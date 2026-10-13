@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '30';
+  var ASSET_VERSION = '31';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'banks', 'calendar', 'flash'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
@@ -1827,30 +1827,66 @@
     });
     var x = fxGet(fx.ccy);
     setText('#fx-sub', x ? (fx.dir === 'bull' ? 'Bullish ' : 'Bearish ') + fx.ccy + ' (' + signed(fxScore(x)) +
-      ' on the board): crosses ranked by how far the other side sits ' + (fx.dir === 'bull' ? 'below' : 'above') + ' it.' : '');
+      ' on the board): every cross, grouped by how far the other side sits ' + (fx.dir === 'bull' ? 'below' : 'above') + ' it.' : '');
     var box = $('#fx-picks');
     box.textContent = '';
-    fxPicks(fx.dir, fx.ccy).forEach(function (p) {
-      var li = el('li', 'pick ' + p.rating[1]);
-      var top = el('div', 'pick-top');
-      top.appendChild(el('span', 'pick-act ' + (p.action === 'Buy' ? 'buy' : 'sell'), p.action));
-      top.appendChild(el('b', 'pick-pair mono', p.pair));
-      top.appendChild(el('span', 'pick-rate ' + p.rating[1], p.rating[0]));
-      var gap = el('span', 'pick-gap mono', 'gap ' + signed(p.gap));
-      gap.title = 'Score divergence between the two sides';
-      top.appendChild(gap);
-      li.appendChild(top);
-      li.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
-      var meta = [];
-      if (p.carry != null) meta.push('carry ' + (p.carry >= 0 ? '+' : '−') + Math.abs(p.carry).toFixed(2) + '%' + (p.carry >= 0 ? ' (you earn)' : ' (you pay)'));
-      if (p.events.length) {
-        var e0 = p.events[0], w0 = evWhen(e0);
-        meta.push(p.events.length + ' high-impact in 14d — next ' + e0.ccy + ' ' + e0.title +
-          (w0 ? ' ' + MONTHS[new Date(w0).getMonth()] + ' ' + new Date(w0).getDate() : ''));
+    var picks = fxPicks(fx.dir, fx.ccy);
+    var maxGap = Math.max(3, Math.max.apply(null, picks.map(function (p) { return Math.abs(p.gap); })));
+    var tiers = [
+      ['edge', 'Strongest edge', 'The other side points the opposite way — both currencies help the trade.',
+        function (p) { return p.gap > 0; }],
+      ['flat', 'No edge', 'Tied on the board — works only if your view is right. Ordered by carry.',
+        function (p) { return p.gap === 0; }],
+      ['against', 'Fights your view', 'The other side is moving the same way you expect ' + fx.ccy + ' to.',
+        function (p) { return p.gap < 0; }]
+    ];
+    tiers.forEach(function (t) {
+      var rows = picks.filter(t[3]);
+      if (!rows.length && t[0] !== 'edge') return;
+      var group = el('li', 'pick-group ' + t[0]);
+      var head = el('div', 'pick-group-head');
+      head.appendChild(el('h3', 'pick-group-title', t[1] + (rows.length ? ' · ' + rows.length : '')));
+      head.appendChild(el('p', 'meta pick-group-note', rows.length ? t[2]
+        : 'No cross has an edge today — every counterpart is level with or ahead of ' + fx.ccy + ' on the board.'));
+      group.appendChild(head);
+      if (rows.length) {
+        var list = el('ol', 'picks-tier');
+        rows.forEach(function (p) { list.appendChild(pickRow(p, maxGap)); });
+        group.appendChild(list);
       }
-      if (meta.length) li.appendChild(el('p', 'meta pick-meta', meta.join(' · ')));
-      box.appendChild(li);
+      box.appendChild(group);
     });
+  }
+
+  function pickRow(p, maxGap) {
+    var li = el('li', 'pick ' + p.rating[1]);
+    var top = el('div', 'pick-top');
+    top.appendChild(el('span', 'pick-act ' + (p.action === 'Buy' ? 'buy' : 'sell'), p.action));
+    top.appendChild(el('b', 'pick-pair mono', p.pair));
+    top.appendChild(el('span', 'pick-rate ' + p.rating[1], p.rating[0]));
+    var gw = el('span', 'pick-gap');
+    gw.title = 'Score divergence between the two sides';
+    if (p.gap > 0) {
+      var bar = el('span', 'gap-bar');
+      bar.setAttribute('aria-hidden', 'true');
+      var fill = el('i');
+      fill.style.width = (Math.min(p.gap, maxGap) / maxGap * 100) + '%';
+      bar.appendChild(fill);
+      gw.appendChild(bar);
+    }
+    gw.appendChild(el('span', 'mono', 'gap ' + signed(p.gap)));
+    top.appendChild(gw);
+    li.appendChild(top);
+    li.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
+    var meta = [];
+    if (p.carry != null) meta.push('carry ' + (p.carry >= 0 ? '+' : '−') + Math.abs(p.carry).toFixed(2) + '%' + (p.carry >= 0 ? ' (you earn)' : ' (you pay)'));
+    if (p.events.length) {
+      var e0 = p.events[0], w0 = evWhen(e0);
+      meta.push(p.events.length + ' high-impact in 14d — next ' + e0.ccy + ' ' + e0.title +
+        (w0 ? ' ' + MONTHS[new Date(w0).getMonth()] + ' ' + new Date(w0).getDate() : ''));
+    }
+    if (meta.length) li.appendChild(el('p', 'meta pick-meta', meta.join(' · ')));
+    return li;
   }
 
   function renderFxDetail(ranked, max) {
