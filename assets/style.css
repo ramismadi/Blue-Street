@@ -681,7 +681,11 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 @keyframes cue { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
 
 /* chapter scenes */
-.ch-scene { height: calc(100vh + var(--steps, 4) * 42vh); height: calc(100svh + var(--steps, 4) * 42svh); }
+/* Short scenes (Rami, 2026-10-12): about one screen per chapter instead of
+   ~1.8. The pin holds briefly near the top; steps reveal as it arrives.
+   app.js sets a min-height so a long teaser never overlaps the next scene. */
+.ch-scene { height: 86vh; height: 86svh; overflow: clip; }
+.ch-scene .pin { height: auto; top: calc(var(--mast-h, 100px) + 6svh); display: block; overflow: visible; padding: 2svh 0; }
 .ghost-num {
   position: absolute;
   right: 0.12em;
@@ -838,6 +842,40 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .nextup li:first-child { border-top: none; padding-top: 0; }
 .n-day { font-size: 0.78rem; color: var(--accent); font-weight: 600; padding-top: 1px; }
 .nextup li.key .n-what { font-weight: 600; }
+
+/* At a glance: right under the headline */
+.glance {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  margin: 0 0 6svh;
+  position: relative;
+  z-index: 2;
+}
+.glance-flash { grid-column: 1 / -1; display: block; text-decoration: none; color: var(--ink); }
+.gf-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.gf-top .tk-cta { margin-left: auto; }
+.gf-hl { margin: 10px 0 4px; font-family: var(--serif); font-size: 1.22rem; line-height: 1.3; font-weight: 600; }
+.gf-next { margin: 4px 0 0; font-size: 0.86rem; color: var(--ink-2); }
+.glance-next .nextup li { grid-template-columns: 110px 1fr; }
+.gl-lean { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.gl-lean a {
+  display: inline-flex; align-items: baseline; gap: 6px;
+  padding: 5px 9px; border-radius: 8px; text-decoration: none;
+  background: var(--surface-2); color: var(--ink-2); font-size: 0.8rem;
+}
+.gl-lean b { color: var(--ink); font-size: 0.84rem; }
+.gl-lean .pos a { background: var(--bull-wash, var(--surface-2)); box-shadow: inset 3px 0 0 var(--bull); }
+.gl-lean .neg a { background: var(--bear-wash, var(--surface-2)); box-shadow: inset 3px 0 0 var(--bear); }
+.gl-lean a:hover { color: var(--ink); }
+
+/* Quiet chapters folded into one line */
+.quiet-line { margin: 0 0 8svh; padding: 14px 18px; border-left: 3px solid var(--line); color: var(--ink-2); font-size: 0.92rem; }
+.quiet-lbl { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 4px; }
+.quiet-line a { font-weight: 600; }
+.quiet-note { display: block; margin-top: 4px; font-size: 0.8rem; color: var(--ink-3); }
+.hero-chapters button.quiet { opacity: 0.6; }
+.pulse-card { margin-bottom: 14px; }
 
 .wire-teaser {
   display: flex;
@@ -1859,11 +1897,13 @@ footer { padding: 34px 0 44px; text-align: center; }
   .mh-inner { min-height: 50px; }
   .edition, .sessions { display: none; }
   .today-grid { grid-template-columns: 1fr; }
+  .glance { grid-template-columns: minmax(0, 1fr); }
+  .gf-hl { font-size: 1.08rem; }
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .tiles .tile { transition-delay: 0s; }
   .tile b::after { content: none; }
   .tiles .tile:nth-child(even) { transition-delay: 0.08s; }
-  .ch-scene { height: calc(100svh + var(--steps, 4) * 34svh); }
+  .ch-scene { height: 80svh; }
   .ch-title { margin-bottom: 16px; }
   .ch-teaser { margin-bottom: 20px; padding-left: 14px; }
   .ghost-num { opacity: 0.4; }

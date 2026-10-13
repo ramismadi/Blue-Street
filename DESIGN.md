@@ -20,11 +20,15 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join) |
 | Flash | `#flash` (old `#wire` links redirect) | `data/latest.json` |
 
-- **Today is a scroll story** (Apple-style pinned scenes): full-screen
-  headline → one pinned scene per story chapter = number + title + `teaser`
-  + "Read the chapter →" (falls back to `fx` if a chapter has no teaser) →
-  "Go deeper" (wire teaser, macro pulse, next up, tiles to every tab). The
-  full narrative lives only in the Story tab, so the tap earns itself.
+- **Today is a scroll story**: full-screen headline → **At a glance** (newest
+  Flash thread with status, tags and What's next; the next two high/medium
+  events with times + zone; the evidence lean as ranked chips) → one short
+  scene per chapter (~one screen each; pin holds briefly near the top, steps
+  reveal as it arrives) = number + title + `teaser` + "Read the chapter →" →
+  chapters with `"quiet": true` fold into one "Quiet today" line (Story tab
+  still shows them in full) → "Go deeper" (macro pulse, where the evidence
+  leans, tiles). Rami, 2026-10-12: Go deeper used to start ~18 screens down;
+  now ~9. The full narrative lives only in the Story tab.
 - **Prose first, site-wide:** narrative leads; figures sit in a "Details"
   drawer (tap to open) — story `numbers`, engine `figure` + sources, bank
   rate definition / last move / sources, the currency score table. Scene mechanics are commented in app.js ("today: scroll engine");
@@ -97,6 +101,9 @@ work). Engine rows and story chapters may instead use `"source"` (string) +
   Story tab, in that order (`fx` usually carries What to watch). Unlabelled
   `fx` renders as the old "What it means for FX" callout.
 - `numbers` — 3–4 crisp figures for the Details drawer, never paragraphs.
+- `quiet` (optional boolean, Hercules) — true only when the chapter has no
+  real delta since the previous edition. Today folds quiet chapters into one
+  line; never set it to skip writing a chapter.
 
 ### `data/engine.json`
 ```

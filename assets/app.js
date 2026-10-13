@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '32';
+  var ASSET_VERSION = '33';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'banks', 'calendar', 'flash'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
@@ -584,11 +584,13 @@
       var li = el('li');
       li.style.setProperty('--i', i);
       // Each chip jumps straight to its chapter scene.
-      var b = el('button', null, ch.title);
+      var b = el('button', ch.quiet ? 'quiet' : null, ch.title);
       b.type = 'button';
+      if (ch.quiet) b.title = 'Quiet today — opens the full chapter';
       b.addEventListener('click', function () {
         var sc = $('#scene-' + (i + 1));
         if (sc) jumpTo(sc);
+        else location.hash = '#story/' + (i + 1);
       });
       li.appendChild(b);
       hc.appendChild(li);
@@ -615,13 +617,18 @@
     box.textContent = '';
     dots.textContent = '';
     var chs = d.chapters || [];
+    var quiet = [];
     chs.forEach(function (ch, i) {
+      // Hercules flags a chapter `quiet` when nothing really changed since the
+      // last edition: Today folds it into one line; Story still has it in full.
+      if (ch.quiet) { quiet.push(i); return; }
       var steps = 2;   // teaser, foot
       var at = function (k) { return (0.1 + 0.62 * k / (steps - 1)).toFixed(3); };
 
       var sc = el('section', 'scene ch-scene gl-scope');
       sc.setAttribute('data-scene', '');
       sc.id = 'scene-' + (i + 1);
+      sc.setAttribute('data-ch', i);
       sc.style.setProperty('--steps', steps);
       var pin = el('div', 'pin');
       pin.appendChild(ghostMark(ch, i));
@@ -656,6 +663,18 @@
       dot.addEventListener('click', function () { jumpTo(sc); });
       dots.appendChild(dot);
     });
+    if (quiet.length) {
+      var q = el('p', 'quiet-line');
+      q.appendChild(el('span', 'quiet-lbl', 'Quiet today'));
+      quiet.forEach(function (i, k) {
+        if (k) q.appendChild(document.createTextNode(' · '));
+        var a = el('a', null, chs[i].title);
+        a.href = '#story/' + (i + 1);
+        q.appendChild(a);
+      });
+      q.appendChild(el('span', 'quiet-note', 'No real change since the last edition — full chapters in Story.'));
+      box.appendChild(q);
+    }
     measureScenes();
     queueScroll();
   }
@@ -684,7 +703,8 @@
   /* currencies.json can land after the story: re-mark the scenes. */
   function refreshGhosts() {
     if (!story) return;
-    Array.prototype.forEach.call(document.querySelectorAll('.ch-scene'), function (sc, i) {
+    Array.prototype.forEach.call(document.querySelectorAll('.ch-scene'), function (sc) {
+      var i = +sc.getAttribute('data-ch');
       var old = sc.querySelector('.ghost-num'), ch = (story.chapters || [])[i];
       if (old && ch) old.parentNode.replaceChild(ghostMark(ch, i), old);
     });
@@ -703,6 +723,7 @@
     var setReduced = function () {
       sx.reduced = !!(mq && mq.matches);
       document.documentElement.classList.toggle('no-motion', sx.reduced);
+      measureScenes();
       queueScroll();
     };
     setReduced();
@@ -729,6 +750,11 @@
     Array.prototype.forEach.call(v.querySelectorAll('[data-scene]'), function (sc) {
       var pin = sc.querySelector('.pin'), inner = sc.querySelector('.pin-inner');
       if (!pin || !inner) return;
+      if (sc.classList.contains('ch-scene')) {
+        // Never shorter than its content + a brief hold, so it can't overlap the next.
+        sc.style.minHeight = sx.reduced ? '' : Math.round(pin.offsetHeight + window.innerHeight * 0.22) + 'px';
+        return;
+      }
       var ov = Math.max(0, inner.offsetHeight - pin.clientHeight + 48);
       sc.style.setProperty('--ov', ov + 'px');
       sc.classList.toggle('tall', ov > 0);
@@ -748,6 +774,11 @@
     Array.prototype.forEach.call(scenes, function (sc, i) {
       var r = reads[i], span = Math.max(1, r.height - avail);
       var p = sx.reduced ? 1 : Math.min(1, Math.max(0, (sx.mast - r.top) / span));
+      if (sc.classList.contains('ch-scene') && !sx.reduced) {
+        // Short scenes: 0 as the top enters the lower screen, 1 as it reaches the masthead.
+        var start = vh * 0.85;
+        p = Math.min(1, Math.max(0, (start - r.top) / Math.max(1, start - sx.mast)));
+      }
       sc.style.setProperty('--p', p.toFixed(4));
       Array.prototype.forEach.call(sc.querySelectorAll('[data-at]'), function (n) {
         n.classList.toggle('in', sx.reduced || p >= +n.getAttribute('data-at'));
@@ -774,7 +805,7 @@
 
   /* Scroll so a chapter scene's content is fully revealed. */
   function jumpTo(sc) {
-    var span = sc.offsetHeight - (window.innerHeight - sx.mast);
+    var span = sc.classList.contains('ch-scene') ? 0 : sc.offsetHeight - (window.innerHeight - sx.mast);
     var y = sc.getBoundingClientRect().top + window.pageYOffset - sx.mast + Math.max(0, span) * 0.86;
     window.scrollTo({ top: y, behavior: sx.reduced ? 'auto' : 'smooth' });
   }
@@ -1208,6 +1239,13 @@
   }
 
   function evWhen(e) { return e.ts ? new Date(e.ts) : null; }
+  /* Short zone name for a time ("CDT"), in the reader's chosen zone. */
+  function tzAbbr(date) {
+    try {
+      var parts = date.toLocaleTimeString('en-US', { timeZone: tzOpt(), timeZoneName: 'short' }).split(' ');
+      return parts[parts.length - 1];
+    } catch (e) { return ''; }
+  }
   function evKey(e) { var w = evWhen(e); return w ? dayKeyOf(w) : e.date; }
   /* Sort value: timed events by instant; date-only events at the start of their day. */
   function evSort(e) {
@@ -1594,7 +1632,7 @@
     box.textContent = '';
     var evs = ((cal.data && cal.data.events) || []).filter(function (e) {
       return e.impact !== 'low' && evUpcoming(e, now, todayKey);
-    }).sort(function (a, b) { return evSort(a) - evSort(b); }).slice(0, 3);
+    }).sort(function (a, b) { return evSort(a) - evSort(b); }).slice(0, 2);
     if (!evs.length) { box.appendChild(el('li', 'meta', 'Nothing scheduled.')); return; }
     evs.forEach(function (e) {
       var w = evWhen(e), k = evKey(e), p = k.split('-');
@@ -1602,7 +1640,7 @@
       var row = el('li', e.impact === 'high' ? 'key' : null);
       row.appendChild(el('span', 'n-day mono', d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' })));
       var what = el('span', 'n-what', e.ccy + ' · ' + e.title);
-      if (w && !e.time_tbd) what.appendChild(el('small', 'n-time', fmtClock(w)));
+      if (w && !e.time_tbd) what.appendChild(el('small', 'n-time', fmtClock(w) + ' ' + tzAbbr(w)));
       row.appendChild(what);
       box.appendChild(row);
     });
@@ -1909,8 +1947,27 @@
     return wrap;
   }
 
+  /* At a glance: each currency's pillar tally, strongest to weakest. */
+  function renderGlanceLean(ranked) {
+    var box = $('#glance-lean');
+    if (!box) return;
+    box.textContent = '';
+    ranked.forEach(function (c) {
+      var t = fxTally(c), net = t.pos - t.neg;
+      var li = el('li', net > 0 ? 'pos' : net < 0 ? 'neg' : 'zero');
+      var a = el('a');
+      a.href = '#fx/' + c.ccy;
+      a.title = c.ccy + ': ' + tallyText(t);
+      a.appendChild(el('b', 'mono', c.ccy));
+      a.appendChild(el('span', 'mono', t.pos + '–' + t.neg));
+      li.appendChild(a);
+      box.appendChild(li);
+    });
+  }
+
   /* Today: where the evidence leans — every currency's pillars as dots. */
   function renderLean(ranked) {
+    renderGlanceLean(ranked);
     var box = $('#today-lean');
     if (!box || !fx.data) return;
     box.textContent = '';
@@ -2368,11 +2425,21 @@
     var t0 = threads[0], tz = $('#today-wire');
     if (tz) {
       tz.textContent = '';
-      tz.appendChild(el('span', 'live-pill', 'Flash · ' + relTime(t0.latest.ts)));
-      var hl = el('span', 'teaser-hl', t0.latest.headline);
-      if (t0.items.length > 1) hl.appendChild(el('small', 'teaser-n', ' · ' + t0.items.length + ' updates'));
-      tz.appendChild(hl);
-      tz.appendChild(el('span', 'tk-cta', 'Open →'));
+      var cool0 = Date.now() - new Date(t0.latest.ts).getTime() > COOL_AFTER;
+      var top = el('div', 'gf-top');
+      top.appendChild(el('span', cool0 ? 'thread-pill' : 'live-pill',
+        (t0.items.length > 1 ? (cool0 ? 'Thread' : 'Developing') : 'Flash') + ' · ' + relTime(t0.latest.ts)));
+      if (t0.items.length > 1) top.appendChild(el('span', 'meta', t0.items.length + ' updates'));
+      top.appendChild(el('span', 'tk-cta', 'Open Flash →'));
+      tz.appendChild(top);
+      tz.appendChild(el('p', 'gf-hl', t0.latest.headline));
+      if (t0.ccy.length || t0.pillar) {
+        var tags = el('div', 'wire-tags');
+        t0.ccy.forEach(function (c) { tags.appendChild(el('span', 'tag ccy', c)); });
+        if (t0.pillar) tags.appendChild(el('span', 'tag pillar', pillarName(t0.pillar)));
+        tz.appendChild(tags);
+      }
+      if (t0.next) tz.appendChild(el('p', 'gf-next', t0.next));
       tz.hidden = false;
     }
     renderFx();
