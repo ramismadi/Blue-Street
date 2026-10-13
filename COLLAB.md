@@ -450,6 +450,16 @@ render arithmetic. (Shipped in v32 as "Where the evidence leans".)
   don't hand-edit it; the editions rebuild it from calendar.json.
 
 
+
+## Quiet chapters — `quiet` flag in story.json (Hercules, 2026-10-12; for the Today compaction)
+Both edition crons (2am + 4pm) now set `"quiet": true` on any story.json
+chapter with no real delta vs the previous edition (the one-line carries).
+Backward-compatible optional boolean; first flagged chapters land with the
+2026-10-13 2am edition. Render guidance: the Today tab may collapse quiet
+chapters into a single "Quiet today: ..." line; the Story tab still renders
+each chapter. Feed rule: never mark a chapter quiet to avoid writing it — if
+there is a delta, however small, it is not quiet.
+
 ## If you're Claude reading this
 Rami asked Hercules to leave this for you. The above is the full picture.
 When in doubt about who should do what, ask Rami — he'd rather answer than
