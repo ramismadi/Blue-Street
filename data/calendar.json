@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T02:00:00-05:00",
+ "updated": "2026-10-13T16:00:00-05:00",
  "events": [
   {
    "id": "boj-ueda-20261006",
@@ -344,6 +344,54 @@
    "sources": []
   },
   {
+   "id": "us-nfib-20261013",
+   "ts": "2026-10-13T10:00:00Z",
+   "ccy": "USD",
+   "impact": "low",
+   "category": "sentiment",
+   "title": "NFIB Small Business Optimism Index (Sep)",
+   "actual": "97.9 (-0.8), below 52-yr avg 98.0; Uncertainty 90; inflation top problem for 20% (+4pts)",
+   "forecast": null,
+   "previous": "98.7 (Aug)",
+   "better": "higher",
+   "why": "Main Street's read on costs and hiring — soft optimism with rising inflation concern feeds the Fed's inflation watch.",
+   "if_beat": "Firmer: small business holding up — resilient-growth read.",
+   "if_miss": "Softer: Main Street squeezed — dovish growth signal, hawkish inflation signal.",
+   "outcome": "Softer (97.9, lowest since June) with inflation concern jumping to 20% — the stagflation-flavored combo: weak sentiment, rising price pressure. Small business is the soft spot in the resilient-US story.",
+   "sources": [
+    {
+     "label": "NFIB: Uncertainty Grows and Optimism Fades Slightly on Main Street in September (Oct 13)",
+     "url": "https://www.nfib.com/news/press-release/new-nfib-survey-uncertainty-grows-and-optimism-fades-slightly-on-main-street-in-september-8/"
+    }
+   ]
+  },
+  {
+   "id": "us-existing-home-sales-20261013",
+   "ts": "2026-10-13T14:00:00Z",
+   "ccy": "USD",
+   "impact": "medium",
+   "category": "housing",
+   "title": "Existing home sales (Sep)",
+   "actual": "+1.5% m/m to 3.99m (vs -0.3% expected)",
+   "forecast": "-0.3% m/m",
+   "previous": null,
+   "better": "higher",
+   "why": "Housing is the rate-sensitive sector — a beat here says high rates haven't killed demand, supporting the hawkish-hold read.",
+   "if_beat": "Beat: resilient housing — supports the Fed's hawkish hold.",
+   "if_miss": "Miss: housing cracking under 7%+ mortgages — dovish for the Fed path.",
+   "outcome": "Beat (+1.5% vs -0.3% exp) — limited the dollar's damage on a dovish-Fed day; consistent with the resilient-growth leg of the hawkish hold.",
+   "sources": [
+    {
+     "label": "Barchart: Dollar Falls on Dovish Fed Comments (Oct 13)",
+     "url": "https://www.barchart.com/story/news/7025939/dollar-falls-on-dovish-fed-comments"
+    },
+    {
+     "label": "FXEmpire: U.S. Dollar Pulls Back From Yearly Highs (Oct 13)",
+     "url": "https://www.fxempire.com/forecasts/article/u-s-dollar-pulls-back-from-yearly-highs-analysis-for-eur-usd-gbp-usd-usd-cad-usd-jpy-1637774"
+    }
+   ]
+  },
+  {
    "id": "china-cpi-20261014",
    "ts": "2026-10-14T01:30:00Z",
    "ccy": "AUD",
@@ -510,6 +558,30 @@
    "sources": []
   },
   {
+   "id": "boe-bailey-20261015",
+   "ts": "2026-10-15T07:30:00Z",
+   "ccy": "GBP",
+   "impact": "medium",
+   "category": "cb",
+   "title": "BoE Gov Bailey speaks (2nd of 4 this week)",
+   "actual": null,
+   "forecast": null,
+   "previous": null,
+   "better": null,
+   "why": "Bailey speaks four times this week — the most central-bank airtime of any G10 chief. With ~85% of a Nov 5 hike priced, any walk-back or reaffirmation moves sterling.",
+   "if_beat": "Hawkish: reaffirms the hike path — GBP floor holds, EUR/GBP tests lower.",
+   "if_miss": "Dovish lean: Nov hike pricing slips — sterling's ~85% floor wobbles.",
+   "outcome": null,
+   "chapter": 3,
+   "bank": "boe",
+   "sources": [
+    {
+     "label": "ForexFactory consensus (Oct 12 feed)",
+     "url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
+    }
+   ]
+  },
+  {
    "id": "us-ppi-20261015",
    "ts": "2026-10-15T12:30:00Z",
    "ccy": "USD",
@@ -668,6 +740,30 @@
    "sources": []
   },
   {
+   "id": "boe-bailey-20261017",
+   "ts": "2026-10-17T06:45:00Z",
+   "ccy": "GBP",
+   "impact": "medium",
+   "category": "cb",
+   "title": "BoE Gov Bailey speaks (weekend, 4th of 4)",
+   "actual": null,
+   "forecast": null,
+   "previous": null,
+   "better": null,
+   "why": "Bailey's fourth appearance of the week — Saturday-morning slot after the week's UK data and CPI; weekend headline risk if he moves on the Nov 5 hike path.",
+   "if_beat": "Hawkish: locks in the ~86% November hike into the blackout.",
+   "if_miss": "Dovish lean: opens the door to a November wobble.",
+   "outcome": null,
+   "chapter": 3,
+   "bank": "boe",
+   "sources": [
+    {
+     "label": "ForexFactory consensus (Oct 12 feed)",
+     "url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
+    }
+   ]
+  },
+  {
    "actual": null,
    "forecast": null,
    "previous": null,
@@ -812,54 +908,6 @@
    "impact": "high",
    "category": "central-bank",
    "title": "SNB decision"
-  },
-  {
-   "id": "boe-bailey-20261015",
-   "ts": "2026-10-15T07:30:00Z",
-   "ccy": "GBP",
-   "impact": "medium",
-   "category": "cb",
-   "title": "BoE Gov Bailey speaks (2nd of 4 this week)",
-   "actual": null,
-   "forecast": null,
-   "previous": null,
-   "better": null,
-   "why": "Bailey speaks four times this week — the most central-bank airtime of any G10 chief. With ~85% of a Nov 5 hike priced, any walk-back or reaffirmation moves sterling.",
-   "if_beat": "Hawkish: reaffirms the hike path — GBP floor holds, EUR/GBP tests lower.",
-   "if_miss": "Dovish lean: Nov hike pricing slips — sterling's ~85% floor wobbles.",
-   "outcome": null,
-   "chapter": 3,
-   "bank": "boe",
-   "sources": [
-    {
-     "label": "ForexFactory consensus (Oct 12 feed)",
-     "url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
-    }
-   ]
-  },
-  {
-   "id": "boe-bailey-20261017",
-   "ts": "2026-10-17T06:45:00Z",
-   "ccy": "GBP",
-   "impact": "medium",
-   "category": "cb",
-   "title": "BoE Gov Bailey speaks (weekend, 4th of 4)",
-   "actual": null,
-   "forecast": null,
-   "previous": null,
-   "better": null,
-   "why": "Bailey's fourth appearance of the week — Saturday-morning slot after the week's UK data and CPI; weekend headline risk if he moves on the Nov 5 hike path.",
-   "if_beat": "Hawkish: locks in the ~86% November hike into the blackout.",
-   "if_miss": "Dovish lean: opens the door to a November wobble.",
-   "outcome": null,
-   "chapter": 3,
-   "bank": "boe",
-   "sources": [
-    {
-     "label": "ForexFactory consensus (Oct 12 feed)",
-     "url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
-    }
-   ]
   }
  ]
 }
