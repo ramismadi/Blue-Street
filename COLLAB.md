@@ -363,6 +363,93 @@ tonight: Hercules owns the feeds, Claude owns the render.
   Sunday Week Ahead + Friday Week in Review. Spec the JSON here first.
 - Nothing in focus.json or the Focus Mode render was touched.
 
+## Depth plan — new JSON shapes (Hercules, 2026-10-12; Rami approved: run now, before CPI)
+
+Rami's decisions 2026-10-12: no house view, ever. A pillar tally is allowed
+purely as evidence-weighing (e.g. "5 of 7 pillars favor USD"), never a
+verdict. Surprise momentum starts counting fresh from Wednesday's CPI
+(2026-10-14) — anything depending on it shows a clean "starts with CPI" state
+until then. Lanes: Hercules owns feeds, Claude owns render.
+
+### 1. Surprise momentum → `data/momentum.json` (SUPERSEDED 2026-10-12)
+Claude specced the agreed shape in DESIGN.md ("data/momentum.json — surprise
+momentum (Hercules)"); the `surprises`-inside-currencies.json draft is
+retired — do not build it. Feed rule: newest 6 scored releases per currency
+since 2026-10-14, result (beat|miss|inline) judged FOR THE CURRENCY by each
+calendar event's `better` field; never backfill before 2026-10-14.
+
+### 2. Positioning percentiles → extend `data/currencies.json` driver notes + `data/engine.json` positioning row
+
+Per-currency positioning driver gets two extra fields:
+```json
+"positioning": { "score": -1, "pct_52w": 93, "wow_chg": 4200,
+  "note": "$36bn dollar longs — 93rd percentile of 52-week range, +$4.2bn on the week" }
+```
+- `pct_52w`: net spec position as percentile of its trailing 52-week range
+  (0 = most short, 100 = most long). `wow_chg`: week-over-week change in
+  contracts (CFTC, Fridays).
+- Render: a "crowded" flag is fine at >=90 or <=10; label it positioning
+  extreme, never a trade signal.
+- SCORING RULE (Rami, 2026-10-12; single rule for every currency): stretched
+  longs (>=90th) score -1 (unwind vulnerability), stretched shorts (<=10th)
+  score +1 (squeeze potential) — the pillar's contrarian philosophy ("where
+  would a surprise hurt most"). Never a supportive "base".
+
+### 3. Thesis scoreboard → `data/story.json`, new top-level `calls` array
+
+```json
+"calls": [
+  { "date": "2026-10-12", "text": "Soft core (0.2%) squeezes crowded dollar longs — DXY gives back ~1%",
+    "status": "pending" },
+  { "date": "2026-10-11", "text": "EUR/USD holds 1.1161 into the French plenary",
+    "status": "confirmed", "resolved": "2026-10-12",
+    "resolution": "Low printed 1.1155 but closed above 1.1161 — held." }
+]
+```
+- `status`: pending | confirmed | broken. Each edition resolves the prior
+  edition's pending calls — this is the site's memory and accountability.
+  (Claude's v32 note says "held / broke / mixed" — reconcile to
+  pending/confirmed/broken/mixed when speccing the render.)
+- Render: running record (e.g. "last 10 calls: 6 confirmed, 3 broken, 1
+  pending"). Show "Scoreboard starts with the Oct 14 edition" until the first
+  resolutions land. Wording stays evidence-style: "confirmed"/"broken", never
+  "we were right".
+
+### 4. Week Ahead / Week in Review → `data/weekly.json` (new file)
+
+```json
+{ "type": "week_ahead", "week_of": "2026-10-19",
+  "headline": "...",
+  "catalysts": [ { "event": "FOMC decision", "when": "Wed Oct 28 1:00pm CT",
+                   "why": "...", "fork": "Hike vs hold reprices ..." } ],
+  "positioning_watch": "...", "sources": [ { "label": "...", "url": "..." } ] }
+```
+- `type`: week_ahead (published Sunday evening) | week_review (published Friday
+  evening). Same prose/source standards as story.json.
+- Render: dedicated slot; archive past weeks by `week_of`.
+
+### 5. Pillar tally (render-side, from existing data — no new feed)
+
+Derive from `currencies.json` → `currencies[].drivers.*.score`: count +1/−1
+per currency, e.g. "5 of 7 pillars favor USD". Allowed phrasing is
+evidence-weighing only ("the weight of evidence leans USD"); never a verdict,
+never "our view is long USD". The −1/0/+1 scores already exist — this is pure
+render arithmetic. (Shipped in v32 as "Where the evidence leans".)
+
+### Do-not-touch before Wednesday's CPI (Oct 14, 7:30am CT)
+
+- `data/focus.json` — the 2am edition arms the CPI preview, the breaking watch
+  drives live→recap intraday, the 4pm edition verifies the recap. First live
+  Focus Mode test; the data side must stay exactly as the crons expect.
+- The Focus Mode takeover render path — verified working 2026-10-12 18:38 CT;
+  no changes until after the debut renders live.
+- During cron windows (2:00–2:30am, 4:00–4:30pm CT) don't push anything touching
+  `data/` — the edition crons overwrite story/engine/banks/calendar/
+  currencies/pillars/latest on every run.
+- `data/momentum.json` is now a cron-owned feed too (see 6c in the 2am job):
+  don't hand-edit it; the editions rebuild it from calendar.json.
+
+
 ## If you're Claude reading this
 Rami asked Hercules to leave this for you. The above is the full picture.
 When in doubt about who should do what, ask Rami — he'd rather answer than
