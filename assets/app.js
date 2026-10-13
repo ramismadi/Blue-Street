@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '31';
+  var ASSET_VERSION = '32';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'banks', 'calendar', 'flash'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
@@ -87,7 +87,16 @@
       fx.data = d;
       renderFx();
       refreshGhosts();
-    }).catch(function () { note('#fx-board', 'Currency data unavailable.'); });
+    }).catch(function () {
+      note('#fx-board', 'Currency data unavailable.');
+      note('#today-lean', 'Currency data unavailable.');
+    });
+    // Surprise momentum is optional: until the feed exists the site shows
+    // when tracking starts.
+    fetchJSON('data/momentum.json').then(function (d) {
+      momentum.data = d;
+      renderFx();
+    }).catch(function () { /* not published yet */ });
     fetchJSON('data/calendar.json').then(function (d) {
       cal.data = d;
       if (d.updated) setText('#cal-updated', fmtDateTime(d.updated, true));
@@ -1656,6 +1665,11 @@
   /* Market quoting convention: the higher-priority currency is the base. */
   var PRIORITY = ['EUR', 'GBP', 'AUD', 'NZD', 'USD', 'CAD', 'CHF', 'JPY'];
   var fx = { data: null, focus: '', dir: 'bull', ccy: 'AUD' };
+  /* data/momentum.json — per-currency economic surprises (Hercules). Counting
+     starts fresh with the first scored release; MOMENTUM_START is only the
+     fallback shown before the feed exists. */
+  var momentum = { data: null };
+  var MOMENTUM_START = '2026-10-14';
 
   function initFx() {
     try {
@@ -1815,6 +1829,118 @@
 
     renderFxDetail(ranked, max);
     renderPicker();
+    renderLean(ranked);
+  }
+
+  /* How many pillars support / weigh on / sit neutral for a currency. */
+  function fxTally(c) {
+    var t = { pos: 0, neg: 0, zero: 0 };
+    PILLARS.forEach(function (k) {
+      var d = (c.drivers || {})[k[0]], s = d ? +d.score || 0 : 0;
+      t[s > 0 ? 'pos' : s < 0 ? 'neg' : 'zero']++;
+    });
+    return t;
+  }
+  function tallyText(t) {
+    return t.pos + ' for · ' + t.neg + ' against · ' + t.zero + ' neutral';
+  }
+
+  /* ---------- surprise momentum ---------- */
+  function momFor(ccy) {
+    var cs = momentum.data && momentum.data.currencies;
+    var m = cs && cs[ccy];
+    var recent = (m && m.recent) || [];
+    var n = { beat: 0, miss: 0, inline: 0 };
+    recent.forEach(function (r) { if (n[r.result] != null) n[r.result]++; });
+    return { m: m || null, recent: recent, n: n };
+  }
+  function ymd(s) {
+    var p = /^(\d{4})-(\d{2})-(\d{2})/.exec(s || '');
+    return p ? new Date(+p[1], +p[2] - 1, +p[3]) : null;
+  }
+  function shortDate(s) {
+    var d = ymd(s);
+    return d ? MONTHS[d.getMonth()] + ' ' + d.getDate() : (s || '');
+  }
+  var MOM_LBL = { beat: 'Beat', miss: 'Missed', inline: 'In line' };
+
+  /* Dots oldest → newest: green beat, red miss, grey in line. */
+  function momDots(recent) {
+    var row = el('span', 'mom-dots');
+    recent.slice().reverse().forEach(function (r) {
+      var i = el('i', 'mom-' + (MOM_LBL[r.result] ? r.result : 'inline'));
+      i.title = shortDate(r.date) + ' · ' + (r.title || '') + ': ' + (MOM_LBL[r.result] || 'In line') +
+        (r.actual != null ? ' (' + r.actual + (r.forecast != null ? ' vs ' + r.forecast : '') + ')' : '');
+      row.appendChild(i);
+    });
+    return row;
+  }
+
+  function momentumBlock(c) {
+    var wrap = el('div', 'mom');
+    wrap.appendChild(el('h2', 'section-label', 'Data surprises'));
+    var since = (momentum.data && momentum.data.since) || MOMENTUM_START;
+    var s = momFor(c.ccy);
+    if (!s.recent.length) {
+      wrap.appendChild(el('p', 'meta', momentum.data
+        ? 'No ' + c.ccy + ' releases scored since ' + shortDate(since) + ' yet.'
+        : 'Tracking starts ' + shortDate(since) + ' with US CPI. From then on every scored release lands here: beat or miss versus expectations, judged by what is good for the currency.'));
+      return wrap;
+    }
+    var top = el('div', 'mom-top');
+    top.appendChild(momDots(s.recent));
+    top.appendChild(el('span', 'mom-count', 'Beat ' + s.n.beat + ' · missed ' + s.n.miss + ' · in line ' + s.n.inline +
+      ' of the last ' + s.recent.length));
+    wrap.appendChild(top);
+    if (s.m && s.m.note) wrap.appendChild(el('p', 'mom-note', s.m.note));
+    var ul = el('ul', 'mom-list');
+    s.recent.slice(0, 3).forEach(function (r) {
+      var li = el('li', 'mom-' + (MOM_LBL[r.result] ? r.result : 'inline'));
+      li.appendChild(el('span', 'mono', shortDate(r.date)));
+      var t = el('span');
+      t.appendChild(el('b', null, (MOM_LBL[r.result] || 'In line') + ' '));
+      t.appendChild(document.createTextNode((r.title || '') +
+        (r.actual != null ? ' — ' + r.actual + (r.forecast != null ? ' vs ' + r.forecast + ' expected' : '') : '')));
+      li.appendChild(t);
+      ul.appendChild(li);
+    });
+    wrap.appendChild(ul);
+    wrap.appendChild(el('p', 'meta', 'Since ' + shortDate(since) + '. A beat means better than expected for the currency, not just a higher number.'));
+    return wrap;
+  }
+
+  /* Today: where the evidence leans — every currency's pillars as dots. */
+  function renderLean(ranked) {
+    var box = $('#today-lean');
+    if (!box || !fx.data) return;
+    box.textContent = '';
+    ranked.forEach(function (c) {
+      var li = el('li');
+      var a = el('a', 'lean-row');
+      a.href = '#fx/' + c.ccy;
+      a.appendChild(el('b', 'l-id mono', c.ccy));
+      var dots = el('span', 'l-dots');
+      PILLARS.forEach(function (k) {
+        var d = (c.drivers || {})[k[0]], sc = d ? +d.score || 0 : 0;
+        var i = el('i', sc > 0 ? 'pos' : sc < 0 ? 'neg' : 'zero');
+        i.title = k[1] + ': ' + (sc > 0 ? 'supports' : sc < 0 ? 'weighs' : 'neutral') + (d && d.note && sc ? ' — ' + d.note : '');
+        dots.appendChild(i);
+      });
+      var t = fxTally(c);
+      dots.setAttribute('role', 'img');
+      dots.setAttribute('aria-label', c.ccy + ': ' + tallyText(t));
+      a.appendChild(dots);
+      a.appendChild(el('span', 'l-tally', t.pos + ' for · ' + t.neg + ' against'));
+      var s = momFor(c.ccy);
+      var dt = el('span', 'l-data mono');
+      if (s.recent.length) {
+        dt.textContent = 'data ' + s.n.beat + '–' + s.n.miss;
+        dt.title = 'Last ' + s.recent.length + ' releases: ' + s.n.beat + ' beat, ' + s.n.miss + ' missed, ' + s.n.inline + ' in line';
+      }
+      a.appendChild(dt);
+      li.appendChild(a);
+      box.appendChild(li);
+    });
   }
 
   function renderPicker() {
@@ -1914,6 +2040,7 @@
     sc.appendChild(el('span', 'fd-num mono', signed(fxScore(c))));
     var dl = fxDelta(c);
     sc.appendChild(el('span', 'meta', dl == null ? 'score' : 'score · ' + (dl === 0 ? 'unchanged' : signed(dl)) + ' vs prior edition'));
+    sc.appendChild(el('span', 'meta fd-tally', 'Pillars: ' + tallyText(fxTally(c))));
     head.appendChild(sc);
     card.appendChild(head);
 
@@ -1957,6 +2084,7 @@
     // Trend
     side.appendChild(el('h2', 'section-label', 'Trend'));
     side.appendChild(sparkline(fxHistory(c)));
+    side.appendChild(momentumBlock(c));
     // Story chapter
     if (c.chapter && story && story.chapters && story.chapters[c.chapter - 1]) {
       var sl = el('a', 'fd-story');

@@ -346,6 +346,23 @@ are developments, not alarms). Data side is done on Hercules's end:
    `actual` as prints land.
 3. **pillars.json** — refresh each `live` example when it goes stale.
 
+## Depth push — evidence tally + surprise momentum (Claude, 2026-10-12; Rami approved)
+Rami wants Gloment to out-depth ForexFundamentals: no house view, but the
+pillars may be used to *weigh* the evidence. Lanes as agreed with Hercules
+tonight: Hercules owns the feeds, Claude owns the render.
+- **Shipped (v32):** Today "Where the evidence leans" card (pillar dots + "N
+  for · N against" per currency, from currencies.json); pillar tally on each
+  currency page; a "Data surprises" section on each currency page and a
+  "data N–N" chip on Today, both reading `data/momentum.json`.
+- **For Hercules:** please own `data/momentum.json` — schema and rules in
+  DESIGN.md. Count starts fresh with US CPI Oct 14; `result` is judged by the
+  calendar's `better` (good/bad for the currency), not higher/lower. Until the
+  file exists the site shows "Tracking starts Oct 14 with US CPI".
+- **Next (Hercules feeds, then Claude render):** positioning as percentiles,
+  the thesis scoreboard (each edition's calls marked held / broke / mixed),
+  Sunday Week Ahead + Friday Week in Review. Spec the JSON here first.
+- Nothing in focus.json or the Focus Mode render was touched.
+
 ## If you're Claude reading this
 Rami asked Hercules to leave this for you. The above is the full picture.
 When in doubt about who should do what, ask Rami — he'd rather answer than

@@ -143,6 +143,40 @@ has no "What is this?" button.
 - Scoring is v1 on purpose (Rami + Claude will refine weights/pillars over
   time); keep the method string accurate if it changes.
 
+### `data/momentum.json` — surprise momentum (Hercules)
+```
+{"updated":"<ISO-8601>",
+ "since":"2026-10-14",              // counting starts fresh with US CPI, Oct 14
+ "window":6,                         // releases kept per currency
+ "currencies":{"USD":{
+   "note":"one line on the pattern (optional)",
+   "recent":[{"id":"us-cpi-20261014",   // = calendar.json event id
+              "date":"YYYY-MM-DD","title":"CPI y/y (Sep)",
+              "result":"beat"|"miss"|"inline",
+              "actual":"3.7%","forecast":"3.6%"}]}}}   // newest first
+```
+- **`result` is judged for the currency, not the number:** use the calendar
+  event's `better` (higher|lower). An unemployment rate above forecast is a
+  `miss`. `inline` = matched forecast (or inside your stated tolerance).
+- Only scored releases with an `actual` and a `forecast` count — speeches,
+  minutes and auctions don't.
+- Keep the newest `window` releases per currency; the site computes the
+  beat/miss/in-line counts itself, so no totals are needed.
+- Never backfill before `since` — Rami wants the count to start clean at CPI.
+- No file (or a currency with no releases) renders gracefully: before the feed
+  exists the site shows "Tracking starts Oct 14 with US CPI".
+
+How it renders: currency page → "Data surprises" under Trend (coloured squares
+oldest→newest, "Beat 3 · missed 1 · in line 0 of the last 4", the `note`, the
+three newest releases). Today → "data 3–1" on that currency's evidence row.
+
+### Today: "Where the evidence leans" (render only, from currencies.json)
+A card in Go deeper: every currency, board order, seven dots = the seven
+pillars in engine order (green supports, red weighs, grey neutral; tooltips
+carry each driver note), "N for · N against", plus the momentum chip. Copy
+says "Evidence, not a call" — this is a tally of evidence, never a verdict.
+The currency page header also shows "Pillars: N for · N against · N neutral".
+
 ### `data/glossary.json` — inline definitions
 ```
 {"terms":[{"term":"FOMC","definition":"one to two lines","aliases":["Federal Open Market Committee"]}]}
