@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '33';
+  var ASSET_VERSION = '34';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'banks', 'calendar', 'flash'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
@@ -82,6 +82,7 @@
     });
     initCalendar();
     initFx();
+    initGlance();
     initFocus();
     fetchJSON('data/currencies.json').then(function (d) {
       fx.data = d;
@@ -708,6 +709,168 @@
       var old = sc.querySelector('.ghost-num'), ch = (story.chapters || [])[i];
       if (old && ch) old.parentNode.replaceChild(ghostMark(ch, i), old);
     });
+  }
+
+  /* ---------------- today: at a glance (reorderable) ----------------
+     The strip's tiles can be put in any order. Arrow buttons work everywhere
+     (touch included); on desktop a tile can also be dragged. The order is
+     saved per browser (localStorage `gloment-glance`), unknown ids are
+     dropped and new tiles are appended, so adding a tile later is safe. The
+     first visible tile spans the full width. */
+  var GLANCE_IDS = ['flash', 'next', 'lean'];
+  var GLANCE_NAMES = { flash: 'Flash', next: 'Next up', lean: 'Evidence leans' };
+  var glance = { editing: false, drag: null };
+
+  function glanceOrder() {
+    var saved = null;
+    try { saved = JSON.parse(localStorage.getItem('gloment-glance') || 'null'); } catch (e) { /* private mode */ }
+    var out = (Array.isArray(saved) ? saved : []).filter(function (id, i, a) {
+      return GLANCE_IDS.indexOf(id) >= 0 && a.indexOf(id) === i;
+    });
+    GLANCE_IDS.forEach(function (id) { if (out.indexOf(id) < 0) out.push(id); });
+    return out;
+  }
+  function saveGlance(order) {
+    try {
+      if (order) localStorage.setItem('gloment-glance', JSON.stringify(order));
+      else localStorage.removeItem('gloment-glance');
+    } catch (e) { /* private mode: order lasts for this visit only */ }
+  }
+  function glanceTile(id) { return document.querySelector('.glance-tile[data-tile="' + id + '"]'); }
+  function tileVisible(t) {
+    var c = t.querySelector('.card');
+    return !c || !c.hidden;
+  }
+
+  /* Put the tiles in order. animate = slide them from where they were (FLIP). */
+  function applyGlance(animate, order) {
+    var box = $('#today-glance');
+    if (!box) return;
+    order = order || glanceOrder();
+    var tiles = order.map(glanceTile).filter(Boolean);
+    var before = animate && !sx.reduced ? tiles.map(function (t) { return t.getBoundingClientRect(); }) : null;
+    var lead = null;
+    tiles.forEach(function (t, i) {
+      box.appendChild(t);
+      var show = glance.editing || tileVisible(t);
+      t.hidden = !show;
+      if (show && !lead) lead = t;
+      var up = t.querySelector('.tc-up'), dn = t.querySelector('.tc-dn');
+      if (up) up.disabled = i === 0;
+      if (dn) dn.disabled = i === tiles.length - 1;
+      var pos = t.querySelector('.tc-pos');
+      if (pos) pos.textContent = (i + 1) + ' of ' + tiles.length;
+    });
+    tiles.forEach(function (t) { t.classList.toggle('lead', t === lead); });
+    if (before) {
+      tiles.forEach(function (t, i) {
+        var a = before[i], b = t.getBoundingClientRect();
+        var dx = a.left - b.left, dy = a.top - b.top;
+        if (!dx && !dy) return;
+        t.style.transition = 'none';
+        t.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            t.style.transition = 'transform 0.35s var(--ease)';
+            t.style.transform = '';
+          });
+        });
+      });
+    }
+    var reset = $('#glance-reset');
+    if (reset) reset.hidden = !glance.editing;
+  }
+
+  function moveGlance(id, to) {
+    var order = glanceOrder(), from = order.indexOf(id);
+    if (from < 0 || to < 0 || to >= order.length || to === from) return;
+    order.splice(from, 1);
+    order.splice(to, 0, id);
+    saveGlance(order);
+    applyGlance(true, order);
+    setText('#glance-status', GLANCE_NAMES[id] + ' moved to position ' + (to + 1) + ' of ' + order.length + '.');
+  }
+
+  function setGlanceEditing(on) {
+    glance.editing = on;
+    var box = $('#today-glance'), btn = $('#glance-edit');
+    if (box) box.classList.toggle('editing', on);
+    if (btn) {
+      btn.textContent = on ? 'Done' : 'Rearrange';
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.glance-tile'), function (t) {
+      t.draggable = on;
+      // While editing, the cards are not links (a tap shouldn't navigate away).
+      Array.prototype.forEach.call(t.querySelectorAll('.card a, a.card'), function (a) {
+        if (on) a.setAttribute('tabindex', '-1'); else a.removeAttribute('tabindex');
+      });
+    });
+    applyGlance(false);
+    setText('#glance-status', on ? 'Rearranging. Use the arrows to move tiles; your order is saved.' : 'Order saved.');
+  }
+
+  function initGlance() {
+    var box = $('#today-glance');
+    if (!box) return;
+    Array.prototype.forEach.call(box.querySelectorAll('.glance-tile'), function (t) {
+      var id = t.getAttribute('data-tile');
+      var ctl = el('div', 'tile-ctl');
+      ctl.appendChild(el('span', 'tc-grip', '⋮⋮'));
+      ctl.appendChild(el('span', 'tc-name', GLANCE_NAMES[id] || id));
+      ctl.appendChild(el('span', 'tc-pos meta'));
+      [['tc-up', '↑', 'Move ' + GLANCE_NAMES[id] + ' up', -1], ['tc-dn', '↓', 'Move ' + GLANCE_NAMES[id] + ' down', 1]]
+        .forEach(function (b) {
+          var btn = el('button', 'tc-btn ' + b[0], b[1]);
+          btn.type = 'button';
+          btn.setAttribute('aria-label', b[2]);
+          btn.addEventListener('click', function () {
+            moveGlance(id, glanceOrder().indexOf(id) + b[3]);
+            if (btn.disabled) { var other = t.querySelector(b[0] === 'tc-up' ? '.tc-dn' : '.tc-up'); if (other) other.focus(); }
+            else btn.focus();
+          });
+          ctl.appendChild(btn);
+        });
+      t.insertBefore(ctl, t.firstChild);
+
+      // Desktop drag: drop onto another tile to take its place.
+      t.addEventListener('dragstart', function (e) {
+        if (!glance.editing) { e.preventDefault(); return; }
+        glance.drag = id;
+        t.classList.add('dragging');
+        try { e.dataTransfer.setData('text/plain', id); e.dataTransfer.effectAllowed = 'move'; } catch (x) {}
+      });
+      t.addEventListener('dragend', function () {
+        glance.drag = null;
+        Array.prototype.forEach.call(box.querySelectorAll('.glance-tile'), function (n) { n.classList.remove('dragging', 'drop-target'); });
+      });
+      t.addEventListener('dragover', function (e) {
+        if (!glance.drag || glance.drag === id) return;
+        e.preventDefault();
+        t.classList.add('drop-target');
+      });
+      t.addEventListener('dragleave', function () { t.classList.remove('drop-target'); });
+      t.addEventListener('drop', function (e) {
+        e.preventDefault();
+        t.classList.remove('drop-target');
+        if (glance.drag && glance.drag !== id) moveGlance(glance.drag, glanceOrder().indexOf(id));
+      });
+      // Editing: swallow clicks on the card so nothing navigates.
+      t.addEventListener('click', function (e) {
+        if (glance.editing && !e.target.closest('.tile-ctl')) e.preventDefault();
+      }, true);
+    });
+    var edit = $('#glance-edit'), reset = $('#glance-reset');
+    if (edit) edit.addEventListener('click', function () { setGlanceEditing(!glance.editing); });
+    if (reset) reset.addEventListener('click', function () {
+      saveGlance(null);
+      applyGlance(true);
+      setText('#glance-status', 'Back to the default order.');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && glance.editing) setGlanceEditing(false);
+    });
+    applyGlance(false);
   }
 
   /* ---------------- today: scroll engine ----------------
@@ -2441,6 +2604,7 @@
       }
       if (t0.next) tz.appendChild(el('p', 'gf-next', t0.next));
       tz.hidden = false;
+      applyGlance(false);   // the Flash tile may now lead
     }
     renderFx();
   }

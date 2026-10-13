@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=33">
+<link rel="stylesheet" href="assets/style.css?v=34">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -24,7 +24,7 @@
     if (/^(ink|forest|velvet|onyx)$/.test(t || '')) document.documentElement.setAttribute('data-mode', 'dark');
   } catch (e) {}
 </script>
-<script src="assets/app.js?v=33" defer></script>
+<script src="assets/app.js?v=34" defer></script>
 </head>
 <body>
 
@@ -90,22 +90,37 @@
       </div>
     </section>
 
-    <!-- At a glance: the three things Rami acts on, right under the headline -->
+    <!-- At a glance: the things Rami acts on, right under the headline.
+         Readers can reorder the tiles; the order is saved per browser. -->
     <section class="glance" id="today-glance" aria-label="At a glance">
-      <a class="card glance-flash" id="today-wire" href="#flash" hidden></a>
-      <div class="card glance-next">
-        <div class="card-head">
-          <h2 class="section-label">Next up</h2>
-          <a class="more" href="#calendar">Calendar →</a>
+      <div class="glance-bar">
+        <p class="kicker">At a glance</p>
+        <div class="glance-actions">
+          <button type="button" class="glance-reset" id="glance-reset" hidden>Reset</button>
+          <button type="button" class="glance-edit" id="glance-edit" aria-pressed="false">Rearrange</button>
         </div>
-        <ul class="nextup" id="today-next"></ul>
       </div>
-      <div class="card glance-lean">
-        <div class="card-head">
-          <h2 class="section-label">Evidence leans</h2>
-          <a class="more" href="#fx">Board →</a>
+      <p class="sr-only" id="glance-status" aria-live="polite"></p>
+      <div class="glance-tile" data-tile="flash">
+        <a class="card glance-flash" id="today-wire" href="#flash" hidden></a>
+      </div>
+      <div class="glance-tile" data-tile="next">
+        <div class="card glance-next">
+          <div class="card-head">
+            <h2 class="section-label">Next up</h2>
+            <a class="more" href="#calendar">Calendar →</a>
+          </div>
+          <ul class="nextup" id="today-next"></ul>
         </div>
-        <ol class="gl-lean" id="glance-lean" aria-label="Pillars for and against, strongest to weakest"></ol>
+      </div>
+      <div class="glance-tile" data-tile="lean">
+        <div class="card glance-lean">
+          <div class="card-head">
+            <h2 class="section-label">Evidence leans</h2>
+            <a class="more" href="#fx">Board →</a>
+          </div>
+          <ol class="gl-lean" id="glance-lean" aria-label="Pillars for and against, strongest to weakest"></ol>
+        </div>
       </div>
     </section>
 

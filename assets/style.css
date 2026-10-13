@@ -852,7 +852,43 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
   position: relative;
   z-index: 2;
 }
-.glance-flash { grid-column: 1 / -1; display: block; text-decoration: none; color: var(--ink); }
+.glance-bar { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: -4px; }
+.glance-bar .kicker { margin: 0; }
+.glance-actions { display: flex; gap: 8px; }
+.glance-edit, .glance-reset {
+  font: inherit; font-size: 0.76rem; font-weight: 600; cursor: pointer;
+  padding: 5px 12px; border-radius: 20px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink-2);
+}
+.glance-edit:hover, .glance-reset:hover { color: var(--ink); border-color: var(--gold); }
+.glance-edit[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.glance-tile { display: flex; flex-direction: column; min-width: 0; }
+.glance-tile > .card { flex: 1; }
+.glance-tile.lead { grid-column: 1 / -1; }
+.glance-flash { display: block; text-decoration: none; color: var(--ink); }
+
+/* Rearranging: dashed outline, a control strip on each tile, links paused */
+.tile-ctl { display: none; }
+.glance.editing .tile-ctl {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 8px 6px 12px; margin-bottom: 6px;
+  border-radius: 10px; background: var(--surface-2); font-size: 0.8rem;
+}
+.tc-grip { color: var(--ink-3); letter-spacing: -2px; cursor: grab; user-select: none; }
+.tc-name { font-weight: 700; color: var(--ink); }
+.tc-pos { margin-right: auto; font-size: 0.72rem; }
+.tc-btn {
+  font: inherit; font-size: 0.95rem; line-height: 1; cursor: pointer;
+  width: 34px; height: 30px; border-radius: 8px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+}
+.tc-btn:hover:not(:disabled) { border-color: var(--gold); }
+.tc-btn:disabled { opacity: 0.35; cursor: default; }
+.glance.editing .glance-tile > .card { outline: 2px dashed var(--line); outline-offset: 2px; opacity: 0.85; cursor: grab; }
+.glance.editing .glance-tile > .card[hidden] { display: block; min-height: 64px; }
+.glance.editing .glance-tile > .card[hidden]:empty::before { content: "Shows the newest Flash thread"; color: var(--ink-3); font-size: 0.86rem; }
+.glance-tile.dragging { opacity: 0.45; }
+.glance-tile.drop-target > .card { outline-color: var(--gold); }
 .gf-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .gf-top .tk-cta { margin-left: auto; }
 .gf-hl { margin: 10px 0 4px; font-family: var(--serif); font-size: 1.22rem; line-height: 1.3; font-weight: 600; }

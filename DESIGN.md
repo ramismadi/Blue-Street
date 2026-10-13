@@ -29,6 +29,14 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   still shows them in full) → "Go deeper" (macro pulse, where the evidence
   leans, tiles). Rami, 2026-10-12: Go deeper used to start ~18 screens down;
   now ~9. The full narrative lives only in the Story tab.
+- **At a glance is reorderable** (Rami, 2026-10-12): "Rearrange" turns on edit
+  mode — ↑/↓ on each tile (works on touch), drag on desktop, Reset, Done/Esc.
+  Saved per browser in localStorage `gloment-glance` (array of tile ids:
+  `flash`, `next`, `lean`); unknown ids are dropped, missing ones appended, so
+  a new tile only needs a `.glance-tile[data-tile]` wrapper + entries in
+  `GLANCE_IDS`/`GLANCE_NAMES`. The first visible tile spans the full width.
+  Per-device for now; accounts (same layout on every device) would need a
+  backend — a later decision.
 - **Prose first, site-wide:** narrative leads; figures sit in a "Details"
   drawer (tap to open) — story `numbers`, engine `figure` + sources, bank
   rate definition / last move / sources, the currency score table. Scene mechanics are commented in app.js ("today: scroll engine");
