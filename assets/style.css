@@ -1480,13 +1480,13 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .spark-line { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
 .spark-end { fill: var(--accent); stroke: var(--surface); stroke-width: 2; }
 .spark-hit { fill: transparent; }
-.fd-story, .fd-bank {
+.fd-story, .fd-bank, .fd-cot {
   display: flex; flex-direction: column; gap: 2px;
   margin-top: 12px; padding: 10px 14px; border-radius: 10px;
   background: var(--surface-2); border: 1px solid var(--line);
   color: var(--ink); text-decoration: none; font-size: 0.9rem;
 }
-.fd-story:hover, .fd-bank:hover { border-color: var(--accent-2); }
+.fd-story:hover, .fd-bank:hover, .fd-cot:hover { border-color: var(--accent-2); }
 .fd-events { list-style: none; margin: 0; padding: 0; font-size: 0.86rem; }
 .fd-events li { display: grid; grid-template-columns: 56px 1fr; gap: 8px; padding: 4px 0; }
 .fd-events .mono { color: var(--accent); font-size: 0.78rem; }
@@ -2011,4 +2011,92 @@ footer { padding: 34px 0 44px; text-align: center; }
   .wire-teaser { flex-wrap: wrap; gap: 8px; }
   .teaser-hl { flex-basis: 100%; order: 2; }
   .wire-teaser .tk-cta { order: 3; }
+}
+
+/* ---------- POSITIONING (COT) ----------
+   Rows are <details>: summary = id, name, percentile gauge, zone, flags.
+   Gauge: zone bands on a 0–100 track; filled dot = hedge funds,
+   gold ring = real money. Colors come from theme tokens only. */
+#cot-body { display: grid; gap: 16px; }
+.cot-take .cot-lines { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.cot-take .cot-lines li { font-family: var(--serif); font-size: 1.05rem; line-height: 1.45; color: var(--ink); padding-left: 16px; position: relative; }
+.cot-take .cot-lines li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+.cot-group { padding-bottom: 8px; }
+.cot-group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.cot-group-head .section-label { margin: 0; }
+.cot-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; margin: 10px 0 6px; }
+.cot-legend span::before { content: ""; display: inline-block; vertical-align: -1px; margin-right: 6px; width: 10px; height: 10px; border-radius: 50%; }
+.cl-hf::before { background: var(--ink); }
+.cl-rm::before { background: transparent; box-shadow: inset 0 0 0 2px var(--gold); }
+.cl-scale::before { display: none !important; }
+.cl-scale { margin-left: auto; }
+
+.cot-row { border-top: 1px solid var(--line); }
+.cot-sum {
+  display: grid;
+  grid-template-columns: 40px minmax(110px, 160px) minmax(0, 1fr) 130px 76px;
+  align-items: center;
+  column-gap: 14px;
+  padding: 11px 6px;
+  cursor: pointer;
+  list-style: none;
+  border-radius: 8px;
+}
+.cot-sum::-webkit-details-marker { display: none; }
+.cot-sum:hover { background: var(--surface-2); }
+.cot-row[open] > .cot-sum { background: var(--surface-2); }
+.cot-id { color: var(--accent); font-weight: 600; font-size: 0.92rem; }
+.cot-name { font-size: 0.9rem; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cot-zone { font-size: 0.82rem; color: var(--ink-2); white-space: nowrap; }
+.cot-zone b { font-weight: 600; }
+.cot-zone.z-crowded-long b, .cot-zone.z-crowded-short b { color: var(--gold); }
+.cot-flags { display: flex; gap: 4px; justify-content: flex-end; flex-wrap: wrap; }
+.cot-flag { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 6px; border-radius: 999px; white-space: nowrap; }
+.cot-flag.split { background: var(--gold-wash); color: var(--gold); }
+.cot-flag.ext { background: var(--accent-wash); color: var(--accent); }
+
+.cg-track { position: relative; height: 12px; border-radius: 999px; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--line); }
+.cg-band { position: absolute; top: 0; bottom: 0; }
+.cg-cs { background: var(--bear); opacity: 0.32; border-radius: 999px 0 0 999px; }
+.cg-ss { background: var(--bear-wash); }
+.cg-ls { background: var(--bull-wash); }
+.cg-cl { background: var(--bull); opacity: 0.32; border-radius: 0 999px 999px 0; }
+.cg-hf, .cg-rm { position: absolute; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; }
+.cg-hf { background: var(--ink); box-shadow: 0 0 0 2px var(--surface); z-index: 2; }
+.cg-rm { background: var(--surface); box-shadow: inset 0 0 0 2.5px var(--gold); z-index: 1; }
+
+.cot-body { padding: 4px 6px 16px; }
+.cot-prose { margin: 6px 0 4px; font-family: var(--serif); font-size: 1.05rem; line-height: 1.5; color: var(--ink); max-width: 70ch; }
+.cot-means { margin-bottom: 12px; }
+.cot-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 22px; margin-bottom: 12px; }
+.cb { margin: 0; }
+.cb-cap { font-size: 0.72rem; color: var(--ink-3); margin-bottom: 4px; }
+.cb-svg { display: block; width: 100%; height: 70px; }
+.cb-pos { fill: var(--bull); opacity: 0.55; }
+.cb-neg { fill: var(--bear); opacity: 0.55; }
+.cb-last { opacity: 1; }
+.cb-zero { stroke: var(--line); stroke-width: 1; }
+.cb-axis { display: flex; justify-content: space-between; margin-top: 2px; }
+.cot-figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 22px; margin: 4px 0 10px; }
+.cf-lbl { margin: 0 0 6px; font-size: 0.74rem; font-weight: 700; color: var(--accent); }
+.cf-grid { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; font-size: 0.82rem; }
+.cf-grid dt { color: var(--ink-3); }
+.cf-grid dd { margin: 0; text-align: right; color: var(--ink); }
+.cot-body .sources { margin: 6px 0 10px; }
+.cot-how p { margin: 0 0 10px; font-size: 0.92rem; line-height: 1.55; color: var(--ink-2); max-width: 75ch; }
+.cot-how p.meta { margin-bottom: 0; }
+
+@media (max-width: 760px) {
+  .cot-sum {
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    grid-template-areas: "id name zone" "gauge gauge gauge" "flags flags flags";
+    row-gap: 8px;
+  }
+  .cot-id { grid-area: id; }
+  .cot-name { grid-area: name; }
+  .cot-zone { grid-area: zone; }
+  .cg { grid-area: gauge; }
+  .cot-flags { grid-area: flags; justify-content: flex-start; }
+  .cot-flags:empty { display: none; }
+  .cl-scale { margin-left: 0; flex-basis: 100%; }
 }

@@ -120,6 +120,12 @@
     return r + (s[(v - 20) % 10] || s[v] || s[0]);
   }
 
+  function pctText(p) {
+    if (p < 0.5) return 'the lowest reading since 2015';
+    if (p > 99.5) return 'the highest reading since 2015';
+    return ordinal(p) + ' percentile';
+  }
+
   /* "net long, but light for them" — the absolute side and where it sits in
      its own history are different things, and the sentence says both. */
   function stance(g) {
@@ -130,7 +136,7 @@
       : g.zone === 'crowded short' ? (sign < 0 ? 'a crowded short by their own history' : 'but the lightest they get — crowded short by their own history')
       : s === sign ? 'heavier than usual'
       : (s > 0 ? 'but less short than usual' : 'but lighter than usual');
-    return dir + ', ' + rel + ' (' + ordinal(g.pct) + ' percentile)';
+    return dir + ', ' + rel + ' (' + pctText(g.pct) + ')';
   }
 
   /* What the last four weeks did to the net position, in trader terms. */
@@ -138,8 +144,8 @@
     var c = g.chg4;
     if (c == null || c === 0) return '';
     var was = g.net - c, amt = fmtInt(Math.abs(c));
-    if (was >= 0 && g.net >= 0) return c > 0 ? 'added ' + amt + ' to their net long' : 'cut their net long by ' + amt;
-    if (was < 0 && g.net < 0) return c < 0 ? 'added ' + amt + ' to their net short' : 'cut their net short by ' + amt;
+    if (was >= 0 && g.net >= 0) return c > 0 ? 'added ' + amt + ' contracts to their net long' : 'cut their net long by ' + amt + ' contracts';
+    if (was < 0 && g.net < 0) return c < 0 ? 'added ' + amt + ' contracts to their net short' : 'cut their net short by ' + amt + ' contracts';
     return c > 0 ? 'flipped from net short to net long' : 'flipped from net long to net short';
   }
 
@@ -147,7 +153,7 @@
     var hf = m.hf;
     var s = 'Hedge funds are ' + stance(hf).replace(/^(net (?:long|short))/, '$1 ' + m.ref) + '.';
     var f = flow(hf);
-    if (f) s += ' Over four weeks they ' + f + (f.indexOf('flipped') === 0 ? '' : ' contracts') + '.';
+    if (f) s += ' Over four weeks they ' + f + '.';
     if (hf.range12 === 0 || hf.range12 === 100) {
       s += ' That is the ' + (hf.range12 === 0 ? 'lowest' : 'highest') + ' net position in 12 weeks.';
     }

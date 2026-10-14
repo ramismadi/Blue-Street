@@ -1,5 +1,5 @@
 /* Gloment — premium desk renderer. Plain static JS, no build step.
-   Tabbed views (hash-routed: #today, #story, #story/2, #engine, #banks,
+   Tabbed views (hash-routed: #today, #story, #story/2, #engine, #positioning, #banks,
    #calendar, #flash), a theme picker, and edition data (story, macro engine,
    Flash) from local JSON files. textContent-only DOM, no HTML injection. */
 
@@ -7,9 +7,9 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '34';
+  var ASSET_VERSION = '35';
 
-  var TABS = ['today', 'story', 'fx', 'engine', 'banks', 'calendar', 'flash'];
+  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'flash'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
@@ -84,6 +84,7 @@
     initFx();
     initGlance();
     initFocus();
+    initCot();
     fetchJSON('data/currencies.json').then(function (d) {
       fx.data = d;
       renderFx();
@@ -457,6 +458,10 @@
     if (tab === 'fx') {
       fx.focus = (h[1] || '').toUpperCase();
       renderFx();
+    }
+    if (tab === 'positioning') {
+      cot.focus = (h[1] || '').toUpperCase();
+      renderCot();
     }
     var active = $('#tab-' + tab);
     if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
@@ -1320,6 +1325,317 @@
     setText('#bank-foot', thin.length
       ? 'Rates and pricing for ' + thin.join(', ') + ' arrive as the data feed covers them.'
       : '');
+  }
+
+  /* ---------------- positioning (COT) ----------------
+     data/cot.json (Claude's weekly job; numbers from assets/cot.js) →
+     who's crowded, per market. Hedge funds (leveraged / managed money) are
+     the filled dot, real money (asset managers, currencies only) the ring,
+     on a 0–100 percentile track vs their own history since 2015.
+     Safety net: no file, or a report behind → build live from the CFTC in
+     the reader's browser with the same code. */
+  var cot = { data: null, live: false, focus: '', loading: false };
+  var COT_ZONES = {
+    'crowded long': 'Crowded long', 'long-side': 'Long-side', 'neutral': 'Neutral',
+    'short-side': 'Short-side', 'crowded short': 'Crowded short'
+  };
+
+  function initCot() {
+    fetchJSON('data/cot.json').then(function (d) {
+      cot.data = d;
+      renderCot();
+      if (window.GlomentCOT && GlomentCOT.isStale(d.report_date)) cotLive();
+    }).catch(function () { cotLive(); });
+  }
+
+  function cotLive() {
+    if (cot.loading || !window.GlomentCOT || !window.fetch) { renderCot(); return; }
+    cot.loading = true;
+    renderCot();
+    GlomentCOT.build().then(function (d) {
+      if (!cot.data || d.report_date > cot.data.report_date) { cot.data = d; cot.live = true; }
+    }).catch(function () { /* keep the snapshot */ }).then(function () {
+      cot.loading = false;
+      renderCot();
+      renderFx();
+    });
+  }
+
+  function cotMarket(id) {
+    var ms = (cot.data && cot.data.markets) || [];
+    for (var i = 0; i < ms.length; i++) if (ms[i].id === id) return ms[i];
+    return null;
+  }
+
+  function fmtSigned(x) {
+    if (x == null) return '—';
+    return (x > 0 ? '+' : x < 0 ? '−' : '') + Math.abs(x).toLocaleString('en-US');
+  }
+  function fmtCount(x) { return x == null ? '—' : (x < 0 ? '−' : '') + Math.abs(x).toLocaleString('en-US'); }
+  function ordinalN(p) {
+    if (p < 0.5) return '<1st';
+    if (p > 99.5) return '>99th';
+    var r = Math.round(p), s = ['th', 'st', 'nd', 'rd'], v = r % 100;
+    return r + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+  function fmtDay(ymd, opts) {
+    try {
+      return new Date(ymd + 'T12:00:00Z').toLocaleDateString('en-US',
+        Object.assign({ timeZone: 'UTC', month: 'short', day: 'numeric' }, opts || {}));
+    } catch (e) { return ymd; }
+  }
+  /* Next CFTC release after this report: the Friday 3 days after the next
+     Tuesday, 3:30 PM New York — shown in the reader's zone. */
+  function cotNextRelease(reportDate) {
+    var t = new Date(reportDate + 'T00:00:00Z');
+    var fri = new Date(t.getTime() + 10 * 864e5);
+    var ymd = fri.toISOString().slice(0, 10);
+    // 3:30 PM New York = 19:30 UTC (EDT) or 20:30 UTC (EST)
+    var probe = new Date(ymd + 'T19:30:00Z');
+    var nyH = +new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', hourCycle: 'h23' }).format(probe);
+    var at = nyH === 15 ? probe : new Date(ymd + 'T20:30:00Z');
+    return at;
+  }
+
+  function stretch(m) { return Math.abs(m.hf.pct - 50); }
+
+  /* 0–100 percentile track: zone bands, hedge funds = dot, real money = ring. */
+  function cotGauge(m) {
+    var g = el('div', 'cg');
+    g.setAttribute('role', 'img');
+    g.setAttribute('aria-label', 'Hedge funds ' + ordinalN(m.hf.pct) + ' percentile' +
+      (m.rm ? ', real money ' + ordinalN(m.rm.pct) + ' percentile' : ''));
+    var tr = el('div', 'cg-track');
+    [['cs', 0, 10], ['ss', 10, 40], ['nn', 40, 60], ['ls', 60, 90], ['cl', 90, 100]].forEach(function (z) {
+      var b = el('i', 'cg-band cg-' + z[0]);
+      b.style.left = z[1] + '%';
+      b.style.width = (z[2] - z[1]) + '%';
+      tr.appendChild(b);
+    });
+    if (m.rm) {
+      var r = el('b', 'cg-rm');
+      r.style.left = m.rm.pct + '%';
+      r.title = 'Real money · ' + ordinalN(m.rm.pct) + ' percentile';
+      tr.appendChild(r);
+    }
+    var h = el('b', 'cg-hf');
+    h.style.left = m.hf.pct + '%';
+    h.title = 'Hedge funds · ' + ordinalN(m.hf.pct) + ' percentile';
+    tr.appendChild(h);
+    g.appendChild(tr);
+    return g;
+  }
+
+  /* Weekly net bars (hedge funds), zero line, first/last dates. */
+  function cotBars(hist, key, label) {
+    var pts = hist.filter(function (h) { return h[key] != null; });
+    var wrap = el('figure', 'cb');
+    wrap.appendChild(el('figcaption', 'cb-cap', label));
+    if (pts.length < 2) return wrap;
+    var NS = 'http://www.w3.org/2000/svg', W = 260, H = 70, pad = 2;
+    var max = Math.max.apply(null, pts.map(function (p) { return Math.abs(p[key]); })) || 1;
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('class', 'cb-svg');
+    svg.setAttribute('aria-hidden', 'true');
+    var bw = (W - pad * 2) / pts.length, mid = H / 2;
+    pts.forEach(function (p, i) {
+      var v = p[key], hgt = Math.max(1, Math.abs(v) / max * (mid - 3));
+      var r = document.createElementNS(NS, 'rect');
+      r.setAttribute('x', (pad + i * bw + bw * 0.15).toFixed(2));
+      r.setAttribute('width', (bw * 0.7).toFixed(2));
+      r.setAttribute('y', (v >= 0 ? mid - hgt : mid).toFixed(2));
+      r.setAttribute('height', hgt.toFixed(2));
+      r.setAttribute('class', (v >= 0 ? 'cb-pos' : 'cb-neg') + (i === pts.length - 1 ? ' cb-last' : ''));
+      var t = document.createElementNS(NS, 'title');
+      t.textContent = fmtDay(p.d) + ': ' + fmtSigned(v);
+      r.appendChild(t);
+      svg.appendChild(r);
+    });
+    var z = document.createElementNS(NS, 'line');
+    z.setAttribute('x1', 0); z.setAttribute('x2', W);
+    z.setAttribute('y1', mid); z.setAttribute('y2', mid);
+    z.setAttribute('class', 'cb-zero');
+    svg.appendChild(z);
+    wrap.appendChild(svg);
+    var ax = el('div', 'cb-axis meta');
+    ax.appendChild(el('span', null, fmtDay(pts[0].d)));
+    ax.appendChild(el('span', null, fmtDay(pts[pts.length - 1].d)));
+    wrap.appendChild(ax);
+    return wrap;
+  }
+
+  function cotFigures(g, label) {
+    var box = el('div', 'cf');
+    box.appendChild(el('p', 'cf-lbl', label));
+    var dl = el('dl', 'cf-grid');
+    [
+      ['Net', fmtSigned(g.net)],
+      ['Longs · shorts', fmtCount(g.long) + ' · ' + fmtCount(g.short)],
+      ['Flip (net ÷ open interest)', (g.flip > 0 ? '+' : '') + g.flip.toFixed(2) + '%'],
+      ['Percentile since 2015', ordinalN(g.pct) + ' · ' + (COT_ZONES[g.zone] || g.zone)],
+      ['Z-score 10y · 1y', (g.z.y10 == null ? '—' : g.z.y10.toFixed(2)) + ' · ' + (g.z.y1 == null ? '—' : g.z.y1.toFixed(2))],
+      ['12-week range', g.range12 + '% of the way up'],
+      ['Change 1w · 4w', fmtSigned(g.chg1) + ' · ' + fmtSigned(g.chg4)]
+    ].forEach(function (r) {
+      dl.appendChild(el('dt', null, r[0]));
+      dl.appendChild(el('dd', 'mono', r[1]));
+    });
+    box.appendChild(dl);
+    return box;
+  }
+
+  function cotRow(m) {
+    var d = el('details', 'cot-row gl-scope');
+    d.id = 'cot-' + m.id;
+    if (cot.focus === m.id) d.open = true;
+    var s = el('summary', 'cot-sum');
+    s.appendChild(el('span', 'cot-id mono', m.id));
+    s.appendChild(el('span', 'cot-name', m.name));
+    s.appendChild(cotGauge(m));
+    var zl = el('span', 'cot-zone z-' + m.hf.zone.replace(' ', '-'));
+    zl.appendChild(el('b', null, COT_ZONES[m.hf.zone] || m.hf.zone));
+    zl.appendChild(el('span', 'mono', ' ' + ordinalN(m.hf.pct)));
+    s.appendChild(zl);
+    var flags = el('span', 'cot-flags');
+    if (m.split) flags.appendChild(el('span', 'cot-flag split', 'Split'));
+    if (m.hf.range12 === 0 || m.hf.range12 === 100) {
+      flags.appendChild(el('span', 'cot-flag ext', m.hf.range12 === 0 ? '12w low' : '12w high'));
+    }
+    s.appendChild(flags);
+    d.appendChild(s);
+
+    var body = el('div', 'cot-body');
+    body.appendChild(el('p', 'cot-prose', m.summary));
+    body.appendChild(el('p', 'meta cot-means', 'Long here means betting on the ' + m.long_means + '.' +
+      (m.signal ? ' Engine positioning read: ' + (m.signal > 0 ? '+1 (crowded short — squeeze risk up)' : '−1 (crowded long — unwind risk down)') + '.' : '')));
+    var charts = el('div', 'cot-charts');
+    charts.appendChild(cotBars(m.history, 'hf', 'Hedge funds · net contracts, 26 weeks'));
+    if (m.rm) charts.appendChild(cotBars(m.history, 'rm', 'Real money · net contracts, 26 weeks'));
+    body.appendChild(charts);
+    var det = drawer('Details', 'the numbers');
+    var figs = el('div', 'cot-figs');
+    figs.appendChild(cotFigures(m.hf, m.hf_label || 'Hedge funds'));
+    if (m.rm) figs.appendChild(cotFigures(m.rm, m.rm_label || 'Real money'));
+    det.appendChild(figs);
+    det.appendChild(el('p', 'meta', m.contract + ' · ' + (m.report === 'TFF' ? 'Traders in Financial Futures' : 'Disaggregated') +
+      ' report, futures only · open interest ' + fmtCount(m.oi) + ' · positions as of ' + fmtDay(m.as_of, { year: 'numeric' })));
+    det.appendChild(sourceChips(cot.data.sources || []));
+    body.appendChild(det);
+    if (m.kind === 'fx' && m.id !== 'USD') {
+      var a = el('a', 'more', m.name + ' page →');
+      a.href = '#fx/' + m.id;
+      body.appendChild(a);
+    } else if (m.id === 'USD') {
+      var u = el('a', 'more', 'US dollar page →');
+      u.href = '#fx/USD';
+      body.appendChild(u);
+    }
+    d.appendChild(body);
+    return d;
+  }
+
+  /* The takeaway, in words: what's crowded, where the two camps split, and
+     the biggest move of the month. */
+  function cotTakeaway(ms) {
+    var lines = [];
+    var crowded = ms.filter(function (m) { return /crowded/.test(m.hf.zone); });
+    if (crowded.length) {
+      lines.push('Crowded: ' + crowded.map(function (m) {
+        return m.name + ' (' + (m.hf.zone === 'crowded long' ? 'long' : 'short') + ', ' + ordinalN(m.hf.pct) + ' pct)';
+      }).join(', ') + '.');
+    } else {
+      lines.push('Nothing is crowded this week — no hedge-fund reading at the 10th or 90th percentile.');
+    }
+    var fxs = ms.filter(function (m) { return m.kind === 'fx' && !/crowded/.test(m.hf.zone); })
+      .sort(function (a, b) { return stretch(b) - stretch(a); });
+    if (fxs.length && stretch(fxs[0]) >= 10) {
+      var t = fxs[0];
+      lines.push('Most stretched currency: ' + t.id + ', hedge funds ' + (t.hf.pct >= 50 ? 'long-side' : 'short-side') + ' at the ' + ordinalN(t.hf.pct) + ' percentile.');
+    }
+    var splits = ms.filter(function (m) { return m.split; });
+    if (splits.length) {
+      lines.push('Hedge funds and real money lean opposite ways on ' + splits.map(function (m) { return m.id; }).join(', ') + '.');
+    }
+    var mover = ms.slice().filter(function (m) { return m.hf.chg4 != null && m.oi; })
+      .sort(function (a, b) { return Math.abs(b.hf.chg4) / b.oi - Math.abs(a.hf.chg4) / a.oi; })[0];
+    if (mover) {
+      lines.push('Biggest 4-week shift: ' + mover.name + ', hedge funds ' + fmtSigned(mover.hf.chg4) + ' contracts' +
+        (mover.hf.range12 === 0 ? ' to a 12-week low.' : mover.hf.range12 === 100 ? ' to a 12-week high.' : '.'));
+    }
+    return lines;
+  }
+
+  function renderCot() {
+    var box = $('#cot-body');
+    if (!box) return;
+    box.textContent = '';
+    var d = cot.data;
+    if (!d || !(d.markets || []).length) {
+      setText('#cot-meta', cot.loading ? 'Loading the latest report from the CFTC…' : 'Positioning data unavailable.');
+      return;
+    }
+    var nxt = cotNextRelease(d.report_date);
+    var meta = 'Positions as of ' + fmtDay(d.report_date, { weekday: 'short', year: 'numeric' }) +
+      ' · next report ' + nxt.toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }) +
+      (cot.live ? ' · computed live from the CFTC' : '');
+    if (cot.loading) meta += ' · checking for a newer report…';
+    setText('#cot-meta', meta);
+
+    var ms = d.markets;
+    var top = el('section', 'card cot-take');
+    top.appendChild(el('p', 'kicker', 'This week'));
+    var ul = el('ul', 'cot-lines');
+    cotTakeaway(ms).forEach(function (l) { ul.appendChild(el('li', null, l)); });
+    top.appendChild(ul);
+    box.appendChild(top);
+
+    [['fx', 'Currencies', 'vs the US dollar (USD = ICE Dollar Index)'], ['commodity', 'Commodities', 'feed the terms-of-trade pillar: oil → CAD, NOK · metals → AUD, NZD']].forEach(function (grp) {
+      var list = ms.filter(function (m) { return m.kind === grp[0]; })
+        .sort(function (a, b) { return stretch(b) - stretch(a); });
+      if (!list.length) return;
+      var sec = el('section', 'card cot-group');
+      var hd = el('div', 'cot-group-head');
+      hd.appendChild(el('h2', 'section-label', grp[1]));
+      hd.appendChild(el('span', 'meta', grp[2]));
+      sec.appendChild(hd);
+      var leg = el('div', 'cot-legend meta');
+      leg.appendChild(el('span', 'cl-hf', 'Hedge funds'));
+      if (grp[0] === 'fx') leg.appendChild(el('span', 'cl-rm', 'Real money'));
+      leg.appendChild(el('span', 'cl-scale', 'Crowded short ← percentile vs own history since 2015 → crowded long'));
+      sec.appendChild(leg);
+      list.forEach(function (m) { sec.appendChild(cotRow(m)); });
+      box.appendChild(sec);
+    });
+
+    var how = el('section', 'card cot-how');
+    how.appendChild(el('h2', 'section-label', 'How to read this'));
+    [
+      'Every Friday the CFTC publishes who holds what in US futures as of Tuesday. Hedge funds and CTAs are the fast, trend-following money; asset managers are the slower real money.',
+      'The percentile ranks this week’s net position (as a share of open interest) against every week since January 2015. At the 90th or above, a trade is crowded long; at the 10th or below, crowded short. Crowded trades are fragile — if everyone is already long, there is no one left to buy.',
+      'A split — hedge funds and real money leaning opposite ways — is worth watching: one side is usually wrong, and the unwind can be sharp.',
+      'Positioning is a risk gauge, not an entry signal. Extremes can persist and get more extreme. It lags by three days.'
+    ].forEach(function (p) { how.appendChild(el('p', null, p)); });
+    how.appendChild(el('p', 'meta', 'Method: ' + (d.method || '')));
+    box.appendChild(how);
+
+    if (cot.focus) {
+      var row = $('#cot-' + cot.focus);
+      if (row && row.scrollIntoView) setTimeout(function () { row.scrollIntoView({ block: 'start', behavior: 'smooth' }); }, 60);
+    }
+  }
+
+  /* Currency page: one line on positioning, linking to the tab. */
+  function cotLine(ccy) {
+    var m = cotMarket(ccy);
+    if (!m) return null;
+    var a = el('a', 'fd-cot');
+    a.href = '#positioning/' + ccy;
+    a.appendChild(el('span', 'callout-lbl', 'Positioning'));
+    a.appendChild(el('span', null, 'Hedge funds ' + (COT_ZONES[m.hf.zone] || m.hf.zone).toLowerCase() + ' (' + ordinalN(m.hf.pct) + ' pct)' +
+      (m.rm ? ' · real money ' + ordinalN(m.rm.pct) : '') + (m.split ? ' · split' : '') + ' →'));
+    return a;
   }
 
   /* ---------------- calendar ----------------
@@ -2305,6 +2621,8 @@
     side.appendChild(el('h2', 'section-label', 'Trend'));
     side.appendChild(sparkline(fxHistory(c)));
     side.appendChild(momentumBlock(c));
+    var cl = cotLine(c.ccy);
+    if (cl) side.appendChild(cl);
     // Story chapter
     if (c.chapter && story && story.chapters && story.chapters[c.chapter - 1]) {
       var sl = el('a', 'fd-story');
