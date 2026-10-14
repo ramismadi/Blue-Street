@@ -1,51 +1,51 @@
 {
- "active": true,
- "event_id": "us-cpi-20261014",
- "forks": [
-  {
-   "if": "Core m/m 0.2% or below",
-   "then": "Disinflation validated — December hike odds slip, crowded USD longs unwind, DXY gives back a percent, gold re-arms toward $4,300."
+  "active": true,
+  "event_id": "us-cpi-20261014",
+  "forks": [
+    {
+      "if": "Core m/m 0.2% or below",
+      "then": "Disinflation validated — December hike odds slip, crowded USD longs unwind, DXY gives back a percent, gold re-arms toward $4,300."
+    },
+    {
+      "if": "Core m/m 0.3% or hotter",
+      "then": "The October hike revives — December gets fully priced, DXY breaks out above the 18-month top, real yields jump and gold slides back toward $4,000."
+    },
+    {
+      "if": "Headline hot but core cool (energy-driven)",
+      "then": "The market reads through it — core is the Fed's number; the dollar's first reaction fades by the London close."
+    }
+  ],
+  "phase": "recap",
+  "setup": {
+    "consensus": "3.6% y/y (Reuters poll 3.7%), 0.6% m/m; core 0.2% m/m, 2.5% y/y",
+    "previous": "3.4% y/y, 0.4% m/m; core 0.3% m/m, 2.4% y/y",
+    "priced": "October hike ~23% (hold ~77%), December hike ~84%"
   },
-  {
-   "if": "Core m/m 0.3% or hotter",
-   "then": "The October hike revives — December gets fully priced, DXY breaks out above the 18-month top, real yields jump and gold slides back toward $4,000."
-  },
-  {
-   "if": "Headline hot but core cool (energy-driven)",
-   "then": "The market reads through it — core is the Fed's number; the dollar's first reaction fades by the London close."
+  "stakes": "Decides whether the October 27–28 hike comes back to life — and whether $35.5bn of crowded dollar longs get to keep the trade.",
+  "story_so_far": [
+    "August CPI surprised hot at 3.4% y/y — and the Fed hiked 25bp to 3.75–4.00% in September, with the board warning that AI-boom demand and wealth-effect spending are lodging inflation in the 2.5–3.0% range.",
+    "September payrolls then collapsed to 29k — the labor floor cracked. The market split the difference: one more hike in 2026 stays the base case, but the October 27–28 meeting is priced as a hold (~77%).",
+    "Into the print the Fed chorus divided openly: Hammack said rates 'need to move higher'; Waller said surging long yields are doing some of the Fed's tightening work; Williams capped 2027 at no further hikes.",
+    "Now September CPI is the tiebreaker. Core m/m is the number the market is actually trading: 0.2% or below validates disinflation, 0.3% or hotter revives the October hike nobody has priced."
+  ],
+  "thread": "us-cpi-20261014",
+  "title": "US CPI (Sep)",
+  "watch": [
+    "7:30 AM CT — CPI prints (BLS); the page flips to live by itself",
+    "7:30–8:00 AM CT — first repricing: FedWatch odds, DXY, the 2-year yield",
+    "12:30 PM CT — Barkin speaks into the print's aftermath",
+    "1:00 PM CT — Fed Beige Book: the anecdotal read on business price hikes",
+    "2:00 PM CT — Goolsbee speaks (warned AI inflation is 'jumping out of its lane')"
+  ],
+  "recap": {
+    "outcome": "Hot: core 0.3% m/m (vs 0.2% exp) and 2.6% y/y (vs 2.5% exp) — beats on both core measures; headline 3.7% y/y (vs 3.6% LSEG est, in line with Reuters poll 3.7%) on +0.6% m/m. Energy drove the headline, but core means pressure is broadening.",
+    "actual": "3.7% y/y, +0.6% m/m; core 0.3% m/m, 2.6% y/y",
+    "expected": "3.6% y/y (Reuters poll 3.7%), 0.6% m/m; core 0.2% m/m, 2.5% y/y",
+    "pricing": "October 27–28 repriced ~23% → ~43–47% (coin flip) by the NY close; December effectively fully priced (was ~84%). DXY held the 18-month-high break (~102.9) through the afternoon; EUR/USD steadied ~1.1155 (-0.39%), USD/JPY ~158.84 (+0.3%), gold slid to ~$4,094 (-1.4%) as the 2Y jumped 13bp to 4.92%.",
+    "thesis": {
+      "verdict": "breaks",
+      "note": "The October-hold base case (~77% priced) broke — hot core on both measures revives the October hike the market had shelved; the 'one more hike, but in December' framing shifts toward 'possibly October'."
+    },
+    "fork": 1
   }
- ],
- "phase": "recap",
- "setup": {
-  "consensus": "3.6% y/y (Reuters poll 3.7%), 0.6% m/m; core 0.2% m/m, 2.5% y/y",
-  "previous": "3.4% y/y, 0.4% m/m; core 0.3% m/m, 2.4% y/y",
-  "priced": "October hike ~23% (hold ~77%), December hike ~84%"
- },
- "stakes": "Decides whether the October 27–28 hike comes back to life — and whether $35.5bn of crowded dollar longs get to keep the trade.",
- "story_so_far": [
-  "August CPI surprised hot at 3.4% y/y — and the Fed hiked 25bp to 3.75–4.00% in September, with the board warning that AI-boom demand and wealth-effect spending are lodging inflation in the 2.5–3.0% range.",
-  "September payrolls then collapsed to 29k — the labor floor cracked. The market split the difference: one more hike in 2026 stays the base case, but the October 27–28 meeting is priced as a hold (~77%).",
-  "Into the print the Fed chorus divided openly: Hammack said rates 'need to move higher'; Waller said surging long yields are doing some of the Fed's tightening work; Williams capped 2027 at no further hikes.",
-  "Now September CPI is the tiebreaker. Core m/m is the number the market is actually trading: 0.2% or below validates disinflation, 0.3% or hotter revives the October hike nobody has priced."
- ],
- "thread": "us-cpi-20261014",
- "title": "US CPI (Sep)",
- "watch": [
-  "7:30 AM CT — CPI prints (BLS); the page flips to live by itself",
-  "7:30–8:00 AM CT — first repricing: FedWatch odds, DXY, the 2-year yield",
-  "12:30 PM CT — Barkin speaks into the print's aftermath",
-  "1:00 PM CT — Fed Beige Book: the anecdotal read on business price hikes",
-  "2:00 PM CT — Goolsbee speaks (warned AI inflation is 'jumping out of its lane')"
- ],
- "recap": {
-  "outcome": "Hot: core 0.3% m/m (vs 0.2% exp) and 2.6% y/y (vs 2.5% exp) — beats on both core measures; headline 3.7% y/y (vs 3.6% LSEG est, in line with Reuters poll 3.7%) on +0.6% m/m. Energy drove the headline, but core means pressure is broadening.",
-  "actual": "3.7% y/y, +0.6% m/m; core 0.3% m/m, 2.6% y/y",
-  "expected": "3.6% y/y (Reuters poll 3.7%), 0.6% m/m; core 0.2% m/m, 2.5% y/y",
-  "pricing": "October 27–28 hike back in play (was ~23% priced pre-print; December ~84%). USD bid post-print: EUR/USD slid ~1.1208 → 1.1134 (-0.6%), USD/JPY rose ~158.2 → 158.84 (+0.3%).",
-  "thesis": {
-   "verdict": "breaks",
-   "note": "The October-hold base case (~77% priced) broke — hot core on both measures revives the October hike the market had shelved; the 'one more hike, but in December' framing shifts toward 'possibly October'."
-  },
-  "fork": 1
- }
 }
