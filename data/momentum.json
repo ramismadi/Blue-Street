@@ -1,58 +1,88 @@
 {
- "currencies": {
-  "USD": {
-   "recent": [],
-   "note": null
-  },
-  "EUR": {
-   "recent": [],
-   "note": null
-  },
-  "GBP": {
-   "recent": [],
-   "note": null
-  },
-  "JPY": {
-   "recent": [],
-   "note": null
-  },
-  "CHF": {
-   "recent": [],
-   "note": null
-  },
-  "AUD": {
-   "recent": [
-    {
-     "id": "cny-trade-20261014",
-     "date": "2026-10-14",
-     "title": "China exports y/y (Sep)",
-     "result": "beat",
-     "actual": "+36.3%",
-     "forecast": "25.5%",
-     "note": null
+  "since": "2026-10-14",
+  "window": 6,
+  "updated": "2026-10-14T16:35:00-05:00",
+  "currencies": {
+    "USD": {
+      "recent": [
+        {
+          "id": "us-cpi-20261014",
+          "date": "2026-10-14",
+          "title": "US CPI y/y (Sep)",
+          "result": "beat",
+          "actual": "3.7%",
+          "forecast": "3.6%",
+          "note": "Core beat twice (0.3% m/m, 2.6% y/y) — the October-hold thesis broke; December fully priced."
+        }
+      ],
+      "note": "Hot core on both measures — October 27–28 back in play."
     },
-    {
-     "id": "china-cpi-20261014",
-     "date": "2026-10-14",
-     "title": "China CPI y/y (Sep)",
-     "result": "miss",
-     "actual": "0.9%",
-     "forecast": "1.0%",
-     "note": null
+    "EUR": {
+      "recent": [
+        {
+          "id": "de-wpi-20261014",
+          "date": "2026-10-14",
+          "title": "German WPI y/y (Sep)",
+          "result": "miss",
+          "actual": "+8.7%",
+          "forecast": "0.6% m/m",
+          "note": "Pipeline inflation hot (hottest since Feb 2023) — a miss on the disinflation read, but it firms the ECB's December-hike case."
+        }
+      ],
+      "note": "Hot wholesale prices keep December alive without committing October."
+    },
+    "GBP": {
+      "recent": [],
+      "note": null
+    },
+    "JPY": {
+      "recent": [],
+      "note": null
+    },
+    "CHF": {
+      "recent": [],
+      "note": null
+    },
+    "AUD": {
+      "recent": [
+        {
+          "id": "cny-trade-20261014",
+          "date": "2026-10-14",
+          "title": "China exports y/y (Sep)",
+          "result": "beat",
+          "actual": "+36.3%",
+          "forecast": "25.5%",
+          "note": null
+        },
+        {
+          "id": "china-cpi-20261014",
+          "date": "2026-10-14",
+          "title": "China CPI y/y (Sep)",
+          "result": "miss",
+          "actual": "0.9%",
+          "forecast": "1.0%",
+          "note": null
+        }
+      ],
+      "note": "China's export boom beats on AI hardware; consumer CPI soft — mixed Asia signal into US CPI."
+    },
+    "CAD": {
+      "recent": [
+        {
+          "id": "cad-building-20261014",
+          "date": "2026-10-14",
+          "title": "Canada building permits m/m (Aug)",
+          "result": "beat",
+          "actual": "+8.8%",
+          "forecast": "2.9%",
+          "note": "Rebound led by multi-unit residential; texture vs the -68.3K jobs shock."
+        }
+      ],
+      "note": "Permits beat — stabilizing pipeline, not a BoC game-changer."
+    },
+    "NZD": {
+      "recent": [],
+      "note": null
     }
-   ],
-   "note": "China's export boom beats on AI hardware; consumer CPI soft \u2014 mixed Asia signal into US CPI."
-  },
-  "CAD": {
-   "recent": [],
-   "note": null
-  },
-  "NZD": {
-   "recent": [],
-   "note": null
   }
- },
- "since": "2026-10-14",
- "updated": "2026-10-14T02:02:01-05:00",
- "window": 6
 }
