@@ -120,22 +120,39 @@
     return r + (s[(v - 20) % 10] || s[v] || s[0]);
   }
 
+  /* "net long, but light for them" — the absolute side and where it sits in
+     its own history are different things, and the sentence says both. */
+  function stance(g) {
+    var dir = g.net >= 0 ? 'net long' : 'net short';
+    var s = side(g.zone), sign = g.net >= 0 ? 1 : -1;
+    var rel = g.zone === 'neutral' ? 'mid-range for them'
+      : g.zone === 'crowded long' ? (sign > 0 ? 'a crowded long by their own history' : 'yet the most long-leaning they get — crowded long by their own history')
+      : g.zone === 'crowded short' ? (sign < 0 ? 'a crowded short by their own history' : 'but the lightest they get — crowded short by their own history')
+      : s === sign ? 'heavier than usual'
+      : (s > 0 ? 'but less short than usual' : 'but lighter than usual');
+    return dir + ', ' + rel + ' (' + ordinal(g.pct) + ' percentile)';
+  }
+
+  /* What the last four weeks did to the net position, in trader terms. */
+  function flow(g) {
+    var c = g.chg4;
+    if (c == null || c === 0) return '';
+    var was = g.net - c, amt = fmtInt(Math.abs(c));
+    if (was >= 0 && g.net >= 0) return c > 0 ? 'added ' + amt + ' to their net long' : 'cut their net long by ' + amt;
+    if (was < 0 && g.net < 0) return c < 0 ? 'added ' + amt + ' to their net short' : 'cut their net short by ' + amt;
+    return c > 0 ? 'flipped from net short to net long' : 'flipped from net long to net short';
+  }
+
   function summarize(m) {
-    var hf = m.hf, who = 'Hedge funds';
-    var dir = hf.net >= 0 ? 'net long' : 'net short';
-    var where = hf.zone === 'neutral' ? 'mid-range for their history'
-      : hf.zone === 'crowded long' ? 'a crowded long by their own history'
-      : hf.zone === 'crowded short' ? 'a crowded short by their own history'
-      : hf.zone === 'long-side' ? 'leaning long versus their history'
-      : 'leaning short versus their history';
-    var s = who + ' are ' + dir + ' ' + m.ref +
-      ', ' + where + ' (' + ordinal(hf.pct) + ' percentile).';
-    if (hf.chg4 != null && hf.chg4 !== 0) {
-      s += ' Over four weeks they ' + (hf.chg4 > 0 ? 'added ' + fmtInt(hf.chg4) + ' net longs.' : 'added ' + fmtInt(-hf.chg4) + ' net shorts.');
+    var hf = m.hf;
+    var s = 'Hedge funds are ' + stance(hf).replace(/^(net (?:long|short))/, '$1 ' + m.ref) + '.';
+    var f = flow(hf);
+    if (f) s += ' Over four weeks they ' + f + (f.indexOf('flipped') === 0 ? '' : ' contracts') + '.';
+    if (hf.range12 === 0 || hf.range12 === 100) {
+      s += ' That is the ' + (hf.range12 === 0 ? 'lowest' : 'highest') + ' net position in 12 weeks.';
     }
     if (m.rm) {
-      s += ' Real money is ' + (m.rm.net >= 0 ? 'net long' : 'net short') + ' (' + ordinal(m.rm.pct) + ' percentile)' +
-        (m.split ? ', on the other side of the hedge funds.' : '.');
+      s += ' Real money is ' + stance(m.rm) + (m.split ? ' — leaning the other way from the hedge funds.' : '.');
     }
     return s;
   }
