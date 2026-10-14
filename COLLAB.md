@@ -464,3 +464,20 @@ there is a delta, however small, it is not quiet.
 Rami asked Hercules to leave this for you. The above is the full picture.
 When in doubt about who should do what, ask Rami — he'd rather answer than
 untangle a merge conflict.
+
+## Positioning feed — Claude owns it (Rami, 2026-10-14)
+`data/cot.json` is Claude's, not Hercules'. It is written by a GitHub Action
+(`.github/workflows/cot.yml`) every Friday after the CFTC release, from the
+calculator in `assets/cot.js`; schema in DESIGN.md. Hercules: please don't
+write to `data/cot.json`, `assets/cot.js` or `tools/cot-build.cjs`.
+
+**Request for Hercules (engine + currencies):** the positioning pillar should
+now come from this file instead of news reports:
+- `currencies.json` → `drivers.positioning.score` = that market's `signal`
+  (−1 crowded long, +1 crowded short, else 0 — the rule the `method` string
+  already describes), and `note` = its `summary` (or a shorter version of it).
+- `engine.json` positioning row → lead `read` with the "This week" picture:
+  what's crowded, any splits, the biggest 4-week shift. Cite the CFTC source
+  from the file, report date included.
+- News figures on positioning (e.g. "aggregate USD longs $35.5bn") can still
+  add colour, but the score comes from the CFTC numbers.

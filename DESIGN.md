@@ -16,6 +16,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Story | `#story`, `#story/2` = chapter 2 | `data/story.json` |
 | Currencies | `#fx`, `#fx/AUD` = currency page | `data/currencies.json` (+ banks, calendar, story joins) |
 | Macro engine | `#engine` | `data/engine.json` + `data/pillars.json` |
+| Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
 | Central banks | `#banks` | `data/banks.json` |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join) |
 | Flash | `#flash` (old `#wire` links redirect) | `data/latest.json` |
@@ -261,6 +262,51 @@ no "Developing"/"Latest" pill. Hercules prunes threads 72h after their last
 update and unthreaded items after 36h.
 Keep the `Numbers:` / `Meaning:` / `FX:` prefixes on bullets — the FX line
 shows by default, the rest sits behind "Full detail".
+
+### `data/cot.json` — Positioning (Claude owns; weekly, automated)
+Built by **`assets/cot.js`** (the one calculator; the site loads it too) from the
+CFTC's public Commitments of Traders API, by the GitHub Action
+`.github/workflows/cot.yml` → `node tools/cot-build.cjs`. Runs Fri 21:17 UTC
+(after the 3:30 PM ET release), with Sat and Mon catch-ups for holiday weeks;
+commits only when a newer report exists, and refuses to overwrite a good
+snapshot with a bad pull. **Nobody hand-edits this file** — change the
+calculator instead (pushing `assets/cot.js` re-runs the job).
+```
+{"updated":"<ISO>","report_date":"2026-10-06",      // Tuesday the positions are as of
+ "method":"...","sources":[{"label","url"}],
+ "markets":[{"id":"EUR","name":"Euro","ref":"the euro",
+   "kind":"fx"|"commodity","report":"TFF"|"Disaggregated",
+   "contract":"CME Euro FX","code":"099741","long_means":"euro up against the dollar",
+   "as_of":"2026-10-06","oi":870291,
+   "hf":{"net","long","short","flip","pct","zone","z":{"all","y10","y1"},
+         "range12","chg1","chg4","weeks","since"},  // hedge funds & CTAs
+   "rm":{...same...},                                 // real money — fx only
+   "split":false,        // hf and rm lean opposite ways vs their own history
+   "signal":0,           // engine positioning score: crowded long −1, crowded short +1
+   "history":[{"d","hf","oi","rm"?}],                // last 26 weeks, net contracts
+   "summary":"one plain-English line"}]}
+```
+- **Markets:** USD (ICE Dollar Index), EUR, GBP, JPY, CHF, CAD, AUD, NZD from the
+  Traders in Financial Futures report (Leveraged Money = hedge funds, Asset
+  Manager = real money); gold, silver, WTI, copper from the Disaggregated report
+  (Managed Money). Futures only. Contract codes keep full history through the
+  CFTC's 2022 renames, so every market ranks against Jan 2015 onward.
+- **Maths:** flip = (long − short) ÷ open interest × 100; `pct` = mid-rank of
+  this week's flip vs every week since Jan 2015; zones ≥90 crowded long,
+  ≥60 long-side, ≤40 short-side, ≤10 crowded short; `range12` = where the net
+  sits in its 12-week range (0 = 12-week low). Calibrated 2026-10-14 against a
+  public benchmark: EUR/JPY/AUD/CAD/CHF percentiles match to ±0.1.
+- **Safety net:** if the file is missing or a report behind (`isStale`), the
+  Positioning tab rebuilds live in the reader's browser from the CFTC and
+  says so in the header.
+
+How it renders: "This week" takeaway (crowded markets, most stretched
+currency, splits, biggest 4-week shift) → Currencies and Commodities, each
+sorted by distance from the 50th percentile. Each row: percentile track with
+zone bands, filled dot = hedge funds, gold ring = real money, zone label,
+Split / 12w low / 12w high flags. Tap a row: the summary, 26-week bars for
+each group, Details drawer with the numbers and sources. The currency page
+shows a one-line "Positioning" link under Trend.
 
 ### `data/banks.json` — Central banks
 ```
