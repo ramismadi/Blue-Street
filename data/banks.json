@@ -1,232 +1,228 @@
 {
- "updated": "2026-10-14T02:05:00-05:00",
- "banks": [
-  {
-   "id": "fed",
-   "short": "Fed",
-   "name": "Federal Reserve",
-   "ccy": "USD",
-   "rate": "3.75–4.00%",
-   "rate_label": "Fed funds target range",
-   "last_move": {
-    "date": "2026-09-16",
-    "bp": 25
-   },
-   "next_meeting": {
-    "start": "2026-10-27",
-    "end": "2026-10-28"
-   },
-   "priced": "Dec hike ~84% (from ~85%), Oct hike ~23% (from ~19-22%) — CPI day: core m/m 0.2% exp is the tiebreaker for the October meeting; Bowman 4:40am CT, Barkin 12:30pm, Beige Book 1:00pm CT, Goolsbee 2:00pm CT; Warsh Thu 10:30pm CT; FOMC Oct 27-28; blackout from Sat Oct 17",
-   "bias": "hawkish",
-   "sources": [
+  "updated": "2026-10-14T16:35:00-05:00",
+  "banks": [
     {
-     "label": "FRED: Fed funds target range (DFEDTARU/DFEDTARL)",
-     "url": "https://fred.stlouisfed.org/series/DFEDTARU"
+      "id": "fed",
+      "short": "Fed",
+      "name": "Federal Reserve",
+      "ccy": "USD",
+      "rate": "3.75–4.00%",
+      "rate_label": "Fed funds target range",
+      "last_move": {
+        "date": "2026-09-16",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-10-27",
+        "end": "2026-10-28"
+      },
+      "priced": "Oct 27–28 hike ~43–47% (coin flip, from ~23% pre-CPI); December effectively fully priced (from ~84%) — hot September CPI (core 0.3% m/m, 2.6% y/y, both beats) broke the October-hold thesis; Beige Book hot-leaning, Goolsbee called the print ‘discouraging’; blackout from Sat Oct 17; September PCE (Oct 29) lands after the meeting",
+      "bias": "hawkish",
+      "sources": [
+        {
+          "label": "Reuters (Oct 14): VIEW — Hot September CPI sends rate-hike bets soaring",
+          "url": "https://www.reuters.com/business/view-hot-september-cpi-sends-rate-hike-bets-soaring-2026-10-14/"
+        },
+        {
+          "label": "Federal Reserve (Oct 14): Beige Book",
+          "url": "https://www.federalreserve.gov/monetarypolicy/beigebook202610-summary.htm"
+        },
+        {
+          "label": "Reuters (Oct 14): Fed's Goolsbee says September CPI data was discouraging",
+          "url": "https://www.reuters.com/markets/us/feds-goolsbee-says-september-cpi-data-was-discouraging-yahoo-finance-2026-10-14/"
+        },
+        {
+          "label": "FRED: Fed funds target range (DFEDTARU/DFEDTARL)",
+          "url": "https://fred.stlouisfed.org/series/DFEDTARU"
+        }
+      ]
     },
     {
-     "label": "CME FedWatch",
-     "url": "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html"
+      "id": "boc",
+      "short": "BoC",
+      "name": "Bank of Canada",
+      "ccy": "CAD",
+      "rate": "2.25%",
+      "rate_label": "Overnight target rate",
+      "last_move": {
+        "date": "2026-09-02",
+        "bp": 0
+      },
+      "next_meeting": {
+        "start": "2026-10-28"
+      },
+      "priced": "Oct 28 hike ~25% (unchanged); Canada 2Y ~161bp below US 2Y (widest since Feb 2025); Macklem spoke overnight (remarks unverified); Canada building permits 7:30am CT",
+      "bias": "neutral",
+      "sources": [
+        {
+          "label": "BoC: Policy interest rate",
+          "url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/"
+        },
+        {
+          "label": "Reuters: Canadian dollar hits 18-month low as jobs data clips rate hike bets",
+          "url": "https://www.reuters.com/business/canadian-dollar-hits-18-month-low-jobs-data-clips-rate-hike-bets-2026-10-09/"
+        }
+      ]
     },
     {
-     "label": "Reuters: Fed's Collins sees another rate hike on the table before end of 2026 (Oct 13)",
-     "url": "https://kelofm.com/2026/10/13/feds-collins-sees-another-rate-hike-on-the-table-before-end-of-2026/"
+      "id": "rbnz",
+      "short": "RBNZ",
+      "name": "Reserve Bank of New Zealand",
+      "ccy": "NZD",
+      "rate": "2.75%",
+      "rate_label": "Official Cash Rate",
+      "last_move": {
+        "date": "2026-09-02",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-10-28"
+      },
+      "priced": "Oct 28: genuine two-way bet — ~50% priced (down from ~75%); Westpac: pause Oct, hike Dec; ANZ: hike Oct + 2 more early 2027",
+      "bias": "hawkish",
+      "sources": [
+        {
+          "label": "RBNZ: OCR increased to 2.75% (Sep 2, 2026)",
+          "url": "https://www.rbnz.govt.nz/news-and-events/news/2026/09/ocr-increased-by-25-basis-points-to-2-75"
+        },
+        {
+          "label": "Mitrade: NZD edges off low as RBNZ hike bets fall (Oct 7)",
+          "url": "https://www.mitrade.com/au/insights/news/live-news/article-1-2141890-20261007"
+        }
+      ]
     },
     {
-     "label": "Reuters: Fed's Williams sees no need for rate hike in 2027 (Oct 13)",
-     "url": "https://froggyweb.com/2026/10/13/feds-williams-currently-sees-no-need-for-rate-hike-in-2027-bloomberg-news-reports/"
+      "id": "ecb",
+      "short": "ECB",
+      "name": "European Central Bank",
+      "ccy": "EUR",
+      "rate": "2.50%",
+      "rate_label": "Deposit facility rate",
+      "last_move": {
+        "date": "2026-09-10",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-10-29"
+      },
+      "priced": "Oct 29 hike ~12% (unchanged); Lagarde overnight: no second-round effects yet, ECB 'cannot wait until in full view' — December more likely than October; Lane: long-rate rise is material tightening",
+      "bias": "hawkish",
+      "sources": [
+        {
+          "label": "ECB: Monetary policy decision, 10 Sep 2026",
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html"
+        },
+        {
+          "label": "FXStreet: Lagarde — 'we're not seeing any second-round effects yet' (Oct 14)",
+          "url": "https://www.fxstreet.com/news/lagarde-speech-were-not-seeing-any-second-round-effects-yet-202610140236"
+        }
+      ]
     },
     {
-     "label": "Barchart: Dollar Falls on Dovish Fed Comments (Oct 13)",
-     "url": "https://www.barchart.com/story/news/7025939/dollar-falls-on-dovish-fed-comments"
+      "id": "boj",
+      "short": "BoJ",
+      "name": "Bank of Japan",
+      "ccy": "JPY",
+      "rate": "1.25%",
+      "rate_label": "Policy rate (overnight call)",
+      "last_move": {
+        "date": "2026-09-18",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-10-29",
+        "end": "2026-10-30"
+      },
+      "priced": "Oct 30 hike ~9% (unchanged); source report (Newsquawk): BoJ to lean against back-to-back hikes, may tweak target language to 'approx. 2%' — December >80% priced (OIS)",
+      "bias": "hawkish",
+      "sources": [
+        {
+          "label": "BoJ: Sep 18, 2026 statement — policy rate to 1.25%",
+          "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf"
+        },
+        {
+          "label": "ZeroHedge markets roundup (Oct 14): BoJ source report via Newsquawk — lean against back-to-back hikes",
+          "url": "https://www.zerohedge.com:443/markets/trump-and-netanyahu-reportedly-discussed-launching-operations-against-iran-elections-dxy"
+        }
+      ]
+    },
+    {
+      "id": "rba",
+      "short": "RBA",
+      "name": "Reserve Bank of Australia",
+      "ccy": "AUD",
+      "rate": "4.60%",
+      "rate_label": "Cash rate target",
+      "last_move": {
+        "date": "2026-09-29",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-11-02",
+        "end": "2026-11-03"
+      },
+      "priced": "Minutes confirmed tightening bias (unanimous Sep 29 hike; waiting 'could be costly'); Nov 2-3 next; Australia jobs Thu 7:30pm CT (fcst 19.6K, unemp 4.6%); ANZ/UBS see final +25bp to 4.85%, CBA/NAB hold",
+      "bias": "hawkish",
+      "sources": [
+        {
+          "label": "RBA: Cash rate target",
+          "url": "https://www.rba.gov.au/statistics/cash-rate/"
+        },
+        {
+          "label": "RBA: 2026 meeting dates",
+          "url": "https://www.rba.gov.au/media-releases/2025/mr-25-02.html"
+        },
+        {
+          "label": "ActionForex: RBA minutes — unanimous hike, hawkish stance maintained (Oct 13)",
+          "url": "https://www.actionforex.com/central-banks/reserve-bank-of-australia/657278-rba-minutes-of-the-monetary-policy-meeting-of-the-reserve-bank-board-82/"
+        }
+      ]
+    },
+    {
+      "id": "boe",
+      "short": "BoE",
+      "name": "Bank of England",
+      "ccy": "GBP",
+      "rate": "3.75%",
+      "rate_label": "Bank Rate",
+      "last_move": {
+        "date": "2026-09-17",
+        "bp": 0
+      },
+      "next_meeting": {
+        "start": "2026-11-05"
+      },
+      "priced": "Nov 5 hike ~86% priced (unchanged); Bailey spoke overnight, added little new; UK data dump Thu 1:00am CT (GDP fcst -0.1% m/m) is the growth counterpoint",
+      "bias": "hawkish",
+      "sources": [
+        {
+          "label": "BoE: Bank Rate 3.75%",
+          "url": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate"
+        }
+      ]
+    },
+    {
+      "id": "snb",
+      "short": "SNB",
+      "name": "Swiss National Bank",
+      "ccy": "CHF",
+      "rate": "0.00%",
+      "rate_label": "SNB policy rate",
+      "last_move": {
+        "date": "2026-09-24",
+        "bp": 0
+      },
+      "next_meeting": {
+        "start": "2026-12-10"
+      },
+      "priced": "0.00% held; Schlegel speaks tonight 11:30pm CT",
+      "bias": "neutral",
+      "sources": [
+        {
+          "label": "SNB: Assessment of 24 Sep 2026",
+          "url": "https://www.snb.ch/en/publications/communication/press-releases-restricted/pre_20260924"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "boc",
-   "short": "BoC",
-   "name": "Bank of Canada",
-   "ccy": "CAD",
-   "rate": "2.25%",
-   "rate_label": "Overnight target rate",
-   "last_move": {
-    "date": "2026-09-02",
-    "bp": 0
-   },
-   "next_meeting": {
-    "start": "2026-10-28"
-   },
-   "priced": "Oct 28 hike ~25% (unchanged); Canada 2Y ~161bp below US 2Y (widest since Feb 2025); Macklem spoke overnight (remarks unverified); Canada building permits 7:30am CT",
-   "bias": "neutral",
-   "sources": [
-    {
-     "label": "BoC: Policy interest rate",
-     "url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/"
-    },
-    {
-     "label": "Reuters: Canadian dollar hits 18-month low as jobs data clips rate hike bets",
-     "url": "https://www.reuters.com/business/canadian-dollar-hits-18-month-low-jobs-data-clips-rate-hike-bets-2026-10-09/"
-    }
-   ]
-  },
-  {
-   "id": "rbnz",
-   "short": "RBNZ",
-   "name": "Reserve Bank of New Zealand",
-   "ccy": "NZD",
-   "rate": "2.75%",
-   "rate_label": "Official Cash Rate",
-   "last_move": {
-    "date": "2026-09-02",
-    "bp": 25
-   },
-   "next_meeting": {
-    "start": "2026-10-28"
-   },
-   "priced": "Oct 28: genuine two-way bet — ~50% priced (down from ~75%); Westpac: pause Oct, hike Dec; ANZ: hike Oct + 2 more early 2027",
-   "bias": "hawkish",
-   "sources": [
-    {
-     "label": "RBNZ: OCR increased to 2.75% (Sep 2, 2026)",
-     "url": "https://www.rbnz.govt.nz/news-and-events/news/2026/09/ocr-increased-by-25-basis-points-to-2-75"
-    },
-    {
-     "label": "Mitrade: NZD edges off low as RBNZ hike bets fall (Oct 7)",
-     "url": "https://www.mitrade.com/au/insights/news/live-news/article-1-2141890-20261007"
-    }
-   ]
-  },
-  {
-   "id": "ecb",
-   "short": "ECB",
-   "name": "European Central Bank",
-   "ccy": "EUR",
-   "rate": "2.50%",
-   "rate_label": "Deposit facility rate",
-   "last_move": {
-    "date": "2026-09-10",
-    "bp": 25
-   },
-   "next_meeting": {
-    "start": "2026-10-29"
-   },
-   "priced": "Oct 29 hike ~12% (unchanged); Lagarde overnight: no second-round effects yet, ECB 'cannot wait until in full view' — December more likely than October; Lane: long-rate rise is material tightening",
-   "bias": "hawkish",
-   "sources": [
-    {
-     "label": "ECB: Monetary policy decision, 10 Sep 2026",
-     "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html"
-    },
-    {
-     "label": "FXStreet: Lagarde — 'we're not seeing any second-round effects yet' (Oct 14)",
-     "url": "https://www.fxstreet.com/news/lagarde-speech-were-not-seeing-any-second-round-effects-yet-202610140236"
-    }
-   ]
-  },
-  {
-   "id": "boj",
-   "short": "BoJ",
-   "name": "Bank of Japan",
-   "ccy": "JPY",
-   "rate": "1.25%",
-   "rate_label": "Policy rate (overnight call)",
-   "last_move": {
-    "date": "2026-09-18",
-    "bp": 25
-   },
-   "next_meeting": {
-    "start": "2026-10-29",
-    "end": "2026-10-30"
-   },
-   "priced": "Oct 30 hike ~9% (unchanged); source report (Newsquawk): BoJ to lean against back-to-back hikes, may tweak target language to 'approx. 2%' — December >80% priced (OIS)",
-   "bias": "hawkish",
-   "sources": [
-    {
-     "label": "BoJ: Sep 18, 2026 statement — policy rate to 1.25%",
-     "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf"
-    },
-    {
-     "label": "ZeroHedge markets roundup (Oct 14): BoJ source report via Newsquawk — lean against back-to-back hikes",
-     "url": "https://www.zerohedge.com:443/markets/trump-and-netanyahu-reportedly-discussed-launching-operations-against-iran-elections-dxy"
-    }
-   ]
-  },
-  {
-   "id": "rba",
-   "short": "RBA",
-   "name": "Reserve Bank of Australia",
-   "ccy": "AUD",
-   "rate": "4.60%",
-   "rate_label": "Cash rate target",
-   "last_move": {
-    "date": "2026-09-29",
-    "bp": 25
-   },
-   "next_meeting": {
-    "start": "2026-11-02",
-    "end": "2026-11-03"
-   },
-   "priced": "Minutes confirmed tightening bias (unanimous Sep 29 hike; waiting 'could be costly'); Nov 2-3 next; Australia jobs Thu 7:30pm CT (fcst 19.6K, unemp 4.6%); ANZ/UBS see final +25bp to 4.85%, CBA/NAB hold",
-   "bias": "hawkish",
-   "sources": [
-    {
-     "label": "RBA: Cash rate target",
-     "url": "https://www.rba.gov.au/statistics/cash-rate/"
-    },
-    {
-     "label": "RBA: 2026 meeting dates",
-     "url": "https://www.rba.gov.au/media-releases/2025/mr-25-02.html"
-    },
-    {
-     "label": "ActionForex: RBA minutes — unanimous hike, hawkish stance maintained (Oct 13)",
-     "url": "https://www.actionforex.com/central-banks/reserve-bank-of-australia/657278-rba-minutes-of-the-monetary-policy-meeting-of-the-reserve-bank-board-82/"
-    }
-   ]
-  },
-  {
-   "id": "boe",
-   "short": "BoE",
-   "name": "Bank of England",
-   "ccy": "GBP",
-   "rate": "3.75%",
-   "rate_label": "Bank Rate",
-   "last_move": {
-    "date": "2026-09-17",
-    "bp": 0
-   },
-   "next_meeting": {
-    "start": "2026-11-05"
-   },
-   "priced": "Nov 5 hike ~86% priced (unchanged); Bailey spoke overnight, added little new; UK data dump Thu 1:00am CT (GDP fcst -0.1% m/m) is the growth counterpoint",
-   "bias": "hawkish",
-   "sources": [
-    {
-     "label": "BoE: Bank Rate 3.75%",
-     "url": "https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate"
-    }
-   ]
-  },
-  {
-   "id": "snb",
-   "short": "SNB",
-   "name": "Swiss National Bank",
-   "ccy": "CHF",
-   "rate": "0.00%",
-   "rate_label": "SNB policy rate",
-   "last_move": {
-    "date": "2026-09-24",
-    "bp": 0
-   },
-   "next_meeting": {
-    "start": "2026-12-10"
-   },
-   "priced": "0.00% held; Schlegel speaks tonight 11:30pm CT",
-   "bias": "neutral",
-   "sources": [
-    {
-     "label": "SNB: Assessment of 24 Sep 2026",
-     "url": "https://www.snb.ch/en/publications/communication/press-releases-restricted/pre_20260924"
-    }
-   ]
-  }
- ]
+  ]
 }
