@@ -1,420 +1,412 @@
 {
- "as_of": "2026-10-14",
- "currencies": [
-  {
-   "bank": "fed",
-   "ccy": "USD",
-   "chapter": 1,
-   "drivers": {
-    "policy": {
-     "score": 1,
-     "note": "One-more-this-year consensus holds into CPI; FedWatch Oct hike ~23%, Dec ~84%"
+  "as_of": "2026-10-14",
+  "currencies": [
+    {
+      "ccy": "USD",
+      "name": "US dollar",
+      "bank": "fed",
+      "chapter": 1,
+      "summary": "Hot core broke the October-hold thesis: October 27–28 a coin flip (~43–47%, from ~23%), December fully priced, DXY a new 18-month high (~102.9) — the crowded longs got paid, not squeezed.",
+      "drivers": {
+        "policy": {
+          "score": 1,
+          "note": "October 27–28 revived: ~43–47% (from ~23%); December effectively fully priced — own-bank more hawkish vs every peer"
+        },
+        "growth": {
+          "score": 1,
+          "note": "Home sales beat +1.5% to 3.99m; bank earnings mixed-to-solid — growth leg unchanged"
+        },
+        "inflation": {
+          "score": 1,
+          "note": "Hot CPI on both core measures (0.3% m/m, 2.6% y/y) — own-bank hawkishness validated"
+        },
+        "risk": {
+          "score": 0,
+          "note": "Post-CPI bid was a rate repricing, not a fear bid"
+        },
+        "tot": {
+          "score": 0,
+          "note": "No direct terms-of-trade read for the dollar"
+        },
+        "positioning": {
+          "score": -1,
+          "note": "USD aggregate longs ~$35.5bn rewarded by the hot print — now even more crowded into PPI; unwind risk on any soft number"
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "No new US fiscal development"
+        }
+      }
     },
-    "growth": {
-     "score": 1,
-     "note": "Home sales beat +1.5% to 3.99m; bank earnings mixed-to-solid"
+    {
+      "ccy": "EUR",
+      "name": "Euro",
+      "bank": "ecb",
+      "chapter": 2,
+      "summary": "Fell with the dollar leg (1.1208 → ~1.1155) but its own story firmed at the margin: hot German WPI (+8.7%) keeps the ECB's December hike case alive; France cleared its first budget hurdle.",
+      "drivers": {
+        "policy": {
+          "score": -1,
+          "note": "Fed-ECB gap widened against the euro as October revived; ECB Oct ~12%, December the live meeting"
+        },
+        "growth": {
+          "score": 0,
+          "note": "No new eurozone growth data"
+        },
+        "inflation": {
+          "score": 1,
+          "note": "German WPI +8.7% y/y, hottest since Feb 2023 — pipeline inflation firms the December-hike case"
+        },
+        "risk": {
+          "score": -1,
+          "note": "Crude ~$106 is bearish for the energy-importing eurozone"
+        },
+        "tot": {
+          "score": -1,
+          "note": "Brent premium (~$106) raises import costs for eurozone buyers"
+        },
+        "positioning": {
+          "score": 1,
+          "note": "Net shorts -99,332 (~0th pctile) — got paid today; squeeze setup still loaded, trigger denied"
+        },
+        "fiscal": {
+          "score": -1,
+          "note": "Budget cleared first hurdle (236–149); revenue vote Oct 20, Moody's Oct 23 still ahead"
+        }
+      }
     },
-    "inflation": {
-     "score": 1,
-     "note": "CPI 7:30am CT: 3.6% y/y, core m/m 0.2% \u2014 the deciding print for the October meeting"
+    {
+      "ccy": "GBP",
+      "name": "British pound",
+      "bank": "boe",
+      "chapter": 3,
+      "summary": "Took the dollar leg lower (1.3256 → ~1.319) with nothing of its own changing — the ~86% November hike case carries into Thursday's GDP print.",
+      "drivers": {
+        "policy": {
+          "score": 1,
+          "note": "BoE hawkish on hold at 3.75%; Nov 5 hike ~86% priced; Bailey added nothing overnight"
+        },
+        "growth": {
+          "score": 0,
+          "note": "UK data dump Thu 1:00am CT (GDP fcst -0.1% m/m) — the growth counterpoint"
+        },
+        "inflation": {
+          "score": 0,
+          "note": "No new UK inflation development"
+        },
+        "risk": {
+          "score": 0,
+          "note": "Neutral risk read"
+        },
+        "tot": {
+          "score": 0,
+          "note": "No new terms-of-trade read"
+        },
+        "positioning": {
+          "score": 1,
+          "note": "Net shorts -97,611 (~0th pctile) — under-owned; squeeze potential"
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "No fiscal development"
+        }
+      }
     },
-    "risk": {
-     "score": 0,
-     "note": "Wait mode \u2014 the dollar flat into CPI; no haven bid despite escalation"
+    {
+      "ccy": "JPY",
+      "name": "Japanese yen",
+      "bank": "boj",
+      "chapter": 4,
+      "summary": "USD/JPY ~158.2 → ~158.84 on the 2-year's 13bp jump — the morning's hot-CPI bull scenario playing out; the BoJ's ‘December, not October’ shape didn't move.",
+      "drivers": {
+        "policy": {
+          "score": -1,
+          "note": "Rate gap widened further in USD's favor (Fed Oct revived vs BoJ 1.25%); source report leans against Oct back-to-back hike"
+        },
+        "growth": {
+          "score": 0,
+          "note": "Japan machinery orders tonight 6:50pm CT — no new data yet"
+        },
+        "inflation": {
+          "score": 0,
+          "note": "CGPI miss (6.8%) keeps BoJ hike view alive without forcing October"
+        },
+        "risk": {
+          "score": 0,
+          "note": "No independent haven bid — yen breathing with the US yield leg"
+        },
+        "tot": {
+          "score": -1,
+          "note": "Crude ~$106 still a tax — Japan imports 90%+ of its energy"
+        },
+        "positioning": {
+          "score": 0,
+          "note": "Yen longs 62,325, ~86th percentile — near-crowded, below the 90th bar; neutral"
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "No fiscal development"
+        }
+      }
     },
-    "tot": {
-     "score": 0,
-     "note": "No direct terms-of-trade read for the dollar"
+    {
+      "ccy": "CHF",
+      "name": "Swiss franc",
+      "bank": "snb",
+      "chapter": 5,
+      "summary": "No verified quote (carried ~0.832) — the fear gauge keeps sleeping; CPI day moved the dollar on rates, not fear.",
+      "drivers": {
+        "policy": {
+          "score": 0,
+          "note": "SNB pinned at 0.00%; Schlegel speaks tonight 11:30pm CT"
+        },
+        "growth": {
+          "score": 0,
+          "note": "No new Swiss growth development"
+        },
+        "inflation": {
+          "score": 0,
+          "note": "No new Swiss inflation development"
+        },
+        "risk": {
+          "score": 0,
+          "note": "No independent haven bid — fear expressing through crude, not currencies"
+        },
+        "tot": {
+          "score": 0,
+          "note": "No new terms-of-trade read"
+        },
+        "positioning": {
+          "score": 0,
+          "note": "Net shorts -23,740; gross longs at 3.5-year high (27.8k) — hedge demand, not a crowded bet"
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "EUR/CHF carried ~0.9314 — French stress transmitting only lightly"
+        }
+      }
     },
-    "positioning": {
-     "score": -1,
-     "note": "USD aggregate longs ~$35.5bn (+$8.9bn WoW) \u2014 crowded into CPI; squeeze risk"
+    {
+      "ccy": "AUD",
+      "name": "Australian dollar",
+      "bank": "rba",
+      "chapter": 6,
+      "summary": "The $0.70 test failed — hot US CPI killed the squeeze; back to ~0.697 on the dollar leg while China's export boom holds a floor.",
+      "drivers": {
+        "policy": {
+          "score": 1,
+          "note": "RBA tightening bias intact (unanimous minutes); Nov 2–3 next"
+        },
+        "growth": {
+          "score": 0,
+          "note": "China exports +36.3% (AI hardware) but CPI soft 0.9% — export resilience, no domestic breakout"
+        },
+        "inflation": {
+          "score": 0,
+          "note": "No new Australia inflation development"
+        },
+        "risk": {
+          "score": 0,
+          "note": "$0.70 test failed on the dollar leg; China beat holds the floor"
+        },
+        "tot": {
+          "score": 0,
+          "note": "No new terms-of-trade read"
+        },
+        "positioning": {
+          "score": 1,
+          "note": "Net shorts -98,588 (~2nd pctile, record gross shorts) — squeeze denied today; still a loaded spring"
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "No fiscal development"
+        }
+      }
     },
-    "fiscal": {
-     "score": 0,
-     "note": "No new US fiscal development"
+    {
+      "ccy": "CAD",
+      "name": "Canadian dollar",
+      "bank": "boc",
+      "chapter": 7,
+      "summary": "The 161bp gap won again — USD/CAD pressed toward the 1.4299 52-week high on the Fed repricing; oil's held bid (WTI ~$95) is the only cushion.",
+      "drivers": {
+        "policy": {
+          "score": -1,
+          "note": "BoC Oct 28 hike ~25% — gap repriced wider against CAD as Fed October revived"
+        },
+        "growth": {
+          "score": -1,
+          "note": "-68.3K jobs, unemp 6.5%, participation 29-yr low — stands"
+        },
+        "inflation": {
+          "score": 0,
+          "note": "Canada CPI Oct 21 is the next inflation test"
+        },
+        "risk": {
+          "score": 0,
+          "note": "Neutral risk read"
+        },
+        "tot": {
+          "score": 1,
+          "note": "WTI ~$95, Brent ~$106 — oil's held bid keeps the offset"
+        },
+        "positioning": {
+          "score": 0,
+          "note": "Net shorts -90,163; most neutral on the board — no crowded read"
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "No fiscal development"
+        }
+      }
+    },
+    {
+      "ccy": "NZD",
+      "name": "New Zealand dollar",
+      "bank": "rbnz",
+      "chapter": 8,
+      "summary": "Slid ~44 pips with the dollar bid, hovering just above the 52-week low (0.5580) — nothing of its own changed; the RBNZ two-way bet is still the only thing on the calendar.",
+      "drivers": {
+        "policy": {
+          "score": 0,
+          "note": "RBNZ 2.75%; Oct 28 genuine two-way bet (~50%)"
+        },
+        "growth": {
+          "score": 0,
+          "note": "China's export beat a mild demand tailwind; no NZ data"
+        },
+        "inflation": {
+          "score": 0,
+          "note": "NZ CPI Oct 21 is the next inflation test"
+        },
+        "risk": {
+          "score": 0,
+          "note": "Near the 52-wk low on the dollar leg"
+        },
+        "tot": {
+          "score": 0,
+          "note": "No new terms-of-trade read"
+        },
+        "positioning": {
+          "score": 0,
+          "note": "Net shorts -29,346; not stretched"
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "No fiscal development"
+        }
+      }
     }
-   },
-   "name": "US dollar",
-   "summary": "Wait mode into CPI: DXY 102.16, flat, every major within hundredths of a percent \u2014 October ~23%, December ~84%, and $35.5bn of longs crowded into 7:30am."
-  },
-  {
-   "bank": "ecb",
-   "ccy": "EUR",
-   "chapter": 2,
-   "drivers": {
-    "policy": {
-     "score": -1,
-     "note": "Lagarde overnight: no second-round effects yet, 'cannot wait until in full view' \u2014 Dec alive, Oct ~12%; ECB trails the Fed"
+  ],
+  "history": [
+    {
+      "date": "2026-10-08",
+      "scores": {
+        "AUD": 0,
+        "CAD": 1,
+        "CHF": 1,
+        "EUR": -2,
+        "GBP": 1,
+        "JPY": 1,
+        "NZD": 0,
+        "USD": 3
+      }
     },
-    "growth": {
-     "score": 0,
-     "note": "German WPI 1:00am CT unverified; no new eurozone growth data"
+    {
+      "date": "2026-10-09",
+      "scores": {
+        "AUD": 1,
+        "CAD": 1,
+        "CHF": 1,
+        "EUR": -2,
+        "GBP": 1,
+        "JPY": 1,
+        "NZD": 1,
+        "USD": 3
+      }
     },
-    "inflation": {
-     "score": 0,
-     "note": "No new eurozone inflation development"
+    {
+      "date": "2026-10-10",
+      "scores": {
+        "AUD": 0,
+        "CAD": -1,
+        "CHF": 0,
+        "EUR": -1,
+        "GBP": 2,
+        "JPY": 3,
+        "NZD": -1,
+        "USD": 2
+      }
     },
-    "risk": {
-     "score": -1,
-     "note": "Crude ~$106.5 is bearish for the eurozone \u2014 Europe imports most of its energy"
+    {
+      "date": "2026-10-11",
+      "scores": {
+        "AUD": 0,
+        "CAD": -1,
+        "CHF": 0,
+        "EUR": -1,
+        "GBP": 2,
+        "JPY": 3,
+        "NZD": -1,
+        "USD": 2
+      }
     },
-    "tot": {
-     "score": -1,
-     "note": "Brent premium (~$106.5) raises import costs for eurozone buyers"
+    {
+      "date": "2026-10-12",
+      "scores": {
+        "USD": 2,
+        "EUR": -1,
+        "GBP": 2,
+        "JPY": 2,
+        "CHF": -1,
+        "AUD": 1,
+        "CAD": -1,
+        "NZD": 0
+      }
     },
-    "positioning": {
-     "score": 1,
-     "note": "Net shorts -99,332 (-36,076 WoW), ~0th percentile \u2014 most bearish since Feb 2020; squeeze potential",
-     "pct_52w": 0,
-     "wow_chg": -36076
+    {
+      "date": "2026-10-12",
+      "evening_scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 1,
+        "JPY": 1,
+        "CHF": -1,
+        "AUD": 0,
+        "CAD": -1,
+        "NZD": 0
+      },
+      "note": "evening read: dollar +2 day (war+rate bids), EUR -2 (17-mo low, French spread), oil premium back"
     },
-    "fiscal": {
-     "score": -1,
-     "note": "Plenary debate under way, no verified outcome; Lagarde: debt solution 'lies at home in France'"
+    {
+      "date": "2026-10-13",
+      "scores": {
+        "AUD": 2,
+        "CAD": -1,
+        "CHF": 1,
+        "EUR": -3,
+        "GBP": 2,
+        "JPY": -2,
+        "NZD": 0,
+        "USD": 3
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "scores": {
+        "USD": 2,
+        "EUR": -3,
+        "GBP": 2,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 2,
+        "CAD": -1,
+        "NZD": 0
+      }
     }
-   },
-   "name": "Euro",
-   "summary": "Flat at 1.1203 but Lagarde spoke: no second-round effects yet, 'cannot wait until in full view' \u2014 December alive, October ~12%; France's debt 'lies at home.'"
-  },
-  {
-   "bank": "boe",
-   "ccy": "GBP",
-   "chapter": 3,
-   "drivers": {
-    "policy": {
-     "score": 1,
-     "note": "BoE hawkish on hold at 3.75%; Nov 5 hike ~86% priced; Bailey added nothing overnight"
-    },
-    "growth": {
-     "score": 0,
-     "note": "UK data dump Thu 1:00am CT (GDP fcst -0.1% m/m) \u2014 the growth counterpoint"
-    },
-    "inflation": {
-     "score": 0,
-     "note": "No new UK inflation development"
-    },
-    "risk": {
-     "score": 0,
-     "note": "Neutral risk read"
-    },
-    "tot": {
-     "score": 0,
-     "note": "No new terms-of-trade read"
-    },
-    "positioning": {
-     "score": 1,
-     "note": "Net shorts -97,611 (-6,536 WoW), ~0th percentile \u2014 under-owned; squeeze potential",
-     "pct_52w": 0,
-     "wow_chg": -6536
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "No fiscal development"
-    }
-   },
-   "name": "British pound",
-   "summary": "Sat it out at 1.3256 \u2014 Bailey added nothing overnight; the ~86% November hike case carries into Thursday's GDP."
-  },
-  {
-   "bank": "boj",
-   "ccy": "JPY",
-   "chapter": 4,
-   "drivers": {
-    "policy": {
-     "score": -1,
-     "note": "Rate gap favors USD (Fed 3.75-4.00% vs BoJ 1.25%); source report leans against Oct back-to-back hike"
-    },
-    "growth": {
-     "score": 0,
-     "note": "Japan machinery orders tonight 6:50pm CT \u2014 no new data yet"
-    },
-    "inflation": {
-     "score": 0,
-     "note": "CGPI miss (6.8%) keeps BoJ hike view alive without forcing October"
-    },
-    "risk": {
-     "score": 0,
-     "note": "No independent haven bid \u2014 yen breathing with the US yield leg"
-    },
-    "tot": {
-     "score": -1,
-     "note": "Crude ~$106.5 still a tax \u2014 Japan imports 90%+ of its energy"
-    },
-    "positioning": {
-     "score": 0,
-     "note": "Yen longs 62,325 (+6,885 WoW), ~86th percentile \u2014 near-crowded, below the 90th bar; neutral",
-     "pct_52w": 86,
-     "wow_chg": 6885
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "No fiscal development"
-    }
-   },
-   "name": "Japanese yen",
-   "summary": "Flat at 158.32; a BoJ source report leans against back-to-back hikes \u2014 'December, not October' now the house lean; the pair breathes with US yields."
-  },
-  {
-   "bank": "snb",
-   "ccy": "CHF",
-   "chapter": 5,
-   "drivers": {
-    "policy": {
-     "score": 0,
-     "note": "SNB pinned at 0.00%; Schlegel remarks unverified"
-    },
-    "growth": {
-     "score": 0,
-     "note": "No new Swiss growth development"
-    },
-    "inflation": {
-     "score": 0,
-     "note": "No new Swiss inflation development"
-    },
-    "risk": {
-     "score": 0,
-     "note": "No independent haven bid \u2014 fear expressing through crude, not currencies"
-    },
-    "tot": {
-     "score": 0,
-     "note": "No new terms-of-trade read"
-    },
-    "positioning": {
-     "score": 0,
-     "note": "Net shorts -23,740; gross longs at 3.5-year high (27.8k) \u2014 hedge demand, not a crowded bet"
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "EUR/CHF ~0.9314 carried \u2014 French stress transmitting only lightly"
-    }
-   },
-   "name": "Swiss franc",
-   "summary": "No verified quote overnight (carried ~0.832) \u2014 the fear gauge keeps sleeping."
-  },
-  {
-   "bank": "rba",
-   "ccy": "AUD",
-   "chapter": 6,
-   "drivers": {
-    "policy": {
-     "score": 1,
-     "note": "RBA tightening bias intact (unanimous minutes); Nov 2-3 next"
-    },
-    "growth": {
-     "score": 0,
-     "note": "China exports +36.3% (AI hardware) but CPI soft 0.9% \u2014 export resilience, no domestic breakout"
-    },
-    "inflation": {
-     "score": 0,
-     "note": "No new Australia inflation development"
-    },
-    "risk": {
-     "score": 0,
-     "note": "Knocking on $0.70 on the China beat; chip rout caps the risk bid"
-    },
-    "tot": {
-     "score": 0,
-     "note": "No new terms-of-trade read"
-    },
-    "positioning": {
-     "score": 1,
-     "note": "Net shorts -98,588 (-35,349 WoW), ~2nd percentile, record gross shorts \u2014 squeeze potential",
-     "pct_52w": 2,
-     "wow_chg": -35349
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "No fiscal development"
-    }
-   },
-   "name": "Australian dollar",
-   "summary": "Knocking on $0.70 (0.6978-0.7004) on China's +36.3% export boom; the squeeze setup needs a soft US CPI."
-  },
-  {
-   "bank": "boc",
-   "ccy": "CAD",
-   "chapter": 7,
-   "drivers": {
-    "policy": {
-     "score": -1,
-     "note": "BoC Oct 28 hike ~25% \u2014 the hawkish-BoC thesis stays broken"
-    },
-    "growth": {
-     "score": -1,
-     "note": "-68.3K jobs, unemp 6.5%, participation 29-yr low"
-    },
-    "inflation": {
-     "score": 0,
-     "note": "Canada CPI Oct 21 is the next inflation test"
-    },
-    "risk": {
-     "score": 0,
-     "note": "Neutral risk read"
-    },
-    "tot": {
-     "score": 1,
-     "note": "WTI ~$95, Brent ~$106.5 \u2014 oil's overnight bounce thickens the offset"
-    },
-    "positioning": {
-     "score": 0,
-     "note": "Net shorts -90,163; most neutral on the board (Z-score -0.10) \u2014 no crowded read"
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "No fiscal development"
-    }
-   },
-   "name": "Canadian dollar",
-   "summary": "Held at 1.4206 as oil's overnight bounce (WTI testing $95) thickened the offset; the 161bp gap hasn't blinked."
-  },
-  {
-   "bank": "rbnz",
-   "ccy": "NZD",
-   "chapter": 8,
-   "drivers": {
-    "policy": {
-     "score": 0,
-     "note": "RBNZ 2.75%; Oct 28 genuine two-way bet (~50%)"
-    },
-    "growth": {
-     "score": 0,
-     "note": "China's export beat a mild demand tailwind; no NZ data"
-    },
-    "inflation": {
-     "score": 0,
-     "note": "NZ CPI Oct 21 is the next inflation test"
-    },
-    "risk": {
-     "score": 0,
-     "note": "Flat with the wait-mode market; kept off the 52-wk low"
-    },
-    "tot": {
-     "score": 0,
-     "note": "No new terms-of-trade read"
-    },
-    "positioning": {
-     "score": 0,
-     "note": "Net shorts -29,346; not stretched"
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "No fiscal development"
-    }
-   },
-   "name": "New Zealand dollar",
-   "summary": "Flat at 0.5605-0.5630, kept off the low by China's export beat; the RBNZ two-way bet is still the only thing on the calendar."
-  }
- ],
- "history": [
-  {
-   "date": "2026-10-08",
-   "scores": {
-    "AUD": 0,
-    "CAD": 1,
-    "CHF": 1,
-    "EUR": -2,
-    "GBP": 1,
-    "JPY": 1,
-    "NZD": 0,
-    "USD": 3
-   }
-  },
-  {
-   "date": "2026-10-09",
-   "scores": {
-    "AUD": 1,
-    "CAD": 1,
-    "CHF": 1,
-    "EUR": -2,
-    "GBP": 1,
-    "JPY": 1,
-    "NZD": 1,
-    "USD": 3
-   }
-  },
-  {
-   "date": "2026-10-10",
-   "scores": {
-    "AUD": 0,
-    "CAD": -1,
-    "CHF": 0,
-    "EUR": -1,
-    "GBP": 2,
-    "JPY": 3,
-    "NZD": -1,
-    "USD": 2
-   }
-  },
-  {
-   "date": "2026-10-11",
-   "scores": {
-    "AUD": 0,
-    "CAD": -1,
-    "CHF": 0,
-    "EUR": -1,
-    "GBP": 2,
-    "JPY": 3,
-    "NZD": -1,
-    "USD": 2
-   }
-  },
-  {
-   "date": "2026-10-12",
-   "scores": {
-    "USD": 2,
-    "EUR": -1,
-    "GBP": 2,
-    "JPY": 2,
-    "CHF": -1,
-    "AUD": 1,
-    "CAD": -1,
-    "NZD": 0
-   }
-  },
-  {
-   "date": "2026-10-12",
-   "evening_scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 1,
-    "JPY": 1,
-    "CHF": -1,
-    "AUD": 0,
-    "CAD": -1,
-    "NZD": 0
-   },
-   "note": "evening read: dollar +2 day (war+rate bids), EUR -2 (17-mo low, French spread), oil premium back"
-  },
-  {
-   "date": "2026-10-13",
-   "scores": {
-    "AUD": 2,
-    "CAD": -1,
-    "CHF": 1,
-    "EUR": -3,
-    "GBP": 2,
-    "JPY": -2,
-    "NZD": 0,
-    "USD": 3
-   }
-  },
-  {
-   "date": "2026-10-14",
-   "scores": {
-    "USD": 2,
-    "EUR": -3,
-    "GBP": 2,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 2,
-    "CAD": -1,
-    "NZD": 0
-   }
-  }
- ],
- "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule (stretched longs >=90th pctile = -1, stretched shorts <=10th pctile = +1)",
- "note": "CPI-day (2am CT) edition. The market holds its breath into 7:30am: DXY 102.16 flat, every major within hundredths of a percent; Oct hike ~23%, Dec ~84%. AUD knocks on $0.70 on China's +36.3% export boom; oil re-bids (Brent ~$106.5, WTI testing $95) on the confirmed Aramco hit; Lagarde keeps December alive; BoJ source report leans against back-to-back hikes. Focus Mode preview armed for US CPI. FX spots are indicative index quotes.",
- "pairs": {},
- "updated": "2026-10-14T02:03:32-05:00"
+  ],
+  "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule (stretched longs >=90th pctile = -1, stretched shorts <=10th pctile = +1)",
+  "note": "CPI-day (2am CT) edition. The market holds its breath into 7:30am: DXY 102.16 flat, every major within hundredths of a percent; Oct hike ~23%, Dec ~84%. AUD knocks on $0.70 on China's +36.3% export boom; oil re-bids (Brent ~$106.5, WTI testing $95) on the confirmed Aramco hit; Lagarde keeps December alive; BoJ source report leans against back-to-back hikes. Focus Mode preview armed for US CPI. FX spots are indicative index quotes.",
+  "pairs": {},
+  "updated": "2026-10-14T16:35:00-05:00"
 }
