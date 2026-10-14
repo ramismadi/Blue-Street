@@ -1,40 +1,41 @@
 {
- "note": "Static explainers for Macro Engine pillars, keyed by engine row id. Content: Hercules (COLLAB.md spec, 2026-10-08). Update `live` as conditions change.",
- "pillars": {
-  "policy": {
-   "title": "Policy divergence",
-   "body": "Central banks moving in different directions. It is the gap between them that moves currencies: money flows toward higher rates.",
-   "live": "CPI day: October hike ~23%, December ~84% \u2014 core m/m (0.2% exp) is the tiebreaker; BoJ source report leans against back-to-back hikes (December >80% priced); Lagarde keeps December alive without committing October."
+  "note": "Static explainers for Macro Engine pillars, keyed by engine row id. Content: Hercules (COLLAB.md spec, 2026-10-08). Update `live` as conditions change.",
+  "pillars": {
+    "policy": {
+      "title": "Policy divergence",
+      "body": "Central banks moving in different directions. It is the gap between them that moves currencies: money flows toward higher rates.",
+      "live": "CPI broke the October hold: September core beat twice (0.3% m/m, 2.6% y/y); October 27–28 went from ~23% to a coin flip (~43–47%), December effectively fully priced. Beige Book hot-leaning; Goolsbee: ‘discouraging.’ ECB Oct ~12%/Dec live; BoJ Oct ~9%/Dec >80%; BoE Nov 5 ~86%; RBA Nov 2–3; BoC/RBNZ Oct 28."
+    },
+    "growth": {
+      "title": "Growth differentials",
+      "body": "Who is accelerating, who is stalling (GDP, jobs, PMIs). Always comparative. Stronger growth pulls in capital and raises hike expectations.",
+      "live": "No new growth print moved a currency — CPI owned the tape. UK GDP Thu 1:00am CT (fcst -0.1%) is the next growth-vs-hike test; China exports +36.3% export-led, not a domestic breakout."
+    },
+    "inflation": {
+      "title": "Inflation",
+      "body": "CPI/PCE vs the central bank's target. High inflation alone strengthens nothing — what matters is what the bank does about it.",
+      "live": "September CPI: 3.7% y/y (vs 3.6%), core 0.3% m/m + 2.6% y/y (both beats) — broadening past energy. Pipeline: German WPI +8.7% y/y (hottest since Feb 2023); China PPI +5.0%. Beige Book: ‘higher oil prices permeated all District reports.’ October is live again."
+    },
+    "risk": {
+      "title": "Risk sentiment",
+      "body": "Risk-on vs risk-off. Fear bids USD, JPY, CHF (havens) and sells AUD, NZD, GBP (risk proxies).",
+      "live": "Post-CPI dollar bid was a rate repricing, not a fear bid — havens didn't independently bid; the franc kept sleeping. AUD $0.70 test failed; NZD hovers near its 52-wk low. Silver -3.2% the cleanest risk-off tell."
+    },
+    "tot": {
+      "title": "Terms of trade",
+      "body": "Export prices vs import prices: oil, metals. The same price moves two currencies opposite ways — say which and why.",
+      "live": "Brent ~$106.06 / WTI ~$95.09, spread ~$11 — Aramco confirmation + two Hormuz vessel strikes (one sunk) kept the shipping premium bid; OPEC cut 2026 demand a 6th straight time. Gold ~$4,094 (-1.4%): the rate leg beat the dollar leg."
+    },
+    "positioning": {
+      "title": "Positioning",
+      "body": "Where speculators already stand (CFTC COT, Fridays). Crowded trades are fragile: if everyone is long dollars, nobody is left to buy. The contrarian lens — where would a surprise hurt most.",
+      "live": "Crowded USD longs (~$35.5bn) got paid on the hot print — unwind risk flips to a soft PPI. EUR shorts (~0th pctile) and AUD record shorts also profited; squeeze setups loaded but denied. Next COT Friday."
+    },
+    "fiscal": {
+      "title": "Fiscal & sovereign risk",
+      "body": "Deficits, debt sustainability, sovereign spreads. Funds stress leaks into the currency.",
+      "live": "France cleared the first hurdle (rejection motion failed 236–149); revenue vote Oct 20, Moody's Oct 23 ahead. German 30y held at 3.8% — no duration fear. No new US fiscal development."
+    }
   },
-  "growth": {
-   "title": "Growth differentials",
-   "body": "Who is accelerating, who is stalling (GDP, jobs, PMIs). Always comparative. Stronger growth pulls in capital and raises hike expectations.",
-   "live": "China's export boom (+36.3% y/y on AI hardware) vs soft consumer CPI (0.9%) \u2014 export resilience without a domestic breakout; UK GDP Thursday (-0.1% m/m fcst) is the next G10 input."
-  },
-  "inflation": {
-   "title": "Inflation",
-   "body": "CPI/PCE vs the central bank's target. High inflation alone strengthens nothing \u2014 what matters is what the bank does about it.",
-   "live": "US CPI 7:30am CT (3.6% y/y; core 0.2% m/m, 2.5% y/y) \u2014 the last big print before FOMC Oct 27-28; China PPI hot at 5.0% on oil costs, not demand."
-  },
-  "risk": {
-   "title": "Risk sentiment",
-   "body": "Risk-on vs risk-off. Fear bids USD, JPY, CHF (havens) and sells AUD, NZD, GBP (risk proxies).",
-   "live": "Wait mode into CPI \u2014 every major flat within hundredths of a percent; AUD tests $0.70 on the China beat; Asia's chip rout stayed sectoral, no haven dash."
-  },
-  "tot": {
-   "title": "Terms of trade",
-   "body": "Export prices vs import prices: oil, metals. The same price moves two currencies opposite ways \u2014 say which and why.",
-   "live": "Brent ~$106.5 (+0.8%), WTI testing $95 \u2014 the confirmed Aramco hit re-bid the premium; spread ~$11.7 still wide: shipping and geopolitics, not demand."
-  },
-  "positioning": {
-   "title": "Positioning",
-   "body": "Where speculators already stand (CFTC COT, Fridays). Crowded trades are fragile: if everyone is long dollars, nobody is left to buy. The contrarian lens \u2014 where would a surprise hurt most.",
-   "live": "COT w/e Oct 6: EUR shorts at the ~0th percentile, AUD shorts at the ~2nd with record gross, yen longs 62,325 at ~86th, USD aggregate ~$35.5bn crowded into CPI."
-  },
-  "fiscal": {
-   "title": "Fiscal & sovereign risk",
-   "body": "Deficits, debt sustainability, sovereign spreads. Funds stress leaks into the currency.",
-   "live": "France's plenary debate under way \u2014 no verified outcome; revenue vote Oct 20, Moody's Oct 23; Lagarde: the debt solution 'lies at home in France.'"
-  }
- }
+  "updated": "2026-10-14T16:35:00-05:00"
 }
