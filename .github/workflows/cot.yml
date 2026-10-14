@@ -1,0 +1,63 @@
+# Gloment — weekly COT positioning snapshot (owned by Claude; see DESIGN.md → data/cot.json).
+# The CFTC publishes Friday 3:30 PM New York with Tuesday's positions. Holiday
+# weeks slip to Monday, so the job also runs Saturday and Monday. It only
+# commits when a newer report exists.
+name: COT positioning
+
+on:
+  schedule:
+    - cron: '17 21 * * 5'   # Fri 21:17 UTC (4:17/5:17 PM New York)
+    - cron: '17 15 * * 6'   # Sat catch-up
+    - cron: '17 21 * * 1'   # Mon, for holiday-delayed releases
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Rewrite data/cot.json even if the report date is unchanged'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - 'assets/cot.js'
+      - 'tools/cot-build.cjs'
+      - '.github/workflows/cot.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cot
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build data/cot.json from the CFTC
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] || [ "${{ inputs.force }}" = "true" ]; then
+            node tools/cot-build.cjs --force
+          else
+            node tools/cot-build.cjs
+          fi
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/cot.json && [ -z "$(git status --porcelain data/cot.json)" ]; then
+            echo "No new report."
+            exit 0
+          fi
+          REPORT=$(node -e "console.log(require('./data/cot.json').report_date)")
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/cot.json
+          git commit -m "data: COT positioning for $REPORT (weekly CFTC snapshot)"
+          for i in 1 2 3; do
+            git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0
+            sleep 10
+          done
+          echo "Push failed after 3 tries" && exit 1
