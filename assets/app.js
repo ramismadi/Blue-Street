@@ -7,9 +7,9 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '35';
+  var ASSET_VERSION = '36';
 
-  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'flash'];
+  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'flash', 'learn'];   // 'learn' has a view but no tab
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
@@ -61,6 +61,7 @@
       setText('#today-headline', 'Edition unavailable');
     });
     initGlossary();
+    initExplain();
     fetchJSON('data/pillars.json').then(function (d) {
       explainers = d.pillars || null;
       attachExplainers();
@@ -105,6 +106,7 @@
       renderCalendar();
       renderFx();
       renderFocus();
+      renderLearn();   // live release numbers on an open explainer
     }).catch(function () {
       note('#cal-list', 'Calendar data unavailable.');
       note('#today-next', 'Calendar data unavailable.');
@@ -459,6 +461,7 @@
       fx.focus = (h[1] || '').toUpperCase();
       renderFx();
     }
+    if (tab === 'learn') renderLearn();
     if (tab === 'positioning') {
       cot.focus = (h[1] || '').toUpperCase();
       renderCot();
@@ -2936,16 +2939,21 @@
      only has to mark its container with .gl-scope. All-caps-style
      abbreviations (2+ capitals: CPI, BoE, OAT) match case-sensitively so
      ordinary words ("oat", "cot") stay plain; everything else matches any case. */
-  var gloss = { re: null, map: {}, list: [], pop: null, pinned: null, queued: false };
+  var gloss = { re: null, map: {}, list: [], byId: {}, loaded: false, pop: null, pinned: null, queued: false };
   var GL_SKIP = 'a, button, summary, h1, h2, time, script, style, .gl, .mono, .fig, .chip, .kicker, ' +
     '.section-label, .callout-lbl, .lbl, .narr-lbl, .drawer-lbl, .tag, .badge, .ev-ccy, .sr-only, ' +
     '.bias, .meet-lbl, .rate-val, .bank-short, .bank-name, .seg';
 
   function initGlossary() {
     fetchJSON('data/glossary.json').then(function (d) {
+      // ?learn-demo previews full explainers before the feed carries any.
+      return /[?&]learn-demo\b/.test(location.search) ? mergeLearnDemo(d) : d;
+    }).then(function (d) {
       var vars = [];
       (d.terms || []).forEach(function (t, i) {
         if (!t || !t.term || !t.definition) return;
+        t.id = slugId(t.id || t.term);
+        gloss.byId[t.id] = i;
         gloss.list[i] = t;
         [t.term].concat(t.aliases || []).forEach(function (v) {
           if (!v) return;
@@ -2953,6 +2961,8 @@
           vars.push(v);
         });
       });
+      gloss.loaded = true;
+      renderLearn();
       if (!vars.length) return;
       vars.sort(function (a, b) { return b.length - a.length; });
       var alt = vars.map(function (v) { return v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+'); }).join('|');
@@ -2997,8 +3007,10 @@
         var start = m.index + m[1].length;
         frag.appendChild(document.createTextNode(text.slice(last, start)));
         var g = el('span', 'gl', m[2]);
-        g.setAttribute('tabindex', '0');
-        g.setAttribute('role', 'button');
+        if (!explainOff()) {
+          g.setAttribute('tabindex', '0');
+          g.setAttribute('role', 'button');
+        }
         g.setAttribute('data-gl-i', hit.i);
         g.setAttribute('aria-label', m[2] + ': ' + gloss.list[hit.i].definition);
         frag.appendChild(g);
@@ -3021,6 +3033,9 @@
     pop.hidden = true;
     pop.appendChild(el('b', 'gl-term'));
     pop.appendChild(el('p', 'gl-def'));
+    var more = el('a', 'gl-more', 'Learn more \u2192');   // only for terms that carry a full explainer
+    more.hidden = true;
+    pop.appendChild(more);
     var x = el('button', 'gl-close', '×');
     x.type = 'button';
     x.setAttribute('aria-label', 'Close definition');
@@ -3029,11 +3044,15 @@
     gloss.pop = pop;
 
     function show(g, sheet) {
+      if (explainOff()) return;
       var t = gloss.list[+g.getAttribute('data-gl-i')];
       if (!t) return;
       pop.querySelector('.gl-term').textContent = t.term;
       pop.querySelector('.gl-def').textContent = t.definition;
-      pop.className = 'gl-pop' + (sheet ? ' sheet' : '');
+      var full = hasDetail(t);
+      more.hidden = !full;
+      if (full) more.href = '#learn/' + encodeURIComponent(t.id);
+      pop.className = 'gl-pop' + (sheet ? ' sheet' : '') + (full ? ' has-more' : '');
       pop.hidden = false;
       g.setAttribute('aria-describedby', 'gl-pop');
       if (sheet) { pop.style.left = pop.style.top = ''; return; }
@@ -3051,14 +3070,25 @@
       gloss.pinned = null;
     }
     if (hover) {
+      // A tooltip with a "Learn more" link has to be reachable: it stays for a
+      // beat after the pointer leaves the term, and while the pointer is on it.
+      var hideT = null;
       document.addEventListener('mouseover', function (e) {
         var g = e.target.closest && e.target.closest('.gl');
-        if (g && !gloss.pinned) show(g, false);
+        if (g && !gloss.pinned) { clearTimeout(hideT); show(g, false); }
       });
       document.addEventListener('mouseout', function (e) {
         var g = e.target.closest && e.target.closest('.gl');
-        if (g && !gloss.pinned) pop.hidden = true;
+        if (!g || gloss.pinned) return;
+        if (pop.classList.contains('has-more')) {
+          clearTimeout(hideT);
+          hideT = setTimeout(function () { if (!gloss.pinned) pop.hidden = true; }, 220);
+        } else {
+          pop.hidden = true;
+        }
       });
+      pop.addEventListener('mouseenter', function () { clearTimeout(hideT); });
+      pop.addEventListener('mouseleave', function () { if (!gloss.pinned) pop.hidden = true; });
     }
     document.addEventListener('click', function (e) {
       var g = e.target.closest && e.target.closest('.gl');
@@ -3081,6 +3111,233 @@
     });
     window.addEventListener('scroll', function () { if (!pop.hidden && !pop.classList.contains('sheet')) hide(); }, { passive: true });
     window.addEventListener('hashchange', hide);
+  }
+
+  /* ---------------- explain layer: toggle, full explainers, Learn library ----------------
+     Layer 1 is the dotted-underline popover above (1–2 lines). Layer 2 is a
+     full explainer page, #learn/<term-id>, for terms whose glossary entry
+     carries an optional `detail` object (see DESIGN.md). Layer 3 is the
+     library, #learn. The read itself never grows: all of it sits behind a tap.
+     The Explain button in the masthead turns the underlines (and popovers)
+     off for experienced readers; the choice is saved per browser. */
+  function explainOff() { return document.documentElement.classList.contains('no-explain'); }
+
+  function slugId(v) {
+    return String(v).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+
+  function hasDetail(t) {
+    var d = t && t.detail;
+    return !!(d && typeof d === 'object' && (d.measures || d.why_moves_fx || d.surprise_looks_like));
+  }
+
+  function mergeLearnDemo(d) {
+    return fetchJSON('assets/glossary-demo.json').then(function (demo) {
+      var by = {};
+      (demo.terms || []).forEach(function (x) { if (x && x.term) by[x.term.toLowerCase()] = x; });
+      (d.terms || []).forEach(function (t) {
+        var x = t && t.term && by[t.term.toLowerCase()];
+        if (!x) return;
+        if (x.detail) t.detail = x.detail;
+        if (x.kind) t.kind = x.kind;
+      });
+      return d;
+    }).catch(function () { return d; });
+  }
+
+  function initExplain() {
+    var btn = $('#explain-btn');
+    if (!btn) return;
+    function apply(on, save) {
+      document.documentElement.classList.toggle('no-explain', !on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.title = on ? 'Explain is on: dotted terms show a definition. Tap to turn off.'
+                     : 'Explain is off. Tap to show definitions on terms.';
+      if (gloss.pop) gloss.pop.hidden = true;
+      gloss.pinned = null;
+      Array.prototype.forEach.call(document.querySelectorAll('.gl'), function (g) {
+        if (on) { g.setAttribute('tabindex', '0'); g.setAttribute('role', 'button'); }
+        else { g.setAttribute('tabindex', '-1'); g.removeAttribute('role'); }
+      });
+      if (save) { try { localStorage.setItem('gloment-explain', on ? 'on' : 'off'); } catch (e) { /* private mode */ } }
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('gloment-explain'); } catch (e) { /* private mode */ }
+    apply(saved !== 'off', false);
+    btn.addEventListener('click', function () { apply(explainOff(), true); });
+  }
+
+  /* Next / last release for a term's explainer, straight from calendar.json so
+     the numbers are never hard-coded in prose. `detail.calendar` is
+     {id_prefix: "us-cpi"} or {match: "CPI", ccy: "USD"}. */
+  function learnLive(spec) {
+    if (!spec || !cal.data || !cal.data.events) return null;
+    var evs = cal.data.events.filter(function (e) {
+      if (!e) return false;
+      if (spec.id_prefix) return (e.id || '').indexOf(spec.id_prefix) === 0;
+      if (spec.match) {
+        return (e.title || '').toLowerCase().indexOf(String(spec.match).toLowerCase()) >= 0 &&
+               (!spec.ccy || e.ccy === spec.ccy);
+      }
+      return false;
+    });
+    function key(e) { return new Date(e.ts || (e.date + 'T00:00:00Z')).getTime(); }
+    evs = evs.filter(function (e) { return isFinite(key(e)); }).sort(function (a, b) { return key(a) - key(b); });
+    var now = Date.now(), next = null, last = null;
+    evs.forEach(function (e) {
+      if (e.actual != null && e.actual !== '' && key(e) <= now) last = e;
+      else if (!next && key(e) > now - 3600000) next = e;
+    });
+    return (next || last) ? { next: next, last: last } : null;
+  }
+
+  function renderLearn() {
+    var root = $('#learn-body');
+    var h = (location.hash || '').slice(1).split('/');
+    if (!root || h[0] !== 'learn') return;
+    var id = '';
+    try { id = decodeURIComponent(h[1] || ''); } catch (e) { id = h[1] || ''; }
+    root.textContent = '';
+    var terms = gloss.list.filter(Boolean);
+    if (!terms.length) {
+      root.appendChild(el('p', 'meta', gloss.loaded ? 'No terms published yet.' : 'Loading…'));
+      return;
+    }
+    if (id && gloss.byId[id] != null) renderLearnTerm(root, gloss.list[gloss.byId[id]]);
+    else renderLearnLibrary(root, terms);
+  }
+
+  function renderLearnLibrary(root, terms) {
+    var head = el('div', 'view-head');
+    head.appendChild(el('h1', 'view-title', 'Learn'));
+    var full = terms.filter(hasDetail).length;
+    head.appendChild(el('p', 'meta', 'The terms and events in the daily read, in plain words. ' +
+      terms.length + ' terms' + (full ? ' · ' + full + ' with a full explainer' : '') +
+      '. How things work, never a call on direction.'));
+    root.appendChild(head);
+
+    var search = el('input', 'learn-search');
+    search.type = 'search';
+    search.placeholder = 'Search terms';
+    search.setAttribute('aria-label', 'Search terms');
+    root.appendChild(search);
+    var out = el('div', 'learn-groups');
+    root.appendChild(out);
+
+    function paint() {
+      var q = search.value.trim().toLowerCase();
+      out.textContent = '';
+      var groups = [], idx = {};
+      terms.forEach(function (t) {
+        if (q) {
+          var hay = [t.term, t.definition].concat(t.aliases || []).join(' ').toLowerCase();
+          if (hay.indexOf(q) < 0) return;
+        }
+        var k = t.kind || 'Terms';
+        if (idx[k] == null) { idx[k] = groups.length; groups.push({ name: k, items: [] }); }
+        groups[idx[k]].items.push(t);
+      });
+      if (!groups.length) { out.appendChild(el('p', 'meta', 'Nothing matches that.')); return; }
+      groups.forEach(function (g) {
+        var sec = el('section', 'learn-group');
+        sec.appendChild(el('h2', 'section-label', g.name));
+        var ul = el('ul', 'learn-list');
+        g.items.forEach(function (t) {
+          var li = el('li', 'learn-row');
+          var name;
+          if (hasDetail(t)) {
+            name = el('a', 'learn-term', t.term);
+            name.href = '#learn/' + encodeURIComponent(t.id);
+          } else {
+            name = el('span', 'learn-term', t.term);
+          }
+          li.appendChild(name);
+          li.appendChild(el('p', 'learn-def', t.definition));
+          if (hasDetail(t)) {
+            var more = el('a', 'learn-tag', 'Full explainer →');
+            more.href = '#learn/' + encodeURIComponent(t.id);
+            li.appendChild(more);
+          }
+          ul.appendChild(li);
+        });
+        sec.appendChild(ul);
+        out.appendChild(sec);
+      });
+    }
+    search.addEventListener('input', paint);
+    paint();
+  }
+
+  function renderLearnTerm(root, t) {
+    var back = el('a', 'more learn-back', '← All terms');
+    back.href = '#learn';
+    root.appendChild(back);
+    var head = el('div', 'view-head');
+    head.appendChild(el('p', 'kicker', t.kind || 'Term'));
+    head.appendChild(el('h1', 'view-title', t.term));
+    root.appendChild(head);
+    root.appendChild(el('p', 'learn-lead', t.definition));
+    if (t.aliases && t.aliases.length) root.appendChild(el('p', 'meta', 'Also written: ' + t.aliases.join(', ')));
+
+    var d = t.detail;
+    if (!hasDetail(t)) {
+      root.appendChild(el('p', 'meta learn-none', 'No full explainer for this one yet.'));
+      return;
+    }
+    var card = el('div', 'card learn-card');
+    [['What it measures', 'measures'], ['Why it moves currencies', 'why_moves_fx'],
+     ['What a surprise looks like', 'surprise_looks_like']].forEach(function (s) {
+      var v = d[s[1]];
+      if (!v || (Array.isArray(v) && !v.length)) return;
+      var sec = el('section', 'learn-sec');
+      sec.appendChild(el('h2', 'section-label', s[0]));
+      if (Array.isArray(v)) {
+        var ul = el('ul', 'learn-bullets');
+        v.forEach(function (x) { ul.appendChild(el('li', null, x)); });
+        sec.appendChild(ul);
+      } else {
+        sec.appendChild(el('p', 'learn-p', v));
+      }
+      card.appendChild(sec);
+    });
+
+    var live = learnLive(d.calendar);
+    if (live) {
+      var box = el('section', 'learn-live');
+      box.appendChild(el('h2', 'section-label', 'Live from the calendar'));
+      if (live.next) {
+        var n = live.next;
+        var when = n.ts ? fmtDateTime(n.ts) : (n.date + ' (time to be confirmed)');
+        var bits = [n.title, when];
+        if (n.forecast) bits.push('forecast ' + n.forecast);
+        if (n.previous) bits.push('previous ' + n.previous);
+        box.appendChild(el('p', 'learn-live-row', 'Next: ' + bits.join(' · ')));
+      }
+      if (live.last) {
+        var l = live.last;
+        var lb = [l.title, 'actual ' + l.actual];
+        if (l.forecast) lb.push('forecast ' + l.forecast);
+        if (l.previous) lb.push('previous ' + l.previous);
+        box.appendChild(el('p', 'learn-live-row', 'Last: ' + lb.join(' · ')));
+      }
+      box.appendChild(el('p', 'meta', 'Pulled from the calendar, so it stays current.'));
+      card.appendChild(box);
+    }
+    root.appendChild(card);
+
+    var rel = (d.related_ids || []).filter(function (r) { return gloss.byId[slugId(r)] != null; });
+    if (rel.length) {
+      var rw = el('div', 'learn-related');
+      rw.appendChild(el('span', 'sources-lbl', 'Related'));
+      rel.forEach(function (r) {
+        var rt = gloss.list[gloss.byId[slugId(r)]];
+        var a = el('a', 'chip', rt.term);
+        a.href = '#learn/' + encodeURIComponent(rt.id);
+        rw.appendChild(a);
+      });
+      root.appendChild(rw);
+    }
+    if (d.sources && d.sources.length) root.appendChild(sourceChips(d.sources));
   }
 
   /* ---------------- focus mode ----------------

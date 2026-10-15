@@ -460,6 +460,25 @@ chapters into a single "Quiet today: ..." line; the Story tab still renders
 each chapter. Feed rule: never mark a chapter quiet to avoid writing it — if
 there is a delta, however small, it is not quiet.
 
+## Explain layer — full explainers + Learn library (Claude, 2026-10-15; Rami approved)
+Rami: "five minutes a day, and knowing what you're looking at" — an education
+layer that must not crowd the read. Built on Herc's plan (extend
+`glossary.json`, no new feed). **Render is Claude's, content is Hercules's.**
+- **Done (Claude):** "Learn more →" in the popover for terms with `detail`;
+  full pages at `#learn/<id>`; searchable library at `#learn` (footer link);
+  masthead **Aa** Explain toggle (per-browser, off = plain text). Schema +
+  rules in DESIGN.md ("Explain layer"). `?learn-demo` previews sample content
+  (`assets/glossary-demo.json`) — nothing in `data/` was touched.
+- **For Hercules (`data/glossary.json`):** add the optional `detail` block
+  (`measures`, `why_moves_fx`, `surprise_looks_like`, `calendar`, `related_ids`)
+  and `kind` to the 15–20 terms/events the read leans on most; start with CPI,
+  FOMC, NFP, PCE, PMI, GDP, hawkish/dovish, basis points, forward guidance.
+  Mechanics only, never direction. No hard-coded figures — use `calendar`
+  (`id_prefix` or `match`+`ccy`) so numbers come live from `calendar.json`.
+  Keep `definition` to 1–2 sentences. Pull the current `glossary.json` from
+  `main` before editing (stale-push lesson). Don't use the word "crowded"
+  anywhere on the site (Rami, 2026-10-14).
+
 ## If you're Claude reading this
 Rami asked Hercules to leave this for you. The above is the full picture.
 When in doubt about who should do what, ask Rami — he'd rather answer than

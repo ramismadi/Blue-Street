@@ -1,0 +1,36 @@
+{
+ "_note": "Preview-only sample of the optional `detail` block. Shown when the page is opened with ?learn-demo. The real content lives in data/glossary.json (Hercules). Mechanics only, never a call on direction.",
+ "terms": [
+  {
+   "term": "CPI",
+   "kind": "Data",
+   "detail": {
+    "measures": "The average change in prices households pay for a fixed basket of goods and services, reported monthly. Headline CPI includes food and energy; core CPI leaves them out because they swing a lot.",
+    "why_moves_fx": "Central banks set rates with inflation in mind, so a print changes what traders expect the bank to do. Currencies tend to move on the change in expected rates, not on inflation by itself.",
+    "surprise_looks_like": "Markets price a forecast before the release, so the gap between the actual and the forecast is what moves things. A higher-than-forecast core reading usually raises expected hikes; a lower one lowers them. Core month-on-month is often the number traders read first.",
+    "calendar": { "id_prefix": "us-cpi" },
+    "related_ids": ["PCE", "hawkish", "basis points"]
+   }
+  },
+  {
+   "term": "FOMC",
+   "kind": "Central banks",
+   "detail": {
+    "measures": "Not a data release. The FOMC is the Fed committee that votes on the policy rate, eight scheduled meetings a year, each with a statement, and some with new projections and a press conference.",
+    "why_moves_fx": "The rate decision matters, but the guidance around it often matters more: how the statement and press conference change what is expected at the next meetings. Rates relative to other central banks drive much of the dollar's move.",
+    "surprise_looks_like": "A decision that matches what futures already priced usually moves little. The move comes from the wording: whether it points to more tightening or an end to it, compared with what was expected.",
+    "calendar": { "id_prefix": "fomc" },
+    "related_ids": ["hawkish", "forward guidance", "basis points"]
+   }
+  },
+  {
+   "term": "hawkish",
+   "kind": "Concepts",
+   "detail": {
+    "measures": "A label for central-bank tone, not a number. Hawkish means leaning toward higher rates or keeping them high to hold down inflation; dovish is the reverse.",
+    "why_moves_fx": "Because the label tells traders which way the next rate move is more likely, a more hawkish tone than expected tends to lift expected rates, and that usually supports the currency.",
+    "surprise_looks_like": "It is always relative to expectations. A bank can raise rates and still sound dovish if it signals it is nearly done, and the market reads the tone, not the move."
+   }
+  }
+ ]
+}

@@ -20,6 +20,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Central banks | `#banks` | `data/banks.json` |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join) |
 | Flash | `#flash` (old `#wire` links redirect) | `data/latest.json` |
+| Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
 - **Today is a scroll story**: full-screen headline → **At a glance** (newest
   Flash thread with status, tags and What's next; the next two high/medium
@@ -203,6 +204,35 @@ calendar detail. Never inside links, buttons, headings, labels or figures.
 Terms with 2+ capitals (CPI, BoE, OAT) match case-sensitively so plain words
 ("oat") stay plain; others match any case. Render code opts a container in
 with the `gl-scope` class; re-renders are picked up automatically.
+
+**Explain layer (Rami, 2026-10-15): three levels, nothing added to the read.**
+1. The popover above (1–2 lines) — unchanged.
+2. A full explainer page, `#learn/<term-id>`, for terms whose entry carries an
+   optional `detail` object. The popover then shows "Learn more →".
+3. The library, `#learn` (footer link + "← All terms"): every term, grouped by
+   `kind`, searchable; terms with `detail` link to their page. Not a tab.
+Optional fields on a glossary term (all backward-compatible; omit = today's
+behaviour):
+```
+{"term":"CPI","definition":"...","aliases":[...],
+ "id":"cpi",              // default = slug of term; related_ids use it
+ "kind":"Data",           // library group; default "Terms" (e.g. Data, Central banks, Concepts)
+ "detail":{
+   "measures":"...", "why_moves_fx":"...", "surprise_looks_like":"...",  // string or [strings]; at least one required
+   "calendar":{"id_prefix":"us-cpi"},    // or {"match":"CPI","ccy":"USD"} — live "Next / Last" block from calendar.json
+   "related_ids":["pce","hawkish"],      // term ids, shown as chips
+   "sources":[{"label":"...","url":"..."}]}}
+```
+Rules: `detail` text explains mechanics only, never direction (no house view);
+no hard-coded figures that go stale — put live numbers behind `calendar` so the
+page pulls consensus/next-release timing from `calendar.json`. Keep the
+`definition` to 1–2 sentences (a length check at write time keeps the popover
+honest). Text is rendered with `textContent` only.
+**Explain toggle:** masthead "Aa" button (`#explain-btn`). Off = terms render as
+plain text, no popovers, no tab stops; saved per browser in localStorage
+`gloment-explain` (`off`; absent = on) and applied pre-paint via `html.no-explain`.
+**Preview:** `?learn-demo` overlays `assets/glossary-demo.json` (sample `detail`
+for CPI, FOMC, hawkish) so the pages can be reviewed before the feed has any.
 
 ### `data/focus.json` — Focus Mode (big-event Today takeover)
 ```
