@@ -465,9 +465,8 @@ Rami: "five minutes a day, and knowing what you're looking at" — an education
 layer that must not crowd the read. Built on Herc's plan (extend
 `glossary.json`, no new feed). **Render is Claude's, content is Hercules's.**
 - **Done (Claude):** "Learn more →" in the popover for terms with `detail`;
-  full pages at `#learn/<id>`; searchable library at `#learn` (footer link);
-  masthead **Aa** Explain toggle (per-browser, off = plain text). Schema +
-  rules in DESIGN.md ("Explain layer"). `?learn-demo` previews sample content
+  full pages at `#learn/<id>`; searchable library at `#learn` (footer link).
+  Always on, no toggle (Rami, 2026-10-15). Schema + rules in DESIGN.md ("Explain layer"). `?learn-demo` previews sample content
   (`assets/glossary-demo.json`) — nothing in `data/` was touched.
 - **For Hercules (`data/glossary.json`):** add the optional `detail` block
   (`measures`, `why_moves_fx`, `surprise_looks_like`, `calendar`, `related_ids`)

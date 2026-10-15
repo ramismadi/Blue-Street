@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '36';
+  var ASSET_VERSION = '37';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'flash', 'learn'];   // 'learn' has a view but no tab
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
@@ -61,7 +61,6 @@
       setText('#today-headline', 'Edition unavailable');
     });
     initGlossary();
-    initExplain();
     fetchJSON('data/pillars.json').then(function (d) {
       explainers = d.pillars || null;
       attachExplainers();
@@ -3007,10 +3006,8 @@
         var start = m.index + m[1].length;
         frag.appendChild(document.createTextNode(text.slice(last, start)));
         var g = el('span', 'gl', m[2]);
-        if (!explainOff()) {
-          g.setAttribute('tabindex', '0');
-          g.setAttribute('role', 'button');
-        }
+        g.setAttribute('tabindex', '0');
+        g.setAttribute('role', 'button');
         g.setAttribute('data-gl-i', hit.i);
         g.setAttribute('aria-label', m[2] + ': ' + gloss.list[hit.i].definition);
         frag.appendChild(g);
@@ -3044,7 +3041,6 @@
     gloss.pop = pop;
 
     function show(g, sheet) {
-      if (explainOff()) return;
       var t = gloss.list[+g.getAttribute('data-gl-i')];
       if (!t) return;
       pop.querySelector('.gl-term').textContent = t.term;
@@ -3117,11 +3113,7 @@
      Layer 1 is the dotted-underline popover above (1–2 lines). Layer 2 is a
      full explainer page, #learn/<term-id>, for terms whose glossary entry
      carries an optional `detail` object (see DESIGN.md). Layer 3 is the
-     library, #learn. The read itself never grows: all of it sits behind a tap.
-     The Explain button in the masthead turns the underlines (and popovers)
-     off for experienced readers; the choice is saved per browser. */
-  function explainOff() { return document.documentElement.classList.contains('no-explain'); }
-
+     library, #learn. The read itself never grows: all of it sits behind a tap. */
   function slugId(v) {
     return String(v).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
   }
@@ -3143,28 +3135,6 @@
       });
       return d;
     }).catch(function () { return d; });
-  }
-
-  function initExplain() {
-    var btn = $('#explain-btn');
-    if (!btn) return;
-    function apply(on, save) {
-      document.documentElement.classList.toggle('no-explain', !on);
-      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-      btn.title = on ? 'Explain is on: dotted terms show a definition. Tap to turn off.'
-                     : 'Explain is off. Tap to show definitions on terms.';
-      if (gloss.pop) gloss.pop.hidden = true;
-      gloss.pinned = null;
-      Array.prototype.forEach.call(document.querySelectorAll('.gl'), function (g) {
-        if (on) { g.setAttribute('tabindex', '0'); g.setAttribute('role', 'button'); }
-        else { g.setAttribute('tabindex', '-1'); g.removeAttribute('role'); }
-      });
-      if (save) { try { localStorage.setItem('gloment-explain', on ? 'on' : 'off'); } catch (e) { /* private mode */ } }
-    }
-    var saved = null;
-    try { saved = localStorage.getItem('gloment-explain'); } catch (e) { /* private mode */ }
-    apply(saved !== 'off', false);
-    btn.addEventListener('click', function () { apply(explainOff(), true); });
   }
 
   /* Next / last release for a term's explainer, straight from calendar.json so

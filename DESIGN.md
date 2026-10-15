@@ -228,9 +228,6 @@ no hard-coded figures that go stale — put live numbers behind `calendar` so th
 page pulls consensus/next-release timing from `calendar.json`. Keep the
 `definition` to 1–2 sentences (a length check at write time keeps the popover
 honest). Text is rendered with `textContent` only.
-**Explain toggle:** masthead "Aa" button (`#explain-btn`). Off = terms render as
-plain text, no popovers, no tab stops; saved per browser in localStorage
-`gloment-explain` (`off`; absent = on) and applied pre-paint via `html.no-explain`.
 **Preview:** `?learn-demo` overlays `assets/glossary-demo.json` (sample `detail`
 for CPI, FOMC, hawkish) so the pages can be reviewed before the feed has any.
 

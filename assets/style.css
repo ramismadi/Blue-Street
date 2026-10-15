@@ -2102,19 +2102,6 @@ footer { padding: 34px 0 44px; text-align: center; }
 }
 
 /* ---------- explain layer: toggle, "Learn more", Learn library ---------- */
-.explain-btn {
-  display: inline-grid; place-items: center; min-width: 30px; height: 30px; padding: 0 7px;
-  border: 1px solid rgba(255, 255, 255, 0.28); border-radius: 15px; background: transparent;
-  color: var(--mast-ink); cursor: pointer; font: inherit; font-size: 0.78rem; font-weight: 700;
-}
-.explain-btn:hover { background: rgba(255, 255, 255, 0.12); }
-.explain-btn .ex-ico { text-decoration: underline dotted; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
-.explain-btn[aria-pressed="true"] { background: rgba(255, 255, 255, 0.16); border-color: rgba(255, 255, 255, 0.5); }
-.explain-btn[aria-pressed="false"] { opacity: 0.7; }
-.explain-btn[aria-pressed="false"] .ex-ico { text-decoration: none; }
-/* Explain off: terms read as plain text, no popovers. */
-html.no-explain .gl { font-weight: inherit; text-decoration: none; cursor: inherit; pointer-events: none; color: inherit; }
-html.no-explain .gl-pop { display: none; }
 
 .gl-pop.has-more { pointer-events: auto; }
 .gl-more {
