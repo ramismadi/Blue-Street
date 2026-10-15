@@ -1,7 +1,7 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-10-14T16:35:00-05:00",
+  "updated": "2026-10-15T02:15:00-05:00",
   "currencies": {
     "USD": {
       "recent": [
@@ -15,7 +15,7 @@
           "note": "Core beat twice (0.3% m/m, 2.6% y/y) — the October-hold thesis broke; December fully priced."
         }
       ],
-      "note": "Hot core on both measures — October 27–28 back in play."
+      "note": "Hot core on both measures — October 27–28 back in play; PPI Thursday is the next score."
     },
     "EUR": {
       "recent": [
@@ -26,18 +26,47 @@
           "result": "miss",
           "actual": "+8.7%",
           "forecast": "0.6% m/m",
-          "note": "Pipeline inflation hot (hottest since Feb 2023) — a miss on the disinflation read, but it firms the ECB's December-hike case."
+          "note": "Hottest since Feb 2023 — a miss on the disinflation read, but it firms the ECB's December-hike case."
         }
       ],
       "note": "Hot wholesale prices keep December alive without committing October."
     },
     "GBP": {
-      "recent": [],
-      "note": null
+      "recent": [
+        {
+          "id": "uk-gdp-20261015",
+          "date": "2026-10-15",
+          "title": "UK GDP m/m (Aug)",
+          "result": "beat",
+          "actual": "+0.1%",
+          "forecast": "-0.1%",
+          "note": "Growth holding, not stalling — the ~86% November BoE hike case carries on."
+        }
+      ],
+      "note": "One growth beat — the BoE's hawkish hold keeps its domestic cover."
     },
     "JPY": {
-      "recent": [],
-      "note": null
+      "recent": [
+        {
+          "id": "jp-machinery-20261015",
+          "date": "2026-10-15",
+          "title": "Japan core machinery orders m/m (Aug)",
+          "result": "beat",
+          "actual": "+5.2%",
+          "forecast": "2.2%",
+          "note": "Broad capex rebound — the domestic-demand leg of the BoJ's December case."
+        },
+        {
+          "id": "jp-ip-revised-20261015",
+          "date": "2026-10-15",
+          "title": "Japan industrial production m/m (Aug, rev)",
+          "result": "miss",
+          "actual": "-2.4%",
+          "forecast": "-1.7%",
+          "note": "Second straight contraction, steepest since January — output is the soft leg."
+        }
+      ],
+      "note": "Split — capex beats, output misses; the BoJ's Oct 29–30 forecasts decide which one matters."
     },
     "CHF": {
       "recent": [],
@@ -46,13 +75,22 @@
     "AUD": {
       "recent": [
         {
+          "id": "aus-jobs-20261015",
+          "date": "2026-10-15",
+          "title": "Australia employment (Sep)",
+          "result": "miss",
+          "actual": "-39.3K / 4.7%",
+          "forecast": "+19.6K / 4.6%",
+          "note": "Five-year-high unemployment above the RBA's 4.5% Q4 forecast — the November-hike case weakens."
+        },
+        {
           "id": "cny-trade-20261014",
           "date": "2026-10-14",
           "title": "China exports y/y (Sep)",
           "result": "beat",
           "actual": "+36.3%",
           "forecast": "25.5%",
-          "note": null
+          "note": "AI-hardware export boom — demand signal, not a domestic breakout."
         },
         {
           "id": "china-cpi-20261014",
@@ -61,10 +99,10 @@
           "result": "miss",
           "actual": "0.9%",
           "forecast": "1.0%",
-          "note": null
+          "note": "Consumer demand still muted while factory-gate heat is oil-driven."
         }
       ],
-      "note": "China's export boom beats on AI hardware; consumer CPI soft — mixed Asia signal into US CPI."
+      "note": "The jobs miss is the one that counts — slack building faster than the RBA's forecasts implied."
     },
     "CAD": {
       "recent": [
@@ -75,7 +113,7 @@
           "result": "beat",
           "actual": "+8.8%",
           "forecast": "2.9%",
-          "note": "Rebound led by multi-unit residential; texture vs the -68.3K jobs shock."
+          "note": "Rebound led by multi-unit residential; texture vs the -68.3K jobs shock (outside the window)."
         }
       ],
       "note": "Permits beat — stabilizing pipeline, not a BoC game-changer."
