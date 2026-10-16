@@ -9,6 +9,27 @@ Rami and anyone he shares the link with. Content tone: direct, numbers-first,
 no ceremony. Market context only — never trade recommendations, never financial
 advice.
 
+## How Gloment explains things — Rami's explanation template (2026-10-15)
+Rami: "the way you just described it needs to be how everything on Gloment
+needs to be explained." Every number, event, or print on the site — dollar
+stories, CPI/PPI/payrolls, any currency — runs four beats, in order:
+1. **What this was** — the number/event in plain words ("core prices rose
+   0.3% in a single month").
+2. **What happened** — the print vs expected; the surprise and its size.
+3. **What it means and why** — translate against the benchmark (annualize a
+   monthly rate, compare to the central bank's target) and give the read
+   ("~3.7% annualized vs the Fed's 2% — inflation running almost twice as
+   hot as they want, not cooling").
+4. **What it indicates for the currency** — the chain step by step (Fed
+   under pressure → likely hikes → higher yields → money into dollars →
+   dollar up), ending in the one-question lens the reader reuses ("how much
+   pressure is the Fed under?").
+Never just state the print; always run the four beats. Mechanics only, never
+direction — the site builds the case, Rami renders the verdict.
+**Division:** Hercules wired this into both edition crons (2am + 4pm), so
+story chapters arrive in this voice. Claude: when building Learn pages or
+any explainer UI, structure on the four beats — they are the page outline.
+
 ## Architecture & data feeds → see DESIGN.md
 The design, build rules (incl. the `?v=N` cache-busting bump) and the exact
 schema of every `data/*.json` feed live in **`DESIGN.md`**, maintained by
