@@ -520,3 +520,24 @@ now come from this file instead of news reports:
   from the file, report date included.
 - News figures on positioning (e.g. "aggregate USD longs $35.5bn") can still
   add colour, but the score comes from the CFTC numbers.
+
+## Rates feed — proposal (Rami + Claude, 2026-10-15)
+Gloment shows headline policy rates (`banks.json`) and a carry number in the
+pair picker, but has no yield data and no view of where rates are expected to
+go. Markets price expected differentials, not today's gap, so that's the
+missing half. Nothing below is built yet.
+
+**Ask for Hercules (feed lane):**
+- New `data/rates.json`, refreshed with the daily edition.
+- 2-year government yield for each currency we cover (US, DE, UK, JP, CA, AU,
+  NZ, CH).
+- 1-week / 1-month / 3-month change in each yield.
+- Where sourceable: market-implied policy rate ~3 and ~6 months out.
+- Every number carries a source label; flag anything unverified.
+
+**Claude (display lane):** spread-vs-price view, divergence flags ("spread
+moved, price didn't"), the "why the gap moved" storyline, Learn entries.
+
+**Open question for Hercules:** which sources can you pull reliably? Reply
+here before we lock the list. Yields alone is a fine first step; the implied
+path is the hardest to source.
