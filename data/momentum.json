@@ -1,69 +1,77 @@
 {
  "since": "2026-10-14",
  "window": 6,
- "updated": "2026-10-16T02:15:00-05:00",
+ "updated": "2026-10-16T16:30:00-05:00",
  "currencies": {
   "USD": {
    "recent": [
     {
-     "id": "us-cpi-20261014",
-     "date": "2026-10-14",
-     "title": "US CPI y/y (Sep)",
+     "id": "us-tic-20261016",
+     "date": "2026-10-16",
+     "title": "TIC long-term securities purchases (Aug)",
      "result": "beat",
-     "actual": "3.7%",
-     "forecast": "3.6%",
-     "note": "Core beat twice (0.3% m/m, 2.6% y/y) — the October-hold thesis broke; December fully priced."
+     "actual": "$199.8B",
+     "forecast": "$75.2B",
+     "note": "Net inflow $199.8B vs $75.2B fcst — foreign bid for US assets intact (long-term securities $300.7B)."
     },
     {
-     "id": "us-ppi-20261015",
-     "date": "2026-10-15",
-     "title": "US PPI m/m (Sep)",
+     "id": "us-budget-20261016",
+     "date": "2026-10-16",
+     "title": "US federal budget balance (Sep)",
      "result": "beat",
-     "actual": "+1.3%",
-     "forecast": "0.6%",
-     "note": "Biggest jump since Mar 2022; core +0.7% — and the market faded October anyway (LSEG ~29%)."
+     "actual": "-$26.9B",
+     "forecast": "-$34.7B",
+     "note": "Narrower September deficit vs -$34.7B fcst — but FY26 $1.992T, largest in 5 years."
     },
     {
-     "id": "us-retail-20261015",
-     "date": "2026-10-15",
-     "title": "US retail sales m/m (Sep)",
+     "id": "us-caputil-20261016",
+     "date": "2026-10-16",
+     "title": "US industrial production / capacity use (Sep)",
      "result": "beat",
-     "actual": "+0.8%",
-     "forecast": "0.3%",
-     "note": "Gasoline (+7.1%) did the work — control group only +0.1% vs 0.3% fcst."
+     "actual": "+0.7%",
+     "forecast": "+0.4%",
+     "note": "Sixth straight monthly gain; caputil 76.9% vs 76.5% fcst — factories up."
+    },
+    {
+     "id": "us-import-prices-20261016",
+     "date": "2026-10-16",
+     "title": "Import prices m/m (Sep)",
+     "result": "beat",
+     "actual": "+1.1%",
+     "forecast": "~0.8%",
+     "note": "Third hot inflation print of the week; +8.1% y/y, a four-year high."
+    },
+    {
+     "id": "us-inventories-20261015",
+     "date": "2026-10-15",
+     "title": "Business inventories (Aug)",
+     "result": "inline",
+     "actual": "0.4%",
+     "forecast": "0.4%",
+     "note": "In line: business inventories +0.4% m/m; restocking continues."
     },
     {
      "id": "us-core-retail-20261015",
      "date": "2026-10-15",
-     "title": "US core retail sales m/m (Sep)",
+     "title": "Core retail sales m/m (Sep)",
      "result": "beat",
      "actual": "+0.9%",
-     "forecast": "0.6%",
-     "note": "Beat on the ex-autos measure; ex-gas-and-autos just +0.2%."
-    },
-    {
-     "id": "us-philly-20261015",
-     "date": "2026-10-15",
-     "title": "Philly Fed manufacturing (Oct)",
-     "result": "miss",
-     "actual": "20.9",
-     "forecast": "28.2",
-     "note": "Second straight decline (from 37.8) but still expanding — cooling factory pulse."
-    },
-    {
-     "id": "us-empire-20261015",
-     "date": "2026-10-15",
-     "title": "Empire State manufacturing (Oct)",
-     "result": "beat",
-     "actual": "25.5",
-     "forecast": "12.1",
-     "note": "Sharpest regional read in the current data set — new orders 23.2."
+     "forecast": "+0.6%",
+     "note": "Beat on ex-autos — but ex-gas-and-autos only +0.2%; gasoline flattered."
     }
-   ],
-   "note": "Two hot wholesale prints in two days, and the market chose the risk-off tape — October faded anyway. Claims 199K inline."
+   ]
   },
   "EUR": {
    "recent": [
+    {
+     "id": "eu-cpi-final-20261016",
+     "date": "2026-10-16",
+     "title": "Eurozone final CPI y/y (Sep)",
+     "result": "inline",
+     "actual": "3.8%",
+     "forecast": "3.8%",
+     "note": "Final confirms the flash — no revision; energy +18.9% y/y. ECB waits for December."
+    },
     {
      "id": "eur-ip-20261015",
      "date": "2026-10-15",
@@ -71,28 +79,27 @@
      "result": "miss",
      "actual": "-0.5%",
      "forecast": "0.0%",
-     "note": "July revised deeper to -0.3% — soft factory texture into the ECB's Oct 29."
+     "note": "Factory output fell 0.5% vs flat consensus; July revised deeper to -0.3%."
     },
     {
      "id": "fr-cpi-final-20261015",
      "date": "2026-10-15",
-     "title": "France final CPI m/m (Sep)",
+     "title": "French final CPI m/m (Sep)",
      "result": "inline",
-     "actual": "-0.3%",
+     "actual": "-0.3% m/m",
      "forecast": "-0.3%",
-     "note": "Confirms the overshoot (HICP 3.4%, highest since Jan 2024) — no new signal."
+     "note": "Inline with prelim — September's energy-driven overshoot stands (HICP 3.4%)."
     },
     {
      "id": "de-wpi-20261014",
      "date": "2026-10-14",
-     "title": "German WPI y/y (Sep)",
+     "title": "German WPI m/m (Sep)",
      "result": "miss",
-     "actual": "+8.7%",
-     "forecast": "0.6% m/m",
-     "note": "Hottest since Feb 2023 — a miss on the disinflation read, but it firms the ECB's December-hike case."
+     "actual": "+8.7% y/y",
+     "forecast": "lower",
+     "note": "Hot wholesale print (+1.9% m/m) — pipeline pressure, wrong direction for the ECB."
     }
-   ],
-   "note": "Soft factories + inline France CPI — the pair trades the dollar leg."
+   ]
   },
   "GBP": {
    "recent": [
@@ -103,33 +110,40 @@
      "result": "beat",
      "actual": "+0.1%",
      "forecast": "-0.1%",
-     "note": "Growth holding, not stalling — the ~86% November BoE hike case carries on."
+     "note": "Beat: +0.1% vs -0.1% fcst; 2.1% y/y strongest since Aug 2022 — Nov 5 hike case intact."
+    },
+    {
+     "id": "uk-data-20261015",
+     "date": "2026-10-15",
+     "title": "UK data dump: GDP, IP, construction, trade",
+     "result": "beat",
+     "actual": "+0.1% / 3M +0.7%",
+     "forecast": "-0.1%",
+     "note": "Services (+0.9% 3M/3M) the driver; production +0.8%."
     }
-   ],
-   "note": "One growth beat — the BoE's hawkish hold keeps its domestic cover."
+   ]
   },
   "JPY": {
    "recent": [
     {
      "id": "jp-machinery-20261015",
-     "date": "2026-10-15",
-     "title": "Japan core machinery orders m/m (Aug)",
+     "date": "2026-10-14",
+     "title": "Japan core machinery orders (Aug)",
      "result": "beat",
      "actual": "+5.2%",
-     "forecast": "2.2%",
-     "note": "Broad capex rebound — the domestic-demand leg of the BoJ's December case."
+     "forecast": "+2.2%",
+     "note": "Capex beat: +5.2% m/m vs +2.2% fcst; +18.6% y/y."
     },
     {
      "id": "jp-ip-revised-20261015",
      "date": "2026-10-15",
-     "title": "Japan industrial production m/m (Aug, rev)",
+     "title": "Japan revised industrial production (Aug)",
      "result": "miss",
      "actual": "-2.4%",
      "forecast": "-1.7%",
-     "note": "Second straight contraction, steepest since January — output is the soft leg."
+     "note": "Revision deeper than prelim — second straight contraction, steepest since January."
     }
-   ],
-   "note": "Split — capex beats, output misses; the BoJ's Oct 29–30 forecasts decide which one matters."
+   ]
   },
   "CHF": {
    "recent": [
@@ -137,72 +151,96 @@
      "id": "chf-ppi-20261015",
      "date": "2026-10-15",
      "title": "Swiss PPI m/m (Sep)",
-     "result": "beat",
+     "result": "miss",
      "actual": "+0.3%",
      "forecast": "0.6%",
-     "note": "Came in below the bar (better=lower) — disinflation intact; December SNB cut risk stays on the table."
+     "note": "Miss vs 0.6% fcst — disinflation intact; December SNB cut risk on the table."
     }
-   ],
-   "note": "Soft pipeline — the franc's story is the haven bid, not the print."
+   ]
   },
   "AUD": {
    "recent": [
     {
      "id": "aus-jobs-20261015",
      "date": "2026-10-15",
-     "title": "Australia employment (Sep)",
+     "title": "Australia jobs (Sep)",
      "result": "miss",
      "actual": "-39.3K / 4.7%",
      "forecast": "+19.6K / 4.6%",
-     "note": "Five-year-high unemployment above the RBA's 4.5% Q4 forecast — the November-hike case weakens."
+     "note": "Big miss: -39.3K jobs, unemployment 4.7% — five-year high, above RBA's 4.5% Q4 forecast."
     },
     {
      "id": "cny-trade-20261014",
      "date": "2026-10-14",
-     "title": "China exports y/y (Sep)",
+     "title": "China trade balance (Sep)",
      "result": "beat",
      "actual": "+36.3%",
-     "forecast": "25.5%",
-     "note": "AI-hardware export boom — demand signal, not a domestic breakout."
-    },
-    {
-     "id": "china-cpi-20261014",
-     "date": "2026-10-14",
-     "title": "China CPI y/y (Sep)",
-     "result": "miss",
-     "actual": "0.9%",
-     "forecast": "1.0%",
-     "note": "Consumer demand still muted while factory-gate heat is oil-driven."
+     "forecast": "+25.5%",
+     "note": "China exports +36.3% y/y vs 25.5% fcst — demand read for the Aussie."
     }
-   ],
-   "note": "The jobs miss is the one that counts — slack building faster than the RBA's forecasts implied."
+   ]
   },
   "CAD": {
    "recent": [
     {
+     "id": "cad-housing-20261016",
+     "date": "2026-10-16",
+     "title": "Canada housing starts (Sep)",
+     "result": "beat",
+     "actual": "248,896",
+     "forecast": "234K",
+     "note": "Beat vs 234K fcst (+2.8% m/m) — but actual starts -11% y/y; low-impact for CAD."
+    },
+    {
+     "id": "cad-foreign-sec-20261016",
+     "date": "2026-10-16",
+     "title": "Canada foreign securities purchases (Aug)",
+     "result": "miss",
+     "actual": "-C$17.31B",
+     "forecast": "+C$23.59B",
+     "note": "Big miss: first monthly divestment of 2026; record C$17.5B federal-debt cut."
+    },
+    {
      "id": "cad-mfg-20261015",
      "date": "2026-10-15",
-     "title": "Canada manufacturing sales m/m (Aug)",
+     "title": "Canada manufacturing sales (Aug)",
      "result": "beat",
      "actual": "+1.5%",
-     "forecast": "1.1%",
-     "note": "Beat on prices — volumes flat; texture vs the -68.3K jobs shock (outside the window)."
+     "forecast": "+1.1%",
+     "note": "Beat vs 1.1% advance: primary metals +14.0% to a record; transport -2.6%."
     },
     {
      "id": "cad-building-20261014",
      "date": "2026-10-14",
-     "title": "Canada building permits m/m (Aug)",
+     "title": "Canada building permits (Aug)",
      "result": "beat",
      "actual": "+8.8%",
-     "forecast": "2.9%",
-     "note": "Rebound led by multi-unit residential; stabilizing pipeline, not a BoC game-changer."
+     "forecast": "+2.9%",
+     "note": "Permits beat: +8.8% vs 2.9% fcst."
     }
-   ],
-   "note": "Goods-economy texture — the -68.3K jobs shock is still the BoC's main event."
+   ]
   },
   "NZD": {
-   "recent": [],
-   "note": null
+   "recent": [
+    {
+     "id": "nzd-bnzm-20261015",
+     "date": "2026-10-15",
+     "title": "NZ BusinessNZ manufacturing PMI (Sep)",
+     "result": "beat",
+     "actual": "56.5",
+     "forecast": "53.1",
+     "note": "56.5 vs 53.1 prior — strongest since 2021; 15th straight expansion; employment back growing."
+    },
+    {
+     "id": "nzd-fpi-20261015",
+     "date": "2026-10-15",
+     "title": "NZ food price index m/m (Sep)",
+     "result": "miss",
+     "actual": "0.0%",
+     "forecast": "+0.3%",
+     "note": "Food prices flat vs +0.3% prior — softens the near-term inflation pulse into Oct 28."
+    }
+   ]
   }
  }
 }
