@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-14T17:38:12.109Z",
- "report_date": "2026-10-06",
+ "updated": "2026-10-16T23:39:20.306Z",
+ "report_date": "2026-10-13",
  "method": "flip = (long − short) / open interest × 100; percentile = mid-rank vs all weekly history since Jan 2015; zones ≥90 crowded long, ≥60 long-side, ≤40 short-side, ≤10 crowded short; signal (hedge funds): crowded long −1, crowded short +1, else 0",
  "sources": [
   {
@@ -22,55 +22,49 @@
    "contract": "ICE US Dollar Index",
    "code": "098662",
    "long_means": "dollar up against a basket of majors",
-   "as_of": "2026-10-06",
-   "oi": 51095,
+   "as_of": "2026-10-13",
+   "oi": 51816,
    "hf": {
-    "net": 864,
-    "long": 15283,
-    "short": 14419,
-    "flip": 1.69,
-    "pct": 53.5,
+    "net": 2076,
+    "long": 19008,
+    "short": 16932,
+    "flip": 4.01,
+    "pct": 59.4,
     "zone": "neutral",
     "z": {
-     "all": 0.15,
-     "y10": 0.12,
-     "y1": 0.8
+     "all": 0.26,
+     "y10": 0.22,
+     "y1": 0.89
     },
-    "range12": 41,
-    "chg1": 503,
-    "chg4": -5322,
-    "weeks": 614,
+    "range12": 50,
+    "chg1": 1212,
+    "chg4": 6985,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": 19096,
-    "long": 22843,
-    "short": 3747,
-    "flip": 37.37,
-    "pct": 80.2,
+    "net": 18164,
+    "long": 20486,
+    "short": 2322,
+    "flip": 35.05,
+    "pct": 73.3,
     "zone": "long-side",
     "z": {
-     "all": 0.89,
-     "y10": 0.81,
-     "y1": 0.98
+     "all": 0.75,
+     "y10": 0.68,
+     "y1": 0.81
     },
-    "range12": 67,
-    "chg1": 1089,
-    "chg4": 2752,
-    "weeks": 614,
+    "range12": 55,
+    "chg1": -932,
+    "chg4": 2362,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": -3095,
-     "oi": 32911,
-     "rm": 8538
-    },
     {
      "d": "2026-04-21",
      "hf": -2409,
@@ -220,9 +214,15 @@
      "hf": 864,
      "oi": 51095,
      "rm": 19096
+    },
+    {
+     "d": "2026-10-13",
+     "hf": 2076,
+     "oi": 51816,
+     "rm": 18164
     }
    ],
-   "summary": "Hedge funds are net long the dollar, mid-range for them (54th percentile). Over four weeks they cut their net long by 5,322 contracts. Real money is net long, heavier than usual (80th percentile)."
+   "summary": "Hedge funds are net long the dollar, mid-range for them (59th percentile). Over four weeks they flipped from net short to net long. Real money is net long, heavier than usual (73rd percentile)."
   },
   {
    "id": "EUR",
@@ -233,55 +233,49 @@
    "contract": "CME Euro FX",
    "code": "099741",
    "long_means": "euro up against the dollar",
-   "as_of": "2026-10-06",
-   "oi": 870291,
+   "as_of": "2026-10-13",
+   "oi": 874541,
    "hf": {
-    "net": -44261,
-    "long": 135367,
-    "short": 179628,
-    "flip": -5.09,
-    "pct": 43.6,
-    "zone": "neutral",
+    "net": -68001,
+    "long": 120021,
+    "short": 188022,
+    "flip": -7.78,
+    "pct": 35.9,
+    "zone": "short-side",
     "z": {
-     "all": 0.22,
-     "y10": -0.04,
-     "y1": -1.26
+     "all": -0.03,
+     "y10": -0.35,
+     "y1": -1.82
     },
-    "range12": 54,
-    "chg1": -4996,
-    "chg4": -10976,
-    "weeks": 614,
+    "range12": 0,
+    "chg1": -23740,
+    "chg4": -39845,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": 189881,
-    "long": 499449,
-    "short": 309568,
-    "flip": 21.82,
-    "pct": 21.6,
+    "net": 199918,
+    "long": 502676,
+    "short": 302758,
+    "flip": 22.86,
+    "pct": 23.3,
     "zone": "short-side",
     "z": {
-     "all": -0.46,
-     "y10": -1.26,
-     "y1": -2.17
+     "all": -0.4,
+     "y10": -1.17,
+     "y1": -1.91
     },
-    "range12": 0,
-    "chg1": -30722,
-    "chg4": -60797,
-    "weeks": 614,
+    "range12": 14,
+    "chg1": 10037,
+    "chg4": -51780,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": 25382,
-     "oi": 788828,
-     "rm": 270442
-    },
     {
      "d": "2026-04-21",
      "hf": 20317,
@@ -431,9 +425,15 @@
      "hf": -44261,
      "oi": 870291,
      "rm": 189881
+    },
+    {
+     "d": "2026-10-13",
+     "hf": -68001,
+     "oi": 874541,
+     "rm": 199918
     }
    ],
-   "summary": "Hedge funds are net short the euro, mid-range for them (44th percentile). Over four weeks they added 10,976 contracts to their net short. Real money is net long, but lighter than usual (22nd percentile)."
+   "summary": "Hedge funds are net short the euro, heavier than usual (36th percentile). Over four weeks they added 39,845 contracts to their net short. That is the lowest net position in 12 weeks. Real money is net long, but lighter than usual (23rd percentile)."
   },
   {
    "id": "GBP",
@@ -444,55 +444,49 @@
    "contract": "CME British Pound",
    "code": "096742",
    "long_means": "pound up against the dollar",
-   "as_of": "2026-10-06",
-   "oi": 265890,
+   "as_of": "2026-10-13",
+   "oi": 268532,
    "hf": {
-    "net": 12432,
-    "long": 57368,
-    "short": 44936,
-    "flip": 4.68,
-    "pct": 47.8,
+    "net": 10313,
+    "long": 55726,
+    "short": 45413,
+    "flip": 3.84,
+    "pct": 45.1,
     "zone": "neutral",
     "z": {
-     "all": 0.04,
-     "y10": -0.09,
-     "y1": -1.1
+     "all": -0.02,
+     "y10": -0.17,
+     "y1": -1.22
     },
-    "range12": 18,
-    "chg1": 7826,
-    "chg4": -22195,
-    "weeks": 614,
+    "range12": 13,
+    "chg1": -2119,
+    "chg4": -8565,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -145442,
-    "long": 17746,
-    "short": 163188,
-    "flip": -54.7,
-    "pct": 0.1,
+    "net": -145735,
+    "long": 18995,
+    "short": 164730,
+    "flip": -54.27,
+    "pct": 0.2,
     "zone": "crowded short",
     "z": {
-     "all": -2.43,
-     "y10": -2.47,
-     "y1": -2.13
+     "all": -2.38,
+     "y10": -2.42,
+     "y1": -2
     },
     "range12": 0,
-    "chg1": -16898,
-    "chg4": -39578,
-    "weeks": 614,
+    "chg1": -293,
+    "chg4": -56524,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": 22331,
-     "oi": 250053,
-     "rm": -87915
-    },
     {
      "d": "2026-04-21",
      "hf": 29137,
@@ -642,9 +636,15 @@
      "hf": 12432,
      "oi": 265890,
      "rm": -145442
+    },
+    {
+     "d": "2026-10-13",
+     "hf": 10313,
+     "oi": 268532,
+     "rm": -145735
     }
    ],
-   "summary": "Hedge funds are net long the pound, mid-range for them (48th percentile). Over four weeks they cut their net long by 22,195 contracts. Real money is net short, a crowded short by their own history (the lowest reading since 2015)."
+   "summary": "Hedge funds are net long the pound, mid-range for them (45th percentile). Over four weeks they cut their net long by 8,565 contracts. Real money is net short, a crowded short by their own history (the lowest reading since 2015)."
   },
   {
    "id": "JPY",
@@ -655,55 +655,49 @@
    "contract": "CME Japanese Yen",
    "code": "097741",
    "long_means": "yen up against the dollar",
-   "as_of": "2026-10-06",
-   "oi": 368138,
+   "as_of": "2026-10-13",
+   "oi": 373502,
    "hf": {
-    "net": -25043,
-    "long": 66123,
-    "short": 91166,
-    "flip": -6.8,
-    "pct": 66.7,
+    "net": -33673,
+    "long": 65309,
+    "short": 98982,
+    "flip": -9.02,
+    "pct": 63,
     "zone": "long-side",
     "z": {
-     "all": 0.3,
-     "y10": 0.45,
-     "y1": 1.48
+     "all": 0.16,
+     "y10": 0.29,
+     "y1": 1.13
     },
-    "range12": 62,
-    "chg1": -10882,
-    "chg4": 24055,
-    "weeks": 614,
+    "range12": 55,
+    "chg1": -8630,
+    "chg4": -56843,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": 67795,
-    "long": 143300,
-    "short": 75505,
-    "flip": 18.42,
-    "pct": 85.4,
+    "net": 65819,
+    "long": 146227,
+    "short": 80408,
+    "flip": 17.62,
+    "pct": 85,
     "zone": "long-side",
     "z": {
-     "all": 1.13,
-     "y10": 1.01,
-     "y1": 1.13
+     "all": 1.09,
+     "y10": 0.96,
+     "y1": 1.09
     },
-    "range12": 100,
-    "chg1": 16161,
-    "chg4": 68365,
-    "weeks": 614,
+    "range12": 99,
+    "chg1": -1976,
+    "chg4": 11974,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": -54445,
-     "oi": 354344,
-     "rm": -10033
-    },
     {
      "d": "2026-04-21",
      "hf": -68497,
@@ -853,9 +847,15 @@
      "hf": -25043,
      "oi": 368138,
      "rm": 67795
+    },
+    {
+     "d": "2026-10-13",
+     "hf": -33673,
+     "oi": 373502,
+     "rm": 65819
     }
    ],
-   "summary": "Hedge funds are net short the yen, but less short than usual (67th percentile). Over four weeks they cut their net short by 24,055 contracts. Real money is net long, heavier than usual (85th percentile)."
+   "summary": "Hedge funds are net short the yen, but less short than usual (63rd percentile). Over four weeks they flipped from net long to net short. Real money is net long, heavier than usual (85th percentile)."
   },
   {
    "id": "CHF",
@@ -866,55 +866,49 @@
    "contract": "CME Swiss Franc",
    "code": "092741",
    "long_means": "franc up against the dollar",
-   "as_of": "2026-10-06",
+   "as_of": "2026-10-13",
    "oi": 137185,
    "hf": {
-    "net": -11350,
-    "long": 12900,
-    "short": 24250,
-    "flip": -8.27,
-    "pct": 41.3,
-    "zone": "neutral",
+    "net": -14941,
+    "long": 9935,
+    "short": 24876,
+    "flip": -10.89,
+    "pct": 34.6,
+    "zone": "short-side",
     "z": {
-     "all": -0.26,
-     "y10": -0.35,
-     "y1": -0.86
+     "all": -0.42,
+     "y10": -0.52,
+     "y1": -1.41
     },
-    "range12": 67,
-    "chg1": 2645,
-    "chg4": 2090,
-    "weeks": 614,
+    "range12": 20,
+    "chg1": -3591,
+    "chg4": 23,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -37379,
-    "long": 19529,
-    "short": 56908,
-    "flip": -27.25,
-    "pct": 27.6,
+    "net": -31456,
+    "long": 22676,
+    "short": 54132,
+    "flip": -22.93,
+    "pct": 38,
     "zone": "short-side",
     "z": {
-     "all": -0.59,
-     "y10": -0.43,
-     "y1": 1.46
+     "all": -0.33,
+     "y10": -0.16,
+     "y1": 1.75
     },
-    "range12": 24,
-    "chg1": -968,
-    "chg4": -1702,
-    "weeks": 614,
+    "range12": 76,
+    "chg1": 5923,
+    "chg4": 4665,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": -3421,
-     "oi": 93376,
-     "rm": -41565
-    },
     {
      "d": "2026-04-21",
      "hf": -3766,
@@ -1064,9 +1058,15 @@
      "hf": -11350,
      "oi": 137185,
      "rm": -37379
+    },
+    {
+     "d": "2026-10-13",
+     "hf": -14941,
+     "oi": 137185,
+     "rm": -31456
     }
    ],
-   "summary": "Hedge funds are net short the franc, mid-range for them (41st percentile). Over four weeks they cut their net short by 2,090 contracts. Real money is net short, heavier than usual (28th percentile)."
+   "summary": "Hedge funds are net short the franc, heavier than usual (35th percentile). Over four weeks they cut their net short by 23 contracts. Real money is net short, heavier than usual (38th percentile)."
   },
   {
    "id": "CAD",
@@ -1077,55 +1077,49 @@
    "contract": "CME Canadian Dollar",
    "code": "090741",
    "long_means": "Canadian dollar up against the US dollar",
-   "as_of": "2026-10-06",
-   "oi": 371048,
+   "as_of": "2026-10-13",
+   "oi": 378204,
    "hf": {
-    "net": -79625,
-    "long": 31682,
-    "short": 111307,
-    "flip": -21.46,
-    "pct": 31.4,
+    "net": -88112,
+    "long": 23811,
+    "short": 111923,
+    "flip": -23.3,
+    "pct": 26.1,
     "zone": "short-side",
     "z": {
-     "all": -0.62,
-     "y10": -0.68,
-     "y1": 0.03
+     "all": -0.74,
+     "y10": -0.8,
+     "y1": -0.31
     },
-    "range12": 36,
-    "chg1": -9981,
-    "chg4": -24177,
-    "weeks": 614,
+    "range12": 23,
+    "chg1": -8487,
+    "chg4": -49090,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -35806,
-    "long": 97612,
-    "short": 133418,
-    "flip": -9.65,
-    "pct": 27.3,
+    "net": -30804,
+    "long": 102895,
+    "short": 133699,
+    "flip": -8.14,
+    "pct": 28.9,
     "zone": "short-side",
     "z": {
-     "all": -0.5,
-     "y10": -0.4,
-     "y1": -0.03
+     "all": -0.43,
+     "y10": -0.33,
+     "y1": 0.02
     },
-    "range12": 72,
-    "chg1": -8225,
-    "chg4": -5798,
-    "weeks": 614,
+    "range12": 77,
+    "chg1": 5002,
+    "chg4": -21418,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": -61404,
-     "oi": 259258,
-     "rm": -26510
-    },
     {
      "d": "2026-04-21",
      "hf": -64215,
@@ -1275,9 +1269,15 @@
      "hf": -79625,
      "oi": 371048,
      "rm": -35806
+    },
+    {
+     "d": "2026-10-13",
+     "hf": -88112,
+     "oi": 378204,
+     "rm": -30804
     }
    ],
-   "summary": "Hedge funds are net short the Canadian dollar, heavier than usual (31st percentile). Over four weeks they added 24,177 contracts to their net short. Real money is net short, heavier than usual (27th percentile)."
+   "summary": "Hedge funds are net short the Canadian dollar, heavier than usual (26th percentile). Over four weeks they added 49,090 contracts to their net short. Real money is net short, heavier than usual (29th percentile)."
   },
   {
    "id": "AUD",
@@ -1288,55 +1288,49 @@
    "contract": "CME Australian Dollar",
    "code": "232741",
    "long_means": "Aussie up against the US dollar",
-   "as_of": "2026-10-06",
-   "oi": 328682,
+   "as_of": "2026-10-13",
+   "oi": 339464,
    "hf": {
-    "net": 54133,
-    "long": 86777,
-    "short": 32644,
-    "flip": 16.47,
-    "pct": 79.4,
+    "net": 50591,
+    "long": 87632,
+    "short": 37041,
+    "flip": 14.9,
+    "pct": 76.5,
     "zone": "long-side",
     "z": {
-     "all": 0.87,
-     "y10": 0.85,
-     "y1": 0.32
+     "all": 0.78,
+     "y10": 0.76,
+     "y1": 0.13
     },
-    "range12": 81,
-    "chg1": -6459,
-    "chg4": 4354,
-    "weeks": 614,
+    "range12": 69,
+    "chg1": -3542,
+    "chg4": -10544,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -101428,
-    "long": 87156,
-    "short": 188584,
-    "flip": -30.86,
-    "pct": 16.7,
+    "net": -115920,
+    "long": 84332,
+    "short": 200252,
+    "flip": -34.15,
+    "pct": 11.3,
     "zone": "short-side",
     "z": {
-     "all": -0.99,
-     "y10": -0.9,
-     "y1": -1.28
+     "all": -1.19,
+     "y10": -1.12,
+     "y1": -1.48
     },
     "range12": 0,
-    "chg1": -28229,
-    "chg4": -61229,
-    "weeks": 614,
+    "chg1": -14492,
+    "chg4": -69524,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": true,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": 43642,
-     "oi": 263918,
-     "rm": 36483
-    },
     {
      "d": "2026-04-21",
      "hf": 48325,
@@ -1486,9 +1480,15 @@
      "hf": 54133,
      "oi": 328682,
      "rm": -101428
+    },
+    {
+     "d": "2026-10-13",
+     "hf": 50591,
+     "oi": 339464,
+     "rm": -115920
     }
    ],
-   "summary": "Hedge funds are net long the Aussie, heavier than usual (79th percentile). Over four weeks they added 4,354 contracts to their net long. Real money is net short, heavier than usual (17th percentile) — leaning the other way from the hedge funds."
+   "summary": "Hedge funds are net long the Aussie, heavier than usual (77th percentile). Over four weeks they cut their net long by 10,544 contracts. Real money is net short, heavier than usual (11th percentile) — leaning the other way from the hedge funds."
   },
   {
    "id": "NZD",
@@ -1499,55 +1499,49 @@
    "contract": "CME NZ Dollar",
    "code": "112741",
    "long_means": "kiwi up against the US dollar",
-   "as_of": "2026-10-06",
-   "oi": 129883,
+   "as_of": "2026-10-13",
+   "oi": 125151,
    "hf": {
-    "net": -787,
-    "long": 27439,
-    "short": 28226,
-    "flip": -0.61,
-    "pct": 55.1,
-    "zone": "neutral",
+    "net": -11619,
+    "long": 17668,
+    "short": 29287,
+    "flip": -9.28,
+    "pct": 34.4,
+    "zone": "short-side",
     "z": {
-     "all": -0.04,
-     "y10": 0.02,
-     "y1": 1.26
+     "all": -0.42,
+     "y10": -0.4,
+     "y1": 0.52
     },
-    "range12": 100,
-    "chg1": 279,
-    "chg4": 16563,
-    "weeks": 614,
+    "range12": 67,
+    "chg1": -10832,
+    "chg4": -9853,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -32534,
-    "long": 11223,
-    "short": 43757,
-    "flip": -25.05,
-    "pct": 44.2,
-    "zone": "neutral",
+    "net": -44139,
+    "long": 12106,
+    "short": 56245,
+    "flip": -35.27,
+    "pct": 27.4,
+    "zone": "short-side",
     "z": {
-     "all": -0.26,
-     "y10": -0.24,
-     "y1": 0.84
+     "all": -0.75,
+     "y10": -0.72,
+     "y1": 0.22
     },
-    "range12": 20,
-    "chg1": -11306,
-    "chg4": -46558,
-    "weeks": 614,
+    "range12": 0,
+    "chg1": -11605,
+    "chg4": -54309,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": -17091,
-     "oi": 80727,
-     "rm": -38519
-    },
     {
      "d": "2026-04-21",
      "hf": -18062,
@@ -1697,9 +1691,15 @@
      "hf": -787,
      "oi": 129883,
      "rm": -32534
+    },
+    {
+     "d": "2026-10-13",
+     "hf": -11619,
+     "oi": 125151,
+     "rm": -44139
     }
    ],
-   "summary": "Hedge funds are net short the kiwi, mid-range for them (55th percentile). Over four weeks they cut their net short by 16,563 contracts. That is the highest net position in 12 weeks. Real money is net short, mid-range for them (44th percentile)."
+   "summary": "Hedge funds are net short the kiwi, heavier than usual (34th percentile). Over four weeks they added 9,853 contracts to their net short. Real money is net short, heavier than usual (27th percentile)."
   },
   {
    "id": "XAU",
@@ -1710,35 +1710,30 @@
    "contract": "COMEX Gold",
    "code": "088691",
    "long_means": "gold price up",
-   "as_of": "2026-10-06",
-   "oi": 396109,
+   "as_of": "2026-10-13",
+   "oi": 396345,
    "hf": {
-    "net": 110987,
-    "long": 127101,
-    "short": 16114,
-    "flip": 28.02,
-    "pct": 67,
+    "net": 107089,
+    "long": 124747,
+    "short": 17658,
+    "flip": 27.02,
+    "pct": 65.4,
     "zone": "long-side",
     "z": {
-     "all": 0.62,
-     "y10": 0.64,
-     "y1": 0.12
+     "all": 0.54,
+     "y10": 0.56,
+     "y1": -0.14
     },
     "range12": 0,
-    "chg1": -9331,
-    "chg4": -23985,
-    "weeks": 614,
+    "chg1": -3898,
+    "chg4": -26027,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Managed Money)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": 95141,
-     "oi": 362274
-    },
     {
      "d": "2026-04-21",
      "hf": 92976,
@@ -1863,9 +1858,14 @@
      "d": "2026-10-06",
      "hf": 110987,
      "oi": 396109
+    },
+    {
+     "d": "2026-10-13",
+     "hf": 107089,
+     "oi": 396345
     }
    ],
-   "summary": "Hedge funds are net long gold, heavier than usual (67th percentile). Over four weeks they cut their net long by 23,985 contracts. That is the lowest net position in 12 weeks."
+   "summary": "Hedge funds are net long gold, heavier than usual (65th percentile). Over four weeks they cut their net long by 26,027 contracts. That is the lowest net position in 12 weeks."
   },
   {
    "id": "XAG",
@@ -1876,35 +1876,30 @@
    "contract": "COMEX Silver",
    "code": "084691",
    "long_means": "silver price up",
-   "as_of": "2026-10-06",
-   "oi": 105130,
+   "as_of": "2026-10-13",
+   "oi": 108433,
    "hf": {
-    "net": 7528,
-    "long": 16457,
-    "short": 8929,
-    "flip": 7.16,
-    "pct": 28.1,
+    "net": 5619,
+    "long": 15802,
+    "short": 10183,
+    "flip": 5.18,
+    "pct": 23.8,
     "zone": "short-side",
     "z": {
-     "all": -0.53,
-     "y10": -0.48,
-     "y1": -1.11
+     "all": -0.68,
+     "y10": -0.64,
+     "y1": -1.7
     },
     "range12": 0,
-    "chg1": -86,
-    "chg4": -6858,
-    "weeks": 614,
+    "chg1": -1909,
+    "chg4": -7505,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Managed Money)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": 11270,
-     "oi": 116983
-    },
     {
      "d": "2026-04-21",
      "hf": 8868,
@@ -2029,9 +2024,14 @@
      "d": "2026-10-06",
      "hf": 7528,
      "oi": 105130
+    },
+    {
+     "d": "2026-10-13",
+     "hf": 5619,
+     "oi": 108433
     }
    ],
-   "summary": "Hedge funds are net long silver, but lighter than usual (28th percentile). Over four weeks they cut their net long by 6,858 contracts. That is the lowest net position in 12 weeks."
+   "summary": "Hedge funds are net long silver, but lighter than usual (24th percentile). Over four weeks they cut their net long by 7,505 contracts. That is the lowest net position in 12 weeks."
   },
   {
    "id": "WTI",
@@ -2042,35 +2042,30 @@
    "contract": "NYMEX WTI",
    "code": "067651",
    "long_means": "oil price up",
-   "as_of": "2026-10-06",
-   "oi": 1889422,
+   "as_of": "2026-10-13",
+   "oi": 1900179,
    "hf": {
-    "net": 53598,
-    "long": 178353,
-    "short": 124755,
-    "flip": 2.84,
-    "pct": 4.6,
+    "net": 40574,
+    "long": 171973,
+    "short": 131399,
+    "flip": 2.14,
+    "pct": 3.7,
     "zone": "crowded short",
     "z": {
-     "all": -1.58,
-     "y10": -1.55,
-     "y1": -0.07
+     "all": -1.73,
+     "y10": -1.69,
+     "y1": -0.44
     },
     "range12": 0,
-    "chg1": -25994,
-    "chg4": -58133,
-    "weeks": 614,
+    "chg1": -13024,
+    "chg4": -65705,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Managed Money)",
    "split": false,
    "signal": 1,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": 98368,
-     "oi": 2094492
-    },
     {
      "d": "2026-04-21",
      "hf": 99887,
@@ -2195,9 +2190,14 @@
      "d": "2026-10-06",
      "hf": 53598,
      "oi": 1889422
+    },
+    {
+     "d": "2026-10-13",
+     "hf": 40574,
+     "oi": 1900179
     }
    ],
-   "summary": "Hedge funds are net long oil, but the lightest they get — crowded short by their own history (5th percentile). Over four weeks they cut their net long by 58,133 contracts. That is the lowest net position in 12 weeks."
+   "summary": "Hedge funds are net long oil, but the lightest they get — crowded short by their own history (4th percentile). Over four weeks they cut their net long by 65,705 contracts. That is the lowest net position in 12 weeks."
   },
   {
    "id": "HG",
@@ -2208,35 +2208,30 @@
    "contract": "COMEX Copper",
    "code": "085692",
    "long_means": "copper price up",
-   "as_of": "2026-10-06",
-   "oi": 304033,
+   "as_of": "2026-10-13",
+   "oi": 313832,
    "hf": {
-    "net": 61134,
-    "long": 76836,
-    "short": 15702,
-    "flip": 20.11,
-    "pct": 75.3,
+    "net": 61058,
+    "long": 77643,
+    "short": 16585,
+    "flip": 19.46,
+    "pct": 73.4,
     "zone": "long-side",
     "z": {
-     "all": 0.78,
-     "y10": 0.66,
-     "y1": -1.2
+     "all": 0.74,
+     "y10": 0.61,
+     "y1": -1.35
     },
     "range12": 0,
-    "chg1": -16924,
-    "chg4": -21020,
-    "weeks": 614,
+    "chg1": -76,
+    "chg4": -4048,
+    "weeks": 615,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Managed Money)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-04-14",
-     "hf": 52333,
-     "oi": 245595
-    },
     {
      "d": "2026-04-21",
      "hf": 59585,
@@ -2361,9 +2356,14 @@
      "d": "2026-10-06",
      "hf": 61134,
      "oi": 304033
+    },
+    {
+     "d": "2026-10-13",
+     "hf": 61058,
+     "oi": 313832
     }
    ],
-   "summary": "Hedge funds are net long copper, heavier than usual (75th percentile). Over four weeks they cut their net long by 21,020 contracts. That is the lowest net position in 12 weeks."
+   "summary": "Hedge funds are net long copper, heavier than usual (73rd percentile). Over four weeks they cut their net long by 4,048 contracts. That is the lowest net position in 12 weeks."
   }
  ]
 }
