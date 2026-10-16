@@ -1,98 +1,6 @@
 {
-  "updated": "2026-10-15T16:10:00-05:00",
+  "updated": "2026-10-16T02:10:00-05:00",
   "events": [
-    {
-      "actual": null,
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "BoE governor on a hawkish-hold Bank — any hike hints with Sep CPI ahead.",
-      "if_beat": null,
-      "if_miss": null,
-      "chapter": null,
-      "bank": null,
-      "sources": [],
-      "id": "boe-bailey-20261008",
-      "date": "2026-10-08",
-      "ccy": "GBP",
-      "impact": "high",
-      "category": "speech",
-      "title": "BoE's Bailey speaks",
-      "time_tbd": true,
-      "ts": "2026-10-08T12:15:00Z"
-    },
-    {
-      "actual": "197k",
-      "forecast": "200k",
-      "previous": "199k",
-      "better": "lower",
-      "why": "Fourth straight week near 57-year lows — the \"low-hire, low-fire\" labor market that keeps Fed hike odds alive.",
-      "if_beat": "Claims stay sub-200k: labor floor intact, Dec hike pricing holds, USD bid.",
-      "if_miss": "Claims jump: layoffs finally cracking, hike odds fade, USD soft.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "Reuters: US weekly jobless claims fall",
-          "url": "https://www.reuters.com/business/us-weekly-jobless-claims-fall-layoffs-remain-low-2026-10-08/"
-        }
-      ],
-      "id": "us-claims-20261008",
-      "ts": "2026-10-08T12:30:00Z",
-      "ccy": "USD",
-      "impact": "medium",
-      "category": "jobs",
-      "title": "Initial jobless claims (w/e Oct 3)",
-      "outcome": "Beat (197k vs 200k). Labor market stable despite weak payrolls — supports the Fed's hawkish stance; mildly USD-supportive."
-    },
-    {
-      "actual": "5.618% (b/c 2.54)",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Long-end demand test at multi-decade high yields — weak auctions steepen the curve and pressure risk.",
-      "if_beat": "Strong demand (high b/c, low tail): yields retreat, risk breathes, USD cools.",
-      "if_miss": "Weak demand: yields spike further, curve steepens, USD bid on haven flows.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "MarketWatch: 30y auction sees healthy demand",
-          "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-oil-prices-brent-crude-attack-tanker-off-qatar/card/30-year-treasury-yields-pull-back-further-after-auction-sees-healthy-demand-JJb3LfLEUa44GJMFISIP"
-        }
-      ],
-      "id": "us-30y-20261008",
-      "ts": "2026-10-08T17:00:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "auction",
-      "title": "30y Treasury auction ($22B)",
-      "outcome": "Strong: 5.618% (highest since 2000), b/c 2.54 vs 2.41 avg, indirect 72.3%. 30y pulled back from 5.73% intraday highs — peak-yield debate now live."
-    },
-    {
-      "actual": null,
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "St. Louis Fed hawk giving a tightening timeline — markets hang on every duration hint.",
-      "if_beat": "Hawkish (more/longer hikes): Dec hike odds firm, USD bid, yields up.",
-      "if_miss": "Dovish (pause signals): hike odds fade, USD soft.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "WSJ: Treasury yields retreat; Musalem timeline",
-          "url": "https://www.wsj.com/finance/investing/u-s-treasury-yields-eurozone-bond-yields-rise-relentlessly-b7d3ba07"
-        }
-      ],
-      "id": "fed-musalem-20261008",
-      "ts": "2026-10-08T17:40:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "speech",
-      "title": "Fed's Musalem speaks",
-      "outcome": "Hawkish: Musalem said rates may need to climb 6-9 more months; Waller open to more hikes. Supports ~70% Dec hike pricing."
-    },
     {
       "id": "cad-jobs-20261009",
       "ts": "2026-10-09T13:30:00Z",
@@ -652,7 +560,8 @@
       "if_miss": "Sanguine: haven flows keep doing the work — CHF drifts with the headlines.",
       "chapter": 5,
       "bank": "snb",
-      "sources": []
+      "sources": [],
+      "outcome": "No verified readout surfaced; the franc's Thursday move (+0.57%) was the haven bid, not SNB guidance. December cut risk stays on the table with PPI soft."
     },
     {
       "id": "jp-ip-revised-20261015",
@@ -1123,9 +1032,14 @@
       "if_miss": "Cool: price pressure easing.",
       "chapter": null,
       "bank": null,
-      "actual": null,
-      "outcome": null,
-      "sources": []
+      "actual": "0.0% m/m (vs +0.3% prior); 2.4% y/y",
+      "outcome": "Cool: food prices flat m/m after +0.3% — softens the near-term inflation pulse into the RBNZ's two-way Oct 28; card spending fell a second month (-0.4%), so the consumer leg is soft too.",
+      "sources": [
+        {
+          "label": "investinglive (Oct 16): NZ food prices hold flat in September",
+          "url": "https://investinglive.com/news/new-zealand-card-spending-falls-for-second-month-as-food-prices-hold-flat-in-september/"
+        }
+      ]
     },
     {
       "id": "speakers-20261016",
@@ -1142,24 +1056,6 @@
       "if_beat": "Hawkish: hike odds re-firm.",
       "if_miss": "Dovish: hike fully priced out.",
       "outcome": null
-    },
-    {
-      "id": "boe-bailey-20261016",
-      "ts": "2026-10-16T02:00:00Z",
-      "ccy": "GBP",
-      "impact": "high",
-      "category": "speech",
-      "title": "BoE Gov Bailey speaks",
-      "actual": null,
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Bailey on Friday with the week's UK data (GDP, retail) behind him — the last word before the Nov 5 blackout; ~85% of a hike is priced.",
-      "if_beat": "Hawkish: Nov hike locked — GBP ends the week bid.",
-      "if_miss": "Dovish: the priced hike wobbles — GBP soft into the weekend.",
-      "chapter": 3,
-      "bank": "boe",
-      "sources": []
     },
     {
       "id": "ecb-nagel-20261015",
@@ -1196,7 +1092,13 @@
       "if_miss": "Dovish: the first crack in the chorus — USD cools into the weekend.",
       "chapter": 1,
       "bank": "fed",
-      "sources": []
+      "sources": [
+        {
+          "label": "Reuters (Oct 16): Fed's Warsh gives no hint on October policy decision",
+          "url": "https://www.reuters.com/markets/asia/feds-warsh-gives-no-hint-october-policy-decision-2026-10-16/"
+        }
+      ],
+      "outcome": "No hint: Warsh said he does not 'prejudge' rate decisions and reprised the September price-stability line — October pricing unmoved (~29-31%, December ~90%+). These were his last public words before the Oct 17 blackout."
     },
     {
       "id": "boc-macklem-20261016",
@@ -1214,24 +1116,37 @@
       "if_miss": "Dovish: the hold is priced and CAD stays heavy.",
       "chapter": 7,
       "bank": "boc",
-      "sources": []
+      "sources": [
+        {
+          "label": "FXStreet (Oct 16): Asia wrap — Macklem in Bangkok",
+          "url": "https://www.fxstreet.com/analysis/tepid-equity-rebound-seen-ahead-of-the-weekend-after-thursdays-rout-202610160609"
+        }
+      ],
+      "outcome": "Hawkish lean: 'the longer it goes, the harder it is to look through' energy-price increases — Macklem putting the October 28 hike option back on the table rhetorically. The call still prices ~25% with Canada CPI Oct 21 ahead."
     },
     {
-      "id": "uk-retail-20261016",
-      "ts": "2026-10-16T06:00:00Z",
+      "id": "boe-bailey-20261016",
+      "ts": "2026-10-16T07:00:00Z",
       "ccy": "GBP",
-      "impact": "medium",
-      "category": "retail",
-      "title": "UK retail sales (Sep)",
+      "impact": "high",
+      "category": "speech",
+      "title": "BoE Gov Bailey speaks",
       "actual": null,
       "forecast": null,
       "previous": null,
-      "better": "higher",
-      "why": "Consumer strength ahead of the Oct 28 Budget and Sep CPI — a read on whether the economy needs the BoE's restraint.",
-      "if_beat": "Hot: demand resilient — BoE hike path intact.",
-      "if_miss": "Soft: consumption cooling — Nov hike odds slip.",
-      "outcome": null,
-      "sources": []
+      "better": null,
+      "why": "Bailey on Friday with the week's UK data (GDP, retail) behind him — the last word before the Nov 5 blackout; ~85% of a hike is priced.",
+      "if_beat": "Hawkish: Nov hike locked — GBP ends the week bid.",
+      "if_miss": "Dovish: the priced hike wobbles — GBP soft into the weekend.",
+      "chapter": 3,
+      "bank": "boe",
+      "sources": [
+        {
+          "label": "Reuters (Oct 16): Bailey says second-round inflation pressures look subdued",
+          "url": "https://www.reuters.com/world/uk/bank-englands-bailey-says-second-round-inflation-pressures-look-subdued-so-far-2026-10-16/"
+        }
+      ],
+      "outcome": "Dovish-leaning texture: second-round inflation 'so far... quite subdued'; August's 3.1% CPI 'enormously frustrating' (Middle East blamed); 'too early to conclude'. The November hike (~86%+) is untouched — this was about the 2027 path, not the November call."
     },
     {
       "id": "eu-cpi-final-20261016",
@@ -1264,23 +1179,6 @@
       "if_beat": "Firm: housing holding.",
       "if_miss": "Soft: housing cracking.",
       "outcome": null
-    },
-    {
-      "id": "us-housing-20261016",
-      "ts": "2026-10-16T12:30:00Z",
-      "ccy": "USD",
-      "impact": "medium",
-      "category": "housing",
-      "title": "US housing starts (Sep)",
-      "actual": null,
-      "forecast": null,
-      "previous": null,
-      "better": "higher",
-      "why": "Housing is the rates-sensitive transmission channel — starts show whether 5%+ long yields are biting.",
-      "if_beat": "Strong: economy shrugging off 5% yields — hawkish-hold intact.",
-      "if_miss": "Weak: rates biting — growth worry, USD softer.",
-      "outcome": null,
-      "sources": []
     },
     {
       "id": "us-import-prices-20261016",
