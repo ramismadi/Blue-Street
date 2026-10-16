@@ -1,28 +1,32 @@
 {
- "as_of": "2026-10-15",
+ "as_of": "2026-10-16",
+ "updated": "2026-10-16T02:15:00-05:00",
+ "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
+ "note": "Oct 16 (2am CT) edition. Warsh gave no hint — October stays ~30% into Saturday's blackout; the AI rout faded into a relief bounce; oil's escalation-vs-release tug compressed the Brent-WTI spread to ~$8.31. Positioning now reads the TFF hedge-fund cut: no currency crowded; the AUD 'record shorts' story breaks (funds net long, 79th pctile). FX spots are indicative index quotes.",
+ "pairs": {},
  "currencies": [
   {
    "ccy": "USD",
    "name": "US dollar",
    "bank": "fed",
    "chapter": 1,
-   "summary": "The market ignored the hot PPI: wholesale +1.3% (biggest since Mar 2022) and October still fell to ~29%; 10Y collapsed ~27bp to ~5.05-5.10%; DXY soft at ~102.05. Warsh 10:30pm CT is the last voice before the blackout.",
+   "summary": "Warsh gave no hint — October stays ~30% into Saturday's blackout; 10Y ~5.04% (softest in ~a month); DXY 102.05. December pricing split (~67% vs ~90%+) is the loose end.",
    "drivers": {
     "policy": {
      "score": 1,
-     "note": "October faded to ~29% post-PPI but the Fed stays the most hawkish bank in G10 (ECB ~12%, BoJ ~9%); December ~90%+ untouched"
+     "note": "October ~30% but the Fed stays the most hawkish G10 bank; December the live debate"
     },
     "growth": {
      "score": 1,
-     "note": "Empire State beat (+25.5) vs Philly miss (20.9); retail gasoline-driven; claims 199K inline"
+     "note": "IP today (cons +0.4%); Empire beat (+25.5); claims 199K inline"
     },
     "inflation": {
      "score": 1,
-     "note": "hot wholesale pipeline two days running — PPI +1.3%, core +0.7%; the bank hasn't moved yet"
+     "note": "PPI +1.3% hot; import prices today (cons +0.8%) the last input before blackout"
     },
     "risk": {
      "score": 0,
-     "note": "risk-off but FX traded the fade, not fear — haven flow went to gold/CHF"
+     "note": "relief bounce — the haven bid is holding, not extending"
     },
     "tot": {
      "score": 0,
@@ -30,11 +34,11 @@
     },
     "positioning": {
      "score": 0,
-     "note": "DXY net +12,011 (modest) — the aggregate crowded read unverified tonight"
+     "note": "hedge funds net long dollar, 54th pctile — mid-range (CFTC TFF (hedge funds & CTAs), report date Oct 6 — via data/cot.json)"
     },
     "fiscal": {
      "score": 0,
-     "note": "no new US fiscal development"
+     "note": "September budget balance today (cons -$34.7B)"
     }
    }
   },
@@ -43,11 +47,11 @@
    "name": "Euro",
    "bank": "ecb",
    "chapter": 2,
-   "summary": "Rode the dollar fade to ~1.1216 (+0.5%) despite its own soft data — eurozone IP missed (-0.5%), France CPI inline; the pair trades the Fed leg.",
+   "summary": "EUR/USD ~1.1218-1.1232 on the dollar fade; final CPI 4am CT confirms or revises the 3.8% flash beat — the ECB's December cover.",
    "drivers": {
     "policy": {
      "score": -1,
-     "note": "Fed-ECB gap still against it despite the overnight fade"
+     "note": "Fed-ECB gap still against it; ECB Oct 29 ~12%, December the live meeting"
     },
     "growth": {
      "score": -1,
@@ -55,23 +59,23 @@
     },
     "inflation": {
      "score": 1,
-     "note": "German WPI +8.7% y/y keeps December alive; France HICP 3.4% final"
+     "note": "flash CPI 3.8% beat (vs 3.6% exp); final at 4am CT; German WPI +8.7%"
     },
     "risk": {
      "score": 0,
-     "note": "mild haven vs risk proxies in the selloff"
+     "note": "mild haven vs risk proxies in the bounce"
     },
     "tot": {
      "score": -1,
-     "note": "Brent ~$106 still a tax; €100B+ war-driven import bill"
+     "note": "Brent ~$105.50 still a tax; €100B+ war-driven import bill"
     },
     "positioning": {
-     "score": 1,
-     "note": "shorts -99,332 (~1st pctile) — squeeze-loaded"
+     "score": 0,
+     "note": "hedge funds net short euro, 44th pctile — mid-range, not crowded (CFTC TFF (hedge funds & CTAs), report date Oct 6 — via data/cot.json)"
     },
     "fiscal": {
      "score": -1,
-     "note": "summit done, no cohesion headline; France Oct 20 revenue vote + Moody's Oct 23"
+     "note": "France Oct 20 revenue vote + Moody's Oct 23; summit no cohesion headline"
     }
    }
   },
@@ -80,7 +84,7 @@
    "name": "British pound",
    "bank": "boe",
    "chapter": 3,
-   "summary": "Rode the dollar fade to ~1.323-1.324 (+0.4%); Reuters poll: 54/63 expect the November hike — but no majority for more after; Pill caps the path.",
+   "summary": "Bailey overnight: second-round 'subdued', 3.1% 'enormously frustrating' — November (~86%+) untouched, the 2027 path leaned dovish; cable ~1.326-1.331.",
    "drivers": {
     "policy": {
      "score": 1,
@@ -88,11 +92,11 @@
     },
     "growth": {
      "score": 1,
-     "note": "GDP beat +0.1%, 3m/3m +0.7%, IP +0.8%, manufacturing +1.2%"
+     "note": "GDP beat +0.1%, 3m/3m +0.7%"
     },
     "inflation": {
      "score": 0,
-     "note": "no new UK inflation development"
+     "note": "Bailey: second-round 'subdued' — dovish-leaning for the path, not November"
     },
     "risk": {
      "score": 0,
@@ -103,12 +107,12 @@
      "note": "no new terms-of-trade read"
     },
     "positioning": {
-     "score": 1,
-     "note": "shorts -97,611 deepening — squeeze potential"
+     "score": 0,
+     "note": "hedge funds net long pound, 48th pctile — mid-range; real money crowded short (lowest since 2015) (CFTC TFF (hedge funds & CTAs), report date Oct 6 — via data/cot.json)"
     },
     "fiscal": {
      "score": 0,
-     "note": "no fiscal development"
+     "note": "Oct 28 budget the next fiscal gate"
     }
    }
   },
@@ -117,11 +121,11 @@
    "name": "Japanese yen",
    "bank": "boj",
    "chapter": 4,
-   "summary": "Faded to ~157.6-157.9 with the 10-year; Koeda: don't get 'overly cautious' on hikes, neutral 'considerably above 1%'; the haven bid picked the franc first.",
+   "summary": "USD/JPY 157.92 with the 10-year; Browne: 'yen level and monetary policy must change' — US rhetorical pressure on top of Koeda's hawkishness; BoJ December ~88%.",
    "drivers": {
     "policy": {
      "score": -1,
-     "note": "rate gap still favors USD despite the fade; Koeda keeps December alive"
+     "note": "rate gap still favors USD; Browne's line is rhetorical, not pricing"
     },
     "growth": {
      "score": 0,
@@ -132,8 +136,8 @@
      "note": "no new Japan inflation development"
     },
     "risk": {
-     "score": 1,
-     "note": "haven bid in the AI-debt selloff — second to the franc"
+     "score": 0,
+     "note": "relief bounce cools the haven bid; franc still the preferred haven"
     },
     "tot": {
      "score": -1,
@@ -141,7 +145,7 @@
     },
     "positioning": {
      "score": 0,
-     "note": "longs +62,325 — not stretched; neutral"
+     "note": "hedge funds net short yen, 67th pctile — less short than usual (CFTC TFF (hedge funds & CTAs), report date Oct 6 — via data/cot.json)"
     },
     "fiscal": {
      "score": 0,
@@ -154,7 +158,7 @@
    "name": "Swiss franc",
    "bank": "snb",
    "chapter": 5,
-   "summary": "The haven that finally showed up: USD/CHF -0.57% to ~0.831, Thursday's best G10 vs the dollar; Swiss PPI missed (+0.3% vs 0.6%) — December cut risk stays on the table.",
+   "summary": "Quiet: USD/CHF ~0.8293 — Thursday's haven bid holding into Asia; no new Swiss driver (Schlegel's remarks produced no verified readout).",
    "drivers": {
     "policy": {
      "score": 0,
@@ -166,11 +170,11 @@
     },
     "inflation": {
      "score": -1,
-     "note": "PPI +0.3% vs 0.6% fcst — disinflation intact; December cut risk on the table"
+     "note": "PPI +0.3% vs 0.6% — disinflation intact; December cut risk on the table"
     },
     "risk": {
      "score": 1,
-     "note": "best G10 haven performer on the AI-debt selloff"
+     "note": "haven bid holding from Thursday (+0.60%)"
     },
     "tot": {
      "score": 0,
@@ -178,7 +182,7 @@
     },
     "positioning": {
      "score": 0,
-     "note": "shorts -23,740, not stretched"
+     "note": "hedge funds net short franc, 41st pctile — mid-range (CFTC TFF (hedge funds & CTAs), report date Oct 6 — via data/cot.json)"
     },
     "fiscal": {
      "score": 0,
@@ -191,7 +195,7 @@
    "name": "Australian dollar",
    "bank": "rba",
    "chapter": 6,
-   "summary": "The only G10 loser vs the dollar (-0.48% to ~0.6939): the jobs miss (-39.3K, 4.7% unemp) collided with the risk-off tape; November-hike odds pared further.",
+   "summary": "~0.6928 (-0.59%) on the jobs miss; the TFF cut breaks the squeeze story — hedge funds net long AUD at the 79th percentile while real money sits short at the 17th.",
    "drivers": {
     "policy": {
      "score": 0,
@@ -206,16 +210,16 @@
      "note": "no new Australia inflation development"
     },
     "risk": {
-     "score": -1,
-     "note": "risk proxy in a risk-off tape"
+     "score": 0,
+     "note": "relief bounce steadies the risk proxy; China GDP Monday the demand read"
     },
     "tot": {
      "score": 0,
      "note": "no new terms-of-trade read"
     },
     "positioning": {
-     "score": 1,
-     "note": "shorts -98,588 (~2nd pctile, record gross) — squeeze potential"
+     "score": 0,
+     "note": "hedge funds net LONG AUD, 79th pctile; real money short, 17th — books lean opposite ways (CFTC TFF (hedge funds & CTAs), report date Oct 6 — via data/cot.json)"
     },
     "fiscal": {
      "score": 0,
@@ -228,15 +232,15 @@
    "name": "Canadian dollar",
    "bank": "boc",
    "chapter": 7,
-   "summary": "Tug-of-war legs pushed opposite ways: EIA confirmed the -8.6M draw, Dec WTI +2.7% to $96.42, while the dollar leg faded — USD/CAD ~1.42, 1.4299 still the line.",
+   "summary": "Macklem leaned hawkish ('harder to look through' energy prices) into Oct 28 (~25% priced); USD/CAD ~1.4210; WTI $97.97 on the confirmed draw.",
    "drivers": {
     "policy": {
-     "score": -1,
-     "note": "BoC Oct 28 ~25% vs a hawkish Fed"
+     "score": 0,
+     "note": "Macklem's hawkish lean firms the Oct 28 tail; Canada CPI Oct 21 the settler"
     },
     "growth": {
      "score": -1,
-     "note": "-68.3K jobs, unemp 6.5% — stands; mfg beat on prices, volumes flat"
+     "note": "-68.3K jobs stands; mfg beat on prices, volumes flat"
     },
     "inflation": {
      "score": 0,
@@ -248,11 +252,11 @@
     },
     "tot": {
      "score": 1,
-     "note": "EIA confirmed the draw; WTI +2.7%; spread compressed to ~$9.7"
+     "note": "EIA confirmed the draw; WTI +3.03%; spread compressed to ~$8.31"
     },
     "positioning": {
      "score": 0,
-     "note": "shorts -90,163 — heavy but not extreme"
+     "note": "hedge funds net short CAD, 31st pctile — heavier than usual, not crowded (CFTC TFF (hedge funds & CTAs), report date Oct 6 — via data/cot.json)"
     },
     "fiscal": {
      "score": 0,
@@ -265,23 +269,23 @@
    "name": "New Zealand dollar",
    "bank": "rbnz",
    "chapter": 8,
-   "summary": "Drifted +0.2% to ~0.5616 on the dollar fade; Conway: Oct 28 'wide open', direction 'most likely up' — the two-way bet stands, NZ CPI Oct 21 settles it.",
+   "summary": "Two-way data for the two-way bet: BNZ PMI 56.5 (hike side) vs flat food prices + soft card spending (hold side); NZD ~0.5635, above the 52-week low.",
    "drivers": {
     "policy": {
      "score": 0,
      "note": "RBNZ 2.75%; Conway: Oct 28 'wide open', direction 'most likely up'"
     },
     "growth": {
-     "score": 0,
-     "note": "no NZ data; BNZM PMI tonight"
+     "score": 1,
+     "note": "BNZ PMI 56.5 — strongest since 2021 ex-one spike; 15th straight expansion"
     },
     "inflation": {
      "score": 0,
-     "note": "NZ CPI Oct 21 is the next inflation test"
+     "note": "food prices flat (0.0%); NZ CPI Oct 21 the settler"
     },
     "risk": {
-     "score": -1,
-     "note": "risk proxy in a risk-off tape"
+     "score": 0,
+     "note": "relief bounce steadies the risk proxy"
     },
     "tot": {
      "score": 0,
@@ -289,7 +293,7 @@
     },
     "positioning": {
      "score": 0,
-     "note": "shorts -29,346, not stretched"
+     "note": "hedge funds net short kiwi, 55th pctile — mid-range; highest net in 12 weeks (CFTC TFF (hedge funds & CTAs), report date Oct 6 — via data/cot.json)"
     },
     "fiscal": {
      "score": 0,
@@ -416,10 +420,19 @@
     "CAD": -1,
     "NZD": -1
    }
+  },
+  {
+   "date": "2026-10-16",
+   "scores": {
+    "USD": 3,
+    "EUR": -3,
+    "GBP": 2,
+    "JPY": -2,
+    "CHF": 0,
+    "AUD": -1,
+    "CAD": 0,
+    "NZD": 1
+   }
   }
- ],
- "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule (stretched longs >=90th pctile = -1, stretched shorts <=10th pctile = +1)",
- "note": "Oct 15 (4pm CT NY-close) edition. The market ignored the hot PPI (+1.3%, biggest since Mar 2022): October faded to ~29%, the 10-year collapsed ~27bp off the CPI-day spike to a three-week low, and the dollar fell against every G10 currency except the aussie. The EIA confirmed the -8.6M draw — WTI +2.7% to $96.42, Brent-WTI spread compressed to ~$9.7. Gold reclaimed ~$4,150+; the franc was Thursday's haven (+0.59% vs the yen's +0.34%). Warsh 10:30pm CT is the last Fed voice before Saturday's blackout. FX spots are indicative index quotes.",
- "pairs": {},
- "updated": "2026-10-15T16:10:00-05:00"
+ ]
 }
