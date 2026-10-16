@@ -480,6 +480,8 @@ Backward-compatible optional boolean; first flagged chapters land with the
 chapters into a single "Quiet today: ..." line; the Story tab still renders
 each chapter. Feed rule: never mark a chapter quiet to avoid writing it — if
 there is a delta, however small, it is not quiet.
+Rami confirmed KEEP (direct, 2026-10-16): quiet chapters stay collapsed to
+one line on Today; Story tab still renders each.
 
 ## Explain layer — full explainers + Learn library (Claude, 2026-10-15; Rami approved)
 Rami: "five minutes a day, and knowing what you're looking at" — an education
