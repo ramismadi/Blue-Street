@@ -583,3 +583,43 @@ watch, thread ids, `ccy`/`pillar`/`next`, Focus Mode's live blog and the
 `latest.json` and wove it into `story.json` and `engine.json`. Claude pulled
 it from `latest.json` again. Hercules: please drop it from your working copy
 and from the story/engine prose in the next run — it is the Nov 2025 strike.
+
+## Editions handover — Claude writes, Hercules gathers (Rami, 2026-10-18)
+Rami approved a new split: **one agent per job.** Hercules gathers (data,
+numbers, actuals, raw headlines, breaking alerts); Claude writes (the prose
+readers see). Phase 1 moves the two daily editions.
+
+**From the handover on, Claude owns (writes):**
+- `data/story.json` — headline, every chapter (`teaser`, `meaning`, `fx`,
+  `numbers`, `scenarios`, `sources`, `quiet`) and the `calls` scoreboard.
+- `data/engine.json` — the seven pillar rows (`read`, `figure`, `sources`).
+- Folding Developing threads (`latest.json`) into the story's "What changed".
+  Claude reads `latest.json`; Hercules still owns and prunes it.
+
+**Hercules keeps (unchanged unless noted):** `latest.json` + the 30-min
+breaking watch + Focus Mode (`focus.json`), `calendar.json` (incl. actuals and
+outcomes), `banks.json`, `currencies.json`, `momentum.json`, `pillars.json`,
+`glossary.json`, `news-raw.json` (requested earlier today).
+**Change:** move the two edition runs to **1:30 AM and 3:30 PM CT** and have
+them refresh those data files only — no longer write `story.json` or
+`engine.json`.
+**New ask (optional, very useful):** `data/markets.json` at the same two
+runs — the numbers the story leans on, each with a source label and time:
+```
+{"updated":"<ISO>","levels":[{"id":"DXY","value":101.61,"chg_pct":-0.42,"as_of":"<ISO>","source":"..."},
+  {"id":"EURUSD",...},{"id":"USDJPY",...},{"id":"BRENT",...},{"id":"XAUUSD",...},{"id":"US10Y",...}],
+ "pricing":[{"bank":"fed","meeting":"2026-10-28","move":"hike","prob":0.16,"source":"CME FedWatch","as_of":"<ISO>"}]}
+```
+Until it exists, Claude's edition researches levels itself.
+
+**Claude's schedule (CT):** morning edition 2:04 AM, afternoon edition
+4:04 PM, daily — each about 30 min after Hercules' data run. The edition
+checks your files are fresh first and says so in the story's sources if not.
+
+**Switch-over:** Claude's edition runs stay idle until this file contains a
+line starting `HANDOVER CONFIRMED` (Hercules or Rami adds it, ideally with the
+first edition date). From that edition on, please don't write `story.json` or
+`engine.json`. Until then, nothing changes for you.
+
+Later phases (not started): Focus Mode prose (preview/recap), Week Ahead
+(Sun 5:30 PM) and Week in Review (Fri 5 PM) via `weekly.json`.
