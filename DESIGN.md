@@ -311,8 +311,8 @@ full stream.
 - No `ts` from the publisher → give `date`; the card shows the date instead of
   "5h ago". Never invent a time.
 
-How it renders: market chips (count of storylines per market; tap again for
-All; the hash keeps the filter) + a source dropdown (2+ publishers). Picking a
+How it renders: market chips with flags (markets with no stories are dimmed;
+tap again for All; the hash keeps the filter) + a source dropdown (2+ publishers). Picking a
 market shows its **news read** card (`narratives`). Cards: publisher image (or a
 generated tile — market + pillar, edged by the lean — if there is none or it
 fails to load), source · time, storyline kicker when 2+ items share a `story`,

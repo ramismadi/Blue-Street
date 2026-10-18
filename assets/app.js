@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '41';
+  var ASSET_VERSION = '42';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // 'learn' has a view but no tab
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
@@ -3042,7 +3042,6 @@
         b.setAttribute('data-mkt', c);
         if (c) b.appendChild(flagEl(c));
         b.appendChild(el('span', null, c ? mktName(c) : 'All'));
-        b.appendChild(el('span', 'fchip-n mono'));
         row.appendChild(b);
       });
       row.addEventListener('click', function (e) {
@@ -3137,13 +3136,12 @@
     var all = (news.data.items || []).filter(function (it) { return it && it.headline && (it.ts || it.date); });
     if (news.data.updated) setText('#news-updated', relTime(news.data.updated));
 
-    // Market chips: pressed state + how many storylines touch each market.
+    // Market chips: pressed state; markets with no stories are dimmed.
     var stAll = newsStories(all);
     Array.prototype.forEach.call(document.querySelectorAll('#news-mkts [data-mkt]'), function (b) {
       var c = b.getAttribute('data-mkt');
       b.setAttribute('aria-pressed', c === news.ccy ? 'true' : 'false');
       var n = c ? stAll.filter(function (s) { return s.items.some(function (it) { return newsTouches(it, c); }); }).length : stAll.length;
-      b.querySelector('.fchip-n').textContent = n ? String(n) : '';
       b.classList.toggle('empty', !n);
     });
 
