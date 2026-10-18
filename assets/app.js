@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '39';
+  var ASSET_VERSION = '40';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // 'learn' has a view but no tab
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
