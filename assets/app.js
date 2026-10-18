@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '40';
+  var ASSET_VERSION = '41';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // 'learn' has a view but no tab
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
@@ -2892,7 +2892,9 @@
       if (t.ccy.length || t.pillar) {
         var tags = el('div', 'wire-tags');
         t.ccy.forEach(function (c) {
-          var a = el('a', 'tag ccy mono', c);
+          var a = el('a', 'tag ccy mono');
+          a.appendChild(flagEl(c));
+          a.appendChild(document.createTextNode(c));
           a.href = '#fx/' + c;
           a.title = c + ' on the strength board';
           tags.appendChild(a);
@@ -2972,7 +2974,12 @@
       tz.appendChild(el('p', 'gf-hl', t0.latest.headline));
       if (t0.ccy.length || t0.pillar) {
         var tags = el('div', 'wire-tags');
-        t0.ccy.forEach(function (c) { tags.appendChild(el('span', 'tag ccy', c)); });
+        t0.ccy.forEach(function (c) {
+          var tg = el('span', 'tag ccy');
+          tg.appendChild(flagEl(c));
+          tg.appendChild(document.createTextNode(c));
+          tags.appendChild(tg);
+        });
         if (t0.pillar) tags.appendChild(el('span', 'tag pillar', pillarName(t0.pillar)));
         tz.appendChild(tags);
       }
@@ -3003,6 +3010,20 @@
   var news = { data: null, ccy: '', src: '', open: {} };
 
   function mktName(c) { return NEWS_NAMES[c] || c; }
+  /* Country flag (or a gold / oil icon) beside a market code. Local SVGs in
+     assets/flags — emoji flags don't render on Windows. */
+  var FLAG_FILE = { USD: 'us', EUR: 'eu', GBP: 'gb', JPY: 'jp', CHF: 'ch', CAD: 'ca', AUD: 'au', NZD: 'nz', XAU: 'xau', OIL: 'oil' };
+  function flagEl(c) {
+    var f = FLAG_FILE[c];
+    if (!f) return document.createTextNode('');
+    var i = document.createElement('img');
+    i.className = 'flag';
+    i.src = 'assets/flags/' + f + '.svg';
+    i.alt = '';
+    i.width = 16; i.height = 12;
+    i.decoding = 'async';
+    return i;
+  }
   /* Items carry `ts` (exact) or, when the publisher shows no time, `date`
      (YYYY-MM-DD, sorted as midday UTC and shown as the date). */
   function newsTime(it) { return new Date(it.ts || (it.date + 'T12:00:00Z')).getTime() || 0; }
@@ -3019,6 +3040,7 @@
         var b = el('button', 'fchip ccy');
         b.type = 'button';
         b.setAttribute('data-mkt', c);
+        if (c) b.appendChild(flagEl(c));
         b.appendChild(el('span', null, c ? mktName(c) : 'All'));
         b.appendChild(el('span', 'fchip-n mono'));
         row.appendChild(b);
@@ -3078,6 +3100,7 @@
     var s = NEWS_STRENGTH[x.strength] || '';
     var t = el('span', 'bias-tag ' + L.cls + (x.strength ? ' s' + x.strength : ''));
     t.appendChild(el('span', 'bias-arrow', L.arrow));
+    t.appendChild(flagEl(x.ccy));
     t.appendChild(el('span', 'mono', mktName(x.ccy)));
     if (long) t.appendChild(el('span', 'bias-word', L.word + (s ? ' · ' + s : '')));
     t.title = L.word + ' for ' + mktName(x.ccy) + (s ? ' (' + s + ')' : '') + ' — headline pressure, not a call';
@@ -3148,7 +3171,10 @@
     nb.hidden = !nr || !nr.text;
     if (!nb.hidden) {
       var head = el('div', 'nr-head');
-      head.appendChild(el('span', 'kicker', mktName(news.ccy) + ' · the news read'));
+      var kk = el('span', 'kicker nr-kicker');
+      kk.appendChild(flagEl(news.ccy));
+      kk.appendChild(document.createTextNode(mktName(news.ccy) + ' · the news read'));
+      head.appendChild(kk);
       var L = NEWS_LEAN[nr.lean];
       if (L) head.appendChild(el('span', 'bias-pill ' + L.cls, L.arrow + ' ' + L.word + ' lean'));
       nb.appendChild(head);

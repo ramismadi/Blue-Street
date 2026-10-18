@@ -2282,3 +2282,11 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
   .news-sec-head .news-src { margin-left: 0; width: 100%; }
   .news-sec-head .news-src select { width: 100%; }
 }
+
+/* Flags beside currency codes (assets/flags/*.svg, 4:3). */
+.flag { display: inline-block; width: 16px; height: 12px; border-radius: 2px; vertical-align: -1px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08); flex: none; object-fit: cover; }
+.tag.ccy, .bias-tag { display: inline-flex; align-items: center; gap: 5px; }
+.tag.ccy .flag, .bias-tag .flag { width: 14px; height: 10.5px; }
+.nr-kicker { display: inline-flex; align-items: center; gap: 7px; }
+.fchip.empty .flag { opacity: 0.7; }

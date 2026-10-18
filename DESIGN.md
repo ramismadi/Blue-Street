@@ -83,6 +83,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   component rules.
 - Fonts: serif (Source Serif 4 → Georgia) for headlines and ledes; system sans
   for UI/body; monospace only for tabular numerals.
+- Flags: `assets/flags/<us|eu|gb|jp|ch|ca|au|nz|xau|oil>.svg` (hand-drawn 4:3 SVGs; gold and oil are icons), placed with `flagEl(code)` in app.js. On the News chips, bias tags, news read, Developing thread tags and the Today glance tile. Emoji flags aren't used — Windows shows them as letters.
 - Session chips (masthead): SYD 07–16, TYO 09–18, LDN 08–17, NYC 08–17, each
   in its own city's local time (DST-correct), Mon–Fri, and only while the FX
   week is open (Sun 17:00 → Fri 17:00 New York). Holidays not modelled.
