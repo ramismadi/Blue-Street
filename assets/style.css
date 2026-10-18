@@ -2290,3 +2290,19 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .tag.ccy .flag, .bias-tag .flag { width: 14px; height: 10.5px; }
 .nr-kicker { display: inline-flex; align-items: center; gap: 7px; }
 .fchip.empty .flag { opacity: 0.7; }
+
+/* Drivers sub-navigation (Macro engine · Positioning · Central banks) */
+.subnav {
+  display: inline-flex; gap: 4px; padding: 4px; margin: 0 0 18px; border-radius: 12px;
+  background: var(--surface-2); border: 1px solid var(--line); max-width: 100%; overflow-x: auto; scrollbar-width: none;
+}
+.subnav::-webkit-scrollbar { display: none; }
+.subnav a {
+  flex: none; padding: 7px 14px; border-radius: 9px; font-size: 0.86rem; font-weight: 600;
+  color: var(--ink-2); text-decoration: none; white-space: nowrap;
+}
+.subnav a:hover { color: var(--ink); }
+.subnav a[aria-current="page"] { background: var(--surface); color: var(--accent); box-shadow: var(--shadow); }
+.subnav[hidden] { display: none; }
+.story-back { display: inline-block; margin-bottom: 12px; }
+.fd-news .news-tags { margin: 4px 0 0; }

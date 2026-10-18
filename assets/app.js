@@ -7,9 +7,14 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '42';
+  var ASSET_VERSION = '43';
 
-  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // 'learn' has a view but no tab
+  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
+  /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
+     their own light up their parent: Story lives under Today; the macro
+     engine, positioning and central banks are the three Drivers sections. */
+  var TAB_PARENT = { story: 'today', engine: 'drivers', positioning: 'drivers', banks: 'drivers', learn: null };
+  var DRIVER_VIEWS = ['engine', 'positioning', 'banks'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
@@ -117,6 +122,7 @@
     fetchJSON('data/news.json').then(function (d) {
       news.data = d;
       renderNews();
+      renderFx();   // "In the news" on currency pages
     }).catch(function () {
       note('#news-grid', 'News feed unavailable.');
     });
@@ -449,16 +455,29 @@
       h[0] = 'news';
       history.replaceState(null, '', '#' + h.join('/'));
     }
+    if (h[0] === 'drivers') {   // the tab opens the Drivers section last read
+      var last = 'engine';
+      try { last = localStorage.getItem('gloment-driver') || 'engine'; } catch (e) { /* private mode */ }
+      h = [DRIVER_VIEWS.indexOf(last) >= 0 ? last : 'engine'];
+      history.replaceState(null, '', '#' + h[0]);
+    }
     var tab = TABS.indexOf(h[0]) >= 0 ? h[0] : 'today';
-    TABS.forEach(function (t) {
-      var v = $('#view-' + t), a = $('#tab-' + t);
-      var on = t === tab;
-      if (v) v.hidden = !on;
-      if (a) {
-        a.setAttribute('aria-selected', on ? 'true' : 'false');
-        a.tabIndex = on ? 0 : -1;
-      }
+    var parent = tab in TAB_PARENT ? TAB_PARENT[tab] : tab;
+    TABS.forEach(function (t) { var v = $('#view-' + t); if (v) v.hidden = t !== tab; });
+    Array.prototype.forEach.call(document.querySelectorAll('#tabs [role=tab]'), function (a) {
+      var on = a.getAttribute('data-tab') === parent;
+      a.setAttribute('aria-selected', on ? 'true' : 'false');
+      a.tabIndex = on ? 0 : -1;
     });
+    var dn = $('#drivers-nav');
+    if (dn) {
+      dn.hidden = DRIVER_VIEWS.indexOf(tab) < 0;
+      Array.prototype.forEach.call(dn.querySelectorAll('[data-view]'), function (a) {
+        var on = a.getAttribute('data-view') === tab;
+        if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+      });
+      if (!dn.hidden) { try { localStorage.setItem('gloment-driver', tab); } catch (e) { /* private mode */ } }
+    }
     if (tab === 'story' && story) {
       var n = parseInt(h[1], 10);
       showChapter(isFinite(n) ? n - 1 : chapterIdx);
@@ -477,7 +496,7 @@
       cot.focus = (h[1] || '').toUpperCase();
       renderCot();
     }
-    var active = $('#tab-' + tab);
+    var active = $('#tab-' + (parent || tab));
     if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     window.scrollTo(0, 0);
   }
@@ -2676,6 +2695,24 @@
         a.href = '#news/' + c.ccy;
         a.appendChild(el('span', 'callout-lbl', relTime(t.latest.ts) + (t.items.length > 1 ? ' · ' + t.items.length + ' updates' : '')));
         a.appendChild(el('span', null, t.latest.headline));
+        side.appendChild(a);
+      });
+    }
+    // Latest headlines for this currency (news.json)
+    var nItems = ((news.data && news.data.items) || []).filter(function (it) { return newsTouches(it, c.ccy); })
+      .sort(function (a, b) { return newsTime(b) - newsTime(a); }).slice(0, 3);
+    if (nItems.length) {
+      side.appendChild(el('h2', 'section-label', 'In the news'));
+      nItems.forEach(function (it) {
+        var a = el('a', 'fd-wire fd-news');
+        a.href = '#news/' + c.ccy;
+        var lb = el('span', 'callout-lbl');
+        lb.appendChild(document.createTextNode((it.source || '') + ' · '));
+        lb.appendChild(newsWhenEl(it));
+        a.appendChild(lb);
+        a.appendChild(el('span', null, it.headline));
+        var x = (it.impact || []).filter(function (y) { return y.ccy === c.ccy; })[0];
+        if (x) { var tg = el('span', 'news-tags'); tg.appendChild(biasTag(x, true)); a.appendChild(tg); }
         side.appendChild(a);
       });
     }

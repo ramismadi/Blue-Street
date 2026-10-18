@@ -7,6 +7,15 @@ rewrite it — tell Rami (or note it in COLLAB.md) if something here is wrong.
 Collaboration rules and the update schedule live in `COLLAB.md`.
 
 ## Product shape
+**Five tabs, one question each (Rami, 2026-10-18):** Today (what's the
+story? — Story chapters open from here, `#story` lights up Today) ·
+Currencies (where does each stand? — the currency page carries its bank,
+positioning, chapter, Developing threads and "In the news") · **Drivers**
+(what's moving things underneath? — Macro engine, Positioning and Central
+banks as three sections with a sub-nav; `#drivers` opens the last one read,
+saved in localStorage `gloment-driver`) · Calendar · News. Every old route
+still works. The table below lists the views.
+
 A premium, tabbed FX macro desk. Principle: **less text up front, depth on
 demand** — every view leads with the takeaway and tucks detail behind a click.
 

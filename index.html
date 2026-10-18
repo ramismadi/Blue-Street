@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=42">
+<link rel="stylesheet" href="assets/style.css?v=43">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -24,8 +24,8 @@
     if (/^(ink|forest|velvet|onyx)$/.test(t || '')) document.documentElement.setAttribute('data-mode', 'dark');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=42" defer></script>
-<script src="assets/app.js?v=42" defer></script>
+<script src="assets/cot.js?v=43" defer></script>
+<script src="assets/app.js?v=43" defer></script>
 </head>
 <body>
 
@@ -59,11 +59,8 @@
     <div class="wrap">
       <div class="tabs" role="tablist" id="tabs">
         <a role="tab" href="./" data-home data-tab="today"    id="tab-today">Today <span class="badge focus-badge" id="focus-badge" hidden></span></a>
-        <a role="tab" href="#story"    data-tab="story"    id="tab-story">Story</a>
         <a role="tab" href="#fx"       data-tab="fx"       id="tab-fx">Currencies</a>
-        <a role="tab" href="#engine"   data-tab="engine"   id="tab-engine">Macro engine</a>
-        <a role="tab" href="#positioning" data-tab="positioning" id="tab-positioning">Positioning</a>
-        <a role="tab" href="#banks"    data-tab="banks"    id="tab-banks">Central banks</a>
+        <a role="tab" href="#drivers"  data-tab="drivers"  id="tab-drivers">Drivers</a>
         <a role="tab" href="#calendar" data-tab="calendar" id="tab-calendar">Calendar</a>
         <a role="tab" href="#news"     data-tab="news"     id="tab-news">News <span class="badge" id="wire-count" title="Stories developing in the last 24 hours" hidden></span></a>
       </div>
@@ -166,7 +163,8 @@
   </section>
 
   <!-- ============ STORY: one chapter at a time ============ -->
-  <section class="view" id="view-story" role="tabpanel" aria-labelledby="tab-story" hidden>
+  <section class="view" id="view-story" role="tabpanel" aria-label="Story" hidden>
+    <a class="more story-back" href="./" data-home>← Today</a>
     <div class="story-layout">
       <ol class="chapter-rail" id="chapter-rail" aria-label="Chapters"></ol>
       <article class="chapter-view card" id="chapter-view" aria-live="polite"></article>
@@ -200,7 +198,13 @@
   </section>
 
   <!-- ============ MACRO ENGINE ============ -->
-  <section class="view" id="view-engine" role="tabpanel" aria-labelledby="tab-engine" hidden>
+  <!-- Drivers: one tab, three sections (Rami, 2026-10-18) -->
+  <nav class="subnav" id="drivers-nav" aria-label="Drivers" hidden>
+    <a href="#engine" data-view="engine">Macro engine</a>
+    <a href="#positioning" data-view="positioning">Positioning</a>
+    <a href="#banks" data-view="banks">Central banks</a>
+  </nav>
+  <section class="view" id="view-engine" role="tabpanel" aria-label="Macro engine" hidden>
     <div class="view-head">
       <h1 class="view-title">Macro engine</h1>
       <p class="meta"><span id="pillar-count">Six</span> pillars · updated <span id="engine-updated">—</span></p>
@@ -209,7 +213,7 @@
   </section>
 
   <!-- ============ POSITIONING (CFTC COT; data/cot.json, Claude's weekly job) ============ -->
-  <section class="view" id="view-positioning" role="tabpanel" aria-labelledby="tab-positioning" hidden>
+  <section class="view" id="view-positioning" role="tabpanel" aria-label="Positioning" hidden>
     <div class="view-head">
       <h1 class="view-title">Positioning</h1>
       <p class="meta" id="cot-meta">Who&rsquo;s crowded, from the CFTC&rsquo;s weekly Commitments of Traders</p>
@@ -218,7 +222,7 @@
   </section>
 
   <!-- ============ CENTRAL BANKS (hand-seeded) ============ -->
-  <section class="view" id="view-banks" role="tabpanel" aria-labelledby="tab-banks" hidden>
+  <section class="view" id="view-banks" role="tabpanel" aria-label="Central banks" hidden>
     <div class="view-head">
       <h1 class="view-title">Central banks</h1>
       <p class="meta">Policy rate, next decision and what the market prices · updated <span id="banks-updated">—</span></p>
