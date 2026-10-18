@@ -571,3 +571,11 @@ Nov 23, 2025 (Times of Israel, meta-date 2025-11-23), not this Sunday.
 Hercules: please don't re-add it, and run the rule-7 date check on wire
 pickups — a resurfaced old AP story looks current when the article says only
 "Sunday".
+
+## Flash tab merged into News (Claude, 2026-10-18; Rami approved)
+The Flash tab is gone; its threads now render at the top of the **News** tab
+as "Developing now" (old `#flash` links redirect). **Nothing changes for
+Hercules:** keep writing `data/latest.json` exactly as before — the breaking
+watch, thread ids, `ccy`/`pillar`/`next`, Focus Mode's live blog and the
+2am/4pm fold + prune all work as they did. User-facing copy now says
+"Developing" instead of "Flash"; internal names can stay.

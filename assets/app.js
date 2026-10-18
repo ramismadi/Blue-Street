@@ -1,15 +1,15 @@
 /* Gloment — premium desk renderer. Plain static JS, no build step.
    Tabbed views (hash-routed: #today, #story, #story/2, #engine, #positioning, #banks,
-   #calendar, #news, #flash), a theme picker, and edition data (story, macro engine,
-   Flash) from local JSON files. textContent-only DOM, no HTML injection. */
+   #calendar, #news), a theme picker, and edition data (story, macro engine,
+   developing stories, news) from local JSON files. textContent-only DOM, no HTML injection. */
 
 (function () {
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '38';
+  var ASSET_VERSION = '39';
 
-  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'flash', 'learn'];   // 'learn' has a view but no tab
+  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // 'learn' has a view but no tab
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
@@ -111,7 +111,7 @@
       note('#today-next', 'Calendar data unavailable.');
     });
     fetchJSON('data/latest.json').then(renderWire).catch(function () {
-      note('#latest-items', 'No Flash items.');
+      note('#latest-items', 'Nothing developing right now.');
     });
     initNews();
     fetchJSON('data/news.json').then(function (d) {
@@ -445,8 +445,8 @@
 
   function route() {
     var h = (location.hash || '#today').slice(1).split('/');
-    if (h[0] === 'wire') {   // the tab was called Wire until 2026-10-09
-      h[0] = 'flash';
+    if (h[0] === 'wire' || h[0] === 'flash') {   // Wire → Flash (2026-10-09) → merged into News (2026-10-18)
+      h[0] = 'news';
       history.replaceState(null, '', '#' + h.join('/'));
     }
     var tab = TABS.indexOf(h[0]) >= 0 ? h[0] : 'today';
@@ -737,7 +737,7 @@
      dropped and new tiles are appended, so adding a tile later is safe. The
      first visible tile spans the full width. */
   var GLANCE_IDS = ['flash', 'next', 'lean'];
-  var GLANCE_NAMES = { flash: 'Flash', next: 'Next up', lean: 'Evidence leans' };
+  var GLANCE_NAMES = { flash: 'Developing', next: 'Next up', lean: 'Evidence leans' };
   var glance = { editing: false, drag: null };
 
   function glanceOrder() {
@@ -2670,10 +2670,10 @@
     // Wire threads touching this currency
     var wt = wireThreads.filter(function (t) { return t.ccy.indexOf(c.ccy) >= 0; });
     if (wt.length) {
-      side.appendChild(el('h2', 'section-label', 'On Flash'));
+      side.appendChild(el('h2', 'section-label', 'Developing'));
       wt.slice(0, 3).forEach(function (t) {
         var a = el('a', 'fd-wire');
-        a.href = '#flash';
+        a.href = '#news/' + c.ccy;
         a.appendChild(el('span', 'callout-lbl', relTime(t.latest.ts) + (t.items.length > 1 ? ' · ' + t.items.length + ' updates' : '')));
         a.appendChild(el('span', null, t.latest.headline));
         side.appendChild(a);
@@ -2812,6 +2812,38 @@
     return det;
   }
 
+  /* Which News filter chips a developing thread answers to: its currency
+     tags, plus Oil / Gold when the story is about them. */
+  var DEV_OIL = /\b(oil|crude|brent|wti|opec|hormuz|tanker|refiner|lng)\b/i, DEV_GOLD = /\bgold\b/i;
+  function devMarkets(t) {
+    var m = t.ccy.slice(), txt = t.items.map(function (it) { return it.headline || ''; }).join(' ');
+    if (t.pillar === 'tot' || DEV_OIL.test(txt)) m.push('OIL');
+    if (DEV_GOLD.test(txt)) m.push('XAU');
+    return m;
+  }
+  /* Apply the News market filter to the Developing strip. */
+  function filterDev() {
+    var box = $('#latest-items');
+    if (!box) return;
+    var c = news.ccy, shown = 0, shownEarlier = 0;
+    Array.prototype.forEach.call(box.querySelectorAll('.thread'), function (w) {
+      var ok = !c || (' ' + w.getAttribute('data-mkts') + ' ').indexOf(' ' + c + ' ') >= 0;
+      w.hidden = !ok;
+      if (ok) { if (w.closest('.dev-earlier')) shownEarlier++; else shown++; }
+    });
+    var ear = box.querySelector('.dev-earlier');
+    if (ear) {
+      ear.hidden = !shownEarlier;
+      var sm = ear.querySelector('summary');
+      if (sm) sm.textContent = 'Earlier stories \u00b7 ' + shownEarlier + ' cooling';
+    }
+    var empty = $('#dev-empty');
+    if (empty) {
+      empty.hidden = shown > 0;
+      empty.textContent = c ? 'Nothing developing on ' + mktName(c) + ' in the last 24 hours.' : 'Nothing developing in the last 24 hours.';
+    }
+  }
+
   function renderWire(d) {
     var box = $('#latest-items');
     box.textContent = '';
@@ -2819,13 +2851,17 @@
     focus.wire = items;
     if (focus.data) renderFocus();
     if (!items.length) {
-      box.appendChild(el('p', 'meta', 'No developing stories right now.'));
+      box.appendChild(el('p', 'meta', 'Nothing developing right now.'));
       return;
     }
     var threads = buildThreads(items);
     wireThreads = threads;
+    // Live threads (an update in the last 24h) lead; cooling ones fold away.
+    var liveN = threads.filter(function (t) { return Date.now() - new Date(t.latest.ts).getTime() <= COOL_AFTER; }).length;
     var badge = $('#wire-count');
-    if (badge) { badge.textContent = threads.length; badge.hidden = false; }
+    if (badge) { badge.textContent = liveN; badge.hidden = !liveN; }
+    var earlier = el('details', 'dev-earlier');
+    var earlierN = 0;
 
     threads.forEach(function (t, i) {
       var it = t.latest, n = t.items.length;
@@ -2835,6 +2871,7 @@
       var w = el('article', 'card wire-item thread gl-scope' + (i === 0 && !cooling ? ' latest' : '') +
         (cooling ? ' cooling' : ''));
       w.id = 'thread-' + t.id;
+      w.setAttribute('data-mkts', devMarkets(t).join(' '));
 
       // Meta: live status, update count, time span
       var meta = el('div', 'wire-meta');
@@ -2887,8 +2924,8 @@
 
       // The arc: earlier updates in this thread, newest first
       if (n > 1) {
-        var arc = el('div', 'thread-arc');
-        arc.appendChild(el('h4', 'section-label', 'How it developed'));
+        var arc = el('details', 'thread-arc');
+        arc.appendChild(el('summary', null, 'How it developed \u00b7 ' + n + ' updates'));
         var ol = el('ol', 'arc');
         t.items.forEach(function (u, k) {
           var li = el('li', k === 0 ? 'now' : null);
@@ -2913,8 +2950,13 @@
         arc.appendChild(ol);
         w.appendChild(arc);
       }
-      box.appendChild(w);
+      if (cooling) { earlier.appendChild(w); earlierN++; } else box.appendChild(w);
     });
+    if (earlierN) {
+      earlier.insertBefore(el('summary', null, 'Earlier stories'), earlier.firstChild);
+      box.appendChild(earlier);
+    }
+    filterDev();
 
     // Teaser on the Today tab.
     var t0 = threads[0], tz = $('#today-wire');
@@ -2923,9 +2965,9 @@
       var cool0 = Date.now() - new Date(t0.latest.ts).getTime() > COOL_AFTER;
       var top = el('div', 'gf-top');
       top.appendChild(el('span', cool0 ? 'thread-pill' : 'live-pill',
-        (t0.items.length > 1 ? (cool0 ? 'Thread' : 'Developing') : 'Flash') + ' · ' + relTime(t0.latest.ts)));
+        (t0.items.length > 1 ? (cool0 ? 'Thread' : 'Developing') : 'Latest') + ' · ' + relTime(t0.latest.ts)));
       if (t0.items.length > 1) top.appendChild(el('span', 'meta', t0.items.length + ' updates'));
-      top.appendChild(el('span', 'tk-cta', 'Open Flash →'));
+      top.appendChild(el('span', 'tk-cta', 'Open News →'));
       tz.appendChild(top);
       tz.appendChild(el('p', 'gf-hl', t0.latest.headline));
       if (t0.ccy.length || t0.pillar) {
@@ -3122,6 +3164,8 @@
       }
       nb.appendChild(foot);
     }
+
+    filterDev();
 
     // Filter, then group.
     var items = all.filter(function (it) {

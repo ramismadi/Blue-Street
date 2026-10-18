@@ -19,8 +19,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
 | Central banks | `#banks` | `data/banks.json` |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join) |
-| News | `#news`, `#news/JPY` = filtered to a market | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`) |
-| Flash | `#flash` (old `#wire` links redirect) | `data/latest.json` |
+| News | `#news`, `#news/JPY` = filtered to a market (old `#flash` / `#wire` links redirect here) | Developing now: `data/latest.json` (Hercules) · Headlines: `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`) |
 | Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
 - **Today is a scroll story**: full-screen headline → **At a glance** (newest
@@ -322,7 +321,16 @@ takeaways" opens the card across the row: the four beats, "By currency" with
 each `why`, "What would change it", the publisher button, and "Earlier on this
 story". Today's tiles link the tab.
 
-### `data/latest.json` — Flash
+### `data/latest.json` — Developing now (was the Flash tab)
+**Rami, 2026-10-18: Flash merged into News.** One tab: the market chips and
+news read on top, then **Developing now** (these threads), then **Headlines**
+(`news.json`). The feed, the 30-min breaking watch, Focus Mode's live blog and
+the editions' fold-in are unchanged — only where it renders moved. In the
+strip: threads updated in the last 24h show (newest spans the row, the rest
+two-up), cooling threads fold into "Earlier stories", and "How it developed"
+is collapsed behind a tap. The News market chips filter threads too (by `ccy`;
+Oil / Gold also match oil- or gold-themed headlines and `pillar: "tot"`). The
+News tab badge counts live threads; the Today glance tile opens News.
 ```
 {"items":[{"ts":"<ISO-8601>","headline","url"?,"bullets":[],"sources":[],
   "thread":"us-iran-20261008",     // same id = one developing story
