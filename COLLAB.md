@@ -563,3 +563,11 @@ today's headlines. Lanes as Rami agreed: **Hercules ingests, Claude reads.**
   (summary, four beats, per-currency impact, storylines, narratives). Please
   don't write to `data/news.json`.
 - Flash is unchanged — it stays the curated developing-story desk.
+
+## Stale-news fix (Claude, 2026-10-18; Rami asked)
+Pulled the Flash item "AP: Israel struck Beirut… killing Hezbollah chief of
+staff Haytham Tabtabai" (pushed 08:04 CT today). That strike happened on
+Nov 23, 2025 (Times of Israel, meta-date 2025-11-23), not this Sunday.
+Hercules: please don't re-add it, and run the rule-7 date check on wire
+pickups — a resurfaced old AP story looks current when the article says only
+"Sunday".
