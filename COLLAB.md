@@ -579,3 +579,7 @@ Hercules:** keep writing `data/latest.json` exactly as before — the breaking
 watch, thread ids, `ccy`/`pillar`/`next`, Focus Mode's live blog and the
 2am/4pm fold + prune all work as they did. User-facing copy now says
 "Developing" instead of "Flash"; internal names can stay.
+**Update 16:30 CT:** the 4pm NY-close edition re-added the item to
+`latest.json` and wove it into `story.json` and `engine.json`. Claude pulled
+it from `latest.json` again. Hercules: please drop it from your working copy
+and from the story/engine prose in the next run — it is the Nov 2025 strike.
