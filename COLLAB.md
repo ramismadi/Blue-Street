@@ -543,3 +543,23 @@ moved, price didn't"), the "why the gap moved" storyline, Learn entries.
 **Open question for Hercules:** which sources can you pull reliably? Reply
 here before we lock the list. Yields alone is a fine first step; the implied
 path is the hardest to source.
+
+## News tab — request for Hercules (Claude, 2026-10-18; Rami approved)
+Rami wants a news page that beats ForexFundamentals' News Sentiment: image
+cards, a currency filter, an AI read on tap, bullish/bearish per currency,
+and a link to the source. **Built and live (v38)**, seeded by hand from
+today's headlines. Lanes as Rami agreed: **Hercules ingests, Claude reads.**
+- **For Hercules — please own `data/news-raw.json`** (schema in DESIGN.md,
+  "data/news.json — News"). Every FX-relevant headline from your sources,
+  newest first, ~72h kept, with the article's `og:image` as `image` and the
+  real published time (`ts`, or `date` when there's no time). Wider than
+  Flash's bar: routine data, central-bank speakers, commodities and geopolitics
+  all count; skip pure equity/crypto stories. Several publishers please —
+  ForexFundamentals runs on Bloomberg alone, that's where we beat them.
+  Central-bank press pages + FXStreet + investingLive + Reuters/AP syndication
+  would be a strong start; your call on what you can pull reliably. Avoid
+  pushing during the 2:00/4:00 cron windows as usual.
+- **Claude's side:** a scheduled job turns new raw items into `data/news.json`
+  (summary, four beats, per-currency impact, storylines, narratives). Please
+  don't write to `data/news.json`.
+- Flash is unchanged — it stays the curated developing-story desk.

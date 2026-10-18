@@ -19,6 +19,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
 | Central banks | `#banks` | `data/banks.json` |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join) |
+| News | `#news`, `#news/JPY` = filtered to a market | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`) |
 | Flash | `#flash` (old `#wire` links redirect) | `data/latest.json` |
 | Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
@@ -268,6 +269,58 @@ for CPI, FOMC, hawkish) so the pages can be reviewed before the feed has any.
   Calendar events with `"focus": true` get a Focus chip.
 - Preview the design anytime: `?focus-demo=preview|live|recap` (sample
   content in `assets/focus-demo.json`, labelled as a demo on screen).
+
+### `data/news.json` — News (Claude's job; built from `data/news-raw.json`)
+Rami, 2026-10-18, benchmarked on ForexFundamentals' News Sentiment page and
+built to beat it: every FX-relevant headline as an image card, a market filter,
+an expandable read, which way the headline pushes each currency, and a link out
+to the publisher. Flash stays the curated "developing now" desk; News is the
+full stream.
+
+**Two files, two owners, no shared writes:**
+- `data/news-raw.json` — **Hercules (ingest).** Raw headlines from the sources,
+  newest first, keep ~72h:
+  ```
+  {"updated":"<ISO>","items":[{"id":"stable-unique","ts":"<ISO published>" | "date":"YYYY-MM-DD",
+    "source":"Reuters","url":"https://...","headline":"publisher's headline",
+    "image":"https://... (the article's og:image) | null","lede":"publisher's preview text (optional, never shown)"}]}
+  ```
+  Check `datePublished` before adding (COLLAB rule 7). `image` is the
+  publisher's own preview image (og:image), hotlinked, never re-hosted.
+- `data/news.json` — **Claude (read + enrich), what the site renders.** A
+  scheduled job reads the raw file, writes the read for each new item, groups
+  storylines, refreshes `narratives`, prunes items older than 72h unless their
+  storyline updated inside that window.
+```
+{"updated":"<ISO>","method":"...",
+ "narratives":{"JPY":{"lean":"bullish"|"bearish"|"mixed","text":"what today's headlines add up to","ts":"<ISO>"}},
+ "items":[{"id","ts"|"date","source","url","image"|null,"headline",
+   "story":"hormuz","story_title":"Hormuz: reopening offer vs ship attacks",   // same story = one card
+   "pillar":"risk",                       // engine pillar id
+   "summary":"1–2 lines, Gloment's own words",
+   "beats":{"was","happened","means","fx"},   // the four beats (COLLAB template)
+   "impact":[{"ccy":"JPY","dir":"bullish"|"bearish"|"mixed","strength":1|2|3,"why":"one line"}],
+   "watch":"what would change it"}]}
+```
+- Markets: `USD EUR GBP JPY CHF CAD AUD NZD` plus `XAU` (gold) and `OIL`.
+  `impact[0]` is the market the headline moves most (it labels the fallback tile).
+- `dir` is **headline pressure, never a call** — the same evidence-weighing
+  rule as the pillar tally. `strength`: 1 mild, 2 clear, 3 strong.
+- Summaries and beats are written from the headline and public preview in
+  Gloment's own words — never copy the article's sentences.
+- No `ts` from the publisher → give `date`; the card shows the date instead of
+  "5h ago". Never invent a time.
+
+How it renders: market chips (count of storylines per market; tap again for
+All; the hash keeps the filter) + a source dropdown (2+ publishers). Picking a
+market shows its **news read** card (`narratives`). Cards: publisher image (or a
+generated tile — market + pillar, edged by the lean — if there is none or it
+fails to load), source · time, storyline kicker when 2+ items share a `story`,
+headline, bias tags (▲ bullish / ▼ bearish / ◆ mixed; faint arrow = mild,
+outlined = strong), pillar tag, summary. Tapping the headline or "Key
+takeaways" opens the card across the row: the four beats, "By currency" with
+each `why`, "What would change it", the publisher button, and "Earlier on this
+story". Today's tiles link the tab.
 
 ### `data/latest.json` — Flash
 ```

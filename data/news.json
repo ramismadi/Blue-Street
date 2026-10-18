@@ -1,0 +1,332 @@
+{
+  "updated": "2026-10-18T19:00:00Z",
+  "method": "Headlines from the source feed, read by Claude: summary and four beats in Gloment's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
+  "narratives": {
+    "USD": {
+      "lean": "bearish",
+      "text": "The dollar's news flow leans soft: Fed Chair Warsh declined to pre-commit to an October move, October hike odds fell to roughly one in six, and the dollar index had its first weekly loss in over a month. The cushion is December, still priced near 90%.",
+      "ts": "2026-10-18T19:00:00Z"
+    },
+    "EUR": {
+      "lean": "bullish",
+      "text": "The euro's gains in the feed come from the dollar side, not from Europe: EUR/USD rose to about 1.1255 Friday as US hike bets faded. No euro-area driver in today's headlines.",
+      "ts": "2026-10-18T19:00:00Z"
+    },
+    "GBP": {
+      "lean": "bullish",
+      "text": "Sterling's headlines lean firm: August GDP grew 0.1% when a contraction was expected, and this week's CPI is forecast to rise to 3.4% from 3.1%, above the BoE's own projection. Both feed the November hike case.",
+      "ts": "2026-10-18T19:00:00Z"
+    },
+    "JPY": {
+      "lean": "mixed",
+      "text": "Two pulls on the yen: Ueda keeps signalling further hikes and Japan's CPI is expected to jump this week, but every oil-supply headline hurts Japan as an energy importer. USD/JPY sat near 158 through all of it.",
+      "ts": "2026-10-18T19:00:00Z"
+    },
+    "CHF": {
+      "lean": "bullish",
+      "text": "The franc's only story in today's feed is haven demand: unconfirmed mine claims and ship attacks around Hormuz keep a safety bid under it.",
+      "ts": "2026-10-18T19:00:00Z"
+    },
+    "CAD": {
+      "lean": "mixed",
+      "text": "Oil-supply headlines (the St. Petersburg terminal strike, Hormuz) support the loonie as an exporter's currency; Monday's CPI and the BoC's business survey decide whether a ~34% chance of an October 28 hike grows or fades.",
+      "ts": "2026-10-18T19:00:00Z"
+    },
+    "AUD": {
+      "lean": "bearish",
+      "text": "The Aussie's main headline is China: Q3 growth is expected at 4.4%, below the lower end of Beijing's 4.5–5% target. A miss would weigh on the demand story behind Australian exports.",
+      "ts": "2026-10-18T19:00:00Z"
+    },
+    "NZD": {
+      "lean": "bullish",
+      "text": "Economists expect Thursday's Q3 CPI around 3.7–4.0% a year, well above the RBNZ's 1–3% band, and several banks call an October 28 hike firmly on the table.",
+      "ts": "2026-10-18T19:00:00Z"
+    },
+    "XAU": {
+      "lean": "bullish",
+      "text": "Gold's headlines lean supportive through the dollar: fading October hike odds and a weaker dollar index. The priced December hike is the cap.",
+      "ts": "2026-10-18T19:00:00Z"
+    },
+    "OIL": {
+      "lean": "bullish",
+      "text": "Supply-risk headlines outnumber relief: Ukraine's drones hit Russia's St. Petersburg export terminal and Hormuz ship attacks continue, while Iran's reopening offer is stalled on the nuclear dispute and the US paused its Russian-oil tariffs for up to 60 days.",
+      "ts": "2026-10-18T19:00:00Z"
+    }
+  },
+  "items": [
+    {
+      "id": "euromaidan-petersburg-terminal-20261018",
+      "ts": "2026-10-18T12:57:00Z",
+      "source": "Euromaidan Press",
+      "url": "https://euromaidanpress.com/2026/10/18/the-drones-flew-1000-km-st-petersburgs-oil-terminal-fuel-depot-and-a-nearby-data-center-were-waiting-at-the-end/",
+      "image": "https://euromaidanpress.com/wp-content/uploads/2026/10/astra-ozon.webp",
+      "headline": "Ukrainian drones hit St. Petersburg's oil terminal, a fuel depot and a data center",
+      "story": "russia-oil",
+      "story_title": "Russian oil: strikes and the sanctions clock",
+      "pillar": "tot",
+      "summary": "Overnight drones set fires at the Petersburg Oil Terminal, which handles about 12.5 million tonnes of petroleum products a year, a week into a US-declared energy truce.",
+      "beats": {
+        "was": "Ukraine struck energy and tech sites around St. Petersburg overnight, including Russia's big Baltic products terminal.",
+        "happened": "Fires broke out at the terminal and a fuel depot; the regional governor said 145 drones were downed. Trump called the renewed strikes a disgrace.",
+        "means": "The terminal moves around 12.5 million tonnes of fuel a year, much of it for export. Any outage tightens product supply into an oil market already strained by Hormuz.",
+        "fx": "Tighter supply lifts oil prices, which helps exporters' currencies like CAD and hurts importers like JPY and EUR. The lens: how long is the terminal offline?"
+      },
+      "impact": [
+        { "ccy": "OIL", "dir": "bullish", "strength": 2, "why": "A major Russian export outlet hit adds a supply-risk premium into Sunday's open." },
+        { "ccy": "CAD", "dir": "bullish", "strength": 1, "why": "Higher oil improves Canada's terms of trade." },
+        { "ccy": "JPY", "dir": "bearish", "strength": 1, "why": "Japan imports almost all its energy, so pricier oil widens its import bill." }
+      ],
+      "watch": "Damage reports and loading schedules from the terminal; Russia's response to the end of the energy truce."
+    },
+    {
+      "id": "kyivpost-graham-60day-20261018",
+      "date": "2026-10-18",
+      "source": "Kyiv Post",
+      "url": "https://www.kyivpost.com/post/87411",
+      "image": null,
+      "headline": "Trump using a 60-day pause to review Russia sanctions, Rubio says",
+      "story": "russia-oil",
+      "story_title": "Russian oil: strikes and the sanctions clock",
+      "pillar": "tot",
+      "summary": "Rubio framed the waiver of the Graham Act penalties as a review of up to 60 days, not a cancellation; the duties can be switched back on at any time.",
+      "beats": {
+        "was": "The Graham Act lets the US put a 500% tariff on Russian goods and 100% duties on the biggest buyers of Russian oil and gas, such as China and India.",
+        "happened": "The October 18 trigger passed with the penalties waived. Rubio said Trump wants up to 60 days to study what they would do to the global economy.",
+        "means": "No immediate hit to Russian oil buyers, so no forced scramble for replacement barrels. But the threat stays live until roughly mid-December.",
+        "fx": "Removes a near-term supply shock (mildly bearish oil) while leaving a fuse in place. The lens: does the review end in duties or a deal?"
+      },
+      "impact": [
+        { "ccy": "OIL", "dir": "bearish", "strength": 1, "why": "Buyers of Russian crude avoid duties for now, easing the risk of a supply scramble." }
+      ],
+      "watch": "Any White House signal on reinstating the duties; India's Russian-crude purchases during the review."
+    },
+    {
+      "id": "reuters-iran-hormuz-offer-20261018",
+      "ts": "2026-10-18T13:35:00Z",
+      "source": "Reuters",
+      "url": "https://theprint.in/world/iran-says-offer-to-reopen-strait-of-hormuz-within-7-days-remains-on-table/3075381/",
+      "image": null,
+      "headline": "Iran says its offer to reopen the Strait of Hormuz within seven days still stands",
+      "story": "hormuz",
+      "story_title": "Hormuz: reopening offer vs ship attacks",
+      "pillar": "risk",
+      "summary": "Araqchi says the strait could reopen within six days if the US lifts its port blockade and oil sanctions, but talks are stuck on Washington's demand to deal with the nuclear programme first.",
+      "beats": {
+        "was": "Iran's foreign minister restated a reopening plan first made in mid-September.",
+        "happened": "The conditions are unchanged: end the US blockade, lift oil sanctions, stop fighting on all fronts. The US wants a meaningful cut to uranium enrichment first.",
+        "means": "There is a path to reopening, which would pull oil sharply lower, but neither side has moved, so the risk premium stays.",
+        "fx": "A real reopening would hit oil and CAD and ease pressure on importers like JPY; a stalemate keeps havens bid. The lens: does either side move on sequencing?"
+      },
+      "impact": [
+        { "ccy": "OIL", "dir": "mixed", "strength": 2, "why": "A reopening path exists (bearish oil) but is blocked by the nuclear dispute (premium stays)." },
+        { "ccy": "JPY", "dir": "mixed", "strength": 1, "why": "Haven demand and the oil import bill pull in opposite directions." }
+      ],
+      "watch": "Any US response to the seven conditions; shipping traffic counts through the strait."
+    },
+    {
+      "id": "iranintl-mine-claim-20261017",
+      "ts": "2026-10-17T12:17:00Z",
+      "source": "Iran International",
+      "url": "https://www.iranintl.com/en/202610174754",
+      "image": null,
+      "headline": "IRGC Navy claims a second supertanker hit a mine in the Strait of Hormuz",
+      "story": "hormuz",
+      "story_title": "Hormuz: reopening offer vs ship attacks",
+      "pillar": "risk",
+      "summary": "The Revolutionary Guard says a tanker carrying over two million barrels struck a mine and stopped; there is no independent confirmation.",
+      "beats": {
+        "was": "A claim by Iran's Revolutionary Guard navy of a second tanker mine strike in the strait.",
+        "happened": "It says the ship caught fire and lost power after an engine-room blast. Nobody outside Iran has confirmed it.",
+        "means": "Unconfirmed claims still raise insurance and shipping risk for the strait, which keeps a premium in oil.",
+        "fx": "Fear headlines bid havens like CHF and support oil. The lens: does anyone independent confirm it?"
+      },
+      "impact": [
+        { "ccy": "CHF", "dir": "bullish", "strength": 1, "why": "Haven demand on Gulf shipping risk." },
+        { "ccy": "OIL", "dir": "bullish", "strength": 1, "why": "Adds to the shipping risk premium, though unconfirmed." }
+      ],
+      "watch": "Confirmation from UKMTO or ship operators; tanker insurance rates."
+    },
+    {
+      "id": "reuters-dollar-weekly-loss-20261016",
+      "ts": "2026-10-16T15:23:00Z",
+      "source": "Reuters",
+      "url": "https://www.marketscreener.com/news/dollar-set-for-weekly-loss-as-fed-hike-bets-fade-ai-clouds-outlook-ce785cdadc88f325",
+      "image": null,
+      "headline": "Dollar heads for first weekly loss in over a month as Fed hike bets fade",
+      "story": "fed-path",
+      "story_title": "The Fed: October fading, December priced",
+      "pillar": "policy",
+      "summary": "The dollar index fell to about 101.61 as Fed officials signalled no hurry to tighten again, after hot CPI and PPI readings had briefly lifted yields.",
+      "beats": {
+        "was": "A weekly wrap of the dollar against major currencies.",
+        "happened": "The index fell 0.42% on the day and about 0.6% on the week. EUR/USD rose to 1.1255, GBP/USD to 1.3353, USD/JPY slipped to 157.79.",
+        "means": "Markets read Fed officials as unhurried despite hot inflation prints, so the expected rate gap in the dollar's favour narrowed a little.",
+        "fx": "Fewer expected hikes, lower yields, less pull into dollars, dollar down. The lens: how much pressure is the Fed under?"
+      },
+      "impact": [
+        { "ccy": "USD", "dir": "bearish", "strength": 2, "why": "Fading hike bets narrow the dollar's rate advantage." },
+        { "ccy": "EUR", "dir": "bullish", "strength": 1, "why": "Gains on the dollar side, not on euro news." },
+        { "ccy": "GBP", "dir": "bullish", "strength": 1, "why": "Sterling's best day of the week, helped by the GDP beat." },
+        { "ccy": "XAU", "dir": "bullish", "strength": 1, "why": "A softer dollar supports gold." }
+      ],
+      "watch": "Fed blackout begins ahead of the October 27-28 meeting, so data, not speakers, moves pricing."
+    },
+    {
+      "id": "fxstreet-warsh-october-20261016",
+      "ts": "2026-10-16T16:24:00Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/dollar-index-slips-as-fed-chair-warsh-wont-prejudge-october-202610161624",
+      "image": null,
+      "headline": "Dollar index slips as Fed Chair Warsh won't prejudge October",
+      "story": "fed-path",
+      "story_title": "The Fed: October fading, December priced",
+      "pillar": "policy",
+      "summary": "Warsh said the Fed is stepping back from previewing decisions; October hike odds dropped from about 28% to 16% while December stayed near 90%.",
+      "beats": {
+        "was": "Fed Chair Warsh speaking in Bangkok about the next two meetings.",
+        "happened": "He declined to signal October or December. The dollar index dropped from just above 102 to about 101.85 within minutes.",
+        "means": "No pre-commitment reads as less urgency for October, so traders took out hike bets for that meeting but kept December.",
+        "fx": "Lower near-term hike odds take some support from the dollar and help gold. The lens: does December pricing hold?"
+      },
+      "impact": [
+        { "ccy": "USD", "dir": "bearish", "strength": 1, "why": "October hike odds roughly halved." },
+        { "ccy": "XAU", "dir": "bullish", "strength": 1, "why": "Fewer near-term hikes lower the opportunity cost of holding gold." }
+      ],
+      "watch": "October 27-28 FOMC; any data surprise before the blackout ends."
+    },
+    {
+      "id": "fxstreet-ueda-hikes-20261016",
+      "ts": "2026-10-16T12:39:17Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/bojs-ueda-signals-further-rate-hikes-as-underlying-inflation-nears-2-202610161239",
+      "image": null,
+      "headline": "BoJ's Ueda signals further rate hikes as underlying inflation nears 2%",
+      "story": "boj-path",
+      "story_title": "BoJ: how fast after September",
+      "pillar": "policy",
+      "summary": "Ueda said the BoJ will keep raising rates while conditions stay loose, with the pace tied to the yen, AI-driven demand and the Middle East; USD/JPY barely moved near 157.95.",
+      "beats": {
+        "was": "The Bank of Japan governor on the outlook for rates.",
+        "happened": "He said tightening continues and that the economy is tracking the bank's forecasts, without committing to a date.",
+        "means": "Direction is clear (higher), timing isn't, which is why the market didn't react.",
+        "fx": "Higher Japanese rates narrow the gap with the US and support the yen over time. The lens: is October live or is it December?"
+      },
+      "impact": [
+        { "ccy": "JPY", "dir": "bullish", "strength": 1, "why": "Confirms a hiking path, but no timing, so little immediate effect." }
+      ],
+      "watch": "Japan CPI on Friday; the BoJ's October 29-30 meeting."
+    },
+    {
+      "id": "bnn-boc-data-20261016",
+      "date": "2026-10-16",
+      "source": "BNN Bloomberg",
+      "url": "https://www.bnnbloomberg.ca/business/economics/2026/10/16/bank-of-canada-set-for-pair-of-important-data-drops-ahead-of-live-rate-decision/",
+      "image": null,
+      "headline": "Bank of Canada faces two key data drops before a 'live' rate decision",
+      "story": "boc-oct",
+      "story_title": "BoC: the October 28 decision",
+      "pillar": "inflation",
+      "summary": "September CPI and the BoC's business and consumer surveys land Monday; markets priced about a 34% chance of a hike on October 28, with the rate at 2.25%.",
+      "beats": {
+        "was": "A preview of Monday's Canadian inflation data and the BoC's quarterly surveys.",
+        "happened": "A Reuters poll expects CPI up to 3.2% a year from 3.0%; RBC sees it holding at 3.0%. Hike odds fell after a weak September jobs report.",
+        "means": "Inflation above the BoC's 2% target argues for a hike, a weak job market argues against. Monday tips the balance.",
+        "fx": "A hot print raises hike odds and lifts CAD; a soft one does the opposite. The lens: do firms plan to pass on higher costs?"
+      },
+      "impact": [
+        { "ccy": "CAD", "dir": "mixed", "strength": 1, "why": "A preview; the direction depends on Monday's numbers." }
+      ],
+      "watch": "Canada CPI and the Business Outlook Survey, Monday October 19."
+    },
+    {
+      "id": "interest-nz-cpi-preview-20261018",
+      "date": "2026-10-18",
+      "source": "interest.co.nz",
+      "url": "https://www.interest.co.nz/economy/140719/inflation-projected-soften-slightly-and-temporarily-september-quarter-economists-say",
+      "image": null,
+      "headline": "NZ inflation seen softening slightly, but an October 28 OCR hike stays 'firmly' on the table",
+      "story": "rbnz-oct",
+      "story_title": "RBNZ: the October 28 review",
+      "pillar": "inflation",
+      "summary": "Economists expect Q3 CPI at 3.7–4.0% a year on Thursday, close to the RBNZ's own 3.9% projection and well above its 1–3% band; the OCR is 2.75%.",
+      "beats": {
+        "was": "A preview of New Zealand's September-quarter inflation figure.",
+        "happened": "Forecasts cluster around 3.8%. ANZ and BNZ expect another hike on October 28.",
+        "means": "Inflation near 4% against a 2% midpoint keeps the RBNZ under pressure to tighten again after September.",
+        "fx": "More hikes widen New Zealand's rate advantage and support NZD. The lens: does the print beat the RBNZ's 3.9%?"
+      },
+      "impact": [
+        { "ccy": "NZD", "dir": "bullish", "strength": 1, "why": "Hike expectations stay high going into the print." }
+      ],
+      "watch": "NZ Q3 CPI on Thursday October 22; the OCR review on October 28."
+    },
+    {
+      "id": "indexbox-china-q3-20261015",
+      "date": "2026-10-15",
+      "source": "IndexBox (Reuters poll)",
+      "url": "https://www.indexbox.io/blog/china-q3-gdp-growth-seen-at-44-below-full-year-target-lower-bound/",
+      "image": null,
+      "headline": "China's Q3 growth seen at 4.4%, below the low end of Beijing's target",
+      "story": "china-q3",
+      "story_title": "China: Q3 growth",
+      "pillar": "growth",
+      "summary": "A Reuters poll of 50 economists expects 4.4% year-on-year growth, under Beijing's 4.5–5% goal despite targeted rate cuts and 550 billion yuan of redirected debt quota.",
+      "beats": {
+        "was": "A forecast for China's third-quarter GDP, due Monday (Sunday 9pm CT).",
+        "happened": "The poll's 4.4% is up from 4.3% in Q2 but below July's 4.6% estimate.",
+        "means": "Growth below target makes more stimulus likely, but for now Chinese demand is soft.",
+        "fx": "China is Australia's biggest customer, so weaker Chinese growth weighs on AUD (and NZD). The lens: does Beijing add more support?"
+      },
+      "impact": [
+        { "ccy": "AUD", "dir": "bearish", "strength": 1, "why": "Soft Chinese demand weighs on Australia's export story." },
+        { "ccy": "NZD", "dir": "bearish", "strength": 1, "why": "China is a major buyer of New Zealand's exports too." }
+      ],
+      "watch": "China GDP, retail sales and industrial output, Sunday 9pm CT."
+    },
+    {
+      "id": "newsquawk-week-ahead-20261016",
+      "ts": "2026-10-16T20:45:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/week-in-focus-19-23rd-october-2026-highlights-include-uk-japan-and-canada-inflation-china-activity-data-and-global-flash-pmis-",
+      "image": null,
+      "headline": "Week ahead: UK, Japan and Canada inflation, China data and flash PMIs",
+      "story": "week-ahead",
+      "story_title": null,
+      "pillar": "inflation",
+      "summary": "UK CPI is expected to rise to 3.4% from 3.1%, above the BoE's 3.0% forecast; Japan's CPI is seen jumping to about 2.8–3.0% from 1.9%.",
+      "beats": {
+        "was": "A preview of the week's main releases.",
+        "happened": "Consensus points to higher inflation in both the UK and Japan; China's GDP and Friday's flash PMIs round out the week.",
+        "means": "Inflation above target in the UK keeps the BoE leaning toward a November hike; a jump in Japan strengthens the BoJ's case.",
+        "fx": "Hotter inflation, more pressure on both banks to tighten, support for GBP and JPY if the forecasts hold. The lens: beat or miss vs consensus?"
+      },
+      "impact": [
+        { "ccy": "GBP", "dir": "bullish", "strength": 1, "why": "If CPI rises as expected, the November hike case firms." },
+        { "ccy": "JPY", "dir": "bullish", "strength": 1, "why": "A jump in Japanese inflation adds pressure on the BoJ." }
+      ],
+      "watch": "UK CPI Wednesday; Japan CPI Friday."
+    },
+    {
+      "id": "fxstreet-uk-gdp-august-20261015",
+      "ts": "2026-10-15T06:02:11Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/01-united-kingdom-gdp-grows-by-faster-than-expected-in-august-202610150602",
+      "image": null,
+      "headline": "UK GDP unexpectedly grew 0.1% in August",
+      "story": "uk-growth",
+      "story_title": "UK: growth and the November hike",
+      "pillar": "growth",
+      "summary": "The economy grew 0.1% in the month when a 0.1% contraction was expected, led by a 0.8% rise in industrial production; GBP/USD rose to about 1.324.",
+      "beats": {
+        "was": "The UK's monthly GDP estimate for August.",
+        "happened": "+0.1% vs -0.1% expected, after 0.4% in July. Manufacturing rose 1.2%.",
+        "means": "A small beat, but it shows the economy holding up while inflation runs above target, so the BoE has less reason to hold back.",
+        "fx": "Firmer growth plus sticky inflation keeps hike odds alive and supports GBP. The lens: does CPI back it up on Wednesday?"
+      },
+      "impact": [
+        { "ccy": "GBP", "dir": "bullish", "strength": 1, "why": "A growth beat supports the BoE's hiking case." }
+      ],
+      "watch": "UK labour data Tuesday, CPI Wednesday."
+    }
+  ]
+}

@@ -1,15 +1,15 @@
 /* Gloment — premium desk renderer. Plain static JS, no build step.
    Tabbed views (hash-routed: #today, #story, #story/2, #engine, #positioning, #banks,
-   #calendar, #flash), a theme picker, and edition data (story, macro engine,
+   #calendar, #news, #flash), a theme picker, and edition data (story, macro engine,
    Flash) from local JSON files. textContent-only DOM, no HTML injection. */
 
 (function () {
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '37';
+  var ASSET_VERSION = '38';
 
-  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'flash', 'learn'];   // 'learn' has a view but no tab
+  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'flash', 'learn'];   // 'learn' has a view but no tab
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
@@ -112,6 +112,13 @@
     });
     fetchJSON('data/latest.json').then(renderWire).catch(function () {
       note('#latest-items', 'No Flash items.');
+    });
+    initNews();
+    fetchJSON('data/news.json').then(function (d) {
+      news.data = d;
+      renderNews();
+    }).catch(function () {
+      note('#news-grid', 'News feed unavailable.');
     });
   }
 
@@ -461,6 +468,11 @@
       renderFx();
     }
     if (tab === 'learn') renderLearn();
+    if (tab === 'news') {
+      var nm = (h[1] || '').toUpperCase();
+      news.ccy = NEWS_MKTS.indexOf(nm) >= 0 ? nm : '';
+      renderNews();
+    }
     if (tab === 'positioning') {
       cot.focus = (h[1] || '').toUpperCase();
       renderCot();
@@ -2927,6 +2939,311 @@
       applyGlance(false);   // the Flash tile may now lead
     }
     renderFx();
+  }
+
+  /* ---------------- News (data/news.json, Claude's job) ----------------
+     Every headline that matters for FX, read for you: picture, source, time,
+     what it does to each currency it touches (headline pressure — evidence,
+     not a call), a one-line summary, and on tap the four beats plus a link
+     out to the publisher. Repeat headlines on one storyline (same `story`)
+     fold into one card with "Earlier on this story". Picking a market
+     filters the grid and shows that market's news read (`narratives`). */
+  var NEWS_MKTS = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'NZD', 'XAU', 'OIL'];
+  var NEWS_NAMES = { XAU: 'Gold', OIL: 'Oil' };
+  var NEWS_LEAN = {
+    bullish: { cls: 'bull', arrow: '▲', word: 'Bullish' },
+    bearish: { cls: 'bear', arrow: '▼', word: 'Bearish' },
+    mixed:   { cls: 'mixed', arrow: '◆', word: 'Mixed' }
+  };
+  var NEWS_STRENGTH = { 1: 'mild', 2: 'clear', 3: 'strong' };
+  var NEWS_BEATS = [['was', 'What this was'], ['happened', 'What happened'],
+    ['means', 'What it means'], ['fx', 'For the currency']];
+  var news = { data: null, ccy: '', src: '', open: {} };
+
+  function mktName(c) { return NEWS_NAMES[c] || c; }
+  /* Items carry `ts` (exact) or, when the publisher shows no time, `date`
+     (YYYY-MM-DD, sorted as midday UTC and shown as the date). */
+  function newsTime(it) { return new Date(it.ts || (it.date + 'T12:00:00Z')).getTime() || 0; }
+  function newsWhenEl(it) {
+    if (it.ts) return relTimeEl(it.ts);
+    var d = new Date(it.date + 'T12:00:00Z');
+    return el('span', 'mono', isFinite(d) ? d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }) : it.date);
+  }
+
+  function initNews() {
+    var row = $('#news-mkts');
+    if (row) {
+      [''].concat(NEWS_MKTS).forEach(function (c) {
+        var b = el('button', 'fchip ccy');
+        b.type = 'button';
+        b.setAttribute('data-mkt', c);
+        b.appendChild(el('span', null, c ? mktName(c) : 'All'));
+        b.appendChild(el('span', 'fchip-n mono'));
+        row.appendChild(b);
+      });
+      row.addEventListener('click', function (e) {
+        var b = e.target.closest('[data-mkt]');
+        if (!b) return;
+        var c = b.getAttribute('data-mkt');
+        if (c === news.ccy) c = '';               // tap again = back to all
+        history.replaceState(null, '', c ? '#news/' + c : '#news');
+        news.ccy = c;
+        renderNews();
+      });
+    }
+    var srcSel = $('#news-src');
+    if (srcSel) srcSel.addEventListener('change', function () {
+      news.src = srcSel.value;
+      renderNews();
+    });
+    var grid = $('#news-grid');
+    if (grid) grid.addEventListener('click', function (e) {
+      var t = e.target.closest('[data-news-toggle]');
+      if (!t) return;
+      var id = t.getAttribute('data-news-toggle');
+      news.open[id] = !news.open[id];
+      renderNews();
+      var card = document.getElementById('news-' + id);
+      if (card && news.open[id] && card.scrollIntoView) {
+        var r = card.getBoundingClientRect();
+        if (r.top < 60 || r.top > window.innerHeight * 0.6) card.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      }
+    });
+  }
+
+  /* Group by storyline; newest item leads; storylines sort by their newest. */
+  function newsStories(items) {
+    var map = {}, out = [];
+    items.forEach(function (it, i) {
+      var key = it.story || it.id || ('n' + i);
+      if (!map[key]) { map[key] = { id: slugId(key), title: it.story_title || null, items: [] }; out.push(map[key]); }
+      map[key].items.push(it);
+      if (!map[key].title && it.story_title) map[key].title = it.story_title;
+    });
+    out.forEach(function (s) {
+      s.items.sort(function (a, b) { return newsTime(b) - newsTime(a); });
+      s.lead = s.items[0];
+    });
+    return out.sort(function (a, b) { return newsTime(b.lead) - newsTime(a.lead); });
+  }
+
+  function newsTouches(it, c) {
+    return (it.impact || []).some(function (x) { return x && x.ccy === c; });
+  }
+
+  function biasTag(x, long) {
+    var L = NEWS_LEAN[x.dir] || NEWS_LEAN.mixed;
+    var s = NEWS_STRENGTH[x.strength] || '';
+    var t = el('span', 'bias-tag ' + L.cls + (x.strength ? ' s' + x.strength : ''));
+    t.appendChild(el('span', 'bias-arrow', L.arrow));
+    t.appendChild(el('span', 'mono', mktName(x.ccy)));
+    if (long) t.appendChild(el('span', 'bias-word', L.word + (s ? ' · ' + s : '')));
+    t.title = L.word + ' for ' + mktName(x.ccy) + (s ? ' (' + s + ')' : '') + ' — headline pressure, not a call';
+    return t;
+  }
+
+  /* Publisher preview image when we have one; otherwise (or if it fails to
+     load) a generated tile: the market it moves most, and the pillar. */
+  function newsFigure(it) {
+    var fig = el('div', 'news-fig');
+    var main = (it.impact || [])[0];
+    function fallback() {
+      fig.textContent = '';
+      fig.className = 'news-fig fallback' + (main ? ' ' + ((NEWS_LEAN[main.dir] || NEWS_LEAN.mixed).cls) : '');
+      fig.appendChild(el('span', 'nf-mkt', main ? mktName(main.ccy) : 'FX'));
+      if (it.pillar) fig.appendChild(el('span', 'nf-pillar', pillarName(it.pillar)));
+    }
+    var src = safeUrl(it.image);
+    if (!src) { fallback(); return fig; }
+    var img = document.createElement('img');
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.referrerPolicy = 'no-referrer';
+    img.addEventListener('error', fallback);
+    img.src = src;
+    fig.appendChild(img);
+    return fig;
+  }
+
+  function renderNews() {
+    var grid = $('#news-grid');
+    if (!grid || !news.data) return;
+    var all = (news.data.items || []).filter(function (it) { return it && it.headline && (it.ts || it.date); });
+    if (news.data.updated) setText('#news-updated', relTime(news.data.updated));
+
+    // Market chips: pressed state + how many storylines touch each market.
+    var stAll = newsStories(all);
+    Array.prototype.forEach.call(document.querySelectorAll('#news-mkts [data-mkt]'), function (b) {
+      var c = b.getAttribute('data-mkt');
+      b.setAttribute('aria-pressed', c === news.ccy ? 'true' : 'false');
+      var n = c ? stAll.filter(function (s) { return s.items.some(function (it) { return newsTouches(it, c); }); }).length : stAll.length;
+      b.querySelector('.fchip-n').textContent = n ? String(n) : '';
+      b.classList.toggle('empty', !n);
+    });
+
+    // Source chips (only worth showing with 2+ publishers).
+    var srcs = [];
+    all.forEach(function (it) { if (it.source && srcs.indexOf(it.source) < 0) srcs.push(it.source); });
+    srcs.sort();
+    if (news.src && srcs.indexOf(news.src) < 0) news.src = '';
+    var srcSel = $('#news-src');
+    if (srcSel) {
+      srcSel.textContent = '';
+      [''].concat(srcs).forEach(function (s) {
+        var o = el('option', null, s || 'All sources');
+        o.value = s;
+        srcSel.appendChild(o);
+      });
+      srcSel.value = news.src;
+      srcSel.parentNode.hidden = srcs.length < 2;
+    }
+
+    // The news read for the picked market.
+    var nb = $('#news-read');
+    nb.textContent = '';
+    var nr = news.ccy && news.data.narratives && news.data.narratives[news.ccy];
+    nb.hidden = !nr || !nr.text;
+    if (!nb.hidden) {
+      var head = el('div', 'nr-head');
+      head.appendChild(el('span', 'kicker', mktName(news.ccy) + ' · the news read'));
+      var L = NEWS_LEAN[nr.lean];
+      if (L) head.appendChild(el('span', 'bias-pill ' + L.cls, L.arrow + ' ' + L.word + ' lean'));
+      nb.appendChild(head);
+      nb.appendChild(el('p', 'nr-text', nr.text));
+      var foot = el('p', 'meta');
+      foot.appendChild(document.createTextNode('What today’s headlines add up to — evidence, not a call'));
+      if (nr.ts) { foot.appendChild(document.createTextNode(' · ')); foot.appendChild(relTimeEl(nr.ts)); }
+      if (NEWS_MKTS.slice(0, 8).indexOf(news.ccy) >= 0) {
+        foot.appendChild(document.createTextNode(' · '));
+        var a = el('a', null, 'All pillars on ' + news.ccy + ' →');
+        a.href = '#fx/' + news.ccy;
+        foot.appendChild(a);
+      }
+      nb.appendChild(foot);
+    }
+
+    // Filter, then group.
+    var items = all.filter(function (it) {
+      if (news.src && it.source !== news.src) return false;
+      return !news.ccy || newsTouches(it, news.ccy);
+    });
+    var stories = newsStories(items);
+    grid.textContent = '';
+    if (!stories.length) {
+      grid.appendChild(el('p', 'meta news-empty', news.ccy
+        ? 'Nothing on ' + mktName(news.ccy) + ' in the current feed.'
+        : 'No headlines yet.'));
+      return;
+    }
+
+    stories.forEach(function (s) {
+      var it = s.lead, open = !!news.open[s.id];
+      var card = el('article', 'card news-card' + (open ? ' open' : ''));
+      card.id = 'news-' + s.id;
+      card.appendChild(newsFigure(it));
+
+      var body = el('div', 'news-body');
+      var meta = el('div', 'news-meta');
+      meta.appendChild(el('span', 'news-src', it.source || 'Source'));
+      meta.appendChild(newsWhenEl(it));
+      if (s.items.length > 1) meta.appendChild(el('span', 'thread-pill', s.items.length + ' on this story'));
+      body.appendChild(meta);
+
+      if (s.title && s.items.length > 1) body.appendChild(el('p', 'news-story', s.title));
+
+      var h = el('h3', 'news-hl');
+      var hb = el('button', 'news-hl-btn', it.headline);
+      hb.type = 'button';
+      hb.setAttribute('data-news-toggle', s.id);
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      h.appendChild(hb);
+      body.appendChild(h);
+
+      var imp = (it.impact || []).filter(function (x) { return x && x.ccy; });
+      if (imp.length) {
+        var tags = el('div', 'news-tags');
+        imp.forEach(function (x) { tags.appendChild(biasTag(x, false)); });
+        if (it.pillar) {
+          var pa = el('a', 'tag pillar', pillarName(it.pillar));
+          pa.href = '#engine';
+          tags.appendChild(pa);
+        }
+        body.appendChild(tags);
+      }
+
+      if (it.summary) body.appendChild(el('p', 'news-sum' + (open ? ' gl-scope' : ''), it.summary));
+
+      if (open) {
+        var x = el('div', 'news-open gl-scope');
+        var beats = it.beats || {};
+        var hasBeats = NEWS_BEATS.some(function (b) { return beats[b[0]]; });
+        if (hasBeats) {
+          x.appendChild(el('h4', 'section-label', 'Key takeaways'));
+          var ol = el('ol', 'news-beats');
+          NEWS_BEATS.forEach(function (b) {
+            if (!beats[b[0]]) return;
+            var li = el('li');
+            li.appendChild(el('span', 'lbl', b[1]));
+            li.appendChild(el('p', null, beats[b[0]]));
+            ol.appendChild(li);
+          });
+          x.appendChild(ol);
+        }
+        if (imp.some(function (y) { return y.why; })) {
+          x.appendChild(el('h4', 'section-label', 'By currency'));
+          var ul = el('ul', 'news-why');
+          imp.forEach(function (y) {
+            var li = el('li');
+            li.appendChild(biasTag(y, true));
+            if (y.why) li.appendChild(el('p', null, y.why));
+            ul.appendChild(li);
+          });
+          x.appendChild(ul);
+        }
+        if (it.watch) {
+          var w = el('div', 'wire-next');
+          w.appendChild(el('span', 'callout-lbl', 'What would change it'));
+          w.appendChild(el('p', null, it.watch));
+          x.appendChild(w);
+        }
+        var go = safeUrl(it.url);
+        if (go) {
+          var a2 = extLink('Read the full article on ' + (it.source || new URL(go).hostname) + ' ↗', go);
+          a2.className = 'btn news-go';
+          x.appendChild(a2);
+        }
+        if (s.items.length > 1) {
+          var arc = el('div', 'thread-arc');
+          arc.appendChild(el('h4', 'section-label', 'Earlier on this story'));
+          var list = el('ol', 'arc');
+          s.items.slice(1).forEach(function (u) {
+            var li = el('li');
+            li.appendChild(newsWhenEl(u));
+            var bd = el('div', 'arc-body');
+            var hl = el('p', 'arc-hl');
+            var uu = safeUrl(u.url);
+            if (uu) hl.appendChild(extLink(u.headline, uu)); else hl.textContent = u.headline;
+            bd.appendChild(hl);
+            if (u.summary) bd.appendChild(el('p', 'arc-fx', u.summary));
+            if (u.source) bd.appendChild(el('p', 'meta', u.source));
+            li.appendChild(bd);
+            list.appendChild(li);
+          });
+          arc.appendChild(list);
+          x.appendChild(arc);
+        }
+        body.appendChild(x);
+      }
+
+      var tg = el('button', 'news-toggle', open ? 'Close' : 'Key takeaways');
+      tg.type = 'button';
+      tg.setAttribute('data-news-toggle', s.id);
+      tg.setAttribute('aria-expanded', open ? 'true' : 'false');
+      body.appendChild(tg);
+      card.appendChild(body);
+      grid.appendChild(card);
+    });
   }
 
   /* ---------------- inline glossary ----------------
