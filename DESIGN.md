@@ -53,6 +53,13 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   rate definition / last move / sources, the currency score table. Scene mechanics are commented in app.js ("today: scroll engine");
   `prefers-reduced-motion` gets a plain, fully visible page.
 - The GLOMENT wordmark and the Today tab go to the clean site URL (no hash).
+- **Side menu (optional, Rami 2026-10-18):** the masthead's panel button moves
+  the sections from the top bar into a left side menu (same five + Drivers'
+  three sections + Learn, with the badges mirrored). Wide screens: a fixed
+  rail that collapses to icons; narrow screens: a drawer that slides in from
+  that button. "Tabs on top" puts it back. Saved per browser in localStorage
+  `gloment-nav` (top|side) and `gloment-nav-collapsed`; applied before first
+  paint. Built in app.js (`NAV_ITEMS`) — a new tab needs an entry there too.
 - No live price widgets (Rami removed them). Price levels appear only in the
   narrative data.
 

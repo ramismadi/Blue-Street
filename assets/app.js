@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '47';
+  var ASSET_VERSION = '48';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -48,6 +48,7 @@
     checkFreshness();
     watchUpdates();
     initTheme();
+    initSideNav();
     initTabs();
     startClock();
     initScrollStory();
@@ -496,9 +497,173 @@
       cot.focus = (h[1] || '').toUpperCase();
       renderCot();
     }
+    updateSideNav(tab, parent);
     var active = $('#tab-' + (parent || tab));
     if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     window.scrollTo(0, 0);
+  }
+
+  /* ---------------- side menu (optional layout) ----------------
+     Rami, 2026-10-18: the same sections can sit in a collapsible side menu
+     instead of the top tab bar. Choice saved per browser:
+     localStorage gloment-nav = top|side, gloment-nav-collapsed = 1.
+     Wide screens: a fixed rail (full or icons-only). Narrow screens: a
+     drawer that slides in from the masthead button. */
+  var NAV_ITEMS = [
+    { id: 'today', label: 'Today', href: './', home: true, badge: 'focus-badge',
+      ico: 'M3 3h10v10H3z M5.5 6h5 M5.5 8.5h5 M5.5 11h3' },
+    { id: 'fx', label: 'Currencies', href: '#fx',
+      ico: 'M6 4.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z M10 4.6a3.5 3.5 0 1 1 0 6.8' },
+    { id: 'drivers', label: 'Drivers', href: '#drivers',
+      ico: 'M2.5 11.5a5.5 5.5 0 1 1 11 0 M8 11.5l2.6-3.6',
+      subs: [['engine', 'Macro engine'], ['positioning', 'Positioning'], ['banks', 'Central banks']] },
+    { id: 'news', label: 'News', href: '#news', badge: 'wire-count',
+      ico: 'M2.5 4.5h9v8h-9z M11.5 6.5h2v5a1 1 0 0 1-2 0 M4.5 6.5h5 M4.5 8.5h5 M4.5 10.5h3' },
+    { id: 'calendar', label: 'Calendar', href: '#calendar',
+      ico: 'M2.5 4h11v9.5h-11z M2.5 7h11 M5.5 2.5v3 M10.5 2.5v3' },
+    { id: 'learn', label: 'Learn', href: '#learn', minor: true,
+      ico: 'M2.5 3.5H7a1.5 1.5 0 0 1 1 .5v9a1.5 1.5 0 0 0-1-.5H2.5z M13.5 3.5H9a1.5 1.5 0 0 0-1 .5v9a1.5 1.5 0 0 1 1-.5h4.5z' }
+  ];
+  var nav = { mode: 'top', collapsed: false };
+  function navIcon(d) {
+    var NS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 16 16');
+    svg.setAttribute('class', 'sn-ico');
+    svg.setAttribute('aria-hidden', 'true');
+    var p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', d);
+    svg.appendChild(p);
+    return svg;
+  }
+  function isNarrow() { return window.matchMedia && window.matchMedia('(max-width: 980px)').matches; }
+  function initSideNav() {
+    try {
+      nav.mode = localStorage.getItem('gloment-nav') === 'side' ? 'side' : 'top';
+      nav.collapsed = localStorage.getItem('gloment-nav-collapsed') === '1';
+    } catch (e) { /* private mode */ }
+    var box = $('#sidenav');
+    if (!box) return;
+    var list = el('nav', 'sn-list');
+    NAV_ITEMS.forEach(function (it) {
+      var a = el('a', 'sn-item' + (it.minor ? ' minor' : ''));
+      a.href = it.href;
+      if (it.home) a.setAttribute('data-home', '');
+      a.setAttribute('data-nav', it.id);
+      a.title = it.label;
+      a.appendChild(navIcon(it.ico));
+      a.appendChild(el('span', 'sn-label', it.label));
+      if (it.badge) {
+        var b = el('span', 'badge sn-badge');
+        b.setAttribute('data-mirror', it.badge);
+        b.hidden = true;
+        a.appendChild(b);
+      }
+      list.appendChild(a);
+      if (it.subs) {
+        var sub = el('div', 'sn-subs');
+        it.subs.forEach(function (sv) {
+          var sa = el('a', 'sn-sub', sv[1]);
+          sa.href = '#' + sv[0];
+          sa.setAttribute('data-nav-sub', sv[0]);
+          sub.appendChild(sa);
+        });
+        list.appendChild(sub);
+      }
+    });
+    box.appendChild(list);
+    var foot = el('div', 'sn-foot');
+    var col = el('button', 'sn-btn sn-collapse');
+    col.type = 'button';
+    col.appendChild(navIcon('M10 4l-4 4 4 4'));
+    col.appendChild(el('span', 'sn-label', 'Collapse'));
+    col.addEventListener('click', function () { setNav('side', !nav.collapsed); });
+    var top = el('button', 'sn-btn sn-top');
+    top.type = 'button';
+    top.appendChild(navIcon('M2.5 3.5h11 M2.5 6.5h11 M5 9.5l3 3 3-3'));
+    top.appendChild(el('span', 'sn-label', 'Tabs on top'));
+    top.title = 'Move the sections back to the top bar';
+    top.addEventListener('click', function () { setNav('top', nav.collapsed); });
+    foot.appendChild(col);
+    foot.appendChild(top);
+    box.appendChild(foot);
+
+    // Close the drawer after choosing a section on a phone.
+    box.addEventListener('click', function (e) {
+      if (e.target.closest('a') && isNarrow()) openDrawer(false);
+    });
+    $('#sidenav-scrim').addEventListener('click', function () { openDrawer(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && box.classList.contains('open')) openDrawer(false);
+    });
+    $('#nav-btn').addEventListener('click', function () {
+      if (nav.mode === 'top') { setNav('side', false); if (isNarrow()) openDrawer(true); return; }
+      if (isNarrow()) openDrawer(!box.classList.contains('open'));
+      else setNav('side', !nav.collapsed);
+    });
+    // Mirror the tab-bar badges (live-thread count, focus LIVE).
+    function syncBadges() {
+      Array.prototype.forEach.call(box.querySelectorAll('[data-mirror]'), function (m) {
+        var src = document.getElementById(m.getAttribute('data-mirror'));
+        m.textContent = src ? src.textContent : '';
+        m.hidden = !src || src.hidden || !src.textContent;
+      });
+    }
+    if (window.MutationObserver) {
+      var mo = new MutationObserver(syncBadges);
+      ['wire-count', 'focus-badge'].forEach(function (id) {
+        var n = document.getElementById(id);
+        if (n) mo.observe(n, { attributes: true, childList: true, characterData: true, subtree: true });
+      });
+    }
+    syncBadges();
+    window.addEventListener('resize', function () { if (!isNarrow()) openDrawer(false); });
+    applyNav();
+  }
+  function setNav(mode, collapsed) {
+    nav.mode = mode;
+    nav.collapsed = !!collapsed;
+    try {
+      localStorage.setItem('gloment-nav', mode);
+      localStorage.setItem('gloment-nav-collapsed', nav.collapsed ? '1' : '0');
+    } catch (e) { /* private mode */ }
+    if (mode === 'top') openDrawer(false);
+    applyNav();
+  }
+  function applyNav() {
+    var root = document.documentElement, side = nav.mode === 'side';
+    root.setAttribute('data-nav', nav.mode);
+    if (side && nav.collapsed) root.setAttribute('data-nav-collapsed', ''); else root.removeAttribute('data-nav-collapsed');
+    var box = $('#sidenav');
+    if (box) box.hidden = !side;
+    var btn = $('#nav-btn');
+    if (btn) {
+      btn.setAttribute('aria-pressed', side ? 'true' : 'false');
+      btn.title = !side ? 'Show the sections as a side menu' : (isNarrow() ? 'Open the menu' : (nav.collapsed ? 'Expand the side menu' : 'Collapse the side menu'));
+    }
+    var col = box && box.querySelector('.sn-collapse .sn-label');
+    if (col) col.textContent = nav.collapsed ? 'Expand' : 'Collapse';
+    // The masthead height changes when the tab bar hides; re-measure.
+    setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 30);
+  }
+  function openDrawer(on) {
+    var box = $('#sidenav'), scrim = $('#sidenav-scrim');
+    if (!box) return;
+    box.classList.toggle('open', !!on);
+    if (scrim) scrim.hidden = !on;
+    document.documentElement.classList.toggle('sn-locked', !!on);
+  }
+  function updateSideNav(tab, parent) {
+    var box = $('#sidenav');
+    if (!box) return;
+    Array.prototype.forEach.call(box.querySelectorAll('[data-nav]'), function (a) {
+      var on = a.getAttribute('data-nav') === (parent || tab);
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    Array.prototype.forEach.call(box.querySelectorAll('[data-nav-sub]'), function (a) {
+      if (a.getAttribute('data-nav-sub') === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    box.classList.toggle('drivers-open', parent === 'drivers');
   }
 
   /* ---------------- clock + sessions ---------------- */
