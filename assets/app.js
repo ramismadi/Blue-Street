@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '43';
+  var ASSET_VERSION = '44';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -3115,7 +3115,8 @@
   function newsStories(items) {
     var map = {}, out = [];
     items.forEach(function (it, i) {
-      var key = it.story || it.id || ('n' + i);
+      // Rami, 2026-10-18: every article gets its own card (no folding).
+      var key = it.id || it.url || ('n' + i);
       if (!map[key]) { map[key] = { id: slugId(key), title: it.story_title || null, items: [] }; out.push(map[key]); }
       map[key].items.push(it);
       if (!map[key].title && it.story_title) map[key].title = it.story_title;
@@ -3152,7 +3153,6 @@
       fig.textContent = '';
       fig.className = 'news-fig fallback' + (main ? ' ' + ((NEWS_LEAN[main.dir] || NEWS_LEAN.mixed).cls) : '');
       fig.appendChild(el('span', 'nf-mkt', main ? mktName(main.ccy) : 'FX'));
-      if (it.pillar) fig.appendChild(el('span', 'nf-pillar', pillarName(it.pillar)));
     }
     var src = safeUrl(it.image);
     if (!src) { fallback(); return fig; }
@@ -3250,12 +3250,15 @@
 
       var body = el('div', 'news-body');
       var meta = el('div', 'news-meta');
+      if (it.pillar) {
+        var pp = el('a', 'news-pillar p-' + it.pillar, pillarName(it.pillar));
+        pp.href = '#engine';
+        pp.title = 'Macro pillar: ' + pillarName(it.pillar);
+        meta.appendChild(pp);
+      }
       meta.appendChild(el('span', 'news-src', it.source || 'Source'));
       meta.appendChild(newsWhenEl(it));
-      if (s.items.length > 1) meta.appendChild(el('span', 'thread-pill', s.items.length + ' on this story'));
       body.appendChild(meta);
-
-      if (s.title && s.items.length > 1) body.appendChild(el('p', 'news-story', s.title));
 
       var h = el('h3', 'news-hl');
       var hb = el('button', 'news-hl-btn', it.headline);
@@ -3267,13 +3270,8 @@
 
       var imp = (it.impact || []).filter(function (x) { return x && x.ccy; });
       if (imp.length) {
-        var tags = el('div', 'news-tags');
-        imp.forEach(function (x) { tags.appendChild(biasTag(x, false)); });
-        if (it.pillar) {
-          var pa = el('a', 'tag pillar', pillarName(it.pillar));
-          pa.href = '#engine';
-          tags.appendChild(pa);
-        }
+        var tags = el('div', 'news-tags news-impact');
+        imp.forEach(function (x) { tags.appendChild(biasTag(x, true)); });
         body.appendChild(tags);
       }
 
