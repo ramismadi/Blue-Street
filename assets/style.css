@@ -2254,9 +2254,9 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .news-sec-head .news-src { margin-left: auto; }
 .dev { margin: 6px 0 34px; }
 .dev .wire { max-width: none; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
-.dev .wire > .thread:first-child { grid-column: 1 / -1; }
+.dev .wire > .thread.dev-lead { grid-column: 1 / -1; }
 .dev .wire-headline { font-size: 1.1rem; }
-.dev .wire > .thread:first-child .wire-headline { font-size: 1.3rem; }
+.dev .wire > .thread.dev-lead .wire-headline { font-size: 1.3rem; }
 .dev-dot {
   width: 8px; height: 8px; border-radius: 50%; background: var(--bear);
   box-shadow: 0 0 0 0 var(--bear); animation: devpulse 2s ease-out infinite;
@@ -2323,3 +2323,10 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .seg[aria-pressed="true"] { background: var(--surface); box-shadow: var(--shadow); color: var(--ink); }
 .news-sort .seg { font-size: 0.78rem; padding: 5px 11px; }
 @media (max-width: 760px) { .news-sort { order: 3; } }
+
+/* Trend-line lean marks (replace the arrows and words). */
+.trend-ico { width: 16px; height: 10px; flex: none; overflow: visible; }
+.trend-ico path { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.bias-tag { gap: 6px; }
+.bias-pill { display: inline-flex; align-items: center; padding: 4px 10px; }
+.bias-pill .trend-ico { width: 20px; height: 12px; }

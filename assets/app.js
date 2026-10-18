@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '45';
+  var ASSET_VERSION = '46';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -2712,7 +2712,7 @@
         a.appendChild(lb);
         a.appendChild(el('span', null, it.headline));
         var x = (it.impact || []).filter(function (y) { return y.ccy === c.ccy; })[0];
-        if (x) { var tg = el('span', 'news-tags'); tg.appendChild(biasTag(x, true)); a.appendChild(tg); }
+        if (x) { var tg = el('span', 'news-tags'); tg.appendChild(biasTag(x)); a.appendChild(tg); }
         side.appendChild(a);
       });
     }
@@ -2866,6 +2866,8 @@
     Array.prototype.forEach.call(box.querySelectorAll('.thread'), function (w) {
       var ok = !c || (' ' + w.getAttribute('data-mkts') + ' ').indexOf(' ' + c + ' ') >= 0;
       w.hidden = !ok;
+      // The first visible live thread spans the row.
+      w.classList.toggle('dev-lead', ok && !shown && !w.closest('.dev-earlier'));
       if (ok) { if (w.closest('.dev-earlier')) shownEarlier++; else shown++; }
     });
     var ear = box.querySelector('.dev-earlier');
@@ -3149,15 +3151,28 @@
     return (it.impact || []).some(function (x) { return x && x.ccy === c; });
   }
 
-  function biasTag(x, long) {
+  /* A tiny trend line: rising (bullish, green), falling (bearish, red),
+     choppy (mixed, gold). Rami, 2026-10-18: colour + line, no words. */
+  var TREND_PATHS = { bull: 'M1 9 L5 5.5 L8 7 L15 1.5', bear: 'M1 1.5 L5 5 L8 3.5 L15 9', mixed: 'M1 6 L4.5 3 L8 7 L11.5 4 L15 6' };
+  function trendIcon(cls) {
+    var NS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 16 10');
+    svg.setAttribute('class', 'trend-ico');
+    svg.setAttribute('aria-hidden', 'true');
+    var path = document.createElementNS(NS, 'path');
+    path.setAttribute('d', TREND_PATHS[cls] || TREND_PATHS.mixed);
+    svg.appendChild(path);
+    return svg;
+  }
+  function biasTag(x) {
     var L = NEWS_LEAN[x.dir] || NEWS_LEAN.mixed;
-    var s = NEWS_STRENGTH[x.strength] || '';
-    var t = el('span', 'bias-tag ' + L.cls + (x.strength ? ' s' + x.strength : ''));
-    t.appendChild(el('span', 'bias-arrow', L.arrow));
+    var t = el('span', 'bias-tag ' + L.cls);
+    t.appendChild(trendIcon(L.cls));
     t.appendChild(flagEl(x.ccy));
     t.appendChild(el('span', 'mono', mktName(x.ccy)));
-    if (long) t.appendChild(el('span', 'bias-word', L.word + (s ? ' · ' + s : '')));
-    t.title = L.word + ' for ' + mktName(x.ccy) + (s ? ' (' + s + ')' : '') + ' — headline pressure, not a call';
+    t.appendChild(el('span', 'sr-only', ' ' + L.word.toLowerCase()));
+    t.title = L.word + ' for ' + mktName(x.ccy) + ' — headline pressure, not a call';
     return t;
   }
 
@@ -3228,7 +3243,13 @@
       kk.appendChild(document.createTextNode(mktName(news.ccy) + ' · the news read'));
       head.appendChild(kk);
       var L = NEWS_LEAN[nr.lean];
-      if (L) head.appendChild(el('span', 'bias-pill ' + L.cls, L.arrow + ' ' + L.word + ' lean'));
+      if (L) {
+        var pill = el('span', 'bias-pill ' + L.cls);
+        pill.appendChild(trendIcon(L.cls));
+        pill.appendChild(el('span', 'sr-only', L.word + ' lean'));
+        pill.title = 'Headlines lean ' + L.word.toLowerCase() + ' — evidence, not a call';
+        head.appendChild(pill);
+      }
       nb.appendChild(head);
       nb.appendChild(el('p', 'nr-text', nr.text));
       var foot = el('p', 'meta');
@@ -3294,7 +3315,7 @@
       var imp = (it.impact || []).filter(function (x) { return x && x.ccy; });
       if (imp.length) {
         var tags = el('div', 'news-tags news-impact');
-        imp.forEach(function (x) { tags.appendChild(biasTag(x, true)); });
+        imp.forEach(function (x) { tags.appendChild(biasTag(x)); });
         body.appendChild(tags);
       }
 
@@ -3321,7 +3342,7 @@
           var ul = el('ul', 'news-why');
           imp.forEach(function (y) {
             var li = el('li');
-            li.appendChild(biasTag(y, true));
+            li.appendChild(biasTag(y));
             if (y.why) li.appendChild(el('p', null, y.why));
             ul.appendChild(li);
           });
