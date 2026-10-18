@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '44';
+  var ASSET_VERSION = '45';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -3044,7 +3044,16 @@
   var NEWS_STRENGTH = { 1: 'mild', 2: 'clear', 3: 'strong' };
   var NEWS_BEATS = [['was', 'What this was'], ['happened', 'What happened'],
     ['means', 'What it means'], ['fx', 'For the currency']];
-  var news = { data: null, ccy: '', src: '', open: {} };
+  var news = { data: null, ccy: '', src: '', open: {}, sort: 'impact' };
+  try { if (localStorage.getItem('gloment-news-sort') === 'latest') news.sort = 'latest'; } catch (e) { /* private mode */ }
+  /* Impact ranking (Rami, 2026-10-18): strongest push on any market first,
+     then how many markets it clearly moves, then newest. */
+  function newsImpact(it) {
+    var imp = (it.impact || []).filter(function (x) { return x && x.ccy; });
+    var top = 0, clear = 0;
+    imp.forEach(function (x) { var st = +x.strength || 1; if (st > top) top = st; if (st >= 2) clear++; });
+    return top * 10 + Math.min(clear, 9);
+  }
 
   function mktName(c) { return NEWS_NAMES[c] || c; }
   /* Country flag (or a gold / oil icon) beside a market code. Local SVGs in
@@ -3094,6 +3103,14 @@
     var srcSel = $('#news-src');
     if (srcSel) srcSel.addEventListener('change', function () {
       news.src = srcSel.value;
+      renderNews();
+    });
+    var sortBox = $('#news-sort');
+    if (sortBox) sortBox.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-sort]');
+      if (!b) return;
+      news.sort = b.getAttribute('data-sort');
+      try { localStorage.setItem('gloment-news-sort', news.sort); } catch (er) { /* private mode */ }
       renderNews();
     });
     var grid = $('#news-grid');
@@ -3234,6 +3251,12 @@
       return !news.ccy || newsTouches(it, news.ccy);
     });
     var stories = newsStories(items);
+    if (news.sort === 'impact') stories.sort(function (a, b) {
+      return (newsImpact(b.lead) - newsImpact(a.lead)) || (newsTime(b.lead) - newsTime(a.lead));
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('#news-sort [data-sort]'), function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-sort') === news.sort ? 'true' : 'false');
+    });
     grid.textContent = '';
     if (!stories.length) {
       grid.appendChild(el('p', 'meta news-empty', news.ccy

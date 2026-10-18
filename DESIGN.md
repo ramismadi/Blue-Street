@@ -320,6 +320,7 @@ full stream.
 - No `ts` from the publisher → give `date`; the card shows the date instead of
   "5h ago". Never invent a time.
 
+**Sorting (Rami, 2026-10-18):** "By impact" (default) ranks by the strongest `strength` on any market, then how many markets it moves at strength 2+, then newest; "Latest" is newest first. Choice saved per browser (localStorage `gloment-news-sort`). So `strength` must be honest — it decides the order.
 **Rami, 2026-10-18: every article gets its own card** — no folding by `story` (keep writing `story`/`story_title`; they're kept for later use). Each card leads with a coloured pillar badge (Growth, Risk sentiment, Policy…) and shows every currency's lean in full (▲ JPY Bullish · mild).
 How it renders: market chips with flags (markets with no stories are dimmed;
 tap again for All; the hash keeps the filter) + a source dropdown (2+ publishers). Picking a

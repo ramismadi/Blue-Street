@@ -2320,3 +2320,6 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .news-pillar.p-inflation, .news-pillar.p-tot { color: var(--gold); background: var(--gold-wash); border-color: transparent; }
 .news-impact { gap: 6px; }
 .news-impact .bias-tag { font-size: 0.74rem; padding: 3px 8px; }
+.seg[aria-pressed="true"] { background: var(--surface); box-shadow: var(--shadow); color: var(--ink); }
+.news-sort .seg { font-size: 0.78rem; padding: 5px 11px; }
+@media (max-width: 760px) { .news-sort { order: 3; } }
