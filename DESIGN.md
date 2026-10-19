@@ -492,3 +492,11 @@ High/Medium/Low→`impact` (skip Holiday or show as low), `date`→`ts` (convert
 to UTC), `forecast`, `previous`. The feed has no actuals — fill `actual` as
 prints land (that's what turns rows green/red). Then add the Blue Street layer
 FF doesn't have: `why`, `if_beat`/`if_miss`, `better`, `chapter`, `bank`.
+
+## Plain-words layer: data/words.json (Rami, 2026-10-19)
+Claude owns `data/words.json`; Hercules never edits it. Sections: `story.headline`,
+`engine.reads.<row id>`, `banks.banks.<bank id>.{summary, priced}`, each with
+`as_of` (YYYY-MM-DD). `applyWords()` in app.js merges them over story/engine/banks
+on load, but only when the data file isn't from a later day than `as_of`; otherwise
+Herc's text shows, still trimmed by the render clamps. A bank's original `priced`
+moves to `detail` (Details drawer) when replaced.

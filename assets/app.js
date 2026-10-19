@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '75';
+  var ASSET_VERSION = '76';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -69,7 +69,13 @@
     startClock();
     initScrollStory();
 
-    fetchJSON('data/story.json').then(function (d) {
+    // Plain-words text lives in data/words.json (Claude's file); Herc's files
+    // keep the numbers. words.json loads first and is merged in on render.
+    var wordsP = fetchJSON('data/words.json').catch(function () { return {}; });
+    function withWords(path, kind) {
+      return Promise.all([fetchJSON(path), wordsP]).then(function (r) { return applyWords(kind, r[0], r[1]); });
+    }
+    withWords('data/story.json', 'story').then(function (d) {
       story = d;
       renderEdition(d);
       hideSplash();
@@ -88,14 +94,14 @@
       explainers = d.pillars || null;
       attachExplainers();
     }).catch(function () { /* explainers are optional */ });
-    fetchJSON('data/engine.json').then(function (d) {
+    withWords('data/engine.json', 'engine').then(function (d) {
       renderEngine(d);
       renderPulse(d);
     }).catch(function () {
       note('#engine-rows', 'Macro engine data unavailable.');
       note('#today-pulse', 'Macro engine data unavailable.');
     });
-    fetchJSON('data/banks.json').then(function (d) {
+    withWords('data/banks.json', 'banks').then(function (d) {
       renderBanks(d);
       (d.banks || []).forEach(function (b) { cal.banks[b.id] = b; });
       renderCalendar();
@@ -164,6 +170,36 @@
       } catch (e) { return; }
       location.reload();
     }).catch(function () { /* offline — keep the current page */ });
+  }
+
+  /* words.json (Rami, 2026-10-19): the plain-words layer. Hercules writes the
+     figures; Claude writes what they mean, in a file Herc never touches, so a
+     data refresh can't put the number-heavy text back. Each section carries
+     the date it was written for and only applies to data from that date or
+     earlier — if Herc's file is newer, the page falls back to his text
+     (still trimmed by the render clamps). */
+  function wordsDay(t) { return String(t || '').slice(0, 10); }
+  function applyWords(kind, d, w) {
+    var sec = w && w[kind];
+    if (!sec || !d) return d;
+    var srcDay = wordsDay(kind === 'story' ? d.date : d.updated);
+    if (sec.as_of && srcDay && srcDay > sec.as_of) return d;
+    if (kind === 'story') {
+      if (sec.headline) d.headline = sec.headline;
+    } else if (kind === 'engine') {
+      (d.rows || []).forEach(function (r) {
+        if (sec.reads && sec.reads[r.id]) r.read = sec.reads[r.id];
+      });
+    } else if (kind === 'banks') {
+      (d.banks || []).forEach(function (b) {
+        var x = sec.banks && sec.banks[b.id];
+        if (!x) return;
+        if (!b.detail && b.priced && x.priced) b.detail = b.priced;
+        if (x.summary) b.summary = x.summary;
+        if (x.priced) b.priced = x.priced;
+      });
+    }
+    return d;
   }
 
   /* ---------------- helpers ---------------- */

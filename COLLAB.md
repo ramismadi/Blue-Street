@@ -1,11 +1,57 @@
 # Working on Blue Street — agent collaboration guide
 
+---
+
+## ⚠️ HERCULES — PLEASE READ: what's going wrong, and three fixes (Rami, 2026-10-19)
+
+### The problems your jobs are causing today
+- **The site stopped updating.** Every push to this repo starts a GitHub Pages
+  build, and a new push cancels the build before it. At 10:34 CT you pushed 4
+  commits in 18 seconds, all empty. At 11:05 CT you pushed 10 in 20 seconds, and
+  only 2 changed a file. So builds kept getting cancelled before they finished.
+  Rami's changes (and yours) sat in the repo but never reached the live site.
+  On a day GitHub is already slow, this backs it up for hours.
+- **Rami's plain-words text keeps getting undone.** Rami said the macro engine
+  and central bank text read like "data slop" (strings of numbers, odds and
+  dates instead of what they mean). Claude rewrote the engine reads in plain
+  words at 04:30 CT; your 04:34 run put the number-heavy text back four minutes
+  later, even though COLLAB.md asked you not to. Rami then saw the old text
+  and thought the fix hadn't worked.
+- **The old name is still showing up.** Your commits still say "Gloment". The
+  site was renamed Blue Street, and Rami asked that every trace of the old
+  name go, including on GitHub.
+- **Stale stories coming back.** The Tabtabai item (a Nov 2025 story) was
+  pulled twice and re-added by your runs both times (see the stale-news notes).
+
+Net effect: Rami asks for a change, it's made, and then either it never shows
+up or your next run reverses it. Please treat the fixes below as standing rules.
+
+### The three fixes
+1. **One commit per run.** Gather all your file changes, then make a single
+   commit and push once. Skip any file that hasn't changed, and if nothing
+   changed, don't commit or push at all. (If your tool writes files one at a
+   time through the GitHub API, that's what creates the empty commits —
+   compare with the current file first and skip unchanged ones.)
+2. **Use the new name.** The repo is ramismadi/Blue-Street. Start commit
+   messages with `data:` (e.g. `data: calendar — BoC BOS Q3 actual`), never
+   "Gloment".
+3. **Leave the written text alone.** The plain-words text now lives in
+   `data/words.json`, which Claude owns — please never edit it. In engine.json,
+   banks.json and story.json keep doing what you do well: numbers, dates, odds
+   and sources. Put detailed figures in `figure` (engine) and `detail` (banks).
+   The site shows Claude's words over yours for the same day; if your file is
+   newer than words.json, yours shows (trimmed), so nothing breaks if Claude
+   misses a day.
+
+Your data work is what the whole site runs on — these rules just keep your
+pushes and Claude's from cancelling each other out.
+
 ## What this is
 Blue Street is Rami's FX macro desk (renamed from its old name on 2026-10-19) — a
 static site on GitHub Pages at ramismadi.github.io/Blue-Street/. It publishes a daily story-format FX
 outlook (numbers → what they mean → what happens to the currencies), a
 macro engine, central-bank scorecard, calendar and breaking wire. Audience:
-Rami and anyone he shares the link with. Content tone: direct, numbers-first,
+Rami and anyone he shares the link with. Content tone: direct, meaning first (plain words), numbers in support,
 no ceremony. Market context only — never trade recommendations, never financial
 advice.
 
