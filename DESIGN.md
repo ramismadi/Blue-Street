@@ -89,6 +89,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 
 ## Look
 - **Default theme: Blue Street** (`blue`, dark pair `night`; Rami 2026-10-19) — brand blue #0a84ff as the accent and a solid blue masthead, on the ivory page; listed first in the colorways. The older colorways remain.
+- **No gold trim on Blue Street / Night** (Rami, 2026-10-19): `--gold` is remapped to blue in those two themes, so kickers, labels, callout rules and the tab underline are brand blue. Gold survives only as the *mixed* signal via `--mixed`/`--mixed-wash` (news lean tags, thesis "mixed"). Central-bank bias there is one blue scale: Hawkish = solid blue, Dovish = pale blue, Neutral = grey. Other themes keep their gold.
 - **Look controls live in the side menu** (Rami, 2026-10-19): light/dark and the colorway swatches sit at the bottom of the side menu / phone drawer; the masthead's own sun-moon and colorway buttons are hidden. On phones the masthead's menu button always opens the drawer (any layout), which frees the bar for the SYD/TYO/LDN/NYC session chips; under 440px the wordmark hides and the symbol carries the brand.
 - Themes are token sets on `<html data-theme="…">` (plus `data-mode` =
   light|dark). They come in **four colorways, each a light + dark pair**:

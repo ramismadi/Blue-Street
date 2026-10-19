@@ -44,8 +44,10 @@
   --accent: #0a84ff;
   --accent-2: #0a84ff;
   --accent-wash: #e7f1fd;
-  --gold: #a07a32;
-  --gold-wash: #f6eedc;
+  --gold: #0a6fd6;           /* no gold trim on Blue Street: accents are brand blue */
+  --gold-wash: #e7f1fd;
+  --mixed: #a07a32;          /* gold survives only as the "mixed" signal */
+  --mixed-wash: #f6eedc;
   --bull: #2d7a4e;
   --bull-wash: #e8f2ea;
   --bear: #a83a32;
@@ -69,8 +71,10 @@
   --accent: #0a84ff;
   --accent-2: #0a84ff;
   --accent-wash: #10233f;
-  --gold: #d6ad62;
-  --gold-wash: #2a2114;
+  --gold: #4ea8ff;
+  --gold-wash: #10233f;
+  --mixed: #d6ad62;
+  --mixed-wash: #2a2114;
   --bull: #7dcc9c;
   --bull-wash: #13281d;
   --bear: #f08a80;
@@ -1199,7 +1203,7 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .thesis { padding: 16px 18px; border-radius: 12px; border-left: 4px solid var(--gold); background: var(--gold-wash); }
 .thesis.confirms { border-left-color: var(--bull); background: var(--bull-wash); }
 .thesis.breaks { border-left-color: var(--bear); background: var(--bear-wash); }
-.thesis-verdict { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+.thesis-verdict { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mixed, var(--gold)); }
 .thesis.confirms .thesis-verdict { color: var(--bull); }
 .thesis.breaks .thesis-verdict { color: var(--bear); }
 .thesis p { margin: 6px 0 0; font-size: 1rem; color: var(--ink); }
@@ -2217,7 +2221,7 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .bias-pill { padding: 2px 9px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; }
 .bias-pill.bull { color: var(--bull); background: var(--bull-wash); }
 .bias-pill.bear { color: var(--bear); background: var(--bear-wash); }
-.bias-pill.mixed { color: var(--gold); background: var(--gold-wash); }
+.bias-pill.mixed { color: var(--mixed, var(--gold)); background: var(--mixed-wash, var(--gold-wash)); }
 
 .news-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
 .news-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
@@ -2234,7 +2238,7 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .news-fig.fallback.bull { box-shadow: inset 0 -4px 0 var(--bull); }
 .news-fig.fallback.bear { box-shadow: inset 0 -4px 0 var(--bear); }
-.news-fig.fallback.mixed { box-shadow: inset 0 -4px 0 var(--gold); }
+.news-fig.fallback.mixed { box-shadow: inset 0 -4px 0 var(--mixed, var(--gold)); }
 .nf-mkt { font-family: var(--serif); font-size: 2.1rem; font-weight: 600; line-height: 1; letter-spacing: 0.02em; }
 .nf-pillar { margin-top: 6px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; }
 .news-body { padding: 14px 18px 16px; display: flex; flex-direction: column; flex: 1; }
@@ -2255,7 +2259,7 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .bias-tag .mono { font-size: 0.72rem; }
 .bias-tag.bull { color: var(--bull); background: var(--bull-wash); }
 .bias-tag.bear { color: var(--bear); background: var(--bear-wash); }
-.bias-tag.mixed { color: var(--gold); background: var(--gold-wash); }
+.bias-tag.mixed { color: var(--mixed, var(--gold)); background: var(--mixed-wash, var(--gold-wash)); }
 .bias-tag.s1 .bias-arrow { opacity: 0.55; }
 .bias-tag.s3 { border-color: currentColor; }
 .bias-arrow { font-size: 0.6rem; }
@@ -2493,3 +2497,10 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .brand-mark { margin-right: 2px; }
 
 .sn-brand { font-family: "Inter", var(--sans); font-weight: 800; font-size: 1.12rem; letter-spacing: 0.02em; text-transform: none; line-height: 1; display: inline-flex; align-items: flex-start; }
+
+/* Blue Street + Night: central-bank bias on one blue scale (Rami, 2026-10-19) */
+[data-theme="blue"] .bias.hawk, [data-theme="night"] .bias.hawk { background: var(--brand); color: #fff; }
+[data-theme="blue"] .bias.dove, [data-theme="night"] .bias.dove { background: var(--accent-wash); color: var(--accent); }
+/* Keep pillar badges distinct from Policy (blue) once gold is gone */
+[data-theme="blue"] .news-pillar.p-inflation, [data-theme="blue"] .news-pillar.p-tot,
+[data-theme="night"] .news-pillar.p-inflation, [data-theme="night"] .news-pillar.p-tot { color: var(--ink-2); background: var(--surface-2); border-color: var(--line); }
