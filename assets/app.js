@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '79';
+  var ASSET_VERSION = '80';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -1759,6 +1759,7 @@
       var b = o.b;
       var c = el('article', 'card bank gl-scope' + (o.covered ? '' : ' thin'));
       var head = el('div', 'bank-head');
+      head.appendChild(flagEl(b.ccy));   // Rami, 2026-10-19: each bank carries its flag
       head.appendChild(el('span', 'bank-short', b.short));
       head.appendChild(el('span', 'bank-ccy mono', b.ccy || ''));
       if (b.bias && BIAS[b.bias]) {
