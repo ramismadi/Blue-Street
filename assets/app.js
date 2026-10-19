@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '77';
+  var ASSET_VERSION = '78';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -563,6 +563,10 @@
     var active = $('#tab-' + (parent || tab));
     if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     window.scrollTo(0, 0);
+    // Redraw the scroll-driven scenes now: returning to Today at scroll 0 fires no scroll event,
+    // so it would otherwise keep its stale faded-out state until the next scroll.
+    measureScenes();
+    queueScroll();
   }
 
   /* ---------------- side menu (optional layout) ----------------

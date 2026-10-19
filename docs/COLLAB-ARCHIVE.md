@@ -1,0 +1,538 @@
+# COLLAB archive — older specs and rules (moved out of COLLAB.md, 2026-10-19)
+
+Everything below was moved word for word from `COLLAB.md` to keep that file
+short and current. Much of it is finished work or has been replaced by the
+split in `COLLAB.md` ("WHO DOES WHAT"). Read it for history; where it disagrees
+with `COLLAB.md`, `COLLAB.md` wins.
+
+---
+
+## How updates happen (Hercules' automation — do not fight it)
+- Daily ~2:00 AM CT cron (`fx-outlook-daily-refresh`): rebuilds `story.json`
+  and `engine.json` from fresh market data and pushes to `main`. It also folds
+  the Latest items into the story and clears them.
+- Breaking-news watch (every 30 min, `fx-breaking-news-watch`): on qualifying
+  news — central-bank surprises, big data beats/misses vs expectations,
+  geopolitical shocks with FX impact (NOT routine headlines) — it prepends to
+  `data/latest.json` and pushes.
+- These jobs overwrite `data/*.json`. Manual edits to data files will be
+  replaced at the next run. Lasting changes belong in `index.html` / `assets/`.
+
+## Collaboration rules (Hercules + Claude)
+1. Pull (fetch) before you push. Never force-push to `main`.
+2. One agent per file at a time. Check the recent commit log first; if the
+   other agent touched the same file in the last hour, ask Rami before
+   editing it.
+3. Commit messages: prefix with the area — `data:`, `design:`, `content:`,
+   `docs:`, `fix:`.
+4. Hercules owns the automated data pushes. Claude: don't hand-edit
+   `data/*.json` unless Rami explicitly asks; your lane is design, structure,
+   features, and copy.
+5. Content standards: every number carries a source label; flag anything
+   unverified rather than guessing; quotes are indicative only, never
+   presented as executable; no trade recommendations, ever.
+6. Relative paths only (the site lives under `/Blue-Street/`). No build tools,
+   no backend — plain static files.
+7. Source freshness: before linking any source, confirm the article's
+   published date matches the event — check `datePublished` on the page.
+   FXStreet/Reuters slugs often carry an article ID encoding an old date
+   (e.g. `202605272351` = May 27, 2026). A stale link under a current
+   headline destroys trust; drop it rather than link it.
+8. Hercules 2026-10-08 hotfix (Rami-reported): home-screen web app showed a
+   stale edition and a default letter icon. Fixed in `assets/app.js`
+   (`fetchJSON` now uses `{cache:'no-store'}` so every launch pulls fresh
+   data) and `index.html` (real icon set: `assets/apple-touch-icon.png`,
+   `icon-192.png`, `icon-512.png`, `favicon.png`, plus
+   mobile-web-app-capable/theme-color metas). Claude: the icon PNGs are
+   generated assets — replace freely if you redesign the mark.
+   NOTE 2026-10-08: the first push of this hotfix was built on stale files
+   and overwrote Claude's theme-dropdown + new schemes; restored from merge
+   commit ac752e6 and re-applied the two fixes on top. Lesson: re-fetch repo
+   files immediately before pushing when Claude is active.
+
+## Division of labor (Rami, 2026-10-08)
+- **Claude + Rami — design and ideas.** They design the site, invent
+  features, and iterate on the look. Next up: a calendar that competes with
+  Forex Factory's.
+- **Hercules — runs it.** The data engine and the glue: daily 2 a.m. edition,
+  30-min breaking wire, and consistent data updates behind whatever
+  Claude/Rami design. When they land a design, Hercules defines the
+  `data/*.json` feed it needs and keeps it fresh on a schedule — including
+  intraday updates as actuals print.
+- Rule of thumb: **we build it (including Claude), Hercules runs it.**
+  Designs are only as good as the data behind them; Hercules makes sure the
+  data is always there, fresh, and correctly shaped.
+
+## Pillar explainers (spec for Claude — Rami audit, 2026-10-08)
+**Shipped 2026-10-09.** The live copy is `data/pillars.json` (keyed by engine
+row id, `body` + `live`) — edit that file to update an explainer; the text
+below is the original brief.
+Rami wants each Macro Engine row to have a tap-to-expand "What is this?"
+The content below is Hercules's; Claude owns the interaction design.
+Keep each to ~3 lines: what it is, how it moves currencies, one live example.
+
+1. **Policy divergence** — Central banks moving in different directions. It is the *gap* between them that moves currencies: money flows toward higher rates. *Live: Fed 3.75–4.00% and still hiking vs SNB pinned at 0% — that gap underpins USD/CHF.*
+2. **Growth differentials** — Who is accelerating, who is stalling (GDP, jobs, PMIs). Always comparative. Stronger growth pulls in capital and raises hike expectations. *Live: US resilient while Europe stalls on energy costs — weight on EUR/USD.*
+3. **Inflation** — CPI/PCE vs the central bank's target. High inflation alone strengthens nothing — what matters is what the bank *does* about it. *Live: UK inflation 3.1% vs 2% target is why the BoE is talking hikes, holding GBP up.*
+4. **Risk sentiment** — Risk-on vs risk-off. Fear bids USD, JPY, CHF (havens) and sells AUD, NZD, GBP (risk proxies). *Live: Iran escalation bid for yen and franc this week was pure risk sentiment.*
+5. **Terms of trade** — Export prices vs import prices: oil, metals. The same price moves two currencies opposite ways — say which and why. *Live: Brent ~$103 supports CAD (exporter) and pressures JPY/EUR (importers).*
+6. **Positioning** — Where speculators already stand (CFTC COT, Fridays). Crowded trades are fragile: if everyone is long dollars, nobody is left to buy. The contrarian lens — where would a surprise hurt most.
+7. **Fiscal & sovereign risk** — Deficits, debt sustainability, sovereign spreads. Funds stress leaks into the currency. *Live: French 10y spread over Bunds >150bp, widest since 2011 — a euro headwind.*
+
+## Requests for Claude (from Hercules, 2026-10-09)
+1. **New calendar field: `outcome`.** Past events now carry a one-line `outcome`
+   (what the print meant in context, e.g. "Beat (197k vs 200k): labor floor
+   intact, Dec hike pricing holds"). Please render it on past events — it's the
+   post-event read Rami asked for. Backfilled on today's 16 events.
+2. Calendar now keeps a 7-day lookback (Rami wants to review past events), not
+   prune-to-yesterday.
+
+## Focus Mode — spec for Claude (Rami, 2026-10-09)
+Big event days get a front-page takeover in three acts. Rami's words: this is
+how he gets the story of the world — "as global macro history is being written,
+I'm there getting the details." Every focus event is a chapter in the world
+story, not an isolated data point.
+
+**Which events:** the big three — FOMC decisions, US CPI, US payrolls. Plus
+unscheduled events only if Rami asks or a wire thread goes hot (3+ items).
+Rami wants a ping when focus mode goes live and on every development.
+
+**Act 1 — Preview (before).** Goes live with the 2 a.m. edition on event day
+(evening before for Asia-timed events). Structure:
+1. `story_so_far` — 3–4 beats on HOW WE GOT HERE. Not the consensus first —
+   the thread. E.g. CPI Oct 14: "August CPI surprised hot → Fed hiked in
+   September → payrolls collapsed to 29k → this print is the tiebreaker."
+2. `stakes` — one line on what this decides (e.g. "Decides whether an October
+   hike comes back to life").
+3. `setup` — consensus, previous, what's priced (e.g. "3.7% y/y vs 3.35%;
+   Oct hike ~17%, Dec ~70%").
+4. `forks` — conditional branches, NEVER conclusions: [{"if": "core 0.2% or
+   below", "then": "..."}, {"if": "core 0.3%+", "then": "..."}]. This is the
+   agency principle: the board is set, Rami forms the bias.
+5. `watch` — what to watch and when (times in CT).
+Design: the event owns the front page (Today tab hero). Countdown to the print.
+
+**Act 2 — Live (during).** The wire thread goes full-screen as a live blog —
+timestamped updates as it breaks. Hercules's breaking watch posts denser
+updates for focus events (every development, not just bar-clearing surprises).
+The thread infrastructure (thread/ccy/pillar/next) already exists.
+
+**Act 3 — Recap (after).** Outcome vs expected, how pricing moved, and what it
+does to the standing thesis (confirms or breaks it). Then folds into the next
+regular edition like any wire item.
+
+**Data (Hercules owns):** new `data/focus.json`:
+```
+{"active": true, "event_id": "us-cpi-20261014", "phase": "preview"|"live"|"recap",
+ "story_so_far": ["..."], "stakes": "...",
+ "setup": {"consensus": "...", "previous": "...", "priced": "..."},
+ "forks": [{"if": "...", "then": "..."}],
+ "watch": ["..."], "thread": "us-cpi-20261014"}
+```
+When no focus event is active: `{"active": false}`. The 2 a.m. run arms it;
+the breaking watch drives live → recap. Calendar event gets `"focus": true`.
+
+**Design (Claude owns):** the three-act front page, phase transitions
+(preview → live at print time → recap after), countdown display. Follow the
+existing design system; this is a Today-tab takeover, not a new tab.
+
+---
+
+## Inline glossary — spec for Claude (Rami, 2026-10-09)
+Rami: jargon, abbreviations, meeting types, and commonly-unknown terms should
+carry their definitions inline. New users shouldn't need a glossary page —
+the definition comes to them.
+
+**Interaction:** known terms render bolded with a dotted underline (the
+universal "definition here" affordance). Hover on desktop shows a tooltip;
+tap on mobile shows the definition (popover or bottom sheet, your call).
+
+**Data (Hercules owns):** new `data/glossary.json`:
+```
+{"terms": [{"term": "FOMC", "definition": "Federal Open Market Committee — the Fed's rate-setting body; meets 8x a year.", "aliases": ["Federal Open Market Committee"]}, ...]}
+```
+Hercules maintains the term list. Match case-insensitively; aliases cover
+full-name forms.
+
+**Behavior (Claude owns):**
+- Scan rendered prose across Story, Engine, Banks, Calendar, Wire.
+- Wrap only the FIRST occurrence of each term per chapter/card/section —
+  no underline spam.
+- Skip terms inside source links, URLs, and headlines' linked text.
+- Tooltip/popover shows the definition; keep it one to two lines.
+
+**Starter coverage (Hercules fills):** central-bank abbreviations (FOMC, ECB,
+BoE, BoJ, SNB, RBA, BoC, RBNZ), data abbreviations (CPI, PCE, NFP, PMI, GDP,
+COT), concepts (hawkish/dovish, basis points, yield, spread, QT/QE,
+intervention, forward guidance, equilibrium), meeting types (rate decision,
+press conference, Monetary Policy Report, meeting minutes).
+
+---
+
+## Prose-first story render — spec for Claude (Rami, 2026-10-09)
+Rami's feedback on the Oct 9 2am edition: chapters felt like "a bunch of
+numbers slapped on a story." Site-wide law from Rami: **prose leads, numbers
+serve the prose, heavy detail hides behind taps.** He scrolls through the
+story and taps for more detail.
+
+**Data change (Hercules did):** story.json chapters are now narrative prose —
+`meaning` carries the full story under the four labels (What changed /
+Thread / What it means / What to watch) with numbers woven into sentences;
+`numbers[]` holds only 3–4 crisp figures (the detail drawer), never
+paragraphs. Same prose-first rule now applies to engine rows, bank cards,
+currency summaries, calendar outcomes.
+
+**Render change (Claude):**
+- Story chapter view: the "The numbers" bullet list becomes a collapsed
+  expander ("Details" / tap to reveal). The narrative (`meaning`) is the
+  scrollable story; figures appear only on tap.
+- Keep the four labels visible as section structure within the narrative.
+- Apply the same pattern wherever a number list currently competes with
+  prose: engine rows (figure behind tap, read leads), bank cards (bias/priced
+  narrative leads, raw numbers expandable), currency summaries.
+- Scenarios segmented control already hides detail behind taps — keep.
+
+---
+
+## Today cards show teasers, not chapters — spec for Claude (Rami, 2026-10-09)
+Rami's feedback: the Today tab's chapter cards said "read the full chapter"
+but the Story page chapter was the same length — the tap didn't earn itself.
+
+**Data change (Hercules did):** every story.json chapter now carries a
+`teaser` field — 1–2 lines, the delta only (what changed and why it matters).
+
+**Render change (Claude):** the Today tab takeaway cards render `teaser`,
+not `ch.fx`. Card = number + title + teaser + "Read the chapter →". The
+Story tab keeps the full chapter (narrative + detail drawer + scenarios).
+The tap must reveal genuinely more than the card.
+
+---
+
+## Done on Claude's side (2026-10-09): teasers, prose-first, glossary
+- Today chapter scenes now show number + title + `teaser` + "Read the chapter →".
+- Story chapters render `meaning`/`fx` as labelled sections (What changed /
+  Thread / What it means / What to watch); `numbers` sit in a Details drawer.
+  Engine figures, bank raw numbers and the currency score table are behind
+  Details too. Banks lead with Market pricing; an optional `summary` string
+  per bank in banks.json would render as the lead line if you want one.
+- Inline glossary is live on Today, Story, Engine, Banks, Currencies,
+  Calendar details and Wire. Abbreviations with 2+ capitals match
+  case-sensitively (so "OAT"/"COT" don't hit ordinary words). Spec in DESIGN.md.
+
+## Focus Mode — design done (Claude, 2026-10-09)
+Built per the spec above; full render rules + schema in DESIGN.md
+(`data/focus.json`). For Hercules:
+1. **Recap fields** (the spec didn't define them): `recap: {outcome, actual,
+   expected, pricing, thesis: {verdict: confirms|breaks|mixed, note}, fork}`
+   — `fork` = index of the fork that played out. All optional; missing ones
+   are skipped.
+2. **Print time** comes from the calendar event (`event_id` = calendar `id`),
+   so keep that event's `ts` right. The site flips preview → live itself at
+   print time; set `phase: "live"` when you start posting, `"recap"` when the
+   recap fields are filled.
+3. Live updates are wire items with `thread` = focus `thread`; the page pulls
+   them every minute. Optional overrides: `title`, `ts`, `ccy`, `chapter`,
+   `sources`.
+4. Rami's "ping" on go-live / every development has to come from your side
+   (push/notification) — the site can't notify a closed browser. The open
+   page does show a LIVE badge, "New" flags and an unread count in the tab title.
+5. Rami can preview all three acts now: `?focus-demo=preview|live|recap`.
+
+## Focus Mode data feed — DONE (Hercules, 2026-10-09)
+The `data/focus.json` feed is wired on Hercules's side, matching the DESIGN.md schema:
+- **2am edition** arms it: on big-event days (FOMC/CPI/payrolls, calendar `"focus": true`) it writes the full preview payload (`story_so_far`, `stakes`, `setup`, `forks`, `watch`, `thread`, `phase: "preview"`); otherwise `{"active": false}`. Also sets `"focus": true` on the big-three calendar events.
+- **Breaking watch** drives it intraday: denser wire updates on the focus thread, fills `recap` (`outcome`, `actual`, `expected`, `pricing`, `thesis.verdict`, `fork`) and flips `phase` to `"live"` → `"recap"`. Pings Rami on go-live and every genuine development.
+- **4pm edition** verifies the recap is filled if the event printed that day.
+First live test: US CPI, Wednesday 2026-10-14.
+
+## US CPI Wed 2026-10-14 — run sheet for Hercules (Claude, 2026-10-09; Rami approved)
+Claude tested all three acts against the real calendar event with a mocked
+Wednesday clock (phone + desktop): the site side is ready. To-dos for the day:
+1. **2 a.m. CT run:** write `data/focus.json` with `active: true`,
+   `event_id: "us-cpi-20261014"` (exact — it joins calendar.json),
+   `phase: "preview"`, **`title: "US CPI (Sep)"`** (new — Rami approved; it
+   overrides the calendar's "CPI y/y (Sep)" as the front-page headline), plus
+   `story_so_far`, `stakes`, `setup`, `forks`, `watch`,
+   `thread: "us-cpi-20261014"`. Set `"focus": true` on the calendar event and
+   keep its `ts` at `2026-10-14T12:30:00Z` (= 7:30 AM CT; the countdown and the
+   auto-flip to live read it).
+2. **At the print:** wire items with `thread: "us-cpi-20261014"`; set
+   `phase: "live"`. The page flips to live by itself at 7:30, so a minute's lag
+   is fine.
+3. **After:** fill `recap` (`outcome`, `actual`, `pricing`, `thesis.verdict` +
+   `note`, `fork`) and set `phase: "recap"`; fill `actual` on the calendar
+   event. **`fork` is 0-based** — the first fork is `0`.
+4. **Pings** to Rami on go-live and every development (your side only — the
+   site can't notify a closed browser).
+5. **Thursday 2 a.m. run:** reset to `{"active": false}`.
+If `focus.json` is missing or malformed the site quietly shows the normal
+Today view — a failed run won't break the page, but the takeover won't appear.
+
+## Wire → Flash rename + thread-based retention — spec for Claude (Rami, 2026-10-09)
+Rami renamed the Wire tab to **Flash** ("Breaking" overpromised — most items
+are developments, not alarms). Data side is done on Hercules's end:
+
+**Hercules owns:**
+- The feed is still `data/latest.json` (filename unchanged — internal only).
+- Cron bodies now say "Flash" throughout (breaking watch writes Flash items,
+  2am/4pm fold + prune).
+- **New retention rule:** 2am/4pm PRUNE instead of wiping — threads stay until
+  72h after their last update, unthreaded one-offs expire after 36h. Living
+  threads remain visible even after being folded into the story.
+
+**Render changes (Claude):**
+1. Rename the "Wire" tab to **"Flash"** everywhere (tab bar, headings, empty
+   states). Any user-facing copy saying "wire" → "Flash".
+2. Relative timestamps on items ("2h ago", "yesterday") so the tab feels live.
+3. Threads with no update in the last 24h get a visually "cooling" state
+   (dimmed slightly, no "Developing" pill) — they phase out on their own;
+   no action needed beyond the visual.
+
+---
+## Open requests for Hercules (from Claude, 2026-10-09, later)
+4. **currencies.json** — new Currencies tab (strength board + pair picker,
+   Rami's spec). Please own `data/currencies.json` from the next 2 a.m.
+   edition: per-currency pillar `drivers` (−1/0/+1 + one-line note),
+   `summary`, `chapter`; set `as_of`; **append** a daily `history` snapshot
+   (that's the trend line). Schema + rules in DESIGN.md. Claude seeded it
+   from the Oct 8 engine reads + banks.json.
+5. Done on Claude's side: calendar `outcome` renders on past events, and a
+   "Last 7 days" range shows the lookback.
+6. Done on Claude's side: wire threads render as grouped arcs — newest update
+   on top with ccy/pillar tags and "What's next", a "How it developed"
+   timeline below; currency pages show "On the wire". Spec in DESIGN.md.
+7. **Oil and Gold chapters (Rami, 2026-10-09).** Please append two chapters
+   to `story.json`, after New Zealand Dollar, titled **"Oil"** and
+   **"Gold"**, with the same shape as the currency chapters (`title`,
+   `teaser`, `meaning`, `numbers`, `fx`, `scenarios`, `sources`). Lead with
+   what the move means for FX (Oil: CAD vs importers JPY/EUR; Gold: haven
+   flows and USD). The site is ready: the Today chips, scenes, ghost marks
+   (`Oil`, `Au`) and Story tab pick them up from the titles. No
+   `currencies.json` entry is needed.
+
+## Requests for Claude (from Hercules, 2026-10-09)
+1. **New calendar field: `outcome`.** Past events now carry a one-line `outcome`
+   (what the print meant in context, e.g. "Beat (197k vs 200k): labor floor
+   intact, Dec hike pricing holds"). Please render it on past events — it's the
+   post-event read Rami asked for. Backfilled on today's 16 events.
+2. Calendar now keeps a 7-day lookback (Rami wants to review past events), not
+   prune-to-yesterday.
+3. **Wire enrichment: `thread` / `ccy` / `pillar` / `next`.** Wire items now
+   carry a stable `thread` id grouping follow-ups into one developing story,
+   `ccy` (affected currencies), `pillar` (macro pillar id), and `next` (the
+   next catalyst in that storyline). Rami ends his daily routine on the wire
+   and tracks stories intraday — please render threads as grouped arcs with
+   tags and the "what's next" line. The 2am edition folds threads into the
+   story's "what changed overnight" section.
+
+## Open requests for Hercules (from Claude, 2026-10-09)
+1. **banks.json sources** — swap in official links: Fed → FRED `DFEDTARU` /
+   `DFEDTARL` (target range; `FEDFUNDS` is the effective rate), RBNZ →
+   rbnz.govt.nz OCR decision, BoJ → boj.or.jp statement for Sep 18 (the
+   current Reuters link is about July minutes and doesn't show 1.25%).
+2. **calendar.json** — please own it. Schema and an ingestion recipe (FF's
+   weekly export feed + the Blue Street layer: why / if_beat / if_miss / better)
+   are in DESIGN.md. Verify the seeded central-bank decision times, and fill
+   `actual` as prints land.
+3. **pillars.json** — refresh each `live` example when it goes stale.
+
+## Depth push — evidence tally + surprise momentum (Claude, 2026-10-12; Rami approved)
+Rami wants Blue Street to out-depth ForexFundamentals: no house view, but the
+pillars may be used to *weigh* the evidence. Lanes as agreed with Hercules
+tonight: Hercules owns the feeds, Claude owns the render.
+- **Shipped (v32):** Today "Where the evidence leans" card (pillar dots + "N
+  for · N against" per currency, from currencies.json); pillar tally on each
+  currency page; a "Data surprises" section on each currency page and a
+  "data N–N" chip on Today, both reading `data/momentum.json`.
+- **For Hercules:** please own `data/momentum.json` — schema and rules in
+  DESIGN.md. Count starts fresh with US CPI Oct 14; `result` is judged by the
+  calendar's `better` (good/bad for the currency), not higher/lower. Until the
+  file exists the site shows "Tracking starts Oct 14 with US CPI".
+- **Next (Hercules feeds, then Claude render):** positioning as percentiles,
+  the thesis scoreboard (each edition's calls marked held / broke / mixed),
+  Sunday Week Ahead + Friday Week in Review. Spec the JSON here first.
+- Nothing in focus.json or the Focus Mode render was touched.
+
+## Depth plan — new JSON shapes (Hercules, 2026-10-12; Rami approved: run now, before CPI)
+
+Rami's decisions 2026-10-12: no house view, ever. A pillar tally is allowed
+purely as evidence-weighing (e.g. "5 of 7 pillars favor USD"), never a
+verdict. Surprise momentum starts counting fresh from Wednesday's CPI
+(2026-10-14) — anything depending on it shows a clean "starts with CPI" state
+until then. Lanes: Hercules owns feeds, Claude owns render.
+
+### 1. Surprise momentum → `data/momentum.json` (SUPERSEDED 2026-10-12)
+Claude specced the agreed shape in DESIGN.md ("data/momentum.json — surprise
+momentum (Hercules)"); the `surprises`-inside-currencies.json draft is
+retired — do not build it. Feed rule: newest 6 scored releases per currency
+since 2026-10-14, result (beat|miss|inline) judged FOR THE CURRENCY by each
+calendar event's `better` field; never backfill before 2026-10-14.
+
+### 2. Positioning percentiles → extend `data/currencies.json` driver notes + `data/engine.json` positioning row
+
+Per-currency positioning driver gets two extra fields:
+```json
+"positioning": { "score": -1, "pct_52w": 93, "wow_chg": 4200,
+  "note": "$36bn dollar longs — 93rd percentile of 52-week range, +$4.2bn on the week" }
+```
+- `pct_52w`: net spec position as percentile of its trailing 52-week range
+  (0 = most short, 100 = most long). `wow_chg`: week-over-week change in
+  contracts (CFTC, Fridays).
+- Render: a "crowded" flag is fine at >=90 or <=10; label it positioning
+  extreme, never a trade signal.
+- SCORING RULE (Rami, 2026-10-12; single rule for every currency): stretched
+  longs (>=90th) score -1 (unwind vulnerability), stretched shorts (<=10th)
+  score +1 (squeeze potential) — the pillar's contrarian philosophy ("where
+  would a surprise hurt most"). Never a supportive "base".
+
+### 3. Thesis scoreboard → `data/story.json`, new top-level `calls` array
+
+```json
+"calls": [
+  { "date": "2026-10-12", "text": "Soft core (0.2%) squeezes crowded dollar longs — DXY gives back ~1%",
+    "status": "pending" },
+  { "date": "2026-10-11", "text": "EUR/USD holds 1.1161 into the French plenary",
+    "status": "confirmed", "resolved": "2026-10-12",
+    "resolution": "Low printed 1.1155 but closed above 1.1161 — held." }
+]
+```
+- `status`: pending | confirmed | broken. Each edition resolves the prior
+  edition's pending calls — this is the site's memory and accountability.
+  (Claude's v32 note says "held / broke / mixed" — reconcile to
+  pending/confirmed/broken/mixed when speccing the render.)
+- Render: running record (e.g. "last 10 calls: 6 confirmed, 3 broken, 1
+  pending"). Show "Scoreboard starts with the Oct 14 edition" until the first
+  resolutions land. Wording stays evidence-style: "confirmed"/"broken", never
+  "we were right".
+
+### 4. Week Ahead / Week in Review → `data/weekly.json` (new file)
+
+```json
+{ "type": "week_ahead", "week_of": "2026-10-19",
+  "headline": "...",
+  "catalysts": [ { "event": "FOMC decision", "when": "Wed Oct 28 1:00pm CT",
+                   "why": "...", "fork": "Hike vs hold reprices ..." } ],
+  "positioning_watch": "...", "sources": [ { "label": "...", "url": "..." } ] }
+```
+- `type`: week_ahead (published Sunday evening) | week_review (published Friday
+  evening). Same prose/source standards as story.json.
+- Render: dedicated slot; archive past weeks by `week_of`.
+
+### 5. Pillar tally (render-side, from existing data — no new feed)
+
+Derive from `currencies.json` → `currencies[].drivers.*.score`: count +1/−1
+per currency, e.g. "5 of 7 pillars favor USD". Allowed phrasing is
+evidence-weighing only ("the weight of evidence leans USD"); never a verdict,
+never "our view is long USD". The −1/0/+1 scores already exist — this is pure
+render arithmetic. (Shipped in v32 as "Where the evidence leans".)
+
+### Do-not-touch before Wednesday's CPI (Oct 14, 7:30am CT)
+
+- `data/focus.json` — the 2am edition arms the CPI preview, the breaking watch
+  drives live→recap intraday, the 4pm edition verifies the recap. First live
+  Focus Mode test; the data side must stay exactly as the crons expect.
+- The Focus Mode takeover render path — verified working 2026-10-12 18:38 CT;
+  no changes until after the debut renders live.
+- During cron windows (2:00–2:30am, 4:00–4:30pm CT) don't push anything touching
+  `data/` — the edition crons overwrite story/engine/banks/calendar/
+  currencies/pillars/latest on every run.
+- `data/momentum.json` is now a cron-owned feed too (see 6c in the 2am job):
+  don't hand-edit it; the editions rebuild it from calendar.json.
+
+
+
+## Quiet chapters — `quiet` flag in story.json (Hercules, 2026-10-12; for the Today compaction)
+Both edition crons (2am + 4pm) now set `"quiet": true` on any story.json
+chapter with no real delta vs the previous edition (the one-line carries).
+Backward-compatible optional boolean; first flagged chapters land with the
+2026-10-13 2am edition. Render guidance: the Today tab may collapse quiet
+chapters into a single "Quiet today: ..." line; the Story tab still renders
+each chapter. Feed rule: never mark a chapter quiet to avoid writing it — if
+there is a delta, however small, it is not quiet.
+Rami confirmed KEEP (direct, 2026-10-16): quiet chapters stay collapsed to
+one line on Today; Story tab still renders each.
+
+## Explain layer — full explainers + Learn library (Claude, 2026-10-15; Rami approved)
+Rami: "five minutes a day, and knowing what you're looking at" — an education
+layer that must not crowd the read. Built on Herc's plan (extend
+`glossary.json`, no new feed). **Render is Claude's, content is Hercules's.**
+- **Done (Claude):** "Learn more →" in the popover for terms with `detail`;
+  full pages at `#learn/<id>`; searchable library at `#learn` (footer link).
+  Always on, no toggle (Rami, 2026-10-15). Schema + rules in DESIGN.md ("Explain layer"). `?learn-demo` previews sample content
+  (`assets/glossary-demo.json`) — nothing in `data/` was touched.
+- **For Hercules (`data/glossary.json`):** add the optional `detail` block
+  (`measures`, `why_moves_fx`, `surprise_looks_like`, `calendar`, `related_ids`)
+  and `kind` to the 15–20 terms/events the read leans on most; start with CPI,
+  FOMC, NFP, PCE, PMI, GDP, hawkish/dovish, basis points, forward guidance.
+  Mechanics only, never direction. No hard-coded figures — use `calendar`
+  (`id_prefix` or `match`+`ccy`) so numbers come live from `calendar.json`.
+  Keep `definition` to 1–2 sentences. Pull the current `glossary.json` from
+  `main` before editing (stale-push lesson). Don't use the word "crowded"
+  anywhere on the site (Rami, 2026-10-14).
+
+## If you're Claude reading this
+Rami asked Hercules to leave this for you. The above is the full picture.
+When in doubt about who should do what, ask Rami — he'd rather answer than
+untangle a merge conflict.
+
+
+## Rates feed — proposal (Rami + Claude, 2026-10-15)
+Blue Street shows headline policy rates (`banks.json`) and a carry number in the
+pair picker, but has no yield data and no view of where rates are expected to
+go. Markets price expected differentials, not today's gap, so that's the
+missing half. Nothing below is built yet.
+
+**Ask for Hercules (feed lane):**
+- New `data/rates.json`, refreshed with the daily edition.
+- 2-year government yield for each currency we cover (US, DE, UK, JP, CA, AU,
+  NZ, CH).
+- 1-week / 1-month / 3-month change in each yield.
+- Where sourceable: market-implied policy rate ~3 and ~6 months out.
+- Every number carries a source label; flag anything unverified.
+
+**Claude (display lane):** spread-vs-price view, divergence flags ("spread
+moved, price didn't"), the "why the gap moved" storyline, Learn entries.
+
+**Open question for Hercules:** which sources can you pull reliably? Reply
+here before we lock the list. Yields alone is a fine first step; the implied
+path is the hardest to source.
+
+## News tab — request for Hercules (Claude, 2026-10-18; Rami approved)
+Rami wants a news page that beats ForexFundamentals' News Sentiment: image
+cards, a currency filter, an AI read on tap, bullish/bearish per currency,
+and a link to the source. **Built and live (v38)**, seeded by hand from
+today's headlines. Lanes as Rami agreed: **Hercules ingests, Claude reads.**
+- **For Hercules — please own `data/news-raw.json`** (schema in DESIGN.md,
+  "data/news.json — News"). Every FX-relevant headline from your sources,
+  newest first, ~72h kept, with the article's `og:image` as `image` and the
+  real published time (`ts`, or `date` when there's no time). Wider than
+  Flash's bar: routine data, central-bank speakers, commodities and geopolitics
+  all count; skip pure equity/crypto stories. Several publishers please —
+  ForexFundamentals runs on Bloomberg alone, that's where we beat them.
+  Central-bank press pages + FXStreet + investingLive + Reuters/AP syndication
+  would be a strong start; your call on what you can pull reliably. Avoid
+  pushing during the 2:00/4:00 cron windows as usual.
+- **Claude's side:** a scheduled job turns new raw items into `data/news.json`
+  (summary, four beats, per-currency impact, storylines, narratives). Please
+  don't write to `data/news.json`.
+- Flash is unchanged — it stays the curated developing-story desk.
+
+## Stale-news fix (Claude, 2026-10-18; Rami asked)
+Pulled the Flash item "AP: Israel struck Beirut… killing Hezbollah chief of
+staff Haytham Tabtabai" (pushed 08:04 CT today). That strike happened on
+Nov 23, 2025 (Times of Israel, meta-date 2025-11-23), not this Sunday.
+Hercules: please don't re-add it, and run the rule-7 date check on wire
+pickups — a resurfaced old AP story looks current when the article says only
+"Sunday".
+
+## Flash tab merged into News (Claude, 2026-10-18; Rami approved)
+The Flash tab is gone; its threads now render at the top of the **News** tab
+as "Developing now" (old `#flash` links redirect). **Nothing changes for
+Hercules:** keep writing `data/latest.json` exactly as before — the breaking
+watch, thread ids, `ccy`/`pillar`/`next`, Focus Mode's live blog and the
+2am/4pm fold + prune all work as they did. User-facing copy now says
+"Developing" instead of "Flash"; internal names can stay.
+**Update 16:30 CT:** the 4pm NY-close edition re-added the item to
+`latest.json` and wove it into `story.json` and `engine.json`. Claude pulled
+it from `latest.json` again. Hercules: please drop it from your working copy
+and from the story/engine prose in the next run — it is the Nov 2025 strike.
