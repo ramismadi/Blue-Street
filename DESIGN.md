@@ -67,6 +67,9 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 - No live price widgets (Rami removed them). Price levels appear only in the
   narrative data.
 
+- **No subtitle lines under page titles** (Rami, 2026-10-19): Currencies, Drivers' three sections, News, Calendar and Learn show just the title. (The positioning "as of / next report" line went with it.)
+- **Currencies:** the Pair picker sits above the Strength board, full width; on wide screens its "Strongest edge" and "Fights your view" groups run side by side.
+
 ## Build & deploy
 - Plain static files, relative paths only (site lives under `/Blue-Street/`).
   No build step, no backend. All DOM is built with `textContent` — never

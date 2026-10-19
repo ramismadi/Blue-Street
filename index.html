@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=67">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=67">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=68">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=68">
 <meta name="theme-color" content="#0a84ff">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,14 +18,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=67">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=68">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=67">
+<link rel="stylesheet" href="assets/style.css?v=68">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -40,8 +40,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=67" defer></script>
-<script src="assets/app.js?v=67" defer></script>
+<script src="assets/cot.js?v=68" defer></script>
+<script src="assets/app.js?v=68" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
@@ -203,11 +203,6 @@
     </div>
     <div id="fx-detail" hidden></div>
     <div class="fx-grid">
-      <section class="card fx-board" aria-label="Strength board">
-        <h2 class="section-label">Strength board</h2>
-        <ol class="board" id="fx-board"></ol>
-        <p class="meta fx-method" id="fx-method"></p>
-      </section>
       <section class="card fx-picker" id="fx-picker" aria-label="Pair picker">
         <h2 class="section-label">Pair picker</h2>
         <p class="picker-q">I&rsquo;m <span class="segmented" role="tablist" aria-label="Direction" id="fx-dir">
@@ -217,6 +212,11 @@
         <div class="chip-row" id="fx-ccy" aria-label="Currency"></div>
         <p class="meta picker-sub" id="fx-sub"></p>
         <ol class="picks" id="fx-picks"></ol>
+      </section>
+      <section class="card fx-board" aria-label="Strength board">
+        <h2 class="section-label">Strength board</h2>
+        <ol class="board" id="fx-board"></ol>
+        <p class="meta fx-method" id="fx-method"></p>
       </section>
     </div>
   </section>
@@ -231,7 +231,6 @@
   <section class="view" id="view-engine" role="tabpanel" aria-label="Macro engine" hidden>
     <div class="view-head">
       <h1 class="view-title">Macro engine</h1>
-      <p class="meta"><span id="pillar-count">Six</span> pillars · updated <span id="engine-updated">—</span></p>
     </div>
     <div class="engine-grid" id="engine-rows"></div>
   </section>
@@ -240,7 +239,6 @@
   <section class="view" id="view-positioning" role="tabpanel" aria-label="Positioning" hidden>
     <div class="view-head">
       <h1 class="view-title">Positioning</h1>
-      <p class="meta" id="cot-meta">Who&rsquo;s crowded, from the CFTC&rsquo;s weekly Commitments of Traders</p>
     </div>
     <div id="cot-body"></div>
   </section>
@@ -249,7 +247,6 @@
   <section class="view" id="view-banks" role="tabpanel" aria-label="Central banks" hidden>
     <div class="view-head">
       <h1 class="view-title">Central banks</h1>
-      <p class="meta">Policy rate, next decision and what the market prices · updated <span id="banks-updated">—</span></p>
     </div>
     <div class="bank-next card" id="bank-next" hidden></div>
     <div class="bank-grid" id="bank-grid"></div>
@@ -261,7 +258,6 @@
     <div class="view-head cal-head">
       <div>
         <h1 class="view-title">Calendar</h1>
-        <p class="meta">Every catalyst, in your time zone · updated <span id="cal-updated">—</span></p>
       </div>
       <label class="tz-pick">
         <span class="sr-only">Time zone</span>
@@ -290,7 +286,6 @@
   <section class="view" id="view-news" role="tabpanel" aria-labelledby="tab-news" hidden>
     <div class="view-head">
       <h1 class="view-title">News</h1>
-      <p class="meta">Every headline that moves FX</p>
     </div>
     <div class="news-filters">
       <div class="chip-row" id="news-mkts" aria-label="Filter by market"></div>

@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '67';
+  var ASSET_VERSION = '68';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -3941,9 +3941,6 @@
     var head = el('div', 'view-head');
     head.appendChild(el('h1', 'view-title', 'Learn'));
     var full = terms.filter(hasDetail).length;
-    head.appendChild(el('p', 'meta', 'The terms and events in the daily read, in plain words. ' +
-      terms.length + ' terms' + (full ? ' · ' + full + ' with a full explainer' : '') +
-      '. How things work, never a call on direction.'));
     root.appendChild(head);
 
     var search = el('input', 'learn-search');
