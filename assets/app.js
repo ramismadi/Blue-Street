@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '62';
+  var ASSET_VERSION = '63';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -773,10 +773,12 @@
   /* First two sentences of a headline (one if two run past ~45 words).
      A sentence ends at . ! or ? followed by a space and a capital, digit or
      quote — so "4.5%" and "U.S." don't split. */
-  function shortHeadline(t) {
+  function shortHeadline(t) { return firstSentences(t, 2, 45); }
+  /* First `max` sentences; drops trailing ones while the total runs past `words`. */
+  function firstSentences(t, max, words) {
     if (!t) return t;
     var out = [], start = 0;
-    for (var i = 0; i < t.length && out.length < 2; i++) {
+    for (var i = 0; i < t.length && out.length < max; i++) {
       if ('.!?'.indexOf(t[i]) < 0) continue;
       var j = i + 1;
       while (j < t.length && '"\'”’)'.indexOf(t[j]) >= 0) j++;
@@ -788,7 +790,8 @@
       start = k;
     }
     if (!out.length) return t.trim();
-    if (out.length === 2 && (out[0] + ' ' + out[1]).split(/\s+/).length > 45) out = [out[0]];
+    if (out.length < max && start < t.length) { /* fewer sentences than max: keep the rest too */ out.push(t.slice(start).trim()); }
+    while (out.length > 1 && out.join(' ').split(/\s+/).length > words) out.pop();
     return out.join(' ');
   }
 
@@ -974,7 +977,8 @@
 
       var tz = el('p', 'ch-teaser step');
       tz.setAttribute('data-at', at(0));
-      withFigures(tz, ch.teaser || ch.fx || '');
+      // Rami, 2026-10-19: Today's chapter cards are 1–3 sentences; the full chapter is one tap away.
+      withFigures(tz, firstSentences(ch.teaser || ch.fx || '', 3, 60));
       inner.appendChild(tz);
 
       var foot = el('div', 'ch-foot step');

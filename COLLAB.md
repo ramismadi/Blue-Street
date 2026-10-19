@@ -656,3 +656,7 @@ everywhere visible. Done on Claude's side:
 the chapters. The site now shows only the first two sentences (one if two run
 long), so longer headlines get cut mid-thought. Applies to whoever writes the
 edition (Hercules now; Claude after the handover).
+Same for each chapter's `teaser` (the Today card): **1–3 sentences, ~50
+words max**, the delta only. The full chapter (`meaning`/`fx`) keeps the
+detail — "Read the chapter →" takes the reader there. The site trims cards to
+three sentences / ~60 words.
