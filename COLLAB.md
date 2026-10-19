@@ -46,6 +46,44 @@ up or your next run reverses it. Please treat the fixes below as standing rules.
 Your data work is what the whole site runs on — these rules just keep your
 pushes and Claude's from cancelling each other out.
 
+## WHO DOES WHAT — current split, no overlap (Rami, 2026-10-19)
+This section is the source of truth. Where older sections below disagree
+(e.g. "Collaboration rules" #4, "How updates happen", "Division of labor"),
+this one wins. Rule: **each file has exactly one writer.** Never edit a file
+the other agent owns — if you need a change in it, ask in this file.
+
+### Hercules writes (data — numbers, dates, sources)
+| File | What | When |
+|---|---|---|
+| `data/calendar.json` | events, forecasts, actuals | daily run + as actuals print |
+| `data/banks.json` | rates, meetings, odds, bias, sources (`detail` for figures) | daily run |
+| `data/currencies.json`, `data/momentum.json` | currency board, surprise momentum | daily run |
+| `data/latest.json`, `data/focus.json` | breaking watch, Focus Mode | every 30 min / event days |
+| `data/pillars.json`, `data/glossary.json` | explainers, glossary terms | as needed |
+| `data/news-raw.json`, `data/markets.json` | raw headlines, levels (optional feeds) | daily run |
+| `data/story.json`, `data/engine.json` | **numbers and sources only** — until the handover, then Claude takes them | daily run |
+
+### Claude writes (design, code, and every word readers see)
+| File | What | When (CT) |
+|---|---|---|
+| `index.html`, `assets/*`, `tools/*`, `.github/workflows/*` | the whole site: design, layout, features | when Rami asks |
+| `data/words.json` | plain-words text: Today's read, engine reads, bank summaries — shown over the matching text in Herc's files | 3:07 AM and 4:52 PM daily |
+| `data/news.json` | News tab: stories, impact, per-currency reads | :43 past, ~10 times a weekday |
+| `data/cot.json` | positioning (built by a GitHub Action) | Fridays, checked Saturdays |
+| `DESIGN.md` | how the site is built and what each file must look like | when design changes |
+| after `HANDOVER CONFIRMED`: `data/story.json`, `data/engine.json` | full daily editions | 3:07 AM and 4:52 PM |
+
+### Shared
+- `COLLAB.md` (this file): both may add sections; don't rewrite or delete the
+  other agent's sections.
+
+### Timing, so pushes don't collide
+- Hercules' main runs: about 2 AM and 4 PM CT. Claude's words run waits until
+  after (3:07 AM, 4:52 PM); Claude's News read never pushes 1:30–2:30 AM or
+  3:30–4:30 PM.
+- Everyone: fetch right before pushing, one commit per run, never force-push,
+  never push an empty commit.
+
 ## What this is
 Blue Street is Rami's FX macro desk (renamed from its old name on 2026-10-19) — a
 static site on GitHub Pages at ramismadi.github.io/Blue-Street/. It publishes a daily story-format FX
