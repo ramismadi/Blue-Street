@@ -53,7 +53,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   rate definition / last move / sources, the currency score table. Scene mechanics are commented in app.js ("today: scroll engine");
   `prefers-reduced-motion` gets a plain, fully visible page.
 - The BLUE STREET wordmark and the Today tab go to the clean site URL (no hash).
-- **App icon (Rami, 2026-10-19):** a flat street sign on the Ivory background (#f6f2ea): solid verified-badge blue (#0095F6) blade set high on a short black post on the right (the post stops inside the frame), lettered like the real Wall St sign — big wide bold "BLUE" with a small raised "ST" (DejaVu Sans Bold), white, no border. Solid colours only, no gradients or shadows. `assets/icon-512.png` is the master; the 192/180/64 sizes are scaled from it. The icon `<link>`s carry `?v=N` so home screens pick up changes.
+- **App icon (Rami, 2026-10-19):** a flat street sign on the Ivory background (#f6f2ea): solid verified-badge blue (#0095F6) blade set high on a short black post with rounded ends on the right (the post stops inside the frame), lettered like the real Wall St sign — big wide bold "BLUE" with a small raised "ST" (DejaVu Sans Bold), white, no border. Solid colours only, no gradients or shadows. `assets/icon-512.png` is the master; the 192/180/64 sizes are scaled from it. The icon `<link>`s carry `?v=N` so home screens pick up changes.
 - **Side menu (optional, Rami 2026-10-18):** the masthead's panel button moves
   the sections from the top bar into a left side menu (same five + Drivers'
   three sections + Learn, with the badges mirrored). Wide screens: a fixed
