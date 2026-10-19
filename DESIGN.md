@@ -31,6 +31,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | News | `#news`, `#news/JPY` = filtered to a market (old `#flash` / `#wire` links redirect here) | Developing now: `data/latest.json` (Hercules) · Headlines: `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`) |
 | Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
+- **Today's chapters are cards** (Rami, 2026-10-19; replaces the pinned full-screen chapter scenes): a grid (3 across on desktop, 2 on tablet, 1 on phones) in chapter order. Each card: flag + chapter title, a lean mark (strength-board score for the 8 currencies, the News read for gold/oil — evidence, not a call), today's read (`teaser`, 1–3 sentences), "In the news" (top 3 headlines touching that market from `news.json`, by impact — each opens its card expanded on News), and "More on … →" into the full Story chapter. Quiet chapters still fold into the "Quiet today" line. The bullets below about scenes are historical.
 - **Today is a scroll story**: full-screen headline → **At a glance** (newest
   Flash thread with status, tags and What's next; the next two high/medium
   events with times + zone; the evidence lean as ranked chips) → one short

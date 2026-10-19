@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '69';
+  var ASSET_VERSION = '70';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -111,7 +111,7 @@
     fetchJSON('data/currencies.json').then(function (d) {
       fx.data = d;
       renderFx();
-      refreshGhosts();
+      if (story) renderScenes(story);
     }).catch(function () {
       note('#fx-board', 'Currency data unavailable.');
       note('#today-lean', 'Currency data unavailable.');
@@ -140,6 +140,7 @@
     fetchJSON('data/news.json').then(function (d) {
       news.data = d;
       renderNews();
+      if (story) renderScenes(story);
       renderFx();   // "In the news" on currency pages
     }).catch(function () {
       note('#news-grid', 'News feed unavailable.');
@@ -513,6 +514,10 @@
       var nm = (h[1] || '').toUpperCase();
       news.ccy = NEWS_MKTS.indexOf(nm) >= 0 ? nm : '';
       renderNews();
+      if (news.pending) {
+        var pid = news.pending; news.pending = null;
+        setTimeout(function () { var c = document.getElementById('news-' + pid); if (c && c.scrollIntoView) c.scrollIntoView({ block: 'start', behavior: 'smooth' }); }, 80);
+      }
     }
     if (tab === 'positioning') {
       cot.focus = (h[1] || '').toUpperCase();
@@ -955,58 +960,76 @@
      Each child with data-at reveals once the scene's scroll progress (0–1)
      passes that value. The full narrative lives in the Story tab, so the tap
      always earns itself. */
+  /* Today's chapters as cards (Rami, 2026-10-19): currency, today's read
+     (1–3 sentences), the top related headlines, and "More on …" into the
+     full Story chapter. Re-rendered when news.json / currencies.json land. */
   function renderScenes(d) {
     var box = $('#today-story'), dots = $('#story-dots');
     box.textContent = '';
     dots.textContent = '';
     var chs = d.chapters || [];
     var quiet = [];
+    var grid = el('div', 'ch-cards');
     chs.forEach(function (ch, i) {
       // Hercules flags a chapter `quiet` when nothing really changed since the
       // last edition: Today folds it into one line; Story still has it in full.
       if (ch.quiet) { quiet.push(i); return; }
-      var steps = 2;   // teaser, foot
-      var at = function (k) { return (0.1 + 0.62 * k / (steps - 1)).toFixed(3); };
+      var code = chapterCcy(ch, i);
+      var card = el('article', 'card ch-card gl-scope');
+      card.id = 'scene-' + (i + 1);
 
-      var sc = el('section', 'scene ch-scene gl-scope');
-      sc.setAttribute('data-scene', '');
-      sc.id = 'scene-' + (i + 1);
-      sc.setAttribute('data-ch', i);
-      sc.style.setProperty('--steps', steps);
-      var pin = el('div', 'pin');
-      pin.appendChild(ghostMark(ch, i));
-      var inner = el('div', 'pin-inner ch-inner');
+      var head = el('header', 'chc-head');
+      if (code) head.appendChild(flagEl(code));
+      var h = el('h2', 'chc-title');
+      var ha = el('a', null, ch.title);
+      ha.href = '#story/' + (i + 1);
+      h.appendChild(ha);
+      head.appendChild(h);
+      var lean = chapterLean(code);
+      if (lean) {
+        var L = NEWS_LEAN[lean.dir];
+        var lt = el('span', 'chc-lean ' + L.cls);
+        lt.appendChild(trendIcon(L.cls));
+        lt.title = lean.title;
+        lt.appendChild(el('span', 'sr-only', lean.title));
+        head.appendChild(lt);
+      }
+      card.appendChild(head);
 
-      var head = el('div', 'ch-head step');
-      head.setAttribute('data-reveal', '');   // in as the scene arrives
-      head.appendChild(el('p', 'kicker', 'Chapter ' + (i + 1) + ' of ' + chs.length));
-      head.appendChild(el('h2', 'ch-title', ch.title));
-      inner.appendChild(head);
+      var read = el('p', 'chc-read');
+      withFigures(read, firstSentences(ch.teaser || ch.fx || '', 3, 60));
+      card.appendChild(read);
 
-      var tz = el('p', 'ch-teaser step');
-      tz.setAttribute('data-at', at(0));
-      // Rami, 2026-10-19: Today's chapter cards are 1–3 sentences; the full chapter is one tap away.
-      withFigures(tz, firstSentences(ch.teaser || ch.fx || '', 3, 60));
-      inner.appendChild(tz);
+      var items = code ? topNewsFor(code, 3) : [];
+      if (items.length) {
+        var nw = el('div', 'chc-news');
+        nw.appendChild(el('h3', 'section-label', 'In the news'));
+        var ul = el('ul');
+        items.forEach(function (it) {
+          var li = el('li');
+          var a = el('a', 'chc-hl');
+          a.href = '#news/' + code;
+          a.setAttribute('data-open-news', slugId(it.id || it.url || it.headline));
+          var x = (it.impact || []).filter(function (y) { return y && y.ccy === code; })[0];
+          if (x) { var Lx = NEWS_LEAN[x.dir] || NEWS_LEAN.mixed; var ic = el('span', 'chc-ic ' + Lx.cls); ic.appendChild(trendIcon(Lx.cls)); a.appendChild(ic); }
+          a.appendChild(el('span', 'chc-hl-t', it.headline));
+          li.appendChild(a);
+          var m = el('span', 'chc-src meta');
+          m.appendChild(document.createTextNode((it.source || '') + ' · '));
+          m.appendChild(newsWhenEl(it));
+          li.appendChild(m);
+          ul.appendChild(li);
+        });
+        nw.appendChild(ul);
+        card.appendChild(nw);
+      }
 
-      var foot = el('div', 'ch-foot step');
-      foot.setAttribute('data-at', at(1));
-      var cta = el('a', 'btn', 'Read the chapter →');
-      cta.href = '#story/' + (i + 1);
-      foot.appendChild(cta);
-      inner.appendChild(foot);
-
-      pin.appendChild(inner);
-      sc.appendChild(pin);
-      box.appendChild(sc);
-
-      var dot = el('button', 'sdot');
-      dot.type = 'button';
-      dot.setAttribute('aria-label', 'Chapter ' + (i + 1) + ': ' + ch.title);
-      dot.appendChild(el('span', 'sdot-lbl', ch.title));
-      dot.addEventListener('click', function () { jumpTo(sc); });
-      dots.appendChild(dot);
+      var more = el('a', 'chc-more', 'More on ' + ch.title + ' →');
+      more.href = '#story/' + (i + 1);
+      card.appendChild(more);
+      grid.appendChild(card);
     });
+    box.appendChild(grid);
     if (quiet.length) {
       var q = el('p', 'quiet-line');
       q.appendChild(el('span', 'quiet-lbl', 'Quiet today'));
@@ -1021,6 +1044,29 @@
     }
     measureScenes();
     queueScroll();
+  }
+
+  /* Lean for a chapter card: the strength-board score for a currency (sum of
+     pillar scores), else the News read for gold / oil. Evidence, not a call. */
+  function chapterLean(code) {
+    if (!code) return null;
+    var c = fx.data && fxGet(code);
+    if (c) {
+      var sc = fxScore(c);
+      return { dir: sc > 0 ? 'bullish' : sc < 0 ? 'bearish' : 'mixed',
+        title: 'Pillars net ' + (sc > 0 ? '+' : '') + sc + ' for ' + code + ' — evidence, not a call' };
+    }
+    var nr = news.data && news.data.narratives && news.data.narratives[code];
+    if (nr && NEWS_LEAN[nr.lean]) return { dir: nr.lean, title: 'Headlines lean ' + nr.lean + ' — evidence, not a call' };
+    return null;
+  }
+  /* Highest-impact recent headlines touching a market (news.json). */
+  function topNewsFor(code, n) {
+    var all = ((news.data && news.data.items) || []).filter(function (it) {
+      return it && it.headline && (it.ts || it.date) && newsTouches(it, code);
+    });
+    all.sort(function (a, b) { return (newsImpact(b) - newsImpact(a)) || (newsTime(b) - newsTime(a)); });
+    return all.slice(0, n);
   }
 
   /* Background mark behind each chapter scene: the chapter's currency symbol
@@ -3378,6 +3424,14 @@
   }
 
   function initNews() {
+    // A headline tapped on a Today card opens expanded on News.
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('[data-open-news]');
+      if (!a) return;
+      var id = a.getAttribute('data-open-news');
+      news.open[id] = true;
+      news.pending = id;
+    }, true);
     var row = $('#news-mkts');
     if (row) {
       [''].concat(NEWS_MKTS).forEach(function (c) {
