@@ -1,10 +1,19 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-10-19T02:50:00-05:00",
+  "updated": "2026-10-19T15:25:00-05:00",
   "currencies": {
     "USD": {
       "recent": [
+        {
+          "id": "usd-nahb-20261019",
+          "date": "2026-10-19",
+          "title": "NAHB housing market index (Oct)",
+          "result": "miss",
+          "actual": "29",
+          "forecast": "31",
+          "note": "Miss: 29 vs 31 consensus (prior 32) — builder sentiment still in the dumps; housing a soft spot in the growth tape."
+        },
         {
           "id": "us-tic-20261016",
           "date": "2026-10-16",
@@ -49,15 +58,6 @@
           "actual": "0.4%",
           "forecast": "0.4%",
           "note": "In line: business inventories +0.4% m/m; restocking continues."
-        },
-        {
-          "id": "us-core-retail-20261015",
-          "date": "2026-10-15",
-          "title": "Core retail sales m/m (Sep)",
-          "result": "beat",
-          "actual": "+0.9%",
-          "forecast": "+0.6%",
-          "note": "Beat on ex-autos — but ex-gas-and-autos only +0.2%; gasoline flattered."
         }
       ]
     },
@@ -126,13 +126,13 @@
     "JPY": {
       "recent": [
         {
-          "id": "jp-tertiary-20261019",
+          "id": "jpy-tertiary-20261019",
           "date": "2026-10-19",
           "title": "Japan tertiary industry activity m/m (Aug)",
           "result": "beat",
-          "actual": "-0.1%",
+          "actual": "-0.1% m/m",
           "forecast": "-0.3%",
-          "note": "Beat vs -0.3% fc; first decline in 2 months (index 106.8). Services recovering — back Ueda's hawkish lean."
+          "note": "Beat: -0.1% m/m vs -0.3% expected (prior +0.4%) — services held up; industrial production still the weak link."
         },
         {
           "id": "jp-ip-revised-20261015",
@@ -210,6 +210,15 @@
     "CAD": {
       "recent": [
         {
+          "id": "cad-cpi-20261019",
+          "date": "2026-10-19",
+          "title": "Canada CPI y/y (Sep)",
+          "result": "miss",
+          "actual": "3.1%",
+          "forecast": "3.2%",
+          "note": "Mild miss: 3.1% vs 3.2% Reuters consensus (prev 3.0%) — keeps October-28 a ~1-in-4 maybe after the -68.3K jobs miss."
+        },
+        {
           "id": "cad-foreign-sec-20261016",
           "date": "2026-10-16",
           "title": "Canada foreign securities purchases (Aug)",
@@ -250,13 +259,13 @@
     "NZD": {
       "recent": [
         {
-          "id": "nzd-trade-20261019",
-          "date": "2026-10-19",
+          "id": "nzd-trade-20261018",
+          "date": "2026-10-18",
           "title": "NZ trade balance (Sep)",
           "result": "miss",
-          "actual": "NZ$-1.97B",
-          "forecast": "NZ$-0.78B",
-          "note": "Deficit blew out on +96% y/y fuel bill (price-driven) + one-off aircraft; exports +12% y/y. Mild RBNZ-hold texture."
+          "actual": "-NZ$1,970M",
+          "forecast": "-NZ$775M",
+          "note": "Miss: NZ$1.97B deficit vs NZ$0.78B fcst — fuel import prices +96% y/y did the damage, not volumes."
         },
         {
           "id": "nzd-fpi-20261015",

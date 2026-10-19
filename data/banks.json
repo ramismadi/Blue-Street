@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T02:50:00-05:00",
+  "updated": "2026-10-19T15:25:00-05:00",
   "banks": [
     {
       "id": "fed",
@@ -8,7 +8,6 @@
       "ccy": "USD",
       "rate": "3.75-4.00%",
       "rate_label": "Fed funds target range",
-      "bias": "hawkish",
       "last_move": {
         "date": "2026-09-16",
         "bp": 25
@@ -20,14 +19,19 @@
       "priced": "October: hold expected; December: hike likely.",
       "sources": [
         {
-          "label": "DailyForex (Oct 19): Forex today — Oct FOMC hold ~84-87%",
-          "url": "https://www.dailyforex.com/forex-news/2026/10/forex-today-19-october-2026/250830"
+          "label": "FXEmpire (Oct 19): Fed hike bets fade — Oct hold ~84%, Dec hike ~92%",
+          "url": "https://www.fxempire.com/forecasts/article/us-dollar-price-forecast-fed-hike-bets-fade-dxy-tests-102-18-as-eur-usd-gbp-usd-slip-1638888"
         },
         {
-          "label": "FRED: 10Y (DGS10) 5.10% Oct 15; Fed target 3.75-4.00% (DFEDTARL/DFEDTARU)"
+          "label": "finanzen.ch (Oct 19): Warsh won't prejudge October; wait until December",
+          "url": "https://www.finanzen.ch/nachrichten/aktien/gold-edges-up-as-oil-prices-yields-dip-1036638370"
+        },
+        {
+          "label": "DailyForex (Oct 19): Forex today — Oct FOMC hold ~84-87%",
+          "url": "https://www.dailyforex.com/forex-news/2026/10/forex-today-19-october-2026/250830"
         }
       ],
-      "detail": "October priced as a hold at ~84-87% into the Oct 17-29 blackout — no Fed voices; December the debate (~89.5% hike, Oct-15 vintage — stale, flag). 10Y 5.07-5.10% (FRED 5.10% Oct 15). Hot week stands: import prices +1.1% (+8.1% y/y, 4-yr high); TIC Aug +$199.8B (foreign bid intact); FY26 deficit $1.992T (5-yr high). Graham waiver stands — armed, unfired — amid backlash, no reversal.",
+      "detail": "October priced as a hold at ~84-85% (CME FedWatch 83.9% hold; FXEmpire) into the Oct 17-29 blackout. Warsh spoke Monday (optimism on US resilience/AI productivity), said he won't prejudge October — December is the debate (~89-92% hike; Ausecure ~89%, FXEmpire ~92%). 10Y 5.11% (+1bp). Hot week stands: import prices +1.1% (+8.1% y/y, 4-yr high); TIC Aug +$199.8B (foreign bid intact); FY26 deficit $1.992T (5-yr high). Graham waiver stands — armed, unfired — amid backlash, no reversal.",
       "summary": "The Fed is expected to hold in October, then decide on a hike in December. Recent inflation has run hot, which keeps the dollar supported while markets wait."
     },
     {
@@ -37,7 +41,6 @@
       "ccy": "CAD",
       "rate": "2.25%",
       "rate_label": "Overnight target rate",
-      "bias": "neutral",
       "last_move": {
         "date": "2026-09-02",
         "bp": 0
@@ -56,7 +59,7 @@
           "url": "https://www.mitrade.com/kr/insights/news/live-news/article-6-2170300-20261017"
         }
       ],
-      "detail": "October-28 hike odds sit at just 25-32% (LSEG 25%, TD 27%, rateprobability 32% Oct 18) — the Sept jobs miss (-68.3K, unemployment 6.5% vs 6.4%, participation at a 29-yr low) repriced October down hard. Macklem's hawkish lean ('harder to look through' energy) now has to beat the jobs tape. Canada CPI TODAY 7:30am CT is the settler (TD 3.2%, UBS 3.3%, RBC 3.0% vs 3.0%); BoC business survey 10:30am CT. December hike ~88%. WTI ~$101 the energy fuel; USD/CAD 1.4122.",
+      "detail": "October-28 hike odds sit at ~1 in 4 after today's mild CPI miss (3.1% vs 3.2% Reuters consensus; prior jobs miss -68.3K, unemployment 6.5%, participation at a 29-yr low still outweighs Macklem's hawkish lean). BoC Q3 survey gave two offsetting reads: Q3 sentiment improved (better sales outlooks, robust investment intentions, inflation expectations eased but elevated) vs the post-Aug-21 trade-talk-breakdown pulse — deteriorating outlooks, weaker export sales, tariffs pushing up costs ('a moderation rather than a fundamental shift' vs 2025 peak tensions). December hike ~88%. WTI ~$100.4, Brent ~$108.3; USD/CAD 1.4096.",
       "summary": "A weak jobs report made an October hike less likely, so the Bank of Canada is waiting on today's inflation numbers. A hot reading would put a hike back on the table and help the loonie."
     },
     {
@@ -66,7 +69,6 @@
       "ccy": "NZD",
       "rate": "2.75%",
       "rate_label": "Official Cash Rate",
-      "bias": "hawkish",
       "last_move": {
         "date": "2026-09-02",
         "bp": 25
@@ -95,7 +97,6 @@
       "ccy": "EUR",
       "rate": "2.50%",
       "rate_label": "Deposit facility rate",
-      "bias": "hawkish",
       "last_move": {
         "date": "2026-09-10",
         "bp": 25
@@ -124,7 +125,6 @@
       "ccy": "JPY",
       "rate": "1.25%",
       "rate_label": "Policy rate (overnight call)",
-      "bias": "hawkish",
       "last_move": {
         "date": "2026-09-18",
         "bp": 25
@@ -144,7 +144,7 @@
           "url": "https://www.fxstreet.com/analysis/the-market-is-pricing-a-boj-pause-heres-why-uedas-keep-raising-rates-could-force-a-sharp-yen-repricing-202610061823"
         }
       ],
-      "detail": "Ueda's clearest hawkish phrase yet: underlying inflation 'quite close' to the 2% target — firms December (~80% OIS) while Oct-30 stays ~25%. The ~216bp US-Japan 10Y gap is the weight; USD/JPY 158.00-158.08. Japan national CPI Fri is the last data before the meeting (fresh quarterly forecasts = the pace signal); 160 is the intervention line.",
+      "detail": "Ueda's clearest hawkish phrase yet: underlying inflation 'quite close' to the 2% target — firms December (~80% OIS) while Oct-30 stays ~25%. The ~216bp US-Japan 10Y gap is the weight; USD/JPY 158.45. Japan national CPI Fri is the last data before the meeting (fresh quarterly forecasts = the pace signal); 160 is the intervention line. IMF: BoJ may need to tighten faster if inflation exceeds forecasts.",
       "summary": "The BoJ keeps signalling that more rate hikes are coming, probably in December rather than October. Higher Japanese rates would narrow the gap with the US and support the yen."
     },
     {
@@ -154,7 +154,6 @@
       "ccy": "AUD",
       "rate": "4.60%",
       "rate_label": "Cash rate target",
-      "bias": "hawkish",
       "last_move": {
         "date": "2026-09-29",
         "bp": 25
@@ -174,7 +173,7 @@
           "url": "https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-19.html"
         }
       ],
-      "detail": "Kent (CBA fireside chat): 'reasonable evidence' neutral rates are rising — unsure 4.60% is 'restrictive enough'; called the post-jobs trimming of hike odds 'sensible'. Nov 2-3 hike ~30%, December ~50%. Underlying inflation 3.6% for three straight months; labor loosening 'faster than forecast' (4.7% unemp, 5-yr high). Q3 CPI Oct 28 is the pivot. China GDP 4.5% beat the demand read; AUD/USD ~0.697, the night's best G10 performer.",
+      "detail": "Kent (CBA fireside chat): 'reasonable evidence' neutral rates are rising — unsure 4.60% is 'restrictive enough'; called the post-jobs trimming of hike odds 'sensible'. Nov 2-3 hike ~30%, December ~50%. Underlying inflation 3.6% for three straight months; labor loosening 'faster than forecast' (4.7% unemp, 5-yr high). Q3 CPI Oct 28 is the pivot. Monday: Kent added the labour market is loosening 'faster than expected' — a dovish lean inside the hawkish setup. China GDP 4.5% beat the demand read; AUD/USD ~0.6981, the day's best G10 performer.",
       "summary": "The RBA's tone has turned more hawkish, hinting rates may not be high enough yet. A hike in November is possible but not expected, and next week's inflation number is the key test."
     },
     {
@@ -184,7 +183,6 @@
       "ccy": "GBP",
       "rate": "3.75%",
       "rate_label": "Bank Rate",
-      "bias": "hawkish",
       "last_move": {
         "date": "2026-09-17",
         "bp": 0
@@ -213,7 +211,6 @@
       "ccy": "CHF",
       "rate": "0.00%",
       "rate_label": "SNB policy rate",
-      "bias": "neutral",
       "last_move": {
         "date": "2026-09-24",
         "bp": 0
