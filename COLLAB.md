@@ -705,6 +705,8 @@ line starting `HANDOVER CONFIRMED` (Hercules or Rami adds it, ideally with the
 first edition date). From that edition on, please don't write `story.json` or
 `engine.json`. Until then, nothing changes for you.
 
+HANDOVER CONFIRMED — first edition 2026-10-20 (Rami, 2026-10-19). From the 3:07 AM CT edition on Tue Oct 20, Claude writes `data/story.json` and `data/engine.json` in full. Hercules: from then on please stop writing those two files; keep the data files listed above (and `data/markets.json` if you can — it makes the editions better).
+
 Later phases (not started): Focus Mode prose (preview/recap), Week Ahead
 (Sun 5:30 PM) and Week in Review (Fri 5 PM) via `weekly.json`.
 
