@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-19T13:55:00Z",
+  "updated": "2026-10-19T14:46:51Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "text": "The dollar's headlines still lean soft: a Fed hold in October is now priced above 80%, 10-year yields eased to about 5.09% after their best week since February, and tightening priced through 2027 slipped to about 70bp. Warnings that yields may not have peaked are the counterweight.",
-      "ts": "2026-10-19T13:55:00Z"
+      "text": "The dollar's headlines still lean soft: a Fed hold this month is priced above 80%, yields have eased, and October's homebuilder index missed at 29. ING says stock jitters now cap the dollar rather than lift it, though it still sees a December hike limiting the downside.",
+      "ts": "2026-10-19T14:46:51Z"
     },
     "EUR": {
       "lean": "bearish",
@@ -18,14 +18,14 @@
       "ts": "2026-10-19T13:55:00Z"
     },
     "JPY": {
-      "lean": "mixed",
-      "text": "Ueda again said inflation is close to target and hikes will continue, but gave no timing, so the yen barely moved. USD/JPY holds near 158 with intervention risk on one side and a wide rate gap on the other.",
-      "ts": "2026-10-19T10:55:00Z"
+      "lean": "bearish",
+      "text": "Ueda again said hikes will continue but gave no timing, and Takaichi opened the door to deficit bonds for a food tax cut, adding to the fiscal worry behind the weak yen. Intervention risk near 158 is the main thing holding it up.",
+      "ts": "2026-10-19T14:46:51Z"
     },
     "CHF": {
       "lean": "mixed",
-      "text": "The franc gained on fading Fed hike odds, and Gulf ship attacks keep a haven bid underneath, but repeated reports of a US–Iran breakthrough this week argue for less shelter. The news pulls both ways.",
-      "ts": "2026-10-19T13:55:00Z"
+      "text": "The franc gained on fading Fed hike odds, and fresh mine strikes in Hormuz keep a haven bid underneath, but repeated reports of a US–Iran breakthrough this week argue for less shelter. The news pulls both ways.",
+      "ts": "2026-10-19T14:46:51Z"
     },
     "CAD": {
       "lean": "bearish",
@@ -39,8 +39,8 @@
     },
     "NZD": {
       "lean": "mixed",
-      "text": "China's broad data beat lifted the kiwi above 0.5650 and markets still price about 80% odds of an Oct 28 RBNZ hike, but Sunday's trade gap was more than double forecasts. Thursday's Q3 CPI decides which side wins.",
-      "ts": "2026-10-19T02:47:00Z"
+      "text": "The kiwi is up three days running near 0.5670 on China's data beat and a soft dollar, with an Oct 28 RBNZ hike still largely priced, but last week's trade gap was much wider than forecast. This week's Q3 CPI decides which side wins.",
+      "ts": "2026-10-19T14:46:51Z"
     },
     "XAU": {
       "lean": "mixed",
@@ -48,12 +48,39 @@
       "ts": "2026-10-19T13:55:00Z"
     },
     "OIL": {
-      "lean": "bearish",
-      "text": "Monday's headlines lean lower: the Russia sanctions waiver knocked Brent back under $108 and WTI under $100, and reports of a US–Iran breakthrough keep coming. The supply risk is still real, with Gulf crude flows reported down to about 8.5m barrels a day.",
-      "ts": "2026-10-19T13:55:00Z"
+      "lean": "mixed",
+      "text": "The Russia sanctions waiver and US–Iran deal reports knocked Brent back toward $108, but Iran says a third tanker hit a mine in Hormuz since Saturday and Gulf flows remain sharply reduced. Deal hopes pull prices down; ship attacks hold a floor under them.",
+      "ts": "2026-10-19T14:46:51Z"
     }
   },
   "items": [
+    {
+      "id": "newsquawk-nahb-oct-20261019",
+      "ts": "2026-10-19T14:20:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/nahb-housing-market-index-oct-29-vs-exp-32-prev-32",
+      "image": null,
+      "headline": "NAHB Housing Market Index (Oct) 29 vs. Exp. 32 (Prev. 32)",
+      "story": "us-housing",
+      "story_title": "US housing: builders lose confidence",
+      "pillar": "growth",
+      "summary": "US homebuilder confidence fell to 29 in October, three points below both forecasts and September. A soft survey, but it points the same way as cooling Fed hike bets.",
+      "beats": {
+        "was": "The NAHB index asks US homebuilders how sales and buyer traffic feel; 50 is the line between good and bad.",
+        "happened": "It dropped to 29 against 32 expected and 32 last month, a clear miss in a reading that was already deep in gloomy territory.",
+        "means": "With mortgage rates high, builders see fewer buyers. It is a mood gauge, not hard activity, so it needs housing starts and permits later this week to confirm it.",
+        "fx": "A cooling housing market gives the Fed one more reason not to tighten again → less support for US yields → a slightly softer dollar. The lens: is high-rate pain starting to show in the US economy?"
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Weaker builder mood adds to the case that the Fed can hold, trimming yield support."
+        }
+      ],
+      "watch": "Housing starts and permits later this week; a rebound there would make this a one-off."
+    },
     {
       "id": "investinglive-canada-cpi-sep-20261019",
       "ts": "2026-10-19T12:30:21Z",
@@ -80,6 +107,33 @@
         }
       ],
       "watch": "The BoC Business Outlook Survey later today and whether markets keep a December hike fully priced."
+    },
+    {
+      "id": "fxstreet-ing-usd-ai-jitters-20261019",
+      "ts": "2026-10-19T12:20:48Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/us-dollar-ai-jitters-soften-haven-appeal-ing-202610191220",
+      "image": "https://editorial.fxsstatic.com/images/i/dollar-index-02_Medium.jpg",
+      "headline": "US Dollar: AI jitters soften haven appeal - ING",
+      "story": "fed-path",
+      "story_title": "Fed path: hike bets fade",
+      "pillar": "policy",
+      "summary": "ING says the tech-stock wobble has pulled US short-term rates lower and could leave the dollar lagging, but sees only limited further downside and still expects a December Fed hike.",
+      "beats": {
+        "was": "A bank note on why the dollar is not acting as a safe haven during the recent AI-led stock sell-off.",
+        "happened": "ING notes markets are cutting Fed tightening bets whenever stocks wobble, even with inflation hot. It sees room for the dollar index to drift to about 101, but not much further.",
+        "means": "Stock turmoil now pushes the dollar down rather than up, because traders read it as a reason for the Fed to do less. The bank still pencils in a December hike, so it sees a floor.",
+        "fx": "Stocks fall → Fed hike bets shrink → US short rates drop → the dollar loses its edge. The lens: does market stress make the Fed more cautious?"
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Bank view that stock jitters cap the dollar, though with limited downside."
+        }
+      ],
+      "watch": "A firm Fed signal for a December hike, or stocks steadying, would restore the dollar's rate support."
     },
     {
       "id": "investinglive-kickstart-iran-hopes-20261019",
@@ -239,6 +293,39 @@
         }
       ],
       "watch": "Unemployment above 5.0% or CPI below 3.3% would weigh on sterling."
+    },
+    {
+      "id": "fxstreet-nzd-streak-q3cpi-20261019",
+      "ts": "2026-10-19T11:48:28Z",
+      "source": "FXStreet",
+      "url": "https://fxstreet.com/news/new-zealand-dollar-extends-winning-streak-against-us-dollar-nz-q3-cpi-data-in-focus-202610191148",
+      "image": "https://editorial.fxsstatic.com/images/i/NZDUSD-bullish-object_Medium.png",
+      "headline": "New Zealand Dollar extends winning streak against US Dollar, NZ Q3 CPI data in focus",
+      "story": "rbnz-oct",
+      "story_title": "RBNZ: hike odds into Q3 CPI",
+      "pillar": "inflation",
+      "summary": "The kiwi rose for a third day near 0.5670, strongest against the euro, as traders look to New Zealand's Q3 inflation print later this week.",
+      "beats": {
+        "was": "NZD/USD's run of gains to start the week, ahead of New Zealand's quarterly inflation report.",
+        "happened": "The pair rose a third straight session near 0.5670. Q3 CPI is expected at 0.8% for the quarter, down from 1.5%.",
+        "means": "A softer dollar and a weak euro are lifting the kiwi for now. A quarterly rise of 0.8% is still about 3% a year, at the top of the RBNZ's 1–3% target band, so the hike case stays alive.",
+        "fx": "Hot CPI → RBNZ more likely to hike on Oct 28 → higher NZ rates → kiwi support. The lens: how much pressure is the RBNZ under?"
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Third day of gains with the hike case intact before CPI."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro was the kiwi's weakest counterpart on French worries."
+        }
+      ],
+      "watch": "Q3 CPI this week: a miss under 0.8% would cut RBNZ hike odds and the kiwi's support."
     },
     {
       "id": "newarab-us-iran-breakthrough-20261019",
@@ -487,39 +574,6 @@
       "watch": "Confirmed Hormuz transits resuming would add to the drop; another tanker strike would reverse it."
     },
     {
-      "id": "fxstreet-cad-recovery-pre-cpi-20261019",
-      "ts": "2026-10-19T10:29:54Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/canadian-dollar-extends-recovery-with-all-eyes-on-inflation-data-202610191029",
-      "image": "https://editorial.fxstreet.com/images/i/BullishChart_Medium.png",
-      "headline": "Canadian Dollar extends recovery with all eyes on inflation data",
-      "story": "boc-oct",
-      "story_title": "Bank of Canada: hike talk vs cooling core",
-      "pillar": "policy",
-      "summary": "The loonie pushed USD/CAD under 1.4100 for the first time in nearly a month ahead of CPI, helped by the Fed's fading hike odds.",
-      "beats": {
-        "was": "USD/CAD's slide from last week's high near 1.4300.",
-        "happened": "The pair dipped below 1.4100 in Europe. CME pricing for a Fed hike has dropped to roughly 15% from near 60% a month ago, while markets still lean toward a BoC hike in December.",
-        "means": "The move was mostly the US side giving way, setting a high bar for the Canadian CPI print to extend it.",
-        "fx": "Fewer Fed hikes + a BoC still eyeing December → narrower rate gap → loonie firmer. The lens: which central bank is under more pressure to tighten?"
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Pre-data momentum, mostly from a softer dollar."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "October Fed hike bets have largely faded."
-        }
-      ],
-      "watch": "Today's CPI (it came in soft, see the CPI card)."
-    },
-    {
       "id": "investinglive-uk-cpi-spotlight-20261019",
       "ts": "2026-10-19T09:48:35Z",
       "source": "investingLive",
@@ -545,6 +599,33 @@
         }
       ],
       "watch": "A core print under 2.7% would chip at the February hike pricing."
+    },
+    {
+      "id": "sedaily-takaichi-deficit-bonds-20261019",
+      "ts": "2026-10-19T09:39:13Z",
+      "source": "Seoul Economic Daily",
+      "url": "https://en.sedaily.com/international/2026/10/19/takaichi-signals-deficit-bonds-to-fund-japans-tax-cuts",
+      "image": "https://wimg.sedaily.com/news/cms/2026/10/19/news-p.v1.20261014.ec90e024326a4566a1c39766cb781538_P1.jpg",
+      "headline": "Takaichi Signals Deficit Bonds to Fund Japan's Tax Cuts",
+      "story": "japan-fiscal",
+      "story_title": "Japan: tax cuts and the bond bill",
+      "pillar": "fiscal",
+      "summary": "Japan's prime minister said deficit bonds may help pay for a two-year food tax cut, moving away from her earlier pledge to fund it by trimming spending, and rejected blame for the weak yen.",
+      "beats": {
+        "was": "A planned two-year cut to Japan's food consumption tax from next April, costed at about ¥10 trillion with a linked benefit scheme.",
+        "happened": "Takaichi told parliament borrowing is not ruled out, while promising to keep issuance under control. She rejected the idea that her policies are behind the weak yen and high rates.",
+        "means": "More borrowing on top of debt already about twice the size of the economy means more bonds for investors to absorb, which tends to push Japanese yields up and worry currency buyers.",
+        "fx": "Looser budget → more debt supply → doubts about Japan's finances → the yen loses appeal, even as higher yields help a little. The lens: is Tokyo spending faster than markets will fund?"
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Borrowing to fund tax cuts adds to fiscal worries behind the weak yen."
+        }
+      ],
+      "watch": "JGB auction demand and any warning from Tokyo's currency officials; a firm spending offset would ease the worry."
     },
     {
       "id": "fxstreet-gold-below-4200-20261019",
@@ -661,60 +742,6 @@
       "watch": "Tuesday's budget vote and Moody's on Friday; a spread back under 130bp would ease the pressure."
     },
     {
-      "id": "fxstreet-forex-today-steady-20261019",
-      "ts": "2026-10-19T07:51:51Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/forex-today-major-pairs-hold-steady-to-start-new-week-202610190751",
-      "image": "https://editorial.fxsstatic.com/images/i/risk-02_Medium.jpg",
-      "headline": "Forex Today: Major pairs hold steady to start new week",
-      "story": "fed-path",
-      "story_title": "Fed: October hike odds fade",
-      "pillar": "policy",
-      "summary": "Majors opened the week close to Friday's levels, with the dollar index under 102 after snapping a four-week winning run; the loonie was the week's standout.",
-      "beats": {
-        "was": "The European-morning overview of currency markets.",
-        "happened": "The dollar index stayed below 102 after Friday's drop; US stock futures rose. Over the past week the dollar fell most against the Canadian dollar, about 1.3%.",
-        "means": "With the Fed in its quiet period before October 28 and an October hike now seen as unlikely, the dollar has lost a support it leaned on all month.",
-        "fx": "Fed less likely to hike soon → US yields' edge narrows → dollar drifts lower. The lens: how much pressure is the Fed under before its next meeting?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Fading October hike bets leave the dollar softer."
-        }
-      ],
-      "watch": "Any data that revives October hike pricing before the blackout ends."
-    },
-    {
-      "id": "fxstreet-canada-cpi-preview-20261019",
-      "ts": "2026-10-19T07:30:00Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/canada-cpi-expected-to-show-a-pick-up-in-inflation-in-september-202610190730",
-      "image": "https://editorial.fxsstatic.com/images/i/cpi-basic-products_Medium.png",
-      "headline": "Canada CPI Preview: Inflation expected to grab some pace in September",
-      "story": "boc-oct",
-      "story_title": "BoC: the October 28 decision",
-      "pillar": "inflation",
-      "summary": "Canada's September inflation, due at 12:30 GMT, is expected to rise to 3.2% with core steady at 2.4%; the Bank of Canada is widely seen holding at 2.25% on October 28.",
-      "beats": {
-        "was": "Canada's consumer price report for September, the last before the Bank of Canada decides.",
-        "happened": "Forecasts look for prices up 0.2% on the month after August's 0.1% dip, 3.2% on the year, and core at 2.4%. USD/CAD sits just under 1.41, near a one-month low.",
-        "means": "Headline inflation above 3% is mostly energy; core near 2.4% is only modestly above the 2% target. A hot core print would test the 'hold' view; an in-line one keeps it.",
-        "fx": "Core inflation surprise → pressure on the BoC to tighten → higher Canadian yields → support for CAD (and the reverse on a miss). The lens: is core heating up or just fuel?"
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A preview; direction depends on the core reading."
-        }
-      ],
-      "watch": "The core measures at 12:30 GMT and the BoC's Business Outlook Survey later today."
-    },
-    {
       "id": "sbs-us-eu-spectrum-retaliation-20261019",
       "ts": "2026-10-19T07:06:23Z",
       "source": "SBS News",
@@ -740,6 +767,45 @@
         }
       ],
       "watch": "Any formal US trade step or an EU climbdown on the spectrum plan."
+    },
+    {
+      "id": "alarabiya-tanker-mine-hormuz-20261019",
+      "ts": "2026-10-19T06:31:00Z",
+      "source": "Al Arabiya (AFP)",
+      "url": "https://english.alarabiya.net/News/middle-east/2026/10/19/oil-tanker-on-fire-after-hitting-mine-in-hormuz-iran-s-irgc-",
+      "image": "https://vid.alarabiya.net/images/2026/10/13/47bb68bf-05eb-4051-a1cf-560729763d23/47bb68bf-05eb-4051-a1cf-560729763d23_16x9_600x338.JPG",
+      "headline": "Oil tanker on fire after hitting mine in Hormuz: Iran's IRGC",
+      "story": "hormuz",
+      "story_title": "Hormuz: reopening offer vs ship attacks",
+      "pillar": "risk",
+      "summary": "Iran's Revolutionary Guards say another tanker hit a mine and caught fire on the strait's unauthorised southern route, the third such incident since Saturday. Not independently confirmed.",
+      "beats": {
+        "was": "Iran controls passage through Hormuz since the war began in February and says ships must have its permission; it warns vessels that switch off tracking will be treated as hostile.",
+        "happened": "The IRGC said a tanker that had disabled its navigation systems struck a mine south of the strait, starting an engine-room fire. Two tankers were reported hit on Saturday.",
+        "means": "Ships trying to slip past Iran's rules are now being hit, so the 'quiet' route is not safe. That keeps the risk on roughly a fifth of world oil flows, even as talk of a deal grows.",
+        "fx": "More attacks → less oil gets out → crude stays bid → oil importers like Japan and the euro area pay more, exporters like Canada gain; havens get a floor. The lens: is Hormuz getting safer or riskier?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A third mine strike in three days keeps a supply-risk premium under crude."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Ongoing Gulf attacks keep some haven demand alive."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Supply risk supports oil, Canada's main export."
+        }
+      ],
+      "watch": "Independent confirmation and ship-tracking data; a US reply accepting Iran's seven-day reopening plan would outweigh it."
     },
     {
       "id": "fxstreet-eurgbp-france-20261019",
@@ -773,33 +839,6 @@
         }
       ],
       "watch": "UK jobs (Tue) and CPI (Wed); a soft CPI would weaken the pound's side of this trade."
-    },
-    {
-      "id": "fxstreet-gbp-data-week-20261019",
-      "ts": "2026-10-19T06:23:50Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/british-pound-reflects-mixed-performance-at-the-start-of-uk-data-packed-week-202610190623",
-      "image": "https://editorial.fxsstatic.com/images/i/GBP-Flag_Medium.png",
-      "headline": "British Pound reflects mixed performance at the start of UK data-packed week",
-      "story": "boe-nov",
-      "story_title": "BoE: the November decision",
-      "pillar": "inflation",
-      "summary": "Sterling started flat ahead of jobs data Tuesday and September CPI Wednesday; Deutsche Bank sees inflation near 3.5%, its highest this year.",
-      "beats": {
-        "was": "A week of UK jobs, inflation, retail and business-survey data before the Bank of England's November meeting.",
-        "happened": "The pound held steady against the dollar and edged up on the euro. Unemployment is seen ticking up to 5%, wage growth easing to 3.8%, and one big bank expects CPI around 3.49%.",
-        "means": "Two forces meet: a cooling jobs market argues for patience, rising inflation argues for a hike. Whichever surprises more will set November pricing.",
-        "fx": "Hot CPI with steady jobs → stronger case for a BoE hike → higher gilt yields → support for GBP; weak jobs would cut the other way. The lens: is UK inflation broadening or just energy?"
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A preview: rising inflation versus a softening jobs market."
-        }
-      ],
-      "watch": "Tuesday's wage data and Wednesday's CPI against the 3.4% consensus."
     },
     {
       "id": "fxstreet-chf-fed-pause-20261019",
@@ -1250,51 +1289,6 @@
         }
       ],
       "watch": "Damage reports and loading schedules from the terminal; Russia's response to the end of the energy truce."
-    },
-    {
-      "id": "reuters-dollar-weekly-loss-20261016",
-      "ts": "2026-10-16T15:23:00Z",
-      "source": "Reuters",
-      "url": "https://www.marketscreener.com/news/dollar-set-for-weekly-loss-as-fed-hike-bets-fade-ai-clouds-outlook-ce785cdadc88f325",
-      "image": null,
-      "headline": "Dollar heads for first weekly loss in over a month as Fed hike bets fade",
-      "story": "fed-path",
-      "story_title": "The Fed: October fading, December priced",
-      "pillar": "policy",
-      "summary": "The dollar index fell to about 101.61 as Fed officials signalled no hurry to tighten again, after hot CPI and PPI readings had briefly lifted yields.",
-      "beats": {
-        "was": "A weekly wrap of the dollar against major currencies.",
-        "happened": "The index fell 0.42% on the day and about 0.6% on the week. EUR/USD rose to 1.1255, GBP/USD to 1.3353, USD/JPY slipped to 157.79.",
-        "means": "Markets read Fed officials as unhurried despite hot inflation prints, so the expected rate gap in the dollar's favour narrowed a little.",
-        "fx": "Fewer expected hikes, lower yields, less pull into dollars, dollar down. The lens: how much pressure is the Fed under?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Fading hike bets narrow the dollar's rate advantage."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Gains on the dollar side, not on euro news."
-        },
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Sterling's best day of the week, helped by the GDP beat."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A softer dollar supports gold."
-        }
-      ],
-      "watch": "Fed blackout begins ahead of the October 27-28 meeting, so data, not speakers, moves pricing."
     }
   ]
 }
