@@ -1,208 +1,218 @@
 {
- "banks": [
-  {
-   "bias": "hawkish",
-   "ccy": "USD",
-   "id": "fed",
-   "last_move": {
-    "bp": 25,
-    "date": "2026-09-16"
-   },
-   "name": "Federal Reserve",
-   "next_meeting": {
-    "end": "2026-10-28",
-    "start": "2026-10-27"
-   },
-   "priced": "October locked as a hold (~85% Friday) into the Oct 27-28 blackout — no Fed voices; December the debate (~74% for a hike). 10Y ~5.09% (5.125% post-data high). Hot week stands: import prices +1.1% (+8.1% y/y, 4-yr high); TIC Aug +$199.8B (foreign bid intact); Sept deficit -$26.9B but FY26 $1.992T (5-yr high). Correction: the Graham Act waiver suspends duties outright — no Oct-18 bite; Rubio frames it as a 60-day review (~Dec 17), no Trump decision yet — watch is waiver reversal or new enforcement.",
-   "rate": "3.75–4.00%",
-   "rate_label": "Fed funds target range",
-   "short": "Fed",
-   "sources": [
+  "updated": "2026-10-19T02:50:00-05:00",
+  "banks": [
     {
-     "label": "Reuters (Oct 16): Dollar set for weekly loss as Fed hike bets fade",
-     "url": "https://live.euronext.com/en/financial-news/dollar-heads-weekly-fall-investors-gauge-ai-selloff-impact"
+      "id": "fed",
+      "name": "Federal Reserve",
+      "short": "Fed",
+      "ccy": "USD",
+      "rate": "3.75-4.00%",
+      "rate_label": "Fed funds target range",
+      "bias": "hawkish",
+      "last_move": {
+        "date": "2026-09-16",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-10-27",
+        "end": "2026-10-28"
+      },
+      "priced": "October priced as a hold at ~84-87% into the Oct 17-29 blackout — no Fed voices; December the debate (~89.5% hike, Oct-15 vintage — stale, flag). 10Y 5.07-5.10% (FRED 5.10% Oct 15). Hot week stands: import prices +1.1% (+8.1% y/y, 4-yr high); TIC Aug +$199.8B (foreign bid intact); FY26 deficit $1.992T (5-yr high). Graham waiver stands — armed, unfired — amid backlash, no reversal.",
+      "sources": [
+        {
+          "label": "DailyForex (Oct 19): Forex today — Oct FOMC hold ~84-87%",
+          "url": "https://www.dailyforex.com/forex-news/2026/10/forex-today-19-october-2026/250830"
+        },
+        {
+          "label": "FRED: 10Y (DGS10) 5.10% Oct 15; Fed target 3.75-4.00% (DFEDTARL/DFEDTARU)"
+        }
+      ]
     },
     {
-     "label": "Reuters (Oct 16): US import prices increase more than expected",
-     "url": "https://www.reuters.com/business/us-import-prices-increase-more-than-expected-september-2026-10-16/"
-    }
-   ]
-  },
-  {
-   "bias": "neutral",
-   "ccy": "CAD",
-   "id": "boc",
-   "last_move": {
-    "bp": 0,
-    "date": "2026-09-02"
-   },
-   "name": "Bank of Canada",
-   "next_meeting": {
-    "start": "2026-10-28"
-   },
-   "priced": "Macklem's hawkish lean stands ('the longer it goes, the harder it is to look through' energy prices) and WTI back over $100 is the fuel — Oct 28 is live. Canada CPI Monday 7:30am CT is the settler (TD 3.2%, UBS 3.3%, RBC 3.0% vs 3.0% prior). BoC business survey Mon 10:30am CT. Housing starts beat (248,896 SAAR vs 234K); foreigners sold a record C$17.3B of Canadian securities in August (first divestment of 2026, mostly federal debt).",
-   "rate": "2.25%",
-   "rate_label": "Overnight target rate",
-   "short": "BoC",
-   "sources": [
-    {
-     "label": "WSJ (Oct 16): Canada Housing Starts Rise in September",
-     "url": "https://www.wsj.com/economy/housing/canada-housing-starts-rise-in-september-though-market-faces-longer-term-supply-gap-8a0cde3f"
+      "id": "boc",
+      "name": "Bank of Canada",
+      "short": "BoC",
+      "ccy": "CAD",
+      "rate": "2.25%",
+      "rate_label": "Overnight target rate",
+      "bias": "neutral",
+      "last_move": {
+        "date": "2026-09-02",
+        "bp": 0
+      },
+      "next_meeting": {
+        "start": "2026-10-28"
+      },
+      "priced": "October-28 hike odds sit at just 25-32% (LSEG 25%, TD 27%, rateprobability 32% Oct 18) — the Sept jobs miss (-68.3K, unemployment 6.5% vs 6.4%, participation at a 29-yr low) repriced October down hard. Macklem's hawkish lean ('harder to look through' energy) now has to beat the jobs tape. Canada CPI TODAY 7:30am CT is the settler (TD 3.2%, UBS 3.3%, RBC 3.0% vs 3.0%); BoC business survey 10:30am CT. December hike ~88%. WTI ~$101 the energy fuel; USD/CAD 1.4122.",
+      "sources": [
+        {
+          "label": "Wealth Professional (Oct 13): October BoC hike odds down to 25%",
+          "url": "https://www.wealthprofessional.ca/news/industry-news/job-losses-push-october-bank-of-canada-hike-odds-down-to-25/393757"
+        },
+        {
+          "label": "TD via Mitrade (Oct 17): Canada CPI forecast 3.2% y/y",
+          "url": "https://www.mitrade.com/kr/insights/news/live-news/article-6-2170300-20261017"
+        }
+      ]
     },
     {
-     "label": "Dow Jones via Morningstar (Oct 16): Foreigners sold C$17.3B of Canadian securities",
-     "url": "https://www.morningstar.com/news/dow-jones/202610163604/foreigners-sold-c173-billion-of-canadian-securities-in-august-targeting-federal-government-debt"
-    }
-   ]
-  },
-  {
-   "bias": "hawkish",
-   "ccy": "NZD",
-   "id": "rbnz",
-   "last_move": {
-    "bp": 25,
-    "date": "2026-09-02"
-   },
-   "name": "Reserve Bank of New Zealand",
-   "next_meeting": {
-    "start": "2026-10-28"
-   },
-   "priced": "Oct 28 two-way: BNZ PMI 56.5 (strongest since 2021, 15th straight expansion) feeds the hike side; flat food prices (0.0%) feed the hold side. Conway: direction 'most likely up'. NZ Q3 CPI next week is the decider. NZD/USD +0.65% to 0.5658 (two-week high) on the dollar fade.",
-   "rate": "2.75%",
-   "rate_label": "Official Cash Rate",
-   "short": "RBNZ",
-   "sources": [
-    {
-     "label": "Economies.com (Oct 16): NZ dollar extends gains to two-week high",
-     "url": "https://www.economies.com/forex/nzd-usd-news/new-zealand-dollar-extends-gains-to-two-week-high-amid-positive-sentiment-50164"
-    }
-   ]
-  },
-  {
-   "bias": "hawkish",
-   "ccy": "EUR",
-   "id": "ecb",
-   "last_move": {
-    "bp": 25,
-    "date": "2026-09-10"
-   },
-   "name": "European Central Bank",
-   "next_meeting": {
-    "start": "2026-10-29"
-   },
-   "priced": "CORRECTION to the morning read: October 29 is NOT priced as a hike — Friday's Reuters bond-market report says traders expect no October move; a December hike is priced at 100%, with at least one further hike by April. September CPI confirmed at 3.8% (three-year high, energy +18.9%; core 2.5%). The US-German 10Y gap sits at 170bp.",
-   "rate": "2.50%",
-   "rate_label": "Deposit facility rate",
-   "short": "ECB",
-   "sources": [
-    {
-     "label": "Reuters (Oct 16): Euro zone bond yields inch up after safe-haven rally",
-     "url": "https://www.devdiscourse.com/article/international/3993624-euro-zone-bond-yields-inch-up-after-safe-haven-rally"
+      "id": "rbnz",
+      "name": "Reserve Bank of New Zealand",
+      "short": "RBNZ",
+      "ccy": "NZD",
+      "rate": "2.75%",
+      "rate_label": "Official Cash Rate",
+      "bias": "hawkish",
+      "last_move": {
+        "date": "2026-09-02",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-10-28"
+      },
+      "priced": "Oct 28 two-way: BNZ PMI 56.5 (strongest since 2021, 15th straight expansion) feeds the hike side; NZ trade miss (NZ$1.97B vs 0.78B fc) and flat food prices feed the hold side. Conway: direction 'most likely up'. NZ Q3 CPI Wed 4:45pm CT is the decider (ANZ 3.8% y/y vs 4.1% Q2; RBNZ proj 3.9%). NZD/USD 0.5655-0.5661.",
+      "sources": [
+        {
+          "label": "ActionForex: NZ trade deficit NZ$1.97B, fuel +96%",
+          "url": "https://www.actionforex.com/live-comments/657904-nz-trade-deficit-widens-to-nz1-97b-as-fuel-import-bill-jumps-96/"
+        },
+        {
+          "label": "Finimize (Oct 16): ANZ sees NZ inflation cooling (3.8% vs 4.1%)",
+          "url": "https://finimize.com/content/anz-sees-new-zealand-inflation-cooling-but-not-enough"
+        }
+      ]
     },
     {
-     "label": "dpa-AFX via TradingView (Oct 16): Eurozone inflation confirmed at 3.8%",
-     "url": "https://www.tradingview.com/news/dpa_afx:7eae89987138f:0-eurozone-inflation-confirmed-at-3-2-highest-since-2023/"
-    }
-   ]
-  },
-  {
-   "bias": "hawkish",
-   "ccy": "JPY",
-   "id": "boj",
-   "last_move": {
-    "bp": 25,
-    "date": "2026-09-18"
-   },
-   "name": "Bank of Japan",
-   "next_meeting": {
-    "end": "2026-10-30",
-    "start": "2026-10-29"
-   },
-   "priced": "Ueda leaned hawkish Friday, flagging inflation-overshoot risks into Oct 29-30; Oct 30 hike ~9-10%, December ~88%. Koeda: don't get 'overly cautious' on hikes — neutral rate 'considerably above 1%.' USD/JPY ~157.8 lagged the dollar fade on the ~216bp US-Japan 10Y gap; 160 is the intervention line.",
-   "rate": "1.25%",
-   "rate_label": "Policy rate (overnight call)",
-   "short": "BoJ",
-   "sources": [
-    {
-     "label": "TradingNews (Oct 16): USD/JPY caught between yield gap and 160 line",
-     "url": "https://www.tradingnews.com/news/usd-jpy-price-forecast-dollar-yen-157-caught-between-a-216-basis-point-yield-gap-and-tokyo-160-intevention-line"
-    }
-   ]
-  },
-  {
-   "bias": "hawkish",
-   "ccy": "AUD",
-   "id": "rba",
-   "last_move": {
-    "bp": 25,
-    "date": "2026-09-29"
-   },
-   "name": "Reserve Bank of Australia",
-   "next_meeting": {
-    "end": "2026-11-03",
-    "start": "2026-11-02"
-   },
-   "priced": "September jobs miss stands: employment -39.3K, unemployment 4.7% — five-year high, above the RBA's 4.5% Q4 forecast; November-hike odds pared after the Sep 29 hike to 4.60%. AUD/USD +0.5% to ~0.695 on the risk rebound, not on Australia. China Q3 GDP Sun 9pm CT (4.4% fc) is the demand read; Kent speaks Sun 6:05pm CT.",
-   "rate": "4.60%",
-   "rate_label": "Cash rate target",
-   "short": "RBA",
-   "sources": [
-    {
-     "label": "InvestingLive (Oct 16): European session wrap — dollar slips",
-     "url": "https://investinglive.com/news/investinglive-european-session-wrap-dollar-slips-as-stocks-steady-and-yields-edge-a-little-higher/"
-    }
-   ]
-  },
-  {
-   "bias": "hawkish",
-   "ccy": "GBP",
-   "id": "boe",
-   "last_move": {
-    "bp": 0,
-    "date": "2026-09-17"
-   },
-   "name": "Bank of England",
-   "next_meeting": {
-    "start": "2026-11-05"
-   },
-   "priced": "Nov 5 hike case intact on the GDP beat (+0.1% vs -0.1% fcst; 2.1% y/y strongest since Aug 2022); Reuters poll: 54/63 expect 25bp to 4.00%. Bailey overnight: second-round pressures 'quite subdued', 3.1% CPI 'enormously frustrating' — dovish lean on the 2027 path, November untouched. GBP/USD +0.60% to 1.3353.",
-   "rate": "3.75%",
-   "rate_label": "Bank Rate",
-   "short": "BoE",
-   "sources": [
-    {
-     "label": "Reuters (Oct 16): Sterling set for third weekly rise against euro",
-     "url": "https://www.reuters.com/world/uk/sterling-set-third-weekly-rise-against-euro-hits-3-week-high-vs-dollar-2026-10-16/"
+      "id": "ecb",
+      "name": "European Central Bank",
+      "short": "ECB",
+      "ccy": "EUR",
+      "rate": "2.50%",
+      "rate_label": "Deposit facility rate",
+      "bias": "hawkish",
+      "last_move": {
+        "date": "2026-09-10",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-10-29"
+      },
+      "priced": "October 29 is NOT priced as a hike — Reuters poll: 70 of 73 economists expect a hold at 2.50%; a December hike is the live meeting (64/73). September CPI confirmed at 3.8% (three-year high, energy +18.9%). New: violent French protests pushed EUR/USD to 1.1225 and the OAT-Bund spread to ~140bp — rallies expected to be sold until budget clarity; France's revenue vote Tue Oct 20, Moody's Fri Oct 23. Lagarde speaks Wed.",
+      "sources": [
+        {
+          "label": "Reuters (Oct 8): ECB to hold Oct 29, hike again in December (poll)",
+          "url": "https://www.reuters.com/business/ecb-hike-rates-again-december-inflation-almost-doubles-2-target-2026-10-08/"
+        },
+        {
+          "label": "Reuters (Oct 19): Dollar firmer, euro weakens as French protests turn violent",
+          "url": "https://www.lapost.com/content/dollar-firmer-euro-weakens-as-french-protests-turn-violent"
+        }
+      ]
     },
     {
-     "label": "Reuters (Oct 15): UK economy beats forecasts to grow by 0.1% in August",
-     "url": "https://www.reuters.com/world/uk/uk-economy-beats-forecasts-grow-by-01-august-2026-10-15/"
-    }
-   ]
-  },
-  {
-   "bias": "neutral",
-   "ccy": "CHF",
-   "id": "snb",
-   "last_move": {
-    "bp": 0,
-    "date": "2026-09-24"
-   },
-   "name": "Swiss National Bank",
-   "next_meeting": {
-    "start": "2026-12-10"
-   },
-   "priced": "0.00% held; December cut risk stays on the table with PPI soft (+0.3% vs 0.6%). The franc did the haven work instead: USD/CHF 0.8228 (-0.48%), +1.4% in two sessions on the oil surge and dollar fade.",
-   "rate": "0.00%",
-   "rate_label": "SNB policy rate",
-   "short": "SNB",
-   "sources": [
+      "id": "boj",
+      "name": "Bank of Japan",
+      "short": "BoJ",
+      "ccy": "JPY",
+      "rate": "1.25%",
+      "rate_label": "Policy rate (overnight call)",
+      "bias": "hawkish",
+      "last_move": {
+        "date": "2026-09-18",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-10-29",
+        "end": "2026-10-30"
+      },
+      "priced": "Ueda's clearest hawkish phrase yet: underlying inflation 'quite close' to the 2% target — firms December (~80% OIS) while Oct-30 stays ~25%. The ~216bp US-Japan 10Y gap is the weight; USD/JPY 158.00-158.08. Japan national CPI Fri is the last data before the meeting (fresh quarterly forecasts = the pace signal); 160 is the intervention line.",
+      "sources": [
+        {
+          "label": "Reuters relay (Oct 18): BoJ's Ueda says underlying inflation 'quite close' to 2% target",
+          "url": "https://stacks921.com/2026/10/18/boj-governor-ueda-says-underlying-inflation-quite-close-to-2-target/"
+        },
+        {
+          "label": "FXStreet (Oct 6): The market is pricing a BoJ pause — Oct-30 hike ~25%",
+          "url": "https://www.fxstreet.com/analysis/the-market-is-pricing-a-boj-pause-heres-why-uedas-keep-raising-rates-could-force-a-sharp-yen-repricing-202610061823"
+        }
+      ]
+    },
     {
-     "label": "Reuters (Oct 16): Dollar set for weekly loss as Fed hike bets fade",
-     "url": "https://live.euronext.com/en/financial-news/dollar-heads-weekly-fall-investors-gauge-ai-selloff-impact"
+      "id": "rba",
+      "name": "Reserve Bank of Australia",
+      "short": "RBA",
+      "ccy": "AUD",
+      "rate": "4.60%",
+      "rate_label": "Cash rate target",
+      "bias": "hawkish",
+      "last_move": {
+        "date": "2026-09-29",
+        "bp": 25
+      },
+      "next_meeting": {
+        "start": "2026-11-02",
+        "end": "2026-11-03"
+      },
+      "priced": "Kent (CBA fireside chat): 'reasonable evidence' neutral rates are rising — unsure 4.60% is 'restrictive enough'; called the post-jobs trimming of hike odds 'sensible'. Nov 2-3 hike ~30%, December ~50%. Underlying inflation 3.6% for three straight months; labor loosening 'faster than forecast' (4.7% unemp, 5-yr high). Q3 CPI Oct 28 is the pivot. China GDP 4.5% beat the demand read; AUD/USD ~0.697, the night's best G10 performer.",
+      "sources": [
+        {
+          "label": "Reuters via Jack FM (Oct 19): Kent — unsure policy is 'restrictive enough'",
+          "url": "https://943jackfm.com/2026/10/18/australia-central-banker-sees-signs-of-labour-market-easing/"
+        },
+        {
+          "label": "RBA: Fireside Chat at the CBA Global Markets Conference (transcript, Oct 19)",
+          "url": "https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-19.html"
+        }
+      ]
+    },
+    {
+      "id": "boe",
+      "name": "Bank of England",
+      "short": "BoE",
+      "ccy": "GBP",
+      "rate": "3.75%",
+      "rate_label": "Bank Rate",
+      "bias": "hawkish",
+      "last_move": {
+        "date": "2026-09-17",
+        "bp": 0
+      },
+      "next_meeting": {
+        "start": "2026-11-05"
+      },
+      "priced": "Nov 5 hike ~95% priced; the question is December. UK CPI consensus hardened to 3.4% y/y (prev 3.1%; Deutsche 3.49%) — prints Wed 1am CT. UK labor Tue 1am CT (unemp 5.0% fc vs 4.9%; earnings 3.8% vs 3.9%). Bailey speaks Wednesday; Oct 28 budget. GBP/USD 1.3329.",
+      "sources": [
+        {
+          "label": "FXStreet (Oct 19): UK data-packed week — Deutsche Bank CPI preview (3.49%)",
+          "url": "https://www.fxstreet.com/news/british-pound-reflects-mixed-performance-at-the-start-of-uk-data-packed-week-202610190623"
+        },
+        {
+          "label": "CMC Markets: The week ahead — UK CPI, Meta and Tesla earnings",
+          "url": "https://www.cmcmarkets.com/en-gb/news-and-analysis/the-week-ahead-uk-cpi-meta-and-tesla-earnings"
+        }
+      ]
+    },
+    {
+      "id": "snb",
+      "name": "Swiss National Bank",
+      "short": "SNB",
+      "ccy": "CHF",
+      "rate": "0.00%",
+      "rate_label": "SNB policy rate",
+      "bias": "neutral",
+      "last_move": {
+        "date": "2026-09-24",
+        "bp": 0
+      },
+      "next_meeting": {
+        "start": "2026-12-10"
+      },
+      "priced": "0.00% held; December cut risk stays on the table with PPI soft (+0.3% vs 0.6%). No Swiss driver — the Beirut haven-bid tailwind never fired at Monday's open (no Hezbollah retaliation yet). USD/CHF 0.8243 (Fri 0.8228). SNB meeting write-up Thursday.",
+      "sources": [
+        {
+          "label": "Reuters (Oct 19): Dollar firmer, euro weakens (Asia FX read)"
+        }
+      ]
     }
-   ]
-  }
- ],
- "updated": "2026-10-18T02:00:00-05:00"
+  ]
 }
