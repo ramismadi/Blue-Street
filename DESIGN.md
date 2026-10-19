@@ -71,6 +71,9 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 - **No subtitle lines under page titles** (Rami, 2026-10-19): Currencies, Drivers' three sections, News, Calendar and Learn show just the title. (The positioning "as of / next report" line went with it.)
 - **Currencies:** the Pair picker sits above the Strength board, full width; on wide screens its "Strongest edge" and "Fights your view" groups run side by side.
 
+- **Calendar session clocks** (Rami, 2026-10-19): four analog clocks (SYD, TYO, LDN, NYC) beside the Calendar title, each on its city's local time (same session rules as the masthead chips). Out of session = greyed out; in session = lit by a warm light from the top down. On phones they sit in a row under the title.
+- **No overflow, ever** (Rami, 2026-10-19): nothing may run past the screen edge or the page scroll sideways. The overflow guard at the end of style.css wraps long values and lets grid/flex children shrink; `html, body` clip as a last resort. **Run `tools/overflow-check.py` before shipping any layout change** — it loads every page at 320–768px (calendar fully expanded) and lists anything that spills.
+
 ## Build & deploy
 - Plain static files, relative paths only (site lives under `/Blue-Street/`).
   No build step, no backend. All DOM is built with `textContent` — never

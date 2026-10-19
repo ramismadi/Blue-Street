@@ -2534,3 +2534,42 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 680px) { .ch-cards { grid-template-columns: minmax(0, 1fr); gap: 12px; } }
 /* Cards read as prose: numbers stay in the sentence's own type, just a touch bolder. */
 .chc-read .fig { font-family: inherit; font-size: inherit; font-weight: 700; color: var(--ink); letter-spacing: 0; }
+
+/* ---------- Calendar session clocks (Rami, 2026-10-19) ---------- */
+.cal-head { align-items: center; }
+.sess-clocks { display: flex; gap: 14px; margin-right: auto; margin-left: 10px; }
+.sclock { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; transition: opacity 0.4s, filter 0.4s; }
+.sclock-face { width: 58px; height: 58px; overflow: visible; }
+.sc-dial { fill: var(--surface); stroke: var(--line); stroke-width: 2; }
+.sc-glow { opacity: 0; transition: opacity 0.6s; }
+.sc-tick { stroke: var(--ink-3); stroke-width: 1.4; stroke-linecap: round; }
+.sc-tick.major { stroke: var(--ink-2); stroke-width: 2.4; }
+.sc-hour { stroke: var(--ink); stroke-width: 4; stroke-linecap: round; }
+.sc-min { stroke: var(--ink); stroke-width: 2.6; stroke-linecap: round; }
+.sc-pin { fill: var(--ink); }
+.sclock figcaption { display: flex; flex-direction: column; align-items: center; line-height: 1.1; }
+.sc-city { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; color: var(--ink-2); }
+.sc-time { font-size: 0.72rem; color: var(--ink-3); }
+/* out of session: greyed out */
+.sclock:not(.open) { opacity: 0.45; filter: grayscale(1); }
+/* in session: lit from the top down with a warm light */
+.sclock.open .sc-glow { opacity: 1; }
+.sclock.open .sc-dial { stroke: #e9b45c; filter: drop-shadow(0 -2px 8px rgba(255, 190, 90, 0.55)); }
+.sclock.open .sc-city { color: var(--ink); }
+.sclock.open .sc-time { color: var(--ink-2); }
+[data-mode="dark"] .sclock.open .sc-dial { fill: #2a2418; }
+@media (max-width: 760px) {
+  .sess-clocks { order: 3; width: 100%; margin: 6px 0 0; justify-content: space-between; }
+  .sclock-face { width: 56px; height: 56px; }
+}
+@media (prefers-reduced-motion: reduce) { .sclock, .sc-glow { transition: none; } }
+
+/* ---------- Overflow guard (Rami, 2026-10-19: nothing may run off the screen) ----------
+   1) Long values wrap instead of pushing past their box.
+   2) Grid/flex children may shrink below their content width.
+   3) Last resort: the page itself never scrolls sideways. */
+.ev-num b, .ev-sub { white-space: normal; overflow-wrap: anywhere; }
+main p, main li, main h1, main h2, main h3, main h4, main b, main span, main a, main td, main th, main figcaption { overflow-wrap: anywhere; }
+main .card, main [class*="-grid"] > *, main .ev-row > *, main .chip-row > * { min-width: 0; }
+html, body { overflow-x: clip; max-width: 100%; }
+@media (max-width: 360px) { .l-tally { white-space: normal; font-size: 0.74rem; } }

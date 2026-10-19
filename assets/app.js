@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '72';
+  var ASSET_VERSION = '74';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -903,7 +903,66 @@
       chip.title = s.city + ' ' + hours + ' — ' + status;
       chip.setAttribute('aria-label', s.city + ' session ' + status);
       box.appendChild(chip);
+      renderSessionClock(s, z, open, hours, status);
     });
+  }
+
+  /* Calendar: one analog clock per FX session, showing that city's local time
+     (Rami, 2026-10-19). Out of session = greyed out; in session = lit with a
+     warm light from the top down. Built once, hands updated on every tick. */
+  function renderSessionClock(s, z, open, hours, status) {
+    var box = $('#sess-clocks');
+    if (!box) return;
+    var NS = 'http://www.w3.org/2000/svg';
+    var fig = box.querySelector('[data-sess="' + s.code + '"]');
+    if (!fig) {
+      fig = el('figure', 'sclock');
+      fig.setAttribute('data-sess', s.code);
+      var svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('viewBox', '0 0 100 100');
+      svg.setAttribute('class', 'sclock-face');
+      svg.setAttribute('aria-hidden', 'true');
+      var mk = function (tag, attrs, cls) {
+        var n = document.createElementNS(NS, tag);
+        Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+        if (cls) n.setAttribute('class', cls);
+        svg.appendChild(n);
+        return n;
+      };
+      var gid = 'glow-' + s.code;
+      var defs = document.createElementNS(NS, 'defs');
+      var lg = document.createElementNS(NS, 'linearGradient');
+      lg.setAttribute('id', gid); lg.setAttribute('x1', '0'); lg.setAttribute('y1', '0'); lg.setAttribute('x2', '0'); lg.setAttribute('y2', '1');
+      [['0', '#ffd48a', '0.95'], ['0.55', '#ffe6bd', '0.35'], ['1', '#fff4e0', '0']].forEach(function (st) {
+        var stop = document.createElementNS(NS, 'stop');
+        stop.setAttribute('offset', st[0]); stop.setAttribute('stop-color', st[1]); stop.setAttribute('stop-opacity', st[2]);
+        lg.appendChild(stop);
+      });
+      defs.appendChild(lg);
+      svg.appendChild(defs);
+      mk('circle', { cx: 50, cy: 50, r: 46 }, 'sc-dial');
+      mk('circle', { cx: 50, cy: 50, r: 46, fill: 'url(#' + gid + ')' }, 'sc-glow');
+      for (var k = 0; k < 12; k++) {
+        var a = k * Math.PI / 6, r1 = k % 3 ? 39 : 35;
+        mk('line', { x1: 50 + r1 * Math.sin(a), y1: 50 - r1 * Math.cos(a), x2: 50 + 42 * Math.sin(a), y2: 50 - 42 * Math.cos(a) }, k % 3 ? 'sc-tick' : 'sc-tick major');
+      }
+      mk('line', { x1: 50, y1: 50, x2: 50, y2: 27 }, 'sc-hour');
+      mk('line', { x1: 50, y1: 50, x2: 50, y2: 15 }, 'sc-min');
+      mk('circle', { cx: 50, cy: 50, r: 3.2 }, 'sc-pin');
+      fig.appendChild(svg);
+      var cap = el('figcaption');
+      cap.appendChild(el('span', 'sc-city', s.code));
+      cap.appendChild(el('span', 'sc-time mono'));
+      fig.appendChild(cap);
+      box.appendChild(fig);
+    }
+    var h = Math.floor(z.mins / 60), m = z.mins % 60;
+    fig.querySelector('.sc-hour').setAttribute('transform', 'rotate(' + ((h % 12) * 30 + m * 0.5) + ' 50 50)');
+    fig.querySelector('.sc-min').setAttribute('transform', 'rotate(' + (m * 6) + ' 50 50)');
+    fig.querySelector('.sc-time').textContent = pad2(h) + ':' + pad2(m);
+    fig.classList.toggle('open', !!open);
+    fig.title = s.city + ' · ' + hours + ' — ' + status;
+    fig.setAttribute('aria-label', s.city + ' ' + pad2(h) + ':' + pad2(m) + ', session ' + status);
   }
 
   /* ---------------- edition / today ---------------- */
