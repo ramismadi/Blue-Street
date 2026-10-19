@@ -1,5 +1,5 @@
 /* Blue Street — premium desk. Tabbed, calm, editorial.
-   Themes are token sets on [data-theme]; Alpine (sunny sky + gold, light)
+   Themes are token sets on [data-theme]; Blue Street (brand blue + ivory)
    is the default. Every theme defines the same tokens. */
 
 :root,
@@ -28,6 +28,58 @@
   --mast-ink: #f6efe1;
   --shadow: 0 1px 2px rgba(40, 30, 10, 0.05), 0 6px 24px rgba(40, 30, 10, 0.06);
   color-scheme: light;
+}
+
+/* Blue Street (default since 2026-10-19): the brand blue #0a84ff — the MT5
+   profit blue — on ivory; solid blue masthead. Night is its dark pair. */
+[data-theme="blue"] {
+  --bg: #f6f2ea;
+  --bg-2: #efe9dd;
+  --surface: #fffdf8;
+  --surface-2: #faf6ee;
+  --ink: #141b2b;
+  --ink-2: #4a5263;
+  --ink-3: #858a94;
+  --line: #e6dfd0;
+  --accent: #0a84ff;
+  --accent-2: #0a84ff;
+  --accent-wash: #e7f1fd;
+  --gold: #a07a32;
+  --gold-wash: #f6eedc;
+  --bull: #2d7a4e;
+  --bull-wash: #e8f2ea;
+  --bear: #a83a32;
+  --bear-wash: #f7e9e6;
+  --mast-1: #0a84ff;
+  --mast-2: #0a84ff;
+  --mast-ink: #f6f2ea;
+  --shadow: 0 1px 2px rgba(10, 40, 80, 0.05), 0 6px 24px rgba(10, 40, 80, 0.07);
+  color-scheme: light;
+}
+
+[data-theme="night"] {
+  --bg: #0a0f1a;
+  --bg-2: #070b13;
+  --surface: #111827;
+  --surface-2: #172033;
+  --ink: #eef2f8;
+  --ink-2: #b4bccb;
+  --ink-3: #808a9c;
+  --line: #22304a;
+  --accent: #0a84ff;
+  --accent-2: #0a84ff;
+  --accent-wash: #10233f;
+  --gold: #d6ad62;
+  --gold-wash: #2a2114;
+  --bull: #7dcc9c;
+  --bull-wash: #13281d;
+  --bear: #f08a80;
+  --bear-wash: #2e1819;
+  --mast-1: #0a84ff;
+  --mast-2: #0a84ff;
+  --mast-ink: #f6f2ea;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 28px rgba(0, 0, 0, 0.25);
+  color-scheme: dark;
 }
 
 [data-theme="sage"] {
@@ -1936,7 +1988,7 @@ footer { padding: 34px 0 44px; text-align: center; }
   main.wrap { padding-top: 20px; padding-bottom: 8px; }
   .wrap { padding: 0 16px; }
   .mh-inner { min-height: 50px; }
-  .edition, .sessions { display: none; }
+  .edition { display: none; }
   .today-grid { grid-template-columns: 1fr; }
   .glance { grid-template-columns: minmax(0, 1fr); }
   .gf-hl { font-size: 1.08rem; }
@@ -2405,3 +2457,26 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { .splash { transition: none; } }
 .sidenav { justify-content: flex-start; }
 .sn-foot { margin-top: auto; }
+
+/* Look controls live in the side menu / phone drawer (Rami, 2026-10-19);
+   the masthead keeps only the menu button, so the session chips fit on a phone. */
+#mode-btn, #theme-menu { display: none !important; }
+.sn-look { display: flex; flex-direction: column; gap: 6px; padding-bottom: 8px; margin-bottom: 4px; border-bottom: 1px solid var(--line); }
+.sn-swatches { display: flex; flex-wrap: wrap; gap: 8px; padding: 2px 12px 6px; }
+.sn-swatch {
+  width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--surface); cursor: pointer; padding: 0;
+  box-shadow: 0 0 0 1px var(--line);
+}
+.sn-swatch[aria-checked="true"] { box-shadow: 0 0 0 2px var(--brand); }
+@media (min-width: 981px) {
+  [data-nav="side"][data-nav-collapsed] .sn-swatches { display: none; }
+}
+@media (max-width: 760px) {
+  .sessions { display: inline-flex; gap: 3px; }
+  .sess { font-size: 0.6rem; padding: 2px 5px; letter-spacing: 0.02em; }
+  .sess.open::before { width: 5px; height: 5px; margin-right: 3px; }
+  .mh-right { gap: 8px; }
+}
+@media (max-width: 440px) {
+  .wordmark { display: none; }   /* the symbol carries the brand; room for the chips */
+}

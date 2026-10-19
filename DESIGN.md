@@ -85,6 +85,8 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   `rel="noopener noreferrer"`.
 
 ## Look
+- **Default theme: Blue Street** (`blue`, dark pair `night`; Rami 2026-10-19) — brand blue #0a84ff as the accent and a solid blue masthead, on the ivory page; listed first in the colorways. The older colorways remain.
+- **Look controls live in the side menu** (Rami, 2026-10-19): light/dark and the colorway swatches sit at the bottom of the side menu / phone drawer; the masthead's own sun-moon and colorway buttons are hidden. On phones the masthead's menu button always opens the drawer (any layout), which frees the bar for the SYD/TYO/LDN/NYC session chips; under 440px the wordmark hides and the symbol carries the brand.
 - Themes are token sets on `<html data-theme="…">` (plus `data-mode` =
   light|dark). They come in **four colorways, each a light + dark pair**:
   | Colorway | Light | Dark |

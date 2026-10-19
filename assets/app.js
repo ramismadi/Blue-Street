@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '58';
+  var ASSET_VERSION = '60';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -18,10 +18,12 @@
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
+    { id: 'blue',      name: 'Blue Street', desc: 'Brand blue & ivory',  sw: ['#f6f2ea', '#0a84ff', '#f6f2ea'] },
     { id: 'ivory',     name: 'Ivory',     desc: 'Navy & brass',           sw: ['#f6f2ea', '#1f3a5f', '#a07a32'] },
     { id: 'sage',      name: 'Sage',      desc: 'Forest & sand',          sw: ['#f2f4ef', '#2f5d4a', '#c9ad7f'] },
     { id: 'claret',    name: 'Claret',    desc: 'Burgundy & cream',       sw: ['#f7f3ef', '#6e1f30', '#a8803c'] },
     { id: 'pearl',     name: 'Pearl',     desc: 'Black & champagne',      sw: ['#f5f3ee', '#151515', '#b8964f'] },
+    { id: 'night',     name: 'Night',     desc: 'Brand blue after dark', sw: ['#0a0f1a', '#0a84ff', '#f6f2ea'], dark: true },
     { id: 'ink',       name: 'Ink',       desc: 'Ink, ivory & copper',    sw: ['#131a26', '#e9dcbc', '#cf9259'], dark: true },
     { id: 'forest',    name: 'Forest',    desc: 'Dark green & brass',     sw: ['#0e1714', '#9fd0b5', '#d2b072'], dark: true },
     { id: 'velvet',    name: 'Velvet',    desc: 'Oxblood, rosé & gold',   sw: ['#1e1216', '#e8a9a0', '#d6ad62'], dark: true },
@@ -30,6 +32,7 @@
   /* Four colorways, each a light + dark pair; the masthead toggle flips
      between the two, the menu picks the colorway. */
   var COLORWAYS = [
+    { light: 'blue',   dark: 'night',  desc: 'Blue Street blue & ivory' },
     { light: 'ivory',  dark: 'ink',    desc: 'Navy, ivory & brass' },
     { light: 'sage',   dark: 'forest', desc: 'Green & sand' },
     { light: 'claret', dark: 'velvet', desc: 'Burgundy, ros\u00e9 & gold' },
@@ -330,7 +333,7 @@
 
   function initTheme() {
     var cur = document.documentElement.getAttribute('data-theme');
-    if (!themeById(cur)) cur = 'ivory';
+    if (!themeById(cur)) cur = 'blue';
 
     var mode = $('#mode-btn');
     if (mode) mode.addEventListener('click', function () {
@@ -435,6 +438,7 @@
     if (save) {
       try { localStorage.setItem('bluestreet-theme', t.id); } catch (e) { /* private mode */ }
     }
+    syncSideTheme();
   }
 
   /* ---------------- tabs / routing ---------------- */
@@ -616,7 +620,44 @@
     top.appendChild(navIcon('M2.5 3.5h11 M2.5 6.5h11 M5 9.5l3 3 3-3'));
     top.appendChild(el('span', 'sn-label', 'Tabs on top'));
     top.title = 'Move the sections back to the top bar';
-    top.addEventListener('click', function () { setNav('top', nav.collapsed); });
+    top.addEventListener('click', function () {
+      if (nav.mode === 'side') setNav('top', nav.collapsed);
+      else { openDrawer(false); setNav('side', false); }
+    });
+    // Look: light/dark + colorway (Rami, 2026-10-19: these live in the menu,
+    // which frees the masthead for the session chips on a phone).
+    var look = el('div', 'sn-look');
+    var modeB = el('button', 'sn-btn sn-mode');
+    modeB.type = 'button';
+    modeB.appendChild(navIcon('M13.5 9.6A5.8 5.8 0 0 1 6.4 2.5a5.8 5.8 0 1 0 7.1 7.1z'));
+    modeB.appendChild(el('span', 'sn-label', 'Dark mode'));
+    modeB.addEventListener('click', function () {
+      var t = themeById(document.documentElement.getAttribute('data-theme')) || THEMES[0];
+      var cw = colorwayOf(t.id);
+      applyTheme(t.dark ? cw.light : cw.dark, true);
+    });
+    look.appendChild(modeB);
+    var sw = el('div', 'sn-swatches');
+    sw.setAttribute('role', 'radiogroup');
+    sw.setAttribute('aria-label', 'Colorway');
+    COLORWAYS.forEach(function (cw) {
+      var b = el('button', 'sn-swatch');
+      b.type = 'button';
+      b.setAttribute('role', 'radio');
+      b.setAttribute('data-colorway', cw.light);
+      b.title = cw.desc;
+      b.setAttribute('aria-label', cw.desc);
+      sw.appendChild(b);
+    });
+    sw.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-colorway]');
+      if (!b) return;
+      var cw = colorwayOf(b.getAttribute('data-colorway'));
+      var dark = !!(themeById(document.documentElement.getAttribute('data-theme')) || {}).dark;
+      applyTheme(dark ? cw.dark : cw.light, true);
+    });
+    look.appendChild(sw);
+    foot.appendChild(look);
     foot.appendChild(col);
     foot.appendChild(top);
     box.appendChild(foot);
@@ -630,8 +671,8 @@
       if (e.key === 'Escape' && box.classList.contains('open')) openDrawer(false);
     });
     $('#nav-btn').addEventListener('click', function () {
-      if (nav.mode === 'top') { setNav('side', false); if (isNarrow()) openDrawer(true); return; }
-      if (isNarrow()) openDrawer(!box.classList.contains('open'));
+      if (isNarrow()) { openDrawer(!box.classList.contains('open')); return; }
+      if (nav.mode === 'top') setNav('side', false);
       else setNav('side', !nav.collapsed);
     });
     // Mirror the tab-bar badges (live-thread count, focus LIVE).
@@ -668,21 +709,46 @@
     root.setAttribute('data-nav', nav.mode);
     if (side && nav.collapsed) root.setAttribute('data-nav-collapsed', ''); else root.removeAttribute('data-nav-collapsed');
     var box = $('#sidenav');
-    if (box) box.hidden = !side;
+    if (box) box.hidden = !side && !box.classList.contains('open');
     var btn = $('#nav-btn');
     if (btn) {
       btn.setAttribute('aria-pressed', side ? 'true' : 'false');
-      btn.title = !side ? 'Show the sections as a side menu' : (isNarrow() ? 'Open the menu' : (nav.collapsed ? 'Expand the side menu' : 'Collapse the side menu'));
+      btn.title = isNarrow() ? 'Menu' : (!side ? 'Show the sections as a side menu' : (nav.collapsed ? 'Expand the side menu' : 'Collapse the side menu'));
     }
     var col = box && box.querySelector('.sn-collapse .sn-label');
     if (col) col.textContent = nav.collapsed ? 'Expand' : 'Collapse';
+    var lay = box && box.querySelector('.sn-top .sn-label');
+    if (lay) lay.textContent = side ? 'Tabs on top' : 'Tabs on the side';
+    syncSideTheme();
     // The masthead height changes when the tab bar hides; re-measure.
     setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 30);
   }
+  /* Side-menu look controls mirror the current theme. */
+  function syncSideTheme() {
+    var box = $('#sidenav');
+    if (!box) return;
+    var t = themeById(document.documentElement.getAttribute('data-theme')) || THEMES[0];
+    var dark = !!t.dark, cw = colorwayOf(t.id);
+    var ml = box.querySelector('.sn-mode .sn-label');
+    if (ml) ml.textContent = dark ? 'Light mode' : 'Dark mode';
+    var mi = box.querySelector('.sn-mode path');
+    if (mi) mi.setAttribute('d', dark
+      ? 'M8 5a3 3 0 1 0 0 6a3 3 0 1 0 0-6z M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9L13 13M3 13l1.1-1.1M11.9 4.1L13 3'
+      : 'M13.5 9.6A5.8 5.8 0 0 1 6.4 2.5a5.8 5.8 0 1 0 7.1 7.1z');
+    Array.prototype.forEach.call(box.querySelectorAll('.sn-swatch'), function (b) {
+      var c = colorwayOf(b.getAttribute('data-colorway'));
+      var shown = themeById(dark ? c.dark : c.light);
+      if (shown) b.style.background = swatchBg(shown);
+      b.setAttribute('aria-checked', c === cw ? 'true' : 'false');
+    });
+  }
+
   function openDrawer(on) {
     var box = $('#sidenav'), scrim = $('#sidenav-scrim');
     if (!box) return;
+    if (on) box.hidden = false;
     box.classList.toggle('open', !!on);
+    if (!on && nav.mode !== 'side') setTimeout(function () { if (!box.classList.contains('open')) box.hidden = true; }, 260);
     if (scrim) scrim.hidden = !on;
     document.documentElement.classList.toggle('sn-locked', !!on);
   }
