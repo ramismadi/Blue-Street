@@ -563,6 +563,10 @@
     var active = $('#tab-' + (parent || tab));
     if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     window.scrollTo(0, 0);
+    // Redraw the scroll-driven scenes now: returning to Today at scroll 0 fires no scroll event,
+    // so it would otherwise keep its stale faded-out state until the next scroll.
+    measureScenes();
+    queueScroll();
   }
 
   /* ---------------- side menu (optional layout) ----------------
