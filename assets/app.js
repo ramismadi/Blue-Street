@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '71';
+  var ASSET_VERSION = '72';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -1368,7 +1368,7 @@
     (d.rows || []).forEach(function (row) {
       var li = el('li');
       li.appendChild(el('span', 'p-title', row.title));
-      li.appendChild(el('span', 'p-read', row.read));
+      li.appendChild(el('span', 'p-read', firstSentences(row.read || '', 1, 40)));
       box.appendChild(li);
     });
   }
