@@ -2480,3 +2480,8 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 440px) {
   .wordmark { display: none; }   /* the symbol carries the brand; room for the chips */
 }
+
+/* Top tabs carry the side-menu icons */
+.tabs a { display: inline-flex; align-items: center; gap: 7px; }
+.tabs a .sn-ico { width: 16px; height: 16px; opacity: 0.85; }
+.tabs a[aria-selected="true"] .sn-ico { opacity: 1; }

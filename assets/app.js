@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '60';
+  var ASSET_VERSION = '61';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -560,6 +560,11 @@
       nav.mode = localStorage.getItem('bluestreet-nav') === 'side' ? 'side' : 'top';
       nav.collapsed = localStorage.getItem('bluestreet-nav-collapsed') === '1';
     } catch (e) { /* private mode */ }
+    // The top tab bar gets the same icons as the side menu (Rami, 2026-10-19).
+    NAV_ITEMS.forEach(function (it) {
+      var tab = document.querySelector('#tabs [data-tab="' + it.id + '"]');
+      if (tab && !tab.querySelector('.sn-ico')) tab.insertBefore(navIcon(it.ico), tab.firstChild);
+    });
     var box = $('#sidenav');
     if (!box) return;
     // Brand symbol at the top of the menu (links home).
