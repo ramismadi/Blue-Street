@@ -498,11 +498,11 @@ FF doesn't have: `why`, `if_beat`/`if_miss`, `better`, `chapter`, `bank`.
 
 ## Plain-words layer: data/words.json (Rami, 2026-10-19)
 Claude owns `data/words.json`; Hercules never edits it. Sections: `story.headline`,
-`engine.reads.<row id>`, `banks.banks.<bank id>.{summary, priced, why, watch}`, each with
+`engine.reads.<row id>`, `banks.banks.<bank id>.{summary, priced, why, watch, bias}`, each with
 `as_of` (YYYY-MM-DD). `applyWords()` in app.js merges them over story/engine/banks
 on load, but only when the data file isn't from a later day than `as_of`; otherwise
 Herc's text shows, still trimmed by the render clamps. A bank's original `priced`
 moves to `detail` (Details drawer) when replaced. `why` ("What is driving it") and `watch`
 ("What to watch") are 1–2 plain sentences each and fill the bank Details drawer; when present they
 replace the number-heavy `detail`, which only shows as a fallback. The bank's bias pill shows a
-trend line: hawkish = rising (green), dovish = falling (red), neutral = sideways (gold).
+trend line (`bias` is Claude's label from words.json, applied regardless of date; rule in COLLAB.md): hawkish = rising (green), dovish = falling (red), neutral = sideways (gold).

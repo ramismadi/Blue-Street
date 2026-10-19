@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '80';
+  var ASSET_VERSION = '81';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -182,6 +182,14 @@
   function applyWords(kind, d, w) {
     var sec = w && w[kind];
     if (!sec || !d) return d;
+    // Rami, 2026-10-19: Claude owns the hawkish/neutral/dovish label (a judgment, not data).
+    // It applies whatever day the data file is from; Herc no longer writes `bias`.
+    if (kind === 'banks') {
+      (d.banks || []).forEach(function (b) {
+        var bx = sec.banks && sec.banks[b.id];
+        if (bx && bx.bias) b.bias = bx.bias;
+      });
+    }
     var srcDay = wordsDay(kind === 'story' ? d.date : d.updated);
     if (sec.as_of && srcDay && srcDay > sec.as_of) return d;
     if (kind === 'story') {

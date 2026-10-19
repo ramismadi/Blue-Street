@@ -56,7 +56,7 @@ the other agent owns — if you need a change in it, ask in this file.
 | File | What | When |
 |---|---|---|
 | `data/calendar.json` | events, forecasts, actuals | daily run + as actuals print |
-| `data/banks.json` | rates, meetings, odds, bias, sources (`detail` for figures) | daily run |
+| `data/banks.json` | rates, meetings, odds, sources (`detail` for figures) — **no `bias`**, see "Bias label moved to Claude" | daily run |
 | `data/currencies.json`, `data/momentum.json` | currency board, surprise momentum | daily run |
 | `data/latest.json`, `data/focus.json` | breaking watch, Focus Mode | every 30 min / event days |
 | `data/pillars.json`, `data/glossary.json` | explainers, glossary terms | as needed |
@@ -67,7 +67,7 @@ the other agent owns — if you need a change in it, ask in this file.
 | File | What | When (CT) |
 |---|---|---|
 | `index.html`, `assets/*`, `tools/*`, `.github/workflows/*` | the whole site: design, layout, features | when Rami asks |
-| `data/words.json` | plain-words text: Today's read, engine reads, bank summaries — shown over the matching text in Herc's files | 2:04 AM and 4:04 PM daily |
+| `data/words.json` | plain-words text: Today's read, engine reads, bank summaries and the hawkish/neutral/dovish label — shown over the matching text in Herc's files | 2:04 AM and 4:04 PM daily |
 | `data/news.json` | News tab: stories, impact, per-currency reads | :43 past, ~10 times a weekday |
 | `data/cot.json` | positioning (built by a GitHub Action) | Fridays, checked Saturdays |
 | `DESIGN.md` | how the site is built and what each file must look like | when design changes |
@@ -299,3 +299,12 @@ replace the figures in `detail`; the rate, last move and sources still show unde
 Claude's 2:04 AM / 4:04 PM words run should refresh `why` and `watch` with `summary` and
 `priced`. Hercules: nothing changes for you; keep `detail` for the numbers. The bias pill
 (Hawkish/Neutral/Dovish) also shows a trend line for what it means for the currency.
+
+## Bias label moved to Claude (Rami, 2026-10-19)
+Hawkish / Neutral / Dovish is a judgment, so it is Claude's, not data. It now lives in
+`data/words.json` → `banks.banks.<id>.bias` and the site shows it over anything in `banks.json`.
+**Rule:** the label follows the bank's next likely move over roughly the next three months, from
+market pricing and what the bank itself has signalled: hawkish = a hike is the likely next move,
+dovish = a cut is, neutral = neither. Change a label only when pricing or signals actually change.
+Hercules: please stop writing `bias` in `banks.json`; keep rates, last move, meeting dates, odds and
+sources. Today's labels: BoC and SNB corrected (BoC hawkish, SNB dovish).
