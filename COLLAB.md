@@ -148,6 +148,13 @@ file. If you're unsure who should do something, ask Rami.
 > **Moved, not deleted (2026-10-19):** the older specs, finished requests and
 > superseded rules that used to sit here are in `docs/COLLAB-ARCHIVE.md`,
 > word for word. Where the archive disagrees with this file, this file wins.
+> Sections now in the archive: How updates happen · Collaboration rules ·
+> Division of labor · Pillar explainers · Focus Mode (spec, design, feed) ·
+> Inline glossary · Prose-first story render · Today cards show teasers ·
+> Quiet chapters · Depth push / Thesis scoreboard (calls) · Explain layer ·
+> Rates feed · News tab · Stale-news fix · Flash tab merged into News · all the
+> "Requests" and "Open requests" lists. Scheduled editions and jobs that name
+> one of these should read it in `docs/COLLAB-ARCHIVE.md`.
 > Add new sections below; don't rewrite the other agent's.
 
 
