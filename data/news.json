@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-19T00:46:32Z",
+  "updated": "2026-10-19T02:47:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Gloment's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "text": "The dollar's news flow leans soft: Fed Chair Warsh declined to pre-commit to an October move, October hike odds fell to roughly one in six, and the dollar index had its first weekly loss in over a month. The cushion is December, still priced near 90%.",
-      "ts": "2026-10-18T19:00:00Z"
+      "text": "The dollar's news flow still leans soft: Warsh won't pre-commit, CME now prices about 84% odds of an October 28 hold, and the dollar index logged its first weekly loss in over a month. December hike pricing is the cushion.",
+      "ts": "2026-10-19T02:47:00Z"
     },
     "EUR": {
       "lean": "mixed",
@@ -19,28 +19,28 @@
     },
     "JPY": {
       "lean": "mixed",
-      "text": "Two pulls on the yen: Ueda keeps signalling further hikes and Japan's CPI is expected to jump this week, but every oil-supply headline hurts Japan as an energy importer. USD/JPY sat near 158 through all of it.",
-      "ts": "2026-10-18T19:00:00Z"
+      "text": "Two pulls on the yen: reports that the BoJ won't hike back to back keep the rate gap wide, while intervention fears and a tech-led stock slide offer support. USD/JPY sits around 158 ahead of this week's CPI and the Oct 29–30 BoJ meeting.",
+      "ts": "2026-10-19T02:47:00Z"
     },
     "CHF": {
       "lean": "bullish",
-      "text": "The franc's story is haven demand: Hormuz ship attacks plus Sunday's harder US\u2013Iran rhetoric keep a safety bid under it.",
-      "ts": "2026-10-18T22:46:58Z"
+      "text": "The franc's story is haven demand: Hormuz tanker hits, Houthi missiles at Saudi cities and a renewed slide in Asian tech stocks all keep a safety bid under it.",
+      "ts": "2026-10-19T02:47:00Z"
     },
     "CAD": {
       "lean": "mixed",
-      "text": "Oil holding near $109 supports the loonie as an exporter's currency; Monday's CPI, expected to rise to about 3.2%, and the BoC's business survey decide whether October 28 hike odds grow or fade.",
-      "ts": "2026-10-18T22:46:58Z"
+      "text": "Oil is the swing factor: the US pause on Russia sanctions pulled crude lower in Asia, trimming the loonie's export support, while Gulf risks keep prices near $108 Brent. Today's CPI, seen near 3.2%, and the BoC survey set the Oct 28 hike odds.",
+      "ts": "2026-10-19T02:47:00Z"
     },
     "AUD": {
-      "lean": "mixed",
-      "text": "Two forces on the Aussie: the RBA's Kent said Monday the neutral rate looks to be rising and questioned whether policy is tight enough, a hawkish undertone after the weak September jobs report. Today's China data decides the other side \u2014 Q3 growth is expected near 4.4%, below Beijing's goal.",
-      "ts": "2026-10-19T00:46:32Z"
+      "lean": "bullish",
+      "text": "The Aussie's headlines lean firm: China's Q3 growth, retail sales and factory output all beat forecasts, the RBA's Kent argued the neutral rate is rising, and fading Fed hike odds weigh on the dollar. Risk-off in Asian stocks is the counterweight.",
+      "ts": "2026-10-19T02:47:00Z"
     },
     "NZD": {
       "lean": "mixed",
-      "text": "Thursday's Q3 CPI is still expected well above the RBNZ's 1\u20133% band, keeping an October 28 hike on the table, but Sunday brought two soft spots: a trade deficit more than double forecasts, driven by imports, and exposure to Monday's China data.",
-      "ts": "2026-10-18T22:46:58Z"
+      "text": "China's broad data beat lifted the kiwi above 0.5650 and markets still price about 80% odds of an Oct 28 RBNZ hike, but Sunday's trade gap was more than double forecasts. Thursday's Q3 CPI decides which side wins.",
+      "ts": "2026-10-19T02:47:00Z"
     },
     "XAU": {
       "lean": "mixed",
@@ -48,12 +48,270 @@
       "ts": "2026-10-18T22:46:58Z"
     },
     "OIL": {
-      "lean": "bullish",
-      "text": "Supply-risk headlines still outnumber relief: Ukraine resumed strikes on St. Petersburg fuel sites, tankers were hit in the Gulf, and Sunday's US\u2013Iran rhetoric hardened. Prices reopened flat to slightly lower near $109 Brent, so the premium is holding rather than growing.",
-      "ts": "2026-10-18T22:46:58Z"
+      "lean": "mixed",
+      "text": "Supply headlines now cut both ways: the US pause on Russia sanctions and softer risk appetite pulled Brent down about 1.6% to near $108, while Houthi strikes on Saudi Arabia, Hormuz tanker hits and the St. Petersburg attacks keep the risk premium in place.",
+      "ts": "2026-10-19T02:47:00Z"
     }
   },
   "items": [
+    {
+      "id": "gulfnews-saudi-houthi-egypt-20261019",
+      "date": "2026-10-19",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-egypt-to-help-saudi-arabia-counter-houthi-attacks-iran-warns-ai-data-firms-1.500714637",
+      "image": null,
+      "headline": "Saudi Arabia intercepts Houthi missiles as Egypt moves to send troops; Trump predicts quick end to Iran war",
+      "story": "saudi-houthi",
+      "story_title": "Saudi–Houthi fighting and the Gulf supply risk",
+      "pillar": "risk",
+      "summary": "Houthi missiles and drones targeted several Saudi cities, Egypt's defence council approved a defensive troop deployment to the kingdom, and Trump said the Iran war would end very quickly.",
+      "beats": {
+        "was": "The Gulf conflict widening beyond Iran and Hormuz to direct Houthi attacks on Saudi Arabia.",
+        "happened": "The coalition said it intercepted two ballistic missiles aimed at Khamis Mushait, with other strikes reported toward Riyadh and the Eastern Province; Egypt's parliament delayed its vote on troops to Monday.",
+        "means": "Attacks reaching Saudi territory, home to major export routes, add to supply risk; Trump's promise of a fast end is the offsetting hope, but no plan was given.",
+        "fx": "Wider Gulf fighting → more oil-supply risk and safe-haven demand → oil and the franc supported. The lens: does the fighting hit Saudi export sites, or stay intercepted?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Strikes on Saudi Arabia widen the supply-risk map."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A widening regional war keeps a haven bid alive."
+        }
+      ],
+      "watch": "Any damage at Saudi oil facilities, Egypt's troop vote, and concrete steps behind Trump's 'quickly'."
+    },
+    {
+      "id": "fxstreet-nzd-china-gdp-20261019",
+      "ts": "2026-10-19T02:20:53Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/new-zealand-dollar-strengthens-above-05650-on-strong-chinas-gdp-data-202610190220",
+      "image": "https://editorial.fxsstatic.com/images/i/NZD-bullish-object_Medium.png",
+      "headline": "New Zealand Dollar strengthens above 0.5650 on strong China's GDP data",
+      "story": "china-q3",
+      "story_title": "China Q3: growth beats the 4.4% call",
+      "pillar": "growth",
+      "summary": "The kiwi firmed to about 0.5655 after China's better-than-expected growth figures, with markets still putting roughly 80% odds on an RBNZ hike in two weeks.",
+      "beats": {
+        "was": "China is New Zealand's biggest export customer, so its growth data move the kiwi as a proxy.",
+        "happened": "Q3 growth of 4.5% beat the 4.4% forecast and September shop sales and factory output also topped estimates; NZD/USD edged above 0.5650.",
+        "means": "Steadier Chinese demand is good news for dairy and other exports, offsetting some of Sunday's wide trade-gap print. The rate story still dominates: hike odds near 80%, though one bank economist warned weak activity makes it a hard call.",
+        "fx": "Better China demand → firmer export outlook → mild support for NZD. The lens: does Thursday's Q3 CPI lock in the October 28 hike?"
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "China's beat helps New Zealand's export outlook; the move was small."
+        }
+      ],
+      "watch": "New Zealand Q3 CPI this week; a soft print would weaken the hike case and the kiwi's support."
+    },
+    {
+      "id": "fxstreet-aud-china-data-20261019",
+      "ts": "2026-10-19T02:13:00Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/australian-dollar-remains-stronger-following-stronger-china-data-202610190213",
+      "image": "https://editorial.fxsstatic.com/images/i/AUDUSD-bullish-chart_Medium.png",
+      "headline": "Australian Dollar remains stronger as China data beats forecasts",
+      "story": "china-q3",
+      "story_title": "China Q3: growth beats the 4.4% call",
+      "pillar": "growth",
+      "summary": "The Aussie held a second day of gains near 0.6970 as China's growth, retail sales and factory output all came in above forecasts and US hike bets kept fading.",
+      "beats": {
+        "was": "Australia's dollar trades as a read on China, its largest buyer of iron ore and energy.",
+        "happened": "China's Q3 growth printed 4.5% vs 4.4% expected, retail sales 1.1% vs 0.5% and industrial output 5.5% vs 5.4%; AUD/USD stayed near 0.6970.",
+        "means": "Two supports landed at once: a firmer China and a softer dollar, with CME pricing about 84% odds the Fed holds on October 28, up from about 49% a month ago.",
+        "fx": "Stronger China demand + fading Fed hike odds → firmer commodity outlook and a weaker dollar → AUD up. The lens: is China's pickup broad enough to last, or just exports?"
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "China beat on every headline number while the US dollar softened."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Fed hold odds near 84% keep the dollar on the back foot."
+        }
+      ],
+      "watch": "Australia's Q3 CPI on Oct 28 and whether China's property and investment slump deepens."
+    },
+    {
+      "id": "fxstreet-yen-158-20261019",
+      "ts": "2026-10-19T02:07:21Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/japanese-yen-extends-range-play-around-15800-vs-usd-as-intervention-risks-limit-losses-202610190207",
+      "image": "https://editorial.fxsstatic.com/images/i/USDJPY-neutral-line_Medium.png",
+      "headline": "Japanese Yen holds range near 158.00 vs USD before Fed, BoJ decisions",
+      "story": "boj-path",
+      "story_title": "BoJ: the next hike and the yen",
+      "pillar": "policy",
+      "summary": "The yen is stuck around 158 per dollar: a wide rate gap and reports the BoJ won't hike back to back weigh on it, while fears of Tokyo stepping in cap the downside.",
+      "beats": {
+        "was": "USD/JPY near 158, with the Fed deciding Oct 28 and the BoJ Oct 29–30.",
+        "happened": "The pair dipped in early Asia and climbed back above 158. Media reports say BoJ officials see little need for a second hike in a row, even as Ueda warns long-term rates could rise if policy lags inflation.",
+        "means": "Without an October BoJ move, the US–Japan rate gap stays wide, which keeps pressure on the yen; the main brake is the risk of official intervention near these levels.",
+        "fx": "BoJ on hold + wide yield gap → money stays in dollars → yen soft; intervention risk → sellers stay cautious. The lens: how close is Tokyo to stepping in?"
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A cautious BoJ weighs on it; intervention risk and lower US yields limit the slide."
+        }
+      ],
+      "watch": "Japan's CPI this week and any warnings from Finance Ministry officials on yen moves."
+    },
+    {
+      "id": "reuters-china-q3-gdp-20261019",
+      "ts": "2026-10-19T02:04:00Z",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://www.investing.com/news/economy-news/chinas-q3-gdp-growth-accelerates-to-45-beating-forecast-4956208",
+      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9I05R_L.jpg",
+      "headline": "China's Q3 GDP growth accelerates to 4.5%, beating forecast",
+      "story": "china-q3",
+      "story_title": "China Q3: growth beats the 4.4% call",
+      "pillar": "growth",
+      "summary": "China grew 4.5% from a year earlier in Q3, up from a three-year low of 4.3% and just above the 4.4% forecast, without a large stimulus package.",
+      "beats": {
+        "was": "China's economic output for July–September versus a year earlier.",
+        "happened": "4.5% y/y vs 4.4% expected and 4.3% in Q2; 1.2% q/q vs 1.1% expected.",
+        "means": "A small beat that lands at the bottom of Beijing's 4.5–5% goal: growth stopped slowing, helped by targeted support for home buyers and cheap credit for infrastructure and tech, but no big stimulus.",
+        "fx": "Steadier China → firmer demand for metals, energy and farm goods → mild support for AUD and NZD. The lens: is Beijing's growth target in reach without new stimulus?"
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "China is Australia's biggest customer; a beat supports export demand."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Same China-demand channel for New Zealand's exports."
+        }
+      ],
+      "watch": "Beijing's next policy signals; growth slipping back under 4.5% would revive stimulus talk."
+    },
+    {
+      "id": "investinglive-china-retail-20261019",
+      "ts": "2026-10-19T02:01:00Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/china-q3-gdp-beats-estimates-as-does-september-retail-sales/",
+      "image": null,
+      "headline": "China Q3 GDP beats estimates, as does September retail sales",
+      "story": "china-q3",
+      "story_title": "China Q3: growth beats the 4.4% call",
+      "pillar": "growth",
+      "summary": "Behind the GDP beat, China's shoppers did better than feared in September, though investment is still shrinking and new-home prices kept falling.",
+      "beats": {
+        "was": "China's monthly activity data, released alongside Q3 GDP.",
+        "happened": "Retail sales rose 1.1% y/y vs 0.5% expected; industrial output 5.5% vs 5.4%; fixed-asset investment −7.2% year to date vs −7.3% expected; new-home prices −0.14% m/m.",
+        "means": "Consumers picked up from a very weak base, which matters more than the GDP decimal. But investment still contracting and home prices still sliding say the property drag hasn't lifted.",
+        "fx": "Broader-than-expected beat → better demand for commodities → mild support for AUD and NZD; the property slump limits how far that goes. The lens: is China's consumer finally turning?"
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Retail sales more than doubled the forecast pace."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer Chinese spending helps food exporters."
+        }
+      ],
+      "watch": "October's data; another month of falling home prices would keep the recovery narrow."
+    },
+    {
+      "id": "fxstreet-wti-russia-waiver-20261019",
+      "ts": "2026-10-19T01:06:05Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/wti-drops-to-near-9750-as-us-waives-russia-oil-sanctions-202610190106",
+      "image": "https://editorial.fxsstatic.com/images/i/West-Texas-Intermediate_3_Medium.png",
+      "headline": "WTI drops as US waives Russia oil sanctions",
+      "story": "russia-oil",
+      "story_title": "Russian oil: strikes and the sanctions clock",
+      "pillar": "tot",
+      "summary": "US crude snapped a seven-day rise in Asia after an executive order paused the Graham Act's sanctions and tariffs on Russia, which should let more Russian fuel reach world markets.",
+      "beats": {
+        "was": "The Graham Act, signed last month, put sanctions and tariffs on Russia to pressure it over Ukraine.",
+        "happened": "Friday's executive order paused those restrictions while the administration spends up to 60 days on an economic review; Turkey will absorb some of the released Russian diesel.",
+        "means": "More Russian barrels and diesel → a looser market at the margin. It cuts against the weekend's St. Petersburg strikes and Gulf tanker hits, which is why the dip may not stick.",
+        "fx": "Sanctions pause → more supply → lower oil → less support for CAD, a little relief for importers like Japan and Europe. The lens: is supply actually rising, or just less threatened?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A sanctions pause adds Russian supply to a tight market."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil trims Canada's export income."
+        }
+      ],
+      "watch": "Whether Russian export volumes actually rise, and new strikes on Russian or Gulf energy sites."
+    },
+    {
+      "id": "businesstoday-asia-stocks-ai-20261019",
+      "ts": "2026-10-19T00:50:35Z",
+      "source": "Business Today (Malaysia)",
+      "url": "https://www.businesstoday.com.my/2026/10/19/ai-spending-fears-send-asian-stocks-lower-oil-eases/",
+      "image": "https://www.businesstoday.com.my/wp-content/uploads/2026/02/Asian-Stock-Markets.jpg",
+      "headline": "AI spending fears send Asian stocks lower, oil eases",
+      "story": "ai-selloff",
+      "story_title": "AI spending doubts hit stocks",
+      "pillar": "risk",
+      "summary": "Japan's Nikkei fell another 2% and Korea 1.6% as doubts grow that AI revenue will justify the spending; Brent slipped to about $108 on the Russia sanctions pause.",
+      "beats": {
+        "was": "A tech-led stock slide: US chip stocks lost 11.4% last week, their longest losing run since 2008.",
+        "happened": "Monday the Nikkei dropped 2% after a 5.4% weekly fall; Korea fell 1.6%; the US 10-year yield dipped 3bp to about 5.06%; USD/JPY eased slightly to about 157.75.",
+        "means": "High bond yields and wider credit spreads raise funding costs just as investors question AI payoffs — a risk-off mood, not a crash, but a persistent one.",
+        "fx": "Falling stocks → investors cut risk → havens (yen, franc) supported, risk-linked currencies like AUD and NZD pressured. The lens: does the equity selloff spread into credit?"
+      },
+      "impact": [
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Risk-off equity moves favour safe havens."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Haven demand, though the yen's move was small."
+        },
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Brent fell 1.6% on the Russia sanctions pause and weaker risk appetite."
+        }
+      ],
+      "watch": "Big-tech earnings and whether US credit spreads keep widening."
+    },
     {
       "id": "investinglive-rba-kent-neutral-20261019",
       "ts": "2026-10-19T00:13:00Z",
@@ -64,12 +322,12 @@
       "story": "rba-nov",
       "story_title": "RBA: the November 3 decision",
       "pillar": "policy",
-      "summary": "An RBA assistant governor said the 'neutral' interest rate looks to be drifting higher, which would make the 4.60% cash rate less restrictive than it seems \u2014 a hawkish undertone after a weak jobs report.",
+      "summary": "An RBA assistant governor said the 'neutral' interest rate looks to be drifting higher, which would make the 4.60% cash rate less restrictive than it seems — a hawkish undertone after a weak jobs report.",
       "beats": {
         "was": "The RBA hiked to 4.60% on Sept 29, its fourth move this year, but September jobs then fell about 39k and unemployment hit 4.7%, a five-year high, cutting near-term hike bets.",
         "happened": "Speaking in Sydney Monday, Kent said the evidence points to neutral rates rising at home and abroad, called policy somewhat restrictive but questioned if it is enough, and said the post-jobs repricing made sense.",
         "means": "If neutral is higher, today's rate bites less, so the bar for another hike is lower than the jobs data alone suggested. But endorsing the market's pullback keeps it from being a clear signal for November.",
-        "fx": "Higher neutral rate \u2192 more room to hike \u2192 mild support for AUD. AUD/USD edged up to about 0.6965\u20130.6970 in early Asia. The lens: does Q3 CPI on Oct 28 back the hawks before the Nov 3 meeting?"
+        "fx": "Higher neutral rate → more room to hike → mild support for AUD. AUD/USD edged up to about 0.6965–0.6970 in early Asia. The lens: does Q3 CPI on Oct 28 back the hawks before the Nov 3 meeting?"
       },
       "impact": [
         {
@@ -96,7 +354,7 @@
         "was": "The first oil trading of the week, after a weekend of supply-risk headlines.",
         "happened": "Brent slipped about $1 to near $108.8; WTI eased to about $101.2. Ukraine hit a terminal and depot in St. Petersburg, ending its pause after the Oct 11 truce declaration.",
         "means": "The market did not add a new premium for the weekend's strikes; prices are holding near last week's highs rather than climbing.",
-        "fx": "Oil near $109 \u2192 keeps the import bill high for Japan and Europe and supports exporters like Canada; no fresh spike means no new push either way. The lens: does supply actually get lost, or just threatened?"
+        "fx": "Oil near $109 → keeps the import bill high for Japan and Europe and supports exporters like Canada; no fresh spike means no new push either way. The lens: does supply actually get lost, or just threatened?"
       },
       "impact": [
         {
@@ -124,12 +382,12 @@
       "story": "china-q3",
       "story_title": "China: Q3 growth",
       "pillar": "growth",
-      "summary": "China's Q3 GDP and September activity data land at 02:00 GMT Monday; polls see 4.4% growth, a touch above Q2 but still under Beijing's 4.5\u20135% goal, with retail sales barely growing.",
+      "summary": "China's Q3 GDP and September activity data land at 02:00 GMT Monday; polls see 4.4% growth, a touch above Q2 but still under Beijing's 4.5–5% goal, with retail sales barely growing.",
       "beats": {
         "was": "China's quarterly growth figure plus September factory output, retail sales and investment, all released together.",
-        "happened": "Consensus: GDP 4.4% y/y (Q2 4.3%), 1.1% q/q; industrial output about 5.3\u20135.5%; retail sales under 1%; fixed-asset investment around -7.5% year to date, dragged by property.",
+        "happened": "Consensus: GDP 4.4% y/y (Q2 4.3%), 1.1% q/q; industrial output about 5.3–5.5%; retail sales under 1%; fixed-asset investment around -7.5% year to date, dragged by property.",
         "means": "Factories are carrying the economy while households and property lag. A print below 4.4% would widen the gap to target and raise the odds of more stimulus.",
-        "fx": "Weak China \u2192 less demand for Australian and NZ exports \u2192 AUD and NZD softer; a stimulus response could cushion that later. The lens: is China's consumer still stuck?"
+        "fx": "Weak China → less demand for Australian and NZ exports → AUD and NZD softer; a stimulus response could cushion that later. The lens: is China's consumer still stuck?"
       },
       "impact": [
         {
@@ -162,7 +420,7 @@
         "was": "The monthly gap between what New Zealand sells abroad and what it buys.",
         "happened": "The deficit came in at NZ$1.97bn vs about NZ$0.78bn forecast and NZ$1.5bn the month before. Imports rose to NZ$8.44bn; exports were flat near NZ$6.47bn.",
         "means": "All of the widening came from imports, which fits a higher fuel bill. A bigger import bill means more kiwi dollars sold to pay for foreign goods.",
-        "fx": "Wider deficit \u2192 more NZD sold for imports \u2192 mild pressure on the kiwi, but one month rarely moves it; China's data and Thursday's CPI matter more. The lens: is oil eating New Zealand's trade income?"
+        "fx": "Wider deficit → more NZD sold for imports → mild pressure on the kiwi, but one month rarely moves it; China's data and Thursday's CPI matter more. The lens: is oil eating New Zealand's trade income?"
       },
       "impact": [
         {
@@ -217,12 +475,12 @@
       "story": "france-unrest",
       "story_title": "France: protests and the deficit budget",
       "pillar": "fiscal",
-      "summary": "Saturday's nationwide protests in France drew 550,000\u2013800,000 people and turned violent in several cities, with about 1,800 arrests \u2014 anger over living costs and fuel prices landing just as the government tries to pass a deficit-cutting budget.",
+      "summary": "Saturday's nationwide protests in France drew 550,000–800,000 people and turned violent in several cities, with about 1,800 arrests — anger over living costs and fuel prices landing just as the government tries to pass a deficit-cutting budget.",
       "beats": {
         "was": "Student protests over schools since mid-September had widened into cost-of-living and fuel-price anger, while the Lecornu government pushes a budget built on spending restraint and tax measures.",
         "happened": "Marches on Oct 17 saw looting and clashes in Paris, Marseille, Bordeaux and elsewhere; police made nearly 1,800 arrests and over 500 officers were hurt. Macron met ministers and was due to address the nation Sunday evening.",
         "means": "Street pressure makes the austerity budget harder to pass intact. France's bond spread over Germany is already wide, so any sign of fiscal slippage or political strain adds to the risk premium.",
-        "fx": "Unrest + budget doubt \u2192 wider French spread \u2192 mild drag on EUR. EUR/USD opened lower near 1.119 in thin early trade. The lens: does the budget survive parliament without big giveaways?"
+        "fx": "Unrest + budget doubt → wider French spread → mild drag on EUR. EUR/USD opened lower near 1.119 in thin early trade. The lens: does the budget survive parliament without big giveaways?"
       },
       "impact": [
         {
@@ -232,7 +490,7 @@
           "why": "Political strain over a deficit-cutting budget feeds the French fiscal risk premium."
         }
       ],
-      "watch": "Whether protests continue this week, any budget concessions, and the French\u2013German 10-year spread."
+      "watch": "Whether protests continue this week, any budget concessions, and the French–German 10-year spread."
     },
     {
       "id": "euromaidan-petersburg-terminal-20261018",
@@ -288,7 +546,7 @@
         "was": "Public statements from Washington and Tehran while the Hormuz reopening offer sits unanswered.",
         "happened": "Trump posted that the US could soon finish the job; Iran's security council secretary cited a new operational plan; Araqchi warned Iran has unfinished business too. No new strike was reported.",
         "means": "Words, not action, but they push the two sides further from the sequencing compromise a reopening needs, so the oil risk premium has no reason to fade.",
-        "fx": "More escalation talk \u2192 oil premium stays \u2192 havens like CHF hold a bid and energy importers like JPY carry a higher bill. The lens: does rhetoric turn into strikes?"
+        "fx": "More escalation talk → oil premium stays → havens like CHF hold a bid and energy importers like JPY carry a higher bill. The lens: does rhetoric turn into strikes?"
       },
       "impact": [
         {
@@ -349,7 +607,7 @@
       "story": "rbnz-oct",
       "story_title": "RBNZ: the October 28 review",
       "pillar": "inflation",
-      "summary": "Economists expect Q3 CPI at 3.7\u20134.0% a year on Thursday, close to the RBNZ's own 3.9% projection and well above its 1\u20133% band; the OCR is 2.75%.",
+      "summary": "Economists expect Q3 CPI at 3.7–4.0% a year on Thursday, close to the RBNZ's own 3.9% projection and well above its 1–3% band; the OCR is 2.75%.",
       "beats": {
         "was": "A preview of New Zealand's September-quarter inflation figure.",
         "happened": "Forecasts cluster around 3.8%. ANZ and BNZ expect another hike on October 28.",
@@ -414,7 +672,7 @@
         "was": "Gold's set-up for a quiet US data week, with the Fed in its pre-meeting blackout.",
         "happened": "Spot gold dipped toward $4,073 midweek, then recovered to about $4,166. Brent rose about 5% on the week; the US 10-year hit about 5.11%.",
         "means": "Two forces cancel out: high oil lifts inflation fears and yields, which hurts a metal that pays nothing, but lower October hike odds and a soft dollar index help it.",
-        "fx": "Higher yields \u2192 holding gold costs more \u2192 pressure; softer dollar and fewer hike bets \u2192 support. The lens: do yields or the dollar lead this week?"
+        "fx": "Higher yields → holding gold costs more → pressure; softer dollar and fewer hike bets → support. The lens: do yields or the dollar lead this week?"
       },
       "impact": [
         {
@@ -436,7 +694,7 @@
       "story": "week-ahead",
       "story_title": null,
       "pillar": "inflation",
-      "summary": "UK CPI is expected to rise to 3.4% from 3.1%, above the BoE's 3.0% forecast; Japan's CPI is seen jumping to about 2.8\u20133.0% from 1.9%.",
+      "summary": "UK CPI is expected to rise to 3.4% from 3.1%, above the BoE's 3.0% forecast; Japan's CPI is seen jumping to about 2.8–3.0% from 1.9%.",
       "beats": {
         "was": "A preview of the week's main releases.",
         "happened": "Consensus points to higher inflation in both the UK and Japan; China's GDP and Friday's flash PMIs round out the week.",
@@ -606,7 +864,7 @@
         "was": "Canada's monthly consumer price index, the BoC's main gauge against its 2% target.",
         "happened": "Expectations point to about 3.2% a year, up from 3.0% in August; core measures could also pick up.",
         "means": "3.2% would be well above the 2% target and moving the wrong way, strengthening the case the BoC moves on Oct 28.",
-        "fx": "Hot CPI \u2192 more pressure on the BoC \u2192 hike odds up \u2192 higher Canadian yields \u2192 CAD firmer; a soft print does the reverse. The lens: how much pressure is the BoC under?"
+        "fx": "Hot CPI → more pressure on the BoC → hike odds up → higher Canadian yields → CAD firmer; a soft print does the reverse. The lens: how much pressure is the BoC under?"
       },
       "impact": [
         {
@@ -628,7 +886,7 @@
       "story": "china-q3",
       "story_title": "China: Q3 growth",
       "pillar": "growth",
-      "summary": "A Reuters poll of 50 economists expects 4.4% year-on-year growth, under Beijing's 4.5\u20135% goal despite targeted rate cuts and 550 billion yuan of redirected debt quota.",
+      "summary": "A Reuters poll of 50 economists expects 4.4% year-on-year growth, under Beijing's 4.5–5% goal despite targeted rate cuts and 550 billion yuan of redirected debt quota.",
       "beats": {
         "was": "A forecast for China's third-quarter GDP, due Monday (Sunday 9pm CT).",
         "happened": "The poll's 4.4% is up from 4.3% in Q2 but below July's 4.6% estimate.",
