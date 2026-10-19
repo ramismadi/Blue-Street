@@ -52,7 +52,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   drawer (tap to open) — story `numbers`, engine `figure` + sources, bank
   rate definition / last move / sources, the currency score table. Scene mechanics are commented in app.js ("today: scroll engine");
   `prefers-reduced-motion` gets a plain, fully visible page.
-- The BLUE STREET wordmark and the Today tab go to the clean site URL (no hash).
+- The masthead wordmark is lettered like the sign — big "BLUE" with a small raised "ST" (Inter 800), beside the symbol; it shows on phones too. The wordmark and the Today tab go to the clean site URL (no hash).
 - **Brand (Rami, 2026-10-19):** one colour, **#0A84FF** (the MT5 profit blue; CSS `--brand`, the same in every theme), with ivory **#f6f2ea**. A two-piece family sharing one geometry (512 viewBox: post `x92 y88 w30 h336 rx15`, arrow `M108 150 H384 L438 210 L384 270 H108 Z`, 14px round-join stroke):
   - **Sign** (full logo) = post + arrow + "BLUE" with raised "ST" (Inter 800). Used where the name can be read: home-screen app icon (`icon-512/192`, `apple-touch-icon`: ivory sign on a blue tile), link previews (`assets/og.png`, 1200×630, og/twitter meta), the loading splash (`#splash`, hidden by app.js once the edition renders, 350 ms–2.5 s).
   - **Symbol** = the same post + arrow, no lettering. Used where it's tiny or the name sits beside it: browser tab (`favicon.png`, blue tile), masthead (ivory, before the BLUE STREET wordmark), top of the side menu (brand blue).

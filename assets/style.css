@@ -2477,11 +2477,15 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
   .sess.open::before { width: 5px; height: 5px; margin-right: 3px; }
   .mh-right { gap: 8px; }
 }
-@media (max-width: 440px) {
-  .wordmark { display: none; }   /* the symbol carries the brand; room for the chips */
-}
+
 
 /* Top tabs carry the side-menu icons */
 .tabs a { display: inline-flex; align-items: center; gap: 7px; }
 .tabs a .sn-ico { width: 16px; height: 16px; opacity: 0.85; }
 .tabs a[aria-selected="true"] .sn-ico { opacity: 1; }
+
+/* Masthead wordmark lettered like the sign: big BLUE, small raised ST (Rami, 2026-10-19). */
+.wordmark { font-family: "Inter", var(--sans); font-weight: 800; letter-spacing: 0.02em; font-size: 1.32rem; line-height: 1; display: inline-flex; align-items: flex-start; }
+.wm-st { font-size: 0.5em; margin-left: 0.18em; margin-top: -0.04em; letter-spacing: 0.04em; }
+.brand { gap: 10px; }
+.brand-mark { margin-right: 2px; }
