@@ -1698,16 +1698,8 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .bank.thin .bank-short { color: var(--ink-2); }
 .bank-foot { margin-top: 14px; }
 
-.bias {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 20px;
-  font-size: 0.72rem;
-  font-weight: 700;
-}
-.bias.hawk { background: var(--gold-wash); color: var(--gold); }
-.bias.dove { background: var(--accent-wash); color: var(--accent); }
-.bias.neutral { background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line); }
+/* Central-bank bias pill: word + trend line (colours come from .bias-pill.bull/bear/mixed) */
+.bank-bias { display: inline-flex; align-items: center; gap: 7px; }
 
 /* ---------- CALENDAR ---------- */
 .sr-only {
@@ -2498,9 +2490,6 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .sn-brand { font-family: "Inter", var(--sans); font-weight: 800; font-size: 1.12rem; letter-spacing: 0.02em; text-transform: none; line-height: 1; display: inline-flex; align-items: flex-start; }
 
-/* Blue Street + Night: central-bank bias on one blue scale (Rami, 2026-10-19) */
-[data-theme="blue"] .bias.hawk, [data-theme="night"] .bias.hawk { background: var(--brand); color: #fff; }
-[data-theme="blue"] .bias.dove, [data-theme="night"] .bias.dove { background: var(--accent-wash); color: var(--accent); }
 /* Keep pillar badges distinct from Policy (blue) once gold is gone */
 [data-theme="blue"] .news-pillar.p-inflation, [data-theme="blue"] .news-pillar.p-tot,
 [data-theme="night"] .news-pillar.p-inflation, [data-theme="night"] .news-pillar.p-tot { color: var(--ink-2); background: var(--surface-2); border-color: var(--line); }
@@ -2575,6 +2564,8 @@ html, body { overflow-x: clip; max-width: 100%; }
 @media (max-width: 360px) { .l-tally { white-space: normal; font-size: 0.74rem; } }
 
 .bank-summary { font-size: 1.04rem; line-height: 1.5; margin: 6px 0 10px; }
+.bank-note { margin: 0 0 12px; }
+.bank-note p { margin: 3px 0 0; font-size: 0.95rem; line-height: 1.45; color: var(--ink); }
 .bank-detail { font-size: 0.86rem; line-height: 1.5; color: var(--ink-2); margin: 0 0 10px; }
 .bank .bank-priced span:last-child { font-family: var(--sans); font-size: 0.92rem; line-height: 1.4; }
 /* Today's read chips: flag + code (Rami, 2026-10-19). */

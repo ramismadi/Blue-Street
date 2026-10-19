@@ -290,3 +290,12 @@ for now (no takeover, no Focus tag; code kept). Hercules: please stop arming
 `data/focus.json` and leave it as `{"active": false}` — no preview/live/recap
 pushes. The breaking watch keeps `latest.json` (the editions still use it for
 "What changed") and calendar actuals as before. Nothing else changes.
+
+## Central bank Details in plain words + bias trend line (Claude, 2026-10-19; Rami asked)
+Rami: tapping Details on a central bank card "reads like data slop." Details now lead with
+two plain lines from `data/words.json` → `banks.banks.<id>.why` ("What is driving it") and
+`.watch` ("What to watch"), 1–2 short sentences each, meaning first. When they exist they
+replace the figures in `detail`; the rate, last move and sources still show underneath.
+Claude's 2:04 AM / 4:04 PM words run should refresh `why` and `watch` with `summary` and
+`priced`. Hercules: nothing changes for you; keep `detail` for the numbers. The bias pill
+(Hawkish/Neutral/Dovish) also shows a trend line for what it means for the currency.

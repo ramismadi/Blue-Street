@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '78';
+  var ASSET_VERSION = '79';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -197,6 +197,8 @@
         if (!b.detail && b.priced && x.priced) b.detail = b.priced;
         if (x.summary) b.summary = x.summary;
         if (x.priced) b.priced = x.priced;
+        if (x.why) b.why = x.why;       // plain Details text (Rami, 2026-10-19)
+        if (x.watch) b.watch = x.watch;
       });
     }
     return d;
@@ -1729,7 +1731,14 @@
     return el('span', 'move flat', 'Held' + when);
   }
 
-  var BIAS = { hawkish: ['Hawkish', 'hawk'], dovish: ['Dovish', 'dove'], neutral: ['Neutral', 'neutral'] };
+  /* Rami, 2026-10-19: the trend line next to the bias shows which way it tends to push
+     the currency. Hawkish (rates up) lifts it, dovish (rates down) weighs on it,
+     neutral goes sideways. Same line and colours as the News tab. */
+  var BIAS = {
+    hawkish: ['Hawkish', 'bull', 'tends to support'],
+    dovish: ['Dovish', 'bear', 'tends to weigh on'],
+    neutral: ['Neutral', 'mixed', 'is not pushing']
+  };
 
   function renderBanks(d) {
     if (d.updated) setText('#banks-updated', fmtDateTime(d.updated, true));
@@ -1752,7 +1761,13 @@
       var head = el('div', 'bank-head');
       head.appendChild(el('span', 'bank-short', b.short));
       head.appendChild(el('span', 'bank-ccy mono', b.ccy || ''));
-      if (b.bias && BIAS[b.bias]) head.appendChild(el('span', 'bias ' + BIAS[b.bias][1], BIAS[b.bias][0]));
+      if (b.bias && BIAS[b.bias]) {
+        var BX = BIAS[b.bias], bp = el('span', 'bias-pill bank-bias ' + BX[1]);
+        bp.appendChild(el('span', null, BX[0]));
+        bp.appendChild(trendIcon(BX[1]));
+        bp.title = BX[0] + ': ' + BX[2] + ' ' + (b.ccy || 'the currency');
+        head.appendChild(bp);
+      }
       c.appendChild(head);
       c.appendChild(el('p', 'bank-name', b.name));
 
@@ -1788,9 +1803,19 @@
       if (o.covered) {
         // Raw numbers: rate definition, last move, sources — on tap.
         var mc = moveChip(b.last_move);
-        if (b.rate_label || mc || b.detail || (b.sources || []).length) {
+        var plain = !!(b.why || b.watch);
+        if (b.rate_label || mc || b.detail || plain || (b.sources || []).length) {
           var det = drawer('Details');
-          if (b.detail) det.appendChild(el('p', 'bank-detail', b.detail));
+          // Rami, 2026-10-19: the old Details read like data slop. When plain-words text
+          // exists (words.json) it replaces the number-heavy detail; otherwise fall back.
+          [['What is driving it', b.why], ['What to watch', b.watch]].forEach(function (r) {
+            if (!r[1]) return;
+            var blk = el('div', 'bank-note');
+            blk.appendChild(el('span', 'meet-lbl', r[0]));
+            blk.appendChild(el('p', null, r[1]));
+            det.appendChild(blk);
+          });
+          if (b.detail && !plain) det.appendChild(el('p', 'bank-detail', b.detail));
           if (b.rate_label) det.appendChild(el('p', 'rate-lbl', b.rate_label + ': ' + (b.rate || '—')));
           if (mc) det.appendChild(mc);
           if ((b.sources || []).length) det.appendChild(sourceChips(b.sources));
@@ -3864,7 +3889,7 @@
   var gloss = { re: null, map: {}, list: [], byId: {}, loaded: false, pop: null, pinned: null, queued: false };
   var GL_SKIP = 'a, button, summary, h1, h2, time, script, style, .gl, .mono, .fig, .chip, .kicker, ' +
     '.section-label, .callout-lbl, .lbl, .narr-lbl, .drawer-lbl, .tag, .badge, .ev-ccy, .sr-only, ' +
-    '.bias, .meet-lbl, .rate-val, .bank-short, .bank-name, .seg';
+    '.bias-pill, .meet-lbl, .rate-val, .bank-short, .bank-name, .seg';
 
   function initGlossary() {
     fetchJSON('data/glossary.json').then(function (d) {
