@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '63';
+  var ASSET_VERSION = '64';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -439,6 +439,9 @@
       try { localStorage.setItem('bluestreet-theme', t.id); } catch (e) { /* private mode */ }
     }
     syncSideTheme();
+    // The phone's status-bar strip follows the theme's masthead colour.
+    var tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.setAttribute('content', (getComputedStyle(root).getPropertyValue('--mast-1') || '#0a84ff').trim());
   }
 
   /* ---------------- tabs / routing ---------------- */

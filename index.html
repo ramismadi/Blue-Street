@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=63">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=63">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=64">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=64">
 <meta name="theme-color" content="#0a84ff">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,14 +18,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=63">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=64">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=63">
+<link rel="stylesheet" href="assets/style.css?v=64">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -33,12 +33,15 @@
     if (t) document.documentElement.setAttribute('data-theme', t);
     if (/^(night|ink|forest|velvet|onyx)$/.test(t || '')) document.documentElement.setAttribute('data-mode', 'dark');
     /* Side-menu layout, also before first paint. */
+    /* Status-bar colour = the theme's masthead colour, before first paint. */
+    var MAST = { blue: '#0a84ff', night: '#0a84ff', ivory: '#16263f', ink: '#080c13', sage: '#22443a', forest: '#0a120f', claret: '#4a1320', velvet: '#1d0a10', pearl: '#0f0f10', onyx: '#0a0a0b' };
+    if (t && MAST[t]) document.querySelector('meta[name="theme-color"]').setAttribute('content', MAST[t]);
     if (localStorage.getItem('bluestreet-nav') === 'side') document.documentElement.setAttribute('data-nav', 'side');
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=63" defer></script>
-<script src="assets/app.js?v=63" defer></script>
+<script src="assets/cot.js?v=64" defer></script>
+<script src="assets/app.js?v=64" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
