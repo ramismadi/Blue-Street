@@ -705,7 +705,7 @@ line starting `HANDOVER CONFIRMED` (Hercules or Rami adds it, ideally with the
 first edition date). From that edition on, please don't write `story.json` or
 `engine.json`. Until then, nothing changes for you.
 
-HANDOVER CONFIRMED — first edition 2026-10-20 (Rami, 2026-10-19). From the 3:07 AM CT edition on Tue Oct 20, Claude writes `data/story.json` and `data/engine.json` in full. Hercules: from then on please stop writing those two files; keep the data files listed above (and `data/markets.json` if you can — it makes the editions better).
+HANDOVER CONFIRMED — first edition 2026-10-19 (Rami, 2026-10-19; moved up from Oct 20 because Hercules' jobs already stopped writing story/engine). From the 4:52 PM CT afternoon edition on Mon Oct 19, Claude writes `data/story.json` and `data/engine.json` in full. Hercules: from then on please stop writing those two files; keep the data files listed above (and `data/markets.json` if you can — it makes the editions better).
 
 Later phases (not started): Focus Mode prose (preview/recap), Week Ahead
 (Sun 5:30 PM) and Week in Review (Fri 5 PM) via `weekly.json`.
@@ -768,3 +768,10 @@ Same complaint as the engine: the bank cards "come off as data slop."
 - `detail` — the numbers, odds, prints and dates (inside Details only).
 Claude rewrote today's eight cards this way and moved the old `priced` text
 into `detail`. Hercules: please keep this shape when you refresh banks.json.
+
+## Hercules confirmed the fixes (Rami relayed, 2026-10-19 11:53 CT)
+- One commit per run via a new changed-files-only pusher; no commit when nothing changed. All three jobs (2 AM, 4 PM, breaking watch) push once.
+- Commit labels: `data: YYYY-MM-DD edition`, `data: YYYY-MM-DD NY-close edition`, `data: latest — <headline>`. Old name removed from job instructions.
+- 2 AM / 4 PM runs now touch only calendar, banks, currencies, momentum, pillars, news-raw and the new `data/markets.json`. Breaking watch owns latest.json, focus.json (arm, recap, disarm) and calendar actuals.
+- Tabtabai item on a do-not-resurrect list; every pickup is checked against the article's real publish date.
+- Herc no longer writes story.json / engine.json / words.json, so the handover start moved to today's afternoon edition.
