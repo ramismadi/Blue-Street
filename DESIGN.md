@@ -266,6 +266,8 @@ honest). Text is rendered with `textContent` only.
 for CPI, FOMC, hawkish) so the pages can be reviewed before the feed has any.
 
 ### `data/focus.json` — Focus Mode (big-event Today takeover)
+**TABLED (Rami, 2026-10-19):** switched off with `FOCUS_ON = false` in app.js — no polling, no Today takeover, no Focus tag in the calendar. Code and demo (`?focus-demo=…`) kept for a redesign later.
+
 ```
 {"active": true, "event_id": "us-cpi-20261014",   // = calendar.json event id
  "phase": "preview" | "live" | "recap",

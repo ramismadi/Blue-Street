@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '76';
+  var ASSET_VERSION = '77';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -2460,7 +2460,7 @@
 
     var t = el('span', 'ev-title');
     var nm = el('span', 'ev-name', e.title);
-    if (e.focus) nm.appendChild(el('span', 'ev-focus', 'Focus'));
+    if (e.focus && FOCUS_ON) nm.appendChild(el('span', 'ev-focus', 'Focus'));
     t.appendChild(nm);
     if (!up && e.outcome) t.appendChild(el('span', 'ev-outcome', e.outcome));
     if (up && w) {
@@ -4242,9 +4242,14 @@
                 demo: null, demoItems: null, timer: 0, title: document.title };
   var FOCUS_ACTS = [['preview', 'Preview'], ['live', 'Live'], ['recap', 'Recap']];
 
+  /* Focus Mode is tabled (Rami, 2026-10-19): it needs a fresh look after the
+     redesign. Off = no focus.json polling and no takeover on Today. The code
+     stays; ?focus-demo=preview|live|recap still shows it for the redesign. */
+  var FOCUS_ON = false;
   function initFocus() {
     var m = /[?&]focus-demo=(preview|live|recap)\b/.exec(location.search);
     if (m) focus.demo = m[1];
+    if (!FOCUS_ON && !focus.demo) return;
     pollFocus();
     setInterval(tickFocus, 1000);
     document.addEventListener('visibilitychange', function () {
@@ -4342,7 +4347,7 @@
   function renderFocus() {
     var box = $('#focus'), view = $('#view-today'), badge = $('#focus-badge');
     if (!box) return;
-    var f = focus.data;
+    var f = (FOCUS_ON || focus.demo) ? focus.data : null;
     if (!f || !f.active) {
       box.hidden = true;
       box.textContent = '';

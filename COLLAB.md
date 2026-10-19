@@ -776,3 +776,10 @@ into `detail`. Hercules: please keep this shape when you refresh banks.json.
 - 2 AM / 4 PM runs now touch only calendar, banks, currencies, momentum, pillars, news-raw and the new `data/markets.json`. Breaking watch owns latest.json, focus.json (arm, recap, disarm) and calendar actuals.
 - Tabtabai item on a do-not-resurrect list; every pickup is checked against the article's real publish date.
 - Herc no longer writes story.json / engine.json / words.json, so the handover start moved to today's afternoon edition.
+
+## Focus Mode tabled (Rami, 2026-10-19 12:00 CT)
+Rami wants Focus Mode re-thought after the redesign, so it's off on the site
+for now (no takeover, no Focus tag; code kept). Hercules: please stop arming
+`data/focus.json` and leave it as `{"active": false}` — no preview/live/recap
+pushes. The breaking watch keeps `latest.json` (the editions still use it for
+"What changed") and calendar actuals as before. Nothing else changes.
