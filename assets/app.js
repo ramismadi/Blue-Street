@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '81';
+  var ASSET_VERSION = '82';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -1855,17 +1855,20 @@
   }
 
   /* ---------------- positioning (COT) ----------------
-     data/cot.json (Claude's weekly job; numbers from assets/cot.js) →
-     who's crowded, per market. Hedge funds (leveraged / managed money) are
-     the filled dot, real money (asset managers, currencies only) the ring,
-     on a 0–100 percentile track vs their own history since 2015.
+     data/cot.json (Claude's weekly job; numbers from assets/cot.js) → how
+     hedge funds are leaning on each market compared with their own usual
+     since 2015. One dot per row (hedge funds), coloured by lean; real money
+     only surfaces when it disagrees. Rami, 2026-10-19: no legend, no
+     how-to — the row says it in words.
      Safety net: no file, or a report behind → build live from the CFTC in
      the reader's browser with the same code. */
   var cot = { data: null, live: false, focus: '', loading: false };
   var COT_ZONES = {
-    'crowded long': 'Crowded long', 'long-side': 'Long-side', 'neutral': 'Neutral',
-    'short-side': 'Short-side', 'crowded short': 'Crowded short'
+    'very bullish': 'Much more bullish', 'bullish': 'More bullish', 'neutral': 'About usual',
+    'bearish': 'More bearish', 'very bearish': 'Much more bearish'
   };
+  function cotTone(z) { return /bullish/.test(z) ? 'bull' : /bearish/.test(z) ? 'bear' : 'flat'; }
+  function cotWord(z) { return /bullish/.test(z) ? 'bullish' : /bearish/.test(z) ? 'bearish' : 'neutral'; }
 
   function initCot() {
     fetchJSON('data/cot.json').then(function (d) {
@@ -1926,28 +1929,15 @@
 
   function stretch(m) { return Math.abs(m.hf.pct - 50); }
 
-  /* 0–100 percentile track: zone bands, hedge funds = dot, real money = ring. */
+  /* One dot on a bearish ← usual → bullish track, coloured by lean. */
   function cotGauge(m) {
     var g = el('div', 'cg');
     g.setAttribute('role', 'img');
-    g.setAttribute('aria-label', 'Hedge funds ' + ordinalN(m.hf.pct) + ' percentile' +
-      (m.rm ? ', real money ' + ordinalN(m.rm.pct) + ' percentile' : ''));
+    g.setAttribute('aria-label', 'Hedge funds: ' + (COT_ZONES[m.hf.zone] || m.hf.zone).toLowerCase() + ' than usual on ' + m.name);
     var tr = el('div', 'cg-track');
-    [['cs', 0, 10], ['ss', 10, 40], ['nn', 40, 60], ['ls', 60, 90], ['cl', 90, 100]].forEach(function (z) {
-      var b = el('i', 'cg-band cg-' + z[0]);
-      b.style.left = z[1] + '%';
-      b.style.width = (z[2] - z[1]) + '%';
-      tr.appendChild(b);
-    });
-    if (m.rm) {
-      var r = el('b', 'cg-rm');
-      r.style.left = m.rm.pct + '%';
-      r.title = 'Real money · ' + ordinalN(m.rm.pct) + ' percentile';
-      tr.appendChild(r);
-    }
-    var h = el('b', 'cg-hf');
-    h.style.left = m.hf.pct + '%';
-    h.title = 'Hedge funds · ' + ordinalN(m.hf.pct) + ' percentile';
+    tr.appendChild(el('i', 'cg-mid'));
+    var h = el('b', 'cg-hf tone-' + cotTone(m.hf.zone));
+    h.style.left = Math.min(97, Math.max(3, m.hf.pct)) + '%';
     tr.appendChild(h);
     g.appendChild(tr);
     return g;
@@ -1998,13 +1988,10 @@
     box.appendChild(el('p', 'cf-lbl', label));
     var dl = el('dl', 'cf-grid');
     [
-      ['Net', fmtSigned(g.net)],
+      ['Net position', fmtSigned(g.net) + ' contracts'],
       ['Longs · shorts', fmtCount(g.long) + ' · ' + fmtCount(g.short)],
-      ['Flip (net ÷ open interest)', (g.flip > 0 ? '+' : '') + g.flip.toFixed(2) + '%'],
-      ['Percentile since 2015', ordinalN(g.pct) + ' · ' + (COT_ZONES[g.zone] || g.zone)],
-      ['Z-score 10y · 1y', (g.z.y10 == null ? '—' : g.z.y10.toFixed(2)) + ' · ' + (g.z.y1 == null ? '—' : g.z.y1.toFixed(2))],
-      ['12-week range', g.range12 + '% of the way up'],
-      ['Change 1w · 4w', fmtSigned(g.chg1) + ' · ' + fmtSigned(g.chg4)]
+      ['Compared with usual since 2015', ordinalN(g.pct) + ' percentile · ' + (COT_ZONES[g.zone] || g.zone).toLowerCase()],
+      ['Change over 1 week · 4 weeks', fmtSigned(g.chg1) + ' · ' + fmtSigned(g.chg4)]
     ].forEach(function (r) {
       dl.appendChild(el('dt', null, r[0]));
       dl.appendChild(el('dd', 'mono', r[1]));
@@ -2021,25 +2008,27 @@
     s.appendChild(el('span', 'cot-id mono', m.id));
     s.appendChild(el('span', 'cot-name', m.name));
     s.appendChild(cotGauge(m));
-    var zl = el('span', 'cot-zone z-' + m.hf.zone.replace(' ', '-'));
+    var zl = el('span', 'cot-zone tone-' + cotTone(m.hf.zone));
     zl.appendChild(el('b', null, COT_ZONES[m.hf.zone] || m.hf.zone));
-    zl.appendChild(el('span', 'mono', ' ' + ordinalN(m.hf.pct)));
     s.appendChild(zl);
     var flags = el('span', 'cot-flags');
-    if (m.split) flags.appendChild(el('span', 'cot-flag split', 'Split'));
-    if (m.hf.range12 === 0 || m.hf.range12 === 100) {
-      flags.appendChild(el('span', 'cot-flag ext', m.hf.range12 === 0 ? '12w low' : '12w high'));
+    if (m.split) {
+      var sp = el('span', 'cot-flag split', 'Real money disagrees');
+      sp.title = 'Real money is ' + cotWord(m.rm.zone) + ' while the hedge funds are ' + cotWord(m.hf.zone);
+      flags.appendChild(sp);
     }
     s.appendChild(flags);
     d.appendChild(s);
 
     var body = el('div', 'cot-body');
     body.appendChild(el('p', 'cot-prose', m.summary));
-    body.appendChild(el('p', 'meta cot-means', 'Long here means betting on the ' + m.long_means + '.' +
-      (m.signal ? ' Engine positioning read: ' + (m.signal > 0 ? '+1 (crowded short — squeeze risk up)' : '−1 (crowded long — unwind risk down)') + '.' : '')));
+    if (m.rm && !m.split) {
+      body.appendChild(el('p', 'meta cot-means', 'Real money, the slower long-term investors, is ' + (COT_ZONES[m.rm.zone] || m.rm.zone).toLowerCase() + ' than usual.'));
+    }
+    body.appendChild(el('p', 'meta cot-means', 'Bullish here means betting on ' + m.long_means + '.'));
     var charts = el('div', 'cot-charts');
-    charts.appendChild(cotBars(m.history, 'hf', 'Hedge funds · net contracts, 26 weeks'));
-    if (m.rm) charts.appendChild(cotBars(m.history, 'rm', 'Real money · net contracts, 26 weeks'));
+    charts.appendChild(cotBars(m.history, 'hf', 'Hedge funds · weekly net bets, 26 weeks (up = bullish)'));
+    if (m.rm) charts.appendChild(cotBars(m.history, 'rm', 'Real money · weekly net bets, 26 weeks (up = bullish)'));
     body.appendChild(charts);
     var det = drawer('Details', 'the numbers');
     var figs = el('div', 'cot-figs');
@@ -2063,33 +2052,39 @@
     return d;
   }
 
-  /* The takeaway, in words: what's crowded, where the two camps split, and
-     the biggest move of the month. */
+  /* The takeaway, in plain words: any extremes, who leans where, where the two
+     camps disagree, and the biggest move of the month. */
   function cotTakeaway(ms) {
     var lines = [];
-    var crowded = ms.filter(function (m) { return /crowded/.test(m.hf.zone); });
-    if (crowded.length) {
-      lines.push('Crowded: ' + crowded.map(function (m) {
-        return m.name + ' (' + (m.hf.zone === 'crowded long' ? 'long' : 'short') + ', ' + ordinalN(m.hf.pct) + ' pct)';
-      }).join(', ') + '.');
-    } else {
-      lines.push('Nothing is crowded this week — no hedge-fund reading at the 10th or 90th percentile.');
-    }
-    var fxs = ms.filter(function (m) { return m.kind === 'fx' && !/crowded/.test(m.hf.zone); })
+    var ext = ms.filter(function (m) { return /^very/.test(m.hf.zone); })
       .sort(function (a, b) { return stretch(b) - stretch(a); });
-    if (fxs.length && stretch(fxs[0]) >= 10) {
-      var t = fxs[0];
-      lines.push('Most stretched currency: ' + t.id + ', hedge funds ' + (t.hf.pct >= 50 ? 'long-side' : 'short-side') + ' at the ' + ordinalN(t.hf.pct) + ' percentile.');
+    if (ext.length) {
+      lines.push(ext.slice(0, 2).map(function (m) { return firstSentences(m.summary, 1, 40); }).join(' ') +
+        ' When funds sit this far from their usual, a sharp move the other way is more likely.');
+    } else {
+      lines.push('No market is at an extreme this week. Every hedge fund bet is within its usual range.');
+    }
+    var fxs = ms.filter(function (m) { return m.kind === 'fx'; }).sort(function (a, b) { return b.hf.pct - a.hf.pct; });
+    if (fxs.length > 1) {
+      var up = fxs[0], dn = fxs[fxs.length - 1], bits = [];
+      if (up.hf.pct >= 60) bits.push('more bullish than usual on ' + up.ref);
+      if (dn.hf.pct <= 40) bits.push('more bearish than usual on ' + dn.ref);
+      if (bits.length) lines.push('Among currencies, hedge funds are ' + bits.join(' and ') + '.');
     }
     var splits = ms.filter(function (m) { return m.split; });
     if (splits.length) {
-      lines.push('Hedge funds and real money lean opposite ways on ' + splits.map(function (m) { return m.id; }).join(', ') + '.');
+      lines.push('Real money disagrees with the hedge funds on ' + splits.map(function (m) {
+        return m.ref + ' (hedge funds ' + cotWord(m.hf.zone) + ', real money ' + cotWord(m.rm.zone) + ')';
+      }).join(' and ') + '.');
     }
     var mover = ms.slice().filter(function (m) { return m.hf.chg4 != null && m.oi; })
       .sort(function (a, b) { return Math.abs(b.hf.chg4) / b.oi - Math.abs(a.hf.chg4) / a.oi; })[0];
     if (mover) {
-      lines.push('Biggest 4-week shift: ' + mover.name + ', hedge funds ' + fmtSigned(mover.hf.chg4) + ' contracts' +
-        (mover.hf.range12 === 0 ? ' to a 12-week low.' : mover.hf.range12 === 100 ? ' to a 12-week high.' : '.'));
+      var sh = Math.abs(mover.hf.chg4) / mover.oi * 100;
+      lines.push('Biggest shift over the past month: hedge funds turned ' + (sh >= 10 ? 'sharply ' : '') + 'more ' +
+        (mover.hf.chg4 > 0 ? 'bullish' : 'bearish') + ' on ' + mover.ref +
+        ((cotTone(mover.hf.zone) === 'bull' && mover.hf.chg4 < 0) || (cotTone(mover.hf.zone) === 'bear' && mover.hf.chg4 > 0)
+          ? ', though they are still ' + (COT_ZONES[mover.hf.zone] || '').toLowerCase() + ' than usual' : '') + '.');
     }
     return lines;
   }
@@ -2118,7 +2113,8 @@
     top.appendChild(ul);
     box.appendChild(top);
 
-    [['fx', 'Currencies', 'vs the US dollar (USD = ICE Dollar Index)'], ['commodity', 'Commodities', 'feed the terms-of-trade pillar: oil → CAD, NOK · metals → AUD, NZD']].forEach(function (grp) {
+    [['fx', 'Currencies', 'Hedge funds’ lean on each one, compared with their usual since 2015'],
+     ['commodity', 'Commodities', 'Same lean, for the markets that feed the terms-of-trade pillar']].forEach(function (grp) {
       var list = ms.filter(function (m) { return m.kind === grp[0]; })
         .sort(function (a, b) { return stretch(b) - stretch(a); });
       if (!list.length) return;
@@ -2127,25 +2123,25 @@
       hd.appendChild(el('h2', 'section-label', grp[1]));
       hd.appendChild(el('span', 'meta', grp[2]));
       sec.appendChild(hd);
-      var leg = el('div', 'cot-legend meta');
-      leg.appendChild(el('span', 'cl-hf', 'Hedge funds'));
-      if (grp[0] === 'fx') leg.appendChild(el('span', 'cl-rm', 'Real money'));
-      leg.appendChild(el('span', 'cl-scale', 'Crowded short ← percentile vs own history since 2015 → crowded long'));
-      sec.appendChild(leg);
+      var ax = el('div', 'cot-axis meta');
+      ax.appendChild(el('span', 'ca-l', 'More bearish'));
+      ax.appendChild(el('span', 'ca-m', 'Usual'));
+      ax.appendChild(el('span', 'ca-r', 'More bullish'));
+      sec.appendChild(ax);
       list.forEach(function (m) { sec.appendChild(cotRow(m)); });
       box.appendChild(sec);
     });
 
-    var how = el('section', 'card cot-how');
-    how.appendChild(el('h2', 'section-label', 'How to read this'));
+    var about = el('section', 'card cot-how');
+    var ab = drawer('About this data', 'where it comes from');
     [
-      'Every Friday the CFTC publishes who holds what in US futures as of Tuesday. Hedge funds and CTAs are the fast, trend-following money; asset managers are the slower real money.',
-      'The percentile ranks this week’s net position (as a share of open interest) against every week since January 2015. At the 90th or above, a trade is crowded long; at the 10th or below, crowded short. Crowded trades are fragile — if everyone is already long, there is no one left to buy.',
-      'A split — hedge funds and real money leaning opposite ways — is worth watching: one side is usually wrong, and the unwind can be sharp.',
-      'Positioning is a risk gauge, not an entry signal. Extremes can persist and get more extreme. It lags by three days.'
-    ].forEach(function (p) { how.appendChild(el('p', null, p)); });
-    how.appendChild(el('p', 'meta', 'Method: ' + (d.method || '')));
-    box.appendChild(how);
+      'Every Friday the CFTC publishes what big traders hold in US futures, as of the Tuesday before. Hedge funds are the fast, trend-following money; real money means slower asset managers.',
+      'Each dot compares this week’s bet with every week since January 2015, so the far ends mean about as bullish or bearish as they have been in years. Positioning is context, not a signal, and it runs about three days behind.'
+    ].forEach(function (t) { ab.appendChild(el('p', null, t)); });
+    ab.appendChild(el('p', 'meta', 'Method: ' + (d.method || '')));
+    ab.appendChild(sourceChips(d.sources || []));
+    about.appendChild(ab);
+    box.appendChild(about);
 
     if (cot.focus) {
       var row = $('#cot-' + cot.focus);
@@ -2160,8 +2156,7 @@
     var a = el('a', 'fd-cot');
     a.href = '#positioning/' + ccy;
     a.appendChild(el('span', 'callout-lbl', 'Positioning'));
-    a.appendChild(el('span', null, 'Hedge funds ' + (COT_ZONES[m.hf.zone] || m.hf.zone).toLowerCase() + ' (' + ordinalN(m.hf.pct) + ' pct)' +
-      (m.rm ? ' · real money ' + ordinalN(m.rm.pct) : '') + (m.split ? ' · split' : '') + ' →'));
+    a.appendChild(el('span', null, 'Hedge funds ' + (COT_ZONES[m.hf.zone] || m.hf.zone).toLowerCase() + ' than usual' + (m.split ? ' · real money disagrees' : '') + ' →'));
     return a;
   }
 

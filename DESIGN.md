@@ -414,7 +414,7 @@ calculator instead (pushing `assets/cot.js` re-runs the job).
          "range12","chg1","chg4","weeks","since"},  // hedge funds & CTAs
    "rm":{...same...},                                 // real money — fx only
    "split":false,        // hf and rm lean opposite ways vs their own history
-   "signal":0,           // engine positioning score: crowded long −1, crowded short +1
+   "signal":0,           // engine positioning score: very bullish −1, very bearish +1
    "history":[{"d","hf","oi","rm"?}],                // last 26 weeks, net contracts
    "summary":"one plain-English line"}]}
 ```
@@ -424,20 +424,26 @@ calculator instead (pushing `assets/cot.js` re-runs the job).
   (Managed Money). Futures only. Contract codes keep full history through the
   CFTC's 2022 renames, so every market ranks against Jan 2015 onward.
 - **Maths:** flip = (long − short) ÷ open interest × 100; `pct` = mid-rank of
-  this week's flip vs every week since Jan 2015; zones ≥90 crowded long,
-  ≥60 long-side, ≤40 short-side, ≤10 crowded short; `range12` = where the net
+  this week's flip vs every week since Jan 2015; zones (a lean
+  compared with the group's own usual) ≥90 `very bullish`, ≥60 `bullish`,
+  ≤40 `bearish`, ≤10 `very bearish`, else `neutral`; `range12` = where the net
   sits in its 12-week range (0 = 12-week low). Calibrated 2026-10-14 against a
   public benchmark: EUR/JPY/AUD/CAD/CHF percentiles match to ±0.1.
 - **Safety net:** if the file is missing or a report behind (`isStale`), the
   Positioning tab rebuilds live in the reader's browser from the CFTC and
   says so in the header.
 
-How it renders: "This week" takeaway (crowded markets, most stretched
-currency, splits, biggest 4-week shift) → Currencies and Commodities, each
-sorted by distance from the 50th percentile. Each row: percentile track with
-zone bands, filled dot = hedge funds, gold ring = real money, zone label,
-Split / 12w low / 12w high flags. Tap a row: the summary, 26-week bars for
-each group, Details drawer with the numbers and sources. The currency page
+How it renders (redesigned 2026-10-19, Rami: no "how to read this", no jargon):
+"This week" takeaway in plain sentences (any extreme, the most bullish and most
+bearish currency, where real money disagrees, the biggest shift of the month) →
+Currencies and Commodities, each sorted by distance from the middle. Each row:
+one dot on a "More bearish ← usual → More bullish" track (the group's lean
+compared with its own history since 2015), coloured green/red/grey, a verdict in
+words (Much more bullish … About usual … Much more bearish), and a "Real money
+disagrees" tag only when it does. Tap a row: the summary, 26-week bars, a
+Details drawer with the numbers and sources. A small "About this data" drawer
+sits at the bottom; there is no how-to section. Never the words "crowded" or
+"stretched" (Rami found them unclear). The currency page
 shows a one-line "Positioning" link under Trend.
 
 ### `data/banks.json` — Central banks

@@ -167,10 +167,10 @@ write to `data/cot.json`, `assets/cot.js` or `tools/cot-build.cjs`.
 **Request for Hercules (engine + currencies):** the positioning pillar should
 now come from this file instead of news reports:
 - `currencies.json` → `drivers.positioning.score` = that market's `signal`
-  (−1 crowded long, +1 crowded short, else 0 — the rule the `method` string
+  (−1 very bullish, +1 very bearish, else 0 — the rule the `method` string
   already describes), and `note` = its `summary` (or a shorter version of it).
 - `engine.json` positioning row → lead `read` with the "This week" picture:
-  what's crowded, any splits, the biggest 4-week shift. Cite the CFTC source
+  any extremes, splits, the biggest 4-week shift. Cite the CFTC source
   from the file, report date included.
 - News figures on positioning (e.g. "aggregate USD longs $35.5bn") can still
   add colour, but the score comes from the CFTC numbers.
@@ -308,3 +308,10 @@ market pricing and what the bank itself has signalled: hawkish = a hike is the l
 dovish = a cut is, neutral = neither. Change a label only when pricing or signals actually change.
 Hercules: please stop writing `bias` in `banks.json`; keep rates, last move, meeting dates, odds and
 sources. Today's labels: BoC and SNB corrected (BoC hawkish, SNB dovish).
+
+## Positioning page redesigned (Claude, 2026-10-19; Rami asked)
+Positioning is now plain words: one dot per market on a "More bearish ← usual → More bullish"
+track, a verdict word, and "Real money disagrees" only when it does. The "How to read this"
+section is gone. Zone names in `cot.json` changed (`very bullish`, `bullish`, `neutral`,
+`bearish`, `very bearish`); the Friday build writes them and the page's summaries. Hercules:
+if you use the positioning score, it is still −1 / 0 / +1 (very bullish −1, very bearish +1).

@@ -16,10 +16,11 @@
      percentile = mid-rank of the current flip vs every weekly flip since
                   2015-01-06 (inclusive of the current week)
      z-scores   = current flip vs the full history, last 520 and last 52 weeks
-     zones      = ≥90 crowded long · ≥60 long-side · ≤40 short-side ·
-                  ≤10 crowded short · otherwise neutral
+     zones      = ≥90 very bullish · ≥60 bullish · ≤40 bearish ·
+                  ≤10 very bearish · otherwise neutral (a lean on the
+                  currency, measured against the group's own history)
      signal     = contrarian engine score from the hedge-fund (leveraged /
-                  managed money) zone: crowded long −1, crowded short +1, else 0
+                  managed money) zone: very bullish −1, very bearish +1, else 0
    Currencies use the Traders in Financial Futures report (futures only):
    Leveraged Money = hedge funds & CTAs, Asset Manager = real money.
    Commodities use the Disaggregated report (futures only): Managed Money. */
@@ -75,14 +76,14 @@
   function round(x, n) { var f = Math.pow(10, n); return Math.round(x * f) / f; }
 
   function zone(pct) {
-    if (pct >= 90) return 'crowded long';
-    if (pct >= 60) return 'long-side';
-    if (pct <= 10) return 'crowded short';
-    if (pct <= 40) return 'short-side';
+    if (pct >= 90) return 'very bullish';
+    if (pct >= 60) return 'bullish';
+    if (pct <= 10) return 'very bearish';
+    if (pct <= 40) return 'bearish';
     return 'neutral';
   }
   function side(z) {
-    return /long/.test(z) ? 1 : /short/.test(z) ? -1 : 0;
+    return /bullish/.test(z) ? 1 : /bearish/.test(z) ? -1 : 0;
   }
 
   /* weeks: [{d, l, s, oi}] oldest → newest */
@@ -120,46 +121,43 @@
     return r + (s[(v - 20) % 10] || s[v] || s[0]);
   }
 
-  function pctText(p) {
-    if (p < 0.5) return 'the lowest reading since 2015';
-    if (p > 99.5) return 'the highest reading since 2015';
-    return ordinal(p) + ' percentile';
+  /* Plain words (Rami, 2026-10-19): a lean on the currency compared with the
+     group's own usual since 2015, not jargon. "bullish" = betting it rises. */
+  function lean(g, who, ref) {
+    var z = g.zone, longNet = g.net >= 0, top = g.pct > 99.5, bot = g.pct < 0.5;
+    if (z === 'neutral') return who + ' are neutral on ' + ref + ', about their usual.';
+    if (z === 'very bullish') {
+      return longNet ? who + ' are ' + (top ? 'more bullish on ' + ref + ' than at any time since 2015.' : 'about as bullish on ' + ref + ' as they have been since 2015.')
+        : who + ' are still net short ' + ref + ', but ' + (top ? 'less than at any time since 2015.' : 'about as little as they have been since 2015.');
+    }
+    if (z === 'very bearish') {
+      return !longNet ? who + ' are ' + (bot ? 'more bearish on ' + ref + ' than at any time since 2015.' : 'about as bearish on ' + ref + ' as they have been since 2015.')
+        : who + ' are still net long ' + ref + ', but ' + (bot ? 'less than at any time since 2015.' : 'about as little as they have been since 2015.');
+    }
+    if (z === 'bullish') return longNet ? who + ' are more bullish on ' + ref + ' than usual.' : who + ' are still net short ' + ref + ', but less than usual.';
+    return !longNet ? who + ' are more bearish on ' + ref + ' than usual.' : who + ' are still net long ' + ref + ', but less than usual.';
   }
 
-  /* "net long, but light for them" — the absolute side and where it sits in
-     its own history are different things, and the sentence says both. */
-  function stance(g) {
-    var dir = g.net >= 0 ? 'net long' : 'net short';
-    var s = side(g.zone), sign = g.net >= 0 ? 1 : -1;
-    var rel = g.zone === 'neutral' ? 'mid-range for them'
-      : g.zone === 'crowded long' ? (sign > 0 ? 'a crowded long by their own history' : 'yet the most long-leaning they get — crowded long by their own history')
-      : g.zone === 'crowded short' ? (sign < 0 ? 'a crowded short by their own history' : 'but the lightest they get — crowded short by their own history')
-      : s === sign ? 'heavier than usual'
-      : (s > 0 ? 'but less short than usual' : 'but lighter than usual');
-    return dir + ', ' + rel + ' (' + pctText(g.pct) + ')';
-  }
-
-  /* What the last four weeks did to the net position, in trader terms. */
-  function flow(g) {
+  /* What the last four weeks did, in words. */
+  function flow(g, oi) {
     var c = g.chg4;
-    if (c == null || c === 0) return '';
-    var was = g.net - c, amt = fmtInt(Math.abs(c));
-    if (was >= 0 && g.net >= 0) return c > 0 ? 'added ' + amt + ' contracts to their net long' : 'cut their net long by ' + amt + ' contracts';
-    if (was < 0 && g.net < 0) return c < 0 ? 'added ' + amt + ' contracts to their net short' : 'cut their net short by ' + amt + ' contracts';
-    return c > 0 ? 'flipped from net short to net long' : 'flipped from net long to net short';
+    if (c == null) return '';
+    var share = oi ? Math.abs(c) / oi * 100 : 0, was = g.net - c;
+    if (share < 0.2) return 'Little has changed over the past month.';
+    if (was >= 0 && g.net < 0) return 'Over the past month they flipped from net long to net short.';
+    if (was < 0 && g.net >= 0) return 'Over the past month they flipped from net short to net long.';
+    return 'Over the past month they turned ' + (share >= 10 ? 'sharply ' : share < 2 ? 'slightly ' : '') + 'more ' + (c > 0 ? 'bullish.' : 'bearish.');
   }
 
   function summarize(m) {
     var hf = m.hf;
-    var s = 'Hedge funds are ' + stance(hf).replace(/^(net (?:long|short))/, '$1 ' + m.ref) + '.';
-    var f = flow(hf);
-    if (f) s += ' Over four weeks they ' + f + '.';
+    var s = lean(hf, 'Hedge funds', m.ref);
+    var f = flow(hf, m.oi);
+    if (f) s += ' ' + f;
     if (hf.range12 === 0 || hf.range12 === 100) {
-      s += ' That is the ' + (hf.range12 === 0 ? 'lowest' : 'highest') + ' net position in 12 weeks.';
+      s += ' That is their most ' + (hf.range12 === 0 ? 'bearish' : 'bullish') + ' reading in 12 weeks.';
     }
-    if (m.rm) {
-      s += ' Real money is ' + stance(m.rm) + (m.split ? ' — leaning the other way from the hedge funds.' : '.');
-    }
+    if (m.split) s += ' Real money disagrees: it is ' + (side(m.rm.zone) > 0 ? 'bullish' : 'bearish') + ' on ' + m.ref + '.';
     return s;
   }
 
@@ -201,7 +199,7 @@
         if (rmW) { m.rm = stats(rmW); m.rm_label = GROUPS.rm.fx; }
         var hs = side(m.hf.zone), rs = m.rm ? side(m.rm.zone) : 0;
         m.split = !!(m.rm && hs && rs && hs !== rs);
-        m.signal = m.hf.zone === 'crowded long' ? -1 : m.hf.zone === 'crowded short' ? 1 : 0;
+        m.signal = m.hf.zone === 'very bullish' ? -1 : m.hf.zone === 'very bearish' ? 1 : 0;
         m.history = hfW.slice(-HISTORY_WEEKS).map(function (w, i, arr) {
           var o = { d: w.d, hf: w.l - w.s, oi: w.oi };
           if (rmW) {
@@ -218,8 +216,8 @@
         updated: new Date().toISOString(),
         report_date: reportDate,
         method: 'flip = (long − short) / open interest × 100; percentile = mid-rank vs all weekly history since Jan 2015; ' +
-          'zones ≥90 crowded long, ≥60 long-side, ≤40 short-side, ≤10 crowded short; ' +
-          'signal (hedge funds): crowded long −1, crowded short +1, else 0',
+          'lean: ≥90 very bullish, ≥60 bullish, ≤40 bearish, ≤10 very bearish, otherwise neutral; ' +
+          'signal (hedge funds): very bullish −1, very bearish +1, else 0',
         sources: [
           { label: 'CFTC Traders in Financial Futures (futures only)', url: 'https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if' },
           { label: 'CFTC Disaggregated (futures only)', url: 'https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy' }
@@ -238,5 +236,5 @@
     return (now || new Date()).getTime() > due + 6 * 3600 * 1000;
   }
 
-  root.BlueStreetCOT = { build: build, isStale: isStale, MARKETS: MARKETS };
+  root.BlueStreetCOT = { build: build, isStale: isStale, MARKETS: MARKETS, summarize: summarize, zone: zone };
 })(typeof window !== 'undefined' ? window : this);

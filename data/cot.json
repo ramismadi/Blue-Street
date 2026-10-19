@@ -1,7 +1,7 @@
 {
  "updated": "2026-10-19T05:17:54.837Z",
  "report_date": "2026-10-13",
- "method": "flip = (long − short) / open interest × 100; percentile = mid-rank vs all weekly history since Jan 2015; zones ≥90 crowded long, ≥60 long-side, ≤40 short-side, ≤10 crowded short; signal (hedge funds): crowded long −1, crowded short +1, else 0",
+ "method": "flip = (long − short) / open interest × 100; percentile = mid-rank vs all weekly history since Jan 2015; lean: ≥90 very bullish, ≥60 bullish, ≤40 bearish, ≤10 very bearish, otherwise neutral; signal (hedge funds): very bullish −1, very bearish +1, else 0",
  "sources": [
   {
    "label": "CFTC Traders in Financial Futures (futures only)",
@@ -49,7 +49,7 @@
     "short": 2322,
     "flip": 35.05,
     "pct": 73.3,
-    "zone": "long-side",
+    "zone": "bullish",
     "z": {
      "all": 0.75,
      "y10": 0.68,
@@ -222,7 +222,7 @@
      "rm": 18164
     }
    ],
-   "summary": "Hedge funds are net long the dollar, mid-range for them (59th percentile). Over four weeks they flipped from net short to net long. Real money is net long, heavier than usual (73rd percentile)."
+   "summary": "Hedge funds are neutral on the dollar, about their usual. Over the past month they flipped from net short to net long."
   },
   {
    "id": "EUR",
@@ -241,7 +241,7 @@
     "short": 188022,
     "flip": -7.78,
     "pct": 35.9,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -0.03,
      "y10": -0.35,
@@ -260,7 +260,7 @@
     "short": 302758,
     "flip": 22.86,
     "pct": 23.3,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -0.4,
      "y10": -1.17,
@@ -433,7 +433,7 @@
      "rm": 199918
     }
    ],
-   "summary": "Hedge funds are net short the euro, heavier than usual (36th percentile). Over four weeks they added 39,845 contracts to their net short. That is the lowest net position in 12 weeks. Real money is net long, but lighter than usual (23rd percentile)."
+   "summary": "Hedge funds are more bearish on the euro than usual. Over the past month they turned more bearish. That is their most bearish reading in 12 weeks."
   },
   {
    "id": "GBP",
@@ -471,7 +471,7 @@
     "short": 164730,
     "flip": -54.27,
     "pct": 0.2,
-    "zone": "crowded short",
+    "zone": "very bearish",
     "z": {
      "all": -2.38,
      "y10": -2.42,
@@ -644,7 +644,7 @@
      "rm": -145735
     }
    ],
-   "summary": "Hedge funds are net long the pound, mid-range for them (45th percentile). Over four weeks they cut their net long by 8,565 contracts. Real money is net short, a crowded short by their own history (the lowest reading since 2015)."
+   "summary": "Hedge funds are neutral on the pound, about their usual. Over the past month they turned more bearish."
   },
   {
    "id": "JPY",
@@ -663,7 +663,7 @@
     "short": 98982,
     "flip": -9.02,
     "pct": 63,
-    "zone": "long-side",
+    "zone": "bullish",
     "z": {
      "all": 0.16,
      "y10": 0.29,
@@ -682,7 +682,7 @@
     "short": 80408,
     "flip": 17.62,
     "pct": 85,
-    "zone": "long-side",
+    "zone": "bullish",
     "z": {
      "all": 1.09,
      "y10": 0.96,
@@ -855,7 +855,7 @@
      "rm": 65819
     }
    ],
-   "summary": "Hedge funds are net short the yen, but less short than usual (63rd percentile). Over four weeks they flipped from net long to net short. Real money is net long, heavier than usual (85th percentile)."
+   "summary": "Hedge funds are still net short the yen, but less than usual. Over the past month they flipped from net long to net short."
   },
   {
    "id": "CHF",
@@ -874,7 +874,7 @@
     "short": 24876,
     "flip": -10.89,
     "pct": 34.6,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -0.42,
      "y10": -0.52,
@@ -893,7 +893,7 @@
     "short": 54132,
     "flip": -22.93,
     "pct": 38,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -0.33,
      "y10": -0.16,
@@ -1066,7 +1066,7 @@
      "rm": -31456
     }
    ],
-   "summary": "Hedge funds are net short the franc, heavier than usual (35th percentile). Over four weeks they cut their net short by 23 contracts. Real money is net short, heavier than usual (38th percentile)."
+   "summary": "Hedge funds are more bearish on the franc than usual. Little has changed over the past month."
   },
   {
    "id": "CAD",
@@ -1085,7 +1085,7 @@
     "short": 111923,
     "flip": -23.3,
     "pct": 26.1,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -0.74,
      "y10": -0.8,
@@ -1104,7 +1104,7 @@
     "short": 133699,
     "flip": -8.14,
     "pct": 28.9,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -0.43,
      "y10": -0.33,
@@ -1277,7 +1277,7 @@
      "rm": -30804
     }
    ],
-   "summary": "Hedge funds are net short the Canadian dollar, heavier than usual (26th percentile). Over four weeks they added 49,090 contracts to their net short. Real money is net short, heavier than usual (29th percentile)."
+   "summary": "Hedge funds are more bearish on the Canadian dollar than usual. Over the past month they turned sharply more bearish."
   },
   {
    "id": "AUD",
@@ -1296,7 +1296,7 @@
     "short": 37041,
     "flip": 14.9,
     "pct": 76.5,
-    "zone": "long-side",
+    "zone": "bullish",
     "z": {
      "all": 0.78,
      "y10": 0.76,
@@ -1315,7 +1315,7 @@
     "short": 200252,
     "flip": -34.15,
     "pct": 11.3,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -1.19,
      "y10": -1.12,
@@ -1488,7 +1488,7 @@
      "rm": -115920
     }
    ],
-   "summary": "Hedge funds are net long the Aussie, heavier than usual (77th percentile). Over four weeks they cut their net long by 10,544 contracts. Real money is net short, heavier than usual (11th percentile) — leaning the other way from the hedge funds."
+   "summary": "Hedge funds are more bullish on the Aussie than usual. Over the past month they turned more bearish. Real money disagrees: it is bearish on the Aussie."
   },
   {
    "id": "NZD",
@@ -1507,7 +1507,7 @@
     "short": 29287,
     "flip": -9.28,
     "pct": 34.4,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -0.42,
      "y10": -0.4,
@@ -1526,7 +1526,7 @@
     "short": 56245,
     "flip": -35.27,
     "pct": 27.4,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -0.75,
      "y10": -0.72,
@@ -1699,7 +1699,7 @@
      "rm": -44139
     }
    ],
-   "summary": "Hedge funds are net short the kiwi, heavier than usual (34th percentile). Over four weeks they added 9,853 contracts to their net short. Real money is net short, heavier than usual (27th percentile)."
+   "summary": "Hedge funds are more bearish on the kiwi than usual. Over the past month they turned more bearish."
   },
   {
    "id": "XAU",
@@ -1718,7 +1718,7 @@
     "short": 17658,
     "flip": 27.02,
     "pct": 65.4,
-    "zone": "long-side",
+    "zone": "bullish",
     "z": {
      "all": 0.54,
      "y10": 0.56,
@@ -1865,7 +1865,7 @@
      "oi": 396345
     }
    ],
-   "summary": "Hedge funds are net long gold, heavier than usual (65th percentile). Over four weeks they cut their net long by 26,027 contracts. That is the lowest net position in 12 weeks."
+   "summary": "Hedge funds are more bullish on gold than usual. Over the past month they turned more bearish. That is their most bearish reading in 12 weeks."
   },
   {
    "id": "XAG",
@@ -1884,7 +1884,7 @@
     "short": 10183,
     "flip": 5.18,
     "pct": 23.8,
-    "zone": "short-side",
+    "zone": "bearish",
     "z": {
      "all": -0.68,
      "y10": -0.64,
@@ -2031,7 +2031,7 @@
      "oi": 108433
     }
    ],
-   "summary": "Hedge funds are net long silver, but lighter than usual (24th percentile). Over four weeks they cut their net long by 7,505 contracts. That is the lowest net position in 12 weeks."
+   "summary": "Hedge funds are still net long silver, but less than usual. Over the past month they turned more bearish. That is their most bearish reading in 12 weeks."
   },
   {
    "id": "WTI",
@@ -2050,7 +2050,7 @@
     "short": 131399,
     "flip": 2.14,
     "pct": 3.7,
-    "zone": "crowded short",
+    "zone": "very bearish",
     "z": {
      "all": -1.73,
      "y10": -1.69,
@@ -2197,7 +2197,7 @@
      "oi": 1900179
     }
    ],
-   "summary": "Hedge funds are net long oil, but the lightest they get — crowded short by their own history (4th percentile). Over four weeks they cut their net long by 65,705 contracts. That is the lowest net position in 12 weeks."
+   "summary": "Hedge funds are still net long oil, but about as little as they have been since 2015. Over the past month they turned more bearish. That is their most bearish reading in 12 weeks."
   },
   {
    "id": "HG",
@@ -2216,7 +2216,7 @@
     "short": 16585,
     "flip": 19.46,
     "pct": 73.4,
-    "zone": "long-side",
+    "zone": "bullish",
     "z": {
      "all": 0.74,
      "y10": 0.61,
@@ -2363,7 +2363,7 @@
      "oi": 313832
     }
    ],
-   "summary": "Hedge funds are net long copper, heavier than usual (73rd percentile). Over four weeks they cut their net long by 4,048 contracts. That is the lowest net position in 12 weeks."
+   "summary": "Hedge funds are more bullish on copper than usual. Over the past month they turned slightly more bearish. That is their most bearish reading in 12 weeks."
   }
  ]
 }
