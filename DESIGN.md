@@ -21,30 +21,31 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 
 | Tab | Route | Fed by |
 |---|---|---|
-| Today | `/` (also `#today`) | story, engine, calendar, latest |
-| Story | `#story`, `#story/2` = chapter 2 | `data/story.json` |
+| Today | `/` (also `#today`) | story, engine, calendar, news |
+| Story (opens from Today) | `#story`, `#story/2` = chapter 2 | `data/story.json` |
 | Currencies | `#fx`, `#fx/AUD` = currency page | `data/currencies.json` (+ banks, calendar, story joins) |
-| Macro engine | `#engine` | `data/engine.json` + `data/pillars.json` |
-| Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
-| Central banks | `#banks` | `data/banks.json` |
+| Drivers: Macro engine | `#engine` | `data/engine.json` + `data/pillars.json` |
+| Drivers: Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
+| Drivers: Central banks | `#banks` | `data/banks.json` |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join) |
-| News | `#news`, `#news/JPY` = filtered to a market (old `#flash` / `#wire` links redirect here) | Developing now: `data/latest.json` (Hercules) · Headlines: `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`) |
+| News | `#news`, `#news/JPY` = filtered to a market (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
 | Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
-- **Today's chapters are cards** (Rami, 2026-10-19; replaces the pinned full-screen chapter scenes): a grid (3 across on desktop, 2 on tablet, 1 on phones) in chapter order. Each card: flag + chapter title, a lean mark (strength-board score for the 8 currencies, the News read for gold/oil — evidence, not a call), today's read (`teaser`, 1–3 sentences), "In the news" (top 3 headlines touching that market from `news.json`, by impact — each opens its card expanded on News), and "More on … →" into the full Story chapter. Quiet chapters still fold into the "Quiet today" line. The bullets below about scenes are historical.
-- **Today is a scroll story**: full-screen headline → **At a glance** (newest
-  Flash thread with status, tags and What's next; the next two high/medium
-  events with times + zone; the evidence lean as ranked chips) → one short
-  scene per chapter (~one screen each; pin holds briefly near the top, steps
-  reveal as it arrives) = number + title + `teaser` + "Read the chapter →" →
-  chapters with `"quiet": true` fold into one "Quiet today" line (Story tab
-  still shows them in full) → "Go deeper" (macro pulse, where the evidence
-  leans, tiles). Rami, 2026-10-12: Go deeper used to start ~18 screens down;
-  now ~9. The full narrative lives only in the Story tab.
+- **Today's chapters are cards** (Rami, 2026-10-19; replaces the pinned full-screen chapter scenes): a grid (3 across on desktop, 2 on tablet, 1 on phones) in chapter order. Each card: flag + chapter title, a lean mark (strength-board score for the 8 currencies, the News read for gold/oil — evidence, not a call), today's read (`teaser`, 1–3 sentences), "In the news" (top 3 headlines touching that market from `news.json`, by impact — each opens its card expanded on News), and "More on … →" into the full Story chapter. Quiet chapters still fold into the "Quiet today" line.
+- **Today (as built, 2026-10-19):** full-screen headline (the one pinned scene,
+  `hero-scene`) → **At a glance** (two tiles: *Next up*, the next two high/medium
+  events with times + zone, and *Evidence leans*, the ranked chips) → the
+  chapter cards above → "Go deeper" (macro pulse, where the evidence leans,
+  tiles). Chapters with `"quiet": true` fold into one "Quiet today" line; the
+  Story view still shows them in full. The full narrative lives only in Story.
+  The scroll code ("today: scroll engine" in app.js) drives the hero and the
+  fade-up of Go deeper; `route()` re-runs it after every tab change, so Today
+  never comes back blank. `prefers-reduced-motion` gets a plain, fully visible
+  page.
 - **At a glance is reorderable** (Rami, 2026-10-12): "Rearrange" turns on edit
   mode — ↑/↓ on each tile (works on touch), drag on desktop, Reset, Done/Esc.
   Saved per browser in localStorage `bluestreet-glance` (array of tile ids:
-  `flash`, `next`, `lean`); unknown ids are dropped, missing ones appended, so
+  `next`, `lean`); unknown ids are dropped, missing ones appended, so
   a new tile only needs a `.glance-tile[data-tile]` wrapper + entries in
   `GLANCE_IDS`/`GLANCE_NAMES`. The first visible tile spans the full width.
   Per-device for now; accounts (same layout on every device) would need a
