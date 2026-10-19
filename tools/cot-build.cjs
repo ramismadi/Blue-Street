@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* Gloment — weekly COT snapshot (Claude's job; runs in GitHub Actions).
+/* Blue Street — weekly COT snapshot (Claude's job; runs in GitHub Actions).
    Uses the exact same calculator the site uses (assets/cot.js), writes
    data/cot.json, and exits 0 without touching the file when the CFTC has
    not published a newer report (so the Action only commits real updates).
@@ -27,10 +27,10 @@ function fail(msg) {
   let prev = null;
   try { prev = JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch (e) { /* first run */ }
 
-  const d = await window.GlomentCOT.build();
+  const d = await window.BlueStreetCOT.build();
 
   // Sanity checks: a bad pull must never replace a good snapshot.
-  const want = window.GlomentCOT.MARKETS.length;
+  const want = window.BlueStreetCOT.MARKETS.length;
   if (!d.report_date) fail('no report date');
   if (!Array.isArray(d.markets) || d.markets.length !== want) fail('expected ' + want + ' markets, got ' + (d.markets || []).length);
   for (const m of d.markets) {

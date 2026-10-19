@@ -1,4 +1,4 @@
-# Gloment — design & data-feed spec
+# Blue Street — design & data-feed spec
 
 **Maintained by Claude.** This is the source of truth for how the site looks,
 how it is built, and the exact shape of every `data/*.json` feed.
@@ -13,7 +13,7 @@ Currencies (where does each stand? — the currency page carries its bank,
 positioning, chapter, Developing threads and "In the news") · **Drivers**
 (what's moving things underneath? — Macro engine, Positioning and Central
 banks as three sections with a sub-nav; `#drivers` opens the last one read,
-saved in localStorage `gloment-driver`) · Calendar · News. Every old route
+saved in localStorage `bluestreet-driver`) · News · Calendar. Every old route
 still works. The table below lists the views.
 
 A premium, tabbed FX macro desk. Principle: **less text up front, depth on
@@ -42,7 +42,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   now ~9. The full narrative lives only in the Story tab.
 - **At a glance is reorderable** (Rami, 2026-10-12): "Rearrange" turns on edit
   mode — ↑/↓ on each tile (works on touch), drag on desktop, Reset, Done/Esc.
-  Saved per browser in localStorage `gloment-glance` (array of tile ids:
+  Saved per browser in localStorage `bluestreet-glance` (array of tile ids:
   `flash`, `next`, `lean`); unknown ids are dropped, missing ones appended, so
   a new tile only needs a `.glance-tile[data-tile]` wrapper + entries in
   `GLANCE_IDS`/`GLANCE_NAMES`. The first visible tile spans the full width.
@@ -52,19 +52,19 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   drawer (tap to open) — story `numbers`, engine `figure` + sources, bank
   rate definition / last move / sources, the currency score table. Scene mechanics are commented in app.js ("today: scroll engine");
   `prefers-reduced-motion` gets a plain, fully visible page.
-- The GLOMENT wordmark and the Today tab go to the clean site URL (no hash).
+- The BLUE STREET wordmark and the Today tab go to the clean site URL (no hash).
 - **Side menu (optional, Rami 2026-10-18):** the masthead's panel button moves
   the sections from the top bar into a left side menu (same five + Drivers'
   three sections + Learn, with the badges mirrored). Wide screens: a fixed
   rail that collapses to icons; narrow screens: a drawer that slides in from
   that button. "Tabs on top" puts it back. Saved per browser in localStorage
-  `gloment-nav` (top|side) and `gloment-nav-collapsed`; applied before first
+  `bluestreet-nav` (top|side) and `bluestreet-nav-collapsed`; applied before first
   paint. Built in app.js (`NAV_ITEMS`) — a new tab needs an entry there too.
 - No live price widgets (Rami removed them). Price levels appear only in the
   narrative data.
 
 ## Build & deploy
-- Plain static files, relative paths only (site lives under `/Gloment/`).
+- Plain static files, relative paths only (site lives under `/Blue-Street/`).
   No build step, no backend. All DOM is built with `textContent` — never
   inject HTML from data.
 - **Cache-busting:** `index.html` loads `assets/style.css?v=N` and
@@ -91,7 +91,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   | Black & champagne | **pearl** | **onyx** |
   The masthead has a sun/moon toggle (flips to the counterpart) and a
   colorway menu (switches colorway, keeps the current mode). The choice is
-  saved per reader (localStorage `gloment-theme`); retired themes (alpine,
+  saved per reader (localStorage `bluestreet-theme`); retired themes (alpine,
   porcelain, harbor, dusk, …) fall back to Ivory. To add a colorway, add both
   `[data-theme]` blocks in style.css, both entries in `THEMES`, and the pair in
   `COLORWAYS` in app.js (and the dark id to the pre-paint regex in
@@ -313,7 +313,7 @@ full stream.
  "items":[{"id","ts"|"date","source","url","image"|null,"headline",
    "story":"hormuz","story_title":"Hormuz: reopening offer vs ship attacks",   // same story = one card
    "pillar":"risk",                       // engine pillar id
-   "summary":"1–2 lines, Gloment's own words",
+   "summary":"1–2 lines, Blue Street's own words",
    "beats":{"was","happened","means","fx"},   // the four beats (COLLAB template)
    "impact":[{"ccy":"JPY","dir":"bullish"|"bearish"|"mixed","strength":1|2|3,"why":"one line"}],
    "watch":"what would change it"}]}
@@ -323,11 +323,11 @@ full stream.
 - `dir` is **headline pressure, never a call** — the same evidence-weighing
   rule as the pillar tally. `strength`: 1 mild, 2 clear, 3 strong.
 - Summaries and beats are written from the headline and public preview in
-  Gloment's own words — never copy the article's sentences.
+  Blue Street's own words — never copy the article's sentences.
 - No `ts` from the publisher → give `date`; the card shows the date instead of
   "5h ago". Never invent a time.
 
-**Sorting (Rami, 2026-10-18):** "By impact" (default) ranks by the strongest `strength` on any market, then how many markets it moves at strength 2+, then newest; "Latest" is newest first. Choice saved per browser (localStorage `gloment-news-sort`). So `strength` must be honest — it decides the order.
+**Sorting (Rami, 2026-10-18):** "By impact" (default) ranks by the strongest `strength` on any market, then how many markets it moves at strength 2+, then newest; "Latest" is newest first. Choice saved per browser (localStorage `bluestreet-news-sort`). So `strength` must be honest — it decides the order.
 **Rami, 2026-10-18: every article gets its own card** — no folding by `story` (keep writing `story`/`story_title`; they're kept for later use). Each card leads with a coloured pillar badge (Growth, Risk sentiment, Policy…) and shows each currency it moves as a coloured tag with a tiny trend line — rising green (bullish), falling red (bearish), choppy gold (mixed). No words or strength labels on screen; strength only drives the sort.
 How it renders: market chips with flags (markets with no stories are dimmed;
 tap again for All; the hash keeps the filter) + a source dropdown (2+ publishers). Picking a
@@ -472,5 +472,5 @@ ingest ForexFactory's weekly export feed
 terms and poll sparingly) and map: `country`→`ccy`, `impact`
 High/Medium/Low→`impact` (skip Holiday or show as low), `date`→`ts` (convert
 to UTC), `forecast`, `previous`. The feed has no actuals — fill `actual` as
-prints land (that's what turns rows green/red). Then add the Gloment layer
+prints land (that's what turns rows green/red). Then add the Blue Street layer
 FF doesn't have: `why`, `if_beat`/`if_miss`, `better`, `chapter`, `bank`.

@@ -1,16 +1,16 @@
-# Working on Gloment — agent collaboration guide
+# Working on Blue Street — agent collaboration guide
 
 ## What this is
-Gloment (GLObal fundaMENTals) is Rami's FX macro desk — a static site on GitHub
-Pages at ramismadi.github.io/Gloment/. It publishes a daily story-format FX
+Blue Street is Rami's FX macro desk (renamed from its old name on 2026-10-19) — a
+static site on GitHub Pages at ramismadi.github.io/Blue-Street/. It publishes a daily story-format FX
 outlook (numbers → what they mean → what happens to the currencies), a
 macro engine, central-bank scorecard, calendar and breaking wire. Audience:
 Rami and anyone he shares the link with. Content tone: direct, numbers-first,
 no ceremony. Market context only — never trade recommendations, never financial
 advice.
 
-## How Gloment explains things — Rami's explanation template (2026-10-15)
-Rami: "the way you just described it needs to be how everything on Gloment
+## How Blue Street explains things — Rami's explanation template (2026-10-15)
+Rami: "the way you just described it needs to be how everything on Blue Street
 needs to be explained." Every number, event, or print on the site — dollar
 stories, CPI/PPI/payrolls, any currency — runs four beats, in order:
 1. **What this was** — the number/event in plain words ("core prices rose
@@ -62,7 +62,7 @@ rewrites have wiped Claude's notes three times, which is why they moved).
 5. Content standards: every number carries a source label; flag anything
    unverified rather than guessing; quotes are indicative only, never
    presented as executable; no trade recommendations, ever.
-6. Relative paths only (the site lives under `/Gloment/`). No build tools,
+6. Relative paths only (the site lives under `/Blue-Street/`). No build tools,
    no backend — plain static files.
 7. Source freshness: before linking any source, confirm the article's
    published date matches the event — check `datePublished` on the page.
@@ -362,13 +362,13 @@ are developments, not alarms). Data side is done on Hercules's end:
    rbnz.govt.nz OCR decision, BoJ → boj.or.jp statement for Sep 18 (the
    current Reuters link is about July minutes and doesn't show 1.25%).
 2. **calendar.json** — please own it. Schema and an ingestion recipe (FF's
-   weekly export feed + the Gloment layer: why / if_beat / if_miss / better)
+   weekly export feed + the Blue Street layer: why / if_beat / if_miss / better)
    are in DESIGN.md. Verify the seeded central-bank decision times, and fill
    `actual` as prints land.
 3. **pillars.json** — refresh each `live` example when it goes stale.
 
 ## Depth push — evidence tally + surprise momentum (Claude, 2026-10-12; Rami approved)
-Rami wants Gloment to out-depth ForexFundamentals: no house view, but the
+Rami wants Blue Street to out-depth ForexFundamentals: no house view, but the
 pillars may be used to *weigh* the evidence. Lanes as agreed with Hercules
 tonight: Hercules owns the feeds, Claude owns the render.
 - **Shipped (v32):** Today "Where the evidence leans" card (pillar dots + "N
@@ -524,7 +524,7 @@ now come from this file instead of news reports:
   add colour, but the score comes from the CFTC numbers.
 
 ## Rates feed — proposal (Rami + Claude, 2026-10-15)
-Gloment shows headline policy rates (`banks.json`) and a carry number in the
+Blue Street shows headline policy rates (`banks.json`) and a carry number in the
 pair picker, but has no yield data and no view of where rates are expected to
 go. Markets price expected differentials, not today's gap, so that's the
 missing half. Nothing below is built yet.
@@ -630,3 +630,21 @@ currency pages, badge). `data/latest.json` is still used by Focus Mode's live
 blog on big-event days and by the editions' "What changed", so the file stays.
 Whether the 30-min breaking watch keeps running outside focus days is Rami's
 call — ask him before changing it.
+
+## Renamed to Blue Street (Rami, 2026-10-19) — action needed, Hercules
+Rami renamed the whole project **Blue Street** and wants the old name gone
+everywhere visible. Done on Claude's side:
+- Site name, wordmark, page title, home-screen title, app icon, footer, docs.
+- **GitHub repo renamed to `ramismadi/Blue-Street`.** The site now lives at
+  **https://ramismadi.github.io/Blue-Street/** (the old Pages address stops
+  working — GitHub doesn't redirect Pages after a rename).
+- Saved-preference keys in the browser are now `bluestreet-*` (one-time reset
+  of theme/layout choices for readers).
+
+**For Hercules:**
+1. Point your clone/remote and every scheduled job at `ramismadi/Blue-Street`
+   (GitHub redirects git for now, but don't rely on it).
+2. Commit messages: drop the old name — e.g. `data: ...` / `content: ...`
+   per rule 3, or `Blue Street data: ...`.
+3. Never write the old name in any data file, cron body or note again; if a
+   template still has it, switch it to Blue Street.

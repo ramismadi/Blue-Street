@@ -1,7 +1,7 @@
-/* Gloment — COT positioning calculator. Plain static JS, no build step.
+/* Blue Street — COT positioning calculator. Plain static JS, no build step.
 
    One source of truth for the numbers behind data/cot.json and the
-   Positioning tab. GlomentCOT.build() pulls the CFTC's public Commitments
+   Positioning tab. BlueStreetCOT.build() pulls the CFTC's public Commitments
    of Traders data (Socrata API, CORS-enabled, no key) and returns the
    cot.json object. Used by:
      - Claude's weekly job: runs build() in a browser, commits the result as
@@ -238,5 +238,5 @@
     return (now || new Date()).getTime() > due + 6 * 3600 * 1000;
   }
 
-  root.GlomentCOT = { build: build, isStale: isStale, MARKETS: MARKETS };
+  root.BlueStreetCOT = { build: build, isStale: isStale, MARKETS: MARKETS };
 })(typeof window !== 'undefined' ? window : this);

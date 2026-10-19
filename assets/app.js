@@ -1,4 +1,4 @@
-/* Gloment — premium desk renderer. Plain static JS, no build step.
+/* Blue Street — premium desk renderer. Plain static JS, no build step.
    Tabbed views (hash-routed: #today, #story, #story/2, #engine, #positioning, #banks,
    #calendar, #news), a theme picker, and edition data (story, macro engine,
    developing stories, news) from local JSON files. textContent-only DOM, no HTML injection. */
@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '49';
+  var ASSET_VERSION = '50';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -139,7 +139,7 @@
     }).then(function (html) {
       var m = /assets\/app\.js\?v=([\w.-]+)/.exec(html);
       if (!m || m[1] === ASSET_VERSION) return;
-      var key = 'gloment-reloaded-' + m[1];
+      var key = 'bluestreet-reloaded-' + m[1];
       try {
         if (sessionStorage.getItem(key)) return; // already tried once
         sessionStorage.setItem(key, '1');
@@ -419,7 +419,7 @@
       b.setAttribute('aria-checked', c === cw ? 'true' : 'false');
     });
     if (save) {
-      try { localStorage.setItem('gloment-theme', t.id); } catch (e) { /* private mode */ }
+      try { localStorage.setItem('bluestreet-theme', t.id); } catch (e) { /* private mode */ }
     }
   }
 
@@ -458,7 +458,7 @@
     }
     if (h[0] === 'drivers') {   // the tab opens the Drivers section last read
       var last = 'engine';
-      try { last = localStorage.getItem('gloment-driver') || 'engine'; } catch (e) { /* private mode */ }
+      try { last = localStorage.getItem('bluestreet-driver') || 'engine'; } catch (e) { /* private mode */ }
       h = [DRIVER_VIEWS.indexOf(last) >= 0 ? last : 'engine'];
       history.replaceState(null, '', '#' + h[0]);
     }
@@ -477,7 +477,7 @@
         var on = a.getAttribute('data-view') === tab;
         if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
       });
-      if (!dn.hidden) { try { localStorage.setItem('gloment-driver', tab); } catch (e) { /* private mode */ } }
+      if (!dn.hidden) { try { localStorage.setItem('bluestreet-driver', tab); } catch (e) { /* private mode */ } }
     }
     if (tab === 'story' && story) {
       var n = parseInt(h[1], 10);
@@ -506,7 +506,7 @@
   /* ---------------- side menu (optional layout) ----------------
      Rami, 2026-10-18: the same sections can sit in a collapsible side menu
      instead of the top tab bar. Choice saved per browser:
-     localStorage gloment-nav = top|side, gloment-nav-collapsed = 1.
+     localStorage bluestreet-nav = top|side, bluestreet-nav-collapsed = 1.
      Wide screens: a fixed rail (full or icons-only). Narrow screens: a
      drawer that slides in from the masthead button. */
   var NAV_ITEMS = [
@@ -539,8 +539,8 @@
   function isNarrow() { return window.matchMedia && window.matchMedia('(max-width: 980px)').matches; }
   function initSideNav() {
     try {
-      nav.mode = localStorage.getItem('gloment-nav') === 'side' ? 'side' : 'top';
-      nav.collapsed = localStorage.getItem('gloment-nav-collapsed') === '1';
+      nav.mode = localStorage.getItem('bluestreet-nav') === 'side' ? 'side' : 'top';
+      nav.collapsed = localStorage.getItem('bluestreet-nav-collapsed') === '1';
     } catch (e) { /* private mode */ }
     var box = $('#sidenav');
     if (!box) return;
@@ -624,8 +624,8 @@
     nav.mode = mode;
     nav.collapsed = !!collapsed;
     try {
-      localStorage.setItem('gloment-nav', mode);
-      localStorage.setItem('gloment-nav-collapsed', nav.collapsed ? '1' : '0');
+      localStorage.setItem('bluestreet-nav', mode);
+      localStorage.setItem('bluestreet-nav-collapsed', nav.collapsed ? '1' : '0');
     } catch (e) { /* private mode */ }
     if (mode === 'top') openDrawer(false);
     applyNav();
@@ -917,7 +917,7 @@
   /* ---------------- today: at a glance (reorderable) ----------------
      The strip's tiles can be put in any order. Arrow buttons work everywhere
      (touch included); on desktop a tile can also be dragged. The order is
-     saved per browser (localStorage `gloment-glance`), unknown ids are
+     saved per browser (localStorage `bluestreet-glance`), unknown ids are
      dropped and new tiles are appended, so adding a tile later is safe. The
      first visible tile spans the full width. */
   var GLANCE_IDS = ['next', 'lean'];   // 'flash' (Developing) removed 2026-10-18
@@ -926,7 +926,7 @@
 
   function glanceOrder() {
     var saved = null;
-    try { saved = JSON.parse(localStorage.getItem('gloment-glance') || 'null'); } catch (e) { /* private mode */ }
+    try { saved = JSON.parse(localStorage.getItem('bluestreet-glance') || 'null'); } catch (e) { /* private mode */ }
     var out = (Array.isArray(saved) ? saved : []).filter(function (id, i, a) {
       return GLANCE_IDS.indexOf(id) >= 0 && a.indexOf(id) === i;
     });
@@ -935,8 +935,8 @@
   }
   function saveGlance(order) {
     try {
-      if (order) localStorage.setItem('gloment-glance', JSON.stringify(order));
-      else localStorage.removeItem('gloment-glance');
+      if (order) localStorage.setItem('bluestreet-glance', JSON.stringify(order));
+      else localStorage.removeItem('bluestreet-glance');
     } catch (e) { /* private mode: order lasts for this visit only */ }
   }
   function glanceTile(id) { return document.querySelector('.glance-tile[data-tile="' + id + '"]'); }
@@ -1542,15 +1542,15 @@
     fetchJSON('data/cot.json').then(function (d) {
       cot.data = d;
       renderCot();
-      if (window.GlomentCOT && GlomentCOT.isStale(d.report_date)) cotLive();
+      if (window.BlueStreetCOT && BlueStreetCOT.isStale(d.report_date)) cotLive();
     }).catch(function () { cotLive(); });
   }
 
   function cotLive() {
-    if (cot.loading || !window.GlomentCOT || !window.fetch) { renderCot(); return; }
+    if (cot.loading || !window.BlueStreetCOT || !window.fetch) { renderCot(); return; }
     cot.loading = true;
     renderCot();
-    GlomentCOT.build().then(function (d) {
+    BlueStreetCOT.build().then(function (d) {
       if (!cot.data || d.report_date > cot.data.report_date) { cot.data = d; cot.live = true; }
     }).catch(function () { /* keep the snapshot */ }).then(function () {
       cot.loading = false;
@@ -1864,7 +1864,7 @@
 
   function loadCalPrefs() {
     try {
-      var p = JSON.parse(localStorage.getItem('gloment-cal') || 'null');
+      var p = JSON.parse(localStorage.getItem('bluestreet-cal') || 'null');
       if (p && typeof p === 'object') {
         if (p.range) cal.prefs.range = p.range;
         if (p.impact) cal.prefs.impact = p.impact;
@@ -1874,7 +1874,7 @@
     } catch (e) { /* defaults */ }
   }
   function saveCalPrefs() {
-    try { localStorage.setItem('gloment-cal', JSON.stringify(cal.prefs)); } catch (e) { /* private mode */ }
+    try { localStorage.setItem('bluestreet-cal', JSON.stringify(cal.prefs)); } catch (e) { /* private mode */ }
   }
 
   function tzOpt() { return cal.prefs.tz === 'local' ? undefined : cal.prefs.tz; }
@@ -2338,7 +2338,7 @@
   function icsEsc(s) { return String(s || '').replace(/\\/g, '\\\\').replace(/([,;])/g, '\\$1').replace(/\n/g, '\\n'); }
   function icsStamp(d) { return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); }
   function icsEvent(e) {
-    var w = evWhen(e), L = ['BEGIN:VEVENT', 'UID:' + e.id + '@gloment', 'DTSTAMP:' + icsStamp(new Date())];
+    var w = evWhen(e), L = ['BEGIN:VEVENT', 'UID:' + e.id + '@bluestreet', 'DTSTAMP:' + icsStamp(new Date())];
     if (w && !e.time_tbd) {
       L.push('DTSTART:' + icsStamp(w), 'DURATION:PT30M');
     } else {
@@ -2357,12 +2357,12 @@
     var evs = (cal.data && cal.data.events) || [];
     var pick = which === '__visible' ? filtered(new Date()) : evs.filter(function (e) { return e.id === which; });
     if (!pick.length) return;
-    var body = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Gloment//Calendar//EN', 'CALSCALE:GREGORIAN']
+    var body = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Blue Street//Calendar//EN', 'CALSCALE:GREGORIAN']
       .concat(pick.map(icsEvent)).concat(['END:VCALENDAR']).join('\r\n');
     var blob = new Blob([body], { type: 'text/calendar;charset=utf-8' });
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = (which === '__visible' ? 'gloment-calendar' : which) + '.ics';
+    a.download = (which === '__visible' ? 'bluestreet-calendar' : which) + '.ics';
     document.body.appendChild(a);
     a.click();
     setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
@@ -2388,7 +2388,7 @@
 
   function initFx() {
     try {
-      var p = JSON.parse(localStorage.getItem('gloment-fx') || 'null');
+      var p = JSON.parse(localStorage.getItem('bluestreet-fx') || 'null');
       if (p && p.dir) fx.dir = p.dir;
       if (p && p.ccy) fx.ccy = p.ccy;
     } catch (e) { /* defaults */ }
@@ -2419,7 +2419,7 @@
     });
   }
   function saveFx() {
-    try { localStorage.setItem('gloment-fx', JSON.stringify({ dir: fx.dir, ccy: fx.ccy })); } catch (e) {}
+    try { localStorage.setItem('bluestreet-fx', JSON.stringify({ dir: fx.dir, ccy: fx.ccy })); } catch (e) {}
   }
 
   function fxList() { return (fx.data && fx.data.currencies) || []; }
@@ -3203,7 +3203,7 @@
   var NEWS_BEATS = [['was', 'What this was'], ['happened', 'What happened'],
     ['means', 'What it means'], ['fx', 'For the currency']];
   var news = { data: null, ccy: '', src: '', open: {}, sort: 'impact' };
-  try { if (localStorage.getItem('gloment-news-sort') === 'latest') news.sort = 'latest'; } catch (e) { /* private mode */ }
+  try { if (localStorage.getItem('bluestreet-news-sort') === 'latest') news.sort = 'latest'; } catch (e) { /* private mode */ }
   /* Impact ranking (Rami, 2026-10-18): strongest push on any market first,
      then how many markets it clearly moves, then newest. */
   function newsImpact(it) {
@@ -3268,7 +3268,7 @@
       var b = e.target.closest('[data-sort]');
       if (!b) return;
       news.sort = b.getAttribute('data-sort');
-      try { localStorage.setItem('gloment-news-sort', news.sort); } catch (er) { /* private mode */ }
+      try { localStorage.setItem('bluestreet-news-sort', news.sort); } catch (er) { /* private mode */ }
       renderNews();
     });
     var grid = $('#news-grid');
