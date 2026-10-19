@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '65';
+  var ASSET_VERSION = '66';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -587,7 +587,12 @@
     pa.setAttribute('stroke-linejoin', 'round');
     sv.appendChild(r); sv.appendChild(pa);
     logo.appendChild(sv);
-    logo.appendChild(el('span', 'sn-label sn-brand', 'Blue Street'));
+    var wm = el('span', 'sn-label sn-brand', 'BLUE');
+    wm.setAttribute('aria-label', 'Blue Street');
+    var st = el('span', 'wm-st', 'ST');
+    st.setAttribute('aria-hidden', 'true');
+    wm.appendChild(st);
+    logo.appendChild(wm);
     box.appendChild(logo);
     var list = el('nav', 'sn-list');
     NAV_ITEMS.forEach(function (it) {
