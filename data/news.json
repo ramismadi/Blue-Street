@@ -1,16 +1,16 @@
 {
-  "updated": "2026-10-19T15:48:39Z",
+  "updated": "2026-10-19T16:48:06Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "text": "The dollar's headlines still lean soft: an October Fed hold is priced above 80% and October's homebuilder index missed at 29. It has steadied against the euro, though, with the dollar index back near 101.95 as France's unrest does the damage, and the 10-year yield holds near 5.1%.",
-      "ts": "2026-10-19T15:48:39Z"
+      "text": "The dollar's headlines still lean soft: an October Fed hold is priced with high odds and October's homebuilder index missed at 29. The pushback is BofA's view that a hike is still possible, and it has steadied near 101.95 as France does the euro's damage.",
+      "ts": "2026-10-19T16:48:06Z"
     },
     "EUR": {
       "lean": "bearish",
-      "text": "France is the euro's problem: its 10-year yield jumped about 10bp on the worst unrest in years, the gap to Germany is back near 145bp, and EUR/USD slipped toward 1.12 while EUR/GBP hit a 16-month low. Tuesday's budget vote and Friday's Moody's review are the next tests; ECB December hike pricing is the only offset.",
-      "ts": "2026-10-19T15:48:39Z"
+      "text": "France is the euro's problem: its 10-year yield closed near its highest since 2002, the gap to Germany widened again and European stocks all fell over 1%. EUR/USD sits near 1.12 and EUR/GBP at a 16-month low; Tuesday's budget vote and Friday's Moody's review are the next tests.",
+      "ts": "2026-10-19T16:48:06Z"
     },
     "GBP": {
       "lean": "bullish",
@@ -28,9 +28,9 @@
       "ts": "2026-10-19T15:48:39Z"
     },
     "CAD": {
-      "lean": "bearish",
-      "text": "Today's CPI took some shine off the loonie: inflation missed at 3.1% and the core gauges slipped under 2%, and TD now sees the next BoC hike only in Q1 2027. It is still near a one-month high on a softer dollar, and cheaper oil gives it no help.",
-      "ts": "2026-10-19T15:48:39Z"
+      "lean": "mixed",
+      "text": "A split day for the loonie: CPI missed at 3.1% with core gauges under 2%, but the BoC's surveys showed consumers' long-run inflation expectations jumping to about 3.9% and firms planning to keep raising prices. Softer oil and the post-tariff gloom in the surveys lean against it.",
+      "ts": "2026-10-19T16:48:06Z"
     },
     "AUD": {
       "lean": "bullish",
@@ -49,11 +49,158 @@
     },
     "OIL": {
       "lean": "mixed",
-      "text": "The Russia sanctions waiver and deal reports knocked Brent back toward $108, but talks over Hormuz have stalled on Iran's conditions and Kpler shows Gulf crude flows down to about 8.5m barrels a day. Deal hopes pull prices down; the supply hole holds a floor under them.",
-      "ts": "2026-10-19T15:48:39Z"
+      "text": "WTI is set for its first loss in eight sessions near $98 after the Russia sanctions waiver, but Gulf flows are still near 8.5m barrels a day and Iran's foreign minister blamed the US for Hormuz without moving toward a deal. Deal hopes pull prices down; the supply hole holds a floor.",
+      "ts": "2026-10-19T16:48:06Z"
     }
   },
   "items": [
+    {
+      "id": "investinglive-eu-close-yields-20261019",
+      "ts": "2026-10-19T16:25:59Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/stocks/european-stocks-close-lower-across-the-board-as-bond-yields-climb/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/European%20indices%20close%20lower_3-featured-1792427118-featured-1792427156.jpg?width=960&format=webp",
+      "headline": "European stocks close lower across the board as bond yields climb",
+      "story": "france-unrest",
+      "story_title": "France: unrest, budget vote and the euro",
+      "pillar": "fiscal",
+      "summary": "Every major European index closed down more than 1% and every 10-year yield rose, with France's up the most to near its highest since 2002, the night before the budget's first vote.",
+      "beats": {
+        "was": "Monday's close for Europe's main stock indices and government bond yields.",
+        "happened": "DAX, CAC, FTSE 100, Ibex and FTSE MIB all fell 1.1–1.6%. France's 10-year yield climbed about 9bp to roughly 4.94%, about 5bp more than Germany's, so the gap between them widened again.",
+        "means": "Selling stocks and bonds together is a sign of worry about France's finances rather than a normal risk-off day, where bonds usually rally. The National Assembly votes on the revenue half of the budget tomorrow; a defeat or big concessions would add to it.",
+        "fx": "Wider French-German spread → investors demand more to hold euro-area debt → less appetite for euro assets → a softer euro. The lens: does Tuesday's vote calm French bonds or push yields higher?"
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "French yields near 24-year highs keep fiscal worry on the euro; a repeat of this morning's story into the close."
+        }
+      ],
+      "watch": "Tuesday's budget vote; a clean pass that narrows the French spread would ease the pressure."
+    },
+    {
+      "id": "cp24-boc-bos-tariffs-20261019",
+      "ts": "2026-10-19T16:21:53Z",
+      "source": "The Canadian Press (CP24)",
+      "url": "https://www.cp24.com/news/canada/2026/10/19/sentiment-improved-but-new-tariffs-weigh-on-business-outlook-boc-report/",
+      "image": "https://www.cp24.com/resizer/v2/IQD4J6XOZWH5MQSLRAAS3ZPEOM.jpg?smart=true&auth=d5be7ea224ebbc8c15aba86da98c35db11027df9ddb1422718e5764627d5096d&width=1200&height=630",
+      "headline": "Sentiment improved, but new tariffs weigh on business outlook: BoC report",
+      "story": "boc-oct",
+      "story_title": "Bank of Canada: hike talk vs cooling core",
+      "pillar": "growth",
+      "summary": "The Bank of Canada's survey shows firms felt better in Q3, but most interviews predate the collapse of US trade talks, and firms asked afterward were gloomier on exports and investment.",
+      "beats": {
+        "was": "The Bank of Canada's quarterly survey of business sentiment, released nine days before its October 28 decision.",
+        "happened": "Sentiment improved on average, but about three-quarters of interviews came before the late-August breakdown of Canada–US talks and Canada's counter-tariffs. Firms surveyed after that cited the new tariffs as a drag.",
+        "means": "The headline improvement is partly out of date. Tariffs are now doing two things the BoC dislikes at once: weakening growth and pushing costs and inflation expectations up.",
+        "fx": "Weaker growth outlook → less room for the BoC to hike → softer support for the loonie; but higher cost pressure argues the other way. The lens: which does the BoC weigh more on October 28, growth or prices?"
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Better sentiment on paper, but the post-breakdown answers point to weaker exports and investment."
+        }
+      ],
+      "watch": "The October 28 BoC decision and Monetary Policy Report."
+    },
+    {
+      "id": "fxstreet-wti-slips-russia-waiver-20261019",
+      "ts": "2026-10-19T16:10:52Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/crude-oil-slips-from-a-one-month-high-on-trumps-russia-waiver-202610191610",
+      "image": "https://editorial.fxsstatic.com/images/i/West-Texas-Intermediate_3_Medium.png",
+      "headline": "Crude Oil slips from a one-month high on Trump's Russia waiver",
+      "story": "russia-oil",
+      "story_title": "Russia oil: sanctions waiver vs drone strikes",
+      "pillar": "tot",
+      "summary": "WTI is heading for its first down day in eight, near $98, after the Russia sanctions waiver; Gulf crude flows of about 8.5m barrels a day still keep supply tight.",
+      "beats": {
+        "was": "US crude prices on the first trading day after the White House waived Russia penalties that threatened tariffs on its biggest oil buyers.",
+        "happened": "WTI dipped to about $96.50 before steadying near $98, set for its first loss after a seven-day run that topped $99 on Friday. Kpler's Gulf flow measure sits near 8.5m barrels a day, down from over 20m a week earlier.",
+        "means": "The waiver removes a threat that would have forced India and others to hunt for non-Russian barrels, so it eases one squeeze. It does nothing for the Gulf, where flows remain a fraction of normal after a tanker hit a mine near Hormuz on Sunday.",
+        "fx": "Slightly cheaper oil → a little less income for oil exporters → a mild drag on the Canadian dollar and less inflation fear for importers like Japan and Europe. The lens: is the Gulf supply hole shrinking, or just the Russia risk?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Waiver pulls prices off the high; Gulf flows near a third of normal keep a floor."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Softer crude trims the loonie's terms-of-trade support."
+        }
+      ],
+      "watch": "Tuesday's API and Wednesday's EIA stock data, and Rubio–Jaishankar talks in Mumbai on Tuesday."
+    },
+    {
+      "id": "investinglive-boc-bos-q3-20261019",
+      "ts": "2026-10-19T15:37:25Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/bank-of-canada-q3-business-outlook-survey-0-33-vs-0-38-prior/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/2026-10-19_11-32-36-featured-1792423967-featured-1792424288.jpg?width=960&format=webp",
+      "headline": "Bank of Canada Q3 business outlook survey -0.33 vs -0.38 prior",
+      "story": "boc-oct",
+      "story_title": "Bank of Canada: hike talk vs cooling core",
+      "pillar": "inflation",
+      "summary": "The BoC's surveys show firms a bit less gloomy and planning to keep passing on higher costs, while consumers' five-year inflation expectations jumped to about 3.9%.",
+      "beats": {
+        "was": "The Bank of Canada's Q3 business and consumer surveys, which it uses to judge where inflation and growth are heading.",
+        "happened": "The business indicator improved to -0.33 from -0.38; firms expecting a recession fell to 6% from 17%. Consumers' five-year inflation expectations rose to 3.91% from 3.39%, and firms facing big cost increases plan to keep passing them on.",
+        "means": "This pulls against this morning's soft CPI. Core inflation is under 2% today, but people and firms expect more of it, which is the sticky behaviour central banks worry about. The catch: most answers predate the trade-talk breakdown.",
+        "fx": "Rising inflation expectations → harder for the BoC to drop its hike talk → firmer Canadian yields → some support for the loonie. The lens: does the BoC trust today's cool core or tomorrow's expected prices?"
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A jump in expected inflation offsets part of the CPI miss in the hike debate."
+        }
+      ],
+      "watch": "Whether December BoC hike pricing holds after today's mixed CPI-plus-survey day."
+    },
+    {
+      "id": "tbs-reuters-araghchi-lavrov-20261019",
+      "ts": "2026-10-19T14:40:00Z",
+      "source": "The Business Standard (Reuters)",
+      "url": "https://www.tbsnews.net/world/irans-araghchi-blames-us-strait-hormuz-tensions-calls-diplomacy-1577801",
+      "image": "https://www.tbsnews.net/sites/default/files/styles/social_share/public/images/2026/10/19/2d899b11-85f6-489a-9940-80c7eeffe33f.png",
+      "headline": "Iran's Araghchi blames US for Strait of Hormuz tensions, calls for diplomacy",
+      "story": "hormuz",
+      "story_title": "Hormuz: reopening offer vs ship attacks",
+      "pillar": "risk",
+      "summary": "Standing next to Russia's Lavrov in Tehran, Iran's foreign minister blamed Washington for the trouble in Hormuz and pushed a regional security setup with no foreign navies.",
+      "beats": {
+        "was": "A joint news conference by Iran's and Russia's foreign ministers in Tehran.",
+        "happened": "Araghchi said disputes should be settled by talks but put the blame for Hormuz on the US, and called for Gulf states to secure the strait themselves without outside forces.",
+        "means": "Talk of diplomacy, but no step toward the US position, and the call to remove foreign forces runs straight into the US naval presence. It does not match the 'breakthrough this week' reports from earlier today.",
+        "fx": "No sign of a deal → Gulf flows stay low → oil keeps its supply premium → support for oil exporters and a steady bid for havens. The lens: does anything move the US and Iran closer this week?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rhetoric gives no ground, keeping the supply premium in place."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stalled diplomacy keeps a small haven bid."
+        }
+      ],
+      "watch": "Any formal US reply to Iran's reopening offer, or a confirmed mediation breakthrough."
+    },
     {
       "id": "fxstreet-tds-cad-cpi-20261019",
       "ts": "2026-10-19T14:22:39Z",
@@ -322,33 +469,6 @@
       "watch": "Tuesday's UK jobs report and Wednesday's CPI; a soft pair would chip at the hike case."
     },
     {
-      "id": "fxstreet-gbpusd-ukdata-20261019",
-      "ts": "2026-10-19T11:54:32Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/pound-sterling-price-news-and-forecast-gbp-usd-to-remain-volatile-in-heavy-uk-data-week-202610191154",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-38_Medium.png",
-      "headline": "Pound Sterling Price News and Forecast: GBP/USD to remain volatile in heavy UK data week",
-      "story": "boe-nov",
-      "story_title": "BoE: the November decision",
-      "pillar": "growth",
-      "summary": "GBP/USD holds around 1.3315–1.3330, capped under its 100-day average, ahead of UK jobs data seen showing unemployment up to 5%.",
-      "beats": {
-        "was": "The pound against the dollar before Tuesday's UK labour report.",
-        "happened": "Slightly lower near 1.3314. Forecasts: unemployment up to 5.0% from 4.9%, pay growth easing to 3.8% from 3.9%. CPI follows Wednesday.",
-        "means": "A softening job market argues for caution at the BoE, while rising inflation argues for hikes. The week's data decides which weighs more.",
-        "fx": "Weaker jobs → less room for BoE hikes → softer pound; hot CPI → the reverse. The lens: is the BoE more worried about jobs or prices?"
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Softer jobs vs rising inflation; the pair is waiting on the data."
-        }
-      ],
-      "watch": "Unemployment above 5.0% or CPI below 3.3% would weigh on sterling."
-    },
-    {
       "id": "fxstreet-nzd-streak-q3cpi-20261019",
       "ts": "2026-10-19T11:48:28Z",
       "source": "FXStreet",
@@ -413,66 +533,6 @@
         }
       ],
       "watch": "An official US or Iranian statement, or a firm date for reopening Hormuz."
-    },
-    {
-      "id": "yahoo-gold-monday-20261019",
-      "ts": "2026-10-19T11:21:00Z",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-monday-october-19-2026-little-change-in-gold-prices-as-oil-sailed-to-may-highs-112123151.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/7d0b3159f58b6b3e3db0ef1a92edd8f8bd74e93f0e483ba4a4d1f86f2fa09d5d/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2Fuser-uploaded%2Fmonday.png",
-      "headline": "Gold prices today, Monday, October 19, 2026: Little change in gold prices as oil sailed to May highs",
-      "story": "gold-week",
-      "story_title": "Gold: oil, yields and the Fed",
-      "pillar": "inflation",
-      "summary": "December gold futures opened near $4,185 and barely moved, down about 4.5% over the past month, as $110 oil failed to shift Fed hold expectations.",
-      "beats": {
-        "was": "Gold futures at the start of the week.",
-        "happened": "Opened at $4,185, about $4,190 by 7am ET: flat. Gold is off roughly 0.8% on the week and 4.5% on the month.",
-        "means": "Oil-driven inflation fears would normally help gold, but high real yields and a Fed seen holding cancel that out, so gold is stuck.",
-        "fx": "Oil up → inflation worry → some gold demand; but high yields → holding gold costs more → cap on price. The lens: are yields or inflation fears winning?"
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Inflation worry and high yields offset each other; flat open."
-        }
-      ],
-      "watch": "A clean break of $4,200 or a sharp drop in Treasury yields."
-    },
-    {
-      "id": "investinglive-eu-wrap-france-20261019",
-      "ts": "2026-10-19T11:17:37Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/investinglive-european-session-wrap-french-unrest-weighs-on-the-euro-as-wall-street-looks-to-bounce-back/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/EUWRAP%20191026-featured-1792408608.jpg?width=960&format=webp",
-      "headline": "investingLive European session wrap: French unrest weighs on the euro as Wall Street looks to bounce back",
-      "story": "france-unrest",
-      "story_title": "France: protests and the deficit budget",
-      "pillar": "risk",
-      "summary": "The euro lagged in Europe, briefly slipping under 1.1200, while the Aussie led on China's data beat and US tech futures rebounded.",
-      "beats": {
-        "was": "The European morning across FX, stocks and commodities.",
-        "happened": "EUR/USD -0.2% to 1.1220, AUD/USD +0.6% to 0.6985, USD/JPY 158.18, gold $4,172, WTI $98.6. European stocks fell over 1% on the French riots while Nasdaq futures rose 1.2%.",
-        "means": "A split session: Europe's own political stress weighed on the euro and its stocks, while the global mood improved on tech and slightly lower Treasury yields.",
-        "fx": "European unrest → euro the weak link; risk-on in US tech + China beat → commodity currencies firm. The lens: is the stress local to Europe, or spreading into global sentiment?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro was the day's laggard on French riots."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Led the majors on China's beat and better risk mood."
-        }
-      ],
-      "watch": "Rising Treasury yields or French stress spreading would turn the risk mood."
     },
     {
       "id": "tradersagency-french-bonds-20261019",
@@ -649,6 +709,33 @@
       "watch": "JGB auction demand and any warning from Tokyo's currency officials; a firm spending offset would ease the worry."
     },
     {
+      "id": "fxstreet-socgen-cad-levels-20261019",
+      "ts": "2026-10-19T09:37:01Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/canadian-dollar-support-levels-eyed-after-pullback-societe-generale-202610190937",
+      "image": "https://editorial.fxsstatic.com/images/i/usd-cad-002_Medium.jpg",
+      "headline": "Canadian Dollar: Strength against US Dollar tests key levels",
+      "story": "boc-oct",
+      "story_title": "Bank of Canada: hike talk vs cooling core",
+      "pillar": "policy",
+      "summary": "Societe Generale noted USD/CAD falling from near 1.43 through 1.42 before today's CPI, with 1.4075 and about 1.40 as the next levels, though rate gaps still favour the dollar.",
+      "beats": {
+        "was": "A pre-CPI technical note from Societe Generale on the loonie.",
+        "happened": "USD/CAD turned down from overbought levels near 1.43 and broke a range floor at 1.42; SocGen flagged 1.4075 and the 50-day average near 1.40 as support.",
+        "means": "The loonie's rally has run ahead of the fundamentals: two-year yield gaps still favour the US dollar, so the move needs a reason to go further. CPI then came in soft and USD/CAD bounced off 1.4075.",
+        "fx": "Rate gaps still on the dollar's side → limited room for more CAD gains unless the BoC sounds firmer. The lens: do yield spreads catch up with the price, or the price with the spreads?"
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Recent strength noted, but the bank flags rate gaps that argue against much more."
+        }
+      ],
+      "watch": "A break of 1.40 would need a hawkish BoC; a rebound above 1.43 would undo the move."
+    },
+    {
       "id": "fxstreet-gold-below-4200-20261019",
       "ts": "2026-10-19T09:32:39Z",
       "source": "FXStreet",
@@ -701,60 +788,6 @@
         }
       ],
       "watch": "Friday's Moody's review and whether the French–German spread pushes back toward 150 basis points."
-    },
-    {
-      "id": "investinglive-france-spread-chart-20261019",
-      "ts": "2026-10-19T08:40:39Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/technical-analysis/chart-of-the-day-france-s-bond-market-is-flashing-another-warning-for-eur-usd/",
-      "image": "https://investinglive.com/cms/media/images/EURO%20FRANCE%20EUR%20v1.jpg?width=960&format=webp",
-      "headline": "Chart of the day: France's bond market is flashing another warning for EUR/USD",
-      "story": "france-unrest",
-      "story_title": "France: protests and the deficit budget",
-      "pillar": "fiscal",
-      "summary": "France's 10-year borrowing premium over Germany is back near 145bp, up from about 85bp in early September, and EUR/USD is leaning on 1.1200.",
-      "beats": {
-        "was": "The French–German 10-year spread: how much extra France pays to borrow versus Germany.",
-        "happened": "It has widened back toward 145bp with 150bp in view, from roughly 85bp at the start of September. EUR/USD sits below its 100- and 200-day averages near 1.1200.",
-        "means": "A spread that wide says investors want real compensation for French fiscal and political risk. Moody's reviews France on October 23, so the pressure has a date attached.",
-        "fx": "Wider French spread → fears of a eurozone debt flare-up → money leaves euro assets → EUR/USD under pressure; a break of 1.1200 opens the October low near 1.1113. The lens: is France's problem staying French, or becoming the euro's?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Widening French spreads are a direct risk premium on the euro."
-        }
-      ],
-      "watch": "Tuesday's budget vote and Moody's on Friday; a spread back under 130bp would ease the pressure."
-    },
-    {
-      "id": "sbs-us-eu-spectrum-retaliation-20261019",
-      "ts": "2026-10-19T07:06:23Z",
-      "source": "SBS News",
-      "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008804686",
-      "image": "https://img.sbs.co.kr/newimg/news/20250819/202102084_1280.jpg",
-      "headline": "US Warns EU of 'Devastating Retaliation' If US Firms Restricted in Satellite Internet Spectrum",
-      "story": "us-eu-tech",
-      "story_title": "US–EU: the tech-rules fight",
-      "pillar": "growth",
-      "summary": "Washington's envoy to the EU threatened tough retaliation against European firms if Brussels reserves most of a satellite spectrum band for EU operators, reopening a trade front.",
-      "beats": {
-        "was": "The EU plans to hand at least two-thirds of a satellite internet band to European operators and its own constellation, shutting out much of SpaceX's Starlink.",
-        "happened": "The US ambassador to the EU warned of harsh retaliation and also attacked the bloc's digital competition law, per a Financial Times report.",
-        "means": "It is a warning, not a measure, but it adds to a list of US–EU tech disputes that could turn into tariffs. Trade threats tend to weigh on the side more exposed to exports, which here is Europe.",
-        "fx": "US threats → risk of tariffs on European firms → softer growth outlook for Europe → mild pressure on the euro. The lens: does talk become an actual trade action?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A new US–EU trade threat; words only so far."
-        }
-      ],
-      "watch": "Any formal US trade step or an EU climbdown on the spectrum plan."
     },
     {
       "id": "alarabiya-tanker-mine-hormuz-20261019",
@@ -860,66 +893,6 @@
         }
       ],
       "watch": "Any Fed speaker reviving October hike talk, or a flight-to-safety bid if Gulf shipping attacks escalate."
-    },
-    {
-      "id": "investinglive-asia-wrap-euro-gap-20261019",
-      "ts": "2026-10-19T03:57:13Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/investinglive-asia-pacific-market-news-china-beats-the-euro-wobbles-and-oil-dips/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/EUR%20gapped%20down%2019%20October%202026-featured-1792381939.jpg",
-      "headline": "investingLive Asia-Pacific market news: China beats, the euro wobbles and oil dips",
-      "story": "france-unrest",
-      "story_title": "France: protests and the deficit budget",
-      "pillar": "risk",
-      "summary": "The euro gapped lower at the open on French riots, Black Sea drone incidents and US threats over EU tech rules, then won back most of the drop; oil eased on the Russia waiver.",
-      "beats": {
-        "was": "A weekend roundup of the Asia session, the first trading after two days of headlines.",
-        "happened": "Three Europe-specific worries hit the euro at once at the open; buyers soon closed most of the gap. Oil dipped on the US waiver on Russian energy, with Houthi attacks on Saudi Arabia limiting the fall.",
-        "means": "A quick refill of the gap says the market sees the weekend's European risks as a drag, not a crisis. China's beat and a steady yen kept the rest of the session calm.",
-        "fx": "Europe-centred headline risk → a brief risk discount on the euro → partly unwound as no new shock followed. The lens: do Europe's political and trade worries keep stacking up?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Gapped down on European risks, then recovered most of it."
-        },
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Eased on the Russia waiver; Gulf attacks capped the drop."
-        }
-      ],
-      "watch": "Whether the euro revisits its opening low in European hours."
-    },
-    {
-      "id": "brecorder-oil-five-month-highs-20261019",
-      "ts": "2026-10-19T02:33:45Z",
-      "source": "Business Recorder (Reuters)",
-      "url": "https://www.brecorder.com/news/40444883/oil-slips-from-five-month-highs-with-hormuz-crossings-russian-sanctions-waiver-in-focus",
-      "image": "https://i.brecorder.com/large/2026/10/190728204f6fcf8.webp",
-      "headline": "Oil slips from five-month highs with Hormuz crossings, Russian sanctions waiver in focus",
-      "story": "hormuz",
-      "story_title": "Hormuz: reopening offer vs ship attacks",
-      "pillar": "tot",
-      "summary": "Brent eased to about $108 from Friday's highest close since May, but Kpler data show Gulf crude flows fell to roughly 8.5 million barrels a day last week from over 20 million.",
-      "beats": {
-        "was": "The oil market's week-opening move, weighing Russia's sanctions waiver against Gulf supply.",
-        "happened": "Brent fell about 1.6% to near $108 and WTI to around $100.5. Kpler said Gulf crude flows dropped to a 8.5m bpd weekly average after at least 10 attacks on ships.",
-        "means": "The waiver adds Russian barrels at the margin, but the Gulf shortfall is far bigger. SEB warned Iran could escalate before the November 3 US midterms.",
-        "fx": "Some extra Russian supply → a small dip; much less Gulf supply → a high floor under prices → support for oil exporters like CAD, a cost for importers like JPY and EUR. The lens: is Gulf supply coming back, or just being talked about?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The waiver pulls prices down while the Gulf supply hole holds them up."
-        }
-      ],
-      "watch": "Weekly Gulf flow data and any new ship attacks."
     },
     {
       "id": "fxstreet-nzd-china-gdp-20261019",
@@ -1102,72 +1075,6 @@
       "watch": "China's Q3 data today and Australia's Q3 CPI on Oct 28; a soft CPI would undercut the neutral-rate argument."
     },
     {
-      "id": "invezz-treasury-yields-20261019",
-      "date": "2026-10-19",
-      "source": "Invezz",
-      "url": "https://invezz.com/news/2026/10/19/treasury-yields-ease-as-oil-prices-retreat-amid-fading-fed-rate-hike-bets/",
-      "image": "https://invezz-wp-media.lon1.digitaloceanspaces.com/2025/08/image-50-2.png",
-      "headline": "Treasury yields ease as oil prices retreat amid fading Fed rate-hike bets",
-      "story": "fed-path",
-      "story_title": "The Fed: October fading, December priced",
-      "pillar": "policy",
-      "summary": "The 10-year Treasury yield edged down to about 5.09% after last week's 16.5bp drop, with over 85% odds of an October Fed hold; PIMCO warns yields may not have peaked.",
-      "beats": {
-        "was": "US government borrowing costs to start the week.",
-        "happened": "The 10-year slipped 1bp to about 5.09% and the 30-year to about 5.43%, after Treasuries' best week since mid-February. FedWatch shows over 85% odds of no October move.",
-        "means": "Cooler oil and fading hike bets are giving bonds a breather, but yields above 5% are still restrictive, and PIMCO sees room for one or two more Fed hikes.",
-        "fx": "Lower US yields → smaller rate advantage for the dollar → softer dollar, firmer gold. The lens: is last week's bond rally a turn, or a pause?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Yields drifting lower erode the dollar's carry support."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Lower yields cut the cost of holding gold."
-        }
-      ],
-      "watch": "Any Fed official reopening the October hike door, or oil back above $110."
-    },
-    {
-      "id": "cbs-lavrov-tehran-oil-20261019",
-      "date": "2026-10-19",
-      "source": "CBS News",
-      "url": "https://cbsnews.com/live-updates/iran-war-us-trump-talks-russia-strait-of-hormuz",
-      "image": null,
-      "headline": "Live Updates: Russian foreign minister says he's visiting Iran for talks to avert return to \"large-scale war\"",
-      "story": "hormuz",
-      "story_title": "Hormuz: reopening offer vs ship attacks",
-      "pillar": "risk",
-      "summary": "Lavrov is in Tehran for talks he says aim to stop a return to full-scale war; Brent fell about 2.5% to near $107 early Monday after Friday's five-month high.",
-      "beats": {
-        "was": "Russia's foreign minister on his first visit to Iran since the US–Iran war began in February.",
-        "happened": "Iran said its conditions for reopening Hormuz are unchanged and it is still reviewing US comments on its ceasefire plan. UKMTO logged 10 ship attacks near the strait last week; oil eased from near $110.",
-        "means": "Diplomacy is active but nothing has changed on the water: attacks continue and flows stay choked. The oil dip owes more to the Russia waiver than to Gulf calm.",
-        "fx": "De-escalation talks → slightly lower odds of renewed war → trims oil's risk premium and haven demand. The lens: does any talk translate into ships moving through Hormuz?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Talks and the price dip trim the premium; attacks keep it from fading."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Diplomacy eases haven demand while ship attacks keep it alive."
-        }
-      ],
-      "watch": "Any statement out of the Lavrov talks on the ceasefire proposal or Hormuz access."
-    },
-    {
       "id": "gulfnews-saudi-houthi-egypt-20261019",
       "date": "2026-10-19",
       "source": "Gulf News",
@@ -1232,6 +1139,33 @@
         }
       ],
       "watch": "Any confirmed US reply to Iran's conditions or an agreed reopening date."
+    },
+    {
+      "id": "mblip-bofa-bhave-oct-hike-20261019",
+      "date": "2026-10-19",
+      "source": "Bloomberg TV (via mblip)",
+      "url": "https://mblip.com/fed-could-raise-rates-in-october-says-bhave/",
+      "image": null,
+      "headline": "Fed Could Raise Rates in October, Says Bhave",
+      "story": "fed-path",
+      "story_title": "Fed: October hold vs one more hike",
+      "pillar": "policy",
+      "summary": "BofA's senior US economist Aditya Bhave told Bloomberg the Fed could still hike in October, against market pricing that strongly favours a hold.",
+      "beats": {
+        "was": "A bank economist's view on the Fed's October 27–28 meeting, ahead of a Warsh appearance.",
+        "happened": "Bhave said an October hike remains possible, even though markets price a hold with high odds.",
+        "means": "It is one forecaster, not a Fed official, so it doesn't change policy. But it is a reminder that pricing has swung hard toward a pause, and a hawkish Warsh would leave room for a repricing.",
+        "fx": "If the Fed hikes against expectations → US yields jump → money moves into dollars → dollar up. The lens: does Warsh sound like a man ready to surprise?"
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "An outside view against the priced hold; it matters only if Fed speakers echo it."
+        }
+      ],
+      "watch": "Warsh's remarks this week and any shift in October hike odds."
     },
     {
       "id": "reuters-iran-hormuz-offer-20261018",
