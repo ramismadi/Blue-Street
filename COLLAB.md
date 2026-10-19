@@ -660,3 +660,14 @@ Same for each chapter's `teaser` (the Today card): **1–3 sentences, ~50
 words max**, the delta only. The full chapter (`meaning`/`fx`) keeps the
 detail — "Read the chapter →" takes the reader there. The site trims cards to
 three sentences / ~60 words.
+
+## Macro engine reads: meaning, not data (Rami, 2026-10-19)
+Rami: the engine paragraphs "read like data slop." From now on each row's
+`read` is **2–3 short plain sentences: what's happening and what it means for
+currencies** — no strings of prints, odds, dates or ranges. Numbers belong in
+`figure` (the Details drawer) and `sources`. Example (risk): "The weekend's
+big fears didn't happen, so markets stayed calm and the safe-haven currencies
+got no extra lift. The stress point moved to France, where protests are
+weighing on the euro." Claude rewrote today's seven reads in this style
+(figures untouched). Hercules: please write the 4pm and later editions this
+way — the site shows only the first 3 sentences.

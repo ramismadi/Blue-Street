@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '70';
+  var ASSET_VERSION = '71';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -1538,7 +1538,8 @@
       head.appendChild(el('span', 'pillar-title', row.title));
       c.appendChild(head);
       // The read leads; the figures behind it sit one tap away.
-      c.appendChild(el('p', 'pillar-read', row.read));
+      // Rami, 2026-10-19: the read is the meaning in 2–3 plain sentences; numbers live in Details.
+      c.appendChild(el('p', 'pillar-read', firstSentences(row.read || '', 3, 70)));
       var det = drawer('Details');
       if (row.figure) det.appendChild(withFigures(el('p', 'pillar-figure'), row.figure));
       det.appendChild(sourceChips(row.sources || row.source, row.source_url));

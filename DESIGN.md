@@ -148,6 +148,7 @@ work). Engine rows and story chapters may instead use `"source"` (string) +
 ```
 {"updated":"<ISO-8601>","rows":[{"id","title","figure","read","sources":[]}]}
 ```
+**`read` = the meaning, not the data** (Rami, 2026-10-19): 2–3 short plain-English sentences — what's happening and what it means for currencies — with as few numbers as possible (round ones if any). Prints, odds, levels and dates go in `figure` and `sources` (the Details drawer). The page shows at most 3 sentences / ~70 words.
 Row ids: `policy`, `growth`, `inflation`, `risk`, `tot`, `positioning`,
 `fiscal`. Any number of rows works — the grid balances itself and the
 "N pillars" label counts them.
