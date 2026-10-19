@@ -67,20 +67,21 @@ the other agent owns — if you need a change in it, ask in this file.
 | File | What | When (CT) |
 |---|---|---|
 | `index.html`, `assets/*`, `tools/*`, `.github/workflows/*` | the whole site: design, layout, features | when Rami asks |
-| `data/words.json` | plain-words text: Today's read, engine reads, bank summaries — shown over the matching text in Herc's files | 3:07 AM and 4:52 PM daily |
+| `data/words.json` | plain-words text: Today's read, engine reads, bank summaries — shown over the matching text in Herc's files | 2:04 AM and 4:04 PM daily |
 | `data/news.json` | News tab: stories, impact, per-currency reads | :43 past, ~10 times a weekday |
 | `data/cot.json` | positioning (built by a GitHub Action) | Fridays, checked Saturdays |
 | `DESIGN.md` | how the site is built and what each file must look like | when design changes |
-| after `HANDOVER CONFIRMED`: `data/story.json`, `data/engine.json` | full daily editions | 3:07 AM and 4:52 PM |
+| after `HANDOVER CONFIRMED`: `data/story.json`, `data/engine.json` | full daily editions | 2:04 AM and 4:04 PM |
 
 ### Shared
 - `COLLAB.md` (this file): both may add sections; don't rewrite or delete the
   other agent's sections.
 
 ### Timing, so pushes don't collide
-- Hercules' main runs: about 2 AM and 4 PM CT. Claude's words run waits until
-  after (3:07 AM, 4:52 PM); Claude's News read never pushes 1:30–2:30 AM or
-  3:30–4:30 PM.
+- The site updates at **2 AM and 4 PM CT** (Rami, 2026-10-19). So Hercules'
+  data runs start at **1:15 AM and 3:15 PM** and should be pushed by about
+  2:00 / 4:00; Claude's editions run at 2:04 AM and 4:04 PM and use what's
+  there. Claude's News read never pushes 1:00–2:45 AM or 3:00–4:45 PM.
 - Everyone: fetch right before pushing, one commit per run, never force-push,
   never push an empty commit.
 
@@ -705,7 +706,7 @@ line starting `HANDOVER CONFIRMED` (Hercules or Rami adds it, ideally with the
 first edition date). From that edition on, please don't write `story.json` or
 `engine.json`. Until then, nothing changes for you.
 
-HANDOVER CONFIRMED — first edition 2026-10-19 (Rami, 2026-10-19; moved up from Oct 20 because Hercules' jobs already stopped writing story/engine). From the 4:52 PM CT afternoon edition on Mon Oct 19, Claude writes `data/story.json` and `data/engine.json` in full. Hercules: from then on please stop writing those two files; keep the data files listed above (and `data/markets.json` if you can — it makes the editions better).
+HANDOVER CONFIRMED — first edition 2026-10-19 (Rami, 2026-10-19; moved up from Oct 20 because Hercules' jobs already stopped writing story/engine). From the 4:04 PM CT afternoon edition on Mon Oct 19, Claude writes `data/story.json` and `data/engine.json` in full. Hercules: from then on please stop writing those two files; keep the data files listed above (and `data/markets.json` if you can — it makes the editions better).
 
 Later phases (not started): Focus Mode prose (preview/recap), Week Ahead
 (Sun 5:30 PM) and Week in Review (Fri 5 PM) via `weekly.json`.
