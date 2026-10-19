@@ -341,6 +341,11 @@ each `why`, "What would change it", the publisher button, and "Earlier on this
 story". Today's tiles link the tab.
 
 ### `data/latest.json` — Developing now (was the Flash tab)
+**Rami, 2026-10-18 (late): the Developing strip is removed from the site** —
+no strip on News, no Today glance tile, no currency-page section, no badge.
+`latest.json` is still read for Focus Mode's live blog (and the editions'
+"What changed"), so the feed itself stays; everything below about rendering
+the strip is retired.
 **Rami, 2026-10-18: Flash merged into News.** One tab: the market chips and
 news read on top, then **Developing now** (these threads), then **Headlines**
 (`news.json`). The feed, the 30-min breaking watch, Focus Mode's live blog and

@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=48">
+<link rel="stylesheet" href="assets/style.css?v=49">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -27,8 +27,8 @@
     if (localStorage.getItem('gloment-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=48" defer></script>
-<script src="assets/app.js?v=48" defer></script>
+<script src="assets/cot.js?v=49" defer></script>
+<script src="assets/app.js?v=49" defer></script>
 </head>
 <body>
 
@@ -67,7 +67,7 @@
         <a role="tab" href="./" data-home data-tab="today"    id="tab-today">Today <span class="badge focus-badge" id="focus-badge" hidden></span></a>
         <a role="tab" href="#fx"       data-tab="fx"       id="tab-fx">Currencies</a>
         <a role="tab" href="#drivers"  data-tab="drivers"  id="tab-drivers">Drivers</a>
-        <a role="tab" href="#news"     data-tab="news"     id="tab-news">News <span class="badge" id="wire-count" title="Stories developing in the last 24 hours" hidden></span></a>
+        <a role="tab" href="#news"     data-tab="news"     id="tab-news">News</a>
         <a role="tab" href="#calendar" data-tab="calendar" id="tab-calendar">Calendar</a>
       </div>
     </div>
@@ -110,9 +110,6 @@
         </div>
       </div>
       <p class="sr-only" id="glance-status" aria-live="polite"></p>
-      <div class="glance-tile" data-tile="flash">
-        <a class="card glance-flash" id="today-wire" href="#news" hidden></a>
-      </div>
       <div class="glance-tile" data-tile="next">
         <div class="card glance-next">
           <div class="card-head">
@@ -276,21 +273,13 @@
   <section class="view" id="view-news" role="tabpanel" aria-labelledby="tab-news" hidden>
     <div class="view-head">
       <h1 class="view-title">News</h1>
-      <p class="meta">What&rsquo;s developing, then every headline that moves FX</p>
+      <p class="meta">Every headline that moves FX</p>
     </div>
     <div class="news-filters">
       <div class="chip-row" id="news-mkts" aria-label="Filter by market"></div>
     </div>
     <section class="card news-read" id="news-read" aria-live="polite" hidden></section>
 
-    <section class="dev" aria-labelledby="dev-title">
-      <div class="news-sec-head">
-        <h2 class="section-label" id="dev-title"><span class="dev-dot" aria-hidden="true"></span>Developing now</h2>
-        <span class="meta">Stories moving FX right now, updated through the day</span>
-      </div>
-      <p class="meta dev-empty" id="dev-empty" hidden></p>
-      <div class="wire" id="latest-items"></div>
-    </section>
 
     <section class="news-heads" aria-labelledby="heads-title">
       <div class="news-sec-head">

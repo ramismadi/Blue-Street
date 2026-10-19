@@ -623,3 +623,10 @@ first edition date). From that edition on, please don't write `story.json` or
 
 Later phases (not started): Focus Mode prose (preview/recap), Week Ahead
 (Sun 5:30 PM) and Week in Review (Fri 5 PM) via `weekly.json`.
+
+## Developing strip removed (Claude, 2026-10-18 late; Rami asked)
+The site no longer shows Developing threads anywhere (News strip, Today tile,
+currency pages, badge). `data/latest.json` is still used by Focus Mode's live
+blog on big-event days and by the editions' "What changed", so the file stays.
+Whether the 30-min breaking watch keeps running outside focus days is Rami's
+call — ask him before changing it.

@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '48';
+  var ASSET_VERSION = '49';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -517,7 +517,7 @@
     { id: 'drivers', label: 'Drivers', href: '#drivers',
       ico: 'M2.5 11.5a5.5 5.5 0 1 1 11 0 M8 11.5l2.6-3.6',
       subs: [['engine', 'Macro engine'], ['positioning', 'Positioning'], ['banks', 'Central banks']] },
-    { id: 'news', label: 'News', href: '#news', badge: 'wire-count',
+    { id: 'news', label: 'News', href: '#news',
       ico: 'M2.5 4.5h9v8h-9z M11.5 6.5h2v5a1 1 0 0 1-2 0 M4.5 6.5h5 M4.5 8.5h5 M4.5 10.5h3' },
     { id: 'calendar', label: 'Calendar', href: '#calendar',
       ico: 'M2.5 4h11v9.5h-11z M2.5 7h11 M5.5 2.5v3 M10.5 2.5v3' },
@@ -920,7 +920,7 @@
      saved per browser (localStorage `gloment-glance`), unknown ids are
      dropped and new tiles are appended, so adding a tile later is safe. The
      first visible tile spans the full width. */
-  var GLANCE_IDS = ['flash', 'next', 'lean'];
+  var GLANCE_IDS = ['next', 'lean'];   // 'flash' (Developing) removed 2026-10-18
   var GLANCE_NAMES = { flash: 'Developing', next: 'Next up', lean: 'Evidence leans' };
   var glance = { editing: false, drag: null };
 
@@ -2851,18 +2851,6 @@
       el2.appendChild(li);
     });
     side.appendChild(el2);
-    // Wire threads touching this currency
-    var wt = wireThreads.filter(function (t) { return t.ccy.indexOf(c.ccy) >= 0; });
-    if (wt.length) {
-      side.appendChild(el('h2', 'section-label', 'Developing'));
-      wt.slice(0, 3).forEach(function (t) {
-        var a = el('a', 'fd-wire');
-        a.href = '#news/' + c.ccy;
-        a.appendChild(el('span', 'callout-lbl', relTime(t.latest.ts) + (t.items.length > 1 ? ' · ' + t.items.length + ' updates' : '')));
-        a.appendChild(el('span', null, t.latest.headline));
-        side.appendChild(a);
-      });
-    }
     // Latest headlines for this currency (news.json)
     var nItems = ((news.data && news.data.items) || []).filter(function (it) { return newsTouches(it, c.ccy); })
       .sort(function (a, b) { return newsTime(b) - newsTime(a); }).slice(0, 3);
@@ -3050,10 +3038,13 @@
 
   function renderWire(d) {
     var box = $('#latest-items');
-    box.textContent = '';
     var items = (d.items || []).slice();
     focus.wire = items;
     if (focus.data) renderFocus();
+    // Rami, 2026-10-18: the Developing strip is gone from the site; latest.json
+    // still feeds Focus Mode's live blog, so only the data hand-off above runs.
+    if (!box) { wireThreads = buildThreads(items); return; }
+    box.textContent = '';
     if (!items.length) {
       box.appendChild(el('p', 'meta', 'Nothing developing right now.'));
       return;
