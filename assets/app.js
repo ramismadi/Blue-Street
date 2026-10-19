@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '74';
+  var ASSET_VERSION = '75';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -990,8 +990,15 @@
     (d.chapters || []).forEach(function (ch, i) {
       var li = el('li');
       li.style.setProperty('--i', i);
-      // Each chip jumps straight to its chapter scene.
-      var b = el('button', ch.quiet ? 'quiet' : null, ch.title);
+      // Each chip jumps straight to its chapter card (or, if quiet, the Story
+      // chapter). Rami, 2026-10-19: flag + code, like the News market chips.
+      var code = chapterCcy(ch, i);
+      var b = el('button', ch.quiet ? 'quiet' : null);
+      if (code && FLAG_FILE[code]) {
+        b.appendChild(flagEl(code));
+        b.appendChild(el('span', null, code === 'XAU' || code === 'OIL' ? mktName(code) : code));
+        b.setAttribute('aria-label', ch.title);
+      } else b.textContent = ch.title;
       b.type = 'button';
       if (ch.quiet) b.title = 'Quiet today — opens the full chapter';
       b.addEventListener('click', function () {
@@ -1711,11 +1718,12 @@
 
       // Prose first: the bank's story (summary, if the feed gives one) and
       // what the market prices lead; the rate stays as a compact figure.
-      if (b.summary) c.appendChild(el('p', 'bank-summary', b.summary));
+      // Rami, 2026-10-19: lead with the meaning in 1–2 plain sentences; the numbers sit in Details.
+      if (b.summary) c.appendChild(el('p', 'bank-summary', firstSentences(b.summary, 2, 45)));
       if (b.priced) {
         var pr = el('div', 'bank-priced');
         pr.appendChild(el('span', 'meet-lbl', 'Market pricing'));
-        pr.appendChild(el('span', null, b.priced));
+        pr.appendChild(el('span', null, b.summary ? firstSentences(b.priced, 1, 25) : b.priced));
         c.appendChild(pr);
       }
       if (o.covered && b.rate) {
@@ -1740,8 +1748,9 @@
       if (o.covered) {
         // Raw numbers: rate definition, last move, sources — on tap.
         var mc = moveChip(b.last_move);
-        if (b.rate_label || mc || (b.sources || []).length) {
+        if (b.rate_label || mc || b.detail || (b.sources || []).length) {
           var det = drawer('Details');
+          if (b.detail) det.appendChild(el('p', 'bank-detail', b.detail));
           if (b.rate_label) det.appendChild(el('p', 'rate-lbl', b.rate_label + ': ' + (b.rate || '—')));
           if (mc) det.appendChild(mc);
           if ((b.sources || []).length) det.appendChild(sourceChips(b.sources));

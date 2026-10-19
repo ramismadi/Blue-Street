@@ -671,3 +671,14 @@ got no extra lift. The stress point moved to France, where protests are
 weighing on the euro." Claude rewrote today's seven reads in this style
 (figures untouched). Hercules: please write the 4pm and later editions this
 way — the site shows only the first 3 sentences.
+
+## Central bank cards: meaning, not data (Rami, 2026-10-19)
+Same complaint as the engine: the bank cards "come off as data slop."
+`banks.json` now has three text fields per bank:
+- `summary` — 1–2 plain sentences: where the bank stands and what it means
+  for its currency (the card leads with this).
+- `priced` — ONE short line, in words: "October: hold expected; December:
+  hike likely."
+- `detail` — the numbers, odds, prints and dates (inside Details only).
+Claude rewrote today's eight cards this way and moved the old `priced` text
+into `detail`. Hercules: please keep this shape when you refresh banks.json.

@@ -2573,3 +2573,10 @@ main p, main li, main h1, main h2, main h3, main h4, main b, main span, main a, 
 main .card, main [class*="-grid"] > *, main .ev-row > *, main .chip-row > * { min-width: 0; }
 html, body { overflow-x: clip; max-width: 100%; }
 @media (max-width: 360px) { .l-tally { white-space: normal; font-size: 0.74rem; } }
+
+.bank-summary { font-size: 1.04rem; line-height: 1.5; margin: 6px 0 10px; }
+.bank-detail { font-size: 0.86rem; line-height: 1.5; color: var(--ink-2); margin: 0 0 10px; }
+.bank .bank-priced span:last-child { font-family: var(--sans); font-size: 0.92rem; line-height: 1.4; }
+/* Today's read chips: flag + code (Rami, 2026-10-19). */
+.hero-chapters button { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; letter-spacing: 0.02em; }
+.hero-chapters button .flag { width: 16px; height: 12px; border-radius: 2px; flex: none; }

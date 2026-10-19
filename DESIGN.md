@@ -137,6 +137,7 @@ work). Engine rows and story chapters may instead use `"source"` (string) +
    "scenarios":{"base","bull","bear"},"sources":[]}]}
 ```
 - `headline` — **Today's read: 1–2 sentences, ~35 words max** (Rami, 2026-10-19). The page shows at most the first two sentences (one if two run past ~45 words), so anything longer is cut, not shown.
+- Chips under Today's read: flag + code (USD, EUR…; Gold and Oil by name), matching the News market chips. Tap = that currency's card on Today, or its Story chapter when quiet (Rami, 2026-10-19).
 - `teaser` — **the Today card: 1–3 sentences, ~50 words max**, the delta only (Rami, 2026-10-19). The card shows at most three sentences / ~60 words; "Read the chapter →" opens the full chapter for anyone who wants more.
 - `meaning` (+ `fx`) — the narrative. Section labels `What changed:`,
   `Thread:`, `What it means:`, `What to watch:` become headed sections in the
@@ -445,6 +446,7 @@ shows a one-line "Positioning" link under Trend.
   "priced":"Oct hike ~60%"|null, "bias":"hawkish"|"neutral"|"dovish"|null,
   "sources":[]}]}
 ```
+**Meaning, not data** (Rami, 2026-10-19): `summary` = 1–2 plain sentences on where the bank stands and what it means for its currency (shown first); `priced` = ONE short line on what markets expect, in words ("October: hold expected; December: hike likely"); `detail` (optional) = the numbers, odds, prints and dates — shown only inside Details. The card trims summary to 2 sentences and priced to 1.
 A bank with `rate`, `priced` or `bias` gets a full card; others show date
 only. Cards sort by soonest meeting. Use the headline policy rate (Fed: the
 target range; ECB: deposit facility) and say which in `rate_label`. Source
