@@ -1,7 +1,7 @@
 {
  "updated": "2026-10-19T19:48:09.382Z",
  "report_date": "2026-10-13",
- "method": "flip = (long − short) / open interest × 100; percentile = mid-rank vs all weekly history since Jan 2015; lean: ≥90 very bullish, ≥60 bullish, ≤40 bearish, ≤10 very bearish, otherwise neutral; signal (hedge funds): very bullish −1, very bearish +1, else 0",
+ "method": "flip = (long − short) / open interest × 100; percentile = mid-rank vs all weekly history since Jan 2015; positive flip = net long (betting the market rises); split = hedge funds and real money on opposite sides; zones (for the engine signal): ≥90 very bullish, ≥60 bullish, ≤40 bearish, ≤10 very bearish, otherwise neutral; signal (hedge funds): very bullish −1, very bearish +1, else 0",
  "sources": [
   {
    "label": "CFTC Traders in Financial Futures (futures only)",
@@ -222,7 +222,7 @@
      "rm": 18164
     }
    ],
-   "summary": "Hedge funds are neutral on the dollar, about their usual. Over the past month they flipped from net short to net long."
+   "summary": "Hedge funds are leaning for the dollar. Over the past month they flipped from betting against the dollar to betting for it."
   },
   {
    "id": "EUR",
@@ -433,7 +433,7 @@
      "rm": 199918
     }
    ],
-   "summary": "Hedge funds are more bearish on the euro than usual. Over the past month they turned more bearish. That is their most bearish reading in 12 weeks."
+   "summary": "Hedge funds are leaning against the euro. Over the past month they added to their bet against the euro."
   },
   {
    "id": "GBP",
@@ -644,7 +644,7 @@
      "rm": -145735
     }
    ],
-   "summary": "Hedge funds are neutral on the pound, about their usual. Over the past month they turned more bearish."
+   "summary": "Hedge funds are leaning for the pound. Over the past month they cut their bet on the pound."
   },
   {
    "id": "JPY",
@@ -695,7 +695,7 @@
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
-   "split": false,
+   "split": true,
    "signal": 0,
    "history": [
     {
@@ -855,7 +855,7 @@
      "rm": 65819
     }
    ],
-   "summary": "Hedge funds are still net short the yen, but less than usual. Over the past month they flipped from net long to net short."
+   "summary": "Hedge funds are betting against the yen. Over the past month they flipped from betting for the yen to betting against it. Real money disagrees: it is betting for the yen."
   },
   {
    "id": "CHF",
@@ -1066,7 +1066,7 @@
      "rm": -31456
     }
    ],
-   "summary": "Hedge funds are more bearish on the franc than usual. Little has changed over the past month."
+   "summary": "Hedge funds are betting against the franc. Little has changed over the past month."
   },
   {
    "id": "CAD",
@@ -1277,7 +1277,7 @@
      "rm": -30804
     }
    ],
-   "summary": "Hedge funds are more bearish on the Canadian dollar than usual. Over the past month they turned sharply more bearish."
+   "summary": "Hedge funds are strongly betting against the Canadian dollar. Over the past month they sharply added to their bet against the Canadian dollar."
   },
   {
    "id": "AUD",
@@ -1488,7 +1488,7 @@
      "rm": -115920
     }
    ],
-   "summary": "Hedge funds are more bullish on the Aussie than usual. Over the past month they turned more bearish. Real money disagrees: it is bearish on the Aussie."
+   "summary": "Hedge funds are betting for the Aussie. Over the past month they cut their bet on the Aussie. Real money disagrees: it is strongly betting against the Aussie."
   },
   {
    "id": "NZD",
@@ -1699,7 +1699,7 @@
      "rm": -44139
     }
    ],
-   "summary": "Hedge funds are more bearish on the kiwi than usual. Over the past month they turned more bearish."
+   "summary": "Hedge funds are betting against the kiwi. Over the past month they added to their bet against the kiwi."
   },
   {
    "id": "XAU",
@@ -1865,7 +1865,7 @@
      "oi": 396345
     }
    ],
-   "summary": "Hedge funds are more bullish on gold than usual. Over the past month they turned more bearish. That is their most bearish reading in 12 weeks."
+   "summary": "Hedge funds are strongly betting for gold. Over the past month they cut their bet on gold."
   },
   {
    "id": "XAG",
@@ -2031,7 +2031,7 @@
      "oi": 108433
     }
    ],
-   "summary": "Hedge funds are still net long silver, but less than usual. Over the past month they turned more bearish. That is their most bearish reading in 12 weeks."
+   "summary": "Hedge funds are leaning for silver. Over the past month they cut their bet on silver."
   },
   {
    "id": "WTI",
@@ -2197,7 +2197,7 @@
      "oi": 1900179
     }
    ],
-   "summary": "Hedge funds are still net long oil, but about as little as they have been since 2015. Over the past month they turned more bearish. That is their most bearish reading in 12 weeks."
+   "summary": "Hedge funds are leaning for oil. Their bet on oil rising is among the weakest since 2015. Over the past month they cut their bet on oil."
   },
   {
    "id": "HG",
@@ -2363,7 +2363,7 @@
      "oi": 313832
     }
    ],
-   "summary": "Hedge funds are more bullish on copper than usual. Over the past month they turned slightly more bearish. That is their most bearish reading in 12 weeks."
+   "summary": "Hedge funds are betting for copper. Over the past month they slightly cut their bet on copper."
   }
  ]
 }

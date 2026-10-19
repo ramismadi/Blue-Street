@@ -121,43 +121,57 @@
     return r + (s[(v - 20) % 10] || s[v] || s[0]);
   }
 
-  /* Plain words (Rami, 2026-10-19): a lean on the currency compared with the
-     group's own usual since 2015, not jargon. "bullish" = betting it rises. */
-  function lean(g, who, ref) {
-    var z = g.zone, longNet = g.net >= 0, top = g.pct > 99.5, bot = g.pct < 0.5;
-    if (z === 'neutral') return who + ' are neutral on ' + ref + ', about their usual.';
-    if (z === 'very bullish') {
-      return longNet ? who + ' are ' + (top ? 'more bullish on ' + ref + ' than at any time since 2015.' : 'about as bullish on ' + ref + ' as they have been since 2015.')
-        : who + ' are still net short ' + ref + ', but ' + (top ? 'less than at any time since 2015.' : 'about as little as they have been since 2015.');
-    }
-    if (z === 'very bearish') {
-      return !longNet ? who + ' are ' + (bot ? 'more bearish on ' + ref + ' than at any time since 2015.' : 'about as bearish on ' + ref + ' as they have been since 2015.')
-        : who + ' are still net long ' + ref + ', but ' + (bot ? 'less than at any time since 2015.' : 'about as little as they have been since 2015.');
-    }
-    if (z === 'bullish') return longNet ? who + ' are more bullish on ' + ref + ' than usual.' : who + ' are still net short ' + ref + ', but less than usual.';
-    return !longNet ? who + ' are more bearish on ' + ref + ' than usual.' : who + ' are still net long ' + ref + ', but less than usual.';
+  /* Plain words (Rami, 2026-10-19): what a group is betting, from its net
+     position (flip = net as a share of open interest). "For" = betting the
+     market rises, "against" = betting it falls. */
+  function stanceOf(g) {
+    var f = g.flip, a = Math.abs(f);
+    if (a < 2) return { word: 'evenly split', sign: 0 };
+    return { word: (a < 8 ? 'leaning' : a < 20 ? 'betting' : 'strongly') + (f > 0 ? ' for' : ' against'), sign: f > 0 ? 1 : -1 };
   }
+  function stanceSentence(g, who, ref) {
+    var st = stanceOf(g);
+    if (!st.sign) return who + ' are evenly split on ' + ref + '.';
+    return who + ' are ' + phrase(st) + ' ' + ref + '.';
+  }
+  function phrase(st) { return st.word.replace(/^strongly/, 'strongly betting'); }
 
   /* What the last four weeks did, in words. */
-  function flow(g, oi) {
+  function flow(g, oi, ref) {
     var c = g.chg4;
     if (c == null) return '';
     var share = oi ? Math.abs(c) / oi * 100 : 0, was = g.net - c;
     if (share < 0.2) return 'Little has changed over the past month.';
-    if (was >= 0 && g.net < 0) return 'Over the past month they flipped from net long to net short.';
-    if (was < 0 && g.net >= 0) return 'Over the past month they flipped from net short to net long.';
-    return 'Over the past month they turned ' + (share >= 10 ? 'sharply ' : share < 2 ? 'slightly ' : '') + 'more ' + (c > 0 ? 'bullish.' : 'bearish.');
+    if (was >= 0 && g.net < 0) return 'Over the past month they flipped from betting for ' + ref + ' to betting against it.';
+    if (was < 0 && g.net >= 0) return 'Over the past month they flipped from betting against ' + ref + ' to betting for it.';
+    var long = g.net >= 0, more = long ? c > 0 : c < 0;
+    return 'Over the past month they ' + (share >= 10 ? 'sharply ' : share < 2 ? 'slightly ' : '') + (more ? 'added to' : 'cut') +
+      ' their bet ' + (long ? 'on ' : 'against ') + ref + '.';
+  }
+
+  /* Is the hedge-fund bet near its extreme since 2015? */
+  function extremity(g, ref) {
+    if (g.pct < 0.5) return 'Their bet on ' + ref + ' rising is the weakest since 2015.';
+    if (g.pct <= 10) return 'Their bet on ' + ref + ' rising is among the weakest since 2015.';
+    if (g.pct > 99.5) return 'Their bet on ' + ref + ' rising is the strongest since 2015.';
+    if (g.pct >= 90) return 'Their bet on ' + ref + ' rising is among the strongest since 2015.';
+    return '';
+  }
+
+  function disagree(m) {
+    if (!m.rm) return false;
+    // Both clearly committed (8%+ of open interest) and on opposite sides.
+    var h = m.hf.flip, r = m.rm.flip;
+    return Math.abs(h) >= 8 && Math.abs(r) >= 8 && (h > 0) !== (r > 0);
   }
 
   function summarize(m) {
-    var hf = m.hf;
-    var s = lean(hf, 'Hedge funds', m.ref);
-    var f = flow(hf, m.oi);
+    var s = stanceSentence(m.hf, 'Hedge funds', m.ref);
+    var x = extremity(m.hf, m.ref);
+    if (x) s += ' ' + x;
+    var f = flow(m.hf, m.oi, m.ref);
     if (f) s += ' ' + f;
-    if (hf.range12 === 0 || hf.range12 === 100) {
-      s += ' That is their most ' + (hf.range12 === 0 ? 'bearish' : 'bullish') + ' reading in 12 weeks.';
-    }
-    if (m.split) s += ' Real money disagrees: it is ' + (side(m.rm.zone) > 0 ? 'bullish' : 'bearish') + ' on ' + m.ref + '.';
+    if (m.split) s += ' Real money disagrees: it is ' + phrase(stanceOf(m.rm)) + ' ' + m.ref + '.';
     return s;
   }
 
@@ -198,7 +212,7 @@
         };
         if (rmW) { m.rm = stats(rmW); m.rm_label = GROUPS.rm.fx; }
         var hs = side(m.hf.zone), rs = m.rm ? side(m.rm.zone) : 0;
-        m.split = !!(m.rm && hs && rs && hs !== rs);
+        m.split = disagree(m);
         m.signal = m.hf.zone === 'very bullish' ? -1 : m.hf.zone === 'very bearish' ? 1 : 0;
         m.history = hfW.slice(-HISTORY_WEEKS).map(function (w, i, arr) {
           var o = { d: w.d, hf: w.l - w.s, oi: w.oi };
@@ -216,7 +230,8 @@
         updated: new Date().toISOString(),
         report_date: reportDate,
         method: 'flip = (long − short) / open interest × 100; percentile = mid-rank vs all weekly history since Jan 2015; ' +
-          'lean: ≥90 very bullish, ≥60 bullish, ≤40 bearish, ≤10 very bearish, otherwise neutral; ' +
+          'positive flip = net long (betting the market rises); split = hedge funds and real money on opposite sides; ' +
+          'zones (for the engine signal): ≥90 very bullish, ≥60 bullish, ≤40 bearish, ≤10 very bearish, otherwise neutral; ' +
           'signal (hedge funds): very bullish −1, very bearish +1, else 0',
         sources: [
           { label: 'CFTC Traders in Financial Futures (futures only)', url: 'https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if' },
@@ -236,5 +251,5 @@
     return (now || new Date()).getTime() > due + 6 * 3600 * 1000;
   }
 
-  root.BlueStreetCOT = { build: build, isStale: isStale, MARKETS: MARKETS, summarize: summarize, zone: zone };
+  root.BlueStreetCOT = { build: build, isStale: isStale, MARKETS: MARKETS, summarize: summarize, zone: zone, disagree: disagree };
 })(typeof window !== 'undefined' ? window : this);

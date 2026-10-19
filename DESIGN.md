@@ -433,17 +433,20 @@ calculator instead (pushing `assets/cot.js` re-runs the job).
   Positioning tab rebuilds live in the reader's browser from the CFTC and
   says so in the header.
 
-How it renders (redesigned 2026-10-19, Rami: no "how to read this", no jargon):
-"This week" takeaway in plain sentences (any extreme, the most bullish and most
-bearish currency, where real money disagrees, the biggest shift of the month) →
-Currencies and Commodities, each sorted by distance from the middle. Each row:
-one dot on a "More bearish ← usual → More bullish" track (the group's lean
-compared with its own history since 2015), coloured green/red/grey, a verdict in
-words (Much more bullish … About usual … Much more bearish), and a "Real money
-disagrees" tag only when it does. Tap a row: the summary, 26-week bars, a
-Details drawer with the numbers and sources. A small "About this data" drawer
-sits at the bottom; there is no how-to section. Never the words "crowded" or
-"stretched" (Rami found them unclear). The currency page
+How it renders (redesigned 2026-10-19, Rami: no "how to read this", no jargon, and
+"usual / more bullish" wording didn't work): "This week" takeaway in plain
+sentences (any extreme, biggest bet for and against among currencies, where real
+money disagrees, the biggest shift of the month) → Currencies and Commodities,
+each sorted by size of the hedge-fund bet. Each row: one track, "Betting against
+← Even → Betting for", showing each group's net position (`flip`, net as a share
+of open interest; right = net long): filled dot = hedge funds, ring = real money,
+both coloured green (for) / red (against). Beside it, one line per group in words
+(Evenly split < 2%, Leaning < 8%, Betting < 20%, Strongly beyond, then "for" or
+"against"). Tags: "Near its low/high since 2015" when the hedge-fund percentile
+is ≤10 or ≥90, and "Real money disagrees" when both groups are 8%+ and on opposite
+sides. Tap a row: the summary, 26-week bars, a Details drawer with the numbers and
+sources. A small "About this data" drawer sits at the bottom; there is no how-to
+section. Never "crowded", "stretched" or "usual" (Rami found them unclear). The currency page
 shows a one-line "Positioning" link under Trend.
 
 ### `data/banks.json` — Central banks

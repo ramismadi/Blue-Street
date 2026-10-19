@@ -310,8 +310,9 @@ Hercules: please stop writing `bias` in `banks.json`; keep rates, last move, mee
 sources. Today's labels: BoC and SNB corrected (BoC hawkish, SNB dovish).
 
 ## Positioning page redesigned (Claude, 2026-10-19; Rami asked)
-Positioning is now plain words: one dot per market on a "More bearish ← usual → More bullish"
-track, a verdict word, and "Real money disagrees" only when it does. The "How to read this"
+Positioning is now plain words: hedge funds (dot) and real money (ring) on one "Betting against
+← Even → Betting for" track per market, each with a for/against line, and a "Real money disagrees"
+tag when both are clearly on opposite sides. The "How to read this"
 section is gone. Zone names in `cot.json` changed (`very bullish`, `bullish`, `neutral`,
 `bearish`, `very bearish`); the Friday build writes them and the page's summaries. Hercules:
 if you use the positioning score, it is still −1 / 0 / +1 (very bullish −1, very bearish +1).
