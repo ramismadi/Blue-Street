@@ -128,6 +128,7 @@ work). Engine rows and story chapters may instead use `"source"` (string) +
  "chapters":[{"title","teaser","fx","meaning","numbers":[],
    "scenarios":{"base","bull","bear"},"sources":[]}]}
 ```
+- `headline` — **Today's read: 1–2 sentences, ~35 words max** (Rami, 2026-10-19). The page shows at most the first two sentences (one if two run past ~45 words), so anything longer is cut, not shown.
 - `teaser` — 1–2 lines, the delta only; it's the Today card.
 - `meaning` (+ `fx`) — the narrative. Section labels `What changed:`,
   `Thread:`, `What it means:`, `What to watch:` become headed sections in the

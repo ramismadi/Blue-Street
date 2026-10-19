@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '61';
+  var ASSET_VERSION = '62';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -770,6 +770,28 @@
     box.classList.toggle('drivers-open', parent === 'drivers');
   }
 
+  /* First two sentences of a headline (one if two run past ~45 words).
+     A sentence ends at . ! or ? followed by a space and a capital, digit or
+     quote — so "4.5%" and "U.S." don't split. */
+  function shortHeadline(t) {
+    if (!t) return t;
+    var out = [], start = 0;
+    for (var i = 0; i < t.length && out.length < 2; i++) {
+      if ('.!?'.indexOf(t[i]) < 0) continue;
+      var j = i + 1;
+      while (j < t.length && '"\'”’)'.indexOf(t[j]) >= 0) j++;
+      if (j < t.length && t[j] !== ' ') continue;
+      var k = j; while (k < t.length && t[k] === ' ') k++;
+      if (k < t.length && !/[A-Z0-9"“'‘]/.test(t[k])) continue;
+      if (/(^|\s)[A-Z]\.$/.test(t.slice(Math.max(0, i - 2), i + 1))) continue;   // U.S.
+      out.push(t.slice(start, j).trim());
+      start = k;
+    }
+    if (!out.length) return t.trim();
+    if (out.length === 2 && (out[0] + ' ' + out[1]).split(/\s+/).length > 45) out = [out[0]];
+    return out.join(' ');
+  }
+
   /* ---------------- clock + sessions ---------------- */
   function startClock() {
     function tick() {
@@ -877,10 +899,12 @@
       setText('#edition-date', label);
       setText('#hero-date', '· ' + label);
     }
+    // Rami, 2026-10-19: Today's read is 1–2 sentences, max. The editions are
+    // told so; this keeps the page honest if a long one slips through.
     // Headline as word spans so it can rise in word by word.
     var h = $('#today-headline');
     h.textContent = '';
-    (d.headline || 'Today’s edition').split(/\s+/).forEach(function (w, i) {
+    (shortHeadline(d.headline) || 'Today’s edition').split(/\s+/).forEach(function (w, i) {
       if (i) h.appendChild(document.createTextNode(' '));
       var s = el('span', 'hw', w);
       s.style.setProperty('--i', i);

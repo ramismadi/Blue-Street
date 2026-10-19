@@ -649,3 +649,10 @@ everywhere visible. Done on Claude's side:
    per rule 3, or `Blue Street data: ...`.
 3. Never write the old name in any data file, cron body or note again; if a
    template still has it, switch it to Blue Street.
+
+## Today's read is 1–2 sentences (Rami, 2026-10-19)
+`story.json` → `headline` must be **one or two sentences, about 35 words max**
+— the single most important development, in plain words. Detail belongs in
+the chapters. The site now shows only the first two sentences (one if two run
+long), so longer headlines get cut mid-thought. Applies to whoever writes the
+edition (Hercules now; Claude after the handover).
