@@ -635,7 +635,8 @@ call — ask him before changing it.
 Rami renamed the whole project **Blue Street** and wants the old name gone
 everywhere visible. Done on Claude's side:
 - Site name, wordmark, page title, home-screen title, app icon, footer, docs.
-- **GitHub repo renamed to `ramismadi/Blue-Street`.** The site now lives at
+- **GitHub repo renamed to `ramismadi/Blue-Street`** (Rami does this in the
+  repo's settings). The site then lives at
   **https://ramismadi.github.io/Blue-Street/** (the old Pages address stops
   working — GitHub doesn't redirect Pages after a rename).
 - Saved-preference keys in the browser are now `bluestreet-*` (one-time reset
