@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T22:46:58Z",
+  "updated": "2026-10-19T00:46:32Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Gloment's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -8,9 +8,9 @@
       "ts": "2026-10-18T19:00:00Z"
     },
     "EUR": {
-      "lean": "bullish",
-      "text": "The euro's gains in the feed come from the dollar side, not from Europe: EUR/USD rose to about 1.1255 Friday as US hike bets faded. No euro-area driver in today's headlines.",
-      "ts": "2026-10-18T19:00:00Z"
+      "lean": "mixed",
+      "text": "The euro's lift last week came from fading US hike bets, not Europe. Over the weekend France's violent cost-of-living protests added strain to a deficit-cutting budget, a mild fiscal drag; EUR/USD opened lower near 1.119 in thin trade.",
+      "ts": "2026-10-19T00:46:32Z"
     },
     "GBP": {
       "lean": "bullish",
@@ -24,7 +24,7 @@
     },
     "CHF": {
       "lean": "bullish",
-      "text": "The franc's story is haven demand: Hormuz ship attacks plus Sunday's harder US–Iran rhetoric keep a safety bid under it.",
+      "text": "The franc's story is haven demand: Hormuz ship attacks plus Sunday's harder US\u2013Iran rhetoric keep a safety bid under it.",
       "ts": "2026-10-18T22:46:58Z"
     },
     "CAD": {
@@ -34,12 +34,12 @@
     },
     "AUD": {
       "lean": "mixed",
-      "text": "The Aussie's headlines hinge on China: Monday's data is expected to show Q3 growth at 4.4%, a touch better than Q2 but still below Beijing's 4.5–5% goal, with consumers and property lagging. A miss weighs; a stimulus response could cushion it.",
-      "ts": "2026-10-18T22:46:58Z"
+      "text": "Two forces on the Aussie: the RBA's Kent said Monday the neutral rate looks to be rising and questioned whether policy is tight enough, a hawkish undertone after the weak September jobs report. Today's China data decides the other side \u2014 Q3 growth is expected near 4.4%, below Beijing's goal.",
+      "ts": "2026-10-19T00:46:32Z"
     },
     "NZD": {
       "lean": "mixed",
-      "text": "Thursday's Q3 CPI is still expected well above the RBNZ's 1–3% band, keeping an October 28 hike on the table, but Sunday brought two soft spots: a trade deficit more than double forecasts, driven by imports, and exposure to Monday's China data.",
+      "text": "Thursday's Q3 CPI is still expected well above the RBNZ's 1\u20133% band, keeping an October 28 hike on the table, but Sunday brought two soft spots: a trade deficit more than double forecasts, driven by imports, and exposure to Monday's China data.",
       "ts": "2026-10-18T22:46:58Z"
     },
     "XAU": {
@@ -49,11 +49,38 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Supply-risk headlines still outnumber relief: Ukraine resumed strikes on St. Petersburg fuel sites, tankers were hit in the Gulf, and Sunday's US–Iran rhetoric hardened. Prices reopened flat to slightly lower near $109 Brent, so the premium is holding rather than growing.",
+      "text": "Supply-risk headlines still outnumber relief: Ukraine resumed strikes on St. Petersburg fuel sites, tankers were hit in the Gulf, and Sunday's US\u2013Iran rhetoric hardened. Prices reopened flat to slightly lower near $109 Brent, so the premium is holding rather than growing.",
       "ts": "2026-10-18T22:46:58Z"
     }
   },
   "items": [
+    {
+      "id": "investinglive-rba-kent-neutral-20261019",
+      "ts": "2026-10-19T00:13:00Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/central-banks/rba-s-kent-says-neutral-rate-is-rising-questions-if-policy-is-restrictive-enough/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/aud%20update%20RBA%20Kent%20speaking%2019%20October%202026-featured-1792368700.jpg?width=960&format=webp",
+      "headline": "RBA's Kent says the neutral rate is rising and asks whether policy is tight enough",
+      "story": "rba-nov",
+      "story_title": "RBA: the November 3 decision",
+      "pillar": "policy",
+      "summary": "An RBA assistant governor said the 'neutral' interest rate looks to be drifting higher, which would make the 4.60% cash rate less restrictive than it seems \u2014 a hawkish undertone after a weak jobs report.",
+      "beats": {
+        "was": "The RBA hiked to 4.60% on Sept 29, its fourth move this year, but September jobs then fell about 39k and unemployment hit 4.7%, a five-year high, cutting near-term hike bets.",
+        "happened": "Speaking in Sydney Monday, Kent said the evidence points to neutral rates rising at home and abroad, called policy somewhat restrictive but questioned if it is enough, and said the post-jobs repricing made sense.",
+        "means": "If neutral is higher, today's rate bites less, so the bar for another hike is lower than the jobs data alone suggested. But endorsing the market's pullback keeps it from being a clear signal for November.",
+        "fx": "Higher neutral rate \u2192 more room to hike \u2192 mild support for AUD. AUD/USD edged up to about 0.6965\u20130.6970 in early Asia. The lens: does Q3 CPI on Oct 28 back the hawks before the Nov 3 meeting?"
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A rising neutral rate argues policy may need to go higher, though Kent also accepted the softer pricing."
+        }
+      ],
+      "watch": "China's Q3 data today and Australia's Q3 CPI on Oct 28; a soft CPI would undercut the neutral-rate argument."
+    },
     {
       "id": "tokenpost-brent-sunday-20261018",
       "ts": "2026-10-18T22:22:51Z",
@@ -69,7 +96,7 @@
         "was": "The first oil trading of the week, after a weekend of supply-risk headlines.",
         "happened": "Brent slipped about $1 to near $108.8; WTI eased to about $101.2. Ukraine hit a terminal and depot in St. Petersburg, ending its pause after the Oct 11 truce declaration.",
         "means": "The market did not add a new premium for the weekend's strikes; prices are holding near last week's highs rather than climbing.",
-        "fx": "Oil near $109 → keeps the import bill high for Japan and Europe and supports exporters like Canada; no fresh spike means no new push either way. The lens: does supply actually get lost, or just threatened?"
+        "fx": "Oil near $109 \u2192 keeps the import bill high for Japan and Europe and supports exporters like Canada; no fresh spike means no new push either way. The lens: does supply actually get lost, or just threatened?"
       },
       "impact": [
         {
@@ -97,12 +124,12 @@
       "story": "china-q3",
       "story_title": "China: Q3 growth",
       "pillar": "growth",
-      "summary": "China's Q3 GDP and September activity data land at 02:00 GMT Monday; polls see 4.4% growth, a touch above Q2 but still under Beijing's 4.5–5% goal, with retail sales barely growing.",
+      "summary": "China's Q3 GDP and September activity data land at 02:00 GMT Monday; polls see 4.4% growth, a touch above Q2 but still under Beijing's 4.5\u20135% goal, with retail sales barely growing.",
       "beats": {
         "was": "China's quarterly growth figure plus September factory output, retail sales and investment, all released together.",
-        "happened": "Consensus: GDP 4.4% y/y (Q2 4.3%), 1.1% q/q; industrial output about 5.3–5.5%; retail sales under 1%; fixed-asset investment around -7.5% year to date, dragged by property.",
+        "happened": "Consensus: GDP 4.4% y/y (Q2 4.3%), 1.1% q/q; industrial output about 5.3\u20135.5%; retail sales under 1%; fixed-asset investment around -7.5% year to date, dragged by property.",
         "means": "Factories are carrying the economy while households and property lag. A print below 4.4% would widen the gap to target and raise the odds of more stimulus.",
-        "fx": "Weak China → less demand for Australian and NZ exports → AUD and NZD softer; a stimulus response could cushion that later. The lens: is China's consumer still stuck?"
+        "fx": "Weak China \u2192 less demand for Australian and NZ exports \u2192 AUD and NZD softer; a stimulus response could cushion that later. The lens: is China's consumer still stuck?"
       },
       "impact": [
         {
@@ -135,7 +162,7 @@
         "was": "The monthly gap between what New Zealand sells abroad and what it buys.",
         "happened": "The deficit came in at NZ$1.97bn vs about NZ$0.78bn forecast and NZ$1.5bn the month before. Imports rose to NZ$8.44bn; exports were flat near NZ$6.47bn.",
         "means": "All of the widening came from imports, which fits a higher fuel bill. A bigger import bill means more kiwi dollars sold to pay for foreign goods.",
-        "fx": "Wider deficit → more NZD sold for imports → mild pressure on the kiwi, but one month rarely moves it; China's data and Thursday's CPI matter more. The lens: is oil eating New Zealand's trade income?"
+        "fx": "Wider deficit \u2192 more NZD sold for imports \u2192 mild pressure on the kiwi, but one month rarely moves it; China's data and Thursday's CPI matter more. The lens: is oil eating New Zealand's trade income?"
       },
       "impact": [
         {
@@ -179,6 +206,33 @@
         }
       ],
       "watch": "Any US response to the seven conditions; shipping traffic counts through the strait."
+    },
+    {
+      "id": "aljazeera-france-protests-20261018",
+      "ts": "2026-10-18T13:08:00Z",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/10/18/paris-left-reeling-as-student-led-protests-turn-chaotic",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/10/2026-10-18T095402Z_1444274297_RC2I5OAMZM61_RTRMADP_3_FRANCE-PROTEST-1792323279.jpg?resize=1920%2C1440",
+      "headline": "Paris left reeling as student-led protests turn chaotic",
+      "story": "france-unrest",
+      "story_title": "France: protests and the deficit budget",
+      "pillar": "fiscal",
+      "summary": "Saturday's nationwide protests in France drew 550,000\u2013800,000 people and turned violent in several cities, with about 1,800 arrests \u2014 anger over living costs and fuel prices landing just as the government tries to pass a deficit-cutting budget.",
+      "beats": {
+        "was": "Student protests over schools since mid-September had widened into cost-of-living and fuel-price anger, while the Lecornu government pushes a budget built on spending restraint and tax measures.",
+        "happened": "Marches on Oct 17 saw looting and clashes in Paris, Marseille, Bordeaux and elsewhere; police made nearly 1,800 arrests and over 500 officers were hurt. Macron met ministers and was due to address the nation Sunday evening.",
+        "means": "Street pressure makes the austerity budget harder to pass intact. France's bond spread over Germany is already wide, so any sign of fiscal slippage or political strain adds to the risk premium.",
+        "fx": "Unrest + budget doubt \u2192 wider French spread \u2192 mild drag on EUR. EUR/USD opened lower near 1.119 in thin early trade. The lens: does the budget survive parliament without big giveaways?"
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Political strain over a deficit-cutting budget feeds the French fiscal risk premium."
+        }
+      ],
+      "watch": "Whether protests continue this week, any budget concessions, and the French\u2013German 10-year spread."
     },
     {
       "id": "euromaidan-petersburg-terminal-20261018",
@@ -234,7 +288,7 @@
         "was": "Public statements from Washington and Tehran while the Hormuz reopening offer sits unanswered.",
         "happened": "Trump posted that the US could soon finish the job; Iran's security council secretary cited a new operational plan; Araqchi warned Iran has unfinished business too. No new strike was reported.",
         "means": "Words, not action, but they push the two sides further from the sequencing compromise a reopening needs, so the oil risk premium has no reason to fade.",
-        "fx": "More escalation talk → oil premium stays → havens like CHF hold a bid and energy importers like JPY carry a higher bill. The lens: does rhetoric turn into strikes?"
+        "fx": "More escalation talk \u2192 oil premium stays \u2192 havens like CHF hold a bid and energy importers like JPY carry a higher bill. The lens: does rhetoric turn into strikes?"
       },
       "impact": [
         {
@@ -295,7 +349,7 @@
       "story": "rbnz-oct",
       "story_title": "RBNZ: the October 28 review",
       "pillar": "inflation",
-      "summary": "Economists expect Q3 CPI at 3.7–4.0% a year on Thursday, close to the RBNZ's own 3.9% projection and well above its 1–3% band; the OCR is 2.75%.",
+      "summary": "Economists expect Q3 CPI at 3.7\u20134.0% a year on Thursday, close to the RBNZ's own 3.9% projection and well above its 1\u20133% band; the OCR is 2.75%.",
       "beats": {
         "was": "A preview of New Zealand's September-quarter inflation figure.",
         "happened": "Forecasts cluster around 3.8%. ANZ and BNZ expect another hike on October 28.",
@@ -360,7 +414,7 @@
         "was": "Gold's set-up for a quiet US data week, with the Fed in its pre-meeting blackout.",
         "happened": "Spot gold dipped toward $4,073 midweek, then recovered to about $4,166. Brent rose about 5% on the week; the US 10-year hit about 5.11%.",
         "means": "Two forces cancel out: high oil lifts inflation fears and yields, which hurts a metal that pays nothing, but lower October hike odds and a soft dollar index help it.",
-        "fx": "Higher yields → holding gold costs more → pressure; softer dollar and fewer hike bets → support. The lens: do yields or the dollar lead this week?"
+        "fx": "Higher yields \u2192 holding gold costs more \u2192 pressure; softer dollar and fewer hike bets \u2192 support. The lens: do yields or the dollar lead this week?"
       },
       "impact": [
         {
@@ -382,7 +436,7 @@
       "story": "week-ahead",
       "story_title": null,
       "pillar": "inflation",
-      "summary": "UK CPI is expected to rise to 3.4% from 3.1%, above the BoE's 3.0% forecast; Japan's CPI is seen jumping to about 2.8–3.0% from 1.9%.",
+      "summary": "UK CPI is expected to rise to 3.4% from 3.1%, above the BoE's 3.0% forecast; Japan's CPI is seen jumping to about 2.8\u20133.0% from 1.9%.",
       "beats": {
         "was": "A preview of the week's main releases.",
         "happened": "Consensus points to higher inflation in both the UK and Japan; China's GDP and Friday's flash PMIs round out the week.",
@@ -511,33 +565,6 @@
       "watch": "Japan CPI on Friday; the BoJ's October 29-30 meeting."
     },
     {
-      "id": "babypips-canada-cpi-guide-20261016",
-      "ts": "2026-10-16T01:24:00Z",
-      "source": "Babypips",
-      "url": "https://www.babypips.com/analysis/event-guide-forex-canada-cpi-september-2026-10-16",
-      "image": "https://bpcdn.co/images/2023/09/18093823/canada-cpi-report-2023-780x405.png",
-      "headline": "Event guide: Canada's September CPI report",
-      "story": "boc-oct",
-      "story_title": "BoC: the October 28 decision",
-      "pillar": "inflation",
-      "summary": "Canada's September inflation is expected to rise to about 3.2% from 3.0%, the next test for a Bank of Canada that has already flagged persistent inflation risks.",
-      "beats": {
-        "was": "Canada's monthly consumer price index, the BoC's main gauge against its 2% target.",
-        "happened": "Expectations point to about 3.2% a year, up from 3.0% in August; core measures could also pick up.",
-        "means": "3.2% would be well above the 2% target and moving the wrong way, strengthening the case the BoC moves on Oct 28.",
-        "fx": "Hot CPI → more pressure on the BoC → hike odds up → higher Canadian yields → CAD firmer; a soft print does the reverse. The lens: how much pressure is the BoC under?"
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Rising inflation is expected; only a surprise either side moves hike odds."
-        }
-      ],
-      "watch": "Headline and core CPI vs 3.2%, then the BoC business outlook survey."
-    },
-    {
       "id": "bnn-boc-data-20261016",
       "date": "2026-10-16",
       "source": "BNN Bloomberg",
@@ -565,6 +592,33 @@
       "watch": "Canada CPI and the Business Outlook Survey, Monday October 19."
     },
     {
+      "id": "babypips-canada-cpi-guide-20261016",
+      "ts": "2026-10-16T01:24:00Z",
+      "source": "Babypips",
+      "url": "https://www.babypips.com/analysis/event-guide-forex-canada-cpi-september-2026-10-16",
+      "image": "https://bpcdn.co/images/2023/09/18093823/canada-cpi-report-2023-780x405.png",
+      "headline": "Event guide: Canada's September CPI report",
+      "story": "boc-oct",
+      "story_title": "BoC: the October 28 decision",
+      "pillar": "inflation",
+      "summary": "Canada's September inflation is expected to rise to about 3.2% from 3.0%, the next test for a Bank of Canada that has already flagged persistent inflation risks.",
+      "beats": {
+        "was": "Canada's monthly consumer price index, the BoC's main gauge against its 2% target.",
+        "happened": "Expectations point to about 3.2% a year, up from 3.0% in August; core measures could also pick up.",
+        "means": "3.2% would be well above the 2% target and moving the wrong way, strengthening the case the BoC moves on Oct 28.",
+        "fx": "Hot CPI \u2192 more pressure on the BoC \u2192 hike odds up \u2192 higher Canadian yields \u2192 CAD firmer; a soft print does the reverse. The lens: how much pressure is the BoC under?"
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Rising inflation is expected; only a surprise either side moves hike odds."
+        }
+      ],
+      "watch": "Headline and core CPI vs 3.2%, then the BoC business outlook survey."
+    },
+    {
       "id": "indexbox-china-q3-20261015",
       "date": "2026-10-15",
       "source": "IndexBox (Reuters poll)",
@@ -574,7 +628,7 @@
       "story": "china-q3",
       "story_title": "China: Q3 growth",
       "pillar": "growth",
-      "summary": "A Reuters poll of 50 economists expects 4.4% year-on-year growth, under Beijing's 4.5–5% goal despite targeted rate cuts and 550 billion yuan of redirected debt quota.",
+      "summary": "A Reuters poll of 50 economists expects 4.4% year-on-year growth, under Beijing's 4.5\u20135% goal despite targeted rate cuts and 550 billion yuan of redirected debt quota.",
       "beats": {
         "was": "A forecast for China's third-quarter GDP, due Monday (Sunday 9pm CT).",
         "happened": "The poll's 4.4% is up from 4.3% in Q2 but below July's 4.6% estimate.",
