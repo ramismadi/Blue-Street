@@ -5,17 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=57">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=57">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=58">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=58">
 <meta name="theme-color" content="#16263f">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Blue Street">
+<!-- link previews (texts, socials): the full sign logo -->
+<meta property="og:site_name" content="Blue Street">
+<meta property="og:title" content="Blue Street — Global fundamentals for FX">
+<meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=58">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=57">
+<link rel="stylesheet" href="assets/style.css?v=58">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -27,15 +37,20 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=57" defer></script>
-<script src="assets/app.js?v=57" defer></script>
+<script src="assets/cot.js?v=58" defer></script>
+<script src="assets/app.js?v=58" defer></script>
 </head>
 <body>
+<!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
+<div class="splash" id="splash" aria-hidden="true">
+  <svg viewBox="0 0 512 512" width="132" height="132"><rect x="92" y="88" width="30" height="336" rx="15" fill="#f6f2ea"/><path d="M108 150 H384 L438 210 L384 270 H108 Z" fill="#f6f2ea" stroke="#f6f2ea" stroke-width="14" stroke-linejoin="round"/><text x="134" y="244" fill="#0a84ff" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="82" letter-spacing="-2">BLUE</text><text x="330" y="190" fill="#0a84ff" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="32">ST</text></svg>
+</div>
 
 <!-- masthead: brand, edition, market clocks, theme picker -->
 <header class="masthead">
   <div class="wrap mh-inner">
     <a class="brand" href="./" data-home aria-label="Blue Street — back to Today">
+      <svg class="brand-mark" viewBox="84 80 362 352" aria-hidden="true"><rect x="92" y="88" width="30" height="336" rx="15"/><path d="M108 150 H384 L438 210 L384 270 H108 Z" stroke-width="14" stroke-linejoin="round"/></svg>
       <span class="wordmark">BLUE STREET</span>
       <span class="brand-sub">Global fundamentals for FX</span>
     </a>

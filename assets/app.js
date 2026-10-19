@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '57';
+  var ASSET_VERSION = '58';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -44,6 +44,19 @@
 
   document.addEventListener('DOMContentLoaded', init);
 
+  /* Loading splash (brand sign on blue): hides once the edition renders,
+     never earlier than 350 ms (no flash) or later than 2.5 s. */
+  var splashT0 = Date.now();
+  function hideSplash() {
+    var sp = document.getElementById('splash');
+    if (!sp || sp.classList.contains('out')) return;
+    setTimeout(function () {
+      sp.classList.add('out');
+      setTimeout(function () { if (sp.parentNode) sp.parentNode.removeChild(sp); }, 400);
+    }, Math.max(0, 350 - (Date.now() - splashT0)));
+  }
+  setTimeout(hideSplash, 2500);
+
   function init() {
     checkFreshness();
     watchUpdates();
@@ -56,6 +69,7 @@
     fetchJSON('data/story.json').then(function (d) {
       story = d;
       renderEdition(d);
+      hideSplash();
       renderScenes(d);
       renderRail(d);
       renderFocus();
@@ -544,6 +558,25 @@
     } catch (e) { /* private mode */ }
     var box = $('#sidenav');
     if (!box) return;
+    // Brand symbol at the top of the menu (links home).
+    var logo = el('a', 'sn-logo');
+    logo.href = './';
+    logo.setAttribute('data-home', '');
+    logo.setAttribute('aria-label', 'Blue Street — back to Today');
+    var NS = 'http://www.w3.org/2000/svg', sv = document.createElementNS(NS, 'svg');
+    sv.setAttribute('viewBox', '84 80 362 352');
+    sv.setAttribute('class', 'sn-mark');
+    sv.setAttribute('aria-hidden', 'true');
+    var r = document.createElementNS(NS, 'rect');
+    [['x', 92], ['y', 88], ['width', 30], ['height', 336], ['rx', 15]].forEach(function (a) { r.setAttribute(a[0], a[1]); });
+    var pa = document.createElementNS(NS, 'path');
+    pa.setAttribute('d', 'M108 150 H384 L438 210 L384 270 H108 Z');
+    pa.setAttribute('stroke-width', '14');
+    pa.setAttribute('stroke-linejoin', 'round');
+    sv.appendChild(r); sv.appendChild(pa);
+    logo.appendChild(sv);
+    logo.appendChild(el('span', 'sn-label sn-brand', 'Blue Street'));
+    box.appendChild(logo);
     var list = el('nav', 'sn-list');
     NAV_ITEMS.forEach(function (it) {
       var a = el('a', 'sn-item' + (it.minor ? ' minor' : ''));
