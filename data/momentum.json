@@ -1,10 +1,37 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-10-20T01:30:00-05:00",
+  "updated": "2026-10-20T15:30:00-05:00",
   "currencies": {
     "USD": {
       "recent": [
+        {
+          "id": "usd-pending-home-20261020",
+          "date": "2026-10-20",
+          "title": "US pending home sales m/m (Sep)",
+          "result": "miss",
+          "actual": "-7.3%",
+          "forecast": "-0.4%",
+          "note": "Big miss: -7.3% vs -0.4% fcst (prev +0.3%) — pending-sales index 66.0, a record low since 2001; rate bite at 7.40% mortgages."
+        },
+        {
+          "id": "us-housing-20261020",
+          "date": "2026-10-20",
+          "title": "US housing starts + permits (Sep)",
+          "result": "miss",
+          "actual": "Starts 1.221M / permits 1.400M",
+          "forecast": "Starts 1.30M / permits 1.39M",
+          "note": "Miss on starts: 1.221M SAAR vs 1.30M fcst (prev 1.288M), down 7.4% y/y; permits in line; single-family permits lowest since Apr 2023."
+        },
+        {
+          "id": "usd-adp-weekly-20261020",
+          "date": "2026-10-20",
+          "title": "ADP weekly employment change (4-wk avg)",
+          "result": "miss",
+          "actual": "18.5K",
+          "forecast": "26.0K (prior week)",
+          "note": "Hiring cooling: 4-week avg fell to 18.5K from 26.0K — lowest print since late August."
+        },
         {
           "id": "usd-nahb-20261019",
           "date": "2026-10-19",
@@ -31,33 +58,6 @@
           "actual": "-$26.9B",
           "forecast": "-$34.7B",
           "note": "Narrower September deficit vs -$34.7B fcst — but FY26 $1.992T, largest in 5 years."
-        },
-        {
-          "id": "us-caputil-20261016",
-          "date": "2026-10-16",
-          "title": "US industrial production / capacity use (Sep)",
-          "result": "beat",
-          "actual": "+0.7%",
-          "forecast": "+0.4%",
-          "note": "Sixth straight monthly gain; caputil 76.9% vs 76.5% fcst — factories up."
-        },
-        {
-          "id": "us-import-prices-20261016",
-          "date": "2026-10-16",
-          "title": "Import prices m/m (Sep)",
-          "result": "beat",
-          "actual": "+1.1%",
-          "forecast": "~0.8%",
-          "note": "Third hot inflation print of the week; +8.1% y/y, a four-year high."
-        },
-        {
-          "id": "us-inventories-20261015",
-          "date": "2026-10-15",
-          "title": "Business inventories (Aug)",
-          "result": "inline",
-          "actual": "0.4%",
-          "forecast": "0.4%",
-          "note": "In line: business inventories +0.4% m/m; restocking continues."
         }
       ]
     },
@@ -71,6 +71,24 @@
           "actual": "6.7%",
           "forecast": "6.2%",
           "note": "Beat: 6.7% y/y vs 6.2% consensus — producer-price pressure still running hot into the ECB's Oct 29 hold."
+        },
+        {
+          "id": "eur-current-account-20261020",
+          "date": "2026-10-20",
+          "title": "Eurozone current account (Aug)",
+          "result": "miss",
+          "actual": "EUR 8.7B",
+          "forecast": "EUR 29.2B",
+          "note": "Miss: August surplus collapsed to EUR 8.7B vs 29.2B fcst (July 27.2B) — weakest since Jan 2023."
+        },
+        {
+          "id": "eur-zew-20261020",
+          "date": "2026-10-20",
+          "title": "German + eurozone ZEW sentiment (Oct)",
+          "result": "miss",
+          "actual": "DE 28.1 / EZ 18.5",
+          "forecast": "DE ~30 / EZ ~23.6",
+          "note": "Miss: DE expectations 28.1 vs ~30 fcst (prev 34.7) — ends a 5-month run of gains on energy costs."
         },
         {
           "id": "eu-cpi-final-20261016",
@@ -98,20 +116,29 @@
           "actual": "-0.3% m/m",
           "forecast": "-0.3%",
           "note": "Inline with prelim — September's energy-driven overshoot stands (HICP 3.4%)."
-        },
-        {
-          "id": "de-wpi-20261014",
-          "date": "2026-10-14",
-          "title": "German WPI m/m (Sep)",
-          "result": "beat",
-          "actual": "+8.7% y/y",
-          "forecast": "lower",
-          "note": "Hot wholesale print (+1.9% m/m, +8.7% y/y vs 0.6% fcst) — pipeline pressure firms the ECB's December hike case."
         }
       ]
     },
     "GBP": {
       "recent": [
+        {
+          "id": "uk-labor-20261020",
+          "date": "2026-10-20",
+          "title": "UK labor: unemployment + earnings (Aug)",
+          "result": "beat",
+          "actual": "Unemp 4.7% / wages 3.7%",
+          "forecast": "Unemp 4.9% / wages 3.8%",
+          "note": "Beat: unemployment fell to 4.7% vs 4.9% fcst (lowest since mid-2025); regular pay 3.7% — locks in the Nov 5 hike; GBP +0.66% to 1.339."
+        },
+        {
+          "id": "gb-claimant-20261020",
+          "date": "2026-10-20",
+          "title": "UK claimant count change (Sep)",
+          "result": "miss",
+          "actual": "+30.3K",
+          "forecast": "+19.4K",
+          "note": "Miss: September claimant count rose 30.3K vs 19.4K expected — the soft counterpoint inside the labor beat."
+        },
         {
           "id": "uk-gdp-20261015",
           "date": "2026-10-15",
@@ -178,6 +205,15 @@
     },
     "AUD": {
       "recent": [
+        {
+          "id": "cny-lpr-20261020",
+          "date": "2026-10-20",
+          "title": "China loan prime rates (Oct)",
+          "result": "inline",
+          "actual": "1y 3.00% / 5y 3.50%",
+          "forecast": "unchanged",
+          "note": "Inline: PBoC held LPR for the 17th straight month — neutral for the China-demand read."
+        },
         {
           "id": "cny-gdp-20261019",
           "date": "2026-10-19",
@@ -267,6 +303,15 @@
     },
     "NZD": {
       "recent": [
+        {
+          "id": "nzd-gdt-20261020",
+          "date": "2026-10-20",
+          "title": "Global Dairy Trade Event 414",
+          "result": "beat",
+          "actual": "WMP +4.4% ($3,760/t), SMP +3.4%",
+          "forecast": "n/a",
+          "note": "Beat: powder-led firm — WMP +4.4% to $3,760/t, SMP +3.4% — positive terms-of-trade read into the Oct-28 RBNZ."
+        },
         {
           "id": "nzd-trade-20261018",
           "date": "2026-10-18",
