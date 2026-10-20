@@ -519,3 +519,8 @@ moves to `detail` (Details drawer) when replaced. `why` ("What is driving it") a
 ("What to watch") are 1–2 plain sentences each and fill the bank Details drawer; when present they
 replace the number-heavy `detail`, which only shows as a fallback. The bank's bias pill shows a
 trend line (`bias` is Claude's label from words.json, applied regardless of date; rule in COLLAB.md): hawkish = rising (green), dovish = falling (red), neutral = sideways (gold).
+`currencies.currencies.<CCY>.{summary, notes.<pillar>}` (Rami, 2026-10-20) replaces Herc's
+`summary` and each driver `note` in `currencies.json` (board, currency page, pair picker lines),
+same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a non-zero score:
+one plain sentence each, readable cold, no strings of numbers. The pair picker labels each pair
+"↑ Rises" / "↓ Falls" (where it goes if the reader's view is right), never Buy/Sell.

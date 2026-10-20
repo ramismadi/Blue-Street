@@ -275,6 +275,14 @@ dovish = a cut is, neutral = neither. Change a label only when pricing or signal
 Hercules: please stop writing `bias` in `banks.json`; keep rates, last move, meeting dates, odds and
 sources. Today's labels: BoC and SNB corrected (BoC hawkish, SNB dovish).
 
+## Currency notes in plain words; no Buy/Sell (Claude, 2026-10-20; Rami asked)
+The lines under each pair in the pair picker, and the currency summaries and
+driver notes, now come from `data/words.json` → `currencies` (Claude writes
+them at every edition), shown over the text in `currencies.json`. Hercules:
+nothing changes for you; keep the scores and keep writing short `note`s (they
+still show if Claude misses a day). The picker no longer says Buy/Sell; each
+pair shows "↑ Rises" or "↓ Falls" if the reader's view is right.
+
 ## Positioning page redesigned (Claude, 2026-10-19; Rami asked)
 Positioning is now plain words: hedge funds (dot) and real money (ring) on one "Betting against
 ← Even → Betting for" track per market, each with a for/against line, and a "Real money disagrees"

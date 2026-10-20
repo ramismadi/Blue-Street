@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '84';
+  var ASSET_VERSION = '85';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -114,7 +114,7 @@
     initGlance();
     initFocus();
     initCot();
-    fetchJSON('data/currencies.json').then(function (d) {
+    withWords('data/currencies.json', 'currencies').then(function (d) {
       fx.data = d;
       renderFx();
       if (story) renderScenes(story);
@@ -207,6 +207,18 @@
         if (x.priced) b.priced = x.priced;
         if (x.why) b.why = x.why;       // plain Details text (Rami, 2026-10-19)
         if (x.watch) b.watch = x.watch;
+      });
+    } else if (kind === 'currencies') {
+      // Rami, 2026-10-20: the pair picker and currency pages showed Herc's
+      // shorthand driver notes. Claude's plain lines replace them; Herc keeps
+      // the scores (which drive the board and the picker).
+      (d.currencies || []).forEach(function (c) {
+        var x = sec.currencies && sec.currencies[c.ccy];
+        if (!x) return;
+        if (x.summary) c.summary = x.summary;
+        Object.keys(x.notes || {}).forEach(function (k) {
+          if (c.drivers && c.drivers[k] && x.notes[k]) c.drivers[k].note = x.notes[k];
+        });
       });
     }
     return d;
@@ -3064,7 +3076,11 @@
   function pickRow(p, maxGap) {
     var li = el('li', 'pick ' + p.rating[1]);
     var top = el('div', 'pick-top');
-    top.appendChild(el('span', 'pick-act ' + (p.action === 'Buy' ? 'buy' : 'sell'), p.action));
+    // Rami, 2026-10-20: no Buy/Sell (that reads as a call). Say where the pair
+    // goes if the reader's view is right.
+    var act = el('span', 'pick-act ' + (p.action === 'Buy' ? 'buy' : 'sell'), p.action === 'Buy' ? '↑ Rises' : '↓ Falls');
+    act.title = 'Where ' + p.pair + ' goes if your view is right';
+    top.appendChild(act);
     top.appendChild(el('b', 'pick-pair mono', p.pair));
     top.appendChild(el('span', 'pick-rate ' + p.rating[1], p.rating[0]));
     var gw = el('span', 'pick-gap');
@@ -3222,7 +3238,7 @@
       lk.setAttribute('data-express', d[0] + ':' + c.ccy);
       row.appendChild(lk);
       row.appendChild(document.createTextNode(' ' + (picks.length
-        ? picks.map(function (p) { return p.action.toLowerCase() + ' ' + p.pair; }).join(', ')
+        ? picks.map(function (p) { return p.pair + (p.action === 'Buy' ? ' rises' : ' falls'); }).join(', ')
         : 'no cross with an edge today')));
       side.appendChild(row);
     });
