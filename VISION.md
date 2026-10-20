@@ -18,6 +18,11 @@ ones.
 - **Meaning before numbers.** Every number, event or print runs the four
   beats: what it was, what happened, what it means and why, and what it
   indicates for the currency. Short plain sentences, never "data slop".
+- **Makes sense to someone who's been away.** Every headline, card and
+  chapter reads on its own for a casual visitor who hasn't opened the site in
+  a while: what happened, the bit of background needed to follow it, and
+  where things go from here. Friendly, not hand-holding. Plain everyday words,
+  not trader clichés like "next test".
 - **Evidence, not a verdict.** No house view and no trade recommendations. The
   site builds the case and weighs the evidence (pillars are fine for that);
   Rami renders the verdict.

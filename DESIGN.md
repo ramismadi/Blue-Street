@@ -140,10 +140,14 @@ work). Engine rows and story chapters may instead use `"source"` (string) +
 - `headline` — **Today's read: 1–2 sentences, ~35 words max** (Rami, 2026-10-19). The page shows at most the first two sentences (one if two run past ~45 words), so anything longer is cut, not shown.
 - Chips under Today's read: flag + code (USD, EUR…; Gold and Oil by name), matching the News market chips. Tap = that currency's card on Today, or its Story chapter when quiet (Rami, 2026-10-19).
 - `teaser` — **the Today card: 1–3 sentences, ~50 words max**, the delta only (Rami, 2026-10-19). The card shows at most three sentences / ~60 words; "Read the chapter →" opens the full chapter for anyone who wants more.
-- `meaning` (+ `fx`) — the narrative. Section labels `What changed:`,
-  `Thread:`, `What it means:`, `What to watch:` become headed sections in the
-  Story tab, in that order (`fx` usually carries What to watch). Unlabelled
-  `fx` renders as the old "What it means for FX" callout.
+- `meaning` (+ `fx`) — the narrative. Section labels `The story so far:`,
+  `What changed:`, `What it means:` (in `meaning`) and `What's next:` (in
+  `fx`) become headed sections in the Story tab, in that order (Rami,
+  2026-10-20). Older editions' `Thread:` shows as "The story so far" and
+  `What to watch:` as "What's next". Unlabelled `fx` renders as the old
+  "What it means for FX" callout. Every chapter must read cold for someone
+  who has been away a week (see COLLAB.md → "Written for someone who's been
+  away").
 - `numbers` — 3–4 crisp figures for the Details drawer, never paragraphs.
 - `quiet` (optional boolean, Hercules) — true only when the chapter has no
   real delta since the previous edition. Today folds quiet chapters into one

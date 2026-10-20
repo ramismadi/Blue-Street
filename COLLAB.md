@@ -197,6 +197,26 @@ blog on big-event days and by the editions' "What changed", so the file stays.
 Whether the 30-min breaking watch keeps running outside focus days is Rami's
 call — ask him before changing it.
 
+## Written for someone who's been away (Rami, 2026-10-20)
+Editions follow one running story, but every piece must make sense to a casual
+visitor who hasn't opened the site in a week. Applies to Today's read, the
+Today cards, every chapter, engine reads, bank text and News items.
+- **Reads cold.** Name people with their role ("Bank of Canada governor Tiff
+  Macklem"), name events fully ("UK inflation figures, out Wednesday"), say
+  which index or yield. Never lean on the last edition: no "the story", "as
+  flagged", "yesterday's edition said", "the pullback".
+- **Chapter order:** `meaning` = `The story so far:` (1–2 sentences of
+  background a newcomer needs, e.g. "For three weeks, US–Iran tensions have
+  pushed oil up, and with it US inflation fears and the dollar.") →
+  `What changed:` → `What it means:`; `fx` = `What's next:` (what decides the
+  next move, and when, in CT).
+- **Friendly, not hand-holding.** Don't explain what a currency is; the
+  built-in definitions handle terms. Keep every length limit.
+- **Plain everyday words, no trader clichés:** not "next test", "in focus",
+  "all eyes on", "in play". Say "Coming up: US housing data at 7:30 AM CT."
+- **Test before pushing:** would this make sense to someone who's been away
+  a week?
+
 ## Today's read is 1–2 sentences (Rami, 2026-10-19)
 `story.json` → `headline` must be **one or two sentences, about 35 words max**
 — the single most important development, in plain words. Detail belongs in

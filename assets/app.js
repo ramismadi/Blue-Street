@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '83';
+  var ASSET_VERSION = '84';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -1519,8 +1519,8 @@
     v.appendChild(el('p', 'kicker', 'Chapter ' + (chapterIdx + 1) + ' of ' + chs.length));
     v.appendChild(el('h1', 'display', ch.title));
 
-    // Prose leads: the narrative under its labels (What changed / Thread /
-    // What it means / What to watch). An unlabelled `fx` (older editions) is
+    // Prose leads: the narrative under its labels (The story so far / What
+    // changed / What it means / What's next). An unlabelled `fx` (older editions) is
     // still the FX takeaway up top.
     var body = el('div', 'narrative gl-scope');
     var fxSecs = narrativeSections(ch.fx);
@@ -1533,7 +1533,7 @@
     }
     narrativeSections(ch.meaning).concat(fxSecs).forEach(function (sec) {
       if (!sec.text) return;
-      var part = el('section', 'narr' + (/watch/i.test(sec.label || '') ? ' narr-watch' : ''));
+      var part = el('section', 'narr' + (/watch|next/i.test(sec.label || '') ? ' narr-watch' : ''));
       if (sec.label) part.appendChild(el('h3', 'narr-lbl', sec.label));
       part.appendChild(el('p', 'narr-p', sec.label ? sec.text.charAt(0).toUpperCase() + sec.text.slice(1) : sec.text));
       body.appendChild(part);
@@ -1572,7 +1572,10 @@
 
   /* Split narrative prose on its section labels. Text before the first label
      (or prose with none) comes back as one unlabelled section. */
-  var NARR_RE = /(?:^|\s)(What changed|Thread|What it means|What to watch)\s*:\s*/g;
+  // "The story so far" and "What's next" are the current labels; "Thread" and
+  // "What to watch" are older editions' names for the same sections.
+  var NARR_RE = /(?:^|\s)(The story so far|What changed|Thread|What it means|What[\u2019']s next|What to watch)\s*:\s*/g;
+  var NARR_SHOW = { 'Thread': 'The story so far', 'What to watch': 'What\u2019s next' };
   function narrativeSections(text) {
     text = String(text || '').trim();
     var out = [], m, last = 0, label = null;
@@ -1580,7 +1583,7 @@
     while ((m = NARR_RE.exec(text))) {
       var chunk = text.slice(last, m.index).trim();
       if (chunk || label) out.push({ label: label, text: chunk });
-      label = m[1];
+      label = NARR_SHOW[m[1]] || m[1].replace("'", '\u2019');
       last = NARR_RE.lastIndex;
     }
     out.push({ label: label, text: text.slice(last).trim() });
