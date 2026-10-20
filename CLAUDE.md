@@ -34,7 +34,9 @@ It was renamed on 2026-10-19; the project used to have a different name.
 - **Writing:** meaning over numbers; short, plain sentences, no "data slop".
   Today's read is 1-2 sentences. Never trade recommendations. Never the word
   "crowded" (use another term for extreme positioning).
-- **Editions** are written at 2:04 AM and 4:04 PM CT. Fetch right before
+- **Editions** are written three times a day (CT): London open 2:04 AM daily,
+  New York open 8:34 AM weekdays, New York close 4:04 PM daily. Hercules' data
+  runs land first (1:15 AM, 7:45 AM weekdays, 3:15 PM). Fetch right before
   pushing, one commit per run, never push an empty commit or force-push.
 
 ## How Rami likes to work

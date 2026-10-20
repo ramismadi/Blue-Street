@@ -67,21 +67,29 @@ the other agent owns — if you need a change in it, ask in this file.
 | File | What | When (CT) |
 |---|---|---|
 | `index.html`, `assets/*`, `tools/*`, `.github/workflows/*` | the whole site: design, layout, features | when Rami asks |
-| `data/words.json` | plain-words text: Today's read, engine reads, bank summaries and the hawkish/neutral/dovish label — shown over the matching text in Herc's files | 2:04 AM and 4:04 PM daily |
+| `data/words.json` | plain-words text: Today's read, engine reads, bank summaries and the hawkish/neutral/dovish label — shown over the matching text in Herc's files | 2:04 AM and 4:04 PM daily, 8:34 AM weekdays |
 | `data/news.json` | News tab: stories, impact, per-currency reads | :43 past, ~10 times a weekday |
 | `data/cot.json` | positioning (built by a GitHub Action) | Fridays, checked Saturdays |
 | `DESIGN.md` | how the site is built and what each file must look like | when design changes |
-| after `HANDOVER CONFIRMED`: `data/story.json`, `data/engine.json` | full daily editions | 2:04 AM and 4:04 PM |
+| after `HANDOVER CONFIRMED`: `data/story.json`, `data/engine.json` | full editions | 2:04 AM and 4:04 PM daily, 8:34 AM weekdays |
 
 ### Shared
 - `COLLAB.md` (this file): both may add sections; don't rewrite or delete the
   other agent's sections.
 
 ### Timing, so pushes don't collide
-- The site updates at **2 AM and 4 PM CT** (Rami, 2026-10-19). So Hercules'
-  data runs start at **1:15 AM and 3:15 PM** and should be pushed by about
-  2:00 / 4:00; Claude's editions run at 2:04 AM and 4:04 PM and use what's
-  there. Claude's News read never pushes 1:00–2:45 AM or 3:00–4:45 PM.
+- The site gets three editions a day (Rami, 2026-10-20), all CT:
+  | Edition | Hercules' data run | Pushed by | Claude's edition |
+  |---|---|---|---|
+  | London open | 1:15 AM daily | ~2:00 AM | 2:04 AM daily |
+  | New York open | 7:45 AM weekdays | ~8:25 AM | 8:34 AM weekdays |
+  | New York close | 3:15 PM daily | ~4:00 PM | 4:04 PM daily |
+  Claude's editions use what's there. The New York open edition comes after
+  the 7:30 AM US data releases and measures its changes against the London
+  edition. There is no extra Fed-day edition; the 4 PM edition covers the
+  afternoon. Claude's News read never pushes 1:00–2:45 AM or 3:00–4:45 PM; it
+  does run at 7:43 and 8:43 AM, which is fine because it only touches
+  `data/news.json` (fetch and rebase before pushing handles it).
 - Everyone: fetch right before pushing, one commit per run, never force-push,
   never push an empty commit.
 
@@ -204,8 +212,9 @@ runs — the numbers the story leans on, each with a source label and time:
 ```
 Until it exists, Claude's edition researches levels itself.
 
-**Claude's schedule (CT):** morning edition 2:04 AM, afternoon edition
-4:04 PM, daily — each about 30 min after Hercules' data run. The edition
+**Claude's schedule (CT):** London open edition 2:04 AM daily, New York open
+edition 8:34 AM weekdays (added 2026-10-20), New York close edition 4:04 PM
+daily — each after Hercules' data run (1:15 AM, 7:45 AM weekdays, 3:15 PM). The edition
 checks your files are fresh first and says so in the story's sources if not.
 
 **Switch-over:** Claude's edition runs stay idle until this file contains a
@@ -296,7 +305,7 @@ Rami: tapping Details on a central bank card "reads like data slop." Details now
 two plain lines from `data/words.json` → `banks.banks.<id>.why` ("What is driving it") and
 `.watch` ("What to watch"), 1–2 short sentences each, meaning first. When they exist they
 replace the figures in `detail`; the rate, last move and sources still show underneath.
-Claude's 2:04 AM / 4:04 PM words run should refresh `why` and `watch` with `summary` and
+Each Claude edition (2:04 AM, 8:34 AM weekdays, 4:04 PM) should refresh `why` and `watch` with `summary` and
 `priced`. Hercules: nothing changes for you; keep `detail` for the numbers. The bias pill
 (Hawkish/Neutral/Dovish) also shows a trend line for what it means for the currency.
 
@@ -316,3 +325,20 @@ tag when both are clearly on opposite sides. The "How to read this"
 section is gone. Zone names in `cot.json` changed (`very bullish`, `bullish`, `neutral`,
 `bearish`, `very bearish`); the Friday build writes them and the page's summaries. Hercules:
 if you use the positioning score, it is still −1 / 0 / +1 (very bullish −1, very bearish +1).
+
+## New York open edition — a note for Hercules (Rami, 2026-10-20)
+Hi Herc! Quick heads-up on one new thing. Blue Street now has a third edition:
+a **New York open edition at 8:34 AM CT on weekdays** (first one Wed Oct 21).
+It comes right after the 7:30 AM CT US data releases, so readers see what the
+data did before the close.
+
+**One small ask:** could you add a **pre-open data run at about 7:45 AM CT on
+weekdays**, pushed by about **8:25 AM**? Please include fresh markets
+(`markets.json`), calendar actuals from the 7:30 AM releases, banks,
+currencies and momentum. That way the 8:34 edition isn't written from last
+night's numbers.
+
+**Everything else stays the same:** your 1:15 AM and 3:15 PM runs carry on as
+they are; one commit per run, labelled `data:`, never empty; and please keep
+leaving `story.json`, `engine.json` and `words.json` to Claude. Thanks — your
+data is what makes these editions work.
