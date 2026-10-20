@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T10:50:00Z",
+  "updated": "2026-10-20T12:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "bearish",
-      "text": "The euro bounced as French protests eased and German factory prices ran hot, but France's budget vote is today and Moody's reviews it Friday. Until that clears, relief rallies look fragile, and sterling is pulling ahead of it.",
-      "ts": "2026-10-20T10:50:00Z"
+      "text": "The euro is holding near 1.12 after French protests eased, but German investors got gloomier about the months ahead and France's budget vote is today, with Moody's on Friday. Relief rallies look fragile until those clear.",
+      "ts": "2026-10-20T12:55:00Z"
     },
     "GBP": {
       "lean": "bullish",
@@ -19,18 +19,18 @@
     },
     "JPY": {
       "lean": "mixed",
-      "text": "Record demand at Japan's 20-year bond sale eased fears about its debt and gave the yen its first gain in three days. Oil near $110 and wide US rate gaps still weigh on it.",
-      "ts": "2026-10-20T10:50:00Z"
+      "text": "Strong demand at Japan's bond sale eased debt fears, and the BoJ is reportedly set to hold next week but raise its inflation forecast, keeping a December hike in play. Oil above $110 and the wide gap with US rates still drag on it.",
+      "ts": "2026-10-20T12:55:00Z"
     },
     "CHF": {
       "lean": "mixed",
-      "text": "The franc keeps a haven floor as Houthi attacks spread across Saudi Arabia and the US warns Americans in the Gulf, but rising US yields and a tech rebound argue for less shelter.",
-      "ts": "2026-10-20T00:51:43Z"
+      "text": "The franc keeps a haven floor as Houthi attacks on Saudi Arabia pile up and Iran claims new tanker hits in Hormuz, but US yields above 5% limit how far shelter demand carries it.",
+      "ts": "2026-10-20T12:55:00Z"
     },
     "CAD": {
       "lean": "bullish",
-      "text": "Hike bets for Oct 28 stay high, oil holds near $110, and Alberta's vote to stay in Canada removes a risk. The loonie is near its strongest in a month.",
-      "ts": "2026-10-20T10:50:00Z"
+      "text": "Oil at five-month highs and steady Oct 28 hike bets made the loonie the best performer in Europe's session. It's near its strongest in a month.",
+      "ts": "2026-10-20T12:55:00Z"
     },
     "AUD": {
       "lean": "bullish",
@@ -44,13 +44,13 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold slid again toward $4,120 as oil pushed US yields higher; war headlines aren't enough to lift it while hike odds climb. It's testing the bottom of its range.",
-      "ts": "2026-10-20T10:50:00Z"
+      "text": "Gold is stuck near $4,120 as oil at five-month highs keeps inflation fears, hike bets and US yields up. War headlines aren't enough to lift it while rates do the talking.",
+      "ts": "2026-10-20T12:55:00Z"
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent is back near $110 on Houthi claims of strikes on Saudi oil sites and talk of more action against Iran. The claims are unconfirmed, so it's a risk premium rather than lost supply.",
-      "ts": "2026-10-20T10:50:00Z"
+      "text": "Brent hit a five-month high near $111 as Houthi attacks on Saudi Arabia piled up and Iran's Guards said their mines stopped two more tankers. The tanker claim is unconfirmed, but Gulf flows stay thin and stock releases aren't filling the gap.",
+      "ts": "2026-10-20T12:55:00Z"
     }
   },
   "items": [
@@ -193,6 +193,51 @@
       "watch": "Any confirmation of damage at Shaybah, or US\u2013Iran mediation progress, which would let the premium fade."
     },
     {
+      "id": "thenational-oil-five-month-high-20261020",
+      "ts": "2026-10-20T11:08:49Z",
+      "source": "The National",
+      "url": "https://www.thenationalnews.com/business/energy/2026/10/20/oil-prices-hit-five-month-high-as-more-houthi-attacks-prompt-supply-and-inflation-fears/",
+      "image": "https://www.thenationalnews.com/resizer/v2/BWK3ABCXHF63QRD6XM5DOL5D74.jpg?auth=db13fa9d508b260b5ece00926277a4c4b04f290b3623505fdf1a93c008ec0317&smart=true&width=1200&height=630",
+      "headline": "Oil prices hit five-month high as Houthi escalation worsens supply and inflation fears",
+      "story": "saudi-houthi",
+      "story_title": "Houthi strikes on Saudi Arabia",
+      "pillar": "tot",
+      "summary": "Brent climbed past $111, its highest since May, after a string of Houthi attacks on Saudi targets and with Gulf shipping still squeezed.",
+      "beats": {
+        "was": "The price of oil, which sets fuel and import bills for every economy and the export income of producers like Canada.",
+        "happened": "Brent rose about 1.5% to near $111 and US crude to about $101, five-month highs, after the Houthis claimed six attacks on Saudi Arabia on Monday. Emergency stock releases and letting sanctioned tankers sail again have not offset the hit.",
+        "means": "Supply from the Gulf is still tight and each new attack adds to the risk premium. Dearer fuel feeds inflation, which keeps central banks, the Fed included, leaning toward higher rates.",
+        "fx": "Oil up \u2192 more income for exporters, bigger bills for importers \u2192 loonie supported, yen and euro squeezed, and more inflation pressure keeping US yields high. The lens: is Gulf supply getting through or not?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Five-month high as attacks keep Gulf supply tight."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher crude lifts Canada's export income."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so dearer crude drains the yen."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Oil-driven inflation keeps rate-hike bets and yields up, a drag on gold."
+        }
+      ],
+      "watch": "A US-Iran deal or proof that Hormuz traffic is recovering would pull the premium out; a confirmed hit to Saudi output would add to it."
+    },
+    {
       "id": "gbaf-uk-jobs-sterling-20261020",
       "ts": "2026-10-20T10:15:50Z",
       "source": "Global Banking & Finance",
@@ -226,6 +271,72 @@
       "watch": "Wednesday's UK CPI: a soft print would cool the hike talk; a hot one would add to it."
     },
     {
+      "id": "alarabiya-irgc-two-tankers-mines-20261020",
+      "ts": "2026-10-20T10:15:00Z",
+      "source": "Al Arabiya",
+      "url": "https://english.alarabiya.net/News/middle-east/2026/10/20/iran-s-irgc-says-mines-halted-two-tankers-crossing-strait-of-hormuz",
+      "image": "https://vid.alarabiya.net/images/2026/08/26/2d49f875-0f42-4701-a00e-ccd87f71acb5/2d49f875-0f42-4701-a00e-ccd87f71acb5_16x9_600x338.jpg",
+      "headline": "Iran's IRGC says mines halted two tankers crossing Strait of Hormuz",
+      "story": "hormuz",
+      "story_title": "Hormuz: reopening offer vs ship attacks",
+      "pillar": "risk",
+      "summary": "Iran's Guards say their mines set two tankers on fire as they tried to slip through a route Tehran calls illegal. Nobody else has confirmed it yet.",
+      "beats": {
+        "was": "A claim from Iran's Revolutionary Guards about ships trying to get around its control of the Strait of Hormuz.",
+        "happened": "The Guards said two tankers were set ablaze and stopped by mines in the southern part of the strait. The ships weren't named and no shipping firm or government has backed up the claim.",
+        "means": "Whether or not every detail holds, it's a warning to anyone trying to bypass Iran's terms, which keeps owners and insurers away. That keeps Gulf flows thin and the oil risk premium high.",
+        "fx": "Riskier Hormuz \u2192 fewer ships willing to cross \u2192 oil stays dear and investors want shelter \u2192 crude and the franc supported, importers like Japan hurt. The lens: are ships still moving through the strait?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Unconfirmed, but it deters ships from the bypass routes."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More Gulf danger adds to haven demand."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Threat to the oil supply Japan relies on."
+        }
+      ],
+      "watch": "Ship names, insurer notices or tracking data would confirm it; quiet traffic numbers would show it's mostly a warning."
+    },
+    {
+      "id": "fxstreet-germany-zew-oct-20261020",
+      "ts": "2026-10-20T09:03:18Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/germany-zew-survey-economic-sentiment-deteriorates-significantly-to-281-in-october-202610200903",
+      "image": "https://editorial.fxsstatic.com/images/i/dax-01_Medium.jpg",
+      "headline": "Germany ZEW Survey - Economic Sentiment deteriorates significantly to 28.1 in October",
+      "story": "ez-growth",
+      "story_title": "Euro area: growth under the oil and France hit",
+      "pillar": "growth",
+      "summary": "German investors turned gloomier about the next six months than expected, even as they said today's conditions are less bad.",
+      "beats": {
+        "was": "The ZEW survey asks financial experts how they see Germany's economy now and six months out.",
+        "happened": "The outlook gauge fell to 28.1 from 34.7, below the 32 expected; the euro-area reading slid to 18.5. The current-conditions gauge improved to -35.9 from -47.1, better than forecast.",
+        "means": "Things look a little less bad today, but costly energy, higher bond yields and France's troubles are dimming the outlook. That's weaker footing for the euro area while the ECB fights oil-driven inflation.",
+        "fx": "Gloomier outlook \u2192 softer growth ahead \u2192 less room for the ECB to keep tightening \u2192 mild weight on the euro. The euro shrugged it off this time. The lens: is Europe's growth bending under the oil shock?"
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Outlook missed forecasts; the euro dipped then recovered near 1.121."
+        }
+      ],
+      "watch": "Friday's flash PMIs: if they also slide, the growth worry becomes harder for the euro to ignore."
+    },
+    {
       "id": "financefeeds-gold-4120-20261020",
       "ts": "2026-10-20T06:47:55Z",
       "source": "FinanceFeeds",
@@ -251,6 +362,33 @@
         }
       ],
       "watch": "A break under about $4,100, or a fall in US yields if oil eases."
+    },
+    {
+      "id": "investinglive-boj-hold-forecast-20261020",
+      "ts": "2026-10-20T06:29:56Z",
+      "source": "investingLive (Reuters report)",
+      "url": "https://investinglive.com/central-banks/boj-reportedly-may-upgrade-inflation-forecast-hold-rates-steady-at-next-week-s-meeting/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/BOJ%20BUILDING%20YEN%20v1-featured-1792475911.jpg?width=960&format=webp",
+      "headline": "BOJ reportedly may upgrade inflation forecast, hold rates steady at next week's meeting",
+      "story": "boj-path",
+      "story_title": "BoJ: when the next hike comes",
+      "pillar": "policy",
+      "summary": "People close to the Bank of Japan say it will likely hold at 1.25% on Oct 30 but nudge up its inflation forecast as oil feeds into prices.",
+      "beats": {
+        "was": "A Reuters report, from four sources, on what the Bank of Japan plans for its Oct 30 meeting.",
+        "happened": "Rates are expected to stay at 1.25% after September's hike, with a slightly higher inflation forecast for fiscal 2027. Markets see almost no move next week and roughly 73% odds of a December hike.",
+        "means": "A higher forecast is the groundwork for another hike, but not yet. Policymakers reportedly see no broad wage-price spiral, so they can wait.",
+        "fx": "Hold now \u2192 US rates stay far above Japan's \u2192 yen stays under pressure; higher forecast \u2192 December hike more likely \u2192 some support later. The yen barely reacted. The lens: how fast will the BoJ close the gap?"
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "No move next week, but a firmer forecast keeps December alive."
+        }
+      ],
+      "watch": "Friday's Japan CPI; a hot print would lift December odds, a soft one would push the yen back toward its lows."
     },
     {
       "id": "fxstreet-aud-eyes-070-20261019",
@@ -482,33 +620,6 @@
         }
       ],
       "watch": "Whether Iran answers the strike, and whether Washington confirms it; real progress in the Qatar-brokered talks would pull oil back down."
-    },
-    {
-      "id": "investinglive-eu-close-yields-20261019",
-      "ts": "2026-10-19T16:25:59Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/stocks/european-stocks-close-lower-across-the-board-as-bond-yields-climb/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/European%20indices%20close%20lower_3-featured-1792427118-featured-1792427156.jpg?width=960&format=webp",
-      "headline": "European stocks close lower across the board as bond yields climb",
-      "story": "france-unrest",
-      "story_title": "France: unrest, budget vote and the euro",
-      "pillar": "fiscal",
-      "summary": "Every major European index closed down more than 1% and every 10-year yield rose, with France's up the most to near its highest since 2002, the night before the budget's first vote.",
-      "beats": {
-        "was": "Monday's close for Europe's main stock indices and government bond yields.",
-        "happened": "DAX, CAC, FTSE 100, Ibex and FTSE MIB all fell 1.1\u20131.6%. France's 10-year yield climbed about 9bp to roughly 4.94%, about 5bp more than Germany's, so the gap between them widened again.",
-        "means": "Selling stocks and bonds together is a sign of worry about France's finances rather than a normal risk-off day, where bonds usually rally. The National Assembly votes on the revenue half of the budget tomorrow; a defeat or big concessions would add to it.",
-        "fx": "Wider French-German spread \u2192 investors demand more to hold euro-area debt \u2192 less appetite for euro assets \u2192 a softer euro. The lens: does Tuesday's vote calm French bonds or push yields higher?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "French yields near 24-year highs keep fiscal worry on the euro; a repeat of this morning's story into the close."
-        }
-      ],
-      "watch": "Tuesday's budget vote; a clean pass that narrows the French spread would ease the pressure."
     },
     {
       "id": "cp24-boc-bos-tariffs-20261019",
@@ -791,33 +902,6 @@
         }
       ],
       "watch": "The BoC Business Outlook Survey later today and whether markets keep a December hike fully priced."
-    },
-    {
-      "id": "fxstreet-ing-usd-ai-jitters-20261019",
-      "ts": "2026-10-19T12:20:48Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/us-dollar-ai-jitters-soften-haven-appeal-ing-202610191220",
-      "image": "https://editorial.fxsstatic.com/images/i/dollar-index-02_Medium.jpg",
-      "headline": "US Dollar: AI jitters soften haven appeal - ING",
-      "story": "fed-path",
-      "story_title": "Fed path: hike bets fade",
-      "pillar": "policy",
-      "summary": "ING says the tech-stock wobble has pulled US short-term rates lower and could leave the dollar lagging, but sees only limited further downside and still expects a December Fed hike.",
-      "beats": {
-        "was": "A bank note on why the dollar is not acting as a safe haven during the recent AI-led stock sell-off.",
-        "happened": "ING notes markets are cutting Fed tightening bets whenever stocks wobble, even with inflation hot. It sees room for the dollar index to drift to about 101, but not much further.",
-        "means": "Stock turmoil now pushes the dollar down rather than up, because traders read it as a reason for the Fed to do less. The bank still pencils in a December hike, so it sees a floor.",
-        "fx": "Stocks fall \u2192 Fed hike bets shrink \u2192 US short rates drop \u2192 the dollar loses its edge. The lens: does market stress make the Fed more cautious?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Bank view that stock jitters cap the dollar, though with limited downside."
-        }
-      ],
-      "watch": "A firm Fed signal for a December hike, or stocks steadying, would restore the dollar's rate support."
     },
     {
       "id": "investing-china-lpr-oct-20261019",
@@ -1126,39 +1210,6 @@
       "watch": "Independent confirmation and ship-tracking data; a US reply accepting Iran's seven-day reopening plan would outweigh it."
     },
     {
-      "id": "fxstreet-chf-fed-pause-20261019",
-      "ts": "2026-10-19T06:21:06Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/swiss-franc-gains-as-fed-rate-pause-bets-weigh-on-us-dollar-202610190621",
-      "image": "https://editorial.fxsstatic.com/images/i/USDCHF-bullish-object_Medium.png",
-      "headline": "Swiss Franc gains as Fed rate pause bets weigh on US Dollar",
-      "story": "fed-path",
-      "story_title": "The Fed: October fading, December priced",
-      "pillar": "policy",
-      "summary": "The franc firmed to around 0.8240 per dollar as markets put better than 80% odds on the Fed holding in October; the SNB is expected to stay at 0% into year-end.",
-      "beats": {
-        "was": "USD/CHF, the dollar priced in Swiss francs, around 0.8240 in Asian trade after a gap at the open.",
-        "happened": "Odds of a Fed hold at the October 27\u201328 meeting are near 84%, up from about 49% a month earlier, after Chair Warsh declined to prejudge the decision. UOB flags 0.8200 as the next stop below.",
-        "means": "With the SNB parked at zero, the pair is mostly a Fed story: as hike odds fade, the dollar's rate edge over the franc stops widening.",
-        "fx": "Fewer expected Fed hikes \u2192 US yields stop climbing \u2192 less reason to hold dollars over francs \u2192 USD/CHF drifts lower. The lens: is the Fed still adding to its rate edge, or done for now?"
-      },
-      "impact": [
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Fading Fed hike odds let the franc claw back ground; no SNB change expected."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "October hold now near 84% priced, trimming the dollar's rate support."
-        }
-      ],
-      "watch": "Any Fed speaker reviving October hike talk, or a flight-to-safety bid if Gulf shipping attacks escalate."
-    },
-    {
       "id": "reuters-china-q3-gdp-20261019",
       "ts": "2026-10-19T02:04:00Z",
       "source": "Reuters (via Investing.com)",
@@ -1223,33 +1274,6 @@
         }
       ],
       "watch": "Whether Russian export volumes actually rise, and new strikes on Russian or Gulf energy sites."
-    },
-    {
-      "id": "fxstreet-ueda-monday-20261019",
-      "ts": "2026-10-19T00:40:11Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/bojs-ueda-underlying-inflation-near-2-target-202610190040",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-91_Medium.png",
-      "headline": "BoJ's Ueda: Underlying inflation near 2% target",
-      "story": "boj-path",
-      "story_title": "BoJ: the next hike and the yen",
-      "pillar": "policy",
-      "summary": "Ueda repeated that underlying inflation is close to target, kept the bond-taper plan unchanged and said long-term yields will likely rise with any future hike; the yen barely moved.",
-      "beats": {
-        "was": "The Bank of Japan's governor spoke again on inflation and bonds ahead of the October 29\u201330 meeting.",
-        "happened": "He said core inflation is near 2%, wages and prices are feeding each other, and the bank won't pre-announce emergency bond steps. USD/JPY dipped about 0.1% to near 157.80.",
-        "means": "This restates his Friday message: more hikes are coming over time, but nothing pins down the timing. A taper left alone means no fresh push on Japanese yields.",
-        "fx": "Inflation near target \u2192 the BoJ keeps hiking gradually \u2192 the rate gap with the US narrows slowly \u2192 mild, slow support for the yen. The lens: does the BoJ move again this month or wait?"
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Hike signals repeated, already largely priced; tiny reaction."
-        }
-      ],
-      "watch": "Japan's CPI this week and any leaks before the October 29\u201330 BoJ meeting."
     },
     {
       "id": "investinglive-rba-kent-neutral-20261019",
