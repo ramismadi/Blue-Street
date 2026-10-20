@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-10-19",
-  "updated": "2026-10-19T15:25:00-05:00",
+  "as_of": "2026-10-20",
+  "updated": "2026-10-20T01:30:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
   "note": "Monday read, 2026-10-19. Scores: policy = own-bank stance vs counterparty (gap favoring the other side is negative); positioning = contrarian only. China GDP beat 4.5% (AUD +), Kent hawkish (AUD +), French unrest (EUR -), Canada CPI today (CAD settler).",
   "pairs": {},
@@ -9,20 +9,20 @@
       "ccy": "USD",
       "name": "US dollar",
       "bank": "fed",
-      "chapter": 1,
-      "summary": "Monday into the NY close: DXY ~101.87 (flat) — the tech rebound (Nasdaq +1.25%, S&P +0.5% after Friday's -2.15% rout) drained Friday's premium, and Warsh said he won't prejudge October, cementing December as the debate: Oct hold ~84-85% (CME FedWatch), Dec hike ~89-92%.",
+      "chapter": null,
+      "summary": "DXY ~101.93 into Tuesday Asia (+0.1-0.2% Monday, ending the two-day slide) — the risk rebound held and the 10Y jumped 7-9bp to 5.14%. October FOMC a hold at ~84%; December the wide-open debate (70-94% hike).",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "October a hold at ~84-85% into the blackout; Warsh won't prejudge — December (~89-92% hike) the debate; the Fed stays the most hawkish G10 bank"
+          "note": "Oct 27-28 a hold at ~83-85% into the blackout; December hike 70-94% (wide) — Fed still the highest G10 rate"
         },
         "growth": {
           "score": 1,
-          "note": "retail sales +0.8% beat; IP +0.7% (6th straight gain) — NY Fed services -20.7 warns"
+          "note": "retail sales +0.8% beat; IP +0.7% (6th straight gain) — housing starts/permits Tue 7:30am CT the next read"
         },
         "inflation": {
           "score": 1,
-          "note": "CPI 3.7%, PPI 1.3% — hot week stands; import prices +8.1% y/y (4-yr high)"
+          "note": "CPI 3.7%, PPI hot; import prices +8.1% y/y (4-yr high) — the hot week stands"
         },
         "risk": {
           "score": 0,
@@ -34,11 +34,11 @@
         },
         "positioning": {
           "score": 0,
-          "note": "hedge funds net long dollar, 54th pctile — mid-range (CFTC TFF, Oct 6)"
+          "note": "hedge funds leaning for the dollar (flipped from against) — signal 0, not crowded (CFTC, Oct 13)"
         },
         "fiscal": {
           "score": 0,
-          "note": "FY26 $1.992T (5-yr high); Graham waiver stands — armed, unfired"
+          "note": "shutdown day 20 (11th failed Senate vote); Graham waiver stands — armed, unfired"
         }
       }
     },
@@ -46,12 +46,12 @@
       "ccy": "EUR",
       "name": "Euro",
       "bank": "ecb",
-      "chapter": 2,
-      "summary": "EUR/USD ~1.1220 into the close — violent French protests (worst unrest in years, Macron urges calm) are the euro's first domestic negative driver in days; OAT-Bund ~140bp. Lagarde said the bond selloff will slow inflation. Rallies expected to be sold until Tuesday's revenue vote and Friday's Moody's.",
+      "chapter": null,
+      "summary": "EUR/USD ~1.1229 — French unrest escalated (curfews, Italy sending 500 troops, OAT-Bund 147.3bp +9.9bp); Lagarde: the fix 'lies at home in France... fiscal policies.' Revenue vote Tuesday, Moody's Friday. German PPI +6.7% beat.",
       "drivers": {
         "policy": {
           "score": -1,
-          "note": "Fed-ECB gap still against it; no October hike priced — December the live meeting (64/73 economists)"
+          "note": "Fed-ECB gap still against it; Oct 29 a hold at ~97% — December the live meeting (64/73 economists)"
         },
         "growth": {
           "score": -1,
@@ -59,23 +59,23 @@
         },
         "inflation": {
           "score": 1,
-          "note": "final CPI 3.8% confirmed (three-year high); energy +18.9% — ECB waits for December"
+          "note": "final CPI 3.8% confirmed (3-yr high); German PPI +6.7% y/y beat — ECB waits for December"
         },
         "risk": {
           "score": 0,
-          "note": "risk-on Monday but the euro was sold on French unrest — no haven read"
+          "note": "sold on French unrest into risk-on tape — no haven read"
         },
         "tot": {
           "score": -1,
-          "note": "Brent ~$108.3 still a tax; EU's EUR100B+ war-driven import bill"
+          "note": "Brent ~$109.55 still a tax; EU's war-driven import bill"
         },
         "positioning": {
           "score": 0,
-          "note": "hedge funds net short euro, 44th pctile — mid-range, not crowded (CFTC TFF, Oct 6)"
+          "note": "hedge funds leaning against the euro, added to the bet — signal 0, not crowded (CFTC, Oct 13)"
         },
         "fiscal": {
           "score": -1,
-          "note": "violent protests Monday; OAT-Bund ~140bp; revenue vote Tue Oct 20 + Moody's Fri Oct 23"
+          "note": "protests escalate: curfews, 500 Italian troops; revenue vote Tue; Moody's Fri — domestic risk premium"
         }
       }
     },
@@ -83,12 +83,12 @@
       "ccy": "GBP",
       "name": "British pound",
       "bank": "boe",
-      "chapter": 3,
-      "summary": "GBP/USD ~1.3311, flat — quiet Monday with the hinge ahead: labor Tuesday 1am CT (earnings 3.8% fc), then UK CPI Wednesday 1am CT (3.4% fc vs 3.1%; Deutsche 3.49%). Nov 5 hike ~95% priced; December enters the debate.",
+      "chapter": null,
+      "summary": "GBP/USD ~1.3313 — quiet into the hinge: UK labor printed 1:00am CT (actuals unverified at write time), UK CPI Wednesday 1:00am CT (3.4% fc vs 3.1%). Nov 5 hike 95% priced; sterling at a 16-month high vs the euro.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Nov 5 hike ~95% priced; CPI consensus hardened to 3.4% — December enters the debate"
+          "note": "Nov 5 hike ~95% to 4.00%; CPI Wed decides whether December enters the debate"
         },
         "growth": {
           "score": 1,
@@ -96,7 +96,7 @@
         },
         "inflation": {
           "score": 1,
-          "note": "CPI Wed: fc 3.4% vs 3.1% (Deutsche 3.49%) — still ~1.4 points over target; cements November"
+          "note": "CPI Wed: fc 3.4% vs 3.1% — still ~1.4 points over target; cements November"
         },
         "risk": {
           "score": 0,
@@ -108,11 +108,11 @@
         },
         "positioning": {
           "score": 0,
-          "note": "no new positioning read"
+          "note": "hedge funds leaning for the pound, trimmed the bet — signal 0 (CFTC, Oct 13)"
         },
         "fiscal": {
           "score": 0,
-          "note": "no fiscal development; Oct 28 budget ahead"
+          "note": "Oct 28 budget ahead; no fiscal development"
         }
       }
     },
@@ -120,8 +120,8 @@
       "ccy": "JPY",
       "name": "Japanese yen",
       "bank": "boj",
-      "chapter": 4,
-      "summary": "USD/JPY ~158.45 — the laggard again. Ueda's 'quite close' to 2% firms December (~80% OIS); Oct-30 stays ~25%. The IMF says the BoJ may need to tighten faster if inflation exceeds forecasts. 160 is the intervention line; Japan national CPI Friday is the last data before the BoJ.",
+      "chapter": null,
+      "summary": "USD/JPY ~158.50 — the laggard again. Ueda's 'quite close' to 2% firms December (64-88%); Oct 29-30 stays a hold (~93-96%). Japan trade balance tonight; 20Y JGB auction in Asia.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -129,7 +129,7 @@
         },
         "growth": {
           "score": 0,
-          "note": "tertiary beat (-0.1% vs -0.3%) vs IP miss (-2.4%) — net mixed; Nikkei -0.64% Monday"
+          "note": "tertiary beat (-0.1% vs -0.3%) vs IP miss (-2.4%) — net mixed"
         },
         "inflation": {
           "score": 0,
@@ -137,15 +137,15 @@
         },
         "risk": {
           "score": 0,
-          "note": "no retaliation Monday — haven bid sheathed; franc still the preferred haven"
+          "note": "no retaliation Monday — haven bid sheathed; franc the preferred haven"
         },
         "tot": {
           "score": -1,
-          "note": "Brent ~$108.3 (-1.4%), WTI ~$100.4 — crude tax eases a touch; the energy importer still pays"
+          "note": "Brent ~$109.55 — the energy importer still pays the crude tax"
         },
         "positioning": {
           "score": 0,
-          "note": "hedge funds net short yen, 67th pctile — less short than usual (CFTC TFF, Oct 6)"
+          "note": "hedge funds flipped to betting against the yen; real money disagrees (for yen) — split, signal 0 (CFTC, Oct 13)"
         },
         "fiscal": {
           "score": 0,
@@ -157,12 +157,12 @@
       "ccy": "CHF",
       "name": "Swiss franc",
       "bank": "snb",
-      "chapter": 5,
-      "summary": "USD/CHF ~0.8258 — no Swiss driver; the haven bid never fired (no retaliation, no signed Iran deal) and Monday's risk rebound drained what was left of Friday's premium. December cut risk stays on the table with PPI soft.",
+      "chapter": null,
+      "summary": "USD/CHF ~0.8254 — no Swiss driver; the haven bid never fired (no retaliation, no signed Iran deal) and Monday's risk rebound drained what was left of Friday's premium.",
       "drivers": {
         "policy": {
           "score": 0,
-          "note": "SNB 0.00%; Schlegel produced no new signal"
+          "note": "SNB 0.00%; no new signal"
         },
         "growth": {
           "score": 0,
@@ -174,7 +174,7 @@
         },
         "risk": {
           "score": 1,
-          "note": "haven premium from Friday intact but unearned Monday — no extension, risk-on tape"
+          "note": "haven premium from Friday intact but unearned Monday — no extension on risk-on tape"
         },
         "tot": {
           "score": 0,
@@ -182,7 +182,7 @@
         },
         "positioning": {
           "score": 0,
-          "note": "hedge funds net short franc, 41st pctile — mid-range (CFTC TFF, Oct 6)"
+          "note": "hedge funds betting against the franc, little changed — signal 0 (CFTC, Oct 13)"
         },
         "fiscal": {
           "score": 0,
@@ -194,16 +194,16 @@
       "ccy": "AUD",
       "name": "Australian dollar",
       "bank": "rba",
-      "chapter": 6,
-      "summary": "AUD/USD ~0.6981 (+0.3%) — the day's best G10 performer on the China double: Q3 GDP 4.5% beat (retail +1.1% the standout; factories +5.5% lead, property -20.6% YTD lags) and CNH firming (USD/CNH 6.6811). Kent's hawkish framing holds, but he now sees labor loosening 'faster than expected' — Q3 CPI Oct 28 is the pivot. Hedge funds still long AUD at the 79th pctile — the pain trade is down.",
+      "chapter": null,
+      "summary": "AUD/USD ~0.6985 — holding the China bid (Q3 GDP 4.5% beat; USD/CNH 6.6811). RBA: Nov ~33%, Dec ~56%; Hauser speaks 5:30pm CT. Q3 CPI Oct 28 the pivot.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Kent: unsure 4.60% 'restrictive enough' — Nov 2-3 ~30%, Dec ~50%; Q3 CPI Oct 28 the pivot"
+          "note": "RBA hawkish tilt intact — Nov 2-3 ~33%, Dec ~56%; Q3 CPI Oct 28 the pivot"
         },
         "growth": {
           "score": -1,
-          "note": "employment -39.3K, unemp 4.7% — five-year high; Kent: loosening 'faster than forecast'"
+          "note": "employment -39.3K, unemp 4.7% — five-year high; loosening 'faster than forecast'"
         },
         "inflation": {
           "score": 0,
@@ -211,15 +211,15 @@
         },
         "risk": {
           "score": 0,
-          "note": "risk-on Monday helped, but positioning overhang caps the read"
+          "note": "risk-on Monday helped, but no fresh impulse overnight"
         },
         "tot": {
           "score": 1,
-          "note": "China Q3 GDP 4.5% beat — the demand read for Australia's biggest customer; USD/CNH 6.6811 (strongest since Jun 2022)"
+          "note": "China Q3 GDP 4.5% beat — the demand read for Australia's biggest customer; USD/CNH 6.6811"
         },
         "positioning": {
           "score": 0,
-          "note": "hedge funds net LONG AUD, 79th pctile — not >=90th; unwind risk, not a supportive base (CFTC TFF, Oct 6)"
+          "note": "hedge funds for the Aussie but cut; real money strongly against — split, signal 0 (CFTC, Oct 13)"
         },
         "fiscal": {
           "score": 0,
@@ -231,12 +231,12 @@
       "ccy": "CAD",
       "name": "Canadian dollar",
       "bank": "boc",
-      "chapter": 7,
-      "summary": "USD/CAD ~1.4096 — CPI day settled as a mild miss: 3.1% vs 3.2% Reuters consensus, keeping October-28 hike odds at ~1 in 4 (the -68.3K jobs miss still outweighs Macklem's hawkish lean). The BoC Q3 survey gave two offsetting reads: Q3 sentiment improved, but the post-Aug-21 trade-talk pulse deteriorated — tariffs pushing up costs and inflation expectations ('a moderation rather than a fundamental shift' vs 2025 peak tensions).",
+      "chapter": null,
+      "summary": "USD/CAD ~1.4099 — the repricing story: Oct-28 hike odds jumped to 83-87% (BMO/RBC/Desjardins flipped to hike calls) on Macklem's inflation-forecast warning. Reuters still cites a hold-bet — the conflict is the trade.",
       "drivers": {
         "policy": {
-          "score": 0,
-          "note": "Oct-28 hike odds ~1 in 4 after the CPI miss (3.1% vs 3.2%) — Macklem's hawkish lean vs the jobs tape; a two-way at long odds"
+          "score": 1,
+          "note": "Oct-28 hike now the base case (83-87% OIS, up from ~1-in-4) — the most aggressively repricing G10 bank into its meeting"
         },
         "growth": {
           "score": -1,
@@ -244,7 +244,7 @@
         },
         "inflation": {
           "score": 0,
-          "note": "Sep CPI 3.1% vs 3.2% fc — mild miss; keeps October a maybe"
+          "note": "Sep CPI 3.1% mild miss — but BoC to revise inflation forecast 'substantially higher' on energy"
         },
         "risk": {
           "score": 0,
@@ -252,11 +252,11 @@
         },
         "tot": {
           "score": 1,
-          "note": "Brent ~$108.3 (-1.4%), WTI ~$100.4 (+1.3%); spread ~$8 — geopolitical premium, still ~2x normal"
+          "note": "WTI +2.2% Monday; Brent ~$109.55; spread ~$6 — geopolitical premium intact"
         },
         "positioning": {
           "score": 0,
-          "note": "hedge funds net short CAD, 31st pctile — heavier than usual, not crowded (CFTC TFF, Oct 6)"
+          "note": "hedge funds strongly betting against CAD, sharply added — signal 0, not crowded-short (CFTC, Oct 13)"
         },
         "fiscal": {
           "score": 0,
@@ -268,12 +268,12 @@
       "ccy": "NZD",
       "name": "New Zealand dollar",
       "bank": "rbnz",
-      "chapter": 8,
-      "summary": "NZD/USD ~0.5666 — quiet; the China-proxy bid held on the 4.5% GDP beat and Monday's risk rebound. The two-way Oct 28 bet is intact; NZ Q3 CPI Wednesday 4:45pm CT (ANZ 3.8% y/y vs 4.1%) decides. GDT dairy Tuesday first.",
+      "chapter": null,
+      "summary": "NZD/USD ~0.5665 — the two-way bet resolved hawkish: Oct-28 hike 80-85% (to 3.00%). NZ Q3 CPI Wednesday 4:45pm CT is the decider; GDT dairy today.",
       "drivers": {
         "policy": {
-          "score": 0,
-          "note": "RBNZ 2.75%; Conway: Oct 28 'wide open', direction 'most likely up'"
+          "score": 1,
+          "note": "Oct-28 hike 80-85% priced (to 3.00%) — hiking into a Fed hold is a genuine divergence"
         },
         "growth": {
           "score": 1,
@@ -285,7 +285,7 @@
         },
         "risk": {
           "score": 1,
-          "note": "China-proxy bid held on the 4.5% GDP beat; risk-on Monday helped"
+          "note": "China-proxy bid held on the 4.5% GDP beat; risk-on tape helped"
         },
         "tot": {
           "score": 0,
@@ -293,7 +293,7 @@
         },
         "positioning": {
           "score": 0,
-          "note": "hedge funds net short kiwi, 55th pctile — mid-range (CFTC TFF, Oct 6)"
+          "note": "hedge funds betting against the kiwi, added — signal 0 (CFTC, Oct 13)"
         },
         "fiscal": {
           "score": 0,
@@ -471,6 +471,19 @@
         "AUD": 1,
         "CAD": 0,
         "NZD": 2
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "scores": {
+        "USD": 3,
+        "EUR": -3,
+        "GBP": 3,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 1,
+        "NZD": 3
       }
     }
   ]

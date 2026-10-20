@@ -1,111 +1,132 @@
 {
-  "updated": "2026-10-19T15:25:00-05:00",
-  "note": "Levels are indicative index quotes, not executable prices.",
+  "updated": "2026-10-20T01:30:00-05:00",
+  "note": "Levels are indicative index quotes, not executable prices. FX as of ~1:25 AM CT Tue Oct 20; energy/yields are Monday NY closes.",
   "levels": [
     {
       "id": "DXY",
-      "value": 101.87,
-      "chg_pct": -0.03,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "eOption mid-morning look, Oct 19 (vs 101.903 prior)"
+      "value": 101.93,
+      "chg_pct": 0.1,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "TradingView/Seeking Alpha, Oct 20 (Monday +0.1%; ended 2-day slide)"
     },
     {
       "id": "EURUSD",
-      "value": 1.122,
-      "chg_pct": 0.2,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Lician live forex rates, Oct 19"
+      "value": 1.1229,
+      "chg_pct": 0.05,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "economies.com 03:05 UTC; Finnhub/OANDA 1.12288"
     },
     {
       "id": "GBPUSD",
-      "value": 1.3311,
-      "chg_pct": -0.14,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Lician live forex rates, Oct 19 (vs 1.3329 Asia)"
+      "value": 1.3313,
+      "chg_pct": 0.09,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "economies.com 03:05 UTC; cptmarkets early Asia 1.3308"
     },
     {
       "id": "USDJPY",
-      "value": 158.45,
-      "chg_pct": 0.28,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Lician live forex rates, Oct 19 (vs ~158.00 Asia)"
+      "value": 158.5,
+      "chg_pct": 0.18,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "economies.com 03:05 UTC 158.43; exchangerates.org.uk 158.41 (+0.26%)"
     },
     {
       "id": "USDCHF",
-      "value": 0.8258,
-      "chg_pct": 0.18,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Lician live forex rates, Oct 19 (vs 0.8243 Asia)"
+      "value": 0.8254,
+      "chg_pct": 0.12,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "economies.com 03:05 UTC; lician 0.8256"
     },
     {
       "id": "AUDUSD",
-      "value": 0.6981,
-      "chg_pct": 0.2,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Lician live forex rates, Oct 19 (vs 0.6965-0.6977 Asia)"
+      "value": 0.6985,
+      "chg_pct": 0.1,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "cptmarkets early Asia 0.6986; lician 0.6983"
     },
     {
       "id": "USDCAD",
-      "value": 1.4096,
-      "chg_pct": -0.18,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Lician live forex rates, Oct 19 (vs 1.4122 Asia)"
+      "value": 1.4099,
+      "chg_pct": -0.1,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "traderfactor ~1.4090; lician 1.4108"
     },
     {
       "id": "NZDUSD",
-      "value": 0.5666,
-      "chg_pct": 0.11,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Lician live forex rates, Oct 19 (vs 0.5655-0.5661 Asia)"
+      "value": 0.5665,
+      "chg_pct": 0.15,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "mitrade 0.5663 (+0.2%); cptmarkets 0.5668"
+    },
+    {
+      "id": "EURGBP",
+      "value": 0.8425,
+      "chg_pct": -0.05,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "ECB daily ref Oct 19: 0.8421; lician 0.8428"
+    },
+    {
+      "id": "EURJPY",
+      "value": 177.6,
+      "chg_pct": -0.09,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "Finnhub/OANDA 177.577; ECB ref Oct 19: 177.63"
+    },
+    {
+      "id": "GBPJPY",
+      "value": 211.1,
+      "chg_pct": 0.27,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "computed from GBPUSD x USDJPY (no direct live quote found)"
+    },
+    {
+      "id": "AUDJPY",
+      "value": 110.68,
+      "chg_pct": 0.02,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "audjpy-chart-live.com, Oct 20"
+    },
+    {
+      "id": "EURCHF",
+      "value": 0.9265,
+      "chg_pct": -0.05,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "ECB ref Oct 19: 0.9261; implied 0.9269 — consistent"
     },
     {
       "id": "BRENT",
-      "value": 108.3,
-      "chg_pct": -1.41,
-      "as_of": "2026-10-19T08:30:00-04:00",
-      "source": "Ausecure pre-market note, Oct 19 (vs $109.86 Fri close, Zacks)"
+      "value": 108.6,
+      "chg_pct": -1.1,
+      "as_of": "2026-10-19T16:00:00-05:00",
+      "source": "Monday range $107.57-$109.55; late session ~$108.20-108.56 (tradingnews/5paisa, Oct 19); Friday settle $109.86"
     },
     {
       "id": "WTI",
-      "value": 100.35,
-      "chg_pct": 1.34,
+      "value": 99.9,
+      "chg_pct": -1.5,
       "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Samuel & Co morning brief, Oct 19 (vs $99.02 Fri close, Zacks)"
+      "source": "Nov contract: $99.46 Asian low, recovered ~$100.40 (tradingnews/DJ, Oct 19); Dec $97.62; Friday Nov settle $101.41"
     },
     {
       "id": "XAUUSD",
-      "value": 4170.8,
-      "chg_pct": 0.03,
-      "as_of": "2026-10-19T10:30:00-04:00",
-      "source": "eOption mid-morning look, Oct 19 (vs $4,169.60 Fri close, Ausecure)"
-    },
-    {
-      "id": "US10Y",
-      "value": 5.11,
-      "chg_bps": 1,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "eOption mid-morning look, Oct 19 (5.10% Fri close, Zacks)"
+      "value": 4126.84,
+      "chg_pct": -0.3,
+      "as_of": "2026-10-20T01:25:00-05:00",
+      "source": "cptmarkets early Asia spot; Dec futures $4,146"
     },
     {
       "id": "US2Y",
-      "value": 4.74,
-      "chg_bps": 2,
-      "as_of": "2026-10-19T08:40:00-04:00",
-      "source": "Ausecure pre-market note, Oct 19 (~4.72% pre-market, Samuel & Co)"
+      "value": 4.77,
+      "chg_pct": 0.84,
+      "as_of": "2026-10-19T16:00:00-05:00",
+      "source": "kucoin NY close Oct 19; FRED DGS2 Friday 4.74%"
     },
     {
-      "id": "SPX",
-      "value": 7703.2,
-      "chg_pct": 0.5,
+      "id": "US10Y",
+      "value": 5.14,
+      "chg_pct": 1.38,
       "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Finnhub/OANDA live quote, Oct 19 (vs 7,659.44 Fri close, Zacks)"
-    },
-    {
-      "id": "NDX",
-      "value": 29578.6,
-      "chg_pct": 1.25,
-      "as_of": "2026-10-19T16:00:00-05:00",
-      "source": "Finnhub/OANDA live quote, Oct 19"
+      "source": "kucoin NY close Oct 19 +7-9bp; FRED DGS10 Friday 5.09%"
     }
   ],
   "pricing": [
@@ -114,40 +135,72 @@
       "meeting": "2026-10-28",
       "move": "hold",
       "prob": 0.84,
-      "source": "CME FedWatch via FXEmpire, Oct 19",
-      "as_of": "2026-10-19T16:00:00-05:00"
+      "source": "CME FedWatch via ActionForex, Oct 20 (~17% hike prob)",
+      "as_of": "2026-10-20T01:00:00-05:00"
     },
     {
       "bank": "fed",
-      "meeting": "2026-10-28",
+      "meeting": "2026-12-16",
       "move": "hike",
-      "prob": 0.16,
-      "source": "CME FedWatch via FXEmpire, Oct 19",
-      "as_of": "2026-10-19T16:00:00-05:00"
+      "prob": 0.7,
+      "source": "Jin10/cryptopanic Dec 25bp hike 70.3% (Oct 12); FXEmpire cited ~92% Oct 19 — range wide, watch refresh",
+      "as_of": "2026-10-20T01:00:00-05:00"
     },
     {
-      "bank": "fed",
-      "meeting": "2026-12",
+      "bank": "ecb",
+      "meeting": "2026-10-29",
+      "move": "hold",
+      "prob": 0.97,
+      "source": "UBS Oct 20: Oct move priced 2-3bp; centralbank.watch OIS 98.2% hold (Oct 18)",
+      "as_of": "2026-10-20T01:00:00-05:00"
+    },
+    {
+      "bank": "ecb",
+      "meeting": "2026-12-17",
       "move": "hike",
-      "prob": 0.9,
-      "source": "CME FedWatch (~89% Ausecure / ~92% FXEmpire), Oct 19",
-      "as_of": "2026-10-19T16:00:00-05:00"
+      "prob": 0.88,
+      "source": "Reuters poll Oct 8: 64/73 economists +25bp Dec; UBS expects 2.75%",
+      "as_of": "2026-10-20T01:00:00-05:00"
     },
     {
       "bank": "boe",
       "meeting": "2026-11-05",
       "move": "hike",
       "prob": 0.95,
-      "source": "OIS pricing via morning desk read, Oct 19",
-      "as_of": "2026-10-19T16:00:00-05:00"
+      "source": "centralbank.watch GBP OIS 95.1% hike (Oct 19); Reuters poll 54/63 economists",
+      "as_of": "2026-10-20T01:00:00-05:00"
     },
     {
       "bank": "boj",
-      "meeting": "2026-12",
+      "meeting": "2026-10-30",
+      "move": "hold",
+      "prob": 0.93,
+      "source": "Polymarket 96.5% no change (Oct 17); officials lean against Oct hike",
+      "as_of": "2026-10-20T01:00:00-05:00"
+    },
+    {
+      "bank": "boj",
+      "meeting": "2026-12-18",
       "move": "hike",
-      "prob": 0.8,
-      "source": "OIS pricing via morning desk read, Oct 19 (Ueda 'quite close')",
-      "as_of": "2026-10-19T16:00:00-05:00"
+      "prob": 0.75,
+      "source": "Bloomberg/FXStreet Oct 13: swaps ~88% Dec; centralbank.watch TONA 64.5% — range wide",
+      "as_of": "2026-10-20T01:00:00-05:00"
+    },
+    {
+      "bank": "boc",
+      "meeting": "2026-10-28",
+      "move": "hike",
+      "prob": 0.85,
+      "source": "OIS 82.8-87% hike (ActionForex/BlueGamma, Oct 19-20) — jumped from ~30% on Macklem Sat remarks; Reuters Oct 19 still citing hold-bet — conflict flagged",
+      "as_of": "2026-10-20T01:00:00-05:00"
+    },
+    {
+      "bank": "rbnz",
+      "meeting": "2026-10-28",
+      "move": "hike",
+      "prob": 0.83,
+      "source": "BBH/FXStreet Oct 20: swaps 80% hike to 3.00%; NZ Adviser 80-85% (BNZ/Westpac/ASB)",
+      "as_of": "2026-10-20T01:00:00-05:00"
     }
   ]
 }
