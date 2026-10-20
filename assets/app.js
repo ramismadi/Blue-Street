@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '85';
+  var ASSET_VERSION = '86';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -3040,9 +3040,6 @@
     Array.prototype.forEach.call(document.querySelectorAll('#fx-ccy [data-ccy]'), function (b) {
       b.setAttribute('aria-pressed', b.getAttribute('data-ccy') === fx.ccy ? 'true' : 'false');
     });
-    var x = fxGet(fx.ccy);
-    setText('#fx-sub', x ? (fx.dir === 'bull' ? 'Bullish ' : 'Bearish ') + fx.ccy + ' (' + signed(fxScore(x)) +
-      ' on the board): every cross, grouped by how far the other side sits ' + (fx.dir === 'bull' ? 'below' : 'above') + ' it.' : '');
     var box = $('#fx-picks');
     box.textContent = '';
     var picks = fxPicks(fx.dir, fx.ccy);
