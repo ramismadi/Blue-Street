@@ -34,10 +34,11 @@ It was renamed on 2026-10-19; the project used to have a different name.
 - **Writing:** meaning over numbers; short, plain sentences, no "data slop".
   Today's read is 1-2 sentences. Never trade recommendations. Never the word
   "crowded" (use another term for extreme positioning).
-- **Editions** are written three times a day (CT): London open 2:04 AM daily,
-  New York open 8:34 AM weekdays, New York close 4:04 PM daily. Hercules' data
-  runs land first (1:15 AM, 7:45 AM weekdays, 3:15 PM). Fetch right before
-  pushing, one commit per run, never push an empty commit or force-push.
+- **Editions** are live by 2:00 AM, 8:30 AM and 4:00 PM CT (London open daily,
+  New York open weekdays, New York close daily). Claude writes at 1:19 AM,
+  7:54 AM and 3:14 PM, after Hercules' data runs (12:40 AM, 7:15 AM, 2:35 PM,
+  pushed by 1:15, 7:50 and 3:10). Full timetable in `COLLAB.md`. Fetch right
+  before pushing, one commit per run, never push an empty commit or force-push.
 
 ## How Rami likes to work
 - Explain the approach in plain terms and get a yes before building something
