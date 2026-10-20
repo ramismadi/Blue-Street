@@ -1,50 +1,9 @@
 # Working on Blue Street — agent collaboration guide
 
----
-
-## ⚠️ HERCULES — PLEASE READ: what's going wrong, and three fixes (Rami, 2026-10-19)
-
-### The problems your jobs are causing today
-- **The site stopped updating.** Every push to this repo starts a GitHub Pages
-  build, and a new push cancels the build before it. At 10:34 CT you pushed 4
-  commits in 18 seconds, all empty. At 11:05 CT you pushed 10 in 20 seconds, and
-  only 2 changed a file. So builds kept getting cancelled before they finished.
-  Rami's changes (and yours) sat in the repo but never reached the live site.
-  On a day GitHub is already slow, this backs it up for hours.
-- **Rami's plain-words text keeps getting undone.** Rami said the macro engine
-  and central bank text read like "data slop" (strings of numbers, odds and
-  dates instead of what they mean). Claude rewrote the engine reads in plain
-  words at 04:30 CT; your 04:34 run put the number-heavy text back four minutes
-  later, even though COLLAB.md asked you not to. Rami then saw the old text
-  and thought the fix hadn't worked.
-- **The old name is still showing up.** Your commits still say "Gloment". The
-  site was renamed Blue Street, and Rami asked that every trace of the old
-  name go, including on GitHub.
-- **Stale stories coming back.** The Tabtabai item (a Nov 2025 story) was
-  pulled twice and re-added by your runs both times (see the stale-news notes).
-
-Net effect: Rami asks for a change, it's made, and then either it never shows
-up or your next run reverses it. Please treat the fixes below as standing rules.
-
-### The three fixes
-1. **One commit per run.** Gather all your file changes, then make a single
-   commit and push once. Skip any file that hasn't changed, and if nothing
-   changed, don't commit or push at all. (If your tool writes files one at a
-   time through the GitHub API, that's what creates the empty commits —
-   compare with the current file first and skip unchanged ones.)
-2. **Use the new name.** The repo is ramismadi/Blue-Street. Start commit
-   messages with `data:` (e.g. `data: calendar — BoC BOS Q3 actual`), never
-   "Gloment".
-3. **Leave the written text alone.** The plain-words text now lives in
-   `data/words.json`, which Claude owns — please never edit it. In engine.json,
-   banks.json and story.json keep doing what you do well: numbers, dates, odds
-   and sources. Put detailed figures in `figure` (engine) and `detail` (banks).
-   The site shows Claude's words over yours for the same day; if your file is
-   newer than words.json, yours shows (trimmed), so nothing breaks if Claude
-   misses a day.
-
-Your data work is what the whole site runs on — these rules just keep your
-pushes and Claude's from cancelling each other out.
+> **Read `VISION.md` first.** It's the why behind the site, and only Rami
+> changes it. Before trimming anything, check it against VISION.md's
+> "Trimming rule": keep what serves the vision or is paused, archive what's
+> finished, and ask Rami before deleting a file or feature.
 
 ## WHO DOES WHAT — current split, no overlap (Rami, 2026-10-19)
 This section is the source of truth. Where older sections below disagree
@@ -61,7 +20,6 @@ the other agent owns — if you need a change in it, ask in this file.
 | `data/latest.json`, `data/focus.json` | breaking watch, Focus Mode | every 30 min / event days |
 | `data/pillars.json`, `data/glossary.json` | explainers, glossary terms | as needed |
 | `data/news-raw.json`, `data/markets.json` | raw headlines, levels (optional feeds) | daily run |
-| `data/story.json`, `data/engine.json` | **numbers and sources only** — until the handover, then Claude takes them | daily run |
 
 ### Claude writes (design, code, and every word readers see)
 | File | What | When (CT) |
@@ -71,7 +29,7 @@ the other agent owns — if you need a change in it, ask in this file.
 | `data/news.json` | News tab: stories, impact, per-currency reads | :43 past, ~10 times a weekday (+ 2:31 PM on Fed days) |
 | `data/cot.json` | positioning (built by a GitHub Action) | Fridays, checked Saturdays |
 | `DESIGN.md` | how the site is built and what each file must look like | when design changes |
-| after `HANDOVER CONFIRMED`: `data/story.json`, `data/engine.json` | full editions | 1:19 AM and 3:14 PM daily, 7:54 AM weekdays |
+| `data/story.json`, `data/engine.json` | full editions (handover done 2026-10-19) | 1:19 AM and 3:14 PM daily, 7:54 AM weekdays |
 
 ### Shared
 - `COLLAB.md` (this file): both may add sections; don't rewrite or delete the
@@ -140,7 +98,6 @@ paste an older copy of this file over the whole thing — edit only the
 section you're changing, starting from the latest `main` (whole-file
 rewrites have wiped Claude's notes three times, which is why they moved).
 
-
 ## Standing rules (apply to everyone)
 Condensed from the older rules, now archived. Rami's rule of thumb: **one writer
 per file.** If you need a change in a file the other agent owns, ask in this
@@ -174,7 +131,6 @@ file. If you're unsure who should do something, ask Rami.
 > one of these should read it in `docs/COLLAB-ARCHIVE.md`.
 > Add new sections below; don't rewrite the other agent's.
 
-
 ## Positioning feed — Claude owns it (Rami, 2026-10-14)
 `data/cot.json` is Claude's, not Hercules'. It is written by a GitHub Action
 (`.github/workflows/cot.yml`) every Friday after the CFTC release, from the
@@ -192,7 +148,6 @@ now come from this file instead of news reports:
 - News figures on positioning (e.g. "aggregate USD longs $35.5bn") can still
   add colour, but the score comes from the CFTC numbers.
 
-
 ## Editions handover — Claude writes, Hercules gathers (Rami, 2026-10-18)
 Rami approved a new split: **one agent per job.** Hercules gathers (data,
 numbers, actuals, raw headlines, breaking alerts); Claude writes (the prose
@@ -209,9 +164,8 @@ readers see). Phase 1 moves the two daily editions.
 breaking watch + Focus Mode (`focus.json`), `calendar.json` (incl. actuals and
 outcomes), `banks.json`, `currencies.json`, `momentum.json`, `pillars.json`,
 `glossary.json`, `news-raw.json` (requested earlier today).
-**Change:** move the two edition runs to **1:30 AM and 3:30 PM CT** and have
-them refresh those data files only — no longer write `story.json` or
-`engine.json`.
+**Change:** Hercules' runs refresh those data files only — no longer write
+`story.json` or `engine.json`. (Run times: see "Timing" above.)
 **New ask (optional, very useful):** `data/markets.json` at the same two
 runs — the numbers the story leans on, each with a source label and time:
 ```
@@ -242,25 +196,6 @@ currency pages, badge). `data/latest.json` is still used by Focus Mode's live
 blog on big-event days and by the editions' "What changed", so the file stays.
 Whether the 30-min breaking watch keeps running outside focus days is Rami's
 call — ask him before changing it.
-
-## Renamed to Blue Street (Rami, 2026-10-19) — action needed, Hercules
-Rami renamed the whole project **Blue Street** and wants the old name gone
-everywhere visible. Done on Claude's side:
-- Site name, wordmark, page title, home-screen title, app icon, footer, docs.
-- **GitHub repo renamed to `ramismadi/Blue-Street`** (Rami does this in the
-  repo's settings). The site then lives at
-  **https://ramismadi.github.io/Blue-Street/** (the old Pages address stops
-  working — GitHub doesn't redirect Pages after a rename).
-- Saved-preference keys in the browser are now `bluestreet-*` (one-time reset
-  of theme/layout choices for readers).
-
-**For Hercules:**
-1. Point your clone/remote and every scheduled job at `ramismadi/Blue-Street`
-   (GitHub redirects git for now, but don't rely on it).
-2. Commit messages: drop the old name — e.g. `data: ...` / `content: ...`
-   per rule 3, or `Blue Street data: ...`.
-3. Never write the old name in any data file, cron body or note again; if a
-   template still has it, switch it to Blue Street.
 
 ## Today's read is 1–2 sentences (Rami, 2026-10-19)
 `story.json` → `headline` must be **one or two sentences, about 35 words max**
@@ -294,13 +229,6 @@ Same complaint as the engine: the bank cards "come off as data slop."
 - `detail` — the numbers, odds, prints and dates (inside Details only).
 Claude rewrote today's eight cards this way and moved the old `priced` text
 into `detail`. Hercules: please keep this shape when you refresh banks.json.
-
-## Hercules confirmed the fixes (Rami relayed, 2026-10-19 11:53 CT)
-- One commit per run via a new changed-files-only pusher; no commit when nothing changed. All three jobs (2 AM, 4 PM, breaking watch) push once.
-- Commit labels: `data: YYYY-MM-DD edition`, `data: YYYY-MM-DD NY-close edition`, `data: latest — <headline>`. Old name removed from job instructions.
-- 2 AM / 4 PM runs now touch only calendar, banks, currencies, momentum, pillars, news-raw and the new `data/markets.json`. Breaking watch owns latest.json, focus.json (arm, recap, disarm) and calendar actuals.
-- Tabtabai item on a do-not-resurrect list; every pickup is checked against the article's real publish date.
-- Herc no longer writes story.json / engine.json / words.json, so the handover start moved to today's afternoon edition.
 
 ## Focus Mode tabled (Rami, 2026-10-19 12:00 CT)
 Rami wants Focus Mode re-thought after the redesign, so it's off on the site

@@ -536,3 +536,82 @@ watch, thread ids, `ccy`/`pillar`/`next`, Focus Mode's live blog and the
 `latest.json` and wove it into `story.json` and `engine.json`. Claude pulled
 it from `latest.json` again. Hercules: please drop it from your working copy
 and from the story/engine prose in the next run — it is the Nov 2025 strike.
+
+---
+
+# Moved from COLLAB.md on 2026-10-20 (finished: fixes confirmed, rename done, schedule replaced)
+
+## ⚠️ HERCULES — PLEASE READ: what's going wrong, and three fixes (Rami, 2026-10-19)
+
+### The problems your jobs are causing today
+- **The site stopped updating.** Every push to this repo starts a GitHub Pages
+  build, and a new push cancels the build before it. At 10:34 CT you pushed 4
+  commits in 18 seconds, all empty. At 11:05 CT you pushed 10 in 20 seconds, and
+  only 2 changed a file. So builds kept getting cancelled before they finished.
+  Rami's changes (and yours) sat in the repo but never reached the live site.
+  On a day GitHub is already slow, this backs it up for hours.
+- **Rami's plain-words text keeps getting undone.** Rami said the macro engine
+  and central bank text read like "data slop" (strings of numbers, odds and
+  dates instead of what they mean). Claude rewrote the engine reads in plain
+  words at 04:30 CT; your 04:34 run put the number-heavy text back four minutes
+  later, even though COLLAB.md asked you not to. Rami then saw the old text
+  and thought the fix hadn't worked.
+- **The old name is still showing up.** Your commits still say "Gloment". The
+  site was renamed Blue Street, and Rami asked that every trace of the old
+  name go, including on GitHub.
+- **Stale stories coming back.** The Tabtabai item (a Nov 2025 story) was
+  pulled twice and re-added by your runs both times (see the stale-news notes).
+
+Net effect: Rami asks for a change, it's made, and then either it never shows
+up or your next run reverses it. Please treat the fixes below as standing rules.
+
+### The three fixes
+1. **One commit per run.** Gather all your file changes, then make a single
+   commit and push once. Skip any file that hasn't changed, and if nothing
+   changed, don't commit or push at all. (If your tool writes files one at a
+   time through the GitHub API, that's what creates the empty commits —
+   compare with the current file first and skip unchanged ones.)
+2. **Use the new name.** The repo is ramismadi/Blue-Street. Start commit
+   messages with `data:` (e.g. `data: calendar — BoC BOS Q3 actual`), never
+   "Gloment".
+3. **Leave the written text alone.** The plain-words text now lives in
+   `data/words.json`, which Claude owns — please never edit it. In engine.json,
+   banks.json and story.json keep doing what you do well: numbers, dates, odds
+   and sources. Put detailed figures in `figure` (engine) and `detail` (banks).
+   The site shows Claude's words over yours for the same day; if your file is
+   newer than words.json, yours shows (trimmed), so nothing breaks if Claude
+   misses a day.
+
+Your data work is what the whole site runs on — these rules just keep your
+pushes and Claude's from cancelling each other out.
+
+## Renamed to Blue Street (Rami, 2026-10-19) — action needed, Hercules
+Rami renamed the whole project **Blue Street** and wants the old name gone
+everywhere visible. Done on Claude's side:
+- Site name, wordmark, page title, home-screen title, app icon, footer, docs.
+- **GitHub repo renamed to `ramismadi/Blue-Street`** (Rami does this in the
+  repo's settings). The site then lives at
+  **https://ramismadi.github.io/Blue-Street/** (the old Pages address stops
+  working — GitHub doesn't redirect Pages after a rename).
+- Saved-preference keys in the browser are now `bluestreet-*` (one-time reset
+  of theme/layout choices for readers).
+
+**For Hercules:**
+1. Point your clone/remote and every scheduled job at `ramismadi/Blue-Street`
+   (GitHub redirects git for now, but don't rely on it).
+2. Commit messages: drop the old name — e.g. `data: ...` / `content: ...`
+   per rule 3, or `Blue Street data: ...`.
+3. Never write the old name in any data file, cron body or note again; if a
+   template still has it, switch it to Blue Street.
+
+## Hercules confirmed the fixes (Rami relayed, 2026-10-19 11:53 CT)
+- One commit per run via a new changed-files-only pusher; no commit when nothing changed. All three jobs (2 AM, 4 PM, breaking watch) push once.
+- Commit labels: `data: YYYY-MM-DD edition`, `data: YYYY-MM-DD NY-close edition`, `data: latest — <headline>`. Old name removed from job instructions.
+- 2 AM / 4 PM runs now touch only calendar, banks, currencies, momentum, pillars, news-raw and the new `data/markets.json`. Breaking watch owns latest.json, focus.json (arm, recap, disarm) and calendar actuals.
+- Tabtabai item on a do-not-resurrect list; every pickup is checked against the article's real publish date.
+- Herc no longer writes story.json / engine.json / words.json, so the handover start moved to today's afternoon edition.
+
+## Editions handover — superseded line (moved 2026-10-20)
+**Change:** move the two edition runs to **1:30 AM and 3:30 PM CT** and have
+them refresh those data files only — no longer write `story.json` or
+`engine.json`.

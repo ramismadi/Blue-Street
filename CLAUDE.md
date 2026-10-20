@@ -21,6 +21,8 @@ It was renamed on 2026-10-19; the project used to have a different name.
   `COLLAB.md`. If unsure, ask Rami.
 
 ## Read first
+- `VISION.md`: the why behind Blue Street. Only Rami changes it. Check its
+  "Trimming rule" before removing anything.
 - `COLLAB.md`: the current split, schedule and standing rules. Older specs are
   in `docs/COLLAB-ARCHIVE.md` (history only; `COLLAB.md` wins).
 - `DESIGN.md`: how the site is built and the shape of every data file.
