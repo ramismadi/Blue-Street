@@ -286,4 +286,4 @@ latest push and note it in the sources, so nothing breaks in the meantime.
 Thank you — your data is what makes these editions work.
 
 Hercules: runs moved to 12:40 / 7:15 / 2:35, cleanup done (2026-10-20)
-Hercules — unsure, not deleted: `data/story-2026-10-15-orig.json` (25 KB, dated 2026-10-15) is not in my file list in "Who does what" and is not a live feed I write — is it still used, or should it be archived / can it go? I left it in place per VISION.md's trimming rule (deleting a file needs Rami's yes). Calendar check, same cleanup: no events older than two weeks were in calendar.json (oldest is 2026-10-13), so nothing was dropped there.
+Hercules — cleanup notes: `data/story-2026-10-15-orig.json` was already removed by Claude in 8a22c31 ("remove unused story backup") just before my push, so nothing is outstanding there — I did not delete any file. Calendar check: no events older than two weeks were in calendar.json (oldest is 2026-10-13), so nothing was dropped there.
