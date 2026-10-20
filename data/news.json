@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T14:55:00Z",
+  "updated": "2026-10-20T15:46:30Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,18 +19,18 @@
     },
     "JPY": {
       "lean": "mixed",
-      "text": "Strong demand at Japan's bond sale eased debt fears, and the BoJ is reportedly set to hold next week but raise its inflation forecast, keeping a December hike in play. Oil above $110 and the wide gap with US rates still drag on it.",
-      "ts": "2026-10-20T12:55:00Z"
+      "text": "Strong demand at the bond sale eased debt fears and the BoJ may raise its inflation forecast next week. But oil near $110, open spending bills and the wide gap with US rates still weigh on the yen.",
+      "ts": "2026-10-20T15:46:30Z"
     },
     "CHF": {
       "lean": "mixed",
-      "text": "Talk of new strikes on Iran and threats to a second oil route keep a haven floor under the franc, but US yields above 5% limit how far shelter demand carries it.",
-      "ts": "2026-10-20T14:55:00Z"
+      "text": "Attacks around Saudi Arabia and Hormuz, and Britain sending jets, keep a haven floor under the franc. US yields above 5% limit how far shelter demand carries it.",
+      "ts": "2026-10-20T15:46:30Z"
     },
     "CAD": {
       "lean": "bullish",
-      "text": "Alberta's clear vote to stay removed a political risk, and oil at five-month highs plus Oct 28 hike bets keep the loonie near its strongest in a month.",
-      "ts": "2026-10-20T14:55:00Z"
+      "text": "The loonie has gained four days running, USD/CAD near 1.409, as oil surges and Alberta's vote cleared a political risk. Oct 28 hike bets add support, though a cautious BoC is still possible.",
+      "ts": "2026-10-20T15:46:30Z"
     },
     "AUD": {
       "lean": "bullish",
@@ -39,21 +39,54 @@
     },
     "NZD": {
       "lean": "bullish",
-      "text": "An Oct 28 RBNZ hike is close to fully priced and the kiwi is firming near 0.5665, mostly against a weak euro. Last week's wide trade gap is the main drag.",
-      "ts": "2026-10-20T14:55:00Z"
+      "text": "The kiwi is near 0.5665 with about 80% odds of an Oct 28 hike priced. This week's Q3 inflation figure decides whether that holds.",
+      "ts": "2026-10-20T15:46:30Z"
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold is slipping toward $4,140 as oil above $111 keeps inflation fears and yields up. War headlines aren't enough to lift it while rates do the steering.",
-      "ts": "2026-10-20T14:55:00Z"
+      "text": "Gold slipped for a third day to about $4,124 as oil pushes US yields toward 5.14% and December hike bets firm up. War headlines aren't lifting it while rates do the steering.",
+      "ts": "2026-10-20T15:46:30Z"
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent is near $111, a five-month high, on Houthi attacks on Saudi Arabia and Iran's tanker and blockade threats. Most claims are unconfirmed, which keeps it a risk premium rather than a proven supply loss.",
-      "ts": "2026-10-20T14:55:00Z"
+      "text": "US crude jumped about 6% toward $110 and Brent is near $112 as Houthi fire on Saudi Arabia and Iran's mines squeeze Gulf flows, reportedly to under half of normal. Britain sending jets to guard Saudi sites says the threat isn't fading.",
+      "ts": "2026-10-20T15:46:30Z"
     }
   },
   "items": [
+    {
+      "id": "usagold-gold-4124-20261020",
+      "ts": "2026-10-20T13:51:20Z",
+      "source": "USAGOLD",
+      "url": "https://www.usagold.com/daily-precious-metals-market-report-october-20-2026/",
+      "image": "https://www.usagold.com/wp-content/uploads/2026/08/usagold-og-image.png",
+      "headline": "Physical Gold Slips To $4,124 As Oil-Driven Yields Revive Fed Hike Bets; Silver Firms",
+      "story": "gold-week",
+      "story_title": "Gold: oil, yields and the Fed",
+      "pillar": "policy",
+      "summary": "Gold fell for a third day to about $4,124 as oil pushed US yields toward 5.14% and markets leaned harder into a December Fed hike.",
+      "beats": {
+        "was": "The daily gold price and what moved it.",
+        "happened": "Spot gold was down about 0.4% to near $4,124, a third straight loss, while silver edged up.",
+        "means": "Higher oil means stickier inflation, so the Fed may have to hike again. That lifts yields, and gold pays no interest, so holding it gets costlier.",
+        "fx": "Dearer oil → Fed hike odds up → higher US yields → cash and bonds pay more than gold → gold slips. The lens: where are US yields heading?"
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Third daily loss as yields rise on oil."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "December hike bets firming gives the dollar a yield edge."
+        }
+      ],
+      "watch": "A pullback in oil or yields would lift gold; a confirmed supply loss could revive haven buying."
+    },
     {
       "id": "reuters-euronext-yen-jgb-auction-20261020",
       "date": "2026-10-20",
@@ -278,6 +311,150 @@
         }
       ],
       "watch": "Confirmed strikes would be a real escalation; progress in Qatar-brokered talks would cool it."
+    },
+    {
+      "id": "gulfnews-us-ships-hegseth-20261020",
+      "date": "2026-10-20",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/middle-east-war-houthi-missiles-kill-53-us-defence-chief-visits-region-1.500716634",
+      "image": "https://media.assettype.com/gulfnews%2F2025-04-09%2Fuq5kmtae%2FSaudi-Skyline-1.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "Middle East War: Attempted strikes on US ships 'unsuccessful', Hegseth visits region",
+      "story": "saudi-houthi",
+      "story_title": "Saudi–Houthi fighting and the Gulf supply risk",
+      "pillar": "tot",
+      "summary": "US crude jumped about 6% toward $110 as the Houthis fired at Riyadh again and the US defence chief made a surprise trip to the region. Iran's attempts to hit US ships near Hormuz reportedly failed.",
+      "beats": {
+        "was": "A day of war news around the Gulf: Houthi missiles at Saudi Arabia, Iran's mines in Hormuz, and a surprise visit by the US defence secretary.",
+        "happened": "A Houthi missile aimed at Riyadh was intercepted and the city's airport stayed shut. US crude rose about 5.7% to roughly $109.60 and Brent about 2% to near $111.70.",
+        "means": "Oil is pricing more than one route at risk at once: Hormuz and the Saudi coast. A senior US visit suggests next steps are being weighed, so traders keep paying for the risk.",
+        "fx": "More attacks → more fear for supply → dearer oil → oil sellers like the loonie gain, oil buyers like Japan pay more → yen under pressure. The lens: does any oil actually stop flowing?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "US crude up about 6% in a day as attacks spread to more targets."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada sells oil, so a higher price helps its trade."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so a dearer barrel drains it."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "War headlines keep some shelter demand under the franc."
+        }
+      ],
+      "watch": "Any confirmed halt in Saudi or Hormuz exports would push this higher; a US–Iran deal or a lull in attacks would pull it back."
+    },
+    {
+      "id": "tradingpedia-loonie-oil-20261020",
+      "date": "2026-10-20",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/10/20/loonie-rallies-as-oil-surge-and-weaker-dollar-hit-usd-cad/",
+      "image": null,
+      "headline": "Loonie Rallies as Oil Surge and Weaker Dollar Hit USD/CAD",
+      "story": "boc-oct",
+      "story_title": "Bank of Canada: hike talk vs cooling core",
+      "pillar": "tot",
+      "summary": "The loonie rose for a fourth day, with USD/CAD near 1.409, as oil climbed. Middle East crude flows have reportedly fallen to well under half their normal level.",
+      "beats": {
+        "was": "A daily read on the Canadian dollar against the US dollar.",
+        "happened": "USD/CAD slid for a fourth session to around 1.409. Tanker-tracker Kpler puts Middle East crude flows near 8.5 million barrels a day, down from over 20 million.",
+        "means": "Canada gets paid more for each barrel it sells while Gulf supply is squeezed. RBC still sees the BoC on hold, torn between weak growth and oil-led inflation.",
+        "fx": "Gulf flows cut → higher oil → more money for Canadian exports → demand for loonies → CAD up. The lens: how long does the oil squeeze last?"
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Fourth day of gains as oil rises; USD/CAD near 1.409."
+        },
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Reported Gulf crude flows down by more than half."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Softer against the oil currencies to start the week."
+        }
+      ],
+      "watch": "A drop in oil or a cautious BoC on Oct 28 would take the wind out of the loonie."
+    },
+    {
+      "id": "tradingpedia-kiwi-cpi-20261020",
+      "date": "2026-10-20",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/10/20/kiwi-dollar-holds-range-ahead-of-cpi-and-rate-signals/",
+      "image": null,
+      "headline": "Kiwi Dollar Holds Range Ahead of CPI and Rate Signals",
+      "story": "rbnz-oct",
+      "story_title": "RBNZ: hike odds into Q3 CPI",
+      "pillar": "inflation",
+      "summary": "The kiwi is idling near 0.5665 before this week's Q3 inflation figures. Inflation is expected to cool a little, but swaps still put about 80% odds on an Oct 28 hike.",
+      "beats": {
+        "was": "A preview of New Zealand's third-quarter consumer prices, due this week.",
+        "happened": "Forecasts are 0.8% for the quarter and 3.8% a year, down from 4.1%. NZD/USD held in a tight range near 0.5665.",
+        "means": "Even the cooler forecast leaves inflation near twice the RBNZ's 2% midpoint, so its own economist calls the Oct 28 call wide open, tilted to a hike.",
+        "fx": "Hot CPI → hike more certain → higher NZ rates → more demand for kiwi; soft CPI → hike in doubt → kiwi slips. The lens: is inflation cooling fast enough for the RBNZ to wait?"
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Hike odds near 80% before the CPI release; a preview, so mild."
+        }
+      ],
+      "watch": "The Q3 CPI print: well under 3.8% a year would put the Oct 28 hike in doubt."
+    },
+    {
+      "id": "dawn-uk-typhoons-saudi-20261020",
+      "ts": "2026-10-20T11:49:36Z",
+      "source": "Dawn",
+      "url": "https://www.dawn.com/news/2038537/uk-to-deploy-fighter-jets-to-help-protect-saudi-arabia-from-houthi-attacks",
+      "image": "https://i.dawn.com/large/2022/02/61faa1b79fb25.jpg",
+      "headline": "UK to deploy fighter jets to help protect Saudi Arabia from Houthi attacks",
+      "story": "saudi-houthi",
+      "story_title": "Saudi–Houthi fighting and the Gulf supply risk",
+      "pillar": "risk",
+      "summary": "Britain is sending Typhoon jets to guard Saudi cities and energy sites, for defence only. It shows the Houthi campaign is now serious enough to pull in outside air forces.",
+      "beats": {
+        "was": "The UK said it will send fighter jets, a transport plane and advisers to help Saudi Arabia shoot down Houthi attacks.",
+        "happened": "The jets will fly defensive patrols over cities and infrastructure, with no strikes on the Houthis. Riyadh's airport has reportedly been hit about 20 times this month.",
+        "means": "More air defence could cut the damage to Saudi oil sites over time, but it also confirms the threat is large and ongoing rather than fading.",
+        "fx": "A wider Western role → the conflict looks longer → the oil risk premium stays → support for oil and the loonie, a mild haven bid for the franc. The lens: is Saudi oil getting out safely?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Confirms a lasting threat to Saudi supply, even if defence improves."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A widening conflict keeps some demand for safe places."
+        }
+      ],
+      "watch": "Fewer successful hits on Saudi sites once the jets arrive would ease the oil premium."
     },
     {
       "id": "yahoo-gold-subdued-oil-20261020",
@@ -571,6 +748,33 @@
       "watch": "Friday's Japan CPI; a hot print would lift December odds, a soft one would push the yen back toward its lows."
     },
     {
+      "id": "fxstreet-katayama-defense-funding-20261020",
+      "ts": "2026-10-20T01:25:07Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/japans-katayama-says-will-consider-measures-for-stable-funding-maintaining-fiscal-sustainability-202610200125",
+      "image": "https://editorial.fxsstatic.com/images/i/Japanese-Bank_4_Medium.png",
+      "headline": "Japan's Katayama says will consider measures for stable funding, maintaining fiscal sustainability",
+      "story": "japan-fiscal",
+      "story_title": "Japan: tax cuts and the bond bill",
+      "pillar": "fiscal",
+      "summary": "Japan's finance minister said there is no plan yet for paying for higher defence spending. It adds one more cost to a budget already stretched by tax cuts.",
+      "beats": {
+        "was": "Comments from Japan's finance minister on how to fund a bigger defence budget.",
+        "happened": "She said no funding decision has been made and promised to look for stable sources while keeping the public finances sound. USD/JPY barely moved, near 158.5.",
+        "means": "Another big spending need with no clear way to pay for it keeps the market asking whether Japan will borrow more.",
+        "fx": "More spending, unclear funding → more bonds to sell → doubts about Japan's finances → investors want more to hold yen assets → mild pressure on the yen. The lens: does the funding plan add to debt?"
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Another open spending bill adds to fiscal worries; little market reaction."
+        }
+      ],
+      "watch": "A clear funding plan that avoids new borrowing would ease the worry; more deficit bonds would add to it."
+    },
+    {
       "id": "fxstreet-irgc-bab-al-mandeb-20261019",
       "ts": "2026-10-19T23:45:59Z",
       "source": "FXStreet",
@@ -817,66 +1021,6 @@
       "watch": "The October 28 BoC decision and Monetary Policy Report."
     },
     {
-      "id": "bbc-yahoo-houthi-shabwa-20261019",
-      "ts": "2026-10-19T16:20:00Z",
-      "source": "BBC via Yahoo",
-      "url": "https://www.yahoo.com/news/world/articles/houthi-missile-strike-yemen-camp-162055009.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/6878c5e471aa9f2616b8ff83084b9ddaae671b051114f2967f2339582a2fe656/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fbbc_us_articles_995%2F05eb4ee9908bffbb5309ff29c5237882.jpg",
-      "headline": "Houthi missile strike on Yemen camp kills 50 security recruits, local authorities say",
-      "story": "saudi-houthi",
-      "story_title": "Saudi–Houthi fighting and the Gulf supply risk",
-      "pillar": "risk",
-      "summary": "A Houthi missile strike on a government training camp in Yemen killed more than 50 recruits, one of the deadliest hits since the Saudi-backed offensive began.",
-      "beats": {
-        "was": "Yemen's war, where Saudi Arabia backs a government offensive and the Houthis answer with attacks on the kingdom.",
-        "happened": "Three missiles hit a camp near Ataq in Shabwa; local authorities say 50+ were killed and about 200 injured. The Houthis said they targeted Saudi-run forces.",
-        "means": "It shows the fighting is getting worse, not winding down, and the Houthis have already targeted Saudi oil sites and Red Sea tankers. This strike itself didn't touch supply.",
-        "fx": "Wider war → more risk to Gulf and Red Sea oil routes → oil holds its premium. The lens: does the fighting reach oil sites or shipping?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Escalation in Yemen keeps Red Sea and Saudi supply risk alive, but no barrels were lost."
-        }
-      ],
-      "watch": "Houthi attacks on Saudi energy sites or Bab al-Mandab shipping; any ceasefire talks."
-    },
-    {
-      "id": "tbs-reuters-araghchi-lavrov-20261019",
-      "ts": "2026-10-19T14:40:00Z",
-      "source": "The Business Standard (Reuters)",
-      "url": "https://www.tbsnews.net/world/irans-araghchi-blames-us-strait-hormuz-tensions-calls-diplomacy-1577801",
-      "image": "https://www.tbsnews.net/sites/default/files/styles/social_share/public/images/2026/10/19/2d899b11-85f6-489a-9940-80c7eeffe33f.png",
-      "headline": "Iran's Araghchi blames US for Strait of Hormuz tensions, calls for diplomacy",
-      "story": "hormuz",
-      "story_title": "Hormuz: reopening offer vs ship attacks",
-      "pillar": "risk",
-      "summary": "Standing next to Russia's Lavrov in Tehran, Iran's foreign minister blamed Washington for the trouble in Hormuz and pushed a regional security setup with no foreign navies.",
-      "beats": {
-        "was": "A joint news conference by Iran's and Russia's foreign ministers in Tehran.",
-        "happened": "Araghchi said disputes should be settled by talks but put the blame for Hormuz on the US, and called for Gulf states to secure the strait themselves without outside forces.",
-        "means": "Talk of diplomacy, but no step toward the US position, and the call to remove foreign forces runs straight into the US naval presence. It does not match the 'breakthrough this week' reports from earlier today.",
-        "fx": "No sign of a deal → Gulf flows stay low → oil keeps its supply premium → support for oil exporters and a steady bid for havens. The lens: does anything move the US and Iran closer this week?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rhetoric gives no ground, keeping the supply premium in place."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Stalled diplomacy keeps a small haven bid."
-        }
-      ],
-      "watch": "Any formal US reply to Iran's reopening offer, or a confirmed mediation breakthrough."
-    },
-    {
       "id": "fxstreet-tds-cad-cpi-20261019",
       "ts": "2026-10-19T14:22:39Z",
       "source": "FXStreet",
@@ -904,60 +1048,6 @@
       "watch": "The BoC's October 28 decision; a hawkish statement despite the CPI would flip this."
     },
     {
-      "id": "newsquawk-nahb-oct-20261019",
-      "ts": "2026-10-19T14:20:00Z",
-      "source": "Newsquawk",
-      "url": "https://www.newsquawk.com/headlines/nahb-housing-market-index-oct-29-vs-exp-32-prev-32",
-      "image": null,
-      "headline": "NAHB Housing Market Index (Oct) 29 vs. Exp. 32 (Prev. 32)",
-      "story": "us-housing",
-      "story_title": "US housing: builders lose confidence",
-      "pillar": "growth",
-      "summary": "US homebuilder confidence fell to 29 in October, three points below both forecasts and September. A soft survey, but it points the same way as cooling Fed hike bets.",
-      "beats": {
-        "was": "The NAHB index asks US homebuilders how sales and buyer traffic feel; 50 is the line between good and bad.",
-        "happened": "It dropped to 29 against 32 expected and 32 last month, a clear miss in a reading that was already deep in gloomy territory.",
-        "means": "With mortgage rates high, builders see fewer buyers. It is a mood gauge, not hard activity, so it needs housing starts and permits later this week to confirm it.",
-        "fx": "A cooling housing market gives the Fed one more reason not to tighten again → less support for US yields → a slightly softer dollar. The lens: is high-rate pain starting to show in the US economy?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Weaker builder mood adds to the case that the Fed can hold, trimming yield support."
-        }
-      ],
-      "watch": "Housing starts and permits later this week; a rebound there would make this a one-off."
-    },
-    {
-      "id": "fxstreet-bbh-yen-range-20261019",
-      "ts": "2026-10-19T14:13:06Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/japanese-yen-range-bound-as-boj-stays-cautious-bbh-202610191413",
-      "image": "https://editorial.fxsstatic.com/images/i/usd-jpy-001_Medium.jpg",
-      "headline": "Japanese Yen: Range-bound as BoJ stays cautious - BBH",
-      "story": "boj-path",
-      "story_title": "BoJ: the next hike and the yen",
-      "pillar": "policy",
-      "summary": "BBH expects Japan's September CPI to edge up but stay under the BoJ's own forecast, leaving an October hike unlikely and USD/JPY stuck between 155 and 160.",
-      "beats": {
-        "was": "A preview of Japan's September consumer prices, due Friday, and what they mean for the Bank of Japan.",
-        "happened": "BBH sees headline and core both at 2.1% (from 1.9% and 1.7%), with the measure excluding energy at 2.3%. Swaps price under a 5% chance of a hike on October 30 and about 80% for December 18.",
-        "means": "Inflation is rising, but it is still running below the BoJ's 2.5% projection for 2026, so the bank has no reason to rush. December stays the live meeting.",
-        "fx": "No October move → the rate gap with the US stays wide → little reason to buy yen → USD/JPY stays in its range. The lens: does Japan's inflation beat the BoJ's own forecast?"
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A cautious BoJ keeps the yen soft, but intervention risk near 160 caps the downside."
-        }
-      ],
-      "watch": "Friday's Japan CPI; core above 2.5% would bring an earlier hike into play."
-    },
-    {
       "id": "investinglive-canada-cpi-sep-20261019",
       "ts": "2026-10-19T12:30:21Z",
       "source": "investingLive",
@@ -983,33 +1073,6 @@
         }
       ],
       "watch": "The BoC Business Outlook Survey later today and whether markets keep a December hike fully priced."
-    },
-    {
-      "id": "investing-china-lpr-oct-20261019",
-      "date": "2026-10-19",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/economic-indicators/china-keeps-benchmark-lending-rates-steady-for-17th-straight-month-in-oct-4958616",
-      "image": "https://content-media.investing.com/news/LYNXNPEB7O0H7_L.jpg",
-      "headline": "China keeps benchmark lending rates steady for 17th straight month in Oct",
-      "story": "china-q3",
-      "story_title": "China Q3: growth beats the 4.4% call",
-      "pillar": "policy",
-      "summary": "China held its main lending rates for a 17th month, as expected; with growth beating forecasts, Beijing sees no need to ease.",
-      "beats": {
-        "was": "China's loan prime rates, the benchmarks for most bank loans and mortgages.",
-        "happened": "The one-year rate stayed at 3.00% and the five-year at 3.50%, exactly as forecast.",
-        "means": "Fresh after a 4.5% growth beat, the hold says Beijing is comfortable without new stimulus, though housing remains weak. The yuan firmed slightly.",
-        "fx": "No easing → steady yuan and no new demand boost → little change for China-linked currencies. The lens: will Beijing need to add stimulus for housing?"
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "As expected: no new boost, but a steady China after its growth beat."
-        }
-      ],
-      "watch": "Any property support measures from Beijing; Australia's flash PMIs on Oct 22."
     },
     {
       "id": "gulfnews-saudi-houthi-egypt-20261019",
@@ -1043,39 +1106,6 @@
         }
       ],
       "watch": "Any damage at Saudi oil facilities, Egypt's troop vote, and concrete steps behind Trump's 'quickly'."
-    },
-    {
-      "id": "almonitor-fii-postponed-20261019",
-      "date": "2026-10-19",
-      "source": "Al-Monitor",
-      "url": "https://www.al-monitor.com/originals/2026/10/saudi-arabia-postpones-davos-desert-until-2027-amid-houthi-attacks",
-      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-10/GettyImages-2181055004.jpg?h=a5ae579a&itok=Uzwv4NXT",
-      "headline": "Saudi Arabia postpones 'Davos in the Desert' until 2027 amid Houthi attacks",
-      "story": "saudi-houthi",
-      "story_title": "Saudi–Houthi fighting and the Gulf supply risk",
-      "pillar": "risk",
-      "summary": "Saudi Arabia pushed its flagship investor conference, due Oct 26–29 in Riyadh, into 2027 as Houthi attacks hit the kingdom, a sign the fighting is now disrupting its economy, not just its oil sites.",
-      "beats": {
-        "was": "The Future Investment Initiative is Saudi Arabia's showcase for foreign money, backed by its sovereign fund and central to its plan to rely less on oil.",
-        "happened": "Organisers postponed it with no new date. Houthi attacks have reached Riyadh's airport, which closed for a week and still cancelled 18% of flights on Monday; the US told Americans across the Gulf to stay on high alert.",
-        "means": "Cancelling a marquee event says Riyadh doesn't expect the threat to fade within days. That makes the Gulf risk look longer-lasting, which keeps a risk premium in oil.",
-        "fx": "Longer Gulf risk → oil premium sticks → exporters gain, importers pay → some haven demand stays. The lens: is the conflict spreading deeper into Saudi Arabia?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Signals the Houthi threat to Saudi Arabia is expected to last."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A wider Gulf conflict keeps some demand for havens."
-        }
-      ],
-      "watch": "Whether attacks on Saudi oil or airports ease; real progress in the US–Iran talks would shrink this premium."
     },
     {
       "id": "newarab-us-iran-breakthrough-20261019",
