@@ -2,8 +2,7 @@
    Themes are token sets on [data-theme]; Blue Street (brand blue + ivory)
    is the default. Every theme defines the same tokens. */
 
-:root,
-[data-theme="ivory"] {
+:root {
   --brand: #0a84ff;          /* Blue Street brand blue (MT5 profit blue) — same in every theme */
   --brand-ivory: #f6f2ea;
   --bg: #f6f2ea;
@@ -59,82 +58,36 @@
   color-scheme: light;
 }
 
+/* Night (new 2026-10-21): the dark pair of Blue Street. Graphite with a
+   faint cool cast, iOS-style layers, brand blue #0a84ff as the only accent.
+   The masthead is graphite too (the blue is the accent, not a slab). */
 [data-theme="night"] {
-  --bg: #0a0f1a;
-  --bg-2: #070b13;
-  --surface: #111827;
-  --surface-2: #172033;
-  --ink: #eef2f8;
-  --ink-2: #b4bccb;
-  --ink-3: #808a9c;
-  --line: #22304a;
+  --bg: #0b0c0f;
+  --bg-2: #07080a;
+  --surface: #14161b;
+  --surface-2: #1b1e25;
+  --ink: #f2f4f8;
+  --ink-2: #b6bbc7;
+  --ink-3: #7f8694;
+  --line: #262a33;
   --accent: #0a84ff;
-  --accent-2: #0a84ff;
-  --accent-wash: #10233f;
-  --gold: #4ea8ff;
-  --gold-wash: #10233f;
-  --mixed: #d6ad62;
+  --accent-2: #4da3ff;
+  --accent-wash: #0f2036;
+  --gold: #4da3ff;           /* no gold trim: accents are brand blue */
+  --gold-wash: #0f2036;
+  --mixed: #d6ad62;          /* gold survives only as the "mixed" signal */
   --mixed-wash: #2a2114;
-  --bull: #7dcc9c;
-  --bull-wash: #13281d;
-  --bear: #f08a80;
-  --bear-wash: #2e1819;
-  --mast-1: #0a84ff;
-  --mast-2: #0a84ff;
-  --mast-ink: #f6f2ea;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 28px rgba(0, 0, 0, 0.25);
+  --bull: #6fd09a;
+  --bull-wash: #12271c;
+  --bear: #f28b82;
+  --bear-wash: #2d1819;
+  --mast-1: #101319;
+  --mast-2: #0b0c0f;
+  --mast-ink: #f2f4f8;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 28px rgba(0, 0, 0, 0.35);
   color-scheme: dark;
 }
-
-[data-theme="sage"] {
-  --bg: #f2f4ef;
-  --bg-2: #e7ebe2;
-  --surface: #ffffff;
-  --surface-2: #f7f8f4;
-  --ink: #1e2a23;
-  --ink-2: #4b5a51;
-  --ink-3: #7f8b84;
-  --line: #dde3d8;
-  --accent: #2f5d4a;
-  --accent-2: #4f8a6f;
-  --accent-wash: #e9f1ec;
-  --gold: #a6834e;
-  --gold-wash: #f5efe3;
-  --bull: #2e7d4f;
-  --bull-wash: #e6f2ea;
-  --bear: #b0453b;
-  --bear-wash: #f8ebe8;
-  --mast-1: #22443a;
-  --mast-2: #33634f;
-  --mast-ink: #f3f1e8;
-  --shadow: 0 1px 2px rgba(20, 40, 30, 0.05), 0 6px 24px rgba(20, 40, 30, 0.06);
-  color-scheme: light;
-}
-
-[data-theme="claret"] {
-  --bg: #f7f3ef;
-  --bg-2: #efe8e1;
-  --surface: #fffcf9;
-  --surface-2: #faf5f0;
-  --ink: #261c1f;
-  --ink-2: #5a4b4f;
-  --ink-3: #8e8185;
-  --line: #e9dfd6;
-  --accent: #6e1f30;
-  --accent-2: #94384b;
-  --accent-wash: #f5e9eb;
-  --gold: #a07a35;
-  --gold-wash: #f6eedb;
-  --bull: #2e7b52;
-  --bull-wash: #e7f2eb;
-  --bear: #b2413b;
-  --bear-wash: #f8eae8;
-  --mast-1: #4a1320;
-  --mast-2: #6e1f30;
-  --mast-ink: #f7efe4;
-  --shadow: 0 1px 2px rgba(50, 20, 25, 0.05), 0 6px 24px rgba(50, 20, 25, 0.06);
-  color-scheme: light;
-}
+[data-theme="night"] .masthead { box-shadow: 0 1px 0 var(--line); }
 
 [data-theme="pearl"] {
   --bg: #f5f3ee;
@@ -182,81 +135,6 @@
   --mast-1: #0a0a0b;
   --mast-2: #18181a;
   --mast-ink: #ecebe7;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 28px rgba(0, 0, 0, 0.25);
-  color-scheme: dark;
-}
-
-[data-theme="forest"] {
-  --bg: #0e1714;
-  --bg-2: #0a110f;
-  --surface: #15211d;
-  --surface-2: #1a2924;
-  --ink: #e8eee9;
-  --ink-2: #adbdb4;
-  --ink-3: #7f9087;
-  --line: #24352f;
-  --accent: #9fd0b5;
-  --accent-2: #6fb08f;
-  --accent-wash: #183026;
-  --gold: #d2b072;
-  --gold-wash: #2a2618;
-  --bull: #76cf9a;
-  --bull-wash: #133021;
-  --bear: #ef8a7f;
-  --bear-wash: #2e1a18;
-  --mast-1: #0a120f;
-  --mast-2: #14241e;
-  --mast-ink: #e8eee9;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 28px rgba(0, 0, 0, 0.25);
-  color-scheme: dark;
-}
-
-[data-theme="velvet"] {
-  --bg: #140b0e;
-  --bg-2: #0f080a;
-  --surface: #1e1216;
-  --surface-2: #26181d;
-  --ink: #f1e6e3;
-  --ink-2: #c3adb0;
-  --ink-3: #8f7a7e;
-  --line: #35232a;
-  --accent: #e8a9a0;
-  --accent-2: #c97b74;
-  --accent-wash: #33191e;
-  --gold: #d6ad62;
-  --gold-wash: #2c2214;
-  --bull: #7fcf9a;
-  --bull-wash: #142a1d;
-  --bear: #f2907f;
-  --bear-wash: #331816;
-  --mast-1: #1d0a10;
-  --mast-2: #3d1322;
-  --mast-ink: #f1e6e3;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 28px rgba(0, 0, 0, 0.25);
-  color-scheme: dark;
-}
-
-[data-theme="ink"] {
-  --bg: #0c1119;
-  --bg-2: #090d14;
-  --surface: #131a26;
-  --surface-2: #19212f;
-  --ink: #eee8dc;
-  --ink-2: #b9b4a8;
-  --ink-3: #858a94;
-  --line: #233042;
-  --accent: #e9dcbc;
-  --accent-2: #cdbb8e;
-  --accent-wash: #232a35;
-  --gold: #cf9259;
-  --gold-wash: #2b2015;
-  --bull: #7dcc9c;
-  --bull-wash: #13281d;
-  --bear: #f08a80;
-  --bear-wash: #2e1819;
-  --mast-1: #080c13;
-  --mast-2: #16233a;
-  --mast-ink: #eee8dc;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 28px rgba(0, 0, 0, 0.25);
   color-scheme: dark;
 }

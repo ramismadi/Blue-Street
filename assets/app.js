@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '87';
+  var ASSET_VERSION = '88';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -19,23 +19,14 @@
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
     { id: 'blue',      name: 'Blue Street', desc: 'Brand blue & ivory',  sw: ['#f6f2ea', '#0a84ff', '#f6f2ea'] },
-    { id: 'ivory',     name: 'Ivory',     desc: 'Navy & brass',           sw: ['#f6f2ea', '#1f3a5f', '#a07a32'] },
-    { id: 'sage',      name: 'Sage',      desc: 'Forest & sand',          sw: ['#f2f4ef', '#2f5d4a', '#c9ad7f'] },
-    { id: 'claret',    name: 'Claret',    desc: 'Burgundy & cream',       sw: ['#f7f3ef', '#6e1f30', '#a8803c'] },
     { id: 'pearl',     name: 'Pearl',     desc: 'Black & champagne',      sw: ['#f5f3ee', '#151515', '#b8964f'] },
-    { id: 'night',     name: 'Night',     desc: 'Brand blue after dark', sw: ['#0a0f1a', '#0a84ff', '#f6f2ea'], dark: true },
-    { id: 'ink',       name: 'Ink',       desc: 'Ink, ivory & copper',    sw: ['#131a26', '#e9dcbc', '#cf9259'], dark: true },
-    { id: 'forest',    name: 'Forest',    desc: 'Dark green & brass',     sw: ['#0e1714', '#9fd0b5', '#d2b072'], dark: true },
-    { id: 'velvet',    name: 'Velvet',    desc: 'Oxblood, rosé & gold',   sw: ['#1e1216', '#e8a9a0', '#d6ad62'], dark: true },
+    { id: 'night',     name: 'Night',     desc: 'Graphite & brand blue',  sw: ['#0b0c0f', '#0a84ff', '#f2f4f8'], dark: true },
     { id: 'onyx',      name: 'Onyx',      desc: 'Black & champagne',      sw: ['#0f0f10', '#e2c98f', '#6cc794'], dark: true }
   ];
-  /* Four colorways, each a light + dark pair; the masthead toggle flips
+  /* Two colorways, each a light + dark pair; the masthead toggle flips
      between the two, the menu picks the colorway. */
   var COLORWAYS = [
     { light: 'blue',   dark: 'night',  desc: 'Blue Street blue & ivory' },
-    { light: 'ivory',  dark: 'ink',    desc: 'Navy, ivory & brass' },
-    { light: 'sage',   dark: 'forest', desc: 'Green & sand' },
-    { light: 'claret', dark: 'velvet', desc: 'Burgundy, ros\u00e9 & gold' },
     { light: 'pearl',  dark: 'onyx',   desc: 'Black & champagne' }
   ];
   function colorwayOf(id) {
@@ -404,7 +395,7 @@
     var btn = $('#theme-btn'), list = $('#theme-list');
     if (!btn || !list) { applyTheme(cur, false); return; }
 
-    // Menu: the four colorways; picking one keeps the current light/dark mode.
+    // Menu: the colorways; picking one keeps the current light/dark mode.
     list.appendChild(el('div', 'tl-group', 'Colorway'));
     COLORWAYS.forEach(function (cw) {
       var item = el('button', 'tl-item');
