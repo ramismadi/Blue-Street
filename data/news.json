@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T11:46:02Z",
+  "updated": "2026-10-21T14:46:42Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "bearish",
-      "text": "The euro slipped back below $1.125 as France plans to bring in troops to keep order at this weekend's protests, and debt worries keep it near a three-month low on the franc. France's budget vote is October 27.",
-      "ts": "2026-10-21T11:46:02Z"
+      "text": "France's 10-year borrowing cost passed 5% for the first time since 2002 and its gap over Germany is the widest since the euro debt crisis, as the budget fight and violent protests drag on. That keeps the euro below $1.125 and near a three-month low on the franc, with France's budget vote on October 27.",
+      "ts": "2026-10-21T14:46:42Z"
     },
     "GBP": {
       "lean": "bullish",
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "bullish",
-      "text": "Stalled US-Iran peace efforts and French unrest keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
-      "ts": "2026-10-21T11:46:02Z"
+      "text": "Stalled US-Iran peace efforts, drone alarms over Saudi Arabia and France's debt worries all keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
+      "ts": "2026-10-21T14:46:42Z"
     },
     "CAD": {
       "lean": "bullish",
@@ -54,6 +54,72 @@
     }
   },
   "items": [
+    {
+      "id": "fxstreet-france-oat-5pct-20261021",
+      "ts": "2026-10-21T09:56:15Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/frances-10-year-bond-yield-climbs-above-5-stirring-fears-of-a-credit-crisis-202610210956",
+      "image": "https://editorial.fxsstatic.com/images/i/Equity-Index_CAC40-1_Medium.jpg",
+      "headline": "France's 10-year bond yield climbs above 5%, stirring fears of a credit crisis",
+      "story": "france-fiscal",
+      "story_title": "France: budget fight, protests and debt worries",
+      "pillar": "risk",
+      "summary": "France now pays over 5% to borrow for ten years, the first time since 2002, and the gap over German debt is the widest since the euro debt crisis of 2009–2011.",
+      "beats": {
+        "was": "France's government has no majority to pass spending cuts, its debt is about 119% of the economy, and student protests have turned violent, with partial curfews in some cities. The budget vote is due October 27.",
+        "happened": "The 10-year French government bond yield went above 5%. The extra yield over Germany's 10-year bond widened to roughly 1.6 percentage points, a level last seen in the 2009–2011 crisis.",
+        "means": "Investors are asking more to lend to France because they doubt it can control its debt before next year's election. That worry spills into the euro as a whole.",
+        "fx": "French borrowing costs up + wider gap to Germany → doubts about the euro area's weakest big borrower → money leaves the euro for safer homes like the franc. The lens: a budget deal or calmer protests would ease it."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Higher French borrowing costs feed doubts about the euro area and cap the euro's recovery."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stress inside the euro area sends money to the Swiss franc next door."
+        }
+      ],
+      "watch": "The October 27 budget vote, this weekend's protests, and Moody's review of France's credit rating on Friday."
+    },
+    {
+      "id": "brecorder-houthis-deny-medina-20261021",
+      "ts": "2026-10-21T12:46:59Z",
+      "source": "Business Recorder",
+      "url": "https://www.brecorder.com/news/40445275/yemens-houthis-deny-launching-drones-towards-saudi-arabias-medina",
+      "image": "https://i.brecorder.com/large/2026/08/20200747da2e529.webp",
+      "headline": "Yemen's Houthis deny launching drones towards Saudi Arabia's Medina",
+      "story": "red-sea-houthis",
+      "story_title": "Houthis widen attacks on Saudi Arabia",
+      "pillar": "risk",
+      "summary": "Saudi-led forces said they shot down drones over Medina and the oil-rich Eastern region; Yemen's Houthi movement denied sending them, leaving it unclear who is behind the attack.",
+      "beats": {
+        "was": "Yemen's Iran-aligned Houthi group restarted fighting with Saudi Arabia this month, ending a 2022 truce. It has hit Riyadh's airport and Saudi Aramco oil sites, opening another front in the US-Israeli war with Iran.",
+        "happened": "The Saudi-led coalition said it intercepted drones over the holy city of Medina and the Eastern region, where most Saudi oil is produced. Houthi spokesman Yahya Saree said the group launched none and is not attacking Saudi Arabia. Inside Yemen, the Houthis claimed an attack near Aden's airport.",
+        "means": "Drones are still reaching Saudi oil country, but the mixed claims make it hard to tell whether the Saudi front is widening or not.",
+        "fx": "Drones over Saudi oil regions → risk to the world's largest oil exporter → keeps a war premium in oil. The lens: confirmed damage to Saudi oil sites would push it higher; a clear Houthi pull-back would ease it."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Drones over Saudi oil country keep supply worries alive, though no damage is reported."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Another sign of a wider Gulf conflict keeps some demand for safe havens."
+        }
+      ],
+      "watch": "Any confirmed hit on Saudi oil sites or exports, and whether the Houthis' denial holds."
+    },
     {
       "id": "gulfnews-us-warships-uranium-20261021",
       "date": "2026-10-21",
@@ -937,39 +1003,6 @@
       "watch": "Houthi strikes and Hormuz ship attacks are still live; a fresh hit would send oil and the dollar back up."
     },
     {
-      "id": "aljazeera-munir-tehran-20261020",
-      "ts": "2026-10-20T14:39:50Z",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/10/20/pakistan-army-chief-in-tehran-can-diplomacy-prevent-new-us-iran-fighting",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/05/afp_6a11f11148bb-1779560721.jpg?resize=1920%2C1440",
-      "headline": "Pakistan army chief in Tehran: Can diplomacy prevent new US-Iran fighting?",
-      "story": "us-iran-talks",
-      "story_title": "US-Iran: mediation and the oil swing",
-      "pillar": "risk",
-      "summary": "Pakistan's army chief Asim Munir flew to Tehran to keep US-Iran talks alive, while US Defense Secretary Pete Hegseth met Israel's leader amid talk of new strikes.",
-      "beats": {
-        "was": "Pakistan brokered the April 8 US-Iran ceasefire. A June deal to reopen the Strait of Hormuz and lift the US naval blockade lapsed in August, and the strait is still shut.",
-        "happened": "Field Marshal Asim Munir arrived in Tehran on his fifth visit since the ceasefire. Talks are indirect, with Qatar passing proposals. US Defense Secretary Pete Hegseth met Israeli Prime Minister Benjamin Netanyahu, reportedly about resuming major strikes.",
-        "means": "Diplomacy is busy but nothing is agreed, and the threat of new fighting hasn't gone. President Trump has said the US won't strike before the Nov 3 midterms.",
-        "fx": "Talks progress → Hormuz reopening hopes → lower oil → relief for oil importers (euro, yen); talks fail → new fighting → oil up, safe havens up. The lens: does mediation turn into a signed step?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Mediation keeps a reopening possible, but strike talk keeps supply risk alive."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Shelter demand rises or falls with the chance of renewed fighting."
-        }
-      ],
-      "watch": "Any signed step on Hormuz or the blockade; signs the US or Israel is preparing new strikes."
-    },
-    {
       "id": "usagold-gold-4124-20261020",
       "ts": "2026-10-20T13:51:20Z",
       "source": "USAGOLD",
@@ -1067,45 +1100,6 @@
         }
       ],
       "watch": "Friday's Japan CPI and any sign the auction demand doesn't repeat; a US yield jump would undo the gain."
-    },
-    {
-      "id": "reuters-euronext-euro-rebounds-20261020",
-      "date": "2026-10-20",
-      "source": "Reuters via Euronext",
-      "url": "https://live.euronext.com/en/financial-news/euro-rebounds-french-protests-ease-dollar-slips",
-      "image": null,
-      "headline": "Euro rebounds as French protests ease, dollar slips",
-      "story": "france-unrest",
-      "story_title": "France: unrest, budget vote and the euro",
-      "pillar": "fiscal",
-      "summary": "The euro bounced as French protests calmed under curfews, but France's budget vote is still due today and some banks expect more euro weakness.",
-      "beats": {
-        "was": "A check on the euro after two days of nationwide unrest in France, with lawmakers voting on the 2027 budget's revenue side.",
-        "happened": "The euro rose 0.2% to about 1.123, off last week's low near 1.111. The dollar index slipped to about 101.75, near the bottom of its October range. The Canadian dollar firmed after Alberta voted to stay in Canada.",
-        "means": "Calmer streets bought the euro a breather, not a fix: worries about France's finances have weighed since September and the budget is still unresolved. Brent above $110 is a cushion for the dollar.",
-        "fx": "Less unrest → less fear over French debt → euro steadies. The lens: does the budget pass without new stress in French bonds?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Bounced as protests eased, but the budget risk and Friday's Moody's review remain."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Near a one-month high after Alberta voted to remain in Canada, removing a tail risk."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Dollar index slipped as pressure on the euro eased."
-        }
-      ],
-      "watch": "The French budget vote and the gap between French and German yields; Moody's review of France on Friday."
     },
     {
       "id": "investing-german-ppi-sep-20261020",
