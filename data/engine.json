@@ -1,117 +1,133 @@
 {
- "updated": "2026-10-21T01:40:00-05:00",
- "rows": [
-  {
-   "id": "policy",
-   "title": "Policy",
-   "read": "Britain's hotter inflation figure makes a Bank of England hike in November close to certain, and an Australian central banker pushed hike bets higher there too. Canada and New Zealand are also expected to raise rates this month, while the Fed holds until December. Currencies whose central banks are about to act keep the rate edge.",
-   "figure": "BoE Nov 5 hike ~95%; RBA Nov 3 ~40% (Reuters); BoC Oct 28 ~85–89%; RBNZ Oct 28 ~80%; Fed Oct hold ~84%, Dec hike ~90%; ECB Dec ~84%; BoJ Dec ~73%",
-   "sources": [
+  "updated": "2026-10-21T15:20:00-05:00",
+  "rows": [
     {
-     "label": "Reuters via Investing.com (Oct 21): UK inflation picks up more than expected to 3.5% in September",
-     "url": "https://za.investing.com/news/economy-news/uk-inflation-picks-up-more-than-expected-to-35-in-september-4515485"
+      "id": "policy",
+      "title": "Policy",
+      "read": "Britain's hot inflation figure all but settles a Bank of England hike in November, and Australian hike bets kept rising. Canada and New Zealand are also expected to raise rates next week, while the Fed waits until December. Currencies whose central banks are about to act keep the rate edge.",
+      "figure": "BoE Nov 5 hike ~95–98%, Dec ~51%; BoC Oct 28 ~93%; RBNZ Oct 28 ~80%; RBA Nov 3 ~42%; Fed Oct hold ~85%, Dec hike ~90%; ECB Dec ~76%; BoJ Dec ~80%",
+      "sources": [
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 21 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Blue Street market levels at the New York close, Oct 21 (Hercules)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        }
+      ]
     },
     {
-     "label": "Reuters via Yahoo Finance (Oct 20): Australian central banker says policy working, but inflation outlook worse",
-     "url": "https://finance.yahoo.com/economy/policy/articles/australia-central-banker-says-policy-221416518.html"
+      "id": "growth",
+      "title": "Growth",
+      "read": "US housing stays weak under high mortgage rates, and UK house prices grew at their slowest pace since March. None of it moved rate bets today, because central banks are watching inflation, not growth.",
+      "figure": "UK house prices +0.9% y/y in Aug (1.7% fc); US pending home sales −7.3% in Sep; Japan Sep exports +16.7% y/y (~+20% fc)",
+      "sources": [
+        {
+          "label": "ONS: UK House Price Index, August 2026",
+          "url": "https://www.gov.uk/government/statistics/uk-house-price-index-for-august-2026/uk-house-price-index-summary-august-2026"
+        },
+        {
+          "label": "Blue Street calendar (Hercules): Oct 21 actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+        }
+      ]
     },
     {
-     "label": "FXEmpire (Oct 20): Gold forecast, CME FedWatch December odds",
-     "url": "https://www.fxempire.com/forecasts/article/gold-xauusd-price-forecast-oil-premium-and-december-rate-bet-keep-sellers-in-control-1639045"
-    }
-   ]
-  },
-  {
-   "id": "growth",
-   "title": "Growth",
-   "read": "Japan's exports grew more slowly than expected, a sign that strong chip demand is not fully offsetting other weakness. US housing remains under pressure from high mortgage rates. Neither changed the rate outlook overnight.",
-   "figure": "Japan Sep exports +16.7% y/y (~+20% fc), deficit ¥537B (¥181B fc); US housing starts 1.22M (1.30M fc); pending home sales -7.3%",
-   "sources": [
-    {
-     "label": "Reuters (Oct 20): Japan September exports rise 16.7% y/y, slower than forecast",
-     "url": "https://www.reuters.com/world/asia-pacific/japan-september-exports-rise-167-yy-slower-than-forecast-2026-10-20/"
-    }
-   ]
-  },
-  {
-   "id": "inflation",
-   "title": "Inflation",
-   "read": "UK inflation rose more than expected as energy costs fed through, showing the oil shock is still lifting prices. That keeps pressure on central banks to hike rather than wait. Coming up: New Zealand's inflation report at 4:45 PM CT today.",
-   "figure": "UK CPI Sep 3.5% y/y (3.4% fc; Aug 3.1%; BoE July forecast 3.0%); NZ Q3 CPI fc 3.8% y/y (prior 4.1%), 4:45 PM CT",
-   "sources": [
-    {
-     "label": "Reuters via Investing.com (Oct 21): UK inflation picks up more than expected to 3.5% in September",
-     "url": "https://za.investing.com/news/economy-news/uk-inflation-picks-up-more-than-expected-to-35-in-september-4515485"
+      "id": "inflation",
+      "title": "Inflation",
+      "read": "UK inflation rose more than expected as fuel costs fed through, and German producer prices also ran hot, so the oil shock is still lifting prices. That keeps central banks leaning toward hikes. Coming up: New Zealand's inflation report at 4:45 PM CT tonight and Japan's on Thursday evening.",
+      "figure": "UK CPI Sep 3.5% y/y (3.4% fc); German PPI +6.7% y/y (6.2% fc); NZ Q3 CPI fc 3.8% y/y, 4:45 PM CT; Japan core CPI fc 2.1%, Thu 6:30 PM CT",
+      "sources": [
+        {
+          "label": "Euronews (Oct 21): UK inflation jumps more than expected; borrowing above forecast",
+          "url": "https://www.euronews.com/2026/10/21/uk-inflation-jumps-more-than-expected-fuelling-rate-hike-expectations"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 21 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Blue Street calendar (Hercules): Oct 21 actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+        }
+      ]
     },
     {
-     "label": "GB News (Oct 21): UK inflation rises to highest level in 11 months ahead of Budget",
-     "url": "https://www.gbnews.com/money/inflation-uk-cpi-cost-of-living-budget"
-    }
-   ]
-  },
-  {
-   "id": "risk",
-   "title": "Risk",
-   "read": "Markets were calm overnight even as tanker attacks reportedly spread into the Gulf of Oman. Hopes for US–Iran diplomacy are holding up without any confirmation, so safe-haven currencies got no fresh lift.",
-   "figure": "Dollar index ~101.8, near a three-week low; US–Iran framework still unconfirmed; ≥18 vessels attacked in two weeks (Kpler)",
-   "sources": [
-    {
-     "label": "Reuters (Oct 21): Dollar on back foot as US yields, crude prices dip; Aussie buoyed by hawkish RBA",
-     "url": "https://www.reuters.com/world/africa/dollar-back-foot-us-yields-crude-prices-dip-aussie-buoyed-by-hawkish-rba-2026-10-21/"
+      "id": "risk",
+      "title": "Risk",
+      "read": "Iran's hard line and more US warships raised tension in the Gulf, but markets stayed calm and safe-haven currencies got no extra lift. The real stress point is France, where borrowing costs hit their highest in more than 20 years.",
+      "figure": "France 10-year >5% (first since 2002), gap over Germany ~153bp; US 20-year auction 5.469% (record); dollar index ~101.7, flat",
+      "sources": [
+        {
+          "label": "FXStreet (Oct 21): France's 10-year bond yield climbs above 5%",
+          "url": "https://www.fxstreet.com/news/frances-10-year-bond-yield-climbs-above-5-stirring-fears-of-a-credit-crisis-202610210956"
+        },
+        {
+          "label": "Gulf News (Oct 21): US sends more warships as Iran peace push hits uranium roadblock",
+          "url": "https://gulfnews.com/world/mena/us-sends-more-warships-as-iran-peace-push-hits-uranium-roadblock-is-war-next-1.500718413"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 21 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        }
+      ]
     },
     {
-     "label": "Reuters (Oct 21): Oil rises on Middle East supply worries",
-     "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-worries-2026-10-21/"
-    }
-   ]
-  },
-  {
-   "id": "tot",
-   "title": "Terms of trade",
-   "read": "Oil climbed back toward $110 as Gulf shipping risks widened. That helps exporters like Canada and costs importers like Japan, the euro area and Britain, where higher energy bills are already showing up in inflation.",
-   "figure": "Brent ~$110 (Reuters $109.64, +0.8%); WTI ~$98.7; gold ~$4,115 (-0.3%); Japan mineral-fuel import bill still heavy",
-   "sources": [
-    {
-     "label": "Reuters (Oct 21): Oil rises on Middle East supply worries",
-     "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-worries-2026-10-21/"
+      "id": "tot",
+      "title": "Terms of trade",
+      "read": "Oil rose in the morning and gave it back after Washington moved to ease supply, ending near $109. Prices that high still help exporters like Canada and cost importers like Japan, the euro area and Britain. Europe's gas bill climbed too.",
+      "figure": "Brent $108.82 (flat; high ~$110.85); WTI $97.15 (−0.7%); euro-area gas >€90/MWh; gold ~$4,120–4,135",
+      "sources": [
+        {
+          "label": "Blue Street market levels at the New York close, Oct 21 (Hercules)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Newsquawk (Oct 21): risk-on as US Treasury lets some blacklisted tankers unload",
+          "url": "https://newsquawk.com/headlines/market-update-risk-on-trade-seen-at-1240-edt--1740-bst-despite-no-clear-headline-driver-downside-of-c-usd-080bbl-was-seen-in-oil-equity-futures-hit-new-session-highs-gold-and-bonds-rallied-while-usd-saw-pressure"
+        },
+        {
+          "label": "Reuters (Oct 21): US aims to loan about a third of heating oil reserve",
+          "url": "https://www.reuters.com/business/energy/us-aims-loan-about-third-heating-oil-reserve-bid-tame-prices-2026-10-21/"
+        }
+      ]
     },
     {
-     "label": "Reuters (Oct 20): Japan September exports rise 16.7% y/y, slower than forecast",
-     "url": "https://www.reuters.com/world/asia-pacific/japan-september-exports-rise-167-yy-slower-than-forecast-2026-10-20/"
-    }
-   ]
-  },
-  {
-   "id": "positioning",
-   "title": "Positioning",
-   "read": "Hedge funds are betting most heavily against the Canadian dollar, even as a Bank of Canada hike looks likely, which leaves those bets exposed if the loonie keeps rising. They also bet against the kiwi and the euro. In the yen and the Aussie, hedge funds and long-term investors take opposite sides.",
-   "figure": "CFTC Oct 13: funds strongly against CAD (sharply added), against EUR and NZD (added), for AUD (trimmed; real money strongly against), against JPY (real money for), strongly for gold (trimmed); oil bets near weakest since 2015",
-   "sources": [
-    {
-     "label": "CFTC Traders in Financial Futures (futures only) (report date Oct 13)",
-     "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
+      "id": "positioning",
+      "title": "Positioning",
+      "read": "Hedge funds are betting most heavily against the Canadian dollar, even as a Bank of Canada hike looks likely, which leaves those bets exposed if the loonie keeps rising. They also bet against the kiwi and the euro. In the yen and the Aussie, hedge funds and long-term investors take opposite sides.",
+      "figure": "CFTC Oct 13: funds strongly against CAD (sharply added), against EUR and NZD (added), for AUD (trimmed; real money strongly against), against JPY (real money for), strongly for gold (trimmed); oil bets near weakest since 2015",
+      "sources": [
+        {
+          "label": "CFTC Traders in Financial Futures (futures only) (report date Oct 13)",
+          "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
+        },
+        {
+          "label": "CFTC Disaggregated (futures only) (report date Oct 13)",
+          "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy"
+        }
+      ]
     },
     {
-     "label": "CFTC Disaggregated (futures only) (report date Oct 13)",
-     "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy"
+      "id": "fiscal",
+      "title": "Fiscal",
+      "read": "France's borrowing costs rose above 5%, a sign investors want more to hold French debt before Moody's review on Friday and a budget vote on October 27. In Britain, borrowing ran above forecast a week before the budget, leaving less room for help with energy bills.",
+      "figure": "France 10-year >5%; Moody's on France Fri Oct 23 (Aa3, negative outlook); revenue vote Oct 27; UK Sep borrowing £24.5bn (£23.9bn fc); UK budget Oct 28",
+      "sources": [
+        {
+          "label": "FXStreet (Oct 21): France's 10-year bond yield climbs above 5%",
+          "url": "https://www.fxstreet.com/news/frances-10-year-bond-yield-climbs-above-5-stirring-fears-of-a-credit-crisis-202610210956"
+        },
+        {
+          "label": "Euronews (Oct 21): UK inflation jumps more than expected; borrowing above forecast",
+          "url": "https://www.euronews.com/2026/10/21/uk-inflation-jumps-more-than-expected-fuelling-rate-hike-expectations"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 21 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "fiscal",
-   "title": "Fiscal",
-   "read": "France's budget fight is on hold until a revenue vote on October 27, with a Moody's review of France on Friday, so the risk to the euro lingers. In Britain, hotter inflation raises the cost of help with energy bills in next week's budget.",
-   "figure": "France revenue vote Oct 27 (formal vote Nov 3); Moody's on France Fri Oct 23; UK budget Oct 28",
-   "sources": [
-    {
-     "label": "Reuters via Devdiscourse (Oct 20): How France's 2027 budget battle could play out (vote moved to Oct 27)",
-     "url": "https://www.devdiscourse.com/article/international/3995152-explainer-how-frances-2027-budget-battle-could-play-out"
-    },
-    {
-     "label": "Reuters via Investing.com (Oct 21): UK inflation picks up more than expected to 3.5% in September",
-     "url": "https://za.investing.com/news/economy-news/uk-inflation-picks-up-more-than-expected-to-35-in-september-4515485"
-    }
-   ]
-  }
- ]
+  ]
 }
