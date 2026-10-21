@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T10:48:18Z",
+  "updated": "2026-10-21T11:46:02Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -8,9 +8,9 @@
       "ts": "2026-10-21T10:48:18Z"
     },
     "EUR": {
-      "lean": "mixed",
-      "text": "The euro rose toward 1.126 as oil eased on Tuesday, but debt worries kept it near a three-month low on the franc, and a report that Putin ordered sabotage across NATO adds a security worry. France's budget vote is Oct 27.",
-      "ts": "2026-10-21T02:55:00Z"
+      "lean": "bearish",
+      "text": "The euro slipped back below $1.125 as France plans to bring in troops to keep order at this weekend's protests, and debt worries keep it near a three-month low on the franc. France's budget vote is October 27.",
+      "ts": "2026-10-21T11:46:02Z"
     },
     "GBP": {
       "lean": "bullish",
@@ -23,18 +23,18 @@
       "ts": "2026-10-21T10:48:18Z"
     },
     "CHF": {
-      "lean": "mixed",
-      "text": "Europe's debt worries and Iran's refusal of US-backed talks keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
-      "ts": "2026-10-21T10:48:18Z"
+      "lean": "bullish",
+      "text": "Stalled US-Iran peace efforts and French unrest keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
+      "ts": "2026-10-21T11:46:02Z"
     },
     "CAD": {
       "lean": "bullish",
-      "text": "Big Canadian banks expect a Bank of Canada hike on October 28, and oil back near $110 helps. Cooling core inflation in September is the soft spot in that case.",
-      "ts": "2026-10-21T10:48:18Z"
+      "text": "The loonie is at a one-month high as traders expect a Bank of Canada rate hike on October 28 and oil sits near $110. Cooling core inflation in September is the soft spot in that case.",
+      "ts": "2026-10-21T11:46:02Z"
     },
     "AUD": {
       "lean": "bullish",
-      "text": "The Aussie reached a one-month high above 70 US cents as Reserve Bank of Australia officials warned inflation may run hotter, keeping a November 3 hike in play. Faster-than-expected growth in China, its biggest customer, adds support.",
+      "text": "The Aussie reached a one-month high above 70 US cents as Reserve Bank of Australia officials warned inflation may run hotter, keeping a November 3 hike possible. Faster-than-expected growth in China, its biggest customer, adds support.",
       "ts": "2026-10-21T10:48:18Z"
     },
     "NZD": {
@@ -49,11 +49,83 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent crude is back near $110 after Iran rejected US-backed talks proposals and a supertanker hit a mine south of the shut Strait of Hormuz. The US is sending a third aircraft carrier, so hopes for a reopening have faded.",
-      "ts": "2026-10-21T10:48:18Z"
+      "text": "Brent crude is back near $110 as US-Iran peace efforts stall over Iran's refusal to send enriched uranium abroad. The US is sending more warships, so hopes for reopening the Strait of Hormuz have faded.",
+      "ts": "2026-10-21T11:46:02Z"
     }
   },
   "items": [
+    {
+      "id": "gulfnews-us-warships-uranium-20261021",
+      "date": "2026-10-21",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/us-sends-more-warships-as-iran-peace-push-hits-uranium-roadblock-is-war-next-1.500718413",
+      "image": "https://media.assettype.com/gulfnews%2Fimport%2F2020%2F04%2F13%2FThe-aircraft-carrier-USS-Theodore-Roosevelt-_17174751618_large.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "US sends more warships as Iran peace push stalls over enriched uranium",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
+      "pillar": "risk",
+      "summary": "Iran's top security official told Pakistan's army chief that none of Iran's enriched uranium will leave the country, while the US sent another carrier group and some 9,000 sailors and Marines to the region.",
+      "beats": {
+        "was": "The US and Iran have been at war since earlier this year and the Strait of Hormuz, the main Gulf oil route, is shut. Pakistan's army chief, Field Marshal Asim Munir, has been carrying a plan to restart talks.",
+        "happened": "Mohsen Rezaei, head of Iran's Supreme National Security Council, said no enriched uranium will be sent abroad, a key US demand. President Masoud Pezeshkian said Iran won't talk under threat. The USS Theodore Roosevelt carrier group and an amphibious group are heading in, and President Trump is said to be weighing new strikes. Gulf stock markets fell.",
+        "means": "The two sides are stuck on the same nuclear point, and the US is adding force rather than easing off, so a quick reopening of Hormuz looks less likely.",
+        "fx": "Stalled talks + more warships → Hormuz stays shut longer → oil supply stays tight → firmer oil, steadier demand for safe havens like the franc. The lens: any sign Iran would ship uranium out would reverse this."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A stalled peace push and a bigger US fleet point to the oil route staying closed."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising war risk keeps money looking for safety."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada exports oil, so dearer crude helps its trade income."
+        }
+      ],
+      "watch": "Whether Trump orders new strikes, and any change in Iran's line on shipping uranium abroad."
+    },
+    {
+      "id": "aljazeera-rubio-deal-difficult-20261021",
+      "date": "2026-10-21",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/10/21/iran-war-live-us-warns-peace-deal-with-tehran-is-extremely-difficult",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/10/AP26271650639081-1791496832.jpg?resize=1920%2C1440",
+      "headline": "Rubio calls an Iran peace deal 'extremely difficult' as pressure stays on",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
+      "pillar": "risk",
+      "summary": "US Secretary of State Marco Rubio said a peace deal with Iran will be very hard to reach and that economic pressure stays until Iran stops hitting ships near Hormuz.",
+      "beats": {
+        "was": "Hopes for a US-Iran deal briefly pulled oil lower on Monday and Tuesday, after reports of a plan to restart talks.",
+        "happened": "Rubio said economic pressure will continue until Tehran stops targeting commercial shipping. Iran's Foreign Minister Abbas Araghchi said Iran wants a peaceful end but sees no US will to agree and is ready to defend itself.",
+        "means": "Both governments are now publicly playing down a deal, which takes away the reason oil dipped earlier this week.",
+        "fx": "Lower deal hopes → shipping risk stays → oil holds up → helps oil exporters' currencies, weighs on big oil importers like Japan. The lens: talk of a date for direct talks would change the picture."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Fading deal hopes remove the reason oil fell earlier in the week."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so dearer crude widens its import bill."
+        }
+      ],
+      "watch": "Any date or venue for direct US-Iran talks; further attacks on ships near Hormuz."
+    },
     {
       "id": "tradingeconomics-gold-fourth-drop-20261021",
       "date": "2026-10-21",
@@ -164,33 +236,6 @@
         }
       ],
       "watch": "The official US Energy Information Administration stock figures, due 9:30 AM CT Wednesday."
-    },
-    {
-      "id": "mitrade-gold-week-low-20261021",
-      "date": "2026-10-21",
-      "source": "Mitrade",
-      "url": "https://www.mitrade.com/insights/commodity-analysis/gold/gold-hormuz-housing-tokenized-wgc",
-      "image": "https://tw.mitrade.com/cms_uploads/img/20230926/bb1ba7e5e4ecad26c1088c0b61b3e435.jpg",
-      "headline": "Gold Price Analysis Today",
-      "story": "gold-week",
-      "story_title": "Gold: four days lower on Fed hike bets",
-      "pillar": "policy",
-      "summary": "Gold hovered near $4,115 an ounce, close to its low for the week, as markets kept betting on a December Fed hike even with US yields easing.",
-      "beats": {
-        "was": "Gold earns no interest, so it tends to struggle when markets expect higher US rates; hot US inflation figures in September put a December Fed hike back in play.",
-        "happened": "Markets price a 92-94% chance of a December hike. The 10-year Treasury yield eased to about 5.12% and US housing starts fell 5.2% in September, but neither helped gold much.",
-        "means": "Rate-hike bets are outweighing the usual support gold gets from war risk and weak data.",
-        "fx": "Fed hike expected → higher returns on cash and bonds → less appeal for gold. A clear drop in oil, and with it hike bets, would ease that."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "December Fed hike bets keep weighing on gold."
-        }
-      ],
-      "watch": "The Fed's October 28 message on December."
     },
     {
       "id": "fxstreet-aud-monthly-high-20261021",
@@ -421,6 +466,39 @@
       "watch": "Whether the daily gap to estimates grows larger; China's next round of growth support."
     },
     {
+      "id": "fxstreet-euro-french-protests-20261021",
+      "ts": "2026-10-21T01:00:08Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/euro-weakens-below-11250-as-french-protests-and-fiscal-risks-weigh-202610210100",
+      "image": "https://editorial.fxsstatic.com/images/i/EUR-bearish-object_Medium.png",
+      "headline": "Euro weakens below 1.1250 as French protests and fiscal risks weigh",
+      "story": "france-unrest",
+      "story_title": "France: unrest, budget vote and the euro",
+      "pillar": "fiscal",
+      "summary": "The euro slipped to about $1.1225 as France prepared to use some military forces to keep order during new protests expected this weekend.",
+      "beats": {
+        "was": "France has seen widespread protests over its budget, and investors already ask about 1.5 percentage points more to lend to France for ten years than to Germany, a sign of worry about its debts.",
+        "happened": "Prime Minister Sébastien Lecornu said curfews would be used where needed, and officials plan to bring in some troops for this weekend's protests. The euro fell back below $1.125 in Asian trading. ECB President Christine Lagarde and other ECB officials speak later Wednesday.",
+        "means": "Unrest in the eurozone's second-largest economy keeps a lid on the euro even when oil eases.",
+        "fx": "More unrest in France → more worry about French debt → investors demand more to hold it → weaker euro. The lens: calm protests and a passed budget would ease this."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "French unrest and debt worries weigh on the single currency."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Europe's worries send some money to the franc next door."
+        }
+      ],
+      "watch": "This weekend's French protests, ECB speeches Wednesday, and France's budget vote on October 27."
+    },
+    {
       "id": "investinglive-katayama-boj-no-gap-20261021",
       "ts": "2026-10-21T00:54:00Z",
       "source": "investingLive",
@@ -595,39 +673,6 @@
       "watch": "Fonterra's milk price forecast and NZ third-quarter inflation figures this week."
     },
     {
-      "id": "fxstreet-forex-today-uk-cpi-20261020",
-      "ts": "2026-10-20T18:10:43Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/forex-today-uk-inflation-comes-to-the-fore-202610201810",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-62_Medium.png",
-      "headline": "Forex Today: UK inflation comes to the fore",
-      "story": "boe-nov",
-      "story_title": "BoE: the November decision",
-      "pillar": "inflation",
-      "summary": "A calmer risk mood left the dollar at a three-week low and the pound above 1.34 going into Wednesday's UK inflation report, which decides how sure a November BoE hike really is.",
-      "beats": {
-        "was": "A wrap of Tuesday's moves and a look at what comes next, led by UK consumer prices on Wednesday.",
-        "happened": "The dollar index briefly touched about 101.5, its lowest in three weeks. The pound reached five-week highs just over 1.34, the Aussie neared 0.70, and gold slipped toward $4,100 even with a softer dollar.",
-        "means": "Markets already expect the BoE to hike in November. A firm inflation print would confirm that; a soft one is the main way the pound's run could stall.",
-        "fx": "Hot UK prices → hike locked in, maybe more → higher UK yields → pound supported. The lens: does inflation back up the jobs data?"
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "At five-week highs ahead of CPI, which can confirm or puncture the hike case."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Eased toward $4,100 despite a weaker dollar and lower yields."
-        }
-      ],
-      "watch": "Wednesday's UK CPI; any official word on the US-Iran plan."
-    },
-    {
       "id": "fxstreet-boe-greene-wages-20261020",
       "ts": "2026-10-20T17:46:49Z",
       "source": "FXStreet",
@@ -653,6 +698,39 @@
         }
       ],
       "watch": "Wednesday's UK consumer prices: a soft figure would weaken her case."
+    },
+    {
+      "id": "fxstreet-cad-one-month-high-20261020",
+      "ts": "2026-10-20T17:21:20Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/canadian-dollar-climbs-to-one-month-highs-as-boc-rate-hike-bets-strengthen-202610201721",
+      "image": "https://editorial.fxsstatic.com/images/i/USDCAD-bullish-animal_Medium.png",
+      "headline": "Canadian Dollar climbs to one-month highs as Bank of Canada hike bets grow",
+      "story": "boc-oct",
+      "story_title": "BoC: the October 28 decision",
+      "pillar": "policy",
+      "summary": "The Canadian dollar reached its strongest in a month, about 1.405 per US dollar, as traders lean toward a Bank of Canada rate rise on October 28.",
+      "beats": {
+        "was": "The Bank of Canada has not raised rates this year. Canada's inflation rose to 3.1% in September, just under the 3.2% forecast, and Alberta voters on Monday chose to stay in Canada.",
+        "happened": "Canadian bond yields rose as more traders expect the bank's first hike of the year next week. A softer US dollar, lower US yields and oil near $110 added support.",
+        "means": "The loonie has a rate story, an oil story and less political risk all pulling the same way.",
+        "fx": "Expected Bank of Canada hike → higher Canadian yields → more demand for the loonie; dear oil adds export income. The lens: a sharp oil drop or a cautious bank would undo it."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Hike bets, oil and less political risk all support the loonie."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A softer dollar and lower US yields helped the move."
+        }
+      ],
+      "watch": "The Bank of Canada decision on October 28 and oil prices."
     },
     {
       "id": "fxstreet-ust-yields-retreat-20261020",
@@ -1057,45 +1135,6 @@
       "watch": "Euro-area flash PMIs and the October ECB meeting on Oct 29 for how much weight the bank puts on this."
     },
     {
-      "id": "aa-brent-near-110-20261020",
-      "date": "2026-10-20",
-      "source": "Anadolu Agency",
-      "url": "https://www.aa.com.tr/en/energy/oil/brent-crude-hovers-near-110-on-middle-east-tensions/60382",
-      "image": "https://cdnuploads.aa.com.tr/uploads/enerjiterminali/Contents/2026/10/20/thumbs_b_c_ecc1b0ea2c035235cc98be881c56940c.jpg?v=102149",
-      "headline": "Brent crude hovers near $110 on Middle East tensions",
-      "story": "saudi-houthi",
-      "story_title": "Saudi–Houthi fighting and the Gulf supply risk",
-      "pillar": "tot",
-      "summary": "Brent edged up toward $110 after Houthi claims of strikes on a Saudi oil field and airports, plus fresh hints from Israel and the US of more action against Iran.",
-      "beats": {
-        "was": "Oil's early Tuesday move, set by war risk around Saudi Arabia and Iran.",
-        "happened": "Brent rose about 0.3% to near $109.9 and WTI held near $98.6. The Houthis said they hit Saudi Arabia's Shaybah oil field and airports in Riyadh and Abha, though there's no confirmation that output was affected.",
-        "means": "The claims are unconfirmed, so this is risk being priced rather than barrels lost. But talk of more action against Iran keeps the floor under oil.",
-        "fx": "Higher war risk → pricier oil → better terms of trade for oil sellers, worse for importers → Canadian dollar helped, yen hurt. The lens: are Saudi barrels actually being lost?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Unconfirmed strike claims on Saudi oil sites and Iran threats keep the risk premium."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "An oil exporter gains when crude holds near its highs."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports its oil, so a high price widens its import bill."
-        }
-      ],
-      "watch": "Any confirmation of damage at Shaybah, or US–Iran mediation progress, which would let the premium fade."
-    },
-    {
       "id": "reuters-investing-pending-home-sales-sep-20261020",
       "date": "2026-10-20",
       "source": "Reuters (via Investing.com)",
@@ -1298,60 +1337,6 @@
         }
       ],
       "watch": "The official tally on Oct 29; a much narrower count would revive the doubt."
-    },
-    {
-      "id": "cmt-bloomberg-boc-hike-bets-20261019",
-      "ts": "2026-10-19T20:29:36Z",
-      "source": "Bloomberg (via Canadian Mortgage Trends)",
-      "url": "https://www.canadianmortgagetrends.com/2026/10/bank-of-canada-hike-bets-grow-among-economists-traders/",
-      "image": "https://www.canadianmortgagetrends.com/wp-content/uploads/2026/07/Bank-of-Canada-building-6_sm.jpg",
-      "headline": "Bank of Canada hike bets grow among economists, traders",
-      "story": "boc-oct",
-      "story_title": "Bank of Canada: hike talk vs cooling core",
-      "pillar": "policy",
-      "summary": "Three big Canadian banks switched on Monday to expecting a Bank of Canada hike on Oct 28, and swaps moved to price close to a nine-in-ten chance, even though CPI came in a touch soft.",
-      "beats": {
-        "was": "Going into Monday, the Oct 28 meeting looked like a close call between a hold and a first hike to 2.50%.",
-        "happened": "CPI rose 3.1% a year, a bit under forecast, but the Bank's own surveys showed consumers' long-run inflation expectations at their highest since the post-COVID price spike, and about half of firms plan to pass on higher oil and tariff costs. BMO, RBC and Desjardins flipped to a hike call; swaps priced about 87% odds by mid-afternoon, up from roughly 70% in the morning.",
-        "means": "Central banks fear expectations more than one month's print: if people expect higher prices, they ask for higher wages and firms raise prices, which keeps inflation going. That outweighed the soft CPI.",
-        "fx": "Expectations drifting up → BoC more likely to hike now → higher Canadian yields → more pull for the loonie. The lens: does the Bank act on expectations, or wait for prices to prove it?"
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Major banks and swaps moved firmly toward an October hike."
-        }
-      ],
-      "watch": "A Bloomberg survey consensus still points to a hold; any BoC signal before the Oct 28 quiet period, or a sharp oil drop, could swing the odds back."
-    },
-    {
-      "id": "fxstreet-canada-cpi-sep-20261019",
-      "ts": "2026-10-19T17:02:38Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/loonie-gives-back-part-of-its-rally-on-soft-canadian-inflation-202610191702",
-      "image": "https://editorial.fxsstatic.com/images/i/usd-cad-001_Medium.jpg",
-      "headline": "Loonie gives back part of its rally on soft Canadian inflation",
-      "story": "boc-oct",
-      "story_title": "BoC: the October 28 decision",
-      "pillar": "inflation",
-      "summary": "Canada's inflation rose to 3.1% in September, a bit under the 3.2% forecast, while the Bank of Canada's preferred core measure cooled to 2.2%.",
-      "beats": {
-        "was": "The Bank of Canada's rate is 2.25%, and big banks such as Scotiabank and Bank of Montreal expect a quarter-point hike on October 28.",
-        "happened": "Headline inflation rose to 3.1% from the year before, driven by gasoline up 27.8%, but came in under forecast. The core measure that strips out swings fell to 2.2% from 2.4%, and core prices were flat on the month.",
-        "means": "The rise is almost all fuel; underlying inflation is cooling toward the 2% target. That weakens the case for a hike, though it doesn't kill it.",
-        "fx": "Softer core → a little less certainty on a hike → the Canadian dollar gave back some gains. Hike bets rose again the next day, so the hit was small."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Cooling core inflation softens the case for an October hike."
-        }
-      ],
-      "watch": "The Bank of Canada decision on October 28."
     }
   ]
 }
