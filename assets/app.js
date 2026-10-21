@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '89';
+  var ASSET_VERSION = '90';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -590,11 +590,11 @@
       ico: 'M3 3h10v10H3z M5.5 6h5 M5.5 8.5h5 M5.5 11h3' },
     { id: 'fx', label: 'Currencies', href: '#fx',
       ico: 'M6 4.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z M10 4.6a3.5 3.5 0 1 1 0 6.8' },
+    { id: 'news', label: 'News', href: '#news',
+      ico: 'M2.5 4.5h9v8h-9z M11.5 6.5h2v5a1 1 0 0 1-2 0 M4.5 6.5h5 M4.5 8.5h5 M4.5 10.5h3' },
     { id: 'drivers', label: 'Drivers', href: '#drivers',
       ico: 'M2.5 11.5a5.5 5.5 0 1 1 11 0 M8 11.5l2.6-3.6',
       subs: [['engine', 'Macro engine'], ['positioning', 'Positioning'], ['banks', 'Central banks']] },
-    { id: 'news', label: 'News', href: '#news',
-      ico: 'M2.5 4.5h9v8h-9z M11.5 6.5h2v5a1 1 0 0 1-2 0 M4.5 6.5h5 M4.5 8.5h5 M4.5 10.5h3' },
     { id: 'calendar', label: 'Calendar', href: '#calendar',
       ico: 'M2.5 4h11v9.5h-11z M2.5 7h11 M5.5 2.5v3 M10.5 2.5v3' },
     { id: 'learn', label: 'Learn', href: '#learn', minor: true,

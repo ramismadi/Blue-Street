@@ -10,10 +10,11 @@ Collaboration rules and the update schedule live in `COLLAB.md`.
 **Five tabs, one question each (Rami, 2026-10-18):** Today (what's the
 story? — Story chapters open from here, `#story` lights up Today) ·
 Currencies (where does each stand? — the currency page carries its bank,
-positioning, chapter, Developing threads and "In the news") · **Drivers**
-(what's moving things underneath? — Macro engine, Positioning and Central
-banks as three sections with a sub-nav; `#drivers` opens the last one read,
-saved in localStorage `bluestreet-driver`) · News · Calendar. Every old route
+positioning, chapter, Developing threads and "In the news") · News ·
+**Drivers** (what's moving things underneath? — Macro engine, Positioning and
+Central banks as three sections with a sub-nav; `#drivers` opens the last one
+read, saved in localStorage `bluestreet-driver`) · Calendar. Tab order (Rami,
+2026-10-21): Today, Currencies, News, Drivers, Calendar. Every old route
 still works. The table below lists the views.
 
 A premium, tabbed FX macro desk. Principle: **less text up front, depth on
