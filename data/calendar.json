@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T01:30:00-05:00",
+  "updated": "2026-10-19T11:02:00-05:00",
   "events": [
     {
       "id": "rba-minutes-20261013",
@@ -1484,7 +1484,7 @@
     },
     {
       "id": "cny-fdi-20261019",
-      "ts": "2026-10-21T09:10:00Z",
+      "ts": "2026-10-19T04:30:00Z",
       "ccy": "CNY",
       "impact": "low",
       "category": "growth",
@@ -2062,10 +2062,22 @@
         {
           "label": "ForexFactory weekly feed (Oct 18-24): UK CPI y/y fc 3.4% vs 3.1% prev",
           "url": "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
+        },
+        {
+          "label": "ONS: Consumer price inflation, UK — September 2026 (official)",
+          "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/latest"
+        },
+        {
+          "label": "Reuters: UK inflation picks up more than expected to 3.5% in September (Oct 21, 2026)",
+          "url": "https://www.reuters.com/world/uk/uk-inflation-picks-up-more-than-expected-35-september-2026-10-21/"
+        },
+        {
+          "label": "WSJ: U.K. Inflation Jumps Again on Energy Costs (Oct 21, 2026)",
+          "url": "https://www.wsj.com/economy/central-banking/u-k-inflation-jumps-again-on-energy-costs-e2bd9d85"
         }
       ],
-      "actual": null,
-      "outcome": null
+      "actual": "3.5% y/y (vs 3.4% fcst, prev 3.1%); core 2.8% (vs 2.6% prev, in line); m/m +0.4% (vs 0.3% fcst); CPIH 3.6%",
+      "outcome": "Hot: headline 3.5% y/y vs 3.4% Reuters/WSJ consensus — highest since October 2025 — on energy, with motor fuels the largest upward contributor. Core 2.8% y/y in line with expectations (from 2.6%); services 3.7% (from 3.4%) still sticky. No repricing: the Nov 5 BoE hike was already ~96% priced and GBP/USD sat ~1.3365, little changed — the beat reinforces the priced path. Next GBP catalyst: Healey's first Budget Oct 28."
     },
     {
       "id": "gb-psnb-20261021",
@@ -2074,7 +2086,7 @@
       "impact": "low",
       "category": "fiscal",
       "title": "UK public sector net borrowing (Sep)",
-      "actual": null,
+      "actual": "£24.5B (vs £23.9B fcst); debt >£3T first time; FY-to-Sep £97.8B vs OBR £91.8B fcst",
       "forecast": "£23.9B",
       "previous": "£18.3B",
       "better": "lower",
@@ -2083,8 +2095,21 @@
       "if_miss": "Higher: borrowing overshoot — gilt pressure.",
       "chapter": null,
       "bank": null,
-      "outcome": null,
-      "sources": []
+      "outcome": "Miss (better=lower): £24.5B vs £23.9B Reuters-poll consensus, pushed up by debt-interest costs; FY-to-September £97.8B runs above the OBR's £91.8B pre-war forecast — Healey's headroom narrows a week before his first Budget (Oct 28), where bank-tax rises are expected. Debt crossed £3T for the first time, though lower as a share of GDP than a year earlier. Gilt-market read, not a sterling spot mover.",
+      "sources": [
+        {
+          "label": "ONS: Public sector finances, UK — September 2026 (official)",
+          "url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/september2026"
+        },
+        {
+          "label": "Reuters: UK borrows more than expected again, debt hits £3 trillion (Oct 21, 2026)",
+          "url": "https://www.reuters.com/world/uk/uk-borrows-more-than-expected-again-debt-hits-3-trillion-2026-10-21/"
+        },
+        {
+          "label": "The Times: UK inflation and borrowing hit highest level so far this year (Oct 21, 2026)",
+          "url": "https://www.thetimes.com/business/economics/article/uk-inflation-and-borrowing-hits-highest-level-so-far-this-year-n7dqgvxcf"
+        }
+      ]
     },
     {
       "id": "eur-nagel-20261021",
@@ -2271,7 +2296,7 @@
       "category": "inflation",
       "title": "Canada IPPI m/m (Sep)",
       "actual": null,
-      "forecast": "0.9%",
+      "forecast": "0.7%",
       "previous": "1.3%",
       "better": "higher",
       "why": "Factory-gate prices — the pipeline read behind Monday's CPI into the Oct 28 BoC; energy is the swing component.",
@@ -2575,7 +2600,7 @@
       "category": "sentiment",
       "title": "Belgian NBB business climate (Oct)",
       "actual": null,
-      "forecast": "-11.8",
+      "forecast": "-11.5",
       "previous": "-12.1",
       "better": "higher",
       "why": "Belgian business climate — the early-cycle eurozone bellwether; less negative would be the first green shoot under the energy shock.",
