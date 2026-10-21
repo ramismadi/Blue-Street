@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T14:46:42Z",
+  "updated": "2026-10-21T15:45:28Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "bullish",
-      "text": "The loonie is at a one-month high as traders expect a Bank of Canada rate hike on October 28 and oil sits near $110. Cooling core inflation in September is the soft spot in that case.",
-      "ts": "2026-10-21T11:46:02Z"
+      "text": "The loonie is near a one-month high as traders now see a Bank of Canada rate hike on October 28 as likely and oil sits near $110. Some strategists argue markets expect too many hikes, since core inflation is below the bank's 2% target.",
+      "ts": "2026-10-21T15:45:28Z"
     },
     "AUD": {
       "lean": "bullish",
@@ -49,11 +49,71 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent crude is back near $110 as US-Iran peace efforts stall over Iran's refusal to send enriched uranium abroad. The US is sending more warships, so hopes for reopening the Strait of Hormuz have faded.",
-      "ts": "2026-10-21T11:46:02Z"
+      "text": "Brent crude is back near $110 as US-Iran peace efforts stall over Iran's refusal to send enriched uranium abroad and ship attacks continue near Hormuz. Official figures showed US crude stocks fell for a second straight week, leaving less cushion if Gulf supply is cut.",
+      "ts": "2026-10-21T15:45:28Z"
     }
   },
   "items": [
+    {
+      "id": "investinglive-eia-crude-draw-20261021",
+      "ts": "2026-10-21T14:33:27Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/commodities/crude-oil-inventories-show-a-draw-of-3-060m-versus-estimate-of-0-82-million-drawdown/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Oil%20inventory%20Logo-featured-1792593072-featured-1792593221.jpg?width=960&format=webp",
+      "headline": "US crude stocks fall 3.06 million barrels, more than the 0.82 million expected",
+      "story": "us-oil-stocks",
+      "story_title": "US oil stocks: a run of draws",
+      "pillar": "tot",
+      "summary": "Official US figures showed crude and gasoline stocks both fell more than expected last week, the second big weekly drop in a row.",
+      "beats": {
+        "was": "Oil has been near five-month highs because attacks on shipping around the Strait of Hormuz and the Red Sea threaten Gulf supply. The week before, US crude stocks fell about 8.6 million barrels, and an industry estimate on Tuesday had pointed to another large drop.",
+        "happened": "The US Energy Information Administration said crude stocks fell about 3.1 million barrels in the week to October 16, against about 0.8 million expected. Gasoline stocks fell about 3 million barrels, while diesel and heating oil stocks rose.",
+        "means": "America is drawing down its own stored oil while Gulf supply is at risk, so there is less cushion if shipping gets worse. The drop was smaller than Tuesday's industry estimate, so US crude barely moved, near $98.",
+        "fx": "Shrinking US oil stocks → less spare supply → keeps oil prices firm → helps the Canadian dollar, weighs on big oil importers like Japan. The lens: mostly expected after Tuesday's estimate, so the push is small."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A second large weekly fall in US stocks adds to supply worries, though much was already expected."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firm oil prices support Canada's export income."
+        }
+      ],
+      "watch": "Next week's US stock figures and any news on shipping through the Strait of Hormuz."
+    },
+    {
+      "id": "fxstreet-bbh-cad-pricing-excessive-20261020",
+      "ts": "2026-10-20T14:38:45Z",
+      "source": "FXStreet (BBH)",
+      "url": "https://www.fxstreet.com/news/canadian-dollar-market-pricing-seen-excessive-despite-hike-bets-bbh-202610201438",
+      "image": "https://editorial.fxsstatic.com/images/i/discover-52_Medium.png",
+      "headline": "Canadian Dollar: market pricing seen excessive despite hike bets (BBH)",
+      "story": "boc-oct",
+      "story_title": "BoC: the October 28 decision",
+      "pillar": "policy",
+      "summary": "A strategist at the bank Brown Brothers Harriman argues markets expect too many Bank of Canada rate rises, which limits how far the Canadian dollar can climb.",
+      "beats": {
+        "was": "Traders have quickly raised their bets on a Bank of Canada rate hike on October 28, to about 78% in swaps from 60%, after Governor Tiff Macklem warned that inflation risks are spreading.",
+        "happened": "Elias Haddad of Brown Brothers Harriman noted that September's headline inflation of 3.1% came mostly from energy, while the bank's preferred core measures eased to about 1.85%, below its 2% target. He judged the roughly one percentage point of hikes priced over the next year as too much.",
+        "means": "The case for a hike rests on oil-driven prices, not broad inflation, and the economy still has slack. If the bank sounds less eager than markets expect, the loonie's rate support could shrink.",
+        "fx": "Core inflation under target + spare capacity in the economy → fewer hikes than priced → caps the loonie's gains. The lens: a hawkish decision on October 28 would prove this wrong."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Hike bets support the loonie, but soft core inflation argues markets have gone too far."
+        }
+      ],
+      "watch": "The Bank of Canada decision and statement on October 28."
+    },
     {
       "id": "fxstreet-france-oat-5pct-20261021",
       "ts": "2026-10-21T09:56:15Z",
@@ -1102,33 +1162,6 @@
       "watch": "Friday's Japan CPI and any sign the auction demand doesn't repeat; a US yield jump would undo the gain."
     },
     {
-      "id": "investing-german-ppi-sep-20261020",
-      "date": "2026-10-20",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/economic-indicators/german-producer-prices-climb-67-in-september-above-forecasts-93CH-4958865",
-      "image": "https://content-media.investing.com/news/LYNXNPEC0E0NG_L.jpg",
-      "headline": "German producer prices climb 6.7% in September, above forecasts",
-      "story": "ez-inflation",
-      "story_title": "Euro area: price pressure and the ECB",
-      "pillar": "inflation",
-      "summary": "German factory-gate prices rose faster than expected, a sign that costs are still feeding through to what shoppers will pay.",
-      "beats": {
-        "was": "Producer prices: what German firms charge for goods as they leave the factory, an early read on future consumer inflation.",
-        "happened": "They were up 6.7% from a year earlier, against forecasts near 6.2%.",
-        "means": "With the ECB's target at 2%, pipeline prices this hot keep pressure on it to lean hawkish, though markets already treat December, not October, as the live meeting.",
-        "fx": "Hotter costs → more pressure on the ECB → higher euro yields → some support for the euro. The lens: do these costs reach shop prices?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A hot cost print adds to the case for a December ECB hike, but France still dominates."
-        }
-      ],
-      "watch": "Euro-area flash PMIs and the October ECB meeting on Oct 29 for how much weight the bank puts on this."
-    },
-    {
       "id": "reuters-investing-pending-home-sales-sep-20261020",
       "date": "2026-10-20",
       "source": "Reuters (via Investing.com)",
@@ -1154,33 +1187,6 @@
         }
       ],
       "watch": "If mortgage rates ease or other data hold firm, this stays a housing story rather than a growth scare."
-    },
-    {
-      "id": "anews-us-housing-starts-sep-20261020",
-      "date": "2026-10-20",
-      "source": "A News",
-      "url": "https://www.anews.com.tr/world/2026/10/20/us-homebuilding-slows-in-september-as-construction-activity-permits-decline",
-      "image": "https://ia.tmgrup.com.tr/bfa71f/806/378/0/0/1280/599?u=https://i.tmgrup.com.tr/anews/v1/2026/10/20/us-homebuilding-slows-in-september-as-construction-activity-permits-decline-1792504056080.jpg",
-      "headline": "US homebuilding slows in September as construction activity, permits decline",
-      "story": "us-housing",
-      "story_title": "US housing: frozen by 7%+ mortgages",
-      "pillar": "growth",
-      "summary": "US housing starts fell 5.2% in September to a four-month low, when a small rise was expected. Permits held up better than feared.",
-      "beats": {
-        "was": "Housing starts count new homes builders broke ground on; permits show what is lined up next.",
-        "happened": "Starts dropped 5.2% to a 1.22 million yearly pace against a forecast rise of about 2%. Permits slipped only 0.2%, less than the drop expected.",
-        "means": "Builders are pulling back as high borrowing costs thin out buyers. Steady permits say the pipeline hasn't collapsed yet.",
-        "fx": "Weaker building → slower growth → a little less pressure on the Fed to hike → dollar slightly softer. The lens: is this a dip or a trend?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Starts missed badly, though permits softened the blow."
-        }
-      ],
-      "watch": "October permits: a sharp drop there would confirm builders are retreating."
     },
     {
       "id": "gulfnews-us-ships-hegseth-20261020",
