@@ -135,12 +135,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   background: linear-gradient(100deg, var(--mast-1), var(--mast-2));
   color: var(--mast-ink);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-  /* Home-screen app: the status bar is see-through, so the masthead colour
-     runs up behind the clock and battery (0 in a normal browser tab). */
-  padding-top: env(safe-area-inset-top, 0px);
 }
-/* Phones in landscape: keep content clear of the notch. */
-body { padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px); }
 
 .mh-inner {
   display: flex;
