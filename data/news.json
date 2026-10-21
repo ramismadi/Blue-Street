@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T00:50:30Z",
+  "updated": "2026-10-21T02:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,18 +9,18 @@
     },
     "EUR": {
       "lean": "mixed",
-      "text": "The euro rose toward 1.126 as oil fell, a relief for an energy importer. But debt worries sent it to a three-month low on the franc, and France's budget vote is Oct 27.",
-      "ts": "2026-10-20T18:47:05Z"
+      "text": "The euro rose toward 1.126 as oil eased on Tuesday, but debt worries kept it near a three-month low on the franc, and a report that Putin ordered sabotage across NATO adds a security worry. France's budget vote is Oct 27.",
+      "ts": "2026-10-21T02:55:00Z"
     },
     "GBP": {
       "lean": "bullish",
-      "text": "Sterling ended Tuesday the strongest major, near five-week highs around 1.34, after a strong jobs report and a BoE rate-setter's warning on sticky pay. A November hike is almost fully priced, so Wednesday's inflation report can confirm or dent it.",
-      "ts": "2026-10-20T22:50:00Z"
+      "text": "Sterling sits near five-week highs around 1.34 after a strong jobs report, with a November BoE hike almost fully priced. Wednesday's inflation figure, expected to rise to 3.4%, can confirm that or knock it back.",
+      "ts": "2026-10-21T02:55:00Z"
     },
     "JPY": {
       "lean": "mixed",
-      "text": "Strong bond demand eased debt fears and the BoJ may raise its inflation forecast at its Oct 29\u201330 meeting. But costly oil, September's wider-than-expected trade deficit and the wide gap with US rates still weigh on the yen.",
-      "ts": "2026-10-21T00:50:30Z"
+      "text": "Japan's finance minister said she sees no gap with the BoJ, and most economists now expect a hike to 1.50% in December, which helps the yen over time. But oil back near $110 and a wider-than-expected trade deficit keep weighing on it now.",
+      "ts": "2026-10-21T02:55:00Z"
     },
     "CHF": {
       "lean": "mixed",
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "bullish",
-      "text": "The Aussie broke above 70 US cents, a two-week high, after RBA Deputy Governor Andrew Hauser said inflation will likely beat the bank's forecast, lifting the odds of a November 3 hike to about 40%. China's growth beat earlier in the week helped too.",
-      "ts": "2026-10-21T00:50:30Z"
+      "text": "The Aussie holds above 70 US cents after RBA Deputy Governor Andrew Hauser said inflation will likely beat the bank's forecast, lifting the odds of a November 3 hike. China setting its yuan weaker than expected is a small drag.",
+      "ts": "2026-10-21T02:55:00Z"
     },
     "NZD": {
       "lean": "bullish",
@@ -44,16 +44,202 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold eased toward $4,100 even as the dollar and yields slipped, with December Fed hike bets still the main weight. A lasting fall in yields would ease that.",
-      "ts": "2026-10-20T18:47:05Z"
+      "text": "Gold fell for a fourth day, to about $4,120, as costlier oil revived bets on a December Fed hike. A lasting fall in US yields would ease that weight.",
+      "ts": "2026-10-21T02:55:00Z"
     },
     "OIL": {
-      "lean": "mixed",
-      "text": "US crude swung between $97 and $103 on mixed US-Iran signals and closed flat near $100. Mediation continues but nothing is agreed, the Strait of Hormuz stays shut, and Gulf attacks keep supply at risk.",
-      "ts": "2026-10-20T22:50:00Z"
+      "lean": "bullish",
+      "text": "Brent crude rose back toward $110 after a supertanker hit a mine south of the shut Strait of Hormuz and ship attacks spread to the Gulf of Oman, the route used to get around it. US-Iran mediation goes on, but nothing is agreed.",
+      "ts": "2026-10-21T02:55:00Z"
     }
   },
   "items": [
+    {
+      "id": "tradingeconomics-gold-fourth-drop-20261021",
+      "date": "2026-10-21",
+      "source": "Trading Economics",
+      "url": "https://tradingeconomics.com/commodity/gold",
+      "image": null,
+      "headline": "Gold falls for a fourth session as oil revives rate-hike bets",
+      "story": "gold-week",
+      "story_title": "Gold: oil, yields and the Fed",
+      "pillar": "policy",
+      "summary": "Gold slipped to around $4,117\u20134,120 an ounce, a fourth straight daily fall, as higher oil revived bets that the Federal Reserve raises rates in December.",
+      "beats": {
+        "was": "Gold climbed to records through the year, but the Gulf war's oil shock has pushed up inflation and with it the chance of higher US interest rates, which hurt a metal that pays no interest.",
+        "happened": "Oil rose after a diplomat played down talk of an imminent US-Iran deal, and gold edged down about 0.1\u20130.2%. The Fed is expected to hold next week, with a December hike seen as possible.",
+        "means": "For now gold is trading more on US rate expectations than as a war shelter.",
+        "fx": "Costlier oil \u2192 higher US inflation \u2192 more chance of a Fed hike \u2192 less appeal for gold. The lens: a real fall in US yields would turn this."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Rate-hike bets keep weighing on a metal that pays no interest."
+        }
+      ],
+      "watch": "Next week's Fed meeting and any shift in December hike odds; a lasting drop in oil."
+    },
+    {
+      "id": "fxstreet-uk-cpi-preview-20261021",
+      "ts": "2026-10-21T02:00:00Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/uk-cpi-set-to-accelerate-paving-the-way-for-a-boe-interest-rate-hike-in-november-202610210200",
+      "image": "https://editorial.fxsstatic.com/images/i/cpi-shopping-bags_Medium.png",
+      "headline": "UK CPI is expected to confirm the inflationary impact of high energy prices",
+      "story": "boe-nov",
+      "story_title": "BoE: the November decision",
+      "pillar": "inflation",
+      "summary": "UK inflation for September, due at 06:00 GMT Wednesday, is expected to rise to 3.4% from 3.1%, with the core rate up to 2.8%, as costly energy feeds into prices.",
+      "beats": {
+        "was": "The Bank of England has not raised rates this year, but a strong jobs report and warnings on sticky pay have markets almost fully expecting a quarter-point hike at its November meeting.",
+        "happened": "Forecasters expect headline inflation of 3.4% over the year to September, from 3.1% in August, and 0.3% on the month. Core inflation, which strips out food and energy, is seen at 2.8% from 2.6%.",
+        "means": "A figure in line or higher would back the November hike; a soft one would raise doubts, since the hike is already mostly priced.",
+        "fx": "Hot print \u2192 hike confirmed \u2192 firmer pound; soft print \u2192 hike in doubt \u2192 pound gives back its recent gains. The lens: core and services prices, not just the headline."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A preview: the pound's direction depends on whether the figure beats or misses."
+        }
+      ],
+      "watch": "The 06:00 GMT release, especially core and services inflation."
+    },
+    {
+      "id": "investinglive-putin-nato-sabotage-20261021",
+      "ts": "2026-10-21T01:20:42Z",
+      "source": "investingLive (WSJ report)",
+      "url": "https://investinglive.com/news/us-intel-says-putin-ordered-nato-sabotage-drive-leipzig-drone-attack-an-opening-shot/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Oil%20has%20popped%20up%2021%20October%202026-featured-1792545599.jpg?width=960&format=webp",
+      "headline": "US intel says Putin ordered NATO sabotage drive, Leipzig drone attack an opening shot",
+      "story": "russia-nato",
+      "story_title": "Russia\u2013NATO: sabotage and grey-zone attacks",
+      "pillar": "risk",
+      "summary": "The Wall Street Journal reports US intelligence concluded Russian President Vladimir Putin personally ordered a sabotage campaign against NATO countries, including an August drone attack on a German airport.",
+      "beats": {
+        "was": "Since August Europe has seen a string of suspected Russian attacks short of war: arson in Estonia and Poland, damage to Starlink stations and drone hits on ships in the Black Sea. Germany blamed Russia in September for a failed drone strike on a military-aid plane at Leipzig-Halle airport.",
+        "happened": "Citing European officials, the Journal says US intelligence found the campaign was ordered by Putin and run by a Russian military-intelligence unit. Aides to German Chancellor Friedrich Merz said heavy casualties at Leipzig would have led Germany to weigh NATO's mutual-defence clause. Russia denies any role.",
+        "means": "It puts a name on attacks already known rather than reporting a new one, but it raises the chance of a tougher European response.",
+        "fx": "More security risk on Europe's doorstep \u2192 small weight on the euro and a small pull toward the franc as shelter. Little effect unless governments act. The lens: any new sanctions or a hit to Russian fuel supply?"
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Raises the risk of a sharper Russia\u2013NATO standoff near the euro area."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Mild extra demand for a safe place to park money."
+        }
+      ],
+      "watch": "A formal European response or new sanctions; any disruption to Russian diesel exports."
+    },
+    {
+      "id": "investinglive-pboc-fix-weak-20261021",
+      "ts": "2026-10-21T01:17:21Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/central-banks/pboc-sets-usd-cny-mid-point-today-at-6-vs-estimate-at-6-6779/",
+      "image": "https://investinglive.com/cms/media/images/pboc%20cny%20yuan%20cnh%2023%20September%202025_id_e08b13e4-f02c-4fee-8b94-82834eb4f542_original.jpeg?width=960&format=webp",
+      "headline": "PBOC sets USD/CNY mid-point today at 6.7192 (vs. estimate at 6.6779)",
+      "story": "china-yuan",
+      "story_title": "China: Beijing slows the yuan's climb",
+      "pillar": "policy",
+      "summary": "China's central bank set the yuan's daily reference rate about 0.6% weaker than analysts expected, another sign Beijing wants to slow the currency's rise.",
+      "beats": {
+        "was": "Each morning the People's Bank of China sets a midpoint for the yuan, which can trade 2% either side of it. Since late last year it has often set it weaker than models predict, to slow a yuan that has been near its strongest in over three years.",
+        "happened": "The bank set the rate at 6.7192 per dollar, against a Reuters estimate of 6.6779, a gap of about 0.6%. It gave no reason, which is normal.",
+        "means": "Beijing is still leaning against a fast-rising yuan, likely to protect exporters. It is a familiar move, not a new policy.",
+        "fx": "A softer yuan on purpose \u2192 China's trade partners get a little less lift from it \u2192 slight weight on the Aussie and kiwi, which trade as China proxies. The lens: does the gap keep widening?"
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A held-back yuan takes a little shine off China-linked currencies."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Same China link, smaller effect."
+        }
+      ],
+      "watch": "Whether the daily gap to estimates grows larger; China's next round of growth support."
+    },
+    {
+      "id": "investinglive-katayama-boj-no-gap-20261021",
+      "ts": "2026-10-21T00:54:00Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/central-banks/japan-s-katayama-sees-no-gap-with-boj-says-wage-driven-inflation-is-near/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/japan-katayama-boj-no-gap-wage-driven-inflation-featured-1792544075.jpg?width=960&format=webp",
+      "headline": "Japan's Katayama sees no gap with BOJ, says wage-driven inflation is near",
+      "story": "boj-path",
+      "story_title": "BoJ: when the next hike comes",
+      "pillar": "policy",
+      "summary": "Japan's Finance Minister Satsuki Katayama told parliament the government and the Bank of Japan see things the same way, and that pay-driven inflation is close, a condition the BoJ wants before raising rates again.",
+      "beats": {
+        "was": "Prime Minister Sanae Takaichi's government plans a consumption tax cut and cash handouts, and investors have worried it could clash with the Bank of Japan's rate rises; in September two board members picked by the government voted against the hike to 1.25%.",
+        "happened": "Katayama said today's price rises come mostly from import costs, but the economy is close to inflation driven by rising wages. Asked about a clash with the BoJ, she said the two sides talk and she sees no gap. She did not openly back more hikes.",
+        "means": "It lowers the odds that the government stands in the way of the next hike, which most economists expect in December.",
+        "fx": "Less political pushback \u2192 a December BoJ hike looks safer \u2192 mild support for the yen. The lens: do the government's picks on the board keep dissenting?"
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Eases fears that the government blocks further rate rises."
+        }
+      ],
+      "watch": "Friday's Japan inflation figures and the BoJ's Oct 29\u201330 meeting, including how its board votes."
+    },
+    {
+      "id": "reuters-gbaf-oil-gulf-of-oman-20261021",
+      "ts": "2026-10-21T00:51:16Z",
+      "source": "Global Banking & Finance (Reuters report)",
+      "url": "https://www.globalbankingandfinance.com/oil-rises-middle-east-supply-worries/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-1a44edcf-dda1-4f4c-9dd5-ce8ff8f3e7ab/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "Oil rises on Middle East supply and shipping concerns",
+      "story": "hormuz",
+      "story_title": "Hormuz: mines, tanker hits and blockade threats",
+      "pillar": "tot",
+      "summary": "Brent crude climbed back toward $110 in Asian trading after Iran's Revolutionary Guards said a supertanker caught fire on a mine south of the Strait of Hormuz, and analysts said ship attacks now reach the Gulf of Oman.",
+      "beats": {
+        "was": "The Strait of Hormuz, the route for about a fifth of the world's oil, has been shut since the US-Iran war began this month, and Gulf exporters have leaned on loading points outside it, such as the Gulf of Oman, to keep crude moving.",
+        "happened": "Iran's Revolutionary Guards Navy said a supertanker hit a sea mine and caught fire south of the strait. LSEG analysts said attacks have spread as far as the Gulf of Oman; the ship tracker Kpler counts at least 18 attacks on vessels in two weeks. Yemen's Houthi rebels also claimed strikes on Saudi oil sites at Yanbu and Shaybah. Brent rose about 0.8% to $109.64.",
+        "means": "The workaround routes that kept Middle East oil flowing are now in range too, so a quick return to normal supply looks less likely even while mediation talks go on.",
+        "fx": "Attacks outside the strait \u2192 less oil getting out \u2192 higher crude \u2192 support for oil exporters like Canada, and a bigger import bill for Japan and Europe. The lens: do loadings in the Gulf of Oman actually slow?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Attacks are reaching the routes used to bypass the shut strait."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher crude lifts Canada's export income."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so a costlier barrel weighs on the yen."
+        }
+      ],
+      "watch": "Whether tanker loadings off Oman drop, and any reply to Iran's mediation offer; Wednesday's US crude stock report."
+    },
     {
       "id": "investinglive-japan-trade-sep-20261021",
       "ts": "2026-10-21T00:31:17Z",
@@ -80,6 +266,417 @@
         }
       ],
       "watch": "The Bank of Japan's Oct 29\u201330 meeting and its new forecasts; a lasting drop in oil would shrink the import bill."
+    },
+    {
+      "id": "reuters-yahoo-rba-hauser-outlook-20261020",
+      "ts": "2026-10-20T23:01:00Z",
+      "source": "Reuters via Yahoo Finance",
+      "url": "https://finance.yahoo.com/economy/policy/articles/australia-central-banker-says-policy-221416518.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/d8857615d319c25ea076db2b8fb25eba72b23b73df342f71bba6cf5199233909/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2Ff20724b4af9590088428338ff587cfb2.jpg",
+      "headline": "Australian central banker says policy working, but inflation outlook worse",
+      "story": "rba-nov",
+      "story_title": "RBA: the November 3 decision",
+      "pillar": "policy",
+      "summary": "The Reserve Bank of Australia's deputy governor, Andrew Hauser, said inflation now looks set to run above the bank's own forecast, raising the odds of another rate rise on November 3. The Aussie pushed above 70 US cents.",
+      "beats": {
+        "was": "The Reserve Bank of Australia has already raised its cash rate four times this year, to 4.60%, to fight inflation lifted partly by the Gulf war's hit to oil. It next decides on November 3.",
+        "happened": "Speaking at a Citi conference in Sydney, Deputy Governor Andrew Hauser said higher rates are slowing the economy, but the inflation outlook has got clearly worse, partly because of high oil prices. Markets raised the chance of a November hike to 4.85% to about 40%, from 30% at the start of the week, and AUD/USD rose to about 0.701, a two-week high.",
+        "means": "A senior official saying inflation will beat the bank's forecast keeps a fifth hike on the table, even with unemployment at a five-year high of 4.7% and house prices falling. Next week's third-quarter inflation figure, seen near 4%, is the deciding number.",
+        "fx": "Inflation running hotter than the RBA expected \u2192 more chance of a rate rise \u2192 higher returns on Australian dollars \u2192 Aussie up. The lens: does next week's inflation figure back him up?"
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Hike odds for Nov 3 rose to about 40% and the Aussie broke above 0.70."
+        }
+      ],
+      "watch": "Australia's third-quarter inflation figure next week; a soft print, or weaker jobs and housing, would cool hike bets."
+    },
+    {
+      "id": "investinglive-boj-poll-december-20261020",
+      "ts": "2026-10-20T22:13:00Z",
+      "source": "investingLive (Reuters poll)",
+      "url": "https://investinglive.com/central-banks/boj-seen-lifting-rates-to-1-50-in-december-as-69-of-economists-expect-a-q4-hike/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/usdyen%20boj%20oputlook%2021%20October%202026-featured-1792534291.jpg?width=960&format=webp",
+      "headline": "BOJ seen lifting rates to 1.50% in December as 69% of economists expect a Q4 hike",
+      "story": "boj-path",
+      "story_title": "BoJ: when the next hike comes",
+      "pillar": "policy",
+      "summary": "A Reuters poll of 78 economists found 69% now expect the Bank of Japan to raise rates to 1.50% by year-end, almost double September's share, with December the favourite month.",
+      "beats": {
+        "was": "The Bank of Japan raised its rate in June and again in September, to 1.25%, but the yen has stayed close to its weakest level of the year because US rates are far higher.",
+        "happened": "In the poll, taken Oct 13\u201319, 54 of 78 economists expect a hike to 1.50% this quarter, up from 36% a month ago. About 80% of those naming a month picked December; only 2% expect a move at the meeting ending Oct 30. Half now see rates reaching 2% or more.",
+        "means": "Forecasters see the BoJ moving faster than they thought a month ago, but not next week.",
+        "fx": "More hikes expected \u2192 Japan's rate gap with the US narrows over time \u2192 slow support for the yen. The lens: does the BoJ hint at December when it meets Oct 30?"
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Economists now expect a quicker climb in Japan's rates."
+        }
+      ],
+      "watch": "The BoJ's Oct 29\u201330 statement and new forecasts; most in the poll warned that more board dissent could weigh on the yen."
+    },
+    {
+      "id": "farmersweekly-gdt-powder-20261020",
+      "ts": "2026-10-20T20:02:45Z",
+      "source": "Farmers Weekly NZ",
+      "url": "https://www.farmersweekly.co.nz/markets/dairy-markets/milk-powder-gains-fuel-gdt-price-surge/",
+      "image": "https://www.farmersweekly.co.nz/wp-content/uploads/2026/03/milk-powder_credit-dreamstime.jpg",
+      "headline": "Milk powder gains fuel GDT price surge",
+      "story": "nz-dairy",
+      "story_title": "NZ dairy prices",
+      "pillar": "tot",
+      "summary": "World dairy prices rose 2.5% at Tuesday's Global Dairy Trade auction, the most since February, led by the milk powders New Zealand sells most.",
+      "beats": {
+        "was": "The Global Dairy Trade auction runs twice a month and sets prices for New Zealand's biggest export, so it feeds farm incomes and the kiwi.",
+        "happened": "The overall index rose 2.5%. Whole milk powder gained 4.4% and skim milk powder 3.4%, while butter and milk fat slipped.",
+        "means": "Milk powder is what most decides NZ farmers' milk price, so forecasts for this season's payout may rise. Fonterra could update its forecast before its Nov 12 shareholder meeting.",
+        "fx": "Higher dairy prices \u2192 more export income for New Zealand \u2192 more demand for kiwi. The lens: does the gain hold at the next auction in early November?"
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Best auction since February, led by the main export product."
+        }
+      ],
+      "watch": "Fonterra's milk price forecast and NZ third-quarter inflation figures this week."
+    },
+    {
+      "id": "fxstreet-forex-today-uk-cpi-20261020",
+      "ts": "2026-10-20T18:10:43Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/forex-today-uk-inflation-comes-to-the-fore-202610201810",
+      "image": "https://editorial.fxsstatic.com/images/i/discover-62_Medium.png",
+      "headline": "Forex Today: UK inflation comes to the fore",
+      "story": "boe-nov",
+      "story_title": "BoE: the November decision",
+      "pillar": "inflation",
+      "summary": "A calmer risk mood left the dollar at a three-week low and the pound above 1.34 going into Wednesday's UK inflation report, which decides how sure a November BoE hike really is.",
+      "beats": {
+        "was": "A wrap of Tuesday's moves and a look at what comes next, led by UK consumer prices on Wednesday.",
+        "happened": "The dollar index briefly touched about 101.5, its lowest in three weeks. The pound reached five-week highs just over 1.34, the Aussie neared 0.70, and gold slipped toward $4,100 even with a softer dollar.",
+        "means": "Markets already expect the BoE to hike in November. A firm inflation print would confirm that; a soft one is the main way the pound's run could stall.",
+        "fx": "Hot UK prices \u2192 hike locked in, maybe more \u2192 higher UK yields \u2192 pound supported. The lens: does inflation back up the jobs data?"
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "At five-week highs ahead of CPI, which can confirm or puncture the hike case."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Eased toward $4,100 despite a weaker dollar and lower yields."
+        }
+      ],
+      "watch": "Wednesday's UK CPI; any official word on the US-Iran plan."
+    },
+    {
+      "id": "fxstreet-boe-greene-wages-20261020",
+      "ts": "2026-10-20T17:46:49Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/boes-greene-warns-stalled-wage-disinflation-raises-inflation-risks-202610201746",
+      "image": "https://editorial.fxsstatic.com/images/i/BoE_Medium.png",
+      "headline": "BoE's Greene warns stalled wage disinflation raises inflation risks",
+      "story": "boe-nov",
+      "story_title": "BoE: the November decision",
+      "pillar": "policy",
+      "summary": "Bank of England rate-setter Megan Greene said UK pay growth has stopped cooling at a level too high for 2% inflation, and the Bank should act early against it.",
+      "beats": {
+        "was": "Megan Greene sits on the Bank of England's nine-member rate committee and has long been one of its firmest voices for keeping rates high.",
+        "happened": "In a speech a day before UK inflation figures, she said pay growth has stalled above what fits a 2% inflation target and the risk of higher prices feeding into wages is bigger than the Bank thought.",
+        "means": "It backs the case for a hike at the Nov 5 meeting, which markets already price almost fully. It's one known hawk repeating her view, so it adds weight rather than news.",
+        "fx": "Sticky pay \u2192 more pressure to hike \u2192 UK yields stay high \u2192 support for the pound. The lens: do other committee members say the same?"
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A rate-setter backing early action; a Nov 5 hike was already near fully priced."
+        }
+      ],
+      "watch": "Wednesday's UK consumer prices: a soft figure would weaken her case."
+    },
+    {
+      "id": "fxstreet-ust-yields-retreat-20261020",
+      "ts": "2026-10-20T16:49:08Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/us-treasury-yields-retreat-as-iran-deal-hopes-pull-wti-lower-202610201649",
+      "image": "https://editorial.fxsstatic.com/images/i/DXY-neutral-object-1_Medium.png",
+      "headline": "US Treasury yields retreat as Iran deal hopes pull WTI lower",
+      "story": "us-iran-talks",
+      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "pillar": "policy",
+      "summary": "Long-term US yields edged down on deal hopes while two-year yields held flat, so markets still expect the Fed to hike in December.",
+      "beats": {
+        "was": "US government bond yields, which set how much dollar assets pay.",
+        "happened": "The 10-year yield slipped about 2bp to near 5.12% and the 2-year held near 4.79%. WTI eased below $98 and the dollar index lost about 0.3%.",
+        "means": "The dip is small and only at the long end. Short-term yields, which track the Fed, didn't move, so the case for a December hike is intact.",
+        "fx": "Small dip in long yields \u2192 slight loss of dollar support; flat 2-year \u2192 Fed outlook unchanged. The lens: does the 2-year start to fall too?"
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Long yields eased, but Fed pricing didn't budge."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Lower yields ease the main weight on gold."
+        }
+      ],
+      "watch": "Thursday's jobless claims and Friday's flash PMIs; the Fed meets Oct 27-28."
+    },
+    {
+      "id": "fxstreet-dxy-iran-report-denial-20261020",
+      "ts": "2026-10-20T15:25:23Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/dollar-index-drops-on-iran-deal-report-steadies-on-denial-202610201525",
+      "image": "https://editorial.fxsstatic.com/images/i/DXY-neutral-object_Medium.png",
+      "headline": "Dollar Index drops on Iran deal report, steadies on denial",
+      "story": "us-iran-talks",
+      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "pillar": "risk",
+      "summary": "The dollar hit its lowest since Oct 1 on the US-Iran report, then won some back after a diplomat said a deal wasn't close.",
+      "beats": {
+        "was": "The dollar's reaction to reports that both sides had backed a Qatar-Pakistan plan.",
+        "happened": "The dollar index fell to just above 101.5, then bounced near 101.7 on the denial. Weak housing data added to the softness.",
+        "means": "The dollar has given back about a third of its rise since early September. Economists still all expect a Fed hike in December, which keeps a floor under it.",
+        "fx": "Peace hopes \u2192 cheaper oil \u2192 lower yields and less haven demand \u2192 dollar softer. The lens: is the US-Iran plan real?"
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Three-week low on the report, partly undone by the denial."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rose as oil fell, the mirror of the dollar's drop."
+        }
+      ],
+      "watch": "Any official confirmation; Thursday's jobless claims and Friday's flash PMIs."
+    },
+    {
+      "id": "fxstreet-gbp-1340-jobs-iran-20261020",
+      "ts": "2026-10-20T15:17:22Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/british-pound-surges-to-13400-as-uk-jobs-beat-iran-deal-hopes-grow-202610201517",
+      "image": "https://editorial.fxsstatic.com/images/i/discover-97_Medium.png",
+      "headline": "British Pound surges to 1.3400 as UK jobs beat, Iran deal hopes grow",
+      "story": "boe-nov",
+      "story_title": "BoE: the November decision",
+      "pillar": "policy",
+      "summary": "The pound gained about 0.7% to near 1.34 as a strong jobs report met a softer dollar on US-Iran hopes.",
+      "beats": {
+        "was": "Sterling's move after the UK jobs report and the US-Iran reports.",
+        "happened": "The UK added about 102,000 jobs in three months, well above forecasts, and unemployment fell. Markets now see about a 93% chance of a November BoE hike.",
+        "means": "Two forces lined up at once: a firmer case for UK rates and a weaker dollar. The pound sits right under a cluster of resistance near 1.341.",
+        "fx": "Strong jobs \u2192 BoE hike nearly certain \u2192 higher UK yields \u2192 pound up; softer dollar adds to it. The lens: does CPI confirm?"
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Up about 0.7% to five-week highs, building on the jobs beat."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Softer on US-Iran hopes and weak housing data."
+        }
+      ],
+      "watch": "Wednesday's UK CPI; a denial of the US-Iran plan would help the dollar back."
+    },
+    {
+      "id": "businesstoday-us-iran-proposal-terms-20261020",
+      "ts": "2026-10-20T15:12:04Z",
+      "source": "Business Today",
+      "url": "https://www.businesstoday.in/world/story/us-iran-breakthrough-this-week-6-billion-frozen-funds-secret-nuclear-inspection-in-new-peace-proposal-562651-2026-10-20",
+      "image": "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202610/6ad7849262541-6-billion-iranian-funds--secret-nuclear-inspections-inside-new-us-iran-compromise-proposal-20111384-16x9.png",
+      "headline": "US Iran breakthrough this week? $6 billion frozen funds, secret nuclear inspection in new peace proposal",
+      "story": "us-iran-talks",
+      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "pillar": "risk",
+      "summary": "What the reported plan contains: Iran would get the interest, not the principal, on $6 billion frozen in Qatar, and would allow a quiet UN nuclear inspection. Neither government has confirmed it.",
+      "beats": {
+        "was": "The terms of the Qatar-Pakistan proposal, carried to Tehran by Pakistan's army chief.",
+        "happened": "A Qatari-owned paper, citing unnamed sources, said the US agreed and Iran responded well. Iranian sources later said reports of a near deal were wrong, while saying talks go on.",
+        "means": "It is a small first step on money and inspections, not a peace deal. It matters because it would reopen talks after weeks of escalation.",
+        "fx": "Real talks \u2192 lower odds of Gulf supply cuts \u2192 less demand for safe havens and less oil premium. The lens: do both sides confirm?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "An unconfirmed opening for talks, already partly denied."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Talks hope eases the need for shelter."
+        }
+      ],
+      "watch": "Official word from Washington or Tehran; a new tanker or Saudi attack would undercut it."
+    },
+    {
+      "id": "fxstreet-wti-slides-us-iran-plan-20261020",
+      "ts": "2026-10-20T15:01:07Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/wti-oil-plunges-as-us-iran-compromise-proposal-raises-hopes-of-de-escalation-202610201501",
+      "image": "https://editorial.fxsstatic.com/images/i/Commodities_Oil-1_Medium.jpg",
+      "headline": "WTI Oil slides as US-Iran compromise plan eases Middle East risks",
+      "story": "us-iran-talks",
+      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "pillar": "risk",
+      "summary": "US crude gave back its surge, falling to about $95.70 after briefly topping $100, on a report that Washington and Tehran had tentatively backed a mediated plan. Nothing is officially confirmed.",
+      "beats": {
+        "was": "A report of a Pakistan- and Qatar-brokered plan to get the US and Iran talking again.",
+        "happened": "Israeli TV said the US approved it and Iran gave early consent. WTI swung from above $100 to near $95.70, down about 2.4% on the day.",
+        "means": "Oil had been pricing a long squeeze on Gulf supply. Any path to talks shrinks that war premium fast, even before anything is signed.",
+        "fx": "Talks hope \u2192 less war premium in oil \u2192 lower inflation fears \u2192 softer yields \u2192 oil sellers' currencies lose a tailwind. The lens: is the plan confirmed, or just a report?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Talk of a deal knocked out much of the day's surge."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Cheaper oil trims the loonie's main support."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil pulls US yields and hike bets back."
+        }
+      ],
+      "watch": "An official denial or a new attack on ships would rebuild the premium; a confirmed meeting would deepen the drop."
+    },
+    {
+      "id": "fxstreet-euro-climbs-oil-tumbles-20261020",
+      "ts": "2026-10-20T14:56:19Z",
+      "source": "FXStreet",
+      "url": "https://fxstreet.com/news/euro-climbs-as-oil-prices-tumble-on-us-iran-negotiation-hopes-202610201456",
+      "image": "https://editorial.fxsstatic.com/images/i/EURUSD-bullish-chart_Medium.png",
+      "headline": "Euro climbs as Oil prices tumble on US-Iran negotiation hopes",
+      "story": "us-iran-talks",
+      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "pillar": "risk",
+      "summary": "The dollar index slipped to its lowest since Oct 1 as oil and US 10-year yields fell on US-Iran talks hope. EUR/USD rose to about 1.125.",
+      "beats": {
+        "was": "The euro-dollar rate during the US session.",
+        "happened": "EUR/USD rose about 0.35% to near 1.125. The dollar index fell to about 101.55, off last week's 18-month high near 103, and the US 10-year yield dropped about 6 basis points to around 5.08%.",
+        "means": "The dollar's recent strength rode on oil-driven yields. When oil eases, that support fades, and Europe, a big oil importer, gets some relief.",
+        "fx": "Oil down \u2192 US yields down \u2192 dollar's yield edge narrows \u2192 dollar slips, euro gains. The lens: does oil keep falling?"
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Dollar index fell to a near three-week low as yields dropped."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Cheaper oil eases Europe's import bill and lifts the euro."
+        }
+      ],
+      "watch": "Houthi strikes and Hormuz ship attacks are still live; a fresh hit would send oil and the dollar back up."
+    },
+    {
+      "id": "aljazeera-munir-tehran-20261020",
+      "ts": "2026-10-20T14:39:50Z",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/10/20/pakistan-army-chief-in-tehran-can-diplomacy-prevent-new-us-iran-fighting",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/05/afp_6a11f11148bb-1779560721.jpg?resize=1920%2C1440",
+      "headline": "Pakistan army chief in Tehran: Can diplomacy prevent new US-Iran fighting?",
+      "story": "us-iran-talks",
+      "story_title": "US-Iran: mediation and the oil swing",
+      "pillar": "risk",
+      "summary": "Pakistan's army chief Asim Munir flew to Tehran to keep US-Iran talks alive, while US Defense Secretary Pete Hegseth met Israel's leader amid talk of new strikes.",
+      "beats": {
+        "was": "Pakistan brokered the April 8 US-Iran ceasefire. A June deal to reopen the Strait of Hormuz and lift the US naval blockade lapsed in August, and the strait is still shut.",
+        "happened": "Field Marshal Asim Munir arrived in Tehran on his fifth visit since the ceasefire. Talks are indirect, with Qatar passing proposals. US Defense Secretary Pete Hegseth met Israeli Prime Minister Benjamin Netanyahu, reportedly about resuming major strikes.",
+        "means": "Diplomacy is busy but nothing is agreed, and the threat of new fighting hasn't gone. President Trump has said the US won't strike before the Nov 3 midterms.",
+        "fx": "Talks progress \u2192 Hormuz reopening hopes \u2192 lower oil \u2192 relief for oil importers (euro, yen); talks fail \u2192 new fighting \u2192 oil up, safe havens up. The lens: does mediation turn into a signed step?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Mediation keeps a reopening possible, but strike talk keeps supply risk alive."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Shelter demand rises or falls with the chance of renewed fighting."
+        }
+      ],
+      "watch": "Any signed step on Hormuz or the blockade; signs the US or Israel is preparing new strikes."
+    },
+    {
+      "id": "usagold-gold-4124-20261020",
+      "ts": "2026-10-20T13:51:20Z",
+      "source": "USAGOLD",
+      "url": "https://www.usagold.com/daily-precious-metals-market-report-october-20-2026/",
+      "image": "https://www.usagold.com/wp-content/uploads/2026/08/usagold-og-image.png",
+      "headline": "Physical Gold Slips To $4,124 As Oil-Driven Yields Revive Fed Hike Bets; Silver Firms",
+      "story": "gold-week",
+      "story_title": "Gold: oil, yields and the Fed",
+      "pillar": "policy",
+      "summary": "Gold fell for a third day to about $4,124 as oil pushed US yields toward 5.14% and markets leaned harder into a December Fed hike.",
+      "beats": {
+        "was": "The daily gold price and what moved it.",
+        "happened": "Spot gold was down about 0.4% to near $4,124, a third straight loss, while silver edged up.",
+        "means": "Higher oil means stickier inflation, so the Fed may have to hike again. That lifts yields, and gold pays no interest, so holding it gets costlier.",
+        "fx": "Dearer oil \u2192 Fed hike odds up \u2192 higher US yields \u2192 cash and bonds pay more than gold \u2192 gold slips. The lens: where are US yields heading?"
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Third daily loss as yields rise on oil."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "December hike bets firming gives the dollar a yield edge."
+        }
+      ],
+      "watch": "A pullback in oil or yields would lift gold; a confirmed supply loss could revive haven buying."
     },
     {
       "id": "tradingpedia-chf-recovery-snb-20261020",
@@ -424,528 +1021,6 @@
       "watch": "A drop in oil or a cautious BoC on Oct 28 would take the wind out of the loonie."
     },
     {
-      "id": "tradingpedia-kiwi-cpi-20261020",
-      "date": "2026-10-20",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/10/20/kiwi-dollar-holds-range-ahead-of-cpi-and-rate-signals/",
-      "image": null,
-      "headline": "Kiwi Dollar Holds Range Ahead of CPI and Rate Signals",
-      "story": "rbnz-oct",
-      "story_title": "RBNZ: hike odds into Q3 CPI",
-      "pillar": "inflation",
-      "summary": "The kiwi is idling near 0.5665 before this week's Q3 inflation figures. Inflation is expected to cool a little, but swaps still put about 80% odds on an Oct 28 hike.",
-      "beats": {
-        "was": "A preview of New Zealand's third-quarter consumer prices, due this week.",
-        "happened": "Forecasts are 0.8% for the quarter and 3.8% a year, down from 4.1%. NZD/USD held in a tight range near 0.5665.",
-        "means": "Even the cooler forecast leaves inflation near twice the RBNZ's 2% midpoint, so its own economist calls the Oct 28 call wide open, tilted to a hike.",
-        "fx": "Hot CPI \u2192 hike more certain \u2192 higher NZ rates \u2192 more demand for kiwi; soft CPI \u2192 hike in doubt \u2192 kiwi slips. The lens: is inflation cooling fast enough for the RBNZ to wait?"
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Hike odds near 80% before the CPI release; a preview, so mild."
-        }
-      ],
-      "watch": "The Q3 CPI print: well under 3.8% a year would put the Oct 28 hike in doubt."
-    },
-    {
-      "id": "reuters-yahoo-rba-hauser-outlook-20261020",
-      "ts": "2026-10-20T23:01:00Z",
-      "source": "Reuters via Yahoo Finance",
-      "url": "https://finance.yahoo.com/economy/policy/articles/australia-central-banker-says-policy-221416518.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/d8857615d319c25ea076db2b8fb25eba72b23b73df342f71bba6cf5199233909/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2Ff20724b4af9590088428338ff587cfb2.jpg",
-      "headline": "Australian central banker says policy working, but inflation outlook worse",
-      "story": "rba-nov",
-      "story_title": "RBA: the November 3 decision",
-      "pillar": "policy",
-      "summary": "The Reserve Bank of Australia's deputy governor, Andrew Hauser, said inflation now looks set to run above the bank's own forecast, raising the odds of another rate rise on November 3. The Aussie pushed above 70 US cents.",
-      "beats": {
-        "was": "The Reserve Bank of Australia has already raised its cash rate four times this year, to 4.60%, to fight inflation lifted partly by the Gulf war's hit to oil. It next decides on November 3.",
-        "happened": "Speaking at a Citi conference in Sydney, Deputy Governor Andrew Hauser said higher rates are slowing the economy, but the inflation outlook has got clearly worse, partly because of high oil prices. Markets raised the chance of a November hike to 4.85% to about 40%, from 30% at the start of the week, and AUD/USD rose to about 0.701, a two-week high.",
-        "means": "A senior official saying inflation will beat the bank's forecast keeps a fifth hike on the table, even with unemployment at a five-year high of 4.7% and house prices falling. Next week's third-quarter inflation figure, seen near 4%, is the deciding number.",
-        "fx": "Inflation running hotter than the RBA expected \u2192 more chance of a rate rise \u2192 higher returns on Australian dollars \u2192 Aussie up. The lens: does next week's inflation figure back him up?"
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Hike odds for Nov 3 rose to about 40% and the Aussie broke above 0.70."
-        }
-      ],
-      "watch": "Australia's third-quarter inflation figure next week; a soft print, or weaker jobs and housing, would cool hike bets."
-    },
-    {
-      "id": "babypips-recap-20261020",
-      "ts": "2026-10-20T20:45:00Z",
-      "source": "Babypips",
-      "url": "https://www.babypips.com/news/daily-financial-forex-market-recap-2026-10-20",
-      "image": "https://bpcdn.co/images/2026/08/17160955/Daily-FF-market-recap-thumb-universal-780x403.jpg",
-      "headline": "Financial & Forex Market Recap: Oct. 20, 2026",
-      "story": "us-iran-talks",
-      "story_title": "US-Iran: mediation and the oil swing",
-      "pillar": "risk",
-      "summary": "Tuesday's close: the pound led the majors after a strong UK jobs report, while oil swung $5 on mixed US-Iran signals and ended flat near $100.",
-      "beats": {
-        "was": "An end-of-day look at New York trading, a day shaped by reports of a US-Iran compromise plan passed on by Qatar and Pakistan.",
-        "happened": "US crude rose to about $103, fell to $97 on the plan reports, then closed near $100 after a diplomat said a deal wasn't close. The dollar index slipped 0.2% to about 101.7 and the 10-year Treasury yield eased to about 5.12%. GBP/USD gained 0.5% to 1.338; USD/CAD fell to 1.4056; gold ended 0.5% lower near $4,121.",
-        "means": "Peace hopes came and went within the day, so the lasting moves were about each country's own rates: the pound and loonie rose on bets their central banks hike soon.",
-        "fx": "Mixed Iran news \u2192 oil round-trips \u2192 little lasting change for oil-linked currencies; firm UK and Canada rate outlooks \u2192 those currencies up against a softer dollar. The lens: did the day change anything, or just shake it?"
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Best major on the day, up 0.5% to 1.338 after the jobs report."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Dollar index down 0.2% as Treasury yields eased."
-        },
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Swung between $97 and $103 and closed flat near $100."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Closed 0.5% lower near $4,121 despite the softer dollar."
-        }
-      ],
-      "watch": "Wednesday's UK and Canadian inflation figures, and any confirmed step in the US-Iran talks."
-    },
-    {
-      "id": "farmersweekly-gdt-powder-20261020",
-      "ts": "2026-10-20T20:02:45Z",
-      "source": "Farmers Weekly NZ",
-      "url": "https://www.farmersweekly.co.nz/markets/dairy-markets/milk-powder-gains-fuel-gdt-price-surge/",
-      "image": "https://www.farmersweekly.co.nz/wp-content/uploads/2026/03/milk-powder_credit-dreamstime.jpg",
-      "headline": "Milk powder gains fuel GDT price surge",
-      "story": "nz-dairy",
-      "story_title": "NZ dairy prices",
-      "pillar": "tot",
-      "summary": "World dairy prices rose 2.5% at Tuesday's Global Dairy Trade auction, the most since February, led by the milk powders New Zealand sells most.",
-      "beats": {
-        "was": "The Global Dairy Trade auction runs twice a month and sets prices for New Zealand's biggest export, so it feeds farm incomes and the kiwi.",
-        "happened": "The overall index rose 2.5%. Whole milk powder gained 4.4% and skim milk powder 3.4%, while butter and milk fat slipped.",
-        "means": "Milk powder is what most decides NZ farmers' milk price, so forecasts for this season's payout may rise. Fonterra could update its forecast before its Nov 12 shareholder meeting.",
-        "fx": "Higher dairy prices \u2192 more export income for New Zealand \u2192 more demand for kiwi. The lens: does the gain hold at the next auction in early November?"
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Best auction since February, led by the main export product."
-        }
-      ],
-      "watch": "Fonterra's milk price forecast and NZ third-quarter inflation figures this week."
-    },
-    {
-      "id": "fxstreet-forex-today-uk-cpi-20261020",
-      "ts": "2026-10-20T18:10:43Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/forex-today-uk-inflation-comes-to-the-fore-202610201810",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-62_Medium.png",
-      "headline": "Forex Today: UK inflation comes to the fore",
-      "story": "boe-nov",
-      "story_title": "BoE: the November decision",
-      "pillar": "inflation",
-      "summary": "A calmer risk mood left the dollar at a three-week low and the pound above 1.34 going into Wednesday's UK inflation report, which decides how sure a November BoE hike really is.",
-      "beats": {
-        "was": "A wrap of Tuesday's moves and a look at what comes next, led by UK consumer prices on Wednesday.",
-        "happened": "The dollar index briefly touched about 101.5, its lowest in three weeks. The pound reached five-week highs just over 1.34, the Aussie neared 0.70, and gold slipped toward $4,100 even with a softer dollar.",
-        "means": "Markets already expect the BoE to hike in November. A firm inflation print would confirm that; a soft one is the main way the pound's run could stall.",
-        "fx": "Hot UK prices \u2192 hike locked in, maybe more \u2192 higher UK yields \u2192 pound supported. The lens: does inflation back up the jobs data?"
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "At five-week highs ahead of CPI, which can confirm or puncture the hike case."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Eased toward $4,100 despite a weaker dollar and lower yields."
-        }
-      ],
-      "watch": "Wednesday's UK CPI; any official word on the US-Iran plan."
-    },
-    {
-      "id": "fxstreet-boe-greene-wages-20261020",
-      "ts": "2026-10-20T17:46:49Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/boes-greene-warns-stalled-wage-disinflation-raises-inflation-risks-202610201746",
-      "image": "https://editorial.fxsstatic.com/images/i/BoE_Medium.png",
-      "headline": "BoE's Greene warns stalled wage disinflation raises inflation risks",
-      "story": "boe-nov",
-      "story_title": "BoE: the November decision",
-      "pillar": "policy",
-      "summary": "Bank of England rate-setter Megan Greene said UK pay growth has stopped cooling at a level too high for 2% inflation, and the Bank should act early against it.",
-      "beats": {
-        "was": "Megan Greene sits on the Bank of England's nine-member rate committee and has long been one of its firmest voices for keeping rates high.",
-        "happened": "In a speech a day before UK inflation figures, she said pay growth has stalled above what fits a 2% inflation target and the risk of higher prices feeding into wages is bigger than the Bank thought.",
-        "means": "It backs the case for a hike at the Nov 5 meeting, which markets already price almost fully. It's one known hawk repeating her view, so it adds weight rather than news.",
-        "fx": "Sticky pay \u2192 more pressure to hike \u2192 UK yields stay high \u2192 support for the pound. The lens: do other committee members say the same?"
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A rate-setter backing early action; a Nov 5 hike was already near fully priced."
-        }
-      ],
-      "watch": "Wednesday's UK consumer prices: a soft figure would weaken her case."
-    },
-    {
-      "id": "fxstreet-ust-yields-retreat-20261020",
-      "ts": "2026-10-20T16:49:08Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/us-treasury-yields-retreat-as-iran-deal-hopes-pull-wti-lower-202610201649",
-      "image": "https://editorial.fxsstatic.com/images/i/DXY-neutral-object-1_Medium.png",
-      "headline": "US Treasury yields retreat as Iran deal hopes pull WTI lower",
-      "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
-      "pillar": "policy",
-      "summary": "Long-term US yields edged down on deal hopes while two-year yields held flat, so markets still expect the Fed to hike in December.",
-      "beats": {
-        "was": "US government bond yields, which set how much dollar assets pay.",
-        "happened": "The 10-year yield slipped about 2bp to near 5.12% and the 2-year held near 4.79%. WTI eased below $98 and the dollar index lost about 0.3%.",
-        "means": "The dip is small and only at the long end. Short-term yields, which track the Fed, didn't move, so the case for a December hike is intact.",
-        "fx": "Small dip in long yields \u2192 slight loss of dollar support; flat 2-year \u2192 Fed outlook unchanged. The lens: does the 2-year start to fall too?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Long yields eased, but Fed pricing didn't budge."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Lower yields ease the main weight on gold."
-        }
-      ],
-      "watch": "Thursday's jobless claims and Friday's flash PMIs; the Fed meets Oct 27-28."
-    },
-    {
-      "id": "fxstreet-dxy-iran-report-denial-20261020",
-      "ts": "2026-10-20T15:25:23Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/dollar-index-drops-on-iran-deal-report-steadies-on-denial-202610201525",
-      "image": "https://editorial.fxsstatic.com/images/i/DXY-neutral-object_Medium.png",
-      "headline": "Dollar Index drops on Iran deal report, steadies on denial",
-      "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
-      "pillar": "risk",
-      "summary": "The dollar hit its lowest since Oct 1 on the US-Iran report, then won some back after a diplomat said a deal wasn't close.",
-      "beats": {
-        "was": "The dollar's reaction to reports that both sides had backed a Qatar-Pakistan plan.",
-        "happened": "The dollar index fell to just above 101.5, then bounced near 101.7 on the denial. Weak housing data added to the softness.",
-        "means": "The dollar has given back about a third of its rise since early September. Economists still all expect a Fed hike in December, which keeps a floor under it.",
-        "fx": "Peace hopes \u2192 cheaper oil \u2192 lower yields and less haven demand \u2192 dollar softer. The lens: is the US-Iran plan real?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Three-week low on the report, partly undone by the denial."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rose as oil fell, the mirror of the dollar's drop."
-        }
-      ],
-      "watch": "Any official confirmation; Thursday's jobless claims and Friday's flash PMIs."
-    },
-    {
-      "id": "fxstreet-gbp-1340-jobs-iran-20261020",
-      "ts": "2026-10-20T15:17:22Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/british-pound-surges-to-13400-as-uk-jobs-beat-iran-deal-hopes-grow-202610201517",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-97_Medium.png",
-      "headline": "British Pound surges to 1.3400 as UK jobs beat, Iran deal hopes grow",
-      "story": "boe-nov",
-      "story_title": "BoE: the November decision",
-      "pillar": "policy",
-      "summary": "The pound gained about 0.7% to near 1.34 as a strong jobs report met a softer dollar on US-Iran hopes.",
-      "beats": {
-        "was": "Sterling's move after the UK jobs report and the US-Iran reports.",
-        "happened": "The UK added about 102,000 jobs in three months, well above forecasts, and unemployment fell. Markets now see about a 93% chance of a November BoE hike.",
-        "means": "Two forces lined up at once: a firmer case for UK rates and a weaker dollar. The pound sits right under a cluster of resistance near 1.341.",
-        "fx": "Strong jobs \u2192 BoE hike nearly certain \u2192 higher UK yields \u2192 pound up; softer dollar adds to it. The lens: does CPI confirm?"
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Up about 0.7% to five-week highs, building on the jobs beat."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Softer on US-Iran hopes and weak housing data."
-        }
-      ],
-      "watch": "Wednesday's UK CPI; a denial of the US-Iran plan would help the dollar back."
-    },
-    {
-      "id": "businesstoday-us-iran-proposal-terms-20261020",
-      "ts": "2026-10-20T15:12:04Z",
-      "source": "Business Today",
-      "url": "https://www.businesstoday.in/world/story/us-iran-breakthrough-this-week-6-billion-frozen-funds-secret-nuclear-inspection-in-new-peace-proposal-562651-2026-10-20",
-      "image": "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202610/6ad7849262541-6-billion-iranian-funds--secret-nuclear-inspections-inside-new-us-iran-compromise-proposal-20111384-16x9.png",
-      "headline": "US Iran breakthrough this week? $6 billion frozen funds, secret nuclear inspection in new peace proposal",
-      "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
-      "pillar": "risk",
-      "summary": "What the reported plan contains: Iran would get the interest, not the principal, on $6 billion frozen in Qatar, and would allow a quiet UN nuclear inspection. Neither government has confirmed it.",
-      "beats": {
-        "was": "The terms of the Qatar-Pakistan proposal, carried to Tehran by Pakistan's army chief.",
-        "happened": "A Qatari-owned paper, citing unnamed sources, said the US agreed and Iran responded well. Iranian sources later said reports of a near deal were wrong, while saying talks go on.",
-        "means": "It is a small first step on money and inspections, not a peace deal. It matters because it would reopen talks after weeks of escalation.",
-        "fx": "Real talks \u2192 lower odds of Gulf supply cuts \u2192 less demand for safe havens and less oil premium. The lens: do both sides confirm?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "An unconfirmed opening for talks, already partly denied."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Talks hope eases the need for shelter."
-        }
-      ],
-      "watch": "Official word from Washington or Tehran; a new tanker or Saudi attack would undercut it."
-    },
-    {
-      "id": "fxstreet-wti-slides-us-iran-plan-20261020",
-      "ts": "2026-10-20T15:01:07Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/wti-oil-plunges-as-us-iran-compromise-proposal-raises-hopes-of-de-escalation-202610201501",
-      "image": "https://editorial.fxsstatic.com/images/i/Commodities_Oil-1_Medium.jpg",
-      "headline": "WTI Oil slides as US-Iran compromise plan eases Middle East risks",
-      "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
-      "pillar": "risk",
-      "summary": "US crude gave back its surge, falling to about $95.70 after briefly topping $100, on a report that Washington and Tehran had tentatively backed a mediated plan. Nothing is officially confirmed.",
-      "beats": {
-        "was": "A report of a Pakistan- and Qatar-brokered plan to get the US and Iran talking again.",
-        "happened": "Israeli TV said the US approved it and Iran gave early consent. WTI swung from above $100 to near $95.70, down about 2.4% on the day.",
-        "means": "Oil had been pricing a long squeeze on Gulf supply. Any path to talks shrinks that war premium fast, even before anything is signed.",
-        "fx": "Talks hope \u2192 less war premium in oil \u2192 lower inflation fears \u2192 softer yields \u2192 oil sellers' currencies lose a tailwind. The lens: is the plan confirmed, or just a report?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Talk of a deal knocked out much of the day's surge."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Cheaper oil trims the loonie's main support."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil pulls US yields and hike bets back."
-        }
-      ],
-      "watch": "An official denial or a new attack on ships would rebuild the premium; a confirmed meeting would deepen the drop."
-    },
-    {
-      "id": "fxstreet-euro-climbs-oil-tumbles-20261020",
-      "ts": "2026-10-20T14:56:19Z",
-      "source": "FXStreet",
-      "url": "https://fxstreet.com/news/euro-climbs-as-oil-prices-tumble-on-us-iran-negotiation-hopes-202610201456",
-      "image": "https://editorial.fxsstatic.com/images/i/EURUSD-bullish-chart_Medium.png",
-      "headline": "Euro climbs as Oil prices tumble on US-Iran negotiation hopes",
-      "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
-      "pillar": "risk",
-      "summary": "The dollar index slipped to its lowest since Oct 1 as oil and US 10-year yields fell on US-Iran talks hope. EUR/USD rose to about 1.125.",
-      "beats": {
-        "was": "The euro-dollar rate during the US session.",
-        "happened": "EUR/USD rose about 0.35% to near 1.125. The dollar index fell to about 101.55, off last week's 18-month high near 103, and the US 10-year yield dropped about 6 basis points to around 5.08%.",
-        "means": "The dollar's recent strength rode on oil-driven yields. When oil eases, that support fades, and Europe, a big oil importer, gets some relief.",
-        "fx": "Oil down \u2192 US yields down \u2192 dollar's yield edge narrows \u2192 dollar slips, euro gains. The lens: does oil keep falling?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Dollar index fell to a near three-week low as yields dropped."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Cheaper oil eases Europe's import bill and lifts the euro."
-        }
-      ],
-      "watch": "Houthi strikes and Hormuz ship attacks are still live; a fresh hit would send oil and the dollar back up."
-    },
-    {
-      "id": "forbes-yahoo-wti-smashes-100-20261020",
-      "ts": "2026-10-20T14:41:00Z",
-      "source": "Forbes via Yahoo Finance",
-      "url": "https://finance.yahoo.com/energy/articles/oil-futures-extend-gains-wti-144124566.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/cd7dd056d8b01f3154ecb72719d5e69fa67d99491360810e80d0837a6bd2b797/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fforbes_contributor_845%2F1a2ae7bfa9721451425428a9dfc20ed1.jpg",
-      "headline": "Oil Futures Extend Gains As WTI Contract Smashes $100 Ceiling Again",
-      "story": "hormuz",
-      "story_title": "Hormuz: mines, tanker hits and blockade threats",
-      "pillar": "tot",
-      "summary": "Before the talks report, oil hit its highest since May. Tanker crossings through Hormuz were about 14 a day, down from 50 before this week and 100+ before the war.",
-      "beats": {
-        "was": "Morning oil prices and how much is getting through Hormuz.",
-        "happened": "WTI broke $100 again and Brent touched about $111.8 in London trade. Ship-tracker Kpler counted about 14 tanker crossings on Sunday, versus 50 earlier.",
-        "means": "The strait is running at a fraction of normal, so supply is tight in fact, not just in fear. That is why prices jump on each new attack.",
-        "fx": "Fewer tankers \u2192 less supply \u2192 higher oil \u2192 oil exporters' currencies gain, importers' lose. The lens: how many ships get through each day?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Hormuz traffic is a fraction of normal."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "High oil supports Canada's export income."
-        }
-      ],
-      "watch": "A rise in daily crossings would ease the squeeze; Deutsche Bank flags higher odds of US escalation after the midterms."
-    },
-    {
-      "id": "aljazeera-munir-tehran-20261020",
-      "ts": "2026-10-20T14:39:50Z",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/10/20/pakistan-army-chief-in-tehran-can-diplomacy-prevent-new-us-iran-fighting",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/05/afp_6a11f11148bb-1779560721.jpg?resize=1920%2C1440",
-      "headline": "Pakistan army chief in Tehran: Can diplomacy prevent new US-Iran fighting?",
-      "story": "us-iran-talks",
-      "story_title": "US-Iran: mediation and the oil swing",
-      "pillar": "risk",
-      "summary": "Pakistan's army chief Asim Munir flew to Tehran to keep US-Iran talks alive, while US Defense Secretary Pete Hegseth met Israel's leader amid talk of new strikes.",
-      "beats": {
-        "was": "Pakistan brokered the April 8 US-Iran ceasefire. A June deal to reopen the Strait of Hormuz and lift the US naval blockade lapsed in August, and the strait is still shut.",
-        "happened": "Field Marshal Asim Munir arrived in Tehran on his fifth visit since the ceasefire. Talks are indirect, with Qatar passing proposals. US Defense Secretary Pete Hegseth met Israeli Prime Minister Benjamin Netanyahu, reportedly about resuming major strikes.",
-        "means": "Diplomacy is busy but nothing is agreed, and the threat of new fighting hasn't gone. President Trump has said the US won't strike before the Nov 3 midterms.",
-        "fx": "Talks progress \u2192 Hormuz reopening hopes \u2192 lower oil \u2192 relief for oil importers (euro, yen); talks fail \u2192 new fighting \u2192 oil up, safe havens up. The lens: does mediation turn into a signed step?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Mediation keeps a reopening possible, but strike talk keeps supply risk alive."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Shelter demand rises or falls with the chance of renewed fighting."
-        }
-      ],
-      "watch": "Any signed step on Hormuz or the blockade; signs the US or Israel is preparing new strikes."
-    },
-    {
-      "id": "usagold-gold-4124-20261020",
-      "ts": "2026-10-20T13:51:20Z",
-      "source": "USAGOLD",
-      "url": "https://www.usagold.com/daily-precious-metals-market-report-october-20-2026/",
-      "image": "https://www.usagold.com/wp-content/uploads/2026/08/usagold-og-image.png",
-      "headline": "Physical Gold Slips To $4,124 As Oil-Driven Yields Revive Fed Hike Bets; Silver Firms",
-      "story": "gold-week",
-      "story_title": "Gold: oil, yields and the Fed",
-      "pillar": "policy",
-      "summary": "Gold fell for a third day to about $4,124 as oil pushed US yields toward 5.14% and markets leaned harder into a December Fed hike.",
-      "beats": {
-        "was": "The daily gold price and what moved it.",
-        "happened": "Spot gold was down about 0.4% to near $4,124, a third straight loss, while silver edged up.",
-        "means": "Higher oil means stickier inflation, so the Fed may have to hike again. That lifts yields, and gold pays no interest, so holding it gets costlier.",
-        "fx": "Dearer oil \u2192 Fed hike odds up \u2192 higher US yields \u2192 cash and bonds pay more than gold \u2192 gold slips. The lens: where are US yields heading?"
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Third daily loss as yields rise on oil."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "December hike bets firming gives the dollar a yield edge."
-        }
-      ],
-      "watch": "A pullback in oil or yields would lift gold; a confirmed supply loss could revive haven buying."
-    },
-    {
-      "id": "dawn-uk-typhoons-saudi-20261020",
-      "ts": "2026-10-20T11:49:36Z",
-      "source": "Dawn",
-      "url": "https://www.dawn.com/news/2038537/uk-to-deploy-fighter-jets-to-help-protect-saudi-arabia-from-houthi-attacks",
-      "image": "https://i.dawn.com/large/2022/02/61faa1b79fb25.jpg",
-      "headline": "UK to deploy fighter jets to help protect Saudi Arabia from Houthi attacks",
-      "story": "saudi-houthi",
-      "story_title": "Saudi\u2013Houthi fighting and the Gulf supply risk",
-      "pillar": "risk",
-      "summary": "Britain is sending Typhoon jets to guard Saudi cities and energy sites, for defence only. It shows the Houthi campaign is now serious enough to pull in outside air forces.",
-      "beats": {
-        "was": "The UK said it will send fighter jets, a transport plane and advisers to help Saudi Arabia shoot down Houthi attacks.",
-        "happened": "The jets will fly defensive patrols over cities and infrastructure, with no strikes on the Houthis. Riyadh's airport has reportedly been hit about 20 times this month.",
-        "means": "More air defence could cut the damage to Saudi oil sites over time, but it also confirms the threat is large and ongoing rather than fading.",
-        "fx": "A wider Western role \u2192 the conflict looks longer \u2192 the oil risk premium stays \u2192 support for oil and the loonie, a mild haven bid for the franc. The lens: is Saudi oil getting out safely?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Confirms a lasting threat to Saudi supply, even if defence improves."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A widening conflict keeps some demand for safe places."
-        }
-      ],
-      "watch": "Fewer successful hits on Saudi sites once the jets arrive would ease the oil premium."
-    },
-    {
       "id": "fxstreet-mufg-cad-hike-bets-20261020",
       "ts": "2026-10-20T11:12:23Z",
       "source": "FXStreet",
@@ -1204,45 +1279,6 @@
       "watch": "Friday's flash PMIs: if they also slide, the growth worry becomes harder for the euro to ignore."
     },
     {
-      "id": "brecorder-aud-nzd-firm-20261020",
-      "ts": "2026-10-20T07:07:00Z",
-      "source": "Business Recorder",
-      "url": "https://www.brecorder.com/news/40445102/australia-nz-dollars-firm-as-french-fallout-pressures-euro",
-      "image": "https://i.brecorder.com/large/2026/04/24110805ed1edfc.webp",
-      "headline": "Australia, NZ dollars firm as French fallout pressures euro",
-      "story": "rbnz-oct",
-      "story_title": "RBNZ: the Oct 28 decision",
-      "pillar": "policy",
-      "summary": "The Aussie and kiwi held gains, helped by euro weakness from France and strong hike bets at home: about 89% for an RBNZ hike on Oct 28.",
-      "beats": {
-        "was": "A regional currency wrap for the Australian and New Zealand dollars.",
-        "happened": "The Aussie sat near 0.698 and the kiwi near 0.5665. Markets price about an 89% chance the RBNZ hikes to 3.0% next week, and roughly 56% for an RBA hike by December.",
-        "means": "Both central banks look set to keep tightening, which supports their currencies. France's trouble also sends money away from the euro.",
-        "fx": "Hike bets at home \u2192 higher local yields \u2192 money into AUD and NZD \u2192 both firm, most clearly against the euro. The lens: does Australia's Q3 inflation keep the RBA on track?"
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "An Oct 28 RBNZ hike is close to fully priced."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Holding near 0.70 with December RBA hike odds above half."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "French political strain weighs on the euro against the antipodeans."
-        }
-      ],
-      "watch": "RBA deputy Hauser on Wednesday and Australia's Q3 CPI on Oct 28."
-    },
-    {
       "id": "investinglive-boj-hold-forecast-20261020",
       "ts": "2026-10-20T06:29:56Z",
       "source": "investingLive (Reuters report)",
@@ -1270,33 +1306,6 @@
       "watch": "Friday's Japan CPI; a hot print would lift December odds, a soft one would push the yen back toward its lows."
     },
     {
-      "id": "fxstreet-aud-eyes-070-20261019",
-      "ts": "2026-10-19T22:58:56Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/australian-dollar-eyes-070-as-china-gdp-surprise-powers-rally-202610192258",
-      "image": "https://editorial.fxsstatic.com/images/i/AUDUSD-bullish-animal_Medium.png",
-      "headline": "Australian Dollar eyes 0.70 as China GDP surprise powers rally",
-      "story": "china-q3",
-      "story_title": "China Q3: growth beats the 4.4% call",
-      "pillar": "growth",
-      "summary": "The Aussie rose more than 0.5% to about 0.698, a second day of gains, carried by China's growth beat and a better risk mood, even as the dollar index edged up.",
-      "beats": {
-        "was": "China, Australia's biggest customer, posted Q3 growth of 4.5%, above forecast, with retail sales also beating.",
-        "happened": "AUD/USD climbed toward 0.6980 while the dollar index rose about 0.2%, so the move was the Aussie's own strength. Markets price no Fed hike in October but about 91% odds of one in December.",
-        "means": "Stronger Chinese demand means more orders for Australian iron ore and energy, and a calmer risk mood helps a growth-linked currency. The Aussie still sits below its main moving averages, so 0.70 is a test, not a given.",
-        "fx": "China growing faster \u2192 more demand for Australian exports \u2192 better outlook \u2192 Aussie up. The lens: is China's pickup lasting?"
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "China's growth beat and better risk mood pushed it toward 0.70."
-        }
-      ],
-      "watch": "China's loan-rate fixing (a hold is expected) and Australia's flash PMIs on Oct 22; a risk-off turn would stall the move."
-    },
-    {
       "id": "cmt-bloomberg-boc-hike-bets-20261019",
       "ts": "2026-10-19T20:29:36Z",
       "source": "Bloomberg (via Canadian Mortgage Trends)",
@@ -1322,51 +1331,6 @@
         }
       ],
       "watch": "A Bloomberg survey consensus still points to a hold; any BoC signal before the Oct 28 quiet period, or a sharp oil drop, could swing the odds back."
-    },
-    {
-      "id": "investinglive-oil-reverses-us-houthi-20261019",
-      "ts": "2026-10-19T17:25:01Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/commodities/oil-reverses-course-higher-after-us-and-houthi-attacks/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/2026-10-19_13-09-51-featured-1792429803.jpg?width=960&format=webp",
-      "headline": "Oil reverses course higher after US and Houthi attacks",
-      "story": "hormuz",
-      "story_title": "Hormuz: reopening offer vs ship attacks",
-      "pillar": "risk",
-      "summary": "Oil wiped out the morning's Russia-waiver drop and turned higher after Iran's navy said the US hit one of its bases, the first such strike in seven weeks, and the Houthis claimed a string of attacks on Saudi oil sites.",
-      "beats": {
-        "was": "Crude had been sliding on Monday after Washington eased sanctions on Russian oil, and deal talk between the US and Iran was building.",
-        "happened": "Iran's navy said two small US projectiles hit the Konarak naval base, wounding two soldiers; the US hasn't confirmed it. The Houthis claimed six attacks on Saudi Arabia in two days, including an Aramco site at Yanbu and the Shaybah field. WTI swung from about $99 to above $103 and Brent back over $110.",
-        "means": "The strike is small, but it breaks a seven-week pause and cuts against the White House line of no attacks before the midterms. Hits on Saudi sites matter because Yanbu is one of the routes that lets Gulf oil avoid Hormuz. The market went back to pricing a supply risk, not a deal.",
-        "fx": "Fresh attacks \u2192 deal hopes fade \u2192 oil bid again \u2192 exporters like Canada gain, importers like Japan and the euro area pay more, and havens keep a floor. The lens: is the US\u2013Iran track moving toward a deal or back toward fighting?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A US strike and Houthi hits on Saudi oil sites flipped the day from a loss to a gain."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil helps Canada's main export."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Renewed fighting keeps some haven demand under the franc."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so a pricier barrel weighs on its trade bill."
-        }
-      ],
-      "watch": "Whether Iran answers the strike, and whether Washington confirms it; real progress in the Qatar-brokered talks would pull oil back down."
     }
   ]
 }
