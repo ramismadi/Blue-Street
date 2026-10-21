@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-21T18:48:33Z",
+  "updated": "2026-10-21T22:52:29Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "mixed",
-      "text": "The dollar index is holding near a three-week low around 101.7 because markets expect the Fed to wait until December to raise rates; it meets on October 27–28. Costly oil keeps that hike in view, which stops the dollar from falling much further.",
-      "ts": "2026-10-21T18:48:33Z"
+      "text": "The dollar index is holding near a three-week low around 101.7 because markets expect the Fed to wait until December to raise rates; it meets on October 27–28. A US 20-year bond sale drew softer foreign demand but barely moved yields, and costly oil keeps the hike in view.",
+      "ts": "2026-10-21T22:52:29Z"
     },
     "EUR": {
       "lean": "bearish",
@@ -19,13 +19,13 @@
     },
     "JPY": {
       "lean": "mixed",
-      "text": "Bank of Japan Deputy Governor Ryozo Himino said inflation is near target, backing a hike most expect in December, which helps the yen over time. For now, oil near $110 and a wider trade deficit keep it weak near 158 per dollar.",
-      "ts": "2026-10-21T10:48:18Z"
+      "text": "Bank of Japan officials say inflation is near target, and a former senior official expects a hike in December and roughly every three months after, which helps the yen over time. For now, oil near $110 and a wider trade deficit keep it weak near 158 per dollar.",
+      "ts": "2026-10-21T22:52:29Z"
     },
     "CHF": {
       "lean": "bullish",
-      "text": "Stalled US-Iran peace efforts, drone alarms over Saudi Arabia and France's debt worries all keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
-      "ts": "2026-10-21T14:46:42Z"
+      "text": "Stalled US-Iran peace efforts, Israeli talk of toppling Iran's government, drone alarms over Saudi Arabia and France's debt worries all keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
+      "ts": "2026-10-21T22:52:29Z"
     },
     "CAD": {
       "lean": "bullish",
@@ -34,13 +34,13 @@
     },
     "AUD": {
       "lean": "bullish",
-      "text": "The Aussie reached a one-month high above 70 US cents as Reserve Bank of Australia officials warned inflation may run hotter, keeping a November 3 hike possible. Faster-than-expected growth in China, its biggest customer, adds support.",
-      "ts": "2026-10-21T10:48:18Z"
+      "text": "The Aussie is near a one-month high above 70 US cents after Reserve Bank of Australia officials warned inflation may run hotter and Goldman Sachs switched to expecting a hike on November 3. Australia's inflation figures on October 28 will decide it.",
+      "ts": "2026-10-21T22:52:29Z"
     },
     "NZD": {
       "lean": "mixed",
-      "text": "Markets give about 80% odds that the Reserve Bank of New Zealand hikes on October 28. The kiwi paused before the quarterly inflation figure, due within a day and expected at 3.8%, which will firm up or shake that bet.",
-      "ts": "2026-10-21T10:48:18Z"
+      "text": "New Zealand's inflation slowed to 3.7% in the third quarter, a little below forecasts and the central bank's own 3.9% projection. A rate hike on October 28 still looks likely, but the softer figure trims that bet and pulled the kiwi back just under 57 US cents.",
+      "ts": "2026-10-21T22:52:29Z"
     },
     "XAU": {
       "lean": "bearish",
@@ -49,11 +49,38 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Oil is still near five-month highs, held up by worsening Iranian attacks on ships near Hormuz and stalled US-Iran peace talks. It slipped back on Wednesday afternoon, with US crude near $96, after the US let some sanctioned cargo be delivered and Russia agreed in principle to new Ukraine peace talks.",
-      "ts": "2026-10-21T18:48:33Z"
+      "text": "Oil stays near five-month highs, with Brent around $109, as Iran keeps Hormuz largely shut and Israel's prime minister said he has ordered efforts to topple Iran's government. US crude eased for a second day after Washington moved to release fuel reserves and let some sanctioned cargo be delivered.",
+      "ts": "2026-10-21T22:52:29Z"
     }
   },
   "items": [
+    {
+      "id": "fxstreet-nz-cpi-q3-miss-20261021",
+      "ts": "2026-10-21T21:52:11Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/new-zealands-cpi-inflation-eases-to-37-yoy-in-q3-vs-38-expected-202610212152",
+      "image": "https://editorial.fxsstatic.com/images/i/nzd-usd-001_Medium.jpg",
+      "headline": "New Zealand's CPI inflation eases to 3.7% YoY in Q3, vs 3.8% expected",
+      "story": "rbnz-oct",
+      "story_title": "RBNZ: the October 28 decision",
+      "pillar": "inflation",
+      "summary": "New Zealand's inflation slowed to 3.7% in the third quarter, a little below forecasts, which takes some heat out of the bet on a rate hike next week.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand had forecast inflation of 3.9% and markets gave roughly 80% odds that it raises rates on October 28. The kiwi had climbed for five days on that bet.",
+        "happened": "Prices rose 0.7% over the quarter and 3.7% from a year earlier, down from 4.1% and below the 3.8% expected. Cheaper petrol and diesel did most of the pulling down; prices of local services barely slowed.",
+        "means": "A small miss, not a change of story: inflation is still well above the bank's 1–3% target, so a hike stays likely, but the case is less urgent and later hikes look less certain.",
+        "fx": "Softer inflation → slightly lower odds of RBNZ hikes → kiwi eases. The lens: it slipped back just under 57 US cents, giving up only a small part of its recent climb."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Inflation came in under both forecasts and the central bank's own projection, trimming hike bets."
+        }
+      ],
+      "watch": "The Reserve Bank of New Zealand's decision on October 28."
+    },
     {
       "id": "fxstreet-gold-rebounds-4130-20261021",
       "ts": "2026-10-21T18:01:35Z",
@@ -127,6 +154,33 @@
       "watch": "Whether the US widens the licence, or new sanctions follow that block more Iranian oil."
     },
     {
+      "id": "investinglive-us-20y-auction-20261021",
+      "ts": "2026-10-21T17:03:19Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/us-treasury-sells-13-billion-of-20-year-bonds-at-a-high-yield-of-5-469/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Bond%20Auction-featured-1792602020-featured-1792602481.jpg?width=960&format=webp",
+      "headline": "US treasury sells $13 billion of 20 year bonds at a high yield of 5.469%",
+      "story": "us-bonds",
+      "story_title": "US government borrowing: who's buying the bonds",
+      "pillar": "fiscal",
+      "summary": "The US government sold $13 billion of 20-year bonds at about 5.47%, slightly above where they traded just before, with foreign buyers taking a smaller share than usual.",
+      "beats": {
+        "was": "The US Treasury sells long-term bonds at regular auctions to fund the government. How eagerly investors buy shows how much they are willing to lend at current rates; weak demand pushes borrowing costs up.",
+        "happened": "Wednesday's sale cleared at 5.469%, a little above the pre-sale level and above last month's 5.42%. Overall demand was above average, but the share taken by foreign and other outside investors was well below normal, with US buyers filling the gap.",
+        "means": "A middling result: the government had no trouble borrowing, but softer interest from overseas buyers is a quiet warning sign for long-term US borrowing costs. Yields barely moved afterwards.",
+        "fx": "Mixed demand → no clear move in US yields → little effect on the dollar. The lens: watch whether foreign demand stays soft at the next long-bond sales."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Adequate demand overall but a smaller foreign share; yields barely reacted."
+        }
+      ],
+      "watch": "Next week's 2-, 5- and 7-year US Treasury note sales and the Fed's October 27–28 meeting."
+    },
+    {
       "id": "investinglive-eia-crude-draw-20261021",
       "ts": "2026-10-21T14:33:27Z",
       "source": "investingLive",
@@ -191,6 +245,39 @@
         }
       ],
       "watch": "Any confirmed hit on Saudi oil sites or exports, and whether the Houthis' denial holds."
+    },
+    {
+      "id": "jpost-netanyahu-topple-iran-regime-20261021",
+      "date": "2026-10-21",
+      "source": "The Jerusalem Post",
+      "url": "https://www.jpost.com/israel-news/defense-news/article-912445",
+      "image": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/742971",
+      "headline": "Benjamin Netanyahu says IDF, Mossad ordered to overthrow Iranian regime over nukes",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
+      "pillar": "risk",
+      "summary": "Israeli Prime Minister Benjamin Netanyahu said he has told Israel's army and spy agency to work to bring down Iran's government, saying Iran is again trying to build a nuclear bomb.",
+      "beats": {
+        "was": "After this year's war, Iran keeps the Strait of Hormuz, the route for about a fifth of the world's oil, largely shut while indirect US-Iran talks stall. Reports say a renewed US-Israeli bombing campaign was shelved before the US midterm elections.",
+        "happened": "Speaking at an army officers' graduation on Wednesday, Netanyahu said his instruction to the military and the Mossad is to overthrow Iran's government. Defence Minister Israel Katz warned that Iran would 'burn' if it attacks Israel.",
+        "means": "It raises the risk that fighting restarts and makes a deal to reopen Hormuz harder. It is a statement of intent during an Israeli election campaign, not an announced operation, and oil barely moved.",
+        "fx": "Higher risk of renewed war → oil supply worries stay → support for oil and the franc. The lens: markets treat it as rhetoric unless strikes follow."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Adds to the risk of renewed conflict around Hormuz; no immediate supply change."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising war risk tends to lift demand for the franc as a safe place."
+        }
+      ],
+      "watch": "Any sign of renewed US or Israeli strikes on Iran, and Iran's response on Hormuz."
     },
     {
       "id": "rigzone-us-diesel-reserve-20261021",
@@ -506,6 +593,33 @@
         }
       ],
       "watch": "The October 27 budget vote, this weekend's protests, and Moody's review of France's credit rating on Friday."
+    },
+    {
+      "id": "mezha-bloomberg-boj-maeda-quarterly-20261021",
+      "ts": "2026-10-21T09:46:00Z",
+      "source": "Mezha (from Bloomberg)",
+      "url": "https://mezha.net/eng/news/mezha-c2cbf67dfc43f5af13a63935_boj_likely_to",
+      "image": "https://mezha.net/eng/wp-content/mezha-og-r205/kd_image_generate/eng/3733505-7456c1592274.jpg",
+      "headline": "BOJ likely to raise rates every three months, former official says",
+      "story": "boj-path",
+      "story_title": "BoJ: the road to the next hike",
+      "pillar": "policy",
+      "summary": "Eiji Maeda, a former Bank of Japan executive who ran its policy work, expects the bank to keep raising rates about once every three months, starting in December.",
+      "beats": {
+        "was": "The Bank of Japan has been lifting its rates slowly from near zero. It is expected to hold at its October 29–30 meeting, with most bets on a hike in December.",
+        "happened": "In a Bloomberg interview, Maeda said he expects the next hike in December and another in March or April, calling a roughly three-month pace appropriate to keep inflation near target. Markets price about an 80% chance of a hike by December.",
+        "means": "A steady path of hikes would slowly narrow the gap between Japanese and US rates, which is what has kept the yen weak. It is a former official's view, not a bank decision.",
+        "fx": "Firmer expectations of regular BoJ hikes → a little support for the yen. The lens: the yen is still weak near 158 per dollar because oil keeps Japan's import bill high."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Adds weight to a December hike and more after it, though it is an outside view."
+        }
+      ],
+      "watch": "The Bank of Japan's October 29–30 meeting and its updated inflation forecasts."
     },
     {
       "id": "fxstreet-aud-monthly-high-20261021",
@@ -943,33 +1057,6 @@
       "watch": "Fonterra's milk price forecast and NZ third-quarter inflation figures this week."
     },
     {
-      "id": "fxstreet-boe-greene-wages-20261020",
-      "ts": "2026-10-20T17:46:49Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/boes-greene-warns-stalled-wage-disinflation-raises-inflation-risks-202610201746",
-      "image": "https://editorial.fxsstatic.com/images/i/BoE_Medium.png",
-      "headline": "BoE's Greene warns stalled wage disinflation raises inflation risks",
-      "story": "boe-nov",
-      "story_title": "BoE: the November decision",
-      "pillar": "policy",
-      "summary": "Bank of England rate-setter Megan Greene said UK pay growth has stopped cooling at a level too high for 2% inflation, and the Bank should act early against it.",
-      "beats": {
-        "was": "Megan Greene sits on the Bank of England's nine-member rate committee and has long been one of its firmest voices for keeping rates high.",
-        "happened": "In a speech a day before UK inflation figures, she said pay growth has stalled above what fits a 2% inflation target and the risk of higher prices feeding into wages is bigger than the Bank thought.",
-        "means": "It backs the case for a hike at the Nov 5 meeting, which markets already price almost fully. It's one known hawk repeating her view, so it adds weight rather than news.",
-        "fx": "Sticky pay → more pressure to hike → UK yields stay high → support for the pound. The lens: do other committee members say the same?"
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A rate-setter backing early action; a Nov 5 hike was already near fully priced."
-        }
-      ],
-      "watch": "Wednesday's UK consumer prices: a soft figure would weaken her case."
-    },
-    {
       "id": "fxstreet-cad-one-month-high-20261020",
       "ts": "2026-10-20T17:21:20Z",
       "source": "FXStreet",
@@ -1001,39 +1088,6 @@
         }
       ],
       "watch": "The Bank of Canada decision on October 28 and oil prices."
-    },
-    {
-      "id": "fxstreet-gbp-1340-jobs-iran-20261020",
-      "ts": "2026-10-20T15:17:22Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/british-pound-surges-to-13400-as-uk-jobs-beat-iran-deal-hopes-grow-202610201517",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-97_Medium.png",
-      "headline": "British Pound surges to 1.3400 as UK jobs beat, Iran deal hopes grow",
-      "story": "boe-nov",
-      "story_title": "BoE: the November decision",
-      "pillar": "policy",
-      "summary": "The pound gained about 0.7% to near 1.34 as a strong jobs report met a softer dollar on US-Iran hopes.",
-      "beats": {
-        "was": "Sterling's move after the UK jobs report and the US-Iran reports.",
-        "happened": "The UK added about 102,000 jobs in three months, well above forecasts, and unemployment fell. Markets now see about a 93% chance of a November BoE hike.",
-        "means": "Two forces lined up at once: a firmer case for UK rates and a weaker dollar. The pound sits right under a cluster of resistance near 1.341.",
-        "fx": "Strong jobs → BoE hike nearly certain → higher UK yields → pound up; softer dollar adds to it. The lens: does CPI confirm?"
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Up about 0.7% to five-week highs, building on the jobs beat."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Softer on US-Iran hopes and weak housing data."
-        }
-      ],
-      "watch": "Wednesday's UK CPI; a denial of the US-Iran plan would help the dollar back."
     },
     {
       "id": "fxstreet-euro-climbs-oil-tumbles-20261020",
@@ -1069,64 +1123,31 @@
       "watch": "Houthi strikes and Hormuz ship attacks are still live; a fresh hit would send oil and the dollar back up."
     },
     {
-      "id": "fxstreet-bbh-cad-pricing-excessive-20261020",
-      "ts": "2026-10-20T14:38:45Z",
-      "source": "FXStreet (BBH)",
-      "url": "https://www.fxstreet.com/news/canadian-dollar-market-pricing-seen-excessive-despite-hike-bets-bbh-202610201438",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-52_Medium.png",
-      "headline": "Canadian Dollar: market pricing seen excessive despite hike bets (BBH)",
-      "story": "boc-oct",
-      "story_title": "BoC: the October 28 decision",
-      "pillar": "policy",
-      "summary": "A strategist at the bank Brown Brothers Harriman argues markets expect too many Bank of Canada rate rises, which limits how far the Canadian dollar can climb.",
-      "beats": {
-        "was": "Traders have quickly raised their bets on a Bank of Canada rate hike on October 28, to about 78% in swaps from 60%, after Governor Tiff Macklem warned that inflation risks are spreading.",
-        "happened": "Elias Haddad of Brown Brothers Harriman noted that September's headline inflation of 3.1% came mostly from energy, while the bank's preferred core measures eased to about 1.85%, below its 2% target. He judged the roughly one percentage point of hikes priced over the next year as too much.",
-        "means": "The case for a hike rests on oil-driven prices, not broad inflation, and the economy still has slack. If the bank sounds less eager than markets expect, the loonie's rate support could shrink.",
-        "fx": "Core inflation under target + spare capacity in the economy → fewer hikes than priced → caps the loonie's gains. The lens: a hawkish decision on October 28 would prove this wrong."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Hike bets support the loonie, but soft core inflation argues markets have gone too far."
-        }
-      ],
-      "watch": "The Bank of Canada decision and statement on October 28."
-    },
-    {
-      "id": "tradingpedia-chf-recovery-snb-20261020",
+      "id": "gurufocus-goldman-rba-november-20261020",
       "date": "2026-10-20",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/10/20/swiss-franc-recovery-tests-snb-tolerance-against-euro/",
+      "source": "GuruFocus",
+      "url": "https://www.gurufocus.com/news/9133102/goldman-sachs-predicts-rba-rate-hike-amid-deteriorating-inflation-outlook",
       "image": null,
-      "headline": "Swiss Franc Recovery Tests SNB Tolerance Against Euro",
-      "story": "chf-snb",
-      "story_title": "Franc: haven demand vs the SNB",
-      "pillar": "risk",
-      "summary": "The franc climbed to a three-month high against the euro on fears of a European debt crisis, nearing levels where the SNB has threatened to step in.",
+      "headline": "Goldman Sachs Predicts RBA Rate Hike Amid Deteriorating Inflation Outlook",
+      "story": "rba-nov",
+      "story_title": "RBA: the November 3 decision",
+      "pillar": "policy",
+      "summary": "Goldman Sachs now expects the Reserve Bank of Australia to raise its rate to 4.85% on November 3, after a senior RBA official warned inflation looks worse.",
       "beats": {
-        "was": "The franc's comeback against the euro after months of weakness.",
-        "happened": "EUR/CHF fell to a three-month low as money sought shelter from Europe's debt worries and Switzerland's sounder public finances.",
-        "means": "The franc is near the zone where the SNB warned it could sell francs. That threat caps gains unless the euro area's problems get worse.",
-        "fx": "European debt fears → money into a safe, low-debt neighbour → franc up, until the SNB pushes back. The lens: does France's budget fight get worse?"
+        "was": "The Reserve Bank of Australia has already raised rates four times this year. Before this week, most economists expected it to pause in November.",
+        "happened": "Goldman Sachs economists switched to calling a quarter-point hike at the November 3 meeting. They pointed to Deputy Governor Andrew Hauser's remarks, which they called clearly hawkish, and to an inflation outlook that has worsened since the bank's August forecasts.",
+        "means": "A big bank changing its call makes a November hike look like a real possibility rather than an outside chance. The deciding figure is Australia's quarterly inflation report on October 28.",
+        "fx": "More hike talk → higher expected Australian rates → support for the Aussie. The lens: it has already climbed to a one-month high above 70 US cents."
       },
       "impact": [
         {
-          "ccy": "CHF",
+          "ccy": "AUD",
           "dir": "bullish",
           "strength": 1,
-          "why": "Haven demand lifted it, but the SNB's line is close."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Debt worries pushed it to a three-month low on the franc."
+          "why": "A major bank now expects a November hike, adding to the repricing that is already under way."
         }
       ],
-      "watch": "Any SNB intervention or warning; France's Oct 27 budget vote."
+      "watch": "Australia's third-quarter inflation figures on October 28, then the RBA decision on November 3."
     },
     {
       "id": "reuters-euronext-yen-jgb-auction-20261020",
