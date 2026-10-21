@@ -105,7 +105,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   | Colorway | Light | Dark |
   |---|---|---|
   | Blue Street blue & ivory | **blue** | **night** |
-  The side menu has the light/dark switch. The colorway swatches are built
+  The side menu has the light/dark switch, an Apple-style toggle (Rami, 2026-10-21) labelled "Dark mode", brand blue when on (`.sn-mode`, `role="switch"`). The colorway swatches are built
   only when `COLORWAYS` has two or more entries, so with one there is nothing to pick. The choice is
   saved per reader (localStorage `bluestreet-theme`); retired themes (ivory,
   ink, sage, forest, claret, velvet, pearl, onyx, alpine, porcelain, harbor, dusk, …) fall

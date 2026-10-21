@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '92';
+  var ASSET_VERSION = '93';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -695,10 +695,13 @@
     // Look: light/dark + colorway (Rami, 2026-10-19: these live in the menu,
     // which frees the masthead for the session chips on a phone).
     var look = el('div', 'sn-look');
-    var modeB = el('button', 'sn-btn sn-mode');
+    var modeB = el('button', 'sn-btn sn-mode');   // an iOS-style switch, brand blue when on
     modeB.type = 'button';
+    modeB.setAttribute('role', 'switch');
+    modeB.setAttribute('aria-checked', 'false');
     modeB.appendChild(navIcon('M13.5 9.6A5.8 5.8 0 0 1 6.4 2.5a5.8 5.8 0 1 0 7.1 7.1z'));
     modeB.appendChild(el('span', 'sn-label', 'Dark mode'));
+    modeB.appendChild(el('span', 'sn-switch'));
     modeB.addEventListener('click', function () {
       var t = themeById(document.documentElement.getAttribute('data-theme')) || THEMES[0];
       var cw = colorwayOf(t.id);
@@ -797,12 +800,8 @@
     if (!box) return;
     var t = themeById(document.documentElement.getAttribute('data-theme')) || THEMES[0];
     var dark = !!t.dark, cw = colorwayOf(t.id);
-    var ml = box.querySelector('.sn-mode .sn-label');
-    if (ml) ml.textContent = dark ? 'Light mode' : 'Dark mode';
-    var mi = box.querySelector('.sn-mode path');
-    if (mi) mi.setAttribute('d', dark
-      ? 'M8 5a3 3 0 1 0 0 6a3 3 0 1 0 0-6z M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9L13 13M3 13l1.1-1.1M11.9 4.1L13 3'
-      : 'M13.5 9.6A5.8 5.8 0 0 1 6.4 2.5a5.8 5.8 0 1 0 7.1 7.1z');
+    var mb = box.querySelector('.sn-mode');
+    if (mb) mb.setAttribute('aria-checked', dark ? 'true' : 'false');
     Array.prototype.forEach.call(box.querySelectorAll('.sn-swatch'), function (b) {
       var c = colorwayOf(b.getAttribute('data-colorway'));
       var shown = themeById(dark ? c.dark : c.light);
