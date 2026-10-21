@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-10-20",
-  "updated": "2026-10-20T15:30:00-05:00",
+  "as_of": "2026-10-21",
+  "updated": "2026-10-21T01:30:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
   "note": "Tuesday NY-close read, 2026-10-20. Scores: policy = own-bank stance vs counterparty (gap favoring the other side is negative); positioning = contrarian only. UK labor beat (GBP +0.66%), BoC hike 85-87% (CAD +0.42%), GDT firm (NZD +), Dec Fed hike 88-90%. History NOT re-appended — 2026-10-20 snapshot exists.",
   "pairs": {},
@@ -10,11 +10,11 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY ~101.69 (-0.27% Tuesday) — the NY session faded Monday's rebound on AI skepticism (Kospi -3.7%) and a housing soft patch (starts miss, pending home sales -7.3% record low). October FOMC a hold at ~84-85%; December hike 88-90% (CME FedWatch, Oct 20).",
+      "summary": "DXY ~101.79 (+0.09% overnight) — the dollar on its back foot as yields dipped and crude eased. October FOMC a hold at ~84%; December hike ~90% (CME FedWatch, Oct 20-21).",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Oct 27-28 a hold at ~84-85% into the blackout; December hike 88-90% (Oct-20 vintage) — Fed still the highest G10 rate"
+          "note": "Oct 27-28 a hold at ~84% into the blackout; December hike ~90% — Fed still the highest G10 rate"
         },
         "growth": {
           "score": 0,
@@ -26,7 +26,7 @@
         },
         "risk": {
           "score": 0,
-          "note": "AI-doubt wobble bid the dollar early, NY session faded it — no sustained haven bid"
+          "note": "overnight yields dipped and crude eased — dollar on the back foot, no sustained haven bid"
         },
         "tot": {
           "score": 0,
@@ -38,7 +38,7 @@
         },
         "fiscal": {
           "score": 0,
-          "note": "shutdown day 20 (11th failed Senate vote); Graham waiver stands — armed, unfired"
+          "note": "CORRECTION (Oct 21): no US shutdown — CR signed Sept 2, funded through Dec 11; Sept jobs/CPI/PPI/housing all printed on schedule. Graham waiver stands — armed, unfired"
         }
       }
     },
@@ -47,7 +47,7 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD ~1.1232 (+0.2%) — held the French mess in check as the dollar faded: the revenue-section vote moved to Oct 27 (vote Nov 3), OAT-Bund ~146bp, and the current account missed badly (EUR 8.7B vs 29.2B). German PPI +6.7% beat keeps December live.",
+      "summary": "EUR/USD ~1.1226 (-0.05%) — French unrest is now the euro's dominant drag: military for weekend protests, curfews 'where required', OAT-Bund ~146-152bp. ECB Oct 29 a hold at ~97-98%; December the live meeting (84%).",
       "drivers": {
         "policy": {
           "score": -1,
@@ -67,7 +67,7 @@
         },
         "tot": {
           "score": -1,
-          "note": "Brent ~$110.07 (+0.5%, five-month high $111.75 intraday) — the energy importer still pays the crude tax"
+          "note": "Brent ~$110.44 — the energy importer still pays the crude tax"
         },
         "positioning": {
           "score": 0,
@@ -75,7 +75,7 @@
         },
         "fiscal": {
           "score": -1,
-          "note": "revenue vote postponed to Oct 27 (formal vote Nov 3); 2,000+ amendments; OAT-Bund 146bp; Moody's Fri"
+          "note": "revenue vote Oct 27 (formal vote Nov 3); 2,000+ amendments; OAT-Bund 146-152bp; Moody's reviews France Friday"
         }
       }
     },
@@ -84,11 +84,11 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD ~1.339 (+0.66%) — the day's best G10: the labor beat (unemp 4.7% vs 4.9%, wages 3.7%) plus a hawkish Greene locked the Nov 5 hike at 95%. UK CPI Wednesday 1am CT (3.4% fc) is the next hinge.",
+      "summary": "GBP/USD ~1.3373 (-0.13%) — steady into the print: UK Sep CPI hit the wires at 1:00am CT (actual unverified at write; consensus 3.4% y/y, core 2.8%). Nov 5 hike ~95-96% pre-print; the CPI actual decides whether December goes back-to-back.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Nov 5 hike ~95% to 4.00% (swaps/SONIA); Greene: wage disinflation 'stalled above 2%-consistent'"
+          "note": "Nov 5 hike ~95-96% to 4.00% (SONIA/swaps, pre-CPI); Greene: wage disinflation 'stalled above 2%-consistent'"
         },
         "growth": {
           "score": 1,
@@ -96,7 +96,7 @@
         },
         "inflation": {
           "score": 1,
-          "note": "CPI Wed: fc 3.4% vs 3.1% — still ~1.4 points over target; cements November, opens December"
+          "note": "Sep CPI printed 1:00am CT (actual unverified at write; fc 3.4% vs 3.1%, core 2.8% vs 2.6%) — cements November, opens December"
         },
         "risk": {
           "score": 0,
@@ -112,7 +112,7 @@
         },
         "fiscal": {
           "score": 0,
-          "note": "Oct 28 budget ahead; no fiscal development"
+          "note": "Oct 28 Healey budget ahead; no fiscal development"
         }
       }
     },
@@ -121,11 +121,11 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY ~158.04 (+0.29%) — still the laggard: Reuters' four BoJ sources say 'virtually no chance' of an October hike; December ~73%. 20Y JGB auction drew the strongest demand on record. Trade balance tonight 6:50pm CT.",
+      "summary": "USD/JPY ~158.26 (+0.14%) — still the laggard: Sep trade deficit nearly 3x forecast (-¥536.6bn vs -¥181bn; exports +16.7% missed +20.1%). BoJ Oct 29-30 a hold at ~95%+; December ~73-74%.",
       "drivers": {
         "policy": {
           "score": -1,
-          "note": "rate gap still favors USD; Oct 29-30 a hold at ~94%+ — Ueda's lean is December (~73%), not October"
+          "note": "rate gap still favors USD; Oct 29-30 a hold at ~95%+ — Ueda's lean is December (~73-74%), not October"
         },
         "growth": {
           "score": 0,
@@ -141,7 +141,7 @@
         },
         "tot": {
           "score": -1,
-          "note": "Brent ~$110 — the energy importer still pays the crude tax; Gulf flows down to ~8.5m b/d (Kpler)"
+          "note": "Sep trade deficit -¥536.6bn vs -¥181bn fc (exports +16.7% missed +20.1%); mineral-fuel import values +39.4% — the energy tax"
         },
         "positioning": {
           "score": 0,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF ~0.8251 (-0.13%) — quiet again: no Swiss driver, the haven bid never fired (no retaliation, no signed Iran deal), and the franc tracked the broad dollar fade.",
+      "summary": "USD/CHF ~0.8259 (+0.10%) — quiet again: no Swiss driver, the haven bid never fired (no retaliation, no signed Iran deal), and the franc tracked the broad dollar fade.",
       "drivers": {
         "policy": {
           "score": 0,
@@ -174,7 +174,7 @@
         },
         "risk": {
           "score": 1,
-          "note": "haven premium from Friday intact but unearned Tuesday — the bid stays sheathed"
+          "note": "haven premium from Friday intact but unearned overnight — the bid stays sheathed"
         },
         "tot": {
           "score": 0,
@@ -195,11 +195,11 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD ~0.7002 (+0.32%) — through 0.70 on the China-bid undertow and the broad dollar fade. Hauser speaks tonight 5:30pm CT; RBA: Nov ~30%, Dec ~56%. Q3 CPI Oct 28 the pivot.",
+      "summary": "AUD/USD ~0.7017 (+0.21%) — three-week high on Hauser's hawkish follow-through ('materially worse' inflation) and the softer dollar. RBA: Nov ~30%, Dec ~56%; Q3 CPI Oct 28 the pivot.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "RBA hawkish tilt intact — Nov 2-3 ~30%, Dec ~56%; Hauser tonight; Q3 CPI Oct 28 the pivot"
+          "note": "Hauser hawkish follow-through — inflation outlook 'materially worse'; RBA Nov 2-3 ~30%, Dec ~56%; Q3 CPI Oct 28 the pivot"
         },
         "growth": {
           "score": -1,
@@ -232,11 +232,11 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD ~1.405 (-0.42%) — the repricing trade working: Oct-28 hike ~85-87% (the Oct-19 '78% hold-bet' is superseded), Alberta-referendum noise, and crude back over $110. Macklem's Saturday warning did the work.",
+      "summary": "USD/CAD ~1.4062 (+0.08%) — the repricing trade holding: Oct-28 hike 85-89% (LSEG ~85%, CORRA OIS 89%), crude back over $110. Nothing scheduled today.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Oct-28 hike ~85-87% (LSEG ~85%, CORRA OIS 87%) — the most aggressively repricing G10 bank into its meeting"
+          "note": "Oct-28 hike 85-89% (LSEG ~85%, CORRA OIS 89%) — the most aggressively repricing G10 bank into its meeting"
         },
         "growth": {
           "score": -1,
@@ -252,7 +252,7 @@
         },
         "tot": {
           "score": 1,
-          "note": "Brent ~$110.07 (+0.5%, five-month high $111.75); WTI Dec ~$98.9 — geopolitical premium intact"
+          "note": "Brent ~$110.44; WTI ~$98.6-98.9 — geopolitical premium intact"
         },
         "positioning": {
           "score": 0,
@@ -269,11 +269,11 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD ~0.5682 (+0.35%) — firm GDT (WMP +4.4% to $3,760/t) added a terms-of-trade tailwind into Wednesday's Q3 CPI (4:45pm CT, ANZ 3.8% y/y) — the decider for the Oct-28 hike (80-89% to 3.00%).",
+      "summary": "NZD/USD ~0.5677 (-0.09%) — softer into tonight's Q3 CPI (4:45pm CT; 0.8% q/q, 3.8% y/y fc) — the decider for the 80%-priced Oct-28 RBNZ hike to 3.00%.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Oct-28 hike 80-89% priced (to 3.00%) — hiking into a Fed hold is a genuine divergence"
+          "note": "Oct-28 hike ~80% priced (to 3.00%) — hiking into a Fed hold is a genuine divergence; Q3 CPI tonight the decider"
         },
         "growth": {
           "score": 1,
@@ -281,7 +281,7 @@
         },
         "inflation": {
           "score": 0,
-          "note": "food prices flat (0.0%); NZ Q3 CPI Wed 4:45pm CT (ANZ 3.8% y/y) — the settler"
+          "note": "food prices flat (0.0%); NZ Q3 CPI Wed 4:45pm CT (0.8% q/q, 3.8% y/y fc) — the settler"
         },
         "risk": {
           "score": 1,
@@ -484,6 +484,19 @@
         "AUD": 1,
         "CAD": 1,
         "NZD": 3
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "scores": {
+        "USD": 2,
+        "EUR": -3,
+        "GBP": 3,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 1,
+        "NZD": 4
       }
     }
   ]
