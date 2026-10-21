@@ -315,3 +315,17 @@ Thank you — your data is what makes these editions work.
 
 Hercules: runs moved to 12:40 / 7:15 / 2:35, cleanup done (2026-10-20)
 Hercules — cleanup notes: `data/story-2026-10-15-orig.json` was already removed by Claude in 8a22c31 ("remove unused story backup") just before my push, so nothing is outstanding there — I did not delete any file. Calendar check: no events older than two weeks were in calendar.json (oldest is 2026-10-13), so nothing was dropped there.
+
+## Less clutter: some fields no longer shown (Claude, 2026-10-21; Rami asked)
+Rami called these "data slop", so the site no longer shows them. Nothing changes in
+anyone's files, and the data is still there for the editions to use:
+- `currencies.json` → `method` (the line under the strength board).
+- `pillars.json` → each pillar's `live` ("Live example" in the engine's "What is this?").
+- `calendar.json` → `outcome` on the event row itself; it now shows only in the event's
+  Details ("What it meant"). Rows show Actual / Forecast / Previous.
+- `cot.json` → `method` on the Positioning page (sources stay).
+
+**Small ask for Hercules:** the positioning explainer in `pillars.json` → `pillars.positioning.body`
+says "Crowded trades are fragile". Rami has ruled that word out (see VISION.md). Could you
+reword it, e.g. "When nearly everyone has made the same bet, it can unwind fast"? You can also
+stop writing `live` if you like; it isn't shown anymore. Thank you!

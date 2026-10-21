@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '86';
+  var ASSET_VERSION = '87';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -1699,12 +1699,8 @@
       panel.id = id;
       panel.hidden = true;
       panel.appendChild(el('p', null, x.body));
-      if (x.live) {
-        var live = el('div', 'explain-live');
-        live.appendChild(el('span', 'callout-lbl', 'Live example'));
-        live.appendChild(el('p', null, x.live));
-        panel.appendChild(live);
-      }
+      // The "Live example" (pillars.json → live) is no longer shown: today's
+      // read and its Details already carry it (Rami, 2026-10-21).
       c.insertBefore(panel, c.querySelector('.pillar-read'));
       btn.addEventListener('click', function () {
         var open = panel.hidden;
@@ -2169,7 +2165,6 @@
       'Every Friday the CFTC publishes what big traders hold in US futures, as of the Tuesday before. Hedge funds are the fast, trend-following money; real money means slower asset managers.',
       'The dot shows each group’s net position: right of the middle means more of its money is betting the market rises, left means falling. Positioning is context, not a signal, and it runs about three days behind.'
     ].forEach(function (t) { ab.appendChild(el('p', null, t)); });
-    ab.appendChild(el('p', 'meta', 'Method: ' + (d.method || '')));
     ab.appendChild(sourceChips(d.sources || []));
     about.appendChild(ab);
     box.appendChild(about);
@@ -2526,7 +2521,7 @@
     var nm = el('span', 'ev-name', e.title);
     if (e.focus && FOCUS_ON) nm.appendChild(el('span', 'ev-focus', 'Focus'));
     t.appendChild(nm);
-    if (!up && e.outcome) t.appendChild(el('span', 'ev-outcome', e.outcome));
+    // Outcome text lives in Details only ("What it meant"); rows show figures (Rami, 2026-10-21).
     if (up && w) {
       var cd = el('span', 'ev-cd', 'in ' + countdown(w - now));
       cd.setAttribute('data-ts', w.getTime());
@@ -2855,7 +2850,7 @@
     var d = p.y.drivers || {};
     var notes = PILLARS.filter(function (k) { return d[k[0]] && Math.sign(d[k[0]].score) === want; })
       .map(function (k) { return d[k[0]].note; });
-    if (p.gap < 0) return p.y.ccy + ' is ' + (dir === 'bull' ? 'stronger' : 'weaker') + ' on the board (' + signed(p.sy) + ') — this cross fights your view.';
+    if (p.gap < 0) return p.y.ccy + ' is ' + (dir === 'bull' ? 'stronger' : 'weaker') + ' on the board (' + signed(p.sy) + '), so this pair works against your view.';
     if (notes.length) return notes.slice(0, 2).join(' · ');
     return p.y.summary || '';
   }
@@ -2872,7 +2867,6 @@
   function renderFx() {
     if (!fx.data) return;
     setText('#fx-asof', fx.data.as_of || '—');
-    setText('#fx-method', fx.data.method || '');
     var ranked = fxRanked();
     var max = Math.max(4, Math.max.apply(null, ranked.map(function (c) { return Math.abs(fxScore(c)); })));
 
@@ -3047,9 +3041,9 @@
     var tiers = [
       ['edge', 'Strongest edge', 'The other side points the opposite way — both currencies help the trade.',
         function (p) { return p.gap > 0; }],
-      ['flat', 'No edge', 'Tied on the board — works only if your view is right. Ordered by carry.',
+      ['flat', 'No edge', 'Level on the board, so only your view decides it. Pairs that pay you more interest come first.',
         function (p) { return p.gap === 0; }],
-      ['against', 'Fights your view', 'The other side is moving the same way you expect ' + fx.ccy + ' to.',
+      ['against', 'Against your view', 'The other side is moving the same way you expect ' + fx.ccy + ' to.',
         function (p) { return p.gap < 0; }]
     ];
     tiers.forEach(function (t) {
@@ -3095,7 +3089,7 @@
     li.appendChild(top);
     li.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
     var meta = [];
-    if (p.carry != null) meta.push('carry ' + (p.carry >= 0 ? '+' : '−') + Math.abs(p.carry).toFixed(2) + '%' + (p.carry >= 0 ? ' (you earn)' : ' (you pay)'));
+    if (p.carry != null) meta.push('interest ' + (p.carry >= 0 ? '+' : '−') + Math.abs(p.carry).toFixed(2) + '%' + (p.carry >= 0 ? ' (you earn)' : ' (you pay)'));
     if (p.events.length) {
       var e0 = p.events[0], w0 = evWhen(e0);
       meta.push(p.events.length + ' high-impact in 14d — next ' + e0.ccy + ' ' + e0.title +
