@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T22:50:00Z",
+  "updated": "2026-10-21T00:50:30Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "mixed",
-      "text": "Strong bond demand eased debt fears and the BoJ may raise its inflation forecast next week. But costly oil, open spending bills and the wide gap with US rates still weigh on the yen.",
-      "ts": "2026-10-20T18:47:05Z"
+      "text": "Strong bond demand eased debt fears and the BoJ may raise its inflation forecast at its Oct 29\u201330 meeting. But costly oil, September's wider-than-expected trade deficit and the wide gap with US rates still weigh on the yen.",
+      "ts": "2026-10-21T00:50:30Z"
     },
     "CHF": {
       "lean": "mixed",
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "bullish",
-      "text": "The Aussie led the majors toward 0.70 on China's growth beat, the RBA's Kent talking up a higher neutral rate, and a better risk mood. Its own strength did the work, since the dollar edged up too.",
-      "ts": "2026-10-20T00:51:43Z"
+      "text": "The Aussie broke above 70 US cents, a two-week high, after RBA Deputy Governor Andrew Hauser said inflation will likely beat the bank's forecast, lifting the odds of a November 3 hike to about 40%. China's growth beat earlier in the week helped too.",
+      "ts": "2026-10-21T00:50:30Z"
     },
     "NZD": {
       "lean": "bullish",
@@ -54,6 +54,429 @@
     }
   },
   "items": [
+    {
+      "id": "investinglive-japan-trade-sep-20261021",
+      "ts": "2026-10-21T00:31:17Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/japan-exports-rise-16-7-for-13th-straight-month-on-ai-chip-demand-trade-gap-narrows/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/USDJPY%20update%2021%20October%202026-featured-1792542625.jpg?width=960&format=webp",
+      "headline": "Japan exports rise 16.7% for 13th straight month on AI chip demand, trade gap narrows",
+      "story": "japan-trade",
+      "story_title": "Japan: exports, the oil bill and the yen",
+      "pillar": "tot",
+      "summary": "Japan's exports grew 16.7% from a year earlier in September, a 13th straight rise but well short of the 20% expected, so the trade deficit came in wider than forecast at about \u00a5537 billion.",
+      "beats": {
+        "was": "Japan's exports have been lifted all year by demand for chips and AI equipment, while costly oil, pushed up by the Gulf war, has swollen the import bill and kept the country in trade deficit.",
+        "happened": "Japan's Ministry of Finance said September exports rose 16.7% from a year earlier, against about 20% expected and 19.3% in August. Imports rose 18.9%, slower than August's 28%. The deficit was about \u00a5537 billion, against \u00a5181 billion expected but half of August's roughly \u00a51.1 trillion.",
+        "means": "Overseas demand for Japanese goods is still solid but cooling, and the energy bill remains the drag. A smaller gap than August helps a little, but the miss gives the Bank of Japan, which meets Oct 29\u201330, no new reason to hurry a rate rise.",
+        "fx": "Exports slower than hoped, oil still costly \u2192 more yen sold to pay for imports than expected \u2192 mild pressure on the yen. The lens: is the oil bill shrinking, or just pausing?"
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Exports missed and the deficit beat forecasts, though it halved from August."
+        }
+      ],
+      "watch": "The Bank of Japan's Oct 29\u201330 meeting and its new forecasts; a lasting drop in oil would shrink the import bill."
+    },
+    {
+      "id": "tradingpedia-chf-recovery-snb-20261020",
+      "date": "2026-10-20",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/10/20/swiss-franc-recovery-tests-snb-tolerance-against-euro/",
+      "image": null,
+      "headline": "Swiss Franc Recovery Tests SNB Tolerance Against Euro",
+      "story": "chf-snb",
+      "story_title": "Franc: haven demand vs the SNB",
+      "pillar": "risk",
+      "summary": "The franc climbed to a three-month high against the euro on fears of a European debt crisis, nearing levels where the SNB has threatened to step in.",
+      "beats": {
+        "was": "The franc's comeback against the euro after months of weakness.",
+        "happened": "EUR/CHF fell to a three-month low as money sought shelter from Europe's debt worries and Switzerland's sounder public finances.",
+        "means": "The franc is near the zone where the SNB warned it could sell francs. That threat caps gains unless the euro area's problems get worse.",
+        "fx": "European debt fears \u2192 money into a safe, low-debt neighbour \u2192 franc up, until the SNB pushes back. The lens: does France's budget fight get worse?"
+      },
+      "impact": [
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Haven demand lifted it, but the SNB's line is close."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Debt worries pushed it to a three-month low on the franc."
+        }
+      ],
+      "watch": "Any SNB intervention or warning; France's Oct 27 budget vote."
+    },
+    {
+      "id": "reuters-euronext-yen-jgb-auction-20261020",
+      "date": "2026-10-20",
+      "source": "Reuters via Euronext",
+      "url": "https://live.euronext.com/en/financial-news/yen-jumps-after-jgb-auction-draws-big-demand-euro-finds-relief",
+      "image": null,
+      "headline": "Yen jumps after JGB auction draws big demand, euro finds relief",
+      "story": "japan-fiscal",
+      "story_title": "Japan: tax cuts and the bond bill",
+      "pillar": "fiscal",
+      "summary": "Buyers swamped Japan's 20-year bond sale with record demand, pulling yields down and giving the yen its first gain in three days.",
+      "beats": {
+        "was": "Japan sold 20-year government bonds, a test of whether investors will fund its growing borrowing.",
+        "happened": "Bids came in at 5.84 times the amount on offer, the most since these bonds began in 1987, against 4.01 last month. The 20-year yield fell 6bp to 3.71% and the yen rose to about 158.1 per dollar.",
+        "means": "Fears that Japan's tax cuts would scare off bond buyers eased for now, and some investors see Japanese bonds as a calmer place than France. It eases one source of yen weakness, but the gap with US rates is still wide.",
+        "fx": "Strong bond demand \u2192 less fear over Japan's debt \u2192 steadier yields and money staying home \u2192 yen firmer. The lens: is Japan's fiscal risk fading or just paused?"
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Record auction demand eased debt fears and snapped a two-day slide."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Edged up to about 1.123 as pressure from France eased overnight."
+        }
+      ],
+      "watch": "Friday's Japan CPI and any sign the auction demand doesn't repeat; a US yield jump would undo the gain."
+    },
+    {
+      "id": "reuters-euronext-euro-rebounds-20261020",
+      "date": "2026-10-20",
+      "source": "Reuters via Euronext",
+      "url": "https://live.euronext.com/en/financial-news/euro-rebounds-french-protests-ease-dollar-slips",
+      "image": null,
+      "headline": "Euro rebounds as French protests ease, dollar slips",
+      "story": "france-unrest",
+      "story_title": "France: unrest, budget vote and the euro",
+      "pillar": "fiscal",
+      "summary": "The euro bounced as French protests calmed under curfews, but France's budget vote is still due today and some banks expect more euro weakness.",
+      "beats": {
+        "was": "A check on the euro after two days of nationwide unrest in France, with lawmakers voting on the 2027 budget's revenue side.",
+        "happened": "The euro rose 0.2% to about 1.123, off last week's low near 1.111. The dollar index slipped to about 101.75, near the bottom of its October range. The Canadian dollar firmed after Alberta voted to stay in Canada.",
+        "means": "Calmer streets bought the euro a breather, not a fix: worries about France's finances have weighed since September and the budget is still unresolved. Brent above $110 is a cushion for the dollar.",
+        "fx": "Less unrest \u2192 less fear over French debt \u2192 euro steadies. The lens: does the budget pass without new stress in French bonds?"
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Bounced as protests eased, but the budget risk and Friday's Moody's review remain."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Near a one-month high after Alberta voted to remain in Canada, removing a tail risk."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Dollar index slipped as pressure on the euro eased."
+        }
+      ],
+      "watch": "The French budget vote and the gap between French and German yields; Moody's review of France on Friday."
+    },
+    {
+      "id": "investing-german-ppi-sep-20261020",
+      "date": "2026-10-20",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/economic-indicators/german-producer-prices-climb-67-in-september-above-forecasts-93CH-4958865",
+      "image": "https://content-media.investing.com/news/LYNXNPEC0E0NG_L.jpg",
+      "headline": "German producer prices climb 6.7% in September, above forecasts",
+      "story": "ez-inflation",
+      "story_title": "Euro area: price pressure and the ECB",
+      "pillar": "inflation",
+      "summary": "German factory-gate prices rose faster than expected, a sign that costs are still feeding through to what shoppers will pay.",
+      "beats": {
+        "was": "Producer prices: what German firms charge for goods as they leave the factory, an early read on future consumer inflation.",
+        "happened": "They were up 6.7% from a year earlier, against forecasts near 6.2%.",
+        "means": "With the ECB's target at 2%, pipeline prices this hot keep pressure on it to lean hawkish, though markets already treat December, not October, as the live meeting.",
+        "fx": "Hotter costs \u2192 more pressure on the ECB \u2192 higher euro yields \u2192 some support for the euro. The lens: do these costs reach shop prices?"
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A hot cost print adds to the case for a December ECB hike, but France still dominates."
+        }
+      ],
+      "watch": "Euro-area flash PMIs and the October ECB meeting on Oct 29 for how much weight the bank puts on this."
+    },
+    {
+      "id": "aa-brent-near-110-20261020",
+      "date": "2026-10-20",
+      "source": "Anadolu Agency",
+      "url": "https://www.aa.com.tr/en/energy/oil/brent-crude-hovers-near-110-on-middle-east-tensions/60382",
+      "image": "https://cdnuploads.aa.com.tr/uploads/enerjiterminali/Contents/2026/10/20/thumbs_b_c_ecc1b0ea2c035235cc98be881c56940c.jpg?v=102149",
+      "headline": "Brent crude hovers near $110 on Middle East tensions",
+      "story": "saudi-houthi",
+      "story_title": "Saudi\u2013Houthi fighting and the Gulf supply risk",
+      "pillar": "tot",
+      "summary": "Brent edged up toward $110 after Houthi claims of strikes on a Saudi oil field and airports, plus fresh hints from Israel and the US of more action against Iran.",
+      "beats": {
+        "was": "Oil's early Tuesday move, set by war risk around Saudi Arabia and Iran.",
+        "happened": "Brent rose about 0.3% to near $109.9 and WTI held near $98.6. The Houthis said they hit Saudi Arabia's Shaybah oil field and airports in Riyadh and Abha, though there's no confirmation that output was affected.",
+        "means": "The claims are unconfirmed, so this is risk being priced rather than barrels lost. But talk of more action against Iran keeps the floor under oil.",
+        "fx": "Higher war risk \u2192 pricier oil \u2192 better terms of trade for oil sellers, worse for importers \u2192 Canadian dollar helped, yen hurt. The lens: are Saudi barrels actually being lost?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Unconfirmed strike claims on Saudi oil sites and Iran threats keep the risk premium."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "An oil exporter gains when crude holds near its highs."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports its oil, so a high price widens its import bill."
+        }
+      ],
+      "watch": "Any confirmation of damage at Shaybah, or US\u2013Iran mediation progress, which would let the premium fade."
+    },
+    {
+      "id": "reuters-investing-pending-home-sales-sep-20261020",
+      "date": "2026-10-20",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://www.investing.com/news/economic-indicators/us-pending-home-sales-tumble-to-record-low-in-september-4960466",
+      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9J16D_L.jpg",
+      "headline": "US pending home sales tumble to record low in September",
+      "story": "us-housing",
+      "story_title": "US housing: frozen by 7%+ mortgages",
+      "pillar": "growth",
+      "summary": "Signed home-sale contracts fell 7.3% in September to the lowest level on record, far worse than the small dip expected. Mortgage rates above 7% are freezing buyers.",
+      "beats": {
+        "was": "Pending home sales count contracts signed on existing homes, an early read on sales a month or two ahead.",
+        "happened": "Contracts fell 7.3% in a month, against a 0.5% dip forecast, and are down about 11% on a year ago. Every region fell.",
+        "means": "War-driven inflation pushed Treasury yields up, and 30-year mortgages near 7.4% have priced many buyers out. Housing is where high rates bite first, so the US economy is starting to feel the squeeze.",
+        "fx": "Housing slumps \u2192 growth cools \u2192 less room for the Fed to keep hiking \u2192 softer yield support \u2192 dollar loses a little shine. The lens: does the weakness spread past housing?"
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A record-low print, far below forecast, shows high rates starting to hurt growth."
+        }
+      ],
+      "watch": "If mortgage rates ease or other data hold firm, this stays a housing story rather than a growth scare."
+    },
+    {
+      "id": "anews-us-housing-starts-sep-20261020",
+      "date": "2026-10-20",
+      "source": "A News",
+      "url": "https://www.anews.com.tr/world/2026/10/20/us-homebuilding-slows-in-september-as-construction-activity-permits-decline",
+      "image": "https://ia.tmgrup.com.tr/bfa71f/806/378/0/0/1280/599?u=https://i.tmgrup.com.tr/anews/v1/2026/10/20/us-homebuilding-slows-in-september-as-construction-activity-permits-decline-1792504056080.jpg",
+      "headline": "US homebuilding slows in September as construction activity, permits decline",
+      "story": "us-housing",
+      "story_title": "US housing: frozen by 7%+ mortgages",
+      "pillar": "growth",
+      "summary": "US housing starts fell 5.2% in September to a four-month low, when a small rise was expected. Permits held up better than feared.",
+      "beats": {
+        "was": "Housing starts count new homes builders broke ground on; permits show what is lined up next.",
+        "happened": "Starts dropped 5.2% to a 1.22 million yearly pace against a forecast rise of about 2%. Permits slipped only 0.2%, less than the drop expected.",
+        "means": "Builders are pulling back as high borrowing costs thin out buyers. Steady permits say the pipeline hasn't collapsed yet.",
+        "fx": "Weaker building \u2192 slower growth \u2192 a little less pressure on the Fed to hike \u2192 dollar slightly softer. The lens: is this a dip or a trend?"
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Starts missed badly, though permits softened the blow."
+        }
+      ],
+      "watch": "October permits: a sharp drop there would confirm builders are retreating."
+    },
+    {
+      "id": "gulfnews-lull-breaking-point-20261020",
+      "date": "2026-10-20",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/uae/us-israel-iran-war-lull-nears-breaking-point-us-israel-weighing-new-strikes-what-to-know-oct-20-2026-1.500716736",
+      "image": "https://media.assettype.com/gulfnews%2F2026-10-20%2Fy9dgkbku%2FScreenshot_2026_10_20_at_1_42_33_PM__2_.png?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "US-Israel-Iran war: Lull nears 'breaking point' \u2014 US, Israel weighing new strikes?",
+      "story": "hormuz",
+      "story_title": "Hormuz: mines, tanker hits and blockade threats",
+      "pillar": "risk",
+      "summary": "Reports say the US and Israel are weighing new strikes on Iran as talks stall, while Iran's Guards threaten undersea cables through Hormuz. Much of it is unverified.",
+      "beats": {
+        "was": "A daily roundup of the US-Israel-Iran war, now about eight months in with major fighting paused.",
+        "happened": "Diplomacy has stalled and reports say new US and Israeli strikes are under consideration. Iran's Guards claim the strait is closed; the US says commercial ships still pass.",
+        "means": "The pause looks fragile. A return to strikes would hit oil supply again and push markets toward safety.",
+        "fx": "Risk of renewed strikes \u2192 higher oil risk premium and safe-haven demand \u2192 oil up, franc and yen supported. The lens: do the talks Qatar says are continuing hold?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Talk of new strikes adds to the supply risk premium; not confirmed."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A fragile pause keeps haven demand alive."
+        }
+      ],
+      "watch": "Confirmed strikes would be a real escalation; progress in Qatar-brokered talks would cool it."
+    },
+    {
+      "id": "gulfnews-us-ships-hegseth-20261020",
+      "date": "2026-10-20",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/middle-east-war-houthi-missiles-kill-53-us-defence-chief-visits-region-1.500716634",
+      "image": "https://media.assettype.com/gulfnews%2F2025-04-09%2Fuq5kmtae%2FSaudi-Skyline-1.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "Middle East War: Attempted strikes on US ships 'unsuccessful', Hegseth visits region",
+      "story": "saudi-houthi",
+      "story_title": "Saudi\u2013Houthi fighting and the Gulf supply risk",
+      "pillar": "tot",
+      "summary": "US crude jumped about 6% toward $110 as the Houthis fired at Riyadh again and the US defence chief made a surprise trip to the region. Iran's attempts to hit US ships near Hormuz reportedly failed.",
+      "beats": {
+        "was": "A day of war news around the Gulf: Houthi missiles at Saudi Arabia, Iran's mines in Hormuz, and a surprise visit by the US defence secretary.",
+        "happened": "A Houthi missile aimed at Riyadh was intercepted and the city's airport stayed shut. US crude rose about 5.7% to roughly $109.60 and Brent about 2% to near $111.70.",
+        "means": "Oil is pricing more than one route at risk at once: Hormuz and the Saudi coast. A senior US visit suggests next steps are being weighed, so traders keep paying for the risk.",
+        "fx": "More attacks \u2192 more fear for supply \u2192 dearer oil \u2192 oil sellers like the loonie gain, oil buyers like Japan pay more \u2192 yen under pressure. The lens: does any oil actually stop flowing?"
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "US crude up about 6% in a day as attacks spread to more targets."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada sells oil, so a higher price helps its trade."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so a dearer barrel drains it."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "War headlines keep some shelter demand under the franc."
+        }
+      ],
+      "watch": "Any confirmed halt in Saudi or Hormuz exports would push this higher; a US\u2013Iran deal or a lull in attacks would pull it back."
+    },
+    {
+      "id": "tradingpedia-loonie-oil-20261020",
+      "date": "2026-10-20",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/10/20/loonie-rallies-as-oil-surge-and-weaker-dollar-hit-usd-cad/",
+      "image": null,
+      "headline": "Loonie Rallies as Oil Surge and Weaker Dollar Hit USD/CAD",
+      "story": "boc-oct",
+      "story_title": "Bank of Canada: hike talk vs cooling core",
+      "pillar": "tot",
+      "summary": "The loonie rose for a fourth day, with USD/CAD near 1.409, as oil climbed. Middle East crude flows have reportedly fallen to well under half their normal level.",
+      "beats": {
+        "was": "A daily read on the Canadian dollar against the US dollar.",
+        "happened": "USD/CAD slid for a fourth session to around 1.409. Tanker-tracker Kpler puts Middle East crude flows near 8.5 million barrels a day, down from over 20 million.",
+        "means": "Canada gets paid more for each barrel it sells while Gulf supply is squeezed. RBC still sees the BoC on hold, torn between weak growth and oil-led inflation.",
+        "fx": "Gulf flows cut \u2192 higher oil \u2192 more money for Canadian exports \u2192 demand for loonies \u2192 CAD up. The lens: how long does the oil squeeze last?"
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Fourth day of gains as oil rises; USD/CAD near 1.409."
+        },
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Reported Gulf crude flows down by more than half."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Softer against the oil currencies to start the week."
+        }
+      ],
+      "watch": "A drop in oil or a cautious BoC on Oct 28 would take the wind out of the loonie."
+    },
+    {
+      "id": "tradingpedia-kiwi-cpi-20261020",
+      "date": "2026-10-20",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/10/20/kiwi-dollar-holds-range-ahead-of-cpi-and-rate-signals/",
+      "image": null,
+      "headline": "Kiwi Dollar Holds Range Ahead of CPI and Rate Signals",
+      "story": "rbnz-oct",
+      "story_title": "RBNZ: hike odds into Q3 CPI",
+      "pillar": "inflation",
+      "summary": "The kiwi is idling near 0.5665 before this week's Q3 inflation figures. Inflation is expected to cool a little, but swaps still put about 80% odds on an Oct 28 hike.",
+      "beats": {
+        "was": "A preview of New Zealand's third-quarter consumer prices, due this week.",
+        "happened": "Forecasts are 0.8% for the quarter and 3.8% a year, down from 4.1%. NZD/USD held in a tight range near 0.5665.",
+        "means": "Even the cooler forecast leaves inflation near twice the RBNZ's 2% midpoint, so its own economist calls the Oct 28 call wide open, tilted to a hike.",
+        "fx": "Hot CPI \u2192 hike more certain \u2192 higher NZ rates \u2192 more demand for kiwi; soft CPI \u2192 hike in doubt \u2192 kiwi slips. The lens: is inflation cooling fast enough for the RBNZ to wait?"
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Hike odds near 80% before the CPI release; a preview, so mild."
+        }
+      ],
+      "watch": "The Q3 CPI print: well under 3.8% a year would put the Oct 28 hike in doubt."
+    },
+    {
+      "id": "reuters-yahoo-rba-hauser-outlook-20261020",
+      "ts": "2026-10-20T23:01:00Z",
+      "source": "Reuters via Yahoo Finance",
+      "url": "https://finance.yahoo.com/economy/policy/articles/australia-central-banker-says-policy-221416518.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/d8857615d319c25ea076db2b8fb25eba72b23b73df342f71bba6cf5199233909/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2Ff20724b4af9590088428338ff587cfb2.jpg",
+      "headline": "Australian central banker says policy working, but inflation outlook worse",
+      "story": "rba-nov",
+      "story_title": "RBA: the November 3 decision",
+      "pillar": "policy",
+      "summary": "The Reserve Bank of Australia's deputy governor, Andrew Hauser, said inflation now looks set to run above the bank's own forecast, raising the odds of another rate rise on November 3. The Aussie pushed above 70 US cents.",
+      "beats": {
+        "was": "The Reserve Bank of Australia has already raised its cash rate four times this year, to 4.60%, to fight inflation lifted partly by the Gulf war's hit to oil. It next decides on November 3.",
+        "happened": "Speaking at a Citi conference in Sydney, Deputy Governor Andrew Hauser said higher rates are slowing the economy, but the inflation outlook has got clearly worse, partly because of high oil prices. Markets raised the chance of a November hike to 4.85% to about 40%, from 30% at the start of the week, and AUD/USD rose to about 0.701, a two-week high.",
+        "means": "A senior official saying inflation will beat the bank's forecast keeps a fifth hike on the table, even with unemployment at a five-year high of 4.7% and house prices falling. Next week's third-quarter inflation figure, seen near 4%, is the deciding number.",
+        "fx": "Inflation running hotter than the RBA expected \u2192 more chance of a rate rise \u2192 higher returns on Australian dollars \u2192 Aussie up. The lens: does next week's inflation figure back him up?"
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Hike odds for Nov 3 rose to about 40% and the Aussie broke above 0.70."
+        }
+      ],
+      "watch": "Australia's third-quarter inflation figure next week; a soft print, or weaker jobs and housing, would cool hike bets."
+    },
     {
       "id": "babypips-recap-20261020",
       "ts": "2026-10-20T20:45:00Z",
@@ -488,375 +911,6 @@
         }
       ],
       "watch": "A pullback in oil or yields would lift gold; a confirmed supply loss could revive haven buying."
-    },
-    {
-      "id": "tradingpedia-chf-recovery-snb-20261020",
-      "date": "2026-10-20",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/10/20/swiss-franc-recovery-tests-snb-tolerance-against-euro/",
-      "image": null,
-      "headline": "Swiss Franc Recovery Tests SNB Tolerance Against Euro",
-      "story": "chf-snb",
-      "story_title": "Franc: haven demand vs the SNB",
-      "pillar": "risk",
-      "summary": "The franc climbed to a three-month high against the euro on fears of a European debt crisis, nearing levels where the SNB has threatened to step in.",
-      "beats": {
-        "was": "The franc's comeback against the euro after months of weakness.",
-        "happened": "EUR/CHF fell to a three-month low as money sought shelter from Europe's debt worries and Switzerland's sounder public finances.",
-        "means": "The franc is near the zone where the SNB warned it could sell francs. That threat caps gains unless the euro area's problems get worse.",
-        "fx": "European debt fears \u2192 money into a safe, low-debt neighbour \u2192 franc up, until the SNB pushes back. The lens: does France's budget fight get worse?"
-      },
-      "impact": [
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Haven demand lifted it, but the SNB's line is close."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Debt worries pushed it to a three-month low on the franc."
-        }
-      ],
-      "watch": "Any SNB intervention or warning; France's Oct 27 budget vote."
-    },
-    {
-      "id": "reuters-euronext-yen-jgb-auction-20261020",
-      "date": "2026-10-20",
-      "source": "Reuters via Euronext",
-      "url": "https://live.euronext.com/en/financial-news/yen-jumps-after-jgb-auction-draws-big-demand-euro-finds-relief",
-      "image": null,
-      "headline": "Yen jumps after JGB auction draws big demand, euro finds relief",
-      "story": "japan-fiscal",
-      "story_title": "Japan: tax cuts and the bond bill",
-      "pillar": "fiscal",
-      "summary": "Buyers swamped Japan's 20-year bond sale with record demand, pulling yields down and giving the yen its first gain in three days.",
-      "beats": {
-        "was": "Japan sold 20-year government bonds, a test of whether investors will fund its growing borrowing.",
-        "happened": "Bids came in at 5.84 times the amount on offer, the most since these bonds began in 1987, against 4.01 last month. The 20-year yield fell 6bp to 3.71% and the yen rose to about 158.1 per dollar.",
-        "means": "Fears that Japan's tax cuts would scare off bond buyers eased for now, and some investors see Japanese bonds as a calmer place than France. It eases one source of yen weakness, but the gap with US rates is still wide.",
-        "fx": "Strong bond demand \u2192 less fear over Japan's debt \u2192 steadier yields and money staying home \u2192 yen firmer. The lens: is Japan's fiscal risk fading or just paused?"
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Record auction demand eased debt fears and snapped a two-day slide."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Edged up to about 1.123 as pressure from France eased overnight."
-        }
-      ],
-      "watch": "Friday's Japan CPI and any sign the auction demand doesn't repeat; a US yield jump would undo the gain."
-    },
-    {
-      "id": "reuters-euronext-euro-rebounds-20261020",
-      "date": "2026-10-20",
-      "source": "Reuters via Euronext",
-      "url": "https://live.euronext.com/en/financial-news/euro-rebounds-french-protests-ease-dollar-slips",
-      "image": null,
-      "headline": "Euro rebounds as French protests ease, dollar slips",
-      "story": "france-unrest",
-      "story_title": "France: unrest, budget vote and the euro",
-      "pillar": "fiscal",
-      "summary": "The euro bounced as French protests calmed under curfews, but France's budget vote is still due today and some banks expect more euro weakness.",
-      "beats": {
-        "was": "A check on the euro after two days of nationwide unrest in France, with lawmakers voting on the 2027 budget's revenue side.",
-        "happened": "The euro rose 0.2% to about 1.123, off last week's low near 1.111. The dollar index slipped to about 101.75, near the bottom of its October range. The Canadian dollar firmed after Alberta voted to stay in Canada.",
-        "means": "Calmer streets bought the euro a breather, not a fix: worries about France's finances have weighed since September and the budget is still unresolved. Brent above $110 is a cushion for the dollar.",
-        "fx": "Less unrest \u2192 less fear over French debt \u2192 euro steadies. The lens: does the budget pass without new stress in French bonds?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Bounced as protests eased, but the budget risk and Friday's Moody's review remain."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Near a one-month high after Alberta voted to remain in Canada, removing a tail risk."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Dollar index slipped as pressure on the euro eased."
-        }
-      ],
-      "watch": "The French budget vote and the gap between French and German yields; Moody's review of France on Friday."
-    },
-    {
-      "id": "investing-german-ppi-sep-20261020",
-      "date": "2026-10-20",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/economic-indicators/german-producer-prices-climb-67-in-september-above-forecasts-93CH-4958865",
-      "image": "https://content-media.investing.com/news/LYNXNPEC0E0NG_L.jpg",
-      "headline": "German producer prices climb 6.7% in September, above forecasts",
-      "story": "ez-inflation",
-      "story_title": "Euro area: price pressure and the ECB",
-      "pillar": "inflation",
-      "summary": "German factory-gate prices rose faster than expected, a sign that costs are still feeding through to what shoppers will pay.",
-      "beats": {
-        "was": "Producer prices: what German firms charge for goods as they leave the factory, an early read on future consumer inflation.",
-        "happened": "They were up 6.7% from a year earlier, against forecasts near 6.2%.",
-        "means": "With the ECB's target at 2%, pipeline prices this hot keep pressure on it to lean hawkish, though markets already treat December, not October, as the live meeting.",
-        "fx": "Hotter costs \u2192 more pressure on the ECB \u2192 higher euro yields \u2192 some support for the euro. The lens: do these costs reach shop prices?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A hot cost print adds to the case for a December ECB hike, but France still dominates."
-        }
-      ],
-      "watch": "Euro-area flash PMIs and the October ECB meeting on Oct 29 for how much weight the bank puts on this."
-    },
-    {
-      "id": "aa-brent-near-110-20261020",
-      "date": "2026-10-20",
-      "source": "Anadolu Agency",
-      "url": "https://www.aa.com.tr/en/energy/oil/brent-crude-hovers-near-110-on-middle-east-tensions/60382",
-      "image": "https://cdnuploads.aa.com.tr/uploads/enerjiterminali/Contents/2026/10/20/thumbs_b_c_ecc1b0ea2c035235cc98be881c56940c.jpg?v=102149",
-      "headline": "Brent crude hovers near $110 on Middle East tensions",
-      "story": "saudi-houthi",
-      "story_title": "Saudi\u2013Houthi fighting and the Gulf supply risk",
-      "pillar": "tot",
-      "summary": "Brent edged up toward $110 after Houthi claims of strikes on a Saudi oil field and airports, plus fresh hints from Israel and the US of more action against Iran.",
-      "beats": {
-        "was": "Oil's early Tuesday move, set by war risk around Saudi Arabia and Iran.",
-        "happened": "Brent rose about 0.3% to near $109.9 and WTI held near $98.6. The Houthis said they hit Saudi Arabia's Shaybah oil field and airports in Riyadh and Abha, though there's no confirmation that output was affected.",
-        "means": "The claims are unconfirmed, so this is risk being priced rather than barrels lost. But talk of more action against Iran keeps the floor under oil.",
-        "fx": "Higher war risk \u2192 pricier oil \u2192 better terms of trade for oil sellers, worse for importers \u2192 Canadian dollar helped, yen hurt. The lens: are Saudi barrels actually being lost?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Unconfirmed strike claims on Saudi oil sites and Iran threats keep the risk premium."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "An oil exporter gains when crude holds near its highs."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports its oil, so a high price widens its import bill."
-        }
-      ],
-      "watch": "Any confirmation of damage at Shaybah, or US\u2013Iran mediation progress, which would let the premium fade."
-    },
-    {
-      "id": "reuters-investing-pending-home-sales-sep-20261020",
-      "date": "2026-10-20",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://www.investing.com/news/economic-indicators/us-pending-home-sales-tumble-to-record-low-in-september-4960466",
-      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9J16D_L.jpg",
-      "headline": "US pending home sales tumble to record low in September",
-      "story": "us-housing",
-      "story_title": "US housing: frozen by 7%+ mortgages",
-      "pillar": "growth",
-      "summary": "Signed home-sale contracts fell 7.3% in September to the lowest level on record, far worse than the small dip expected. Mortgage rates above 7% are freezing buyers.",
-      "beats": {
-        "was": "Pending home sales count contracts signed on existing homes, an early read on sales a month or two ahead.",
-        "happened": "Contracts fell 7.3% in a month, against a 0.5% dip forecast, and are down about 11% on a year ago. Every region fell.",
-        "means": "War-driven inflation pushed Treasury yields up, and 30-year mortgages near 7.4% have priced many buyers out. Housing is where high rates bite first, so the US economy is starting to feel the squeeze.",
-        "fx": "Housing slumps \u2192 growth cools \u2192 less room for the Fed to keep hiking \u2192 softer yield support \u2192 dollar loses a little shine. The lens: does the weakness spread past housing?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A record-low print, far below forecast, shows high rates starting to hurt growth."
-        }
-      ],
-      "watch": "If mortgage rates ease or other data hold firm, this stays a housing story rather than a growth scare."
-    },
-    {
-      "id": "anews-us-housing-starts-sep-20261020",
-      "date": "2026-10-20",
-      "source": "A News",
-      "url": "https://www.anews.com.tr/world/2026/10/20/us-homebuilding-slows-in-september-as-construction-activity-permits-decline",
-      "image": "https://ia.tmgrup.com.tr/bfa71f/806/378/0/0/1280/599?u=https://i.tmgrup.com.tr/anews/v1/2026/10/20/us-homebuilding-slows-in-september-as-construction-activity-permits-decline-1792504056080.jpg",
-      "headline": "US homebuilding slows in September as construction activity, permits decline",
-      "story": "us-housing",
-      "story_title": "US housing: frozen by 7%+ mortgages",
-      "pillar": "growth",
-      "summary": "US housing starts fell 5.2% in September to a four-month low, when a small rise was expected. Permits held up better than feared.",
-      "beats": {
-        "was": "Housing starts count new homes builders broke ground on; permits show what is lined up next.",
-        "happened": "Starts dropped 5.2% to a 1.22 million yearly pace against a forecast rise of about 2%. Permits slipped only 0.2%, less than the drop expected.",
-        "means": "Builders are pulling back as high borrowing costs thin out buyers. Steady permits say the pipeline hasn't collapsed yet.",
-        "fx": "Weaker building \u2192 slower growth \u2192 a little less pressure on the Fed to hike \u2192 dollar slightly softer. The lens: is this a dip or a trend?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Starts missed badly, though permits softened the blow."
-        }
-      ],
-      "watch": "October permits: a sharp drop there would confirm builders are retreating."
-    },
-    {
-      "id": "gulfnews-lull-breaking-point-20261020",
-      "date": "2026-10-20",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/uae/us-israel-iran-war-lull-nears-breaking-point-us-israel-weighing-new-strikes-what-to-know-oct-20-2026-1.500716736",
-      "image": "https://media.assettype.com/gulfnews%2F2026-10-20%2Fy9dgkbku%2FScreenshot_2026_10_20_at_1_42_33_PM__2_.png?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "US-Israel-Iran war: Lull nears 'breaking point' \u2014 US, Israel weighing new strikes?",
-      "story": "hormuz",
-      "story_title": "Hormuz: mines, tanker hits and blockade threats",
-      "pillar": "risk",
-      "summary": "Reports say the US and Israel are weighing new strikes on Iran as talks stall, while Iran's Guards threaten undersea cables through Hormuz. Much of it is unverified.",
-      "beats": {
-        "was": "A daily roundup of the US-Israel-Iran war, now about eight months in with major fighting paused.",
-        "happened": "Diplomacy has stalled and reports say new US and Israeli strikes are under consideration. Iran's Guards claim the strait is closed; the US says commercial ships still pass.",
-        "means": "The pause looks fragile. A return to strikes would hit oil supply again and push markets toward safety.",
-        "fx": "Risk of renewed strikes \u2192 higher oil risk premium and safe-haven demand \u2192 oil up, franc and yen supported. The lens: do the talks Qatar says are continuing hold?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Talk of new strikes adds to the supply risk premium; not confirmed."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A fragile pause keeps haven demand alive."
-        }
-      ],
-      "watch": "Confirmed strikes would be a real escalation; progress in Qatar-brokered talks would cool it."
-    },
-    {
-      "id": "gulfnews-us-ships-hegseth-20261020",
-      "date": "2026-10-20",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/world/mena/middle-east-war-houthi-missiles-kill-53-us-defence-chief-visits-region-1.500716634",
-      "image": "https://media.assettype.com/gulfnews%2F2025-04-09%2Fuq5kmtae%2FSaudi-Skyline-1.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "Middle East War: Attempted strikes on US ships 'unsuccessful', Hegseth visits region",
-      "story": "saudi-houthi",
-      "story_title": "Saudi\u2013Houthi fighting and the Gulf supply risk",
-      "pillar": "tot",
-      "summary": "US crude jumped about 6% toward $110 as the Houthis fired at Riyadh again and the US defence chief made a surprise trip to the region. Iran's attempts to hit US ships near Hormuz reportedly failed.",
-      "beats": {
-        "was": "A day of war news around the Gulf: Houthi missiles at Saudi Arabia, Iran's mines in Hormuz, and a surprise visit by the US defence secretary.",
-        "happened": "A Houthi missile aimed at Riyadh was intercepted and the city's airport stayed shut. US crude rose about 5.7% to roughly $109.60 and Brent about 2% to near $111.70.",
-        "means": "Oil is pricing more than one route at risk at once: Hormuz and the Saudi coast. A senior US visit suggests next steps are being weighed, so traders keep paying for the risk.",
-        "fx": "More attacks \u2192 more fear for supply \u2192 dearer oil \u2192 oil sellers like the loonie gain, oil buyers like Japan pay more \u2192 yen under pressure. The lens: does any oil actually stop flowing?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "US crude up about 6% in a day as attacks spread to more targets."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Canada sells oil, so a higher price helps its trade."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so a dearer barrel drains it."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "War headlines keep some shelter demand under the franc."
-        }
-      ],
-      "watch": "Any confirmed halt in Saudi or Hormuz exports would push this higher; a US\u2013Iran deal or a lull in attacks would pull it back."
-    },
-    {
-      "id": "tradingpedia-loonie-oil-20261020",
-      "date": "2026-10-20",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/10/20/loonie-rallies-as-oil-surge-and-weaker-dollar-hit-usd-cad/",
-      "image": null,
-      "headline": "Loonie Rallies as Oil Surge and Weaker Dollar Hit USD/CAD",
-      "story": "boc-oct",
-      "story_title": "Bank of Canada: hike talk vs cooling core",
-      "pillar": "tot",
-      "summary": "The loonie rose for a fourth day, with USD/CAD near 1.409, as oil climbed. Middle East crude flows have reportedly fallen to well under half their normal level.",
-      "beats": {
-        "was": "A daily read on the Canadian dollar against the US dollar.",
-        "happened": "USD/CAD slid for a fourth session to around 1.409. Tanker-tracker Kpler puts Middle East crude flows near 8.5 million barrels a day, down from over 20 million.",
-        "means": "Canada gets paid more for each barrel it sells while Gulf supply is squeezed. RBC still sees the BoC on hold, torn between weak growth and oil-led inflation.",
-        "fx": "Gulf flows cut \u2192 higher oil \u2192 more money for Canadian exports \u2192 demand for loonies \u2192 CAD up. The lens: how long does the oil squeeze last?"
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Fourth day of gains as oil rises; USD/CAD near 1.409."
-        },
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Reported Gulf crude flows down by more than half."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Softer against the oil currencies to start the week."
-        }
-      ],
-      "watch": "A drop in oil or a cautious BoC on Oct 28 would take the wind out of the loonie."
-    },
-    {
-      "id": "tradingpedia-kiwi-cpi-20261020",
-      "date": "2026-10-20",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/10/20/kiwi-dollar-holds-range-ahead-of-cpi-and-rate-signals/",
-      "image": null,
-      "headline": "Kiwi Dollar Holds Range Ahead of CPI and Rate Signals",
-      "story": "rbnz-oct",
-      "story_title": "RBNZ: hike odds into Q3 CPI",
-      "pillar": "inflation",
-      "summary": "The kiwi is idling near 0.5665 before this week's Q3 inflation figures. Inflation is expected to cool a little, but swaps still put about 80% odds on an Oct 28 hike.",
-      "beats": {
-        "was": "A preview of New Zealand's third-quarter consumer prices, due this week.",
-        "happened": "Forecasts are 0.8% for the quarter and 3.8% a year, down from 4.1%. NZD/USD held in a tight range near 0.5665.",
-        "means": "Even the cooler forecast leaves inflation near twice the RBNZ's 2% midpoint, so its own economist calls the Oct 28 call wide open, tilted to a hike.",
-        "fx": "Hot CPI \u2192 hike more certain \u2192 higher NZ rates \u2192 more demand for kiwi; soft CPI \u2192 hike in doubt \u2192 kiwi slips. The lens: is inflation cooling fast enough for the RBNZ to wait?"
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Hike odds near 80% before the CPI release; a preview, so mild."
-        }
-      ],
-      "watch": "The Q3 CPI print: well under 3.8% a year would put the Oct 28 hike in doubt."
     },
     {
       "id": "dawn-uk-typhoons-saudi-20261020",
@@ -1313,60 +1367,6 @@
         }
       ],
       "watch": "Whether Iran answers the strike, and whether Washington confirms it; real progress in the Qatar-brokered talks would pull oil back down."
-    },
-    {
-      "id": "investinglive-canada-cpi-sep-20261019",
-      "ts": "2026-10-19T12:30:21Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/canada-september-cpi-3-1-y-y-vs-3-2-expected/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/canada-economy-featured-1792413030.jpg?width=960&format=webp",
-      "headline": "Canada September CPI 3.1% y/y vs 3.2% expected",
-      "story": "boc-oct",
-      "story_title": "Bank of Canada: hike talk vs cooling core",
-      "pillar": "inflation",
-      "summary": "Canadian inflation came in a tenth under forecasts at 3.1%, and every core gauge cooled; USD/CAD bounced from 1.4075 to about 1.4106 on the release.",
-      "beats": {
-        "was": "September consumer prices: 3.1% higher than a year ago, up from 3.0% in August, and 0.1% on the month.",
-        "happened": "Forecasts were 3.2% and 0.2%, so a small miss. The Bank of Canada's preferred core gauges eased: trim 1.8% and median 1.9%, with the BoC core measure flat on the month.",
-        "means": "Energy is what keeps the headline above 3%; strip it out and underlying inflation sits right around the 2% target and is drifting lower. That takes heat off the argument for an October 28 hike.",
-        "fx": "Softer core \u2192 less pressure on the BoC to hike \u2192 lower Canadian yields relative to the US \u2192 a lighter bid for the loonie. The lens: is energy the only thing keeping Canadian inflation hot?"
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A miss with all core gauges cooling trims the case for a BoC hike; the loonie gave back part of its rally."
-        }
-      ],
-      "watch": "The BoC Business Outlook Survey later today and whether markets keep a December hike fully priced."
-    },
-    {
-      "id": "tradersagency-french-bonds-20261019",
-      "ts": "2026-10-19T11:17:11Z",
-      "source": "Traders Agency",
-      "url": "https://tradersagency.com/blog/french-bonds-and-paris-stocks-slide-after-worst-unrest-in-years-a-day-before-budget-vote",
-      "image": "https://tradersagency.com/uploads/evergreen-b2829ec5ab49b316ad35f261.png",
-      "headline": "French Bonds and Paris Stocks Slide After Worst Unrest in Years, a Day Before Budget Vote",
-      "story": "france-unrest",
-      "story_title": "France: protests and the deficit budget",
-      "pillar": "fiscal",
-      "summary": "France's 10-year yield jumped about 10bp to roughly 4.89% after weekend protests drew some 550,000 people, a day before the Assembly votes on the 2027 budget.",
-      "beats": {
-        "was": "French government bond yields and Paris stocks on Monday.",
-        "happened": "The 10-year yield rose about 10bp to around 4.89%, the 30-year to near 5.42%, and the gap to Germany is reported at its widest since the euro debt crisis. Authorities counted about 550,000 protesters on Saturday.",
-        "means": "Paris needs about \u20ac54bn in savings, and debt interest is set to top \u20ac91bn in 2027. Unrest makes those savings harder to pass, so investors demand more to lend to France.",
-        "fx": "Higher French yields \u2192 doubts about the budget \u2192 risk premium on euro assets \u2192 euro under pressure. The lens: can France pass a budget that markets believe?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A 10bp jump in French yields on unrest is the kind of stress the euro trades on."
-        }
-      ],
-      "watch": "Tuesday's budget vote and Moody's review on Friday October 23."
     }
   ]
 }
