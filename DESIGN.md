@@ -95,19 +95,18 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 ## Look
 - **Default theme: Blue Street** (`blue`, dark pair `night`; Rami 2026-10-19) — brand blue #0a84ff as the accent and a solid blue masthead, on the ivory page; listed first in the colorways.
 - **Night, new look (Rami, 2026-10-21):** the dark mode for Blue Street is now graphite (`#0b0c0f` page, `#14161b` / `#1b1e25` surfaces, `#262a33` lines) with brand blue as the only accent, and a graphite masthead with a hairline under it (the blue slab stays on the light theme). The id stays `night`, so saved choices keep working.
-- **Retired colorways (Rami, 2026-10-21):** Green & sand (sage, forest), Burgundy, rosé & gold (claret, velvet) and Navy, ivory & brass (ivory, ink) are gone. Anyone who saved one lands on Blue Street. The tokens that were on `:root` for Ivory stay there only as the base set every theme overrides; there is no `ivory` theme any more.
+- **Retired colorways (Rami, 2026-10-21):** Black & champagne (pearl, onyx), Green & sand (sage, forest), Burgundy, rosé & gold (claret, velvet) and Navy, ivory & brass (ivory, ink) are gone. Anyone who saved one lands on Blue Street. The tokens that were on `:root` for Ivory stay there only as the base set every theme overrides; there is no `ivory` theme any more.
 - **No gold trim on Blue Street / Night** (Rami, 2026-10-19): `--gold` is remapped to blue in those two themes, so kickers, labels, callout rules and the tab underline are brand blue. Gold survives only as the *mixed* signal via `--mixed`/`--mixed-wash` (news lean tags, thesis "mixed"). Central-bank bias there is one blue scale: Hawkish = solid blue, Dovish = pale blue, Neutral = grey. Other themes keep their gold.
 - **Look controls live in the side menu** (Rami, 2026-10-19): light/dark and the colorway swatches sit at the bottom of the side menu / phone drawer; the masthead's own sun-moon and colorway buttons are hidden. On phones the masthead's menu button always opens the drawer (any layout), which frees the bar for the SYD/TYO/LDN/NYC session chips; under 440px the wordmark hides and the symbol carries the brand.
 - Themes are token sets on `<html data-theme="…">` (plus `data-mode` =
-  light|dark). They come in **two colorways, each a light + dark pair**:
+  light|dark). There is **one colorway, a light + dark pair**:
   | Colorway | Light | Dark |
   |---|---|---|
-  | Blue Street blue & ivory (default) | **blue** | **night** |
-  | Black & champagne | **pearl** | **onyx** |
-  The masthead has a sun/moon toggle (flips to the counterpart) and a
-  colorway menu (switches colorway, keeps the current mode). The choice is
+  | Blue Street blue & ivory | **blue** | **night** |
+  The side menu has the light/dark switch. The colorway swatches are built
+  only when `COLORWAYS` has two or more entries, so with one there is nothing to pick. The choice is
   saved per reader (localStorage `bluestreet-theme`); retired themes (ivory,
-  ink, sage, forest, claret, velvet, alpine, porcelain, harbor, dusk, …) fall
+  ink, sage, forest, claret, velvet, pearl, onyx, alpine, porcelain, harbor, dusk, …) fall
   back to Blue Street. To add a colorway, add both
   `[data-theme]` blocks in style.css, both entries in `THEMES`, and the pair in
   `COLORWAYS` in app.js (and the theme ids to the pre-paint regexes and `MAST`

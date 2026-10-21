@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '88';
+  var ASSET_VERSION = '89';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -19,15 +19,12 @@
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
     { id: 'blue',      name: 'Blue Street', desc: 'Brand blue & ivory',  sw: ['#f6f2ea', '#0a84ff', '#f6f2ea'] },
-    { id: 'pearl',     name: 'Pearl',     desc: 'Black & champagne',      sw: ['#f5f3ee', '#151515', '#b8964f'] },
-    { id: 'night',     name: 'Night',     desc: 'Graphite & brand blue',  sw: ['#0b0c0f', '#0a84ff', '#f2f4f8'], dark: true },
-    { id: 'onyx',      name: 'Onyx',      desc: 'Black & champagne',      sw: ['#0f0f10', '#e2c98f', '#6cc794'], dark: true }
+    { id: 'night',     name: 'Night',     desc: 'Graphite & brand blue',  sw: ['#0b0c0f', '#0a84ff', '#f2f4f8'], dark: true }
   ];
-  /* Two colorways, each a light + dark pair; the masthead toggle flips
-     between the two, the menu picks the colorway. */
+  /* One colorway (a light + dark pair): the light/dark switch flips between
+     the two. The colorway swatches only show when there are 2+ colorways. */
   var COLORWAYS = [
-    { light: 'blue',   dark: 'night',  desc: 'Blue Street blue & ivory' },
-    { light: 'pearl',  dark: 'onyx',   desc: 'Black & champagne' }
+    { light: 'blue',   dark: 'night',  desc: 'Blue Street blue & ivory' }
   ];
   function colorwayOf(id) {
     for (var i = 0; i < COLORWAYS.length; i++) if (COLORWAYS[i].light === id || COLORWAYS[i].dark === id) return COLORWAYS[i];
@@ -727,7 +724,7 @@
       var dark = !!(themeById(document.documentElement.getAttribute('data-theme')) || {}).dark;
       applyTheme(dark ? cw.dark : cw.light, true);
     });
-    look.appendChild(sw);
+    if (COLORWAYS.length > 1) look.appendChild(sw);   // nothing to pick with one colorway
     foot.appendChild(look);
     foot.appendChild(col);
     foot.appendChild(top);
