@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-21T15:45:28Z",
+  "updated": "2026-10-21T18:48:33Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "mixed",
-      "text": "The dollar index sits near a three-week low around 101.6 because markets now expect the Fed to wait until December to raise rates. A hike is still priced, and costly oil keeps a floor under it.",
-      "ts": "2026-10-21T10:48:18Z"
+      "text": "The dollar index is holding near a three-week low around 101.7 because markets expect the Fed to wait until December to raise rates; it meets on October 27–28. Costly oil keeps that hike in view, which stops the dollar from falling much further.",
+      "ts": "2026-10-21T18:48:33Z"
     },
     "EUR": {
       "lean": "bearish",
@@ -44,16 +44,88 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold is stuck near $4,115, close to its low for the week, because markets see a December Fed hike as nearly certain. War risk and weak US housing data haven't been enough to lift it.",
-      "ts": "2026-10-21T10:48:18Z"
+      "text": "Gold bounced to about $4,133 on Wednesday as oil eased, but it has been stuck between $4,100 and $4,200 for 16 days. Markets see a Fed rate hike in December as very likely, which keeps a lid on it.",
+      "ts": "2026-10-21T18:48:33Z"
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent crude is back near $110 as US-Iran peace efforts stall over Iran's refusal to send enriched uranium abroad and ship attacks continue near Hormuz. Official figures showed US crude stocks fell for a second straight week, leaving less cushion if Gulf supply is cut.",
-      "ts": "2026-10-21T15:45:28Z"
+      "text": "Oil is still near five-month highs, held up by worsening Iranian attacks on ships near Hormuz and stalled US-Iran peace talks. It slipped back on Wednesday afternoon, with US crude near $96, after the US let some sanctioned cargo be delivered and Russia agreed in principle to new Ukraine peace talks.",
+      "ts": "2026-10-21T18:48:33Z"
     }
   },
   "items": [
+    {
+      "id": "fxstreet-gold-rebounds-4130-20261021",
+      "ts": "2026-10-21T18:01:35Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/gold-rebounds-above-4-130-as-oil-retreats-fed-decision-looms-202610211801",
+      "image": "https://editorial.fxsstatic.com/images/i/discover-51_Medium.png",
+      "headline": "Gold rebounds above $4,130 as Oil retreats, Fed decision looms",
+      "story": "gold-week",
+      "story_title": "Gold: oil, yields and the Fed",
+      "pillar": "policy",
+      "summary": "Gold bounced back to about $4,133 after three days of losses, as oil slipped and the dollar eased, but it's still stuck in the same narrow range.",
+      "beats": {
+        "was": "Gold is down about a quarter from its record near $5,600 because costly oil has pushed the US Federal Reserve toward raising interest rates, which makes gold, paying no interest, less attractive. It has traded between $4,100 and $4,200 for 16 days in a row.",
+        "happened": "Gold rose to about $4,133 after touching $4,106 earlier on Wednesday, helped by a dip in oil after a US sanctions licence and a slightly weaker dollar. Markets still see about an 89% chance the Fed raises rates in December, and a small chance at its October 27–28 meeting.",
+        "means": "The bounce is small and doesn't change the bigger picture: as long as a Fed rate hike is expected, gold struggles to climb. Cheaper oil would ease that pressure.",
+        "fx": "Oil dips → slightly less pressure for Fed hikes → gold lifts a little. The lens: still inside its range; the Fed meeting next week matters more."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A small rebound as oil and the dollar eased."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The dollar slipped slightly as oil fell."
+        }
+      ],
+      "watch": "The Fed's October 27–28 decision and next week's US core inflation (PCE) figure."
+    },
+    {
+      "id": "newsquawk-ofac-offload-cargo-20261021",
+      "ts": "2026-10-21T17:16:00Z",
+      "source": "Newsquawk",
+      "url": "https://newsquawk.com/headlines/market-update-risk-on-trade-seen-at-1240-edt--1740-bst-despite-no-clear-headline-driver-downside-of-c-usd-080bbl-was-seen-in-oil-equity-futures-hit-new-session-highs-gold-and-bonds-rallied-while-usd-saw-pressure",
+      "image": "https://www.newsquawk.com/assets/placeholder_images_for_news_by_category/Energy/3.png",
+      "headline": "Risk-on trade as desks cite OFAC authorising offloading of some cargo involving some blocked vessels",
+      "story": "us-iran-sanctions",
+      "story_title": "US sanctions on Iran's oil shipping",
+      "pillar": "tot",
+      "summary": "The US Treasury let some cargo be unloaded from tankers it had just blacklisted, and oil slipped while shares, bonds and gold rose.",
+      "beats": {
+        "was": "The US is at war with Iran and blocks Iranian oil exports, adding tankers and shipping firms to its sanctions list most weeks. Oil had climbed back near five-month highs on Wednesday morning as peace talks stalled.",
+        "happened": "The US Treasury's sanctions office (OFAC) blacklisted nine more vessels and several shipping firms on Wednesday, but issued a licence allowing some of their cargo to be unloaded and their business wound down. US crude fell about 80 cents soon after, and the dollar eased.",
+        "means": "Oil already at sea may still reach buyers instead of being stuck, so a little less supply goes missing. The licence is narrow, and past ones like it have had little lasting effect.",
+        "fx": "Some blocked oil can still be delivered → slightly more supply → small dip in oil prices → mild relief for oil importers like Japan and Europe, a small drag on the Canadian dollar. The lens: a narrow, technical step, not a change in US policy."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lets some sanctioned cargo reach buyers, easing supply worries a little."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Gold rose as bond yields and the dollar eased on the move."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The dollar slipped as cheaper oil eased Fed rate-hike worries."
+        }
+      ],
+      "watch": "Whether the US widens the licence, or new sanctions follow that block more Iranian oil."
+    },
     {
       "id": "investinglive-eia-crude-draw-20261021",
       "ts": "2026-10-21T14:33:27Z",
@@ -88,66 +160,6 @@
       "watch": "Next week's US stock figures and any news on shipping through the Strait of Hormuz."
     },
     {
-      "id": "fxstreet-bbh-cad-pricing-excessive-20261020",
-      "ts": "2026-10-20T14:38:45Z",
-      "source": "FXStreet (BBH)",
-      "url": "https://www.fxstreet.com/news/canadian-dollar-market-pricing-seen-excessive-despite-hike-bets-bbh-202610201438",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-52_Medium.png",
-      "headline": "Canadian Dollar: market pricing seen excessive despite hike bets (BBH)",
-      "story": "boc-oct",
-      "story_title": "BoC: the October 28 decision",
-      "pillar": "policy",
-      "summary": "A strategist at the bank Brown Brothers Harriman argues markets expect too many Bank of Canada rate rises, which limits how far the Canadian dollar can climb.",
-      "beats": {
-        "was": "Traders have quickly raised their bets on a Bank of Canada rate hike on October 28, to about 78% in swaps from 60%, after Governor Tiff Macklem warned that inflation risks are spreading.",
-        "happened": "Elias Haddad of Brown Brothers Harriman noted that September's headline inflation of 3.1% came mostly from energy, while the bank's preferred core measures eased to about 1.85%, below its 2% target. He judged the roughly one percentage point of hikes priced over the next year as too much.",
-        "means": "The case for a hike rests on oil-driven prices, not broad inflation, and the economy still has slack. If the bank sounds less eager than markets expect, the loonie's rate support could shrink.",
-        "fx": "Core inflation under target + spare capacity in the economy → fewer hikes than priced → caps the loonie's gains. The lens: a hawkish decision on October 28 would prove this wrong."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Hike bets support the loonie, but soft core inflation argues markets have gone too far."
-        }
-      ],
-      "watch": "The Bank of Canada decision and statement on October 28."
-    },
-    {
-      "id": "fxstreet-france-oat-5pct-20261021",
-      "ts": "2026-10-21T09:56:15Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/frances-10-year-bond-yield-climbs-above-5-stirring-fears-of-a-credit-crisis-202610210956",
-      "image": "https://editorial.fxsstatic.com/images/i/Equity-Index_CAC40-1_Medium.jpg",
-      "headline": "France's 10-year bond yield climbs above 5%, stirring fears of a credit crisis",
-      "story": "france-fiscal",
-      "story_title": "France: budget fight, protests and debt worries",
-      "pillar": "risk",
-      "summary": "France now pays over 5% to borrow for ten years, the first time since 2002, and the gap over German debt is the widest since the euro debt crisis of 2009–2011.",
-      "beats": {
-        "was": "France's government has no majority to pass spending cuts, its debt is about 119% of the economy, and student protests have turned violent, with partial curfews in some cities. The budget vote is due October 27.",
-        "happened": "The 10-year French government bond yield went above 5%. The extra yield over Germany's 10-year bond widened to roughly 1.6 percentage points, a level last seen in the 2009–2011 crisis.",
-        "means": "Investors are asking more to lend to France because they doubt it can control its debt before next year's election. That worry spills into the euro as a whole.",
-        "fx": "French borrowing costs up + wider gap to Germany → doubts about the euro area's weakest big borrower → money leaves the euro for safer homes like the franc. The lens: a budget deal or calmer protests would ease it."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Higher French borrowing costs feed doubts about the euro area and cap the euro's recovery."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Stress inside the euro area sends money to the Swiss franc next door."
-        }
-      ],
-      "watch": "The October 27 budget vote, this weekend's protests, and Moody's review of France's credit rating on Friday."
-    },
-    {
       "id": "brecorder-houthis-deny-medina-20261021",
       "ts": "2026-10-21T12:46:59Z",
       "source": "Business Recorder",
@@ -179,6 +191,105 @@
         }
       ],
       "watch": "Any confirmed hit on Saudi oil sites or exports, and whether the Houthis' denial holds."
+    },
+    {
+      "id": "rigzone-us-diesel-reserve-20261021",
+      "date": "2026-10-21",
+      "source": "Rigzone (Bloomberg)",
+      "url": "https://www.rigzone.com/news/usa_to_tap_national_diesel_reserve-21-oct-2026-184897-article",
+      "image": null,
+      "headline": "USA to Tap National Diesel Reserve",
+      "story": "us-fuel-prices",
+      "story_title": "US fuel prices before the midterms",
+      "pillar": "tot",
+      "summary": "The US government will lend out a third of its emergency heating-oil stock in the Northeast to cool diesel prices before the November 3 elections.",
+      "beats": {
+        "was": "The war with Iran has pushed US diesel to record highs; it averages about $6.32 a gallon, and the midterm elections are on November 3. The Northeast Home Heating Oil Reserve holds 1 million barrels for winter emergencies.",
+        "happened": "US Energy Secretary Chris Wright said the government will lend 315,000 barrels from that reserve, with deliveries done by November 13. He called it a temporary fix for a temporary supply problem.",
+        "means": "The amount is tiny next to what the US uses each day, so the effect on prices is mostly symbolic. It shows Washington is under pressure to bring fuel costs down quickly.",
+        "fx": "Small emergency fuel release → barely more supply → little change to oil prices. The lens: a political signal more than a market one."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Adds a small amount of diesel supply and signals Washington wants lower fuel prices."
+        }
+      ],
+      "watch": "Whether the government releases more from its emergency stocks if prices keep rising."
+    },
+    {
+      "id": "rigzone-iran-ship-strikes-engines-20261021",
+      "date": "2026-10-21",
+      "source": "Rigzone (Bloomberg)",
+      "url": "https://www.rigzone.com/news/iran_intensifies_strikes_on_ships-21-oct-2026-184891-article",
+      "image": null,
+      "headline": "Iran Intensifies Strikes on Ships",
+      "story": "hormuz",
+      "story_title": "Hormuz: reopening offer vs ship attacks",
+      "pillar": "risk",
+      "summary": "Attacks on ships near the Strait of Hormuz are getting more frequent and more damaging, with missiles replacing drones and two vessels sunk last week.",
+      "beats": {
+        "was": "About a fifth of the world's oil passed through the Strait of Hormuz before the US-Iran war began. Iran has been attacking ships there to pressure Washington while peace talks run through Pakistan and Qatar.",
+        "happened": "At least 23 attacks on ships were logged in or near the strait in the first two weeks of October, at least five of them hitting engine rooms, which hadn't happened in September. Iran is using more missiles, and at least two ships sank last week.",
+        "means": "Oil is still flowing: Gulf exports are close to pre-war levels by some counts. But each attack makes tankers scarcer and shipping and insurance dearer, which keeps a risk premium in oil.",
+        "fx": "Heavier ship attacks → costlier, riskier Gulf shipping → keeps oil prices firm → helps the Canadian dollar, weighs on importers like Japan, and supports safe havens like the Swiss franc. The lens: escalation in kind, but flows are holding up."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Worse ship attacks raise shipping costs and the risk of lost supply."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More violence at sea keeps demand for safe havens."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so costlier shipping hurts its trade balance."
+        }
+      ],
+      "watch": "Any sign that Gulf oil exports fall back below normal, or that attacks ease if talks make progress."
+    },
+    {
+      "id": "aljazeera-putin-three-way-talks-20261021",
+      "date": "2026-10-21",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/10/21/witkoff-in-russia-for-putin-meeting-after-positive-talks-with-zelenskyy",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/10/AFP__20261021__D3XR3G4__v2__HighRes__RussiaUsUkraineDiplomacyConflict-1792595907.jpg?resize=1920%2C1440",
+      "headline": "Putin ready to resume three-way Ukraine peace talks",
+      "story": "russia-ukraine-talks",
+      "story_title": "Russia–Ukraine: peace talks restart?",
+      "pillar": "risk",
+      "summary": "After meeting the US envoy, Russia's President Vladimir Putin agreed in principle to new peace talks with the US and Ukraine, possibly in Abu Dhabi in mid-November.",
+      "beats": {
+        "was": "US-brokered talks to end the Russia-Ukraine war stalled in February, before the US-Iran war began. The war keeps European energy costly and adds to worries about Russian sabotage in NATO countries.",
+        "happened": "US special envoy Steve Witkoff met Putin for three hours in St Petersburg on Wednesday, a day after meeting Ukraine's President Volodymyr Zelenskyy and European leaders in Oslo. Putin's aide Yuri Ushakov said Russia is willing in principle to hold three-way talks, maybe in Abu Dhabi in mid-November, though he called Europe's and Kyiv's latest ideas thin.",
+        "means": "A restart of talks is a step, not a deal: the two sides remain far apart on terms. Still, it slightly lowers the odds of a wider war on Europe's edge.",
+        "fx": "Peace talks may resume → a little less war risk for Europe → mild support for the euro, and a small drag on oil if Russian supply looks safer. The lens: early, and talks have failed before."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Any easing of the war next door lifts Europe's outlook a little."
+        },
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Peace hopes trim the risk to Russian energy supply."
+        }
+      ],
+      "watch": "Whether a date and place for the talks is confirmed, and whether Ukraine and Europe agree to join."
     },
     {
       "id": "gulfnews-us-warships-uranium-20261021",
@@ -362,6 +473,39 @@
         }
       ],
       "watch": "The official US Energy Information Administration stock figures, due 9:30 AM CT Wednesday."
+    },
+    {
+      "id": "fxstreet-france-oat-5pct-20261021",
+      "ts": "2026-10-21T09:56:15Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/frances-10-year-bond-yield-climbs-above-5-stirring-fears-of-a-credit-crisis-202610210956",
+      "image": "https://editorial.fxsstatic.com/images/i/Equity-Index_CAC40-1_Medium.jpg",
+      "headline": "France's 10-year bond yield climbs above 5%, stirring fears of a credit crisis",
+      "story": "france-fiscal",
+      "story_title": "France: budget fight, protests and debt worries",
+      "pillar": "risk",
+      "summary": "France now pays over 5% to borrow for ten years, the first time since 2002, and the gap over German debt is the widest since the euro debt crisis of 2009–2011.",
+      "beats": {
+        "was": "France's government has no majority to pass spending cuts, its debt is about 119% of the economy, and student protests have turned violent, with partial curfews in some cities. The budget vote is due October 27.",
+        "happened": "The 10-year French government bond yield went above 5%. The extra yield over Germany's 10-year bond widened to roughly 1.6 percentage points, a level last seen in the 2009–2011 crisis.",
+        "means": "Investors are asking more to lend to France because they doubt it can control its debt before next year's election. That worry spills into the euro as a whole.",
+        "fx": "French borrowing costs up + wider gap to Germany → doubts about the euro area's weakest big borrower → money leaves the euro for safer homes like the franc. The lens: a budget deal or calmer protests would ease it."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Higher French borrowing costs feed doubts about the euro area and cap the euro's recovery."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stress inside the euro area sends money to the Swiss franc next door."
+        }
+      ],
+      "watch": "The October 27 budget vote, this weekend's protests, and Moody's review of France's credit rating on Friday."
     },
     {
       "id": "fxstreet-aud-monthly-high-20261021",
@@ -859,72 +1003,6 @@
       "watch": "The Bank of Canada decision on October 28 and oil prices."
     },
     {
-      "id": "fxstreet-ust-yields-retreat-20261020",
-      "ts": "2026-10-20T16:49:08Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/us-treasury-yields-retreat-as-iran-deal-hopes-pull-wti-lower-202610201649",
-      "image": "https://editorial.fxsstatic.com/images/i/DXY-neutral-object-1_Medium.png",
-      "headline": "US Treasury yields retreat as Iran deal hopes pull WTI lower",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: a mediated plan to restart talks",
-      "pillar": "policy",
-      "summary": "Long-term US yields edged down on deal hopes while two-year yields held flat, so markets still expect the Fed to hike in December.",
-      "beats": {
-        "was": "US government bond yields, which set how much dollar assets pay.",
-        "happened": "The 10-year yield slipped about 2bp to near 5.12% and the 2-year held near 4.79%. WTI eased below $98 and the dollar index lost about 0.3%.",
-        "means": "The dip is small and only at the long end. Short-term yields, which track the Fed, didn't move, so the case for a December hike is intact.",
-        "fx": "Small dip in long yields → slight loss of dollar support; flat 2-year → Fed outlook unchanged. The lens: does the 2-year start to fall too?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Long yields eased, but Fed pricing didn't budge."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Lower yields ease the main weight on gold."
-        }
-      ],
-      "watch": "Thursday's jobless claims and Friday's flash PMIs; the Fed meets Oct 27-28."
-    },
-    {
-      "id": "fxstreet-dxy-iran-report-denial-20261020",
-      "ts": "2026-10-20T15:25:23Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/dollar-index-drops-on-iran-deal-report-steadies-on-denial-202610201525",
-      "image": "https://editorial.fxsstatic.com/images/i/DXY-neutral-object_Medium.png",
-      "headline": "Dollar Index drops on Iran deal report, steadies on denial",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: a mediated plan to restart talks",
-      "pillar": "risk",
-      "summary": "The dollar hit its lowest since Oct 1 on the US-Iran report, then won some back after a diplomat said a deal wasn't close.",
-      "beats": {
-        "was": "The dollar's reaction to reports that both sides had backed a Qatar-Pakistan plan.",
-        "happened": "The dollar index fell to just above 101.5, then bounced near 101.7 on the denial. Weak housing data added to the softness.",
-        "means": "The dollar has given back about a third of its rise since early September. Economists still all expect a Fed hike in December, which keeps a floor under it.",
-        "fx": "Peace hopes → cheaper oil → lower yields and less haven demand → dollar softer. The lens: is the US-Iran plan real?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Three-week low on the report, partly undone by the denial."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rose as oil fell, the mirror of the dollar's drop."
-        }
-      ],
-      "watch": "Any official confirmation; Thursday's jobless claims and Friday's flash PMIs."
-    },
-    {
       "id": "fxstreet-gbp-1340-jobs-iran-20261020",
       "ts": "2026-10-20T15:17:22Z",
       "source": "FXStreet",
@@ -956,78 +1034,6 @@
         }
       ],
       "watch": "Wednesday's UK CPI; a denial of the US-Iran plan would help the dollar back."
-    },
-    {
-      "id": "businesstoday-us-iran-proposal-terms-20261020",
-      "ts": "2026-10-20T15:12:04Z",
-      "source": "Business Today",
-      "url": "https://www.businesstoday.in/world/story/us-iran-breakthrough-this-week-6-billion-frozen-funds-secret-nuclear-inspection-in-new-peace-proposal-562651-2026-10-20",
-      "image": "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202610/6ad7849262541-6-billion-iranian-funds--secret-nuclear-inspections-inside-new-us-iran-compromise-proposal-20111384-16x9.png",
-      "headline": "US Iran breakthrough this week? $6 billion frozen funds, secret nuclear inspection in new peace proposal",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: a mediated plan to restart talks",
-      "pillar": "risk",
-      "summary": "What the reported plan contains: Iran would get the interest, not the principal, on $6 billion frozen in Qatar, and would allow a quiet UN nuclear inspection. Neither government has confirmed it.",
-      "beats": {
-        "was": "The terms of the Qatar-Pakistan proposal, carried to Tehran by Pakistan's army chief.",
-        "happened": "A Qatari-owned paper, citing unnamed sources, said the US agreed and Iran responded well. Iranian sources later said reports of a near deal were wrong, while saying talks go on.",
-        "means": "It is a small first step on money and inspections, not a peace deal. It matters because it would reopen talks after weeks of escalation.",
-        "fx": "Real talks → lower odds of Gulf supply cuts → less demand for safe havens and less oil premium. The lens: do both sides confirm?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "An unconfirmed opening for talks, already partly denied."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Talks hope eases the need for shelter."
-        }
-      ],
-      "watch": "Official word from Washington or Tehran; a new tanker or Saudi attack would undercut it."
-    },
-    {
-      "id": "fxstreet-wti-slides-us-iran-plan-20261020",
-      "ts": "2026-10-20T15:01:07Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/wti-oil-plunges-as-us-iran-compromise-proposal-raises-hopes-of-de-escalation-202610201501",
-      "image": "https://editorial.fxsstatic.com/images/i/Commodities_Oil-1_Medium.jpg",
-      "headline": "WTI Oil slides as US-Iran compromise plan eases Middle East risks",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: a mediated plan to restart talks",
-      "pillar": "risk",
-      "summary": "US crude gave back its surge, falling to about $95.70 after briefly topping $100, on a report that Washington and Tehran had tentatively backed a mediated plan. Nothing is officially confirmed.",
-      "beats": {
-        "was": "A report of a Pakistan- and Qatar-brokered plan to get the US and Iran talking again.",
-        "happened": "Israeli TV said the US approved it and Iran gave early consent. WTI swung from above $100 to near $95.70, down about 2.4% on the day.",
-        "means": "Oil had been pricing a long squeeze on Gulf supply. Any path to talks shrinks that war premium fast, even before anything is signed.",
-        "fx": "Talks hope → less war premium in oil → lower inflation fears → softer yields → oil sellers' currencies lose a tailwind. The lens: is the plan confirmed, or just a report?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Talk of a deal knocked out much of the day's surge."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Cheaper oil trims the loonie's main support."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil pulls US yields and hike bets back."
-        }
-      ],
-      "watch": "An official denial or a new attack on ships would rebuild the premium; a confirmed meeting would deepen the drop."
     },
     {
       "id": "fxstreet-euro-climbs-oil-tumbles-20261020",
@@ -1063,37 +1069,31 @@
       "watch": "Houthi strikes and Hormuz ship attacks are still live; a fresh hit would send oil and the dollar back up."
     },
     {
-      "id": "usagold-gold-4124-20261020",
-      "ts": "2026-10-20T13:51:20Z",
-      "source": "USAGOLD",
-      "url": "https://www.usagold.com/daily-precious-metals-market-report-october-20-2026/",
-      "image": "https://www.usagold.com/wp-content/uploads/2026/08/usagold-og-image.png",
-      "headline": "Physical Gold Slips To $4,124 As Oil-Driven Yields Revive Fed Hike Bets; Silver Firms",
-      "story": "gold-week",
-      "story_title": "Gold: oil, yields and the Fed",
+      "id": "fxstreet-bbh-cad-pricing-excessive-20261020",
+      "ts": "2026-10-20T14:38:45Z",
+      "source": "FXStreet (BBH)",
+      "url": "https://www.fxstreet.com/news/canadian-dollar-market-pricing-seen-excessive-despite-hike-bets-bbh-202610201438",
+      "image": "https://editorial.fxsstatic.com/images/i/discover-52_Medium.png",
+      "headline": "Canadian Dollar: market pricing seen excessive despite hike bets (BBH)",
+      "story": "boc-oct",
+      "story_title": "BoC: the October 28 decision",
       "pillar": "policy",
-      "summary": "Gold fell for a third day to about $4,124 as oil pushed US yields toward 5.14% and markets leaned harder into a December Fed hike.",
+      "summary": "A strategist at the bank Brown Brothers Harriman argues markets expect too many Bank of Canada rate rises, which limits how far the Canadian dollar can climb.",
       "beats": {
-        "was": "The daily gold price and what moved it.",
-        "happened": "Spot gold was down about 0.4% to near $4,124, a third straight loss, while silver edged up.",
-        "means": "Higher oil means stickier inflation, so the Fed may have to hike again. That lifts yields, and gold pays no interest, so holding it gets costlier.",
-        "fx": "Dearer oil → Fed hike odds up → higher US yields → cash and bonds pay more than gold → gold slips. The lens: where are US yields heading?"
+        "was": "Traders have quickly raised their bets on a Bank of Canada rate hike on October 28, to about 78% in swaps from 60%, after Governor Tiff Macklem warned that inflation risks are spreading.",
+        "happened": "Elias Haddad of Brown Brothers Harriman noted that September's headline inflation of 3.1% came mostly from energy, while the bank's preferred core measures eased to about 1.85%, below its 2% target. He judged the roughly one percentage point of hikes priced over the next year as too much.",
+        "means": "The case for a hike rests on oil-driven prices, not broad inflation, and the economy still has slack. If the bank sounds less eager than markets expect, the loonie's rate support could shrink.",
+        "fx": "Core inflation under target + spare capacity in the economy → fewer hikes than priced → caps the loonie's gains. The lens: a hawkish decision on October 28 would prove this wrong."
       },
       "impact": [
         {
-          "ccy": "XAU",
-          "dir": "bearish",
+          "ccy": "CAD",
+          "dir": "mixed",
           "strength": 1,
-          "why": "Third daily loss as yields rise on oil."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "December hike bets firming gives the dollar a yield edge."
+          "why": "Hike bets support the loonie, but soft core inflation argues markets have gone too far."
         }
       ],
-      "watch": "A pullback in oil or yields would lift gold; a confirmed supply loss could revive haven buying."
+      "watch": "The Bank of Canada decision and statement on October 28."
     },
     {
       "id": "tradingpedia-chf-recovery-snb-20261020",
