@@ -1,6 +1,6 @@
 {
   "as_of": "2026-10-22",
-  "updated": "2026-10-22T00:40:00-05:00",
+  "updated": "2026-10-22T07:52:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
   "note": "NY-close read, Wednesday 2026-10-21. 20-yr auction: $13B at 5.469% (record; 0.9bp tail, B/C 2.73) — little market reaction. UK CPI 3.5% beat stands; Nov-5 BoE ~95-98%, Dec ~51%. BoC Oct-28 ~93%; RBNZ ~80-81% (Q3 CPI 4:45pm CT tonight the decider); ECB Dec ~76% (vintage update); BoJ Dec ~80% (up from ~73%); RBA Nov ~42% (Goldman flipped). Brent settled $108.82, WTI $97.15. Scores unchanged; history NOT re-appended — 2026-10-21 snapshot exists.",
   "pairs": {},
@@ -10,7 +10,7 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY ~101.6 — flat, consolidating just above the 3-week low of 101.50; October FOMC a hold at ~84-85% (only ~16% hike odds), December hike ~90%. Blackout holds, no Fed speakers; 10Y 5.12%, 2Y 4.79% (FRED, Oct 20).",
+      "summary": "DXY ~101.5 near the 3-week low — jobless claims beat at 194K (vs 200K fcst; near 57-year lows) but the risk-off tape dominates: Brent $112.4, USD/JPY 157.19, yields sliding (10Y ~5.07%). October FOMC a hold at ~84-85% (only ~16% hike odds), December hike ~90%; blackout holds. Reuters: economists expect the Fed to stay pat next week and hike in December.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -18,7 +18,7 @@
         },
         "growth": {
           "score": 0,
-          "note": "housing starts 1.221M miss + pending home sales record-low + ADP 18.5K — the soft patch vs last week's retail/IP beats; net mixed; jobless claims 7:30am CT today (200K fcst)"
+          "note": "jobless claims BEAT: 194K vs 200K fcst (week ended Oct 17; -6K) — near 57-year lows; continuing claims +25K to 1.728M. Housing soft patch (starts 1.221M miss, pending home sales record-low, ADP 18.5K) vs last week's retail/IP beats; net mixed-to-firm on the claims print"
         },
         "inflation": {
           "score": 1,
@@ -26,7 +26,7 @@
         },
         "risk": {
           "score": 0,
-          "note": "DXY ~101.6 flat near the 3-week low — no sustained haven bid ('dip in the dollar takes a breather,' Reuters Asia)"
+          "note": "dollar extends slide as US yields stretch lower (FXStreet) — no real haven bid even on the Gulf escalation; DXY near the 3-week low"
         },
         "tot": {
           "score": 0,
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD ~1.3395 (+0.4%) — near the 1-month high: Sep CPI 3.5% beat (vs 3.4% fcst; highest since Oct 2025; core 2.8%; services 3.7% sticky) locks Nov 5 at ~98.8% (LSEG) and December back-to-back at ~51%; EUR/GBP 83.80p — 17-month sterling high. Bailey's fireside produced no new rate-policy signal.",
+      "summary": "GBP/USD ~1.3395 (+0.4%) — near the 1-month high: Sep CPI 3.5% beat (vs 3.4% fcst; highest since Oct 2025; core 2.8%; services 3.7% sticky) locks Nov 5 at ~98.8% (LSEG) and December back-to-back at ~51%; CBI industrial orders missed at -32 (vs -20 fcst, from -9) this morning — factory gloom deepening but the BoE path priced on inflation. EUR/GBP 83.80p — 17-month sterling high.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -92,7 +92,7 @@
         },
         "growth": {
           "score": 1,
-          "note": "jobs beat: unemp 4.7% (lowest since mid-2025), payrolls +13K vs -15K; GDP +0.1% beat stands; CBI orders today (6am CT)"
+          "note": "jobs beat: unemp 4.7% (lowest since mid-2025), payrolls +13K vs -15K; GDP +0.1% beat stands; CBI order expectations -32 (vs -20 fcst, from -9) — industrial gloom deepens, services carry the story"
         },
         "inflation": {
           "score": 1,
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY ~157.7-158.1 (-0.2%) — rangebound: Sep trade deficit still the anchor (-¥536.6bn vs -¥181bn; exports +16.7% missed +20.1%). BoJ Oct 29-30 a hold at ~88-90%; December ~80% (Japan Times/Bloomberg via ex-BoJ Maeda). National core CPI tonight (18:30 CT; 2.1% fcst).",
+      "summary": "USD/JPY below 157.5 (Asia low 157.4) — the yen's best day in a month, lowest since early October: dollar-long paring + Gulf risk-off (Reuters/Business Today, Oct 22). BoJ Oct 29-30 a hold at ~88-90%; December ~80% (Japan Times/Bloomberg via ex-BoJ Maeda). National core CPI tonight (18:30 CT; 2.1% fcst).",
       "drivers": {
         "policy": {
           "score": -1,
@@ -136,8 +136,8 @@
           "note": "national core CPI tonight 18:30 CT (2.1% fcst, prev 1.7%); Ueda: underlying inflation 'quite close' to 2% — words, not a move yet"
         },
         "risk": {
-          "score": 0,
-          "note": "no retaliation, no signed deal — haven bid sheathed; franc the preferred haven"
+          "score": 1,
+          "note": "haven bid fired on the Gulf escalation — yen's best day in a month, USD/JPY below 157.5 (Asia low 157.4) on dollar-long paring (Reuters, Oct 22)"
         },
         "tot": {
           "score": -1,
@@ -158,11 +158,11 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF ~0.8240 (-0.1%) — quiet, haven bid sheathed; SNB summary of monetary policy discussions 02:30 CT today; policy rate 0.00%, next decision Dec 10.",
+      "summary": "USD/CHF ~0.824 (-0.1%) — SNB September write-up (Oct 22): the franc's carry-trade appeal acknowledged (widening rate differentials, low volatility), intervention readiness eased, franc weakness tolerated; policy rate 0.00%, next decision Dec 10 (a cut possible).",
       "drivers": {
         "policy": {
           "score": 0,
-          "note": "SNB at 0.00%; summary of monetary policy discussions today (02:30 CT); next decision Dec 10 — a cut is possible"
+          "note": "SNB at 0.00% (Dec 10 next; a cut possible); September summary (Oct 22): franc's carry-trade appeal acknowledged, intervention readiness eased — tolerates franc weakness"
         },
         "growth": {
           "score": 0,
@@ -174,7 +174,7 @@
         },
         "risk": {
           "score": 1,
-          "note": "preferred haven on Iran-war headlines — but the bid sheathed while oil trades diplomacy headlines"
+          "note": "haven bid fired on the Gulf escalation — but the yen led, not the franc (USD/CHF ~0.824)"
         },
         "tot": {
           "score": 0,
@@ -240,7 +240,7 @@
         },
         "growth": {
           "score": -1,
-          "note": "housing starts miss + retail softness — the domestic soft patch vs US resilience"
+          "note": "housing starts miss + retail softness — the domestic soft patch vs US resilience; IPPI/NHPI/RMPI print 7:30 CT today (0.7%/-0.1%/0.1% fcst)"
         },
         "inflation": {
           "score": 0,
