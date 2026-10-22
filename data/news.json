@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-22T16:51:43Z",
+  "updated": "2026-10-22T22:47:03Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "text": "The dollar is near a three-week low: US shares slid on Thursday and investors bought US government bonds, pulling their yields down sharply. Layoffs are the fewest since July, though, and with oil high the Fed is still expected to hold on October 28 and raise rates in December.",
-      "ts": "2026-10-22T15:47:55Z"
+      "text": "The dollar is near a three-week low: US tech shares slid on Thursday and investors bought US government bonds, pushing the 10-year yield below 5%. Layoffs are the fewest since July, though, and with oil high the Fed is still expected to hold on October 28 and raise rates in December.",
+      "ts": "2026-10-22T22:47:03Z"
     },
     "EUR": {
       "lean": "bearish",
@@ -19,7 +19,7 @@
     },
     "JPY": {
       "lean": "bullish",
-      "text": "The yen had its best day in about a month, reaching about 157 per dollar, as falling share markets and Gulf attacks sent money to shelter and US bond yields eased. Bank of Japan officials keep a December hike in view; national inflation data is due October 23 and the bank meets October 29\u201330.",
+      "text": "The yen had its best day in about a month, reaching about 157 per dollar, as falling share markets and Gulf attacks sent money to shelter and US bond yields eased. Bank of Japan officials keep a December hike in view; national inflation data is due October 23 and the bank meets October 29–30.",
       "ts": "2026-10-22T11:46:35Z"
     },
     "CHF": {
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "bullish",
-      "text": "The loonie has risen six days running to a one-month high, near 1.40 per US dollar, helped by Brent oil above $110 and bets on a Bank of Canada rate hike on October 28. Some strategists think markets expect too many hikes, since core inflation is below the bank's 2% target.",
-      "ts": "2026-10-22T15:47:55Z"
+      "text": "The loonie has risen six days running to a one-month high, near 1.40 per US dollar, helped by Brent oil above $110 and bets on a Bank of Canada rate hike on October 28. Factory prices jumped in September, which backs the hike case, though core inflation is still below the bank's 2% target.",
+      "ts": "2026-10-22T22:47:03Z"
     },
     "AUD": {
       "lean": "mixed",
@@ -44,16 +44,88 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold eased to about $4,070, near its low for the month, because markets see a US rate hike in December as very likely. Falling shares and Gulf attacks bring some shelter demand, but not enough to offset that.",
-      "ts": "2026-10-22T11:46:35Z"
+      "text": "Gold fell a fifth straight day to about $4,040, near its lowest this month, because dearer oil makes a US rate hike in December more likely. Falling shares and Gulf attacks bring some shelter buying, but not enough to offset that.",
+      "ts": "2026-10-22T22:47:03Z"
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent oil is at a five-month high above $111 after Iran claimed hits on seven Gulf ships, Houthi attacks reached Saudi Arabia's oil region, and reports said the US and Israel plan new strikes on Iran after the November 3 US election. With the Strait of Hormuz still largely shut, supply risk is growing even as the US releases fuel reserves and President Trump promises calm before the vote.",
-      "ts": "2026-10-22T16:51:43Z"
+      "text": "Brent oil rose to about $113, its highest since May, after Iran claimed hits on seven Gulf ships, Houthi attacks reached Saudi Arabia's oil region and reports said the US and Israel plan new strikes on Iran after the November 3 US election. President Trump says Iran is faking some attacks, but with the Strait of Hormuz still largely shut the supply risk keeps growing.",
+      "ts": "2026-10-22T22:47:03Z"
     }
   },
   "items": [
+    {
+      "id": "cbs-trump-fake-ship-hits-20261022",
+      "ts": "2026-10-22T18:58:00Z",
+      "source": "CBS News",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-ceasefire-talks-ongoing/",
+      "image": null,
+      "headline": "Iran War Updates: Trump accuses Iran of making up fake strikes on ships to drive up oil prices",
+      "story": "hormuz",
+      "story_title": "Hormuz: Iran's attacks on Gulf shipping",
+      "pillar": "tot",
+      "summary": "President Trump said Iran is inventing ship attacks to push oil prices up before the US election, as Brent oil hit its highest since mid-May and Saudi Aramco reportedly cleared its head office.",
+      "beats": {
+        "was": "Iran has largely closed the Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil, and the US has blockaded Iran's ports for 100 days.",
+        "happened": "Iran's Revolutionary Guards said they hit four tankers and that three more struck mines on Thursday. President Trump called the claims fake, meant to lift oil prices before the November 3 midterm elections. Reuters reported that Saudi Aramco told staff to leave its Dhahran headquarters after Houthi attacks on Saudi Arabia, and Brent rose to about $112, its highest since May 18.",
+        "means": "Whether or not every attack is real, buyers are paying more for oil because the threat to Gulf supply keeps growing.",
+        "fx": "Higher oil → good for oil sellers like Canada, bad for big oil buyers like Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "More reported ship attacks and a threat near Saudi Arabia's oil heartland lift supply fears."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada earns more when oil is dear."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Fear brings shelter buying, but Japan pays more for imported energy."
+        }
+      ],
+      "watch": "Independent proof of the ship hits, or any sign the Strait of Hormuz reopens."
+    },
+    {
+      "id": "businesstoday-gold-below-4100-silver-20261022",
+      "ts": "2026-10-22T16:31:00Z",
+      "source": "Business Today",
+      "url": "https://www.businesstoday.in/latest/economy/story/gold-falls-below-4100-silver-slides-4-5-as-brent-nears-112-will-fed-rate-hike-fears-trigger-more-losses-563169-2026-10-22",
+      "image": "https://akm-img-a-in.tosshub.com/businesstoday/images/story/202610/6ada39ec3b451-brent-crudes-rise-towards-112-a-barrel-highlights-the-risk-that-disruptions-to-gulf-shipping-could-222930959-16x9.jpg",
+      "headline": "Gold falls below $4,100, silver slides 4.5% as Brent nears $112: Will Fed rate hike fears trigger more losses?",
+      "story": "gold-week",
+      "story_title": "Gold: rate-hike odds vs war risk",
+      "pillar": "policy",
+      "summary": "Gold fell more than 2% to about $4,050 and silver lost over 4%, as dearer oil revived fears of more US rate hikes.",
+      "beats": {
+        "was": "Gold pays no interest, so it usually loses appeal when markets expect higher US rates; it had already fallen four days running.",
+        "happened": "On Thursday gold slid about 2.3% to roughly $4,047 an ounce and silver dropped about 4.5%, while Brent oil rose toward $112. Gold is down about 3% so far in October and silver about 10%.",
+        "means": "Gulf fighting is lifting oil, and dearer oil makes a December US rate hike more likely, which outweighs gold's appeal as a shelter.",
+        "fx": "Oil up → US hike bets up → gold down, even on a fearful day."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A fifth straight fall, driven by US rate-hike fears rather than war news."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Australia is a big gold and metals exporter, and copper fell too."
+        }
+      ],
+      "watch": "What the Fed signals about December on October 28, and whether gold holds above its early-October lows."
+    },
     {
       "id": "reuters-ez-consumer-confidence-oct-20261022",
       "ts": "2026-10-22T14:14:00Z",
@@ -69,7 +141,7 @@
         "was": "The European Commission's monthly consumer confidence survey asks households how they feel about money and the economy. It was already weak at -16.8 in September, with oil above $100 lifting fuel and heating bills.",
         "happened": "The early October reading fell to -17.9, below the -17.0 economists expected. For the whole European Union it slipped to -17.3.",
         "means": "Shoppers are getting more cautious, which points to softer spending and makes it harder for the European Central Bank to keep raising rates without hurting growth.",
-        "fx": "Weaker household mood + high energy bills \u2192 less room for ECB hikes than for Bank of England hikes, a mild drag on the euro."
+        "fx": "Weaker household mood + high energy bills → less room for ECB hikes than for Bank of England hikes, a mild drag on the euro."
       },
       "impact": [
         {
@@ -96,7 +168,7 @@
         "was": "Weekly jobless claims count people newly applying for unemployment benefits, a quick read on layoffs. US hiring has been slow and the jobless rate rose to 4.2% last month, but companies have mostly kept their staff.",
         "happened": "New claims fell to 194,000 from 200,000 the week before, the lowest in three months. The four-week average dropped to about 198,000.",
         "means": "The job market is cooling through slow hiring, not through layoffs. That gives the Federal Reserve no reason to drop its plan to raise rates in December.",
-        "fx": "Low layoffs + Fed hike still expected in December \u2192 a small support for the dollar and a small weight on gold."
+        "fx": "Low layoffs + Fed hike still expected in December → a small support for the dollar and a small weight on gold."
       },
       "impact": [
         {
@@ -115,6 +187,33 @@
       "watch": "Whether claims stay this low into the next US jobs report."
     },
     {
+      "id": "instaforex-canada-ippi-sep-20261022",
+      "ts": "2026-10-22T12:30:00Z",
+      "source": "InstaForex",
+      "url": "https://www.instaforex.com/forex-news/3243226",
+      "image": null,
+      "headline": "Canada's Industrial Product Prices Accelerate in September, Signalling Rising Cost Pressures",
+      "story": "boc-oct28",
+      "story_title": "Bank of Canada: an October 28 rate hike?",
+      "pillar": "inflation",
+      "summary": "Prices Canadian factories charge rose 2.0% in September, faster than in August, a sign that higher costs are still feeding through.",
+      "beats": {
+        "was": "Markets expect the Bank of Canada to raise rates on October 28, though core consumer inflation is running below its 2% target.",
+        "happened": "Statistics Canada said its industrial product price index, which tracks prices at the factory gate, rose 2.0% in September after 1.2% in August, well above forecasts. Raw material prices also jumped.",
+        "means": "Higher factory costs tend to reach shop prices later, which supports the case for a rate hike.",
+        "fx": "Hotter factory prices → more reason for a Bank of Canada hike → mild support for the loonie."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising factory prices back the case for an October 28 hike."
+        }
+      ],
+      "watch": "Whether the Bank of Canada hikes on October 28 and says these costs worry it."
+    },
+    {
       "id": "investinglive-eu-wrap-risk-off-20261022",
       "ts": "2026-10-22T12:12:25Z",
       "source": "investingLive",
@@ -129,7 +228,7 @@
         "was": "Tension between the US and Iran, doubts about AI spending, and France's budget troubles have all been weighing on markets this week.",
         "happened": "In European trading, the euro fell to about 0.92 Swiss francs, its lowest in three months, and the dollar slid to about 157 yen. European shares fell and the gap between French and German borrowing costs widened to its largest since 2011.",
         "means": "When investors get nervous they buy the franc and the yen; France's troubles add a euro-specific reason to sell.",
-        "fx": "Shelter buying + French debt worries \u2192 franc and yen up, euro down against both."
+        "fx": "Shelter buying + French debt worries → franc and yen up, euro down against both."
       },
       "impact": [
         {
@@ -161,14 +260,14 @@
       "image": "https://s.yimg.com/lo/mysterio/api/e1f0f77556a6736ddac13c1242262837541eaaa0948517e7dc2766682d4720bd/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-10%2Fe4d66753-eb1d-4a3d-a303-375d5cefd8ab",
       "headline": "Oil prices gain on worries of Iran-US escalations after midterms",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
       "pillar": "risk",
       "summary": "Oil climbed to its highest since May, with Brent above $111 and US crude near $99, on fears that fighting with Iran restarts after the US midterm elections on November 3.",
       "beats": {
         "was": "The US-Iran war began in late February, and Iran still keeps the Strait of Hormuz, the route for about a fifth of the world's oil, largely shut. President Trump has been looking for ways to bring fuel prices down before the midterm elections on November 3.",
         "happened": "A New York Times report said the US and Israel have plans for new strikes on Iran after the elections, and Saudi Arabia reported attacks on Dammam's airport and an Aramco oil field. Trump said he will not attack Iran before the vote and suggested fuel prices will fall afterwards. Brent rose above $111 a barrel and US crude went past $99.",
         "means": "Markets now see the weeks after the vote as the riskier stretch for oil supply, so promises of calm before it do little to cool prices.",
-        "fx": "Talk of strikes after the election \u2192 more risk to Gulf oil \u2192 dearer oil. Dearer oil keeps US inflation worries alive, which is why traders fully expect a Federal Reserve hike in December. The lens: whether Brent holds above $110 into November."
+        "fx": "Talk of strikes after the election → more risk to Gulf oil → dearer oil. Dearer oil keeps US inflation worries alive, which is why traders fully expect a Federal Reserve hike in December. The lens: whether Brent holds above $110 into November."
       },
       "impact": [
         {
@@ -199,6 +298,39 @@
       "watch": "Brent near $111, and any sign the post-election strike plans move forward or are shelved."
     },
     {
+      "id": "fxstreet-danske-fed-preview-20261022",
+      "ts": "2026-10-22T10:47:41Z",
+      "source": "FXStreet (Danske Bank)",
+      "url": "https://www.fxstreet.com/analysis/fed-preview-on-hold-in-october-hiking-resumes-later-202610221047",
+      "image": "https://editorial.fxsstatic.com/images/i/Federal-Reserve-Building_2_Medium.png",
+      "headline": "Fed preview: On hold in October, hiking resumes later",
+      "story": "fed-oct28",
+      "story_title": "Federal Reserve: hold on October 28, hike in December?",
+      "pillar": "policy",
+      "summary": "Economists at Danske Bank expect the US Federal Reserve to leave rates alone on October 28, then raise them in December and again in March.",
+      "beats": {
+        "was": "The Fed raised rates this year for the first time since 2023 as energy costs pushed inflation up; markets give only a small chance of another hike next week.",
+        "happened": "Danske Bank expects a hold on October 28, with two or three officials, possibly Beth Hammack and Lorie Logan, voting for a hike. It forecasts quarter-point hikes in December and March, and says the risk is of even more.",
+        "means": "A hold would be mostly expected. The question is how firmly Fed Chair Kevin Warsh points to December.",
+        "fx": "Hold now, hikes later → little change for the dollar unless the vote is more split than expected."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A hold could ease US yields a little, but more hikes are expected after."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Danske sees any euro lift on a Fed hold as short-lived."
+        }
+      ],
+      "watch": "How many Fed officials vote for a hike on October 28, and what Kevin Warsh says about December."
+    },
+    {
       "id": "disruptionbanking-france-spread-2011-20261022",
       "ts": "2026-10-22T10:30:58Z",
       "source": "Disruption Banking",
@@ -213,7 +345,7 @@
         "was": "France's government is trying to pass a 2027 budget that aims to cut the deficit to 5% of national income, but parliament is split and street protests are growing. Investors have been demanding more to lend to France for weeks.",
         "happened": "France's 10-year borrowing cost rose above 5% for the first time since 2002, and the gap over Germany widened to roughly 165 basis points, up from about 150 earlier this month. For a short time France paid more than the US to borrow for 10 years, a first since 2013. The vote on the budget's tax side has been delayed, and Finance Minister Roland Lescure said the government could force it through without a vote if needed.",
         "means": "Investors now treat France as a real credit worry, not just a political one. More than half of French debt is held abroad, so a downgrade could push foreign money out of the euro area.",
-        "fx": "Wider France\u2013Germany gap + rating review Friday \u2192 money leaves euro-area bonds, which weighs on the euro and tends to help the franc and the pound against it."
+        "fx": "Wider France–Germany gap + rating review Friday → money leaves euro-area bonds, which weighs on the euro and tends to help the franc and the pound against it."
       },
       "impact": [
         {
@@ -246,7 +378,7 @@
         "was": "Yemen's Houthis, an armed group backed by Iran, have stepped up drone and missile attacks on Saudi Arabia during the US-Iran war, which began in late February. On October 21 a drone aimed at Saudi Aramco's Shaybah oilfield was shot down and two people died.",
         "happened": "A late attack on King Fahd International Airport in Dammam, in Saudi Arabia's oil-rich east, killed two people and hurt eight; the airport has reopened. The US State Department ordered non-emergency staff and families out of Saudi Arabia and said the order covers only that country, though US officials told Reuters families would also leave other Gulf missions. Brent was above $110 a barrel.",
         "means": "Attacks are reaching Saudi Arabia's oil region itself, not just ships at sea, so the risk to the world's biggest oil exporter is rising.",
-        "fx": "Houthi strikes on Saudi soil \u2192 more risk to oil supply \u2192 dearer oil and demand for shelter currencies. The lens: whether attacks hit Saudi oil output or export terminals."
+        "fx": "Houthi strikes on Saudi soil → more risk to oil supply → dearer oil and demand for shelter currencies. The lens: whether attacks hit Saudi oil output or export terminals."
       },
       "impact": [
         {
@@ -291,7 +423,7 @@
         "was": "The Confederation of British Industry (CBI), a business lobby, asks manufacturers each month about orders and plans. Official figures show factory output growing this year, and the Bank of England is expected to raise rates on November 5 because inflation is 3.5%.",
         "happened": "The CBI's measure of order books dropped to -32 in October from -9 in September, meaning far more firms reported weak orders than strong ones. Firms' outlook for output over the next three months improved to about flat, from deeply negative in July, and their plans to raise prices rose to +24 from +11. The CBI pointed to falling orders and growing staff shortages.",
         "means": "Demand for British goods is soft, but factories plan bigger price rises, which is what the Bank of England worries about.",
-        "fx": "weak orders + firmer price plans \u2192 little change to the case for a November hike, a small dent in the growth story for the pound. The lens: the official UK business surveys out on October 23."
+        "fx": "weak orders + firmer price plans → little change to the case for a November hike, a small dent in the growth story for the pound. The lens: the official UK business surveys out on October 23."
       },
       "impact": [
         {
@@ -318,7 +450,7 @@
         "was": "Since the US-Iran war began, Iran has kept most traffic through the Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil, blocked or under threat, while US-Iran peace talks have stalled.",
         "happened": "The naval arm of Iran's Revolutionary Guards claimed it struck four tankers moving oil between ships in the northern Gulf, and that three more vessels hit mines west of Hormuz. These are Iran's own claims and have not been confirmed. It also warned of a wider response against US bases. Yemen's Houthis, who are allied with Iran, kept firing drones at Saudi oilfields, and the US told non-essential staff to leave Saudi Arabia. Brent rose more than 2% in Asian trading.",
         "means": "Shipping in the Gulf looks less safe again, not more, so the oil supply risk is growing rather than fading.",
-        "fx": "Gulf ships under attack \u2192 dearer oil \u2192 support for oil exporters like Canada, a heavier bill for big oil importers like Japan, and more demand for shelter currencies. The lens: whether these claims are confirmed by shipping trackers."
+        "fx": "Gulf ships under attack → dearer oil → support for oil exporters like Canada, a heavier bill for big oil importers like Japan, and more demand for shelter currencies. The lens: whether these claims are confirmed by shipping trackers."
       },
       "impact": [
         {
@@ -363,7 +495,7 @@
         "was": "The Swiss National Bank (SNB) held its rate at 0% in September. Earlier in the year it had said it was more willing than usual to step into currency markets to stop the franc getting too strong.",
         "happened": "A summary of the September discussion, published October 22, says the franc fell about 3% against its main partners between June and September, which eased conditions more than slightly higher Swiss rates tightened them. It says wider gaps between interest rates abroad and calm markets have made the franc attractive to borrow cheaply and invest elsewhere, while demand for it as a safe place stayed limited. Inflation was 0.8% in August, mostly from fuel, and growth was solid, so an increased willingness to intervene is no longer needed, though the bank can still act.",
         "means": "The SNB is relaxed about the franc for now. It is not trying to push it down, and with near-zero rates the franc tends to be sold when markets are calm.",
-        "fx": "SNB steps back + franc cheap to borrow \u2192 less official selling of francs, but steady pressure from investors who borrow in francs to buy higher-yielding currencies. The lens: whether war fear keeps outweighing that."
+        "fx": "SNB steps back + franc cheap to borrow → less official selling of francs, but steady pressure from investors who borrow in francs to buy higher-yielding currencies. The lens: whether war fear keeps outweighing that."
       },
       "impact": [
         {
@@ -390,7 +522,7 @@
         "was": "The European Central Bank has raised rates this year as oil pushed inflation up, and markets expected at least one more hike by December. Then France's budget crisis sent its borrowing costs soaring.",
         "happened": "Brzeski expects no change next week, with any further hike left to December. He argues higher bond yields are already doing the bank's work: worth about a quarter-point hike for Germany and closer to half a point for France.",
         "means": "If markets are already tightening money for the ECB, it has less reason to raise rates itself. A rescue bond-buying tool exists, but France would likely need to pass a budget within EU rules first.",
-        "fx": "Fewer ECB hikes than the Bank of England \u2192 less support for the euro, especially against the pound."
+        "fx": "Fewer ECB hikes than the Bank of England → less support for the euro, especially against the pound."
       },
       "impact": [
         {
@@ -415,9 +547,9 @@
       "summary": "Gold slipped below $4,100 an ounce, near its lowest this month, because markets expect a US rate hike in December.",
       "beats": {
         "was": "Gold had been stuck between about $4,100 and $4,200 for more than two weeks, pulled up by war fears and down by the prospect of higher US rates.",
-        "happened": "It broke below $4,100 even though the dollar was soft. Futures pricing shows about a 90% chance the Federal Reserve raises rates in December, after hot US inflation data and costly oil. Fed officials have signalled no hurry to act at their October 27\u201328 meeting.",
+        "happened": "It broke below $4,100 even though the dollar was soft. Futures pricing shows about a 90% chance the Federal Reserve raises rates in December, after hot US inflation data and costly oil. Fed officials have signalled no hurry to act at their October 27–28 meeting.",
         "means": "Expected rate hikes are weighing on gold more than war fears are helping it, since gold pays no interest.",
-        "fx": "Higher expected US rates \u2192 holding gold costs more \u2192 gold lower. The lens: whether it holds above this month's low."
+        "fx": "Higher expected US rates → holding gold costs more → gold lower. The lens: whether it holds above this month's low."
       },
       "impact": [
         {
@@ -444,7 +576,7 @@
         "was": "Since the US blockade began, Iran had kept selling to Asian buyers, mostly in China, from oil already parked on ships near Malaysia and Singapore.",
         "happened": "Ship trackers cited by the Wall Street Journal say that stored oil fell below 1 million barrels by early October. The US says the blockade has cost Iran at least $25 billion, and Iran's currency has lost about a third of its value since July. Chinese refiners are turning to Brazil and West Africa, while other Gulf exports through Hormuz are back above pre-war levels under US escort.",
         "means": "Iran's money squeeze is getting tighter, which raises pressure on it to deal, but also the risk it lashes out at shipping.",
-        "fx": "Iranian barrels gone \u2192 tighter supply for Asian buyers; other Gulf oil flowing again \u2192 an offset. The lens: a slow squeeze, not a sudden shock."
+        "fx": "Iranian barrels gone → tighter supply for Asian buyers; other Gulf oil flowing again → an offset. The lens: a slow squeeze, not a sudden shock."
       },
       "impact": [
         {
@@ -464,14 +596,14 @@
       "image": "https://investinglive.com/cms/media/Processed/Categories/featured/oil%20highs%20new%20war%2022%20October%202026-featured-1792627323.jpg?width=960&format=webp",
       "headline": "US and Israel plan specific renewed Iran strikes after US midterms, New York Times reports",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
       "pillar": "risk",
       "summary": "The US and Israeli militaries have reportedly drawn up plans for a short, heavy round of strikes on Iran after the US midterm elections on November 3, though President Trump has not signed off.",
       "beats": {
         "was": "Talks to end the US-Iran war have stalled over Iran's enriched uranium, the US keeps a naval blockade on Iranian oil, and Iran has kept the Strait of Hormuz, a key Gulf oil route, largely shut.",
         "happened": "The New York Times, citing US officials, said the two militaries have plans to hit Iran's nuclear sites, missiles and drones, and some energy sites, with three US aircraft carriers in place by early November. Trump has turned down similar plans several times this year.",
         "means": "The chance of the war flaring again in November just went up, and the threat may be meant to push Iran back to the table. Iranian figures have warned they would hit back at Saudi oil plants and undersea internet cables.",
-        "fx": "More risk of new strikes \u2192 more fear for Gulf oil supply \u2192 oil and safe havens like the franc and gold stay supported. The lens: Brent held near $110 in Asia, with no sharp move yet."
+        "fx": "More risk of new strikes → more fear for Gulf oil supply → oil and safe havens like the franc and gold stay supported. The lens: Brent held near $110 in Asia, with no sharp move yet."
       },
       "impact": [
         {
@@ -510,7 +642,7 @@
         "was": "For most of October the yen sat in a tight range near 158 per dollar, held down by Japan's low interest rates even as Bank of Japan officials hinted at a hike in December.",
         "happened": "On Thursday the dollar fell about 0.6% against the yen, its biggest drop since late September, and the yen also gained on the euro, the pound and the Australian dollar. Share markets slid on fears that heavy AI spending won't pay off, Brent oil rose above $111 on Gulf attacks, and France's borrowing costs stayed near their highest since 2002. Falling US government bond yields also took some shine off the dollar. The euro held near $1.123 and the pound near $1.340.",
         "means": "When stocks wobble, investors still reach for the yen as a shelter, which can outweigh the damage dear oil does to Japan.",
-        "fx": "Nervous stock markets \u2192 money into shelter \u2192 a firmer yen and a softer dollar. The lens: whether the share sell-off deepens or fades."
+        "fx": "Nervous stock markets → money into shelter → a firmer yen and a softer dollar. The lens: whether the share sell-off deepens or fades."
       },
       "impact": [
         {
@@ -532,7 +664,7 @@
           "why": "The Australian dollar tends to slip when investors get nervous about stocks."
         }
       ],
-      "watch": "Whether stocks steady, and the Bank of Japan meeting on October 29\u201330."
+      "watch": "Whether stocks steady, and the Bank of Japan meeting on October 29–30."
     },
     {
       "id": "reuters-gurutrade-asia-stocks-3m-low-20261022",
@@ -549,7 +681,7 @@
         "was": "Tech and AI companies have carried share markets for much of the year, but investors have grown uneasy about how much these firms are spending and how dear borrowing has become.",
         "happened": "A broad index of Asia-Pacific shares outside Japan fell 1.8%, heading for a fourth weekly loss. Korea's market dropped more than 4%, Hong Kong's more than 3% and Japan's Nikkei about 2%, led by chipmakers such as Tokyo Electron and SK Hynix. Plans by Meta, the Facebook owner, to raise money with a new class of shares revived fears about AI spending. US and European share futures fell too, Brent oil rose above $111, gold eased to about $4,068 and US 10-year bond yields dropped to about 5.09% as money moved to safety.",
         "means": "Investors are pulling back from riskier bets just as the Gulf war heats up again, which favours shelter assets over growth-linked currencies.",
-        "fx": "Falling shares \u2192 less appetite for risk \u2192 support for the yen and franc, pressure on the Australian and New Zealand dollars. The lens: whether the slide spreads to Wall Street."
+        "fx": "Falling shares → less appetite for risk → support for the yen and franc, pressure on the Australian and New Zealand dollars. The lens: whether the slide spreads to Wall Street."
       },
       "impact": [
         {
@@ -594,7 +726,7 @@
         "was": "UK inflation came in above forecast this week, so traders see the Bank of England raising rates on November 5, while France's budget fight has pushed its borrowing costs to the highest in more than 20 years.",
         "happened": "Traders now expect at least three quarter-point Bank of England hikes by April, against about two from the European Central Bank. French 10-year yields hit a new 24-year high, Italian and Belgian yields jumped, and European shares fell about 1%. UK bonds held steady. Options traders are the most negative on the euro against the pound since mid-2024.",
         "means": "Higher UK rates and France's debt worries both pull money from the euro toward the pound.",
-        "fx": "Wider UK-euro rate gap + French debt stress \u2192 pound up against the euro. The lens: the UK budget on October 28 and France's budget vote on October 27."
+        "fx": "Wider UK-euro rate gap + French debt stress → pound up against the euro. The lens: the UK budget on October 28 and France's budget vote on October 27."
       },
       "impact": [
         {
@@ -627,7 +759,7 @@
         "was": "Worries that big tech firms are spending too much on AI had already knocked shares on Wednesday, and Brent oil was climbing on attacks around the Gulf.",
         "happened": "The Nasdaq dropped about 2% and the S&P 500 about 1.2% soon after the open. The 10-year US Treasury yield fell about 0.11 percentage point to near 5.02%, as Brent reached a five-month high above $111.",
         "means": "Investors are moving from shares into safe bonds, and lower US yields make holding dollars a little less rewarding.",
-        "fx": "Falling US yields + money leaving shares \u2192 pressure on the dollar against the yen and franc; a softer mood also tends to weigh on the Australian dollar."
+        "fx": "Falling US yields + money leaving shares → pressure on the dollar against the yen and franc; a softer mood also tends to weigh on the Australian dollar."
       },
       "impact": [
         {
@@ -666,7 +798,7 @@
         "was": "Canada is a big oil exporter, so dearer oil tends to help its currency. Traders have come to expect the Bank of Canada to raise its rate on October 28.",
         "happened": "The US dollar fell to about 1.4025 Canadian dollars, its lowest since September 21, after drone attacks on Saudi and Russian energy sites lifted oil. Markets see a quarter-point hike to 2.50% as likely.",
         "means": "Two supports are working together for the loonie: a higher price for what Canada sells, and a central bank expected to raise rates.",
-        "fx": "Dearer oil + a likely Bank of Canada hike \u2192 steady support for the Canadian dollar."
+        "fx": "Dearer oil + a likely Bank of Canada hike → steady support for the Canadian dollar."
       },
       "impact": [
         {
@@ -692,14 +824,14 @@
       "image": "https://editorial.fxsstatic.com/images/i/Iran_1_Medium.png",
       "headline": "Iran tells US to prove it wants peace by lifting blockade",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
       "pillar": "risk",
       "summary": "Iran's foreign minister said Tehran would give talks another chance, but only if the US first lifts its naval blockade on Iranian oil.",
       "beats": {
         "was": "Efforts to end the US-Iran war are stuck, and the US Navy has been stopping Iran from selling oil by sea.",
         "happened": "Foreign Minister Abbas Araghchi said the US must lift the blockade to show it is serious, and warned a new war would end badly for Washington. An unnamed Iranian official threatened US political figures if strikes resume, and US officials said some American troops are quietly being pulled back from Middle East bases.",
         "means": "The door to talks is open a crack, but on terms the US has so far rejected, so no quick deal is likely.",
-        "fx": "Talk of diplomacy \u2192 a little less war risk \u2192 oil could ease; tough conditions and threats \u2192 the war premium stays. The lens: US crude was little changed near $97.60."
+        "fx": "Talk of diplomacy → a little less war risk → oil could ease; tough conditions and threats → the war premium stays. The lens: US crude was little changed near $97.60."
       },
       "impact": [
         {
@@ -725,8 +857,8 @@
       "beats": {
         "was": "The Reserve Bank of New Zealand had forecast inflation of 3.9% and markets gave roughly 80% odds that it raises rates on October 28. The kiwi had climbed for five days on that bet.",
         "happened": "Prices rose 0.7% over the quarter and 3.7% from a year earlier, down from 4.1% and below the 3.8% expected. Cheaper petrol and diesel did most of the pulling down; prices of local services barely slowed.",
-        "means": "A small miss, not a change of story: inflation is still well above the bank's 1\u20133% target, so a hike stays likely, but the case is less urgent and later hikes look less certain.",
-        "fx": "Softer inflation \u2192 slightly lower odds of RBNZ hikes \u2192 kiwi eases. The lens: it slipped back just under 57 US cents, giving up only a small part of its recent climb."
+        "means": "A small miss, not a change of story: inflation is still well above the bank's 1–3% target, so a hike stays likely, but the case is less urgent and later hikes look less certain.",
+        "fx": "Softer inflation → slightly lower odds of RBNZ hikes → kiwi eases. The lens: it slipped back just under 57 US cents, giving up only a small part of its recent climb."
       },
       "impact": [
         {
@@ -737,78 +869,6 @@
         }
       ],
       "watch": "The Reserve Bank of New Zealand's decision on October 28."
-    },
-    {
-      "id": "fxstreet-gold-rebounds-4130-20261021",
-      "ts": "2026-10-21T18:01:35Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/gold-rebounds-above-4-130-as-oil-retreats-fed-decision-looms-202610211801",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-51_Medium.png",
-      "headline": "Gold rebounds above $4,130 as Oil retreats, Fed decision looms",
-      "story": "gold-week",
-      "story_title": "Gold: oil, yields and the Fed",
-      "pillar": "policy",
-      "summary": "Gold bounced back to about $4,133 after three days of losses, as oil slipped and the dollar eased, but it's still stuck in the same narrow range.",
-      "beats": {
-        "was": "Gold is down about a quarter from its record near $5,600 because costly oil has pushed the US Federal Reserve toward raising interest rates, which makes gold, paying no interest, less attractive. It has traded between $4,100 and $4,200 for 16 days in a row.",
-        "happened": "Gold rose to about $4,133 after touching $4,106 earlier on Wednesday, helped by a dip in oil after a US sanctions licence and a slightly weaker dollar. Markets still see about an 89% chance the Fed raises rates in December, and a small chance at its October 27\u201328 meeting.",
-        "means": "The bounce is small and doesn't change the bigger picture: as long as a Fed rate hike is expected, gold struggles to climb. Cheaper oil would ease that pressure.",
-        "fx": "Oil dips \u2192 slightly less pressure for Fed hikes \u2192 gold lifts a little. The lens: still inside its range; the Fed meeting next week matters more."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A small rebound as oil and the dollar eased."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The dollar slipped slightly as oil fell."
-        }
-      ],
-      "watch": "The Fed's October 27\u201328 decision and next week's US core inflation (PCE) figure."
-    },
-    {
-      "id": "newsquawk-ofac-offload-cargo-20261021",
-      "ts": "2026-10-21T17:16:00Z",
-      "source": "Newsquawk",
-      "url": "https://newsquawk.com/headlines/market-update-risk-on-trade-seen-at-1240-edt--1740-bst-despite-no-clear-headline-driver-downside-of-c-usd-080bbl-was-seen-in-oil-equity-futures-hit-new-session-highs-gold-and-bonds-rallied-while-usd-saw-pressure",
-      "image": "https://www.newsquawk.com/assets/placeholder_images_for_news_by_category/Energy/3.png",
-      "headline": "Risk-on trade as desks cite OFAC authorising offloading of some cargo involving some blocked vessels",
-      "story": "us-iran-sanctions",
-      "story_title": "US sanctions on Iran's oil shipping",
-      "pillar": "tot",
-      "summary": "The US Treasury let some cargo be unloaded from tankers it had just blacklisted, and oil slipped while shares, bonds and gold rose.",
-      "beats": {
-        "was": "The US is at war with Iran and blocks Iranian oil exports, adding tankers and shipping firms to its sanctions list most weeks. Oil had climbed back near five-month highs on Wednesday morning as peace talks stalled.",
-        "happened": "The US Treasury's sanctions office (OFAC) blacklisted nine more vessels and several shipping firms on Wednesday, but issued a licence allowing some of their cargo to be unloaded and their business wound down. US crude fell about 80 cents soon after, and the dollar eased.",
-        "means": "Oil already at sea may still reach buyers instead of being stuck, so a little less supply goes missing. The licence is narrow, and past ones like it have had little lasting effect.",
-        "fx": "Some blocked oil can still be delivered \u2192 slightly more supply \u2192 small dip in oil prices \u2192 mild relief for oil importers like Japan and Europe, a small drag on the Canadian dollar. The lens: a narrow, technical step, not a change in US policy."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lets some sanctioned cargo reach buyers, easing supply worries a little."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Gold rose as bond yields and the dollar eased on the move."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The dollar slipped as cheaper oil eased Fed rate-hike worries."
-        }
-      ],
-      "watch": "Whether the US widens the licence, or new sanctions follow that block more Iranian oil."
     },
     {
       "id": "investinglive-us-20y-auction-20261021",
@@ -825,7 +885,7 @@
         "was": "The US Treasury sells long-term bonds at regular auctions to fund the government. How eagerly investors buy shows how much they are willing to lend at current rates; weak demand pushes borrowing costs up.",
         "happened": "Wednesday's sale cleared at 5.469%, a little above the pre-sale level and above last month's 5.42%. Overall demand was above average, but the share taken by foreign and other outside investors was well below normal, with US buyers filling the gap.",
         "means": "A middling result: the government had no trouble borrowing, but softer interest from overseas buyers is a quiet warning sign for long-term US borrowing costs. Yields barely moved afterwards.",
-        "fx": "Mixed demand \u2192 no clear move in US yields \u2192 little effect on the dollar. The lens: watch whether foreign demand stays soft at the next long-bond sales."
+        "fx": "Mixed demand → no clear move in US yields → little effect on the dollar. The lens: watch whether foreign demand stays soft at the next long-bond sales."
       },
       "impact": [
         {
@@ -835,40 +895,7 @@
           "why": "Adequate demand overall but a smaller foreign share; yields barely reacted."
         }
       ],
-      "watch": "Next week's 2-, 5- and 7-year US Treasury note sales and the Fed's October 27\u201328 meeting."
-    },
-    {
-      "id": "investinglive-eia-crude-draw-20261021",
-      "ts": "2026-10-21T14:33:27Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/commodities/crude-oil-inventories-show-a-draw-of-3-060m-versus-estimate-of-0-82-million-drawdown/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Oil%20inventory%20Logo-featured-1792593072-featured-1792593221.jpg?width=960&format=webp",
-      "headline": "US crude stocks fall 3.06 million barrels, more than the 0.82 million expected",
-      "story": "us-oil-stocks",
-      "story_title": "US oil stocks: a run of draws",
-      "pillar": "tot",
-      "summary": "Official US figures showed crude and gasoline stocks both fell more than expected last week, the second big weekly drop in a row.",
-      "beats": {
-        "was": "Oil has been near five-month highs because attacks on shipping around the Strait of Hormuz and the Red Sea threaten Gulf supply. The week before, US crude stocks fell about 8.6 million barrels, and an industry estimate on Tuesday had pointed to another large drop.",
-        "happened": "The US Energy Information Administration said crude stocks fell about 3.1 million barrels in the week to October 16, against about 0.8 million expected. Gasoline stocks fell about 3 million barrels, while diesel and heating oil stocks rose.",
-        "means": "America is drawing down its own stored oil while Gulf supply is at risk, so there is less cushion if shipping gets worse. The drop was smaller than Tuesday's industry estimate, so US crude barely moved, near $98.",
-        "fx": "Shrinking US oil stocks \u2192 less spare supply \u2192 keeps oil prices firm \u2192 helps the Canadian dollar, weighs on big oil importers like Japan. The lens: mostly expected after Tuesday's estimate, so the push is small."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A second large weekly fall in US stocks adds to supply worries, though much was already expected."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firm oil prices support Canada's export income."
-        }
-      ],
-      "watch": "Next week's US stock figures and any news on shipping through the Strait of Hormuz."
+      "watch": "Next week's 2-, 5- and 7-year US Treasury note sales and the Fed's October 27–28 meeting."
     },
     {
       "id": "fxstreet-france-oat-5pct-20261021",
@@ -880,12 +907,12 @@
       "story": "france-fiscal",
       "story_title": "France: budget fight, protests and debt worries",
       "pillar": "risk",
-      "summary": "France now pays over 5% to borrow for ten years, the first time since 2002, and the gap over German debt is the widest since the euro debt crisis of 2009\u20132011.",
+      "summary": "France now pays over 5% to borrow for ten years, the first time since 2002, and the gap over German debt is the widest since the euro debt crisis of 2009–2011.",
       "beats": {
         "was": "France's government has no majority to pass spending cuts, its debt is about 119% of the economy, and student protests have turned violent, with partial curfews in some cities. The budget vote is due October 27.",
-        "happened": "The 10-year French government bond yield went above 5%. The extra yield over Germany's 10-year bond widened to roughly 1.6 percentage points, a level last seen in the 2009\u20132011 crisis.",
+        "happened": "The 10-year French government bond yield went above 5%. The extra yield over Germany's 10-year bond widened to roughly 1.6 percentage points, a level last seen in the 2009–2011 crisis.",
         "means": "Investors are asking more to lend to France because they doubt it can control its debt before next year's election. That worry spills into the euro as a whole.",
-        "fx": "French borrowing costs up + wider gap to Germany \u2192 doubts about the euro area's weakest big borrower \u2192 money leaves the euro for safer homes like the franc. The lens: a budget deal or calmer protests would ease it."
+        "fx": "French borrowing costs up + wider gap to Germany → doubts about the euro area's weakest big borrower → money leaves the euro for safer homes like the franc. The lens: a budget deal or calmer protests would ease it."
       },
       "impact": [
         {
@@ -915,10 +942,10 @@
       "pillar": "policy",
       "summary": "Eiji Maeda, a former Bank of Japan executive who ran its policy work, expects the bank to keep raising rates about once every three months, starting in December.",
       "beats": {
-        "was": "The Bank of Japan has been lifting its rates slowly from near zero. It is expected to hold at its October 29\u201330 meeting, with most bets on a hike in December.",
+        "was": "The Bank of Japan has been lifting its rates slowly from near zero. It is expected to hold at its October 29–30 meeting, with most bets on a hike in December.",
         "happened": "In a Bloomberg interview, Maeda said he expects the next hike in December and another in March or April, calling a roughly three-month pace appropriate to keep inflation near target. Markets price about an 80% chance of a hike by December.",
         "means": "A steady path of hikes would slowly narrow the gap between Japanese and US rates, which is what has kept the yen weak. It is a former official's view, not a bank decision.",
-        "fx": "Firmer expectations of regular BoJ hikes \u2192 a little support for the yen. The lens: the yen is still weak near 158 per dollar because oil keeps Japan's import bill high."
+        "fx": "Firmer expectations of regular BoJ hikes → a little support for the yen. The lens: the yen is still weak near 158 per dollar because oil keeps Japan's import bill high."
       },
       "impact": [
         {
@@ -928,7 +955,7 @@
           "why": "Adds weight to a December hike and more after it, though it is an outside view."
         }
       ],
-      "watch": "The Bank of Japan's October 29\u201330 meeting and its updated inflation forecasts."
+      "watch": "The Bank of Japan's October 29–30 meeting and its updated inflation forecasts."
     },
     {
       "id": "fxstreet-aud-monthly-high-20261021",
@@ -945,7 +972,7 @@
         "was": "The Aussie fell below 69 US cents last week, its lowest since early July, before Reserve Bank of Australia officials turned more worried about inflation.",
         "happened": "Deputy Governor Andrew Hauser warned that underlying inflation for July-September may come in hotter than forecast, and Assistant Governor Christopher Kent said the 'neutral' rate, neither boosting nor slowing the economy, seems to be rising.",
         "means": "Both point the same way: rates may need to go higher. Better-than-expected growth in China, Australia's biggest customer, also helps.",
-        "fx": "Hike talk \u2192 higher Australian rates ahead \u2192 support for the Aussie. A firmer US dollar on Fed hike bets is the brake."
+        "fx": "Hike talk → higher Australian rates ahead → support for the Aussie. A firmer US dollar on Fed hike bets is the brake."
       },
       "impact": [
         {
@@ -970,7 +997,7 @@
       "summary": "Alongside hotter inflation, UK government borrowing for September came in above forecast, a week before Chancellor Rachel Reeves' budget on October 28.",
       "beats": {
         "was": "UK government bond yields hit a 19-year high in September on worries about how much the government borrows, and the budget lands October 28.",
-        "happened": "The government borrowed \u00a324.5bn in September, more than expected. Borrowing so far this tax year is about \u00a36bn above the official forecast, and total debt passed \u00a33 trillion for the first time.",
+        "happened": "The government borrowed £24.5bn in September, more than expected. Borrowing so far this tax year is about £6bn above the official forecast, and total debt passed £3 trillion for the first time.",
         "means": "Higher borrowing leaves less room in the budget and keeps debt worries alive, at the same time as inflation pushes the Bank of England toward a hike.",
         "fx": "Rate hikes help the pound, but debt worries hurt it. Together they cancelled out on Wednesday morning: the pound barely moved."
       },
@@ -999,7 +1026,7 @@
         "was": "The yen has been weak for weeks, near 158 per dollar, partly because Japan's rates are far below US rates. Markets expect the Bank of Japan to raise rates again, most likely on December 17.",
         "happened": "Himino said underlying inflation is near target, borrowing conditions are still easy, and longer-run inflation expectations are rising.",
         "means": "A deputy governor saying inflation is near target is a hint that the bank is getting ready to raise rates again.",
-        "fx": "More signals of a hike \u2192 smaller gap with US rates over time \u2192 slow support for the yen. A wider-than-expected trade deficit in September limited the lift."
+        "fx": "More signals of a hike → smaller gap with US rates over time → slow support for the yen. A wider-than-expected trade deficit in September limited the lift."
       },
       "impact": [
         {
@@ -1026,7 +1053,7 @@
         "was": "The Bank of England, whose rate is 3.75% against a 2% inflation target, has not raised rates since 2023, but a strong jobs report had markets nearly sure of a quarter-point hike at its November 5 meeting.",
         "happened": "Prices rose 3.5% over the year to September, up from 3.1% in August and above the 3.4% expected. Core inflation, which leaves out food and energy, rose to 2.8% from 2.6%, about as forecast.",
         "means": "Inflation is running well above the 2% goal and moving the wrong way, mostly from petrol and diesel. That makes a November hike very hard for the Bank to skip.",
-        "fx": "Higher inflation \u2192 November hike all but locked in \u2192 UK rates stay attractive \u2192 support for the pound. Most of this was already expected, so the lift is modest."
+        "fx": "Higher inflation → November hike all but locked in → UK rates stay attractive → support for the pound. Most of this was already expected, so the lift is modest."
       },
       "impact": [
         {
@@ -1037,39 +1064,6 @@
         }
       ],
       "watch": "Whether the Bank signals more than one hike; a quick fall in oil would ease the pressure."
-    },
-    {
-      "id": "fxstreet-euro-french-protests-20261021",
-      "ts": "2026-10-21T01:00:08Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/euro-weakens-below-11250-as-french-protests-and-fiscal-risks-weigh-202610210100",
-      "image": "https://editorial.fxsstatic.com/images/i/EUR-bearish-object_Medium.png",
-      "headline": "Euro weakens below 1.1250 as French protests and fiscal risks weigh",
-      "story": "france-unrest",
-      "story_title": "France: unrest, budget vote and the euro",
-      "pillar": "fiscal",
-      "summary": "The euro slipped to about $1.1225 as France prepared to use some military forces to keep order during new protests expected this weekend.",
-      "beats": {
-        "was": "France has seen widespread protests over its budget, and investors already ask about 1.5 percentage points more to lend to France for ten years than to Germany, a sign of worry about its debts.",
-        "happened": "Prime Minister S\u00e9bastien Lecornu said curfews would be used where needed, and officials plan to bring in some troops for this weekend's protests. The euro fell back below $1.125 in Asian trading. ECB President Christine Lagarde and other ECB officials speak later Wednesday.",
-        "means": "Unrest in the eurozone's second-largest economy keeps a lid on the euro even when oil eases.",
-        "fx": "More unrest in France \u2192 more worry about French debt \u2192 investors demand more to hold it \u2192 weaker euro. The lens: calm protests and a passed budget would ease this."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "French unrest and debt worries weigh on the single currency."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Europe's worries send some money to the franc next door."
-        }
-      ],
-      "watch": "This weekend's French protests, ECB speeches Wednesday, and France's budget vote on October 27."
     },
     {
       "id": "investinglive-katayama-boj-no-gap-20261021",
@@ -1086,7 +1080,7 @@
         "was": "Prime Minister Sanae Takaichi's government plans a consumption tax cut and cash handouts, and investors have worried it could clash with the Bank of Japan's rate rises; in September two board members picked by the government voted against the hike to 1.25%.",
         "happened": "Katayama said today's price rises come mostly from import costs, but the economy is close to inflation driven by rising wages. Asked about a clash with the BoJ, she said the two sides talk and she sees no gap. She did not openly back more hikes.",
         "means": "It lowers the odds that the government stands in the way of the next hike, which most economists expect in December.",
-        "fx": "Less political pushback \u2192 a December BoJ hike looks safer \u2192 mild support for the yen. The lens: do the government's picks on the board keep dissenting?"
+        "fx": "Less political pushback → a December BoJ hike looks safer → mild support for the yen. The lens: do the government's picks on the board keep dissenting?"
       },
       "impact": [
         {
@@ -1096,7 +1090,7 @@
           "why": "Eases fears that the government blocks further rate rises."
         }
       ],
-      "watch": "Friday's Japan inflation figures and the BoJ's Oct 29\u201330 meeting, including how its board votes."
+      "watch": "Friday's Japan inflation figures and the BoJ's Oct 29–30 meeting, including how its board votes."
     },
     {
       "id": "reuters-gbaf-oil-gulf-of-oman-20261021",
@@ -1113,7 +1107,7 @@
         "was": "The Strait of Hormuz, the route for about a fifth of the world's oil, has been shut since the US-Iran war began this month, and Gulf exporters have leaned on loading points outside it, such as the Gulf of Oman, to keep crude moving.",
         "happened": "Iran's Revolutionary Guards Navy said a supertanker hit a sea mine and caught fire south of the strait. LSEG analysts said attacks have spread as far as the Gulf of Oman; the ship tracker Kpler counts at least 18 attacks on vessels in two weeks. Yemen's Houthi rebels also claimed strikes on Saudi oil sites at Yanbu and Shaybah. Brent rose about 0.8% to $109.64.",
         "means": "The workaround routes that kept Middle East oil flowing are now in range too, so a quick return to normal supply looks less likely even while mediation talks go on.",
-        "fx": "Attacks outside the strait \u2192 less oil getting out \u2192 higher crude \u2192 support for oil exporters like Canada, and a bigger import bill for Japan and Europe. The lens: do loadings in the Gulf of Oman actually slow?"
+        "fx": "Attacks outside the strait → less oil getting out → higher crude → support for oil exporters like Canada, and a bigger import bill for Japan and Europe. The lens: do loadings in the Gulf of Oman actually slow?"
       },
       "impact": [
         {
@@ -1147,12 +1141,12 @@
       "story": "japan-trade",
       "story_title": "Japan: exports, the oil bill and the yen",
       "pillar": "tot",
-      "summary": "Japan's exports grew 16.7% from a year earlier in September, a 13th straight rise but well short of the 20% expected, so the trade deficit came in wider than forecast at about \u00a5537 billion.",
+      "summary": "Japan's exports grew 16.7% from a year earlier in September, a 13th straight rise but well short of the 20% expected, so the trade deficit came in wider than forecast at about ¥537 billion.",
       "beats": {
         "was": "Japan's exports have been lifted all year by demand for chips and AI equipment, while costly oil, pushed up by the Gulf war, has swollen the import bill and kept the country in trade deficit.",
-        "happened": "Japan's Ministry of Finance said September exports rose 16.7% from a year earlier, against about 20% expected and 19.3% in August. Imports rose 18.9%, slower than August's 28%. The deficit was about \u00a5537 billion, against \u00a5181 billion expected but half of August's roughly \u00a51.1 trillion.",
-        "means": "Overseas demand for Japanese goods is still solid but cooling, and the energy bill remains the drag. A smaller gap than August helps a little, but the miss gives the Bank of Japan, which meets Oct 29\u201330, no new reason to hurry a rate rise.",
-        "fx": "Exports slower than hoped, oil still costly \u2192 more yen sold to pay for imports than expected \u2192 mild pressure on the yen. The lens: is the oil bill shrinking, or just pausing?"
+        "happened": "Japan's Ministry of Finance said September exports rose 16.7% from a year earlier, against about 20% expected and 19.3% in August. Imports rose 18.9%, slower than August's 28%. The deficit was about ¥537 billion, against ¥181 billion expected but half of August's roughly ¥1.1 trillion.",
+        "means": "Overseas demand for Japanese goods is still solid but cooling, and the energy bill remains the drag. A smaller gap than August helps a little, but the miss gives the Bank of Japan, which meets Oct 29–30, no new reason to hurry a rate rise.",
+        "fx": "Exports slower than hoped, oil still costly → more yen sold to pay for imports than expected → mild pressure on the yen. The lens: is the oil bill shrinking, or just pausing?"
       },
       "impact": [
         {
@@ -1162,7 +1156,7 @@
           "why": "Exports missed and the deficit beat forecasts, though it halved from August."
         }
       ],
-      "watch": "The Bank of Japan's Oct 29\u201330 meeting and its new forecasts; a lasting drop in oil would shrink the import bill."
+      "watch": "The Bank of Japan's Oct 29–30 meeting and its new forecasts; a lasting drop in oil would shrink the import bill."
     },
     {
       "id": "cbs-us-saudi-ordered-departure-20261021",
@@ -1179,7 +1173,7 @@
         "was": "Yemen's Iran-aligned Houthi group has been firing drones and missiles at Saudi airports and oil sites this month; a strike on Riyadh's main airport killed 12 people. Saudi Arabia is the world's largest oil exporter, and with the Strait of Hormuz shut its Red Sea routes matter even more.",
         "happened": "The State Department ordered non-essential staff and families out of Saudi Arabia, citing Houthi attacks on airports and key infrastructure. Its spokesman said the order covers Saudi Arabia only; other Gulf embassies are on reduced operations. Officials said US forces are cutting their footprint at Middle East posts over Houthi and Iranian threats, and President Trump did not rule out strikes on the Houthis.",
         "means": "Washington is treating the threat to Saudi Arabia as serious and lasting, not a passing flare-up. That raises the odds of more attacks on Saudi oil, or of US strikes on the Houthis.",
-        "fx": "US pulls staff from Saudi Arabia \u2192 higher risk to Gulf oil supply on top of Hormuz \u2192 keeps a war premium in oil and some demand for the franc. The lens: confirmed hits on Saudi exports would push oil higher; a lull in attacks would let it ease."
+        "fx": "US pulls staff from Saudi Arabia → higher risk to Gulf oil supply on top of Hormuz → keeps a war premium in oil and some demand for the franc. The lens: confirmed hits on Saudi exports would push oil higher; a lull in attacks would let it ease."
       },
       "impact": [
         {
@@ -1211,14 +1205,14 @@
       "image": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/742971",
       "headline": "Benjamin Netanyahu says IDF, Mossad ordered to overthrow Iranian regime over nukes",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
       "pillar": "risk",
       "summary": "Israeli Prime Minister Benjamin Netanyahu said he has told Israel's army and spy agency to work to bring down Iran's government, saying Iran is again trying to build a nuclear bomb.",
       "beats": {
         "was": "After this year's war, Iran keeps the Strait of Hormuz, the route for about a fifth of the world's oil, largely shut while indirect US-Iran talks stall. Reports say a renewed US-Israeli bombing campaign was shelved before the US midterm elections.",
         "happened": "Speaking at an army officers' graduation on Wednesday, Netanyahu said his instruction to the military and the Mossad is to overthrow Iran's government. Defence Minister Israel Katz warned that Iran would 'burn' if it attacks Israel.",
         "means": "It raises the risk that fighting restarts and makes a deal to reopen Hormuz harder. It is a statement of intent during an Israeli election campaign, not an announced operation, and oil barely moved.",
-        "fx": "Higher risk of renewed war \u2192 oil supply worries stay \u2192 support for oil and the franc. The lens: markets treat it as rhetoric unless strikes follow."
+        "fx": "Higher risk of renewed war → oil supply worries stay → support for oil and the franc. The lens: markets treat it as rhetoric unless strikes follow."
       },
       "impact": [
         {
@@ -1251,7 +1245,7 @@
         "was": "About a fifth of the world's oil passed through the Strait of Hormuz before the US-Iran war began. Iran has been attacking ships there to pressure Washington while peace talks run through Pakistan and Qatar.",
         "happened": "At least 23 attacks on ships were logged in or near the strait in the first two weeks of October, at least five of them hitting engine rooms, which hadn't happened in September. Iran is using more missiles, and at least two ships sank last week.",
         "means": "Oil is still flowing: Gulf exports are close to pre-war levels by some counts. But each attack makes tankers scarcer and shipping and insurance dearer, which keeps a risk premium in oil.",
-        "fx": "Heavier ship attacks \u2192 costlier, riskier Gulf shipping \u2192 keeps oil prices firm \u2192 helps the Canadian dollar, weighs on importers like Japan, and supports safe havens like the Swiss franc. The lens: escalation in kind, but flows are holding up."
+        "fx": "Heavier ship attacks → costlier, riskier Gulf shipping → keeps oil prices firm → helps the Canadian dollar, weighs on importers like Japan, and supports safe havens like the Swiss franc. The lens: escalation in kind, but flows are holding up."
       },
       "impact": [
         {
@@ -1283,14 +1277,14 @@
       "image": "https://media.assettype.com/gulfnews%2Fimport%2F2020%2F04%2F13%2FThe-aircraft-carrier-USS-Theodore-Roosevelt-_17174751618_large.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
       "headline": "US sends more warships as Iran peace push stalls over enriched uranium",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: a mediated plan to restart talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
       "pillar": "risk",
       "summary": "Iran's top security official told Pakistan's army chief that none of Iran's enriched uranium will leave the country, while the US sent another carrier group and some 9,000 sailors and Marines to the region.",
       "beats": {
         "was": "The US and Iran have been at war since earlier this year and the Strait of Hormuz, the main Gulf oil route, is shut. Pakistan's army chief, Field Marshal Asim Munir, has been carrying a plan to restart talks.",
         "happened": "Mohsen Rezaei, head of Iran's Supreme National Security Council, said no enriched uranium will be sent abroad, a key US demand. President Masoud Pezeshkian said Iran won't talk under threat. The USS Theodore Roosevelt carrier group and an amphibious group are heading in, and President Trump is said to be weighing new strikes. Gulf stock markets fell.",
         "means": "The two sides are stuck on the same nuclear point, and the US is adding force rather than easing off, so a quick reopening of Hormuz looks less likely.",
-        "fx": "Stalled talks + more warships \u2192 Hormuz stays shut longer \u2192 oil supply stays tight \u2192 firmer oil, steadier demand for safe havens like the franc. The lens: any sign Iran would ship uranium out would reverse this."
+        "fx": "Stalled talks + more warships → Hormuz stays shut longer → oil supply stays tight → firmer oil, steadier demand for safe havens like the franc. The lens: any sign Iran would ship uranium out would reverse this."
       },
       "impact": [
         {
@@ -1329,7 +1323,7 @@
         "was": "The Strait of Hormuz, the route for about a fifth of the world's oil, has been shut for months by the US-Iran war, and Pakistan's army chief Asim Munir is in Tehran trying to restart talks.",
         "happened": "Mohsen Rezaei, secretary of Iran's Supreme National Security Council, said there are no talks until the US meets seven Iranian conditions. Parliament Speaker and chief negotiator Mohammad Bagher Ghalibaf said Iran had nothing new to say. Fox News reported a third US carrier, the USS Theodore Roosevelt, is heading to the region.",
         "means": "Tuesday's hopes for a deal have faded, and both sides are hardening. A reopening of the strait looks further away.",
-        "fx": "Less hope of a deal \u2192 oil stays high \u2192 support for oil-exporter Canada's dollar, pressure on oil-importer Japan's yen, and demand for shelter like the Swiss franc."
+        "fx": "Less hope of a deal → oil stays high → support for oil-exporter Canada's dollar, pressure on oil-importer Japan's yen, and demand for shelter like the Swiss franc."
       },
       "impact": [
         {
@@ -1374,7 +1368,7 @@
         "was": "The Reserve Bank of Australia has already raised its cash rate four times this year, to 4.60%, to fight inflation lifted partly by the Gulf war's hit to oil. It next decides on November 3.",
         "happened": "Speaking at a Citi conference in Sydney, Deputy Governor Andrew Hauser said higher rates are slowing the economy, but the inflation outlook has got clearly worse, partly because of high oil prices. Markets raised the chance of a November hike to 4.85% to about 40%, from 30% at the start of the week, and AUD/USD rose to about 0.701, a two-week high.",
         "means": "A senior official saying inflation will beat the bank's forecast keeps a fifth hike on the table, even with unemployment at a five-year high of 4.7% and house prices falling. Next week's third-quarter inflation figure, seen near 4%, is the deciding number.",
-        "fx": "Inflation running hotter than the RBA expected \u2192 more chance of a rate rise \u2192 higher returns on Australian dollars \u2192 Aussie up. The lens: does next week's inflation figure back him up?"
+        "fx": "Inflation running hotter than the RBA expected → more chance of a rate rise → higher returns on Australian dollars → Aussie up. The lens: does next week's inflation figure back him up?"
       },
       "impact": [
         {
@@ -1401,7 +1395,7 @@
         "was": "The Bank of England is widely expected to raise rates on November 5, after the war with Iran sent energy prices higher.",
         "happened": "In a speech at the London School of Economics, Greene said pay is rising faster than official figures show, the economy has held up well, and current rates may not be holding it back much. She wants to act now and adjust later if needed.",
         "means": "A rate-setter arguing for firmness backs the market's view that several UK hikes are coming.",
-        "fx": "Firm Bank of England voices + hikes already expected \u2192 mild, steady support for the pound."
+        "fx": "Firm Bank of England voices + hikes already expected → mild, steady support for the pound."
       },
       "impact": [
         {
