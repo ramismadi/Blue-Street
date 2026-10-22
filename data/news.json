@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T22:52:29Z",
+  "updated": "2026-10-22T00:47:33Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "bullish",
-      "text": "Stalled US-Iran peace efforts, Israeli talk of toppling Iran's government, drone alarms over Saudi Arabia and France's debt worries all keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
-      "ts": "2026-10-21T22:52:29Z"
+      "text": "Stalled US-Iran peace efforts, a US order pulling embassy staff out of Saudi Arabia over Houthi attacks, and France's debt worries all keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
+      "ts": "2026-10-22T00:47:33Z"
     },
     "CAD": {
       "lean": "bullish",
@@ -49,8 +49,8 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Oil stays near five-month highs, with Brent around $109, as Iran keeps Hormuz largely shut and Israel's prime minister said he has ordered efforts to topple Iran's government. US crude eased for a second day after Washington moved to release fuel reserves and let some sanctioned cargo be delivered.",
-      "ts": "2026-10-21T22:52:29Z"
+      "text": "Brent oil holds near $109, close to five-month highs, as Iran keeps the Strait of Hormuz largely shut and the US has ordered non-essential staff out of Saudi Arabia over Houthi attacks. US crude eased for a second day after Washington moved to release fuel reserves.",
+      "ts": "2026-10-22T00:47:33Z"
     }
   },
   "items": [
@@ -245,6 +245,45 @@
         }
       ],
       "watch": "Any confirmed hit on Saudi oil sites or exports, and whether the Houthis' denial holds."
+    },
+    {
+      "id": "cbs-us-saudi-ordered-departure-20261021",
+      "date": "2026-10-21",
+      "source": "CBS News",
+      "url": "https://cbsnews.com/news/us-saudi-arabia-ordered-departure-houthis",
+      "image": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/09/15/89ed5121-0859-4287-8ef5-88b1b0ef0ebb/thumbnail/1200x630/8029321c35bce0919d5a1ea803221356/ap26258417507065.jpg",
+      "headline": "U.S. ordering some government staff to depart Saudi Arabia, reducing military footprint in Middle East",
+      "story": "saudi-houthi",
+      "story_title": "Houthi strikes on Saudi Arabia",
+      "pillar": "risk",
+      "summary": "The US told non-essential embassy staff and their families to leave Saudi Arabia because of Houthi attacks, and US officials say the military is quietly thinning its presence at bases in the region.",
+      "beats": {
+        "was": "Yemen's Iran-aligned Houthi group has been firing drones and missiles at Saudi airports and oil sites this month; a strike on Riyadh's main airport killed 12 people. Saudi Arabia is the world's largest oil exporter, and with the Strait of Hormuz shut its Red Sea routes matter even more.",
+        "happened": "The State Department ordered non-essential staff and families out of Saudi Arabia, citing Houthi attacks on airports and key infrastructure. Its spokesman said the order covers Saudi Arabia only; other Gulf embassies are on reduced operations. Officials said US forces are cutting their footprint at Middle East posts over Houthi and Iranian threats, and President Trump did not rule out strikes on the Houthis.",
+        "means": "Washington is treating the threat to Saudi Arabia as serious and lasting, not a passing flare-up. That raises the odds of more attacks on Saudi oil, or of US strikes on the Houthis.",
+        "fx": "US pulls staff from Saudi Arabia → higher risk to Gulf oil supply on top of Hormuz → keeps a war premium in oil and some demand for the franc. The lens: confirmed hits on Saudi exports would push oil higher; a lull in attacks would let it ease."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "An evacuation order signals Washington expects the attacks on the top oil exporter to go on."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A wider Gulf conflict keeps some money looking for safety."
+        },
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The dollar firmed a little on the news as a safe place to park money, but dearer oil also feeds US inflation worries."
+        }
+      ],
+      "watch": "Any Houthi hit on Saudi oil exports, and whether President Trump orders strikes on the Houthis."
     },
     {
       "id": "jpost-netanyahu-topple-iran-regime-20261021",
@@ -1003,33 +1042,6 @@
       "watch": "Australia's third-quarter inflation figure next week; a soft print, or weaker jobs and housing, would cool hike bets."
     },
     {
-      "id": "investinglive-boj-poll-december-20261020",
-      "ts": "2026-10-20T22:13:00Z",
-      "source": "investingLive (Reuters poll)",
-      "url": "https://investinglive.com/central-banks/boj-seen-lifting-rates-to-1-50-in-december-as-69-of-economists-expect-a-q4-hike/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/usdyen%20boj%20oputlook%2021%20October%202026-featured-1792534291.jpg?width=960&format=webp",
-      "headline": "BOJ seen lifting rates to 1.50% in December as 69% of economists expect a Q4 hike",
-      "story": "boj-path",
-      "story_title": "BoJ: when the next hike comes",
-      "pillar": "policy",
-      "summary": "A Reuters poll of 78 economists found 69% now expect the Bank of Japan to raise rates to 1.50% by year-end, almost double September's share, with December the favourite month.",
-      "beats": {
-        "was": "The Bank of Japan raised its rate in June and again in September, to 1.25%, but the yen has stayed close to its weakest level of the year because US rates are far higher.",
-        "happened": "In the poll, taken Oct 13–19, 54 of 78 economists expect a hike to 1.50% this quarter, up from 36% a month ago. About 80% of those naming a month picked December; only 2% expect a move at the meeting ending Oct 30. Half now see rates reaching 2% or more.",
-        "means": "Forecasters see the BoJ moving faster than they thought a month ago, but not next week.",
-        "fx": "More hikes expected → Japan's rate gap with the US narrows over time → slow support for the yen. The lens: does the BoJ hint at December when it meets Oct 30?"
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Economists now expect a quicker climb in Japan's rates."
-        }
-      ],
-      "watch": "The BoJ's Oct 29–30 statement and new forecasts; most in the poll warned that more board dissent could weigh on the yen."
-    },
-    {
       "id": "farmersweekly-gdt-powder-20261020",
       "ts": "2026-10-20T20:02:45Z",
       "source": "Farmers Weekly NZ",
@@ -1055,39 +1067,6 @@
         }
       ],
       "watch": "Fonterra's milk price forecast and NZ third-quarter inflation figures this week."
-    },
-    {
-      "id": "fxstreet-cad-one-month-high-20261020",
-      "ts": "2026-10-20T17:21:20Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/canadian-dollar-climbs-to-one-month-highs-as-boc-rate-hike-bets-strengthen-202610201721",
-      "image": "https://editorial.fxsstatic.com/images/i/USDCAD-bullish-animal_Medium.png",
-      "headline": "Canadian Dollar climbs to one-month highs as Bank of Canada hike bets grow",
-      "story": "boc-oct",
-      "story_title": "BoC: the October 28 decision",
-      "pillar": "policy",
-      "summary": "The Canadian dollar reached its strongest in a month, about 1.405 per US dollar, as traders lean toward a Bank of Canada rate rise on October 28.",
-      "beats": {
-        "was": "The Bank of Canada has not raised rates this year. Canada's inflation rose to 3.1% in September, just under the 3.2% forecast, and Alberta voters on Monday chose to stay in Canada.",
-        "happened": "Canadian bond yields rose as more traders expect the bank's first hike of the year next week. A softer US dollar, lower US yields and oil near $110 added support.",
-        "means": "The loonie has a rate story, an oil story and less political risk all pulling the same way.",
-        "fx": "Expected Bank of Canada hike → higher Canadian yields → more demand for the loonie; dear oil adds export income. The lens: a sharp oil drop or a cautious bank would undo it."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Hike bets, oil and less political risk all support the loonie."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A softer dollar and lower US yields helped the move."
-        }
-      ],
-      "watch": "The Bank of Canada decision on October 28 and oil prices."
     },
     {
       "id": "fxstreet-euro-climbs-oil-tumbles-20261020",
