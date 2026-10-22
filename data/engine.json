@@ -1,38 +1,54 @@
 {
-  "updated": "2026-10-22T01:35:00-05:00",
+  "updated": "2026-10-22T15:30:00-05:00",
   "rows": [
     {
       "id": "policy",
       "title": "Policy",
-      "read": "Almost every major central bank is leaning toward raising rates because high oil keeps inflation up. Hikes look near-certain soon in Britain, Canada and New Zealand, and likely by December in the US, the euro area and Japan. Switzerland is the odd one out, where a cut is still possible.",
-      "figure": "BoE Nov 5 hike ~95–99%, Dec ~51%; BoC Oct 28 ~93%; RBNZ Oct 28 ~98%; RBA Nov 3 ~42%; Fed Oct hold ~85%, Dec hike ~90%; ECB Dec ~76%; BoJ Dec ~80%",
+      "read": "Almost every major central bank is leaning toward raising rates because high oil keeps inflation up. A sharp fall in US bond yields today did not shake bets on a December Federal Reserve hike. Switzerland is the odd one out, where a cut is still possible.",
+      "figure": "Fed Oct 28 hike ~11% (Oct 22), Dec hike ~90% (Oct 21); BoC Oct 28 ~93%; RBNZ Oct 28 ~98%; BoE Nov 5 ~99%, Dec ~51%; RBA Nov 3 ~42%; ECB Dec ~76%; BoJ Dec ~73–80%",
       "sources": [
         {
-          "label": "Blue Street central bank data (Hercules, Oct 22, 12:40 AM CT)",
+          "label": "Blue Street central bank data (Hercules, Oct 22, 2:55 PM CT): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street market levels, Oct 22 Asia session (Hercules, 12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 22, 2:55 PM CT run; currency quotes ~2:45 PM CT)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Babypips (Oct 22): New Zealand inflation eases to 3.7% in Q3",
-          "url": "https://www.babypips.com/news/headline-new-zealand-inflation-eases-rbnz-hike-odds-steady-2026-10-22"
+          "label": "InvestingLive (Oct 22): Canada September producer prices +2.0% m/m",
+          "url": "https://investinglive.com/news/canada-september-ppi-2-0-m-m-vs-1-3-prior/"
+        },
+        {
+          "label": "AP (Oct 22): US jobless claims fell to 194,000 last week, lowest since July",
+          "url": "https://www.news4jax.com/business/2026/10/22/us-jobless-claims-fell-to-194000-last-week-lowest-since-july/"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "read": "Growth is holding up but softening at the edges, with housing weak in the US and UK under high borrowing costs. That has not yet changed any central bank's plans, so it is not driving currencies for now.",
-      "figure": "UK house prices +0.9% y/y (Aug); US pending home sales −7.3% (Sep); Japan Sep exports +16.7% y/y (~+20% fc)",
+      "read": "The US jobs market is still strong, with layoffs near their lowest in decades. Elsewhere growth is softening at the edges: euro-area households are gloomier, UK factory orders fell and Canadian home prices slipped. None of it has changed central bank plans yet.",
+      "figure": "US jobless claims 194K (200K fc); US leading index flat at 99.6 (−0.2% fc); euro-area confidence −17.9 (−17.0 fc); UK CBI orders −32 (−20 fc); Canada new home prices −0.2% m/m",
       "sources": [
         {
-          "label": "ONS: UK House Price Index, August 2026",
-          "url": "https://www.gov.uk/government/statistics/uk-house-price-index-for-august-2026/uk-house-price-index-summary-august-2026"
+          "label": "AP (Oct 22): US jobless claims fell to 194,000 last week, lowest since July",
+          "url": "https://www.news4jax.com/business/2026/10/22/us-jobless-claims-fell-to-194000-last-week-lowest-since-july/"
         },
         {
-          "label": "Blue Street calendar (Hercules): Oct 21 actuals",
+          "label": "Reuters (Oct 22): euro zone consumer confidence falls to −17.9 in October",
+          "url": "https://1027wbow.com/2026/10/22/euro-zone-consumer-confidence-falls-to-17-9-in-october-2/"
+        },
+        {
+          "label": "Reuters (Oct 22): UK factory output expected to stabilise, CBI survey shows",
+          "url": "https://www.investing.com/news/economic-indicators/uk-factory-output-expected-to-stabilise-cbi-survey-shows-4965272"
+        },
+        {
+          "label": "Canadian Mortgage Trends (Oct 22): new home prices fall as Toronto-area markets post steepest declines",
+          "url": "https://www.canadianmortgagetrends.com/mortgage-wire/2026/10/22/new-home-prices-fall-as-toronto-area-markets-post-steepest-declines"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 22): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -40,60 +56,68 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "read": "Inflation is running hot almost everywhere because of energy, which is why so many central banks are leaning toward hikes. New Zealand's figures overnight cooled slightly but stayed above target, so they did not change the picture. Japan's inflation figures tonight matter most for the yen.",
-      "figure": "NZ Q3 CPI 3.7% y/y (3.8% fc; 4.1% prior); UK CPI Sep 3.5% y/y (3.4% fc); German PPI +6.7% y/y; Japan core CPI fc 2.1%, Thu 6:30 PM CT",
+      "read": "Inflation is running hot almost everywhere because of energy, which is why so many central banks lean toward hikes. Canada's factory and raw material prices jumped far more than expected, a sign more inflation is on the way there. Japan's inflation figures tonight matter most for the yen.",
+      "figure": "Canada IPPI +2.0% m/m (0.7% fc), RMPI +4.8% m/m (0.1% fc); UK CPI Sep 3.5%; NZ Q3 CPI 3.7%; Japan core CPI fc 2.1%, 6:30 PM CT",
       "sources": [
         {
-          "label": "Babypips (Oct 22): New Zealand inflation eases to 3.7% in Q3",
+          "label": "InvestingLive (Oct 22): Canada September producer prices +2.0% m/m",
+          "url": "https://investinglive.com/news/canada-september-ppi-2-0-m-m-vs-1-3-prior/"
+        },
+        {
+          "label": "Babypips (Oct 22): New Zealand inflation eases to 3.7% in Q3, RBNZ hike odds steady",
           "url": "https://www.babypips.com/news/headline-new-zealand-inflation-eases-rbnz-hike-odds-steady-2026-10-22"
         },
         {
-          "label": "Blue Street calendar (Hercules): Oct 21–22 actuals",
+          "label": "Blue Street calendar (Hercules, Oct 22): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-        },
-        {
-          "label": "Blue Street central bank data (Hercules, Oct 22, 12:40 AM CT)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk",
-      "read": "The Gulf conflict moved closer to Saudi oil sites, and the US told some diplomats to leave Saudi Arabia. Markets took it calmly: safe havens like the yen, franc and gold saw no rush of buying. In Europe, the stress point remains France's high borrowing costs.",
-      "figure": "US ordered departure, Saudi Arabia (Oct 21); Brent ~$110; dollar index ~101.6; gold ~$4,115; France 10-year >5%",
+      "read": "Investors turned nervous: tech shares fell sharply on doubts about AI spending, and reports of planned strikes on Iran added to the worry. Money went into US government bonds and the yen, while the New Zealand dollar fell most. Gold kept sliding instead of acting as a shelter.",
+      "figure": "Nasdaq −2.6%, S&P 500 −1.2%; US 10Y ~4.95% (about −0.2pts); USD/JPY ~156.85 (−0.8%); NZD/USD −0.5%; gold ~$4,045 (−2.5%)",
       "sources": [
         {
-          "label": "CNN (Oct 21): US orders departure of some embassy staff and families from Saudi Arabia",
-          "url": "https://www.cnn.com/2026/10/21/politics/us-orders-departure-embassy-staff-saudi-arabia"
+          "label": "Yahoo Finance live (Oct 22, US close): S&P 500, Nasdaq, Dow, Brent, US crude, 10-year yield and gold",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
         },
         {
-          "label": "Reuters (Oct 22): Oil rises as US orders diplomats to leave Saudi Arabia",
-          "url": "https://www.reuters.com/business/energy/oil-rises-us-orders-diplomats-leave-saudi-arabia-amid-escalating-tensions-2026-10-22/"
+          "label": "Reuters (Oct 22): yen set for biggest rally in a month as risk-averse investors shun dollar",
+          "url": "https://live.euronext.com/en/financial-news/yen-set-biggest-rally-month-risk-averse-investors-shun-dollar"
         },
         {
-          "label": "Blue Street market levels, Oct 22 Asia session (Hercules, 12:40 AM CT)",
+          "label": "investingLive European session wrap (Oct 22): franc at a three-month high against the euro, yen leads",
+          "url": "https://investinglive.com/news/investinglive-european-session-wrap-dollar-yen-and-bonds-kick-it-old-school/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, Oct 22, 2:55 PM CT run; currency quotes ~2:45 PM CT)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "FXStreet (Oct 21): France's 10-year bond yield climbs above 5%",
-          "url": "https://www.fxstreet.com/news/frances-10-year-bond-yield-climbs-above-5-stirring-fears-of-a-credit-crisis-202610210956"
         }
       ]
     },
     {
       "id": "tot",
       "title": "Terms of trade",
-      "read": "Oil is back near its recent highs on the risk of attacks reaching Saudi supply. That helps exporters like Canada and hurts big energy importers like Japan and the euro area. Australia and New Zealand also benefit from firm prices for what they sell abroad.",
-      "figure": "Brent ~$110.11 (+1.2%); WTI ~$98.12 (+1%); euro-area gas >€90/MWh; gold ~$4,115",
+      "read": "Oil is at its highest since May on the risk of renewed strikes on Iran. That helps exporters like Canada and hurts big energy importers like Japan and the euro area.",
+      "figure": "Brent ~$113 (+4%); US crude ~$99 (+2.4%); Iran claims 7 ships hit or mined (unconfirmed)",
       "sources": [
         {
-          "label": "Blue Street market levels, Oct 22 Asia session (Hercules, 12:40 AM CT)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "investingLive (Oct 22): US and Israel plan renewed Iran strikes after US midterms, New York Times reports",
+          "url": "https://investinglive.com/commodities/us-and-israel-plan-specific-renewed-iran-strikes-after-us-midterms-new-york-times-reports/"
         },
         {
-          "label": "Reuters (Oct 22): Oil rises as US orders diplomats to leave Saudi Arabia",
-          "url": "https://www.reuters.com/business/energy/oil-rises-us-orders-diplomats-leave-saudi-arabia-amid-escalating-tensions-2026-10-22/"
+          "label": "OilPrice.com (Oct 22): Iran claims seven ships hit in the Persian Gulf as oil prices surge",
+          "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Claims-Seven-Ships-Hit-in-Persian-Gulf-as-Oil-Prices-Surge.html"
+        },
+        {
+          "label": "Yahoo Finance live (Oct 22, US close): S&P 500, Nasdaq, Dow, Brent, US crude, 10-year yield and gold",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, Oct 22, 2:55 PM CT run; currency quotes ~2:45 PM CT)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
     },
@@ -101,7 +125,7 @@
       "id": "positioning",
       "title": "Positioning",
       "read": "Hedge funds are betting most heavily against the Canadian dollar, even as a Bank of Canada hike looks likely, which leaves those bets exposed if the loonie keeps rising. They also bet against the kiwi and the euro. In the yen and the Aussie, hedge funds and long-term investors take opposite sides.",
-      "figure": "CFTC Oct 13: funds strongly against CAD (sharply added), against EUR and NZD (added), for AUD (trimmed; real money strongly against), against JPY (real money for), strongly for gold (trimmed); oil bets near weakest since 2015",
+      "figure": "CFTC Oct 13: funds strongly against CAD (sharply added), against EUR and NZD (added), for AUD (trimmed; real money strongly against), against JPY (real money for), strongly for gold (trimmed); next report Fri Oct 23",
       "sources": [
         {
           "label": "CFTC Traders in Financial Futures (futures only) (report date Oct 13)",
@@ -116,20 +140,24 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "read": "Government finances are weighing on the euro, with France's borrowing costs at their highest in over twenty years before a credit rating review on Friday. In Britain, the October 28 budget comes next and may add help with energy bills.",
-      "figure": "France 10-year >5%; Moody's on France Fri Oct 23 (Aa3, negative outlook); French revenue vote Oct 27; UK Sep borrowing £24.5bn (£23.9bn fc); UK budget Oct 28",
+      "read": "Government finances are weighing on the euro: France now pays more than 5% to borrow for ten years, and its gap over Germany is near the widest since 2011. Moody's reviews France's credit rating on Friday, and Britain's budget follows on October 28.",
+      "figure": "France 10Y above 5%; OAT–Bund ~1.6–1.7pts (widest since 2011); Moody's on France Fri Oct 23; French revenue vote Oct 27; UK budget Oct 28",
       "sources": [
         {
-          "label": "FXStreet (Oct 21): France's 10-year bond yield climbs above 5%",
-          "url": "https://www.fxstreet.com/news/frances-10-year-bond-yield-climbs-above-5-stirring-fears-of-a-credit-crisis-202610210956"
+          "label": "Disruption Banking (Oct 22): French yields cross 5%, spread widest since 2011",
+          "url": "https://www.disruptionbanking.com/2026/10/22/french-yields-cross-5-spread-widest-since-2011/"
         },
         {
-          "label": "Euronews (Oct 21): UK inflation jumps more than expected; borrowing above forecast",
-          "url": "https://www.euronews.com/2026/10/21/uk-inflation-jumps-more-than-expected-fuelling-rate-hike-expectations"
+          "label": "FXStreet / ING (Oct 22): ECB caught in the French drama",
+          "url": "https://www.fxstreet.com/analysis/ecb-caught-in-the-french-drama-202610220634"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 21 close)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+          "label": "Blue Street currency board (Hercules, Oct 22, 2:55 PM CT)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 22): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     }
