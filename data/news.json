@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T00:47:33Z",
+  "updated": "2026-10-22T02:46:52Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "bullish",
-      "text": "Stalled US-Iran peace efforts, a US order pulling embassy staff out of Saudi Arabia over Houthi attacks, and France's debt worries all keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
-      "ts": "2026-10-22T00:47:33Z"
+      "text": "Stalled US-Iran peace efforts, a report of US-Israeli plans to strike Iran again in November, and France's debt worries all keep demand for the franc high, near a three-month high on the euro. The Swiss National Bank has warned it may act to stop it rising too far.",
+      "ts": "2026-10-22T02:46:52Z"
     },
     "CAD": {
       "lean": "bullish",
@@ -44,16 +44,109 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold bounced to about $4,133 on Wednesday as oil eased, but it has been stuck between $4,100 and $4,200 for 16 days. Markets see a Fed rate hike in December as very likely, which keeps a lid on it.",
-      "ts": "2026-10-21T18:48:33Z"
+      "text": "Gold has been stuck between $4,100 and $4,200 for 16 days. Talk of new strikes on Iran gives it some shelter demand, but markets see a Fed rate hike in December as very likely, and that keeps a lid on it.",
+      "ts": "2026-10-22T02:46:52Z"
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent oil holds near $109, close to five-month highs, as Iran keeps the Strait of Hormuz largely shut and the US has ordered non-essential staff out of Saudi Arabia over Houthi attacks. US crude eased for a second day after Washington moved to release fuel reserves.",
-      "ts": "2026-10-22T00:47:33Z"
+      "text": "Brent oil holds near $110, close to five-month highs, as Iran keeps the Strait of Hormuz largely shut and Houthi drones reach Saudi oilfields. A report that the US and Israel plan new strikes on Iran after the November 3 midterms keeps the war risk in the price, even as the US releases fuel reserves.",
+      "ts": "2026-10-22T02:46:52Z"
     }
   },
   "items": [
+    {
+      "id": "investinglive-iran-floating-oil-dry-20261022",
+      "ts": "2026-10-22T01:17:22Z",
+      "source": "investingLive (Wall Street Journal report)",
+      "url": "https://investinglive.com/commodities/iran-s-floating-oil-reserves-in-asia-run-dry-under-us-naval-blockade-wsj-reports/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/brent%20update%2022%20October%202026-featured-1792631638.jpg?width=960&format=webp",
+      "headline": "Iran's floating oil reserves in Asia run dry under US naval blockade, WSJ reports",
+      "story": "us-iran-sanctions",
+      "story_title": "US sanctions on Iran's oil shipping",
+      "pillar": "tot",
+      "summary": "Iran's stock of oil stored on tankers off Asia, once close to 90 million barrels, has run out under the US naval blockade.",
+      "beats": {
+        "was": "Since the US blockade began, Iran had kept selling to Asian buyers, mostly in China, from oil already parked on ships near Malaysia and Singapore.",
+        "happened": "Ship trackers cited by the Wall Street Journal say that stored oil fell below 1 million barrels by early October. The US says the blockade has cost Iran at least $25 billion, and Iran's currency has lost about a third of its value since July. Chinese refiners are turning to Brazil and West Africa, while other Gulf exports through Hormuz are back above pre-war levels under US escort.",
+        "means": "Iran's money squeeze is getting tighter, which raises pressure on it to deal, but also the risk it lashes out at shipping.",
+        "fx": "Iranian barrels gone → tighter supply for Asian buyers; other Gulf oil flowing again → an offset. The lens: a slow squeeze, not a sudden shock."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Iran's lost supply is being partly made up by other Gulf exporters shipping under US protection."
+        }
+      ],
+      "watch": "Whether Iran answers the squeeze with more attacks on ships or a return to talks."
+    },
+    {
+      "id": "investinglive-nyt-iran-strike-plans-20261022",
+      "ts": "2026-10-22T00:03:00Z",
+      "source": "investingLive (New York Times report)",
+      "url": "https://investinglive.com/commodities/us-and-israel-plan-specific-renewed-iran-strikes-after-us-midterms-new-york-times-reports/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/oil%20highs%20new%20war%2022%20October%202026-featured-1792627323.jpg?width=960&format=webp",
+      "headline": "US and Israel plan specific renewed Iran strikes after US midterms, New York Times reports",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
+      "pillar": "risk",
+      "summary": "The US and Israeli militaries have reportedly drawn up plans for a short, heavy round of strikes on Iran after the US midterm elections on November 3, though President Trump has not signed off.",
+      "beats": {
+        "was": "Talks to end the US-Iran war have stalled over Iran's enriched uranium, the US keeps a naval blockade on Iranian oil, and Iran has kept the Strait of Hormuz, a key Gulf oil route, largely shut.",
+        "happened": "The New York Times, citing US officials, said the two militaries have plans to hit Iran's nuclear sites, missiles and drones, and some energy sites, with three US aircraft carriers in place by early November. Trump has turned down similar plans several times this year.",
+        "means": "The chance of the war flaring again in November just went up, and the threat may be meant to push Iran back to the table. Iranian figures have warned they would hit back at Saudi oil plants and undersea internet cables.",
+        "fx": "More risk of new strikes → more fear for Gulf oil supply → oil and safe havens like the franc and gold stay supported. The lens: Brent held near $110 in Asia, with no sharp move yet."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A planned new round of strikes, with Iranian threats against Saudi oil, keeps a war premium in crude."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher odds of renewed war add to demand for the franc as a safe place to park money."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "War risk supports gold as a shelter, though rate-hike bets still cap it."
+        }
+      ],
+      "watch": "Whether Trump approves the plans, and Israel's election on October 27, which could change the timing."
+    },
+    {
+      "id": "fxstreet-araghchi-lift-blockade-20261021",
+      "ts": "2026-10-21T23:39:03Z",
+      "source": "FXStreet (Bloomberg report)",
+      "url": "https://www.fxstreet.com/news/iran-tells-us-to-prove-it-wants-peace-by-lifting-blockade-202610212339",
+      "image": "https://editorial.fxsstatic.com/images/i/Iran_1_Medium.png",
+      "headline": "Iran tells US to prove it wants peace by lifting blockade",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran: a mediated plan to restart talks",
+      "pillar": "risk",
+      "summary": "Iran's foreign minister said Tehran would give talks another chance, but only if the US first lifts its naval blockade on Iranian oil.",
+      "beats": {
+        "was": "Efforts to end the US-Iran war are stuck, and the US Navy has been stopping Iran from selling oil by sea.",
+        "happened": "Foreign Minister Abbas Araghchi said the US must lift the blockade to show it is serious, and warned a new war would end badly for Washington. An unnamed Iranian official threatened US political figures if strikes resume, and US officials said some American troops are quietly being pulled back from Middle East bases.",
+        "means": "The door to talks is open a crack, but on terms the US has so far rejected, so no quick deal is likely.",
+        "fx": "Talk of diplomacy → a little less war risk → oil could ease; tough conditions and threats → the war premium stays. The lens: US crude was little changed near $97.60."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "An offer to talk is offset by conditions the US is unlikely to accept and new threats."
+        }
+      ],
+      "watch": "Any US reply on the blockade, or a date for new talks."
+    },
     {
       "id": "fxstreet-nz-cpi-q3-miss-20261021",
       "ts": "2026-10-21T21:52:11Z",
@@ -601,6 +694,39 @@
       "watch": "The official US Energy Information Administration stock figures, due 9:30 AM CT Wednesday."
     },
     {
+      "id": "thenational-shaybah-drone-deaths-20261021",
+      "date": "2026-10-21",
+      "source": "The National",
+      "url": "https://www.thenationalnews.com/news/mena/2026/10/21/saudi-aramco-shaybah-houthi-strike/",
+      "image": "https://www.thenationalnews.com/resizer/v2/ZF7OMKQ7LGMH3RLLRSWGCK2TY4.jpg?auth=6e7195d319c46bf0805a1d57102223cbc08911c11f6425310c95c1ee77f3e16e&smart=true&width=1200&height=630",
+      "headline": "Two killed after drone interception in Saudi Arabia",
+      "story": "saudi-houthi",
+      "story_title": "Houthi strikes on Saudi Arabia",
+      "pillar": "tot",
+      "summary": "Debris from a drone shot down near Saudi Aramco's Shaybah oilfield killed two workers, but Saudi Arabia says oil output was not affected.",
+      "beats": {
+        "was": "Yemen's Houthi rebels, allied with Iran, have been firing drones and missiles at Saudi airports and oil sites, and the US has just ordered non-essential staff out of Saudi Arabia.",
+        "happened": "Saudi air defences downed a drone aimed at a processing plant at Shaybah, a big oilfield in the east; falling debris killed two contract workers and set a vehicle on fire outside the site. A separate attack on the airport in Dammam, also in the east, killed and injured several people.",
+        "means": "The attacks are now reaching deeper into Saudi Arabia's oil heartland and causing deaths, even if no oil has been lost yet.",
+        "fx": "Attacks near Saudi oil plants → more worry about supply → firmer oil, which helps the Canadian dollar. The lens: the effect is mild while Aramco says operations are normal."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "An oilfield was targeted, but output was not hit, so it adds worry rather than lost barrels."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil prices help Canada, a big oil exporter."
+        }
+      ],
+      "watch": "Any strike that actually halts Saudi oil output or exports."
+    },
+    {
       "id": "fxstreet-france-oat-5pct-20261021",
       "ts": "2026-10-21T09:56:15Z",
       "source": "FXStreet",
@@ -742,33 +868,6 @@
       "watch": "The Bank of Japan meeting next week, and whether it raises its inflation forecasts."
     },
     {
-      "id": "vantage-dxy-three-week-low-20261021",
-      "ts": "2026-10-21T03:31:35Z",
-      "source": "Vantage Markets",
-      "url": "https://www.vantagemarkets.com/market-analysis/why-us-dollar-index-slipped-euro-yen-firmed-usdx-october-21-2026/",
-      "image": "https://www.vantagemarkets.com/wp-content/uploads/2026/10/USDX-Daily-Analysis-October-21-2026.webp",
-      "headline": "US Dollar Index (DXY) Near Three-Week Low as Euro and Yen Firm",
-      "story": "fed-path",
-      "story_title": "Fed: hold now, hike in December?",
-      "pillar": "policy",
-      "summary": "The US dollar index sits near a three-week low around 101.6 as bets on a Federal Reserve hike at next week's meeting faded, with the move pushed to December instead.",
-      "beats": {
-        "was": "Hot US inflation figures on October 14 lifted the dollar index to about 102.9 on talk of a Fed hike as soon as October 28.",
-        "happened": "Markets now price about an 83% chance the Fed holds next week and about 94% for a hike in December. A firmer euro and yen did the rest.",
-        "means": "The Fed is still seen raising rates, just later. That takes some shine off the dollar now without changing the bigger picture.",
-        "fx": "Hike pushed back → less near-term pull for the dollar → it drifts lower against the euro and yen. A hawkish message next week could bring it back."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A later Fed hike removes some near-term support."
-        }
-      ],
-      "watch": "The Fed decision on October 28 and what Chair Kevin Warsh says about December."
-    },
-    {
       "id": "fxstreet-nzd-cpi-ahead-20261021",
       "ts": "2026-10-21T02:38:43Z",
       "source": "FXStreet",
@@ -854,39 +953,6 @@
         }
       ],
       "watch": "A formal European response or new sanctions; any disruption to Russian diesel exports."
-    },
-    {
-      "id": "investinglive-pboc-fix-weak-20261021",
-      "ts": "2026-10-21T01:17:21Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/pboc-sets-usd-cny-mid-point-today-at-6-vs-estimate-at-6-6779/",
-      "image": "https://investinglive.com/cms/media/images/pboc%20cny%20yuan%20cnh%2023%20September%202025_id_e08b13e4-f02c-4fee-8b94-82834eb4f542_original.jpeg?width=960&format=webp",
-      "headline": "PBOC sets USD/CNY mid-point today at 6.7192 (vs. estimate at 6.6779)",
-      "story": "china-yuan",
-      "story_title": "China: Beijing slows the yuan's climb",
-      "pillar": "policy",
-      "summary": "China's central bank set the yuan's daily reference rate about 0.6% weaker than analysts expected, another sign Beijing wants to slow the currency's rise.",
-      "beats": {
-        "was": "Each morning the People's Bank of China sets a midpoint for the yuan, which can trade 2% either side of it. Since late last year it has often set it weaker than models predict, to slow a yuan that has been near its strongest in over three years.",
-        "happened": "The bank set the rate at 6.7192 per dollar, against a Reuters estimate of 6.6779, a gap of about 0.6%. It gave no reason, which is normal.",
-        "means": "Beijing is still leaning against a fast-rising yuan, likely to protect exporters. It is a familiar move, not a new policy.",
-        "fx": "A softer yuan on purpose → China's trade partners get a little less lift from it → slight weight on the Aussie and kiwi, which trade as China proxies. The lens: does the gap keep widening?"
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A held-back yuan takes a little shine off China-linked currencies."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Same China link, smaller effect."
-        }
-      ],
-      "watch": "Whether the daily gap to estimates grows larger; China's next round of growth support."
     },
     {
       "id": "fxstreet-euro-french-protests-20261021",
@@ -1042,33 +1108,6 @@
       "watch": "Australia's third-quarter inflation figure next week; a soft print, or weaker jobs and housing, would cool hike bets."
     },
     {
-      "id": "farmersweekly-gdt-powder-20261020",
-      "ts": "2026-10-20T20:02:45Z",
-      "source": "Farmers Weekly NZ",
-      "url": "https://www.farmersweekly.co.nz/markets/dairy-markets/milk-powder-gains-fuel-gdt-price-surge/",
-      "image": "https://www.farmersweekly.co.nz/wp-content/uploads/2026/03/milk-powder_credit-dreamstime.jpg",
-      "headline": "Milk powder gains fuel GDT price surge",
-      "story": "nz-dairy",
-      "story_title": "NZ dairy prices",
-      "pillar": "tot",
-      "summary": "World dairy prices rose 2.5% at Tuesday's Global Dairy Trade auction, the most since February, led by the milk powders New Zealand sells most.",
-      "beats": {
-        "was": "The Global Dairy Trade auction runs twice a month and sets prices for New Zealand's biggest export, so it feeds farm incomes and the kiwi.",
-        "happened": "The overall index rose 2.5%. Whole milk powder gained 4.4% and skim milk powder 3.4%, while butter and milk fat slipped.",
-        "means": "Milk powder is what most decides NZ farmers' milk price, so forecasts for this season's payout may rise. Fonterra could update its forecast before its Nov 12 shareholder meeting.",
-        "fx": "Higher dairy prices → more export income for New Zealand → more demand for kiwi. The lens: does the gain hold at the next auction in early November?"
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Best auction since February, led by the main export product."
-        }
-      ],
-      "watch": "Fonterra's milk price forecast and NZ third-quarter inflation figures this week."
-    },
-    {
       "id": "fxstreet-euro-climbs-oil-tumbles-20261020",
       "ts": "2026-10-20T14:56:19Z",
       "source": "FXStreet",
@@ -1100,33 +1139,6 @@
         }
       ],
       "watch": "Houthi strikes and Hormuz ship attacks are still live; a fresh hit would send oil and the dollar back up."
-    },
-    {
-      "id": "gurufocus-goldman-rba-november-20261020",
-      "date": "2026-10-20",
-      "source": "GuruFocus",
-      "url": "https://www.gurufocus.com/news/9133102/goldman-sachs-predicts-rba-rate-hike-amid-deteriorating-inflation-outlook",
-      "image": null,
-      "headline": "Goldman Sachs Predicts RBA Rate Hike Amid Deteriorating Inflation Outlook",
-      "story": "rba-nov",
-      "story_title": "RBA: the November 3 decision",
-      "pillar": "policy",
-      "summary": "Goldman Sachs now expects the Reserve Bank of Australia to raise its rate to 4.85% on November 3, after a senior RBA official warned inflation looks worse.",
-      "beats": {
-        "was": "The Reserve Bank of Australia has already raised rates four times this year. Before this week, most economists expected it to pause in November.",
-        "happened": "Goldman Sachs economists switched to calling a quarter-point hike at the November 3 meeting. They pointed to Deputy Governor Andrew Hauser's remarks, which they called clearly hawkish, and to an inflation outlook that has worsened since the bank's August forecasts.",
-        "means": "A big bank changing its call makes a November hike look like a real possibility rather than an outside chance. The deciding figure is Australia's quarterly inflation report on October 28.",
-        "fx": "More hike talk → higher expected Australian rates → support for the Aussie. The lens: it has already climbed to a one-month high above 70 US cents."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A major bank now expects a November hike, adding to the repricing that is already under way."
-        }
-      ],
-      "watch": "Australia's third-quarter inflation figures on October 28, then the RBA decision on November 3."
     },
     {
       "id": "reuters-euronext-yen-jgb-auction-20261020",
