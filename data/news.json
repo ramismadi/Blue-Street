@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T22:47:03Z",
+  "updated": "2026-10-23T00:50:54Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -13,14 +13,14 @@
       "ts": "2026-10-22T15:47:55Z"
     },
     "GBP": {
-      "lean": "bullish",
-      "text": "Above-forecast UK inflation, and rate-setters such as Megan Greene saying the energy shock could spread, have traders expecting at least three Bank of England hikes by April, starting November 5. That, plus money leaving the euro area, keeps the pound near $1.34; the October 28 budget is the main risk.",
-      "ts": "2026-10-22T15:47:55Z"
+      "lean": "mixed",
+      "text": "Above-forecast UK inflation has traders expecting at least three Bank of England hikes by April, starting November 5, and money leaving the euro area has helped the pound. But consumer confidence just fell by the most since 2020, a sign households are cutting back before the October 28 budget.",
+      "ts": "2026-10-23T00:50:54Z"
     },
     "JPY": {
       "lean": "bullish",
-      "text": "The yen had its best day in about a month, reaching about 157 per dollar, as falling share markets and Gulf attacks sent money to shelter and US bond yields eased. Bank of Japan officials keep a December hike in view; national inflation data is due October 23 and the bank meets October 29–30.",
-      "ts": "2026-10-22T11:46:35Z"
+      "text": "The yen had its best day in about a month, near 156.5 per dollar, as falling share markets and Gulf attacks sent money to shelter. Japan's inflation rose back above 2% in September and price rises are spreading beyond fuel, which backs a Bank of Japan hike; the bank meets October 29–30.",
+      "ts": "2026-10-23T00:50:54Z"
     },
     "CHF": {
       "lean": "bullish",
@@ -49,11 +49,104 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent oil rose to about $113, its highest since May, after Iran claimed hits on seven Gulf ships, Houthi attacks reached Saudi Arabia's oil region and reports said the US and Israel plan new strikes on Iran after the November 3 US election. President Trump says Iran is faking some attacks, but with the Strait of Hormuz still largely shut the supply risk keeps growing.",
-      "ts": "2026-10-22T22:47:03Z"
+      "text": "Brent oil closed at about $113, its highest since May, after Iran claimed hits on seven Gulf ships, a drone killed two at a Saudi Aramco oil field and reports said the US and Israel plan new strikes on Iran after the November 3 US election. President Trump says Iran is faking some attacks, but with the Strait of Hormuz still largely shut the supply risk keeps growing.",
+      "ts": "2026-10-23T00:50:54Z"
     }
   },
   "items": [
+    {
+      "id": "fxstreet-japan-cpi-sep-20261022",
+      "ts": "2026-10-22T23:31:19Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/21-japans-national-cpi-climbs-in-september-202610222331",
+      "image": "https://editorial.fxsstatic.com/images/i/cpi-shopping-cart_Medium.png",
+      "headline": "2.1%: Japan's National CPI climbs in September",
+      "story": "boj-path",
+      "story_title": "BoJ: the road to the next hike",
+      "pillar": "inflation",
+      "summary": "Japan's main inflation measure rose to 2.1% in September, back above the Bank of Japan's 2% goal, and the measure that also leaves out energy jumped to 2.4%.",
+      "beats": {
+        "was": "The Bank of Japan wants inflation to sit steadily at 2% before it raises rates again; it meets on October 29–30 and many expect a hike by December.",
+        "happened": "Prices excluding fresh food rose 2.1% from a year earlier in September, up from 1.8% and in line with forecasts. Excluding both fresh food and energy, prices rose 2.4%, up from 2.0%.",
+        "means": "Price rises are spreading beyond fuel, which is the kind of evidence the central bank has said it needs before hiking.",
+        "fx": "Firmer Japanese inflation → more reason for a Bank of Japan hike → supports the yen."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The headline matched forecasts, but the broader rise backs the case for a December hike."
+        }
+      ],
+      "watch": "Whether Bank of Japan Governor Kazuo Ueda signals a hike at the October 29–30 meeting."
+    },
+    {
+      "id": "reuters-uk-gfk-oct-20261023",
+      "date": "2026-10-23",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/economy-news/uk-consumer-confidence-tumbles-ahead-of-healeys-budget-gfk-reports-4967810",
+      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9L24S_L.jpg",
+      "headline": "UK consumer confidence tumbles ahead of Healey's budget, GfK reports",
+      "story": "uk-growth",
+      "story_title": "UK: how the economy is holding up",
+      "pillar": "growth",
+      "summary": "British shoppers' mood fell in October by the most since the start of the pandemic, with fewer planning big purchases and more expecting higher prices.",
+      "beats": {
+        "was": "In September GfK's monthly UK consumer confidence index had reached -13, its best level in over two years, and the Bank of England is expected to raise rates on November 5.",
+        "happened": "The index fell 11 points to -24 in October, worse than every forecast in a Reuters poll and the steepest monthly drop since April 2020. GfK pointed to rising prices, the Middle East war and tighter household budgets; people's inflation expectations rose too.",
+        "means": "Households are pulling back just as rates look set to rise, which raises the risk that the UK economy slows and limits how far the Bank of England can go.",
+        "fx": "Weaker consumer demand → doubts about a long run of UK rate hikes → weighs on the pound."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A far bigger fall in confidence than expected, days before the October 28 budget."
+        }
+      ],
+      "watch": "UK retail sales and business surveys, and what the October 28 budget does for household budgets."
+    },
+    {
+      "id": "rigzone-oil-saudi-attacks-20261022",
+      "ts": "2026-10-22T19:55:00Z",
+      "source": "Rigzone (Bloomberg)",
+      "url": "https://www.rigzone.com/news/oil_surges_4_after_deadly_saudi_attacks-22-oct-2026-184912-article",
+      "image": null,
+      "headline": "Oil Surges 4% After Deadly Saudi Attacks",
+      "story": "saudi-houthi",
+      "story_title": "Saudi Arabia: Houthi attacks on oil and airports",
+      "pillar": "tot",
+      "summary": "Brent oil closed about 4% higher at $113 after a drone killed two people at a Saudi Aramco oil field and an airport in eastern Saudi Arabia was hit.",
+      "beats": {
+        "was": "Yemen's Houthi rebels, allied with Iran, have been attacking Saudi Arabia while Iran keeps the Strait of Hormuz largely shut.",
+        "happened": "A drone hit Saudi Aramco's Shaybah field, killing two, though output was not affected, and an attack on King Fahd airport in Dammam caused casualties. Brent rose about 4% to settle at $113.17, its biggest gain in two weeks; US crude settled near $99.50.",
+        "means": "Attacks now reach Saudi Arabia's own oil sites, so the region's biggest supplier is no longer seen as safe.",
+        "fx": "Higher oil → helps oil sellers like Canada and Norway, hurts big oil buyers like Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Deadly strikes on a Saudi oil field lift the risk to Gulf supply."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada earns more when oil is dear."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro area imports most of its energy."
+        }
+      ],
+      "watch": "Any damage that actually cuts Saudi output, or a pause in Houthi attacks."
+    },
     {
       "id": "cbs-trump-fake-ship-hits-20261022",
       "ts": "2026-10-22T18:58:00Z",
@@ -871,33 +964,6 @@
       "watch": "The Reserve Bank of New Zealand's decision on October 28."
     },
     {
-      "id": "investinglive-us-20y-auction-20261021",
-      "ts": "2026-10-21T17:03:19Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/us-treasury-sells-13-billion-of-20-year-bonds-at-a-high-yield-of-5-469/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Bond%20Auction-featured-1792602020-featured-1792602481.jpg?width=960&format=webp",
-      "headline": "US treasury sells $13 billion of 20 year bonds at a high yield of 5.469%",
-      "story": "us-bonds",
-      "story_title": "US government borrowing: who's buying the bonds",
-      "pillar": "fiscal",
-      "summary": "The US government sold $13 billion of 20-year bonds at about 5.47%, slightly above where they traded just before, with foreign buyers taking a smaller share than usual.",
-      "beats": {
-        "was": "The US Treasury sells long-term bonds at regular auctions to fund the government. How eagerly investors buy shows how much they are willing to lend at current rates; weak demand pushes borrowing costs up.",
-        "happened": "Wednesday's sale cleared at 5.469%, a little above the pre-sale level and above last month's 5.42%. Overall demand was above average, but the share taken by foreign and other outside investors was well below normal, with US buyers filling the gap.",
-        "means": "A middling result: the government had no trouble borrowing, but softer interest from overseas buyers is a quiet warning sign for long-term US borrowing costs. Yields barely moved afterwards.",
-        "fx": "Mixed demand → no clear move in US yields → little effect on the dollar. The lens: watch whether foreign demand stays soft at the next long-bond sales."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Adequate demand overall but a smaller foreign share; yields barely reacted."
-        }
-      ],
-      "watch": "Next week's 2-, 5- and 7-year US Treasury note sales and the Fed's October 27–28 meeting."
-    },
-    {
       "id": "fxstreet-france-oat-5pct-20261021",
       "ts": "2026-10-21T09:56:15Z",
       "source": "FXStreet",
@@ -1066,33 +1132,6 @@
       "watch": "Whether the Bank signals more than one hike; a quick fall in oil would ease the pressure."
     },
     {
-      "id": "investinglive-katayama-boj-no-gap-20261021",
-      "ts": "2026-10-21T00:54:00Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/japan-s-katayama-sees-no-gap-with-boj-says-wage-driven-inflation-is-near/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/japan-katayama-boj-no-gap-wage-driven-inflation-featured-1792544075.jpg?width=960&format=webp",
-      "headline": "Japan's Katayama sees no gap with BOJ, says wage-driven inflation is near",
-      "story": "boj-path",
-      "story_title": "BoJ: when the next hike comes",
-      "pillar": "policy",
-      "summary": "Japan's Finance Minister Satsuki Katayama told parliament the government and the Bank of Japan see things the same way, and that pay-driven inflation is close, a condition the BoJ wants before raising rates again.",
-      "beats": {
-        "was": "Prime Minister Sanae Takaichi's government plans a consumption tax cut and cash handouts, and investors have worried it could clash with the Bank of Japan's rate rises; in September two board members picked by the government voted against the hike to 1.25%.",
-        "happened": "Katayama said today's price rises come mostly from import costs, but the economy is close to inflation driven by rising wages. Asked about a clash with the BoJ, she said the two sides talk and she sees no gap. She did not openly back more hikes.",
-        "means": "It lowers the odds that the government stands in the way of the next hike, which most economists expect in December.",
-        "fx": "Less political pushback → a December BoJ hike looks safer → mild support for the yen. The lens: do the government's picks on the board keep dissenting?"
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Eases fears that the government blocks further rate rises."
-        }
-      ],
-      "watch": "Friday's Japan inflation figures and the BoJ's Oct 29–30 meeting, including how its board votes."
-    },
-    {
       "id": "reuters-gbaf-oil-gulf-of-oman-20261021",
       "ts": "2026-10-21T00:51:16Z",
       "source": "Global Banking & Finance (Reuters report)",
@@ -1196,78 +1235,6 @@
         }
       ],
       "watch": "Any Houthi hit on Saudi oil exports, and whether President Trump orders strikes on the Houthis."
-    },
-    {
-      "id": "jpost-netanyahu-topple-iran-regime-20261021",
-      "date": "2026-10-21",
-      "source": "The Jerusalem Post",
-      "url": "https://www.jpost.com/israel-news/defense-news/article-912445",
-      "image": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/742971",
-      "headline": "Benjamin Netanyahu says IDF, Mossad ordered to overthrow Iranian regime over nukes",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: a mediated plan to restart talks",
-      "pillar": "risk",
-      "summary": "Israeli Prime Minister Benjamin Netanyahu said he has told Israel's army and spy agency to work to bring down Iran's government, saying Iran is again trying to build a nuclear bomb.",
-      "beats": {
-        "was": "After this year's war, Iran keeps the Strait of Hormuz, the route for about a fifth of the world's oil, largely shut while indirect US-Iran talks stall. Reports say a renewed US-Israeli bombing campaign was shelved before the US midterm elections.",
-        "happened": "Speaking at an army officers' graduation on Wednesday, Netanyahu said his instruction to the military and the Mossad is to overthrow Iran's government. Defence Minister Israel Katz warned that Iran would 'burn' if it attacks Israel.",
-        "means": "It raises the risk that fighting restarts and makes a deal to reopen Hormuz harder. It is a statement of intent during an Israeli election campaign, not an announced operation, and oil barely moved.",
-        "fx": "Higher risk of renewed war → oil supply worries stay → support for oil and the franc. The lens: markets treat it as rhetoric unless strikes follow."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Adds to the risk of renewed conflict around Hormuz; no immediate supply change."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rising war risk tends to lift demand for the franc as a safe place."
-        }
-      ],
-      "watch": "Any sign of renewed US or Israeli strikes on Iran, and Iran's response on Hormuz."
-    },
-    {
-      "id": "rigzone-iran-ship-strikes-engines-20261021",
-      "date": "2026-10-21",
-      "source": "Rigzone (Bloomberg)",
-      "url": "https://www.rigzone.com/news/iran_intensifies_strikes_on_ships-21-oct-2026-184891-article",
-      "image": null,
-      "headline": "Iran Intensifies Strikes on Ships",
-      "story": "hormuz",
-      "story_title": "Hormuz: reopening offer vs ship attacks",
-      "pillar": "risk",
-      "summary": "Attacks on ships near the Strait of Hormuz are getting more frequent and more damaging, with missiles replacing drones and two vessels sunk last week.",
-      "beats": {
-        "was": "About a fifth of the world's oil passed through the Strait of Hormuz before the US-Iran war began. Iran has been attacking ships there to pressure Washington while peace talks run through Pakistan and Qatar.",
-        "happened": "At least 23 attacks on ships were logged in or near the strait in the first two weeks of October, at least five of them hitting engine rooms, which hadn't happened in September. Iran is using more missiles, and at least two ships sank last week.",
-        "means": "Oil is still flowing: Gulf exports are close to pre-war levels by some counts. But each attack makes tankers scarcer and shipping and insurance dearer, which keeps a risk premium in oil.",
-        "fx": "Heavier ship attacks → costlier, riskier Gulf shipping → keeps oil prices firm → helps the Canadian dollar, weighs on importers like Japan, and supports safe havens like the Swiss franc. The lens: escalation in kind, but flows are holding up."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Worse ship attacks raise shipping costs and the risk of lost supply."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "More violence at sea keeps demand for safe havens."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so costlier shipping hurts its trade balance."
-        }
-      ],
-      "watch": "Any sign that Gulf oil exports fall back below normal, or that attacks ease if talks make progress."
     },
     {
       "id": "gulfnews-us-warships-uranium-20261021",
