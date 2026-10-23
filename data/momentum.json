@@ -1,10 +1,28 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-10-23T07:45:00-05:00",
+  "updated": "2026-10-23T15:00:00-05:00",
   "currencies": {
     "USD": {
       "recent": [
+        {
+          "id": "usd-pmi-20261023",
+          "date": "2026-10-23",
+          "title": "US flash PMIs (Oct)",
+          "result": "inline",
+          "actual": "Comp 57.6 (fcst 57.6); Svc 57.9 (fcst 58.0)",
+          "forecast": "57.6",
+          "note": "Inline cool: comp 57.6 exactly as expected (Sep 58.4 five-year high); new orders 58.2 highest since Mar-2022 but output prices 59.8 hottest since Aug-2022 — growth holding, price pressure not."
+        },
+        {
+          "id": "usd-uom-20261023",
+          "date": "2026-10-23",
+          "title": "UoM sentiment + inflation expectations (Oct final)",
+          "result": "beat",
+          "actual": "48.0 (vs 46.3 prelim)",
+          "forecast": "46.3",
+          "note": "Beat: 48.0 vs 46.3 prelim/fcst (Sep 48.1) — 2nd-lowest on record; 1-yr infl 4.7% (Sep 4.6%), 5-yr 3.5% (3.4%) — both highest since May."
+        },
         {
           "id": "us-claims-20261022",
           "date": "2026-10-22",
@@ -40,29 +58,20 @@
           "actual": "Starts 1.221M / permits 1.400M",
           "forecast": "Starts 1.30M / permits 1.39M",
           "note": "Miss on starts: 1.221M SAAR vs 1.30M fcst (prev 1.288M), down 7.4% y/y; permits in line; single-family permits lowest since Apr 2023."
-        },
-        {
-          "id": "usd-adp-weekly-20261020",
-          "date": "2026-10-20",
-          "title": "ADP weekly employment change (4-wk avg)",
-          "result": "miss",
-          "actual": "18.5K",
-          "forecast": "26.0K (prior week)",
-          "note": "Hiring cooling: 4-week avg fell to 18.5K from 26.0K — lowest print since late August."
-        },
-        {
-          "id": "usd-nahb-20261019",
-          "date": "2026-10-19",
-          "title": "NAHB housing market index (Oct)",
-          "result": "miss",
-          "actual": "29",
-          "forecast": "31",
-          "note": "Miss: 29 vs 31 consensus (prior 32) — builder sentiment still in the dumps; housing a soft spot in the growth tape."
         }
       ]
     },
     "EUR": {
       "recent": [
+        {
+          "id": "eur-nbb-20261023",
+          "date": "2026-10-23",
+          "title": "Belgian NBB business climate (Oct)",
+          "result": "beat",
+          "actual": "-9.8 (vs -11.8 fcst)",
+          "forecast": "-11.8",
+          "note": "Beat: -9.8 vs -11.8 fcst (Sep -12.1) — highest since January; mfg -9.2, building -8.3 improved; trade -13.2 worsened."
+        },
         {
           "id": "eur-pmi-20261023",
           "date": "2026-10-23",
@@ -107,15 +116,6 @@
           "actual": "6.7%",
           "forecast": "6.2%",
           "note": "Beat: 6.7% y/y vs 6.2% consensus — producer-price pressure still running hot into the ECB's Oct 29 hold."
-        },
-        {
-          "id": "eur-current-account-20261020",
-          "date": "2026-10-20",
-          "title": "Eurozone current account (Aug)",
-          "result": "miss",
-          "actual": "EUR 8.7B",
-          "forecast": "EUR 29.2B",
-          "note": "Miss: August surplus collapsed to EUR 8.7B vs 29.2B fcst (July 27.2B) — weakest since Jan 2023."
         }
       ]
     },
@@ -300,6 +300,15 @@
     "CAD": {
       "recent": [
         {
+          "id": "cad-retail-20261023",
+          "date": "2026-10-23",
+          "title": "Canada retail sales m/m (Aug)",
+          "result": "miss",
+          "actual": "+1.2% (vs +1.3% fcst)",
+          "forecast": "+1.3%",
+          "note": "A tenth light: +1.2% vs +1.3% fcst (Jul -0.7%); ex-autos +1.2% beat vs +1.0%; Sep advance +0.7% — essentially inline, loonie unmoved near 1.40."
+        },
+        {
           "id": "cad-ippi-202609",
           "date": "2026-10-22",
           "title": "Canada IPPI m/m (Sep)",
@@ -343,15 +352,6 @@
           "actual": "-C$17.31B",
           "forecast": "+C$23.59B",
           "note": "Big miss: first monthly divestment of 2026; record C$17.5B federal-debt cut."
-        },
-        {
-          "id": "cad-housing-20261016",
-          "date": "2026-10-16",
-          "title": "Canada housing starts (Sep)",
-          "result": "beat",
-          "actual": "248,896",
-          "forecast": "234K",
-          "note": "Beat vs 234K fcst (+2.8% m/m) — but actual starts -11% y/y; low-impact for CAD."
         }
       ]
     },
