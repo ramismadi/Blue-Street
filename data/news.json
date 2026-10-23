@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T10:51:28Z",
+  "updated": "2026-10-23T11:46:14Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "bearish",
-      "text": "Euro-area business growth slowed to a four-month low in October, with France shrinking again as it pays the most over Germany to borrow since the 2011 debt crisis. That gives the European Central Bank, which meets October 29, less reason to raise rates, and leaves the euro weak against the pound and the franc.",
-      "ts": "2026-10-23T10:51:28Z"
+      "text": "Euro-area business growth slowed to a four-month low in October, with France shrinking again as it pays the most over Germany to borrow since the 2011 debt crisis. Moody's is expected to cut France's credit rating after Friday's US close, and the European Central Bank, which meets October 29, has less reason to raise rates.",
+      "ts": "2026-10-23T11:46:14Z"
     },
     "GBP": {
       "lean": "mixed",
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "bullish",
-      "text": "The yen is at its strongest in over a month, near 156.3 per dollar, as falling shares and Gulf attacks send money to shelter. Japan's core inflation is back above 2% and business growth is holding up, which backs a Bank of Japan hike; most expect it in December rather than at the October 29–30 meeting.",
-      "ts": "2026-10-23T10:51:28Z"
+      "text": "The yen touched its strongest in over a month, near 156.3 per dollar, before easing to about 157, as falling shares and Gulf attacks send money to shelter. Japan's core inflation is back above 2% and business growth is holding up, which backs a Bank of Japan hike; most expect it in December rather than at the October 29–30 meeting.",
+      "ts": "2026-10-23T11:46:14Z"
     },
     "CHF": {
       "lean": "bullish",
@@ -44,16 +44,115 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold has fallen five days running to about $4,020, its lowest since early August, because dearer oil keeps US rate hikes on the table and gold pays no interest. War news and falling US bond yields have not been enough to bring shelter buyers back.",
-      "ts": "2026-10-23T02:47:17Z"
+      "text": "Gold dipped below $4,000 on Friday for the first time since July, about a quarter below its January record. Dearer oil keeps US rate hikes on the table, gold pays no interest, and investors hit by falling shares have been selling it to raise cash.",
+      "ts": "2026-10-23T11:46:14Z"
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent oil is holding near $113, a five-month high, after Houthi attacks reached Saudi Aramco's oil sites and offices, on top of Iran keeping the Strait of Hormuz largely shut. A pipeline outage in Libya adds to the supply worries.",
-      "ts": "2026-10-23T02:47:17Z"
+      "text": "Brent oil is near $114.50, a five-month high, after Yemen's Houthi rebels struck more Saudi targets, including an Aramco site at Yanbu, the port Saudi Arabia uses to ship oil out by the Red Sea. A pipeline outage in Libya adds to the supply worries.",
+      "ts": "2026-10-23T11:46:14Z"
     }
   },
   "items": [
+    {
+      "id": "thenational-oil-houthi-new-wave-20261023",
+      "ts": "2026-10-23T11:14:12Z",
+      "source": "The National",
+      "url": "https://www.thenationalnews.com/business/energy/2026/10/23/oil-prices-rise-as-houthis-launch-another-wave-of-attacks-on-saudi-arabia/",
+      "image": "https://www.thenationalnews.com/resizer/v2/SGAFXJZDFTVDC2T5ZLBWADGJD4.jpg?auth=f026f695c160d446fd2104660250cd828af39155df863eaeab71e96910376a59&smart=true&width=1200&height=630",
+      "headline": "Oil prices rise as Houthis launch another wave of attacks on Saudi Arabia",
+      "story": "saudi-houthi",
+      "story_title": "Saudi Arabia: Houthi attacks on oil and airports",
+      "pillar": "tot",
+      "summary": "Brent oil climbed to about $114.50 on Friday after Yemen's Houthi rebels said they struck more Saudi targets, including an Aramco site at the Red Sea port of Yanbu.",
+      "beats": {
+        "was": "Yemen's Houthi rebels, allied with Iran, have spent the week attacking Saudi Arabia, the world's biggest oil exporter. Saudi Aramco, the state oil company, has already cleared its Dhahran headquarters.",
+        "happened": "The Houthis said that over two days they hit the Saudi defence ministry in Riyadh, airports in Dammam and Abha, and an Aramco site at Yanbu that includes an oil loading port. Two people died at Dammam airport. Brent rose about 1% to near $114.50, set for a third weekly gain, and US crude rose to about $100.80. A shut pipeline valve in Libya is also cutting output there.",
+        "means": "Yanbu is the port Saudi Arabia uses to ship oil out by the Red Sea, away from the Gulf, so attacks there go straight at its backup export route.",
+        "fx": "Saudi export route under fire → oil higher → helps oil sellers like Canada, weighs on big buyers like Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Fresh strikes on a Saudi export port and airports push Brent to a new five-month high."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada earns more when oil is dear."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so a dearer barrel costs it more."
+        }
+      ],
+      "watch": "Whether any strike actually cuts Saudi exports from Yanbu, or the attacks ease."
+    },
+    {
+      "id": "gbaf-france-moodys-verdict-20261023",
+      "ts": "2026-10-23T10:35:45Z",
+      "source": "Global Banking & Finance Review",
+      "url": "https://www.globalbankingandfinance.com/unrest-hit-france-poised-moodys-ratings-verdict/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-09ae8750-98e3-47ab-a762-67213e04164f/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "Unrest-hit France poised for Moody's ratings verdict",
+      "story": "france-fiscal",
+      "story_title": "France: budget fight, protests and debt worries",
+      "pillar": "risk",
+      "summary": "Moody's, the credit rating agency, gives its verdict on France's debt after US markets close on Friday, and most analysts expect a downgrade.",
+      "beats": {
+        "was": "France has no majority to pass spending cuts, protests over schools and living costs turned into riots last weekend, and its 10-year borrowing cost hit 5.14% this week, the highest since 2002. Moody's has rated France Aa3 with a negative outlook since October 2025.",
+        "happened": "Moody's decision is due at 20:00 GMT on Friday, after the US close. Most analysts expect a cut, likely one step to A1, which would match S&P and Fitch. More protests are planned for Saturday, and the government has refused to add school funding or raise the minimum wage.",
+        "means": "A cut is largely expected, so the bigger risk is a cut of more than one step or a warning of more to come, landing over a weekend of protests.",
+        "fx": "Downgrade risk + weekend unrest → more doubt about France's debt → euro stays on the back foot, franc stays in demand."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "An expected downgrade tonight keeps France's debt worries hanging over the euro."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stress inside the euro area sends money to the Swiss franc next door."
+        }
+      ],
+      "watch": "Moody's verdict after Friday's US close, Saturday's protests, and the October 27 budget vote."
+    },
+    {
+      "id": "investinglive-gold-below-4000-20261023",
+      "ts": "2026-10-23T02:18:27Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/commodities/gold-drops-below-4-000-for-first-time-since-july-as-yields-and-dollar-weigh/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/gold%20under%204000%20for%20the%20first%20time%20since%20July-featured-1792721649.jpg?width=960&format=webp",
+      "headline": "Gold drops below $4,000 for first time since July as yields and dollar weigh",
+      "story": "gold-week",
+      "story_title": "Gold: rate-hike odds vs war risk",
+      "pillar": "policy",
+      "summary": "Gold dipped under $4,000 an ounce in Asia on Friday for the first time since July, about a quarter below its January record above $5,400.",
+      "beats": {
+        "was": "Gold pays no interest, so it loses appeal when US rates are expected to rise. The Federal Reserve raised rates in September for the first time since 2023, and dear oil keeps more hikes possible.",
+        "happened": "Gold slipped below $4,000 in Asian trade, extending a slide of nearly a week. Besides rate worries, investors who borrowed to buy shares sold gold to cover losses after the Nasdaq fell more than 2.5% on Thursday.",
+        "means": "Gold is acting less like a shelter and more like something people sell to raise cash when other markets fall.",
+        "fx": "Oil high → US hike odds stay up → gold under pressure; forced selling adds to it."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Breaking $4,000 extends a slide already under way on the same rate worries."
+        }
+      ],
+      "watch": "The Fed's October 28 decision, and whether gold climbs back above $4,000 once share markets calm."
+    },
     {
       "id": "investing-uk-retail-sales-sep-20261023",
       "date": "2026-10-23",
@@ -1222,45 +1321,6 @@
       "watch": "The Reserve Bank of New Zealand's decision on October 28."
     },
     {
-      "id": "cbs-us-saudi-ordered-departure-20261021",
-      "date": "2026-10-21",
-      "source": "CBS News",
-      "url": "https://cbsnews.com/news/us-saudi-arabia-ordered-departure-houthis",
-      "image": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/09/15/89ed5121-0859-4287-8ef5-88b1b0ef0ebb/thumbnail/1200x630/8029321c35bce0919d5a1ea803221356/ap26258417507065.jpg",
-      "headline": "U.S. ordering some government staff to depart Saudi Arabia, reducing military footprint in Middle East",
-      "story": "saudi-houthi",
-      "story_title": "Houthi strikes on Saudi Arabia",
-      "pillar": "risk",
-      "summary": "The US told non-essential embassy staff and their families to leave Saudi Arabia because of Houthi attacks, and US officials say the military is quietly thinning its presence at bases in the region.",
-      "beats": {
-        "was": "Yemen's Iran-aligned Houthi group has been firing drones and missiles at Saudi airports and oil sites this month; a strike on Riyadh's main airport killed 12 people. Saudi Arabia is the world's largest oil exporter, and with the Strait of Hormuz shut its Red Sea routes matter even more.",
-        "happened": "The State Department ordered non-essential staff and families out of Saudi Arabia, citing Houthi attacks on airports and key infrastructure. Its spokesman said the order covers Saudi Arabia only; other Gulf embassies are on reduced operations. Officials said US forces are cutting their footprint at Middle East posts over Houthi and Iranian threats, and President Trump did not rule out strikes on the Houthis.",
-        "means": "Washington is treating the threat to Saudi Arabia as serious and lasting, not a passing flare-up. That raises the odds of more attacks on Saudi oil, or of US strikes on the Houthis.",
-        "fx": "US pulls staff from Saudi Arabia → higher risk to Gulf oil supply on top of Hormuz → keeps a war premium in oil and some demand for the franc. The lens: confirmed hits on Saudi exports would push oil higher; a lull in attacks would let it ease."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "An evacuation order signals Washington expects the attacks on the top oil exporter to go on."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A wider Gulf conflict keeps some money looking for safety."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The dollar firmed a little on the news as a safe place to park money, but dearer oil also feeds US inflation worries."
-        }
-      ],
-      "watch": "Any Houthi hit on Saudi oil exports, and whether President Trump orders strikes on the Houthis."
-    },
-    {
       "id": "fxstreet-france-oat-5pct-20261021",
       "ts": "2026-10-21T09:56:15Z",
       "source": "FXStreet",
@@ -1294,33 +1354,6 @@
       "watch": "The October 27 budget vote, this weekend's protests, and Moody's review of France's credit rating on Friday."
     },
     {
-      "id": "mezha-bloomberg-boj-maeda-quarterly-20261021",
-      "ts": "2026-10-21T09:46:00Z",
-      "source": "Mezha (from Bloomberg)",
-      "url": "https://mezha.net/eng/news/mezha-c2cbf67dfc43f5af13a63935_boj_likely_to",
-      "image": "https://mezha.net/eng/wp-content/mezha-og-r205/kd_image_generate/eng/3733505-7456c1592274.jpg",
-      "headline": "BOJ likely to raise rates every three months, former official says",
-      "story": "boj-path",
-      "story_title": "BoJ: the road to the next hike",
-      "pillar": "policy",
-      "summary": "Eiji Maeda, a former Bank of Japan executive who ran its policy work, expects the bank to keep raising rates about once every three months, starting in December.",
-      "beats": {
-        "was": "The Bank of Japan has been lifting its rates slowly from near zero. It is expected to hold at its October 29–30 meeting, with most bets on a hike in December.",
-        "happened": "In a Bloomberg interview, Maeda said he expects the next hike in December and another in March or April, calling a roughly three-month pace appropriate to keep inflation near target. Markets price about an 80% chance of a hike by December.",
-        "means": "A steady path of hikes would slowly narrow the gap between Japanese and US rates, which is what has kept the yen weak. It is a former official's view, not a bank decision.",
-        "fx": "Firmer expectations of regular BoJ hikes → a little support for the yen. The lens: the yen is still weak near 158 per dollar because oil keeps Japan's import bill high."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Adds weight to a December hike and more after it, though it is an outside view."
-        }
-      ],
-      "watch": "The Bank of Japan's October 29–30 meeting and its updated inflation forecasts."
-    },
-    {
       "id": "fxstreet-uk-cpi-preview-20261021",
       "ts": "2026-10-21T02:00:00Z",
       "source": "FXStreet",
@@ -1346,45 +1379,6 @@
         }
       ],
       "watch": "Whether the Bank signals more than one hike; a quick fall in oil would ease the pressure."
-    },
-    {
-      "id": "reuters-gbaf-oil-gulf-of-oman-20261021",
-      "ts": "2026-10-21T00:51:16Z",
-      "source": "Global Banking & Finance (Reuters report)",
-      "url": "https://www.globalbankingandfinance.com/oil-rises-middle-east-supply-worries/",
-      "image": "https://www.globalbankingandfinance.com/i/cloud-1a44edcf-dda1-4f4c-9dd5-ce8ff8f3e7ab/width=1200,height=630,quality=80,format=auto,fit=cover/",
-      "headline": "Oil rises on Middle East supply and shipping concerns",
-      "story": "hormuz",
-      "story_title": "Hormuz: mines, tanker hits and blockade threats",
-      "pillar": "tot",
-      "summary": "Brent crude climbed back toward $110 in Asian trading after Iran's Revolutionary Guards said a supertanker caught fire on a mine south of the Strait of Hormuz, and analysts said ship attacks now reach the Gulf of Oman.",
-      "beats": {
-        "was": "The Strait of Hormuz, the route for about a fifth of the world's oil, has been shut since the US-Iran war began this month, and Gulf exporters have leaned on loading points outside it, such as the Gulf of Oman, to keep crude moving.",
-        "happened": "Iran's Revolutionary Guards Navy said a supertanker hit a sea mine and caught fire south of the strait. LSEG analysts said attacks have spread as far as the Gulf of Oman; the ship tracker Kpler counts at least 18 attacks on vessels in two weeks. Yemen's Houthi rebels also claimed strikes on Saudi oil sites at Yanbu and Shaybah. Brent rose about 0.8% to $109.64.",
-        "means": "The workaround routes that kept Middle East oil flowing are now in range too, so a quick return to normal supply looks less likely even while mediation talks go on.",
-        "fx": "Attacks outside the strait → less oil getting out → higher crude → support for oil exporters like Canada, and a bigger import bill for Japan and Europe. The lens: do loadings in the Gulf of Oman actually slow?"
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Attacks are reaching the routes used to bypass the shut strait."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher crude lifts Canada's export income."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so a costlier barrel weighs on the yen."
-        }
-      ],
-      "watch": "Whether tanker loadings off Oman drop, and any reply to Iran's mediation offer; Wednesday's US crude stock report."
     }
   ]
 }
