@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-23T13:52:12Z",
+  "updated": "2026-10-23T15:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
-      "lean": "bearish",
-      "text": "The dollar is near a three-week low after a slide in US tech shares sent investors into US government bonds, pushing the 10-year yield below 5%. Traders now see a December Fed rate hike as likely but no longer certain, though high oil keeps the Fed alert; it decides on October 28.",
-      "ts": "2026-10-23T02:47:17Z"
+      "lean": "mixed",
+      "text": "The dollar is near a three-week low after a slide in US tech shares sent money into US government bonds and pulled yields down. Friday's surveys show US businesses still growing and raising prices fast, so a December Fed rate hike remains the base case; the Fed decides on October 28.",
+      "ts": "2026-10-23T15:55:00Z"
     },
     "EUR": {
       "lean": "bearish",
@@ -19,7 +19,7 @@
     },
     "JPY": {
       "lean": "bullish",
-      "text": "The yen touched its strongest in over a month, near 156.3 per dollar, before easing to about 157, as falling shares and Gulf attacks send money to shelter. Japan's core inflation is back above 2% and business growth is holding up, which backs a Bank of Japan hike; most expect it in December rather than at the October 29–30 meeting.",
+      "text": "The yen touched its strongest in over a month, near 156.3 per dollar, before easing to about 157, as falling shares and Gulf attacks send money to shelter. Japan's core inflation is back above 2% and business growth is holding up, which backs a Bank of Japan hike; most expect it in December rather than at the October 29\u201330 meeting.",
       "ts": "2026-10-23T11:46:14Z"
     },
     "CHF": {
@@ -55,6 +55,60 @@
   },
   "items": [
     {
+      "id": "reuters-us-flash-pmi-oct-20261023",
+      "ts": "2026-10-23T13:49:00Z",
+      "source": "Reuters",
+      "url": "https://www.aol.com/articles/us-business-activity-cools-october-134947000.html",
+      "image": "https://hermes.media.transform.aol.com/58687721651fa4c020eb71381e02c55040611b27/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/10/23/cc523381-dd9f-333e-9329-629aaaff3285/0bcaeb06-520e-4377-b1cc-0daaccd18314.jpg",
+      "headline": "US business growth cools in October, but firms raise prices at the fastest pace since 2022",
+      "summary": "S&P Global's early October survey shows US business activity still growing fast, if a little slower than September's five-year high. Orders are strong and companies are passing on higher costs.",
+      "beats": {
+        "was": "The Federal Reserve raised its main rate to 3.75%-4.00% in September as oil prices, pushed up by the US-Israeli war with Iran, lifted inflation. It meets again on October 27-28.",
+        "happened": "S&P Global's flash survey of US purchasing managers fell to 57.6 in October from 58.4; anything above 50 means growth. New orders were the highest since March 2022, and the prices firms charge rose at the quickest pace since August 2022. Factories hired at the fastest rate since 2012.",
+        "means": "Demand in the US is holding up well despite dear fuel, and businesses are able to pass costs on to customers. That keeps inflation pressure alive and the Fed leaning toward another hike.",
+        "fx": "Strong demand and rising prices \u2192 keeps a December Fed hike on the table \u2192 supports the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Solid growth and faster price rises back the case for a December Fed hike, but the reading was close to forecasts."
+        }
+      ],
+      "pillar": "growth",
+      "watch": "The first estimate of US third-quarter growth next week, and the Fed's decision on October 28.",
+      "story": "fed-oct28",
+      "story_title": "Federal Reserve: hold on October 28, hike in December?"
+    },
+    {
+      "id": "investinglive-umich-final-oct-20261023",
+      "ts": "2026-10-23T14:03:25Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/umich-final-october-final-consumer-sentiment-48-0-vs-46-3-expected/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/US%20consumer%20spending%20retail%20sales_id_49dd8701-e6ae-4a0c-a532-9aff2658e6da_original-featured-1792764204.jpg?width=960&format=webp",
+      "headline": "US consumer mood revised up to 48.0 in October, still near record lows",
+      "summary": "The University of Michigan's final October survey shows Americans a bit less gloomy than first estimated, but still among the most downbeat on record. They expect prices to keep rising fast.",
+      "beats": {
+        "was": "US consumer confidence fell to a record low in May after the war with Iran sent fuel prices soaring, and has stayed weak since. The Fed watches the survey's inflation expectations closely.",
+        "happened": "The University of Michigan's final consumer sentiment reading for October came in at 48.0, above the 46.3 first estimate. Views of current conditions worsened, while hopes for the months ahead improved. Households expect prices to rise 4.7% over the next year and 3.5% a year over five to ten years.",
+        "means": "Americans feel squeezed by living costs ahead of the November 3 midterm elections, but this has not yet shown up as a collapse in spending. High price expectations are the part that worries the Fed.",
+        "fx": "Gloomy but not collapsing, with high price expectations \u2192 little change to Fed hike bets \u2192 small effect on the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Weak mood is a drag, but sticky inflation expectations keep the Fed alert; markets barely moved."
+        }
+      ],
+      "pillar": "growth",
+      "watch": "The Conference Board's consumer confidence survey on October 27, the day before the Fed decision.",
+      "story": "fed-oct28",
+      "story_title": "Federal Reserve: hold on October 28, hike in December?"
+    },
+    {
       "id": "investinglive-canada-retail-aug-20261023",
       "ts": "2026-10-23T12:30:06Z",
       "source": "investingLive",
@@ -69,7 +123,7 @@
         "was": "Canadian shoppers cut back in July, the first monthly fall in sales in seven months. The Bank of Canada decides on October 28 whether to raise interest rates to fight rising prices.",
         "happened": "Statistics Canada said retail sales rose 1.2% in August, just under the 1.3% forecast. Leaving out car dealers, sales also rose 1.2%, more than the 1.0% expected. Its early estimate for September points to a further 0.7% gain. The US dollar slipped below 1.40 Canadian dollars.",
         "means": "Canadian households are still spending despite dearer fuel and higher borrowing costs, which gives the central bank room to raise rates next week.",
-        "fx": "Shoppers still spending → more room for a Bank of Canada hike → supports the loonie."
+        "fx": "Shoppers still spending \u2192 more room for a Bank of Canada hike \u2192 supports the loonie."
       },
       "impact": [
         {
@@ -96,7 +150,7 @@
         "was": "UK shop sales had grown over the summer, helped by the World Cup and a heatwave, and a separate survey this week showed consumer confidence falling sharply in October.",
         "happened": "Sales volumes fell 0.4% in September, worse than the 0.1% dip economists expected, according to the Office for National Statistics. Over the three months to September they still rose 0.7%, and July and August were revised up.",
         "means": "Households are spending more on fuel and less elsewhere, a sign that high energy prices are starting to bite ahead of the October 28 budget.",
-        "fx": "Softer spending → small doubt over how far the Bank of England can raise rates → mild weight on the pound."
+        "fx": "Softer spending \u2192 small doubt over how far the Bank of England can raise rates \u2192 mild weight on the pound."
       },
       "impact": [
         {
@@ -123,7 +177,7 @@
         "was": "The yen and the Swiss franc usually gain when investors get scared, and this week brought a slide in US tech shares, Gulf attacks and worries about France's debt.",
         "happened": "On Friday the yen rose 0.3% to about 156.3 per dollar, on track for a 1% weekly gain. The dollar index was near its lowest since early October, the franc held near a one-month high, and the Canadian dollar firmed past 1.40 per US dollar. Japan's core inflation also rose above the Bank of Japan's 2% goal for the first time in nine months.",
         "means": "Each worry is helping a different shelter: AI fears the yen, France's troubles the franc, and dearer oil the Canadian dollar.",
-        "fx": "Risk worries + firmer Japanese inflation → more demand for the yen; oil above $110 → supports the loonie."
+        "fx": "Risk worries + firmer Japanese inflation \u2192 more demand for the yen; oil above $110 \u2192 supports the loonie."
       },
       "impact": [
         {
@@ -145,7 +199,7 @@
           "why": "High oil prices keep the loonie near a one-month high."
         }
       ],
-      "watch": "Whether the Bank of Japan, meeting October 29–30, hints at a December hike; most economists polled by Reuters expect a hold next week."
+      "watch": "Whether the Bank of Japan, meeting October 29\u201330, hints at a December hike; most economists polled by Reuters expect a hold next week."
     },
     {
       "id": "reuters-uk-gfk-oct-20261023",
@@ -162,7 +216,7 @@
         "was": "In September GfK's monthly UK consumer confidence index had reached -13, its best level in over two years, and the Bank of England is expected to raise rates on November 5.",
         "happened": "The index fell 11 points to -24 in October, worse than every forecast in a Reuters poll and the steepest monthly drop since April 2020. GfK pointed to rising prices, the Middle East war and tighter household budgets; people's inflation expectations rose too.",
         "means": "Households are pulling back just as rates look set to rise, which raises the risk that the UK economy slows and limits how far the Bank of England can go.",
-        "fx": "Weaker consumer demand → doubts about a long run of UK rate hikes → weighs on the pound."
+        "fx": "Weaker consumer demand \u2192 doubts about a long run of UK rate hikes \u2192 weighs on the pound."
       },
       "impact": [
         {
@@ -189,7 +243,7 @@
         "was": "Yemen's Houthi rebels, allied with Iran, have spent the week attacking Saudi Arabia, the world's biggest oil exporter. Saudi Aramco, the state oil company, has already cleared its Dhahran headquarters.",
         "happened": "The Houthis said that over two days they hit the Saudi defence ministry in Riyadh, airports in Dammam and Abha, and an Aramco site at Yanbu that includes an oil loading port. Two people died at Dammam airport. Brent rose about 1% to near $114.50, set for a third weekly gain, and US crude rose to about $100.80. A shut pipeline valve in Libya is also cutting output there.",
         "means": "Yanbu is the port Saudi Arabia uses to ship oil out by the Red Sea, away from the Gulf, so attacks there go straight at its backup export route.",
-        "fx": "Saudi export route under fire → oil higher → helps oil sellers like Canada, weighs on big buyers like Japan and the euro area."
+        "fx": "Saudi export route under fire \u2192 oil higher \u2192 helps oil sellers like Canada, weighs on big buyers like Japan and the euro area."
       },
       "impact": [
         {
@@ -228,7 +282,7 @@
         "was": "France has no majority to pass spending cuts, protests over schools and living costs turned into riots last weekend, and its 10-year borrowing cost hit 5.14% this week, the highest since 2002. Moody's has rated France Aa3 with a negative outlook since October 2025.",
         "happened": "Moody's decision is due at 20:00 GMT on Friday, after the US close. Most analysts expect a cut, likely one step to A1, which would match S&P and Fitch. More protests are planned for Saturday, and the government has refused to add school funding or raise the minimum wage.",
         "means": "A cut is largely expected, so the bigger risk is a cut of more than one step or a warning of more to come, landing over a weekend of protests.",
-        "fx": "Downgrade risk + weekend unrest → more doubt about France's debt → euro stays on the back foot, franc stays in demand."
+        "fx": "Downgrade risk + weekend unrest \u2192 more doubt about France's debt \u2192 euro stays on the back foot, franc stays in demand."
       },
       "impact": [
         {
@@ -261,7 +315,7 @@
         "was": "S&P Global's monthly survey of UK purchasing managers (the PMI, where 50 splits growth from shrinking) read 52.0 in September, and the Bank of England is widely expected to raise rates on November 5 for the first time in over three years.",
         "happened": "The early October reading jumped to 53.1, well above the 51.8 forecast, with both factories and service firms growing faster. The pound still slipped slightly to about $1.338 as the dollar bounced and September shop sales came in weak.",
         "means": "Firms are doing better than the gloomy consumer surveys suggest, and rising costs in the survey make a November rate hike look close to certain.",
-        "fx": "Stronger business activity → firmer case for Bank of England hikes → supports the pound, though much of that is already priced."
+        "fx": "Stronger business activity \u2192 firmer case for Bank of England hikes \u2192 supports the pound, though much of that is already priced."
       },
       "impact": [
         {
@@ -294,7 +348,7 @@
         "was": "The pound has gained on the euro for weeks: the Bank of England is expected to raise rates on November 5, while France's debt and protests weigh on the euro.",
         "happened": "After a UK business survey showed the best month since February, the euro fell to about 83.6 pence, its lowest since May 2025, before steadying near 83.7. The pound slipped against a firmer US dollar to about $1.338. Weak UK shop sales and a slump in consumer mood held it back.",
         "means": "UK firms look healthier than euro-area ones and UK rates are likely to rise sooner, so money keeps favouring the pound over the euro, even as British shoppers feel the pinch.",
-        "fx": "UK firms stronger, France under strain → pound up against the euro; the US dollar is a separate story."
+        "fx": "UK firms stronger, France under strain \u2192 pound up against the euro; the US dollar is a separate story."
       },
       "impact": [
         {
@@ -327,7 +381,7 @@
         "was": "The euro area's monthly business survey (the HCOB PMI, where 50 splits growth from shrinking) read 53.1 in September, and the European Central Bank meets October 29 with rates at 2.50%.",
         "happened": "The early October reading fell to 51.9, below the 52.7 forecast, as both services and factories cooled. France's business activity shrank again amid its budget fight, and firms reported energy and transport costs rising.",
         "means": "The euro-area economy is still growing, at roughly 0.3% a quarter by S&P Global's estimate, but slower growth and France's troubles give the ECB less reason to raise rates soon.",
-        "fx": "Slower growth → less pressure on the ECB to hike → weighs on the euro, especially against the pound."
+        "fx": "Slower growth \u2192 less pressure on the ECB to hike \u2192 weighs on the euro, especially against the pound."
       },
       "impact": [
         {
@@ -360,7 +414,7 @@
         "was": "The Federal Reserve raised rates in September for the first time since 2023, and until this week markets had fully expected another hike in December because oil keeps pushing prices up.",
         "happened": "After Meta reported its first cash outflow in over a decade on heavy AI spending, the Nasdaq fell more than 2% on Thursday and the US 10-year Treasury yield dropped about 0.19 percentage points, its biggest one-day fall since March 2023, to just under 5%. On Friday Japan's Nikkei fell another 1.3%, and the odds of a December Fed hike slipped to about 85%.",
         "means": "A share-market scare is doing some of the Fed's work: lower bond yields and shakier markets ease the pressure to keep raising rates.",
-        "fx": "Fewer expected US hikes → lower US yields → weighs on the dollar, while shelter buying helps the yen."
+        "fx": "Fewer expected US hikes \u2192 lower US yields \u2192 weighs on the dollar, while shelter buying helps the yen."
       },
       "impact": [
         {
@@ -399,7 +453,7 @@
         "was": "Gold pays no interest, so it loses appeal when US rates are expected to rise. The Federal Reserve raised rates in September for the first time since 2023, and dear oil keeps more hikes possible.",
         "happened": "Gold slipped below $4,000 in Asian trade, extending a slide of nearly a week. Besides rate worries, investors who borrowed to buy shares sold gold to cover losses after the Nasdaq fell more than 2.5% on Thursday.",
         "means": "Gold is acting less like a shelter and more like something people sell to raise cash when other markets fall.",
-        "fx": "Oil high → US hike odds stay up → gold under pressure; forced selling adds to it."
+        "fx": "Oil high \u2192 US hike odds stay up \u2192 gold under pressure; forced selling adds to it."
       },
       "impact": [
         {
@@ -423,10 +477,10 @@
       "pillar": "growth",
       "summary": "Japan's business growth held steady in October as service firms picked up while factories slowed to a seven-month low.",
       "beats": {
-        "was": "The Bank of Japan's rate is 1.25%, its highest since 1995, and Japan's core inflation rose back above the bank's 2% target in September; the bank meets October 29–30.",
+        "was": "The Bank of Japan's rate is 1.25%, its highest since 1995, and Japan's core inflation rose back above the bank's 2% target in September; the bank meets October 29\u201330.",
         "happened": "S&P Global's early October survey (where 50 splits growth from shrinking) held at 52.3. Services rose to 52.0, factories eased to 53.3, hiring slowed to a 14-month low, and firms' costs kept climbing.",
         "means": "The economy is steady enough for the Bank of Japan to keep raising rates slowly, but the weaker hiring backs a careful pace, most likely a December move rather than October.",
-        "fx": "Steady growth with sticky costs → BoJ hikes still on track → mild support for the yen."
+        "fx": "Steady growth with sticky costs \u2192 BoJ hikes still on track \u2192 mild support for the yen."
       },
       "impact": [
         {
@@ -436,7 +490,7 @@
           "why": "Steady overall, with rising costs for hikes and softer hiring against."
         }
       ],
-      "watch": "The Bank of Japan decision on October 29–30 and any hint on December."
+      "watch": "The Bank of Japan decision on October 29\u201330 and any hint on December."
     },
     {
       "id": "fxstreet-japan-cpi-sep-20261022",
@@ -450,10 +504,10 @@
       "pillar": "inflation",
       "summary": "Japan's main inflation measure rose to 2.1% in September, back above the Bank of Japan's 2% goal, and the measure that also leaves out energy jumped to 2.4%.",
       "beats": {
-        "was": "The Bank of Japan wants inflation to sit steadily at 2% before it raises rates again; it meets on October 29–30 and many expect a hike by December.",
+        "was": "The Bank of Japan wants inflation to sit steadily at 2% before it raises rates again; it meets on October 29\u201330 and many expect a hike by December.",
         "happened": "Prices excluding fresh food rose 2.1% from a year earlier in September, up from 1.8% and in line with forecasts. Excluding both fresh food and energy, prices rose 2.4%, up from 2.0%.",
         "means": "Price rises are spreading beyond fuel, which is the kind of evidence the central bank has said it needs before hiking.",
-        "fx": "Firmer Japanese inflation → more reason for a Bank of Japan hike → supports the yen."
+        "fx": "Firmer Japanese inflation \u2192 more reason for a Bank of Japan hike \u2192 supports the yen."
       },
       "impact": [
         {
@@ -463,7 +517,7 @@
           "why": "The headline matched forecasts, but the broader rise backs the case for a December hike."
         }
       ],
-      "watch": "Whether Bank of Japan Governor Kazuo Ueda signals a hike at the October 29–30 meeting."
+      "watch": "Whether Bank of Japan Governor Kazuo Ueda signals a hike at the October 29\u201330 meeting."
     },
     {
       "id": "investinglive-au-flash-pmi-oct-20261022",
@@ -480,7 +534,7 @@
         "was": "Australia's monthly business survey (the S&P Global PMI, where 50 splits growth from shrinking) read 51.3 in September, and Reserve Bank of Australia officials have said a rate hike on November 3 is possible.",
         "happened": "The early October reading dropped to 47.7, its lowest since March, as services fell to 47.8. Factories were roughly flat, but input costs from energy, shipping and wages climbed faster.",
         "means": "Weaker output argues against raising rates while rising prices argue for it, which leaves the November decision more finely balanced.",
-        "fx": "Shrinking activity → less room for an RBA hike → weighs on the Aussie, softened by the price pressure."
+        "fx": "Shrinking activity \u2192 less room for an RBA hike \u2192 weighs on the Aussie, softened by the price pressure."
       },
       "impact": [
         {
@@ -507,7 +561,7 @@
         "was": "Yemen's Houthi rebels, allied with Iran, have been attacking Saudi Arabia while Iran keeps the Strait of Hormuz largely shut.",
         "happened": "A drone hit Saudi Aramco's Shaybah field, killing two, though output was not affected, and an attack on King Fahd airport in Dammam caused casualties. Brent rose about 4% to settle at $113.17, its biggest gain in two weeks; US crude settled near $99.50.",
         "means": "Attacks now reach Saudi Arabia's own oil sites, so the region's biggest supplier is no longer seen as safe.",
-        "fx": "Higher oil → helps oil sellers like Canada and Norway, hurts big oil buyers like Japan and the euro area."
+        "fx": "Higher oil \u2192 helps oil sellers like Canada and Norway, hurts big oil buyers like Japan and the euro area."
       },
       "impact": [
         {
@@ -546,7 +600,7 @@
         "was": "Iran has largely closed the Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil, and the US has blockaded Iran's ports for 100 days.",
         "happened": "Iran's Revolutionary Guards said they hit four tankers and that three more struck mines on Thursday. President Trump called the claims fake, meant to lift oil prices before the November 3 midterm elections. Reuters reported that Saudi Aramco told staff to leave its Dhahran headquarters after Houthi attacks on Saudi Arabia, and Brent rose to about $112, its highest since May 18.",
         "means": "Whether or not every attack is real, buyers are paying more for oil because the threat to Gulf supply keeps growing.",
-        "fx": "Higher oil → good for oil sellers like Canada, bad for big oil buyers like Japan and the euro area."
+        "fx": "Higher oil \u2192 good for oil sellers like Canada, bad for big oil buyers like Japan and the euro area."
       },
       "impact": [
         {
@@ -585,7 +639,7 @@
         "was": "Gold pays no interest, so it usually loses appeal when markets expect higher US rates; it had already fallen four days running.",
         "happened": "On Thursday gold slid about 2.3% to roughly $4,047 an ounce and silver dropped about 4.5%, while Brent oil rose toward $112. Gold is down about 3% so far in October and silver about 10%.",
         "means": "Gulf fighting is lifting oil, and dearer oil makes a December US rate hike more likely, which outweighs gold's appeal as a shelter.",
-        "fx": "Oil up → US hike bets up → gold down, even on a fearful day."
+        "fx": "Oil up \u2192 US hike bets up \u2192 gold down, even on a fearful day."
       },
       "impact": [
         {
@@ -618,7 +672,7 @@
         "was": "The European Commission's monthly consumer confidence survey asks households how they feel about money and the economy. It was already weak at -16.8 in September, with oil above $100 lifting fuel and heating bills.",
         "happened": "The early October reading fell to -17.9, below the -17.0 economists expected. For the whole European Union it slipped to -17.3.",
         "means": "Shoppers are getting more cautious, which points to softer spending and makes it harder for the European Central Bank to keep raising rates without hurting growth.",
-        "fx": "Weaker household mood + high energy bills → less room for ECB hikes than for Bank of England hikes, a mild drag on the euro."
+        "fx": "Weaker household mood + high energy bills \u2192 less room for ECB hikes than for Bank of England hikes, a mild drag on the euro."
       },
       "impact": [
         {
@@ -645,7 +699,7 @@
         "was": "Weekly jobless claims count people newly applying for unemployment benefits, a quick read on layoffs. US hiring has been slow and the jobless rate rose to 4.2% last month, but companies have mostly kept their staff.",
         "happened": "New claims fell to 194,000 from 200,000 the week before, the lowest in three months. The four-week average dropped to about 198,000.",
         "means": "The job market is cooling through slow hiring, not through layoffs. That gives the Federal Reserve no reason to drop its plan to raise rates in December.",
-        "fx": "Low layoffs + Fed hike still expected in December → a small support for the dollar and a small weight on gold."
+        "fx": "Low layoffs + Fed hike still expected in December \u2192 a small support for the dollar and a small weight on gold."
       },
       "impact": [
         {
@@ -678,7 +732,7 @@
         "was": "Markets expect the Bank of Canada to raise rates on October 28, though core consumer inflation is running below its 2% target.",
         "happened": "Statistics Canada said its industrial product price index, which tracks prices at the factory gate, rose 2.0% in September after 1.2% in August, well above forecasts. Raw material prices also jumped.",
         "means": "Higher factory costs tend to reach shop prices later, which supports the case for a rate hike.",
-        "fx": "Hotter factory prices → more reason for a Bank of Canada hike → mild support for the loonie."
+        "fx": "Hotter factory prices \u2192 more reason for a Bank of Canada hike \u2192 mild support for the loonie."
       },
       "impact": [
         {
@@ -705,7 +759,7 @@
         "was": "Tension between the US and Iran, doubts about AI spending, and France's budget troubles have all been weighing on markets this week.",
         "happened": "In European trading, the euro fell to about 0.92 Swiss francs, its lowest in three months, and the dollar slid to about 157 yen. European shares fell and the gap between French and German borrowing costs widened to its largest since 2011.",
         "means": "When investors get nervous they buy the franc and the yen; France's troubles add a euro-specific reason to sell.",
-        "fx": "Shelter buying + French debt worries → franc and yen up, euro down against both."
+        "fx": "Shelter buying + French debt worries \u2192 franc and yen up, euro down against both."
       },
       "impact": [
         {
@@ -737,14 +791,14 @@
       "image": "https://s.yimg.com/lo/mysterio/api/e1f0f77556a6736ddac13c1242262837541eaaa0948517e7dc2766682d4720bd/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-10%2Fe4d66753-eb1d-4a3d-a303-375d5cefd8ab",
       "headline": "Oil prices gain on worries of Iran-US escalations after midterms",
       "story": "us-iran-talks",
-      "story_title": "US–Iran: a mediated plan to restart talks",
+      "story_title": "US\u2013Iran: a mediated plan to restart talks",
       "pillar": "risk",
       "summary": "Oil climbed to its highest since May, with Brent above $111 and US crude near $99, on fears that fighting with Iran restarts after the US midterm elections on November 3.",
       "beats": {
         "was": "The US-Iran war began in late February, and Iran still keeps the Strait of Hormuz, the route for about a fifth of the world's oil, largely shut. President Trump has been looking for ways to bring fuel prices down before the midterm elections on November 3.",
         "happened": "A New York Times report said the US and Israel have plans for new strikes on Iran after the elections, and Saudi Arabia reported attacks on Dammam's airport and an Aramco oil field. Trump said he will not attack Iran before the vote and suggested fuel prices will fall afterwards. Brent rose above $111 a barrel and US crude went past $99.",
         "means": "Markets now see the weeks after the vote as the riskier stretch for oil supply, so promises of calm before it do little to cool prices.",
-        "fx": "Talk of strikes after the election → more risk to Gulf oil → dearer oil. Dearer oil keeps US inflation worries alive, which is why traders fully expect a Federal Reserve hike in December. The lens: whether Brent holds above $110 into November."
+        "fx": "Talk of strikes after the election \u2192 more risk to Gulf oil \u2192 dearer oil. Dearer oil keeps US inflation worries alive, which is why traders fully expect a Federal Reserve hike in December. The lens: whether Brent holds above $110 into November."
       },
       "impact": [
         {
@@ -789,7 +843,7 @@
         "was": "The Reserve Bank of New Zealand meets on October 28. Third-quarter inflation slowed to 3.7%, a little below its own forecast, but oil has jumped since September.",
         "happened": "Francesco Pesole, an FX strategist at ING, expects a quarter-point rise to 3.0% with a firm tone, and another hike by February. He points to oil up about 20% since September, the kiwi's lowest trade-weighted level since 2009, and growth running ahead of the bank's forecast. Markets price roughly an 85% chance of a hike, and the kiwi sits near 57 US cents.",
         "means": "Most of the hike is already expected, so the kiwi needs a firm message about further rises to gain much, and global moods may matter more than the decision.",
-        "fx": "Likely hike, mostly priced → mild support for the kiwi; a hint of more to come would add to it."
+        "fx": "Likely hike, mostly priced \u2192 mild support for the kiwi; a hint of more to come would add to it."
       },
       "impact": [
         {
@@ -816,7 +870,7 @@
         "was": "For most of October the yen sat in a tight range near 158 per dollar, held down by Japan's low interest rates even as Bank of Japan officials hinted at a hike in December.",
         "happened": "On Thursday the dollar fell about 0.6% against the yen, its biggest drop since late September, and the yen also gained on the euro, the pound and the Australian dollar. Share markets slid on fears that heavy AI spending won't pay off, Brent oil rose above $111 on Gulf attacks, and France's borrowing costs stayed near their highest since 2002. Falling US government bond yields also took some shine off the dollar. The euro held near $1.123 and the pound near $1.340.",
         "means": "When stocks wobble, investors still reach for the yen as a shelter, which can outweigh the damage dear oil does to Japan.",
-        "fx": "Nervous stock markets → money into shelter → a firmer yen and a softer dollar. The lens: whether the share sell-off deepens or fades."
+        "fx": "Nervous stock markets \u2192 money into shelter \u2192 a firmer yen and a softer dollar. The lens: whether the share sell-off deepens or fades."
       },
       "impact": [
         {
@@ -838,7 +892,7 @@
           "why": "The Australian dollar tends to slip when investors get nervous about stocks."
         }
       ],
-      "watch": "Whether stocks steady, and the Bank of Japan meeting on October 29–30."
+      "watch": "Whether stocks steady, and the Bank of Japan meeting on October 29\u201330."
     },
     {
       "id": "reuters-gurutrade-asia-stocks-3m-low-20261022",
@@ -855,7 +909,7 @@
         "was": "Tech and AI companies have carried share markets for much of the year, but investors have grown uneasy about how much these firms are spending and how dear borrowing has become.",
         "happened": "A broad index of Asia-Pacific shares outside Japan fell 1.8%, heading for a fourth weekly loss. Korea's market dropped more than 4%, Hong Kong's more than 3% and Japan's Nikkei about 2%, led by chipmakers such as Tokyo Electron and SK Hynix. Plans by Meta, the Facebook owner, to raise money with a new class of shares revived fears about AI spending. US and European share futures fell too, Brent oil rose above $111, gold eased to about $4,068 and US 10-year bond yields dropped to about 5.09% as money moved to safety.",
         "means": "Investors are pulling back from riskier bets just as the Gulf war heats up again, which favours shelter assets over growth-linked currencies.",
-        "fx": "Falling shares → less appetite for risk → support for the yen and franc, pressure on the Australian and New Zealand dollars. The lens: whether the slide spreads to Wall Street."
+        "fx": "Falling shares \u2192 less appetite for risk \u2192 support for the yen and franc, pressure on the Australian and New Zealand dollars. The lens: whether the slide spreads to Wall Street."
       },
       "impact": [
         {
@@ -900,7 +954,7 @@
         "was": "UK inflation came in above forecast this week, so traders see the Bank of England raising rates on November 5, while France's budget fight has pushed its borrowing costs to the highest in more than 20 years.",
         "happened": "Traders now expect at least three quarter-point Bank of England hikes by April, against about two from the European Central Bank. French 10-year yields hit a new 24-year high, Italian and Belgian yields jumped, and European shares fell about 1%. UK bonds held steady. Options traders are the most negative on the euro against the pound since mid-2024.",
         "means": "Higher UK rates and France's debt worries both pull money from the euro toward the pound.",
-        "fx": "Wider UK-euro rate gap + French debt stress → pound up against the euro. The lens: the UK budget on October 28 and France's budget vote on October 27."
+        "fx": "Wider UK-euro rate gap + French debt stress \u2192 pound up against the euro. The lens: the UK budget on October 28 and France's budget vote on October 27."
       },
       "impact": [
         {
@@ -933,7 +987,7 @@
         "was": "Worries that big tech firms are spending too much on AI had already knocked shares on Wednesday, and Brent oil was climbing on attacks around the Gulf.",
         "happened": "The Nasdaq dropped about 2% and the S&P 500 about 1.2% soon after the open. The 10-year US Treasury yield fell about 0.11 percentage point to near 5.02%, as Brent reached a five-month high above $111.",
         "means": "Investors are moving from shares into safe bonds, and lower US yields make holding dollars a little less rewarding.",
-        "fx": "Falling US yields + money leaving shares → pressure on the dollar against the yen and franc; a softer mood also tends to weigh on the Australian dollar."
+        "fx": "Falling US yields + money leaving shares \u2192 pressure on the dollar against the yen and franc; a softer mood also tends to weigh on the Australian dollar."
       },
       "impact": [
         {
@@ -972,7 +1026,7 @@
         "was": "Canada is a big oil exporter, so dearer oil tends to help its currency. Traders have come to expect the Bank of Canada to raise its rate on October 28.",
         "happened": "The US dollar fell to about 1.4025 Canadian dollars, its lowest since September 21, after drone attacks on Saudi and Russian energy sites lifted oil. Markets see a quarter-point hike to 2.50% as likely.",
         "means": "Two supports are working together for the loonie: a higher price for what Canada sells, and a central bank expected to raise rates.",
-        "fx": "Dearer oil + a likely Bank of Canada hike → steady support for the Canadian dollar."
+        "fx": "Dearer oil + a likely Bank of Canada hike \u2192 steady support for the Canadian dollar."
       },
       "impact": [
         {
@@ -1005,7 +1059,7 @@
         "was": "The Fed raised rates this year for the first time since 2023 as energy costs pushed inflation up; markets give only a small chance of another hike next week.",
         "happened": "Danske Bank expects a hold on October 28, with two or three officials, possibly Beth Hammack and Lorie Logan, voting for a hike. It forecasts quarter-point hikes in December and March, and says the risk is of even more.",
         "means": "A hold would be mostly expected. The question is how firmly Fed Chair Kevin Warsh points to December.",
-        "fx": "Hold now, hikes later → little change for the dollar unless the vote is more split than expected."
+        "fx": "Hold now, hikes later \u2192 little change for the dollar unless the vote is more split than expected."
       },
       "impact": [
         {
@@ -1038,7 +1092,7 @@
         "was": "France's government is trying to pass a 2027 budget that aims to cut the deficit to 5% of national income, but parliament is split and street protests are growing. Investors have been demanding more to lend to France for weeks.",
         "happened": "France's 10-year borrowing cost rose above 5% for the first time since 2002, and the gap over Germany widened to roughly 165 basis points, up from about 150 earlier this month. For a short time France paid more than the US to borrow for 10 years, a first since 2013. The vote on the budget's tax side has been delayed, and Finance Minister Roland Lescure said the government could force it through without a vote if needed.",
         "means": "Investors now treat France as a real credit worry, not just a political one. More than half of French debt is held abroad, so a downgrade could push foreign money out of the euro area.",
-        "fx": "Wider France–Germany gap + rating review Friday → money leaves euro-area bonds, which weighs on the euro and tends to help the franc and the pound against it."
+        "fx": "Wider France\u2013Germany gap + rating review Friday \u2192 money leaves euro-area bonds, which weighs on the euro and tends to help the franc and the pound against it."
       },
       "impact": [
         {
@@ -1071,7 +1125,7 @@
         "was": "Yemen's Houthis, an armed group backed by Iran, have stepped up drone and missile attacks on Saudi Arabia during the US-Iran war, which began in late February. On October 21 a drone aimed at Saudi Aramco's Shaybah oilfield was shot down and two people died.",
         "happened": "A late attack on King Fahd International Airport in Dammam, in Saudi Arabia's oil-rich east, killed two people and hurt eight; the airport has reopened. The US State Department ordered non-emergency staff and families out of Saudi Arabia and said the order covers only that country, though US officials told Reuters families would also leave other Gulf missions. Brent was above $110 a barrel.",
         "means": "Attacks are reaching Saudi Arabia's oil region itself, not just ships at sea, so the risk to the world's biggest oil exporter is rising.",
-        "fx": "Houthi strikes on Saudi soil → more risk to oil supply → dearer oil and demand for shelter currencies. The lens: whether attacks hit Saudi oil output or export terminals."
+        "fx": "Houthi strikes on Saudi soil \u2192 more risk to oil supply \u2192 dearer oil and demand for shelter currencies. The lens: whether attacks hit Saudi oil output or export terminals."
       },
       "impact": [
         {
@@ -1116,7 +1170,7 @@
         "was": "The Confederation of British Industry (CBI), a business lobby, asks manufacturers each month about orders and plans. Official figures show factory output growing this year, and the Bank of England is expected to raise rates on November 5 because inflation is 3.5%.",
         "happened": "The CBI's measure of order books dropped to -32 in October from -9 in September, meaning far more firms reported weak orders than strong ones. Firms' outlook for output over the next three months improved to about flat, from deeply negative in July, and their plans to raise prices rose to +24 from +11. The CBI pointed to falling orders and growing staff shortages.",
         "means": "Demand for British goods is soft, but factories plan bigger price rises, which is what the Bank of England worries about.",
-        "fx": "weak orders + firmer price plans → little change to the case for a November hike, a small dent in the growth story for the pound. The lens: the official UK business surveys out on October 23."
+        "fx": "weak orders + firmer price plans \u2192 little change to the case for a November hike, a small dent in the growth story for the pound. The lens: the official UK business surveys out on October 23."
       },
       "impact": [
         {
@@ -1143,7 +1197,7 @@
         "was": "Since the US-Iran war began, Iran has kept most traffic through the Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil, blocked or under threat, while US-Iran peace talks have stalled.",
         "happened": "The naval arm of Iran's Revolutionary Guards claimed it struck four tankers moving oil between ships in the northern Gulf, and that three more vessels hit mines west of Hormuz. These are Iran's own claims and have not been confirmed. It also warned of a wider response against US bases. Yemen's Houthis, who are allied with Iran, kept firing drones at Saudi oilfields, and the US told non-essential staff to leave Saudi Arabia. Brent rose more than 2% in Asian trading.",
         "means": "Shipping in the Gulf looks less safe again, not more, so the oil supply risk is growing rather than fading.",
-        "fx": "Gulf ships under attack → dearer oil → support for oil exporters like Canada, a heavier bill for big oil importers like Japan, and more demand for shelter currencies. The lens: whether these claims are confirmed by shipping trackers."
+        "fx": "Gulf ships under attack \u2192 dearer oil \u2192 support for oil exporters like Canada, a heavier bill for big oil importers like Japan, and more demand for shelter currencies. The lens: whether these claims are confirmed by shipping trackers."
       },
       "impact": [
         {
@@ -1188,7 +1242,7 @@
         "was": "The Swiss National Bank (SNB) held its rate at 0% in September. Earlier in the year it had said it was more willing than usual to step into currency markets to stop the franc getting too strong.",
         "happened": "A summary of the September discussion, published October 22, says the franc fell about 3% against its main partners between June and September, which eased conditions more than slightly higher Swiss rates tightened them. It says wider gaps between interest rates abroad and calm markets have made the franc attractive to borrow cheaply and invest elsewhere, while demand for it as a safe place stayed limited. Inflation was 0.8% in August, mostly from fuel, and growth was solid, so an increased willingness to intervene is no longer needed, though the bank can still act.",
         "means": "The SNB is relaxed about the franc for now. It is not trying to push it down, and with near-zero rates the franc tends to be sold when markets are calm.",
-        "fx": "SNB steps back + franc cheap to borrow → less official selling of francs, but steady pressure from investors who borrow in francs to buy higher-yielding currencies. The lens: whether war fear keeps outweighing that."
+        "fx": "SNB steps back + franc cheap to borrow \u2192 less official selling of francs, but steady pressure from investors who borrow in francs to buy higher-yielding currencies. The lens: whether war fear keeps outweighing that."
       },
       "impact": [
         {
@@ -1215,7 +1269,7 @@
         "was": "The European Central Bank has raised rates this year as oil pushed inflation up, and markets expected at least one more hike by December. Then France's budget crisis sent its borrowing costs soaring.",
         "happened": "Brzeski expects no change next week, with any further hike left to December. He argues higher bond yields are already doing the bank's work: worth about a quarter-point hike for Germany and closer to half a point for France.",
         "means": "If markets are already tightening money for the ECB, it has less reason to raise rates itself. A rescue bond-buying tool exists, but France would likely need to pass a budget within EU rules first.",
-        "fx": "Fewer ECB hikes than the Bank of England → less support for the euro, especially against the pound."
+        "fx": "Fewer ECB hikes than the Bank of England \u2192 less support for the euro, especially against the pound."
       },
       "impact": [
         {
@@ -1240,9 +1294,9 @@
       "summary": "Gold slipped below $4,100 an ounce, near its lowest this month, because markets expect a US rate hike in December.",
       "beats": {
         "was": "Gold had been stuck between about $4,100 and $4,200 for more than two weeks, pulled up by war fears and down by the prospect of higher US rates.",
-        "happened": "It broke below $4,100 even though the dollar was soft. Futures pricing shows about a 90% chance the Federal Reserve raises rates in December, after hot US inflation data and costly oil. Fed officials have signalled no hurry to act at their October 27–28 meeting.",
+        "happened": "It broke below $4,100 even though the dollar was soft. Futures pricing shows about a 90% chance the Federal Reserve raises rates in December, after hot US inflation data and costly oil. Fed officials have signalled no hurry to act at their October 27\u201328 meeting.",
         "means": "Expected rate hikes are weighing on gold more than war fears are helping it, since gold pays no interest.",
-        "fx": "Higher expected US rates → holding gold costs more → gold lower. The lens: whether it holds above this month's low."
+        "fx": "Higher expected US rates \u2192 holding gold costs more \u2192 gold lower. The lens: whether it holds above this month's low."
       },
       "impact": [
         {
@@ -1262,14 +1316,14 @@
       "image": "https://investinglive.com/cms/media/Processed/Categories/featured/oil%20highs%20new%20war%2022%20October%202026-featured-1792627323.jpg?width=960&format=webp",
       "headline": "US and Israel plan specific renewed Iran strikes after US midterms, New York Times reports",
       "story": "us-iran-talks",
-      "story_title": "US–Iran: a mediated plan to restart talks",
+      "story_title": "US\u2013Iran: a mediated plan to restart talks",
       "pillar": "risk",
       "summary": "The US and Israeli militaries have reportedly drawn up plans for a short, heavy round of strikes on Iran after the US midterm elections on November 3, though President Trump has not signed off.",
       "beats": {
         "was": "Talks to end the US-Iran war have stalled over Iran's enriched uranium, the US keeps a naval blockade on Iranian oil, and Iran has kept the Strait of Hormuz, a key Gulf oil route, largely shut.",
         "happened": "The New York Times, citing US officials, said the two militaries have plans to hit Iran's nuclear sites, missiles and drones, and some energy sites, with three US aircraft carriers in place by early November. Trump has turned down similar plans several times this year.",
         "means": "The chance of the war flaring again in November just went up, and the threat may be meant to push Iran back to the table. Iranian figures have warned they would hit back at Saudi oil plants and undersea internet cables.",
-        "fx": "More risk of new strikes → more fear for Gulf oil supply → oil and safe havens like the franc and gold stay supported. The lens: Brent held near $110 in Asia, with no sharp move yet."
+        "fx": "More risk of new strikes \u2192 more fear for Gulf oil supply \u2192 oil and safe havens like the franc and gold stay supported. The lens: Brent held near $110 in Asia, with no sharp move yet."
       },
       "impact": [
         {
@@ -1307,8 +1361,8 @@
       "beats": {
         "was": "The Reserve Bank of New Zealand had forecast inflation of 3.9% and markets gave roughly 80% odds that it raises rates on October 28. The kiwi had climbed for five days on that bet.",
         "happened": "Prices rose 0.7% over the quarter and 3.7% from a year earlier, down from 4.1% and below the 3.8% expected. Cheaper petrol and diesel did most of the pulling down; prices of local services barely slowed.",
-        "means": "A small miss, not a change of story: inflation is still well above the bank's 1–3% target, so a hike stays likely, but the case is less urgent and later hikes look less certain.",
-        "fx": "Softer inflation → slightly lower odds of RBNZ hikes → kiwi eases. The lens: it slipped back just under 57 US cents, giving up only a small part of its recent climb."
+        "means": "A small miss, not a change of story: inflation is still well above the bank's 1\u20133% target, so a hike stays likely, but the case is less urgent and later hikes look less certain.",
+        "fx": "Softer inflation \u2192 slightly lower odds of RBNZ hikes \u2192 kiwi eases. The lens: it slipped back just under 57 US cents, giving up only a small part of its recent climb."
       },
       "impact": [
         {
@@ -1319,66 +1373,6 @@
         }
       ],
       "watch": "The Reserve Bank of New Zealand's decision on October 28."
-    },
-    {
-      "id": "fxstreet-france-oat-5pct-20261021",
-      "ts": "2026-10-21T09:56:15Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/frances-10-year-bond-yield-climbs-above-5-stirring-fears-of-a-credit-crisis-202610210956",
-      "image": "https://editorial.fxsstatic.com/images/i/Equity-Index_CAC40-1_Medium.jpg",
-      "headline": "France's 10-year bond yield climbs above 5%, stirring fears of a credit crisis",
-      "story": "france-fiscal",
-      "story_title": "France: budget fight, protests and debt worries",
-      "pillar": "risk",
-      "summary": "France now pays over 5% to borrow for ten years, the first time since 2002, and the gap over German debt is the widest since the euro debt crisis of 2009–2011.",
-      "beats": {
-        "was": "France's government has no majority to pass spending cuts, its debt is about 119% of the economy, and student protests have turned violent, with partial curfews in some cities. The budget vote is due October 27.",
-        "happened": "The 10-year French government bond yield went above 5%. The extra yield over Germany's 10-year bond widened to roughly 1.6 percentage points, a level last seen in the 2009–2011 crisis.",
-        "means": "Investors are asking more to lend to France because they doubt it can control its debt before next year's election. That worry spills into the euro as a whole.",
-        "fx": "French borrowing costs up + wider gap to Germany → doubts about the euro area's weakest big borrower → money leaves the euro for safer homes like the franc. The lens: a budget deal or calmer protests would ease it."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Higher French borrowing costs feed doubts about the euro area and cap the euro's recovery."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Stress inside the euro area sends money to the Swiss franc next door."
-        }
-      ],
-      "watch": "The October 27 budget vote, this weekend's protests, and Moody's review of France's credit rating on Friday."
-    },
-    {
-      "id": "fxstreet-uk-cpi-preview-20261021",
-      "ts": "2026-10-21T02:00:00Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/uk-cpi-set-to-accelerate-paving-the-way-for-a-boe-interest-rate-hike-in-november-202610210200",
-      "image": "https://editorial.fxsstatic.com/images/i/cpi-shopping-bags_Medium.png",
-      "headline": "United Kingdom CPI inflation climbs to 3.5% YoY in September, vs. 3.4% expected",
-      "story": "boe-nov",
-      "story_title": "BoE: the November decision",
-      "pillar": "inflation",
-      "summary": "UK inflation rose to 3.5% in September, a touch above the 3.4% forecast and the highest in a year, as fuel costs from the US-Iran war fed into prices.",
-      "beats": {
-        "was": "The Bank of England, whose rate is 3.75% against a 2% inflation target, has not raised rates since 2023, but a strong jobs report had markets nearly sure of a quarter-point hike at its November 5 meeting.",
-        "happened": "Prices rose 3.5% over the year to September, up from 3.1% in August and above the 3.4% expected. Core inflation, which leaves out food and energy, rose to 2.8% from 2.6%, about as forecast.",
-        "means": "Inflation is running well above the 2% goal and moving the wrong way, mostly from petrol and diesel. That makes a November hike very hard for the Bank to skip.",
-        "fx": "Higher inflation → November hike all but locked in → UK rates stay attractive → support for the pound. Most of this was already expected, so the lift is modest."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A higher-than-expected figure backs a November Bank of England hike."
-        }
-      ],
-      "watch": "Whether the Bank signals more than one hike; a quick fall in oil would ease the pressure."
     }
   ]
 }
