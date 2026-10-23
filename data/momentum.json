@@ -1,7 +1,7 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-10-22T07:52:00-05:00",
+  "updated": "2026-10-23T00:55:00-05:00",
   "currencies": {
     "USD": {
       "recent": [
@@ -13,6 +13,15 @@
           "actual": "194K",
           "forecast": "200K",
           "note": "Beat: 194K vs 200K fcst (-6K) — near 57-year lows, the 189K mid-July low (lowest since 1969) in reach; continuing claims +25K to 1.728M (week ended Oct 10). Low-hire, low-fire intact; Reuters: economists expect the Fed to stay pat Oct 27-28 and hike in December."
+        },
+        {
+          "id": "usd-leading-20261022",
+          "date": "2026-10-22",
+          "title": "US leading index m/m (Sep)",
+          "result": "beat",
+          "actual": "0.0% m/m — flat at 99.6 (vs -0.2% fcst; Aug -0.1%)",
+          "forecast": "-0.2%",
+          "note": "Mild beat: flat (0.0% m/m) vs -0.2% expected; five of ten components positive — keeps the Oct 27-28 Fed hold / December-hike framing intact."
         },
         {
           "id": "usd-pending-home-20261020",
@@ -49,20 +58,20 @@
           "actual": "29",
           "forecast": "31",
           "note": "Miss: 29 vs 31 consensus (prior 32) — builder sentiment still in the dumps; housing a soft spot in the growth tape."
-        },
-        {
-          "id": "us-tic-20261016",
-          "date": "2026-10-16",
-          "title": "TIC long-term securities purchases (Aug)",
-          "result": "beat",
-          "actual": "$199.8B",
-          "forecast": "$75.2B",
-          "note": "Net inflow $199.8B vs $75.2B fcst — foreign bid for US assets intact (long-term securities $300.7B)."
         }
       ]
     },
     "EUR": {
       "recent": [
+        {
+          "id": "eur-confidence-20261022",
+          "date": "2026-10-22",
+          "title": "Eurozone consumer confidence (Oct flash)",
+          "result": "miss",
+          "actual": "-17.9 (vs -17.0 fcst; Sept rev. to -16.8)",
+          "forecast": "-17",
+          "note": "Modest miss: -17.9 vs -17.0 expected (Sept rev. to -16.8) — second straight monthly fall as high energy costs keep households pessimistic."
+        },
         {
           "id": "eur-german-ppi-20261020",
           "date": "2026-10-20",
@@ -107,15 +116,6 @@
           "actual": "-0.5%",
           "forecast": "0.0%",
           "note": "Factory output fell 0.5% vs flat consensus; July revised deeper to -0.3%."
-        },
-        {
-          "id": "fr-cpi-final-20261015",
-          "date": "2026-10-15",
-          "title": "French final CPI m/m (Sep)",
-          "result": "inline",
-          "actual": "-0.3% m/m",
-          "forecast": "-0.3%",
-          "note": "Inline with prelim — September's energy-driven overshoot stands (HICP 3.4%)."
         }
       ]
     },
@@ -129,6 +129,15 @@
           "actual": "-32",
           "forecast": "-20",
           "note": "Miss: order-books balance fell to -32 vs -20 fcst (from -9 in September) — UK industrial gloom deepens; quarterly output outlook steadied. GBP held near the 1-month high — the miss was swamped by the CPI-driven BoE repricing (Reuters, Oct 22)."
+        },
+        {
+          "id": "gb-gfk-20261022",
+          "date": "2026-10-22",
+          "title": "GfK consumer confidence (Oct)",
+          "result": "miss",
+          "actual": "-24",
+          "forecast": "-14",
+          "note": "Big miss: -24 vs -14 consensus — 11-pt drop, sharpest fall since the 2016 Brexit referendum (outside the pandemic); budget-anxiety sentiment ahead of the Oct 28 budget."
         },
         {
           "id": "uk-cpi-20261021",
@@ -165,20 +174,29 @@
           "actual": "+0.1%",
           "forecast": "-0.1%",
           "note": "Beat: +0.1% vs -0.1% fcst; 2.1% y/y strongest since Aug 2022 — Nov 5 hike case intact."
-        },
-        {
-          "id": "uk-data-20261015",
-          "date": "2026-10-15",
-          "title": "UK data dump: GDP, IP, construction, trade",
-          "result": "beat",
-          "actual": "+0.1% / 3M +0.7%",
-          "forecast": "-0.1%",
-          "note": "Services (+0.9% 3M/3M) the driver; production +0.8%."
         }
       ]
     },
     "JPY": {
       "recent": [
+        {
+          "id": "jpy-pmi-20261023",
+          "date": "2026-10-23",
+          "title": "Japan flash PMIs (Oct)",
+          "result": "miss",
+          "actual": "Mfg 53.3, Svc 52.0, Comp 52.3",
+          "forecast": "Mfg 54.5 (54.1)",
+          "note": "Manufacturing 53.3 (Sep 54.1) — 7-month low, miss vs 54.5 expected; services 52.0 (51.3) beat; composite 52.3 unchanged (19th straight expansion)."
+        },
+        {
+          "id": "jpy-cpi-20261023",
+          "date": "2026-10-22",
+          "title": "Japan national core CPI y/y (Sep)",
+          "result": "inline",
+          "actual": "2.1%",
+          "forecast": "2.1%",
+          "note": "Inline: 2.1% vs 2.1% consensus (Aug 1.7%) — first print above the BoJ's 2% target in nine months; core-core 2.4% (vs 1.9%) firms the case for a December hike."
+        },
         {
           "id": "jpy-trade-20261020",
           "date": "2026-10-20",
@@ -300,6 +318,15 @@
           "note": "Big beat: +4.8% m/m vs 0.1% fcst (prev 3.1%) — +27.0% y/y; raw-material costs surging alongside the IPPI beat."
         },
         {
+          "id": "cad-nhpi-20261022",
+          "date": "2026-10-22",
+          "title": "Canada new housing price index m/m (Sep)",
+          "result": "miss",
+          "actual": "-0.2%",
+          "forecast": "-0.1%",
+          "note": "Slight miss: -0.2% m/m vs -0.1% consensus — second straight soft month; Toronto and Oshawa steepest annual declines (-4.9% y/y). Shelter drag continues into the BoC's Oct 28 deliberation."
+        },
+        {
           "id": "cad-cpi-20261019",
           "date": "2026-10-19",
           "title": "Canada CPI y/y (Sep)",
@@ -325,15 +352,6 @@
           "actual": "248,896",
           "forecast": "234K",
           "note": "Beat vs 234K fcst (+2.8% m/m) — but actual starts -11% y/y; low-impact for CAD."
-        },
-        {
-          "id": "cad-mfg-20261015",
-          "date": "2026-10-15",
-          "title": "Canada manufacturing sales (Aug)",
-          "result": "beat",
-          "actual": "+1.5%",
-          "forecast": "+1.1%",
-          "note": "Beat vs 1.1% advance: primary metals +14.0% to a record; transport -2.6%."
         }
       ]
     },
