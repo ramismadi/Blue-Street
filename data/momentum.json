@@ -1,7 +1,7 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-10-23T00:55:00-05:00",
+  "updated": "2026-10-23T07:45:00-05:00",
   "currencies": {
     "USD": {
       "recent": [
@@ -64,6 +64,33 @@
     "EUR": {
       "recent": [
         {
+          "id": "eur-pmi-20261023",
+          "date": "2026-10-23",
+          "title": "Eurozone flash PMIs (Oct)",
+          "result": "miss",
+          "actual": "Comp 51.9 (fcst 52.7, Sep 53.1) — slowest in 4 months; Mfg 52.4 (52.9); Svc 51.7 (53.0)",
+          "forecast": "52.7",
+          "note": "Miss: composite 51.9 vs 52.7 expected — slowest expansion in 4 months; France back in contraction (48.4) and rising energy-driven input costs (Reuters, Oct 23)."
+        },
+        {
+          "id": "eur-de-pmi-20261023",
+          "date": "2026-10-23",
+          "title": "Germany flash PMIs (Oct)",
+          "result": "miss",
+          "actual": "Comp 52.8 (vs 53.3 fcst, Sep 53.8); Mfg 54.2 (vs 53.5) beat; Svc 51.7 (vs 52.6)",
+          "forecast": "53.3",
+          "note": "Mild composite miss (52.8 vs 53.3) though manufacturing beat (54.2); services the drag (Reuters, Oct 23)."
+        },
+        {
+          "id": "eur-fr-pmi-20261023",
+          "date": "2026-10-23",
+          "title": "France flash PMIs (Oct)",
+          "result": "miss",
+          "actual": "Comp 48.9 (vs 50.5 fcst, Sep 51.1); Mfg 49.3; Svc 48.4 — back in contraction",
+          "forecast": "50.5",
+          "note": "Back in contraction: 48.9 vs 50.5 expected as political/fiscal turmoil bites — the softest EZ read (Reuters, Oct 23)."
+        },
+        {
           "id": "eur-confidence-20261022",
           "date": "2026-10-22",
           "title": "Eurozone consumer confidence (Oct flash)",
@@ -89,38 +116,29 @@
           "actual": "EUR 8.7B",
           "forecast": "EUR 29.2B",
           "note": "Miss: August surplus collapsed to EUR 8.7B vs 29.2B fcst (July 27.2B) — weakest since Jan 2023."
-        },
-        {
-          "id": "eur-zew-20261020",
-          "date": "2026-10-20",
-          "title": "German + eurozone ZEW sentiment (Oct)",
-          "result": "miss",
-          "actual": "DE 28.1 / EZ 18.5",
-          "forecast": "DE ~30 / EZ ~23.6",
-          "note": "Miss: DE expectations 28.1 vs ~30 fcst (prev 34.7) — ends a 5-month run of gains on energy costs."
-        },
-        {
-          "id": "eu-cpi-final-20261016",
-          "date": "2026-10-16",
-          "title": "Eurozone final CPI y/y (Sep)",
-          "result": "inline",
-          "actual": "3.8%",
-          "forecast": "3.8%",
-          "note": "Final confirms the flash — no revision; energy +18.9% y/y. ECB waits for December."
-        },
-        {
-          "id": "eur-ip-20261015",
-          "date": "2026-10-15",
-          "title": "Eurozone industrial production m/m (Aug)",
-          "result": "miss",
-          "actual": "-0.5%",
-          "forecast": "0.0%",
-          "note": "Factory output fell 0.5% vs flat consensus; July revised deeper to -0.3%."
         }
       ]
     },
     "GBP": {
       "recent": [
+        {
+          "id": "gb-pmi-20261023",
+          "date": "2026-10-23",
+          "title": "UK flash PMIs (Oct)",
+          "result": "beat",
+          "actual": "Comp 53.1 (vs 51.8 fcst, Sep 52.0) — strongest since Feb; Mfg 52.8; Svc 53.1",
+          "forecast": "51.8",
+          "note": "Beat: 53.1 vs 51.8 expected, strongest since February — demand resilience alongside the BoE repricing (Reuters, Oct 23)."
+        },
+        {
+          "id": "gb-retail-20261023",
+          "date": "2026-10-23",
+          "title": "UK retail sales m/m (Sep)",
+          "result": "miss",
+          "actual": "-0.4% m/m (vs -0.1% fcst; Aug rev. up to +0.7%)",
+          "forecast": "-0.1%",
+          "note": "Miss: -0.4% vs -0.1% expected — warm weather hit clothing and supermarkets; Aug revised up to +0.7% (ONS/Reuters, Oct 23)."
+        },
         {
           "id": "gb-cbi-20261022",
           "date": "2026-10-22",
@@ -156,24 +174,6 @@
           "actual": "Unemp 4.7% / wages 3.7%",
           "forecast": "Unemp 4.9% / wages 3.8%",
           "note": "Beat: unemployment fell to 4.7% vs 4.9% fcst (lowest since mid-2025); regular pay 3.7% — locks in the Nov 5 hike; GBP +0.66% to 1.339."
-        },
-        {
-          "id": "gb-claimant-20261020",
-          "date": "2026-10-20",
-          "title": "UK claimant count change (Sep)",
-          "result": "miss",
-          "actual": "+30.3K",
-          "forecast": "+19.4K",
-          "note": "Miss: September claimant count rose 30.3K vs 19.4K expected — the soft counterpoint inside the labor beat."
-        },
-        {
-          "id": "uk-gdp-20261015",
-          "date": "2026-10-15",
-          "title": "UK GDP m/m (Aug)",
-          "result": "beat",
-          "actual": "+0.1%",
-          "forecast": "-0.1%",
-          "note": "Beat: +0.1% vs -0.1% fcst; 2.1% y/y strongest since Aug 2022 — Nov 5 hike case intact."
         }
       ]
     },
