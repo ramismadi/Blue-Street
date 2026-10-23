@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T15:55:00Z",
+  "updated": "2026-10-23T16:46:43Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "bearish",
-      "text": "Euro-area business growth slowed to a four-month low in October, with France shrinking again as it pays the most over Germany to borrow since the 2011 debt crisis. Moody's is expected to cut France's credit rating after Friday's US close, and the European Central Bank, which meets October 29, has less reason to raise rates.",
-      "ts": "2026-10-23T11:46:14Z"
+      "text": "Euro-area business growth slowed to a four-month low in October, with France shrinking again as it pays the most over Germany to borrow since the 2011 debt crisis. The European Central Bank is expected to hold on October 29 and hike in December, but France's troubles could make it wait; Moody's is expected to cut France's credit rating after Friday's US close.",
+      "ts": "2026-10-23T16:46:43Z"
     },
     "GBP": {
       "lean": "mixed",
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "bullish",
-      "text": "The loonie is past 1.40 per US dollar, its strongest in a month, as Brent oil holds above $110 and Canadian shop sales bounced back 1.2% in August with more gains in September. That backs bets on a Bank of Canada rate hike on October 28.",
-      "ts": "2026-10-23T13:52:12Z"
+      "text": "The loonie is past 1.40 per US dollar, its strongest in a month, as Brent oil nears $115 and Canadian shop sales bounced back 1.2% in August. Most economists in a Reuters poll now expect a Bank of Canada hike to 2.50% on October 28, which markets put at about three in four.",
+      "ts": "2026-10-23T16:46:43Z"
     },
     "AUD": {
       "lean": "bearish",
@@ -49,11 +49,77 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent oil is near $114.50, a five-month high, after Yemen's Houthi rebels struck more Saudi targets, including an Aramco site at Yanbu, the port Saudi Arabia uses to ship oil out by the Red Sea. A pipeline outage in Libya adds to the supply worries.",
-      "ts": "2026-10-23T11:46:14Z"
+      "text": "Brent oil is near $115, its highest since early May, as Yemen's Houthi rebels keep striking Saudi targets, including an Aramco export site at Yanbu on the Red Sea. A tanker spill off the UAE and a pipeline outage in Libya add to the supply worries.",
+      "ts": "2026-10-23T16:46:43Z"
     }
   },
   "items": [
+    {
+      "id": "reuters-brent-115-uae-spill-20261023",
+      "ts": "2026-10-23T16:26:16Z",
+      "source": "Reuters (via CNBC Africa)",
+      "url": "https://www.cnbcafrica.com/2026/brent-crude-hits-more-than-five-month-high-on-houthi-saudi-attacks-uae-oil-spill",
+      "image": "https://cdn.cnbc.africa/wp-content/uploads/2026/10/LY5RJV25ZVIRFE2MFSGGJB67P4.jpg",
+      "headline": "Brent oil tops $115, its highest since early May, on Houthi attacks in Saudi Arabia and a tanker spill off the UAE",
+      "story": "saudi-houthi",
+      "story_title": "Saudi Arabia: Houthi attacks on oil and airports",
+      "pillar": "tot",
+      "summary": "Brent oil rose about 1.5% to near $115 on Friday, its highest since May 4, as fighting in Saudi Arabia went on and the UAE reported oil leaking from a tanker off its coast.",
+      "beats": {
+        "was": "Yemen's Houthi rebels, allied with Iran, have been attacking Saudi Arabia, the world's biggest oil exporter, since moving toward the Red Sea's Bab el-Mandeb strait last month. On Thursday Saudi Aramco, the state oil company, cleared its Dhahran headquarters.",
+        "happened": "Brent touched $115.16 a barrel and is heading for a third weekly rise of about 4%. US crude rose to about $101. The UAE's environment ministry reported an oil spill from an unnamed tanker off Umm Al Quwain without giving a cause, and a shut pipeline valve in Libya is cutting output there. A UBS analyst said high shipping costs and uneven oil flows have left the market short of supply.",
+        "means": "Each new incident adds to the worry that the Gulf's oil can't move freely, so prices keep climbing even without a confirmed cut to Saudi exports.",
+        "fx": "Dearer oil \u2192 more income for Canada, higher import bills for Japan and the euro area \u2192 helps the loonie, weighs on the yen and euro."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A new five-month high, but driven by the same Saudi fighting that is already in the price."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada earns more when oil is dear."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys nearly all its oil abroad, so a dearer barrel costs it more."
+        }
+      ],
+      "watch": "Whether the UAE names the tanker or a cause for the spill, and whether any attack actually stops Saudi oil leaving port."
+    },
+    {
+      "id": "reuters-boc-poll-hike-20261023",
+      "date": "2026-10-23",
+      "source": "Reuters",
+      "url": "https://www.933thedrive.com/2026/10/23/bank-of-canada-to-raise-rates-to-2-50-on-october-28-and-once-again-by-end-march/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/23/2026-10-23T160952Z_1_LYNXMPEM9M1JH_RTROPTP_3_TRAVEL-CM-OTTAWA.JPG",
+      "headline": "Most economists in a Reuters poll now expect the Bank of Canada to raise rates to 2.50% on October 28",
+      "story": "boc-oct28",
+      "story_title": "Bank of Canada: an October 28 rate hike?",
+      "pillar": "policy",
+      "summary": "A slim majority of economists now expect the Bank of Canada to raise its rate by a quarter point next week, its first move in a year, and many see one more hike by March.",
+      "beats": {
+        "was": "The Bank of Canada's rate has been 2.25% for a year, and a month ago most economists expected it to stay there through 2026. Since then Canadian inflation rose to 3.1% in September and oil prices soared.",
+        "happened": "In a Reuters poll taken October 21-23, 19 of 34 economists expect a hike to 2.50% on October 28, and 16 of 29 expect another to 2.75% by the end of March. They pointed to the September inflation figure, a central-bank survey showing businesses expect faster price rises, broken-down trade talks with the US, and recent hints from Governor Tiff Macklem. Markets now put the odds of an October hike at about three in four, up from roughly 30%.",
+        "means": "Forecasters have caught up with markets: a hike is now the expected outcome, though a sizable minority still thinks the weak economy will hold the bank back.",
+        "fx": "A likely hike plus more to come \u2192 higher Canadian rates \u2192 support for the loonie, though much of it is already priced."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Economists now back the hike markets were already expecting."
+        }
+      ],
+      "watch": "The Bank of Canada's decision and statement on October 28, and whether it signals more than one hike."
+    },
     {
       "id": "reuters-us-flash-pmi-oct-20261023",
       "ts": "2026-10-23T13:49:00Z",
@@ -398,6 +464,33 @@
         }
       ],
       "watch": "The ECB decision on October 29 and any change in France's budget or credit rating."
+    },
+    {
+      "id": "reuters-ecb-five-questions-20261023",
+      "ts": "2026-10-23T04:06:00Z",
+      "source": "Reuters (via AOL)",
+      "url": "https://www.aol.com/articles/ready-french-test-five-questions-040637000.html",
+      "image": "https://hermes.media.transform.aol.com/f3e3d3826f5adced9d78b9a5a0054f598b91a7b0/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/10/23/ce6e67da-96d8-3646-bacd-1c4f207e0dd6/fb6b0635-5d8b-4ed9-a972-ed279a90f232.jpg",
+      "headline": "European Central Bank expected to hold rates on October 29 as France's borrowing costs climb",
+      "story": "ecb-oct",
+      "story_title": "European Central Bank: hold now, hike in December?",
+      "pillar": "policy",
+      "summary": "The European Central Bank is widely expected to keep its rate at 2.5% next Thursday, with economists looking for a hike in December, while it watches France's bond market closely.",
+      "beats": {
+        "was": "The European Central Bank raised rates in June and September as oil, up almost 80% this year, pushed euro-area inflation to 3.8% in September. Since then France's budget crisis has pushed its 10-year borrowing costs above 5%, the highest in 24 years.",
+        "happened": "A Reuters preview says the bank is expected to hold on October 29. Economists polled by Reuters see a quarter-point hike in December, and markets price at least two hikes by mid-2027. The extra France pays over Germany to borrow for 10 years has grown to about 1.7 percentage points from 0.9 at the last meeting, but the bank is not expected to use its emergency bond-buying tool soon; President Christine Lagarde says France must fix its own budget.",
+        "means": "The bank is caught between inflation that argues for more hikes and a French debt scare that argues for caution. Some analysts think a deeper French crisis could push back the next hike.",
+        "fx": "Hold now, hike later, with France a reason to wait \u2192 limited fresh support for the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A hold is expected; hikes are still priced for later, but France's troubles could delay them."
+        }
+      ],
+      "watch": "Whether the bank's statement on October 29 keeps a December hike open, and anything it says about France or its bond-buying backstop."
     },
     {
       "id": "reuters-asia-shares-tech-rout-bonds-20261023",
@@ -1045,39 +1138,6 @@
       "watch": "Canada's retail sales figures on Friday, October 23, and the Bank of Canada decision on October 28."
     },
     {
-      "id": "fxstreet-danske-fed-preview-20261022",
-      "ts": "2026-10-22T10:47:41Z",
-      "source": "FXStreet (Danske Bank)",
-      "url": "https://www.fxstreet.com/analysis/fed-preview-on-hold-in-october-hiking-resumes-later-202610221047",
-      "image": "https://editorial.fxsstatic.com/images/i/Federal-Reserve-Building_2_Medium.png",
-      "headline": "Fed preview: On hold in October, hiking resumes later",
-      "story": "fed-oct28",
-      "story_title": "Federal Reserve: hold on October 28, hike in December?",
-      "pillar": "policy",
-      "summary": "Economists at Danske Bank expect the US Federal Reserve to leave rates alone on October 28, then raise them in December and again in March.",
-      "beats": {
-        "was": "The Fed raised rates this year for the first time since 2023 as energy costs pushed inflation up; markets give only a small chance of another hike next week.",
-        "happened": "Danske Bank expects a hold on October 28, with two or three officials, possibly Beth Hammack and Lorie Logan, voting for a hike. It forecasts quarter-point hikes in December and March, and says the risk is of even more.",
-        "means": "A hold would be mostly expected. The question is how firmly Fed Chair Kevin Warsh points to December.",
-        "fx": "Hold now, hikes later \u2192 little change for the dollar unless the vote is more split than expected."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A hold could ease US yields a little, but more hikes are expected after."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Danske sees any euro lift on a Fed hold as short-lived."
-        }
-      ],
-      "watch": "How many Fed officials vote for a hike on October 28, and what Kevin Warsh says about December."
-    },
-    {
       "id": "disruptionbanking-france-spread-2011-20261022",
       "ts": "2026-10-22T10:30:58Z",
       "source": "Disruption Banking",
@@ -1156,33 +1216,6 @@
       "watch": "Whether the attacks stop, or whether a strike damages Saudi oil output or a US base."
     },
     {
-      "id": "reuters-investing-uk-cbi-orders-oct-20261022",
-      "ts": "2026-10-22T10:08:00Z",
-      "source": "Reuters",
-      "url": "https://www.investing.com/news/economic-indicators/uk-factory-output-expected-to-stabilise-cbi-survey-shows-4965272",
-      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9L0XS_L.jpg",
-      "headline": "UK factory output expected to stabilise, CBI survey shows",
-      "story": "uk-growth",
-      "story_title": "UK: how the economy is holding up",
-      "pillar": "growth",
-      "summary": "British factory orders fell sharply in October, a business survey shows, though firms expect output to stop shrinking and plan to raise prices more.",
-      "beats": {
-        "was": "The Confederation of British Industry (CBI), a business lobby, asks manufacturers each month about orders and plans. Official figures show factory output growing this year, and the Bank of England is expected to raise rates on November 5 because inflation is 3.5%.",
-        "happened": "The CBI's measure of order books dropped to -32 in October from -9 in September, meaning far more firms reported weak orders than strong ones. Firms' outlook for output over the next three months improved to about flat, from deeply negative in July, and their plans to raise prices rose to +24 from +11. The CBI pointed to falling orders and growing staff shortages.",
-        "means": "Demand for British goods is soft, but factories plan bigger price rises, which is what the Bank of England worries about.",
-        "fx": "weak orders + firmer price plans \u2192 little change to the case for a November hike, a small dent in the growth story for the pound. The lens: the official UK business surveys out on October 23."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Weaker orders hurt the growth picture, but higher price plans back the case for rate hikes."
-        }
-      ],
-      "watch": "Whether official surveys and data confirm falling demand, which could make the Bank of England more cautious after November."
-    },
-    {
       "id": "oilprice-iran-seven-ships-20261022",
       "ts": "2026-10-22T09:30:00Z",
       "source": "OilPrice.com",
@@ -1253,33 +1286,6 @@
         }
       ],
       "watch": "Whether the franc jumps on Gulf news and the SNB starts warning again; the next SNB decision is in December."
-    },
-    {
-      "id": "ing-ecb-french-drama-20261022",
-      "ts": "2026-10-22T06:34:36Z",
-      "source": "FXStreet (ING)",
-      "url": "https://www.fxstreet.com/analysis/ecb-caught-in-the-french-drama-202610220634",
-      "image": "https://editorial.fxsstatic.com/images/i/European-Central-Bank_5_Medium.png",
-      "headline": "ECB caught in the French drama",
-      "story": "ecb-oct",
-      "story_title": "European Central Bank: hold now, hike in December?",
-      "pillar": "policy",
-      "summary": "ING's chief eurozone economist, Carsten Brzeski, expects the European Central Bank to hold next week, and says France's debt troubles reduce the need for more hikes.",
-      "beats": {
-        "was": "The European Central Bank has raised rates this year as oil pushed inflation up, and markets expected at least one more hike by December. Then France's budget crisis sent its borrowing costs soaring.",
-        "happened": "Brzeski expects no change next week, with any further hike left to December. He argues higher bond yields are already doing the bank's work: worth about a quarter-point hike for Germany and closer to half a point for France.",
-        "means": "If markets are already tightening money for the ECB, it has less reason to raise rates itself. A rescue bond-buying tool exists, but France would likely need to pass a budget within EU rules first.",
-        "fx": "Fewer ECB hikes than the Bank of England \u2192 less support for the euro, especially against the pound."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A softer ECB path removes some support for the euro; this is one bank's view."
-        }
-      ],
-      "watch": "The ECB decision next week, and whether its president Christine Lagarde mentions France or its bond-buying backstop."
     },
     {
       "id": "fxstreet-gold-below-4100-20261022",
