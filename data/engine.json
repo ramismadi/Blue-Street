@@ -1,98 +1,94 @@
 {
-  "updated": "2026-10-22T15:30:00-05:00",
+  "updated": "2026-10-23T01:40:00-05:00",
   "rows": [
     {
       "id": "policy",
       "title": "Policy",
-      "read": "Almost every major central bank is leaning toward raising rates because high oil keeps inflation up. A sharp fall in US bond yields today did not shake bets on a December Federal Reserve hike. Switzerland is the odd one out, where a cut is still possible.",
-      "figure": "Fed Oct 28 hike ~11% (Oct 22), Dec hike ~90% (Oct 21); BoC Oct 28 ~93%; RBNZ Oct 28 ~98%; BoE Nov 5 ~99%, Dec ~51%; RBA Nov 3 ~42%; ECB Dec ~76%; BoJ Dec ~73–80%",
+      "read": "Almost every major central bank still leans toward raising rates because high oil keeps inflation up. A stock-market scare has trimmed bets on a December Federal Reserve hike, which takes a little support from the dollar. Switzerland remains the odd one out.",
+      "figure": "Fed Oct 28 hold ~93%, Dec hike ~85% (from ~90%); BoC Oct 28 hike ~80–87%; RBNZ Oct 28 ~98%; BoE Nov 5 ~90–95%, Dec ~48–61%; RBA Nov 3 ~44–50%; ECB Dec ~88%; BoJ Dec ~80%",
       "sources": [
         {
-          "label": "Blue Street central bank data (Hercules, Oct 22, 2:55 PM CT): pricing and notes",
+          "label": "Reuters via The Jakarta Post (Oct 23): Asian shares wobble as tech rout boosts bonds, dents rate hike bets",
+          "url": "https://www.thejakartapost.com/business/2026/10/23/asian-shares-wobble-as-tech-rout-boosts-bonds-dents-rate-hike-bets"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 23, 12:55 AM CT run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, Oct 22, 2:55 PM CT run; currency quotes ~2:45 PM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "InvestingLive (Oct 22): Canada September producer prices +2.0% m/m",
-          "url": "https://investinglive.com/news/canada-september-ppi-2-0-m-m-vs-1-3-prior/"
-        },
-        {
-          "label": "AP (Oct 22): US jobless claims fell to 194,000 last week, lowest since July",
-          "url": "https://www.news4jax.com/business/2026/10/22/us-jobless-claims-fell-to-194000-last-week-lowest-since-july/"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "read": "The US jobs market is still strong, with layoffs near their lowest in decades. Elsewhere growth is softening at the edges: euro-area households are gloomier, UK factory orders fell and Canadian home prices slipped. None of it has changed central bank plans yet.",
-      "figure": "US jobless claims 194K (200K fc); US leading index flat at 99.6 (−0.2% fc); euro-area confidence −17.9 (−17.0 fc); UK CBI orders −32 (−20 fc); Canada new home prices −0.2% m/m",
+      "read": "Households are starting to pull back where energy bills bite hardest. UK shoppers spent less and their confidence slumped, and Australia's private sector shrank. Weaker growth makes it harder for those central banks to keep raising rates.",
+      "figure": "UK retail sales Sep −0.4% m/m (−0.1% fc); GfK Oct −24 (−14 fc); Australia flash composite PMI 47.7 (51.3 prior); Japan flash PMI 52.3 (factories 53.3, services 52.0)",
       "sources": [
         {
-          "label": "AP (Oct 22): US jobless claims fell to 194,000 last week, lowest since July",
-          "url": "https://www.news4jax.com/business/2026/10/22/us-jobless-claims-fell-to-194000-last-week-lowest-since-july/"
+          "label": "Reuters via Global Banking & Finance (Oct 23): British retail sales fall 0.4% in September",
+          "url": "https://www.globalbankingandfinance.com/british-retail-sales-fall-0-4-september/"
         },
         {
-          "label": "Reuters (Oct 22): euro zone consumer confidence falls to −17.9 in October",
-          "url": "https://1027wbow.com/2026/10/22/euro-zone-consumer-confidence-falls-to-17-9-in-october-2/"
+          "label": "Reuters via Investing.com (Oct 23): UK consumer confidence tumbles ahead of Healey's budget, GfK reports",
+          "url": "https://www.investing.com/news/economy-news/uk-consumer-confidence-tumbles-ahead-of-healeys-budget-gfk-reports-4967810"
         },
         {
-          "label": "Reuters (Oct 22): UK factory output expected to stabilise, CBI survey shows",
-          "url": "https://www.investing.com/news/economic-indicators/uk-factory-output-expected-to-stabilise-cbi-survey-shows-4965272"
+          "label": "InvestingLive (Oct 22): Australia flash PMI, private sector shrinks for first time in five months as prices rise",
+          "url": "https://investinglive.com/news/australia-flash-pmi-private-sector-shrinks-for-first-time-in-five-months-as-prices-rise/"
         },
         {
-          "label": "Canadian Mortgage Trends (Oct 22): new home prices fall as Toronto-area markets post steepest declines",
-          "url": "https://www.canadianmortgagetrends.com/mortgage-wire/2026/10/22/new-home-prices-fall-as-toronto-area-markets-post-steepest-declines"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Oct 22): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+          "label": "InvestingLive (Oct 23): Japan flash PMI holds at 52.3 as services gain offsets factory slowdown",
+          "url": "https://investinglive.com/news/japan-flash-pmi-holds-at-52-3-as-services-gain-offsets-factory-slowdown-before-boj/"
         }
       ]
     },
     {
       "id": "inflation",
       "title": "Inflation",
-      "read": "Inflation is running hot almost everywhere because of energy, which is why so many central banks lean toward hikes. Canada's factory and raw material prices jumped far more than expected, a sign more inflation is on the way there. Japan's inflation figures tonight matter most for the yen.",
-      "figure": "Canada IPPI +2.0% m/m (0.7% fc), RMPI +4.8% m/m (0.1% fc); UK CPI Sep 3.5%; NZ Q3 CPI 3.7%; Japan core CPI fc 2.1%, 6:30 PM CT",
+      "read": "Energy keeps inflation high almost everywhere, which is why so many central banks lean toward hikes. Japan's inflation is back above the Bank of Japan's goal and spreading beyond fuel, which strengthens the case for a December hike there and helps the yen.",
+      "figure": "Japan core CPI Sep 2.1% y/y (2.1% fc), ex-food and energy 2.4%; UK CPI Sep 3.5%; Canada factory-gate prices +2.0% m/m; Australia input costs fastest since May",
       "sources": [
+        {
+          "label": "Reuters (Oct 22): Japan core inflation exceeds BOJ target, cements near-term rate hike chance",
+          "url": "https://www.reuters.com/world/asia-pacific/japan-core-inflation-exceeds-boj-target-cements-near-term-rate-hike-chance-2026-10-22/"
+        },
+        {
+          "label": "FXStreet (Oct 22): Japan's national CPI climbs to 2.1% in September",
+          "url": "https://www.fxstreet.com/news/21-japans-national-cpi-climbs-in-september-202610222331"
+        },
+        {
+          "label": "InvestingLive (Oct 22): Australia flash PMI, private sector shrinks for first time in five months as prices rise",
+          "url": "https://investinglive.com/news/australia-flash-pmi-private-sector-shrinks-for-first-time-in-five-months-as-prices-rise/"
+        },
         {
           "label": "InvestingLive (Oct 22): Canada September producer prices +2.0% m/m",
           "url": "https://investinglive.com/news/canada-september-ppi-2-0-m-m-vs-1-3-prior/"
-        },
-        {
-          "label": "Babypips (Oct 22): New Zealand inflation eases to 3.7% in Q3, RBNZ hike odds steady",
-          "url": "https://www.babypips.com/news/headline-new-zealand-inflation-eases-rbnz-hike-odds-steady-2026-10-22"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Oct 22): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk",
-      "read": "Investors turned nervous: tech shares fell sharply on doubts about AI spending, and reports of planned strikes on Iran added to the worry. Money went into US government bonds and the yen, while the New Zealand dollar fell most. Gold kept sliding instead of acting as a shelter.",
-      "figure": "Nasdaq −2.6%, S&P 500 −1.2%; US 10Y ~4.95% (about −0.2pts); USD/JPY ~156.85 (−0.8%); NZD/USD −0.5%; gold ~$4,045 (−2.5%)",
+      "read": "Investors are nervous: worries about AI spending keep hitting tech shares, and attacks on Saudi Arabia add to the unease. Money is going into US government bonds and the yen, while gold keeps sliding instead of acting as a shelter.",
+      "figure": "Nikkei −1.3% Fri; US 10Y ~4.96%; USD/JPY low ~156.3, yen strongest in over a month; gold ~$4,020, two-month low",
       "sources": [
         {
-          "label": "Yahoo Finance live (Oct 22, US close): S&P 500, Nasdaq, Dow, Brent, US crude, 10-year yield and gold",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
+          "label": "Reuters via The Jakarta Post (Oct 23): Asian shares wobble as tech rout boosts bonds, dents rate hike bets",
+          "url": "https://www.thejakartapost.com/business/2026/10/23/asian-shares-wobble-as-tech-rout-boosts-bonds-dents-rate-hike-bets"
         },
         {
-          "label": "Reuters (Oct 22): yen set for biggest rally in a month as risk-averse investors shun dollar",
-          "url": "https://live.euronext.com/en/financial-news/yen-set-biggest-rally-month-risk-averse-investors-shun-dollar"
+          "label": "Reuters (Oct 23): yen shines as AI jitters spur safe-haven rush",
+          "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247"
         },
         {
-          "label": "investingLive European session wrap (Oct 22): franc at a three-month high against the euro, yen leads",
-          "url": "https://investinglive.com/news/investinglive-european-session-wrap-dollar-yen-and-bonds-kick-it-old-school/"
+          "label": "FXStreet (Oct 22, 11:35 PM UTC): gold falls to two-month low below $4,050 as oil spikes",
+          "url": "https://www.fxstreet.com/news/gold-falls-to-two-month-low-below-4-050-as-oil-spikes-202610222335"
         },
         {
-          "label": "Blue Street market levels (Hercules, Oct 22, 2:55 PM CT run; currency quotes ~2:45 PM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -100,23 +96,19 @@
     {
       "id": "tot",
       "title": "Terms of trade",
-      "read": "Oil is at its highest since May on the risk of renewed strikes on Iran. That helps exporters like Canada and hurts big energy importers like Japan and the euro area.",
-      "figure": "Brent ~$113 (+4%); US crude ~$99 (+2.4%); Iran claims 7 ships hit or mined (unconfirmed)",
+      "read": "Oil is near its highest since May as Houthi attacks reach deeper into Saudi Arabia and Libyan output dips. That helps exporters like Canada and hurts big energy importers like Japan and the euro area.",
+      "figure": "Brent ~$114 (third weekly gain in sight); US crude ~$100; Aramco Dhahran HQ evacuated; Libya pipeline shut",
       "sources": [
         {
-          "label": "investingLive (Oct 22): US and Israel plan renewed Iran strikes after US midterms, New York Times reports",
-          "url": "https://investinglive.com/commodities/us-and-israel-plan-specific-renewed-iran-strikes-after-us-midterms-new-york-times-reports/"
+          "label": "Reuters via Yahoo Finance (Oct 23): oil prices rise as supply concerns linger amid Houthi attacks on Saudi Arabia",
+          "url": "https://finance.yahoo.com/energy/articles/oil-prices-rise-supply-concerns-052617190.html"
         },
         {
-          "label": "OilPrice.com (Oct 22): Iran claims seven ships hit in the Persian Gulf as oil prices surge",
-          "url": "https://oilprice.com/Latest-Energy-News/World-News/Iran-Claims-Seven-Ships-Hit-in-Persian-Gulf-as-Oil-Prices-Surge.html"
+          "label": "OilPrice.com (Oct 23): Brent hits $114 as Houthi attacks threaten Saudi energy infrastructure",
+          "url": "https://oilprice.com/Latest-Energy-News/World-News/Brent-Hits-114-as-Houthi-Attacks-Threaten-Saudi-Energy-Infrastructure.html"
         },
         {
-          "label": "Yahoo Finance live (Oct 22, US close): S&P 500, Nasdaq, Dow, Brent, US crude, 10-year yield and gold",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 22, 2:55 PM CT run; currency quotes ~2:45 PM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -140,23 +132,19 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "read": "Government finances are weighing on the euro: France now pays more than 5% to borrow for ten years, and its gap over Germany is near the widest since 2011. Moody's reviews France's credit rating on Friday, and Britain's budget follows on October 28.",
-      "figure": "France 10Y above 5%; OAT–Bund ~1.6–1.7pts (widest since 2011); Moody's on France Fri Oct 23; French revenue vote Oct 27; UK budget Oct 28",
+      "read": "Government finances are weighing on the euro: France pays more than 5% to borrow for ten years, near its widest gap over Germany since 2011. Moody's reviews France's rating tonight, and Britain's budget follows on October 28, with shoppers already holding back ahead of it.",
+      "figure": "France 10Y above 5%; OAT–Bund near widest since 2011; Moody's on France Fri Oct 23 (after European close); French revenue vote Oct 27; UK budget Oct 28",
       "sources": [
         {
           "label": "Disruption Banking (Oct 22): French yields cross 5%, spread widest since 2011",
           "url": "https://www.disruptionbanking.com/2026/10/22/french-yields-cross-5-spread-widest-since-2011/"
         },
         {
-          "label": "FXStreet / ING (Oct 22): ECB caught in the French drama",
-          "url": "https://www.fxstreet.com/analysis/ecb-caught-in-the-french-drama-202610220634"
+          "label": "Reuters via Global Banking & Finance (Oct 23): British retail sales fall 0.4% in September",
+          "url": "https://www.globalbankingandfinance.com/british-retail-sales-fall-0-4-september/"
         },
         {
-          "label": "Blue Street currency board (Hercules, Oct 22, 2:55 PM CT)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Oct 22): times, forecasts and actuals",
+          "label": "Blue Street calendar (Hercules; last refreshed Thu Oct 22 evening, not in the 12:40 AM run): times and forecasts",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
