@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T02:47:17Z",
+  "updated": "2026-10-23T10:51:28Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,18 +9,18 @@
     },
     "EUR": {
       "lean": "bearish",
-      "text": "France now pays the most over Germany to borrow since the 2011 debt crisis, with its budget stuck in parliament and a Moody's rating review on October 23. Euro-area households grew gloomier than expected, and economists at ING think France's troubles give the ECB less reason to hike, so the euro is sliding against the pound and the franc.",
-      "ts": "2026-10-22T15:47:55Z"
+      "text": "Euro-area business growth slowed to a four-month low in October, with France shrinking again as it pays the most over Germany to borrow since the 2011 debt crisis. That gives the European Central Bank, which meets October 29, less reason to raise rates, and leaves the euro weak against the pound and the franc.",
+      "ts": "2026-10-23T10:51:28Z"
     },
     "GBP": {
       "lean": "mixed",
-      "text": "Above-forecast UK inflation has traders expecting at least three Bank of England hikes by April, starting November 5, and money leaving the euro area has helped the pound. But consumer confidence just fell by the most since 2020, a sign households are cutting back before the October 28 budget.",
-      "ts": "2026-10-23T00:50:54Z"
+      "text": "UK businesses just had their best month since February, which makes a Bank of England rate hike on November 5 look close to certain. But shop sales fell in September and consumer confidence dropped by the most since 2020, so households are feeling the squeeze before the October 28 budget.",
+      "ts": "2026-10-23T10:51:28Z"
     },
     "JPY": {
       "lean": "bullish",
-      "text": "The yen is at its strongest in over a month, near 156.3 per dollar, and heading for its best week since early September as falling shares and Gulf attacks send money to shelter. Japan's core inflation is back above 2%, which backs a Bank of Japan hike; the bank meets October 29–30, with most expecting a move in December.",
-      "ts": "2026-10-23T02:47:17Z"
+      "text": "The yen is at its strongest in over a month, near 156.3 per dollar, as falling shares and Gulf attacks send money to shelter. Japan's core inflation is back above 2% and business growth is holding up, which backs a Bank of Japan hike; most expect it in December rather than at the October 29–30 meeting.",
+      "ts": "2026-10-23T10:51:28Z"
     },
     "CHF": {
       "lean": "bullish",
@@ -33,9 +33,9 @@
       "ts": "2026-10-23T02:47:17Z"
     },
     "AUD": {
-      "lean": "mixed",
-      "text": "The Aussie is holding near 70 US cents after Reserve Bank of Australia officials warned inflation may run hotter. But Asian shares fell for a fourth straight week on AI worries, which tends to weigh on it; Australia's inflation figures on October 28 decide a November 3 hike.",
-      "ts": "2026-10-23T02:47:17Z"
+      "lean": "bearish",
+      "text": "Australian business activity shrank in October for the first time in five months, and falling Asian shares add to the pressure. Rising costs keep a Reserve Bank of Australia hike on November 3 possible; inflation figures on October 28 should decide it.",
+      "ts": "2026-10-23T10:51:28Z"
     },
     "NZD": {
       "lean": "mixed",
@@ -54,6 +54,165 @@
     }
   },
   "items": [
+    {
+      "id": "investing-uk-retail-sales-sep-20261023",
+      "date": "2026-10-23",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/economic-indicators/uk-retail-sales-fall-by-more-than-expected-in-september-4968076",
+      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9M0D7_L.jpg",
+      "headline": "UK retail sales fall by more than expected in September",
+      "story": "uk-growth",
+      "story_title": "UK: how the economy is holding up",
+      "pillar": "growth",
+      "summary": "British shops sold less in September than forecast, as a warm start to autumn kept people from buying winter clothes and dearer fuel squeezed budgets.",
+      "beats": {
+        "was": "UK shop sales had grown over the summer, helped by the World Cup and a heatwave, and a separate survey this week showed consumer confidence falling sharply in October.",
+        "happened": "Sales volumes fell 0.4% in September, worse than the 0.1% dip economists expected, according to the Office for National Statistics. Over the three months to September they still rose 0.7%, and July and August were revised up.",
+        "means": "Households are spending more on fuel and less elsewhere, a sign that high energy prices are starting to bite ahead of the October 28 budget.",
+        "fx": "Softer spending → small doubt over how far the Bank of England can raise rates → mild weight on the pound."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A modest miss with good summer revisions, overshadowed by the strong business survey."
+        }
+      ],
+      "watch": "October retail figures and whether the budget eases or tightens household finances."
+    },
+    {
+      "id": "reuters-yen-shines-ai-jitters-20261023",
+      "date": "2026-10-23",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247",
+      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9M044_L.jpg",
+      "headline": "Yen shines as AI jitters spur safe-haven rush",
+      "story": "haven-bid",
+      "story_title": "Shelter buying: yen and franc",
+      "pillar": "risk",
+      "summary": "The yen reached its strongest in over a month, near 156.3 per dollar, and is heading for its best week since early September as nervous investors look for shelter.",
+      "beats": {
+        "was": "The yen and the Swiss franc usually gain when investors get scared, and this week brought a slide in US tech shares, Gulf attacks and worries about France's debt.",
+        "happened": "On Friday the yen rose 0.3% to about 156.3 per dollar, on track for a 1% weekly gain. The dollar index was near its lowest since early October, the franc held near a one-month high, and the Canadian dollar firmed past 1.40 per US dollar. Japan's core inflation also rose above the Bank of Japan's 2% goal for the first time in nine months.",
+        "means": "Each worry is helping a different shelter: AI fears the yen, France's troubles the franc, and dearer oil the Canadian dollar.",
+        "fx": "Risk worries + firmer Japanese inflation → more demand for the yen; oil above $110 → supports the loonie."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Shelter buying and a firmer case for a Bank of Japan hike, extending this week's gain."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "France's debt worries keep money flowing to the franc."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "High oil prices keep the loonie near a one-month high."
+        }
+      ],
+      "watch": "Whether the Bank of Japan, meeting October 29–30, hints at a December hike; most economists polled by Reuters expect a hold next week."
+    },
+    {
+      "id": "reuters-uk-gfk-oct-20261023",
+      "date": "2026-10-23",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/economy-news/uk-consumer-confidence-tumbles-ahead-of-healeys-budget-gfk-reports-4967810",
+      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9L24S_L.jpg",
+      "headline": "UK consumer confidence tumbles ahead of Healey's budget, GfK reports",
+      "story": "uk-growth",
+      "story_title": "UK: how the economy is holding up",
+      "pillar": "growth",
+      "summary": "British shoppers' mood fell in October by the most since the start of the pandemic, with fewer planning big purchases and more expecting higher prices.",
+      "beats": {
+        "was": "In September GfK's monthly UK consumer confidence index had reached -13, its best level in over two years, and the Bank of England is expected to raise rates on November 5.",
+        "happened": "The index fell 11 points to -24 in October, worse than every forecast in a Reuters poll and the steepest monthly drop since April 2020. GfK pointed to rising prices, the Middle East war and tighter household budgets; people's inflation expectations rose too.",
+        "means": "Households are pulling back just as rates look set to rise, which raises the risk that the UK economy slows and limits how far the Bank of England can go.",
+        "fx": "Weaker consumer demand → doubts about a long run of UK rate hikes → weighs on the pound."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A far bigger fall in confidence than expected, days before the October 28 budget."
+        }
+      ],
+      "watch": "UK retail sales and business surveys, and what the October 28 budget does for household budgets."
+    },
+    {
+      "id": "fxstreet-uk-flash-pmi-oct-20261023",
+      "ts": "2026-10-23T10:24:11Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/british-pound-underperforms-despite-upbeat-uk-flash-pmi-report-202610231024",
+      "image": "https://editorial.fxsstatic.com/images/i/discover-62_Medium.png",
+      "headline": "British Pound underperforms despite upbeat UK flash PMI report",
+      "story": "uk-growth",
+      "story_title": "UK: how the economy is holding up",
+      "pillar": "growth",
+      "summary": "UK businesses had their best month since February in October, a much stronger survey than expected, yet the pound barely moved.",
+      "beats": {
+        "was": "S&P Global's monthly survey of UK purchasing managers (the PMI, where 50 splits growth from shrinking) read 52.0 in September, and the Bank of England is widely expected to raise rates on November 5 for the first time in over three years.",
+        "happened": "The early October reading jumped to 53.1, well above the 51.8 forecast, with both factories and service firms growing faster. The pound still slipped slightly to about $1.338 as the dollar bounced and September shop sales came in weak.",
+        "means": "Firms are doing better than the gloomy consumer surveys suggest, and rising costs in the survey make a November rate hike look close to certain.",
+        "fx": "Stronger business activity → firmer case for Bank of England hikes → supports the pound, though much of that is already priced."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A clear beat that strengthens the case for a November rate hike."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "UK business is outpacing a slowing euro area, which favours the pound over the euro."
+        }
+      ],
+      "watch": "The final October PMIs in early November, the October 28 budget, and whether the Bank of England signals more than one hike."
+    },
+    {
+      "id": "fxstreet-ez-flash-pmi-oct-20261023",
+      "ts": "2026-10-23T08:06:15Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/eurozone-hcob-composite-pmi-declines-to-519-in-october-vs-527-expected-202610230806",
+      "image": "https://editorial.fxsstatic.com/images/i/eurozone-02_Medium.jpg",
+      "headline": "Eurozone HCOB Composite PMI declines to 51.9 in October vs. 52.7 expected",
+      "story": "ez-growth",
+      "story_title": "Euro area: how the economy is holding up",
+      "pillar": "growth",
+      "summary": "Euro-area business growth slowed to a four-month low in October, weaker than expected, with France slipping back into decline.",
+      "beats": {
+        "was": "The euro area's monthly business survey (the HCOB PMI, where 50 splits growth from shrinking) read 53.1 in September, and the European Central Bank meets October 29 with rates at 2.50%.",
+        "happened": "The early October reading fell to 51.9, below the 52.7 forecast, as both services and factories cooled. France's business activity shrank again amid its budget fight, and firms reported energy and transport costs rising.",
+        "means": "The euro-area economy is still growing, at roughly 0.3% a quarter by S&P Global's estimate, but slower growth and France's troubles give the ECB less reason to raise rates soon.",
+        "fx": "Slower growth → less pressure on the ECB to hike → weighs on the euro, especially against the pound."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A clear miss, led by France, that cools ECB hike talk."
+        },
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The UK survey beat on the same day, widening the gap in favour of the pound."
+        }
+      ],
+      "watch": "The ECB decision on October 29 and any change in France's budget or credit rating."
+    },
     {
       "id": "reuters-asia-shares-tech-rout-bonds-20261023",
       "ts": "2026-10-23T02:34:33Z",
@@ -127,70 +286,31 @@
       "watch": "Any Houthi strike that actually cuts Saudi output, or progress in Russia–Ukraine talks that eases sanctions fears."
     },
     {
-      "id": "reuters-yen-shines-ai-jitters-20261023",
-      "date": "2026-10-23",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247",
-      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9M044_L.jpg",
-      "headline": "Yen shines as AI jitters spur safe-haven rush",
-      "story": "haven-bid",
-      "story_title": "Shelter buying: yen and franc",
-      "pillar": "risk",
-      "summary": "The yen reached its strongest in over a month, near 156.3 per dollar, and is heading for its best week since early September as nervous investors look for shelter.",
+      "id": "investinglive-japan-flash-pmi-oct-20261023",
+      "ts": "2026-10-23T00:38:00Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/japan-flash-pmi-holds-at-52-3-as-services-gain-offsets-factory-slowdown-before-boj/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/usdyen%20pmi%20update%2023%20October%202026-featured-1792715880.jpg?width=960&format=webp",
+      "headline": "Japan flash PMI holds at 52.3 as services gain offsets factory slowdown before BoJ",
+      "story": "boj-path",
+      "story_title": "BoJ: when the next hike comes",
+      "pillar": "growth",
+      "summary": "Japan's business growth held steady in October as service firms picked up while factories slowed to a seven-month low.",
       "beats": {
-        "was": "The yen and the Swiss franc usually gain when investors get scared, and this week brought a slide in US tech shares, Gulf attacks and worries about France's debt.",
-        "happened": "On Friday the yen rose 0.3% to about 156.3 per dollar, on track for a 1% weekly gain. The dollar index was near its lowest since early October, the franc held near a one-month high, and the Canadian dollar firmed past 1.40 per US dollar. Japan's core inflation also rose above the Bank of Japan's 2% goal for the first time in nine months.",
-        "means": "Each worry is helping a different shelter: AI fears the yen, France's troubles the franc, and dearer oil the Canadian dollar.",
-        "fx": "Risk worries + firmer Japanese inflation → more demand for the yen; oil above $110 → supports the loonie."
+        "was": "The Bank of Japan's rate is 1.25%, its highest since 1995, and Japan's core inflation rose back above the bank's 2% target in September; the bank meets October 29–30.",
+        "happened": "S&P Global's early October survey (where 50 splits growth from shrinking) held at 52.3. Services rose to 52.0, factories eased to 53.3, hiring slowed to a 14-month low, and firms' costs kept climbing.",
+        "means": "The economy is steady enough for the Bank of Japan to keep raising rates slowly, but the weaker hiring backs a careful pace, most likely a December move rather than October.",
+        "fx": "Steady growth with sticky costs → BoJ hikes still on track → mild support for the yen."
       },
       "impact": [
         {
           "ccy": "JPY",
-          "dir": "bullish",
+          "dir": "mixed",
           "strength": 1,
-          "why": "Shelter buying and a firmer case for a Bank of Japan hike, extending this week's gain."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "France's debt worries keep money flowing to the franc."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "High oil prices keep the loonie near a one-month high."
+          "why": "Steady overall, with rising costs for hikes and softer hiring against."
         }
       ],
-      "watch": "Whether the Bank of Japan, meeting October 29–30, hints at a December hike; most economists polled by Reuters expect a hold next week."
-    },
-    {
-      "id": "reuters-uk-gfk-oct-20261023",
-      "date": "2026-10-23",
-      "source": "Reuters",
-      "url": "https://www.investing.com/news/economy-news/uk-consumer-confidence-tumbles-ahead-of-healeys-budget-gfk-reports-4967810",
-      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9L24S_L.jpg",
-      "headline": "UK consumer confidence tumbles ahead of Healey's budget, GfK reports",
-      "story": "uk-growth",
-      "story_title": "UK: how the economy is holding up",
-      "pillar": "growth",
-      "summary": "British shoppers' mood fell in October by the most since the start of the pandemic, with fewer planning big purchases and more expecting higher prices.",
-      "beats": {
-        "was": "In September GfK's monthly UK consumer confidence index had reached -13, its best level in over two years, and the Bank of England is expected to raise rates on November 5.",
-        "happened": "The index fell 11 points to -24 in October, worse than every forecast in a Reuters poll and the steepest monthly drop since April 2020. GfK pointed to rising prices, the Middle East war and tighter household budgets; people's inflation expectations rose too.",
-        "means": "Households are pulling back just as rates look set to rise, which raises the risk that the UK economy slows and limits how far the Bank of England can go.",
-        "fx": "Weaker consumer demand → doubts about a long run of UK rate hikes → weighs on the pound."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A far bigger fall in confidence than expected, days before the October 28 budget."
-        }
-      ],
-      "watch": "UK retail sales and business surveys, and what the October 28 budget does for household budgets."
+      "watch": "The Bank of Japan decision on October 29–30 and any hint on December."
     },
     {
       "id": "fxstreet-gold-two-month-low-20261022",
@@ -245,6 +365,33 @@
         }
       ],
       "watch": "Whether Bank of Japan Governor Kazuo Ueda signals a hike at the October 29–30 meeting."
+    },
+    {
+      "id": "investinglive-au-flash-pmi-oct-20261022",
+      "ts": "2026-10-22T22:16:08Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/australia-flash-pmi-private-sector-shrinks-for-first-time-in-five-months-as-prices-rise/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/aud%20chart%20update%2023%20October%202026-featured-1792707351.jpg?width=960&format=webp",
+      "headline": "Australia flash PMI: private sector shrinks for first time in five months as prices rise",
+      "story": "rba-nov",
+      "story_title": "RBA: is a November hike coming?",
+      "pillar": "growth",
+      "summary": "Australian business activity shrank in October for the first time in five months, led by service firms, while their costs rose at the fastest pace since May.",
+      "beats": {
+        "was": "Australia's monthly business survey (the S&P Global PMI, where 50 splits growth from shrinking) read 51.3 in September, and Reserve Bank of Australia officials have said a rate hike on November 3 is possible.",
+        "happened": "The early October reading dropped to 47.7, its lowest since March, as services fell to 47.8. Factories were roughly flat, but input costs from energy, shipping and wages climbed faster.",
+        "means": "Weaker output argues against raising rates while rising prices argue for it, which leaves the November decision more finely balanced.",
+        "fx": "Shrinking activity → less room for an RBA hike → weighs on the Aussie, softened by the price pressure."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A sharp, surprise drop into contraction days before key inflation figures."
+        }
+      ],
+      "watch": "Australia's quarterly inflation figures on October 28, which decide the November 3 rate call."
     },
     {
       "id": "rigzone-oil-saudi-attacks-20261022",
@@ -527,6 +674,195 @@
         }
       ],
       "watch": "Brent near $111, and any sign the post-election strike plans move forward or are shelved."
+    },
+    {
+      "id": "reuters-euronext-yen-biggest-rally-20261022",
+      "date": "2026-10-22",
+      "source": "Reuters",
+      "url": "https://live.euronext.com/en/financial-news/yen-set-biggest-rally-month-risk-averse-investors-shun-dollar",
+      "image": null,
+      "headline": "Yen set for biggest rally in a month; risk-averse investors shun dollar",
+      "story": "risk-off-oct22",
+      "story_title": "Markets turn nervous: AI spending, oil and France",
+      "pillar": "risk",
+      "summary": "The yen had its best day in about a month, with the dollar down to around 157.3 yen, as worries about tech stocks, dear oil and France sent money looking for safety.",
+      "beats": {
+        "was": "For most of October the yen sat in a tight range near 158 per dollar, held down by Japan's low interest rates even as Bank of Japan officials hinted at a hike in December.",
+        "happened": "On Thursday the dollar fell about 0.6% against the yen, its biggest drop since late September, and the yen also gained on the euro, the pound and the Australian dollar. Share markets slid on fears that heavy AI spending won't pay off, Brent oil rose above $111 on Gulf attacks, and France's borrowing costs stayed near their highest since 2002. Falling US government bond yields also took some shine off the dollar. The euro held near $1.123 and the pound near $1.340.",
+        "means": "When stocks wobble, investors still reach for the yen as a shelter, which can outweigh the damage dear oil does to Japan.",
+        "fx": "Nervous stock markets → money into shelter → a firmer yen and a softer dollar. The lens: whether the share sell-off deepens or fades."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Shelter buying gave the yen its biggest one-day gain in about a month."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower US bond yields and fewer bets on extra Fed hikes weighed on the dollar."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The Australian dollar tends to slip when investors get nervous about stocks."
+        }
+      ],
+      "watch": "Whether stocks steady, and the Bank of Japan meeting on October 29–30."
+    },
+    {
+      "id": "reuters-gurutrade-asia-stocks-3m-low-20261022",
+      "date": "2026-10-22",
+      "source": "Reuters",
+      "url": "https://www.gurutrade.com/news/asian-stocks-sink-to-3-mth-low-on-tech-angst-gulf-tensions-1792661194.html",
+      "image": "https://www.gurutrade.com/files/imagemanager/d/f/d/dfd911bde4bbb10fa0b9aeb3ed327484_ee6fa6efa3dd4aa7b553753155cd4c5e.jpg",
+      "headline": "Asian Stocks Sink to 3-mth Low on Tech Angst, Gulf Tensions",
+      "story": "risk-off-oct22",
+      "story_title": "Markets turn nervous: AI spending, oil and France",
+      "pillar": "risk",
+      "summary": "Asian shares fell to their lowest in nearly three months as chip stocks sold off and Houthi attacks on Saudi Arabia raised the risk of a wider Gulf war.",
+      "beats": {
+        "was": "Tech and AI companies have carried share markets for much of the year, but investors have grown uneasy about how much these firms are spending and how dear borrowing has become.",
+        "happened": "A broad index of Asia-Pacific shares outside Japan fell 1.8%, heading for a fourth weekly loss. Korea's market dropped more than 4%, Hong Kong's more than 3% and Japan's Nikkei about 2%, led by chipmakers such as Tokyo Electron and SK Hynix. Plans by Meta, the Facebook owner, to raise money with a new class of shares revived fears about AI spending. US and European share futures fell too, Brent oil rose above $111, gold eased to about $4,068 and US 10-year bond yields dropped to about 5.09% as money moved to safety.",
+        "means": "Investors are pulling back from riskier bets just as the Gulf war heats up again, which favours shelter assets over growth-linked currencies.",
+        "fx": "Falling shares → less appetite for risk → support for the yen and franc, pressure on the Australian and New Zealand dollars. The lens: whether the slide spreads to Wall Street."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Weaker Asian shares and chip demand worries hurt the region's most-traded risk currency."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Investors moving to safety tend to buy the yen."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The kiwi usually falls with Asian stocks."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Nervous markets add to demand for the Swiss franc."
+        }
+      ],
+      "watch": "How Wall Street opens, and whether more Gulf attacks are confirmed."
+    },
+    {
+      "id": "reuters-investing-pound-outperforms-euro-20261022",
+      "date": "2026-10-22",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://www.investing.com/news/forex-news/pound-edges-higher-outperforming-as-investor-nerves-rattle-euro-zone-markets-4965186",
+      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9L0VL_L.jpg",
+      "headline": "Pound edges higher, outperforming as investor nerves rattle euro zone markets",
+      "story": "gbp-eur-rates",
+      "story_title": "Pound vs euro: rate gap and France's debt",
+      "pillar": "policy",
+      "summary": "The pound held near $1.34 as money left euro-area markets; the euro is on course for its biggest monthly fall against the pound since May 2023.",
+      "beats": {
+        "was": "UK inflation came in above forecast this week, so traders see the Bank of England raising rates on November 5, while France's budget fight has pushed its borrowing costs to the highest in more than 20 years.",
+        "happened": "Traders now expect at least three quarter-point Bank of England hikes by April, against about two from the European Central Bank. French 10-year yields hit a new 24-year high, Italian and Belgian yields jumped, and European shares fell about 1%. UK bonds held steady. Options traders are the most negative on the euro against the pound since mid-2024.",
+        "means": "Higher UK rates and France's debt worries both pull money from the euro toward the pound.",
+        "fx": "Wider UK-euro rate gap + French debt stress → pound up against the euro. The lens: the UK budget on October 28 and France's budget vote on October 27."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Money is leaving euro-area bonds and shares as French borrowing costs climb."
+        },
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "More Bank of England hikes are expected than ECB hikes, which favours the pound."
+        }
+      ],
+      "watch": "Whether UK Chancellor John Healey's October 28 budget calms or rattles bond investors, and whether France passes its budget."
+    },
+    {
+      "id": "yahoo-wall-street-tech-slide-yields-20261022",
+      "date": "2026-10-22",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/c81b8b519a0fe456bfd5181b8ac2fc88ca06d7d35b4b1c46e850f52b18cb2e44/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-10%2F28f0a79d-8b85-40c7-961e-c1875244cb32",
+      "headline": "Stock market today: Dow, S&P 500, Nasdaq tumble as oil climbs, investors weigh Meta, Tesla earnings",
+      "story": "risk-off-oct22",
+      "story_title": "Thursday's flight to safety: shares down, bonds up",
+      "pillar": "risk",
+      "summary": "US shares fell sharply at Thursday's open, led by tech, while investors piled into US government bonds and pushed their yields down hard.",
+      "beats": {
+        "was": "Worries that big tech firms are spending too much on AI had already knocked shares on Wednesday, and Brent oil was climbing on attacks around the Gulf.",
+        "happened": "The Nasdaq dropped about 2% and the S&P 500 about 1.2% soon after the open. The 10-year US Treasury yield fell about 0.11 percentage point to near 5.02%, as Brent reached a five-month high above $111.",
+        "means": "Investors are moving from shares into safe bonds, and lower US yields make holding dollars a little less rewarding.",
+        "fx": "Falling US yields + money leaving shares → pressure on the dollar against the yen and franc; a softer mood also tends to weigh on the Australian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A big one-day drop in US bond yields trims the dollar's rate advantage."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Falling shares send money to the yen as a shelter."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The Aussie usually slips when shares fall."
+        }
+      ],
+      "watch": "Whether the share sell-off deepens into Friday or buyers return after the big tech earnings."
+    },
+    {
+      "id": "investing-cad-oil-boc-bets-20261022",
+      "date": "2026-10-22",
+      "source": "Investing.com",
+      "url": "https://ca.investing.com/news/forex-news/canadian-dollar-strengthens-as-oil-prices-boc-rate-hike-bets-support-loonie-4896495",
+      "image": "https://content-media.investing.com/news/LYNXMPEE3G1OZ_L.jpg",
+      "headline": "Canadian dollar strengthens as oil prices, BoC rate hike bets support loonie",
+      "story": "boc-oct28",
+      "story_title": "Bank of Canada: an October 28 rate hike?",
+      "pillar": "policy",
+      "summary": "The Canadian dollar rose for a sixth straight day against the US dollar, helped by higher oil and bets on a Bank of Canada rate hike.",
+      "beats": {
+        "was": "Canada is a big oil exporter, so dearer oil tends to help its currency. Traders have come to expect the Bank of Canada to raise its rate on October 28.",
+        "happened": "The US dollar fell to about 1.4025 Canadian dollars, its lowest since September 21, after drone attacks on Saudi and Russian energy sites lifted oil. Markets see a quarter-point hike to 2.50% as likely.",
+        "means": "Two supports are working together for the loonie: a higher price for what Canada sells, and a central bank expected to raise rates.",
+        "fx": "Dearer oil + a likely Bank of Canada hike → steady support for the Canadian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Oil and hike bets keep lifting the loonie, though much is already expected."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The US dollar has lost ground against the loonie six days running."
+        }
+      ],
+      "watch": "Canada's retail sales figures on Friday, October 23, and the Bank of Canada decision on October 28."
     },
     {
       "id": "fxstreet-danske-fed-preview-20261022",
@@ -859,222 +1195,6 @@
       "watch": "Whether Trump approves the plans, and Israel's election on October 27, which could change the timing."
     },
     {
-      "id": "reuters-euronext-yen-biggest-rally-20261022",
-      "date": "2026-10-22",
-      "source": "Reuters",
-      "url": "https://live.euronext.com/en/financial-news/yen-set-biggest-rally-month-risk-averse-investors-shun-dollar",
-      "image": null,
-      "headline": "Yen set for biggest rally in a month; risk-averse investors shun dollar",
-      "story": "risk-off-oct22",
-      "story_title": "Markets turn nervous: AI spending, oil and France",
-      "pillar": "risk",
-      "summary": "The yen had its best day in about a month, with the dollar down to around 157.3 yen, as worries about tech stocks, dear oil and France sent money looking for safety.",
-      "beats": {
-        "was": "For most of October the yen sat in a tight range near 158 per dollar, held down by Japan's low interest rates even as Bank of Japan officials hinted at a hike in December.",
-        "happened": "On Thursday the dollar fell about 0.6% against the yen, its biggest drop since late September, and the yen also gained on the euro, the pound and the Australian dollar. Share markets slid on fears that heavy AI spending won't pay off, Brent oil rose above $111 on Gulf attacks, and France's borrowing costs stayed near their highest since 2002. Falling US government bond yields also took some shine off the dollar. The euro held near $1.123 and the pound near $1.340.",
-        "means": "When stocks wobble, investors still reach for the yen as a shelter, which can outweigh the damage dear oil does to Japan.",
-        "fx": "Nervous stock markets → money into shelter → a firmer yen and a softer dollar. The lens: whether the share sell-off deepens or fades."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Shelter buying gave the yen its biggest one-day gain in about a month."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower US bond yields and fewer bets on extra Fed hikes weighed on the dollar."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The Australian dollar tends to slip when investors get nervous about stocks."
-        }
-      ],
-      "watch": "Whether stocks steady, and the Bank of Japan meeting on October 29–30."
-    },
-    {
-      "id": "reuters-gurutrade-asia-stocks-3m-low-20261022",
-      "date": "2026-10-22",
-      "source": "Reuters",
-      "url": "https://www.gurutrade.com/news/asian-stocks-sink-to-3-mth-low-on-tech-angst-gulf-tensions-1792661194.html",
-      "image": "https://www.gurutrade.com/files/imagemanager/d/f/d/dfd911bde4bbb10fa0b9aeb3ed327484_ee6fa6efa3dd4aa7b553753155cd4c5e.jpg",
-      "headline": "Asian Stocks Sink to 3-mth Low on Tech Angst, Gulf Tensions",
-      "story": "risk-off-oct22",
-      "story_title": "Markets turn nervous: AI spending, oil and France",
-      "pillar": "risk",
-      "summary": "Asian shares fell to their lowest in nearly three months as chip stocks sold off and Houthi attacks on Saudi Arabia raised the risk of a wider Gulf war.",
-      "beats": {
-        "was": "Tech and AI companies have carried share markets for much of the year, but investors have grown uneasy about how much these firms are spending and how dear borrowing has become.",
-        "happened": "A broad index of Asia-Pacific shares outside Japan fell 1.8%, heading for a fourth weekly loss. Korea's market dropped more than 4%, Hong Kong's more than 3% and Japan's Nikkei about 2%, led by chipmakers such as Tokyo Electron and SK Hynix. Plans by Meta, the Facebook owner, to raise money with a new class of shares revived fears about AI spending. US and European share futures fell too, Brent oil rose above $111, gold eased to about $4,068 and US 10-year bond yields dropped to about 5.09% as money moved to safety.",
-        "means": "Investors are pulling back from riskier bets just as the Gulf war heats up again, which favours shelter assets over growth-linked currencies.",
-        "fx": "Falling shares → less appetite for risk → support for the yen and franc, pressure on the Australian and New Zealand dollars. The lens: whether the slide spreads to Wall Street."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Weaker Asian shares and chip demand worries hurt the region's most-traded risk currency."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Investors moving to safety tend to buy the yen."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The kiwi usually falls with Asian stocks."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Nervous markets add to demand for the Swiss franc."
-        }
-      ],
-      "watch": "How Wall Street opens, and whether more Gulf attacks are confirmed."
-    },
-    {
-      "id": "reuters-investing-pound-outperforms-euro-20261022",
-      "date": "2026-10-22",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://www.investing.com/news/forex-news/pound-edges-higher-outperforming-as-investor-nerves-rattle-euro-zone-markets-4965186",
-      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9L0VL_L.jpg",
-      "headline": "Pound edges higher, outperforming as investor nerves rattle euro zone markets",
-      "story": "gbp-eur-rates",
-      "story_title": "Pound vs euro: rate gap and France's debt",
-      "pillar": "policy",
-      "summary": "The pound held near $1.34 as money left euro-area markets; the euro is on course for its biggest monthly fall against the pound since May 2023.",
-      "beats": {
-        "was": "UK inflation came in above forecast this week, so traders see the Bank of England raising rates on November 5, while France's budget fight has pushed its borrowing costs to the highest in more than 20 years.",
-        "happened": "Traders now expect at least three quarter-point Bank of England hikes by April, against about two from the European Central Bank. French 10-year yields hit a new 24-year high, Italian and Belgian yields jumped, and European shares fell about 1%. UK bonds held steady. Options traders are the most negative on the euro against the pound since mid-2024.",
-        "means": "Higher UK rates and France's debt worries both pull money from the euro toward the pound.",
-        "fx": "Wider UK-euro rate gap + French debt stress → pound up against the euro. The lens: the UK budget on October 28 and France's budget vote on October 27."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Money is leaving euro-area bonds and shares as French borrowing costs climb."
-        },
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "More Bank of England hikes are expected than ECB hikes, which favours the pound."
-        }
-      ],
-      "watch": "Whether UK Chancellor John Healey's October 28 budget calms or rattles bond investors, and whether France passes its budget."
-    },
-    {
-      "id": "yahoo-wall-street-tech-slide-yields-20261022",
-      "date": "2026-10-22",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/c81b8b519a0fe456bfd5181b8ac2fc88ca06d7d35b4b1c46e850f52b18cb2e44/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-10%2F28f0a79d-8b85-40c7-961e-c1875244cb32",
-      "headline": "Stock market today: Dow, S&P 500, Nasdaq tumble as oil climbs, investors weigh Meta, Tesla earnings",
-      "story": "risk-off-oct22",
-      "story_title": "Thursday's flight to safety: shares down, bonds up",
-      "pillar": "risk",
-      "summary": "US shares fell sharply at Thursday's open, led by tech, while investors piled into US government bonds and pushed their yields down hard.",
-      "beats": {
-        "was": "Worries that big tech firms are spending too much on AI had already knocked shares on Wednesday, and Brent oil was climbing on attacks around the Gulf.",
-        "happened": "The Nasdaq dropped about 2% and the S&P 500 about 1.2% soon after the open. The 10-year US Treasury yield fell about 0.11 percentage point to near 5.02%, as Brent reached a five-month high above $111.",
-        "means": "Investors are moving from shares into safe bonds, and lower US yields make holding dollars a little less rewarding.",
-        "fx": "Falling US yields + money leaving shares → pressure on the dollar against the yen and franc; a softer mood also tends to weigh on the Australian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A big one-day drop in US bond yields trims the dollar's rate advantage."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Falling shares send money to the yen as a shelter."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The Aussie usually slips when shares fall."
-        }
-      ],
-      "watch": "Whether the share sell-off deepens into Friday or buyers return after the big tech earnings."
-    },
-    {
-      "id": "investing-cad-oil-boc-bets-20261022",
-      "date": "2026-10-22",
-      "source": "Investing.com",
-      "url": "https://ca.investing.com/news/forex-news/canadian-dollar-strengthens-as-oil-prices-boc-rate-hike-bets-support-loonie-4896495",
-      "image": "https://content-media.investing.com/news/LYNXMPEE3G1OZ_L.jpg",
-      "headline": "Canadian dollar strengthens as oil prices, BoC rate hike bets support loonie",
-      "story": "boc-oct28",
-      "story_title": "Bank of Canada: an October 28 rate hike?",
-      "pillar": "policy",
-      "summary": "The Canadian dollar rose for a sixth straight day against the US dollar, helped by higher oil and bets on a Bank of Canada rate hike.",
-      "beats": {
-        "was": "Canada is a big oil exporter, so dearer oil tends to help its currency. Traders have come to expect the Bank of Canada to raise its rate on October 28.",
-        "happened": "The US dollar fell to about 1.4025 Canadian dollars, its lowest since September 21, after drone attacks on Saudi and Russian energy sites lifted oil. Markets see a quarter-point hike to 2.50% as likely.",
-        "means": "Two supports are working together for the loonie: a higher price for what Canada sells, and a central bank expected to raise rates.",
-        "fx": "Dearer oil + a likely Bank of Canada hike → steady support for the Canadian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Oil and hike bets keep lifting the loonie, though much is already expected."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The US dollar has lost ground against the loonie six days running."
-        }
-      ],
-      "watch": "Canada's retail sales figures on Friday, October 23, and the Bank of Canada decision on October 28."
-    },
-    {
-      "id": "fxstreet-araghchi-lift-blockade-20261021",
-      "ts": "2026-10-21T23:39:03Z",
-      "source": "FXStreet (Bloomberg report)",
-      "url": "https://www.fxstreet.com/news/iran-tells-us-to-prove-it-wants-peace-by-lifting-blockade-202610212339",
-      "image": "https://editorial.fxsstatic.com/images/i/Iran_1_Medium.png",
-      "headline": "Iran tells US to prove it wants peace by lifting blockade",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: a mediated plan to restart talks",
-      "pillar": "risk",
-      "summary": "Iran's foreign minister said Tehran would give talks another chance, but only if the US first lifts its naval blockade on Iranian oil.",
-      "beats": {
-        "was": "Efforts to end the US-Iran war are stuck, and the US Navy has been stopping Iran from selling oil by sea.",
-        "happened": "Foreign Minister Abbas Araghchi said the US must lift the blockade to show it is serious, and warned a new war would end badly for Washington. An unnamed Iranian official threatened US political figures if strikes resume, and US officials said some American troops are quietly being pulled back from Middle East bases.",
-        "means": "The door to talks is open a crack, but on terms the US has so far rejected, so no quick deal is likely.",
-        "fx": "Talk of diplomacy → a little less war risk → oil could ease; tough conditions and threats → the war premium stays. The lens: US crude was little changed near $97.60."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "An offer to talk is offset by conditions the US is unlikely to accept and new threats."
-        }
-      ],
-      "watch": "Any US reply on the blockade, or a date for new talks."
-    },
-    {
       "id": "fxstreet-nz-cpi-q3-miss-20261021",
       "ts": "2026-10-21T21:52:11Z",
       "source": "FXStreet",
@@ -1100,6 +1220,45 @@
         }
       ],
       "watch": "The Reserve Bank of New Zealand's decision on October 28."
+    },
+    {
+      "id": "cbs-us-saudi-ordered-departure-20261021",
+      "date": "2026-10-21",
+      "source": "CBS News",
+      "url": "https://cbsnews.com/news/us-saudi-arabia-ordered-departure-houthis",
+      "image": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/09/15/89ed5121-0859-4287-8ef5-88b1b0ef0ebb/thumbnail/1200x630/8029321c35bce0919d5a1ea803221356/ap26258417507065.jpg",
+      "headline": "U.S. ordering some government staff to depart Saudi Arabia, reducing military footprint in Middle East",
+      "story": "saudi-houthi",
+      "story_title": "Houthi strikes on Saudi Arabia",
+      "pillar": "risk",
+      "summary": "The US told non-essential embassy staff and their families to leave Saudi Arabia because of Houthi attacks, and US officials say the military is quietly thinning its presence at bases in the region.",
+      "beats": {
+        "was": "Yemen's Iran-aligned Houthi group has been firing drones and missiles at Saudi airports and oil sites this month; a strike on Riyadh's main airport killed 12 people. Saudi Arabia is the world's largest oil exporter, and with the Strait of Hormuz shut its Red Sea routes matter even more.",
+        "happened": "The State Department ordered non-essential staff and families out of Saudi Arabia, citing Houthi attacks on airports and key infrastructure. Its spokesman said the order covers Saudi Arabia only; other Gulf embassies are on reduced operations. Officials said US forces are cutting their footprint at Middle East posts over Houthi and Iranian threats, and President Trump did not rule out strikes on the Houthis.",
+        "means": "Washington is treating the threat to Saudi Arabia as serious and lasting, not a passing flare-up. That raises the odds of more attacks on Saudi oil, or of US strikes on the Houthis.",
+        "fx": "US pulls staff from Saudi Arabia → higher risk to Gulf oil supply on top of Hormuz → keeps a war premium in oil and some demand for the franc. The lens: confirmed hits on Saudi exports would push oil higher; a lull in attacks would let it ease."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "An evacuation order signals Washington expects the attacks on the top oil exporter to go on."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A wider Gulf conflict keeps some money looking for safety."
+        },
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The dollar firmed a little on the news as a safe place to park money, but dearer oil also feeds US inflation worries."
+        }
+      ],
+      "watch": "Any Houthi hit on Saudi oil exports, and whether President Trump orders strikes on the Houthis."
     },
     {
       "id": "fxstreet-france-oat-5pct-20261021",
@@ -1160,87 +1319,6 @@
         }
       ],
       "watch": "The Bank of Japan's October 29–30 meeting and its updated inflation forecasts."
-    },
-    {
-      "id": "fxstreet-aud-monthly-high-20261021",
-      "ts": "2026-10-21T09:03:51Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/australian-dollar-refreshes-monthly-top-as-hawkish-rba-counters-usd-uptick-202610210903",
-      "image": "https://editorial.fxsstatic.com/images/i/AUDUSD-bullish-animal_Medium.png",
-      "headline": "Australian Dollar extends recovery as hawkish RBA offsets USD strength",
-      "story": "rba-nov",
-      "story_title": "RBA: the November 3 decision",
-      "pillar": "policy",
-      "summary": "The Australian dollar reached a one-month high near 70.3 US cents, a fourth day of gains, as Reserve Bank of Australia officials kept the door open to a November hike.",
-      "beats": {
-        "was": "The Aussie fell below 69 US cents last week, its lowest since early July, before Reserve Bank of Australia officials turned more worried about inflation.",
-        "happened": "Deputy Governor Andrew Hauser warned that underlying inflation for July-September may come in hotter than forecast, and Assistant Governor Christopher Kent said the 'neutral' rate, neither boosting nor slowing the economy, seems to be rising.",
-        "means": "Both point the same way: rates may need to go higher. Better-than-expected growth in China, Australia's biggest customer, also helps.",
-        "fx": "Hike talk → higher Australian rates ahead → support for the Aussie. A firmer US dollar on Fed hike bets is the brake."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Officials' hawkish comments keep a November hike alive."
-        }
-      ],
-      "watch": "Australia's July-September inflation figures, due late October, the last big input before the November 3 decision."
-    },
-    {
-      "id": "euronews-uk-inflation-borrowing-20261021",
-      "ts": "2026-10-21T08:52:00Z",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/10/21/uk-inflation-jumps-more-than-expected-fuelling-rate-hike-expectations",
-      "image": "https://images.euronews.com/articles/stories/09/96/11/86/1200x675_cmsv2_409290be-bb13-5687-a865-378b29ed3a71-9961186.jpg",
-      "headline": "UK inflation jumps more than expected fuelling rate hike expectations",
-      "story": "uk-budget",
-      "story_title": "UK: inflation, borrowing and the Oct 28 budget",
-      "pillar": "fiscal",
-      "summary": "Alongside hotter inflation, UK government borrowing for September came in above forecast, a week before Chancellor Rachel Reeves' budget on October 28.",
-      "beats": {
-        "was": "UK government bond yields hit a 19-year high in September on worries about how much the government borrows, and the budget lands October 28.",
-        "happened": "The government borrowed £24.5bn in September, more than expected. Borrowing so far this tax year is about £6bn above the official forecast, and total debt passed £3 trillion for the first time.",
-        "means": "Higher borrowing leaves less room in the budget and keeps debt worries alive, at the same time as inflation pushes the Bank of England toward a hike.",
-        "fx": "Rate hikes help the pound, but debt worries hurt it. Together they cancelled out on Wednesday morning: the pound barely moved."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Debt worries offset the lift from a likely rate hike."
-        }
-      ],
-      "watch": "The October 28 budget: tax rises or spending cuts that calm bond markets would help the pound."
-    },
-    {
-      "id": "fxstreet-jpy-himino-20261021",
-      "ts": "2026-10-21T08:16:35Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/japanese-yen-ticks-up-within-previous-range-buoyed-by-hawkish-boj-comments-202610210816",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-68_Medium.png",
-      "headline": "Japanese Yen ticks up within previous range, buoyed by hawkish BoJ comments",
-      "story": "boj-path",
-      "story_title": "BoJ: the road to the next hike",
-      "pillar": "policy",
-      "summary": "Bank of Japan Deputy Governor Ryozo Himino said Japan's underlying inflation is close to the 2% goal, leaving room for more rate hikes; the yen edged up but stayed near 158 per dollar.",
-      "beats": {
-        "was": "The yen has been weak for weeks, near 158 per dollar, partly because Japan's rates are far below US rates. Markets expect the Bank of Japan to raise rates again, most likely on December 17.",
-        "happened": "Himino said underlying inflation is near target, borrowing conditions are still easy, and longer-run inflation expectations are rising.",
-        "means": "A deputy governor saying inflation is near target is a hint that the bank is getting ready to raise rates again.",
-        "fx": "More signals of a hike → smaller gap with US rates over time → slow support for the yen. A wider-than-expected trade deficit in September limited the lift."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Supports the case for a December Bank of Japan hike, which is already expected."
-        }
-      ],
-      "watch": "The Bank of Japan meeting next week, and whether it raises its inflation forecasts."
     },
     {
       "id": "fxstreet-uk-cpi-preview-20261021",
@@ -1307,72 +1385,6 @@
         }
       ],
       "watch": "Whether tanker loadings off Oman drop, and any reply to Iran's mediation offer; Wednesday's US crude stock report."
-    },
-    {
-      "id": "investinglive-japan-trade-sep-20261021",
-      "ts": "2026-10-21T00:31:17Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/japan-exports-rise-16-7-for-13th-straight-month-on-ai-chip-demand-trade-gap-narrows/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/USDJPY%20update%2021%20October%202026-featured-1792542625.jpg?width=960&format=webp",
-      "headline": "Japan exports rise 16.7% for 13th straight month on AI chip demand, trade gap narrows",
-      "story": "japan-trade",
-      "story_title": "Japan: exports, the oil bill and the yen",
-      "pillar": "tot",
-      "summary": "Japan's exports grew 16.7% from a year earlier in September, a 13th straight rise but well short of the 20% expected, so the trade deficit came in wider than forecast at about ¥537 billion.",
-      "beats": {
-        "was": "Japan's exports have been lifted all year by demand for chips and AI equipment, while costly oil, pushed up by the Gulf war, has swollen the import bill and kept the country in trade deficit.",
-        "happened": "Japan's Ministry of Finance said September exports rose 16.7% from a year earlier, against about 20% expected and 19.3% in August. Imports rose 18.9%, slower than August's 28%. The deficit was about ¥537 billion, against ¥181 billion expected but half of August's roughly ¥1.1 trillion.",
-        "means": "Overseas demand for Japanese goods is still solid but cooling, and the energy bill remains the drag. A smaller gap than August helps a little, but the miss gives the Bank of Japan, which meets Oct 29–30, no new reason to hurry a rate rise.",
-        "fx": "Exports slower than hoped, oil still costly → more yen sold to pay for imports than expected → mild pressure on the yen. The lens: is the oil bill shrinking, or just pausing?"
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Exports missed and the deficit beat forecasts, though it halved from August."
-        }
-      ],
-      "watch": "The Bank of Japan's Oct 29–30 meeting and its new forecasts; a lasting drop in oil would shrink the import bill."
-    },
-    {
-      "id": "cbs-us-saudi-ordered-departure-20261021",
-      "date": "2026-10-21",
-      "source": "CBS News",
-      "url": "https://cbsnews.com/news/us-saudi-arabia-ordered-departure-houthis",
-      "image": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/09/15/89ed5121-0859-4287-8ef5-88b1b0ef0ebb/thumbnail/1200x630/8029321c35bce0919d5a1ea803221356/ap26258417507065.jpg",
-      "headline": "U.S. ordering some government staff to depart Saudi Arabia, reducing military footprint in Middle East",
-      "story": "saudi-houthi",
-      "story_title": "Houthi strikes on Saudi Arabia",
-      "pillar": "risk",
-      "summary": "The US told non-essential embassy staff and their families to leave Saudi Arabia because of Houthi attacks, and US officials say the military is quietly thinning its presence at bases in the region.",
-      "beats": {
-        "was": "Yemen's Iran-aligned Houthi group has been firing drones and missiles at Saudi airports and oil sites this month; a strike on Riyadh's main airport killed 12 people. Saudi Arabia is the world's largest oil exporter, and with the Strait of Hormuz shut its Red Sea routes matter even more.",
-        "happened": "The State Department ordered non-essential staff and families out of Saudi Arabia, citing Houthi attacks on airports and key infrastructure. Its spokesman said the order covers Saudi Arabia only; other Gulf embassies are on reduced operations. Officials said US forces are cutting their footprint at Middle East posts over Houthi and Iranian threats, and President Trump did not rule out strikes on the Houthis.",
-        "means": "Washington is treating the threat to Saudi Arabia as serious and lasting, not a passing flare-up. That raises the odds of more attacks on Saudi oil, or of US strikes on the Houthis.",
-        "fx": "US pulls staff from Saudi Arabia → higher risk to Gulf oil supply on top of Hormuz → keeps a war premium in oil and some demand for the franc. The lens: confirmed hits on Saudi exports would push oil higher; a lull in attacks would let it ease."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "An evacuation order signals Washington expects the attacks on the top oil exporter to go on."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A wider Gulf conflict keeps some money looking for safety."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The dollar firmed a little on the news as a safe place to park money, but dearer oil also feeds US inflation worries."
-        }
-      ],
-      "watch": "Any Houthi hit on Saudi oil exports, and whether President Trump orders strikes on the Houthis."
     }
   ]
 }
