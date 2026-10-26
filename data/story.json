@@ -1,380 +1,403 @@
 {
-  "date": "2026-10-23",
-  "headline": "Oil climbed toward $114 a barrel, near its highest since May, as Houthi attacks forced Saudi Aramco to clear its headquarters. The yen hit a one-month high, and UK retail sales fell more than expected.",
+  "date": "2026-10-26",
+  "headline": "Oil fell about 6% to near $110 a barrel as Saudi, Pakistani and Turkish envoys met Iran's leaders to head off new fighting. Currencies barely moved ahead of five central-bank decisions this week.",
   "chapters": [
     {
       "title": "US Dollar",
-      "teaser": "The dollar index held near a three-week low around 101.5 in Asian trading. A tech-led stock sell-off has pulled US bond yields down, and traders trimmed bets on a December Federal Reserve hike to about 85%, from about 90%.",
-      "meaning": "The story so far: since the US–Iran war began in February, high oil has kept US inflation up, and with it bets that the Federal Reserve raises rates again in December, which has supported the dollar. What changed: worries that heavy AI spending won't pay off knocked tech shares on Thursday, and the selling spread to Asia on Friday, with Japan's Nikkei down about 1.3%. Investors kept money in US government bonds: the 10-year yield held near 4.96%, just under 5%, and the 2-year eased to about 4.66%. December hike odds slipped to about 85%. The dollar index sat near 101.5, losing most to the yen. What it means: when markets wobble, the Fed has less need to keep raising rates, and lower US yields make the dollar less rewarding to hold. High oil still argues the other way. The question to keep asking: does the stock sell-off keep pulling yields down, or do strong US figures pull them back up?",
-      "fx": "What's next: US business surveys (flash PMIs) at 8:45 AM CT today and the final University of Michigan survey, with its inflation expectations, at 9:00 AM CT. The Fed's next decision is October 28; it is in its quiet period until then.",
+      "teaser": "The dollar index slipped about 0.1% to near 101.7 as oil fell sharply on Iran peace efforts. The only US figure this morning, a Chicago Fed gauge of activity for September, came in a little stronger than expected and moved nothing.",
+      "meaning": "The story so far: Since the US–Iran war began in February, high oil has kept US inflation up, and markets expect the Federal Reserve to hold this Wednesday and raise rates in December, which supports the dollar. What changed: Over the weekend and into Monday, oil dropped about 6% as Saudi Arabia, Pakistan and Turkey sent senior officials to Tehran to stop the fighting flaring again. The Chicago Fed National Activity Index for September rose to +0.07, against about −0.10 expected: a sign the US economy grew slightly faster than its usual pace. Markets ignored it. The 10-year Treasury yield sat near 4.97%, and a Fed hold on Wednesday is priced at about 91–93%. What it means: Cheaper oil eases the inflation worry that keeps a December Fed hike on the table, so it takes a little support away from the dollar. The question to keep asking: does oil keep falling, and does that soften what Federal Reserve policymakers signal on Wednesday?",
+      "fx": "What's next: No more major US data today. Coming up: US durable goods orders at 7:30 AM CT and Conference Board consumer confidence at 9:00 AM CT on Tuesday, then the Fed decision at 1:00 PM CT Wednesday, with the press conference at 1:30 PM CT. A hold is priced; the surprise would be a clear signal for or against a December hike.",
       "numbers": [
-        "Dollar index ~101.52 (−0.1%), near a three-week low",
-        "US 10-year yield ~4.96%; 2-year ~4.66%",
-        "Fed: Oct 28 hold ~93%; Dec hike ~85% (down from ~90%)",
-        "Nikkei −1.3% on Friday"
+        "Dollar index ~101.67 (−0.1%)",
+        "US 10-year yield ~4.97%",
+        "Chicago Fed activity index (Sep) +0.07 vs −0.10 expected",
+        "Fed Oct 28: hold ~91–93%; December hike >80%"
       ],
       "scenarios": {
-        "base": "If today's US surveys land near forecasts and stocks steady, the dollar index stays near 101.5 into the weekend.",
-        "bull": "If the surveys or inflation expectations run hot, yields climb back above 5% and the dollar firms.",
-        "bear": "If the stock sell-off spreads into Europe and New York, yields slide further and the dollar loses more ground to the yen."
+        "base": "Oil stays near $110 and the dollar drifts sideways into Wednesday's Fed decision.",
+        "bull": "A new attack on Gulf oil sites or a collapse of the Tehran talks sends oil and US yields back up, lifting the dollar.",
+        "bear": "A ceasefire framework from the Tehran talks pushes oil lower, trims December hike bets and weighs on the dollar."
       },
       "sources": [
         {
-          "label": "Reuters via The Jakarta Post (Oct 23): Asian shares wobble as tech rout boosts bonds, dents rate hike bets",
-          "url": "https://www.thejakartapost.com/business/2026/10/23/asian-shares-wobble-as-tech-rout-boosts-bonds-dents-rate-hike-bets"
-        },
-        {
-          "label": "Reuters (Oct 23): yen shines as AI jitters spur safe-haven rush",
-          "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 23, 12:55 AM CT run): pricing and notes",
+          "label": "FRED: Chicago Fed National Activity Index (Sep data, released Oct 26)",
+          "url": "https://fred.stlouisfed.org/series/CFNAI"
+        },
+        {
+          "label": "Euronews (Oct 26): Oil plunges more than 6% from near wartime highs as diplomacy over Iran gathers pace",
+          "url": "https://www.euronews.com/2026/10/26/oil-plunges-more-than-6-from-near-wartime-highs-as-diplomacy-over-iran-seemingly-gathers"
+        },
+        {
+          "label": "AP via WSB-TV (Oct 26): Delegations meeting in Tehran with region on edge",
+          "url": "https://www.wsbtv.com/news/world/delegations-meeting/7R6BOJYTHQ2K5O3AATDQETAJMA/"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 26 pre-open run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street calendar (Hercules; last refreshed Thu Oct 22 evening, not in the 12:40 AM run): times and forecasts",
+          "label": "Blue Street calendar (Hercules, Oct 26 pre-open run): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "title": "Euro",
-      "teaser": "The euro held near $1.121 in Asian trading. Coming up: business surveys for France, Germany and the euro area between 2:15 and 3:00 AM CT, then Moody's review of France's credit rating after European markets close.",
-      "meaning": "The story so far: the euro has been held back by France's budget fight and by expensive energy, which Europe imports. The European Central Bank is expected to hold on October 29 and lean toward a hike in December, because euro-area inflation is well above its 2% target. What changed: little overnight. The euro stayed near $1.121 as oil rose toward $114 a barrel. France's 10-year borrowing cost is above 5%, and its gap over Germany is near the widest since 2011. What it means: dearer oil and French debt worries weigh on the euro, while expected ECB hikes support it, so the day's surveys and Moody's decide which side gains. The question: does Moody's cut France's rating tonight?",
-      "fx": "What's next: flash business surveys for France (2:15 AM CT), Germany (2:30 AM CT) and the euro area (3:00 AM CT), then Moody's review of France after European markets close. October 27: the French parliament's vote on the budget's tax side. October 29: the ECB's decision.",
+      "teaser": "The euro led the major currencies early on Monday, touching about $1.122, as French borrowing costs eased after Moody's chose not to cut France's credit rating. It slipped back to near $1.120 by the New York open.",
+      "meaning": "The story so far: France's debt, a budget fight and street protests pushed its 10-year borrowing cost above 5% last week, near its widest gap over Germany since 2011, which weighed on the euro. What changed: Late Friday, Moody's kept France at Aa3 with a negative outlook, rather than the one-notch cut many expected. French yields eased on Monday. Germany's Ifo business climate survey rose to 90.2 in October, against 90.0 expected, its fifth monthly rise, driven by firms' hopes for the months ahead. The euro gave back its early gain as the morning went on. What it means: Less stress in French bonds removes one weight from the euro, and German firms' brighter outlook helps the case for a European Central Bank hike in December. The question to keep asking: does France get through its budget votes without a new scare?",
+      "fx": "What's next: No euro-area data left today. Coming up: France's parliament takes up the revenue part of its budget on Tuesday, then the ECB decides on Thursday at 8:15 AM CT; a hold is expected, with President Christine Lagarde's press conference at about 8:45 AM CT.",
       "numbers": [
-        "EUR/USD ~1.1212 (flat)",
-        "France 10-year yield above 5%; gap over Germany near widest since 2011",
-        "ECB: Oct 29 hold ~95%; Dec hike ~88%",
-        "Euro-area manufacturing survey: ~52.7 expected"
+        "EUR/USD ~1.1196 (−0.1%), after ~1.1219 in the European morning",
+        "Germany Ifo (Oct) 90.2 vs 90.0 expected; expectations 91.6",
+        "Moody's: France held at Aa3, negative outlook",
+        "ECB Oct 29: hold ~93–97%"
       ],
       "scenarios": {
-        "base": "If the surveys land near forecasts and Moody's holds France's rating, the euro stays near $1.12.",
-        "bull": "If the surveys beat forecasts, December hike bets firm and the euro edges higher.",
-        "bear": "If Moody's cuts France or the surveys miss, France's gap over Germany widens and the euro slips under $1.12."
+        "base": "The euro holds near $1.12 into Thursday's ECB decision.",
+        "bull": "A smooth French budget vote and an ECB that keeps December open lift the euro toward last week's highs.",
+        "bear": "A new French political scare or a cautious ECB pushes the euro back below $1.12."
       },
       "sources": [
         {
-          "label": "Disruption Banking (Oct 22): French yields cross 5%, spread widest since 2011",
-          "url": "https://www.disruptionbanking.com/2026/10/22/french-yields-cross-5-spread-widest-since-2011/"
-        },
-        {
-          "label": "Reuters (Oct 23): yen shines as AI jitters spur safe-haven rush",
-          "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 23, 12:55 AM CT run): pricing and notes",
+          "label": "FXStreet (Oct 26): Euro outperforms as French bond yields cool",
+          "url": "https://www.fxstreet.com/news/euro-outperforms-major-currency-peers-as-french-bond-yields-cool-down-further-202610260826"
+        },
+        {
+          "label": "Reuters (Oct 26): German business sentiment grows in October, Ifo finds",
+          "url": "https://www.reuters.com/business/german-business-sentiment-grows-october-ifo-survey-finds-2026-10-26/"
+        },
+        {
+          "label": "Euronext/Reuters (Oct 23): France spared Moody's downgrade",
+          "url": "https://live.euronext.com/en/financial-news/france-spared-moodys-ratings-downgrade-it-struggles-unrest"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 26 pre-open run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street calendar (Hercules; last refreshed Thu Oct 22 evening, not in the 12:40 AM run): times and forecasts",
+          "label": "Blue Street calendar (Hercules, Oct 26 pre-open run): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "title": "British Pound",
-      "teaser": "UK retail sales fell 0.4% in September, worse than the 0.1% drop expected, a day after consumer confidence had its steepest fall since 2020. The pound sat near $1.339 before the figures; a Bank of England hike in November still looks all but certain.",
-      "meaning": "The story so far: the Gulf war has pushed up energy bills, and Britain, which imports a lot of gas, has felt it more than most. UK inflation of 3.5% in September made a Bank of England hike on November 5 close to certain; the open question is a second hike in December. What changed: retail sales volumes fell 0.4% in September, against a 0.1% fall expected, as energy costs and worry about the October 28 budget held shoppers back. On Thursday evening GfK's consumer confidence index fell 11 points to −24, far below the −14 expected and its steepest drop since early 2020. What it means: shoppers are pulling back just as rates rise. That does not change November, but it weakens the case for a second hike in December, which takes some support from the pound. The question: do business surveys show the slowdown spreading?",
-      "fx": "What's next: UK flash business surveys at 3:30 AM CT today. October 28: the UK budget from Chancellor John Healey. November 5: the Bank of England's decision.",
+      "teaser": "The pound eased to about $1.337 and lost ground to the euro as investors stepped back before Wednesday's UK Budget. A much better-than-expected retail survey from the Confederation of British Industry did not help it.",
+      "meaning": "The story so far: A Bank of England rate hike on November 5 is all but priced because UK inflation is running hot, and on Friday the pound hit its strongest against the euro since May 2025. What changed: The CBI's retail sales balance improved to −10 in October from −55, far better than the −47 expected: sales are still falling, but at the slowest pace since April 2025. Even so, the pound slipped about 0.3% against the euro to near 84 pence and dipped to about $1.335 in London trade, as investors avoided big bets before Chancellor Healey presents his first Budget. What it means: The move reflects caution before a big event, not new weakness in the economy. The Budget matters because heavier borrowing could worry bond investors, while tighter spending would cool growth and the case for more Bank of England hikes. The question to keep asking: does the Budget calm or rattle UK bond markets?",
+      "fx": "What's next: No UK data left today. Coming up: the UK Budget on Wednesday, around 7:30 AM CT, then the Bank of England decision on November 5, where a hike is about 94% priced.",
       "numbers": [
-        "UK retail sales −0.4% m/m in Sep (−0.1% expected)",
-        "GfK confidence −24 (−14 expected; −13 prior)",
-        "GBP/USD ~1.339 before the release",
-        "BoE: Nov 5 hike ~90–95%; Dec second hike ~48–61%"
+        "GBP/USD ~1.3370 (flat), low ~1.3348 in London",
+        "EUR/GBP ~0.837 at the New York open (~0.840 in London), from ~0.836 Friday",
+        "CBI retail sales (Oct) −10 vs −47 expected",
+        "BoE Nov 5: hike ~94%"
       ],
       "scenarios": {
-        "base": "If the business surveys come in near forecasts, the pound holds near $1.34 with November locked in.",
-        "bull": "If the surveys surprise higher, December hike bets recover and the pound with them.",
-        "bear": "If the surveys also disappoint, December bets fade and the pound slips."
+        "base": "The pound stays quiet until the Budget on Wednesday.",
+        "bull": "A Budget that keeps borrowing in check calms gilts and lets the pound recover against the euro.",
+        "bear": "A Budget seen as loosening spending or raising borrowing pushes gilt yields up for the wrong reasons and weighs on the pound."
       },
       "sources": [
         {
-          "label": "Reuters via Global Banking & Finance (Oct 23): British retail sales fall 0.4% in September",
-          "url": "https://www.globalbankingandfinance.com/british-retail-sales-fall-0-4-september/"
-        },
-        {
-          "label": "Reuters via Investing.com (Oct 23): UK consumer confidence tumbles ahead of Healey's budget, GfK reports",
-          "url": "https://www.investing.com/news/economy-news/uk-consumer-confidence-tumbles-ahead-of-healeys-budget-gfk-reports-4967810"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 23, 12:55 AM CT run): pricing and notes",
+          "label": "Reuters (Oct 26): Strong CBI retail sales buck downbeat UK consumer trend",
+          "url": "https://www.reuters.com/markets/us/strong-cbi-retail-sales-buck-downbeat-uk-consumer-trend-2026-10-26/"
+        },
+        {
+          "label": "Reuters (Oct 26): Sterling drops against euro and dollar ahead of UK budget",
+          "url": "https://www.reuters.com/world/uk/sterling-drops-against-euro-dollar-ahead-uk-budget-2026-10-26/"
+        },
+        {
+          "label": "FXStreet (Oct 26): Euro tests 0.8400 against the pound as German business climate beats",
+          "url": "https://www.fxstreet.com/news/euro-tests-08400-against-british-pound-as-german-business-climate-beats-expectations-202610260944"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 26 pre-open run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street calendar (Hercules; last refreshed Thu Oct 22 evening, not in the 12:40 AM run): times and forecasts",
+          "label": "Blue Street calendar (Hercules, Oct 26 pre-open run): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "title": "Japanese Yen",
-      "teaser": "The yen reached its strongest in over a month, with the dollar dipping to about ¥156.3 before steadying near ¥156.9. Japan's core inflation rose to 2.1%, back above the Bank of Japan's 2% goal, and stock-market jitters kept investors seeking shelter.",
-      "meaning": "The story so far: the yen has been the weakest major currency, because Japan's rates are far below everyone else's and Japan pays heavily for imported energy. The Bank of Japan is expected to hold on October 30 and is increasingly expected to hike in December. What changed: Japan's national core inflation rose to 2.1% in September, as expected and up from 1.7%, the first reading above the 2% goal in nine months. A broader measure that also leaves out energy jumped to 2.4%. Flash business surveys showed factories cooling but services growing. Meanwhile Japan's stocks fell, and the dollar slipped to about ¥156.3 in Asian trading. What it means: price rises are spreading beyond fuel, which is what the Bank of Japan wants to see before hiking, and fear in markets adds safe-haven buying. A lasting recovery still needs the hike itself. The question: does governor Kazuo Ueda signal December next week?",
-      "fx": "What's next: no more Japanese data this week. The yen moves with stock markets and US yields into the Bank of Japan's decision on October 29–30.",
+      "teaser": "The yen weakened slightly, with the dollar up about 0.2% to near ¥157.1, as calmer markets and falling oil cut demand for safe places to park money. The Bank of Japan decides on Friday.",
+      "meaning": "The story so far: Japan imports nearly all its energy, so high oil has weighed on the yen this year; last week a global stock wobble briefly lifted it to a one-month high, with the dollar near ¥156.1. What changed: With stock futures rising and oil sliding on the Tehran peace efforts, investors had less reason to hold the yen for safety, and the dollar edged back above ¥157. Cheaper oil helps Japan's trade balance, which is good for the yen over time, but on the day the calmer mood mattered more. What it means: The yen now leans on the Bank of Japan. Japan's core inflation is back above the bank's 2% goal, and a December hike is widely expected; a clear signal of it on Friday would support the yen. The question to keep asking: does the Bank of Japan say a December hike is coming?",
+      "fx": "What's next: Coming up: Japan's services producer prices at 6:50 PM CT tonight, Tokyo consumer prices at 6:30 PM CT Wednesday, and the Bank of Japan decision on Friday, Japan time (late Thursday night CT), where a hold is expected.",
       "numbers": [
-        "USD/JPY ~156.3–156.9; yen strongest in over a month",
-        "Japan core CPI 2.1% y/y in Sep (2.1% expected; 1.7% prior); ex-food and energy 2.4%",
-        "Japan flash PMI: factories 53.3, services 52.0",
-        "BoJ: Oct 30 hold ~96%; Dec hike ~80%"
+        "USD/JPY ~157.09 (+0.2%)",
+        "Last week's dollar low ~¥156.1",
+        "BoJ Oct 30: hold ~98%; December hike ~83–88%"
       ],
       "scenarios": {
-        "base": "If stocks steady, the dollar stays near ¥156–157 into the Bank of Japan meeting.",
-        "bull": "If the stock sell-off deepens or US yields keep falling, the yen extends its gains toward ¥155.",
-        "bear": "If stocks bounce and US yields climb back above 5%, the dollar returns toward ¥158."
+        "base": "The dollar holds around ¥157 until the Fed and Bank of Japan decisions.",
+        "bull": "A Bank of Japan that clearly signals a December hike, or a fresh stock sell-off, pulls the dollar back toward ¥156.",
+        "bear": "A cautious Bank of Japan and firm US yields lift the dollar toward ¥158."
       },
       "sources": [
         {
-          "label": "Reuters (Oct 22): Japan core inflation exceeds BOJ target, cements near-term rate hike chance",
-          "url": "https://www.reuters.com/world/asia-pacific/japan-core-inflation-exceeds-boj-target-cements-near-term-rate-hike-chance-2026-10-22/"
-        },
-        {
-          "label": "FXStreet (Oct 22): Japan's national CPI climbs to 2.1% in September",
-          "url": "https://www.fxstreet.com/news/21-japans-national-cpi-climbs-in-september-202610222331"
-        },
-        {
-          "label": "InvestingLive (Oct 23): Japan flash PMI holds at 52.3 as services gain offsets factory slowdown",
-          "url": "https://investinglive.com/news/japan-flash-pmi-holds-at-52-3-as-services-gain-offsets-factory-slowdown-before-boj/"
-        },
-        {
-          "label": "Reuters (Oct 23): yen shines as AI jitters spur safe-haven rush",
-          "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 23, 12:55 AM CT run): pricing and notes",
+          "label": "FXStreet (Oct 26): Japanese yen holds near one-month top as traders await Fed and BoJ",
+          "url": "https://www.fxstreet.com/news/japanese-yen-holds-near-one-month-top-vs-weak-usd-as-traders-await-fed-boj-meetings-202610260208"
+        },
+        {
+          "label": "BNN Bloomberg (Oct 26): World market report, US futures climb ahead of Fed rate call",
+          "url": "https://www.bnnbloomberg.ca/markets/2026/10/26/world-shares-mostly-advance-after-a-decline-on-wall-street-and-oil-prices-fall-more-than-1/"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 26 pre-open run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 26 pre-open run): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "title": "Swiss Franc",
-      "teaser": "The franc held near a one-month high against the dollar, at about 0.821, as nervous markets kept demand for safe currencies. There is no Swiss data until next week.",
-      "meaning": "The story so far: the Swiss franc is a safe place to park money in a crisis, but Swiss inflation is near zero, so the Swiss National Bank holds rates at 0%. On Thursday the bank's summary of its September discussion said the franc has become popular to borrow for carry trades, and it eased its readiness to step into currency markets. What changed: the dollar slipped to about 0.82 francs in Asian trading as stock markets fell. The yen, not the franc, led the rush to safety. What it means: the bank is not fighting the franc in either direction, so global fear sets its path. The question: does Gulf fear keep building over the weekend?",
-      "fx": "What's next: no Swiss data until next week. The franc moves with war headlines and stock markets. December 10: the Swiss National Bank's next decision.",
+      "teaser": "The franc was one of the few currencies to gain against the dollar, which slipped about 0.2% to near 0.824 francs. There is no Swiss data until Wednesday.",
+      "meaning": "The story so far: The Swiss National Bank holds rates at zero with inflation near zero, so the franc moves mostly on global fear, and it held near a one-month high against the dollar last week. What changed: The dollar was weakest against the franc this morning, at about 0.824, from about 0.825 on Friday, even as calmer markets eased demand for safety elsewhere. The move is small and came with no Swiss news. What it means: With no Swiss data or central-bank news, the franc is following the dollar's dip rather than a change in Switzerland. The question to keep asking: does a calmer Middle East take away the franc's safe-haven support?",
+      "fx": "What's next: Coming up: the UBS survey of Swiss economic expectations on Wednesday at 4:00 AM CT, and the KOF economic barometer on Friday. The Swiss National Bank's next decision is December 10.",
       "numbers": [
-        "USD/CHF ~0.8199–0.8211 (−0.2%)",
-        "SNB policy rate 0%; next decision Dec 10"
+        "USD/CHF ~0.8238 (−0.2%)",
+        "SNB rate 0.00%; next decision Dec 10"
       ],
       "scenarios": {
-        "base": "If war fears stay at today's level, the franc holds near 0.82 per dollar.",
-        "bull": "If attacks spread to more Gulf oil sites, safe-haven buying lifts the franc further.",
-        "bear": "If fear fades and carry trades return, the franc softens."
+        "base": "The franc stays near its recent highs while the dollar drifts before the Fed.",
+        "bull": "A flare-up in the Middle East or a stock sell-off pushes the dollar further below 0.82 francs.",
+        "bear": "A peace deal and rising stocks cool the safe-haven demand and lift the dollar back toward 0.83."
       },
       "sources": [
         {
-          "label": "Reuters (Oct 23): yen shines as AI jitters spur safe-haven rush",
-          "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 23, 12:55 AM CT run): pricing and notes",
+          "label": "Blue Street central bank data (Hercules, Oct 26 pre-open run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 26 pre-open run): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "title": "Australian Dollar",
-      "teaser": "Australia's private sector shrank in October for the first time in five months, while business costs rose at the fastest pace since May. The Australian dollar held near 70.2 US cents as markets weighed whether that rules out a November rate hike.",
-      "meaning": "The story so far: Australia's inflation has picked up with energy prices, and Reserve Bank of Australia deputy governor Andrew Hauser said this week the outlook was materially worse, making a November hike close to an even bet. What changed: S&P Global's flash surveys showed overall activity falling to 47.7 in October, from 51.3, with services back below 50, the line between growth and shrinking. Input costs rose at the fastest pace since May. The Aussie held near 0.7016. What it means: slowing activity argues against a hike while rising costs argue for one, which leaves the November decision finely balanced. The question: does third-quarter inflation on October 28 settle it?",
-      "fx": "What's next: no major Australian data until October 28, when third-quarter consumer prices come out. November 2–3: the Reserve Bank of Australia's decision.",
+      "teaser": "The Australian dollar held near 70.3 US cents, flat on the day, as traders waited for Australia's third-quarter inflation figures on Tuesday evening, CT. Those figures will likely decide whether the central bank raises rates next week.",
+      "meaning": "The story so far: The Reserve Bank of Australia has raised rates four times this year to 4.60%, and markets see a November 3 hike as close to an even bet, which has kept the Aussie near its strongest levels of the year. What changed: Over the weekend, Reserve Bank of Australia assistant governor Sarah Hunter said the job on inflation is not done after four hikes, keeping a November hike in view. Cheaper oil today slightly eases the inflation picture but did not move the currency. What it means: The Aussie rests on the inflation figures: a hot reading makes a November hike likely and supports it; a soft one pushes the hike out and leaves it exposed. The question to keep asking: is underlying inflation still running near 1% a quarter?",
+      "fx": "What's next: Coming up: Australia's third-quarter inflation figures at 7:30 PM CT Tuesday (trimmed mean about +1.0% on the quarter expected), and the Reserve Bank of Australia decision on November 3.",
       "numbers": [
-        "AUD/USD ~0.7016 (flat)",
-        "Flash composite PMI 47.7 (51.3 prior); services 47.8",
-        "RBA: Nov 3 hike ~44–50%; Dec ~64%",
-        "RBA cash rate 4.60%"
+        "AUD/USD ~0.7034 (flat)",
+        "RBA rate 4.60%; Nov 3 hike ~50%",
+        "Q3 trimmed-mean inflation forecast ~+1.0% q/q"
       ],
       "scenarios": {
-        "base": "If stocks steady, the Australian dollar holds near 70 cents into the inflation report.",
-        "bull": "If inflation on October 28 runs hot, November hike bets rise and the Aussie climbs.",
-        "bear": "If the stock sell-off deepens or inflation cools, hike bets fade and the Aussie slips."
+        "base": "The Aussie holds near 70 cents until Tuesday night's inflation figures.",
+        "bull": "Hotter-than-expected inflation makes a November hike likely and lifts the Aussie.",
+        "bear": "Softer inflation pushes the hike out and pulls the Aussie back below 70 cents."
       },
       "sources": [
         {
-          "label": "InvestingLive (Oct 22): Australia flash PMI, private sector shrinks for first time in five months as prices rise",
-          "url": "https://investinglive.com/news/australia-flash-pmi-private-sector-shrinks-for-first-time-in-five-months-as-prices-rise/"
-        },
-        {
-          "label": "Reuters (Oct 23): yen shines as AI jitters spur safe-haven rush",
-          "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 23, 12:55 AM CT run): pricing and notes",
+          "label": "investingLive (Oct 25): RBA's Hunter says the inflation job is not done",
+          "url": "https://investinglive.com/central-banks/rba-s-hunter-says-inflation-job-not-done-after-four-hikes-november-rise-in-view/"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 26 pre-open run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 26 pre-open run): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "title": "Canadian Dollar",
-      "teaser": "The loonie firmed past 1.40 per US dollar, its strongest in about a month, helped by oil near $100 for US crude. A Bank of Canada hike next Wednesday is mostly priced; Canadian retail sales come at 7:30 AM CT.",
-      "meaning": "The story so far: high oil lifts Canada's export income but also its inflation. Bank of Canada governor Tiff Macklem said the bank's inflation forecast would be revised substantially higher on energy, and markets moved to expect a hike on October 28. What changed: US crude rose to about $100 a barrel overnight as Houthi attacks on Saudi Arabia continued, and the US dollar eased to about 1.4007 Canadian. Thursday's factory and raw material prices had already jumped far more than expected. What it means: dearer oil helps the loonie twice, through export income and by firming the hike case. Much of the October hike is already in the price, so the next move depends on whether the bank signals more. The question: does Macklem hint at further hikes?",
-      "fx": "What's next: Canadian retail sales for August at 7:30 AM CT today (about 1.3% expected after a 0.7% drop). October 28: the Bank of Canada's decision.",
+      "teaser": "The loonie held near 1.40 per US dollar even as oil fell about 6%, which usually hurts it. Markets still expect the Bank of Canada to raise rates on Wednesday, though two banks, TD Securities and Rabobank, now expect a hold.",
+      "meaning": "The story so far: The Canadian dollar rose for seven straight days last week, to its strongest in about a month, helped by high oil and bets that the Bank of Canada hikes on October 28 because energy is pushing inflation up. What changed: Oil's drop on the Tehran peace efforts took away some of that support, with US crude near $101 from about $103 on Friday, but the loonie barely moved. A Bank of Canada hike is still priced at about 75–80%. Separately, US tariff changes on some Canadian goods, signed Friday, take effect on October 30. What it means: Much of a hike is already in the loonie's price, so a hike alone may not lift it much, while a hold would be a real surprise. The question to keep asking: does Bank of Canada governor Tiff Macklem raise rates and signal more?",
+      "fx": "What's next: Coming up: the Bank of Canada decision and Monetary Policy Report at 8:45 AM CT Wednesday, with Macklem's press conference after; Canada's August GDP comes Friday at 7:30 AM CT.",
       "numbers": [
-        "USD/CAD ~1.4007 (−0.2%)",
-        "US crude ~$100 (Reuters, ~11:40 PM CT)",
-        "BoC: Oct 28 hike ~80–87%",
-        "Factory-gate prices +2.0% m/m in Sep (0.7% expected)"
+        "USD/CAD ~1.4006 (flat)",
+        "US crude (WTI) ~$101, from ~$103 Friday",
+        "BoC Oct 28: hike ~75–80% to 2.50%"
       ],
       "scenarios": {
-        "base": "If oil holds near $100 for US crude, the loonie stays near 1.40 into the Bank of Canada decision.",
-        "bull": "If retail sales rebound strongly or oil climbs further, bets on more hikes lift the loonie.",
-        "bear": "If calmer Gulf news knocks oil lower or retail sales disappoint, the loonie loses some support."
+        "base": "The loonie stays near 1.40 into Wednesday's decision.",
+        "bull": "A hike with a signal of more pushes the loonie toward 1.39 per dollar.",
+        "bear": "A hold, or a further oil slide, pushes the US dollar back toward 1.41 Canadian."
       },
       "sources": [
         {
-          "label": "Reuters via Yahoo Finance (Oct 23): oil prices rise as supply concerns linger amid Houthi attacks on Saudi Arabia",
-          "url": "https://finance.yahoo.com/energy/articles/oil-prices-rise-supply-concerns-052617190.html"
-        },
-        {
-          "label": "InvestingLive (Oct 22): Canada September producer prices +2.0% m/m",
-          "url": "https://investinglive.com/news/canada-september-ppi-2-0-m-m-vs-1-3-prior/"
-        },
-        {
-          "label": "Reuters (Oct 23): yen shines as AI jitters spur safe-haven rush",
-          "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 23, 12:55 AM CT run): pricing and notes",
+          "label": "Reuters poll via 93.3 The Drive (Oct 23): Bank of Canada to raise rates to 2.50% on October 28",
+          "url": "https://www.933thedrive.com/2026/10/23/bank-of-canada-to-raise-rates-to-2-50-on-october-28-and-once-again-by-end-march/"
+        },
+        {
+          "label": "Euronews (Oct 26): Oil plunges more than 6% from near wartime highs as diplomacy over Iran gathers pace",
+          "url": "https://www.euronews.com/2026/10/26/oil-plunges-more-than-6-from-near-wartime-highs-as-diplomacy-over-iran-seemingly-gathers"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 26 pre-open run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street calendar (Hercules; last refreshed Thu Oct 22 evening, not in the 12:40 AM run): times and forecasts",
+          "label": "Blue Street calendar (Hercules, Oct 26 pre-open run): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "title": "New Zealand Dollar",
-      "teaser": "The kiwi steadied near 56.9 US cents after Thursday's drop, as Asian stocks slipped again. A Reserve Bank of New Zealand hike on October 28 is still seen as near certain.",
-      "meaning": "The story so far: New Zealand's central bank, the RBNZ, has turned toward raising rates as energy and food push inflation above its 1–3% target band. Third-quarter inflation came in at 3.7%, a touch below forecasts but still above the band. What changed: no New Zealand news overnight. The kiwi held near 0.5685, after falling about 0.5% on Thursday when tech and war fears hit stock markets. What it means: the expected hike supports the kiwi, but it is among the first currencies sold when investors get nervous. The question: does the RBNZ signal more than one hike when it meets?",
-      "fx": "What's next: no major New Zealand data before the RBNZ's decision on October 28. Until then the kiwi moves with stock markets and the US dollar.",
+      "teaser": "The kiwi held near 57.2 US cents ahead of the Reserve Bank of New Zealand decision at 8:00 PM CT on Tuesday, where a rate hike is widely expected.",
+      "meaning": "The story so far: New Zealand's central bank is expected to raise its rate to 3.00% from 2.75% on October 28, because inflation, at 3.7%, is still above its target, and that expectation has supported the kiwi. What changed: Nothing new from New Zealand today. The kiwi firmed about 0.3% in Asian trading as the hike bets held, and lower oil eased pressure on an economy that imports its fuel. What it means: With a hike mostly priced, what the bank says about further hikes matters more than the move itself. The question to keep asking: does the bank signal more hikes beyond this one?",
+      "fx": "What's next: Coming up: the Reserve Bank of New Zealand decision at 8:00 PM CT Tuesday, then the ANZ business confidence survey at 7:00 PM CT Wednesday.",
       "numbers": [
-        "NZD/USD ~0.5685–0.5687",
-        "RBNZ: Oct 28 hike ~98% (Reuters)",
-        "RBNZ cash rate 2.75%"
+        "NZD/USD ~0.572 (+0.3%, Asian trading)",
+        "RBNZ rate 2.75%; Oct 28 hike ~85–89%",
+        "NZ inflation (Q3) 3.7% y/y"
       ],
       "scenarios": {
-        "base": "If stocks steady, the kiwi holds near 57 cents into the RBNZ decision.",
-        "bull": "If war fears ease and the RBNZ signals a run of hikes, the kiwi recovers.",
-        "bear": "If the stock sell-off deepens, the kiwi slips toward 56 cents."
+        "base": "A hike that is already priced leaves the kiwi near 57 cents.",
+        "bull": "A hike with a clear signal of more lifts the kiwi toward 58 cents.",
+        "bear": "A hold, or a hike framed as the last, sends the kiwi back toward 56 cents."
       },
       "sources": [
         {
-          "label": "Reuters (Oct 23): yen shines as AI jitters spur safe-haven rush",
-          "url": "https://za.investing.com/news/economy-news/yen-shines-as-ai-jitters-spur-safehaven-rush-4521247"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 23, 12:55 AM CT run): pricing and notes",
+          "label": "Blue Street central bank data (Hercules, Oct 26 pre-open run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 26 pre-open run): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
-      ],
-      "quiet": true
+      ]
     },
     {
       "title": "Oil",
-      "teaser": "Brent crude rose about 0.5–1% to near $114 a barrel in Asian trading, on track for a third weekly gain. Saudi Aramco ordered its Dhahran headquarters evacuated as Houthi attacks on Saudi Arabia grew, and a pipeline shutdown cut Libyan output.",
-      "meaning": "The story so far: oil has been high since the US–Iran war began in February, with Iran keeping the Strait of Hormuz, the route for about a fifth of the world's oil, largely shut. Brent jumped about 4% on Thursday after deadly Houthi drone strikes on a Saudi oil field and airport. What changed: Saudi Aramco told staff to leave its Dhahran headquarters as fighting with the Houthis intensified, a sign the rebels can now reach deeper into Saudi Arabia. In Libya, a shut pipeline valve cut output at two oil fields. Senior Israeli military sources said no strike on Iran is planned before the November 3 US midterms. Brent rose to about $114 and US crude to about $100. What it means: the threat now sits inside Saudi Arabia, the world's biggest exporter, so buyers keep paying a risk premium. That feeds inflation worries and helps oil exporters like Canada, while hurting importers like Japan and the euro area. The question: do attacks reach actual Saudi output?",
-      "fx": "What's next: any further Houthi attacks on Saudi oil sites or Red Sea shipping over the weekend, and Israel's October 27 election. The November 3 US midterms are the next big date for any US move on Iran.",
+      "teaser": "Brent crude fell about 6% to near $110 a barrel, from about $117 on Friday, as Saudi Arabia's defence minister, Pakistan's army chief and Turkey's intelligence chief went to Tehran to stop the fighting flaring again.",
+      "meaning": "The story so far: Oil has stayed high since the US–Iran war began in February, and Houthi attacks on Saudi oil sites drove Brent to a six-month high last week. What changed: The weekend passed without a US strike on Iran, Qatari mediators were in Tehran with US backing, and on Monday three regional delegations arrived to press for calm. Yemen's Houthi rebels said they hit pumping stations on Saudi Arabia's East-West pipeline, but Saudi Arabia has not confirmed it and prices kept falling. US crude fell to about $101. What it means: Some of the war premium in oil is leaving the price. That helps energy importers like Japan and the euro area, and takes some support from oil exporters like Canada. The question to keep asking: do the Tehran talks produce anything concrete, or do the attacks resume?",
+      "fx": "What's next: Coming up: any result from the Tehran talks, the American Petroleum Institute's weekly oil stocks at 3:30 PM CT Tuesday, and official US stocks figures at 9:30 AM CT Wednesday.",
       "numbers": [
-        "Brent ~$113.75–114.6 (+0.5–1%); third weekly gain in sight",
-        "US crude ~$100 (+0.7%)",
-        "Thursday: Brent +4% to $113.17, highest since May"
+        "Brent ~$110 (about −6% from Friday's ~$117 close)",
+        "WTI ~$101.08, from $103.27 Friday",
+        "No US strike over the weekend; delegations in Tehran Monday"
       ],
       "scenarios": {
-        "base": "If attacks stay near Saudi oil sites without cutting output, Brent holds near $112–115.",
-        "bull": "If an attack cuts Saudi output or shuts more Red Sea traffic, Brent climbs well above its May highs.",
-        "bear": "If the Houthi attacks pause over the weekend, Brent eases back toward $110."
+        "base": "Brent settles between $105 and $112 while the talks continue.",
+        "bull": "A confirmed hit on Saudi oil sites or a breakdown in the talks sends Brent back above $115.",
+        "bear": "A ceasefire framework pushes Brent toward $105."
       },
       "sources": [
         {
-          "label": "Reuters via Yahoo Finance (Oct 23): oil prices rise as supply concerns linger amid Houthi attacks on Saudi Arabia",
-          "url": "https://finance.yahoo.com/energy/articles/oil-prices-rise-supply-concerns-052617190.html"
-        },
-        {
-          "label": "OilPrice.com (Oct 23): Brent hits $114 as Houthi attacks threaten Saudi energy infrastructure",
-          "url": "https://oilprice.com/Latest-Energy-News/World-News/Brent-Hits-114-as-Houthi-Attacks-Threaten-Saudi-Energy-Infrastructure.html"
-        },
-        {
-          "label": "JFeed (Oct 22): IDF says no Iran strike planned before US midterms",
-          "url": "https://www.jfeed.com/news-israel/tnbomv"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Euronews (Oct 26): Oil plunges more than 6% from near wartime highs as diplomacy over Iran gathers pace",
+          "url": "https://www.euronews.com/2026/10/26/oil-plunges-more-than-6-from-near-wartime-highs-as-diplomacy-over-iran-seemingly-gathers"
+        },
+        {
+          "label": "AP via WSB-TV (Oct 26): Delegations meeting in Tehran with region on edge",
+          "url": "https://www.wsbtv.com/news/world/delegations-meeting/7R6BOJYTHQ2K5O3AATDQETAJMA/"
+        },
+        {
+          "label": "Reuters via Business Recorder (Oct 26): Oil drops from near six-month highs on hopes Iran war hostilities ease",
+          "url": "https://www.brecorder.com/news/40445943/oil-drops-from-near-six-month-highs-on-hopes-iran-war-hostilities-to-ease"
+        },
+        {
+          "label": "Reuters via TimesLIVE (Oct 26): Houthis say they attacked East-West oil pumping stations",
+          "url": "https://www.timeslive.co.za/news/world/2026-10-26-houthis-say-they-attacked-east-west-oil-pumping-stations/"
         }
       ]
     },
     {
       "title": "Gold",
-      "teaser": "Gold slipped to about $4,020 an ounce in Asian trading, its lowest in about two months, extending a five-day slide. Dearer oil keeps alive the chance of more US rate hikes, and gold pays no interest.",
-      "meaning": "The story so far: gold ran to records this year on war fears and central-bank buying, but it has slid for a week as markets priced a December Federal Reserve hike, since gold pays no interest. What changed: gold fell to about $4,020, below a level near $4,065 that Societe Generale strategists had seen as a floor; they now see room toward the June low near $3,950. It fell even as US yields dropped and Gulf attacks grew. What it means: gold is trading on rate expectations and on selling to cover losses elsewhere, not on war fear. Hedge funds were still strongly betting on gold in the latest US futures data, though trimming. The question: what breaks the slide, a lasting fall in rate-hike bets or a real hit to Gulf supply?",
-      "fx": "What's next: US business surveys at 8:45 AM CT and the University of Michigan's inflation expectations at 9:00 AM CT. New US futures positioning data come Friday afternoon.",
+      "teaser": "Gold held just above $4,000 an ounce, up about 0.3%, after falling last week to its lowest in about three months. A slightly weaker dollar helped, but expectations of a December US rate hike keep the bounce small.",
+      "meaning": "The story so far: Gold fell nearly 4% last week as high oil raised fears of more inflation and more US rate hikes; gold pays no interest, so it suffers when rates rise. What changed: Falling oil and a slightly softer dollar let gold steady near $4,008. The calmer mood around Iran cut demand for safe assets, which limited the bounce. What it means: Cheaper oil eases the rate-hike pressure that hurt gold last week, which helps it; calmer geopolitics take away some of the safety demand, which hurts it. The question to keep asking: what does the Federal Reserve signal about December on Wednesday?",
+      "fx": "What's next: Coming up: US consumer confidence at 9:00 AM CT Tuesday, then the Fed decision at 1:00 PM CT Wednesday.",
       "numbers": [
-        "Gold ~$4,020 (Thursday ~$4,045); lowest in about two months",
-        "SocGen: next support near $3,950 (June low)",
-        "CFTC Oct 13: hedge funds strongly for gold, trimming"
+        "Gold ~$4,008 (+0.3%)",
+        "Last week: about −4%, low near $3,975–3,990",
+        "Fed December hike priced >80%"
       ],
       "scenarios": {
-        "base": "If yields stay near 5% and the Gulf stays tense but contained, gold steadies near $4,000.",
-        "bull": "If US yields keep falling or attacks hit Gulf supply, gold rebounds.",
-        "bear": "If today's US data firm the December Fed hike, gold extends its slide toward $3,950."
+        "base": "Gold holds around $4,000 into Wednesday's Fed decision.",
+        "bull": "A Fed that sounds less sure about a December hike lifts gold back toward $4,100.",
+        "bear": "A firm signal of a December hike pushes gold back below $4,000."
       },
       "sources": [
         {
-          "label": "FXStreet (Oct 22, 11:35 PM UTC): gold falls to two-month low below $4,050 as oil spikes",
-          "url": "https://www.fxstreet.com/news/gold-falls-to-two-month-low-below-4-050-as-oil-spikes-202610222335"
-        },
-        {
-          "label": "CFTC Disaggregated (futures only) (report date Oct 13)",
-          "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 23, 12:55 AM CT run; quotes ~12:40 AM CT)",
+          "label": "Blue Street market levels (Hercules, Oct 26 pre-open run, quotes ~7:36 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "FXStreet (Oct 26): Gold consolidates near $4,000 ahead of Fed decision",
+          "url": "https://www.fxstreet.com/news/gold-consolidates-near-4-000-as-recovery-remains-fragile-ahead-of-fed-decision-202610261105"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 26 pre-open run): pricing and notes",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         }
       ]
     }
   ],
   "calls": [
     {
-      "date": "2026-10-23",
+      "date": "2026-10-26",
       "status": "pending",
-      "text": "Brent near $114 after Aramco cleared its Dhahran headquarters: a Houthi hit that cuts Saudi output lifts Brent past its May highs and supports the loonie; a quiet weekend lets it ease toward $110"
+      "text": "Brent near $110 on the Tehran peace efforts: a confirmed attack on Saudi oil sites or a breakdown in talks sends it back above $115 by the close; no news lets it hold between $105 and $112"
+    },
+    {
+      "date": "2026-10-26",
+      "status": "pending",
+      "text": "Dollar index near 101.7 with no major US data left today: if oil keeps falling, it slips toward 101.5 by the close; an oil rebound lifts it back toward 101.8"
+    },
+    {
+      "date": "2026-10-26",
+      "status": "pending",
+      "text": "Pound near $1.337 before Wednesday's UK Budget: with no UK data, it stays between $1.333 and $1.341 by the close; a Budget leak on borrowing moves it out of that range"
     },
     {
       "date": "2026-10-23",
-      "status": "pending",
-      "text": "Canada retail sales Fri 7:30 AM CT (about +1.3% expected for August): a strong rebound lifts bets on Bank of Canada hikes beyond October 28; a miss keeps it to one"
+      "status": "mixed",
+      "text": "Brent near $114 after Aramco cleared its Dhahran headquarters: a Houthi hit that cuts Saudi output lifts Brent past its May highs and supports the loonie; a quiet weekend lets it ease toward $110",
+      "resolved": "2026-10-26",
+      "note": "Both happened in turn: Houthi attacks lifted Brent to about $117 on Friday without a confirmed cut to Saudi output, then a quiet weekend and talks in Tehran took it to about $110 by Monday."
+    },
+    {
+      "date": "2026-10-23",
+      "status": "mixed",
+      "text": "Canada retail sales Fri 7:30 AM CT (about +1.3% expected for August): a strong rebound lifts bets on Bank of Canada hikes beyond October 28; a miss keeps it to one",
+      "resolved": "2026-10-26",
+      "note": "Sales rose 1.2%, a touch under the 1.3% expected, so neither a strong beat nor a miss; Bank of Canada hike pricing for October 28 stayed near 75–80%."
     },
     {
       "date": "2026-10-22",
@@ -406,13 +429,17 @@
     },
     {
       "date": "2026-10-22",
-      "status": "pending",
-      "text": "Euro-area flash business surveys Fri 3:00 AM CT (manufacturing ~52.7, services ~52.6 expected), hours before Moody's on France: misses keep the euro near $1.12; beats firm December ECB hike bets and lift it"
+      "status": "confirmed",
+      "text": "Euro-area flash business surveys Fri 3:00 AM CT (manufacturing ~52.7, services ~52.6 expected), hours before Moody's on France: misses keep the euro near $1.12; beats firm December ECB hike bets and lift it",
+      "resolved": "2026-10-26",
+      "note": "The surveys missed (euro-area composite 51.9, France back in contraction at 48.4), and the euro stayed near $1.12."
     },
     {
       "date": "2026-10-22",
-      "status": "pending",
-      "text": "US flash PMIs Fri 8:45 AM CT (services ~58.0 expected) and Michigan inflation expectations 9:00 AM CT: firm readings lift yields back toward 5% and steady the dollar; soft ones extend the bond rally"
+      "status": "confirmed",
+      "text": "US flash PMIs Fri 8:45 AM CT (services ~58.0 expected) and Michigan inflation expectations 9:00 AM CT: firm readings lift yields back toward 5% and steady the dollar; soft ones extend the bond rally",
+      "resolved": "2026-10-26",
+      "note": "The surveys were firm on prices and the Michigan inflation outlook ticked up; the 10-year yield rose back to about 5.00% and the dollar index firmed to about 101.8 on Friday."
     },
     {
       "date": "2026-10-22",
@@ -430,9 +457,10 @@
     },
     {
       "date": "2026-10-22",
-      "status": "pending",
+      "status": "mixed",
       "text": "UK retail sales Fri 1:00 AM CT (−0.2% expected): a strong print lifts December hike bets and the pound; a weak one trims both",
-      "note": "Oct 23: the weak branch printed, −0.4% vs −0.1% expected (Reuters poll). The pound's reaction and December pricing are checked at the New York open."
+      "note": "Sales fell 0.4%, worse than expected, yet the pound reached its strongest against the euro since May 2025 on Friday as a November Bank of England hike stayed near certain.",
+      "resolved": "2026-10-26"
     },
     {
       "date": "2026-10-21",
@@ -443,8 +471,10 @@
     },
     {
       "date": "2026-10-21",
-      "status": "pending",
-      "text": "Moody's review of France Fri: a downgrade widens France's gap over German yields and weighs on the euro; holding the rating eases the pressure"
+      "status": "confirmed",
+      "text": "Moody's review of France Fri: a downgrade widens France's gap over German yields and weighs on the euro; holding the rating eases the pressure",
+      "resolved": "2026-10-26",
+      "note": "Moody's held France at Aa3; French yields eased on Monday and the euro led the majors in the European morning."
     },
     {
       "date": "2026-10-21",
