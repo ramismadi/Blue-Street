@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T07:36:00-05:00",
+  "updated": "2026-10-26T15:00:00-05:00",
   "events": [
     {
       "id": "rba-minutes-20261013",
@@ -2953,6 +2953,32 @@
         {
           "label": "FRED series CFNAI / CFNAIMA3 (Federal Reserve Bank of Chicago data, last updated 2026-10-26 07:35 CT)",
           "url": "https://fred.stlouisfed.org/series/CFNAI"
+        }
+      ]
+    },
+    {
+      "id": "us-dallas-fed-20261026",
+      "ts": "2026-10-26T14:30:00Z",
+      "ccy": "USD",
+      "impact": "low",
+      "category": "growth",
+      "title": "Dallas Fed manufacturing index (Oct)",
+      "actual": "13.4 (vs 7.0 fcst, Sep 9.8) — production 15.8 (vs 29.8 Sep); new orders 9.3 (vs 30.7 Sep); prices paid 55.3 (vs 52.2); future index 38.1 (vs 20.8)",
+      "forecast": "7.0",
+      "previous": "9.8",
+      "better": "higher",
+      "why": "Texas factory read into FOMC week — headline beat, but the internals split: new orders collapsed while the six-month outlook jumped.",
+      "if_beat": "Above 7: Texas expansion intact into the FOMC — mild USD support.",
+      "if_miss": "Below 7: factory softening — another growth wobble into the decision.",
+      "outcome": "Beat: 13.4 vs 7.0 fcst (Sep 9.8) — but new orders fell to 9.3 from 30.7 while prices paid rose to 55.3; the dollar firmed into the NY close anyway on the oil/geopolitics bid, not the survey alone.",
+      "sources": [
+        {
+          "label": "Dallas Fed via Dow Jones/Morningstar: Texas factory business activity climbed in October",
+          "url": "https://www.morningstar.com/news/dow-jones/202610265213/texas-factory-business-activity-climbed-in-october"
+        },
+        {
+          "label": "Seeking Alpha: Dallas Fed manufacturing index unexpectedly rises in October",
+          "url": "https://seekingalpha.com/news/4657200-dallas-fed-manufacturing-index-unexpectedly-rises-in-october"
         }
       ]
     },

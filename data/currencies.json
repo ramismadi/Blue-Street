@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-26T07:36:00-05:00",
-  "updated": "2026-10-26T07:36:00-05:00",
+  "as_of": "2026-10-26T15:00:00-05:00",
+  "updated": "2026-10-26T15:00:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "NY-open read, Monday 2026-10-26. NY-open: DXY 101.67, EUR/USD 1.1196, GBP/USD 1.3370, USD/JPY 157.09, AUD/USD 0.7034; Brent $110.00, WTI $101.08 off Asia lows on the Qatari-mediation report; 10Y 4.97%. Morning prints: German Ifo 90.2 beat (6th straight rise), CBI -10 big beat (sterling eased anyway pre-Budget). Ahead: Dallas Fed 9:30 AM CT; RBNZ Tue 8pm CT; triple-decision Wednesday (BoC 8:45am CT, FOMC 1pm CT), UK Budget Wed, US GDP+PCE + ECB Thu, BoJ + EZ GDP/CPI Fri.",
+  "note": "NY-close read, Monday 2026-10-26. Close: DXY 102.00 (+0.20% vs Friday), EUR/USD 1.1178 (-0.20%), GBP/USD 1.3346 (-0.20%), USD/JPY 157.50 (+0.40%), AUD/USD 0.7019 (-0.30%). Brent $115.81, WTI $101.76 — oil eased (Brent -0.8%, WTI -1.5%) on Qatari mediation in Tehran, premium intact. 10Y 4.98%. Day's prints: German Ifo 90.2 beat, CBI -10 big beat, CFNAI +0.07 beat, Dallas Fed 13.4 beat (new orders collapsed). Ahead: RBNZ Tue 8pm CT; triple-decision Wednesday (BoC 8:45am CT, FOMC 1pm CT, UK Budget); US GDP+PCE + ECB Thu; BoJ + EZ GDP/CPI Fri.",
   "pairs": {},
   "currencies": [
     {
@@ -10,7 +10,7 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY 101.67 (NY-open, -0.1% vs Friday close) — eased as Brent fell to ~$110 and 10Y held 4.97%; Friday had firmed with the yield bounce (10Y 5.00%, 2Y 4.69%); ING says the dollar has 'lost its safe-haven status' (AI-crisis vulnerability) though it expects September gains to hold into the FOMC. Oct 27-28 a hold at ~91-93%; December hike >80%; blackout holds.",
+      "summary": "DXY 102.00 (NY close, +0.20% vs Friday) — firmed into the close as the oil pullback faded and 2Y held above 4.70%; Dallas Fed 13.4 beat the headline (new orders collapsed to 9.3) and CFNAI +0.07 beat, but neither drove the dollar — the geopolitics/yield bid did. Oct 27-28 a hold at ~91-93%; December hike >80%; blackout holds.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -47,7 +47,7 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD 1.1196 (NY-open) — Ifo 90.2 beat (6th straight rise, expectations best in 4.5+ years) after Moody's France repricing: Aa3 affirmed, neg outlook, after Friday's close. October flash PMIs all missed (EZ comp 51.9, France 48.4 back in contraction). ECB Thursday: hold ~93-97%, presser all about OATs/TPI.",
+      "summary": "EUR/USD 1.1178 (NY close, -0.20%) — eased despite the Ifo 90.2 beat (6th straight rise); the dollar's afternoon firming and the oil premium did the damage, not the data. ECB Thu a hold at ~93-97%; France revenue vote Tuesday, OAT-Bund ~170-177bp.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD 1.3370 (NY-open) — CBI -10 big beat (slowest retail fall since Apr 2025) but sterling eased on pre-Budget positioning; sterling near a 17-month high vs the euro (EUR/GBP 0.8374 NY-open). Healey's first Budget Wednesday (CGT rise off the table, bank tax coming; headroom £23.6B→~£15B); Nov-5 BoE hike ~94%.",
+      "summary": "GBP/USD 1.3346 (NY close, -0.20%) — slipped even after the CBI -10 big beat; pre-Budget positioning won over the data. Healey's first Budget Wednesday; BoE Nov 5 hike ~94% priced.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY ~156.92 (Monday Asia, steady vs Friday) — off the 156.08 one-month low; closed the week near 157 as the haven bid faded. Sep core CPI 2.1% (first above 2% in nine months) cements December (~83-88%); BoJ Friday a hold; Tokyo CPI Thursday the preview.",
+      "summary": "USD/JPY 157.50 (NY close, +0.40%) — rose with 2Y back above 4.70% and the haven bid fading; yen strength into the central-bank week capped it below the morning's range top. BoJ Fri a hold; December hike ~83-88%; Tokyo CPI Thu.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF ~0.8252 — haven bid faded as equities steadied; SNB December pricing conflicted (~50-50 LSEG vs ~82% no-change investinglive).",
+      "summary": "USD/CHF 0.8275 (NY close, +0.30%) — haven bid faded further as equities steadied and oil eased; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
       "drivers": {
         "policy": {
           "score": 0,
@@ -195,7 +195,7 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD ~0.7030 (Monday Asia, flat vs Friday) — closed above each of the prior ten closes on the hike repricing; Q3 CPI Wednesday the pivot (trimmed +1.0% q/q consensus; Hauser: 'materially worse'; GS tips a November hike; ~50/50 Nov, ~64% Dec). Flash PMIs a big miss (comp 47.7, first contraction in 5 months).",
+      "summary": "AUD/USD 0.7019 (NY close, -0.30%) — eased with the firmer dollar into the close; Q3 CPI Wednesday is the pivot (trimmed +1.0% q/q consensus; Hauser: 'materially worse'; ~50/50 Nov hike, ~64% Dec).",
       "drivers": {
         "policy": {
           "score": 1,
@@ -232,7 +232,7 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD ~1.4003 (flat Friday) — seventh straight daily loonie gain; dipped to 1.39684 intraday before closing back above 1.40. BoC Wednesday: hike ~75-80% (TD dissents); WSJ/Reuters tariff-removal story unconfirmed (White House: speculation). WTI ~$102.08 Monday Asia (from $103.27 Friday close).",
+      "summary": "USD/CAD 1.4019 (NY close, +0.10%) — loonie gave back a little as WTI eased to ~$101.76; BoC Wednesday: hike ~75-80% (TD dissents).",
       "drivers": {
         "policy": {
           "score": 1,
@@ -269,7 +269,7 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD ~0.5720 (Monday Asia, +0.3% vs Friday) — near 0.57 on the RBNZ repricing: Oct-28 hike ~85-89% (Bloomberg 85%, finimize 89%; investinglive 99% — the spread is the story); terminal 3.25-3.50% (ING). Decision lands 8pm CT Tuesday.",
+      "summary": "NZD/USD 0.5683 (NY close, -0.30%) — decision lands 8pm CT Tuesday: hike ~85-89% to 3.00% priced, terminal 3.25-3.50% (ING).",
       "drivers": {
         "policy": {
           "score": 1,
