@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T13:59:43Z",
+  "updated": "2026-10-26T14:49:29Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -43,14 +43,14 @@
       "ts": "2026-10-26T13:59:43Z"
     },
     "XAU": {
-      "lean": "bearish",
-      "text": "Gold is back just above $4,000 after its worst week in months, when it fell to its lowest since August. Markets expect a US rate hike in December and gold pays no interest; Wednesday's Federal Reserve decision is the next big test.",
-      "ts": "2026-10-26T11:48:24Z"
+      "lean": "mixed",
+      "text": "Gold is back a little above $4,000 after its worst week in months. A likely US rate hike in December weighs on it, since gold pays no interest, while reports that the US is ready for bigger strikes on Iran keep some shelter demand; Wednesday's Federal Reserve decision matters most next.",
+      "ts": "2026-10-26T14:49:29Z"
     },
     "OIL": {
       "lean": "bearish",
-      "text": "Brent oil dropped to about $110 on Monday, from about $117 on Friday, as Qatari mediators and Saudi, Pakistani and Turkish officials met Iran's leaders to head off new US strikes. The risk has not gone: President Trump says it is nearly time to choose between a deal and more attacks, and Yemen's Houthi rebels keep firing at Saudi oil sites.",
-      "ts": "2026-10-26T13:59:43Z"
+      "text": "Brent oil dropped to about $115 on Monday, from about $117 on Friday, as Qatari mediators and Saudi, Pakistani and Turkish officials met Iran's leaders to head off new US strikes. The risk has not gone: US officials say forces are ready to hit Iran, including its energy sites, within days of an order from President Trump, and Yemen's Houthi rebels keep firing at Saudi oil sites.",
+      "ts": "2026-10-26T14:49:29Z"
     }
   },
   "items": [
@@ -379,6 +379,51 @@
       "watch": "Any result from the talks in Tehran, or a firm date for strikes; Israel's election on Tuesday, October 27, could also change the picture."
     },
     {
+      "id": "cnn-iran-strike-plans-96h-20261026",
+      "ts": "2026-10-26T04:00:15Z",
+      "source": "CNN (via KTEN)",
+      "url": "https://www.kten.com/news/politics/us-has-plans-for-major-iran-strikes-if-trump-chooses/article_8e8f5665-f78e-52ea-830b-25a7f77d7bc0.html",
+      "image": null,
+      "headline": "US has plans for major Iran strikes if Trump chooses",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Two US officials told CNN that American forces in the Middle East could start large new attacks on Iran within four days of an order from President Donald Trump. No decision has been made; officials see the weeks after the November 3 US elections as the most likely window.",
+      "beats": {
+        "was": "The US and Iran fought earlier this year, then Trump halted full combat; since then the US has made only small strikes on radars and missile launchers, and blocks Iran's ports near the Strait of Hormuz. Gulf mediators are now in Tehran trying to head off a new round.",
+        "happened": "CNN reports enough US forces are already in place for a much bigger campaign, with a target list that includes Iran's energy sites, military bases and nuclear facilities. The US embassy in Riyadh has ordered non-essential staff out, and US intelligence expects Iran and Yemen's Houthi rebels to hit back fast if attacked.",
+        "means": "The threat behind Trump's 'deal or force' choice is concrete, not just talk. Officials note he has stepped back at the last minute before, so this raises the odds of new fighting without making it certain.",
+        "fx": "Possible strikes on Iran's energy sites → risk to Gulf oil supply → upward pressure on oil and some demand for safe currencies. Oil still fell on Monday, so markets are giving the talks more weight for now."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Energy sites are on the reported target list, but oil fell on the talks."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Mild shelter demand if strikes look closer."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Mild shelter demand if strikes look closer."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Gold edged up to about $4,025 as war risk lingers."
+        }
+      ],
+      "watch": "Whether the talks in Tehran produce anything before the US elections on November 3, and any further drawdown of US embassy staff in the Gulf."
+    },
+    {
       "id": "brecorder-fx-cb-week-20261026",
       "ts": "2026-10-26T03:02:00Z",
       "source": "Reuters (via Business Recorder)",
@@ -698,33 +743,6 @@
         }
       ],
       "watch": "Whether the UAE names the tanker or a cause for the spill, and whether any attack actually stops Saudi oil leaving port."
-    },
-    {
-      "id": "investinglive-umich-final-oct-20261023",
-      "ts": "2026-10-23T14:03:25Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/umich-final-october-final-consumer-sentiment-48-0-vs-46-3-expected/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/US%20consumer%20spending%20retail%20sales_id_49dd8701-e6ae-4a0c-a532-9aff2658e6da_original-featured-1792764204.jpg?width=960&format=webp",
-      "headline": "US consumer mood revised up to 48.0 in October, still near record lows",
-      "summary": "The University of Michigan's final October survey shows Americans a bit less gloomy than first estimated, but still among the most downbeat on record. They expect prices to keep rising fast.",
-      "beats": {
-        "was": "US consumer confidence fell to a record low in May after the war with Iran sent fuel prices soaring, and has stayed weak since. The Fed watches the survey's inflation expectations closely.",
-        "happened": "The University of Michigan's final consumer sentiment reading for October came in at 48.0, above the 46.3 first estimate. Views of current conditions worsened, while hopes for the months ahead improved. Households expect prices to rise 4.7% over the next year and 3.5% a year over five to ten years.",
-        "means": "Americans feel squeezed by living costs ahead of the November 3 midterm elections, but this has not yet shown up as a collapse in spending. High price expectations are the part that worries the Fed.",
-        "fx": "Gloomy but not collapsing, with high price expectations → little change to Fed hike bets → small effect on the dollar."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Weak mood is a drag, but sticky inflation expectations keep the Fed alert; markets barely moved."
-        }
-      ],
-      "pillar": "growth",
-      "watch": "The Conference Board's consumer confidence survey on October 27, the day before the Fed decision.",
-      "story": "fed-oct28",
-      "story_title": "Federal Reserve: hold on October 28, hike in December?"
     },
     {
       "id": "euronext-moodys-france-hold-20261023",
