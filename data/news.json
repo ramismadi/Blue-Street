@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T14:49:29Z",
+  "updated": "2026-10-26T16:48:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -54,6 +54,33 @@
     }
   },
   "items": [
+    {
+      "id": "benzinga-cfnai-sep-20261026",
+      "ts": "2026-10-26T16:21:00Z",
+      "source": "Benzinga",
+      "url": "https://www.benzinga.com/markets/market-summary/26/10/62596462/crude-oil-edges-lower-chicago-fed-activity-index-rises-in-september",
+      "image": null,
+      "headline": "Crude Oil Edges Lower; Chicago Fed Activity Index Rises In September",
+      "story": "fed-oct28",
+      "story_title": "Fed week: the October 28 decision and December hike bets",
+      "pillar": "growth",
+      "summary": "A broad Chicago Fed gauge of the US economy turned slightly positive in September, meaning growth ran just above its normal pace. It is a minor report and the dollar barely moved.",
+      "beats": {
+        "was": "The Chicago Fed National Activity Index blends 85 US figures on output, jobs, spending and housing into one number. Zero means the economy is growing at its long-run average pace; it was slightly below zero in August.",
+        "happened": "The index rose to +0.07 for September from -0.08 in August, published Monday by the Federal Reserve Bank of Chicago.",
+        "means": "The US economy was holding up into the autumn, not speeding up. That fits a Federal Reserve that still sees room to raise rates in December, but it changes little before Wednesday's decision.",
+        "fx": "Steady US growth → no reason for the Fed to soften → a small, quiet support for the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Growth ran slightly above normal in September; a minor report that moved little."
+        }
+      ],
+      "watch": "Thursday's first estimate of US growth for July to September, a much bigger report."
+    },
     {
       "id": "investinglive-kickstart-dollar-20261026",
       "ts": "2026-10-26T12:20:31Z",
@@ -704,45 +731,6 @@
         }
       ],
       "watch": "Whether Brent holds above $115 into Friday's close, and whether any attack actually cuts Saudi or Gulf exports."
-    },
-    {
-      "id": "reuters-brent-115-uae-spill-20261023",
-      "ts": "2026-10-23T16:26:16Z",
-      "source": "Reuters (via CNBC Africa)",
-      "url": "https://www.cnbcafrica.com/2026/brent-crude-hits-more-than-five-month-high-on-houthi-saudi-attacks-uae-oil-spill",
-      "image": "https://cdn.cnbc.africa/wp-content/uploads/2026/10/LY5RJV25ZVIRFE2MFSGGJB67P4.jpg",
-      "headline": "Brent oil tops $115, its highest since early May, on Houthi attacks in Saudi Arabia and a tanker spill off the UAE",
-      "story": "saudi-houthi",
-      "story_title": "Saudi Arabia: Houthi attacks on oil and airports",
-      "pillar": "tot",
-      "summary": "Brent oil rose about 1.5% to near $115 on Friday, its highest since May 4, as fighting in Saudi Arabia went on and the UAE reported oil leaking from a tanker off its coast.",
-      "beats": {
-        "was": "Yemen's Houthi rebels, allied with Iran, have been attacking Saudi Arabia, the world's biggest oil exporter, since moving toward the Red Sea's Bab el-Mandeb strait last month. On Thursday Saudi Aramco, the state oil company, cleared its Dhahran headquarters.",
-        "happened": "Brent touched $115.16 a barrel and is heading for a third weekly rise of about 4%. US crude rose to about $101. The UAE's environment ministry reported an oil spill from an unnamed tanker off Umm Al Quwain without giving a cause, and a shut pipeline valve in Libya is cutting output there. A UBS analyst said high shipping costs and uneven oil flows have left the market short of supply.",
-        "means": "Each new incident adds to the worry that the Gulf's oil can't move freely, so prices keep climbing even without a confirmed cut to Saudi exports.",
-        "fx": "Dearer oil → more income for Canada, higher import bills for Japan and the euro area → helps the loonie, weighs on the yen and euro."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A new five-month high, but driven by the same Saudi fighting that is already in the price."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Canada earns more when oil is dear."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys nearly all its oil abroad, so a dearer barrel costs it more."
-        }
-      ],
-      "watch": "Whether the UAE names the tanker or a cause for the spill, and whether any attack actually stops Saudi oil leaving port."
     },
     {
       "id": "euronext-moodys-france-hold-20261023",
