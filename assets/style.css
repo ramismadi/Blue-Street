@@ -135,6 +135,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   background: linear-gradient(100deg, var(--mast-1), var(--mast-2));
   color: var(--mast-ink);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  /* On an installed phone app the status bar is see-through, so the masthead
+     reaches up behind it: one colour from the very top, no mismatched strip. */
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .mh-inner {
