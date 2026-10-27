@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T00:49:05Z",
+  "updated": "2026-10-27T02:48:31Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "bullish",
-      "text": "The Australian dollar is near 70 US cents. Inflation figures due Wednesday are expected to stay well above the Reserve Bank of Australia's forecasts, and markets give about a 70% chance of a fifth hike this year on November 3.",
-      "ts": "2026-10-26T22:49:19Z"
+      "text": "The Australian dollar is near 70 US cents. Chinese factory profits bounced in September, a small plus for Australia's exports, and Wednesday's inflation figures are expected to stay well above the Reserve Bank of Australia's target, with markets leaning toward a fifth hike this year on November 3.",
+      "ts": "2026-10-27T02:48:31Z"
     },
     "NZD": {
       "lean": "mixed",
@@ -49,11 +49,71 @@
     },
     "OIL": {
       "lean": "mixed",
-      "text": "Brent oil ended Monday near $115, down about 1%, as Saudi, Pakistani and Turkish officials met Iran's leaders and agreed to keep talking. Nothing concrete was agreed, Iran says ships in the Strait of Hormuz must follow its rules for good, and Yemen's Houthi rebels keep firing at Saudi oil sites, so supply worries have not gone.",
-      "ts": "2026-10-27T00:49:05Z"
+      "text": "Brent oil is near $115, a little lower early Tuesday, as Saudi, Pakistani and Turkish officials keep talking with Iran's leaders. Nothing concrete has been agreed, Yemen's Houthi rebels keep attacking Saudi Arabia, and October has seen a record number of attacks on ships near the Strait of Hormuz, so supply risk keeps prices high.",
+      "ts": "2026-10-27T02:48:31Z"
     }
   },
   "items": [
+    {
+      "id": "reuters-oil-eases-diplomacy-saudi-20261027",
+      "ts": "2026-10-27T00:37:11Z",
+      "source": "Reuters via Global Banking & Finance",
+      "url": "https://www.globalbankingandfinance.com/oil-eases-middle-east-diplomacy-hopes-saudi-attacks-keep/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-f5e957f6-62a6-4f5d-97b2-557cd4e5be91/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "Oil eases on Middle East diplomacy hopes, Saudi attacks keep supply worries alive",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Brent oil slipped about half a percent to near $115 early Tuesday as regional talks with Iran went on. Fresh Houthi attacks on Saudi Arabia and a record month of attacks on ships near Hormuz kept prices high.",
+      "beats": {
+        "was": "The US and Israel have been at war with Iran since February, and the Strait of Hormuz, which used to carry about a fifth of the world's energy, is still unsafe. Brent topped $117 last week, its highest since April, after attacks on tankers.",
+        "happened": "Brent fell 66 cents to about $115.15 and US crude to about $101.32 in early Asian trading. Saudi, Turkish and Pakistani officials held talks in Tehran on Monday to head off new fighting, but Yemen's Iran-backed Houthi rebels kept attacking Saudi Arabia, and a Washington research group said October has been the worst month for attacks on shipping around Hormuz since its records began in 2017.",
+        "means": "Talks are taking a little off the top of oil prices, but supply risks are still live, so oil stays far above pre-war levels. That keeps energy costs high for big importers like Japan and the euro area.",
+        "fx": "Talks → slightly lower oil → small relief for the yen and euro; continued attacks keep oil high, which helps the Canadian dollar's export income."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A small dip on talk hopes, held up by ongoing attacks on Saudi sites and shipping."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Oil stays high for Canada's exports, but the drift lower trims that support."
+        }
+      ],
+      "watch": "Whether the Tehran talks produce anything concrete, and any new attacks on tankers or Saudi oil sites."
+    },
+    {
+      "id": "investinglive-china-profits-sep-20261027",
+      "ts": "2026-10-27T01:49:19Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/china-september-industrial-profits-jump-14-4-y-y-rebounding-from-4-2-in-august/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/china-september-2026-industrial-profits-rebound-featured-1793065731.jpg?width=960&format=webp",
+      "headline": "China September industrial profits jump 14.4% y/y, rebounding from 4.2% in August",
+      "story": "china-economy",
+      "story_title": "China: how the economy is holding up",
+      "pillar": "growth",
+      "summary": "Profits at Chinese factories, mines and utilities grew 14.4% from a year earlier in September, a strong bounce from August's 4.2%. It is a small plus for countries that sell raw materials to China, Australia most of all.",
+      "beats": {
+        "was": "China is Australia's biggest customer for iron ore and other raw materials, so signs of Chinese demand matter for the Australian dollar. Profit growth at Chinese industrial firms had slowed to 4.2% in August, the weakest month since November 2025.",
+        "happened": "China's statistics office said September profits rose 14.4% on a year earlier. For January to September together, growth eased slightly to 15.5%, led by miners and makers of computers and chips.",
+        "means": "Chinese industry looks firmer than August suggested, which helps the outlook for demand for metals and energy. The lift is modest: Chinese shares are still weak, and the full-year pace is still slowing.",
+        "fx": "Firmer Chinese factory profits → steadier demand for raw materials → mild support for the Australian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Better Chinese industry is good for Australia's exports, but one month of profits rarely moves the currency much."
+        }
+      ],
+      "watch": "Wednesday's Australian inflation figures, which matter far more for the Australian dollar this week."
+    },
     {
       "id": "investinglive-boj-preview-mufg-20261026",
       "ts": "2026-10-26T22:31:51Z",
@@ -416,7 +476,7 @@
       "image": "https://images.euronews.com/articles/stories/09/96/72/93/1200x675_cmsv2_c8712ade-a164-5436-a6b8-a6ab4312ae06-9967293.jpg",
       "headline": "Oil plunges more than 6% from near wartime highs as diplomacy over Iran seemingly gathers pace",
       "story": "us-iran-talks",
-      "story_title": "US–Iran: talks or new strikes?",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
       "pillar": "tot",
       "summary": "Brent oil fell to about $110 a barrel on Monday morning, from about $117 at Friday's close, as several countries stepped up efforts to stop the US–Iran war flaring again. European shares rose.",
       "beats": {
@@ -455,7 +515,7 @@
       "image": "https://www.newarab.com/sites/default/files/styles/new_arab_overlay_medium_16_9/public/2292347603.jpeg?itok=ibmIdShI",
       "headline": "Iran, Saudi Arabia, Turkey and Pakistan agree to further talks",
       "story": "us-iran-talks",
-      "story_title": "US–Iran: talks or new strikes?",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
       "pillar": "risk",
       "summary": "Monday's meeting in Tehran between Iran and senior officials from Saudi Arabia, Turkey and Pakistan ended with a promise to keep talking about regional security. No deal or new arrangement was announced.",
       "beats": {
@@ -488,7 +548,7 @@
       "image": "https://editorial.fxsstatic.com/images/i/Discover-f-10_Medium.jpg",
       "headline": "Euro tests 0.8400 against British Pound as German business climate beats expectations",
       "story": "uk-growth",
-      "story_title": "UK: how the economy is holding up",
+      "story_title": "UK growth before the November 5 Bank of England decision",
       "pillar": "growth",
       "summary": "The pound gave back some ground to the euro on Monday, with the euro near 84 pence after a better German business survey, lower oil and calmer French bond markets.",
       "beats": {
@@ -575,7 +635,7 @@
       "image": "https://cmg-cmg-tv-10010-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FOHEEDHIASA3VDGVKBA65NMTVGU.jpg?auth=64a69b760e7f7e7776fb3dec1a665cc6344ab7a32db3202acdebd8322236db2c&width=1200&height=630&smart=true",
       "headline": "Delegations meeting in Tehran with region on edge over potential for renewed fighting",
       "story": "us-iran-talks",
-      "story_title": "US–Iran: talks or new strikes?",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
       "pillar": "risk",
       "summary": "Saudi Arabia's defence minister, Pakistan's army chief and Turkey's intelligence chief went to Tehran on Monday to try to stop fighting between Iran, Israel and the US from starting again. No result has been reported yet.",
       "beats": {
@@ -608,7 +668,7 @@
       "image": "https://www.globalbankingandfinance.com/i/cloud-c33afc99-787a-41c2-bc0a-d27ee1262a85/width=1200,height=630,quality=80,format=auto,fit=cover/",
       "headline": "UK Finance Minister Healey to Announce Cautious, Market-Minded Budget",
       "story": "uk-growth",
-      "story_title": "UK: how the economy is holding up",
+      "story_title": "UK growth before the November 5 Bank of England decision",
       "pillar": "risk",
       "summary": "Britain's finance minister, Chancellor John Healey, is expected to present a careful first budget on Wednesday, aimed at keeping bond investors calm rather than spending big. A higher tax on bank profits is the main expected tax rise.",
       "beats": {
@@ -791,7 +851,7 @@
       "image": "https://i.brecorder.com/large/2026/10/2607485146b693a.webp",
       "headline": "Oil drops from near six-month highs on hopes Iran war hostilities to ease",
       "story": "us-iran-talks",
-      "story_title": "US–Iran: talks or new strikes?",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
       "pillar": "risk",
       "summary": "Oil fell more than 1% on Monday, with Brent near $115, after Qatari mediators went to Tehran with US backing and the weekend passed without a US strike on Iran.",
       "beats": {
