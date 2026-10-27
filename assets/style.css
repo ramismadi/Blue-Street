@@ -132,7 +132,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: linear-gradient(100deg, var(--mast-1), var(--mast-2));
+  background: var(--mast-1);   /* solid, so the status bar area never fades */
   color: var(--mast-ink);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   /* On an installed phone app the status bar is see-through, so the masthead
