@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T10:52:59Z",
+  "updated": "2026-10-27T11:51:13Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -13,9 +13,9 @@
       "ts": "2026-10-27T10:52:59Z"
     },
     "GBP": {
-      "lean": "mixed",
-      "text": "The pound eased on Monday as euro-area news improved, even though British shops said sales fell at the slowest pace in about 18 months. Chancellor John Healey is expected to deliver a careful budget on Wednesday, October 28, to keep UK bond investors calm; any borrowing surprise is the pound's biggest risk before a likely Bank of England hike on November 5.",
-      "ts": "2026-10-26T18:49:34Z"
+      "lean": "bearish",
+      "text": "The pound slipped to about $1.33 on Tuesday, its lowest in nearly a week, as the dollar firmed before Wednesday's US Federal Reserve decision. Chancellor John Healey's budget the same day is expected to be careful; a borrowing surprise is the main risk before a likely Bank of England hike to 4% on November 5.",
+      "ts": "2026-10-27T11:51:13Z"
     },
     "JPY": {
       "lean": "bearish",
@@ -38,22 +38,160 @@
       "ts": "2026-10-27T02:48:31Z"
     },
     "NZD": {
-      "lean": "mixed",
-      "text": "The kiwi slipped to about 56.9 US cents on Monday as the dollar firmed. Markets see an 85% chance the Reserve Bank of New Zealand raises its rate to 3.00% on Wednesday, October 28, so its hints about further hikes will matter more than the move itself.",
-      "ts": "2026-10-26T22:49:19Z"
+      "lean": "bullish",
+      "text": "The kiwi edged back up to about 56.9 US cents on Tuesday as markets expect the Reserve Bank of New Zealand to raise its rate to 3% on Wednesday, October 28. Hints of more hikes would matter more than the move itself; a firm US dollar before the Fed limits the gain.",
+      "ts": "2026-10-27T11:51:13Z"
     },
     "XAU": {
-      "lean": "mixed",
-      "text": "Gold closed Monday near $4,013, up slightly, as falling oil eased some inflation worries. A likely US rate hike in December weighs on it, since gold pays no interest, while the unresolved Iran conflict keeps some shelter demand; Wednesday's Federal Reserve decision matters most next.",
-      "ts": "2026-10-26T22:49:19Z"
+      "lean": "bearish",
+      "text": "Gold is stuck near $4,000 after last week's 4% drop, as a firm dollar and an 82% chance of a US rate hike in December weigh on a metal that pays no interest. Wednesday's Federal Reserve decision and Thursday's inflation figure are what could change that.",
+      "ts": "2026-10-27T11:51:13Z"
     },
     "OIL": {
       "lean": "mixed",
-      "text": "Brent oil is near $115, a little lower early Tuesday, as Saudi, Pakistani and Turkish officials keep talking with Iran's leaders. Nothing concrete has been agreed, Yemen's Houthi rebels keep attacking Saudi Arabia, and October has seen a record number of attacks on ships near the Strait of Hormuz, so supply risk keeps prices high.",
-      "ts": "2026-10-27T02:48:31Z"
+      "text": "Oil prices slipped about 1% on Tuesday after Iran's Supreme Leader Mojtaba Khamenei spoke about the terms for ending the war, adding to this week's regional talks in Tehran. He offered nothing new and insisted on control of the Strait of Hormuz, which is still running well below normal, so supply risk keeps prices high.",
+      "ts": "2026-10-27T11:51:13Z"
     }
   },
   "items": [
+    {
+      "id": "aa-khamenei-war-conditions-20261027",
+      "ts": "2026-10-27T11:07:00Z",
+      "source": "Anadolu Agency (via US Muslims)",
+      "url": "https://www.usmuslims.com/irans-supreme-leader-calls-for-meeting-tehrans-conditions-to-end-war-378364h.htm",
+      "image": "https://www.usmuslims.com/d/news/0.jpg",
+      "headline": "Iran's supreme leader calls for meeting Tehran's conditions to end war",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Iran's Supreme Leader Mojtaba Khamenei said on Tuesday the war can end only if the conditions set by Iran's officials are met, and stressed keeping control of the Strait of Hormuz. Oil slipped as traders read it as Tehran talking about terms, not walking away.",
+      "beats": {
+        "was": "Iran has been at war with the US since February, and the Strait of Hormuz, which carried about a fifth of the world's energy before the war, is running at around 60% of normal flows. Saudi Arabia, Turkey and Pakistan met Iranian officials in Tehran on Monday and agreed to keep talking.",
+        "happened": "Khamenei met Mohsen Rezaei, head of Iran's Supreme National Security Council, and said Iran's terms for ending the war must be met and the current 'neither war nor peace' state brought to an end. He also stressed managing the Strait of Hormuz and closer ties with neighbours. Oil prices slipped about 1% on the day, with US crude near $101.",
+        "means": "Iran's top leader is talking about how the war ends, which supports the diplomacy of the past few days. But he set no new offer and repeated that Iran wants its own conditions met, including a say over Hormuz, so a deal is not close.",
+        "fx": "Talk of ending the war \u2192 less fear of lost supply \u2192 lower oil, a small help for oil importers like Japan and the euro area; no concession on Hormuz \u2192 the supply risk stays."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Iran's leader frames terms for ending the war, adding to the diplomacy that has pulled prices off their highs."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil trims Canada's export income."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Cheaper oil helps Japan's import bill, but calmer nerves cut demand for shelter."
+        }
+      ],
+      "watch": "Whether the US answers Iran's terms, or new attacks on ships near Hormuz or on Saudi oil sites push the talks back."
+    },
+    {
+      "id": "fxstreet-nzd-rbnz-hike-bets-20261027",
+      "ts": "2026-10-27T08:09:48Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/new-zealand-dollar-rises-on-rbnz-rate-hike-expectations-202610270809",
+      "image": "https://editorial.fxsstatic.com/images/i/NZDUSD_Medium.png",
+      "headline": "New Zealand Dollar rises on RBNZ rate hike expectations",
+      "story": "rbnz-oct28",
+      "story_title": "RBNZ: a third hike on October 28?",
+      "pillar": "policy",
+      "summary": "The New Zealand dollar edged up to about 56.9 US cents on Tuesday as markets expect the Reserve Bank of New Zealand to raise its rate to 3% on Wednesday. A firm US dollar before the Federal Reserve decision limits the gain.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand raised rates in July and September as higher oil prices pushed up inflation. It decides again on Wednesday, October 28, a few hours before the US Federal Reserve.",
+        "happened": "The kiwi recovered Monday's small loss to trade near 0.5690 in European hours. Traders expect a quarter-point hike to 3%. In the US, futures pricing shows about a 90% chance the Fed holds on Wednesday and about an 82% chance it raises rates in December.",
+        "means": "A hike is largely expected, so it would mostly confirm the kiwi's support rather than add to it. What moves the currency more is whether the bank signals more hikes, set against a Fed that is also leaning toward raising rates.",
+        "fx": "Expected hike \u2192 steady support for the kiwi; a signal of more hikes \u2192 more support; a Fed that sounds firm on December \u2192 caps the kiwi against the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Markets expect a third rate hike, to 3%, on Wednesday."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "High odds of a December Fed hike keep the dollar firm."
+        }
+      ],
+      "watch": "Whether the Reserve Bank of New Zealand hints at more hikes after Wednesday's decision."
+    },
+    {
+      "id": "reuters-gold-eases-dollar-fed-20261027",
+      "ts": "2026-10-27T07:35:00Z",
+      "source": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40446116/gold-eases-on-firmer-dollar-ahead-of-fed-decision",
+      "image": "https://i.brecorder.com/large/2026/10/140823333073fb7.webp",
+      "headline": "Gold eases on firmer dollar ahead of Fed decision",
+      "story": "gold-fed",
+      "story_title": "Gold: oil, rates and the Fed",
+      "pillar": "policy",
+      "summary": "Gold slipped to about $4,007 an ounce early Tuesday as the dollar held near a one-week high. Markets see a Federal Reserve hike in December as likely, which weighs on a metal that pays no interest.",
+      "beats": {
+        "was": "Gold fell 4% last week, its worst week in about four months, and dropped below $4,000 for the first time since mid-July. High energy prices from the Iran war have kept US inflation worries alive.",
+        "happened": "Spot gold fell 0.2% to $4,007.29 in Asian trading, and December gold futures slipped 0.5%. Futures pricing shows only about an 11% chance the Fed raises rates on Wednesday, but about an 82% chance it does so in December. The Fed's preferred inflation measure, the PCE price index, is due Thursday.",
+        "means": "With a December hike close to expected, gold is struggling to recover last week's losses. Ilya Spivak of Tastylive said a fall below $3,900 could open a much deeper drop.",
+        "fx": "Higher expected US rates + firm dollar \u2192 pressure on gold; a softer Fed message on Wednesday \u2192 relief for gold."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A firm dollar and likely December Fed hike keep gold pinned near $4,000."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Holds near a one-week high before the Fed."
+        }
+      ],
+      "watch": "What Fed Chair Kevin Warsh says about December on Wednesday, and Thursday's PCE inflation figure."
+    },
+    {
+      "id": "investing-sterling-dips-fed-budget-20261027",
+      "date": "2026-10-27",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/forex-news/sterling-today-pound-dips-on-firm-dollar-as-fed-budget-loom-4974676",
+      "image": "https://content-media.investing.com/news/LYNXMPEB2A0U6_L.jpg",
+      "headline": "Sterling today: Pound dips on firm dollar as Fed, budget loom",
+      "story": "uk-budget-oct28",
+      "story_title": "UK budget: Chancellor Healey's October 28 statement",
+      "pillar": "policy",
+      "summary": "The pound slipped to about $1.332 on Tuesday as the dollar firmed before Wednesday's US Federal Reserve decision and the UK budget. Markets expect a low-key budget from Chancellor John Healey and a Bank of England hike to 4% in November.",
+      "beats": {
+        "was": "Chancellor John Healey presents his first budget on Wednesday, October 28, the same day the US Federal Reserve decides on rates. UK borrowing costs have been sensitive this year, so the budget is being watched for how much the government plans to borrow.",
+        "happened": "The pound fell about 0.2% to $1.3317 by mid-morning in London, gaining only against the yen. Bank HSBC said investors were cutting bets against the dollar before the Fed meeting. Reports point to about \u00a320 billion of extra investment spending over five years, and markets fully expect the Bank of England to raise rates by a quarter point to 4% on November 5.",
+        "means": "The pound's dip is mostly about a firmer dollar, not bad UK news. A calm budget with no borrowing surprise would keep the expected Bank of England hike on track; a budget that spooks UK bond investors is the bigger risk for the pound.",
+        "fx": "Firm dollar before the Fed \u2192 softer pound; borrowing surprise in the budget \u2192 higher UK bond yields for the wrong reason \u2192 weaker pound."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Eases to a near one-week low as the dollar firms before the budget and the Fed."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Investors trim bets against the dollar ahead of Wednesday's Fed decision."
+        }
+      ],
+      "watch": "How much extra borrowing Chancellor Healey announces on Wednesday, October 28, and how UK bond yields react."
+    },
     {
       "id": "reuters-yen-slips-cb-week-20261027",
       "ts": "2026-10-27T03:04:08Z",
