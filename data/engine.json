@@ -1,46 +1,38 @@
 {
-  "updated": "2026-10-26T15:30:00-05:00",
+  "updated": "2026-10-27T01:40:00-05:00",
   "rows": [
     {
       "id": "policy",
       "title": "Policy",
-      "figure": "Fed Oct 28 hold ~93%, Dec hike >80%; BoC Oct 28 hike ~75–80% (TD, Rabobank: hold); RBNZ Oct 28 hike ~87%; ECB Oct 29 hold ~95%; BoJ Oct 30 hold ~98%; RBA Nov 3 ~50%; BoE Nov 5 hike ~94%; US 2Y ~4.70%",
-      "read": "Five central banks decide this week, and most still lean toward raising rates because energy keeps inflation high. Canada and New Zealand are expected to hike; the Fed, the ECB and the Bank of Japan are expected to hold, with the Fed and the Bank of Japan seen hiking in December. Investors favoured the dollar on Monday, betting the Fed keeps that December hike in view.",
+      "figure": "Fed Oct 28 hold ~93%, Dec hike >80%; BoC Oct 28 hike ~75–80% (TD, Rabobank: hold); RBNZ Oct 28 hike ~87% (tonight 8:00 PM CT); ECB Oct 29 hold ~95%; BoJ Oct 30 hold ~98%; RBA Nov 3 ~50%; BoE Nov 5 hike ~94%",
+      "read": "Five central banks decide this week, starting with New Zealand tonight, and most still lean toward raising rates because energy keeps inflation high. Canada and New Zealand are expected to hike, while the Fed, the ECB and the Bank of Japan are expected to hold. Currencies barely moved overnight as investors waited.",
       "sources": [
         {
-          "label": "Blue Street central bank data (Hercules, Oct 26): pricing and notes",
+          "label": "Blue Street central bank data (Hercules, Oct 27): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, Oct 26 close run, 3:00 PM CT New York close; indicative)",
+          "label": "Blue Street market levels (Hercules, Oct 27 London run, ~12:40 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "investingLive (Oct 26): Dollar higher as Fed, earnings and data flood loom",
-          "url": "https://investinglive.com/technical-analysis/morning-kickstart-dollar-higher-as-fed-earnings-and-data-flood-loom/"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "Germany Ifo Oct 90.2 (90.0 fc); UK CBI retail Oct −10 (−47 fc); Chicago Fed activity Sep +0.07 (−0.10 fc); Dallas Fed mfg Oct 13.4 (~7 fc), new orders 9.3 from 30.7",
-      "read": "Monday's surveys were better than feared. German firms are more hopeful, UK retailers saw sales fall far less than expected, and Texas factories reported more activity, though their new orders slowed sharply. None of it moved currencies much before a week full of central-bank decisions.",
+      "figure": "China industrial profits Sep +14.4% y/y (Aug 4.2%); South Korea Q3 GDP +1.0% q/q (0.7% fc); US durable goods Sep fc +0.6% (7:30 AM CT); US consumer confidence Oct fc 81.2 (9:00 AM CT)",
+      "read": "Asia's growth news was good: Chinese factory profits jumped and South Korea's economy beat expectations on chip exports. That helps commodity sellers like Australia a little. US spending and confidence figures today test whether the American economy is still strong enough for a December Fed hike.",
       "sources": [
         {
-          "label": "investingLive (Oct 26): Germany Ifo improves as expectations surprise higher",
-          "url": "https://investinglive.com/news/germany-ifo-business-confidence-improves-in-october-as-expectations-surprise-higher/"
+          "label": "investingLive (Oct 27): China September industrial profits +14.4% y/y",
+          "url": "https://investinglive.com/news/china-september-industrial-profits-jump-14-4-y-y-rebounding-from-4-2-in-august/"
         },
         {
-          "label": "Reuters via Global Banking & Finance Review (Oct 26): Strong CBI retail sales",
-          "url": "https://www.globalbankingandfinance.com/strong-cbi-retail-sales-buck-downbeat-uk-consumer-trend/"
+          "label": "investingLive (Oct 27): Asia-Pacific market news wrap",
+          "url": "https://investinglive.com/news/investinglive-asia-pacific-market-news-regional-stocks-mostly-rose/"
         },
         {
-          "label": "investingLive (Oct 26): Dallas Fed manufacturing index 13.4",
-          "url": "https://investinglive.com/news/us-october-dallas-fed-manufacturing-index-13-4-vs-9-8-prior/"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Oct 26 close run): times, forecasts and actuals",
+          "label": "Blue Street calendar (Hercules, Oct 27 London run): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -48,19 +40,23 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "Brent $115.81 (−0.8%); Dallas Fed prices paid 55.3 (from 52.2); Japan core CPI Sep 2.1%; UK CPI Sep 3.5%; Australia Q3 CPI Tue 7:30 PM CT",
-      "read": "Energy is still the main reason inflation runs above target in most big economies, and oil barely fell on Monday. Texas factories also said the prices they pay kept rising. Australia's inflation figures on Tuesday evening, CT, are the week's first big test.",
+      "figure": "Brent $115.15 (−0.6%); UK BRC shop prices Oct +2.1% y/y (1.6% fc); Japan services PPI Sep +3.7% (as expected); Australia Q3 CPI tonight 7:30 PM CT (trimmed ~+1.0% q/q fc)",
+      "read": "Energy is still the main reason inflation runs above target in most big economies. In Britain, shop prices are now rising at their fastest pace in about two and a half years as energy costs spread into everyday goods. Australia's inflation figures tonight are the week's first big test.",
       "sources": [
         {
-          "label": "WSJ (Oct 26), via Hercules' market levels: December Brent settled $115.81 (−0.8%), WTI $101.76 (−1.5%)",
+          "label": "Blue Street market levels (Hercules, Oct 27 London run, ~12:40 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "investingLive (Oct 26): Dallas Fed manufacturing index 13.4",
-          "url": "https://investinglive.com/news/us-october-dallas-fed-manufacturing-index-13-4-vs-9-8-prior/"
+          "label": "British Retail Consortium: Shop Price Monitor (October 2026)",
+          "url": "https://brc.org.uk/market-intelligence/publications/monitors/shop-price-monitor/2026/102026_spm/"
         },
         {
-          "label": "Blue Street calendar (Hercules, Oct 26 close run): times, forecasts and actuals",
+          "label": "Bank of Japan: Services Producer Price Index (September 2026)",
+          "url": "https://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 27 London run): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -68,19 +64,19 @@
     {
       "id": "risk",
       "title": "Risk",
-      "figure": "US stocks recover last week's losses (Oct 26); USD/JPY 157.50 (+0.4%); USD/CHF 0.8275 (+0.3%); gold ~$4,033",
-      "read": "Markets were calm: US stocks won back last week's losses and regional envoys met Iran's leaders to head off new fighting. That cut demand for safe havens, so the yen and the franc weakened. Fresh attacks or failed talks would quickly reverse that.",
+      "figure": "Nikkei 225 +1.7%; KOSPI +3.4%; USD/JPY 157.69 (+0.1%); USD/CHF 0.8275 (flat); gold ~$4,020",
+      "read": "Markets stayed calm overnight: Asian stocks mostly rose, led by chipmakers, and regional talks with Iran went on. That kept demand for safe havens low, so the yen slipped again and the franc held still. Fresh attacks or failed talks would quickly reverse that.",
       "sources": [
         {
-          "label": "AP via BNN Bloomberg (Oct 26): US stocks climb and recover last week's losses",
-          "url": "https://www.bnnbloomberg.ca/markets/2026/10/26/world-shares-mostly-advance-after-a-decline-on-wall-street-and-oil-prices-fall-more-than-1/"
+          "label": "investingLive (Oct 27): Asia-Pacific market news wrap",
+          "url": "https://investinglive.com/news/investinglive-asia-pacific-market-news-regional-stocks-mostly-rose/"
         },
         {
-          "label": "The New Arab (Oct 26): Iran, Saudi Arabia, Turkey and Pakistan agree to further talks",
-          "url": "https://www.newarab.com/news/iran-saudi-arabia-turkey-and-pakistan-agree-further-talks"
+          "label": "Investing.com (Oct 27 Asia session): Asian currencies mixed as dollar holds firm, yen retreats",
+          "url": "https://www.investing.com/news/forex-news/asian-currencies-mixed-as-dollar-holds-firm-yen-retreats-ahead-of-fed-decision-4974116"
         },
         {
-          "label": "Blue Street market levels (Hercules, Oct 26 close run, 3:00 PM CT New York close; indicative)",
+          "label": "Blue Street market levels (Hercules, Oct 27 London run, ~12:40 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -88,20 +84,20 @@
     {
       "id": "tot",
       "title": "Terms of trade",
-      "figure": "Brent $115.81 settle (−0.8%); WTI $101.76 (−1.5%); Houthi claim on Saudi East-West pipeline unconfirmed",
-      "read": "Oil eased only slightly as the talks in Tehran ended without a deal, so most of the war premium is still in the price. That keeps pressure on energy importers like Japan and the euro area and still supports Canada. The yen felt it most on Monday.",
+      "figure": "Brent $115.15 (−0.6%); WTI $100.80 (−0.9%); Houthi–Saudi exchanges continue; record month of ship attacks near Hormuz (Reuters)",
+      "read": "Oil eased only a little, so most of the war premium is still in the price. That keeps pressure on energy importers like Japan and the euro area and still supports Canada. Stronger Chinese factory profits are a small plus for Australia's raw-material exports.",
       "sources": [
         {
-          "label": "WSJ (Oct 26), via Hercules' market levels: December Brent settled $115.81 (−0.8%), WTI $101.76 (−1.5%)",
+          "label": "Blue Street market levels (Hercules, Oct 27 London run, ~12:40 AM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "The New Arab (Oct 26): Iran, Saudi Arabia, Turkey and Pakistan agree to further talks",
-          "url": "https://www.newarab.com/news/iran-saudi-arabia-turkey-and-pakistan-agree-further-talks"
+          "label": "Reuters via Global Banking & Finance Review (Oct 27): Oil eases on Middle East diplomacy hopes",
+          "url": "https://www.globalbankingandfinance.com/oil-eases-middle-east-diplomacy-hopes-saudi-attacks-keep/"
         },
         {
-          "label": "Reuters via TimesLIVE (Oct 26): Houthis say they attacked East-West oil pumping stations",
-          "url": "https://www.timeslive.co.za/news/world/2026-10-26-houthis-say-they-attacked-east-west-oil-pumping-stations/"
+          "label": "investingLive (Oct 27): China September industrial profits +14.4% y/y",
+          "url": "https://investinglive.com/news/china-september-industrial-profits-jump-14-4-y-y-rebounding-from-4-2-in-august/"
         }
       ]
     },
@@ -125,18 +121,14 @@
       "id": "fiscal",
       "title": "Fiscal",
       "figure": "Moody's held France at Aa3, negative outlook (Oct 23); French revenue-section first reading postponed; UK Budget Wed Oct 28 ~7:30 AM CT",
-      "read": "Pressure on France eased after Moody's held its rating, though the first parliamentary vote on France's budget revenues has been postponed. Britain's first Budget from Chancellor John Healey on Wednesday is the bigger test: heavier borrowing could unsettle UK bonds and the pound.",
+      "read": "Pressure on France has eased since Moody's held its rating, though the first parliamentary vote on France's budget revenues has been postponed. Britain's first Budget from Chancellor John Healey on Wednesday is the bigger test: heavier borrowing could unsettle UK bonds and the pound.",
       "sources": [
         {
-          "label": "Reuters via Investing.com (Oct 26): Five questions for the ECB",
-          "url": "https://www.investing.com/news/economy-news/ready-for-a-french-test-five-questions-for-the-ecb-4971518"
+          "label": "Blue Street central bank data (Hercules, Oct 27): pricing and notes",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Reuters via Global Banking & Finance Review (Oct 26): Healey set to deliver careful Budget",
-          "url": "https://www.globalbankingandfinance.com/mindful-markets-uks-healey-set-deliver-careful-budget/"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Oct 26 close run): times, forecasts and actuals",
+          "label": "Blue Street calendar (Hercules, Oct 27 London run): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
