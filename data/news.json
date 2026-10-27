@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-27T13:53:41Z",
+  "updated": "2026-10-27T14:49:28Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "text": "The dollar edged higher on Tuesday against the euro, yen and pound before Wednesday's US Federal Reserve decision, where a hold is expected. US factory orders rose more than forecast in September, though mostly on aircraft, so what Fed Chair Kevin Warsh says about a December hike matters most.",
-      "ts": "2026-10-27T13:53:41Z"
+      "text": "US consumer confidence jumped far more than expected in October and new home sales held up, adding to signs the economy is strong the day before Wednesday's Federal Reserve decision. A hold is expected; what Fed Chair Kevin Warsh says about a December hike is what moves the dollar.",
+      "ts": "2026-10-27T14:49:28Z"
     },
     "EUR": {
       "lean": "mixed",
@@ -44,16 +44,76 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold is stuck near $4,000 after last week's 4% drop, as a firm dollar and an 82% chance of a US rate hike in December weigh on a metal that pays no interest. Wednesday's Federal Reserve decision and Thursday's inflation figure are what could change that.",
-      "ts": "2026-10-27T11:51:13Z"
+      "text": "Gold is stuck near $4,000 after last week's 4% drop. Strong US consumer confidence on Tuesday firms up bets on a December Fed hike, which weighs on a metal that pays no interest; Wednesday's Fed decision and Thursday's inflation figure could change that.",
+      "ts": "2026-10-27T14:49:28Z"
     },
     "OIL": {
       "lean": "mixed",
-      "text": "Oil prices slipped about 1% on Tuesday after Iran's Supreme Leader Mojtaba Khamenei spoke about the terms for ending the war, adding to this week's regional talks in Tehran. He offered nothing new and insisted on control of the Strait of Hormuz, which is still running well below normal, so supply risk keeps prices high.",
-      "ts": "2026-10-27T11:51:13Z"
+      "text": "Brent oil slipped below $115 on Tuesday as Gulf neighbours keep talking peace with Iran, but flows through the Strait of Hormuz are still only about 60% of normal, so supply risk keeps prices high. Israel's close election on Tuesday adds a new swing factor: an opposition win could ease war fears.",
+      "ts": "2026-10-27T14:49:28Z"
     }
   },
   "items": [
+    {
+      "id": "prn-cb-confidence-oct-20261027",
+      "ts": "2026-10-27T14:00:00Z",
+      "source": "The Conference Board (PR Newswire)",
+      "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-increased-in-october-302920731.html",
+      "image": "https://mmx.prnewswire.com/media/MS461842/The-Conference-Board-Logo.jpg?id=OA3041776&p=facebook",
+      "headline": "US Consumer Confidence Increased in October",
+      "story": "fed-oct28",
+      "story_title": "Fed week: the October 28 decision and December hike bets",
+      "pillar": "growth",
+      "summary": "US consumer confidence jumped to 91.7 in October, far above the 81 economists expected, as people felt better about business conditions and petrol got cheaper. It is one more sign the US economy is holding up the day before the Fed decides.",
+      "beats": {
+        "was": "The US Federal Reserve decides on rates on Wednesday, October 28, and is expected to hold; markets mostly expect a hike in December. In September the Conference Board's consumer confidence index had sunk to its lowest level in years as war-driven fuel prices squeezed households.",
+        "happened": "The Conference Board, a private research group, said its index rose 7.5 points to 91.7 in October, from a September figure revised up to 84.2; economists polled by Reuters had expected about 81. Views of today's conditions and of the next six months both improved, helped by falling petrol prices. Households still expect prices to rise 5.8% over the next year and plan to spend a bit less on services and big purchases.",
+        "means": "Americans feel steadier than forecasters thought, which makes it easier for the Fed to keep talking about a December hike. High expected inflation and softer spending plans keep it from being a clean all-clear.",
+        "fx": "Confident consumers and high expected inflation → firmer case for a December Fed hike → support for the dollar; weaker spending plans → that support has a limit."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A big beat on consumer mood backs the case for a December Fed hike."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher odds of a US hike weigh on a metal that pays no interest."
+        }
+      ],
+      "watch": "What Fed Chair Kevin Warsh says about December on Wednesday, and Thursday's US inflation figure."
+    },
+    {
+      "id": "investinglive-new-home-sales-sep-20261027",
+      "ts": "2026-10-27T14:00:00Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/us-new-home-sales-for-september-0-676m-annualized-vs-0-650m-estimate/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Home%20sales%20New%20Home%20sales%20Census-featured-1793109569-featured-1793109647.jpg?width=960&format=webp",
+      "headline": "US New home sales for September 0.676M annualized vs 0.650M estimate",
+      "story": "fed-oct28",
+      "story_title": "Fed week: the October 28 decision and December hike bets",
+      "pillar": "growth",
+      "summary": "Sales of newly built US homes dipped only slightly in September, to a 676,000 yearly pace, beating the 650,000 expected. Housing is cooling slowly, not sliding.",
+      "beats": {
+        "was": "High US borrowing costs have weighed on home buying this year, and the Federal Reserve decides on rates on Wednesday, October 28, with a December hike widely expected.",
+        "happened": "The Census Bureau said new home sales ran at a 676,000 yearly pace in September, down 0.6% from August (revised to 680,000) but above forecasts of 650,000. Sales were about 5% lower than a year earlier, and the typical price rose to about $400,000.",
+        "means": "Buyers are still showing up despite high mortgage rates, so housing is not dragging the economy down fast enough to change the Fed's thinking.",
+        "fx": "Housing holding up better than forecast → no reason for the Fed to soften → mild support for the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Small beat on home sales; housing is cooling slowly, not sharply."
+        }
+      ],
+      "watch": "Whether mortgage rates climb further if the Fed signals a December hike on Wednesday."
+    },
     {
       "id": "actionforex-durables-sep-20261027",
       "ts": "2026-10-27T12:45:08Z",
@@ -563,6 +623,39 @@
         }
       ],
       "watch": "What Fed Chair Kevin Warsh says about December on Wednesday; a softer tone would undo the bounce."
+    },
+    {
+      "id": "timeslive-israel-election-markets-20261026",
+      "ts": "2026-10-26T12:11:00Z",
+      "source": "TimesLIVE (Reuters)",
+      "url": "https://www.timeslive.co.za/news/world/2026-10-26-israel-markets-eye-gains-if-netanyahu-loses-tight-election/",
+      "image": "https://www.timeslive.co.za/resizer/v2/QDP5A4AECVGTTBOPT6LM5HYRKQ.JPG?smart=true&auth=494522bce318c07cba5758448a75508b2fb6d8560f59fc366f624d46107a8e8c&width=1200&height=630",
+      "headline": "Israel markets eye gains if Netanyahu loses tight election",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Israel votes on Tuesday, October 27, in a close race between Prime Minister Benjamin Netanyahu and an opposition led by former army chief Gadi Eisenkot. Some investors think a Netanyahu loss would lower the risk of a wider war with Iran.",
+      "beats": {
+        "was": "Israel and the US have been at war with Iran, which has cut oil flows through the Strait of Hormuz and kept oil prices high; Gulf neighbours are now holding peace talks in Tehran.",
+        "happened": "Polls show neither Netanyahu's bloc nor Eisenkot's opposition alliance close to the 61 of 120 seats needed to govern, so coalition talks could drag on. Betting markets favour Eisenkot. Turnout by early afternoon was the highest on record for that hour, and results come after polls close late Tuesday Israeli time. Some analysts argue a Netanyahu win raises the chance of further escalation with Iran, while both leaders promise to keep pressure on Tehran.",
+        "means": "The vote is one more input on whether the Iran war cools or flares. A clear opposition win could take a little war risk out of oil; a Netanyahu win or a long stalemate changes little.",
+        "fx": "Opposition win → slightly less war risk → softer oil, a small drag on the Canadian dollar and a small lift for oil importers; Netanyahu win or deadlock → war risk stays priced → oil stays high."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The result could nudge Iran war risk either way; no outcome yet."
+        },
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Less war risk would ease the shelter and high-energy support the dollar has had."
+        }
+      ],
+      "watch": "Exit polls after voting ends late Tuesday Israeli time, and how long coalition talks take."
     },
     {
       "id": "tradingpedia-nzd-rbnz-pricing-20261026",
