@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '97';
+  var ASSET_VERSION = '98';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -3045,7 +3045,7 @@
       // your view — the titles say enough.
       ['edge', 'Strongest edge', '',
         function (p) { return p.gap > 0; }],
-      ['flat', 'No edge', 'Level on the board, so only your view decides it. Pairs that pay you more interest come first.',
+      ['flat', 'No edge', '',
         function (p) { return p.gap === 0; }],
       ['against', 'Against your view', '',
         function (p) { return p.gap < 0; }]
