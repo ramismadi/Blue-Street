@@ -2034,10 +2034,19 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .fchip-n { font-size: 0.66rem; font-weight: 700; color: var(--ink-3); }
 .fchip-n:empty { display: none; }
 .fchip.empty { opacity: 0.5; }
-.news-src select {
-  font: inherit; font-size: 0.8rem; font-weight: 600; padding: 6px 10px; border-radius: 10px;
-  border: 1px solid var(--line); background: var(--surface); color: var(--ink-2);
+/* Source filter (Rami, 2026-10-27): a round funnel button beside the sort.
+   The real <select> sits invisibly on top, so a tap opens the native picker. */
+.news-srcbtn {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink-2); cursor: pointer;
 }
+.news-srcbtn[hidden] { display: none; }
+.news-srcbtn svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; }
+.news-srcbtn.on { background: var(--accent-wash); border-color: var(--accent-2); color: var(--accent); }
+.news-srcbtn.on svg { fill: currentColor; }
+.news-srcbtn select { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; font-size: 16px; }
+.news-srcbtn:focus-within { outline: 2px solid var(--accent-2); outline-offset: 2px; }
 .news-read { margin-bottom: 16px; border-left: 3px solid var(--gold); }
 .nr-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
 .nr-head .kicker { margin: 0; }
@@ -2133,9 +2142,8 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .news-card.open .news-fig.fallback { justify-content: flex-start; padding-top: 22px; }
 
 /* News = Developing now (data/latest.json threads, Hercules) + Headlines. */
-.news-sec-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 0 0 12px; }
+.news-sec-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 0 0 12px; }
 .news-sec-head .section-label { margin: 0; display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2); }
-.news-sec-head .news-src { margin-left: auto; }
 .dev { margin: 6px 0 34px; }
 .dev .wire { max-width: none; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
 .dev .wire > .thread.dev-lead { grid-column: 1 / -1; }
@@ -2163,8 +2171,6 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .news-heads { margin-top: 0; }
 @media (max-width: 760px) {
   .dev .wire, .dev-earlier[open] { grid-template-columns: minmax(0, 1fr); }
-  .news-sec-head .news-src { margin-left: 0; width: 100%; }
-  .news-sec-head .news-src select { width: 100%; }
 }
 
 /* Flags beside currency codes (assets/flags/*.svg, 4:3). */
@@ -2206,7 +2212,6 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .news-impact .bias-tag { font-size: 0.74rem; padding: 3px 8px; }
 .seg[aria-pressed="true"] { background: var(--surface); box-shadow: var(--shadow); color: var(--ink); }
 .news-sort .seg { font-size: 0.78rem; padding: 5px 11px; }
-@media (max-width: 760px) { .news-sort { order: 3; } }
 
 /* Trend-line lean marks (replace the arrows and words). */
 .trend-ico { width: 16px; height: 10px; flex: none; overflow: visible; }

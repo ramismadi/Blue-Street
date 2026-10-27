@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '95';
+  var ASSET_VERSION = '96';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -3736,6 +3736,8 @@
       });
       srcSel.value = news.src;
       srcSel.parentNode.hidden = srcs.length < 2;
+      srcSel.parentNode.classList.toggle('on', !!news.src);   // lit when a source is picked
+      srcSel.parentNode.title = news.src ? 'Source: ' + news.src : 'Filter by source';
     }
 
     // The news read for the picked market.
