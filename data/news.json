@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T02:48:31Z",
+  "updated": "2026-10-27T10:52:59Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -8,9 +8,9 @@
       "ts": "2026-10-26T22:49:19Z"
     },
     "EUR": {
-      "lean": "bullish",
-      "text": "The euro led major currencies on Monday, near $1.12, as French borrowing costs fell after Moody's held France's rating and German firms grew more hopeful. The European Central Bank is expected to hold at 2.5% on Thursday, October 29, and still leans toward more hikes; stress over France's budget is the main reason it might go slower.",
-      "ts": "2026-10-26T18:49:34Z"
+      "lean": "mixed",
+      "text": "The euro slipped to about $1.1165 early Tuesday, its lowest in nearly two weeks, as worries about France's debt linger, even though German firms are growing more hopeful. The European Central Bank is expected to hold at 2.5% on Thursday, October 29; stress over France's budget is the main reason it might slow its hikes.",
+      "ts": "2026-10-27T10:52:59Z"
     },
     "GBP": {
       "lean": "mixed",
@@ -18,9 +18,9 @@
       "ts": "2026-10-26T18:49:34Z"
     },
     "JPY": {
-      "lean": "mixed",
-      "text": "The yen slipped to about 157.5 per dollar on Monday, the weakest of the majors, as shares rose and Gulf talks calmed nerves. The Bank of Japan is expected to hold on Friday, October 30, but may say its 2% inflation goal has been reached, which would point to a December hike and help the yen.",
-      "ts": "2026-10-26T22:49:19Z"
+      "lean": "bearish",
+      "text": "The yen weakened for a second day, to about 157.7 per dollar early Tuesday, as rising shares took away last week's demand for shelter. The Bank of Japan is expected to hold at 1.25% on Friday, October 30; a clear hint at a December hike, which markets see as slightly better than even, is what could lift it.",
+      "ts": "2026-10-27T10:52:59Z"
     },
     "CHF": {
       "lean": "mixed",
@@ -55,6 +55,45 @@
   },
   "items": [
     {
+      "id": "reuters-yen-slips-cb-week-20261027",
+      "ts": "2026-10-27T03:04:08Z",
+      "source": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40446087/yen-slips-ahead-of-central-bank-bonanza-dollar-firms-on-tech-rebound",
+      "image": "https://i.brecorder.com/large/2026/10/27075951f52f72a.jpg",
+      "headline": "Yen slips ahead of central bank bonanza, dollar firms on tech rebound",
+      "story": "boj-path",
+      "story_title": "BoJ: the road to the next hike",
+      "pillar": "policy",
+      "summary": "The yen weakened for a second day, to about 157.7 per dollar early Tuesday, as a rebound in US tech shares made investors less keen on safe places to park money. The euro slipped to its lowest in nearly two weeks as worries about France's finances linger.",
+      "beats": {
+        "was": "The yen was one of last week's best performers, reaching a one-month high when a slide in AI-linked shares sent investors looking for shelter. Four big central banks decide this week: the US Federal Reserve on Wednesday, the European Central Bank on Thursday and the Bank of Japan on Friday, with New Zealand and Canada expected to raise rates.",
+        "happened": "The yen fell about 0.2% to 157.73 per dollar, while the dollar index held near a one-week high around 102 after Wall Street's tech-led rebound. Japan's price index for business services rose 3.7% from a year earlier in September, as expected. The euro fell to about $1.1165, down roughly 1.4% this month, as the extra yield investors demand to hold French debt has recently been the highest since the 2011 euro debt crisis.",
+        "means": "With nerves calmer, the shelter demand that lifted the yen last week is fading. The Bank of Japan is expected to hold at 1.25% on Friday, but markets put slightly better than even odds on a December hike, so a firm message from Governor Kazuo Ueda could pull the yen back up.",
+        "fx": "Calmer markets \u2192 less demand for shelter \u2192 weaker yen; any clear hint of a December Bank of Japan hike would push the other way. France worries \u2192 softer euro."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Shelter demand fades as shares rebound, ahead of a Bank of Japan meeting expected to hold."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Near a two-week low as concerns about France's debt linger."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Holds near a one-week high on a better mood in US shares."
+        }
+      ],
+      "watch": "What Bank of Japan Governor Kazuo Ueda says on Friday, October 30, about a December hike."
+    },
+    {
       "id": "reuters-oil-eases-diplomacy-saudi-20261027",
       "ts": "2026-10-27T00:37:11Z",
       "source": "Reuters via Global Banking & Finance",
@@ -69,7 +108,7 @@
         "was": "The US and Israel have been at war with Iran since February, and the Strait of Hormuz, which used to carry about a fifth of the world's energy, is still unsafe. Brent topped $117 last week, its highest since April, after attacks on tankers.",
         "happened": "Brent fell 66 cents to about $115.15 and US crude to about $101.32 in early Asian trading. Saudi, Turkish and Pakistani officials held talks in Tehran on Monday to head off new fighting, but Yemen's Iran-backed Houthi rebels kept attacking Saudi Arabia, and a Washington research group said October has been the worst month for attacks on shipping around Hormuz since its records began in 2017.",
         "means": "Talks are taking a little off the top of oil prices, but supply risks are still live, so oil stays far above pre-war levels. That keeps energy costs high for big importers like Japan and the euro area.",
-        "fx": "Talks → slightly lower oil → small relief for the yen and euro; continued attacks keep oil high, which helps the Canadian dollar's export income."
+        "fx": "Talks \u2192 slightly lower oil \u2192 small relief for the yen and euro; continued attacks keep oil high, which helps the Canadian dollar's export income."
       },
       "impact": [
         {
@@ -102,7 +141,7 @@
         "was": "China is Australia's biggest customer for iron ore and other raw materials, so signs of Chinese demand matter for the Australian dollar. Profit growth at Chinese industrial firms had slowed to 4.2% in August, the weakest month since November 2025.",
         "happened": "China's statistics office said September profits rose 14.4% on a year earlier. For January to September together, growth eased slightly to 15.5%, led by miners and makers of computers and chips.",
         "means": "Chinese industry looks firmer than August suggested, which helps the outlook for demand for metals and energy. The lift is modest: Chinese shares are still weak, and the full-year pace is still slowing.",
-        "fx": "Firmer Chinese factory profits → steadier demand for raw materials → mild support for the Australian dollar."
+        "fx": "Firmer Chinese factory profits \u2192 steadier demand for raw materials \u2192 mild support for the Australian dollar."
       },
       "impact": [
         {
@@ -129,7 +168,7 @@
         "was": "The Bank of Japan raised its rate to 1.25% in September, and two of its nine board members voted against that hike. The yen is weak, at about 157 per US dollar, partly because Japanese rates are far below US ones.",
         "happened": "In a preview of this week's two-day meeting, MUFG said the bank will likely hold but declare in its new forecasts that the 2% inflation goal has been met, and that Governor Kazuo Ueda should sound firm afterwards. A Nikkei report citing a senior official said a second hike in a row is unlikely.",
         "means": "A hold that clearly opens the door to a December hike would help the yen. The main risk is the two members who opposed September's move: if they push for easier policy, the firm message gets muddied.",
-        "fx": "Hold + 'inflation goal reached' → December hike bets rise → support for the yen. Votes for easier policy would cut against that."
+        "fx": "Hold + 'inflation goal reached' \u2192 December hike bets rise \u2192 support for the yen. Votes for easier policy would cut against that."
       },
       "impact": [
         {
@@ -153,10 +192,10 @@
       "pillar": "policy",
       "summary": "The US dollar ended Monday higher against all seven other major currencies, helped by strong US factory surveys, even as oil fell and shares rose. The dollar index closed near 102.0, up about 0.2%.",
       "beats": {
-        "was": "The Federal Reserve raised rates in September for the first time in about three years and is expected to hold at 3.75%–4.00% on Wednesday, October 28. Markets think another hike could come in December.",
+        "was": "The Federal Reserve raised rates in September for the first time in about three years and is expected to hold at 3.75%\u20134.00% on Wednesday, October 28. Markets think another hike could come in December.",
         "happened": "The dollar rose about 0.4% against the yen to near 157.5 and about 0.2% against the euro and pound, which closed near $1.118 and $1.335. US oil fell about 1.7% to near $103, gold closed near $4,013, and the 10-year US Treasury yield ended near 4.99%. Reports from the Chicago and Dallas Federal Reserve banks showed activity firmer than expected.",
         "means": "Solid US data keep a December Fed hike in view, which supports the dollar into Wednesday's decision. The gains were small, so the market is mostly waiting for the Fed.",
-        "fx": "Firm US data → December hike stays in view → mild support for the dollar across the board."
+        "fx": "Firm US data \u2192 December hike stays in view \u2192 mild support for the dollar across the board."
       },
       "impact": [
         {
@@ -189,7 +228,7 @@
         "was": "US shares fell last week on worries about the cost of the AI building boom and the Iran conflict. The 10-year US Treasury yield, a benchmark for borrowing costs, had climbed above 5.30% earlier in October.",
         "happened": "By early afternoon in New York the S&P 500 was up 0.8% and the tech-heavy Nasdaq 1.1%. The 10-year yield was 4.98%, from 5.00% on Friday, and Brent oil was near $111 after dipping toward $109 in the morning.",
         "means": "Investors are more willing to take risk as oil eases on Gulf diplomacy. Lower long-term US yields take a little shine off the dollar, while a calmer mood weighs on shelter currencies like the yen.",
-        "fx": "Calmer markets and slightly lower US yields → less need for shelter → mixed for the dollar, mild pressure on the yen."
+        "fx": "Calmer markets and slightly lower US yields \u2192 less need for shelter \u2192 mixed for the dollar, mild pressure on the yen."
       },
       "impact": [
         {
@@ -222,7 +261,7 @@
         "was": "The Chicago Fed National Activity Index blends 85 US figures on output, jobs, spending and housing into one number. Zero means the economy is growing at its long-run average pace; it was slightly below zero in August.",
         "happened": "The index rose to +0.07 for September from -0.08 in August, published Monday by the Federal Reserve Bank of Chicago.",
         "means": "The US economy was holding up into the autumn, not speeding up. That fits a Federal Reserve that still sees room to raise rates in December, but it changes little before Wednesday's decision.",
-        "fx": "Steady US growth → no reason for the Fed to soften → a small, quiet support for the dollar."
+        "fx": "Steady US growth \u2192 no reason for the Fed to soften \u2192 a small, quiet support for the dollar."
       },
       "impact": [
         {
@@ -249,7 +288,7 @@
         "was": "The Federal Reserve Bank of Dallas asks Texas manufacturers each month whether business is getting better or worse; any reading above zero means more firms say better. It was 9.8 in September.",
         "happened": "The main index rose to 13.4 in October. Firms' outlook for six months ahead jumped to 38.1 from 20.8, but new orders fell to 9.3 from 30.7 and the gauge of prices firms pay rose to 55.3 from 52.2.",
         "means": "Factories are still growing, and their own costs are climbing. Several firms blamed fuel prices and high interest rates. Rising costs fit the case for a December Fed hike, but the drop in orders is a warning about demand.",
-        "fx": "Firm activity and rising costs → keeps a December Fed hike on the table → a small support for the dollar."
+        "fx": "Firm activity and rising costs \u2192 keeps a December Fed hike on the table \u2192 a small support for the dollar."
       },
       "impact": [
         {
@@ -267,7 +306,7 @@
       "source": "FXStreet (BBH note)",
       "url": "https://www.fxstreet.com/news/australian-dollar-inflation-data-to-bolster-yield-edge-bbh-202610261226",
       "image": "https://editorial.fxsstatic.com/images/i/discover-40_Medium.png",
-      "headline": "Australian Dollar: Inflation data to bolster yield edge – BBH",
+      "headline": "Australian Dollar: Inflation data to bolster yield edge \u2013 BBH",
       "story": "rba-nov3",
       "story_title": "RBA: a fifth hike on November 3?",
       "pillar": "policy",
@@ -276,7 +315,7 @@
         "was": "The Reserve Bank of Australia has raised its rate four times this year, to 4.60% in September. Deputy Governor Andrew Hauser recently said the inflation outlook is much worse than the bank thought in August.",
         "happened": "BBH expects yearly inflation for September to rise to 4.2% from 4.0%, and the trimmed mean, a core measure that drops the biggest price swings, to stay at 3.6%. Both are above the bank's year-end forecasts of 3.6% and 3.3%. Markets put the chance of a hike to 4.85% on November 3 at about 70%.",
         "means": "Another hike would widen the gap between Australian and other countries' interest rates, which makes the Australian dollar more attractive to hold.",
-        "fx": "Inflation above forecast → November hike more likely → wider rate gap → support for the Australian dollar."
+        "fx": "Inflation above forecast \u2192 November hike more likely \u2192 wider rate gap \u2192 support for the Australian dollar."
       },
       "impact": [
         {
@@ -303,7 +342,7 @@
         "was": "The dollar ended last week near a three-week low after falling US bond yields and a slide in big tech shares. Markets still expect the Federal Reserve to raise rates in December.",
         "happened": "On Monday morning the dollar rose to about 157.35 yen and the New Zealand dollar slipped to about 56.8 US cents. The euro and pound eased a little. Oil fell again on Iran diplomacy, and US stock futures pointed higher.",
         "means": "A small bounce, not a turn. Buyers are getting into position before the Fed decision on Wednesday, October 28, and Thursday's first estimate of US growth for July to September plus the Fed's preferred inflation gauge.",
-        "fx": "Fed expected to stay firm → US rates stay attractive → mild support for the dollar, mostly against low-yielding currencies like the yen."
+        "fx": "Fed expected to stay firm \u2192 US rates stay attractive \u2192 mild support for the dollar, mostly against low-yielding currencies like the yen."
       },
       "impact": [
         {
@@ -342,7 +381,7 @@
         "was": "The Reserve Bank of New Zealand has been raising rates as high oil prices and a weak currency push up import costs. Its key rate, the official cash rate, is 2.75%.",
         "happened": "Interest-rate markets priced an 85% chance of a quarter-point hike to 3.00% on Wednesday and more than a full percentage point of hikes over the next year, to about 3.75%. US bank BBH said high oil prices support more hikes, but a firmer US Federal Reserve limits how far the kiwi can rise against the dollar.",
         "means": "A hike is mostly expected, so the kiwi will react more to what the bank says about December than to the move itself.",
-        "fx": "Hike mostly priced → the bank's hints about more hikes decide the kiwi's move."
+        "fx": "Hike mostly priced \u2192 the bank's hints about more hikes decide the kiwi's move."
       },
       "impact": [
         {
@@ -369,7 +408,7 @@
         "was": "The ECB raised rates in June and September because oil, up about 90% this year, pushed euro-area inflation to 3.8% in September. France's 10-year borrowing cost then rose above 5%, its highest in over two decades, over a budget fight.",
         "happened": "A Reuters preview says the bank will likely hold on October 29 and avoid promising its next step. The gap between French and German 10-year yields has widened to 1.67 percentage points from 0.92 at the last meeting. Markets price at least two more hikes by mid-2027.",
         "means": "The ECB still leans toward more hikes, but stress in France could make it go slower, since higher rates would add to France's debt costs. President Christine Lagarde has said France must fix its own finances.",
-        "fx": "Hikes still expected, but France is a reason to go slow → mixed for the euro."
+        "fx": "Hikes still expected, but France is a reason to go slow \u2192 mixed for the euro."
       },
       "impact": [
         {
@@ -396,7 +435,7 @@
         "was": "The US and Israel went to war with Iran in late February. About a fifth of the world's oil normally passes through the Strait of Hormuz, and traffic there is still restricted; Brent oil is up nearly 90% this year.",
         "happened": "On Monday, Major General Ali Abdollahi, chief of staff of Iran's armed forces, told troops on the coast that Iran has full control of the strait and ships cannot pass unless they follow Iranian rules. Araghchi said both the routes and the way the strait is run will change for good, and that talks on this will continue.",
         "means": "Even if the fighting winds down, Iran wants a lasting say over who uses the strait. That makes a quick return to normal oil shipping less likely, which keeps a floor under prices even as diplomacy calms nerves.",
-        "fx": "Lasting limits on Hormuz traffic → oil stays dear → support for oil, a cost for big importers like Japan and the euro area. Mostly a restatement of Iran's stance, so the push is small."
+        "fx": "Lasting limits on Hormuz traffic \u2192 oil stays dear \u2192 support for oil, a cost for big importers like Japan and the euro area. Mostly a restatement of Iran's stance, so the push is small."
       },
       "impact": [
         {
@@ -429,7 +468,7 @@
         "was": "Gold lost nearly 4% last week, dipping to about $3,975, as high oil raised fears of more inflation and more US rate hikes. Gold pays no interest, so it suffers when rates rise.",
         "happened": "A slightly weaker dollar and lower US bond yields helped gold up about 0.5%. Markets put the chance of a Federal Reserve hike in December at about 79%.",
         "means": "The selling has paused, but the main weight is still there. The Fed's decision on Wednesday, October 28, and what Chair Kevin Warsh says about December, will likely set gold's direction.",
-        "fx": "More US hikes expected → holding gold costs more in lost interest → pressure on gold. Cheaper oil today eases that a little."
+        "fx": "More US hikes expected \u2192 holding gold costs more in lost interest \u2192 pressure on gold. Cheaper oil today eases that a little."
       },
       "impact": [
         {
@@ -456,7 +495,7 @@
         "was": "UK shoppers have been pulling back: official September sales were weak and consumer confidence had its sharpest drop since the pandemic, ahead of Chancellor John Healey's first budget on Wednesday, October 28.",
         "happened": "The Confederation of British Industry's monthly retail survey jumped to -10 from -55, far better than the roughly -47 expected. Orders to suppliers also improved from a record low.",
         "means": "It eases fears that UK spending is collapsing, which helps the case for a Bank of England hike on November 5. But it is one survey of 68 chains, and the group warns that fuel costs and careful households still weigh.",
-        "fx": "Spending holds up better than feared → less pressure to go easy on rates → small support for the pound. The pound slipped anyway on Monday, so the effect is minor."
+        "fx": "Spending holds up better than feared \u2192 less pressure to go easy on rates \u2192 small support for the pound. The pound slipped anyway on Monday, so the effect is minor."
       },
       "impact": [
         {
@@ -478,12 +517,12 @@
       "story": "us-iran-talks",
       "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
       "pillar": "tot",
-      "summary": "Brent oil fell to about $110 a barrel on Monday morning, from about $117 at Friday's close, as several countries stepped up efforts to stop the US–Iran war flaring again. European shares rose.",
+      "summary": "Brent oil fell to about $110 a barrel on Monday morning, from about $117 at Friday's close, as several countries stepped up efforts to stop the US\u2013Iran war flaring again. European shares rose.",
       "beats": {
-        "was": "Oil has been high since the US–Iran war began; Brent was near $72 before it and closed Friday near $117, close to its March peak, after Yemen's Houthi rebels attacked Saudi oil sites and tankers.",
+        "was": "Oil has been high since the US\u2013Iran war began; Brent was near $72 before it and closed Friday near $117, close to its March peak, after Yemen's Houthi rebels attacked Saudi oil sites and tankers.",
         "happened": "Qatari mediators visited Tehran on Sunday in step with Washington, and Saudi, Pakistani and Turkish security chiefs arrived on Monday. President Trump told Fox News the choice is between a deal with Iran or finishing the war by force.",
         "means": "Markets are betting that talks lower the chance of new US strikes, so part of the war premium in oil is coming out. Supply is still at risk: the Houthis say they hit Saudi airports and energy sites again over the weekend.",
-        "fx": "Cheaper oil → less money flowing to oil exporters and less inflation worry for importers → a drag on the Canadian dollar, a small help for the yen. Lower oil also eases pressure on the Federal Reserve to keep raising rates."
+        "fx": "Cheaper oil \u2192 less money flowing to oil exporters and less inflation worry for importers \u2192 a drag on the Canadian dollar, a small help for the yen. Lower oil also eases pressure on the Federal Reserve to keep raising rates."
       },
       "impact": [
         {
@@ -522,7 +561,7 @@
         "was": "The US and Israel fought Iran earlier this year, and a shaky pause has held since. US officials say new strikes could come soon, and Yemen's Houthi rebels, backed by Iran, keep attacking Saudi Arabia. Saudi Arabia, Turkey and Pakistan are partners in a new defence pact signed in Mecca.",
         "happened": "Iran's security chief Mohsen Rezaei and President Masoud Pezeshkian hosted Saudi Defence Minister Prince Khalid bin Salman, Pakistan's army chief Asim Munir and Turkey's intelligence chief Ibrahim Kalin. A joint statement said they would keep consulting on peace and security. Pezeshkian said Iran does not want nuclear weapons and criticised the US for offering talks while threatening strikes.",
         "means": "Regional powers are keeping a channel open, which helps hold off new fighting for now. But nothing concrete came out, and the main gap between Washington and Tehran is unchanged.",
-        "fx": "Talks continue but no deal → war risk eases only a little → a mild weight on oil prices."
+        "fx": "Talks continue but no deal \u2192 war risk eases only a little \u2192 a mild weight on oil prices."
       },
       "impact": [
         {
@@ -555,7 +594,7 @@
         "was": "On Friday the pound reached its strongest against the euro since May 2025, near 83.6 pence, helped by strong UK business surveys that make a Bank of England rate hike on November 5 look likely.",
         "happened": "The euro rose about 0.3% from Friday's low after Germany's Ifo business survey beat forecasts, Brent oil dropped toward $110 and French yields eased.",
         "means": "This is mostly the euro bouncing rather than fresh bad news for Britain. The pound's next big test is Chancellor John Healey's budget on Wednesday, October 28.",
-        "fx": "Better news from Germany and France → money moves back toward the euro → the pound slips against it. An expected Bank of England hike limits how far it can fall."
+        "fx": "Better news from Germany and France \u2192 money moves back toward the euro \u2192 the pound slips against it. An expected Bank of England hike limits how far it can fall."
       },
       "impact": [
         {
@@ -588,7 +627,7 @@
         "was": "The Ifo index asks about 9,000 German companies how business is going now and how they expect it to go over the next six months. Germany is the euro area's biggest economy, and last week's euro-area business surveys showed growth slowing to a four-month low.",
         "happened": "The overall reading edged up to 90.2 from 89.9, just above the 90.0 forecast. Hopes for the coming months jumped to their highest since February 2022, while firms' view of current conditions slipped below forecast.",
         "means": "German companies expect better times ahead, but today's business is not improving yet, and surveys are not hard data. It softens last week's gloomy euro-area picture without changing it.",
-        "fx": "Brighter German outlook → slightly less worry about euro-area growth → a small help for the euro. It is unlikely to change the European Central Bank's decision on Thursday, October 29, where a hold is expected. The question to keep asking: is the euro area's slowdown bottoming out?"
+        "fx": "Brighter German outlook \u2192 slightly less worry about euro-area growth \u2192 a small help for the euro. It is unlikely to change the European Central Bank's decision on Thursday, October 29, where a hold is expected. The question to keep asking: is the euro area's slowdown bottoming out?"
       },
       "impact": [
         {
@@ -615,7 +654,7 @@
         "was": "Worries about France's public debt, a budget fight and street protests pushed France's 10-year borrowing cost to 5.14% last week, its highest in about 20 years, and weighed on the euro.",
         "happened": "Moody's kept France at Aa3 with a negative outlook late Friday instead of cutting it. On Monday France's 10-year yield slipped to just under 5%, and the euro rose about 0.25% against the yen.",
         "means": "The rating decision gives France some breathing room, and investors are buying French bonds again. The underlying problems, a large deficit and a split parliament, have not gone away.",
-        "fx": "Lower French borrowing costs → less fear of a euro-area debt scare → support for the euro before the European Central Bank decides on Thursday, October 29."
+        "fx": "Lower French borrowing costs \u2192 less fear of a euro-area debt scare \u2192 support for the euro before the European Central Bank decides on Thursday, October 29."
       },
       "impact": [
         {
@@ -640,9 +679,9 @@
       "summary": "Saudi Arabia's defence minister, Pakistan's army chief and Turkey's intelligence chief went to Tehran on Monday to try to stop fighting between Iran, Israel and the US from starting again. No result has been reported yet.",
       "beats": {
         "was": "The US and Israel fought Iran earlier this year, and a shaky pause has held since. Last week US officials said new US strikes could come soon, and Yemen's Houthi rebels, who are backed by Iran, kept attacking Saudi Arabia.",
-        "happened": "The three delegations met Iran's top security officials to push for a US–Iran deal and to discuss the Houthi attacks on Saudi Arabia. Iran's foreign ministry spokesman, Esmail Baghaei, said Iran will not accept the 'complete surrender' US officials ask for.",
+        "happened": "The three delegations met Iran's top security officials to push for a US\u2013Iran deal and to discuss the Houthi attacks on Saudi Arabia. Iran's foreign ministry spokesman, Esmail Baghaei, said Iran will not accept the 'complete surrender' US officials ask for.",
         "means": "Big regional powers are now working to cool things down, which lowers the odds of a new round of fighting in the short run. The gap between the two sides is still wide.",
-        "fx": "Less fear of war → less demand for shelter and a smaller war premium in oil → a mild weight on oil and the Swiss franc."
+        "fx": "Less fear of war \u2192 less demand for shelter and a smaller war premium in oil \u2192 a mild weight on oil and the Swiss franc."
       },
       "impact": [
         {
@@ -672,10 +711,10 @@
       "pillar": "risk",
       "summary": "Britain's finance minister, Chancellor John Healey, is expected to present a careful first budget on Wednesday, aimed at keeping bond investors calm rather than spending big. A higher tax on bank profits is the main expected tax rise.",
       "beats": {
-        "was": "UK government borrowing costs are the highest in the G7, with the 30-year yield near 6% and the 10-year at its highest since 2007. Public debt passed £3 trillion in September, so Healey has little room against his own borrowing rules.",
+        "was": "UK government borrowing costs are the highest in the G7, with the 30-year yield near 6% and the 10-year at its highest since 2007. Public debt passed \u00a33 trillion in September, so Healey has little room against his own borrowing rules.",
         "happened": "Reuters reports the October 28 budget will offer some help with energy bills and business costs, raise the levy on bank profits, and leave bigger plans from Prime Minister Andy Burnham for a spending review next year. Economists quoted said investors would punish any spending not paid for.",
         "means": "A careful budget would ease the risk of another sell-off in UK government bonds, which has weighed on the pound. Any surprise in extra borrowing would be the big danger.",
-        "fx": "Careful budget → steadier UK bonds → mild support for the pound; a borrowing surprise would hurt it."
+        "fx": "Careful budget \u2192 steadier UK bonds \u2192 mild support for the pound; a borrowing surprise would hurt it."
       },
       "impact": [
         {
@@ -702,7 +741,7 @@
         "was": "Yemen's Iran-backed Houthi rebels have been firing missiles and drones at Saudi airports, ports and oil sites, which helped push oil to a six-month high last week. The East-West pipeline carries Saudi crude to the Red Sea, letting it avoid the Strait of Hormuz.",
         "happened": "The Houthis claimed new strikes on the pipeline's pumping stations and on Riyadh airport, after warning on Saturday that the airport remains a target. There was no Saudi confirmation of damage. The coalition said it intercepted a missile fired at Riyadh and destroyed the launcher.",
         "means": "If the pipeline were damaged, Saudi Arabia would lose its main way around Hormuz. For now these are claims only, and oil fell on Monday anyway, so the market is treating them as contained.",
-        "fx": "Unconfirmed claims → limited extra supply fear → little lift for oil or the yen today. A confirmed hit would change that fast. The question to keep asking: is Saudi oil actually being disrupted?"
+        "fx": "Unconfirmed claims \u2192 limited extra supply fear \u2192 little lift for oil or the yen today. A confirmed hit would change that fast. The question to keep asking: is Saudi oil actually being disrupted?"
       },
       "impact": [
         {
@@ -726,7 +765,7 @@
       "source": "Bloomberg (via ThePrint)",
       "url": "https://theprint.in/world/deal-or-finish-it-off-donald-trump-says-decision-time-on-iran-near/3081449/",
       "image": "https://staticprintenglish.theprint.in/wp-content/uploads/2026/10/472276198-1-scaled-e1792988529606.jpg",
-      "headline": "Deal or ‘finish it off’: Donald Trump says ‘decision time’ on Iran near",
+      "headline": "Deal or \u2018finish it off\u2019: Donald Trump says \u2018decision time\u2019 on Iran near",
       "story": "us-iran-talks",
       "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
       "pillar": "risk",
@@ -735,7 +774,7 @@
         "was": "The US and Iran are in a war that has paused but not ended. Regional mediators are in Tehran trying to head off new US strikes, while Yemen's Houthi rebels, allied with Iran, keep firing at Saudi targets.",
         "happened": "In a Fox News interview Trump said it is nearly time to decide: make a deal or finish the campaign by force. The US has sent a third aircraft carrier group to the Gulf, and Bloomberg reports Iran is preparing to hit back across the region if bombed.",
         "means": "Diplomacy is moving, but the threat of new strikes is back on a clock. The weeks after the US vote look like the riskiest window, which keeps a war premium in oil even as prices fall.",
-        "fx": "Risk of renewed strikes → supply fears for Gulf oil → upward pressure on oil and some demand for safe currencies. Oil still fell on Monday, so for now the talks outweigh the threat."
+        "fx": "Risk of renewed strikes \u2192 supply fears for Gulf oil \u2192 upward pressure on oil and some demand for safe currencies. Oil still fell on Monday, so for now the talks outweigh the threat."
       },
       "impact": [
         {
@@ -774,7 +813,7 @@
         "was": "The US and Iran fought earlier this year, then Trump halted full combat; since then the US has made only small strikes on radars and missile launchers, and blocks Iran's ports near the Strait of Hormuz. Gulf mediators are now in Tehran trying to head off a new round.",
         "happened": "CNN reports enough US forces are already in place for a much bigger campaign, with a target list that includes Iran's energy sites, military bases and nuclear facilities. The US embassy in Riyadh has ordered non-essential staff out, and US intelligence expects Iran and Yemen's Houthi rebels to hit back fast if attacked.",
         "means": "The threat behind Trump's 'deal or force' choice is concrete, not just talk. Officials note he has stepped back at the last minute before, so this raises the odds of new fighting without making it certain.",
-        "fx": "Possible strikes on Iran's energy sites → risk to Gulf oil supply → upward pressure on oil and some demand for safe currencies. Oil still fell on Monday, so markets are giving the talks more weight for now."
+        "fx": "Possible strikes on Iran's energy sites \u2192 risk to Gulf oil supply \u2192 upward pressure on oil and some demand for safe currencies. Oil still fell on Monday, so markets are giving the talks more weight for now."
       },
       "impact": [
         {
@@ -819,7 +858,7 @@
         "was": "Oil above $110 has kept inflation high this year, so most central banks are leaning toward raising rates. Last week a slide in US tech shares sent money into US government bonds, pulling yields down and the dollar near a three-week low.",
         "happened": "The euro sat near $1.12, the pound near $1.34 and the yen near 157 per dollar, all within a fraction of Friday. Oil eased after Qatari mediators went to Tehran. The Federal Reserve decides on Wednesday, October 28, along with the Bank of Canada and the Reserve Bank of New Zealand; the European Central Bank follows on Thursday and the Bank of Japan on Friday.",
         "means": "The decisions themselves are mostly expected, so what each bank says about its next meetings will matter more. US interest rates have been setting the dollar's direction lately, and the gap between US rates and others has been narrowing.",
-        "fx": "Smaller rate gap between the US and others → less reason to hold dollars → a mild drag on the dollar. Canada and New Zealand hiking would support their currencies only if they signal more to come. The question to keep asking: who sounds readier to raise rates again?"
+        "fx": "Smaller rate gap between the US and others \u2192 less reason to hold dollars \u2192 a mild drag on the dollar. Canada and New Zealand hiking would support their currencies only if they signal more to come. The question to keep asking: who sounds readier to raise rates again?"
       },
       "impact": [
         {
@@ -858,7 +897,7 @@
         "was": "The US and Israel went to war with Iran in late February, and shipping through the Strait of Hormuz and the Red Sea is still disrupted. Brent rose about 6% last week, to its highest in six months, as Yemen's Houthi rebels attacked Saudi oil sites, and a US envoy warned a strike on Iran could come over the weekend.",
         "happened": "No strike came. Qatari mediators travelled to Tehran on Sunday in a push to calm tensions, coordinated with the US, and officials from Saudi Arabia, Turkey and Pakistan were due to meet Iran's leaders on Monday. Brent fell about $1.50 to around $115.",
         "means": "Some of the fear that drove last week's jump is fading, but the supply risks are still there. Analysts quoted say the relief may not last, and the head of the International Energy Agency, Fatih Birol, expects energy markets to stay disrupted through 2027.",
-        "fx": "Talks instead of strikes → less fear of a supply cut → oil eases → less need for shelter, so a little less support for the yen, and a small drag on the oil-linked Canadian dollar. The question to keep asking: is the Gulf heading toward talks or more fighting?"
+        "fx": "Talks instead of strikes \u2192 less fear of a supply cut \u2192 oil eases \u2192 less need for shelter, so a little less support for the yen, and a small drag on the oil-linked Canadian dollar. The question to keep asking: is the Gulf heading toward talks or more fighting?"
       },
       "impact": [
         {
@@ -897,7 +936,7 @@
         "was": "The yen had been weak for months because Japan's interest rates are far below US rates. Last week it gained as falling shares and war worries sent money to shelter, and the dollar touched about 156, its lowest against the yen since mid-September.",
         "happened": "The dollar's small bounce stalled below 157 yen. Lower US bond yields are holding the dollar back, while Bank of Japan Governor Kazuo Ueda has recently said underlying inflation is nearing the bank's 2% goal, a sign a rate hike is getting closer.",
         "means": "The gap between US and Japanese interest rates may be starting to narrow from both sides: US yields have eased and Japan is edging toward a hike. Friday's Bank of Japan meeting is expected to keep rates at 1.25%, so its hints about the next move matter most.",
-        "fx": "Narrower US–Japan rate gap → less reward for borrowing in yen to buy dollars → support for the yen. The question to keep asking: how close is the Bank of Japan to its next hike?"
+        "fx": "Narrower US\u2013Japan rate gap \u2192 less reward for borrowing in yen to buy dollars \u2192 support for the yen. The question to keep asking: how close is the Bank of Japan to its next hike?"
       },
       "impact": [
         {
@@ -927,10 +966,10 @@
       "pillar": "policy",
       "summary": "Sarah Hunter, an Assistant Governor at the Reserve Bank of Australia, said on TV that the bank has not yet done enough to bring inflation down. Markets already expect a fifth rate hike this year on November 3.",
       "beats": {
-        "was": "The Reserve Bank of Australia has raised its cash rate four times this year, most recently in late September, to 4.6%, a 15-year high. Higher oil prices from the US–Iran war are pushing costs up.",
+        "was": "The Reserve Bank of Australia has raised its cash rate four times this year, most recently in late September, to 4.6%, a 15-year high. Higher oil prices from the US\u2013Iran war are pushing costs up.",
         "happened": "In a 60 Minutes interview on Sunday, Hunter said the job is 'not quite yet' done and that higher oil costs are spreading through supply chains. She did not say what the board will decide.",
         "means": "A senior official is backing up what markets already expect: another hike next week. Third-quarter inflation figures on Wednesday, October 28 are the last big test before the decision.",
-        "fx": "Hawkish tone → Australian rates stay high or go higher → mild support for the Australian dollar, which is already near a one-month high above 70 US cents."
+        "fx": "Hawkish tone \u2192 Australian rates stay high or go higher \u2192 mild support for the Australian dollar, which is already near a one-month high above 70 US cents."
       },
       "impact": [
         {
@@ -941,33 +980,6 @@
         }
       ],
       "watch": "Australia's third-quarter inflation figures on October 28; a soft reading would cast doubt on the hike."
-    },
-    {
-      "id": "aljazeera-france-protests-20261024",
-      "date": "2026-10-24",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/10/24/france-braces-for-another-day-of-mass-protests-as-security-on-high-alert",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/10/afp_6adcb603f0d0-1792849411.jpg?resize=1920%2C1440",
-      "headline": "Hundreds of thousands protest in France amid heightened police security",
-      "story": "france-fiscal",
-      "story_title": "France: budget fight, protests and debt worries",
-      "pillar": "risk",
-      "summary": "About 410,000 people marched across France on Saturday, by the government's count, over school conditions and living costs. Marches were mostly peaceful, with about 1,000 arrests, fewer than the week before.",
-      "beats": {
-        "was": "Protests over run-down schools, teacher shortages and the cost of living turned into looting and violence a week earlier, adding to worries about France's budget and debt.",
-        "happened": "The Interior Ministry counted 410,000 marchers, 110,000 of them in Paris; unions said about twice that. More than 70,000 police were deployed and several marches were banned or moved. Police made nearly 1,000 arrests, against more than 2,000 after the October 17 protests.",
-        "means": "Calmer than the week before, but students say they will keep marching until they see action. Ongoing unrest makes it harder for the government to pass spending cuts.",
-        "fx": "Lasting unrest → harder to cut the deficit → investors want more to hold French debt → a mild drag on the euro. The question to keep asking: is the unrest fading or spreading?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Unrest makes a deficit-cutting budget harder, though this weekend was calmer."
-        }
-      ],
-      "watch": "Whether students and unions call more marches, and how parliament votes on the budget."
     }
   ]
 }
