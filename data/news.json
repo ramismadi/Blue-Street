@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-27T14:49:28Z",
+  "updated": "2026-10-27T16:53:44Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "text": "US consumer confidence jumped far more than expected in October and new home sales held up, adding to signs the economy is strong the day before Wednesday's Federal Reserve decision. A hold is expected; what Fed Chair Kevin Warsh says about a December hike is what moves the dollar.",
-      "ts": "2026-10-27T14:49:28Z"
+      "text": "US consumer confidence jumped far more than expected in October and new home sales held up, adding to signs the economy is strong the day before Wednesday's Federal Reserve decision. A hold is all but certain with inflation at 3.7%; what Fed Chair Kevin Warsh says about a December hike, and whether some officials vote for one now, is what moves the dollar.",
+      "ts": "2026-10-27T16:53:44Z"
     },
     "EUR": {
       "lean": "mixed",
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "mixed",
-      "text": "Most economists expect the Bank of Canada to raise rates to 2.50% on Wednesday, October 28, which supports the loonie. But Brent oil's drop to about $110 on Gulf diplomacy cuts into the income Canada earns from oil.",
-      "ts": "2026-10-26T11:48:24Z"
+      "text": "Most economists expect the Bank of Canada to raise rates to 2.50% on Wednesday, October 28, which supports the loonie. Oil, a big Canadian export, is pulled between Gulf peace talks and Houthi attacks on Saudi sites, so it gives little steady help.",
+      "ts": "2026-10-27T16:53:44Z"
     },
     "AUD": {
       "lean": "bullish",
@@ -49,11 +49,44 @@
     },
     "OIL": {
       "lean": "mixed",
-      "text": "Brent oil slipped below $115 on Tuesday as Gulf neighbours keep talking peace with Iran, but flows through the Strait of Hormuz are still only about 60% of normal, so supply risk keeps prices high. Israel's close election on Tuesday adds a new swing factor: an opposition win could ease war fears.",
-      "ts": "2026-10-27T14:49:28Z"
+      "text": "Brent oil slipped to about $115 on Tuesday as Iran's neighbours keep talking peace, even after Yemen's Houthis said they hit Saudi Arabia's biggest refinery at Ras Tanura, where a fire was quickly put out. Ship attacks near the Strait of Hormuz and the risk of a US strike on Iran keep prices near their highest since April.",
+      "ts": "2026-10-27T16:53:44Z"
     }
   },
   "items": [
+    {
+      "id": "euronews-fed-preview-warsh-20261027",
+      "ts": "2026-10-27T14:23:00Z",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/10/27/what-to-expect-from-the-fed-as-warsh-weighs-hot-inflation-oil-and-us-midterms",
+      "image": "https://images.euronews.com/articles/stories/09/96/87/96/1200x675_cmsv2_c774358a-5778-5d5d-81b8-3597a7bad651-9968796.jpg",
+      "headline": "What to expect from the Fed as Warsh weighs hot inflation, oil and US midterms",
+      "story": "fed-oct28",
+      "story_title": "Fed week: the October 28 decision and December hike bets",
+      "pillar": "policy",
+      "summary": "The US Federal Reserve is almost certain to leave rates alone on Wednesday, but inflation near 3.7% keeps a December hike likely. The open questions are what Chair Kevin Warsh hints at and how many officials vote for a hike now.",
+      "beats": {
+        "was": "The Fed raised rates in September for the first time in three years, to a range of 3.75% to 4%, as war-driven fuel costs pushed US inflation back up. It meets again on Wednesday, October 28, six days before the US midterm elections.",
+        "happened": "A Euronews preview says markets see better than a 90% chance of no change on Wednesday and about a 73% chance of a quarter-point hike in December. Consumer prices rose 3.7% over the year to September, up from 3.4%, with petrol behind more than half of the rise. Two regional Fed presidents, Beth Hammack of Cleveland and Lorie Logan of Dallas, have said rates are not yet high enough, so some officials may vote against a hold.",
+        "means": "A hold is already expected, so the dollar will react to the tone: whether Warsh leaves December open and whether several officials push for a hike now. Political pressure from the White House before the vote is a reason he may stay vague.",
+        "fx": "Inflation still rising and possible votes for a hike → a firm-sounding Fed → support for the dollar; a vague message close to the election → that support fades."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A preview: a December hike is mostly expected, so only a firmer tone would add support."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Talk of more US hikes weighs on a metal that pays no interest."
+        }
+      ],
+      "watch": "How many Fed officials vote for a hike on Wednesday, and whether Warsh rules December in or out."
+    },
     {
       "id": "prn-cb-confidence-oct-20261027",
       "ts": "2026-10-27T14:00:00Z",
@@ -140,6 +173,39 @@
         }
       ],
       "watch": "Whether Thursday's US inflation figure and Fed Chair Kevin Warsh's words on Wednesday firm up or cool the December hike bets."
+    },
+    {
+      "id": "euronext-oil-falls-talks-20261027",
+      "date": "2026-10-27",
+      "source": "Reuters (Euronext)",
+      "url": "https://live.euronext.com/en/financial-news/oil-falls-middle-east-talks-outweigh-concern-over-fresh-strikes",
+      "image": null,
+      "headline": "Oil falls as Middle East talks outweigh concern over fresh strikes",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Oil slipped about 1% on Tuesday, with Brent near $114.80, as hopes for peace talks with Iran outweighed the Houthi attack on a Saudi refinery. Prices are still near their highest since April.",
+      "beats": {
+        "was": "Brent oil climbed above $117 last week, its highest since April, after Iranian attacks on tankers during the Iran war. Iran, Saudi Arabia, Turkey and Pakistan agreed on Monday to keep talking about peace and security.",
+        "happened": "By early afternoon in London, Brent was down $1 at about $114.80 a barrel and US crude was just under $101. Iran's top security official met Supreme Leader Ali Khamenei after the regional talks. A Washington think tank said October has been the worst month yet for attacks on ships in and near the Strait of Hormuz. UBS raised its year-end Brent forecast to about $110 from $100.",
+        "means": "Traders are giving more weight to the talks than to the latest strikes, but the price still carries a large premium for the risk of a US or Israeli attack on Iran. Prices this high, even after a dip, keep fuel costs a worry for central banks.",
+        "fx": "Peace talks → a small dip in oil → slight relief for oil buyers like Japan and the euro area; a smaller boost for Canada, whose exports earn less."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Talks pull prices down while ship attacks and strike risk hold them high."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slightly cheaper oil trims Canada's export income."
+        }
+      ],
+      "watch": "Any sign of a US decision on new strikes on Iran, and the result of Israel's election."
     },
     {
       "id": "cna-katayama-decisive-fx-20261027",
@@ -245,6 +311,45 @@
         }
       ],
       "watch": "Whether the US answers Iran's terms, or new attacks on ships near Hormuz or on Saudi oil sites push the talks back."
+    },
+    {
+      "id": "turkiyetoday-ras-tanura-fire-20261027",
+      "ts": "2026-10-27T08:36:00Z",
+      "source": "Türkiye Today",
+      "url": "https://www.turkiyetoday.com/business/oil-prices-rise-as-saudi-ras-tanura-hub-catches-fire-after-houthi-attack-3231114",
+      "image": "https://img.turkiyetoday.com/images/2026/10/27/oil-prices-rise-as-saudi-ras-tanura-hub-catches-fire-after-houthi-attack-3231114_20261027120813_20261027120813.jpg",
+      "headline": "Oil prices rise as Saudi Ras Tanura hub catches fire after Houthi attack",
+      "story": "saudi-houthi",
+      "story_title": "Saudi Arabia: Houthi attacks on oil and airports",
+      "pillar": "commodities",
+      "summary": "Yemen's Houthi rebels say a missile hit Saudi Arabia's Ras Tanura refinery, the kingdom's largest, and a fire broke out near its oil export terminal early Tuesday. The fire was put out within hours and the damage is unclear, so oil rose only a little.",
+      "beats": {
+        "was": "The Houthis, an Iran-aligned group in Yemen, have been firing at Saudi oil sites and airports during the Iran war. With the Strait of Hormuz partly blocked, Saudi Arabia has been sending about 4 million barrels a day around it by pipeline to the Red Sea.",
+        "happened": "A fire broke out early Tuesday near the Ras Tanura export terminal on Saudi Arabia's Gulf coast and was contained within hours, Bloomberg reported. The Houthis said a ballistic missile caused it; Saudi Arabia has not confirmed that. Ras Tanura holds the country's biggest refinery, about 550,000 barrels a day, and shipped over 5 million barrels a day before the war. Brent rose about 0.6% to near $116.50 in the morning.",
+        "means": "An attack on Saudi Arabia's main oil export hub is the kind of hit markets fear most. Because the fire was quickly put out and nothing has shown that exports stopped, it adds worry rather than a real loss of oil for now.",
+        "fx": "A strike on the biggest Saudi export hub → more risk to oil supply → higher oil, which helps oil sellers like Canada and hurts oil buyers like Japan."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "An unconfirmed hit on Saudi Arabia's main export hub, with the fire quickly put out."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil lifts what Canada earns from its exports."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so dearer crude hurts it."
+        }
+      ],
+      "watch": "Whether Saudi Arabia or Aramco confirms damage or a slowdown in exports from Ras Tanura."
     },
     {
       "id": "fxstreet-nzd-rbnz-hike-bets-20261027",
@@ -1211,66 +1316,6 @@
         }
       ],
       "watch": "Any outcome from Monday's Tehran meetings, or a new Houthi strike on Saudi oil."
-    },
-    {
-      "id": "fxstreet-yen-one-month-top-20261026",
-      "ts": "2026-10-26T02:08:28Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/japanese-yen-holds-near-one-month-top-vs-weak-usd-as-traders-await-fed-boj-meetings-202610260208",
-      "image": "https://editorial.fxsstatic.com/images/i/discover-63_Medium.png",
-      "headline": "Japanese Yen holds near one-month top vs weak USD as traders await Fed, BoJ meetings",
-      "story": "boj-path",
-      "story_title": "BoJ: the road to the next hike",
-      "pillar": "policy",
-      "summary": "The yen held near its strongest in a month, just under 157 per dollar, ahead of the Federal Reserve on Wednesday and the Bank of Japan on Friday.",
-      "beats": {
-        "was": "The yen had been weak for months because Japan's interest rates are far below US rates. Last week it gained as falling shares and war worries sent money to shelter, and the dollar touched about 156, its lowest against the yen since mid-September.",
-        "happened": "The dollar's small bounce stalled below 157 yen. Lower US bond yields are holding the dollar back, while Bank of Japan Governor Kazuo Ueda has recently said underlying inflation is nearing the bank's 2% goal, a sign a rate hike is getting closer.",
-        "means": "The gap between US and Japanese interest rates may be starting to narrow from both sides: US yields have eased and Japan is edging toward a hike. Friday's Bank of Japan meeting is expected to keep rates at 1.25%, so its hints about the next move matter most.",
-        "fx": "Narrower US–Japan rate gap → less reward for borrowing in yen to buy dollars → support for the yen. The question to keep asking: how close is the Bank of Japan to its next hike?"
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Lower US yields and hints of a Bank of Japan hike support the yen."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Falling US bond yields limit the dollar's bounce."
-        }
-      ],
-      "watch": "Bank of Japan decision and Governor Ueda's comments on Friday, October 30."
-    },
-    {
-      "id": "investinglive-rba-hunter-60min-20261025",
-      "ts": "2026-10-25T20:28:39Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/rba-s-hunter-says-inflation-job-not-done-after-four-hikes-november-rise-in-view/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/aud%20chart%20update%20ahead%2026%20October%202026-featured-1792959729.jpg?width=960&format=webp",
-      "headline": "RBA's Hunter says inflation job not done after four hikes, November rise in view",
-      "story": "rba-nov3",
-      "story_title": "RBA: a fifth hike on November 3?",
-      "pillar": "policy",
-      "summary": "Sarah Hunter, an Assistant Governor at the Reserve Bank of Australia, said on TV that the bank has not yet done enough to bring inflation down. Markets already expect a fifth rate hike this year on November 3.",
-      "beats": {
-        "was": "The Reserve Bank of Australia has raised its cash rate four times this year, most recently in late September, to 4.6%, a 15-year high. Higher oil prices from the US–Iran war are pushing costs up.",
-        "happened": "In a 60 Minutes interview on Sunday, Hunter said the job is 'not quite yet' done and that higher oil costs are spreading through supply chains. She did not say what the board will decide.",
-        "means": "A senior official is backing up what markets already expect: another hike next week. Third-quarter inflation figures on Wednesday, October 28 are the last big test before the decision.",
-        "fx": "Hawkish tone → Australian rates stay high or go higher → mild support for the Australian dollar, which is already near a one-month high above 70 US cents."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "An official backed the November hike that markets already price."
-        }
-      ],
-      "watch": "Australia's third-quarter inflation figures on October 28; a soft reading would cast doubt on the hike."
     }
   ]
 }
