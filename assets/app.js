@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '93';
+  var ASSET_VERSION = '94';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -3539,8 +3539,9 @@
   var NEWS_STRENGTH = { 1: 'mild', 2: 'clear', 3: 'strong' };
   var NEWS_BEATS = [['was', 'What this was'], ['happened', 'What happened'],
     ['means', 'What it means'], ['fx', 'For the currency']];
+  /* Rami, 2026-10-26: News always opens on By impact; Latest is a per-visit
+     choice, not remembered. */
   var news = { data: null, ccy: '', src: '', open: {}, sort: 'impact' };
-  try { if (localStorage.getItem('bluestreet-news-sort') === 'latest') news.sort = 'latest'; } catch (e) { /* private mode */ }
   /* Impact ranking (Rami, 2026-10-18): strongest push on any market first,
      then how many markets it clearly moves, then newest. */
   function newsImpact(it) {
@@ -3613,12 +3614,16 @@
       var b = e.target.closest('[data-sort]');
       if (!b) return;
       news.sort = b.getAttribute('data-sort');
-      try { localStorage.setItem('bluestreet-news-sort', news.sort); } catch (er) { /* private mode */ }
       renderNews();
     });
     var grid = $('#news-grid');
     if (grid) grid.addEventListener('click', function (e) {
       var t = e.target.closest('[data-news-toggle]');
+      // Phone rows (Rami, 2026-10-26): a closed row opens from anywhere on it.
+      if (!t && !e.target.closest('a, button, select') && newsPhone()) {
+        var row = e.target.closest('.news-card.news-row:not(.open)');
+        if (row) t = row.querySelector('[data-news-toggle]');
+      }
       if (!t) return;
       var id = t.getAttribute('data-news-toggle');
       news.open[id] = !news.open[id];
@@ -3630,6 +3635,8 @@
       }
     });
   }
+
+  function newsPhone() { return window.matchMedia && window.matchMedia('(max-width: 640px)').matches; }
 
   /* Group by storyline; newest item leads; storylines sort by their newest. */
   function newsStories(items) {
@@ -3787,10 +3794,21 @@
       return;
     }
 
-    stories.forEach(function (s) {
+    stories.forEach(function (s, si) {
       var it = s.lead, open = !!news.open[s.id];
-      var card = el('article', 'card news-card' + (open ? ' open' : ''));
+      /* Phone layout (Rami, 2026-10-26): the first story is the hero card,
+         the rest are compact rows (arrow · headline · thumbnail). The
+         `news-row` class only changes the layout at phone width. */
+      var card = el('article', 'card news-card' + (si ? ' news-row' : ' news-hero') + (open ? ' open' : ''));
       card.id = 'news-' + s.id;
+      var top = null;   // the market this headline moves most
+      (it.impact || []).forEach(function (x) { if (x && x.ccy && (!top || (+x.strength || 1) > (+top.strength || 1))) top = x; });
+      if (si) {
+        var lead = el('span', 'news-lead' + (top ? ' ' + (NEWS_LEAN[top.dir] || NEWS_LEAN.mixed).cls : ''));
+        lead.setAttribute('aria-hidden', 'true');
+        if (top) { lead.appendChild(trendIcon((NEWS_LEAN[top.dir] || NEWS_LEAN.mixed).cls)); lead.appendChild(flagEl(top.ccy)); }
+        card.appendChild(lead);
+      }
       card.appendChild(newsFigure(it));
 
       var body = el('div', 'news-body');

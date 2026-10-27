@@ -2420,3 +2420,53 @@ html, body { overflow-x: clip; max-width: 100%; }
 /* Today's read chips: flag + code (Rami, 2026-10-19). */
 .hero-chapters button { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; letter-spacing: 0.02em; }
 .hero-chapters button .flag { width: 16px; height: 12px; border-radius: 2px; flex: none; }
+
+/* News on phones (Rami, 2026-10-26): first story is the hero card, the rest
+   are compact rows — arrow on the left, headline + source/time, small square
+   thumbnail on the right. Tap opens the read in place. Desktop unchanged. */
+.news-lead { display: none; }
+@media (max-width: 640px) {
+  .news-grid { gap: 0; }
+  .news-hero { margin-bottom: 12px; }
+  .news-card.news-row {
+    display: grid; grid-template-columns: 26px minmax(0, 1fr) 64px; grid-template-areas: "lead body fig";
+    column-gap: 12px; align-items: start; padding: 12px 0; cursor: pointer;
+    border: 0; border-top: 1px solid var(--line); border-radius: 0; background: none; box-shadow: none;
+  }
+  .news-card.news-row:last-child { border-bottom: 1px solid var(--line); }
+  .news-row .news-lead {
+    grid-area: lead; display: flex; flex-direction: column; align-items: center; gap: 5px; padding-top: 3px;
+    color: var(--ink-3);
+  }
+  .news-row .news-lead.bull { color: var(--bull); }
+  .news-row .news-lead.bear { color: var(--bear); }
+  .news-row .news-lead.mixed { color: var(--mixed, var(--gold)); }
+  .news-row .news-lead .trend-ico { width: 20px; height: 12px; }
+  .news-row .news-fig, .news-card.news-row.open .news-fig {
+    grid-area: fig; width: 64px; height: 64px; aspect-ratio: 1 / 1; min-height: 0; border-radius: 8px; flex: none;
+  }
+  .news-row .news-fig.fallback, .news-card.news-row.open .news-fig.fallback {
+    aspect-ratio: 1 / 1; padding: 0; justify-content: center; align-items: center;
+  }
+  .news-row .news-fig .nf-mkt { font-size: 0.9rem; position: relative; }
+  .news-row .news-body, .news-card.news-row.open .news-body { grid-area: body; padding: 0; min-width: 0; }
+  .news-row .news-meta { order: 2; margin-top: 5px; }
+  .news-row .news-hl { order: 1; margin: 0; font-size: 1rem; line-height: 1.3; }
+  .news-card.news-row.open .news-hl { font-size: 1.08rem; }
+  .news-row:not(.open) .news-pillar,
+  .news-row:not(.open) .news-impact,
+  .news-row:not(.open) .news-sum,
+  .news-row:not(.open) .news-toggle { display: none; }
+  .news-row.open .news-impact { order: 3; margin-top: 10px; }
+  .news-row.open .news-sum { order: 4; margin-top: 4px; }
+  .news-row.open .news-open { order: 5; }
+  .news-row.open .news-toggle { order: 6; }
+  .news-card.news-row.open { border-color: var(--line); }
+  .news-row .news-meta { flex-wrap: nowrap; min-width: 0; }
+  .news-row .news-meta .news-src { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.68rem; }
+  .news-row .news-meta > * { flex: none; }
+  .news-row .news-meta > .news-src { flex: 0 1 auto; }
+  /* Opened row: the read gets the full width; the thumbnail steps aside. */
+  .news-card.news-row.open .news-fig { display: none; }
+  .news-card.news-row.open .news-body { grid-column: 2 / 4; }
+}
