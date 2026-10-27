@@ -2533,3 +2533,28 @@ html, body { overflow-x: clip; max-width: 100%; }
   body { padding-bottom: calc(78px + env(safe-area-inset-bottom, 0px)); }
   .update-pill { bottom: calc(86px + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* Phones (Rami, 2026-10-27): the bottom bar has the sections, so the
+   masthead button becomes Settings — a short sheet from the bottom with
+   Dark mode, Colorway and Learn. */
+.nav-btn .ico-gear { display: none; }
+@media (max-width: 640px) {
+  .nav-btn .ico-menu { display: none; }
+  .nav-btn .ico-gear { display: block; }
+  .sidenav, [data-nav="side"] .sidenav {
+    top: auto; left: 0; right: 0; bottom: 0; width: auto; max-height: 80vh; z-index: 62;
+    justify-content: flex-start; gap: 6px;
+    padding: 10px 14px calc(16px + env(safe-area-inset-bottom, 0px));
+    border-right: 0; border-top: 1px solid var(--line); border-radius: 20px 20px 0 0;
+    transform: translateY(105%); transition: transform 0.25s ease;
+  }
+  .sidenav.open { transform: none; }
+  .sidenav::before {   /* grab handle */
+    content: ""; align-self: center; flex: none; width: 36px; height: 4px; border-radius: 2px; background: var(--line); margin-bottom: 6px;
+  }
+  .sidenav-scrim { z-index: 61; }
+  .sn-logo, .sn-collapse, .sn-top, .sn-subs, .sn-list .sn-item:not([data-nav="learn"]) { display: none !important; }
+  .sn-list { order: 2; }
+  .sn-foot { order: 1; margin-top: 0; border-top: 0; padding-top: 0; }
+  .sn-item.minor { margin-top: 0; font-weight: 600; color: var(--ink-2); }
+}

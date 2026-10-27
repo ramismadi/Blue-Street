@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '99';
+  var ASSET_VERSION = '100';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -784,7 +784,9 @@
     var btn = $('#nav-btn');
     if (btn) {
       btn.setAttribute('aria-pressed', side ? 'true' : 'false');
-      btn.title = isNarrow() ? 'Menu' : (!side ? 'Show the sections as a side menu' : (nav.collapsed ? 'Expand the side menu' : 'Collapse the side menu'));
+      var ph = window.matchMedia && window.matchMedia('(max-width: 640px)').matches;   // phones: settings sheet
+      btn.setAttribute('aria-label', ph ? 'Settings' : 'Side menu');
+      btn.title = ph ? 'Settings' : isNarrow() ? 'Menu' : (!side ? 'Show the sections as a side menu' : (nav.collapsed ? 'Expand the side menu' : 'Collapse the side menu'));
     }
     var col = box && box.querySelector('.sn-collapse .sn-label');
     if (col) col.textContent = nav.collapsed ? 'Expand' : 'Collapse';
