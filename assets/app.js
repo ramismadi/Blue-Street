@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '105';
+  var ASSET_VERSION = '106';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -495,8 +495,11 @@
     }
     syncSideTheme();
     // The phone's status-bar strip follows the theme's masthead colour.
-    var tc = document.querySelector('meta[name="theme-color"]');
-    if (tc) tc.setAttribute('content', (getComputedStyle(root).getPropertyValue('--mast-1') || '#0a84ff').trim());
+    // Fresh tag each time: phones re-read a new tag more reliably than an edited one.
+    Array.prototype.forEach.call(document.querySelectorAll('meta[name="theme-color"]'), function (m) { m.remove(); });
+    var tc = document.createElement('meta'); tc.name = 'theme-color';
+    tc.content = (getComputedStyle(root).getPropertyValue('--mast-1') || '#0a84ff').trim();
+    document.head.appendChild(tc);
   }
 
   /* ---------------- tabs / routing ---------------- */
