@@ -2475,3 +2475,32 @@ html, body { overflow-x: clip; max-width: 100%; }
   .news-card.news-row.open .news-fig { display: none; }
   .news-card.news-row.open .news-body { grid-column: 2 / 4; }
 }
+
+/* Pair picker on phones (Rami, 2026-10-27): one line per pair; tap for the
+   why, interest and events. Desktop unchanged. */
+.pick-more { display: none; }
+@media (max-width: 640px) {
+  .picks { gap: 14px; }
+  .picks-tier { gap: 6px; }
+  .pick, .pick-group.edge .pick, .pick-group.flat .pick { padding: 10px 12px; cursor: pointer; }
+  .pick-top { flex-wrap: nowrap; gap: 6px; }
+  .pick-top > * { flex: none; }
+  .pick-gap { margin-left: auto; min-width: 0; }
+  .pick-gap .gap-bar { display: none; }
+  .pick-group.edge .pick-pair { font-size: 1.05rem; }
+  .pick-group.edge .pick-act { font-size: 0.72rem; padding: 2px 7px; }
+  .pick:not(.open) .pick-why, .pick:not(.open) .pick-meta { display: none; }
+  .pick-more {
+    display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; margin-left: 2px;
+    padding: 0; border: 0; background: none; color: var(--ink-3); font: inherit; cursor: pointer;
+  }
+  .pick-more::before { content: "+"; font-size: 1.05rem; font-weight: 600; line-height: 1; }
+  .pick.open .pick-more::before { content: "\2013"; }
+}
+@media (max-width: 360px) {
+  .pick, .pick-group.edge .pick, .pick-group.flat .pick { padding: 10px 8px; }
+  .pick-top { gap: 4px; }
+  .pick-act, .pick-group.edge .pick-act { letter-spacing: 0.02em; padding: 2px 5px; }
+  .pick-pair, .pick-group.edge .pick-pair { font-size: 0.95rem; }
+  .pick-more { width: 16px; }
+}

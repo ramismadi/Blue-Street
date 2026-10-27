@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '96';
+  var ASSET_VERSION = '97';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -2716,7 +2716,7 @@
   ];
   /* Market quoting convention: the higher-priority currency is the base. */
   var PRIORITY = ['EUR', 'GBP', 'AUD', 'NZD', 'USD', 'CAD', 'CHF', 'JPY'];
-  var fx = { data: null, focus: '', dir: 'bull', ccy: 'AUD' };
+  var fx = { data: null, focus: '', dir: 'bull', ccy: 'AUD', pickOpen: {} };
   /* data/momentum.json — per-currency economic surprises (Hercules). Counting
      starts fresh with the first scored release; MOMENTUM_START is only the
      fallback shown before the feed exists. */
@@ -2732,7 +2732,7 @@
     var dir = $('#fx-dir');
     if (dir) dir.addEventListener('click', function (e) {
       var b = e.target.closest('[data-dir]');
-      if (b) { fx.dir = b.getAttribute('data-dir'); saveFx(); renderPicker(); }
+      if (b) { fx.dir = b.getAttribute('data-dir'); fx.pickOpen = {}; saveFx(); renderPicker(); }
     });
     var cc = $('#fx-ccy');
     if (cc) {
@@ -2744,9 +2744,22 @@
       });
       cc.addEventListener('click', function (e) {
         var b = e.target.closest('[data-ccy]');
-        if (b) { fx.ccy = b.getAttribute('data-ccy'); saveFx(); renderPicker(); }
+        if (b) { fx.ccy = b.getAttribute('data-ccy'); fx.pickOpen = {}; saveFx(); renderPicker(); }
       });
     }
+    /* Phones (Rami, 2026-10-27): each pair shows one line; tap it for the
+       why, interest and upcoming events. Desktop shows everything. */
+    var picks = $('#fx-picks');
+    if (picks) picks.addEventListener('click', function (e) {
+      if (e.target.closest('a') || !pickPhone()) return;
+      var li = e.target.closest('.pick[data-pair]');
+      if (!li) return;
+      var k = li.getAttribute('data-pair');
+      fx.pickOpen[k] = !fx.pickOpen[k];
+      li.classList.toggle('open', fx.pickOpen[k]);
+      var m = li.querySelector('.pick-more');
+      if (m) m.setAttribute('aria-expanded', fx.pickOpen[k] ? 'true' : 'false');
+    });
     // "Express it" shortcuts from a currency page preset the picker.
     document.addEventListener('click', function (e) {
       var a = e.target.closest('[data-express]');
@@ -3013,6 +3026,8 @@
     });
   }
 
+  function pickPhone() { return window.matchMedia && window.matchMedia('(max-width: 640px)').matches; }
+
   function renderPicker() {
     if (!fx.data) return;
     Array.prototype.forEach.call(document.querySelectorAll('#fx-dir [data-dir]'), function (b) {
@@ -3026,11 +3041,13 @@
     var picks = fxPicks(fx.dir, fx.ccy);
     var maxGap = Math.max(3, Math.max.apply(null, picks.map(function (p) { return Math.abs(p.gap); })));
     var tiers = [
-      ['edge', 'Strongest edge', 'The other side points the opposite way — both currencies help the trade.',
+      // Rami, 2026-10-27: no explainer lines under Strongest edge / Against
+      // your view — the titles say enough.
+      ['edge', 'Strongest edge', '',
         function (p) { return p.gap > 0; }],
       ['flat', 'No edge', 'Level on the board, so only your view decides it. Pairs that pay you more interest come first.',
         function (p) { return p.gap === 0; }],
-      ['against', 'Against your view', 'The other side is moving the same way you expect ' + fx.ccy + ' to.',
+      ['against', 'Against your view', '',
         function (p) { return p.gap < 0; }]
     ];
     tiers.forEach(function (t) {
@@ -3039,8 +3056,9 @@
       var group = el('li', 'pick-group ' + t[0]);
       var head = el('div', 'pick-group-head');
       head.appendChild(el('h3', 'pick-group-title', t[1] + (rows.length ? ' · ' + rows.length : '')));
-      head.appendChild(el('p', 'meta pick-group-note', rows.length ? t[2]
-        : 'No cross has an edge today — every counterpart is level with or ahead of ' + fx.ccy + ' on the board.'));
+      var note = rows.length ? t[2]
+        : 'No cross has an edge today — every counterpart is level with or ahead of ' + fx.ccy + ' on the board.';
+      if (note) head.appendChild(el('p', 'meta pick-group-note', note));
       group.appendChild(head);
       if (rows.length) {
         var list = el('ol', 'picks-tier');
@@ -3052,7 +3070,9 @@
   }
 
   function pickRow(p, maxGap) {
-    var li = el('li', 'pick ' + p.rating[1]);
+    var open = !!fx.pickOpen[p.pair];
+    var li = el('li', 'pick ' + p.rating[1] + (open ? ' open' : ''));
+    li.setAttribute('data-pair', p.pair);
     var top = el('div', 'pick-top');
     // Rami, 2026-10-20: no Buy/Sell (that reads as a call). Say where the pair
     // goes if the reader's view is right.
@@ -3073,6 +3093,11 @@
     }
     gw.appendChild(el('span', 'mono', 'gap ' + signed(p.gap)));
     top.appendChild(gw);
+    var more = el('button', 'pick-more');   // phones only
+    more.type = 'button';
+    more.setAttribute('aria-expanded', open ? 'true' : 'false');
+    more.setAttribute('aria-label', 'More on ' + p.pair);
+    top.appendChild(more);
     li.appendChild(top);
     li.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
     var meta = [];
