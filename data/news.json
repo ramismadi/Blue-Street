@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T16:53:44Z",
+  "updated": "2026-10-27T18:49:14Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -44,16 +44,49 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold is stuck near $4,000 after last week's 4% drop. Strong US consumer confidence on Tuesday firms up bets on a December Fed hike, which weighs on a metal that pays no interest; Wednesday's Fed decision and Thursday's inflation figure could change that.",
-      "ts": "2026-10-27T14:49:28Z"
+      "text": "Gold keeps bouncing off $4,000 after last week's 4% drop. Markets now see about an 82% chance of a US rate hike in December, which weighs on a metal that pays no interest; Wednesday's Fed decision and Thursday's PCE inflation figure could change that.",
+      "ts": "2026-10-27T18:49:14Z"
     },
     "OIL": {
-      "lean": "mixed",
-      "text": "Brent oil slipped to about $115 on Tuesday as Iran's neighbours keep talking peace, even after Yemen's Houthis said they hit Saudi Arabia's biggest refinery at Ras Tanura, where a fire was quickly put out. Ship attacks near the Strait of Hormuz and the risk of a US strike on Iran keep prices near their highest since April.",
-      "ts": "2026-10-27T16:53:44Z"
+      "lean": "bullish",
+      "text": "Brent oil is near $113, a little lower on the day, as Iran's neighbours keep talking peace. But risks are spreading: Iran says a tanker hit mines near the Strait of Hormuz, Yemen's Houthis keep striking Saudi sites, and Egypt's parliament has cleared military help for Saudi Arabia, so a big supply scare is never far away.",
+      "ts": "2026-10-27T18:49:14Z"
     }
   },
   "items": [
+    {
+      "id": "investingcube-gold-defends-4000-20261027",
+      "ts": "2026-10-27T14:43:00Z",
+      "source": "InvestingCube",
+      "url": "https://www.investingcube.com/commodities/gold-price-today-xau-usd-defends-4000-as-dollar-strength-tests-buyers/",
+      "image": null,
+      "headline": "Gold Price Today: Can $4,000 Hold as December Fed Hike Bets Hit 82%?",
+      "story": "fed-oct28",
+      "story_title": "Fed week: the October 28 decision and December hike bets",
+      "pillar": "policy",
+      "summary": "Gold dipped to $4,000 and bounced to about $4,024 on Tuesday as the dollar hit a near two-week high. Markets now see about an 82% chance the US Federal Reserve raises rates in December.",
+      "beats": {
+        "was": "Gold fell about 4% last week from record highs as the Fed, fighting inflation of 3.7%, signalled more rate rises. The Fed decides on Wednesday, October 28, and the PCE inflation measure, the one the Fed watches most, comes out on Thursday.",
+        "happened": "Gold touched $4,000 early Tuesday, down 0.4%, then recovered to around $4,024 by midday in London. Futures pricing compiled by CME shows about an 82% chance of a December hike, up from about 73% last week. Gold is still below its average of the past 20 days.",
+        "means": "Buyers keep stepping in at $4,000, but rising odds of higher US rates make a metal that pays no interest less attractive. A firm Fed or hot inflation figures this week would add to the pressure.",
+        "fx": "Higher odds of a US hike → a stronger dollar → gold costs more for foreign buyers and struggles to rise."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Rising hike odds weigh on gold, though $4,000 keeps attracting buyers."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Markets lean more toward a December hike, which supports the dollar."
+        }
+      ],
+      "watch": "Whether gold holds $4,000 after Wednesday's Fed decision and Thursday's PCE inflation report."
+    },
     {
       "id": "euronews-fed-preview-warsh-20261027",
       "ts": "2026-10-27T14:23:00Z",
@@ -148,6 +181,39 @@
       "watch": "Whether mortgage rates climb further if the Fed signals a December hike on Wednesday."
     },
     {
+      "id": "mem-tanker-mine-hormuz-20261027",
+      "ts": "2026-10-27T13:51:00Z",
+      "source": "Middle East Monitor (Anadolu)",
+      "url": "https://www.middleeastmonitor.com/20261027-iran-says-oil-tanker-catches-fire-after-hitting-naval-mine-east-of-strait-of-hormuz/",
+      "image": "https://www.middleeastmonitor.com/wp-content/uploads/2026/09/AA-20260909-42424031-42424014-COMMERCIAL_VESSELS_REMAIN_ANCHORED_OFF_BANDAR_ABBAS_FOLLOWING_IRANS_CLOSURE_OF_STRAIT_OF_HORMUZ.jpg",
+      "headline": "Iran says oil tanker catches fire after hitting naval mine east of Strait of Hormuz",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Iran's navy says an oil tanker caught fire after hitting mines just east of the Strait of Hormuz, and repeated that ships may only pass with its permission. It gave no name, flag or crew details.",
+      "beats": {
+        "was": "The Strait of Hormuz, the narrow sea lane between Iran and Oman, carries about a fifth of the world's oil. During the eight-month Iran war, Tehran has said ships need its approval to pass, and attacks on tankers there have pushed oil prices up.",
+        "happened": "On Tuesday Iran's navy said a tanker that had turned off its tracking signal hit naval mines in a restricted area east of the strait and caught fire. It said the strait stays closed and unsafe for any ship that does not coordinate with Iran's armed forces. The ship has not been identified, and the claim has not been confirmed by others.",
+        "means": "Iran is showing it can still make the route dangerous even while its neighbours hold peace talks. Iran has made similar mine claims before, and US forces have called some of them false, so traders treat each new one with caution.",
+        "fx": "Mines in the main oil route → more risk that oil supply is cut → a higher price floor for oil, a small help for Canada's loonie and a weight on big oil buyers like Japan."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "An unconfirmed mine strike adds to supply worries but echoes earlier claims."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports almost all its oil, so supply scares raise its fuel bill."
+        }
+      ],
+      "watch": "Whether the tanker is identified and whether shipping firms pull back from the route."
+    },
+    {
       "id": "actionforex-durables-sep-20261027",
       "ts": "2026-10-27T12:45:08Z",
       "source": "ActionForex",
@@ -187,7 +253,7 @@
       "summary": "Oil slipped about 1% on Tuesday, with Brent near $114.80, as hopes for peace talks with Iran outweighed the Houthi attack on a Saudi refinery. Prices are still near their highest since April.",
       "beats": {
         "was": "Brent oil climbed above $117 last week, its highest since April, after Iranian attacks on tankers during the Iran war. Iran, Saudi Arabia, Turkey and Pakistan agreed on Monday to keep talking about peace and security.",
-        "happened": "By early afternoon in London, Brent was down $1 at about $114.80 a barrel and US crude was just under $101. Iran's top security official met Supreme Leader Ali Khamenei after the regional talks. A Washington think tank said October has been the worst month yet for attacks on ships in and near the Strait of Hormuz. UBS raised its year-end Brent forecast to about $110 from $100.",
+        "happened": "By early afternoon in London, Brent was down $1 at about $114.80 a barrel and US crude was just under $101. Iran's top security official met Supreme Leader Mojtaba Khamenei after the regional talks. A Washington think tank said October has been the worst month yet for attacks on ships in and near the Strait of Hormuz. UBS raised its year-end Brent forecast to about $110 from $100.",
         "means": "Traders are giving more weight to the talks than to the latest strikes, but the price still carries a large premium for the risk of a US or Israeli attack on Iran. Prices this high, even after a dip, keep fuel costs a worry for central banks.",
         "fx": "Peace talks → a small dip in oil → slight relief for oil buyers like Japan and the euro area; a smaller boost for Canada, whose exports earn less."
       },
@@ -311,6 +377,39 @@
         }
       ],
       "watch": "Whether the US answers Iran's terms, or new attacks on ships near Hormuz or on Saudi oil sites push the talks back."
+    },
+    {
+      "id": "turkiyetoday-egypt-houthis-war-20261027",
+      "ts": "2026-10-27T09:35:00Z",
+      "source": "Türkiye Today",
+      "url": "https://www.turkiyetoday.com/region/houthis-accuse-egypt-of-declaring-war-by-backing-saudi-arabia-3231117",
+      "image": "https://img.turkiyetoday.com/images/2026/10/27/houthis-say-egypt-declares-war-by-backing-saudi-arabia-3231117_20261027122741.jpg",
+      "headline": "Houthis accuse Egypt of 'declaring war' by backing Saudi Arabia",
+      "story": "houthi-saudi",
+      "story_title": "Houthi attacks on Saudi Arabia and who joins the defence",
+      "pillar": "commodities",
+      "summary": "Egypt's parliament has allowed President Abdel Fattah el-Sisi to send military help to Saudi Arabia against Houthi attacks. A senior Houthi leader called it a declaration of war on Yemen.",
+      "beats": {
+        "was": "Yemen's Houthi movement, allied with Iran, has fired missiles and drones at Saudi oil sites, airports and cities for weeks, including a claimed hit on the big Ras Tanura refinery on Tuesday. Saudi Arabia, Turkey and Pakistan already have a defence pact, and Britain has sent fighter jets.",
+        "happened": "In a closed session on Monday, at least two thirds of Egypt's lawmakers authorised Sisi to take whatever steps are needed to help Saudi Arabia defend itself. No troops have been sent yet and Saudi Arabia has not made a formal request. Mohammed Ali al-Houthi, a member of the Houthis' political leadership, said Egypt had in effect declared war on Yemen.",
+        "means": "The fight around Saudi Arabia is drawing in more countries, which raises the chance it lasts longer. Egypt also runs the Suez Canal, so a wider clash near the Red Sea is a risk for shipping, though no threat to shipping has been made.",
+        "fx": "A wider war around Saudi oil sites → a bigger risk premium in oil → support for oil-linked currencies like the loonie and more demand for shelter like the franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More countries joining raises the risk to Saudi supply, but no troops have moved yet."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Talk of a wider war adds a little to demand for shelter."
+        }
+      ],
+      "watch": "Whether Egyptian forces actually go to Saudi Arabia, and how the Houthis respond."
     },
     {
       "id": "turkiyetoday-ras-tanura-fire-20261027",
@@ -575,39 +674,6 @@
         }
       ],
       "watch": "US durable goods orders for September on Tuesday, then the Fed decision on Wednesday."
-    },
-    {
-      "id": "ap-markets-rebound-20261026",
-      "ts": "2026-10-26T17:37:00Z",
-      "source": "AP (via BNN Bloomberg)",
-      "url": "https://www.bnnbloomberg.ca/markets/2026/10/26/world-shares-mostly-advance-after-a-decline-on-wall-street-and-oil-prices-fall-more-than-1/",
-      "image": "https://www.bnnbloomberg.ca/resizer/v2/XVQG3QBFHM3ZL2N4ZFGMYIVPVM.jpg?smart=true&auth=705192ba51af3d55b57e5a431a2374a69aef81f9932b3bd7a74d952683146132&width=1200&height=630",
-      "headline": "Markets today: U.S. stocks climb and recover last week's losses",
-      "story": "cb-week",
-      "story_title": "Five central banks decide this week",
-      "pillar": "risk",
-      "summary": "US shares rose on Monday afternoon and won back last week's losses, while the 10-year US government bond yield slipped just under 5%. Investors are calmer heading into a week of big company results and central-bank decisions.",
-      "beats": {
-        "was": "US shares fell last week on worries about the cost of the AI building boom and the Iran conflict. The 10-year US Treasury yield, a benchmark for borrowing costs, had climbed above 5.30% earlier in October.",
-        "happened": "By early afternoon in New York the S&P 500 was up 0.8% and the tech-heavy Nasdaq 1.1%. The 10-year yield was 4.98%, from 5.00% on Friday, and Brent oil was near $111 after dipping toward $109 in the morning.",
-        "means": "Investors are more willing to take risk as oil eases on Gulf diplomacy. Lower long-term US yields take a little shine off the dollar, while a calmer mood weighs on shelter currencies like the yen.",
-        "fx": "Calmer markets and slightly lower US yields → less need for shelter → mixed for the dollar, mild pressure on the yen."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Lower long-term yields trim its appeal, but calmer markets give no reason to sell it hard."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Rising shares and calmer markets reduce demand for the yen as a shelter."
-        }
-      ],
-      "watch": "Wednesday's Fed decision and results from Alphabet and Microsoft the same day."
     },
     {
       "id": "benzinga-cfnai-sep-20261026",
@@ -1238,45 +1304,6 @@
         }
       ],
       "watch": "Whether the talks in Tehran produce anything before the US elections on November 3, and any further drawdown of US embassy staff in the Gulf."
-    },
-    {
-      "id": "brecorder-fx-cb-week-20261026",
-      "ts": "2026-10-26T03:02:00Z",
-      "source": "Reuters (via Business Recorder)",
-      "url": "https://www.brecorder.com/news/40445945/currency-markets-subdued-ahead-of-pivotal-central-bank-week",
-      "image": "https://i.brecorder.com/large/2026/10/260758169863995.jpg",
-      "headline": "Currency markets subdued ahead of pivotal central bank week",
-      "story": "cb-week",
-      "story_title": "Five central banks decide this week",
-      "pillar": "policy",
-      "summary": "Currencies barely moved on Monday as traders waited for five central-bank decisions this week. The Fed, ECB and Bank of Japan are expected to hold; Canada and New Zealand may raise rates.",
-      "beats": {
-        "was": "Oil above $110 has kept inflation high this year, so most central banks are leaning toward raising rates. Last week a slide in US tech shares sent money into US government bonds, pulling yields down and the dollar near a three-week low.",
-        "happened": "The euro sat near $1.12, the pound near $1.34 and the yen near 157 per dollar, all within a fraction of Friday. Oil eased after Qatari mediators went to Tehran. The Federal Reserve decides on Wednesday, October 28, along with the Bank of Canada and the Reserve Bank of New Zealand; the European Central Bank follows on Thursday and the Bank of Japan on Friday.",
-        "means": "The decisions themselves are mostly expected, so what each bank says about its next meetings will matter more. US interest rates have been setting the dollar's direction lately, and the gap between US rates and others has been narrowing.",
-        "fx": "Smaller rate gap between the US and others → less reason to hold dollars → a mild drag on the dollar. Canada and New Zealand hiking would support their currencies only if they signal more to come. The question to keep asking: who sounds readier to raise rates again?"
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Lower US yields weigh, but a December Fed hike is still largely expected."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Markets expect a Bank of Canada hike on Wednesday."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Markets expect a Reserve Bank of New Zealand hike on Wednesday."
-        }
-      ],
-      "watch": "What Fed Chair Kevin Warsh says about December at Wednesday's press conference (1:30 PM CT)."
     },
     {
       "id": "brecorder-oil-drops-qatar-20261026",
