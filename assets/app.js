@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '94';
+  var ASSET_VERSION = '95';
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
@@ -3711,7 +3711,6 @@
     var grid = $('#news-grid');
     if (!grid || !news.data) return;
     var all = (news.data.items || []).filter(function (it) { return it && it.headline && (it.ts || it.date); });
-    if (news.data.updated) setText('#news-updated', relTime(news.data.updated));
 
     // Market chips: pressed state; markets with no stories are dimmed.
     var stAll = newsStories(all);
