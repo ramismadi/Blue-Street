@@ -7,7 +7,15 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '102';
+  var ASSET_VERSION = '103';
+
+  /* Opened from the iPhone home screen? (No manifest, so the CSS
+     display-mode query doesn't fire there.) Lifts the bottom bar clear of
+     the home indicator. */
+  if (window.navigator.standalone === true ||
+      (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches)) {
+    document.documentElement.classList.add('is-app');
+  }
 
   var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of

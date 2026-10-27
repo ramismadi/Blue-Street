@@ -2560,9 +2560,9 @@ html, body { overflow-x: clip; max-width: 100%; }
 }
 /* Home-screen app (Rami, 2026-10-27): lift the bar clear of the iPhone home
    indicator (the swipe-up line). In Safari the toolbar already sits below it. */
-@media (max-width: 640px) and (display-mode: standalone) {
-  .tabbar, [data-nav="side"] .tabbar { bottom: calc(24px + env(safe-area-inset-bottom, 0px)); }
-  body { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
-  .update-pill { bottom: calc(102px + env(safe-area-inset-bottom, 0px)); }
-  .sidenav, [data-nav="side"] .sidenav { padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px)); }
+@media (max-width: 640px) {
+  .is-app .tabbar, .is-app[data-nav="side"] .tabbar { bottom: 26px; }
+  .is-app body { padding-bottom: 100px; }
+  .is-app .update-pill { bottom: 106px; }
+  .is-app .sidenav, .is-app[data-nav="side"] .sidenav { padding-bottom: 34px; }
 }
