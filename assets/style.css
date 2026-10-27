@@ -2504,3 +2504,32 @@ html, body { overflow-x: clip; max-width: 100%; }
   .pick-pair, .pick-group.edge .pick-pair { font-size: 0.95rem; }
   .pick-more { width: 16px; }
 }
+
+/* Bottom tab bar on phones (Rami, 2026-10-27), modeled on Apple News: the
+   same five tabs float at the bottom, icon over label, the current one in a
+   soft blue pill. Always visible. Desktop keeps the top tabs. */
+@media (max-width: 640px) {
+  .tabbar, [data-nav="side"] .tabbar {
+    display: block; position: fixed; z-index: 50;
+    left: 10px; right: 10px; bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+    border: 1px solid var(--line); border-radius: 30px;
+    background: color-mix(in srgb, var(--surface) 86%, transparent);
+    -webkit-backdrop-filter: saturate(1.6) blur(18px); backdrop-filter: saturate(1.6) blur(18px);
+    box-shadow: 0 8px 28px rgba(10, 14, 22, 0.18), 0 1px 3px rgba(10, 14, 22, 0.08);
+  }
+  .tabbar .wrap { padding: 0; max-width: none; }
+  .tabs { gap: 2px; padding: 5px; overflow: visible; justify-content: space-between; }
+  .tabs a {
+    flex: 1 1 0; min-width: 0; flex-direction: column; justify-content: center; gap: 3px;
+    padding: 7px 2px 6px; border-radius: 24px;
+    font-size: 0.66rem; font-weight: 600; letter-spacing: 0; color: var(--ink-2);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tabs a .sn-ico { width: 22px; height: 22px; opacity: 1; }
+  .tabs a[aria-selected="true"] { background: var(--accent-wash); color: var(--accent); font-weight: 700; }
+  .tabs a[aria-selected="true"]::after { display: none; }
+  .tabs a .focus-badge { position: absolute; top: 3px; left: calc(50% + 6px); margin: 0; }
+  /* Room so the last lines of every page clear the bar. */
+  body { padding-bottom: calc(78px + env(safe-area-inset-bottom, 0px)); }
+  .update-pill { bottom: calc(86px + env(safe-area-inset-bottom, 0px)); }
+}
