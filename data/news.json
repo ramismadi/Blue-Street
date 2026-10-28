@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-28T03:00:00Z",
+  "updated": "2026-10-28T10:53:46Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "text": "The dollar is holding near a two-week high after strong US reports on confidence, durable goods and home sales. A hold at Wednesday's Federal Reserve decision is about 91% priced, so what Fed Chair Kevin Warsh says about a December hike is what moves the dollar.",
-      "ts": "2026-10-28T03:00:00Z"
+      "text": "The dollar is at a two-week high after strong US reports on confidence, durable goods and home sales, and talk of possible US strikes on Iran after the midterms adds some demand for shelter. A Fed hold at 1:00 PM CT is about 91% priced, so Fed Chair Kevin Warsh's words on a December hike are what move it.",
+      "ts": "2026-10-28T10:53:46Z"
     },
     "EUR": {
       "lean": "bearish",
@@ -14,8 +14,8 @@
     },
     "GBP": {
       "lean": "bearish",
-      "text": "The pound slipped to about $1.33 on Tuesday as the dollar firmed before Wednesday's US Federal Reserve decision. Britain had to pay over 5% to borrow for five years at a bond sale on the eve of Chancellor John Healey's budget the same day; a borrowing surprise is the main risk before a likely Bank of England hike to 4% on November 5.",
-      "ts": "2026-10-27T22:55:36Z"
+      "text": "The pound is near $1.33, its lowest in about two weeks, before Chancellor John Healey's first budget at 7:30 AM CT on Wednesday. His room to spend is thin and long-term borrowing costs are near 28-year highs, so a borrowing surprise is the main risk before a likely Bank of England hike on November 5.",
+      "ts": "2026-10-28T10:53:46Z"
     },
     "JPY": {
       "lean": "bearish",
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "mixed",
-      "text": "A slim majority of economists expect the Bank of Canada to raise rates to 2.50% on Wednesday, October 28, but some big banks think it will wait, so the loonie can move either way. Oil, a big Canadian export, is pulled between Gulf peace talks and Houthi attacks on Saudi sites, so it gives little steady help.",
-      "ts": "2026-10-27T22:55:36Z"
+      "text": "The loonie slipped to just over 1.40 per US dollar before the Bank of Canada's decision at 8:45 AM CT, where a rise to 2.50% is mostly expected. Higher oil, a big Canadian export, helps, but a surprise hold would hurt.",
+      "ts": "2026-10-28T10:53:46Z"
     },
     "AUD": {
       "lean": "bullish",
@@ -49,11 +49,110 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent oil is near $114, a little lower as Iran's neighbours keep talking peace, but Houthi strikes on Saudi sites and mine reports near the Strait of Hormuz keep supply fears alive. Israel's election gave no clear winner, and OPEC+ is expected to leave its targets unchanged on Sunday, so neither changes the picture much.",
-      "ts": "2026-10-28T01:05:17Z"
+      "text": "Brent oil is back near $115 after Yemen's Houthi rebels said they hit Saudi Arabia's biggest refinery, and a Wall Street Journal report says the US told Gulf states to prepare for possible strikes on Iran after the November 3 US elections. Neither has meant lost oil so far, but both keep supply fears high.",
+      "ts": "2026-10-28T10:53:46Z"
     }
   },
   "items": [
+    {
+      "id": "euronext-oil-saudi-refinery-20261028",
+      "date": "2026-10-28",
+      "source": "Reuters (Euronext)",
+      "url": "https://live.euronext.com/en/financial-news/oil-over-1-saudi-arabian-refinery-attack-reignites-supply-risk-concerns",
+      "image": null,
+      "headline": "Oil up over 1% as Saudi Arabian refinery attack reignites supply risk concerns",
+      "story": "saudi-houthi",
+      "story_title": "Saudi Arabia: Houthi attacks on oil and airports",
+      "pillar": "commodities",
+      "summary": "Oil rose more than 1% on Wednesday, with Brent near $115, after Yemen's Houthi rebels said they hit Saudi Arabia's biggest refinery. Saudi Arabia had not confirmed the strike, and a US industry report showed crude stocks falling.",
+      "beats": {
+        "was": "The Houthis, an Iran-aligned group in Yemen, have stepped up missile and drone attacks on Saudi Arabia during the Iran war. Oil had slipped nearly $2 on Tuesday on hopes for peace talks in Tehran.",
+        "happened": "Brent rose about $1.40 to roughly $115 a barrel by Wednesday morning in London, and US crude rose about 1.6% to $101.50. The Houthis said a missile hit Saudi Arabia's largest refinery, which processes 550,000 barrels a day; Saudi Arabia had not confirmed it. The American Petroleum Institute, a US industry group, reported a 2 million barrel fall in US crude stocks when a small rise was expected. ING said markets see a higher chance of the fighting flaring up again.",
+        "means": "Oil won back most of Tuesday's drop. No lost supply has been shown, so this is fear being priced back in rather than a real shortage.",
+        "fx": "Attack claims on Saudi oil → oil back up → helps oil sellers like Canada, hurts oil buyers like Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Unconfirmed refinery hit plus falling US stocks win back Tuesday's drop."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil lifts what Canada earns from exports."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Dearer crude raises Japan's import bill."
+        }
+      ],
+      "watch": "Official US stock figures at 9:30 AM CT and any Saudi word on damage to the refinery."
+    },
+    {
+      "id": "gbaf-sterling-budget-eve-20261028",
+      "date": "2026-10-28",
+      "source": "Global Banking & Finance Review (Reuters)",
+      "url": "https://www.globalbankingandfinance.com/sterling-inches-lower-ahead-highly-anticipated-uk-budget/",
+      "image": null,
+      "headline": "Sterling Slips Ahead of UK Budget Amid Bond Market Worries",
+      "story": "uk-budget-oct28",
+      "story_title": "UK budget: Chancellor Healey's first, on October 28",
+      "pillar": "policy",
+      "summary": "The pound eased to about $1.329 before Chancellor John Healey's first budget, due at 7:30 AM CT on Wednesday. His room to spend is thin, and one strategist warned that a market-friendly budget is already expected, so the easier way for the pound is down.",
+      "beats": {
+        "was": "Britain's long-term borrowing costs hit their highest since 1998 earlier this month. Healey, the finance minister, took over from Rachel Reeves, who had already raised taxes heavily.",
+        "happened": "The pound slipped 0.1% to about $1.329 and 83.7 pence per euro on Wednesday morning. Official forecasters put the government's spare room under its own borrowing rules at only about £15 billion. Higher taxes on banks, betting firms and online marketplaces are expected, with little new borrowing. Markets still expect the Bank of England to raise rates on November 5.",
+        "means": "Investors expect a careful budget. If Healey borrows more than planned, bond and pound sellers have room to push; a careful budget mostly leaves things as they are.",
+        "fx": "Thin room to spend → any extra borrowing would hit UK bonds → the pound is more exposed to a bad surprise than a good one."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slips before a budget where a borrowing surprise is the main risk."
+        }
+      ],
+      "watch": "How much new borrowing Healey announces at 7:30 AM CT, and how UK 10- and 30-year bond yields react."
+    },
+    {
+      "id": "tradingpedia-usdcad-boc-fed-20261028",
+      "date": "2026-10-28",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/10/28/usd-cad-extends-rally-ahead-of-boc-and-fed-decisions/",
+      "image": null,
+      "headline": "USD/CAD Extends Rally Ahead of BoC and Fed Decisions",
+      "story": "boc-oct28",
+      "story_title": "Bank of Canada: the October 28 decision",
+      "pillar": "policy",
+      "summary": "The Canadian dollar weakened for a second day, to just over 1.40 per US dollar, before the Bank of Canada's decision at 8:45 AM CT and the US Federal Reserve's at 1:00 PM CT. A firm US dollar outweighed a rebound in oil.",
+      "beats": {
+        "was": "The Bank of Canada has kept its main rate at 2.25% for a year, but war-driven fuel prices pushed Canadian inflation to 3.1% in September. Most economists expect a quarter-point rise on Wednesday.",
+        "happened": "The US dollar rose to a one-week high against the loonie in Asian trading, moving above 1.40 after a low near 1.397 last week. The US dollar has gained for four straight days on bets the Fed will raise rates in December. Oil climbed again after two days of losses, which limited the loonie's fall.",
+        "means": "A Bank of Canada hike is mostly expected, so it would only steady the loonie. A surprise hold would hurt it more, as New Zealand's surprise hold hurt the kiwi earlier on Wednesday.",
+        "fx": "Bank of Canada hike expected → a hike steadies the loonie, a hold would knock it lower; the Fed's tone later decides the US dollar side."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slips for a second day before its own rate decision."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Four days of gains on bets for a December Fed hike."
+        }
+      ],
+      "watch": "The Bank of Canada's decision and forecasts at 8:45 AM CT; a hold would surprise."
+    },
     {
       "id": "brecorder-dollar-steady-kiwi-slumps-20261028",
       "date": "2026-10-28",
@@ -86,6 +185,51 @@
         }
       ],
       "watch": "Fed Chair Kevin Warsh's comments on a December hike after the 1:00 PM CT decision."
+    },
+    {
+      "id": "iranintl-wsj-post-midterm-iran-20261028",
+      "ts": "2026-10-28T04:07:16Z",
+      "source": "Iran International (WSJ report)",
+      "url": "https://www.iranintl.com/en/202610282501",
+      "image": "https://i.iranintl.com/images/rdk9umy0/production/6a5988b540a282daaa246d29858fd4efc9ff4468-1200x675.jpg?rect=0,23,1200,630&w=1200&h=630&q=66&fit=max&auto=format",
+      "headline": "US warns Persian Gulf states of possible post-election Iran strikes - WSJ",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "The US has reportedly told Gulf Arab governments to get ready for a short, heavy US attack on Iran after the November 3 US midterm elections. The White House would not comment, and the Wall Street Journal says no final decision has been made.",
+      "beats": {
+        "was": "The US and Israel fought a war with Iran this year that partly blocked the Strait of Hormuz, the route for about a fifth of the world's oil. Talks with Iran, helped by Qatar, have stalled in recent days.",
+        "happened": "The Wall Street Journal reported that the US warned several Gulf states, through diplomats and the military, to prepare for a possible short, intense campaign against Iran after the midterms. President Trump is said to lean toward a large strike on Iran's infrastructure and nuclear sites. The US is moving air-defence systems, fresh munitions, bombers and another aircraft carrier group into the region.",
+        "means": "This puts a rough date on the risk of the war restarting: the days after November 3. Until then, the chance of new fighting keeps a fear premium in oil and keeps demand for safe places to hold money.",
+        "fx": "Talk of new US strikes → bigger risk to Gulf oil → higher oil, which helps Canada and hurts Japan and Europe, and more demand for the dollar and Swiss franc as shelter."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Puts a possible date on new fighting near the Gulf's oil routes."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "War fears add to demand for the dollar as shelter."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The franc draws money when war risk rises."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so the fuel bill risk rises."
+        }
+      ],
+      "watch": "Whether talks with Iran restart before November 3, or the White House confirms or denies the plan."
     },
     {
       "id": "canberratimes-asia-stocks-fed-20261028",
@@ -889,6 +1033,33 @@
       "watch": "Wednesday's decision and whether the bank says more hikes are coming."
     },
     {
+      "id": "cityam-healey-gilts-dmo-20261027",
+      "ts": "2026-10-27T05:27:00Z",
+      "source": "City AM",
+      "url": "https://www.cityam.com/autumn-budget-2026-healey-will-buy-some-time-with-the-bond-markets/",
+      "image": "https://www.cityam.com/wp-content/uploads/2026/10/john-healey-at-jackdaw.jpg",
+      "headline": "Autumn Budget 2026: Healey will buy some time with the bond markets",
+      "story": "uk-budget-oct28",
+      "story_title": "UK budget: Chancellor Healey's first, on October 28",
+      "pillar": "policy",
+      "summary": "A City AM column argues Britain is calming bond buyers by selling far fewer long-dated bonds and more short-term debt. That helps now, but leaves the government more exposed if inflation and rates stay high.",
+      "beats": {
+        "was": "Pension funds, the usual buyers of Britain's long-dated bonds, want fewer of them, and long-term borrowing costs hit a 28-year high this month.",
+        "happened": "Gilt dealers polled by Reuters expect bonds maturing in more than 15 years to be about 7% of new sales, down from over 30% five years ago. They expect total bond sales this year near £250 billion and next year's borrowing need around £334 billion, £27 billion above March's plan. The writer says lower-than-expected figures on budget day could lift UK bonds.",
+        "means": "How much Britain plans to borrow, and in what form, matters as much as the tax and spending news. Smaller figures would ease pressure on bonds; bigger ones would add to it.",
+        "fx": "Smaller borrowing plan → bonds rally, steadier pound; bigger plan → yields climb, weaker pound."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Hangs on whether budget-day borrowing figures come in above or below about £334 billion."
+        }
+      ],
+      "watch": "The Debt Management Office's borrowing plan published with the budget on Wednesday."
+    },
+    {
       "id": "reuters-yen-slips-cb-week-20261027",
       "ts": "2026-10-27T03:04:08Z",
       "source": "Reuters via Business Recorder",
@@ -1129,93 +1300,6 @@
       "watch": "The Reserve Bank of New Zealand's decision and statement on Wednesday, October 28 (Tuesday evening in the US)."
     },
     {
-      "id": "reuters-ecb-five-questions-20261026",
-      "date": "2026-10-26",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://www.investing.com/news/economy-news/ready-for-a-french-test-five-questions-for-the-ecb-4971518",
-      "image": "https://content-media.investing.com/trkd-images/LYNXMPEM9M07Q_L.jpg",
-      "headline": "Ready for a French test?: Five questions for the ECB",
-      "story": "cb-week",
-      "story_title": "Five central banks decide this week",
-      "pillar": "policy",
-      "summary": "The European Central Bank is expected to keep its main rate at 2.5% on Thursday, with economists looking for another hike in December. The jump in French borrowing costs is the new worry it has to weigh.",
-      "beats": {
-        "was": "The ECB raised rates in June and September because oil, up about 90% this year, pushed euro-area inflation to 3.8% in September. France's 10-year borrowing cost then rose above 5%, its highest in over two decades, over a budget fight.",
-        "happened": "A Reuters preview says the bank will likely hold on October 29 and avoid promising its next step. The gap between French and German 10-year yields has widened to 1.67 percentage points from 0.92 at the last meeting. Markets price at least two more hikes by mid-2027.",
-        "means": "The ECB still leans toward more hikes, but stress in France could make it go slower, since higher rates would add to France's debt costs. President Christine Lagarde has said France must fix its own finances.",
-        "fx": "Hikes still expected, but France is a reason to go slow → mixed for the euro."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "More hikes are expected, but French bond stress could slow them; a preview, so mostly priced."
-        }
-      ],
-      "watch": "Thursday's ECB decision and what Lagarde says about December and about France."
-    },
-    {
-      "id": "gulfnews-iran-hormuz-control-20261026",
-      "date": "2026-10-26",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/world/mena/middle-east-war-trump-leaves-iran-attack-on-the-table-tehran-vows-changes-to-hormuz-strait-houthis-claim-saudi-strikes-1.500723497",
-      "image": "https://media.assettype.com/gulfnews%2F2026-10-26%2Fkyull0bw%2Fnewsml_afp_com_20261026T143003Z_doc_d4g96rf.jpeg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "Iran says it controls the Strait of Hormuz and its routes will not go back to how they were",
-      "story": "iran-hormuz",
-      "story_title": "Iran war: the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's top military officer said the Strait of Hormuz is closed to any ship that does not follow Iran's rules, and Foreign Minister Abbas Araghchi said shipping there will not return to its pre-war form. The same day, talks in Tehran with Saudi Arabia, Turkey and Pakistan ended with only a promise to keep talking.",
-      "beats": {
-        "was": "The US and Israel went to war with Iran in late February. About a fifth of the world's oil normally passes through the Strait of Hormuz, and traffic there is still restricted; Brent oil is up nearly 90% this year.",
-        "happened": "On Monday, Major General Ali Abdollahi, chief of staff of Iran's armed forces, told troops on the coast that Iran has full control of the strait and ships cannot pass unless they follow Iranian rules. Araghchi said both the routes and the way the strait is run will change for good, and that talks on this will continue.",
-        "means": "Even if the fighting winds down, Iran wants a lasting say over who uses the strait. That makes a quick return to normal oil shipping less likely, which keeps a floor under prices even as diplomacy calms nerves.",
-        "fx": "Lasting limits on Hormuz traffic → oil stays dear → support for oil, a cost for big importers like Japan and the euro area. Mostly a restatement of Iran's stance, so the push is small."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Signals Hormuz shipping won't fully reopen soon, but repeats Iran's known stance."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so dearer oil weighs on the yen."
-        }
-      ],
-      "watch": "Whether Iran publishes concrete rules for ships, and whether tanker traffic through Hormuz picks up or falls."
-    },
-    {
-      "id": "gbaf-cbi-retail-oct-20261026",
-      "ts": "2026-10-26T11:02:30Z",
-      "source": "Reuters (via Global Banking & Finance Review)",
-      "url": "https://www.globalbankingandfinance.com/strong-cbi-retail-sales-buck-downbeat-uk-consumer-trend/",
-      "image": "https://www.globalbankingandfinance.com/i/cloud-afa9f929-4c9b-4aa6-9201-e0dfbe40996b/width=1200,height=630,quality=80,format=auto,fit=cover/",
-      "headline": "Strong CBI retail sales buck downbeat UK consumer trend",
-      "story": "uk-growth",
-      "story_title": "UK growth before the November 5 Bank of England decision",
-      "pillar": "growth",
-      "summary": "British shops said sales fell at the slowest pace in about 18 months in October, a much better reading than expected. The business group behind the survey still calls the outlook fragile.",
-      "beats": {
-        "was": "UK shoppers have been pulling back: official September sales were weak and consumer confidence had its sharpest drop since the pandemic, ahead of Chancellor John Healey's first budget on Wednesday, October 28.",
-        "happened": "The Confederation of British Industry's monthly retail survey jumped to -10 from -55, far better than the roughly -47 expected. Orders to suppliers also improved from a record low.",
-        "means": "It eases fears that UK spending is collapsing, which helps the case for a Bank of England hike on November 5. But it is one survey of 68 chains, and the group warns that fuel costs and careful households still weigh.",
-        "fx": "Spending holds up better than feared → less pressure to go easy on rates → small support for the pound. The pound slipped anyway on Monday, so the effect is minor."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A big beat on a survey, but sterling eased anyway with the budget two days away."
-        }
-      ],
-      "watch": "Wednesday's budget: tax rises that hit spending would undo the relief."
-    },
-    {
       "id": "euronews-oil-plunge-diplomacy-20261026",
       "ts": "2026-10-26T10:18:00Z",
       "source": "Euronews",
@@ -1253,72 +1337,6 @@
         }
       ],
       "watch": "Whether the Tehran talks produce anything concrete, or Houthi attacks or US strikes resume."
-    },
-    {
-      "id": "newarab-mecca-pact-talks-20261026",
-      "ts": "2026-10-26T10:14:00Z",
-      "source": "The New Arab",
-      "url": "https://www.newarab.com/news/iran-saudi-arabia-turkey-and-pakistan-agree-further-talks",
-      "image": "https://www.newarab.com/sites/default/files/styles/new_arab_overlay_medium_16_9/public/2292347603.jpeg?itok=ibmIdShI",
-      "headline": "Iran, Saudi Arabia, Turkey and Pakistan agree to further talks",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Monday's meeting in Tehran between Iran and senior officials from Saudi Arabia, Turkey and Pakistan ended with a promise to keep talking about regional security. No deal or new arrangement was announced.",
-      "beats": {
-        "was": "The US and Israel fought Iran earlier this year, and a shaky pause has held since. US officials say new strikes could come soon, and Yemen's Houthi rebels, backed by Iran, keep attacking Saudi Arabia. Saudi Arabia, Turkey and Pakistan are partners in a new defence pact signed in Mecca.",
-        "happened": "Iran's security chief Mohsen Rezaei and President Masoud Pezeshkian hosted Saudi Defence Minister Prince Khalid bin Salman, Pakistan's army chief Asim Munir and Turkey's intelligence chief Ibrahim Kalin. A joint statement said they would keep consulting on peace and security. Pezeshkian said Iran does not want nuclear weapons and criticised the US for offering talks while threatening strikes.",
-        "means": "Regional powers are keeping a channel open, which helps hold off new fighting for now. But nothing concrete came out, and the main gap between Washington and Tehran is unchanged.",
-        "fx": "Talks continue but no deal → war risk eases only a little → a mild weight on oil prices."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Talks keep going, slightly lowering the near-term risk to Gulf supply."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Calmer news takes away a little shelter demand."
-        }
-      ],
-      "watch": "Whether President Trump chooses a deal or new strikes, and whether Houthi attacks on Saudi Arabia ease."
-    },
-    {
-      "id": "fxstreet-eurgbp-084-ifo-20261026",
-      "ts": "2026-10-26T09:44:15Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/euro-tests-08400-against-british-pound-as-german-business-climate-beats-expectations-202610260944",
-      "image": "https://editorial.fxsstatic.com/images/i/Discover-f-10_Medium.jpg",
-      "headline": "Euro tests 0.8400 against British Pound as German business climate beats expectations",
-      "story": "uk-growth",
-      "story_title": "UK growth before the November 5 Bank of England decision",
-      "pillar": "growth",
-      "summary": "The pound gave back some ground to the euro on Monday, with the euro near 84 pence after a better German business survey, lower oil and calmer French bond markets.",
-      "beats": {
-        "was": "On Friday the pound reached its strongest against the euro since May 2025, near 83.6 pence, helped by strong UK business surveys that make a Bank of England rate hike on November 5 look likely.",
-        "happened": "The euro rose about 0.3% from Friday's low after Germany's Ifo business survey beat forecasts, Brent oil dropped toward $110 and French yields eased.",
-        "means": "This is mostly the euro bouncing rather than fresh bad news for Britain. The pound's next big test is Chancellor John Healey's budget on Wednesday, October 28.",
-        "fx": "Better news from Germany and France → money moves back toward the euro → the pound slips against it. An expected Bank of England hike limits how far it can fall."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Pulled back from a 17-month high against the euro as the euro area's news improved."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "German firms' brighter outlook and calmer French bonds helped the euro."
-        }
-      ],
-      "watch": "Healey's budget on October 28: how much borrowing and tax it plans, and how UK government bonds react."
     }
   ]
 }
