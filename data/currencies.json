@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-28T07:40:00-05:00",
-  "updated": "2026-10-28T07:40:00-05:00",
+  "as_of": "2026-10-28T15:05:00-05:00",
+  "updated": "2026-10-28T15:05:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "NY-open read, Wednesday 2026-10-28 (7:15 AM CT). DXY 102.40 flat at its two-week high; EUR/USD 1.1124, GBP/USD 1.329 (more than one-week low into the Budget), USD/JPY 157.95, USD/CHF ~0.83, AUD/USD 0.7035, USD/CAD 1.4063, NZD/USD ~0.5606; Brent ~$115, WTI ~$101, gold ~$4,051, 10Y 5.01%. Spot levels are indicative index quotes, not executable prices.",
+  "note": "NY-close read, Wednesday 2026-10-28 (3:00 PM CT close). FOMC held 3.75-4.00% (10-2); BoC hiked to 2.50%; UK Budget landed muted. DXY ~102.00, EUR/USD ~1.116, GBP/USD ~1.3340, USD/JPY ~157.80, USD/CHF ~0.83, AUD/USD ~0.7060, USD/CAD ~1.4035, NZD/USD ~0.5606; Brent ~$115.7, WTI past $103, gold slipping back toward $4,000, 10Y ~5.01%. Spot levels are indicative index quotes, not executable prices.",
   "pairs": {},
   "currencies": [
     {
@@ -10,11 +10,11 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY 102.40 (two-week high) into today's FOMC: hold ~91% (CME FedWatch via Reuters Oct 28), Dec hike ~73-82%. Tue's beats (durables +1.8%, confidence 91.7, new home sales 676K) still underpin the dollar; Warsh presser 1:30pm CT.",
+      "summary": "DXY ~102.00 into the NY close after the FOMC held 3.75-4.00% (10-2, Cook + Hammack for a hike); Warsh's presser knocked the dollar off its two-week high and pulled the 2Y back to 4.726%. December hike ~86% (CME post-decision). Tue's beats (durables +1.8%, confidence 91.7, new home sales 676K) still underpin the dollar into Thursday's GDP + PCE.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Oct 27-28 a hold at ~89-93% (LSEG 89.5% Oct 27; CME FedWatch ~91%); December hike ~73-82% (FXEmpire ~73% CME Monday; Reuters via Kitco 82% Tuesday) — Fed still the highest G10 rate; Warsh corralled the October pause; blackout holds; presser 1:30pm CT Wed"
+          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~86% (CME FedWatch via CoinDesk post-decision, up from ~78% a day earlier) — Fed still the highest G10 rate; next meeting Dec 8-9 with SEP/dot plot"
         },
         "growth": {
           "score": 0,
@@ -47,7 +47,7 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD 1.1129, flat in Asia — fifth straight down day's lows held into Thursday's ECB (hold ~93-97%). France OAT-Bund ~167bp; German GfK due 2am CT, EZ sentiment Thu.",
+      "summary": "EUR/USD ~1.116 into the NY close, reversing five straight daily drops and challenging 1.1170 (FXStreet afternoon) into Thursday's ECB (hold ~93-97%). France OAT-Bund widened to ~162bp Oct 27; German GfK -30.8 in line. EZ sentiment + US GDP/PCE Thu, EZ GDP + flash CPI Fri.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -75,7 +75,7 @@
         },
         "fiscal": {
           "score": -1,
-          "note": "Moody's SPARED France Friday (Aa3 affirmed, negative outlook — vs the widely expected A1 cut; wants a deficit-cutting 2027 budget, debt >120% of GDP in 2027); OAT-Bund ~167bp (FXEmpire, Oct 27) vs 170-177bp (15-yr high), OAT 10Y 5.14% (highest since Jul 2002); revenue-section vote moved to Nov 3 (was Oct 27); S&P reviews Nov 27"
+          "note": "Moody's SPARED France Friday (Aa3 affirmed, negative outlook — vs the widely expected A1 cut; wants a deficit-cutting 2027 budget, debt >120% of GDP in 2027); OAT-Bund ~162bp (Action Forex, Oct 27) after French 10Y +5.2bp; revenue-section vote moved to Nov 3 (was Oct 27); S&P reviews Nov 27"
         }
       }
     },
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD ~1.329 (12-day low $1.3269 in early European trade) into Healey's first Budget at 7:30am CT — BoE Nov 5 hike ~90-97% to 4.00%; BRC shop prices beat 2.1%. Ebury: with a market-friendly Budget priced in, 'the path of least resistance is lower for the pound and bonds.'",
+      "summary": "GBP/USD ~1.3340 into the NY close, retracing from troughs near 1.3270 after Healey's first Budget landed as expected — headroom £15B, 10Y gilt -2bp to 5.323%, the 'boring budget' bond markets wanted. BoE Nov 5 hike ~94% to 4.00%.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -112,7 +112,7 @@
         },
         "fiscal": {
           "score": 0,
-          "note": "Healey's first Budget Wednesday: CGT rise off the table, banks face £2-5B tax rise, headroom £23.6B→~£15B, issuance +~£3B away from the long end (newsquawk); Sep borrowing £24.5B miss, debt >£3T first time"
+          "note": "Healey's first Budget DELIVERED Oct 28: headroom £15B in 2029/30 (vs £23.6B March, matching the dealer poll), OBR 2027 growth cut to 1.0% (from 1.6%), 2026 lifted to 1.2%; banks face a surcharge rise to 6%; gilt 10Y -2bp to 5.323%, sterling $1.3298 — muted, as expected"
         }
       }
     },
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY 157.81 — yen flat in Asia after Katayama's intervention warning; BoJ Fri: hold at 1.25%, Dec hike ~83-88%. BoJ trend index jumped 3.2% y/y in Sep (3-yr high, Reuters Oct 27), cementing the Dec case.",
+      "summary": "USD/JPY ~157.80 into the NY close, failing to hold past 158.00 after the FOMC hold and ending slightly in the red (FXStreet afternoon); BoJ Fri: hold at 1.25%, Dec hike ~83-88%. BoJ trend index jumped 3.2% y/y in Sep (3-yr high, Reuters Oct 27), cementing the Dec case.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF 0.8299 in Asia — haven bid faded as equities steadied; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
+      "summary": "USD/CHF ~0.83 into the NY close — haven bid faded as equities steadied; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
       "drivers": {
         "policy": {
           "score": 0,
@@ -195,7 +195,7 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD 0.7035 — spiked to $0.7053 on Q3 CPI, then settled in Asia. RBA Nov 2-3 hike now ~79-85% to 4.85% after trimmed CPI beat the Bank's own forecast.",
+      "summary": "AUD/USD ~0.7060 into the NY close, new five-week highs challenging its 200-day SMA (FXStreet afternoon). RBA Nov 2-3 hike ~79-85% to 4.85% after trimmed CPI beat the Bank's own forecast.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -232,11 +232,11 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD 1.4066 into the BoC at 8:45am CT: hike ~78-85% to 2.50% (TD/Rabobank dissent — hold). Crude rebounded (WTI $101.12) on the Houthi refinery claim, unconfirmed by Saudi.",
+      "summary": "USD/CAD ~1.4035 into the NY close (+0.1% loonie) after the BoC hiked +25bp to 2.50%, its first since July 2023; MPR lifts 2027 inflation to 3.1%. December further hike ~45% (swaps); Can 2Y hit a 2-year high 3.441%.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Oct 28 hike ~75-80% (currencysolutions ~75%, investinglive ~78%, Oct 23); TD Securities dissents — hold at 2.25% Oct, +25bp Dec, +25bp Jan"
+          "note": "Oct 28 HIKED +25bp to 2.50% (first since July 2023), as expected; December further hike ~45% (swaps via Reuters), a second hike fully discounted by January; TD: lower bar for December — next decision Dec 9"
         },
         "growth": {
           "score": -1,
@@ -269,7 +269,7 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD ~0.5606 — fell as much as 1.7% to $0.5585 (Finnhub low 0.5580) after the surprise RBNZ hold; the hike case is delayed to December, not dropped.",
+      "summary": "NZD/USD ~0.5606 into the NY close, still nursing the RBNZ surprise hold (4-3, 2.75%); the hike case is delayed to Dec 9, not dropped (ANZ: Dec/Feb/Mar to 3.50%).",
       "drivers": {
         "policy": {
           "score": 0,
