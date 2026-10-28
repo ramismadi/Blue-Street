@@ -1,40 +1,48 @@
 {
-  "updated": "2026-10-28T01:40:00-05:00",
+  "updated": "2026-10-28T15:30:00-05:00",
   "rows": [
     {
       "id": "policy",
       "title": "Policy",
-      "figure": "RBNZ held 2.75% (4–3) vs ~85–95% hike priced; RBA Nov 3 hike ~79–85% (from ~50–60%); BoC today hike ~78–85%; Fed today hold ~91%, Dec hike ~73–82%; ECB Oct 29 hold ~95%; BoJ Oct 30 hold ~98%; BoE Nov 5 hike ~90–97%",
-      "read": "New Zealand's central bank surprised markets by holding rates, though it still expects to hike later, while hot inflation in Australia made a November hike there likely. Today Canada and the Fed decide, and for both the signal about what comes next matters more than the decision. Most banks still lean toward hikes because energy keeps inflation high.",
+      "figure": "Fed Oct 28 held 3.75–4.00% (10–2, Cook + Hammack for +25bp), Dec hike ~86%; BoC hiked to 2.50%, Dec ~45%; RBNZ held 2.75% (4–3); RBA Nov 3 hike ~79–85%; ECB Oct 29 hold ~95%; BoJ Oct 30 hold ~98%; BoE Nov 5 hike ~94%",
+      "read": "The Fed held but two officials wanted to hike now, and Canada raised rates, so the global push toward higher rates continues. Fed chair Kevin Warsh refused to commit to December, which took some shine off the dollar. Europe and Japan decide next, and both are expected to wait until December.",
       "sources": [
         {
-          "label": "Blue Street central bank data (Hercules, Oct 28 London open run): pricing and notes",
+          "label": "Federal Reserve: FOMC statement (Oct 28, 2026)",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+        },
+        {
+          "label": "Reuters (Oct 28): Bank of Canada raises key interest rate, says another hike possible",
+          "url": "https://www.reuters.com/world/americas/bank-canada-raises-key-interest-rate-says-another-hike-possible-2026-10-28/"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 28 New York close run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, Oct 28 London open run, 12:55 AM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, Oct 28 New York close run, 3:05 PM CT; indicative, mostly afternoon quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Morningstar/Dow Jones (Oct 27): New Zealand central bank surprises markets with rate hold",
-          "url": "https://www.morningstar.com/news/dow-jones/2026102714004/new-zealand-central-bank-surprises-markets-with-rate-hold"
-        },
-        {
-          "label": "investingLive (Oct 28): hawkish RBA signals clash with RBNZ's surprise 4–3 hold",
-          "url": "https://investinglive.com/forex/aud-nzd-in-focus-as-hawkish-rba-signals-clash-with-rbnz-s-surprise-4-3-hold/"
-        },
-        {
-          "label": "Investing.com (Oct 28): Asia FX mixed as dollar holds near two-week high, kiwi sinks after RBNZ hold",
-          "url": "https://www.investing.com/news/stock-market-news/asia-fx-mixed-as-dollar-holds-near-twoweek-high-kiwi-sinks-after-rbnz-hold-4977438"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "US consumer confidence Oct 91.7 (fc 81.2); durable goods Sep +1.8%; US Q3 GDP Thu fc 3.0% annualised; euro-area Q3 GDP Fri",
-      "read": "There was no major growth news overnight, so the picture is unchanged: a strong US economy against a soft euro area and a weak Australian jobs market. That gap keeps favouring the dollar. US growth figures on Thursday are the next big check.",
+      "figure": "Fed statement: activity 'strong' (from 'solid'); US Sep goods deficit −$134.9B (fc −$130.2B); OBR UK 2027 growth 1.0% (from 1.6%); German GfK −30.8; US Q3 GDP Thu fc 3.0% annualised",
+      "read": "The Fed upgraded its view of the US economy to strong, while Britain's budget watchdog cut its growth forecast and German shoppers stayed gloomy. That gap keeps favouring the dollar. US third-quarter growth figures on Thursday are the next check.",
       "sources": [
+        {
+          "label": "Federal Reserve: FOMC statement (Oct 28, 2026)",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+        },
+        {
+          "label": "Reuters (Oct 28): UK economic growth downgraded to 1% in 2027, Healey says in first budget",
+          "url": "https://www.reuters.com/world/uk/uk-economic-growth-downgraded-1-2027-healey-says-first-budget-2026-10-28/"
+        },
+        {
+          "label": "Reuters (Oct 28): German consumer sentiment slips on inflation fears",
+          "url": "https://www.reuters.com/business/german-consumer-sentiment-slips-inflation-fears-survey-shows-2026-10-28/"
+        },
         {
           "label": "Blue Street calendar (Hercules, Oct 28): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
@@ -44,16 +52,20 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "Australia Q3 trimmed CPI +1.0% q/q (RBA fc 0.8%); headline Sep 4.3% y/y (fc 4.2%); Tokyo CPI tonight 6:30 PM CT; US PCE Thu 7:30 AM CT (core fc +0.3% m/m)",
-      "read": "Australian inflation ran hotter than its central bank expected, the latest sign that high energy costs are feeding into prices. That keeps most central banks leaning toward hikes, which supports currencies whose banks act. The US inflation measure the Fed watches most comes on Thursday.",
+      "figure": "Fed: inflation 'remains elevated'; BoC 2027 inflation forecast 3.1% (from 2.0%); Australia Q3 trimmed CPI +1.0% q/q (RBA fc 0.8%); Tokyo CPI tonight 6:30 PM CT; US core PCE Thu fc +0.3% m/m",
+      "read": "Energy keeps pushing prices up: the Fed called inflation elevated, Canada raised its inflation forecasts and Australia's ran hotter than its central bank expected. That keeps most banks leaning toward hikes, which supports currencies whose banks act. The US inflation measure the Fed watches most comes on Thursday.",
       "sources": [
+        {
+          "label": "Federal Reserve: FOMC statement (Oct 28, 2026)",
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+        },
+        {
+          "label": "Reuters (Oct 28): Full text of Bank of Canada governor Tiff Macklem's opening statement",
+          "url": "https://www.reuters.com/business/full-text-bank-canada-head-sees-less-room-monetary-accommodation-2026-10-28/"
+        },
         {
           "label": "Australian Bureau of Statistics (Oct 28): CPI rose 4.3% in the year to September 2026",
           "url": "https://www.abs.gov.au/media-centre/media-releases/cpi-rose-43-year-september-2026"
-        },
-        {
-          "label": "investingLive (Oct 28): hawkish RBA signals clash with RBNZ's surprise 4–3 hold",
-          "url": "https://investinglive.com/forex/aud-nzd-in-focus-as-hawkish-rba-signals-clash-with-rbnz-s-surprise-4-3-hold/"
         },
         {
           "label": "Blue Street calendar (Hercules, Oct 28): times, forecasts and actuals",
@@ -64,19 +76,19 @@
     {
       "id": "risk",
       "title": "Risk",
-      "figure": "Nikkei +1.2%, KOSPI >+3% (Oct 28 Asia); USD/JPY ~157.8; USD/CHF ~0.830; Israel count ~42%: no bloc near 61 seats; shekel ~−1%",
-      "read": "Asian stocks rallied on strong chipmaker results, so markets stayed calm and the yen and franc drew little safety demand. Israel's election produced no clear winner, which hit the shekel but not the major currencies. The Fed's tone this afternoon is the main risk to that calm.",
+      "figure": "US stocks ~+0.2% after the Fed; USD/JPY ~157.8; USD/CHF ~0.830; Israel count ~93%: no bloc near 61 seats; WSJ: US warned Gulf of possible post-midterm Iran campaign",
+      "read": "Markets stayed calm through the Fed, so the yen and franc drew little demand as safe places for money. The risks are building in the background: a report says the US may strike Iran after the midterms, and Israel's election left no clear winner. A turn in either would test that calm.",
       "sources": [
         {
-          "label": "The Canberra Times (Oct 28): Asian stocks rally, US dollar steady before Fed decision",
-          "url": "https://canberratimes.com.au/story/9381592/asian-stocks-rally-us-steady-before-fed-decision"
+          "label": "WSJ (Oct 27): US warns Gulf of possible short, intense renewal of Iran war after midterms",
+          "url": "https://www.wsj.com/world/middle-east/u-s-warns-gulf-of-possible-short-intense-renewal-of-iran-war-after-midterms-cd1a55e1"
         },
         {
-          "label": "OPB/AP (Oct 27): Exit polls suggest a rebuke of Netanyahu but no clear winner in Israel's election",
-          "url": "https://www.opb.org/article/2026/10/27/exit-polls-suggest-a-rebuke-of-netanyahu-but-no-clear-winner-in-israel-s-election/"
+          "label": "FXStreet (Oct 28): Dollar Index slides as Fed Chair Warsh puts no date on price stability",
+          "url": "https://www.fxstreet.com/news/dollar-index-dips-and-recovers-as-the-fed-holds-with-two-hike-votes-202610281808"
         },
         {
-          "label": "Blue Street market levels (Hercules, Oct 28 London open run, 12:55 AM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, Oct 28 New York close run, 3:05 PM CT; indicative, mostly afternoon quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -84,20 +96,20 @@
     {
       "id": "tot",
       "title": "Terms of trade",
-      "figure": "Brent $115.36 (+1.3%); WTI $101.12 (+1.2%); Ras Tanura claim unconfirmed; API crude −2.0M bbl; OPEC+ meets Sunday",
-      "read": "Oil rose again as hopes for the Iran talks faded and Saudi Arabia stayed silent on a claimed refinery strike. That helps exporters like Canada and Australia and costs importers like Japan and the euro area. Until the talks produce terms, the war premium stays in the price.",
+      "figure": "Brent ~$115.7 (+$1.78, late morning); WTI >$103 (one-week high); EIA crude −1.9M bbl (fc ~flat), gasoline +3.9M; OPEC+ meets Sunday",
+      "read": "Oil rose again on falling US stocks and talk of US strikes on Iran after the midterms. That helps exporters like Canada and Australia and costs importers like Japan and the euro area. Until the talks with Iran produce terms, the war premium stays in the price.",
       "sources": [
         {
-          "label": "Reuters via WNFL (Oct 28 Asia): Oil prices rise after attack on Saudi refinery reignites supply concerns",
-          "url": "https://wnflsports.com/2026/10/27/oil-prices-rise-after-attack-on-saudi-arabian-refinery-reignites-supply-concerns/"
+          "label": "Reuters (Oct 28): US crude stocks and distillate inventories fall, gasoline stocks rise, EIA says",
+          "url": "https://www.reuters.com/business/energy/us-crude-stocks-distillate-inventories-fall-gasoline-stocks-rise-eia-says-2026-10-28/"
         },
         {
-          "label": "Blue Street market levels (Hercules, Oct 28 London open run, 12:55 AM CT; indicative)",
+          "label": "WSJ (Oct 27): US warns Gulf of possible short, intense renewal of Iran war after midterms",
+          "url": "https://www.wsj.com/world/middle-east/u-s-warns-gulf-of-possible-short-intense-renewal-of-iran-war-after-midterms-cd1a55e1"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, Oct 28 New York close run, 3:05 PM CT; indicative, mostly afternoon quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Oct 28): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
@@ -105,7 +117,7 @@
       "id": "positioning",
       "title": "Positioning",
       "figure": "CFTC Oct 20: funds strongly against CAD (sharply added), against NZD (sharply added) and EUR (added), for GBP (real money strongly against), for AUD (real money strongly against), leaning against JPY, strongly for gold",
-      "read": "Hedge funds hold their biggest bets against the Canadian dollar, so a Bank of Canada hike with a signal of more today could force them to buy it back. Their bets against the kiwi paid off overnight. In the pound and the Aussie, hedge funds and long-term investors take opposite sides.",
+      "read": "Hedge funds hold their biggest bets against the Canadian dollar, but Canada's rate hike today was too cautious to force them to buy loonies back. Their bets against the kiwi paid off after New Zealand's surprise hold. In the pound and the Aussie, hedge funds and long-term investors take opposite sides.",
       "sources": [
         {
           "label": "CFTC Traders in Financial Futures (futures only), report date Oct 20",
@@ -120,19 +132,19 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "UK Budget today ~7:30 AM CT; dealer poll: 2026-27 gilt sales +£3.4bn to £249.6bn; French revenue vote Nov 3; France–Germany 10-year gap ~167 bp",
-      "read": "Chancellor John Healey presents his first UK Budget this morning, and dealers expect only a small rise in government bond sales. Borrowing close to that would keep UK bonds calm; a bigger jump could unsettle them and the pound. France's budget vote is still delayed, which keeps a weight on the euro.",
+      "figure": "UK Budget: borrowing 4.2% of GDP this year to 1.8% by 2030–31; headroom £15bn (from £24bn); 10-year gilt yield −2bp; French revenue vote Nov 3; France–Germany 10-year gap ~162–177bp",
+      "read": "Chancellor John Healey's first UK Budget passed calmly, with borrowing set to fall, so UK bonds and the pound took it in stride. France's budget fight is still unresolved and keeps a weight on the euro.",
       "sources": [
         {
-          "label": "City AM (Oct 27): Autumn Budget 2026 — Healey will buy some time with the bond markets",
-          "url": "https://www.cityam.com/autumn-budget-2026-healey-will-buy-some-time-with-the-bond-markets/"
+          "label": "Reuters (Oct 28): UK economic growth downgraded to 1% in 2027, Healey says in first budget",
+          "url": "https://www.reuters.com/world/uk/uk-economic-growth-downgraded-1-2027-healey-says-first-budget-2026-10-28/"
         },
         {
-          "label": "Blue Street calendar (Hercules, Oct 28): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+          "label": "Reuters (Oct 28): Healey says UK will have £15 bln of fiscal headroom",
+          "url": "https://www.reuters.com/world/uk/healey-says-uk-will-have-15-bln-fiscal-headroom-end-forecast-period-2026-10-28/"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Oct 28 London open run): pricing and notes",
+          "label": "Blue Street central bank data (Hercules, Oct 28 New York close run): pricing and notes",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         }
       ]
