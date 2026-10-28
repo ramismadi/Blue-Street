@@ -71,7 +71,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   narrative data.
 
 - **No subtitle lines under page titles** (Rami, 2026-10-19): Currencies, Drivers' three sections, News, Calendar and Learn show just the title. (The positioning "as of / next report" line went with it.)
-- **Currencies:** the Pair picker sits above the Strength board, full width; on wide screens its "Strongest edge" and "Against your view" groups run side by side.
+- **Currencies:** the Pair picker sits above the Strength board with no card, as part of the page: a large "I'm Bullish / Bearish on" sentence and the currency buttons. It starts blank every visit (no remembered pick); the pairs appear only once a side and a currency are chosen (Rami, 2026-10-27).
 
 - **Calendar session clocks** (Rami, 2026-10-19): four analog clocks (SYD, TYO, LDN, NYC) beside the Calendar title, each on its city's local time (same session rules as the masthead chips). Out of session = greyed out; in session = lit by a warm light from the top down. On phones they sit in a row under the title.
 - **No overflow, ever** (Rami, 2026-10-19): nothing may run past the screen edge or the page scroll sideways. The overflow guard at the end of style.css wraps long values and lets grid/flex children shrink; `html, body` clip as a last resort. **Run `tools/overflow-check.py` before shipping any layout change** — it loads every page at 320–768px (calendar fully expanded) and lists anything that spills.
@@ -524,5 +524,7 @@ trend line (`bias` is Claude's label from words.json, applied regardless of date
 `currencies.currencies.<CCY>.{summary, notes.<pillar>}` (Rami, 2026-10-20) replaces Herc's
 `summary` and each driver `note` in `currencies.json` (board, currency page, pair picker lines),
 same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a non-zero score:
-one plain sentence each, readable cold, no strings of numbers. The pair picker labels each pair
-"↑ Rises" / "↓ Falls" (where it goes if the reader's view is right), never Buy/Sell.
+one plain sentence each, readable cold, no strings of numbers. The pair picker shows each pair
+as its name in a glowing box, no words: green if it rises when the reader's view is right,
+red if it falls; the brighter the glow, the wider the score gap. The name is in the main text
+color so it reads on any tint. Never Buy/Sell (Rami, 2026-10-27).

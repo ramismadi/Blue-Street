@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=106">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=106">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=107">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=107">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=106">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=107">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=106">
+<link rel="stylesheet" href="assets/style.css?v=107">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=106" defer></script>
-<script src="assets/app.js?v=106" defer></script>
+<script src="assets/cot.js?v=107" defer></script>
+<script src="assets/app.js?v=107" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
@@ -210,8 +210,9 @@
     </div>
     <div id="fx-detail" hidden></div>
     <div class="fx-grid">
-      <section class="card fx-picker" id="fx-picker" aria-label="Pair picker">
-        <h2 class="section-label">Pair picker</h2>
+      <!-- Pair picker (Rami, 2026-10-27): no card; the sentence sits on the
+           page and starts blank. Pairs appear once a side and a currency are picked. -->
+      <section class="fx-picker" id="fx-picker" aria-label="Pair picker">
         <p class="picker-q">I&rsquo;m <span class="segmented" role="tablist" aria-label="Direction" id="fx-dir">
           <button type="button" class="seg" data-dir="bull">Bullish</button>
           <button type="button" class="seg" data-dir="bear">Bearish</button>

@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '106';
+  var ASSET_VERSION = '107';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -2729,7 +2729,8 @@
   ];
   /* Market quoting convention: the higher-priority currency is the base. */
   var PRIORITY = ['EUR', 'GBP', 'AUD', 'NZD', 'USD', 'CAD', 'CHF', 'JPY'];
-  var fx = { data: null, focus: '', dir: 'bull', ccy: 'AUD', pickOpen: {} };
+  // Rami, 2026-10-27: the picker starts blank every visit (no remembered pick).
+  var fx = { data: null, focus: '', dir: '', ccy: '', pickOpen: {} };
   /* data/momentum.json — per-currency economic surprises (Hercules). Counting
      starts fresh with the first scored release; MOMENTUM_START is only the
      fallback shown before the feed exists. */
@@ -2737,15 +2738,11 @@
   var MOMENTUM_START = '2026-10-14';
 
   function initFx() {
-    try {
-      var p = JSON.parse(localStorage.getItem('bluestreet-fx') || 'null');
-      if (p && p.dir) fx.dir = p.dir;
-      if (p && p.ccy) fx.ccy = p.ccy;
-    } catch (e) { /* defaults */ }
+    try { localStorage.removeItem('bluestreet-fx'); } catch (e) {}
     var dir = $('#fx-dir');
     if (dir) dir.addEventListener('click', function (e) {
       var b = e.target.closest('[data-dir]');
-      if (b) { fx.dir = b.getAttribute('data-dir'); fx.pickOpen = {}; saveFx(); renderPicker(); }
+      if (b) { fx.dir = b.getAttribute('data-dir'); fx.pickOpen = {}; renderPicker(); }
     });
     var cc = $('#fx-ccy');
     if (cc) {
@@ -2757,7 +2754,7 @@
       });
       cc.addEventListener('click', function (e) {
         var b = e.target.closest('[data-ccy]');
-        if (b) { fx.ccy = b.getAttribute('data-ccy'); fx.pickOpen = {}; saveFx(); renderPicker(); }
+        if (b) { fx.ccy = b.getAttribute('data-ccy'); fx.pickOpen = {}; renderPicker(); }
       });
     }
     /* Phones (Rami, 2026-10-27): each pair shows one line; tap it for the
@@ -2778,11 +2775,8 @@
       var a = e.target.closest('[data-express]');
       if (!a) return;
       var v = a.getAttribute('data-express').split(':');
-      fx.dir = v[0]; fx.ccy = v[1]; saveFx();
+      fx.dir = v[0]; fx.ccy = v[1]; fx.pickOpen = {};
     });
-  }
-  function saveFx() {
-    try { localStorage.setItem('bluestreet-fx', JSON.stringify({ dir: fx.dir, ccy: fx.ccy })); } catch (e) {}
   }
 
   function fxList() { return (fx.data && fx.data.currencies) || []; }
@@ -3051,68 +3045,55 @@
     });
     var box = $('#fx-picks');
     box.textContent = '';
+    // Rami, 2026-10-27: a clean slate until both a side and a currency are picked.
+    var ready = !!(fx.dir && fx.ccy && fxGet(fx.ccy));
+    box.hidden = !ready;
+    $('#fx-picker').classList.toggle('picked', ready);
+    if (!ready) return;
     var picks = fxPicks(fx.dir, fx.ccy);
-    var maxGap = Math.max(3, Math.max.apply(null, picks.map(function (p) { return Math.abs(p.gap); })));
     var tiers = [
-      // Rami, 2026-10-27: no explainer lines under Strongest edge / Against
-      // your view — the titles say enough.
-      ['edge', 'Strongest edge', '',
-        function (p) { return p.gap > 0; }],
-      ['flat', 'No edge', '',
-        function (p) { return p.gap === 0; }],
-      ['against', 'Against your view', '',
-        function (p) { return p.gap < 0; }]
+      ['edge', 'Strongest edge', function (p) { return p.gap > 0; }],
+      ['flat', 'No edge', function (p) { return p.gap === 0; }],
+      ['against', 'Against your view', function (p) { return p.gap < 0; }]
     ];
     tiers.forEach(function (t) {
-      var rows = picks.filter(t[3]);
+      var rows = picks.filter(t[2]);
       if (!rows.length && t[0] !== 'edge') return;
       var group = el('li', 'pick-group ' + t[0]);
       var head = el('div', 'pick-group-head');
       head.appendChild(el('h3', 'pick-group-title', t[1] + (rows.length ? ' · ' + rows.length : '')));
-      var note = rows.length ? t[2]
-        : 'No cross has an edge today — every counterpart is level with or ahead of ' + fx.ccy + ' on the board.';
-      if (note) head.appendChild(el('p', 'meta pick-group-note', note));
+      if (!rows.length) head.appendChild(el('p', 'meta pick-group-note',
+        'No cross has an edge today — every counterpart is level with or ahead of ' + fx.ccy + ' on the board.'));
       group.appendChild(head);
       if (rows.length) {
         var list = el('ol', 'picks-tier');
-        rows.forEach(function (p) { list.appendChild(pickRow(p, maxGap)); });
+        rows.forEach(function (p) { list.appendChild(pickRow(p)); });
         group.appendChild(list);
       }
       box.appendChild(group);
     });
   }
 
-  function pickRow(p, maxGap) {
+  /* A pair name in a glowing box (Rami, 2026-10-27): green if the pair rises
+     when your view is right, red if it falls. No words. The brighter the
+     glow, the bigger the edge (score gap) behind it. */
+  function pairGlow(p, tag) {
+    var up = p.action === 'Buy';
+    var g = p.gap >= 3 ? 4 : p.gap === 2 ? 3 : p.gap === 1 ? 2 : p.gap === 0 ? 1 : 0;
+    var b = el(tag || 'b', 'pair-glow mono ' + (up ? 'up' : 'dn') + ' g' + g, p.pair);
+    var say = p.pair + (up ? ' rises' : ' falls') + ' if your view is right';
+    b.title = say;
+    b.setAttribute('aria-label', say);
+    return b;
+  }
+
+  function pickRow(p) {
     var open = !!fx.pickOpen[p.pair];
-    var li = el('li', 'pick ' + p.rating[1] + (open ? ' open' : ''));
+    var li = el('li', 'pick' + (open ? ' open' : ''));
     li.setAttribute('data-pair', p.pair);
-    var top = el('div', 'pick-top');
-    // Rami, 2026-10-20: no Buy/Sell (that reads as a call). Say where the pair
-    // goes if the reader's view is right.
-    var act = el('span', 'pick-act ' + (p.action === 'Buy' ? 'buy' : 'sell'), p.action === 'Buy' ? '↑ Rises' : '↓ Falls');
-    act.title = 'Where ' + p.pair + ' goes if your view is right';
-    top.appendChild(act);
-    top.appendChild(el('b', 'pick-pair mono', p.pair));
-    top.appendChild(el('span', 'pick-rate ' + p.rating[1], p.rating[0]));
-    var gw = el('span', 'pick-gap');
-    gw.title = 'Score divergence between the two sides';
-    if (p.gap > 0) {
-      var bar = el('span', 'gap-bar');
-      bar.setAttribute('aria-hidden', 'true');
-      var fill = el('i');
-      fill.style.width = (Math.min(p.gap, maxGap) / maxGap * 100) + '%';
-      bar.appendChild(fill);
-      gw.appendChild(bar);
-    }
-    gw.appendChild(el('span', 'mono', 'gap ' + signed(p.gap)));
-    top.appendChild(gw);
-    var more = el('button', 'pick-more');   // phones only
-    more.type = 'button';
-    more.setAttribute('aria-expanded', open ? 'true' : 'false');
-    more.setAttribute('aria-label', 'More on ' + p.pair);
-    top.appendChild(more);
-    li.appendChild(top);
-    li.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
+    li.appendChild(pairGlow(p));
+    var body = el('div', 'pick-body');
+    body.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
     var meta = [];
     if (p.carry != null) meta.push('interest ' + (p.carry >= 0 ? '+' : '−') + Math.abs(p.carry).toFixed(2) + '%' + (p.carry >= 0 ? ' (you earn)' : ' (you pay)'));
     if (p.events.length) {
@@ -3120,7 +3101,13 @@
       meta.push(p.events.length + ' high-impact in 14d — next ' + e0.ccy + ' ' + e0.title +
         (w0 ? ' ' + MONTHS[new Date(w0).getMonth()] + ' ' + new Date(w0).getDate() : ''));
     }
-    if (meta.length) li.appendChild(el('p', 'meta pick-meta', meta.join(' · ')));
+    if (meta.length) body.appendChild(el('p', 'meta pick-meta', meta.join(' · ')));
+    li.appendChild(body);
+    var more = el('button', 'pick-more');   // phones only
+    more.type = 'button';
+    more.setAttribute('aria-expanded', open ? 'true' : 'false');
+    more.setAttribute('aria-label', 'More on ' + p.pair);
+    li.appendChild(more);
     return li;
   }
 
@@ -3253,9 +3240,10 @@
       lk.href = '#fx';
       lk.setAttribute('data-express', d[0] + ':' + c.ccy);
       row.appendChild(lk);
-      row.appendChild(document.createTextNode(' ' + (picks.length
-        ? picks.map(function (p) { return p.pair + (p.action === 'Buy' ? ' rises' : ' falls'); }).join(', ')
-        : 'no cross with an edge today')));
+      // Same glowing pairs as the picker; no rises/falls words (Rami, 2026-10-27).
+      row.appendChild(document.createTextNode(' '));
+      if (picks.length) picks.forEach(function (p) { row.appendChild(pairGlow(p, 'span')); });
+      else row.appendChild(document.createTextNode('no cross with an edge today'));
       side.appendChild(row);
     });
     cols.appendChild(side);
