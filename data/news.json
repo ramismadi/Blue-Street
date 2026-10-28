@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-28T16:55:00Z",
+  "updated": "2026-10-28T18:48:27Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "text": "The dollar is near a two-week high after strong US reports on confidence and home sales, and talk of possible US strikes on Iran after the midterms adds demand for shelter. A wider-than-expected September trade gap barely dented it; a Fed hold at 1:00 PM CT is widely expected, so Chair Kevin Warsh's words on a December hike are what move it.",
-      "ts": "2026-10-28T14:05:00Z"
+      "text": "The Federal Reserve kept rates at 3.75% to 4% on Wednesday, as expected, but two officials voted for a hike and the statement called growth strong, so a December hike stays possible. The dollar holds near a two-week high on that rate support and on demand for shelter amid talk of US strikes on Iran after the midterms; Thursday's growth and inflation figures come next.",
+      "ts": "2026-10-28T18:48:27Z"
     },
     "EUR": {
       "lean": "bearish",
@@ -44,8 +44,8 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold is near $4,060, held back by a dollar at a two-week high and an over 80% chance of a US rate hike in December, which weighs on a metal that pays no interest. Fed Chair Kevin Warsh's words after the 1:00 PM CT decision could shift that; mixed signals from Iran on peace keep some demand for shelter alive.",
-      "ts": "2026-10-28T16:55:00Z"
+      "text": "Gold is near $4,050, held back by a dollar at a two-week high and a likely US rate hike in December, which weighs on a metal that pays no interest. The Fed paused on Wednesday but two officials wanted a hike, so that pressure has not gone away; mixed signals from Iran on peace keep some demand for shelter alive.",
+      "ts": "2026-10-28T18:48:27Z"
     },
     "OIL": {
       "lean": "bullish",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "yahoo-fed-holds-split-vote-20261028",
+      "ts": "2026-10-28T18:14:00Z",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/economy/policy/live/fed-meeting-live-updates-federal-reserve-october-meeting-kevin-warsh-161129201.html",
+      "image": null,
+      "headline": "Federal Reserve holds interest rates steady in split vote ahead of midterm elections",
+      "story": "fed-oct28",
+      "story_title": "Federal Reserve: the October 28 decision",
+      "pillar": "policy",
+      "summary": "The US Federal Reserve kept its rate at 3.75% to 4% on Wednesday, as expected, but two officials voted for a hike. The statement called growth strong and gave no clear signal on December.",
+      "beats": {
+        "was": "The Fed raised rates in September for the first time in three years, because the Iran war pushed fuel prices up and US inflation reached 3.7% in September. Markets saw a pause this time as near certain and were pricing a likely hike at the December 8-9 meeting.",
+        "happened": "The vote was 10-2: Governor Lisa Cook and Cleveland Fed President Beth Hammack wanted a quarter-point hike, after a unanimous vote in September. The statement upgraded growth from solid to strong, but softened its tone on inflation, saying more information will help it set the right level of rates.",
+        "means": "The Fed is waiting rather than pushing, but two votes for a hike show pressure inside the bank to go further. Chair Kevin Warsh's press briefing and Thursday's September price data decide whether December still looks like a hike.",
+        "fx": "Pause with hawkish dissents → a December hike stays possible but not promised → the dollar keeps its rate support without gaining new fuel."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 2,
+          "why": "Expected pause, but two votes for a hike keep December alive."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "No hike today helps gold a little; the hike talk still weighs on it."
+        }
+      ],
+      "watch": "Thursday's US figures: third-quarter growth and the September PCE price index, the Fed's preferred inflation gauge."
+    },
     {
       "id": "euronext-uk-markets-take-budget-in-stride-20261028",
       "ts": "2026-10-28T15:24:00Z",
@@ -1292,45 +1325,6 @@
         }
       ],
       "watch": "Whether Warsh points clearly to a December hike, and how many officials vote to hike now."
-    },
-    {
-      "id": "euronews-oil-plunge-diplomacy-20261026",
-      "ts": "2026-10-26T10:18:00Z",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/10/26/oil-plunges-more-than-6-from-near-wartime-highs-as-diplomacy-over-iran-seemingly-gathers",
-      "image": "https://images.euronews.com/articles/stories/09/96/72/93/1200x675_cmsv2_c8712ade-a164-5436-a6b8-a6ab4312ae06-9967293.jpg",
-      "headline": "Oil plunges more than 6% from near wartime highs as diplomacy over Iran seemingly gathers pace",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "tot",
-      "summary": "Brent oil fell to about $110 a barrel on Monday morning, from about $117 at Friday's close, as several countries stepped up efforts to stop the US–Iran war flaring again. European shares rose.",
-      "beats": {
-        "was": "Oil has been high since the US–Iran war began; Brent was near $72 before it and closed Friday near $117, close to its March peak, after Yemen's Houthi rebels attacked Saudi oil sites and tankers.",
-        "happened": "Qatari mediators visited Tehran on Sunday in step with Washington, and Saudi, Pakistani and Turkish security chiefs arrived on Monday. President Trump told Fox News the choice is between a deal with Iran or finishing the war by force.",
-        "means": "Markets are betting that talks lower the chance of new US strikes, so part of the war premium in oil is coming out. Supply is still at risk: the Houthis say they hit Saudi airports and energy sites again over the weekend.",
-        "fx": "Cheaper oil → less money flowing to oil exporters and less inflation worry for importers → a drag on the Canadian dollar, a small help for the yen. Lower oil also eases pressure on the Federal Reserve to keep raising rates."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Diplomacy hopes took a large slice of the war premium out of Brent in one morning."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Canada sells oil abroad, so lower prices trim its income."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Japan buys nearly all its oil, so cheaper crude eases its import bill."
-        }
-      ],
-      "watch": "Whether the Tehran talks produce anything concrete, or Houthi attacks or US strikes resume."
     }
   ]
 }
