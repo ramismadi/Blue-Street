@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T14:58:00Z",
+  "updated": "2026-10-28T16:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -14,8 +14,8 @@
     },
     "GBP": {
       "lean": "mixed",
-      "text": "Chancellor John Healey's first budget cut the government's spare borrowing room to £15 billion but caused no bond-market scare, so the pound held near $1.33 after slipping to a two-week low going in. The Bank of England decision on November 5, where a hike is likely, is the next big test of the pound.",
-      "ts": "2026-10-28T14:05:00Z"
+      "text": "Chancellor John Healey's first budget left £15 billion of spare room and passed without a bond-market scare: UK borrowing costs fell and shares rose. The pound still slipped to about $1.33 against a strong dollar; the Bank of England decision on November 5, where a hike is likely, is what could move it next.",
+      "ts": "2026-10-28T16:55:00Z"
     },
     "JPY": {
       "lean": "bearish",
@@ -28,9 +28,9 @@
       "ts": "2026-10-26T18:49:34Z"
     },
     "CAD": {
-      "lean": "bullish",
-      "text": "The Bank of Canada raised its rate to 2.5% on Wednesday, its first hike in three years, and said more may be needed as it now sees inflation near 3% through most of 2027. Oil near $115, a big Canadian export, adds support.",
-      "ts": "2026-10-28T14:05:00Z"
+      "lean": "mixed",
+      "text": "The Bank of Canada raised its rate to 2.5% on Wednesday, its first hike in three years, and said more may be needed, but the move was expected and the Canadian dollar slipped to about 1.406 per US dollar as the US dollar stayed strong. Oil near $115, a big Canadian export, gives some support.",
+      "ts": "2026-10-28T16:55:00Z"
     },
     "AUD": {
       "lean": "bullish",
@@ -44,16 +44,109 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold slipped back below $4,050 as the dollar held near a two-week high. Markets see over an 80% chance of a US rate hike in December, which weighs on a metal that pays no interest; Fed Chair Kevin Warsh's words after the 1:00 PM CT decision could shift that. Iran's openness to a Qatari peace plan also trims demand for shelter a little.",
-      "ts": "2026-10-28T14:58:00Z"
+      "text": "Gold is near $4,060, held back by a dollar at a two-week high and an over 80% chance of a US rate hike in December, which weighs on a metal that pays no interest. Fed Chair Kevin Warsh's words after the 1:00 PM CT decision could shift that; mixed signals from Iran on peace keep some demand for shelter alive.",
+      "ts": "2026-10-28T16:55:00Z"
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Oil stays high after Yemen's Houthi rebels hit Saudi Arabia's biggest refinery, a report that the US told Gulf states to prepare for strikes on Iran after the November 3 US elections, and a new US Navy warning to keep ships away from the Strait of Hormuz. Against that, Iran says it is open to a Qatari peace plan due for a reply this week, which could ease supply fears quickly if it holds.",
-      "ts": "2026-10-28T14:58:00Z"
+      "text": "Brent is near $115.70 after Yemen's Houthi rebels hit Saudi targets, a report that the US told Gulf states to prepare for strikes on Iran after the November 3 US elections, and a drop in US crude stocks as exports surged. Iran sent mixed signals on a Qatari peace plan, with one senior official calling its ideas unacceptable, so hopes of Gulf supply returning soon have dimmed.",
+      "ts": "2026-10-28T16:55:00Z"
     }
   },
   "items": [
+    {
+      "id": "euronext-uk-markets-take-budget-in-stride-20261028",
+      "ts": "2026-10-28T15:24:00Z",
+      "source": "Euronext (Reuters)",
+      "url": "https://live.euronext.com/en/financial-news/british-markets-take-healeys-first-budget-their-stride",
+      "image": null,
+      "headline": "British markets take Healey's first budget in their stride",
+      "story": "uk-budget-oct28",
+      "story_title": "UK budget: Chancellor Healey's first, on October 28",
+      "pillar": "fiscal",
+      "summary": "UK government borrowing costs fell after Chancellor John Healey's first budget, and shares rose. The pound slipped to about $1.33, moved more by the strong dollar than by the budget.",
+      "beats": {
+        "was": "Britain's bond market has been touchy since the 2022 mini-budget, when unfunded tax cuts sent borrowing costs and the pound sharply lower. Investors feared Healey would leave too little spare room under the government's borrowing rules.",
+        "happened": "Healey left £15 billion of room, close to what economists expected but below the £23.6 billion set in March. The yield on 10-year UK government bonds fell to about 5.31% and on 30-year bonds to about 5.70%. Big banks' shares rose more than 3% after a smaller-than-feared rise in their extra tax.",
+        "means": "The budget passed without a scare, which removes one worry for the pound. Attention moves back to the Bank of England, which decides on November 5.",
+        "fx": "A calm budget → no extra risk premium on UK debt → the pound trades on the dollar and the Bank of England, not on fiscal fear."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Budget fear has passed, but the pound still slipped against a firm dollar."
+        }
+      ],
+      "watch": "The Bank of England decision on Thursday, November 5."
+    },
+    {
+      "id": "investing-eia-crude-draw-gasoline-build-20261028",
+      "ts": "2026-10-28T15:21:00Z",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/commodities-news/us-crude-and-distillate-inventories-fall-gasoline-stocks-riseeia-says-4980047",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEM9R1P3_L.jpg",
+      "headline": "US crude and distillate inventories fall, gasoline stocks rise, EIA says",
+      "story": "iran-hormuz",
+      "story_title": "Iran war: the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "US crude stocks fell by 1.9 million barrels last week when no change was expected, as exports jumped, while gasoline stocks rose by 3.9 million barrels instead of falling. Brent rose to about $115.70.",
+      "beats": {
+        "was": "With Gulf supply cut by the Iran war, buyers abroad have leaned on US oil, and the weekly report from the US Energy Information Administration (EIA) shows how fast US stocks are being drawn down.",
+        "happened": "For the week to October 23, US crude stocks fell to 410.6 million barrels as exports rose by 1.4 million barrels a day, and stocks on the Gulf Coast hit their lowest since December 2024. Gasoline stocks rose because Americans bought less of it, while diesel and heating oil stocks fell. One shipping tracker said the export jump may be overstated.",
+        "means": "Crude keeps leaving the US quickly, which shows how tight world supply is. Weaker US gasoline buying is the one soft spot.",
+        "fx": "Falling US crude stocks → a tighter oil market → support for oil, and through oil for the Canadian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Crude stocks fell when no change was expected, though gasoline rose."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firm oil helps Canada's biggest export."
+        }
+      ],
+      "watch": "Next week's EIA report on November 4, and whether US exports stay this high."
+    },
+    {
+      "id": "hromadske-iran-calls-qatar-ideas-unacceptable-20261028",
+      "ts": "2026-10-28T14:38:00Z",
+      "source": "Hromadske",
+      "url": "https://hromadske.ua/en/heopolityka/273341-iran-calls-qatars-latest-peace-proposals-unacceptable-as-us-strike-fears-grow",
+      "image": "https://hromadske.ua/static/content/thumbs/1200x630/5/e4/3c4lxk---c1200x630x50px50p--5f464a1ad5605f6341b3a7d732d46e45.jpg",
+      "headline": "Iran calls Qatar's latest peace proposals 'unacceptable' as US strike fears grow",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "A senior Iranian official told Reuters that Qatar's mediators brought a list of ideas Iran cannot accept, not a real offer, and that Iran will not give ground on its nuclear programme. Other reports say Tehran is still weighing a Qatari draft.",
+      "beats": {
+        "was": "The US-Iran war, which began in February, has kept the Strait of Hormuz, the narrow sea lane for much of the Gulf's oil, largely shut, with a US blockade of Iranian ports. Qatar and Pakistan are leading efforts to end it, and Qatar handed Iran a seven-day step-by-step plan on Sunday.",
+        "happened": "On Wednesday a senior Iranian official dismissed Qatar's suggestions and said Iran would not let its enriched nuclear material leave the country. The two sides disagree on order: Washington wants the nuclear programme on the table first, while Tehran wants the US blockade and oil sanctions lifted first.",
+        "means": "The messages from Tehran are mixed on the same day, so the peace path looks shakier than it did this morning. With reports that the US is preparing strikes after the November 3 US elections, the risk of a longer war has not faded.",
+        "fx": "Weaker hopes for a deal → Gulf oil stays at risk → support for oil prices and for gold as shelter."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Cools hopes that a deal will reopen Gulf supply soon."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Keeps war risk, and demand for shelter, alive."
+        }
+      ],
+      "watch": "Iran's formal reply to Qatar, expected by the end of the week, and any US decision on new strikes."
+    },
     {
       "id": "thenational-iran-welcomes-qatar-draft-20261028",
       "ts": "2026-10-28T14:29:45Z",
@@ -425,6 +518,33 @@
         }
       ],
       "watch": "Final vote counts and whom Israel's president asks to form a government."
+    },
+    {
+      "id": "producer-loonie-dips-after-boc-hike-20261028",
+      "date": "2026-10-28",
+      "source": "The Western Producer (Reuters)",
+      "url": "https://www.producer.com/market-update/canadian-dollar-and-business-outlook-loonie-down-after-boc-raises-key-interest-rate/",
+      "image": "https://static.producer.com/wp-content/uploads/2026/10/05081619/dollar-morning-1200.jpg",
+      "headline": "Canadian Dollar and Business Outlook: Loonie down after BoC raises key interest rate",
+      "story": "boc-oct28",
+      "story_title": "Bank of Canada: the October 28 decision",
+      "pillar": "policy",
+      "summary": "The Canadian dollar edged down to about 1.406 per US dollar after the Bank of Canada raised its rate to 2.5%. The hike had been expected, so it gave the currency little lift.",
+      "beats": {
+        "was": "The Bank of Canada had held its rate at 2.25% for a year. Higher oil and fuel prices from the Iran war have pushed Canadian inflation up, and economists widely expected a quarter-point rise.",
+        "happened": "The bank raised its rate to 2.5% on Wednesday, its first hike in three years, and said more rises are possible. The Canadian dollar slipped to about 71.1 US cents from 71.2 on Tuesday, while the US dollar stayed strong before the Federal Reserve decision.",
+        "means": "Markets had already priced the hike, so the news added little. The bank's hint of more rises keeps a floor under the currency, but the US dollar's strength matters more for now.",
+        "fx": "An expected hike → little new support → the Canadian dollar follows the US dollar and oil."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The hike was priced in; a hint of more gives only mild support."
+        }
+      ],
+      "watch": "The Fed decision at 1:00 PM CT today, and Canada's jobs report on Friday, November 6."
     },
     {
       "id": "tradingpedia-gold-retreats-fed-20261028",
@@ -976,39 +1096,6 @@
       "watch": "Whether Saudi Arabia or Aramco confirms damage or a slowdown in exports from Ras Tanura."
     },
     {
-      "id": "fxstreet-nzd-rbnz-hike-bets-20261027",
-      "ts": "2026-10-27T08:09:48Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/new-zealand-dollar-rises-on-rbnz-rate-hike-expectations-202610270809",
-      "image": "https://editorial.fxsstatic.com/images/i/NZDUSD_Medium.png",
-      "headline": "New Zealand Dollar rises on RBNZ rate hike expectations",
-      "story": "rbnz-oct28",
-      "story_title": "RBNZ: the October 28 decision",
-      "pillar": "policy",
-      "summary": "The New Zealand dollar edged up to about 56.9 US cents on Tuesday as markets expect the Reserve Bank of New Zealand to raise its rate to 3% on Wednesday. A firm US dollar before the Federal Reserve decision limits the gain.",
-      "beats": {
-        "was": "The Reserve Bank of New Zealand raised rates in July and September as higher oil prices pushed up inflation. It decides again on Wednesday, October 28, a few hours before the US Federal Reserve.",
-        "happened": "The kiwi recovered Monday's small loss to trade near 0.5690 in European hours. Traders expect a quarter-point hike to 3%. In the US, futures pricing shows about a 90% chance the Fed holds on Wednesday and about an 82% chance it raises rates in December.",
-        "means": "A hike is largely expected, so it would mostly confirm the kiwi's support rather than add to it. What moves the currency more is whether the bank signals more hikes, set against a Fed that is also leaning toward raising rates.",
-        "fx": "Expected hike → steady support for the kiwi; a signal of more hikes → more support; a Fed that sounds firm on December → caps the kiwi against the dollar."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Markets expect a third rate hike, to 3%, on Wednesday."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "High odds of a December Fed hike keep the dollar firm."
-        }
-      ],
-      "watch": "Whether the Reserve Bank of New Zealand hints at more hikes after Wednesday's decision."
-    },
-    {
       "id": "reuters-gold-eases-dollar-fed-20261027",
       "ts": "2026-10-27T07:35:00Z",
       "source": "Reuters via Business Recorder",
@@ -1040,87 +1127,6 @@
         }
       ],
       "watch": "What Fed Chair Kevin Warsh says about December on Wednesday, and Thursday's PCE inflation figure."
-    },
-    {
-      "id": "mpa-boc-preview-20261027",
-      "ts": "2026-10-27T07:25:11Z",
-      "source": "Canadian Mortgage Professional",
-      "url": "https://www.mpamag.com/ca/mortgage-industry/industry-trends/boc-preview-what-to-expect-from-wednesdays-huge-decision/594976",
-      "image": "https://cdn-res.keymedia.com/cms/images/us/074/0373_639286370231956432.png",
-      "headline": "BoC preview: What to expect from Wednesday's huge decision",
-      "story": "boc-oct28",
-      "story_title": "Bank of Canada: the October 28 decision",
-      "pillar": "policy",
-      "summary": "Economists are split on whether the Bank of Canada raises rates on Wednesday. A slim majority in a Reuters poll expect a hike to 2.50%, but some big bank economists think it will wait.",
-      "beats": {
-        "was": "The Bank of Canada last cut rates a year ago and has held at 2.25% since. Canadian inflation rose to 3.1% in September, mostly because fuel got pricier during the Iran war, while trade friction with the US weighs on growth.",
-        "happened": "In a Reuters poll, 19 of 34 economists expect a quarter-point rise to 2.50% on Wednesday, October 28, and most see another rise before March. RBC Economics calls a hike the likeliest outcome but gives a hold almost even odds; National Bank's chief economist argues against hiking because core inflation is still near 2%.",
-        "means": "A hike is expected but far from certain. If the bank holds, it would likely signal a hike in December or January instead.",
-        "fx": "A hike → higher Canadian rates → support for the loonie; a hold with a hint of later hikes → a small disappointment → a softer loonie."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A hike is likely but not locked in, so either outcome can move the loonie."
-        }
-      ],
-      "watch": "Wednesday's decision and whether the bank says more hikes are coming."
-    },
-    {
-      "id": "cityam-healey-gilts-dmo-20261027",
-      "ts": "2026-10-27T05:27:00Z",
-      "source": "City AM",
-      "url": "https://www.cityam.com/autumn-budget-2026-healey-will-buy-some-time-with-the-bond-markets/",
-      "image": "https://www.cityam.com/wp-content/uploads/2026/10/john-healey-at-jackdaw.jpg",
-      "headline": "Autumn Budget 2026: Healey will buy some time with the bond markets",
-      "story": "uk-budget-oct28",
-      "story_title": "UK budget: Chancellor Healey's first, on October 28",
-      "pillar": "policy",
-      "summary": "A City AM column argues Britain is calming bond buyers by selling far fewer long-dated bonds and more short-term debt. That helps now, but leaves the government more exposed if inflation and rates stay high.",
-      "beats": {
-        "was": "Pension funds, the usual buyers of Britain's long-dated bonds, want fewer of them, and long-term borrowing costs hit a 28-year high this month.",
-        "happened": "Gilt dealers polled by Reuters expect bonds maturing in more than 15 years to be about 7% of new sales, down from over 30% five years ago. They expect total bond sales this year near £250 billion and next year's borrowing need around £334 billion, £27 billion above March's plan. The writer says lower-than-expected figures on budget day could lift UK bonds.",
-        "means": "How much Britain plans to borrow, and in what form, matters as much as the tax and spending news. Smaller figures would ease pressure on bonds; bigger ones would add to it.",
-        "fx": "Smaller borrowing plan → bonds rally, steadier pound; bigger plan → yields climb, weaker pound."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Hangs on whether budget-day borrowing figures come in above or below about £334 billion."
-        }
-      ],
-      "watch": "The Debt Management Office's borrowing plan published with the budget on Wednesday."
-    },
-    {
-      "id": "investinglive-china-profits-sep-20261027",
-      "ts": "2026-10-27T01:49:19Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/china-september-industrial-profits-jump-14-4-y-y-rebounding-from-4-2-in-august/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/china-september-2026-industrial-profits-rebound-featured-1793065731.jpg?width=960&format=webp",
-      "headline": "China September industrial profits jump 14.4% y/y, rebounding from 4.2% in August",
-      "story": "china-economy",
-      "story_title": "China: how the economy is holding up",
-      "pillar": "growth",
-      "summary": "Profits at Chinese factories, mines and utilities grew 14.4% from a year earlier in September, a strong bounce from August's 4.2%. It is a small plus for countries that sell raw materials to China, Australia most of all.",
-      "beats": {
-        "was": "China is Australia's biggest customer for iron ore and other raw materials, so signs of Chinese demand matter for the Australian dollar. Profit growth at Chinese industrial firms had slowed to 4.2% in August, the weakest month since November 2025.",
-        "happened": "China's statistics office said September profits rose 14.4% on a year earlier. For January to September together, growth eased slightly to 15.5%, led by miners and makers of computers and chips.",
-        "means": "Chinese industry looks firmer than August suggested, which helps the outlook for demand for metals and energy. The lift is modest: Chinese shares are still weak, and the full-year pace is still slowing.",
-        "fx": "Firmer Chinese factory profits → steadier demand for raw materials → mild support for the Australian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Better Chinese industry is good for Australia's exports, but one month of profits rarely moves the currency much."
-        }
-      ],
-      "watch": "Wednesday's Australian inflation figures, which matter far more for the Australian dollar this week."
     },
     {
       "id": "euronext-oil-falls-talks-20261027",
