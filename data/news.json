@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T22:55:36Z",
+  "updated": "2026-10-28T01:05:17Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "bullish",
-      "text": "The Australian dollar is near 70 US cents. Chinese factory profits bounced in September, a small plus for Australia's exports, and Wednesday's inflation figures are expected to stay well above the Reserve Bank of Australia's target, with markets leaning toward a fifth hike this year on November 3.",
-      "ts": "2026-10-27T02:48:31Z"
+      "text": "Australian inflation rose to 4.3% in September, and the core measure the Reserve Bank of Australia watches rose faster in the quarter than the bank had forecast. That makes a fifth rate hike this year on November 3 harder to skip, which supports the Australian dollar.",
+      "ts": "2026-10-28T01:05:17Z"
     },
     "NZD": {
       "lean": "bullish",
@@ -49,11 +49,65 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent oil is near $113, a little lower on the day, as Iran's neighbours keep talking peace. But risks are spreading: Iran says a tanker hit mines near the Strait of Hormuz, Yemen's Houthis keep striking Saudi sites, and Egypt's parliament has cleared military help for Saudi Arabia, so a big supply scare is never far away.",
-      "ts": "2026-10-27T18:49:14Z"
+      "text": "Brent oil is near $114, a little lower as Iran's neighbours keep talking peace, but Houthi strikes on Saudi sites and mine reports near the Strait of Hormuz keep supply fears alive. Israel's election gave no clear winner, and OPEC+ is expected to leave its targets unchanged on Sunday, so neither changes the picture much.",
+      "ts": "2026-10-28T01:05:17Z"
     }
   },
   "items": [
+    {
+      "id": "abs-cpi-sep-20261028",
+      "ts": "2026-10-28T00:30:00Z",
+      "source": "Australian Bureau of Statistics",
+      "url": "https://www.abs.gov.au/media-centre/media-releases/cpi-rose-43-year-september-2026",
+      "image": null,
+      "headline": "CPI rose 4.3% in the year to September 2026",
+      "story": "rba-nov3",
+      "story_title": "RBA: a fifth hike on November 3?",
+      "pillar": "policy",
+      "summary": "Australian prices rose 4.3% in the year to September, up from 4.0% and a little above the 4.2% forecasters expected. The core measure the Reserve Bank of Australia watches rose 1.0% in the quarter, above the bank's own forecast.",
+      "beats": {
+        "was": "The Reserve Bank of Australia has raised its rate four times this year, to 4.60%, as higher fuel costs from the Iran war push up prices. It decides again on November 3, and markets already leaned toward a fifth hike.",
+        "happened": "The Australian Bureau of Statistics said prices rose 0.8% in September alone and 1.3% over the July-to-September quarter. Petrol was up 9.4% in the month after a 14.8% jump in August. The trimmed mean, which drops the biggest price swings, held at 3.6% a year and rose 1.0% in the quarter, against the bank's August forecast of 0.8%. Housing and electricity were the largest drivers.",
+        "means": "Inflation is running faster than the central bank planned for, and not only because of fuel: the core measure is also too high. That makes a hike on November 3 harder to skip.",
+        "fx": "Inflation above the bank's forecast → November hike more likely → wider rate gap with other countries → support for the Australian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Core inflation beat the central bank's forecast, firming up a November hike."
+        }
+      ],
+      "watch": "The Reserve Bank of Australia's decision on Tuesday, November 3."
+    },
+    {
+      "id": "opb-israel-exit-polls-20261028",
+      "ts": "2026-10-28T00:16:00Z",
+      "source": "OPB (AP)",
+      "url": "https://www.opb.org/article/2026/10/27/exit-polls-suggest-a-rebuke-of-netanyahu-but-no-clear-winner-in-israel-s-election/",
+      "image": "https://opb-opb-prod.cdn.arcpublishing.com/resizer/v2/LCPPMOUBBRBITIT7RD6QA2LW6I.jpg?auth=59573fbf2214b616d16416ccc48f0b727832e2b863b31e1a636776b8c0bed318&width=1200&height=675&smart=true",
+      "headline": "Exit polls suggest a rebuke of Netanyahu but no clear winner in Israel's election",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Israel's election on Tuesday produced no clear winner. Exit polls put Prime Minister Benjamin Netanyahu's bloc and the opposition led by former army chief Gadi Eisenkot roughly level, both far from a majority.",
+      "beats": {
+        "was": "Israel and the US have been at war with Iran, which has disrupted oil flows through the Strait of Hormuz. Some investors saw a Netanyahu loss as a way to lower the risk of the war widening.",
+        "happened": "Television exit polls gave each side about 51 of the 120 seats in parliament, with Arab parties holding about 18. Neither camp has a clear path to the 61 seats needed to govern. Israel's president will ask the leader with the best chance to try to form a coalition; if no one can, another election could come early next year.",
+        "means": "There is no quick answer on who leads Israel through the Iran war, so the vote does not change the war risk built into oil prices for now. Exit polls can be wrong, and final counts could still shift the picture.",
+        "fx": "Deadlock → Iran war risk stays as it was → oil stays high; little change for the dollar or oil-linked currencies."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "No winner yet, so the vote neither raises nor lowers war risk."
+        }
+      ],
+      "watch": "Final vote counts and whom Israel's president asks to form a government."
+    },
     {
       "id": "investingcube-gold-defends-4000-20261027",
       "ts": "2026-10-27T14:43:00Z",
@@ -536,6 +590,33 @@
         }
       ],
       "watch": "Whether Egyptian forces actually go to Saudi Arabia, and how the Houthis respond."
+    },
+    {
+      "id": "gbaf-opec-steady-dec-20261027",
+      "ts": "2026-10-27T09:27:00Z",
+      "source": "Global Banking & Finance Review (Reuters)",
+      "url": "https://www.globalbankingandfinance.com/opec-oil-producers-set-keep-output-targets-steady-sunday/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-a5b7f7c8-1bf7-462e-85ee-313b2a8f3864/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "OPEC+ oil producers set to keep output targets steady at Sunday meeting, sources say",
+      "story": "iran-hormuz",
+      "story_title": "Iran war: the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Seven core OPEC+ oil producers, led by Saudi Arabia and Russia, are expected to keep December output targets unchanged at an online meeting on Sunday, November 1, three sources told Reuters.",
+      "beats": {
+        "was": "The Iran war cut Gulf oil exports for months and pushed Brent above $110 a barrel. OPEC+ finished undoing one layer of output cuts in September.",
+        "happened": "Sources said no final decision has been made, but the group is unlikely to change policy before next year. Most Gulf members are pumping well below their targets anyway as they rebuild exports after the war disruption. A review of how much each member can produce, which sets 2027 targets, is expected in mid-November.",
+        "means": "The targets are not what limits supply right now; the war is. A steady decision would leave oil prices to follow the Gulf fighting and peace talks.",
+        "fx": "No change in targets → no new push on oil → oil-linked currencies like the Canadian dollar keep following war headlines instead."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "An expected hold from unnamed sources; supply is set by the war, not the targets."
+        }
+      ],
+      "watch": "The OPEC+ meeting on Sunday, November 1."
     },
     {
       "id": "turkiyetoday-ras-tanura-fire-20261027",
@@ -1226,87 +1307,6 @@
         }
       ],
       "watch": "Healey's budget on October 28: how much borrowing and tax it plans, and how UK government bonds react."
-    },
-    {
-      "id": "investinglive-ifo-oct-20261026",
-      "ts": "2026-10-26T09:06:13Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/germany-ifo-business-confidence-improves-in-october-as-expectations-surprise-higher/",
-      "image": "https://investinglive.com/cms/media/images/Germany%20Flag%20Data%202.jpg?width=960&format=webp",
-      "headline": "Germany Ifo business confidence improves in October as expectations surprise higher",
-      "story": "ez-growth",
-      "story_title": "Euro area: how the economy is holding up",
-      "pillar": "growth",
-      "summary": "German firms grew more upbeat about the months ahead in October, even though they judged business today a little worse. It is the fifth monthly rise in the Ifo survey of German business mood.",
-      "beats": {
-        "was": "The Ifo index asks about 9,000 German companies how business is going now and how they expect it to go over the next six months. Germany is the euro area's biggest economy, and last week's euro-area business surveys showed growth slowing to a four-month low.",
-        "happened": "The overall reading edged up to 90.2 from 89.9, just above the 90.0 forecast. Hopes for the coming months jumped to their highest since February 2022, while firms' view of current conditions slipped below forecast.",
-        "means": "German companies expect better times ahead, but today's business is not improving yet, and surveys are not hard data. It softens last week's gloomy euro-area picture without changing it.",
-        "fx": "Brighter German outlook → slightly less worry about euro-area growth → a small help for the euro. It is unlikely to change the European Central Bank's decision on Thursday, October 29, where a hold is expected. The question to keep asking: is the euro area's slowdown bottoming out?"
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firms' hopes for the months ahead rose more than expected, though current business weakened."
-        }
-      ],
-      "watch": "Whether hard data, like factory orders and output, start to follow the brighter outlook."
-    },
-    {
-      "id": "fxstreet-euro-french-yields-cool-20261026",
-      "ts": "2026-10-26T08:26:06Z",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/euro-outperforms-major-currency-peers-as-french-bond-yields-cool-down-further-202610260826",
-      "image": "https://editorial.fxsstatic.com/images/i/EUR-bullish-line_Medium.png",
-      "headline": "Why is the Euro outperforming at start of ECB policy week?",
-      "story": "france-fiscal",
-      "story_title": "France: budget fight, protests and debt worries",
-      "pillar": "risk",
-      "summary": "The euro was the best performer among major currencies on Monday morning as the interest rate on French government debt eased further, after Moody's chose not to cut France's credit rating.",
-      "beats": {
-        "was": "Worries about France's public debt, a budget fight and street protests pushed France's 10-year borrowing cost to 5.14% last week, its highest in about 20 years, and weighed on the euro.",
-        "happened": "Moody's kept France at Aa3 with a negative outlook late Friday instead of cutting it. On Monday France's 10-year yield slipped to just under 5%, and the euro rose about 0.25% against the yen.",
-        "means": "The rating decision gives France some breathing room, and investors are buying French bonds again. The underlying problems, a large deficit and a split parliament, have not gone away.",
-        "fx": "Lower French borrowing costs → less fear of a euro-area debt scare → support for the euro before the European Central Bank decides on Thursday, October 29."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Easing French debt worries remove a weight that hit the euro last week."
-        }
-      ],
-      "watch": "Whether French yields climb back above 5% as the budget debate in parliament continues."
-    },
-    {
-      "id": "reuters-healey-budget-preview-20261026",
-      "ts": "2026-10-26T07:14:59Z",
-      "source": "Reuters (via Global Banking & Finance Review)",
-      "url": "https://www.globalbankingandfinance.com/mindful-markets-uks-healey-set-deliver-careful-budget/",
-      "image": "https://www.globalbankingandfinance.com/i/cloud-c33afc99-787a-41c2-bc0a-d27ee1262a85/width=1200,height=630,quality=80,format=auto,fit=cover/",
-      "headline": "UK Finance Minister Healey to Announce Cautious, Market-Minded Budget",
-      "story": "uk-growth",
-      "story_title": "UK growth before the November 5 Bank of England decision",
-      "pillar": "risk",
-      "summary": "Britain's finance minister, Chancellor John Healey, is expected to present a careful first budget on Wednesday, aimed at keeping bond investors calm rather than spending big. A higher tax on bank profits is the main expected tax rise.",
-      "beats": {
-        "was": "UK government borrowing costs are the highest in the G7, with the 30-year yield near 6% and the 10-year at its highest since 2007. Public debt passed £3 trillion in September, so Healey has little room against his own borrowing rules.",
-        "happened": "Reuters reports the October 28 budget will offer some help with energy bills and business costs, raise the levy on bank profits, and leave bigger plans from Prime Minister Andy Burnham for a spending review next year. Economists quoted said investors would punish any spending not paid for.",
-        "means": "A careful budget would ease the risk of another sell-off in UK government bonds, which has weighed on the pound. Any surprise in extra borrowing would be the big danger.",
-        "fx": "Careful budget → steadier UK bonds → mild support for the pound; a borrowing surprise would hurt it."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A careful plan would calm UK bonds, but the budget is still the pound's biggest risk this week."
-        }
-      ],
-      "watch": "Wednesday's budget: how much the government plans to borrow, and how UK bond yields react."
     }
   ]
 }
