@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-27T15:00:00-05:00",
-  "updated": "2026-10-27T15:00:00-05:00",
+  "as_of": "2026-10-28T00:55:00-05:00",
+  "updated": "2026-10-28T00:55:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "Evening read, Tuesday 2026-10-27 (3:00 PM CT NY close). DXY ~102.3 (+0.26%); EUR/USD 1.1136 (-0.34%), GBP/USD 1.3310 (-0.24%), USD/JPY 157.80 (+0.19%) after the 9am CT confidence beat (91.7) and new home sales beat (676K) capped a firm dollar day into the FOMC; spot levels are indicative index quotes, not executable prices.",
+  "note": "Overnight read, Wednesday 2026-10-28 (12:40 AM CT). DXY 102.40; EUR/USD 1.1129, GBP/USD 1.3307, USD/JPY 157.81, USD/CHF 0.8299, AUD/USD 0.7035, USD/CAD 1.4066, NZD/USD ~0.5606 after the RBNZ hold (low 0.5580); Brent $115.36, WTI $101.12, gold ~$4,051, 10Y ~5.02%. Spot levels are indicative index quotes, not executable prices.",
   "pairs": {},
   "currencies": [
     {
@@ -10,7 +10,7 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY ~102.3 (+0.26%, 1.5-week high, third straight gain) into the FOMC — durable goods BEAT +1.8%, confidence BEAT 91.7 (biggest beat since May 2025), new home sales BEAT 676K. FOMC decision Wed 1pm CT: hold ~89-93%, Dec hike ~73-82%.",
+      "summary": "DXY 102.40 (two-week high) into today's FOMC: hold ~91% (CME FedWatch via Reuters Oct 28), Dec hike ~73-82%. Tue's beats (durables +1.8%, confidence 91.7, new home sales 676K) still underpin the dollar; Warsh presser 1:30pm CT.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -47,7 +47,7 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD 1.1136 (-0.34%, fifth straight down day, day low 1.1133) — below its triangle, 1.1150 now resistance; France OAT-Bund ~167bp into Thursday's ECB (hold ~93-97%).",
+      "summary": "EUR/USD 1.1129, flat in Asia — fifth straight down day's lows held into Thursday's ECB (hold ~93-97%). France OAT-Bund ~167bp; German GfK due 2am CT, EZ sentiment Thu.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD 1.3310 (-0.24%) — below its 1.3356 range floor into Wednesday's Budget (7:30am CT); BRC shop prices beat 2.1% (fastest since Feb 2024). BoE Nov 5 hike ~90-97% to 4.00%.",
+      "summary": "GBP/USD 1.3307 into Healey's first Budget at 7:30am CT — BoE Nov 5 hike ~90-97% to 4.00%; BRC shop prices beat 2.1%.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY 157.80 (+0.19%) — yen softened as risk appetite returned; Finance Minister Katayama warned Tokyo stands ready to act on FX. BoJ Fri: hold at 1.25%, Dec hike ~83-88%.",
+      "summary": "USD/JPY 157.81 — yen flat in Asia after Katayama's intervention warning; BoJ Fri: hold at 1.25%, Dec hike ~83-88%. BoJ trend index jumped 3.2% y/y in Sep (3-yr high, Reuters Oct 27), cementing the Dec case.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF 0.8289 (+0.17%) — haven bid faded further as equities steadied; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
+      "summary": "USD/CHF 0.8299 in Asia — haven bid faded as equities steadied; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
       "drivers": {
         "policy": {
           "score": 0,
@@ -195,19 +195,19 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD 0.7028 (+0.17%) — held firm into tonight's Q3 CPI (7:30pm CT; trimmed +1.0% q/q consensus). RBA Nov 2-3 hike ~50%.",
+      "summary": "AUD/USD 0.7035 — spiked to $0.7053 on Q3 CPI, then settled in Asia. RBA Nov 2-3 hike now ~79-85% to 4.85% after trimmed CPI beat the Bank's own forecast.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "RBA Nov 2-3 hike ~50% (newsquawk 'roughly equal'; GS tips Nov after Hauser; up from ~30% at week's start); December ~64%; Q3 CPI Oct 28 the pivot (trimmed +1.0% q/q consensus)"
+          "note": "RBA Nov 2-3 hike ~79-85% to 4.85% (ActionForex 79% from 60% pre-CPI; Biggo 85% from 69%) after Q3 CPI; Bullock: board will debate whether four hikes this year suffice"
         },
         "growth": {
           "score": -1,
           "note": "flash PMIs a big miss: composite 47.7 (first contraction in 5 months); employment -39.3K, unemp 4.7% — a five-year high; Q3 CPI Oct 28 the pivot"
         },
         "inflation": {
-          "score": 0,
-          "note": "Q3 underlying inflation 3.6% vs Hauser's worsened outlook — the Oct 28 CPI print decides November"
+          "score": 1,
+          "note": "Q3 CPI hotter than the RBA's path: trimmed +1.0% q/q vs the Bank's 0.8% forecast (Q3 trimmed 3.7% y/y); monthly Sep headline 4.3% y/y vs 4.2% exp — the bank is expected to act in November"
         },
         "risk": {
           "score": 0,
@@ -232,7 +232,7 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD 1.4027 (+0.06%) — loonie steadied as WTI slid; BoC Wed 8:45am CT: hike ~75-80% (TD dissents — hold Oct).",
+      "summary": "USD/CAD 1.4066 into the BoC at 8:45am CT: hike ~78-85% to 2.50% (TD/Rabobank dissent — hold). Crude rebounded (WTI $101.12) on the Houthi refinery claim, unconfirmed by Saudi.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -269,11 +269,11 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD 0.5696 (+0.23%) — decision lands 8pm CT tonight: hike ~85-89% to 3.00% priced, terminal 3.25-3.50% (ING).",
+      "summary": "NZD/USD ~0.5606 — fell as much as 1.7% to $0.5585 (Finnhub low 0.5580) after the surprise RBNZ hold; the hike case is delayed to December, not dropped.",
       "drivers": {
         "policy": {
-          "score": 1,
-          "note": "Oct 28 hike ~85-89% to 3.00% (Bloomberg 85%, finimize 89%; investinglive 99% — sources disagree on the tightness); terminal 3.25-3.50% (ING); decision 8pm CT Tuesday"
+          "score": 0,
+          "note": "RBNZ HELD at 2.75% on Oct 28 in a 4-3 vote vs ~85-95% hike pricing — tightening delayed, not abandoned: all members agreed further tightening is likely, Breman raised restrictive territory, ANZ sees Dec/Feb/Mar hikes to 3.50%; next decision Dec 9"
         },
         "growth": {
           "score": 1,
@@ -575,6 +575,19 @@
         "AUD": 1,
         "CAD": 2,
         "NZD": 4
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 2,
+        "CAD": 2,
+        "NZD": 3
       }
     }
   ]
