@@ -2619,3 +2619,34 @@ html, body { overflow-x: clip; max-width: 100%; }
   .news-card.news-row.open .news-body { max-width: 860px; }
   .news-card.news-row.open .news-hl { font-size: 1.3rem; }
 }
+
+/* News groups (Rami, 2026-10-28): a clear break and label between groups. */
+.news-group-head {
+  grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;
+  margin: 34px 0 6px; padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+}
+.news-hero + .news-group-head { margin-top: 10px; }
+.ng-title { margin: 0; font-family: var(--serif); font-size: 1.3rem; font-weight: 600; line-height: 1.25; color: var(--ink); }
+.ng-count { margin-left: auto; font-size: 0.76rem; }
+.ng-tag {
+  flex-basis: 100%; display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bear);
+}
+.ng-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--bear); }
+.news-group-head.day .ng-title { font-family: var(--sans); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.news-more-btn {
+  grid-column: 1 / -1; justify-self: start; margin: 12px 0 0; padding: 6px 0; border: 0; background: none; cursor: pointer;
+  font: inherit; font-size: 0.84rem; font-weight: 700; color: var(--accent);
+}
+.news-more-btn::after { content: " +"; }
+.news-more-btn[aria-expanded="true"]::after { content: " \2013"; }
+.news-more-btn:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 641px) {
+  .news-group-head { margin-top: 40px; }
+}
+@media (max-width: 640px) {
+  .news-group-head { margin: 28px 0 0; padding-bottom: 8px; }
+  .ng-title { font-size: 1.12rem; }
+  .news-group-head + .news-card.news-row { border-top: 0; }
+  .news-card.news-row:has(+ .news-group-head), .news-card.news-row:has(+ .news-more-btn) { border-bottom: 1px solid var(--line); }
+}

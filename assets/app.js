@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '115';
+  var ASSET_VERSION = '116';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -3655,7 +3655,7 @@
     ['means', 'What it means'], ['fx', 'For the currency']];
   /* Rami, 2026-10-26: News always opens on By impact; Latest is a per-visit
      choice, not remembered. */
-  var news = { data: null, ccy: '', src: '', open: {}, sort: 'impact' };
+  var news = { data: null, ccy: '', src: '', open: {}, sort: 'impact', more: {} };
   /* Impact ranking (Rami, 2026-10-18): strongest push on any market first,
      then how many markets it clearly moves, then newest. */
   function newsImpact(it) {
@@ -3732,6 +3732,8 @@
     });
     var grid = $('#news-grid');
     if (grid) grid.addEventListener('click', function (e) {
+      var mb = e.target.closest('[data-news-more]');
+      if (mb) { var gk = mb.getAttribute('data-news-more'); news.more[gk] = !news.more[gk]; renderNews(); return; }
       var t = e.target.closest('[data-news-toggle]');
       // Rows (phone 2026-10-26, desktop 2026-10-28): a closed row opens from anywhere on it.
       if (!t && !e.target.closest('a, button, select')) {
@@ -3748,6 +3750,106 @@
         if (r.top < 60 || r.top > window.innerHeight * 0.6) card.scrollIntoView({ block: 'start', behavior: 'smooth' });
       }
     });
+  }
+
+  /* Grouping (Rami, 2026-10-28): breaks between headlines so the feed
+     doesn't run together. By impact: hero, then Trending (the 2-3 busiest
+     storylines), then macro categories, busiest first. Latest: hero, then
+     Today / Yesterday / date. Each headline shows once; groups over 6 rows
+     fold behind "Show N more". */
+  var NEWS_CATS = [
+    ['banks', 'Central banks', ['policy']],
+    ['energy', 'Energy & commodities', ['commodities', 'tot']],
+    ['risk', 'Risk & geopolitics', ['risk']],
+    ['growth', 'Growth & data', ['growth']],
+    ['inflation', 'Inflation', ['inflation']],
+    ['fiscal', 'Fiscal & government', ['fiscal']],
+    ['other', 'More headlines', []]
+  ];
+  var NEWS_GROUP_MAX = 6;
+  function newsCat(it) {
+    for (var i = 0; i < NEWS_CATS.length - 1; i++) if (NEWS_CATS[i][2].indexOf(it.pillar) >= 0) return NEWS_CATS[i];
+    return NEWS_CATS[NEWS_CATS.length - 1];
+  }
+  function newsDayKey(it) {
+    var d = new Date(newsTime(it));
+    return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+  }
+  function newsDayLabel(it) {
+    var d = new Date(newsTime(it)), now = new Date();
+    var y = new Date(now); y.setDate(now.getDate() - 1);
+    var k = newsDayKey(it);
+    if (k === newsDayKey({ ts: now.toISOString() })) return 'Today';
+    if (k === newsDayKey({ ts: y.toISOString() })) return 'Yesterday';
+    return d.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+  }
+  function newsGroupHead(key, kind, title, count) {
+    var h = el('div', 'news-group-head ' + kind);
+    if (kind === 'trend') {
+      var tg = el('span', 'ng-tag');
+      tg.appendChild(el('i', 'ng-dot'));
+      tg.appendChild(document.createTextNode('Trending'));
+      h.appendChild(tg);
+    }
+    var t = el('h3', 'ng-title', title);
+    h.appendChild(t);
+    h.appendChild(el('span', 'ng-count meta', count + (count === 1 ? ' headline' : ' headlines')));
+    h.setAttribute('data-group', key);
+    return h;
+  }
+  function newsLayout(stories) {
+    var out = [{ s: stories[0], hero: true }], rest = stories.slice(1), groups = [];
+    if (news.sort === 'latest') {
+      var byDay = {};
+      rest.forEach(function (s) {
+        var k = newsDayKey(s.lead);
+        if (!byDay[k]) { byDay[k] = { key: 'day-' + k, kind: 'day', title: newsDayLabel(s.lead), items: [] }; groups.push(byDay[k]); }
+        byDay[k].items.push(s);
+      });
+    } else {
+      // Trending: storylines with 3+ headlines in the current view, busiest first (max 3).
+      var count = {}, peak = {};
+      stories.forEach(function (s) {
+        var t = s.lead.story_title; if (!t) return;
+        count[t] = (count[t] || 0) + 1;
+        peak[t] = Math.max(peak[t] || 0, newsImpact(s.lead));
+      });
+      var hot = Object.keys(count).filter(function (t) { return count[t] >= 3; })
+        .sort(function (a, b) { return (count[b] - count[a]) || (peak[b] - peak[a]); }).slice(0, 3);
+      var used = {};
+      hot.forEach(function (t) {
+        var g = { key: 'trend-' + slugId(t), kind: 'trend', title: t, items: [] };
+        rest.forEach(function (s) { if (s.lead.story_title === t) { g.items.push(s); used[s.id] = true; } });
+        if (g.items.length) groups.push(g);
+      });
+      var cats = {}, catList = [];
+      rest.forEach(function (s) {
+        if (used[s.id]) return;
+        var c = newsCat(s.lead);
+        if (!cats[c[0]]) { cats[c[0]] = { key: 'cat-' + c[0], kind: 'cat', title: c[1], items: [], peak: 0, other: c[0] === 'other' }; catList.push(cats[c[0]]); }
+        cats[c[0]].items.push(s);
+        cats[c[0]].peak = Math.max(cats[c[0]].peak, newsImpact(s.lead));
+      });
+      catList.sort(function (a, b) { return (a.other - b.other) || (b.peak - a.peak) || (b.items.length - a.items.length); });
+      groups = groups.concat(catList);
+    }
+    groups.forEach(function (g) {
+      out.push({ node: newsGroupHead(g.key, g.kind, g.title, g.items.length) });
+      var showAll = !!news.more[g.key];
+      g.items.forEach(function (s, i) {
+        // An opened headline stays visible even inside a folded group.
+        if (showAll || i < NEWS_GROUP_MAX || news.open[s.id]) out.push({ s: s });
+      });
+      var hidden = g.items.length - NEWS_GROUP_MAX;
+      if (hidden > 0) {
+        var b = el('button', 'news-more-btn', showAll ? 'Show fewer' : 'Show ' + hidden + ' more');
+        b.type = 'button';
+        b.setAttribute('data-news-more', g.key);
+        b.setAttribute('aria-expanded', showAll ? 'true' : 'false');
+        out.push({ node: b });
+      }
+    });
+    return out;
   }
 
   function newsPhone() { return window.matchMedia && window.matchMedia('(max-width: 640px)').matches; }
@@ -3909,7 +4011,9 @@
       return;
     }
 
-    stories.forEach(function (s, si) {
+    newsLayout(stories).forEach(function (en) {
+      if (en.node) { grid.appendChild(en.node); return; }
+      var s = en.s, si = en.hero ? 0 : 1;
       var it = s.lead, open = !!news.open[s.id];
       /* Phone layout (Rami, 2026-10-26): the first story is the hero card,
          the rest are compact rows (arrow · headline · thumbnail). The
