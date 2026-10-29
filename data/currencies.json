@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-29T07:53:00-05:00",
-  "updated": "2026-10-29T07:53:00-05:00",
+  "as_of": "2026-10-29T15:00:00-05:00",
+  "updated": "2026-10-29T15:00:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "NY-open read, Thursday 2026-10-29 (~7:50 AM CT). FOMC held 3.75-4.00% (10-2); BoC hiked to 2.50%; RBNZ surprise hold; UK Budget landed muted. Post-7:30am CT data window (Finnhub/OANDA ~7:48am CT): DXY ~102.25, EUR/USD ~1.1138, GBP/USD ~1.3320, USD/JPY ~158.06, USD/CHF ~0.8278 (overnight), AUD/USD ~0.705, USD/CAD ~1.3981 (overnight), NZD/USD ~0.5621; Brent ~$114.10, WTI ~$101.45, gold ~$4,027, 2Y ~4.71%, 10Y ~5.04%. ECB decision 8:15am CT; BoJ Friday. NOTE: 7:30am CT GDP/PCE/claims actuals unverified at push time (BEA/DOL fetch pending, wire index still pre-release) — left unfilled for the breaking watch/4pm run; no numbers invented. Spot levels are indicative index quotes, not executable prices.",
+  "note": "NY-close read, Thursday 2026-10-29 (~3:00 PM CT). ECB held at 2.50% with a clear December signal and Lagarde's Feb 7, 2027 exit announced; US Q3 GDP beat (3.4%), September PCE in line, claims 194K. Dollar range-bound into the close; BoJ decides overnight.",
   "pairs": {},
   "currencies": [
     {
@@ -10,15 +10,15 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY ~102.25 in the European morning, little changed after the FOMC held 3.75-4.00% (10-2, Cook + Hammack for a hike); Warsh's presser knocked the dollar off its two-week high and December hike pricing eased to ~78% (CME via Reuters Oct 29). The 7:30am CT prints (GDP advance, September PCE, jobless claims) landed but their actuals were NOT verified in time for this push — first market reaction muted: EUR/USD 1.1138, USD/JPY 158.06 (Finnhub/OANDA ~7:48am CT).",
+      "summary": "DXY ~102.15 into the NY close, soft on the day (-0.22%) despite a GDP beat — Q3 advance 3.4% SAAR vs 3.2% consensus, September PCE in line (headline +0.5% m/m, core +0.3% m/m, 3.1% y/y), claims 194K vs ~199K. December hike pricing ~83% after the block (from ~78% in the morning); 10Y eased to 4.98%.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~78% (CME FedWatch via Reuters Oct 29, down from ~84% pre-decision) — Fed still the highest G10 rate; next meeting Dec 8-9 with SEP/dot plot"
+          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~83% after the Oct 29 GDP/PCE block (FedWatch via SmartXSignals, from ~78% in the morning) — Fed still the highest G10 rate; next meeting Dec 8-9 with SEP/dot plot"
         },
         "growth": {
           "score": 0,
-          "note": "claims BEAT again: 194K vs 200K fcst (week ended Oct 17) — near 57-year lows; Oct flash comp 57.6 inline; CFNAI Sep +0.07 beat (MA3 +0.03, just above trend); durable goods Sep BEAT +1.8% m/m (vs 0.6% fcst; ex-transport +0.5%, core cap goods ex-aircraft +0.5%; Aug rev. up to +0.1%) — factory orders firm into the FOMC, while weekly ADP eased to 16.75K from 18.5K; Oct 27: confidence BEAT 91.7 (biggest beat since May 2025), new home sales BEAT 676K"
+          "note": "Q3 GDP advance BEAT: 3.4% SAAR (vs 3.2% consensus, prev 2.2%); claims BEAT again: 194K vs ~199K fcst (week ended Oct 24, prev revised to 195K); continuing claims 1.701M (-21K) — the low-hire, low-fire labor market intact"
         },
         "inflation": {
           "score": 1,
@@ -47,11 +47,11 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD ~1.1134 in Asia (-0.15%), giving back Wednesday's post-FOMC bounce. ECB today 8:15am CT: hold at 2.50% is ~93-97% priced (Reuters poll 70/73); the presser will be dominated by French bond turmoil, TPI and questions about Lagarde's future. EZ sentiment missed again this morning (96.9 vs 97.5).",
+      "summary": "EUR/USD 1.1162 into the NY close (+0.08%), recovering from a ~1.1106 post-ECB dip; the ECB held at 2.50% as expected, Lagarde said the direction of travel is clear and a hike was debated — a Dec 17 hike is now 'all but certain' per Reuters sources. Same morning she announced she steps down Feb 7, 2027. EZ sentiment missed again (96.9 vs 97.5).",
       "drivers": {
         "policy": {
           "score": -1,
-          "note": "ECB TODAY 8:15am CT: hold at 2.50% ~93-97% (Reuters poll 70/73); December hike ~84-88% (64/73 economists; market ~84%) — the ECB lags the hike cycle, a drag vs the counterparty gap; presser (~8:45am CT) dominated by OATs, TPI and Lagarde's future"
+          "note": "Oct 29 HELD at 2.50% as expected (Reuters poll 70/73); Lagarde: direction of travel 'clear', a hike was debated and deferred to December — Reuters sources call a Dec 17 hike 'all but certain'; Lagarde steps down Feb 7, 2027. The ECB lags the hike cycle, a drag vs the counterparty gap"
         },
         "growth": {
           "score": -1,
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD ~1.3327 in Asia, holding Wednesday's retrace from troughs near 1.3270 after Healey's first Budget landed as expected — headroom £15B, 10Y gilt -2bp to 5.323%, the 'boring budget' bond markets wanted. UK credit cooled this morning (approvals 53.4K vs 54K). BoE Nov 5 hike ~90-97% to 4.00%.",
+      "summary": "GBP/USD 1.3365 into the close (+0.29%), steady after four down days; UK credit softer (mortgage approvals 53.4K vs 54K, net lending £5.8B vs £6.2B) but largely ignored post-Budget. BoE Nov 5 hike ~94% to 4.00%.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY ~158.05 in Asia, back above 158.00 after the FOMC hold as the haven bid faded further. Japan consumer confidence slipped to 35.0 (vs 35.1 fcst) — a soft read into Friday's BoJ (hold at 1.25%, Dec hike ~83-88%). Tokyo CPI lands Thursday night CT (fcst 2.6% core).",
+      "summary": "USD/JPY 157.97 into the close (+0.09%), probing the high then settling; Japan consumer confidence 35.0 (vs 35.1) soft. Tokyo CPI lands Thursday night CT (core fcst 2.6% y/y), then the BoJ decision (hold ~98%, December hike ~83-88%).",
       "drivers": {
         "policy": {
           "score": -1,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF ~0.8278 in Asia — haven bid faded as equities steadied and the Gulf risk premium eased with the Vance Iran-talk letter; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
+      "summary": "USD/CHF 0.8262 into the close (-0.23%), the haven bid fading further as oil eased and Iran-talk hopes rose; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
       "drivers": {
         "policy": {
           "score": 0,
@@ -195,7 +195,7 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD ~0.705 in Asia, steady near a one-month high. RBA Nov 2-3 hike ~79-85% to 4.85% after hot Q3 CPI — but Q3 import prices fell 1.1% q/q (vs +1.8% exp), cooling the pipeline leg.",
+      "summary": "AUD/USD 0.7032 into the close, off Asia's ~0.705 near-one-month high; RBA Nov 2-3 hike ~79-85% to 4.85% after hot Q3 CPI — but Q3 import prices fell 1.1% q/q (vs +1.8% exp), cooling the pipeline leg.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -232,7 +232,7 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD ~1.3981 in Asia, loonie holding Wednesday's gain after the BoC hiked +25bp to 2.50%, its first since July 2023; MPR lifts 2027 inflation to 3.1%. December further hike ~45% (swaps); Can 2Y hit a 2-year high.",
+      "summary": "USD/CAD 1.3995 into the close, the loonie holding below 1.40 after the BoC hike; a further December BoC hike ~45% (swaps), a second hike fully discounted by January. BoC's Vincent speaks — the first Governing Council voice since the hike.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -269,7 +269,7 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD ~0.5621 in Asia, holding after sliding as much as 1.7% on the RBNZ surprise hold (4-3, 2.75%); ANZ business confidence firmed to 52.5 (from 51.9) but own activity eased to 46.2 — a mixed first read since the hold. The hike case is delayed to Dec 9, not abandoned.",
+      "summary": "NZD/USD 0.5613 into the close, holding after sliding as much as 1.7% on the RBNZ surprise hold (4-3, 2.75%); ANZ business confidence firmed to 52.5 (from 51.9) but own activity eased to 46.2 — a mixed first read since the hold. The hike case is delayed to Dec 9, not abandoned.",
       "drivers": {
         "policy": {
           "score": 0,

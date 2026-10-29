@@ -1,10 +1,37 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-10-29T07:53:00-05:00",
+  "updated": "2026-10-29T15:00:00-05:00",
   "currencies": {
     "USD": {
       "recent": [
+        {
+          "id": "us-gdp-20261029",
+          "date": "2026-10-29",
+          "title": "US GDP advance (Q3)",
+          "result": "beat",
+          "actual": "3.4% SAAR (vs 3.2% consensus; prev 2.2%)",
+          "forecast": "3.2%",
+          "note": "Beat: Q3 advance 3.4% SAAR vs 3.2% consensus (prev 2.2%); consumer spending +3.8%, final sales +1.7% — the AI-capex quarter."
+        },
+        {
+          "id": "us-pce-20261029",
+          "date": "2026-10-29",
+          "title": "US PCE price index (Sep)",
+          "result": "inline",
+          "actual": "Headline +0.5% m/m, +3.6% y/y; core +0.3% m/m, +3.1% y/y",
+          "forecast": "Headline +0.5% m/m; core +0.3% m/m",
+          "note": "In line: September PCE matched forecasts; core y/y ticked up to 3.1% from 3.0% — sticky, not re-accelerating."
+        },
+        {
+          "id": "us-claims-20261029",
+          "date": "2026-10-29",
+          "title": "US jobless claims (week ended Oct 24)",
+          "result": "beat",
+          "actual": "194K (vs 198K fcst; prev week revised to 195K); continuing 1.701M (-21K)",
+          "forecast": "198K",
+          "note": "Beat: 194K vs 198K fcst (Reuters poll 199K); prev week revised to 195K; continuing claims 1.701M (-21K) — low-hire, low-fire intact."
+        },
         {
           "id": "us-trade-adv-20261028",
           "date": "2026-10-28",
@@ -31,33 +58,6 @@
           "actual": "676K SAAR (Sep); inventory 476K, 8.4 months' supply; median $400,400",
           "forecast": "660K",
           "note": "Beat: 676K vs 660K fcst, though down from 680K Aug and 5.3% y/y — demand steadier than feared. Census/HUD, Oct 27."
-        },
-        {
-          "id": "us-hpi-20261027",
-          "date": "2026-10-27",
-          "title": "US house price indexes (Aug)",
-          "result": "beat",
-          "actual": "+0.3% m/m (FHFA); Case-Shiller 20-city +2.7% y/y, national +2.1% y/y",
-          "forecast": "0.1%",
-          "note": "Beat: +0.3% m/m vs 0.1% fcst (FHFA); Case-Shiller 20-city +2.7% y/y — housing wealth firm into the FOMC. FHFA / S&P Cotality, Oct 27."
-        },
-        {
-          "id": "us-durables-20261027",
-          "date": "2026-10-27",
-          "title": "US durable goods orders (Sep)",
-          "result": "beat",
-          "actual": "+1.8% m/m ($345.4bn; vs 0.6% fcst; Aug rev. to +0.1%)",
-          "forecast": "0.6%",
-          "note": "Beat: +1.8% vs 0.6% fcst (WSJ consensus +1.7%) — nondefense aircraft +28.4% led, but ex-transport +0.5% and core cap goods ex-aircraft +0.5% both firmer; August revised up from flat. Census advance report, Oct 27."
-        },
-        {
-          "id": "us-dallas-fed-20261026",
-          "date": "2026-10-26",
-          "title": "Dallas Fed manufacturing index (Oct)",
-          "result": "beat",
-          "actual": "13.4 (vs 7.0 fcst; Sep 9.8)",
-          "forecast": "7.0",
-          "note": "Beat: 13.4 vs 7.0 fcst (Sep 9.8) — headline strong, internals split: new orders collapsed to 9.3 from 30.7, production eased to 15.8, prices paid rose to 55.3, six-month outlook jumped to 38.1. Mixed signal, not a clean growth beat."
         }
       ]
     },
@@ -71,6 +71,15 @@
           "actual": "96.9 (vs 97.5 fcst; prev 97.9)",
           "forecast": "97.5",
           "note": "Miss: 96.9 vs 97.5 consensus, down from 97.9 in September — sentiment softening into the ECB decision; a second soft read after the Oct 22 flash consumer confidence drop to -17.9. European Commission, Oct 29."
+        },
+        {
+          "id": "it-unemp-20261029",
+          "date": "2026-10-29",
+          "title": "Italian unemployment rate (Sep)",
+          "result": "miss",
+          "actual": "6.3% (fcst 6.2%)",
+          "forecast": "6.2%",
+          "note": "Slight miss: Italian jobless 6.3% vs 6.2% fcst (prev 6.2%) — slack building at the eurozone fiscal stress point, on ECB morning."
         },
         {
           "id": "eur-m3-20261027",
@@ -107,15 +116,6 @@
           "actual": "Comp 51.9 (fcst 52.7, Sep 53.1) — slowest in 4 months; Mfg 52.4 (52.9); Svc 51.7 (53.0)",
           "forecast": "52.7",
           "note": "Miss: composite 51.9 vs 52.7 expected — slowest expansion in 4 months; France back in contraction (48.4) and rising energy-driven input costs (Reuters, Oct 23)."
-        },
-        {
-          "id": "eur-de-pmi-20261023",
-          "date": "2026-10-23",
-          "title": "Germany flash PMIs (Oct)",
-          "result": "miss",
-          "actual": "Comp 52.8 (vs 53.3 fcst, Sep 53.8); Mfg 54.2 (vs 53.5) beat; Svc 51.7 (vs 52.6)",
-          "forecast": "53.3",
-          "note": "Mild composite miss (52.8 vs 53.3) though manufacturing beat (54.2); services the drag (Reuters, Oct 23)."
         }
       ]
     },
@@ -318,7 +318,7 @@
           "note": "A tenth light: +1.2% vs +1.3% fcst (Jul -0.7%); ex-autos +1.2% beat vs +1.0%; Sep advance +0.7% — essentially inline, loonie unmoved near 1.40."
         },
         {
-          "id": "cad-ippi-202609",
+          "id": "cad-ippi-20261022",
           "date": "2026-10-22",
           "title": "Canada IPPI m/m (Sep)",
           "result": "beat",
@@ -327,7 +327,7 @@
           "note": "Beat: +2.0% m/m vs 0.7% fcst (Aug rev. to +1.2%) — +14.5% y/y, 24th straight annual gain; upstream pressure supports the hawkish BoC repricing."
         },
         {
-          "id": "cad-rmpi-202609",
+          "id": "cad-rmpi-20261022",
           "date": "2026-10-22",
           "title": "Canada raw materials price index m/m (Sep)",
           "result": "beat",
