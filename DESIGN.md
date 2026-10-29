@@ -187,12 +187,24 @@ has no "What is this?" button.
 - Pillar keys match the engine: `policy`, `growth`, `inflation`, `risk`,
   `tot`, `positioning`, `fiscal`. Omit a pillar (or score 0) when it isn't a
   driver; every non-zero score needs a one-line `note`.
+- **`rates` ("Rate gap", added 2026-10-28):** an eighth pillar, same −1/0/+1
+  weight as the rest. The site adds it to the board only once any currency has
+  `drivers.rates`; until then it stays at seven. Hercules computes it from
+  `rates.json` (rule in `COLLAB.md`: 2-year yield vs the median of the eight,
+  plus its 1-month change vs the median, capped ±1) and includes it in `history`.
+  It measures what `policy` doesn't: where market yields sit and which way they move.
 - The site computes the score (sum of drivers), ranks the board, and builds
   the pair picker: for "bullish X" each counterpart Y is ranked by
   `score(X) − score(Y)` (Best ≥ 2, Good 1, No edge 0, Avoid < 0), shown in
   market convention (EUR > GBP > AUD > NZD > USD > CAD > CHF > JPY), with
   carry from `banks.json` rates and high-impact events in the next 14 days
-  from `calendar.json`.
+  from `calendar.json`. Carry is the headline-rate gap from the side you'd hold
+  ("interest +0.85% a year (you earn / you pay)"); a range uses its **upper
+  bound**, the Bloomberg convention (Fed 3.75–4.00% → 4.00). When `rates.json`
+  exists the line adds "rate gap widening your way / narrowing against you /
+  steady over a month" (1-month change in the two 2-year yields, ±0.10 points
+  to count), and a pair whose score leans one way while the rates cut the other
+  says "rates work against this one".
 - **Daily (2 a.m. edition):** rewrite `drivers`/`summary` from that morning's
   engine reads and banks, set `as_of`, and **append** one
   `{"date","scores"}` snapshot to `history` (keep ~60 days). History is what
@@ -200,6 +212,18 @@ has no "What is this?" button.
   rewrite past entries.
 - Scoring is v1 on purpose (Rami + Claude will refine weights/pillars over
   time); keep the method string accurate if it changes.
+
+### `data/rates.json` — yields (Hercules; optional, added 2026-10-28)
+```
+{"updated":"<ISO-8601>","as_of":"YYYY-MM-DD",
+ "yields":{"USD":{"y2":4.72,"chg_1w":0.05,"chg_1m":0.20,"chg_3m":0.40,
+                  "source":"label","as_of":"<ISO-8601>"}},   // all eight; EUR = German 2Y
+ "implied":{"USD":{"m3":4.25,"m6":4.50,"source":"label","as_of":"<ISO-8601>"}}}  // optional
+```
+- `y2` in percent; `chg_*` in percentage points. Every number has a source label.
+- The site reads `yields[ccy].y2` and `chg_1m` for the picker's rate-gap line.
+  `implied` is not shown yet. No file renders gracefully: the picker shows only
+  today's headline-rate gap.
 
 ### `data/momentum.json` — surprise momentum (Hercules)
 ```
@@ -229,8 +253,8 @@ oldest→newest, "Beat 3 · missed 1 · in line 0 of the last 4", the `note`, th
 three newest releases). Today → "data 3–1" on that currency's evidence row.
 
 ### Today: "Where the evidence leans" (render only, from currencies.json)
-A card in Go deeper: every currency, board order, seven dots = the seven
-pillars in engine order (green supports, red weighs, grey neutral; tooltips
+A card in Go deeper: every currency, board order, one dot per pillar (seven,
+eight once the Rate gap pillar is live) in engine order (green supports, red weighs, grey neutral; tooltips
 carry each driver note), "N for · N against", plus the momentum chip. Copy
 says "Evidence, not a call" — this is a tally of evidence, never a verdict.
 The currency page header also shows "Pillars: N for · N against · N neutral".

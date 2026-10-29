@@ -329,3 +329,58 @@ anyone's files, and the data is still there for the editions to use:
 says "Crowded trades are fragile". Rami has ruled that word out (see VISION.md). Could you
 reword it, e.g. "When nearly everyone has made the same bet, it can unwind fast"? You can also
 stop writing `live` if you like; it isn't shown anymore. Thank you!
+
+## Rates feed + "Rate gap" pillar: request for Hercules (Claude, 2026-10-28; Rami asked)
+Hi Herc! Rami wants interest-rate gaps on Blue Street, as a read on every pair
+and as part of each currency's score. This is the "Rates feed" idea from
+Oct 15 (now in the archive), now approved. The site code is done and waits
+for your file; nothing changes on the site until `rates.json` exists.
+
+**1. New file `data/rates.json`** (yours; refresh at all three runs):
+```
+{"updated":"<ISO>","as_of":"YYYY-MM-DD",
+ "yields":{"USD":{"y2":4.72,"chg_1w":0.05,"chg_1m":0.20,"chg_3m":0.40,
+                  "source":"<label>","as_of":"<ISO>"}, "EUR":{...}, ...},
+ "implied":{"USD":{"m3":4.25,"m6":4.50,"source":"<label>","as_of":"<ISO>"}}}
+```
+- `yields`: the **2-year government yield** for all eight currencies: US, Germany
+  (for EUR), UK, Japan, Canada, Australia, New Zealand, Switzerland. `y2` is in
+  percent; `chg_*` are the change in **percentage points** over 1 week, 1 month
+  and 3 months. Any reliable public source is fine; every number carries a
+  `source` label, and flag anything unverified instead of guessing.
+- `implied` is optional and the hardest to source: the policy rate the market
+  prices about 3 and 6 months out. Skip a currency you can't verify.
+
+**2. Rate convention** (Rami: use what Bloomberg and the other majors use).
+Please keep `banks.json` `rate` in this form so the gaps are comparable: Fed =
+**upper bound** of the target range (shown as the range, the site takes the
+upper end: 4.00%), ECB = **deposit facility rate**, BoE = Bank Rate, BoJ =
+overnight call rate target, BoC = overnight rate target, RBA = cash rate
+target, RBNZ = Official Cash Rate, SNB = policy rate. Heads-up: Trading
+Economics' all-country table mixes conventions (it shows the ECB's main
+refinancing rate, 2.65%) and lags (Canada still 2.25% there), so don't use it
+for the level; use it only to cross-check. Also, the USD note in
+`currencies.json` says the Fed is "still the highest G10 rate", but
+`banks.json` has AUD at 4.60%. Could you reword that one?
+
+**3. New pillar `rates` in `currencies.json`** (label "Rate gap"). Same −1 / 0 /
++1 as every other pillar, so it carries the same weight (one of eight). It
+measures what Policy doesn't: where the market's yield sits versus the other
+seven, and which way it's moving. Rule, from `rates.json`:
+- **Level:** `y2` minus the median of the eight `y2` values. +1 if ≥ +0.25,
+  −1 if ≤ −0.25, else 0.
+- **Move:** `chg_1m` minus the median of the eight `chg_1m` values. +1 if ≥
+  +0.15, −1 if ≤ −0.15, else 0.
+- **Score** = level + move, capped to −1 / +1 (so one strong signal counts,
+  and a high level that's falling fast nets to 0).
+- `note` when non-zero: one plain sentence, e.g. "Two-year yield 4.72%, 0.60
+  points above the middle of the eight and up 0.25 in a month."
+- Please include `rates` in the `scores` you append to `history` from the first
+  day you write it, so the trend lines stay consistent.
+- Until you write `drivers.rates`, the site shows seven pillars as before. Once
+  any currency has it, an eighth appears everywhere automatically.
+
+**What Claude does:** the pair picker's rate-gap line (gap today from
+`banks.json`, whether it is widening or narrowing from `rates.json`), the
+"Rate gap" pillar display, `DESIGN.md`, and later an engine row and a Learn
+entry. Thresholds above are a first guess; Rami and I will tune them.

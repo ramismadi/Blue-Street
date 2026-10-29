@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '113';
+  var ASSET_VERSION = '114';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -112,6 +112,7 @@
     initCot();
     withWords('data/currencies.json', 'currencies').then(function (d) {
       fx.data = d;
+      syncPillars();
       renderFx();
       if (story) renderScenes(story);
     }).catch(function () {
@@ -122,6 +123,12 @@
     // when tracking starts.
     fetchJSON('data/momentum.json').then(function (d) {
       momentum.data = d;
+      renderFx();
+    }).catch(function () { /* not published yet */ });
+    // Yields are optional too: the picker shows the rate gap's direction once
+    // the feed exists.
+    fetchJSON('data/rates.json').then(function (d) {
+      rates.data = d;
       renderFx();
     }).catch(function () { /* not published yet */ });
     fetchJSON('data/calendar.json').then(function (d) {
@@ -2735,6 +2742,7 @@
      starts fresh with the first scored release; MOMENTUM_START is only the
      fallback shown before the feed exists. */
   var momentum = { data: null };
+  var rates = { data: null };   // data/rates.json (Hercules), optional
   var MOMENTUM_START = '2026-10-14';
 
   function initFx() {
@@ -2820,13 +2828,33 @@
   }
   function signed(n) { return (n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n); }
 
+  /* Headline rate as a number. A target range uses its upper bound, the way
+     Bloomberg and the other majors quote it (Fed 3.75-4.00% → 4.00). */
   function rateNum(bankId) {
     var b = cal.banks[bankId];
     if (!b || !b.rate) return null;
-    var m = String(b.rate).match(/-?\d+(\.\d+)?/g);
-    if (!m) return null;
-    var v = m.map(Number);
-    return v.length > 1 ? (v[0] + v[1]) / 2 : v[0];
+    var s = String(b.rate).replace(/−/g, '-');
+    // A range like "3.75-4.00%": its hyphen is a dash, not a minus sign.
+    var r = s.match(/(\d+(?:\.\d+)?)\s*(?:-|–|—|to)\s*(\d+(?:\.\d+)?)/);
+    if (r) return Math.max(+r[1], +r[2]);
+    var m = s.match(/-?\d+(?:\.\d+)?/);
+    return m ? +m[0] : null;
+  }
+
+  /* data/rates.json (Hercules): 2-year yields and their recent change, per
+     currency. Optional. Until it exists the picker shows only today's gap. */
+  function yieldOf(ccy) {
+    var y = rates.data && rates.data.yields && rates.data.yields[ccy];
+    return y && typeof y.y2 === 'number' ? y : null;
+  }
+  /* The Rate gap pillar appears once Hercules writes drivers.rates; until
+     then the board stays at seven pillars. */
+  function syncPillars() {
+    var has = fxList().some(function (c) { return c.drivers && c.drivers.rates; });
+    var i = -1;
+    PILLARS.forEach(function (k, n) { if (k[0] === 'rates') i = n; });
+    if (has && i < 0) PILLARS.push(['rates', 'Rate gap']);
+    if (!has && i >= 0) PILLARS.splice(i, 1);
   }
 
   /* Upcoming high-impact events for a set of currencies within N days. */
@@ -2853,8 +2881,13 @@
       var longBase = dir === 'bull' ? base === X : base === y.ccy;
       var rx = rateNum(x.bank), ry = rateNum(y.bank);
       var carry = rx == null || ry == null ? null : (dir === 'bull' ? rx - ry : ry - rx);
+      // Is the yield gap, from the side you'd hold, growing or shrinking?
+      var yx = yieldOf(X), yy = yieldOf(y.ccy), ygap = null;
+      if (yx && yy && typeof yx.chg_1m === 'number' && typeof yy.chg_1m === 'number') {
+        ygap = { move: dir === 'bull' ? yx.chg_1m - yy.chg_1m : yy.chg_1m - yx.chg_1m };
+      }
       return {
-        y: y, sy: sy, gap: gap, pair: base + '/' + quote, action: longBase ? 'Buy' : 'Sell', carry: carry,
+        y: y, sy: sy, gap: gap, pair: base + '/' + quote, action: longBase ? 'Buy' : 'Sell', carry: carry, ygap: ygap,
         rating: gap >= 2 ? ['Best', 'best'] : gap === 1 ? ['Good', 'good'] : gap === 0 ? ['No edge', 'flat'] : ['Avoid', 'avoid'],
         events: eventsFor([X, y.ccy], 14)
       };
@@ -3110,7 +3143,16 @@
     var body = el('div', 'pick-body');
     body.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
     var meta = [];
-    if (p.carry != null) meta.push('interest ' + (p.carry >= 0 ? '+' : '−') + Math.abs(p.carry).toFixed(2) + '%' + (p.carry >= 0 ? ' (you earn)' : ' (you pay)'));
+    if (p.carry != null) {
+      var cm = 'interest ' + (p.carry >= 0 ? '+' : '−') + Math.abs(p.carry).toFixed(2) + '% a year' + (p.carry >= 0 ? ' (you earn)' : ' (you pay)');
+      // Say so when the rates cut against the score's lean.
+      if (p.gap >= 1 && p.carry < 0) cm += ', rates work against this one';
+      meta.push(cm);
+    }
+    if (p.ygap) {
+      var mv = p.ygap.move;
+      meta.push('rate gap ' + (mv >= 0.1 ? 'widening your way' : mv <= -0.1 ? 'narrowing against you' : 'steady') + ' over a month');
+    }
     if (p.events.length) {
       var e0 = p.events[0], w0 = evWhen(e0);
       meta.push(p.events.length + ' high-impact in 14d — next ' + e0.ccy + ' ' + e0.title +
