@@ -1,149 +1,149 @@
 {
- "updated": "2026-10-29T01:40:00-05:00",
- "rows": [
-  {
-   "id": "policy",
-   "title": "Policy",
-   "figure": "Fed held 3.75–4.00% Oct 28 (10–2), Dec hike ~78% (CME via Reuters, from ~84%); BoC 2.50%, Dec ~45%; RBNZ 2.75%; ECB Oct 29 hold ~95%, Dec hike ~89%; BoJ Oct 30 hold ~98%; RBA Nov 3 hike ~79–85%; BoE Nov 5 hike ~94%",
-   "read": "Most central banks are still leaning toward higher rates because of energy-driven inflation. Markets eased their bets on a December Fed hike a little after chair Kevin Warsh refused to commit, which keeps the dollar steady rather than stronger. The European Central Bank today and the Bank of Japan overnight are both expected to wait until December.",
-   "sources": [
+  "updated": "2026-10-29T15:30:00-05:00",
+  "rows": [
     {
-     "label": "Federal Reserve: FOMC statement (Oct 28, 2026)",
-     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+      "id": "policy",
+      "title": "Policy",
+      "figure": "Fed 3.75–4.00%, Dec hike ~83% (from ~78% a.m.); ECB held 2.50% Oct 29, Dec 17 hike >80%; BoJ Oct 30 hold ~98%, Dec ~85%; RBA Nov 3 hike ~79–85%; BoE Nov 5 hike ~94%; BoC 2.50%, Dec ~45%; RBNZ 2.75%",
+      "read": "Most central banks still lean toward higher rates because of energy-driven inflation. Strong US figures kept a December Fed hike likely, and the European Central Bank's chief said a hike was discussed, which pointed to December. Japan's central bank decides overnight and is expected to wait.",
+      "sources": [
+        {
+          "label": "ECB: Monetary policy decisions (Oct 29, 2026)",
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html"
+        },
+        {
+          "label": "InstaForex (Oct 29): Euro rebounds as Lagarde signals December hike",
+          "url": "https://www.instaforex.com/forex-news/3258467"
+        },
+        {
+          "label": "Reuters (Oct 29): US inflation heats up in September; consumer spending rises",
+          "url": "https://www.reuters.com/business/us-inflation-heats-up-september-consumer-spending-rises-2026-10-29/"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Oct 29 New York close run): pricing and notes",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, Oct 29 New York close run, 3:00 PM CT)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        }
+      ]
     },
     {
-     "label": "Blue Street central bank data (Hercules, Oct 29 London open run): pricing and notes",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+      "id": "growth",
+      "title": "Growth",
+      "figure": "US Q3 GDP 3.4% ann. (fc 3.2%); claims 194K; euro-area sentiment 96.9 (fc 97.5); UK mortgage approvals 53.4K (fc 54K); Italy unemployment 6.3%",
+      "read": "The US economy is growing far faster than Europe's, and that gap keeps favouring the dollar. Euro-area sentiment slipped again and UK borrowing cooled, while US jobless claims stayed very low.",
+      "sources": [
+        {
+          "label": "FXStreet (Oct 29): United States economy grows 3.4% in third quarter vs. 3.2% expected",
+          "url": "https://www.fxstreet.com/news/united-states-economy-grows-34-in-third-quarter-vs-32-expected-202610291232"
+        },
+        {
+          "label": "Reuters (Oct 29): US weekly jobless claims hover near 57-year lows",
+          "url": "https://www.reuters.com/world/us/us-weekly-jobless-claims-hover-near-57-year-lows-2026-10-29/"
+        },
+        {
+          "label": "Bank of England: Money and Credit, September 2026",
+          "url": "https://www.bankofengland.co.uk/statistics/money-and-credit/2026/september-2026"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 29): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+        }
+      ]
     },
     {
-     "label": "Blue Street market levels (Hercules, Oct 29 London open run, 12:45 AM CT; indicative overnight quotes)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+      "id": "inflation",
+      "title": "Inflation",
+      "figure": "US PCE 3.6% y/y (from 3.4%); core +0.3% m/m, 3.1% y/y (in line); Tokyo core CPI tonight fc 2.6%; euro-area flash CPI Fri (prior 3.8%)",
+      "read": "Energy keeps prices high, which is why most central banks still lean toward hikes. US inflation rose on gasoline, but underlying prices did only what was expected, so there was no fresh shock. Euro-area and Tokyo price figures come next.",
+      "sources": [
+        {
+          "label": "Reuters (Oct 29): US inflation heats up in September; consumer spending rises",
+          "url": "https://www.reuters.com/business/us-inflation-heats-up-september-consumer-spending-rises-2026-10-29/"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 29): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+        }
+      ]
+    },
+    {
+      "id": "risk",
+      "title": "Risk",
+      "figure": "USD/JPY ~157.97; USD/CHF ~0.8262; Vance letter to Iran (WSJ); Hormuz ship fire, cause under investigation (UKMTO)",
+      "read": "Markets stayed calm, with no rush into safe currencies like the yen and franc. Hopes for US–Iran talks eased war fears a little, while a ship fire near the Strait of Hormuz was a reminder the risk has not gone.",
+      "sources": [
+        {
+          "label": "ANI (Oct 29): JD Vance sends letter to Iran hard-liner in bid to revive peace talks",
+          "url": "https://aninews.in/news/world/us/jd-vance-sends-letter-to-iran-hard-liner-in-bid-to-revive-peace-talks-as-trump-threatens-strikes-report20261029050831/"
+        },
+        {
+          "label": "CDM (Oct 29): Ship on fire in the Strait of Hormuz off Oman, cause under investigation",
+          "url": "https://cdm.press/news/middle-east/2026/10/29/hormuz-burns-overnight-ship-on-fire-off-oman-crew-unknown/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, Oct 29 New York close run, 3:00 PM CT)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        }
+      ]
+    },
+    {
+      "id": "tot",
+      "title": "Terms of trade",
+      "figure": "Brent ~$113.82 (-1.3%), WTI ~$101.09 (-1.6%, midday CT); US gas storage +80 Bcf; OPEC+ meets Sunday",
+      "read": "Oil fell again on hopes the US and Iran might talk, but it is still far above pre-war levels. That keeps helping exporters like Canada and Australia and costing importers like Japan and the euro area. A real peace deal would shift that balance quickly.",
+      "sources": [
+        {
+          "label": "ANI (Oct 29): JD Vance sends letter to Iran hard-liner in bid to revive peace talks",
+          "url": "https://aninews.in/news/world/us/jd-vance-sends-letter-to-iran-hard-liner-in-bid-to-revive-peace-talks-as-trump-threatens-strikes-report20261029050831/"
+        },
+        {
+          "label": "ForexFactory (Oct 29): EIA: US gas inventories up by 80 billion cubic feet",
+          "url": "https://www.forexfactory.com/news/1433935-eia-us-gas-inventories-up-by-80-billion/amp"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, Oct 29 New York close run, 3:00 PM CT)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        }
+      ]
+    },
+    {
+      "id": "positioning",
+      "title": "Positioning",
+      "figure": "CFTC Oct 20: funds strongly against CAD (sharply added), against NZD and EUR (euro net short largest since March 2020), for GBP and AUD (real money strongly against), strongly for gold",
+      "read": "Hedge funds hold their biggest bets against the Canadian dollar, and the loonie's climb since Canada's rate hike puts those bets under pressure. Their bets against the euro are the largest in years, so good euro news could force them to buy it back.",
+      "sources": [
+        {
+          "label": "CFTC Traders in Financial Futures (futures only), report date Oct 20",
+          "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
+        },
+        {
+          "label": "Blue Street positioning (CFTC, report date Oct 20)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/cot.json"
+        }
+      ]
+    },
+    {
+      "id": "fiscal",
+      "title": "Fiscal",
+      "figure": "Lagarde: tools to counter disorderly French bond moves; French revenue vote Nov 3; Italy 10-y auction 4.49% (from 4.58%); UK headroom £15bn",
+      "read": "France's budget fight is still unresolved and keeps a weight on the euro, though the European Central Bank's chief said the bank has tools to calm any disorderly bond selling. The UK Budget passed calmly, so British bonds and the pound took it in stride.",
+      "sources": [
+        {
+          "label": "InstaForex (Oct 29): Euro rebounds as Lagarde signals December hike",
+          "url": "https://www.instaforex.com/forex-news/3258467"
+        },
+        {
+          "label": "Reuters (Oct 28): UK economic growth downgraded to 1% in 2027, Healey says in first budget",
+          "url": "https://www.reuters.com/world/uk/uk-economic-growth-downgraded-1-2027-healey-says-first-budget-2026-10-28/"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Oct 29): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "growth",
-   "title": "Growth",
-   "figure": "US Q3 GDP today 7:30 AM CT fc 3.0% annualised; Fed: activity 'strong'; Japan consumer confidence 35.0 (fc 35.1); NZ ANZ business confidence 52.5 (from 51.9); Alphabet ~-9% after hours",
-   "read": "The US economy still looks stronger than Europe's or Britain's, and that gap keeps favouring the dollar. Overnight surveys were mixed: Japanese households a little gloomier, New Zealand firms a little brighter. US third-quarter growth figures this morning are the next big check.",
-   "sources": [
-    {
-     "label": "FXStreet (Oct 29): Japan consumer confidence index below forecasts in October",
-     "url": "https://www.fxstreet.com/news/japan-consumer-confidence-index-below-forecasts-351-in-october-actual-35-202610290500"
-    },
-    {
-     "label": "Reuters (Oct 29): New Zealand businesses stay optimistic despite oil price volatility, survey shows",
-     "url": "https://www.reuters.com/world/asia-pacific/new-zealand-businesses-stay-optimistic-despite-oil-price-volatility-survey-shows-2026-10-29/"
-    },
-    {
-     "label": "Global Banking & Finance Review (Oct 29): Asian shares slide as Alphabet earnings miss, Wall St futures dip",
-     "url": "https://www.globalbankingandfinance.com/asian-shares-fall-alphabet-earnings-miss-drags-wall-st/"
-    },
-    {
-     "label": "Blue Street calendar (Hercules, Oct 29): times, forecasts and actuals",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-    }
-   ]
-  },
-  {
-   "id": "inflation",
-   "title": "Inflation",
-   "figure": "US core PCE (Sep) today fc +0.3% m/m; Australia Q3 import prices -1.1% q/q (fc +1.8%); NZ firms' pricing plans highest since May; Tokyo CPI tonight 6:30 PM CT fc 2.6%; euro-area CPI 3.8%",
-   "read": "Energy keeps prices high, which is why most central banks are still leaning toward hikes. There are early signs of relief: Australia's import costs fell as fuel shipping eased. The US inflation measure the Fed watches most comes this morning, and it will shape how sure markets are of a December Fed hike.",
-   "sources": [
-    {
-     "label": "Australian Bureau of Statistics (Oct 29): International Trade Price Indexes, September quarter 2026",
-     "url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/international-trade-price-indexes-australia/latest-release"
-    },
-    {
-     "label": "Reuters (Oct 29): New Zealand businesses stay optimistic despite oil price volatility, survey shows",
-     "url": "https://www.reuters.com/world/asia-pacific/new-zealand-businesses-stay-optimistic-despite-oil-price-volatility-survey-shows-2026-10-29/"
-    },
-    {
-     "label": "Blue Street calendar (Hercules, Oct 29): times, forecasts and actuals",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-    }
-   ]
-  },
-  {
-   "id": "risk",
-   "title": "Risk",
-   "figure": "Alphabet ~-9% after hours; Kospi -2.8%, Nikkei flat; USD/JPY ~157.75; USD/CHF ~0.828; Vance letter to Iran (WSJ); Trump threatens strikes after midterms",
-   "read": "Asian shares slipped after a weak result from Google's owner, Alphabet, but there was no rush into safe currencies like the yen and franc. A report of US outreach to Iran eased war fears a little, while threats of strikes after next week's US elections keep the risk alive. Calm for now, but fragile.",
-   "sources": [
-    {
-     "label": "Global Banking & Finance Review (Oct 29): Asian shares slide as Alphabet earnings miss, Wall St futures dip",
-     "url": "https://www.globalbankingandfinance.com/asian-shares-fall-alphabet-earnings-miss-drags-wall-st/"
-    },
-    {
-     "label": "investingLive (Oct 29): Asia-Pacific market news — oil eases on Vance’s Iran outreach",
-     "url": "https://investinglive.com/news/investinglive-asia-pacific-market-news-oil-eases-on-vance-s-iran-outreach/"
-    },
-    {
-     "label": "ANI (Oct 29): JD Vance sends letter to Iran hard-liner in bid to revive peace talks",
-     "url": "https://aninews.in/news/world/us/jd-vance-sends-letter-to-iran-hard-liner-in-bid-to-revive-peace-talks-as-trump-threatens-strikes-report20261029050831/"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, Oct 29 London open run, 12:45 AM CT; indicative overnight quotes)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-    }
-   ]
-  },
-  {
-   "id": "tot",
-   "title": "Terms of trade",
-   "figure": "Brent ~$114.10 (-1.1%), WTI ~$101.45 (-1.3%, Reuters 03:51 GMT); Houthi refinery strike claim unconfirmed; EIA crude -1.9M bbl; OPEC+ meets Sunday",
-   "read": "Oil eased on hopes that the US and Iran might talk, but it is still far above pre-war levels. That keeps helping exporters like Canada and Australia and costing importers like Japan and the euro area. A real peace deal would shift that balance quickly.",
-   "sources": [
-    {
-     "label": "ANI (Oct 29): JD Vance sends letter to Iran hard-liner in bid to revive peace talks",
-     "url": "https://aninews.in/news/world/us/jd-vance-sends-letter-to-iran-hard-liner-in-bid-to-revive-peace-talks-as-trump-threatens-strikes-report20261029050831/"
-    },
-    {
-     "label": "HDFC Sky (Oct 29): Brent falls to $114.2, WTI at $101.4 as US–Iran peace hopes counter supply risks",
-     "url": "https://hdfcsky.com/news/oil-prices-today-october-29-2026-brent-falls-to-114-2-wti-at-101-4-as-us-iran-peace-hopes-counter-supply-risks"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, Oct 29 London open run, 12:45 AM CT; indicative overnight quotes)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-    }
-   ]
-  },
-  {
-   "id": "positioning",
-   "title": "Positioning",
-   "figure": "CFTC Oct 20: funds strongly against CAD (sharply added), against NZD (sharply added) and EUR (added), for GBP (real money strongly against), for AUD (real money strongly against), leaning against JPY, strongly for gold",
-   "read": "Hedge funds hold their biggest bets against the Canadian dollar, and Canada's rate hike has not yet forced them to buy back. Their bets against the kiwi paid off after New Zealand's surprise hold. In the pound and the Aussie, hedge funds and long-term investors take opposite sides.",
-   "sources": [
-    {
-     "label": "CFTC Traders in Financial Futures (futures only), report date Oct 20",
-     "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
-    },
-    {
-     "label": "Blue Street positioning (CFTC, report date Oct 20)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/cot.json"
-    }
-   ]
-  },
-  {
-   "id": "fiscal",
-   "title": "Fiscal",
-   "figure": "UK Budget: borrowing 4.2% of GDP this year to 1.8% by 2030–31; headroom £15bn (from £24bn); 10-year gilt yield −2bp; French revenue vote Nov 3; France–Germany 10-year gap ~162–177bp",
-   "read": "Chancellor John Healey's first UK Budget passed calmly, with borrowing set to fall, so UK bonds and the pound took it in stride. France's budget fight is still unresolved and keeps a weight on the euro; reporters are likely to raise it at the European Central Bank's press conference today.",
-   "sources": [
-    {
-     "label": "Reuters (Oct 28): UK economic growth downgraded to 1% in 2027, Healey says in first budget",
-     "url": "https://www.reuters.com/world/uk/uk-economic-growth-downgraded-1-2027-healey-says-first-budget-2026-10-28/"
-    },
-    {
-     "label": "Reuters (Oct 28): Healey says UK will have £15 bln of fiscal headroom",
-     "url": "https://www.reuters.com/world/uk/healey-says-uk-will-have-15-bln-fiscal-headroom-end-forecast-period-2026-10-28/"
-    },
-    {
-     "label": "Blue Street central bank data (Hercules, Oct 28 New York close run): pricing and notes",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-    }
-   ]
-  }
- ]
+  ]
 }
