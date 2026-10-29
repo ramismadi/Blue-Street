@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-29T18:49:25Z",
+  "updated": "2026-10-29T22:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "text": "The Federal Reserve held rates at 3.75% to 4% on Wednesday, but two officials wanted a rise, and Thursday's figures backed them: the US economy grew at a 3.4% pace last quarter and the Fed's preferred price gauge climbed to 3.6%. Ten-year US bond yields are back above 5% and markets give about an 85% chance of a December rise, which keeps the dollar firm without a big move.",
-      "ts": "2026-10-29T18:49:25Z"
+      "text": "The Federal Reserve held rates at 3.75% to 4% on Wednesday, but two officials wanted a rise, and Thursday's figures backed them: the US economy grew at a 3.4% pace last quarter and the Fed's preferred price gauge climbed to 3.6%. Markets still lean toward a December rise, yet the dollar ended Thursday slightly lower because Fed Chair Kevin Warsh has not promised one.",
+      "ts": "2026-10-29T22:55:00Z"
     },
     "EUR": {
       "lean": "bearish",
@@ -49,11 +49,83 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent crude is near $114, still far above $100, because the Strait of Hormuz remains largely shut; another ship caught fire there overnight, cause unknown. Prices eased on Thursday as Vice President JD Vance reportedly wrote to Tehran about talks, but fear of US strikes after the November 3 midterms keeps the war premium in place.",
-      "ts": "2026-10-29T18:49:25Z"
+      "text": "Brent crude is near $114, still far above $100, because the Strait of Hormuz remains largely shut; another ship caught fire there overnight, cause unknown. Prices eased on Thursday as Vice President JD Vance reportedly wrote to Tehran about talks, but reports that the US told allies to brace for strikes on Iran after the November 3 midterms keep the war premium in place.",
+      "ts": "2026-10-29T22:55:00Z"
     }
   },
   "items": [
+    {
+      "id": "economies-dollar-retreats-despite-gdp-20261029",
+      "ts": "2026-10-29T19:41:00Z",
+      "source": "Economies.com",
+      "url": "https://www.economies.com/stocks/united-states-news/us-dollar-retreats-despite-strong-gdp-growth-as-fed-rate-outlook-remains-uncertain-50396",
+      "image": "https://dylta6p24nxqg.cloudfront.net/images/1793302917_2b6a9a.png",
+      "headline": "US dollar retreats despite strong GDP growth as Fed rate outlook remains uncertain",
+      "story": "fed-oct28",
+      "story_title": "Fed week: the October 28 decision and December hike bets",
+      "pillar": "policy",
+      "summary": "The dollar ended Thursday a little lower against most major currencies, even though US growth and inflation figures came in strong.",
+      "beats": {
+        "was": "The Federal Reserve held its rate at 3.75% to 4% on Wednesday. Two officials wanted a rise, but Fed Chair Kevin Warsh would not promise one in December.",
+        "happened": "Thursday's figures showed the US economy grew at a 3.4% yearly pace last quarter, above forecasts, and the Fed's preferred price gauge rose to 3.6%. Even so, the dollar index slipped about 0.2% to near 102, and the pound gained about 0.3% to near $1.336.",
+        "means": "Strong numbers were not enough to lift the dollar while the Fed itself stays vague about December. Traders seem to want a clear signal from the bank, not just good data, before buying more dollars.",
+        "fx": "Strong data but an unclear Fed → a small dollar dip; a firm hint of a December rise would likely turn it back up."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The dollar slipped as the Fed's silence on December outweighed strong growth and price figures."
+        },
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The pound was the day's best gainer against a softer dollar."
+        }
+      ],
+      "watch": "Comments from Fed officials before the December meeting, and next week's US jobs report; a clear hint of a rise would lift the dollar."
+    },
+    {
+      "id": "ap-us-warns-allies-iran-strikes-20261029",
+      "ts": "2026-10-29T00:37:00Z",
+      "source": "AP via CP24",
+      "url": "https://www.cp24.com/news/world/2026/10/29/us-warns-allies-to-prepare-for-possible-iran-strikes-retaliation-after-midterms-ap-sources/",
+      "image": "https://www.cp24.com/resizer/v2/6SLMHQN722UJB7KTLWUHSMQXY4.jpg",
+      "headline": "U.S. warns allies to prepare for possible Iran strikes, retaliation after midterms: AP sources",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Two diplomats told the Associated Press that the US has warned Middle East allies to brace for possible new US strikes on Iran after the November 3 midterm elections, and for Iranian attacks in return.",
+      "beats": {
+        "was": "The US and Iran fought earlier this year, and the Strait of Hormuz, a route for about a fifth of the world's oil, is still largely shut. The US has not struck Iran since early September, and talks helped by Qatar have stalled.",
+        "happened": "The diplomats said US officials told allies new strikes could last several days, and urged them to protect energy sites and other key infrastructure from Iranian retaliation. President Trump has not made a final decision. Iran's foreign minister, Abbas Araghchi, said Tehran is still giving talks a chance.",
+        "means": "A second news group now backs an earlier Wall Street Journal report, so the risk of fighting after November 3 looks more real. The warning about energy sites points straight at Gulf oil supply.",
+        "fx": "More signs of US strikes after the election → risk to Gulf oil sites → keeps oil high, which helps Canada and weighs on Japan and Europe, and adds shelter demand for the dollar and Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Allies were told to guard energy sites against Iranian retaliation."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising war risk draws money to the franc."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so higher fuel costs weigh on the yen."
+        }
+      ],
+      "watch": "Whether Trump decides on strikes after November 3, or talks with Iran restart first."
+    },
     {
       "id": "instaforex-euro-rebounds-lagarde-december-20261029",
       "ts": "2026-10-29T15:53:32Z",
@@ -1214,33 +1286,6 @@
         }
       ],
       "watch": "The Reserve Bank of Australia's decision on Tuesday, November 3."
-    },
-    {
-      "id": "opb-israel-exit-polls-20261028",
-      "ts": "2026-10-28T00:16:00Z",
-      "source": "OPB (AP)",
-      "url": "https://www.opb.org/article/2026/10/27/exit-polls-suggest-a-rebuke-of-netanyahu-but-no-clear-winner-in-israel-s-election/",
-      "image": "https://opb-opb-prod.cdn.arcpublishing.com/resizer/v2/LCPPMOUBBRBITIT7RD6QA2LW6I.jpg?auth=59573fbf2214b616d16416ccc48f0b727832e2b863b31e1a636776b8c0bed318&width=1200&height=675&smart=true",
-      "headline": "Exit polls suggest a rebuke of Netanyahu but no clear winner in Israel's election",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Israel's election on Tuesday produced no clear winner. Exit polls put Prime Minister Benjamin Netanyahu's bloc and the opposition led by former army chief Gadi Eisenkot roughly level, both far from a majority.",
-      "beats": {
-        "was": "Israel and the US have been at war with Iran, which has disrupted oil flows through the Strait of Hormuz. Some investors saw a Netanyahu loss as a way to lower the risk of the war widening.",
-        "happened": "Television exit polls gave each side about 51 of the 120 seats in parliament, with Arab parties holding about 18. Neither camp has a clear path to the 61 seats needed to govern. Israel's president will ask the leader with the best chance to try to form a coalition; if no one can, another election could come early next year.",
-        "means": "There is no quick answer on who leads Israel through the Iran war, so the vote does not change the war risk built into oil prices for now. Exit polls can be wrong, and final counts could still shift the picture.",
-        "fx": "Deadlock → Iran war risk stays as it was → oil stays high; little change for the dollar or oil-linked currencies."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "No winner yet, so the vote neither raises nor lowers war risk."
-        }
-      ],
-      "watch": "Final vote counts and whom Israel's president asks to form a government."
     },
     {
       "id": "hl-boj-trend-inflation-3yr-high-20261027",
