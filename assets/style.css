@@ -1300,8 +1300,8 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .picker-q .segmented { background: transparent; border: 0; padding: 0; gap: 4px; }
 .picker-q .seg { font-family: var(--serif); font-size: inherit; padding: 2px 12px; border-radius: 10px; color: var(--ink-3); background: transparent; box-shadow: none; border: 1px dashed var(--line); transition: color .2s, background .2s, border-color .2s; }
 .picker-q .seg:hover { color: var(--ink); }
-.picker-q .seg[data-dir="bull"][aria-selected="true"] { color: var(--bull); background: var(--bull-wash); border: 1px solid var(--bull); box-shadow: 0 0 14px color-mix(in srgb, var(--bull) 30%, transparent); }
-.picker-q .seg[data-dir="bear"][aria-selected="true"] { color: var(--bear); background: var(--bear-wash); border: 1px solid var(--bear); box-shadow: 0 0 14px color-mix(in srgb, var(--bear) 30%, transparent); }
+.picker-q .seg[data-dir="bull"][aria-selected="true"] { color: var(--bull); background: var(--bull-wash); border: 1px solid var(--bull); box-shadow: none; }
+.picker-q .seg[data-dir="bear"][aria-selected="true"] { color: var(--bear); background: var(--bear-wash); border: 1px solid var(--bear); box-shadow: none; }
 .fx-picker .chip-row { margin: 0; }
 .picks { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 22px; }
 .fx-picker.picked .picks { animation: picks-in .35s ease-out; }
@@ -1319,26 +1319,18 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .pick-group.flat .pick-why { color: var(--ink-2); }
 .pick-group.against .pick-why, .pick-group.against .pick-meta { color: var(--ink-3); font-size: 0.82rem; }
 
-/* The glowing pair. Green = rises if your view is right, red = falls.
-   g0 (against you) to g4 (widest gap): the brighter, the stronger the edge. */
-.pair-glow {
-  --c: var(--bull);
+/* The pair box (Rami, 2026-10-28): solid green if the pair rises when your
+   view is right, red if it falls. Text in the page background color so it
+   reads clearly. No glow. */
+.pair-box {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 4px 10px; border-radius: 8px; white-space: nowrap;
   font-size: 0.98rem; font-weight: 700; letter-spacing: 0.01em;
-  color: var(--ink);   /* readable on any tint (Rami, 2026-10-27) */
-  background: color-mix(in srgb, var(--c) var(--fill), transparent);
-  border: 1px solid color-mix(in srgb, var(--c) var(--edge), transparent);
-  box-shadow: 0 0 var(--blur) color-mix(in srgb, var(--c) var(--halo), transparent);
+  color: var(--bg); background: var(--bull);
 }
-.pair-glow.dn { --c: var(--bear); }
-.pair-glow.g4 { --fill: 28%; --edge: 95%; --halo: 65%; --blur: 22px; }
-.pair-glow.g3 { --fill: 22%; --edge: 80%; --halo: 48%; --blur: 16px; }
-.pair-glow.g2 { --fill: 15%; --edge: 55%; --halo: 26%; --blur: 10px; }
-.pair-glow.g1 { --fill: 10%; --edge: 35%; --halo: 0%;  --blur: 0px; }
-.pair-glow.g0 { --fill: 6%;  --edge: 22%; --halo: 0%;  --blur: 0px; color: var(--ink-2); }
-.pick > .pair-glow { justify-self: start; }
-.fd-express .pair-glow { font-size: 0.8rem; padding: 2px 7px; margin: 2px 6px 2px 0; }
+.pair-box.dn { background: var(--bear); }
+.pick > .pair-box { justify-self: start; }
+.fd-express .pair-box { font-size: 0.8rem; padding: 2px 7px; margin: 2px 6px 2px 0; }
 
 .fx-detail { margin-bottom: 14px; padding: 22px 26px; }
 .fd-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-top: 10px; }
@@ -2481,7 +2473,7 @@ html, body { overflow-x: clip; max-width: 100%; }
   .news-card.news-row.open .news-body { grid-column: 2 / 4; }
 }
 
-/* Pair picker on phones (Rami, 2026-10-27): one line per pair (the glowing
+/* Pair picker on phones (Rami, 2026-10-27): one line per pair (the pair
    name); tap for the why, interest and events. Desktop shows everything. */
 .pick-more { display: none; }
 @media (max-width: 640px) {
@@ -2501,7 +2493,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 }
 @media (max-width: 360px) {
   .picker-q { font-size: 1.15rem; }
-  .pair-glow { font-size: 0.92rem; padding: 3px 8px; }
+  .pair-box { font-size: 0.92rem; padding: 3px 8px; }
 }
 
 /* Bottom tab bar on phones (Rami, 2026-10-27), modeled on Apple News: the

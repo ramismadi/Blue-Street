@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '107';
+  var ASSET_VERSION = '108';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -3074,13 +3074,11 @@
     });
   }
 
-  /* A pair name in a glowing box (Rami, 2026-10-27): green if the pair rises
-     when your view is right, red if it falls. No words. The brighter the
-     glow, the bigger the edge (score gap) behind it. */
-  function pairGlow(p, tag) {
+  /* A pair name in a solid box (Rami, 2026-10-28): green if the pair rises
+     when your view is right, red if it falls. No words. */
+  function pairBox(p, tag) {
     var up = p.action === 'Buy';
-    var g = p.gap >= 3 ? 4 : p.gap === 2 ? 3 : p.gap === 1 ? 2 : p.gap === 0 ? 1 : 0;
-    var b = el(tag || 'b', 'pair-glow mono ' + (up ? 'up' : 'dn') + ' g' + g, p.pair);
+    var b = el(tag || 'b', 'pair-box mono ' + (up ? 'up' : 'dn'), p.pair);
     var say = p.pair + (up ? ' rises' : ' falls') + ' if your view is right';
     b.title = say;
     b.setAttribute('aria-label', say);
@@ -3091,7 +3089,7 @@
     var open = !!fx.pickOpen[p.pair];
     var li = el('li', 'pick' + (open ? ' open' : ''));
     li.setAttribute('data-pair', p.pair);
-    li.appendChild(pairGlow(p));
+    li.appendChild(pairBox(p));
     var body = el('div', 'pick-body');
     body.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
     var meta = [];
@@ -3240,9 +3238,9 @@
       lk.href = '#fx';
       lk.setAttribute('data-express', d[0] + ':' + c.ccy);
       row.appendChild(lk);
-      // Same glowing pairs as the picker; no rises/falls words (Rami, 2026-10-27).
+      // Same pair boxes as the picker; no rises/falls words (Rami, 2026-10-27).
       row.appendChild(document.createTextNode(' '));
-      if (picks.length) picks.forEach(function (p) { row.appendChild(pairGlow(p, 'span')); });
+      if (picks.length) picks.forEach(function (p) { row.appendChild(pairBox(p, 'span')); });
       else row.appendChild(document.createTextNode('no cross with an edge today'));
       side.appendChild(row);
     });

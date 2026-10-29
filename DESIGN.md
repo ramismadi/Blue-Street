@@ -525,6 +525,6 @@ trend line (`bias` is Claude's label from words.json, applied regardless of date
 `summary` and each driver `note` in `currencies.json` (board, currency page, pair picker lines),
 same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a non-zero score:
 one plain sentence each, readable cold, no strings of numbers. The pair picker shows each pair
-as its name in a glowing box, no words: green if it rises when the reader's view is right,
-red if it falls; the brighter the glow, the wider the score gap. The name is in the main text
-color so it reads on any tint. Never Buy/Sell (Rami, 2026-10-27).
+as its name in a solid box, no words: green if it rises when the reader's view is right,
+red if it falls. The name is in the page background color so it reads clearly. No glow.
+Never Buy/Sell (Rami, 2026-10-28).
