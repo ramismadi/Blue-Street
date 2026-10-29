@@ -526,5 +526,5 @@ trend line (`bias` is Claude's label from words.json, applied regardless of date
 same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a non-zero score:
 one plain sentence each, readable cold, no strings of numbers. The pair picker shows each pair
 as its name in a solid box, no words: green if it rises when the reader's view is right,
-red if it falls. The name is in the page background color so it reads clearly. No glow.
+red if it falls. White text, no glow. Picker green #279a41 (a bit lighter than forest), red #e3262c (saturated, MT5 loss red); the Bullish/Bearish buttons use the same solid boxes. Everything in the picker is centered, and tapping a picked side or currency again clears it.
 Never Buy/Sell (Rami, 2026-10-28).

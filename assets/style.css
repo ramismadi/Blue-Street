@@ -1293,16 +1293,25 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .mom-list li.mom-miss b { color: var(--bear); }
 .mom-list li.mom-inline b { color: var(--ink-3); }
 
-/* Pair picker (Rami, 2026-10-27): no card, part of the page. A large
-   sentence, then the pairs once a side and a currency are picked. */
-.fx-picker { padding: 4px 0 18px; }
-.picker-q { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 0 0 14px; font-family: var(--serif); font-size: 1.6rem; line-height: 1.2; color: var(--ink); }
-.picker-q .segmented { background: transparent; border: 0; padding: 0; gap: 4px; }
-.picker-q .seg { font-family: var(--serif); font-size: inherit; padding: 2px 12px; border-radius: 10px; color: var(--ink-3); background: transparent; box-shadow: none; border: 1px dashed var(--line); transition: color .2s, background .2s, border-color .2s; }
-.picker-q .seg:hover { color: var(--ink); }
-.picker-q .seg[data-dir="bull"][aria-selected="true"] { color: var(--bull); background: var(--bull-wash); border: 1px solid var(--bull); box-shadow: none; }
-.picker-q .seg[data-dir="bear"][aria-selected="true"] { color: var(--bear); background: var(--bear-wash); border: 1px solid var(--bear); box-shadow: none; }
-.fx-picker .chip-row { margin: 0; }
+/* Pair picker (Rami, 2026-10-28): no card, centered, part of the page. A
+   large sentence, then the pairs once a side and a currency are picked.
+   Picker colors: a saturated loss red (like MT5) and a green a little
+   lighter than forest green; white text on both, every theme. */
+.fx-picker { --pick-up: #279a41; --pick-dn: #e3262c; --pick-ink: #ffffff; padding: 18px 0 22px; text-align: center; }
+.picker-q { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 0 0 18px; font-family: var(--serif); font-size: 1.9rem; line-height: 1.2; color: var(--ink); }
+.picker-q .segmented { background: transparent; border: 0; padding: 0; gap: 8px; }
+.picker-q .seg {
+  font-family: var(--serif); font-size: inherit; font-weight: 700; padding: 4px 16px; border-radius: 10px; border: 0; box-shadow: none;
+  color: var(--pick-ink); background: var(--pick-up); cursor: pointer;
+  transition: opacity .2s, transform .15s;
+}
+.picker-q .seg[data-dir="bear"] { background: var(--pick-dn); }
+.picker-q .seg:hover { transform: translateY(-1px); }
+.picker-q .seg:active { transform: scale(0.97); }
+.picker-q .segmented.has-dir .seg[aria-selected="false"] { opacity: 0.3; }
+.picker-q .segmented.has-dir .seg[aria-selected="false"]:hover { opacity: 0.6; }
+.fx-picker .chip-row { justify-content: center; }
+.fx-picker .picks { max-width: 760px; margin-left: auto; margin-right: auto; text-align: left; }
 .picks { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 22px; }
 .fx-picker.picked .picks { animation: picks-in .35s ease-out; }
 @keyframes picks-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
@@ -1320,15 +1329,15 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .pick-group.against .pick-why, .pick-group.against .pick-meta { color: var(--ink-3); font-size: 0.82rem; }
 
 /* The pair box (Rami, 2026-10-28): solid green if the pair rises when your
-   view is right, red if it falls. Text in the page background color so it
-   reads clearly. No glow. */
+   view is right, red if it falls. White text so it reads clearly. No glow. */
 .pair-box {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 4px 10px; border-radius: 8px; white-space: nowrap;
   font-size: 0.98rem; font-weight: 700; letter-spacing: 0.01em;
-  color: var(--bg); background: var(--bull);
+  color: var(--pick-ink, #fff); background: var(--pick-up, #279a41);
 }
-.pair-box.dn { background: var(--bear); }
+.pair-box.dn { background: var(--pick-dn, #e3262c); }
+.fx-detail { --pick-up: #279a41; --pick-dn: #e3262c; --pick-ink: #ffffff; }
 .pick > .pair-box { justify-self: start; }
 .fd-express .pair-box { font-size: 0.8rem; padding: 2px 7px; margin: 2px 6px 2px 0; }
 
@@ -2477,8 +2486,8 @@ html, body { overflow-x: clip; max-width: 100%; }
    name); tap for the why, interest and events. Desktop shows everything. */
 .pick-more { display: none; }
 @media (max-width: 640px) {
-  .picker-q { font-size: 1.3rem; gap: 8px; }
-  .picker-q .seg { padding: 2px 10px; }
+  .picker-q { font-size: 1.45rem; gap: 8px; }
+  .picker-q .seg { padding: 3px 12px; }
   .picks { gap: 18px; margin-top: 18px; }
   .pick { grid-template-columns: minmax(0, 1fr) auto; padding: 9px 0; cursor: pointer; }
   .pick .pick-body { grid-column: 1 / -1; grid-row: 2; }

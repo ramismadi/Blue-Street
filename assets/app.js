@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '108';
+  var ASSET_VERSION = '109';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -2742,7 +2742,10 @@
     var dir = $('#fx-dir');
     if (dir) dir.addEventListener('click', function (e) {
       var b = e.target.closest('[data-dir]');
-      if (b) { fx.dir = b.getAttribute('data-dir'); fx.pickOpen = {}; renderPicker(); }
+      if (b) {   // tap the picked side again to clear it (Rami, 2026-10-28)
+        var d = b.getAttribute('data-dir');
+        fx.dir = fx.dir === d ? '' : d; fx.pickOpen = {}; renderPicker();
+      }
     });
     var cc = $('#fx-ccy');
     if (cc) {
@@ -2754,7 +2757,10 @@
       });
       cc.addEventListener('click', function (e) {
         var b = e.target.closest('[data-ccy]');
-        if (b) { fx.ccy = b.getAttribute('data-ccy'); fx.pickOpen = {}; renderPicker(); }
+        if (b) {   // tap the picked currency again to clear it
+          var c = b.getAttribute('data-ccy');
+          fx.ccy = fx.ccy === c ? '' : c; fx.pickOpen = {}; renderPicker();
+        }
       });
     }
     /* Phones (Rami, 2026-10-27): each pair shows one line; tap it for the
@@ -3043,6 +3049,8 @@
     Array.prototype.forEach.call(document.querySelectorAll('#fx-ccy [data-ccy]'), function (b) {
       b.setAttribute('aria-pressed', b.getAttribute('data-ccy') === fx.ccy ? 'true' : 'false');
     });
+    var dirBox = $('#fx-dir');
+    if (dirBox) dirBox.classList.toggle('has-dir', !!fx.dir);
     var box = $('#fx-picks');
     box.textContent = '';
     // Rami, 2026-10-27: a clean slate until both a side and a currency are picked.
