@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '116';
+  var ASSET_VERSION = '117';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -1273,11 +1273,12 @@
     order = order || glanceOrder();
     var tiles = order.map(glanceTile).filter(Boolean);
     var before = animate && !sx.reduced ? tiles.map(function (t) { return t.getBoundingClientRect(); }) : null;
-    var lead = null;
+    var lead = null, shownCount = 0;
     tiles.forEach(function (t, i) {
       box.appendChild(t);
       var show = glance.editing || tileVisible(t);
       t.hidden = !show;
+      if (show) shownCount++;
       if (show && !lead) lead = t;
       var up = t.querySelector('.tc-up'), dn = t.querySelector('.tc-dn');
       if (up) up.disabled = i === 0;
@@ -1285,7 +1286,9 @@
       var pos = t.querySelector('.tc-pos');
       if (pos) pos.textContent = (i + 1) + ' of ' + tiles.length;
     });
-    tiles.forEach(function (t) { t.classList.toggle('lead', t === lead); });
+    // The first tile spans the full row only when it would otherwise leave a
+    // gap (an odd count); two tiles sit side by side (Rami, 2026-10-28).
+    tiles.forEach(function (t) { t.classList.toggle('lead', t === lead && shownCount % 2 === 1); });
     if (before) {
       tiles.forEach(function (t, i) {
         var a = before[i], b = t.getBoundingClientRect();
