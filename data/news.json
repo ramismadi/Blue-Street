@@ -1,16 +1,16 @@
 {
-  "updated": "2026-10-29T00:55:00Z",
+  "updated": "2026-10-29T02:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "mixed",
-      "text": "The Federal Reserve kept rates at 3.75% to 4% on Wednesday, with two officials voting for a hike. Chair Kevin Warsh made no promise on December, so the dollar slipped from its two-week high, though markets still see a December hike as likely. Thursday's US growth and inflation figures come next.",
-      "ts": "2026-10-29T00:55:00Z"
+      "text": "The Federal Reserve kept rates at 3.75% to 4% on Wednesday, with two officials voting for a hike, and Chair Kevin Warsh made no promise on December, so the dollar slipped from its two-week high. It held steady in Asia on Thursday as a tech-share slide kept buyers cautious; Thursday's US growth and inflation figures come next.",
+      "ts": "2026-10-29T02:50:00Z"
     },
     "EUR": {
       "lean": "bearish",
-      "text": "The euro is near $1.113, close to its lowest since May 2025, as France's budget strain keeps its borrowing costs up; it edged higher late Wednesday as the dollar softened after the Fed. The European Central Bank decides on Thursday, October 29, and is expected to hold at 2.5%; any hint about a December hike could move the euro.",
-      "ts": "2026-10-29T00:55:00Z"
+      "text": "The euro is near $1.113, close to its lowest since May 2025, as France's budget strain keeps its borrowing costs high. The European Central Bank decides on Thursday, October 29, and is expected to hold at 2.5%; markets still expect more hikes, so a firm hint about December could lift the euro, while worry about France or talk of Christine Lagarde leaving early could weigh.",
+      "ts": "2026-10-29T02:50:00Z"
     },
     "GBP": {
       "lean": "mixed",
@@ -44,16 +44,121 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold is near $4,050, held back by a dollar at a two-week high and a likely US rate hike in December, which weighs on a metal that pays no interest. The Fed paused on Wednesday but two officials wanted a hike, so that pressure has not gone away; mixed signals from Iran on peace keep some demand for shelter alive.",
-      "ts": "2026-10-28T18:48:27Z"
+      "text": "Gold is near $4,050 and down about 2.5% in October, held back by a likely US rate hike in December, which weighs on a metal that pays no interest. Central-bank buying gives it a floor, and mixed signals on US-Iran talks keep some demand for shelter alive; a soft US inflation reading on Thursday would give it some relief.",
+      "ts": "2026-10-29T02:50:00Z"
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Oil closed higher on Wednesday, with US crude near $102.80, after Yemen's Houthi rebels hit Saudi targets, a report that the US told Gulf states to prepare for strikes on Iran after the November 3 US elections, and a drop in US crude stocks. Iran sent mixed signals on a Qatari peace plan, so hopes of Gulf supply returning soon have dimmed.",
-      "ts": "2026-10-29T00:55:00Z"
+      "text": "Brent crude is near $115, close to its highest levels, with the Strait of Hormuz still largely shut and Yemen's Houthi rebels hitting Saudi targets. It eased slightly on Thursday after a report that Vice President JD Vance wrote to a senior Iranian official about talks, but President Trump denied seeking talks and still threatens new strikes, so the war premium holds.",
+      "ts": "2026-10-29T02:50:00Z"
     }
   },
   "items": [
+    {
+      "id": "gbaf-asian-shares-alphabet-miss-20261029",
+      "ts": "2026-10-29T02:28:30Z",
+      "source": "Global Banking & Finance Review",
+      "url": "https://www.globalbankingandfinance.com/asian-shares-fall-alphabet-earnings-miss-drags-wall-st/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-ba816d6a-a1f4-4d82-b9f2-a859643d7373/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "Asian Shares Slide as Alphabet Earnings Miss, Wall St Futures Dip",
+      "story": "ai-earnings",
+      "story_title": "Big Tech results and the AI spending boom",
+      "pillar": "risk",
+      "summary": "Asian shares gave up early gains on Thursday after Google's owner Alphabet fell about 10% in late trading on heavy spending, pulling US share futures lower. The dollar held steady and oil slipped on a report that Washington is trying to restart talks with Iran.",
+      "beats": {
+        "was": "Stock markets have leaned on hopes for artificial-intelligence profits all year, and a slump in AI shares last week sent investors briefly into safe places such as the yen and the Swiss franc. Alphabet and Microsoft reported results after the US close on Wednesday, the same day the Federal Reserve held rates.",
+        "happened": "Alphabet's shares dropped about 10% after hours, wiping close to $400 billion off its value, while Microsoft rose about 3% on stronger cash flow. US tech futures fell about 1%, a broad index of Asian shares outside Japan fell 0.7% and South Korea's main index fell 2.6%. The dollar was flat after a small dip on Wednesday, and Brent crude eased 0.4% to about $115.",
+        "means": "Investors are again asking whether the huge sums poured into AI will pay off, which takes some of the shine off shares. So far it is a wobble, not a rush for safety: currency moves are small.",
+        "fx": "Weaker tech shares → a little less appetite for risk → mild help for the yen and franc, mild drag on the Australian dollar; if the selling deepens on Wall Street, that shelter demand grows."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A tech-led share slide tends to send some money to the yen, but moves so far are small."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Usually tracks global shares, so a weaker tech mood weighs a little."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Another place investors park money when shares fall."
+        }
+      ],
+      "watch": "How Wall Street opens on Thursday. A deeper tech slide would lift the yen and franc; a quick recovery would leave currencies to the US inflation figures and the European Central Bank."
+    },
+    {
+      "id": "investing-gold-slips-fed-hold-20261029",
+      "date": "2026-10-29",
+      "source": "Investing.com",
+      "url": "https://ng.investing.com/news/commodities-news/gold-slips-after-fed-holds-rates-pce-inflation-data-in-focus-2765400",
+      "image": "https://content-media.investing.com/news/LYNXMPED1M0ED_L.jpg",
+      "headline": "Gold slips after Fed holds rates, PCE inflation data in focus",
+      "story": "gold-fed",
+      "story_title": "Gold vs a hawkish Fed",
+      "pillar": "policy",
+      "summary": "Gold eased to about $4,050 an ounce in Asian trading after the US Federal Reserve held rates but left a December hike likely. It is down about 2.5% in October, on course for a second monthly fall.",
+      "beats": {
+        "was": "Gold pays no interest, so it tends to suffer when US rates are expected to rise. The Fed raised rates in September and markets expect another hike in December because high energy prices are keeping inflation up. A slump in AI shares last week pushed gold to its lowest since July.",
+        "happened": "The Fed kept rates on hold on Wednesday in a 10-2 vote, the two dissenters wanting a hike. Spot gold slipped 0.4% to about $4,052 early Thursday in Asia. Goldman Sachs estimates central banks bought 79 tonnes of gold in August, a quarter of it by China.",
+        "means": "The pull of higher US rates is still beating gold's appeal as a shelter. Steady central-bank buying gives it a floor but has not been enough to turn the trend.",
+        "fx": "December hike still likely → holding gold costs more → gold under pressure; hot US inflation figures on Thursday → more pressure; soft figures → relief."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A likely December US hike keeps weighing on a metal that pays no interest."
+        }
+      ],
+      "watch": "Thursday's US September PCE price index, the Fed's preferred inflation gauge. A soft reading would ease hike bets and help gold."
+    },
+    {
+      "id": "ani-vance-letter-iran-20261029",
+      "ts": "2026-10-28T23:38:31Z",
+      "source": "ANI",
+      "url": "https://aninews.in/news/world/us/jd-vance-sends-letter-to-iran-hard-liner-in-bid-to-revive-peace-talks-as-trump-threatens-strikes-report20261029050831/",
+      "image": "https://d3lzcn6mbbadaf.cloudfront.net/media/details/__sized__/ANI-20261028232712-thumbnail-320x180-70.jpg",
+      "headline": "JD Vance sends letter to Iran hard-liner in bid to revive peace talks as Trump threatens strikes: Report",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "The Wall Street Journal reported that US Vice President JD Vance wrote to a senior Iranian security official to explore restarting peace talks. President Donald Trump denied ordering talks, saying the contact was about medical supplies.",
+      "beats": {
+        "was": "The US and Iran have been at war this year, and Iran has kept the Strait of Hormuz, the route for about a fifth of the world's oil, largely shut. Trump has said there are no talks and has threatened new strikes, possibly soon after the November 3 US elections.",
+        "happened": "According to the Journal, Vance sent a letter to Mohsen Rezaei, secretary of Iran's Supreme National Security Council and a former Revolutionary Guards commander, asking whether a framework for talks could be set up. Trump said he had not told Vance to start talks and that Iran needed help with medical supplies; one source told the paper the letter went with Trump's knowledge.",
+        "means": "There is a back channel, but the White House is not owning it, and the threat of strikes is still on the table. That leaves the oil market caught between a small chance of a deal and a real chance of more fighting.",
+        "fx": "A live channel to Tehran → slightly lower odds of new strikes → oil eases a little; Trump's denial and strike threats → the risk premium in oil stays → support for the Canadian dollar, pressure on the yen and euro as oil importers."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Hints of talks pull oil down a touch, but the denial and strike threats keep the war premium."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Shelter demand fades on talk of talks and returns if strikes look closer."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Same push and pull on demand for safety."
+        }
+      ],
+      "watch": "Whether Iran answers the letter or either side confirms contact. A public reply would pull oil lower; new US strikes would send it and shelter assets sharply higher."
+    },
     {
       "id": "newsquawk-dollar-dips-post-fed-20261028",
       "ts": "2026-10-28T21:15:00Z",
@@ -817,6 +922,33 @@
       "watch": "Friday's Bank of Japan decision and any hint on December, or a fast slide in the yen toward 160 per dollar."
     },
     {
+      "id": "reuters-ecb-hold-lagarde-future-20261028",
+      "date": "2026-10-28",
+      "source": "Reuters via WBOW",
+      "url": "https://1027wbow.com/2026/10/28/ecb-to-hold-rates-as-investors-focus-on-french-bonds-lagardes-future/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/28/2026-10-28T230201Z_1_LYNXNPEM9R2LL_RTROPTP_3_ECB-POLICY-MARKETS.JPG",
+      "headline": "ECB to hold rates as investors focus on French bonds, Lagarde's future",
+      "story": "ecb-oct29",
+      "story_title": "ECB: the October 29 decision",
+      "pillar": "policy",
+      "summary": "The European Central Bank is expected to keep its deposit rate at 2.5% on Thursday, with markets pricing about three more hikes ahead. Investors care more about France's borrowing costs and whether President Christine Lagarde leaves early.",
+      "beats": {
+        "was": "The ECB raised rates in June and September as the oil shock from the Iran war lifted euro-area inflation to a three-year high. France's budget troubles have pushed its borrowing costs to some of the highest in 25 years, well above Germany's.",
+        "happened": "Reuters expects a hold at 2.5%, with markets betting on roughly three more quarter-point rises, to 3.25%, and a December move still seen as likely. Help for French bonds looks unlikely for now. Lagarde's term runs for another year, but she may leave before France's spring presidential election; Dutch and Spanish former central bank chiefs Klaas Knot and Pablo Hernández de Cos are named as possible successors.",
+        "means": "A hold is expected, so the euro's reaction depends on tone: whether the bank keeps December open, and whether it sounds worried about France. Uncertainty over the next president adds a little extra doubt.",
+        "fx": "Clear signal that more hikes are coming → euro support; a softer tone or worry about French debt → euro weaker. A Lagarde exit story → mild uncertainty for the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A hold is priced; the euro's move hinges on the December signal and the bank's view of France."
+        }
+      ],
+      "watch": "The decision at 8:15 AM CT Thursday and the press briefing 30 minutes later: any firm hint of a December hike, or any mention of help for bond markets."
+    },
+    {
       "id": "investingcube-gold-defends-4000-20261027",
       "ts": "2026-10-27T14:43:00Z",
       "source": "InvestingCube",
@@ -941,33 +1073,6 @@
         }
       ],
       "watch": "What Fed Chair Kevin Warsh says about December on Wednesday, and Thursday's US inflation figure."
-    },
-    {
-      "id": "investinglive-new-home-sales-sep-20261027",
-      "ts": "2026-10-27T14:00:00Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/us-new-home-sales-for-september-0-676m-annualized-vs-0-650m-estimate/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Home%20sales%20New%20Home%20sales%20Census-featured-1793109569-featured-1793109647.jpg?width=960&format=webp",
-      "headline": "US New home sales for September 0.676M annualized vs 0.650M estimate",
-      "story": "fed-oct28",
-      "story_title": "Fed week: the October 28 decision and December hike bets",
-      "pillar": "growth",
-      "summary": "Sales of newly built US homes dipped only slightly in September, to a 676,000 yearly pace, beating the 650,000 expected. Housing is cooling slowly, not sliding.",
-      "beats": {
-        "was": "High US borrowing costs have weighed on home buying this year, and the Federal Reserve decides on rates on Wednesday, October 28, with a December hike widely expected.",
-        "happened": "The Census Bureau said new home sales ran at a 676,000 yearly pace in September, down 0.6% from August (revised to 680,000) but above forecasts of 650,000. Sales were about 5% lower than a year earlier, and the typical price rose to about $400,000.",
-        "means": "Buyers are still showing up despite high mortgage rates, so housing is not dragging the economy down fast enough to change the Fed's thinking.",
-        "fx": "Housing holding up better than forecast → no reason for the Fed to soften → mild support for the dollar."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Small beat on home sales; housing is cooling slowly, not sharply."
-        }
-      ],
-      "watch": "Whether mortgage rates climb further if the Fed signals a December hike on Wednesday."
     },
     {
       "id": "mem-tanker-mine-hormuz-20261027",
@@ -1201,39 +1306,6 @@
       "watch": "Whether Saudi Arabia or Aramco confirms damage or a slowdown in exports from Ras Tanura."
     },
     {
-      "id": "euronext-oil-falls-talks-20261027",
-      "date": "2026-10-27",
-      "source": "Reuters (Euronext)",
-      "url": "https://live.euronext.com/en/financial-news/oil-falls-middle-east-talks-outweigh-concern-over-fresh-strikes",
-      "image": null,
-      "headline": "Oil falls as Middle East talks outweigh concern over fresh strikes",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "commodities",
-      "summary": "Oil slipped about 1% on Tuesday, with Brent near $114.80, as hopes for peace talks with Iran outweighed the Houthi attack on a Saudi refinery. Prices are still near their highest since April.",
-      "beats": {
-        "was": "Brent oil climbed above $117 last week, its highest since April, after Iranian attacks on tankers during the Iran war. Iran, Saudi Arabia, Turkey and Pakistan agreed on Monday to keep talking about peace and security.",
-        "happened": "By early afternoon in London, Brent was down $1 at about $114.80 a barrel and US crude was just under $101. Iran's top security official met Supreme Leader Mojtaba Khamenei after the regional talks. A Washington think tank said October has been the worst month yet for attacks on ships in and near the Strait of Hormuz. UBS raised its year-end Brent forecast to about $110 from $100.",
-        "means": "Traders are giving more weight to the talks than to the latest strikes, but the price still carries a large premium for the risk of a US or Israeli attack on Iran. Prices this high, even after a dip, keep fuel costs a worry for central banks.",
-        "fx": "Peace talks → a small dip in oil → slight relief for oil buyers like Japan and the euro area; a smaller boost for Canada, whose exports earn less."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Talks pull prices down while ship attacks and strike risk hold them high."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Slightly cheaper oil trims Canada's export income."
-        }
-      ],
-      "watch": "Any sign of a US decision on new strikes on Iran, and the result of Israel's election."
-    },
-    {
       "id": "cna-katayama-decisive-fx-20261027",
       "date": "2026-10-27",
       "source": "Reuters via CNA (UA.News)",
@@ -1265,72 +1337,6 @@
         }
       ],
       "watch": "A fast slide in the yen toward 160 per dollar, or Friday's Bank of Japan decision hinting at a December hike."
-    },
-    {
-      "id": "tltnews-french-yields-rise-20261027",
-      "date": "2026-10-27",
-      "source": "TLT News",
-      "url": "https://rallies.ai/news/french-bond-yields-rise-shrugging-off-dip-in-oil-d3884f46aa672b3f",
-      "image": null,
-      "headline": "French bond yields rise, shrugging off dip in oil",
-      "story": "france-fiscal",
-      "story_title": "France: budget fight and borrowing costs",
-      "pillar": "risk",
-      "summary": "French 10-year borrowing costs rose to about 4.95% on Tuesday, undoing part of Monday's fall, while German yields slipped. Worry about France's budget is pushing money into safer German debt two days before the European Central Bank meets.",
-      "beats": {
-        "was": "France's parliament is still fighting over next year's budget, and investors have demanded more to lend to France than to Germany since the Iran war pushed up borrowing costs. French yields fell about 11 basis points on Monday.",
-        "happened": "France's 10-year yield rose 4 basis points to about 4.95% while Germany's fell 2 points to 3.35% as oil dipped. French consumer morale hit its lowest since 2013 earlier this month. Markets price close to a 90% chance the ECB raises rates in December, though it is expected to hold on Thursday, October 29.",
-        "means": "Monday's calm over France did not last. A wider gap between French and German borrowing costs is the kind of stress that could make the ECB slow its hikes.",
-        "fx": "French debt worries return → more stress inside the euro area → a drag on the euro."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Renewed French debt stress weighs on the euro before the ECB."
-        }
-      ],
-      "watch": "What ECB President Christine Lagarde says about France and December on Thursday."
-    },
-    {
-      "id": "barchart-dollar-1-5wk-high-20261027",
-      "date": "2026-10-27",
-      "source": "Barchart",
-      "url": "https://www.barchart.com/story/news/8479406/dollar-posts-1-5-week-high-on-expectations-for-hawkish-fomc-commentary",
-      "image": null,
-      "headline": "Dollar Posts 1.5-week High on Expectations for Hawkish FOMC Commentary",
-      "story": "fed-oct28",
-      "story_title": "Fed week: the October 28 decision and December hike bets",
-      "pillar": "policy",
-      "summary": "The dollar rose for a third day to its highest in about a week and a half. Traders expect the Fed to hold on Wednesday but to sound firm about raising rates in December.",
-      "beats": {
-        "was": "The US Federal Reserve, led by Chair Kevin Warsh, decides on rates on Wednesday, October 28. Inflation is 3.7%, and markets mostly expect the next move to be a hike in December.",
-        "happened": "The dollar index, which tracks the dollar against six major currencies, rose about 0.3% on Tuesday, its third gain in a row. Markets priced only a small chance of a hike this week but a very high chance for the December 8–9 meeting. Strong US reports on consumer confidence and durable goods orders helped.",
-        "means": "A December hike is largely priced in already. What matters now is whether Warsh confirms it; a softer tone could undo some of this week's gain.",
-        "fx": "Expected firm Fed message → higher US rates ahead → a firmer dollar; much of it priced → a mild message could pull the dollar back."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Bets on a firm Fed message lift the dollar, though much is already priced."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro gives ground as the dollar firms."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The yen slips as the US rate gap stays wide."
-        }
-      ],
-      "watch": "Whether Warsh points clearly to a December hike, and how many officials vote to hike now."
     }
   ]
 }
