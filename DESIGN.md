@@ -525,7 +525,7 @@ trend line (`bias` is Claude's label from words.json, applied regardless of date
 `summary` and each driver `note` in `currencies.json` (board, currency page, pair picker lines),
 same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a non-zero score:
 one plain sentence each, readable cold, no strings of numbers. The pair picker lists every pair,
-best edge first, with no group headings, as tiles styled like Today's currency tiles (card,
+best edge first, with no group headings (edge tiles get a blue edge, no-edge tiles go flat, against-your-view tiles fade), as tiles styled like Today's currency tiles (card,
 rounded): score, both flags, the pair in serif, and a green (rises if the reader's view is
 right) or red (falls) trend pill, then +. Opening a tile shows the why, interest and events
 under a divider. Bullish/Bearish are solid green #279a41 / red #e3262c with text in the site

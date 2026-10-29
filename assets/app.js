@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '112';
+  var ASSET_VERSION = '113';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -3085,7 +3085,10 @@
   function pickRow(p) {
     var open = !!fx.pickOpen[p.pair];
     var up = p.action === 'Buy';
-    var li = el('li', 'pick card' + (open ? ' open' : ''));
+    // Rami, 2026-10-28: tell edges apart at a glance — pairs with an edge
+    // stand out, no-edge pairs go quiet, pairs against your view fade.
+    var tier = p.gap > 0 ? 'edge' : p.gap === 0 ? 'flat' : 'against';
+    var li = el('li', 'pick card ' + tier + (open ? ' open' : ''));
     li.setAttribute('data-pair', p.pair);
     var bx = el('button', 'pick-box');
     bx.type = 'button';

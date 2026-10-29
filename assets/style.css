@@ -1323,7 +1323,15 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 
 /* One pair (Rami, 2026-10-28): a tile like Today's currency tiles. Score,
    both flags, pair name, green/red trend pill; tap for the why. */
-.pick.card { padding: 0; }
+.pick.card { padding: 0; transition: opacity .2s; }
+/* At a glance (Rami, 2026-10-28): edge = full tile with an accent edge;
+   no edge = flat and quieter; against your view = faded. Hover or open
+   brings any tile back to full. */
+.pick.edge { border-color: var(--accent-2); box-shadow: var(--shadow), inset 3px 0 0 var(--accent); }
+.pick.flat { box-shadow: none; background: transparent; }
+.pick.flat .pb-pair { color: var(--ink-2); }
+.pick.against { box-shadow: none; background: transparent; border-style: dashed; opacity: 0.5; }
+.pick.against:hover, .pick.against.open { opacity: 1; }
 .pick-box {
   width: 100%; display: flex; align-items: center; gap: 9px; padding: 14px 16px;
   border: 0; background: none; color: var(--ink); text-align: left; cursor: pointer; font: inherit; border-radius: var(--radius);
