@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-29T00:43:29-05:00",
-  "updated": "2026-10-29T00:43:29-05:00",
+  "as_of": "2026-10-29T07:53:00-05:00",
+  "updated": "2026-10-29T07:53:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "Overnight read, Thursday 2026-10-29 (~12:40 AM CT). FOMC held 3.75-4.00% (10-2); BoC hiked to 2.50%; UK Budget landed muted. DXY ~102.18, EUR/USD ~1.1141, GBP/USD ~1.3327, USD/JPY ~157.75, USD/CHF ~0.8278, AUD/USD ~0.7059, USD/CAD ~1.3981, NZD/USD ~0.5625; Brent ~$114.10, WTI ~$101.45, gold ~$4,038, 10Y just under 5.00%. Spot levels are indicative index quotes, not executable prices.",
+  "note": "NY-open read, Thursday 2026-10-29 (~7:50 AM CT). FOMC held 3.75-4.00% (10-2); BoC hiked to 2.50%; RBNZ surprise hold; UK Budget landed muted. Post-7:30am CT data window (Finnhub/OANDA ~7:48am CT): DXY ~102.25, EUR/USD ~1.1138, GBP/USD ~1.3320, USD/JPY ~158.06, USD/CHF ~0.8278 (overnight), AUD/USD ~0.705, USD/CAD ~1.3981 (overnight), NZD/USD ~0.5621; Brent ~$114.10, WTI ~$101.45, gold ~$4,027, 2Y ~4.71%, 10Y ~5.04%. ECB decision 8:15am CT; BoJ Friday. NOTE: 7:30am CT GDP/PCE/claims actuals unverified at push time (BEA/DOL fetch pending, wire index still pre-release) — left unfilled for the breaking watch/4pm run; no numbers invented. Spot levels are indicative index quotes, not executable prices.",
   "pairs": {},
   "currencies": [
     {
@@ -10,7 +10,7 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY ~102.18 overnight Asia after the FOMC held 3.75-4.00% (10-2, Cook + Hammack for a hike); Warsh's presser knocked the dollar off its two-week high, and December hike pricing eased to ~78% (CME via Reuters Oct 29, from ~84% pre-decision). Thursday's GDP advance (fcst 3.0% SAAR) + Sep PCE (headline +0.5% m/m, core +0.3% exp) land 7:30am CT — growth and inflation in one print, on ECB day.",
+      "summary": "DXY ~102.25 in the European morning, little changed after the FOMC held 3.75-4.00% (10-2, Cook + Hammack for a hike); Warsh's presser knocked the dollar off its two-week high and December hike pricing eased to ~78% (CME via Reuters Oct 29). The 7:30am CT prints (GDP advance, September PCE, jobless claims) landed but their actuals were NOT verified in time for this push — first market reaction muted: EUR/USD 1.1138, USD/JPY 158.06 (Finnhub/OANDA ~7:48am CT).",
       "drivers": {
         "policy": {
           "score": 1,
@@ -26,7 +26,7 @@
         },
         "risk": {
           "score": 0,
-          "note": "ING (Reuters, Oct 27): dollar 'found good support early this week, as stabilising AI-related sentiment has allowed markets to reconnect with the broader supportive backdrop of a hawkish Fed and high energy prices' — the haven bid that faded Monday faded further in London morning"
+          "note": "Warsh's presser gave no December guidance — read dovish (CBA's Kong: 'not hawkish enough'); DXY ~102.26 in Asia after sliding off its two-week high; December hike ~78% (CME FedWatch via Reuters Oct 29, down from ~84% pre-decision); 2Y ~4.71% (-2.3bp in Asia)"
         },
         "tot": {
           "score": 0,
@@ -47,15 +47,15 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD ~1.1141 overnight Asia, giving back part of Wednesday's bounce off five straight daily drops (NY close ~1.1159). ECB today 8:15am CT: hold at 2.50% is ~93-97% priced (Reuters poll 70/73); the presser will be dominated by France — OAT-Bund ~170-177bp, OAT 10Y 5.14% — plus Lagarde's future. Money markets price ~3 further hikes to 3.25% (Reuters Oct 29).",
+      "summary": "EUR/USD ~1.1134 in Asia (-0.15%), giving back Wednesday's post-FOMC bounce. ECB today 8:15am CT: hold at 2.50% is ~93-97% priced (Reuters poll 70/73); the presser will be dominated by French bond turmoil, TPI and questions about Lagarde's future. EZ sentiment missed again this morning (96.9 vs 97.5).",
       "drivers": {
         "policy": {
           "score": -1,
-          "note": "ECB Oct 29 a hold at ~93-97% (70/73 economists in the Reuters poll); December hike ~88-90% — the ECB lags the hike cycle, a drag vs the counterparty gap"
+          "note": "ECB TODAY 8:15am CT: hold at 2.50% ~93-97% (Reuters poll 70/73); December hike ~84-88% (64/73 economists; market ~84%) — the ECB lags the hike cycle, a drag vs the counterparty gap; presser (~8:45am CT) dominated by OATs, TPI and Lagarde's future"
         },
         "growth": {
           "score": -1,
-          "note": "October flash PMIs all missed: EZ comp 51.9 vs 52.7 fcst (slowest in 4 months); France 48.4 vs 50.5 (back in contraction); Germany comp 52.8 vs 53.3; Ifo Oct 90.2 beat (expectations 91.6 best in 4.5+ yrs, current conditions 88.8 softer)"
+          "note": "October flash PMIs all missed: EZ comp 51.9 vs 52.7 fcst (slowest in 4 months); France 48.4 vs 50.5 (back in contraction); Germany comp 52.8 vs 53.3; Ifo Oct 90.2 beat (expectations 91.6 best in 4.5+ yrs, current conditions 88.8 softer). Thu morning: EZ economic sentiment missed again, 96.9 vs 97.5 (prev 97.9)"
         },
         "inflation": {
           "score": 1,
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD ~1.3327 overnight Asia, holding Wednesday's retrace from troughs near 1.3270 after Healey's first Budget landed as expected — headroom £15B, 10Y gilt -2bp to 5.323%, the 'boring budget' bond markets wanted. BoE Nov 5 hike ~94% priced; next test is Friday's data, not the Budget.",
+      "summary": "GBP/USD ~1.3327 in Asia, holding Wednesday's retrace from troughs near 1.3270 after Healey's first Budget landed as expected — headroom £15B, 10Y gilt -2bp to 5.323%, the 'boring budget' bond markets wanted. UK credit cooled this morning (approvals 53.4K vs 54K). BoE Nov 5 hike ~90-97% to 4.00%.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -92,7 +92,7 @@
         },
         "growth": {
           "score": 1,
-          "note": "flash PMI beat (comp 53.1 vs 51.8, strongest since Feb) vs retail sales miss (-0.4% m/m vs -0.1%); GfK confidence -24 (biggest monthly drop since COVID); CBI Oct -10 big beat (slowest retail fall since Apr 2025) vs GfK confidence -24 gloom"
+          "note": "flash PMI beat (comp 53.1 vs 51.8, strongest since Feb) vs retail sales miss (-0.4% m/m vs -0.1%); GfK confidence -24 (biggest monthly drop since COVID); CBI Oct -10 big beat (slowest retail fall since Apr 2025) vs GfK confidence -24 gloom. Thu morning: UK money/credit softer — mortgage approvals 53.4K vs 54K fcst, net lending £5.8B vs £6.2B, M4ex +4.0% y/y (prev 4.5%)"
         },
         "inflation": {
           "score": 1,
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY ~157.75 overnight Asia, still capped below 158.00 after the FOMC hold. Japan consumer confidence slipped to 35.0 (vs 35.1 fcst) — a soft read into Friday's BoJ (hold at 1.25%, Dec hike ~83-88%). Tokyo CPI lands Thursday night CT (fcst 2.6% core) — the last inflation read before Ueda.",
+      "summary": "USD/JPY ~158.05 in Asia, back above 158.00 after the FOMC hold as the haven bid faded further. Japan consumer confidence slipped to 35.0 (vs 35.1 fcst) — a soft read into Friday's BoJ (hold at 1.25%, Dec hike ~83-88%). Tokyo CPI lands Thursday night CT (fcst 2.6% core).",
       "drivers": {
         "policy": {
           "score": -1,
@@ -137,7 +137,7 @@
         },
         "risk": {
           "score": 1,
-          "note": "haven bid faded further in London morning — USD/JPY 157.73 (Reuters: yen -0.16%), eroding last week's haven gains as equities steadied; Finance Minister Katayama (Tue): government stands ready to take decisive action in the currency market — intervention language caps tops"
+          "note": "haven bid faded further in Asia — USD/JPY back above 158.00 (158.045, +0.14%), eroding last week's haven gains as equities steadied; Finance Minister Katayama (Tue): government stands ready to take decisive action in the currency market — intervention language caps tops"
         },
         "tot": {
           "score": -1,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF ~0.8278 overnight Asia — haven bid faded as equities steadied and the Gulf risk premium eased with the Vance Iran-talk letter; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
+      "summary": "USD/CHF ~0.8278 in Asia — haven bid faded as equities steadied and the Gulf risk premium eased with the Vance Iran-talk letter; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
       "drivers": {
         "policy": {
           "score": 0,
@@ -195,7 +195,7 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD ~0.7059 overnight Asia, holding new five-week highs near its 200-day SMA (~0.7060). RBA Nov 2-3 hike ~79-85% to 4.85% after hot Q3 CPI — but Q3 import prices fell 1.1% q/q (vs +1.8% exp), cooling the pipeline leg; PPI + credit land Thursday night CT.",
+      "summary": "AUD/USD ~0.705 in Asia, steady near a one-month high. RBA Nov 2-3 hike ~79-85% to 4.85% after hot Q3 CPI — but Q3 import prices fell 1.1% q/q (vs +1.8% exp), cooling the pipeline leg.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -232,7 +232,7 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD ~1.3981 overnight Asia, loonie holding Wednesday's gain after the BoC hiked +25bp to 2.50%, its first since July 2023; MPR lifts 2027 inflation to 3.1%. December further hike ~45% (swaps); Can 2Y hit a 2-year high 3.441%. Canada Aug GDP lands Friday 7:30am CT.",
+      "summary": "USD/CAD ~1.3981 in Asia, loonie holding Wednesday's gain after the BoC hiked +25bp to 2.50%, its first since July 2023; MPR lifts 2027 inflation to 3.1%. December further hike ~45% (swaps); Can 2Y hit a 2-year high.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -269,7 +269,7 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD ~0.5625 overnight Asia, recovering from the RBNZ surprise hold (4-3, 2.75%); ANZ business confidence firmed to 52.5 (from 51.9) but own activity eased to 46.2 — a mixed first read since the hold. The hike case is delayed to Dec 9, not dropped (ANZ: Dec/Feb/Mar to 3.50%).",
+      "summary": "NZD/USD ~0.5621 in Asia, holding after sliding as much as 1.7% on the RBNZ surprise hold (4-3, 2.75%); ANZ business confidence firmed to 52.5 (from 51.9) but own activity eased to 46.2 — a mixed first read since the hold. The hike case is delayed to Dec 9, not abandoned.",
       "drivers": {
         "policy": {
           "score": 0,
