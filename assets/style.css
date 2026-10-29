@@ -1299,8 +1299,9 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 /* Pair picker (Rami, 2026-10-28): no card, centered, part of the page. A
    large sentence, then the pairs once a side and a currency are picked.
    Picker colors: a saturated loss red (like MT5) and a green a little
-   lighter than forest green; white text on both, every theme. */
-.fx-picker { --pick-up: #279a41; --pick-dn: #e3262c; --pick-ink: #ffffff; padding: 18px 0 22px; text-align: center; }
+   lighter than forest green; text in the site background color (follows
+   light/dark). */
+.fx-picker { --pick-up: #279a41; --pick-dn: #e3262c; --pick-ink: var(--bg); padding: 18px 0 22px; text-align: center; }
 .picker-q { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 0 0 18px; font-family: var(--serif); font-size: 1.9rem; line-height: 1.2; color: var(--ink); }
 .picker-q .segmented { background: transparent; border: 0; padding: 0; gap: 8px; }
 .picker-q .seg {
@@ -1314,7 +1315,7 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .picker-q .segmented.has-dir .seg[aria-selected="false"] { opacity: 0.3; }
 .picker-q .segmented.has-dir .seg[aria-selected="false"]:hover { opacity: 0.6; }
 .fx-picker .chip-row { justify-content: center; }
-.picks { list-style: none; margin: 26px auto 0; padding: 0; width: min(100%, 94%); display: grid; gap: 10px; text-align: left; }
+.picks { list-style: none; margin: 22px auto 0; padding: 0; width: min(100%, 560px); display: grid; gap: 6px; text-align: left; }
 .fx-picker.picked .picks { animation: picks-in .35s ease-out; }
 @keyframes picks-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .fx-picker.picked .picks { animation: none; } }
@@ -1324,9 +1325,9 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
    why sits beside it. */
 .pick { display: flex; align-items: flex-start; gap: 18px; }
 .pick-box {
-  flex: none; width: 100%; display: grid; grid-template-columns: 3.2em 1fr 3.2em; align-items: center;
-  padding: 12px 16px; border: 0; border-radius: 0; cursor: pointer;   /* sharp corners (Rami) */
-  font-family: var(--serif); font-weight: 600; font-size: 1.3rem; line-height: 1.2; letter-spacing: -0.01em;
+  flex: none; width: 100%; display: grid; grid-template-columns: 2.6em 1fr 2.6em; align-items: center;
+  padding: 6px 12px; border: 0; border-radius: 0; cursor: pointer;   /* sharp corners (Rami) */
+  font-family: var(--serif); font-weight: 600; font-size: 1.02rem; line-height: 1.2; letter-spacing: -0.01em;
   color: var(--pick-ink); background: var(--pick-up);
   transition: width .3s ease, transform .15s;
 }
@@ -1336,25 +1337,26 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .pb-score { justify-self: start; font-variant-numeric: tabular-nums; }
 .pb-pair { justify-self: center; white-space: nowrap; }
 .pb-more { justify-self: end; width: 1em; text-align: center; }
-.pb-more::before { content: "+"; font-family: var(--sans); font-weight: 500; font-size: 1.35rem; line-height: 1; }
+.pb-more::before { content: "+"; font-family: var(--sans); font-weight: 500; font-size: 1.1rem; line-height: 1; }
 .pick.open .pb-more::before { content: "\2013"; }
-.pick-body { display: none; flex: 1 1 auto; min-width: 0; padding-top: 4px; }
-.pick.open .pick-box { width: 230px; font-size: 1.05rem; padding: 10px 12px; }
+.pick-body { display: none; flex: 1 1 auto; min-width: 0; padding-top: 2px; }
+.pick.open .pick-box { width: 180px; font-size: 0.95rem; padding: 6px 10px; }
 .pick.open .pick-body { display: block; animation: picks-in .3s ease-out; }
 .pick-why { margin: 0; font-size: 0.92rem; }
 .pick-meta { margin: 4px 0 0; }
 @media (prefers-reduced-motion: reduce) { .pick-box, .pick.open .pick-body { transition: none; animation: none; } }
 
 /* The pair box (Rami, 2026-10-28): solid green if the pair rises when your
-   view is right, red if it falls. White text so it reads clearly. No glow. */
+   view is right, red if it falls. Text in the site background color, so it
+   follows light/dark (Rami, 2026-10-28). No glow. */
 .pair-box {
   display: inline-flex; align-items: center; justify-content: center;
   padding: 4px 10px; border-radius: 8px; white-space: nowrap;
   font-size: 0.98rem; font-weight: 700; letter-spacing: 0.01em;
-  color: var(--pick-ink, #fff); background: var(--pick-up, #279a41);
+  color: var(--pick-ink, var(--bg)); background: var(--pick-up, #279a41);
 }
 .pair-box.dn { background: var(--pick-dn, #e3262c); }
-.fx-detail { --pick-up: #279a41; --pick-dn: #e3262c; --pick-ink: #ffffff; }
+.fx-detail { --pick-up: #279a41; --pick-dn: #e3262c; --pick-ink: var(--bg); }
 .pick > .pair-box { justify-self: start; }
 .fd-express .pair-box { font-size: 0.8rem; padding: 2px 7px; margin: 2px 6px 2px 0; }
 
@@ -2504,15 +2506,15 @@ html, body { overflow-x: clip; max-width: 100%; }
 @media (max-width: 640px) {
   .picker-q { font-size: 1.45rem; gap: 8px; }
   .picker-q .seg { padding: 3px 12px; }
-  .picks { width: 100%; margin-top: 20px; gap: 8px; }
+  .picks { width: 100%; margin-top: 18px; gap: 6px; }
   .pick { flex-wrap: wrap; gap: 8px; }
-  .pick-box { font-size: 1.15rem; padding: 11px 14px; grid-template-columns: 2.8em 1fr 2.8em; }
-  .pick.open .pick-box { width: 200px; font-size: 1rem; }
+  .pick-box { font-size: 1rem; padding: 6px 12px; }
+  .pick.open .pick-box { width: 170px; font-size: 0.95rem; }
   .pick.open .pick-body { flex-basis: 100%; padding: 0 2px 6px; }
 }
 @media (max-width: 360px) {
   .picker-q { font-size: 1.2rem; }
-  .pick-box { font-size: 1.05rem; padding: 10px 12px; }
+  .pick-box { font-size: 0.95rem; padding: 6px 10px; }
 }
 
 /* Bottom tab bar on phones (Rami, 2026-10-27), modeled on Apple News: the
