@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '111';
+  var ASSET_VERSION = '112';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -2750,7 +2750,9 @@
     var cc = $('#fx-ccy');
     if (cc) {
       CCYS.forEach(function (c) {
-        var b = el('button', 'fchip ccy', c);
+        var b = el('button', 'fchip ccy');   // flag + code (Rami, 2026-10-28)
+        b.appendChild(flagEl(c));
+        b.appendChild(document.createTextNode(c));
         b.type = 'button';
         b.setAttribute('data-ccy', c);
         cc.appendChild(b);
@@ -2893,7 +2895,10 @@
       a.href = '#fx/' + c.ccy;
       a.appendChild(el('span', 'b-rank mono', String(i + 1)));
       var id = el('span', 'b-id');
-      id.appendChild(el('b', 'mono', c.ccy));
+      var idb = el('b', 'mono');   // flag beside the code (Rami, 2026-10-28)
+      idb.appendChild(flagEl(c.ccy));
+      idb.appendChild(document.createTextNode(c.ccy));
+      id.appendChild(idb);
       id.appendChild(el('small', null, c.name));
       a.appendChild(id);
       a.appendChild(diverging(fxScore(c), max));
@@ -3074,21 +3079,29 @@
     return b;
   }
 
-  /* One pair (Rami, 2026-10-28): a wide green/red box — score on the left,
-     pair in the middle, + on the right. Open it and the box shrinks to the
-     left with the why, interest and events beside it. */
+  /* One pair (Rami, 2026-10-28): a tile like Today's currency tiles. Score,
+     both flags and the pair name; a green (rises if you're right) or red
+     (falls) trend pill on the right. Tap for the why, interest and events. */
   function pickRow(p) {
     var open = !!fx.pickOpen[p.pair];
     var up = p.action === 'Buy';
-    var li = el('li', 'pick' + (open ? ' open' : ''));
+    var li = el('li', 'pick card' + (open ? ' open' : ''));
     li.setAttribute('data-pair', p.pair);
-    var bx = el('button', 'pick-box ' + (up ? 'up' : 'dn'));
+    var bx = el('button', 'pick-box');
     bx.type = 'button';
     bx.setAttribute('aria-expanded', open ? 'true' : 'false');
     bx.setAttribute('aria-label', p.pair + (up ? ' rises' : ' falls') + ' if your view is right, score ' + signed(p.gap) + '. More');
-    bx.title = 'Score: how far apart the two currencies are on the board, for your view';
-    bx.appendChild(el('span', 'pb-score', signed(p.gap)));
+    var sc = el('span', 'pb-score mono', signed(p.gap));
+    sc.title = 'Score: how far apart the two currencies are on the board, for your view';
+    bx.appendChild(sc);
+    var fl = el('span', 'pb-flags');
+    p.pair.split('/').forEach(function (c) { fl.appendChild(flagEl(c)); });
+    bx.appendChild(fl);
     bx.appendChild(el('span', 'pb-pair', p.pair));
+    var lt = el('span', 'chc-lean ' + (up ? 'bull' : 'bear'));
+    lt.appendChild(trendIcon(up ? 'bull' : 'bear'));
+    lt.title = p.pair + (up ? ' rises' : ' falls') + ' if your view is right';
+    bx.appendChild(lt);
     bx.appendChild(el('span', 'pb-more'));
     li.appendChild(bx);
     var body = el('div', 'pick-body');

@@ -1237,7 +1237,8 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .board-row.on { box-shadow: inset 3px 0 0 var(--gold); }
 .b-rank { grid-area: rank; font-size: 0.74rem; color: var(--ink-3); }
 .b-id { grid-area: id; display: flex; flex-direction: column; line-height: 1.2; }
-.b-id b { font-size: 0.95rem; color: var(--accent); }
+.b-id b { font-size: 0.95rem; color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
+.b-id b .flag { width: 16px; height: 12px; border-radius: 1px; flex: none; }
 .b-id small { font-size: 0.7rem; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .b-score { grid-area: score; text-align: right; font-weight: 700; font-size: 0.92rem; }
 .b-delta { grid-area: delta; font-size: 0.72rem; color: var(--ink-3); text-align: right; }
@@ -1301,8 +1302,8 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
    Picker colors: a saturated loss red (like MT5) and a green a little
    lighter than forest green; text in the site background color (follows
    light/dark). */
-.fx-picker { --pick-up: #279a41; --pick-dn: #e3262c; --pick-ink: var(--bg); padding: 18px 0 22px; text-align: center; }
-.picker-q { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 0 0 18px; font-family: var(--serif); font-size: 1.9rem; line-height: 1.2; color: var(--ink); }
+.fx-picker { --pick-up: #279a41; --pick-dn: #e3262c; --pick-ink: var(--bg); padding: 10px 0 22px; }
+.picker-q { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin: 0 0 18px; font-family: var(--serif); font-size: 1.9rem; line-height: 1.2; color: var(--ink); }
 .picker-q .segmented { background: transparent; border: 0; padding: 0; gap: 8px; }
 .picker-q .seg {
   font-family: var(--serif); font-size: inherit; font-weight: 700; padding: 4px 16px; border-radius: 10px; border: 0; box-shadow: none;
@@ -1314,37 +1315,33 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .picker-q .seg:active { transform: scale(0.97); }
 .picker-q .segmented.has-dir .seg[aria-selected="false"] { opacity: 0.3; }
 .picker-q .segmented.has-dir .seg[aria-selected="false"]:hover { opacity: 0.6; }
-.fx-picker .chip-row { justify-content: center; }
-.picks { list-style: none; margin: 22px auto 0; padding: 0; width: min(100%, 560px); display: grid; gap: 6px; text-align: left; }
+.fx-picker .fchip.ccy .flag { width: 14px; height: 10.5px; margin-right: 5px; border-radius: 1px; }
+.picks { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; align-items: start; }
 .fx-picker.picked .picks { animation: picks-in .35s ease-out; }
 @keyframes picks-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .fx-picker.picked .picks { animation: none; } }
 
-/* One pair (Rami, 2026-10-28): a wide solid box, score left, pair centered,
-   + right, in the Today read's serif. Opened, it shrinks to the left and the
-   why sits beside it. */
-.pick { display: flex; align-items: flex-start; gap: 18px; }
+/* One pair (Rami, 2026-10-28): a tile like Today's currency tiles. Score,
+   both flags, pair name, green/red trend pill; tap for the why. */
+.pick.card { padding: 0; }
 .pick-box {
-  flex: none; width: 100%; display: grid; grid-template-columns: 2.6em 1fr 2.6em; align-items: center;
-  padding: 6px 12px; border: 0; border-radius: 0; cursor: pointer;   /* sharp corners (Rami) */
-  font-family: var(--serif); font-weight: 600; font-size: 1.02rem; line-height: 1.2; letter-spacing: -0.01em;
-  color: var(--pick-ink); background: var(--pick-up);
-  transition: width .3s ease, transform .15s;
+  width: 100%; display: flex; align-items: center; gap: 9px; padding: 14px 16px;
+  border: 0; background: none; color: var(--ink); text-align: left; cursor: pointer; font: inherit; border-radius: var(--radius);
 }
-.pick-box.dn { background: var(--pick-dn); }
-.pick-box:active { transform: scale(0.99); }
-.pick-box:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.pb-score { justify-self: start; font-variant-numeric: tabular-nums; }
-.pb-pair { justify-self: center; white-space: nowrap; }
-.pb-more { justify-self: end; width: 1em; text-align: center; }
-.pb-more::before { content: "+"; font-family: var(--sans); font-weight: 500; font-size: 1.1rem; line-height: 1; }
+.pick-box:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.pb-score { min-width: 2em; font-size: 0.82rem; line-height: 1; font-weight: 700; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.pb-flags { display: inline-flex; gap: 3px; }
+.pb-flags .flag { width: 20px; height: 15px; border-radius: 2px; }
+.pb-pair { flex: 1; font-family: var(--serif); font-size: 1.2rem; font-weight: 600; line-height: 1.2; white-space: nowrap; }
+.pb-more { width: 12px; text-align: center; color: var(--ink-3); }
+.pb-more::before { content: "+"; font-size: 1.05rem; font-weight: 500; line-height: 1; }
 .pick.open .pb-more::before { content: "\2013"; }
-.pick-body { display: none; flex: 1 1 auto; min-width: 0; padding-top: 2px; }
-.pick.open .pick-box { width: 180px; font-size: 0.95rem; padding: 6px 10px; }
-.pick.open .pick-body { display: block; animation: picks-in .3s ease-out; }
-.pick-why { margin: 0; font-size: 0.92rem; }
-.pick-meta { margin: 4px 0 0; }
-@media (prefers-reduced-motion: reduce) { .pick-box, .pick.open .pick-body { transition: none; animation: none; } }
+.pick-box:hover .pb-pair { color: var(--accent); }
+.pick-body { display: none; margin: 0 16px; padding: 10px 0 14px; border-top: 1px solid var(--line); }
+.pick.open .pick-body { display: block; animation: picks-in .25s ease-out; }
+.pick-why { margin: 0; font-family: var(--serif); font-size: 0.98rem; line-height: 1.5; }
+.pick-meta { margin: 6px 0 0; }
+@media (prefers-reduced-motion: reduce) { .pick.open .pick-body { animation: none; } }
 
 /* The pair box (Rami, 2026-10-28): solid green if the pair rises when your
    view is right, red if it falls. Text in the site background color, so it
@@ -2501,20 +2498,18 @@ html, body { overflow-x: clip; max-width: 100%; }
   .news-card.news-row.open .news-body { grid-column: 2 / 4; }
 }
 
-/* Pair picker on phones (Rami, 2026-10-28): opened, the box shrinks and the
-   why drops below it. */
+/* Pair picker on phones (Rami, 2026-10-28): tiles one per row. */
 @media (max-width: 640px) {
   .picker-q { font-size: 1.45rem; gap: 8px; }
   .picker-q .seg { padding: 3px 12px; }
-  .picks { width: 100%; margin-top: 18px; gap: 6px; }
-  .pick { flex-wrap: wrap; gap: 8px; }
-  .pick-box { font-size: 1rem; padding: 6px 12px; }
-  .pick.open .pick-box { width: 170px; font-size: 0.95rem; }
-  .pick.open .pick-body { flex-basis: 100%; padding: 0 2px 6px; }
+  .picks { grid-template-columns: minmax(0, 1fr); gap: 8px; margin-top: 18px; }
+  .pick-box { padding: 12px 14px; }
+  .pick-body { margin: 0 14px; }
 }
 @media (max-width: 360px) {
   .picker-q { font-size: 1.2rem; }
-  .pick-box { font-size: 0.95rem; padding: 6px 10px; }
+  .pick-box { gap: 7px; padding: 11px 12px; }
+  .pb-pair { font-size: 1.08rem; }
 }
 
 /* Bottom tab bar on phones (Rami, 2026-10-27), modeled on Apple News: the

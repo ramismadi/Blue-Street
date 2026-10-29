@@ -71,7 +71,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   narrative data.
 
 - **No subtitle lines under page titles** (Rami, 2026-10-19): Currencies, Drivers' three sections, News, Calendar and Learn show just the title. (The positioning "as of / next report" line went with it.)
-- **Currencies:** the Pair picker sits above the Strength board with no card, as part of the page: a large "I'm Bullish / Bearish on" sentence and the currency buttons. It starts blank every visit (no remembered pick); the pairs appear only once a side and a currency are chosen (Rami, 2026-10-27).
+- **Currencies:** the Pair picker sits above the Strength board with no card, as part of the page: a large left-aligned "I'm Bullish / Bearish on" sentence and the currency buttons (with flags). It starts blank every visit (no remembered pick); the pairs appear only once a side and a currency are chosen (Rami, 2026-10-27).
 
 - **Calendar session clocks** (Rami, 2026-10-19): four analog clocks (SYD, TYO, LDN, NYC) beside the Calendar title, each on its city's local time (same session rules as the masthead chips). Out of session = greyed out; in session = lit by a warm light from the top down. On phones they sit in a row under the title.
 - **No overflow, ever** (Rami, 2026-10-19): nothing may run past the screen edge or the page scroll sideways. The overflow guard at the end of style.css wraps long values and lets grid/flex children shrink; `html, body` clip as a last resort. **Run `tools/overflow-check.py` before shipping any layout change** — it loads every page at 320–768px (calendar fully expanded) and lists anything that spills.
@@ -525,9 +525,10 @@ trend line (`bias` is Claude's label from words.json, applied regardless of date
 `summary` and each driver `note` in `currencies.json` (board, currency page, pair picker lines),
 same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a non-zero score:
 one plain sentence each, readable cold, no strings of numbers. The pair picker lists every pair,
-best edge first, with no group headings. Each pair is a compact, centered, square-cornered solid box in the
-Today read's serif: green if it rises when the reader's view is right, red if it falls; the
-score (gap) on the left, the pair centered, + on the right. Opening it shrinks the box to the
-left with the why, interest and events beside it (below on phones). Text in the site background color (follows light/dark), no glow.
-Picker green #279a41, red #e3262c; Bullish/Bearish use the same solid colors. Tapping a picked
-side or currency again clears it. The strength board has no card. Never Buy/Sell (Rami, 2026-10-28).
+best edge first, with no group headings, as tiles styled like Today's currency tiles (card,
+rounded): score, both flags, the pair in serif, and a green (rises if the reader's view is
+right) or red (falls) trend pill, then +. Opening a tile shows the why, interest and events
+under a divider. Bullish/Bearish are solid green #279a41 / red #e3262c with text in the site
+background color. The prompt is left-aligned; currency buttons and the strength board show
+flags. Tapping a picked side or currency again clears it. The strength board has no card.
+Never Buy/Sell (Rami, 2026-10-28).
