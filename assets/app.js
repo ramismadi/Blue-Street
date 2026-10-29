@@ -3697,8 +3697,8 @@
     var grid = $('#news-grid');
     if (grid) grid.addEventListener('click', function (e) {
       var t = e.target.closest('[data-news-toggle]');
-      // Phone rows (Rami, 2026-10-26): a closed row opens from anywhere on it.
-      if (!t && !e.target.closest('a, button, select') && newsPhone()) {
+      // Rows (phone 2026-10-26, desktop 2026-10-28): a closed row opens from anywhere on it.
+      if (!t && !e.target.closest('a, button, select')) {
         var row = e.target.closest('.news-card.news-row:not(.open)');
         if (row) t = row.querySelector('[data-news-toggle]');
       }
@@ -3877,7 +3877,7 @@
       var it = s.lead, open = !!news.open[s.id];
       /* Phone layout (Rami, 2026-10-26): the first story is the hero card,
          the rest are compact rows (arrow · headline · thumbnail). The
-         `news-row` class only changes the layout at phone width. */
+         same on desktop since 2026-10-28, with rows in two columns. */
       var card = el('article', 'card news-card' + (si ? ' news-row' : ' news-hero') + (open ? ' open' : ''));
       card.id = 'news-' + s.id;
       var top = null;   // the market this headline moves most

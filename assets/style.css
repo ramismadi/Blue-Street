@@ -2458,9 +2458,10 @@ html, body { overflow-x: clip; max-width: 100%; }
 
 /* News on phones (Rami, 2026-10-26): first story is the hero card, the rest
    are compact rows — arrow on the left, headline + source/time, small square
-   thumbnail on the right. Tap opens the read in place. Desktop unchanged. */
+   thumbnail on the right. Tap opens the read in place. Desktop got the same
+   layout on 2026-10-28 (overrides below). */
 .news-lead { display: none; }
-@media (max-width: 640px) {
+@media all {
   .news-grid { gap: 0; }
   .news-hero { margin-bottom: 12px; }
   .news-card.news-row {
@@ -2580,4 +2581,26 @@ html, body { overflow-x: clip; max-width: 100%; }
   .is-app body { padding-bottom: 100px; }
   .is-app .update-pill { bottom: 106px; }
   .is-app .sidenav, .is-app[data-nav="side"] .sidenav { padding-bottom: 34px; }
+}
+
+/* News on desktop (Rami, 2026-10-28): the phone layout, widened. The top
+   story is a full-width hero (picture left, read right); the rest are
+   compact rows in two columns with an 80px thumbnail. A clicked row opens
+   across both columns. */
+@media (min-width: 641px) {
+  .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; row-gap: 0; }
+  .news-hero { grid-column: 1 / -1; flex-direction: row; align-items: stretch; margin-bottom: 18px; }
+  .news-hero .news-fig, .news-hero .news-fig.fallback { flex: 0 0 42%; aspect-ratio: auto; min-height: 280px; align-self: stretch; }
+  .news-hero .news-fig.fallback { justify-content: flex-end; padding: 22px 24px; }
+  .news-hero .news-body { padding: 22px 26px; }
+  .news-hero .news-hl { font-size: 1.55rem; line-height: 1.25; }
+  .news-hero .news-sum { font-size: 1rem; color: var(--ink); }
+  .news-card.news-row { grid-template-columns: 26px minmax(0, 1fr) 80px; padding: 14px 0; border-top: 0; border-bottom: 1px solid var(--line); }
+  .news-row .news-fig, .news-card.news-row.open .news-fig { width: 80px; height: 80px; }
+  .news-row .news-fig .nf-mkt { font-size: 1rem; }
+  .news-row .news-hl { font-size: 1.04rem; }
+  .news-card.news-row:hover .news-hl-btn { color: var(--accent); }
+  .news-card.news-row.open { padding: 18px 0 20px; }
+  .news-card.news-row.open .news-body { max-width: 860px; }
+  .news-card.news-row.open .news-hl { font-size: 1.3rem; }
 }
