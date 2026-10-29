@@ -524,7 +524,10 @@ trend line (`bias` is Claude's label from words.json, applied regardless of date
 `currencies.currencies.<CCY>.{summary, notes.<pillar>}` (Rami, 2026-10-20) replaces Herc's
 `summary` and each driver `note` in `currencies.json` (board, currency page, pair picker lines),
 same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a non-zero score:
-one plain sentence each, readable cold, no strings of numbers. The pair picker shows each pair
-as its name in a solid box, no words: green if it rises when the reader's view is right,
-red if it falls. White text, no glow. Picker green #279a41 (a bit lighter than forest), red #e3262c (saturated, MT5 loss red); the Bullish/Bearish buttons use the same solid boxes. Everything in the picker is centered, and tapping a picked side or currency again clears it.
-Never Buy/Sell (Rami, 2026-10-28).
+one plain sentence each, readable cold, no strings of numbers. The pair picker lists every pair,
+best edge first, with no group headings. Each pair is a wide, square-cornered solid box in the
+Today read's serif: green if it rises when the reader's view is right, red if it falls; the
+score (gap) on the left, the pair centered, + on the right. Opening it shrinks the box to the
+left with the why, interest and events beside it (below on phones). White text, no glow.
+Picker green #279a41, red #e3262c; Bullish/Bearish use the same solid colors. Tapping a picked
+side or currency again clears it. The strength board has no card. Never Buy/Sell (Rami, 2026-10-28).

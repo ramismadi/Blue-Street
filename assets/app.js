@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '109';
+  var ASSET_VERSION = '110';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -2767,14 +2767,16 @@
        why, interest and upcoming events. Desktop shows everything. */
     var picks = $('#fx-picks');
     if (picks) picks.addEventListener('click', function (e) {
-      if (e.target.closest('a') || !pickPhone()) return;
-      var li = e.target.closest('.pick[data-pair]');
-      if (!li) return;
+      // Rami, 2026-10-28: every screen — tap a pair's box (or its +) to
+      // shrink it and show the why beside it; tap again to close.
+      if (e.target.closest('a')) return;
+      var bx = e.target.closest('.pick-box');
+      if (!bx) return;
+      var li = bx.closest('.pick[data-pair]');
       var k = li.getAttribute('data-pair');
       fx.pickOpen[k] = !fx.pickOpen[k];
       li.classList.toggle('open', fx.pickOpen[k]);
-      var m = li.querySelector('.pick-more');
-      if (m) m.setAttribute('aria-expanded', fx.pickOpen[k] ? 'true' : 'false');
+      bx.setAttribute('aria-expanded', fx.pickOpen[k] ? 'true' : 'false');
     });
     // "Express it" shortcuts from a currency page preset the picker.
     document.addEventListener('click', function (e) {
@@ -3039,7 +3041,6 @@
     });
   }
 
-  function pickPhone() { return window.matchMedia && window.matchMedia('(max-width: 640px)').matches; }
 
   function renderPicker() {
     if (!fx.data) return;
@@ -3058,28 +3059,8 @@
     box.hidden = !ready;
     $('#fx-picker').classList.toggle('picked', ready);
     if (!ready) return;
-    var picks = fxPicks(fx.dir, fx.ccy);
-    var tiers = [
-      ['edge', 'Strongest edge', function (p) { return p.gap > 0; }],
-      ['flat', 'No edge', function (p) { return p.gap === 0; }],
-      ['against', 'Against your view', function (p) { return p.gap < 0; }]
-    ];
-    tiers.forEach(function (t) {
-      var rows = picks.filter(t[2]);
-      if (!rows.length && t[0] !== 'edge') return;
-      var group = el('li', 'pick-group ' + t[0]);
-      var head = el('div', 'pick-group-head');
-      head.appendChild(el('h3', 'pick-group-title', t[1] + (rows.length ? ' · ' + rows.length : '')));
-      if (!rows.length) head.appendChild(el('p', 'meta pick-group-note',
-        'No cross has an edge today — every counterpart is level with or ahead of ' + fx.ccy + ' on the board.'));
-      group.appendChild(head);
-      if (rows.length) {
-        var list = el('ol', 'picks-tier');
-        rows.forEach(function (p) { list.appendChild(pickRow(p)); });
-        group.appendChild(list);
-      }
-      box.appendChild(group);
-    });
+    // Rami, 2026-10-28: one list, best edge first, no group headings.
+    fxPicks(fx.dir, fx.ccy).forEach(function (p) { box.appendChild(pickRow(p)); });
   }
 
   /* A pair name in a solid box (Rami, 2026-10-28): green if the pair rises
@@ -3093,11 +3074,23 @@
     return b;
   }
 
+  /* One pair (Rami, 2026-10-28): a wide green/red box — score on the left,
+     pair in the middle, + on the right. Open it and the box shrinks to the
+     left with the why, interest and events beside it. */
   function pickRow(p) {
     var open = !!fx.pickOpen[p.pair];
+    var up = p.action === 'Buy';
     var li = el('li', 'pick' + (open ? ' open' : ''));
     li.setAttribute('data-pair', p.pair);
-    li.appendChild(pairBox(p));
+    var bx = el('button', 'pick-box ' + (up ? 'up' : 'dn'));
+    bx.type = 'button';
+    bx.setAttribute('aria-expanded', open ? 'true' : 'false');
+    bx.setAttribute('aria-label', p.pair + (up ? ' rises' : ' falls') + ' if your view is right, score ' + signed(p.gap) + '. More');
+    bx.title = 'Score: how far apart the two currencies are on the board, for your view';
+    bx.appendChild(el('span', 'pb-score', signed(p.gap)));
+    bx.appendChild(el('span', 'pb-pair', p.pair));
+    bx.appendChild(el('span', 'pb-more'));
+    li.appendChild(bx);
     var body = el('div', 'pick-body');
     body.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
     var meta = [];
@@ -3109,11 +3102,6 @@
     }
     if (meta.length) body.appendChild(el('p', 'meta pick-meta', meta.join(' · ')));
     li.appendChild(body);
-    var more = el('button', 'pick-more');   // phones only
-    more.type = 'button';
-    more.setAttribute('aria-expanded', open ? 'true' : 'false');
-    more.setAttribute('aria-label', 'More on ' + p.pair);
-    li.appendChild(more);
     return li;
   }
 
