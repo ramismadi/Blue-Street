@@ -551,7 +551,7 @@ same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a n
 one plain sentence each, readable cold, no strings of numbers. The pair picker lists every pair,
 best edge first, with no group headings (edge tiles get a blue edge, no-edge tiles go flat, against-your-view tiles fade), as tiles styled like Today's currency tiles (card,
 rounded): score, both flags, the pair in serif, and a green (rises if the reader's view is
-right) or red (falls) trend pill, then +. Opening a tile shows the why, interest and events
+right) or red (falls) trend pill, then +. Opening a tile shows a score breakdown (each pillar for both currencies and what it adds for the reader's view, summing to the tile score), then the why, interest and events
 under a divider. Bullish/Bearish are solid green #279a41 / red #e3262c with text in the site
 background color. The prompt is left-aligned; currency buttons and the strength board show
 flags. Tapping a picked side or currency again clears it. The strength board has no card.

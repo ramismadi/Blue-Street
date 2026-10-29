@@ -3112,6 +3112,41 @@
     return b;
   }
 
+  /* Score breakdown (Rami, 2026-10-28): each pillar's score for both sides
+     of the pair, and what it adds to the pair's score for your view. The
+     pillar lines add up to the score on the tile. */
+  function scoreBreakdown(p) {
+    var X = fx.ccy, Y = p.y.ccy;
+    var cx = fxGet(X), cy = p.y;
+    var side = p.pair.split('/');
+    var dOf = function (c, k) { var d = (c && c.drivers || {})[k]; return d ? (+d.score || 0) : 0; };
+    var t = el('table', 'pick-bd');
+    var cap = el('caption', 'sr-only', 'Score breakdown for ' + p.pair);
+    t.appendChild(cap);
+    var hd = el('tr');
+    hd.appendChild(el('th', null, ''));
+    side.forEach(function (c) { var th = el('th', 'bd-ccy'); th.appendChild(flagEl(c)); th.appendChild(document.createTextNode(c)); hd.appendChild(th); });
+    hd.appendChild(el('th', 'bd-net', 'For you'));
+    var thead = el('thead'); thead.appendChild(hd); t.appendChild(thead);
+    var tb = el('tbody');
+    PILLARS.forEach(function (k) {
+      var vx = dOf(cx, k[0]), vy = dOf(cy, k[0]);
+      var net = fx.dir === 'bull' ? vx - vy : vy - vx;
+      var tr = el('tr', net > 0 ? 'pos' : net < 0 ? 'neg' : 'zero');
+      tr.appendChild(el('th', 'bd-pillar', k[1]));
+      side.forEach(function (c) { var v = c === X ? vx : vy; tr.appendChild(el('td', 'mono' + (v ? '' : ' nil'), signed(v))); });
+      tr.appendChild(el('td', 'bd-net mono', signed(net)));
+      tb.appendChild(tr);
+    });
+    var tot = el('tr', 'bd-total');
+    tot.appendChild(el('th', 'bd-pillar', 'Score'));
+    side.forEach(function (c) { tot.appendChild(el('td', 'mono', signed(fxScore(c === X ? cx : cy)))); });
+    tot.appendChild(el('td', 'bd-net mono', signed(p.gap)));
+    tb.appendChild(tot);
+    t.appendChild(tb);
+    return t;
+  }
+
   /* One pair (Rami, 2026-10-28): a tile like Today's currency tiles. Score,
      both flags and the pair name; a green (rises if you're right) or red
      (falls) trend pill on the right. Tap for the why, interest and events. */
@@ -3141,6 +3176,7 @@
     bx.appendChild(el('span', 'pb-more'));
     li.appendChild(bx);
     var body = el('div', 'pick-body');
+    body.appendChild(scoreBreakdown(p));
     body.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
     var meta = [];
     if (p.carry != null) {

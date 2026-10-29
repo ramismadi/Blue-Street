@@ -1348,6 +1348,21 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .pick-body { display: none; margin: 0 16px; padding: 10px 0 14px; border-top: 1px solid var(--line); }
 .pick.open .pick-body { display: block; animation: picks-in .25s ease-out; }
 .pick-why { margin: 0; font-family: var(--serif); font-size: 0.98rem; line-height: 1.5; }
+/* Score breakdown (Rami, 2026-10-28) */
+.pick-bd { width: 100%; border-collapse: collapse; margin: 0 0 12px; font-size: 0.84rem; }
+.pick-bd th, .pick-bd td { padding: 4px 0; text-align: right; font-weight: 400; }
+.pick-bd thead th { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); padding-bottom: 6px; }
+.pick-bd .bd-ccy { white-space: nowrap; }
+.pick-bd .bd-ccy .flag { width: 14px; height: 10.5px; margin-right: 4px; vertical-align: -1px; border-radius: 1px; }
+.pick-bd .bd-pillar { text-align: left; color: var(--ink-2); }
+.pick-bd td.nil { color: var(--ink-3); }
+.pick-bd .bd-net { width: 4.5em; font-weight: 700; }
+.pick-bd tr.pos .bd-net { color: var(--bull); }
+.pick-bd tr.neg .bd-net { color: var(--bear); }
+.pick-bd tr.zero .bd-net { color: var(--ink-3); font-weight: 400; }
+.pick-bd tbody tr + tr { border-top: 1px solid var(--line); }
+.pick-bd tr.bd-total { border-top: 1px solid var(--ink-3); }
+.pick-bd tr.bd-total th, .pick-bd tr.bd-total td { font-weight: 700; color: var(--ink); padding-top: 6px; }
 .pick-meta { margin: 6px 0 0; }
 @media (prefers-reduced-motion: reduce) { .pick.open .pick-body { animation: none; } }
 
