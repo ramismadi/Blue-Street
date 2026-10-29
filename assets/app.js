@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '114';
+  var ASSET_VERSION = '115';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -1242,7 +1242,7 @@
      dropped and new tiles are appended, so adding a tile later is safe. The
      first visible tile spans the full width. */
   var GLANCE_IDS = ['next', 'lean'];   // 'flash' (Developing) removed 2026-10-18
-  var GLANCE_NAMES = { flash: 'Developing', next: 'Next up', lean: 'Evidence leans' };
+  var GLANCE_NAMES = { flash: 'Developing', next: 'Next up', lean: 'Strength board' };
   var glance = { editing: false, drag: null };
 
   function glanceOrder() {
