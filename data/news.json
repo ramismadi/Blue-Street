@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T02:50:00Z",
+  "updated": "2026-10-29T10:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "mixed",
-      "text": "The yen is weak near 158 per dollar because Japan's rates are far below US rates. But Finance Minister Satsuki Katayama's warnings that Tokyo may step in, and hopes of a Bank of Japan hike in December, are slowing the fall; the bank decides on Friday and is expected to hold at 1.25%.",
-      "ts": "2026-10-29T00:55:00Z"
+      "text": "The yen is weak near 158 per dollar because Japan's rates are far below US rates. But a Bank of Japan gauge of underlying inflation just hit a three-year high, which, with Finance Minister Satsuki Katayama's warnings that Tokyo may step in, slows the fall; the bank decides on Friday and is expected to hold at 1.25% while hinting at a December hike.",
+      "ts": "2026-10-29T10:55:00Z"
     },
     "CHF": {
       "lean": "mixed",
@@ -49,8 +49,8 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent crude is near $115, close to its highest levels, with the Strait of Hormuz still largely shut and Yemen's Houthi rebels hitting Saudi targets. It eased slightly on Thursday after a report that Vice President JD Vance wrote to a senior Iranian official about talks, but President Trump denied seeking talks and still threatens new strikes, so the war premium holds.",
-      "ts": "2026-10-29T02:50:00Z"
+      "text": "Brent crude is near $114, still far above $100, because the Strait of Hormuz remains largely shut and Yemen's Houthi rebels keep firing at Saudi Arabia. It slipped on Thursday as Qatar offered Iran a new draft deal and Vice President JD Vance reportedly wrote to Tehran about talks, but fresh tanker hits and fear of US strikes after the November 3 midterms keep the war premium in place.",
+      "ts": "2026-10-29T10:55:00Z"
     }
   },
   "items": [
@@ -119,6 +119,45 @@
         }
       ],
       "watch": "Thursday's US September PCE price index, the Fed's preferred inflation gauge. A soft reading would ease hike bets and help gold."
+    },
+    {
+      "id": "investing-oil-falls-diplomacy-hopes-20261029",
+      "date": "2026-10-29",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/commodities-news/us-oil-prices-fall-as-investors-gauge-risks-to-mideast-supply-4981268",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEM9S00Y_L.jpg",
+      "headline": "Oil falls as diplomacy hopes outweigh Middle East escalation fears",
+      "story": "iran-talks",
+      "story_title": "US-Iran war: talks vs new strikes",
+      "pillar": "risk",
+      "summary": "Brent crude fell about 1% to near $114 a barrel on Thursday morning in London as fresh peace efforts between the US and Iran took some heat out of prices. Attacks on Saudi Arabia and on tankers near the Strait of Hormuz kept the drop small.",
+      "beats": {
+        "was": "Oil has been above $100 for weeks because the war between the US, Israel and Iran has largely shut the Strait of Hormuz, the sea lane for about a fifth of the world's oil. Yemen's Houthi rebels, who back Iran, said on Tuesday they hit Saudi Arabia's biggest refinery.",
+        "happened": "Brent slipped $1.27 to about $114 and US crude fell 1.5% to about $101 by mid-morning in London. The Wall Street Journal reported that Vice President JD Vance wrote to a senior Iranian security official to restart talks, and Qatar has put a new draft deal to Iran. But a Saudi-led coalition said it shot down a missile fired at eastern Saudi Arabia early Thursday, and Iran's Revolutionary Guards said three tankers hit sea mines south of Hormuz.",
+        "means": "Talk of a deal is enough to shave a little off the war premium, but every new attack shows supply is still at risk. Worry that the US could strike Iran after its November 3 midterm elections keeps buyers from leaving.",
+        "fx": "Talks gain ground → oil eases → small relief for oil importers like the euro and yen, less help for the Canadian dollar; new attacks or US strikes → oil jumps back."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Peace efforts trim the war premium, though attacks limit the fall."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slightly lower oil means a little less support for a big Canadian export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan imports nearly all its fuel, so cheaper oil eases pressure on the yen."
+        }
+      ],
+      "watch": "Whether Iran answers Qatar's draft or the Vance letter, and any new Houthi strike on Saudi oil sites or tanker attacks near Hormuz."
     },
     {
       "id": "ani-vance-letter-iran-20261029",
@@ -1267,76 +1306,31 @@
       "watch": "The OPEC+ meeting on Sunday, November 1."
     },
     {
-      "id": "turkiyetoday-ras-tanura-fire-20261027",
-      "ts": "2026-10-27T08:36:00Z",
-      "source": "Türkiye Today",
-      "url": "https://www.turkiyetoday.com/business/oil-prices-rise-as-saudi-ras-tanura-hub-catches-fire-after-houthi-attack-3231114",
-      "image": "https://img.turkiyetoday.com/images/2026/10/27/oil-prices-rise-as-saudi-ras-tanura-hub-catches-fire-after-houthi-attack-3231114_20261027120813_20261027120813.jpg",
-      "headline": "Oil prices rise as Saudi Ras Tanura hub catches fire after Houthi attack",
-      "story": "saudi-houthi",
-      "story_title": "Saudi Arabia: Houthi attacks on oil and airports",
-      "pillar": "commodities",
-      "summary": "Yemen's Houthi rebels say a missile hit Saudi Arabia's Ras Tanura refinery, the kingdom's largest, and a fire broke out near its oil export terminal early Tuesday. The fire was put out within hours and the damage is unclear, so oil rose only a little.",
-      "beats": {
-        "was": "The Houthis, an Iran-aligned group in Yemen, have been firing at Saudi oil sites and airports during the Iran war. With the Strait of Hormuz partly blocked, Saudi Arabia has been sending about 4 million barrels a day around it by pipeline to the Red Sea.",
-        "happened": "A fire broke out early Tuesday near the Ras Tanura export terminal on Saudi Arabia's Gulf coast and was contained within hours, Bloomberg reported. The Houthis said a ballistic missile caused it; Saudi Arabia has not confirmed that. Ras Tanura holds the country's biggest refinery, about 550,000 barrels a day, and shipped over 5 million barrels a day before the war. Brent rose about 0.6% to near $116.50 in the morning.",
-        "means": "An attack on Saudi Arabia's main oil export hub is the kind of hit markets fear most. Because the fire was quickly put out and nothing has shown that exports stopped, it adds worry rather than a real loss of oil for now.",
-        "fx": "A strike on the biggest Saudi export hub → more risk to oil supply → higher oil, which helps oil sellers like Canada and hurts oil buyers like Japan."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "An unconfirmed hit on Saudi Arabia's main export hub, with the fire quickly put out."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil lifts what Canada earns from its exports."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so dearer crude hurts it."
-        }
-      ],
-      "watch": "Whether Saudi Arabia or Aramco confirms damage or a slowdown in exports from Ras Tanura."
-    },
-    {
-      "id": "cna-katayama-decisive-fx-20261027",
+      "id": "hl-boj-trend-inflation-3yr-high-20261027",
       "date": "2026-10-27",
-      "source": "Reuters via CNA (UA.News)",
-      "url": "https://ua.news/en/finansi/iaponiia-gotova-rishuche-diiati-na-valiutnomu-rinku-channel-newsasia",
-      "image": "https://cdn-cabinet.ua.news/uploads/images/japan_ready_to_act_in_currency_market_1793077045858.webp",
-      "headline": "Japan ready for decisive currency market action — Channel NewsAsia",
-      "story": "japan-fx-warnings",
-      "story_title": "Japan: official warnings over a weak yen",
-      "pillar": "policy",
-      "summary": "Japan's Finance Minister Satsuki Katayama told parliament on Tuesday the government is ready to act decisively in the currency market. The yen was near 157.7 per dollar, close to levels where Tokyo has stepped in before.",
+      "source": "Hargreaves Lansdown (Reuters)",
+      "url": "https://www.hl.co.uk/news/japans-trend-inflation-index-hits-3-year-high-cements-case-for-boj-rate-hike",
+      "image": "https://images.hl.uk/vvl3z0p6qtad/6aoBSeeMuqtAgRrdudFXDi/59da67c45a72774c4c9ac5db20e33efb/image-japan-stock-market-and-funds-review-a-brighter-outlook-ahead.jpg",
+      "headline": "Japan's trend inflation index hits 3-year high, cements case for BOJ rate hike",
+      "story": "boj-path",
+      "story_title": "Bank of Japan: hold now, hike later?",
+      "pillar": "inflation",
+      "summary": "A Bank of Japan measure of underlying inflation rose to 3.2% in September, its fastest in three years. It strengthens the case for another rate rise after Friday's meeting, where the bank is expected to hold.",
       "beats": {
-        "was": "The yen has weakened to around 157-158 per dollar, and Japan's government has in the past bought yen to slow sharp falls. The Bank of Japan decides on rates on Friday, October 30, and is expected to hold at 1.25%.",
-        "happened": "Asked in parliament how the government's spending plans could affect the yen and long-term interest rates, Katayama said officials are watching markets with a strong sense of urgency and are ready to take decisive action. She named no specific steps, and analysts noted the wording was firmer but not new.",
-        "means": "Tokyo is warning sellers off the yen with words, a step that has often come before actual buying of yen. It does not mean buying is imminent; officials may first wait to see how markets take Friday's Bank of Japan decision.",
-        "fx": "Firmer warnings → more risk that Japan buys yen if it falls fast → caps how far the yen can slide; no action yet → the pull from the rate gap with the US stays."
+        "was": "The Bank of Japan's rate is 1.25%, far below US rates, which keeps the yen weak near 158 per dollar. The bank says it sets the pace of hikes by underlying inflation, not by swings in energy or one-off government subsidies.",
+        "happened": "The bank's own gauge that strips out those one-off factors rose 3.2% from a year earlier in September, up from 2.6% in August and the biggest rise since October 2023. Prices companies charge each other for services also stayed high, pushed up by soaring shipping costs, a weak yen and dearer imported fuel.",
+        "means": "Price rises are spreading through the economy, which is what the bank wants to see before it raises rates again. A hold this Friday with a clear hint about December looks more likely.",
+        "fx": "Firmer underlying inflation → more chance of a December Bank of Japan hike → narrower gap with US rates → some support for the yen."
       },
       "impact": [
         {
           "ccy": "JPY",
           "dir": "bullish",
           "strength": 1,
-          "why": "Stronger warning wording raises the risk of Japan buying yen if it keeps falling."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A cap on dollar gains against the yen, but no change to the US rate outlook."
+          "why": "Broadening inflation supports a later Bank of Japan hike, though Friday's hold is expected."
         }
       ],
-      "watch": "A fast slide in the yen toward 160 per dollar, or Friday's Bank of Japan decision hinting at a December hike."
+      "watch": "Friday's Bank of Japan decision and Governor Kazuo Ueda's press conference: a clear signal for December would help the yen; no hint would leave it weak."
     }
   ]
 }
