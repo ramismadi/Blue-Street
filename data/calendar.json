@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T07:52:00-05:00",
+  "updated": "2026-10-30T15:05:00-05:00",
   "events": [
     {
       "id": "chf-ppi-20261015",
@@ -3290,7 +3290,8 @@
       "better": "higher",
       "why": "Imported-price pipeline for German inflation — energy-driven, feeds the ECB’s upside-risk watch.",
       "if_beat": "Beat: pipeline hotter — ECB hawkish tilt firms.",
-      "if_miss": "Miss: pipeline cooling — disinflation intact."
+      "if_miss": "Miss: pipeline cooling — disinflation intact.",
+      "outcome": "Beat: import prices +2.1% m/m vs 1.9% fcst, +10.4% y/y — energy-driven pipeline heat, feeds the ECB's upside-risk watch."
     },
     {
       "id": "fr-cpi-flash-20261030",
@@ -3324,7 +3325,8 @@
       "better": "higher",
       "why": "French private-sector hiring — a jobs read beside the GDP/CPI flash batch.",
       "if_beat": "Beat: hiring holding up — EUR mildly supported.",
-      "if_miss": "Miss: payrolls shrinking — slowdown confirmed."
+      "if_miss": "Miss: payrolls shrinking — slowdown confirmed.",
+      "outcome": "Inline: private payrolls -0.1% q/q as expected (-25,800 jobs; -0.3% y/y) — French hiring flat."
     },
     {
       "id": "es-cpi-flash-20261030",
@@ -3422,25 +3424,6 @@
       "sources": []
     },
     {
-      "id": "eur-cpi-flash-20261030",
-      "ts": "2026-10-30T10:00:00Z",
-      "ccy": "EUR",
-      "impact": "medium",
-      "category": "inflation",
-      "title": "Eurozone flash CPI (Oct)",
-      "actual": null,
-      "forecast": null,
-      "previous": "3.8%",
-      "better": "higher",
-      "why": "October flash: Sep final 3.8%; German state/national CPI the same day. Hot + French-spread stress = the ECB's December dilemma in one print.",
-      "if_beat": "Hotter: December hike odds firm — EUR bid.",
-      "if_miss": "Cooler: disinflation — December hike fades.",
-      "outcome": null,
-      "chapter": null,
-      "bank": null,
-      "sources": []
-    },
-    {
       "id": "eur-unemp-20261030",
       "ts": "2026-10-30T10:00:00Z",
       "ccy": "EUR",
@@ -3472,7 +3455,8 @@
       "better": "higher",
       "why": "Italian flash CPI in the eurozone flash batch — the ECB’s upside-inflation-risk watch.",
       "if_beat": "Beat: Italian prices hotter — ECB hawkish tilt firms.",
-      "if_miss": "Miss: cooling — disinflation intact."
+      "if_miss": "Miss: cooling — disinflation intact.",
+      "outcome": "Sharp beat: Italian CPI +5.4% y/y vs ~4.6% consensus (prev 4.2%), HICP 5.6% — energy surge; Italy now above Spain on the harmonised measure."
     },
     {
       "id": "cad-gdp-20261030",
@@ -3540,7 +3524,7 @@
       "why": "Germany's October flash — the input to the EZ aggregate; Sep PPI ran hot at +6.7% y/y and the states print through the morning.",
       "if_beat": "Hotter: EZ aggregate at risk — ECB hawkish.",
       "if_miss": "Cooler: relief — dovish lean.",
-      "outcome": null,
+      "outcome": "Miss: German CPI cooled to 2.8% y/y (HICP 2.8% vs 3.1% poll, prev 3.3%), CPI -0.2% m/m; core 2.1% (prev 2.4%) — relief after the hot French/Italian flashes.",
       "chapter": null,
       "bank": null,
       "sources": []
@@ -3580,7 +3564,7 @@
       "impact": "low",
       "category": "speech",
       "title": "Fed speakers (Daly, Musalem)",
-      "actual": null,
+      "actual": "Musalem: hike 'again soon', policy still accommodative; Daly: AI matters for near- and medium-term policy thinking; Barkin: AI investment boom adding to inflation pressures",
       "forecast": null,
       "previous": null,
       "better": null,
@@ -3589,7 +3573,7 @@
       "if_miss": "Dovish: pause talk.",
       "chapter": null,
       "bank": null,
-      "outcome": null,
+      "outcome": "Hawkish tone: the first post-hold voices back the December-hike path — Musalem wants a hike 'again soon'; Logan (later Friday) put a number on it: at least two more 25bp hikes, then a pause.",
       "sources": []
     },
     {
@@ -3628,6 +3612,25 @@
       "impact": "high",
       "category": "central-bank",
       "title": "RBA decision"
+    },
+    {
+      "id": "eur-cpi-flash-20261030",
+      "ts": "2026-11-04T10:00:00Z",
+      "ccy": "EUR",
+      "impact": "medium",
+      "category": "inflation",
+      "title": "Eurozone flash CPI (Oct)",
+      "actual": null,
+      "forecast": null,
+      "previous": "3.8%",
+      "better": "higher",
+      "why": "October flash (Eurostat, due Nov 4 — corrected Oct 30 evening run: this event was mis-scheduled for Oct 30): Sep final 3.8%; German state/national CPI Oct 30. Hot + French-spread stress = the ECB's December dilemma in one print.",
+      "if_beat": "Hotter: December hike odds firm — EUR bid.",
+      "if_miss": "Cooler: disinflation — December hike fades.",
+      "outcome": null,
+      "chapter": null,
+      "bank": null,
+      "sources": []
     },
     {
       "actual": null,
