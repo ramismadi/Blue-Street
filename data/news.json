@@ -1,16 +1,16 @@
 {
-  "updated": "2026-10-30T12:10:00Z",
+  "updated": "2026-10-30T13:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "mixed",
-      "text": "The Federal Reserve held rates at 3.75% to 4% on Wednesday, and strong figures since (3.4% growth last quarter, its preferred price gauge at 3.6%) keep a December rise on the table. But worries over AI spending sent money into US bonds, pushing the 10-year yield to a one-month low near 4.9%, so the dollar has slipped to around 101.8 on its index while Fed Chair Kevin Warsh avoids promising a rise.",
-      "ts": "2026-10-30T03:20:00Z"
+      "ts": "2026-10-30T13:55:00Z",
+      "text": "The Federal Reserve held rates at 3.75% to 4% on Wednesday, and strong figures since (3.4% growth last quarter, its preferred price gauge at 3.6%) keep a December rise on the table; Friday's wage-cost figures matched forecasts and changed little. But worries over AI spending have sent money into US bonds, pulling yields lower, so the dollar has slipped to around 101.8 on its index while Fed Chair Kevin Warsh avoids promising a rise."
     },
     "EUR": {
-      "lean": "bullish",
-      "text": "Friday's figures mostly backed the European Central Bank's hint of a December rate rise: the euro zone grew 0.4% last quarter, twice the forecast, and inflation jumped in Italy (5.4%) and France. But early state figures point to cooler prices in Germany, France's economy shrank, and the euro is losing ground to the pound even as it holds near $1.12.",
-      "ts": "2026-10-30T12:10:00Z"
+      "lean": "mixed",
+      "ts": "2026-10-30T13:55:00Z",
+      "text": "The European Central Bank hinted at a December rate rise on Thursday, and Friday's figures were split: the euro zone grew 0.4% last quarter, twice the forecast, and inflation jumped in Italy (5.4%) and France. But German inflation cooled more than expected to 2.8% and France's economy shrank, so the euro holds near $1.12 while losing ground to the pound."
     },
     "GBP": {
       "lean": "bullish",
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "mixed",
-      "text": "The Bank of Canada raised its rate to 2.5% on Wednesday, its first hike in three years, and Governor Tiff Macklem said more may be needed. That, plus oil above $100 a barrel, a big Canadian export, has the loonie at its strongest against the euro in 15 months and just under 1.40 per US dollar.",
-      "ts": "2026-10-29T18:49:25Z"
+      "ts": "2026-10-30T13:55:00Z",
+      "text": "The Bank of Canada raised its rate to 2.5% on Wednesday, its first hike in three years, and oil above $100 a barrel, a big Canadian export, has the loonie just under 1.40 per US dollar. But Friday's figures showed the economy flat in August and likely shrinking in September, well below the bank's forecast, which makes another rise harder to justify."
     },
     "AUD": {
       "lean": "bullish",
@@ -44,8 +44,8 @@
     },
     "XAU": {
       "lean": "bearish",
-      "text": "Gold fell about 1% to near $4,020 on Thursday after strong US growth and inflation figures made a December Fed rate rise more likely, which weighs on a metal that pays no interest. Central-bank buying and the Iran war give it a floor, but it is on course for a second monthly fall.",
-      "ts": "2026-10-29T18:49:25Z"
+      "ts": "2026-10-30T13:55:00Z",
+      "text": "Gold slipped back below $4,000 an ounce on Friday as strong US growth and inflation figures made a December Fed rate rise more likely, which weighs on a metal that pays no interest. Central-bank buying and the Iran war give it a floor, but it is on course for a second monthly fall."
     },
     "OIL": {
       "lean": "bullish",
@@ -54,6 +54,114 @@
     }
   },
   "items": [
+    {
+      "id": "finimize-canada-gdp-aug-flat-20261030",
+      "ts": "2026-10-30T12:40:24Z",
+      "source": "Finimize",
+      "url": "https://finimize.com/content/canadas-economy-flatlined-again-in-august",
+      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2Ftag_reuters_com_2026_newsml_L2N46G0LT_1573331930.jpeg?ixlib=python-3.1.2&s=a35b5552477221092a905b73e4f835c7",
+      "headline": "Canada's Economy Flatlined Again In August",
+      "story": "canada-growth",
+      "story_title": "Canada: a stalling economy after the rate rise",
+      "pillar": "growth",
+      "summary": "Canada's economy did not grow in August for a second month running, short of the small gain forecast, and an early read points to a dip in September.",
+      "beats": {
+        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise in three years, betting the economy could take it; it expected growth near 2% a year.",
+        "happened": "Statistics Canada said output was flat in August against a forecast 0.2% gain, with wholesale trade down 1.4%, and its early estimate shows a 0.1% fall in September. That leaves the third quarter growing at only about 1.3% a year.",
+        "means": "Growth is running well below what the central bank assumed when it raised rates, which makes another rise harder to justify soon.",
+        "fx": "Less room for more hikes → mild weight on the Canadian dollar, though oil above $100 is holding it up for now."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Weaker growth than the Bank of Canada expected cools talk of another rate rise."
+        }
+      ],
+      "watch": "If Bank of Canada officials brush off the weak figures and repeat that more rises may be needed, the loonie's support returns."
+    },
+    {
+      "id": "investing-germany-cpi-oct-28-20261030",
+      "date": "2026-10-30",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/economic-indicators/germany-october-inflation-slows-more-than-expected-to-28-4987753",
+      "image": "https://content-media.investing.com/news/LYNXMPED0C0KP_L.jpg",
+      "headline": "Germany October inflation slows more than expected to 2.8%",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holds up as prices climb",
+      "pillar": "inflation",
+      "summary": "German inflation fell to 2.8% in October from 3.3%, cooler than forecast, as energy costs rose more slowly and the underlying rate eased to 2.1%.",
+      "beats": {
+        "was": "The European Central Bank held its deposit rate at 2.5% on Thursday and hinted it may raise rates in December because energy costs keep prices high. Earlier Friday, inflation in Italy and France came in hot.",
+        "happened": "Germany's first estimate showed prices up 2.8% from a year ago on the EU-wide measure, against 3.1% expected. Energy inflation slowed to 12.2% from 14.9%, and prices excluding food and energy rose 2.1%, down from 2.4%.",
+        "means": "Germany is the euro zone's biggest economy, so a cooler reading there takes some heat out of the case for a December rise, even with Italy and France running hot.",
+        "fx": "Softer prices in Germany → some weight on the euro, which has already been losing ground to the pound."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Cooler German prices than expected weaken the case for a December ECB rise."
+        }
+      ],
+      "watch": "The euro-zone-wide inflation estimate next week; a hot figure despite Germany would put the December rise back in view."
+    },
+    {
+      "id": "wbow-reuters-us-eci-q3-20261030",
+      "date": "2026-10-30",
+      "source": "102.7 WBOW (Reuters)",
+      "url": "https://1027wbow.com/2026/10/30/us-labor-costs-rise-moderately-in-third-quarter/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/30/2026-10-30T124017Z_1_LYNXNPEM9T18S_RTROPTP_3_USA-ELECTION-ECONOMY-JOBS.JPG",
+      "headline": "US labor costs rise moderately in third quarter",
+      "story": "fed-oct28",
+      "story_title": "Federal Reserve: the October 28 decision",
+      "pillar": "inflation",
+      "summary": "US labor costs rose 0.8% in the third quarter, exactly as forecast, and 3.4% over the year, the same pace as before.",
+      "beats": {
+        "was": "The Federal Reserve held rates on Wednesday but left a December rise open, and Thursday's strong growth and inflation figures made one look more likely.",
+        "happened": "The Employment Cost Index, a broad gauge of what employers pay in wages and benefits, rose 0.8% from July to September after 0.9% in the spring. The yearly rise held at 3.4%.",
+        "means": "Pay is not adding new inflation pressure, so the figure neither strengthens nor weakens the case for a December rise.",
+        "fx": "In line with forecasts → little change for the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Wage costs matched forecasts, so they add no new pressure either way on Fed rates."
+        }
+      ],
+      "watch": "A sharp jump in pay growth in the next jobs report would add to the case for a December Fed rise."
+    },
+    {
+      "id": "financefeeds-gold-3987-below-4000-20261030",
+      "date": "2026-10-30",
+      "source": "FinanceFeeds",
+      "url": "https://financefeeds.com/gold-price-today-3987-friday-below-4000-second-monthly-decline-bull-4080-bear-3940/",
+      "image": null,
+      "headline": "Gold Price Today: $3,987 Below $4,000, Bull $4,080",
+      "story": "gold-fed",
+      "story_title": "Gold vs a hawkish Fed",
+      "pillar": "policy",
+      "summary": "Gold slipped back under $4,000 an ounce on Friday, near $3,987, and is heading for a second monthly fall as bets on a December US rate rise firm.",
+      "beats": {
+        "was": "Gold pays no interest, so it tends to lose appeal when US rates are expected to rise. Two Federal Reserve officials voted for a rise on Wednesday, and strong US figures followed on Thursday.",
+        "happened": "Gold fell about 0.8% to near $3,987, with markets now putting the chance of a December Fed rise at around 75%. A softer dollar and lower US bond yields only partly cushioned it.",
+        "means": "Expectations of higher US rates are outweighing the Iran war as a reason to hold gold, at least for now.",
+        "fx": "Higher expected US rates → gold under $4,000; the October 23 low near $3,975 is the nearby floor."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Rising odds of a December Fed rise keep weighing on a metal that pays no interest."
+        }
+      ],
+      "watch": "A sharp escalation with Iran, or a Fed official cooling December talk, would pull buyers back to gold."
+    },
     {
       "id": "reuters-ueda-presser-20261030",
       "date": "2026-10-30",
@@ -667,33 +775,6 @@
       "watch": "The second estimate of third-quarter growth on November 25 and the October jobs report."
     },
     {
-      "id": "tradingpedia-euro-slides-ecb-day-20261029",
-      "date": "2026-10-29",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/10/29/euro-slides-as-traders-focus-on-ecb-decision-and-fed-pause/",
-      "image": null,
-      "headline": "Euro Slides as Traders Focus on ECB Decision and Fed Pause",
-      "story": "ecb-oct29",
-      "story_title": "ECB: the October 29 decision",
-      "pillar": "policy",
-      "summary": "The euro gave back Wednesday's small gain in Asian trade, near $1.114, as the dollar steadied after the Fed's hold. The European Central Bank decides later on Thursday and is expected to keep its rate at 2.5%.",
-      "beats": {
-        "was": "The European Central Bank has raised its deposit rate twice this year, by a quarter point each time, to 2.5%, to fight inflation pushed up by expensive energy. The euro has been sliding toward its lowest level since May 2025.",
-        "happened": "The euro slipped back to about $1.114 on Thursday morning in Asia. Markets expect the bank to hold today but still see a chance of another rise in December. Danske Bank pointed to the bank's own survey of lenders, which showed banks tightening loan terms a bit more than expected, mostly in France, though still not by much.",
-        "means": "Today's decision is mainly about the message. Higher rates have barely squeezed lending so far, which leaves the bank room to keep a December rise on the table.",
-        "fx": "A clear hint of a December rise → support for the euro; a cautious tone or worry over France's finances → more pressure on a currency already near a 17-month low."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Holding is expected; the hint about December decides the direction."
-        }
-      ],
-      "watch": "The European Central Bank's statement and President Christine Lagarde's press conference on Thursday afternoon, Europe time: any firm word on December."
-    },
-    {
       "id": "tradingpedia-aussie-gains-rba-bets-20261029",
       "date": "2026-10-29",
       "source": "Tradingpedia",
@@ -719,33 +800,6 @@
         }
       ],
       "watch": "The Reserve Bank of Australia's decision on Tuesday, November 3, and whether Governor Michele Bullock hints at more after it."
-    },
-    {
-      "id": "investing-gold-slips-fed-hold-20261029",
-      "date": "2026-10-29",
-      "source": "Investing.com",
-      "url": "https://ng.investing.com/news/commodities-news/gold-slips-after-fed-holds-rates-pce-inflation-data-in-focus-2765400",
-      "image": "https://content-media.investing.com/news/LYNXMPED1M0ED_L.jpg",
-      "headline": "Gold slips after Fed holds rates, PCE inflation data in focus",
-      "story": "gold-fed",
-      "story_title": "Gold vs a hawkish Fed",
-      "pillar": "policy",
-      "summary": "Gold eased to about $4,050 an ounce in Asian trading after the US Federal Reserve held rates but left a December hike likely. It is down about 2.5% in October, on course for a second monthly fall.",
-      "beats": {
-        "was": "Gold pays no interest, so it tends to suffer when US rates are expected to rise. The Fed raised rates in September and markets expect another hike in December because high energy prices are keeping inflation up. A slump in AI shares last week pushed gold to its lowest since July.",
-        "happened": "The Fed kept rates on hold on Wednesday in a 10-2 vote, the two dissenters wanting a hike. Spot gold slipped 0.4% to about $4,052 early Thursday in Asia. Goldman Sachs estimates central banks bought 79 tonnes of gold in August, a quarter of it by China.",
-        "means": "The pull of higher US rates is still beating gold's appeal as a shelter. Steady central-bank buying gives it a floor but has not been enough to turn the trend.",
-        "fx": "December hike still likely → holding gold costs more → gold under pressure; hot US inflation figures on Thursday → more pressure; soft figures → relief."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A likely December US hike keeps weighing on a metal that pays no interest."
-        }
-      ],
-      "watch": "Thursday's US September PCE price index, the Fed's preferred inflation gauge. A soft reading would ease hike bets and help gold."
     },
     {
       "id": "investing-oil-falls-diplomacy-hopes-20261029",
@@ -785,33 +839,6 @@
         }
       ],
       "watch": "Whether Iran answers Qatar's draft or the Vance letter, and any new Houthi strike on Saudi oil sites or tanker attacks near Hormuz."
-    },
-    {
-      "id": "tradingpedia-usdchf-firm-fed-pause-20261029",
-      "date": "2026-10-29",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/10/29/usd-chf-holds-firm-as-fed-pause-leaves-markets-guessing/",
-      "image": null,
-      "headline": "USD/CHF holds firm as Fed pause leaves markets guessing",
-      "story": "fed-oct28",
-      "story_title": "Fed week: the October 28 decision and December hike bets",
-      "pillar": "growth",
-      "summary": "The dollar held near 0.828 Swiss francs on Thursday after the Fed's hold, while a gauge of Swiss investor expectations fell sharply.",
-      "beats": {
-        "was": "The Swiss franc is a classic shelter in times of stress, but Switzerland's rates are near zero, far below US rates, which limits its gains against the dollar.",
-        "happened": "The Fed kept rates at 3.75% to 4% with two officials voting for a rise, and the dollar gave back part of its recent gains before steadying. In Switzerland, the ZEW survey of investor expectations fell to -15.3 in October from +2.6 in September, meaning more expect the economy to get worse.",
-        "means": "Gloomier Swiss expectations and a wide rate gap with the US leave the franc little to lean on other than its shelter role.",
-        "fx": "Weaker Swiss outlook plus higher US rates → mild pressure on the franc; a sudden rise in war fears would help it."
-      },
-      "impact": [
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A sharp drop in Swiss investor expectations and a wide US rate gap weigh on the franc."
-        }
-      ],
-      "watch": "Swiss inflation for October, due early next week."
     },
     {
       "id": "reuters-tokyo-core-cpi-oct-20261029",
@@ -1064,45 +1091,6 @@
         }
       ],
       "watch": "The Bank of England's decision on Thursday, November 5, where a rate rise is widely expected."
-    },
-    {
-      "id": "gbaf-asian-shares-alphabet-miss-20261029",
-      "ts": "2026-10-29T02:28:30Z",
-      "source": "Global Banking & Finance Review",
-      "url": "https://www.globalbankingandfinance.com/asian-shares-fall-alphabet-earnings-miss-drags-wall-st/",
-      "image": "https://www.globalbankingandfinance.com/i/cloud-ba816d6a-a1f4-4d82-b9f2-a859643d7373/width=1200,height=630,quality=80,format=auto,fit=cover/",
-      "headline": "Asian Shares Slide as Alphabet Earnings Miss, Wall St Futures Dip",
-      "story": "ai-earnings",
-      "story_title": "Big Tech results and the AI spending boom",
-      "pillar": "risk",
-      "summary": "Asian shares gave up early gains on Thursday after Google's owner Alphabet fell about 10% in late trading on heavy spending, pulling US share futures lower. The dollar held steady and oil slipped on a report that Washington is trying to restart talks with Iran.",
-      "beats": {
-        "was": "Stock markets have leaned on hopes for artificial-intelligence profits all year, and a slump in AI shares last week sent investors briefly into safe places such as the yen and the Swiss franc. Alphabet and Microsoft reported results after the US close on Wednesday, the same day the Federal Reserve held rates.",
-        "happened": "Alphabet's shares dropped about 10% after hours, wiping close to $400 billion off its value, while Microsoft rose about 3% on stronger cash flow. US tech futures fell about 1%, a broad index of Asian shares outside Japan fell 0.7% and South Korea's main index fell 2.6%. The dollar was flat after a small dip on Wednesday, and Brent crude eased 0.4% to about $115.",
-        "means": "Investors are again asking whether the huge sums poured into AI will pay off, which takes some of the shine off shares. So far it is a wobble, not a rush for safety: currency moves are small.",
-        "fx": "Weaker tech shares → a little less appetite for risk → mild help for the yen and franc, mild drag on the Australian dollar; if the selling deepens on Wall Street, that shelter demand grows."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A tech-led share slide tends to send some money to the yen, but moves so far are small."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Usually tracks global shares, so a weaker tech mood weighs a little."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Another place investors park money when shares fall."
-        }
-      ],
-      "watch": "How Wall Street opens on Thursday. A deeper tech slide would lift the yen and franc; a quick recovery would leave currencies to the US inflation figures and the European Central Bank."
     },
     {
       "id": "actionforex-nz-anz-confidence-oct-20261029",
