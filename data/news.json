@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T03:20:00Z",
+  "updated": "2026-10-30T10:59:43Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -8,9 +8,9 @@
       "ts": "2026-10-30T03:20:00Z"
     },
     "EUR": {
-      "lean": "bearish",
-      "text": "The European Central Bank held its rate at 2.5% on Thursday, and the euro first slipped to its lowest since May 2025, near $1.11. It recovered after President Christine Lagarde said a rise had been discussed, putting December odds above 80%; her early exit in February 2027, France's debt worries and a 15-month low against the Canadian dollar still keep the euro on the back foot.",
-      "ts": "2026-10-29T18:49:25Z"
+      "lean": "bullish",
+      "text": "Friday's figures backed the European Central Bank's hint of a December rate rise: the euro zone grew 0.4% last quarter, twice the forecast, and inflation jumped in Italy (5.4%) and France. The euro has recovered to near $1.12, though France's shrinking economy and debt worries and President Christine Lagarde's early exit in February 2027 still hang over it.",
+      "ts": "2026-10-30T10:59:43Z"
     },
     "GBP": {
       "lean": "mixed",
@@ -18,9 +18,9 @@
       "ts": "2026-10-29T16:00:33Z"
     },
     "JPY": {
-      "lean": "mixed",
-      "text": "The yen is weak near 158 per dollar because Japan's rates are far below US rates, and oil above $100 makes Japan's import bill heavier. The Bank of Japan is expected to hold at 1.25% on Friday, with most economists looking for a rise in December, so how clearly Governor Kazuo Ueda backs that decides the yen's next move.",
-      "ts": "2026-10-30T03:20:00Z"
+      "lean": "bullish",
+      "text": "The Bank of Japan held its rate at 1.25% on Friday but said underlying inflation has now reached its 2% goal, and one board member wanted a rise straight away, so a December hike looks likely. That has the yen a little firmer near 157.4 per dollar, though Governor Kazuo Ueda gave no date and costly oil still weighs on Japan.",
+      "ts": "2026-10-30T10:59:43Z"
     },
     "CHF": {
       "lean": "mixed",
@@ -49,11 +49,38 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent crude is near $115 a barrel, heading for a fourth straight month of double-digit gains, because the Strait of Hormuz remains largely shut and Iran says tankers have hit its mines there. A report that President Trump was briefed on new military options against Iran, and Houthi missiles fired at Saudi Arabia, add to the war premium, while US hopes of a deal pull the other way.",
-      "ts": "2026-10-30T03:20:00Z"
+      "text": "Brent crude is near $116 a barrel and on course for a fourth straight monthly gain, about 11% in October, because the Strait of Hormuz remains largely shut and a tanker was hit by explosives there on Friday. Houthi strikes on Saudi refineries and reports of new US military options against Iran add to the war premium, while US efforts to restart talks pull the other way.",
+      "ts": "2026-10-30T10:59:43Z"
     }
   },
   "items": [
+    {
+      "id": "reuters-ueda-presser-20261030",
+      "date": "2026-10-30",
+      "source": "93.3 The Drive (Reuters)",
+      "url": "https://www.933thedrive.com/2026/10/30/boj-governor-uedas-comments-at-news-conference-27/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/30/2026-10-30T064927Z_1_LYNXNPEM9T0FN_RTROPTP_3_JAPAN-BOJ.JPG",
+      "headline": "BOJ Governor Ueda's comments at news conference",
+      "story": "boj-path",
+      "story_title": "Bank of Japan: how soon the next rate rise",
+      "pillar": "policy",
+      "summary": "Bank of Japan Governor Kazuo Ueda said the bank won't sit and wait, but stopped short of naming a date for the next rate rise, and the yen gave back some of its gains.",
+      "beats": {
+        "was": "Hours earlier the bank held its rate at 1.25% and said underlying inflation is now in line with its 2% goal.",
+        "happened": "At his press conference Ueda said the goal is not fully reached yet, that upside risks to prices have not grown sharply in the past month, and that the bank will adjust policy as needed rather than wait.",
+        "means": "His words keep December possible without promising it, so they added little to the morning's decision.",
+        "fx": "No firm signal on timing → the yen trimmed its gains, near 157.4 per dollar."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Open to a rise but no date given, so the yen's gains faded a little."
+        }
+      ],
+      "watch": "A clear hint of a December rise from Ueda or his deputies would give the yen a stronger lift."
+    },
     {
       "id": "reuters-yen-steady-before-boj-ai-treasury-20261030",
       "date": "2026-10-30",
@@ -127,6 +154,132 @@
       "watch": "Whether Iran accepts a deal through Qatar's mediators, or US strikes resume after the November 3 election."
     },
     {
+      "id": "gbaf-euro-zone-gdp-q3-beat-20261030",
+      "ts": "2026-10-30T10:06:26Z",
+      "source": "Global Banking & Finance Review (Reuters)",
+      "url": "https://www.globalbankingandfinance.com/euro-zone-growth-beats-projections/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-9f307d3c-9f86-4580-b212-5f218000eb92/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "Euro Zone Economic Growth Surpasses Forecasts Despite Energy Headwinds",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holds up as prices climb",
+      "pillar": "growth",
+      "summary": "The euro zone economy grew 0.4% in the third quarter, twice what economists expected, even as France shrank and Italy stalled.",
+      "beats": {
+        "was": "High energy costs from the Iran war have squeezed Europe, and the European Central Bank held its rate at 2.5% on Thursday while hinting at a December rise.",
+        "happened": "Output rose 0.4% on the quarter and 1.3% on the year, both above forecast, though slower than the 0.6% of the quarter before. Germany grew 0.2%, Spain 0.6% and Ireland 5.5%, while Italy was flat and France slipped 0.1%.",
+        "means": "A sturdier economy gives the central bank more room to raise rates to fight inflation. Ireland's jump flatters the total, and France's slide shows the strain underneath.",
+        "fx": "Better growth backs a December rate rise → support for the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Growth twice the forecast makes a December rate rise easier for the central bank."
+        }
+      ],
+      "watch": "Weak business surveys next week, or energy prices jumping again, would undo the growth story."
+    },
+    {
+      "id": "investinglive-italy-cpi-oct-20261030",
+      "ts": "2026-10-30T10:01:45Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/italy-october-preliminary-cpi-5-4-vs-4-6-y-y-expected/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/italy-cpi-featured-1785486858.jpg?width=960&format=webp",
+      "headline": "Italy October preliminary CPI +5.4% vs +4.6% y/y expected",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holds up as prices climb",
+      "pillar": "inflation",
+      "summary": "Italian inflation jumped to 5.4% in October from 4.2%, far above the 4.6% expected, as energy bills surged.",
+      "beats": {
+        "was": "Energy prices across Europe have climbed since the Iran war closed much of the Strait of Hormuz, and the European Central Bank is weighing a December rate rise.",
+        "happened": "Italy's statistics office said consumer prices rose 5.4% over the year in October, and 5.6% on the European measure. Regulated energy prices were up nearly 60%, and goods prices rose 7.5%.",
+        "means": "Earlier on Friday France also came in hotter than expected, so October inflation for the whole euro zone looks likely to rise again, adding pressure on the central bank to raise rates.",
+        "fx": "Hotter inflation → stronger case for a December rise → support for the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A big inflation surprise in the zone's third-largest economy raises the odds of a December rate rise."
+        }
+      ],
+      "watch": "If the euro-zone-wide inflation figure comes in softer than these country prints suggest, the push for a December rise would ease."
+    },
+    {
+      "id": "reuters-boj-holds-instant-view-20261030",
+      "ts": "2026-10-30T04:16:00Z",
+      "source": "Yahoo Finance (Reuters)",
+      "url": "https://finance.yahoo.com/economy/policy/articles/instant-view-analysts-react-boj-032614967.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/eea88709f62a255eac6cb68552d9ba9743072b75cddb6fda1f2d40c57a424d05/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F72a3854be94f001b5fc2452fb1b86cd2.jpg",
+      "headline": "Analysts react to BOJ decision to keep rates steady",
+      "story": "boj-path",
+      "story_title": "Bank of Japan: how soon the next rate rise",
+      "pillar": "policy",
+      "summary": "The Bank of Japan kept its rate at 1.25% on Friday, but said for the first time that underlying inflation has reached its 2% goal, which keeps a December rise firmly on the table.",
+      "beats": {
+        "was": "Japan's central bank has been raising rates slowly from near zero, and the yen has been weak near 158 per dollar because Japanese rates sit far below US rates.",
+        "happened": "The bank held at 1.25% in an 8-1 vote; board member Hajime Takata wanted a rise now. It lifted its inflation forecasts, judged underlying inflation to be in line with 2%, and sped up the sale of its stock-fund holdings.",
+        "means": "Saying the 2% goal is met removes a main reason to wait, so economists see a rise as soon as December and possibly more often after that. The hold itself was expected, so the yen's first gain was partly given back.",
+        "fx": "A clearer path to higher Japanese rates → some support for the yen, capped because the hold was expected."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "The bank says its inflation goal is met and one member already wants a rise."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A narrower gap between US and Japanese rates trims the dollar's edge over the yen."
+        }
+      ],
+      "watch": "If spring wage talks or the December data disappoint, or the bank sounds in no hurry, the yen would lose this support."
+    },
+    {
+      "id": "reuters-oil-fourth-monthly-gain-hormuz-20261030",
+      "ts": "2026-10-30T03:59:00Z",
+      "source": "Yahoo Finance (Reuters)",
+      "url": "https://finance.yahoo.com/news/oil-rises-supply-concerns-houthis-022725347.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/b153b2eb6c8d76ef71160cf42cad5a372339b196eda28943a88a724845e69ec0/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2Faf0151ca22c62f13b15ed57e38f075a9.jpg",
+      "headline": "Oil set for fourth monthly gain as Hormuz tanker attack highlights supply risks from war",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "A tanker was hit by explosives in the Strait of Hormuz, lifting Brent crude to about $116 a barrel and putting oil on course for a fourth straight monthly gain.",
+      "beats": {
+        "was": "The US-Israeli war with Iran is in its eighth month, and the Strait of Hormuz, the route for about a fifth of the world's oil, has been largely shut.",
+        "happened": "The UK's maritime security agency said a small boat attached explosives to a tanker in the strait; the attacker is unknown. Brent rose about 1% to near $116 and US crude to about $103, after Yemen's Houthi group said it struck Saudi refineries on Thursday.",
+        "means": "Fresh attacks on ships and Saudi sites keep the war premium in oil even as the US tries to restart talks with Iran. Brent is up about 11% this month.",
+        "fx": "Higher oil → support for oil exporters like the Canadian dollar, a heavier import bill for Japan and Europe."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A new attack inside the strait adds to supply fears."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada exports oil, so higher prices help its currency."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so costlier crude weighs on the yen."
+        }
+      ],
+      "watch": "A reply from Iran to the US letter seeking talks, or ships passing the strait safely, would cool prices."
+    },
+    {
       "id": "finimize-australia-ppi-q3-20261030",
       "ts": "2026-10-30T01:33:00Z",
       "source": "Finimize",
@@ -154,31 +307,31 @@
       "watch": "The RBA decision on November 3; a hold would surprise and hit the Australian dollar."
     },
     {
-      "id": "actionforex-nz-anz-confidence-oct-20261029",
-      "ts": "2026-10-29T01:49:34Z",
-      "source": "ActionForex",
-      "url": "https://www.actionforex.com/live-comments/659085-new-zealand-anz-business-confidence-rises-to-52-5-pricing-intentions-reach-52-2/",
-      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-nz1.jpg",
-      "headline": "New Zealand ANZ Business Confidence Rises to 52.5, Pricing Intentions Reach 52.2",
-      "story": "rbnz-oct28",
-      "story_title": "RBNZ: the October 28 decision",
-      "pillar": "inflation",
-      "summary": "A monthly ANZ survey of New Zealand firms showed confidence edging up in October and more businesses planning to raise prices.",
+      "id": "investinglive-japan-ip-beat-retail-miss-20261030",
+      "ts": "2026-10-30T00:05:53Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/japan-september-factory-output-beats-forecasts-but-retail-sales-disappoint-ahead-of-boj/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/USDJPY%20update%20%2030%20October%202026-featured-1793318703.jpg?width=960&format=webp",
+      "headline": "Japan September factory output beats forecasts, but retail sales disappoint ahead of BoJ",
+      "story": "boj-path",
+      "story_title": "Bank of Japan: when the next hike comes",
+      "pillar": "growth",
+      "summary": "Japan's factories produced more in September than expected, but shop sales fell for a second month, giving a mixed picture hours before the Bank of Japan decides on rates.",
       "beats": {
-        "was": "The Reserve Bank of New Zealand surprised markets on October 28 by keeping its rate at 2.75% instead of raising it, and the kiwi dollar fell sharply.",
-        "happened": "ANZ's October business survey had confidence at 52.5, up from 51.9. A net 52% of firms plan to raise prices, up from 48%, and expected inflation a year ahead rose to 3.3%. Firms' views of their own activity and investment plans dipped.",
-        "means": "Rising price plans make it harder for the central bank to wait long before raising rates, which could rebuild some of the support the kiwi lost this week.",
-        "fx": "More firms planning price rises → a small lift for odds of a later RBNZ hike and the kiwi."
+        "was": "Japan's factory output dropped 2.4% in August, and the Bank of Japan, which holds its rate at 1.25%, wants signs the economy can cope with more rate rises.",
+        "happened": "Factory output rose 2.2% in September, well above the 1.3% expected, and manufacturers expect a further 5.1% gain in October. Retail sales slipped 0.7% on the month, a second fall, and were up only 2.3% on the year against 3.3% forecast.",
+        "means": "Industry looks to be recovering while households are spending less. That balance is unlikely to change Friday's expected hold, but weak shoppers give the bank a reason to move slowly.",
+        "fx": "Strong factories, soft shoppers → no clear new reason for a faster Bank of Japan → the yen waits for the decision itself."
       },
       "impact": [
         {
-          "ccy": "NZD",
-          "dir": "bullish",
+          "ccy": "JPY",
+          "dir": "mixed",
           "strength": 1,
-          "why": "Higher price plans strengthen the case for a later rate rise."
+          "why": "Better industry and weaker spending roughly cancel out before the rate decision."
         }
       ],
-      "watch": "Comments from RBNZ officials on how soon a rise could come; softer jobs figures next week would weaken the case."
+      "watch": "The Bank of Japan's statement on Friday and whether it mentions weak household spending as a reason for caution."
     },
     {
       "id": "economies-dollar-retreats-despite-gdp-20261029",
@@ -212,45 +365,6 @@
         }
       ],
       "watch": "Comments from Fed officials before the December meeting, and next week's US jobs report; a clear hint of a rise would lift the dollar."
-    },
-    {
-      "id": "ap-us-warns-allies-iran-strikes-20261029",
-      "ts": "2026-10-29T00:37:00Z",
-      "source": "AP via CP24",
-      "url": "https://www.cp24.com/news/world/2026/10/29/us-warns-allies-to-prepare-for-possible-iran-strikes-retaliation-after-midterms-ap-sources/",
-      "image": "https://www.cp24.com/resizer/v2/6SLMHQN722UJB7KTLWUHSMQXY4.jpg",
-      "headline": "U.S. warns allies to prepare for possible Iran strikes, retaliation after midterms: AP sources",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Two diplomats told the Associated Press that the US has warned Middle East allies to brace for possible new US strikes on Iran after the November 3 midterm elections, and for Iranian attacks in return.",
-      "beats": {
-        "was": "The US and Iran fought earlier this year, and the Strait of Hormuz, a route for about a fifth of the world's oil, is still largely shut. The US has not struck Iran since early September, and talks helped by Qatar have stalled.",
-        "happened": "The diplomats said US officials told allies new strikes could last several days, and urged them to protect energy sites and other key infrastructure from Iranian retaliation. President Trump has not made a final decision. Iran's foreign minister, Abbas Araghchi, said Tehran is still giving talks a chance.",
-        "means": "A second news group now backs an earlier Wall Street Journal report, so the risk of fighting after November 3 looks more real. The warning about energy sites points straight at Gulf oil supply.",
-        "fx": "More signs of US strikes after the election → risk to Gulf oil sites → keeps oil high, which helps Canada and weighs on Japan and Europe, and adds shelter demand for the dollar and Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Allies were told to guard energy sites against Iranian retaliation."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rising war risk draws money to the franc."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so higher fuel costs weigh on the yen."
-        }
-      ],
-      "watch": "Whether Trump decides on strikes after November 3, or talks with Iran restart first."
     },
     {
       "id": "instaforex-euro-rebounds-lagarde-december-20261029",
@@ -580,6 +694,105 @@
       "watch": "Swiss inflation for October, due early next week."
     },
     {
+      "id": "reuters-tokyo-core-cpi-oct-20261029",
+      "date": "2026-10-29",
+      "source": "Reuters via 93.3 The Drive",
+      "url": "https://www.933thedrive.com/2026/10/29/tokyo-core-inflation-exceeds-boj-target-in-october/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/29/2026-10-29T234648Z_1_LYNXNPEM9S2S2_RTROPTP_3_JAPAN-BOJ.JPG",
+      "headline": "Tokyo core inflation exceeds BOJ target in October",
+      "story": "boj-path",
+      "story_title": "Bank of Japan: when the next hike comes",
+      "pillar": "inflation",
+      "summary": "Prices in Tokyo, an early guide to all of Japan, rose 2.6% in October from a year before, still above the Bank of Japan's 2% goal. A deeper measure that leaves out food and fuel cooled to 2.6% from 2.9%.",
+      "beats": {
+        "was": "The Bank of Japan raised its rate in September to 1.25%, its highest in 31 years, and decides again later on Friday, October 30. It is expected to hold, but has said it will keep raising rates if inflation runs too hot. The yen is weak near 158 per dollar.",
+        "happened": "Tokyo prices excluding fresh food rose 2.6% in October, as forecast, after 2.7% in September. The measure that also leaves out fuel, which the bank watches for the underlying trend, slowed to 2.6% from 2.9%.",
+        "means": "Inflation is still above target, so the case for another rise stays alive, but the cooling in the underlying trend gives the bank less reason to sound urgent on Friday.",
+        "fx": "Inflation above 2% but easing → no push for a faster Bank of Japan → little help for the yen before the decision."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Still above target, but the underlying trend cooled, so it neither adds nor removes much from December hike bets."
+        }
+      ],
+      "watch": "The Bank of Japan's decision and new forecasts on Friday, then Governor Kazuo Ueda's press conference for a hint about December."
+    },
+    {
+      "id": "gulfnews-hormuz-tankers-mines-riyadh-20261029",
+      "date": "2026-10-29",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/middle-east-war-saudi-intercepts-houthi-missile-as-iran-warns-israel-against-strikes-1.500727751",
+      "image": "https://media.assettype.com/gulfnews%2F2026-10-29%2F6slz0dvn%2Fgulfnews2026-10-04lybhnjcdANI20261004221233.avif?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "Middle East War: Saudi intercepts Houthi missile as four tankers on fire after hitting mines in Hormuz",
+      "story": "iran-hormuz",
+      "story_title": "Iran war: the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Iran says four tankers caught fire after hitting its mines in and near the Strait of Hormuz, and Saudi Arabia shot down Houthi missiles fired at its capital, Riyadh.",
+      "beats": {
+        "was": "The Strait of Hormuz, the narrow sea lane that normally carries about a fifth of the world's oil, has been largely shut since Iran's war with the US began this year, and Iran has mined it. Yemen's Houthi rebels, allied with Iran, have been firing at Saudi Arabia.",
+        "happened": "Iran's Revolutionary Guards said three tankers using a southern route through the strait hit mines and caught fire within a day; Iran's army later reported a fourth stuck and burning east of the strait. Iran says the ships had switched off their tracking and ignored its warnings; no one else has confirmed the details. Saudi air defences also brought down two Houthi missiles aimed at Riyadh, and Iran's foreign minister, Abbas Araghchi, warned that any Israeli-led attack in the Gulf would badly hurt world markets.",
+        "means": "Ships trying to slip through the strait are being hit, so even the small flow of oil still getting out is at risk. Together with missiles at Saudi Arabia, the world's biggest oil exporter, this keeps the war premium in oil despite talk of peace efforts.",
+        "fx": "Tankers hit and Saudi Arabia targeted → more risk to Gulf oil supply → support for oil prices, which helps Canada and weighs on Japan and Europe, and adds shelter demand for the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Four tankers reported burning and missiles at Riyadh hit the little Gulf supply still moving."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so higher prices hurt its trade balance."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "War news draws shelter money into the franc."
+        }
+      ],
+      "watch": "Whether shipping firms or Western navies confirm the tanker strikes, and any further Houthi attacks on Saudi oil sites."
+    },
+    {
+      "id": "gulfnews-barrack-us-iran-very-close-20261029",
+      "date": "2026-10-29",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/us-envoy-pushes-for-timeout-credits-qatar-pakistan-us-iran-deal-very-close-1.500729026",
+      "image": "https://media.assettype.com/gulfnews%2F2026-08-23%2Fcq20cvg8%2Fpreview.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "US-Iran Deal Nears as Envoy Credits Qatar, Pakistan for Mediation Efforts",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Tom Barrack, a senior US envoy, said Washington and Tehran are very close to a first understanding on how to calm the war, and called for a pause in fighting. Iran called the latest ideas sent through Qatar unacceptable.",
+      "beats": {
+        "was": "The US and Iran have been at war for about eight months, and the Strait of Hormuz, a key oil route, is still largely shut. Reports this week said the US has warned Gulf allies to prepare for new strikes on Iran after the November 3 US midterm elections.",
+        "happened": "Barrack, the US ambassador to Turkey and special envoy to Syria, told CNN on Thursday the two sides were very close to an initial deal on a process to bring tensions down, and thanked Qatar and Pakistan for their help. He asked for a time-out in the fighting. A senior Iranian official, though, rejected the latest proposals passed on by Qatar.",
+        "means": "Washington is sending peace signals and strike warnings in the same week, so neither outcome is settled. Iran's rejection means the hopeful words are not yet a deal.",
+        "fx": "Talk of a deal → a little less war premium in oil and less shelter demand; Iran's rejection keeps that effect small."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Hopeful US words trim the war premium, but Iran's rejection limits the effect."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Less talk of war means a little less need for shelter."
+        }
+      ],
+      "watch": "Whether Iran answers with its own proposal, and any US decision on strikes after the November 3 elections."
+    },
+    {
       "id": "srn-us-pce-september-heats-up-20261029",
       "ts": "2026-10-29T11:50:00Z",
       "source": "Reuters via SRN News",
@@ -772,6 +985,72 @@
       "watch": "How Wall Street opens on Thursday. A deeper tech slide would lift the yen and franc; a quick recovery would leave currencies to the US inflation figures and the European Central Bank."
     },
     {
+      "id": "actionforex-nz-anz-confidence-oct-20261029",
+      "ts": "2026-10-29T01:49:34Z",
+      "source": "ActionForex",
+      "url": "https://www.actionforex.com/live-comments/659085-new-zealand-anz-business-confidence-rises-to-52-5-pricing-intentions-reach-52-2/",
+      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-nz1.jpg",
+      "headline": "New Zealand ANZ Business Confidence Rises to 52.5, Pricing Intentions Reach 52.2",
+      "story": "rbnz-oct28",
+      "story_title": "RBNZ: the October 28 decision",
+      "pillar": "inflation",
+      "summary": "A monthly ANZ survey of New Zealand firms showed confidence edging up in October and more businesses planning to raise prices.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand surprised markets on October 28 by keeping its rate at 2.75% instead of raising it, and the kiwi dollar fell sharply.",
+        "happened": "ANZ's October business survey had confidence at 52.5, up from 51.9. A net 52% of firms plan to raise prices, up from 48%, and expected inflation a year ahead rose to 3.3%. Firms' views of their own activity and investment plans dipped.",
+        "means": "Rising price plans make it harder for the central bank to wait long before raising rates, which could rebuild some of the support the kiwi lost this week.",
+        "fx": "More firms planning price rises → a small lift for odds of a later RBNZ hike and the kiwi."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher price plans strengthen the case for a later rate rise."
+        }
+      ],
+      "watch": "Comments from RBNZ officials on how soon a rise could come; softer jobs figures next week would weaken the case."
+    },
+    {
+      "id": "ap-us-warns-allies-iran-strikes-20261029",
+      "ts": "2026-10-29T00:37:00Z",
+      "source": "AP via CP24",
+      "url": "https://www.cp24.com/news/world/2026/10/29/us-warns-allies-to-prepare-for-possible-iran-strikes-retaliation-after-midterms-ap-sources/",
+      "image": "https://www.cp24.com/resizer/v2/6SLMHQN722UJB7KTLWUHSMQXY4.jpg",
+      "headline": "U.S. warns allies to prepare for possible Iran strikes, retaliation after midterms: AP sources",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Two diplomats told the Associated Press that the US has warned Middle East allies to brace for possible new US strikes on Iran after the November 3 midterm elections, and for Iranian attacks in return.",
+      "beats": {
+        "was": "The US and Iran fought earlier this year, and the Strait of Hormuz, a route for about a fifth of the world's oil, is still largely shut. The US has not struck Iran since early September, and talks helped by Qatar have stalled.",
+        "happened": "The diplomats said US officials told allies new strikes could last several days, and urged them to protect energy sites and other key infrastructure from Iranian retaliation. President Trump has not made a final decision. Iran's foreign minister, Abbas Araghchi, said Tehran is still giving talks a chance.",
+        "means": "A second news group now backs an earlier Wall Street Journal report, so the risk of fighting after November 3 looks more real. The warning about energy sites points straight at Gulf oil supply.",
+        "fx": "More signs of US strikes after the election → risk to Gulf oil sites → keeps oil high, which helps Canada and weighs on Japan and Europe, and adds shelter demand for the dollar and Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Allies were told to guard energy sites against Iranian retaliation."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising war risk draws money to the franc."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so higher fuel costs weigh on the yen."
+        }
+      ],
+      "watch": "Whether Trump decides on strikes after November 3, or talks with Iran restart first."
+    },
+    {
       "id": "ani-vance-letter-iran-20261029",
       "ts": "2026-10-28T23:38:31Z",
       "source": "ANI",
@@ -943,165 +1222,6 @@
       "watch": "Next week's EIA report on November 4, and whether US exports stay this high."
     },
     {
-      "id": "hromadske-iran-calls-qatar-ideas-unacceptable-20261028",
-      "ts": "2026-10-28T14:38:00Z",
-      "source": "Hromadske",
-      "url": "https://hromadske.ua/en/heopolityka/273341-iran-calls-qatars-latest-peace-proposals-unacceptable-as-us-strike-fears-grow",
-      "image": "https://hromadske.ua/static/content/thumbs/1200x630/5/e4/3c4lxk---c1200x630x50px50p--5f464a1ad5605f6341b3a7d732d46e45.jpg",
-      "headline": "Iran calls Qatar's latest peace proposals 'unacceptable' as US strike fears grow",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "A senior Iranian official told Reuters that Qatar's mediators brought a list of ideas Iran cannot accept, not a real offer, and that Iran will not give ground on its nuclear programme. Other reports say Tehran is still weighing a Qatari draft.",
-      "beats": {
-        "was": "The US-Iran war, which began in February, has kept the Strait of Hormuz, the narrow sea lane for much of the Gulf's oil, largely shut, with a US blockade of Iranian ports. Qatar and Pakistan are leading efforts to end it, and Qatar handed Iran a seven-day step-by-step plan on Sunday.",
-        "happened": "On Wednesday a senior Iranian official dismissed Qatar's suggestions and said Iran would not let its enriched nuclear material leave the country. The two sides disagree on order: Washington wants the nuclear programme on the table first, while Tehran wants the US blockade and oil sanctions lifted first.",
-        "means": "The messages from Tehran are mixed on the same day, so the peace path looks shakier than it did this morning. With reports that the US is preparing strikes after the November 3 US elections, the risk of a longer war has not faded.",
-        "fx": "Weaker hopes for a deal → Gulf oil stays at risk → support for oil prices and for gold as shelter."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Cools hopes that a deal will reopen Gulf supply soon."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Keeps war risk, and demand for shelter, alive."
-        }
-      ],
-      "watch": "Iran's formal reply to Qatar, expected by the end of the week, and any US decision on new strikes."
-    },
-    {
-      "id": "thenational-iran-welcomes-qatar-draft-20261028",
-      "ts": "2026-10-28T14:29:45Z",
-      "source": "The National",
-      "url": "https://www.thenationalnews.com/news/mena/2026/10/28/iran-welcomes-negotiations-after-reported-qatari-mediated-draft-deal/",
-      "image": "https://www.thenationalnews.com/resizer/v2/UUSRXFGOKFH3LF6SZWJI3XCEQ4.jpg?auth=786f73404a2cd0c5b16c40fbc1748cd65f7cf9ee803925c6ef9cb17e8a697a32&smart=true&width=1200&height=630",
-      "headline": "Iran 'welcomes negotiations' after reported Qatari-mediated draft deal",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "An Iranian official said Tehran is open to talks after Qatar's mediators handed it a draft deal to end the war with the US. Iran is expected to answer by the end of the week.",
-      "beats": {
-        "was": "The US-Iran war has kept the Strait of Hormuz, the narrow sea lane for much of the Gulf's oil, under a US blockade of Iranian ships since July. A Saudi, Pakistani and Turkish delegation met Iranian leaders in Tehran on Monday with no clear result.",
-        "happened": "Qatar's draft, handed over on Sunday, sets out seven days of step-by-step goodwill moves by both sides, backed by several guarantor countries, possibly starting early next week. Iran, for its part, asked the visitors to win US support for a two-week pause in fighting across the region, after which talks would restart and Hormuz would slowly reopen.",
-        "means": "Both sides now have a written plan on the table, which is the first concrete path to an end of the war in weeks. Nothing is agreed yet, and Iran says it cannot rein in Yemen's Houthi rebels, who keep hitting Saudi targets.",
-        "fx": "A real chance of talks → less fear for Gulf oil supply → mild pressure on oil prices and on demand for gold as shelter."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A draft peace plan eases supply fears a little, but nothing is signed."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Talk of a pause trims demand for shelter."
-        }
-      ],
-      "watch": "Iran's reply to the Qatari draft by the end of the week, and whether the US backs a two-week pause."
-    },
-    {
-      "id": "bnn-boc-hikes-250-20261028",
-      "ts": "2026-10-28T13:46:00Z",
-      "source": "BNN Bloomberg",
-      "url": "https://www.bnnbloomberg.ca/business/economics/2026/10/28/bank-of-canada-raises-key-interest-rate-says-another-hike-possible/",
-      "image": "https://www.bnnbloomberg.ca/resizer/v2/NAONKADKVRFDBEDLAD7HHUFHQE.jpg?smart=true&auth=c481bc704fa65ec1bb4fd9cdd4bd507e78bcdf4ae7dc012b4f9dd82c473d4242&width=1200&height=630",
-      "headline": "Bank of Canada raises key interest rate, says another hike possible",
-      "story": "boc-oct28",
-      "story_title": "Bank of Canada: the October 28 decision",
-      "pillar": "policy",
-      "summary": "The Bank of Canada raised its rate from 2.25% to 2.5% on Wednesday, its first hike since 2023, and said it may need to go higher. It now sees inflation staying near 3% through most of next year.",
-      "beats": {
-        "was": "Canadian inflation reached 3.2% in September, above the bank's 1% to 3% target range, mostly because of energy and transport costs tied to the Iran war. Markets had mostly priced a quarter-point rise.",
-        "happened": "The bank lifted its rate a quarter point to 2.5%, still below the level it sees as neutral. Governor Tiff Macklem said a further rise may be needed and the bank will move carefully. It raised its 2027 inflation forecast to 3.1% from 2.0% and expects inflation back near 2% only by mid-2028; it also lifted its growth forecasts, while warning new US tariffs will slow the last quarter of this year.",
-        "means": "The hike itself was expected. The new part is the open door to more and a much higher inflation path, which tells markets the bank worries that high fuel costs are spreading to other prices.",
-        "fx": "Hike plus a hint of more → Canadian rates stay attractive for longer → some support for the loonie."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Expected hike, but the open door to more adds a little support."
-        }
-      ],
-      "watch": "How the loonie trades once the Fed decides at 1:00 PM CT, and Canada's October inflation figure in November."
-    },
-    {
-      "id": "investing-boj-preview-hawkish-hold-20261028",
-      "date": "2026-10-28",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/economy-news/boj-preview-october-hawkish-hold-expected-as-inflation-remains-sticky-4981430",
-      "image": "https://content-media.investing.com/news/LYNXMPEB1304I_L.jpg",
-      "headline": "BOJ preview October: hawkish hold expected as inflation remains sticky",
-      "story": "boj-path",
-      "story_title": "Bank of Japan: when the next hike comes",
-      "pillar": "policy",
-      "summary": "The Bank of Japan is expected to keep its rate at 1.25% on Friday, October 30, while signalling it is ready to raise it again, likely in December.",
-      "beats": {
-        "was": "The Bank of Japan has raised its rate by half a point this year, to 1.25%, but that is still far below US rates, which keeps the yen weak near 158 per dollar.",
-        "happened": "Ahead of the two-day meeting that ends Friday, economists expect a hold with a firm tone. ANZ sees a quarter-point rise in December and another in March. Governor Kazuo Ueda said in September the bank would raise rates again if inflation stays high, and Japan's plan to end fuel subsidies by December could lift prices further.",
-        "means": "The decision itself is not the news; what matters is how clearly Ueda points to December and whether the bank raises its inflation forecasts.",
-        "fx": "A clear hint of a December rise → support for the yen; a vague or cautious tone → the yen could weaken further toward 160 per dollar."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A hold is expected; the hint about December decides the direction."
-        }
-      ],
-      "watch": "Tokyo's October inflation figures early Friday, then the Bank of Japan's statement, new forecasts and Ueda's press conference."
-    },
-    {
-      "id": "euronext-oil-saudi-refinery-20261028",
-      "date": "2026-10-28",
-      "source": "Reuters (Euronext)",
-      "url": "https://live.euronext.com/en/financial-news/oil-over-1-saudi-arabian-refinery-attack-reignites-supply-risk-concerns",
-      "image": null,
-      "headline": "Oil up over 1% as Saudi Arabian refinery attack reignites supply risk concerns",
-      "story": "saudi-houthi",
-      "story_title": "Saudi Arabia: Houthi attacks on oil and airports",
-      "pillar": "commodities",
-      "summary": "Oil rose more than 1% on Wednesday, with Brent near $115, after Yemen's Houthi rebels said they hit Saudi Arabia's biggest refinery. Saudi Arabia had not confirmed the strike, and a US industry report showed crude stocks falling.",
-      "beats": {
-        "was": "The Houthis, an Iran-aligned group in Yemen, have stepped up missile and drone attacks on Saudi Arabia during the Iran war. Oil had slipped nearly $2 on Tuesday on hopes for peace talks in Tehran.",
-        "happened": "Brent rose about $1.40 to roughly $115 a barrel by Wednesday morning in London, and US crude rose about 1.6% to $101.50. The Houthis said a missile hit Saudi Arabia's largest refinery, which processes 550,000 barrels a day; Saudi Arabia had not confirmed it. The American Petroleum Institute, a US industry group, reported a 2 million barrel fall in US crude stocks when a small rise was expected. ING said markets see a higher chance of the fighting flaring up again.",
-        "means": "Oil won back most of Tuesday's drop. No lost supply has been shown, so this is fear being priced back in rather than a real shortage.",
-        "fx": "Attack claims on Saudi oil → oil back up → helps oil sellers like Canada, hurts oil buyers like Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Unconfirmed refinery hit plus falling US stocks win back Tuesday's drop."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil lifts what Canada earns from exports."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Dearer crude raises Japan's import bill."
-        }
-      ],
-      "watch": "Official US stock figures at 9:30 AM CT and any Saudi word on damage to the refinery."
-    },
-    {
       "id": "iranintl-wsj-post-midterm-iran-20261028",
       "ts": "2026-10-28T04:07:16Z",
       "source": "Iran International (WSJ report)",
@@ -1205,132 +1325,6 @@
         }
       ],
       "watch": "The Reserve Bank of Australia's decision on Tuesday, November 3."
-    },
-    {
-      "id": "reuters-tokyo-core-cpi-oct-20261029",
-      "date": "2026-10-29",
-      "source": "Reuters via 93.3 The Drive",
-      "url": "https://www.933thedrive.com/2026/10/29/tokyo-core-inflation-exceeds-boj-target-in-october/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/29/2026-10-29T234648Z_1_LYNXNPEM9S2S2_RTROPTP_3_JAPAN-BOJ.JPG",
-      "headline": "Tokyo core inflation exceeds BOJ target in October",
-      "story": "boj-path",
-      "story_title": "Bank of Japan: when the next hike comes",
-      "pillar": "inflation",
-      "summary": "Prices in Tokyo, an early guide to all of Japan, rose 2.6% in October from a year before, still above the Bank of Japan's 2% goal. A deeper measure that leaves out food and fuel cooled to 2.6% from 2.9%.",
-      "beats": {
-        "was": "The Bank of Japan raised its rate in September to 1.25%, its highest in 31 years, and decides again later on Friday, October 30. It is expected to hold, but has said it will keep raising rates if inflation runs too hot. The yen is weak near 158 per dollar.",
-        "happened": "Tokyo prices excluding fresh food rose 2.6% in October, as forecast, after 2.7% in September. The measure that also leaves out fuel, which the bank watches for the underlying trend, slowed to 2.6% from 2.9%.",
-        "means": "Inflation is still above target, so the case for another rise stays alive, but the cooling in the underlying trend gives the bank less reason to sound urgent on Friday.",
-        "fx": "Inflation above 2% but easing → no push for a faster Bank of Japan → little help for the yen before the decision."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Still above target, but the underlying trend cooled, so it neither adds nor removes much from December hike bets."
-        }
-      ],
-      "watch": "The Bank of Japan's decision and new forecasts on Friday, then Governor Kazuo Ueda's press conference for a hint about December."
-    },
-    {
-      "id": "investinglive-japan-ip-beat-retail-miss-20261030",
-      "ts": "2026-10-30T00:05:53Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/japan-september-factory-output-beats-forecasts-but-retail-sales-disappoint-ahead-of-boj/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/USDJPY%20update%20%2030%20October%202026-featured-1793318703.jpg?width=960&format=webp",
-      "headline": "Japan September factory output beats forecasts, but retail sales disappoint ahead of BoJ",
-      "story": "boj-path",
-      "story_title": "Bank of Japan: when the next hike comes",
-      "pillar": "growth",
-      "summary": "Japan's factories produced more in September than expected, but shop sales fell for a second month, giving a mixed picture hours before the Bank of Japan decides on rates.",
-      "beats": {
-        "was": "Japan's factory output dropped 2.4% in August, and the Bank of Japan, which holds its rate at 1.25%, wants signs the economy can cope with more rate rises.",
-        "happened": "Factory output rose 2.2% in September, well above the 1.3% expected, and manufacturers expect a further 5.1% gain in October. Retail sales slipped 0.7% on the month, a second fall, and were up only 2.3% on the year against 3.3% forecast.",
-        "means": "Industry looks to be recovering while households are spending less. That balance is unlikely to change Friday's expected hold, but weak shoppers give the bank a reason to move slowly.",
-        "fx": "Strong factories, soft shoppers → no clear new reason for a faster Bank of Japan → the yen waits for the decision itself."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Better industry and weaker spending roughly cancel out before the rate decision."
-        }
-      ],
-      "watch": "The Bank of Japan's statement on Friday and whether it mentions weak household spending as a reason for caution."
-    },
-    {
-      "id": "gulfnews-hormuz-tankers-mines-riyadh-20261029",
-      "date": "2026-10-29",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/world/mena/middle-east-war-saudi-intercepts-houthi-missile-as-iran-warns-israel-against-strikes-1.500727751",
-      "image": "https://media.assettype.com/gulfnews%2F2026-10-29%2F6slz0dvn%2Fgulfnews2026-10-04lybhnjcdANI20261004221233.avif?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "Middle East War: Saudi intercepts Houthi missile as four tankers on fire after hitting mines in Hormuz",
-      "story": "iran-hormuz",
-      "story_title": "Iran war: the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Iran says four tankers caught fire after hitting its mines in and near the Strait of Hormuz, and Saudi Arabia shot down Houthi missiles fired at its capital, Riyadh.",
-      "beats": {
-        "was": "The Strait of Hormuz, the narrow sea lane that normally carries about a fifth of the world's oil, has been largely shut since Iran's war with the US began this year, and Iran has mined it. Yemen's Houthi rebels, allied with Iran, have been firing at Saudi Arabia.",
-        "happened": "Iran's Revolutionary Guards said three tankers using a southern route through the strait hit mines and caught fire within a day; Iran's army later reported a fourth stuck and burning east of the strait. Iran says the ships had switched off their tracking and ignored its warnings; no one else has confirmed the details. Saudi air defences also brought down two Houthi missiles aimed at Riyadh, and Iran's foreign minister, Abbas Araghchi, warned that any Israeli-led attack in the Gulf would badly hurt world markets.",
-        "means": "Ships trying to slip through the strait are being hit, so even the small flow of oil still getting out is at risk. Together with missiles at Saudi Arabia, the world's biggest oil exporter, this keeps the war premium in oil despite talk of peace efforts.",
-        "fx": "Tankers hit and Saudi Arabia targeted → more risk to Gulf oil supply → support for oil prices, which helps Canada and weighs on Japan and Europe, and adds shelter demand for the Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Four tankers reported burning and missiles at Riyadh hit the little Gulf supply still moving."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so higher prices hurt its trade balance."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "War news draws shelter money into the franc."
-        }
-      ],
-      "watch": "Whether shipping firms or Western navies confirm the tanker strikes, and any further Houthi attacks on Saudi oil sites."
-    },
-    {
-      "id": "gulfnews-barrack-us-iran-very-close-20261029",
-      "date": "2026-10-29",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/world/mena/us-envoy-pushes-for-timeout-credits-qatar-pakistan-us-iran-deal-very-close-1.500729026",
-      "image": "https://media.assettype.com/gulfnews%2F2026-08-23%2Fcq20cvg8%2Fpreview.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "US-Iran Deal Nears as Envoy Credits Qatar, Pakistan for Mediation Efforts",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Tom Barrack, a senior US envoy, said Washington and Tehran are very close to a first understanding on how to calm the war, and called for a pause in fighting. Iran called the latest ideas sent through Qatar unacceptable.",
-      "beats": {
-        "was": "The US and Iran have been at war for about eight months, and the Strait of Hormuz, a key oil route, is still largely shut. Reports this week said the US has warned Gulf allies to prepare for new strikes on Iran after the November 3 US midterm elections.",
-        "happened": "Barrack, the US ambassador to Turkey and special envoy to Syria, told CNN on Thursday the two sides were very close to an initial deal on a process to bring tensions down, and thanked Qatar and Pakistan for their help. He asked for a time-out in the fighting. A senior Iranian official, though, rejected the latest proposals passed on by Qatar.",
-        "means": "Washington is sending peace signals and strike warnings in the same week, so neither outcome is settled. Iran's rejection means the hopeful words are not yet a deal.",
-        "fx": "Talk of a deal → a little less war premium in oil and less shelter demand; Iran's rejection keeps that effect small."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Hopeful US words trim the war premium, but Iran's rejection limits the effect."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Less talk of war means a little less need for shelter."
-        }
-      ],
-      "watch": "Whether Iran answers with its own proposal, and any US decision on strikes after the November 3 elections."
     }
   ]
 }
