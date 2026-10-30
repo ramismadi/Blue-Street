@@ -1,16 +1,16 @@
 {
-  "updated": "2026-10-30T19:00:00Z",
+  "updated": "2026-10-30T22:45:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "mixed",
-      "ts": "2026-10-30T19:00:00Z",
-      "text": "Two Federal Reserve officials, St. Louis's Alberto Musalem and Dallas's Lorie Logan, said on Friday that rates need to rise again, Logan by at least two more quarter points, after strong growth and inflation figures this week. But a sharp sell-off in tech shares over AI spending is sending money into US bonds and pulling yields down, so the dollar is slightly softer, near 101.8 on its index."
+      "ts": "2026-10-30T22:45:00Z",
+      "text": "Two Federal Reserve officials, St. Louis's Alberto Musalem and Dallas's Lorie Logan, said on Friday that rates still need to rise, after strong growth and inflation figures this week. But a steep fall in tech shares over AI spending pushed money into US bonds and pulled yields down, so the dollar ended the week slightly softer, near 101.6 on its index."
     },
     "EUR": {
       "lean": "mixed",
-      "ts": "2026-10-30T13:55:00Z",
-      "text": "The European Central Bank hinted at a December rate rise on Thursday, and Friday's figures were split: the euro zone grew 0.4% last quarter, twice the forecast, and inflation jumped in Italy (5.4%) and France. But German inflation cooled more than expected to 2.8% and France's economy shrank, so the euro holds near $1.12 while losing ground to the pound."
+      "ts": "2026-10-30T22:45:00Z",
+      "text": "The European Central Bank hinted at a December rate rise on Thursday, and the euro zone grew 0.4% last quarter, twice the forecast, while prices jumped in Italy and France. But German inflation cooled to 2.8%, France's economy shrank and Fitch warned late Friday it may cut France's credit rating, so the euro sits near $1.117 and keeps losing ground to the pound."
     },
     "GBP": {
       "lean": "bullish",
@@ -44,8 +44,8 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-10-30T19:00:00Z",
-      "text": "Gold fell about 3% on Friday to just under $3,900 an ounce, its lowest in a year and some 30% below January's record, as Fed officials talked up more rate rises and some investors sold it to cover stock losses. Central-bank buying and the Iran war have not been enough to stop a second monthly fall."
+      "ts": "2026-10-30T22:45:00Z",
+      "text": "Gold fell more than 3% on Friday to below $3,900 an ounce, its lowest in a year and some 30% under January's record, as Fed officials talked up more rate rises and some investors sold it to cover stock losses. Central-bank buying and the Iran war have not been enough to stop a second monthly fall."
     },
     "OIL": {
       "lean": "bullish",
@@ -54,6 +54,33 @@
     }
   },
   "items": [
+    {
+      "id": "wbow-reuters-fitch-france-outlook-negative-20261030",
+      "ts": "2026-10-30T22:18:00Z",
+      "source": "Reuters via 102.7 WBOW",
+      "url": "https://1027wbow.com/2026/10/30/fitch-revises-frances-outlook-to-negative-on-worsening-debt-dynamics/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/30/2026-10-30T221851Z_1_LYNXNPEM9T22V_RTROPTP_3_FRANCE-TOURISM.JPG",
+      "headline": "Fitch revises France's outlook to 'negative' on worsening debt dynamics",
+      "story": "france-debt",
+      "story_title": "France: rising debt and a budget fight",
+      "pillar": "growth",
+      "summary": "Credit rating agency Fitch warned it may cut France's rating, changing its outlook to negative because debt keeps climbing and politics make cuts hard.",
+      "beats": {
+        "was": "France is struggling to pass next year's budget amid street protests, its economy shrank last quarter, and its 10-year borrowing cost rose above 5.1% last week, the highest since 2002.",
+        "happened": "Late on Friday Fitch moved France's outlook from stable to negative, pointing to weaker growth, higher borrowing costs and a wider deficit since August. It expects debt to reach about 124% of the economy by 2028, up from about 116% last year.",
+        "means": "A negative outlook is a warning that a downgrade could follow. It adds pressure on French bonds just as Paris needs to show it can cut its deficit before the next presidential election.",
+        "fx": "Worry about France's debt can push its borrowing costs up relative to Germany's, which tends to weigh on the euro, though the effect is usually small unless a downgrade actually comes."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A step toward a French downgrade adds to doubts about the euro zone's second-largest economy."
+        }
+      ],
+      "watch": "How French bonds trade on Monday after weekend protests, and whether the budget makes it through parliament."
+    },
     {
       "id": "gvwire-reuters-logan-two-more-hikes-20261030",
       "ts": "2026-10-30T18:31:29Z",
@@ -113,6 +140,66 @@
         }
       ],
       "watch": "If US stocks steady and the margin-call selling stops, or Fed officials soften their talk of more rises, gold could find a floor."
+    },
+    {
+      "id": "wbow-reuters-musalem-hike-soon-20261030",
+      "ts": "2026-10-30T16:32:00Z",
+      "source": "Reuters via 102.7 WBOW",
+      "url": "https://1027wbow.com/2026/10/30/feds-musalem-says-a-rate-hike-is-needed-soon/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/30/2026-10-30T163223Z_1_LYNXNPEM9T1OK_RTROPTP_3_USA-FED-MUSALEM.JPG",
+      "headline": "Fed's Musalem says a rate hike is needed 'soon'",
+      "story": "fed-december",
+      "story_title": "Fed: the case for a December rate rise",
+      "pillar": "policy",
+      "summary": "St. Louis Fed President Alberto Musalem said the Fed will need to raise rates again, and soon, because inflation is still too high.",
+      "beats": {
+        "was": "The Federal Reserve held its rate at 3.75% to 4% on Wednesday after a rise in September, and Chair Kevin Warsh would not say what comes in December.",
+        "happened": "Musalem, who does not vote on rates this year but will next year, said in a speech that policy is still too loose to bring inflation down to 2% and that small, early rises are safer than bigger ones later.",
+        "means": "He adds his voice to the officials pushing for a December rise, and argues it can be done without hurting jobs or growth.",
+        "fx": "Talk of more Fed rises supports the dollar, though on Friday a stock sell-off pulling bond yields lower largely offset it."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Another Fed official backing a near-term rise supports US rates, but he has no vote this year."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher expected US rates make gold, which pays no interest, less appealing."
+        }
+      ],
+      "watch": "The US jobs report on November 6; a weak one would make a December rise harder to argue for."
+    },
+    {
+      "id": "indexbox-chicago-pmi-oct-553-20261030",
+      "date": "2026-10-30",
+      "source": "IndexBox",
+      "url": "https://www.indexbox.io/blog/chicago-pmi-falls-to-553-missing-forecast-and-signaling-slower-manufacturing-growth/",
+      "image": "https://www.indexbox.io/landing/img/blog/telegram-fallback/26ac83d146da86a3b98d871363427233.webp",
+      "headline": "Chicago PMI Drops to 55.3 vs 55.8 Forecast \u2014 Manufacturing Growth Slows",
+      "story": "us-economy",
+      "story_title": "US economy: strong growth, cooling signs",
+      "pillar": "growth",
+      "summary": "A survey of businesses around Chicago showed activity still growing in October, but more slowly than in September and a bit below forecasts.",
+      "beats": {
+        "was": "The US economy grew at a 3.4% yearly pace last quarter, and the Federal Reserve is weighing a rate rise in December.",
+        "happened": "The Chicago Business Barometer, a monthly survey of purchasing managers, fell to 55.3 from 58.8, a little under the roughly 56 economists expected. Any reading above 50 means activity is growing.",
+        "means": "Business in the Midwest is still expanding at a solid clip, just less briskly. It is a small sign of cooling, not a reason for the Fed to change course.",
+        "fx": "A slight miss on a second-tier survey barely changes the outlook for US rates, so the effect on the dollar is small."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slower, though still solid, business growth trims the case for more Fed rises a little."
+        }
+      ],
+      "watch": "The national ISM manufacturing survey on Monday, November 2, which covers the whole country."
     },
     {
       "id": "finimize-canada-gdp-aug-flat-20261030",
@@ -266,33 +353,6 @@
         }
       ],
       "watch": "A sharp jump in pay growth in the next jobs report would add to the case for a December Fed rise."
-    },
-    {
-      "id": "financefeeds-gold-3987-below-4000-20261030",
-      "date": "2026-10-30",
-      "source": "FinanceFeeds",
-      "url": "https://financefeeds.com/gold-price-today-3987-friday-below-4000-second-monthly-decline-bull-4080-bear-3940/",
-      "image": null,
-      "headline": "Gold Price Today: $3,987 Below $4,000, Bull $4,080",
-      "story": "gold-fed",
-      "story_title": "Gold vs a hawkish Fed",
-      "pillar": "policy",
-      "summary": "Gold slipped back under $4,000 an ounce on Friday, near $3,987, and is heading for a second monthly fall as bets on a December US rate rise firm.",
-      "beats": {
-        "was": "Gold pays no interest, so it tends to lose appeal when US rates are expected to rise. Two Federal Reserve officials voted for a rise on Wednesday, and strong US figures followed on Thursday.",
-        "happened": "Gold fell about 0.8% to near $3,987, with markets now putting the chance of a December Fed rise at around 75%. A softer dollar and lower US bond yields only partly cushioned it.",
-        "means": "Expectations of higher US rates are outweighing the Iran war as a reason to hold gold, at least for now.",
-        "fx": "Higher expected US rates \u2192 gold under $4,000; the October 23 low near $3,975 is the nearby floor."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Rising odds of a December Fed rise keep weighing on a metal that pays no interest."
-        }
-      ],
-      "watch": "A sharp escalation with Iran, or a Fed official cooling December talk, would pull buyers back to gold."
     },
     {
       "id": "reuters-ueda-presser-20261030",
@@ -512,33 +572,6 @@
         }
       ],
       "watch": "A national German figure well below 3.1%, or a soft euro-zone figure next Wednesday, would weaken the case for a December rise."
-    },
-    {
-      "id": "newsquawk-german-unemployment-oct-20261030",
-      "ts": "2026-10-30T09:15:00Z",
-      "source": "Newsquawk",
-      "url": "https://www.newsquawk.com/headlines/german-unemployment-rate-oct-64-vs-exp-64-prev-64",
-      "image": null,
-      "headline": "German Unemployment Rate (Oct) 6.4% vs. Exp. 6.4% (Prev. 6.4%)",
-      "story": "ez-growth-inflation",
-      "story_title": "Euro zone: growth holds up as prices climb",
-      "pillar": "growth",
-      "summary": "German joblessness held at 6.4% in October, with the number out of work barely changed.",
-      "beats": {
-        "was": "Germany's economy roughly stalled over the summer as high energy costs hit its factories, and about 3 million people are registered as unemployed.",
-        "happened": "The jobless rate stayed at 6.4%, as expected, and the count of unemployed rose by only about 4,000, a bit less than forecast.",
-        "means": "The job market is soft but not getting worse quickly, so it changes little for the European Central Bank.",
-        "fx": "In line with forecasts \u2192 no real push for the euro."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Steady but weak German jobs figures, close to what was expected."
-        }
-      ],
-      "watch": "A sudden jump in job losses would raise doubts about how far the central bank can raise rates."
     },
     {
       "id": "instaforex-kof-oct-20261030",
@@ -779,39 +812,6 @@
         }
       ],
       "watch": "European Central Bank speeches before the December 17 meeting, eurozone inflation for October, and French bond yields."
-    },
-    {
-      "id": "investing-sterling-17m-high-vs-euro-ecb-20261029",
-      "date": "2026-10-29",
-      "source": "Investing.com",
-      "url": "https://za.investing.com/news/forex-news/sterling-today-pound-edges-lower-as-dollar-firms-ahead-of-us-pce-gdp-data-4534793",
-      "image": "https://content-media.investing.com/news/pound_notes_800x533_L_1412751310.jpg",
-      "headline": "Sterling hits 17-month high vs euro as ECB holds rates",
-      "story": "ecb-oct29",
-      "story_title": "ECB: the October 29 decision",
-      "pillar": "policy",
-      "summary": "The pound rose to its strongest level against the euro since May 2025 after the European Central Bank held rates, while it stayed flat near $1.33 against the dollar.",
-      "beats": {
-        "was": "The European Central Bank raised rates in June and September to fight inflation, and the Bank of England is expected to raise its own rate on November 5, so both banks have been leaning toward tighter money.",
-        "happened": "The ECB kept its deposit rate at 2.5% on Thursday, warned that higher energy costs could lift prices and hurt growth, and said President Christine Lagarde will leave in February. The pound gained about 0.2% on the euro to a level last seen in May 2025.",
-        "means": "A pause in Frankfurt, with a rise still possible in London next week, tilts the rate gap toward the UK. The news of Lagarde's early exit adds a question mark over who leads the euro's central bank next.",
-        "fx": "Pressure is up for the pound against the euro and down for the euro; against the dollar the pound barely moved."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Strongest against the euro since May 2025 as the UK looks set to raise rates while the ECB pauses."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "An ECB pause plus a leadership change ahead leaves the euro softer against the pound."
-        }
-      ],
-      "watch": "A Bank of England hold on November 5, or a clear ECB signal of a December rise, would undo the pound's edge over the euro."
     },
     {
       "id": "indexbox-us-gdp-q3-34-20261029",
