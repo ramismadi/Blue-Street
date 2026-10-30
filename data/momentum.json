@@ -1,10 +1,19 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-10-30T00:56:00-05:00",
+  "updated": "2026-10-30T07:52:00-05:00",
   "currencies": {
     "USD": {
       "recent": [
+        {
+          "id": "us-eci-20261030",
+          "date": "2026-10-30",
+          "title": "US Employment Cost Index (Q3)",
+          "result": "inline",
+          "actual": "+0.8% q/q (vs 0.8% fcst, prev 0.9%); wages +0.7%, benefits +0.9%",
+          "forecast": "0.8%",
+          "note": "Inline: Q3 ECI +0.8% q/q as expected, down from 0.9% — wages +0.7%, benefits +0.9%; labor costs cooling into the December decision, no fresh wage-inflation impulse (BLS, Oct 30)."
+        },
         {
           "id": "us-gdp-20261029",
           "date": "2026-10-29",
@@ -49,78 +58,78 @@
           "actual": "91.7 (Oct); present situation 120.4, expectations 72.6",
           "forecast": "81.2",
           "note": "Beat: 91.7 vs 81.2 fcst (Sep revised up to 84.2) — biggest beat since May 2025; households catching up to the data as gasoline prices eased, but still on the long-term downtrend. Conference Board, Oct 27."
-        },
-        {
-          "id": "us-newhome-20261027",
-          "date": "2026-10-27",
-          "title": "US new home sales (Sep)",
-          "result": "beat",
-          "actual": "676K SAAR (Sep); inventory 476K, 8.4 months' supply; median $400,400",
-          "forecast": "660K",
-          "note": "Beat: 676K vs 660K fcst, though down from 680K Aug and 5.3% y/y — demand steadier than feared. Census/HUD, Oct 27."
         }
       ]
     },
     "EUR": {
       "recent": [
         {
-          "id": "eur-sentiment-20261029",
-          "date": "2026-10-29",
-          "title": "Eurozone economic sentiment (Oct)",
-          "result": "miss",
-          "actual": "96.9 (vs 97.5 fcst; prev 97.9)",
-          "forecast": "97.5",
-          "note": "Miss: 96.9 vs 97.5 consensus, down from 97.9 in September — sentiment softening into the ECB decision; a second soft read after the Oct 22 flash consumer confidence drop to -17.9. European Commission, Oct 29."
-        },
-        {
-          "id": "it-unemp-20261029",
-          "date": "2026-10-29",
-          "title": "Italian unemployment rate (Sep)",
-          "result": "miss",
-          "actual": "6.3% (fcst 6.2%)",
-          "forecast": "6.2%",
-          "note": "Slight miss: Italian jobless 6.3% vs 6.2% fcst (prev 6.2%) — slack building at the eurozone fiscal stress point, on ECB morning."
-        },
-        {
-          "id": "eur-m3-20261027",
-          "date": "2026-10-27",
-          "title": "Eurozone M3 money supply y/y (Sep)",
+          "id": "eur-gdp-20261030",
+          "date": "2026-10-30",
+          "title": "Eurozone GDP (Q3 advance)",
           "result": "beat",
-          "actual": "3.5% (vs 3.4% fcst; prev 3.5%)",
-          "forecast": "3.4%",
-          "note": "Small beat: M3 held at 3.5% y/y vs 3.4% expected (prev 3.5%) — credit still expanding into Thursday's ECB hold."
+          "actual": "+0.4% q/q (vs 0.2% fcst, prev 0.6%); +1.3% y/y (vs 1.1% exp)",
+          "forecast": "0.2%",
+          "note": "Beat: Q3 GDP +0.4% q/q vs 0.2% expected, +1.3% y/y vs 1.1% — but Ireland's +5.5% flatters the headline; ex-Ireland growth ~0.2% (Eurostat, Oct 30). EUR/USD ticked up to ~1.1202 on the print."
         },
         {
-          "id": "de-ifo-20261026",
-          "date": "2026-10-26",
-          "title": "German Ifo business climate (Oct)",
-          "result": "beat",
-          "actual": "90.2 (vs 90.0 fcst; Sep 89.9)",
-          "forecast": "90.0",
-          "note": "Small beat: sixth straight rise, highest since May 2023; expectations 91.6 drove it (most optimistic in 4.5+ years) while current conditions 88.8 softened; EUR/USD +0.1% to ~1.1212 after the print."
-        },
-        {
-          "id": "eur-nbb-20261023",
-          "date": "2026-10-23",
-          "title": "Belgian NBB business climate (Oct)",
-          "result": "beat",
-          "actual": "-9.8 (vs -11.8 fcst)",
-          "forecast": "-11.8",
-          "note": "Beat: -9.8 vs -11.8 fcst (Sep -12.1) — highest since January; mfg -9.2, building -8.3 improved; trade -13.2 worsened."
-        },
-        {
-          "id": "eur-pmi-20261023",
-          "date": "2026-10-23",
-          "title": "Eurozone flash PMIs (Oct)",
+          "id": "eur-unemp-20261030",
+          "date": "2026-10-30",
+          "title": "Eurozone unemployment rate (Sep)",
           "result": "miss",
-          "actual": "Comp 51.9 (fcst 52.7, Sep 53.1) — slowest in 4 months; Mfg 52.4 (52.9); Svc 51.7 (53.0)",
-          "forecast": "52.7",
-          "note": "Miss: composite 51.9 vs 52.7 expected — slowest expansion in 4 months; France back in contraction (48.4) and rising energy-driven input costs (Reuters, Oct 23)."
+          "actual": "6.5% (vs 6.4% fcst; Aug revised to 6.5% from 6.4%)",
+          "forecast": "6.4%",
+          "note": "Miss: September jobless 6.5% vs 6.4% expected — though August was revised up to 6.5%, so no real deterioration (Eurostat, Oct 30)."
+        },
+        {
+          "id": "it-cpi-flash-20261030",
+          "date": "2026-10-30",
+          "title": "Italian prelim CPI (Oct)",
+          "result": "beat",
+          "actual": "+0.9% m/m (vs 0.1% fcst, prev 0.7%); +5.4% y/y (vs ~4.6% consensus, prev 4.2%)",
+          "forecast": "0.1%",
+          "note": "Sharp beat: Italian prelim CPI +0.9% m/m, +5.4% y/y vs ~4.6% consensus — the hot print in the eurozone flash batch (ISTAT, Oct 30)."
+        },
+        {
+          "id": "it-gdp-20261030",
+          "date": "2026-10-30",
+          "title": "Italian GDP (Q3 advance)",
+          "result": "miss",
+          "actual": "0.0% q/q (vs 0.1% fcst, prev 0.2%); +0.8% y/y (vs 0.9% exp)",
+          "forecast": "0.1%",
+          "note": "Miss: Italian Q3 GDP flat vs +0.1% expected — services and agriculture up, industry down, net exports a drag (ISTAT, Oct 30)."
+        },
+        {
+          "id": "de-unemp-20261030",
+          "date": "2026-10-30",
+          "title": "German unemployment change (Oct)",
+          "result": "beat",
+          "actual": "+4K to 3.016M SA (vs 5K fcst, prev +12K); rate steady 6.4%",
+          "forecast": "5K",
+          "note": "Slight beat: German jobless rose 4K vs 5K expected, rate steady at 6.4% — but the labour office says conditions still don't support improvement (Oct 30)."
+        },
+        {
+          "id": "es-cpi-flash-20261030",
+          "date": "2026-10-30",
+          "title": "Spanish flash CPI (Oct)",
+          "result": "inline",
+          "actual": "+4.9% y/y (vs 4.9% exp, prev 4.9%); HICP +4.9% y/y (vs 4.9% exp, prev 5.0%)",
+          "forecast": "4.9%",
+          "note": "Inline: Spanish flash CPI stuck at 4.9% y/y, HICP 4.9% — no relief for the ECB ahead of the eurozone flash (INE, Oct 30)."
         }
       ]
     },
     "GBP": {
       "recent": [
+        {
+          "id": "gb-nationwide-20261030",
+          "date": "2026-10-30",
+          "title": "Nationwide house price index (Oct)",
+          "result": "beat",
+          "actual": "0.0% m/m (vs -0.2% fcst; prev -0.2%, revised to -0.3%); +0.5% y/y (vs 0.6% exp, prev 0.8%)",
+          "forecast": "-0.2%",
+          "note": "Beat: Nationwide house prices flat m/m vs -0.2% expected — but annual growth cooled to 0.5%, slowest since Jan 2024 (Nationwide, Oct 30)."
+        },
         {
           "id": "gb-credit-20261029",
           "date": "2026-10-29",
@@ -165,15 +174,6 @@
           "actual": "-0.4% m/m (vs -0.1% fcst; Aug rev. up to +0.7%)",
           "forecast": "-0.1%",
           "note": "Miss: -0.4% vs -0.1% expected — warm weather hit clothing and supermarkets; Aug revised up to +0.7% (ONS/Reuters, Oct 23)."
-        },
-        {
-          "id": "gb-cbi-20261022",
-          "date": "2026-10-22",
-          "title": "CBI industrial order expectations (Oct)",
-          "result": "miss",
-          "actual": "-32",
-          "forecast": "-20",
-          "note": "Miss: order-books balance fell to -32 vs -20 fcst (from -9 in September) — UK industrial gloom deepens; quarterly output outlook steadied. GBP held near the 1-month high — the miss was swamped by the CPI-driven BoE repricing (Reuters, Oct 22)."
         }
       ]
     },
@@ -237,6 +237,15 @@
     },
     "CHF": {
       "recent": [
+        {
+          "id": "chf-kof-20261030",
+          "date": "2026-10-30",
+          "title": "KOF economic barometer (Oct)",
+          "result": "miss",
+          "actual": "107.6 (vs 108.1 fcst, prev 109.1)",
+          "forecast": "108.1",
+          "note": "Miss: KOF barometer slipped to 107.6 vs 108.1 expected, from 109.1 — Swiss momentum cooling into the SNB's Dec 10 meeting (KOF, Oct 30)."
+        },
         {
           "id": "chf-ppi-20261015",
           "date": "2026-10-15",
@@ -309,6 +318,15 @@
     "CAD": {
       "recent": [
         {
+          "id": "cad-gdp-20261030",
+          "date": "2026-10-30",
+          "title": "Canada GDP (Aug)",
+          "result": "miss",
+          "actual": "0.0% m/m (vs 0.2% fcst, prev 0.0%)",
+          "forecast": "0.2%",
+          "note": "Miss: August GDP flat vs +0.2% expected — the advance estimate's rebound did not materialize; loonie firmer anyway (USD/CAD ~1.3959 post-release) on the oil bid and the offered dollar (ActionForex, Oct 30; StatsCan text pending)."
+        },
+        {
           "id": "cad-retail-20261023",
           "date": "2026-10-23",
           "title": "Canada retail sales m/m (Aug)",
@@ -352,15 +370,6 @@
           "actual": "3.1%",
           "forecast": "3.2%",
           "note": "Mild miss: 3.1% vs 3.2% Reuters consensus (prev 3.0%) — keeps October-28 a ~1-in-4 maybe after the -68.3K jobs miss."
-        },
-        {
-          "id": "cad-foreign-sec-20261016",
-          "date": "2026-10-16",
-          "title": "Canada foreign securities purchases (Aug)",
-          "result": "miss",
-          "actual": "-C$17.31B",
-          "forecast": "+C$23.59B",
-          "note": "Big miss: first monthly divestment of 2026; record C$17.5B federal-debt cut."
         }
       ]
     },

@@ -1,54 +1,6 @@
 {
-  "updated": "2026-10-30T00:56:00-05:00",
+  "updated": "2026-10-30T07:52:00-05:00",
   "events": [
-    {
-      "id": "cny-trade-20261014",
-      "ts": "2026-10-14T02:31:00Z",
-      "ccy": "AUD",
-      "impact": "medium",
-      "category": "trade",
-      "title": "China trade balance (Sep)",
-      "actual": "Exports +36.3% y/y (vs 25.5% fcst); imports +31.0% (vs 24.5%); surplus $133.5B (vs $111.4B fcst)",
-      "forecast": "25.5% y/y exports",
-      "previous": "25.0% y/y",
-      "better": "higher",
-      "why": "China's AI-hardware export boom (+36.3%) is the demand signal behind AUD/NZD — it printed hot hours before US CPI, setting the Asia risk mood for the big one.",
-      "if_beat": "Hot: export resilience confirms — AUD risk bid into US CPI.",
-      "if_miss": "Miss: demand wobble — AUD/NZD soft.",
-      "outcome": "Big beat — export resilience on AI hardware (fastest since February); no domestic-demand signal (CPI soft at 0.9%). AUD/NZD modestly firmer, no repricing — all eyes on US CPI.",
-      "sources": [
-        {
-          "label": "Reuters (Oct 14): China's exports surge 36.3% y/y in September, imports up 31%",
-          "url": "https://www.reuters.com/world/asia-pacific/chinas-exports-surge-363-yy-september-imports-up-31-2026-10-14/"
-        },
-        {
-          "label": "WSJ (Oct 14): Chinese Exports Soar in September",
-          "url": "https://www.wsj.com/world/china/chinese-exports-accelerated-in-september-188b0884"
-        }
-      ]
-    },
-    {
-      "id": "aus-jobs-20261015",
-      "ts": "2026-10-15T00:30:00Z",
-      "ccy": "AUD",
-      "impact": "high",
-      "category": "jobs",
-      "title": "Australia jobs (Sep)",
-      "actual": "-39.3K / 4.7%",
-      "forecast": "19.6K (unemp 4.6%)",
-      "previous": "39.5K / 4.6%",
-      "better": "higher",
-      "why": "The AUD's next policy test — hot jobs strengthen the RBA's hawkish-on-hold stance at 4.60%; soft jobs question it.",
-      "if_beat": "Hot: RBA tightening bias reinforced — AUD bid.",
-      "if_miss": "Soft: November looks like a hold — AUD tailwind eases.",
-      "outcome": "Big miss: employment -39.3K vs +19.6K fcst, unemployment up to 4.7% (five-year high, above the RBA’s 4.5% Q4 forecast) — soft print questions the November hike; AUD tailwind eases.",
-      "sources": [
-        {
-          "label": "ABS: Labour Force, Australia, September 2026 (official release)",
-          "url": "https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release"
-        }
-      ]
-    },
     {
       "id": "chf-ppi-20261015",
       "ts": "2026-10-15T06:30:00Z",
@@ -3529,17 +3481,22 @@
       "impact": "medium",
       "category": "growth",
       "title": "Canada GDP (Aug)",
-      "actual": null,
+      "actual": "0.0% m/m (vs 0.2% fcst, prev 0.0%); miss",
       "forecast": "0.2%",
       "previous": "0.0%",
       "better": "higher",
       "why": "August GDP — the last growth read after Wednesday's BoC; retail (+1.2%) and the pipeline (IPPI +2.0%, RMPI +4.8%) already pointed to heat.",
       "if_beat": "Beat: the hike looks right — CAD bid.",
       "if_miss": "Miss: growth wobble — TD's dovish call gains.",
-      "outcome": null,
+      "outcome": "Miss: August GDP flat vs +0.2% expected — the advance estimate's rebound did not materialize; loonie firmer anyway (USD/CAD ~1.3959 post-release) on the oil bid and the offered dollar.",
       "chapter": null,
       "bank": null,
-      "sources": []
+      "sources": [
+        {
+          "label": "ActionForex Eco Data Oct 30 (single calendar-feed read; StatsCan text pending)",
+          "url": "https://www.actionforex.com/economic-calendar/658581-eco-data-10-30-26/"
+        }
+      ]
     },
     {
       "id": "us-eci-20261030",
@@ -3548,17 +3505,26 @@
       "impact": "medium",
       "category": "jobs",
       "title": "US Employment Cost Index (Q3)",
-      "actual": null,
+      "actual": "+0.8% q/q (vs 0.8% fcst, prev 0.9%); wages +0.7%, benefits +0.9%; inline",
       "forecast": "0.8%",
       "previous": "0.9%",
       "better": "higher",
       "why": "Q3 wage-cost growth — the Fed's cleanest labor-cost read; easing expected. Hot would harden the December-hike case the day after the FOMC.",
       "if_beat": "Hotter: wage pressure — December hike firms.",
       "if_miss": "Cooler: labor costs easing — dovish data point.",
-      "outcome": null,
+      "outcome": "Inline: Q3 ECI +0.8% q/q as expected (prev 0.9%) — wages +0.7%, benefits +0.9%; labor costs cooling, not re-accelerating into the December decision.",
       "chapter": null,
       "bank": null,
-      "sources": []
+      "sources": [
+        {
+          "label": "BLS via ForexFactory (Oct 30): ECI release text",
+          "url": "https://www.forexfactory.com/calendar/179-us-employment-cost-index-qq"
+        },
+        {
+          "label": "ActionForex Eco Data Oct 30",
+          "url": "https://www.actionforex.com/economic-calendar/658581-eco-data-10-30-26/"
+        }
+      ]
     },
     {
       "id": "de-cpi-flash-20261030",
