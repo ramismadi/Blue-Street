@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T10:59:43Z",
+  "updated": "2026-10-30T12:10:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,13 +9,13 @@
     },
     "EUR": {
       "lean": "bullish",
-      "text": "Friday's figures backed the European Central Bank's hint of a December rate rise: the euro zone grew 0.4% last quarter, twice the forecast, and inflation jumped in Italy (5.4%) and France. The euro has recovered to near $1.12, though France's shrinking economy and debt worries and President Christine Lagarde's early exit in February 2027 still hang over it.",
-      "ts": "2026-10-30T10:59:43Z"
+      "text": "Friday's figures mostly backed the European Central Bank's hint of a December rate rise: the euro zone grew 0.4% last quarter, twice the forecast, and inflation jumped in Italy (5.4%) and France. But early state figures point to cooler prices in Germany, France's economy shrank, and the euro is losing ground to the pound even as it holds near $1.12.",
+      "ts": "2026-10-30T12:10:00Z"
     },
     "GBP": {
-      "lean": "mixed",
-      "text": "Chancellor John Healey's first budget passed without a bond-market scare, though the official forecaster cut next year's UK growth outlook to 1%. The pound is near $1.33 and on Thursday hit its strongest level against the euro since May 2025 after the European Central Bank paused; the Bank of England decision on November 5, where a rise is likely, is what could move it next.",
-      "ts": "2026-10-29T16:00:33Z"
+      "lean": "bullish",
+      "text": "The pound led the major currencies on Friday, above $1.34 and at its strongest against the euro this year, after a Bank of England survey showed firms expecting faster price rises. Chancellor John Healey's first budget passed without a bond-market scare, and the Bank of England decision on November 5, where a rise is widely expected, is what could move it next.",
+      "ts": "2026-10-30T12:10:00Z"
     },
     "JPY": {
       "lean": "bullish",
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "mixed",
-      "text": "The Swiss franc draws shelter money when war risk with Iran rises, as with tanker strikes in Hormuz and US warnings of strikes after next week's election; hopeful US words about a deal pull the other way. Swiss rates far below US rates keep the dollar near 0.83 francs, so the pressure runs both ways.",
-      "ts": "2026-10-30T01:00:00Z"
+      "text": "The Swiss franc draws shelter money when war risk with Iran rises, as with tanker strikes near Hormuz; hopeful US words about a deal pull the other way. A Swiss outlook gauge slipped in October but stays healthy, and Swiss rates far below US rates keep the pressure running both ways.",
+      "ts": "2026-10-30T12:10:00Z"
     },
     "CAD": {
       "lean": "mixed",
@@ -206,6 +206,126 @@
         }
       ],
       "watch": "If the euro-zone-wide inflation figure comes in softer than these country prints suggest, the push for a December rise would ease."
+    },
+    {
+      "id": "newsquawk-gbp-leads-eurgbp-2026-low-20261030",
+      "ts": "2026-10-30T09:58:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-softer-with-g10s-broadly-firmer-gbp-leads-as-eurgbp-prints-a-fresh-2026-low-usdjpy-dips-after-the-boj",
+      "image": null,
+      "headline": "DXY softer with G10s broadly firmer; GBP leads as EUR/GBP prints a fresh 2026 low, USD/JPY dips after the BoJ",
+      "story": "boe-path",
+      "story_title": "Bank of England: a rate rise in November?",
+      "pillar": "policy",
+      "summary": "The pound led the major currencies on Friday, rising above $1.34 and to its strongest level against the euro this year, as a softer dollar lifted most others.",
+      "beats": {
+        "was": "The Bank of England meets on November 5, and a rate rise is widely expected because UK inflation has been pushed up by energy costs from the Iran war.",
+        "happened": "Sterling climbed above $1.34 and the euro fell to about 0.834 pounds, a 2026 low. A Bank of England survey of firms showed they expect prices to rise 3.3% over the next year, up from 3.1%, and UK house prices held flat in October.",
+        "means": "Firms expecting faster price rises makes a November rate rise easier to justify, and the pound is gaining against a euro weighed by France's shrinking economy.",
+        "fx": "Rising price expectations and a likely rate rise → support for the pound, most clearly against the euro."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Top performer among majors and a fresh 2026 high against the euro ahead of a likely rate rise."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lost ground to the pound despite firm euro-zone figures."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The dollar index edged lower again, near 101.6 to 101.9."
+        }
+      ],
+      "watch": "A softer UK inflation reading or Bank of England officials playing down a November rise would cool the pound's run."
+    },
+    {
+      "id": "finimize-german-states-cpi-oct-20261030",
+      "ts": "2026-10-30T09:24:37Z",
+      "source": "Finimize (Reuters)",
+      "url": "https://finimize.com/content/german-inflation-looked-softer-in-october-state-by-state",
+      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2Ftag_reuters_com_2026_newsml_L5N46G0GY_463495993.jpeg?ixlib=python-3.1.2&s=b373c636faa01142b0986ec1d356c9fd",
+      "headline": "German Inflation Looked Softer In October, State By State",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holds up as prices climb",
+      "pillar": "inflation",
+      "summary": "Inflation cooled in Germany's biggest states in October, pointing to a dip in the national rate even as Italy and France ran hotter.",
+      "beats": {
+        "was": "German inflation rose to 3.3% in September, its highest since late 2023, on energy costs from the Iran war, and the European Central Bank has hinted at a December rate rise.",
+        "happened": "Early state figures showed prices up 2.8% over the year in Bavaria (from 3.2%) and 2.7% in North Rhine-Westphalia (from 3.3%), with Lower Saxony and Baden-Wuerttemberg also lower. Economists expect the national rate to ease to about 3.1%.",
+        "means": "Germany, the euro zone's largest economy, may be cooling while Italy and France heat up, which softens the case for a December rise a little.",
+        "fx": "Cooler German prices → slightly less pressure on the central bank to raise rates → a small drag on the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Softer prices in the biggest economy take a little heat out of the December rate-rise case."
+        }
+      ],
+      "watch": "A national German figure well below 3.1%, or a soft euro-zone figure next Wednesday, would weaken the case for a December rise."
+    },
+    {
+      "id": "newsquawk-german-unemployment-oct-20261030",
+      "ts": "2026-10-30T09:15:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/german-unemployment-rate-oct-64-vs-exp-64-prev-64",
+      "image": null,
+      "headline": "German Unemployment Rate (Oct) 6.4% vs. Exp. 6.4% (Prev. 6.4%)",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holds up as prices climb",
+      "pillar": "growth",
+      "summary": "German joblessness held at 6.4% in October, with the number out of work barely changed.",
+      "beats": {
+        "was": "Germany's economy roughly stalled over the summer as high energy costs hit its factories, and about 3 million people are registered as unemployed.",
+        "happened": "The jobless rate stayed at 6.4%, as expected, and the count of unemployed rose by only about 4,000, a bit less than forecast.",
+        "means": "The job market is soft but not getting worse quickly, so it changes little for the European Central Bank.",
+        "fx": "In line with forecasts → no real push for the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Steady but weak German jobs figures, close to what was expected."
+        }
+      ],
+      "watch": "A sudden jump in job losses would raise doubts about how far the central bank can raise rates."
+    },
+    {
+      "id": "instaforex-kof-oct-20261030",
+      "ts": "2026-10-30T08:14:52Z",
+      "source": "InstaForex",
+      "url": "https://www.instaforex.com/forex-news/3261100",
+      "image": null,
+      "headline": "Swiss KOF Barometer Falls in October",
+      "story": "swiss-economy",
+      "story_title": "Switzerland: economy and the franc",
+      "pillar": "growth",
+      "summary": "A closely watched gauge of Switzerland's economic outlook slipped in October and missed forecasts, though it stays above its long-run average.",
+      "beats": {
+        "was": "The Swiss franc has drawn shelter money during the Iran war, and Swiss interest rates are far below those in the US.",
+        "happened": "The KOF economic barometer, a monthly forecast gauge from Zurich's ETH university, fell to 107.6 from 109.1, below the 108.3 expected. The drop was broad, though factories added to it.",
+        "means": "Switzerland's outlook is still solid, just a little less upbeat, which gives the Swiss National Bank no new reason to change course.",
+        "fx": "Slight miss but still strong → little lasting pressure on the franc."
+      },
+      "impact": [
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A small miss on the outlook gauge, from a still-healthy level."
+        }
+      ],
+      "watch": "A sharper fall in next month's gauge or weak Swiss inflation figures would raise talk of easier Swiss policy."
     },
     {
       "id": "reuters-boj-holds-instant-view-20261030",
@@ -1051,84 +1171,6 @@
       "watch": "Whether Trump decides on strikes after November 3, or talks with Iran restart first."
     },
     {
-      "id": "ani-vance-letter-iran-20261029",
-      "ts": "2026-10-28T23:38:31Z",
-      "source": "ANI",
-      "url": "https://aninews.in/news/world/us/jd-vance-sends-letter-to-iran-hard-liner-in-bid-to-revive-peace-talks-as-trump-threatens-strikes-report20261029050831/",
-      "image": "https://d3lzcn6mbbadaf.cloudfront.net/media/details/__sized__/ANI-20261028232712-thumbnail-320x180-70.jpg",
-      "headline": "JD Vance sends letter to Iran hard-liner in bid to revive peace talks as Trump threatens strikes: Report",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "The Wall Street Journal reported that US Vice President JD Vance wrote to a senior Iranian security official to explore restarting peace talks. President Donald Trump denied ordering talks, saying the contact was about medical supplies.",
-      "beats": {
-        "was": "The US and Iran have been at war this year, and Iran has kept the Strait of Hormuz, the route for about a fifth of the world's oil, largely shut. Trump has said there are no talks and has threatened new strikes, possibly soon after the November 3 US elections.",
-        "happened": "According to the Journal, Vance sent a letter to Mohsen Rezaei, secretary of Iran's Supreme National Security Council and a former Revolutionary Guards commander, asking whether a framework for talks could be set up. Trump said he had not told Vance to start talks and that Iran needed help with medical supplies; one source told the paper the letter went with Trump's knowledge.",
-        "means": "There is a back channel, but the White House is not owning it, and the threat of strikes is still on the table. That leaves the oil market caught between a small chance of a deal and a real chance of more fighting.",
-        "fx": "A live channel to Tehran → slightly lower odds of new strikes → oil eases a little; Trump's denial and strike threats → the risk premium in oil stays → support for the Canadian dollar, pressure on the yen and euro as oil importers."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Hints of talks pull oil down a touch, but the denial and strike threats keep the war premium."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Shelter demand fades on talk of talks and returns if strikes look closer."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Same push and pull on demand for safety."
-        }
-      ],
-      "watch": "Whether Iran answers the letter or either side confirms contact. A public reply would pull oil lower; new US strikes would send it and shelter assets sharply higher."
-    },
-    {
-      "id": "newsquawk-dollar-dips-post-fed-20261028",
-      "ts": "2026-10-28T21:15:00Z",
-      "source": "Newsquawk",
-      "url": "https://www.newsquawk.com/headlines/us-market-wrap-stocks-gain-as-tech-climbs-while-dollar-takes-a-hit-post-fed",
-      "image": null,
-      "headline": "US Market Wrap: Stocks gain as tech climbs while Dollar takes a hit post Fed",
-      "story": "fed-oct28",
-      "story_title": "Federal Reserve: the October 28 decision",
-      "pillar": "policy",
-      "summary": "The dollar gave back part of its recent gains after Fed Chair Kevin Warsh's press briefing on Wednesday, as he made no promise of a December hike. Short-term US yields dipped while long-term yields rose, and US shares closed a little higher.",
-      "beats": {
-        "was": "The dollar had climbed to a two-week high going into the US Federal Reserve's decision, on bets that the Fed would sound ready to raise rates again in December. The Fed raised rates in September, the first time in three years, because the Iran war pushed US inflation up.",
-        "happened": "The Fed kept rates at 3.75% to 4%, with two officials voting for a hike. After Warsh's briefing the dollar index slipped to about 102.1 from about 102.5 earlier in the day. Market odds of a December hike eased to about 85% from about 90%. The two-year Treasury yield fell slightly, the 10-year rose to about 5.05%, and oil closed higher on US-Iran tensions.",
-        "means": "Markets heard a Fed that wants more data before acting again, so the push behind the dollar faded a little. Long-term yields rising while short-term ones dipped suggests some worry that the Fed is moving too slowly against inflation.",
-        "fx": "No firm December promise → hike odds a touch lower → the dollar loses some of its pre-meeting gains; a December hike is still the base case → the dollar keeps most of its rate support."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Gave back some of its run-up as Warsh kept December open; hike odds slipped only slightly."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Gained on a softer US dollar and higher Canadian yields after the Bank of Canada's hike."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Edged up against a softer dollar ahead of Thursday's European Central Bank decision."
-        }
-      ],
-      "watch": "Thursday's US figures: third-quarter growth and the September PCE price index, the Fed's preferred inflation gauge. Hot numbers would firm up a December hike and help the dollar back."
-    },
-    {
       "id": "yahoo-fed-holds-split-vote-20261028",
       "ts": "2026-10-28T19:32:00Z",
       "source": "CoinDesk",
@@ -1160,66 +1202,6 @@
         }
       ],
       "watch": "Thursday's US figures: third-quarter growth and the September PCE price index, the Fed's preferred inflation gauge; a hot reading firms up December."
-    },
-    {
-      "id": "euronext-uk-markets-take-budget-in-stride-20261028",
-      "ts": "2026-10-28T15:24:00Z",
-      "source": "Euronext (Reuters)",
-      "url": "https://live.euronext.com/en/financial-news/british-markets-take-healeys-first-budget-their-stride",
-      "image": null,
-      "headline": "British markets take Healey's first budget in their stride",
-      "story": "uk-budget-oct28",
-      "story_title": "UK budget: Chancellor Healey's first, on October 28",
-      "pillar": "fiscal",
-      "summary": "UK government borrowing costs fell after Chancellor John Healey's first budget, and shares rose. The pound slipped to about $1.33, moved more by the strong dollar than by the budget.",
-      "beats": {
-        "was": "Britain's bond market has been touchy since the 2022 mini-budget, when unfunded tax cuts sent borrowing costs and the pound sharply lower. Investors feared Healey would leave too little spare room under the government's borrowing rules.",
-        "happened": "Healey left £15 billion of room, close to what economists expected but below the £23.6 billion set in March. The yield on 10-year UK government bonds fell to about 5.31% and on 30-year bonds to about 5.70%. Big banks' shares rose more than 3% after a smaller-than-feared rise in their extra tax.",
-        "means": "The budget passed without a scare, which removes one worry for the pound. Attention moves back to the Bank of England, which decides on November 5.",
-        "fx": "A calm budget → no extra risk premium on UK debt → the pound trades on the dollar and the Bank of England, not on fiscal fear."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Budget fear has passed, but the pound still slipped against a firm dollar."
-        }
-      ],
-      "watch": "The Bank of England decision on Thursday, November 5."
-    },
-    {
-      "id": "investing-eia-crude-draw-gasoline-build-20261028",
-      "ts": "2026-10-28T15:21:00Z",
-      "source": "Investing.com (Reuters)",
-      "url": "https://www.investing.com/news/commodities-news/us-crude-and-distillate-inventories-fall-gasoline-stocks-riseeia-says-4980047",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEM9R1P3_L.jpg",
-      "headline": "US crude and distillate inventories fall, gasoline stocks rise, EIA says",
-      "story": "iran-hormuz",
-      "story_title": "Iran war: the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "US crude stocks fell by 1.9 million barrels last week when no change was expected, as exports jumped, while gasoline stocks rose by 3.9 million barrels instead of falling. Brent rose to about $115.70.",
-      "beats": {
-        "was": "With Gulf supply cut by the Iran war, buyers abroad have leaned on US oil, and the weekly report from the US Energy Information Administration (EIA) shows how fast US stocks are being drawn down.",
-        "happened": "For the week to October 23, US crude stocks fell to 410.6 million barrels as exports rose by 1.4 million barrels a day, and stocks on the Gulf Coast hit their lowest since December 2024. Gasoline stocks rose because Americans bought less of it, while diesel and heating oil stocks fell. One shipping tracker said the export jump may be overstated.",
-        "means": "Crude keeps leaving the US quickly, which shows how tight world supply is. Weaker US gasoline buying is the one soft spot.",
-        "fx": "Falling US crude stocks → a tighter oil market → support for oil, and through oil for the Canadian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Crude stocks fell when no change was expected, though gasoline rose."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firm oil helps Canada's biggest export."
-        }
-      ],
-      "watch": "Next week's EIA report on November 4, and whether US exports stay this high."
     },
     {
       "id": "iranintl-wsj-post-midterm-iran-20261028",
