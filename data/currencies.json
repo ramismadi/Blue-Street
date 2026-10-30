@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-29T15:00:00-05:00",
-  "updated": "2026-10-29T15:00:00-05:00",
+  "as_of": "2026-10-30T00:56:00-05:00",
+  "updated": "2026-10-30T00:56:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "NY-close read, Thursday 2026-10-29 (~3:00 PM CT). ECB held at 2.50% with a clear December signal and Lagarde's Feb 7, 2027 exit announced; US Q3 GDP beat (3.4%), September PCE in line, claims 194K. Dollar range-bound into the close; BoJ decides overnight.",
+  "note": "Overnight read, Friday 2026-10-30 (~1:00 AM CT). BoJ held at 1.25% (8-1) with the Outlook Report calling the 2% target reached — December hike ~80%; Ueda presser 1:30am CT. Dollar slipped below 102.00 on AI-led risk-off; oil jumped (Brent ~$116) on Iran-strike reports. Today: EZ Q3 GDP + flash CPI, Canada GDP, US ECI (all morning CT).",
   "pairs": {},
   "currencies": [
     {
@@ -10,11 +10,11 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY ~102.15 into the NY close, soft on the day (-0.22%) despite a GDP beat — Q3 advance 3.4% SAAR vs 3.2% consensus, September PCE in line (headline +0.5% m/m, core +0.3% m/m, 3.1% y/y), claims 194K vs ~199K. December hike pricing ~83% after the block (from ~78% in the morning); 10Y eased to 4.98%.",
+      "summary": "DXY slipped below 102.00 overnight on AI-led risk-off (Asia ~101.85, -0.33%) despite the GDP beat; NY close Oct 29: EUR/USD 1.1180 (+0.24%), GBP/USD 1.3376 (+0.37%). December hike pricing ~75-82% into Asia (from ~83% after the GDP/PCE block); 10Y back below 5% at 4.98%.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~83% after the Oct 29 GDP/PCE block (FedWatch via SmartXSignals, from ~78% in the morning) — Fed still the highest G10 rate; next meeting Dec 8-9 with SEP/dot plot"
+          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~75-82% into Oct 30 Asia (FedWatch via FXStreet/Morningstar, from ~83% after the Oct 29 GDP/PCE block) — Fed still the highest G10 rate; next meeting Dec 8-9 with SEP/dot plot"
         },
         "growth": {
           "score": 0,
@@ -47,7 +47,7 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD 1.1162 into the NY close (+0.08%), recovering from a ~1.1106 post-ECB dip; the ECB held at 2.50% as expected, Lagarde said the direction of travel is clear and a hike was debated — a Dec 17 hike is now 'all but certain' per Reuters sources. Same morning she announced she steps down Feb 7, 2027. EZ sentiment missed again (96.9 vs 97.5).",
+      "summary": "EUR/USD ~1.1180 NY close, ~1.1194 in Asia after dipping to a 17-month low of 1.1104 post-ECB; the ECB held at 2.50% with a clear December signal and Lagarde's Feb 7, 2027 exit announced. EZ Q3 GDP + flash CPI land Friday morning CT.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD 1.3365 into the close (+0.29%), steady after four down days; UK credit softer (mortgage approvals 53.4K vs 54K, net lending £5.8B vs £6.2B) but largely ignored post-Budget. BoE Nov 5 hike ~94% to 4.00%.",
+      "summary": "GBP/USD ~1.3376 NY close, ~1.339 in Asia; steady after four down days, BoE Nov 5 hike ~94% to 4.00%.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -121,15 +121,15 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY 157.97 into the close (+0.09%), probing the high then settling; Japan consumer confidence 35.0 (vs 35.1) soft. Tokyo CPI lands Thursday night CT (core fcst 2.6% y/y), then the BoJ decision (hold ~98%, December hike ~83-88%).",
+      "summary": "USD/JPY ~157.71 NY close, ~157.4 in Asia after the BoJ HELD at 1.25% (8-1, Takata for 1.50%); Outlook Report judged underlying inflation at the 2% target, FY2027 core CPI raised to 2.6% — December hike ~80%. Ueda presser 1:30am CT. Tokyo CPI in line (core 2.6%), IP beat, retail missed.",
       "drivers": {
         "policy": {
           "score": -1,
-          "note": "Oct 29-30 a hold — zero economists expect a move (Bloomberg); December hike ~83-88% (83% of economists; swaps ~88%) — the policy gap vs the Fed still favors the dollar side"
+          "note": "Oct 30 HELD at 1.25% (8-1; Takata dissented for 1.50%); Outlook Report judged underlying inflation 'generally consistent' with the 2% target, FY2027 core CPI raised to 2.6% — December hike ~80% (OIS/Nikkei). The policy gap vs the Fed still favors the dollar side near-term"
         },
         "growth": {
           "score": 0,
-          "note": "flash PMIs mixed: manufacturing 53.3 (Sep 54.1 — 7-month low, miss) vs services 52.0 up from 51.3; composite 52.3, 19th month of expansion"
+          "note": "Mixed overnight: IP BEAT (+2.2% m/m vs +1.3% exp, Oct outlook upgraded to +5.1%) but retail MISSED (+2.3% y/y vs 3.3% exp, -0.7% m/m); jobs tightened (2.4%, jobs ratio 1.19); housing starts MISSED (-2.7% y/y vs +2.5% fcst)"
         },
         "inflation": {
           "score": 0,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF 0.8262 into the close (-0.23%), the haven bid fading further as oil eased and Iran-talk hopes rose; SNB December pricing still conflicted (~50-50 LSEG vs ~82% no-change).",
+      "summary": "USD/CHF ~0.8214 in Asia, the franc firmer on the haven bid as oil jumped; SNB December pricing still conflicted.",
       "drivers": {
         "policy": {
           "score": 0,
@@ -195,11 +195,11 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD 0.7032 into the close, off Asia's ~0.705 near-one-month high; RBA Nov 2-3 hike ~79-85% to 4.85% after hot Q3 CPI — but Q3 import prices fell 1.1% q/q (vs +1.8% exp), cooling the pipeline leg.",
+      "summary": "AUD/USD ~0.7029 NY close (only major to lose vs USD, -0.35%), ~0.7035 in Asia; Q3 PPI a touch hot (+1.1% q/q) into the RBA’s Nov 2-3 meeting (hike ~79-85% to 4.85%).",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "RBA Nov 2-3 hike ~79-85% to 4.85% (ActionForex 79% from 60% pre-CPI; Biggo 85% from 69%) after Q3 CPI; Bullock: board will debate whether four hikes this year suffice"
+          "note": "Nov 2-3: hike ~79-85% to 4.85% after hot Q3 CPI; Q3 PPI a touch hot (+1.1% q/q vs 1.0% exp) keeps the pipeline case alive — first decision since the Sep 29 hike to 4.60%"
         },
         "growth": {
           "score": -1,
@@ -232,7 +232,7 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD 1.3995 into the close, the loonie holding below 1.40 after the BoC hike; a further December BoC hike ~45% (swaps), a second hike fully discounted by January. BoC's Vincent speaks — the first Governing Council voice since the hike.",
+      "summary": "USD/CAD ~1.3989 NY close, ~1.3966 in Asia; loonie holding the BoC-hike gain with oil jumping (WTI ~$103.43); Canada Aug GDP Friday 7:30am CT.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -269,7 +269,7 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD 0.5613 into the close, holding after sliding as much as 1.7% on the RBNZ surprise hold (4-3, 2.75%); ANZ business confidence firmed to 52.5 (from 51.9) but own activity eased to 46.2 — a mixed first read since the hold. The hike case is delayed to Dec 9, not abandoned.",
+      "summary": "NZD/USD ~0.5633 NY close, ~0.563 in Asia; holding after the RBNZ surprise hold; the hike case is delayed to Dec 9, not abandoned.",
       "drivers": {
         "policy": {
           "score": 0,
@@ -592,6 +592,19 @@
     },
     {
       "date": "2026-10-29",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 2,
+        "CAD": 2,
+        "NZD": 3
+      }
+    },
+    {
+      "date": "2026-10-30",
       "scores": {
         "USD": 2,
         "EUR": -2,

@@ -1,7 +1,7 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-10-29T15:00:00-05:00",
+  "updated": "2026-10-30T00:56:00-05:00",
   "currencies": {
     "USD": {
       "recent": [
@@ -180,6 +180,33 @@
     "JPY": {
       "recent": [
         {
+          "id": "jp-housing-20261030",
+          "date": "2026-10-30",
+          "title": "Japan housing starts y/y (Sep)",
+          "result": "miss",
+          "actual": "-2.7% y/y (vs 2.5% fcst, prev 6.1%)",
+          "forecast": "2.5%",
+          "note": "Miss: starts swung from +6.1% to -2.7% y/y against expectations of a rise — construction cooling, but a low-impact print on BoJ morning; yen unmoved."
+        },
+        {
+          "id": "jpy-retail-20261030",
+          "date": "2026-10-30",
+          "title": "Japan retail sales y/y (Sep)",
+          "result": "miss",
+          "actual": "2.3% y/y (vs 3.3% exp, prev 2.9% revised from 2.7%); -0.7% m/m",
+          "forecast": "3.3%",
+          "note": "Miss: sales fell well short — household spending cooling into the BoJ; mixed read with the IP beat, yen unmoved."
+        },
+        {
+          "id": "jpy-tokyo-cpi-20261030",
+          "date": "2026-10-30",
+          "title": "Tokyo CPI y/y (Oct)",
+          "result": "inline",
+          "actual": "Core 2.6% y/y (vs 2.6% exp, prev 2.7%); headline 2.8% (vs 2.7% exp)",
+          "forecast": "2.6%",
+          "note": "In line: core matched forecast at 2.6% while headline beat at 2.8% — December-hike case intact, no new signal into the BoJ."
+        },
+        {
           "id": "jp-consumer-conf-20261029",
           "date": "2026-10-29",
           "title": "Japan consumer confidence (Oct)",
@@ -205,33 +232,6 @@
           "actual": "Mfg 53.3, Svc 52.0, Comp 52.3",
           "forecast": "Mfg 54.5 (54.1)",
           "note": "Manufacturing 53.3 (Sep 54.1) — 7-month low, miss vs 54.5 expected; services 52.0 (51.3) beat; composite 52.3 unchanged (19th straight expansion)."
-        },
-        {
-          "id": "jpy-cpi-20261023",
-          "date": "2026-10-22",
-          "title": "Japan national core CPI y/y (Sep)",
-          "result": "inline",
-          "actual": "2.1%",
-          "forecast": "2.1%",
-          "note": "Inline: 2.1% vs 2.1% consensus (Aug 1.7%) — first print above the BoJ's 2% target in nine months; core-core 2.4% (vs 1.9%) firms the case for a December hike."
-        },
-        {
-          "id": "jpy-trade-20261020",
-          "date": "2026-10-20",
-          "title": "Japan trade balance (Sep)",
-          "result": "miss",
-          "actual": "-¥536.6bn",
-          "forecast": "-¥181bn",
-          "note": "Miss: deficit nearly 3x forecast (-¥536.6bn vs -¥181bn); exports +16.7% y/y missed +20.1% exp — 5th straight monthly deficit; mineral-fuel import values +39.4% y/y."
-        },
-        {
-          "id": "jpy-tertiary-20261019",
-          "date": "2026-10-19",
-          "title": "Japan tertiary industry activity m/m (Aug)",
-          "result": "beat",
-          "actual": "-0.1% m/m",
-          "forecast": "-0.3%",
-          "note": "Beat: -0.1% m/m vs -0.3% expected (prior +0.4%) — services held up; industrial production still the weak link."
         }
       ]
     },
@@ -250,6 +250,24 @@
     },
     "AUD": {
       "recent": [
+        {
+          "id": "aud-ppi-20261030",
+          "date": "2026-10-30",
+          "title": "Australia PPI q/q (Q3)",
+          "result": "beat",
+          "actual": "1.1% q/q (vs 1.0% exp, prev 1.3%); +3.6% y/y",
+          "forecast": "1.0%",
+          "note": "Slightly hotter: pipeline pressure still building into the RBA’s Nov 2-3 meeting, but a second-tier read beside Wednesday’s hot CPI."
+        },
+        {
+          "id": "aud-credit-20261030",
+          "date": "2026-10-30",
+          "title": "Australia private sector credit m/m (Sep)",
+          "result": "beat",
+          "actual": "0.6% m/m (vs 0.5% exp, prev 0.6%); +8.4% y/y",
+          "forecast": "0.5%",
+          "note": "Beat on the monthly read but steady vs August’s pace — no fresh tightening or loosening signal into the RBA."
+        },
         {
           "id": "aud-import-prices-20261029",
           "date": "2026-10-29",
@@ -285,24 +303,6 @@
           "actual": "4.5%",
           "forecast": "4.4%",
           "note": "Retail +1.1% the standout (2x fc); two-speed beat — factories lead, property -20.6% YTD. AUD best G10 performer."
-        },
-        {
-          "id": "aus-jobs-20261015",
-          "date": "2026-10-15",
-          "title": "Australia jobs (Sep)",
-          "result": "miss",
-          "actual": "-39.3K / 4.7%",
-          "forecast": "+19.6K / 4.6%",
-          "note": "Big miss: -39.3K jobs, unemployment 4.7% — five-year high, above RBA's 4.5% Q4 forecast."
-        },
-        {
-          "id": "cny-trade-20261014",
-          "date": "2026-10-14",
-          "title": "China trade balance (Sep)",
-          "result": "beat",
-          "actual": "+36.3%",
-          "forecast": "+25.5%",
-          "note": "China exports +36.3% y/y vs 25.5% fcst — demand read for the Aussie."
         }
       ]
     },
