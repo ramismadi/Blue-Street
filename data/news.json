@@ -1,11 +1,11 @@
 {
-  "updated": "2026-10-30T01:00:00Z",
+  "updated": "2026-10-30T03:20:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
-      "lean": "bullish",
-      "text": "The Federal Reserve held rates at 3.75% to 4% on Wednesday, but two officials wanted a rise, and Thursday's figures backed them: the US economy grew at a 3.4% pace last quarter and the Fed's preferred price gauge climbed to 3.6%. Markets still lean toward a December rise, yet the dollar ended Thursday slightly lower because Fed Chair Kevin Warsh has not promised one.",
-      "ts": "2026-10-29T22:55:00Z"
+      "lean": "mixed",
+      "text": "The Federal Reserve held rates at 3.75% to 4% on Wednesday, and strong figures since (3.4% growth last quarter, its preferred price gauge at 3.6%) keep a December rise on the table. But worries over AI spending sent money into US bonds, pushing the 10-year yield to a one-month low near 4.9%, so the dollar has slipped to around 101.8 on its index while Fed Chair Kevin Warsh avoids promising a rise.",
+      "ts": "2026-10-30T03:20:00Z"
     },
     "EUR": {
       "lean": "bearish",
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "mixed",
-      "text": "The yen is weak near 158 per dollar because Japan's rates are far below US rates. Friday morning's figures gave the Bank of Japan no strong push either way: Tokyo inflation stayed above 2% but its underlying trend cooled, factories picked up while shop sales fell. The bank is expected to hold at 1.25% on Friday, so how clearly Governor Kazuo Ueda points to a December rise decides the yen's next move.",
-      "ts": "2026-10-30T01:00:00Z"
+      "text": "The yen is weak near 158 per dollar because Japan's rates are far below US rates, and oil above $100 makes Japan's import bill heavier. The Bank of Japan is expected to hold at 1.25% on Friday, with most economists looking for a rise in December, so how clearly Governor Kazuo Ueda backs that decides the yen's next move.",
+      "ts": "2026-10-30T03:20:00Z"
     },
     "CHF": {
       "lean": "mixed",
@@ -34,13 +34,13 @@
     },
     "AUD": {
       "lean": "bullish",
-      "text": "Australian inflation came in hotter than the Reserve Bank of Australia forecast, and markets now give about an 85% chance of a fifth rate rise this year on November 3. That rate edge has the Australian dollar above 70 US cents and at its strongest against the New Zealand dollar in over a decade, after New Zealand's central bank paused.",
-      "ts": "2026-10-29T12:05:00Z"
+      "text": "Australian inflation came in hotter than the Reserve Bank of Australia forecast, and business-level prices also kept rising last quarter (3.6% over the year), so markets give a high chance of a fifth rate rise on November 3. That rate edge has the Australian dollar near 70 US cents and at its strongest against the New Zealand dollar in over a decade.",
+      "ts": "2026-10-30T03:20:00Z"
     },
     "NZD": {
       "lean": "bearish",
-      "text": "The Reserve Bank of New Zealand kept its rate at 2.75% on Wednesday, October 28, when nearly everyone expected a rise to 3%, and the kiwi fell about 1.7% to roughly 55.9 US cents. The bank still says more hikes are likely, but not yet, so the kiwi has lost its rate support for now.",
-      "ts": "2026-10-28T03:00:00Z"
+      "text": "The Reserve Bank of New Zealand kept its rate at 2.75% on October 28 when nearly everyone expected a rise to 3%, and the kiwi fell about 1.7% to roughly 55.9 US cents. A business survey since showed more firms planning price rises, which could bring a hike back sooner, but for now the kiwi has lost its rate support.",
+      "ts": "2026-10-30T03:20:00Z"
     },
     "XAU": {
       "lean": "bearish",
@@ -49,11 +49,137 @@
     },
     "OIL": {
       "lean": "bullish",
-      "text": "Brent crude is near $114, far above $100, because the Strait of Hormuz remains largely shut; Iran says four tankers hit its mines there this week, and Houthi missiles were fired at Saudi Arabia's capital. US talk of being close to a first deal with Iran, and reports of US strikes after the November 3 midterms, pull in opposite directions, but the war premium stays.",
-      "ts": "2026-10-30T01:00:00Z"
+      "text": "Brent crude is near $115 a barrel, heading for a fourth straight month of double-digit gains, because the Strait of Hormuz remains largely shut and Iran says tankers have hit its mines there. A report that President Trump was briefed on new military options against Iran, and Houthi missiles fired at Saudi Arabia, add to the war premium, while US hopes of a deal pull the other way.",
+      "ts": "2026-10-30T03:20:00Z"
     }
   },
   "items": [
+    {
+      "id": "reuters-yen-steady-before-boj-ai-treasury-20261030",
+      "date": "2026-10-30",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/economy-news/yen-steady-before-boj-ai-jitters-drive-treasury-rally-weigh-on-dollar-4985701",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEM9T046_L.jpg",
+      "headline": "Yen steady before BOJ, AI jitters drive Treasury rally, weigh on dollar",
+      "story": "ai-earnings",
+      "story_title": "Big Tech results and the AI spending boom",
+      "pillar": "risk",
+      "summary": "Worries about how much tech companies spend on AI sent money into US government bonds, pulling yields to one-month lows and leaving the dollar a little softer as Asia opened Friday.",
+      "beats": {
+        "was": "Google's owner Alphabet reported results this week that revived doubts about whether huge spending on artificial intelligence will pay off, and stocks fell.",
+        "happened": "Investors moved into safe US Treasury bonds, and the 10-year yield fell to about 4.9%, its lowest in over a month. The dollar index eased to near 101.8, the yen held near 157.8 per dollar before the Bank of Japan's decision, and the euro sat near $1.118.",
+        "means": "Lower US yields shrink the dollar's interest-rate edge, so a stock scare is softening the dollar rather than lifting it. The dollar is still set for a second monthly gain.",
+        "fx": "Falling US yields → mild pressure on the dollar; the yen waits on the Bank of Japan."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower Treasury yields trim the dollar's rate edge."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Narrower US yields help the yen, but traders are waiting for the Bank of Japan."
+        }
+      ],
+      "watch": "If US yields bounce back above 5%, or the stock selloff deepens into wider fear, the dollar's direction could change."
+    },
+    {
+      "id": "investing-oil-rises-us-military-action-iran-20261030",
+      "date": "2026-10-30",
+      "source": "Investing.com",
+      "url": "https://ph.investing.com/news/commodities-news/oil-rises-on-prospects-of-fresh-us-military-action-against-iran-2661785",
+      "image": "https://content-media.investing.com/news/LYNXMPEA601BL_L.jpg",
+      "headline": "Oil rises on prospects of fresh U.S. military action against Iran",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Oil rose about 0.7% in early Asian trading Friday after a report that the top US commander for the Middle East briefed President Trump on new military options against Iran.",
+      "beats": {
+        "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the sea lane for about a fifth of the world's oil, largely shut. Talks have stalled, and President Donald Trump has hinted at new strikes after the November 3 midterm elections.",
+        "happened": "The Wall Street Journal reported that Admiral Brad Cooper, head of US Central Command, briefed Trump on options including a return to major fighting. Brent crude rose to about $115.70 a barrel and US crude to about $102.80; both are heading for a fourth straight month of gains above 10%.",
+        "means": "Each sign that fighting could restart adds to the war premium in oil. Low US crude stocks and Houthi missile fire at Saudi Arabia keep supply worries alive too.",
+        "fx": "Talk of new US strikes → firmer oil; that helps oil exporters like Canada and weighs on big importers like Japan."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The chance of renewed US strikes on Iran adds to supply fears."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil lifts Canada's main export earnings."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so a higher bill hurts the yen."
+        }
+      ],
+      "watch": "Whether Iran accepts a deal through Qatar's mediators, or US strikes resume after the November 3 election."
+    },
+    {
+      "id": "finimize-australia-ppi-q3-20261030",
+      "ts": "2026-10-30T01:33:00Z",
+      "source": "Finimize",
+      "url": "https://finimize.com/content/australias-producer-prices-kept-climbing-in-the-september-quarter",
+      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2FG2711249_xml.jpeg",
+      "headline": "Australia's producer prices kept climbing in the September quarter",
+      "story": "rba-nov3",
+      "story_title": "RBA: a fifth hike on November 3?",
+      "pillar": "inflation",
+      "summary": "Prices Australian businesses charge each other rose 1.1% in the July–September quarter and 3.6% over the year, the same yearly pace as before.",
+      "beats": {
+        "was": "Australia's consumer inflation came in hotter than the Reserve Bank of Australia expected this week, and markets lean heavily toward a rate rise at its November 3 meeting.",
+        "happened": "The producer price index, which tracks what firms pay and charge further up the supply chain, rose 1.1% in the quarter. The yearly rate held at 3.6%. Building and health-care costs rose, while manufacturing prices fell.",
+        "means": "Price pressure is not easing at the business level either, which keeps the case for a November rise intact. Steady, not rising, yearly growth means it adds little new.",
+        "fx": "Firm producer prices → support for an RBA rise and the Australian dollar, but mostly already priced."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Sticky business prices back the case for an RBA rate rise next week."
+        }
+      ],
+      "watch": "The RBA decision on November 3; a hold would surprise and hit the Australian dollar."
+    },
+    {
+      "id": "actionforex-nz-anz-confidence-oct-20261029",
+      "ts": "2026-10-29T01:49:34Z",
+      "source": "ActionForex",
+      "url": "https://www.actionforex.com/live-comments/659085-new-zealand-anz-business-confidence-rises-to-52-5-pricing-intentions-reach-52-2/",
+      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-nz1.jpg",
+      "headline": "New Zealand ANZ Business Confidence Rises to 52.5, Pricing Intentions Reach 52.2",
+      "story": "rbnz-oct28",
+      "story_title": "RBNZ: the October 28 decision",
+      "pillar": "inflation",
+      "summary": "A monthly ANZ survey of New Zealand firms showed confidence edging up in October and more businesses planning to raise prices.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand surprised markets on October 28 by keeping its rate at 2.75% instead of raising it, and the kiwi dollar fell sharply.",
+        "happened": "ANZ's October business survey had confidence at 52.5, up from 51.9. A net 52% of firms plan to raise prices, up from 48%, and expected inflation a year ahead rose to 3.3%. Firms' views of their own activity and investment plans dipped.",
+        "means": "Rising price plans make it harder for the central bank to wait long before raising rates, which could rebuild some of the support the kiwi lost this week.",
+        "fx": "More firms planning price rises → a small lift for odds of a later RBNZ hike and the kiwi."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher price plans strengthen the case for a later rate rise."
+        }
+      ],
+      "watch": "Comments from RBNZ officials on how soon a rise could come; softer jobs figures next week would weaken the case."
+    },
     {
       "id": "economies-dollar-retreats-despite-gdp-20261029",
       "ts": "2026-10-29T19:41:00Z",
@@ -910,60 +1036,6 @@
       "watch": "How the loonie trades once the Fed decides at 1:00 PM CT, and Canada's October inflation figure in November."
     },
     {
-      "id": "actionforex-uk-budget-no-shock-20261028",
-      "ts": "2026-10-28T13:01:02Z",
-      "source": "ActionForex",
-      "url": "https://www.actionforex.com/action-insight/market-overview/659039-uk-budget-shrinks-fiscal-buffer-without-market-shock-fed-dissent-in-focus/",
-      "image": "https://www.actionforex.com/wp-content/uploads/2018/09/f-uk20.jpg",
-      "headline": "UK Budget Shrinks Fiscal Buffer Without Market Shock; Fed Dissent in Focus",
-      "story": "uk-budget-oct28",
-      "story_title": "UK budget: Chancellor Healey's first, on October 28",
-      "pillar": "fiscal",
-      "summary": "Chancellor John Healey's first budget cut the government's spare room under its borrowing rules to £15 billion, from about £24 billion in March. The pound and UK government bonds barely moved.",
-      "beats": {
-        "was": "Investors had worried that a weak budget could push UK long-term borrowing costs, already near their highest in decades, even higher. The pound had slipped to its lowest in about two weeks going in.",
-        "happened": "Healey said the government will have £15 billion of room under its rules by 2029–30, down from £23.6 billion in March, as the Iran war weighs on the economy. The 10-year UK government bond yield edged down to about 5.34% from 5.36% before the speech, and the pound held near $1.329 and flat against the euro.",
-        "means": "There was no fresh scare, so the pound avoids a hit for now. But the buffer is smaller, so any future miss on growth or borrowing would leave less room before taxes or spending have to change.",
-        "fx": "Smaller buffer but no bond-market alarm → no new pressure on the pound today → focus moves to the Bank of England on November 5."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A thinner buffer, but bonds and the pound shrugged it off."
-        }
-      ],
-      "watch": "Whether UK long-term borrowing costs stay calm into the Bank of England decision on November 5."
-    },
-    {
-      "id": "insurancejournal-us-hormuz-advisory-20261028",
-      "ts": "2026-10-28T12:26:08Z",
-      "source": "Insurance Journal",
-      "url": "https://www.insurancejournal.com/news/international/2026/10/28/890571.htm",
-      "image": "https://www.insurancejournal.com/app/uploads/2026/10/ships-in-strait-of-hormuz-near-bandar-abbas-iran-bloomberg-scaled.jpg",
-      "headline": "US Tells Ships to Avoid Unnecessary Transits Through Hormuz",
-      "story": "iran-hormuz",
-      "story_title": "Iran war: the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "The US Navy told ships on Wednesday to stay clear of the Strait of Hormuz unless they must pass, and warned of searches tied to its blockade of Iran. It gave no reason for the new notice.",
-      "beats": {
-        "was": "The US has blocked Iranian shipping through the Strait of Hormuz since mid-July. Even so, tankers willing to take the risk have pushed Gulf oil flows back near prewar levels, while Iran's own exports are close to zero and its attacks on ships hit almost 30 in October.",
-        "happened": "US Naval Forces Central Command, which runs the blockade, advised vessels with no need to cross the Gulf of Oman and Hormuz to keep well away, and told those that must cross to expect delays. Even neutral ships with neutral cargo may be questioned, boarded and searched.",
-        "means": "The last notice like this came when the blockade began, so a fresh one hints that the US is tightening enforcement. It lands a day after a report that the US told Gulf states to prepare for possible strikes on Iran after the November 3 US elections.",
-        "fx": "Slower or riskier passage through Hormuz → higher shipping and insurance costs → some support for oil prices."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Tighter checks could slow tanker traffic, though no oil has been lost yet."
-        }
-      ],
-      "watch": "Whether tanker traffic through Hormuz slows in the coming days, and any US explanation for the notice."
-    },
-    {
       "id": "investing-boj-preview-hawkish-hold-20261028",
       "date": "2026-10-28",
       "source": "Investing.com",
@@ -989,33 +1061,6 @@
         }
       ],
       "watch": "Tokyo's October inflation figures early Friday, then the Bank of Japan's statement, new forecasts and Ueda's press conference."
-    },
-    {
-      "id": "producer-loonie-dips-after-boc-hike-20261028",
-      "date": "2026-10-28",
-      "source": "The Western Producer (Reuters)",
-      "url": "https://www.producer.com/market-update/canadian-dollar-and-business-outlook-loonie-down-after-boc-raises-key-interest-rate/",
-      "image": "https://static.producer.com/wp-content/uploads/2026/10/05081619/dollar-morning-1200.jpg",
-      "headline": "Canadian Dollar and Business Outlook: Loonie down after BoC raises key interest rate",
-      "story": "boc-oct28",
-      "story_title": "Bank of Canada: the October 28 decision",
-      "pillar": "policy",
-      "summary": "The Canadian dollar edged down to about 1.406 per US dollar after the Bank of Canada raised its rate to 2.5%. The hike had been expected, so it gave the currency little lift.",
-      "beats": {
-        "was": "The Bank of Canada had held its rate at 2.25% for a year. Higher oil and fuel prices from the Iran war have pushed Canadian inflation up, and economists widely expected a quarter-point rise.",
-        "happened": "The bank raised its rate to 2.5% on Wednesday, its first hike in three years, and said more rises are possible. The Canadian dollar slipped to about 71.1 US cents from 71.2 on Tuesday, while the US dollar stayed strong before the Federal Reserve decision.",
-        "means": "Markets had already priced the hike, so the news added little. The bank's hint of more rises keeps a floor under the currency, but the US dollar's strength matters more for now.",
-        "fx": "An expected hike → little new support → the Canadian dollar follows the US dollar and oil."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The hike was priced in; a hint of more gives only mild support."
-        }
-      ],
-      "watch": "The Fed decision at 1:00 PM CT today, and Canada's jobs report on Friday, November 6."
     },
     {
       "id": "euronext-oil-saudi-refinery-20261028",
@@ -1055,39 +1100,6 @@
         }
       ],
       "watch": "Official US stock figures at 9:30 AM CT and any Saudi word on damage to the refinery."
-    },
-    {
-      "id": "tradingpedia-eurjpy-intervention-boj-20261028",
-      "date": "2026-10-28",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/10/28/eur-jpy-drops-as-intervention-jitters-and-boj-lift-yen/",
-      "image": null,
-      "headline": "EUR/JPY Drops as Intervention Jitters and BoJ Lift Yen",
-      "story": "japan-fx-warnings",
-      "story_title": "Japan: official warnings over a weak yen",
-      "pillar": "policy",
-      "summary": "The yen firmed against the euro on Wednesday, to about 175.65 yen per euro, after Japan's finance minister warned again that Tokyo is ready to act in the currency market. The Bank of Japan meets on Friday.",
-      "beats": {
-        "was": "The yen has been weak, near 158 per US dollar, because Japan's interest rates are far below those in the US and Europe. Japan's government has bought yen in the past to slow sharp falls.",
-        "happened": "Finance Minister Satsuki Katayama said on Tuesday that the government is ready to take decisive action in the currency market if needed. The euro then slipped against the yen in early European trading. Analysts at MUFG, a big Japanese bank, see buying as not imminent and point to 160 yen per dollar as the likely trigger.",
-        "means": "The warnings make yen sellers more careful, so the yen's fall slows. The Bank of Japan is expected to hold its rate at 1.25% on Friday, October 30, while markets see about an 80% chance of a hike in December, which also gives the yen some support.",
-        "fx": "Firmer warnings + a likely December hike in Japan → less room for the yen to keep falling → the yen steadies against the euro and dollar; no action yet → the rate gap still weighs on it."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Official warnings and December hike hopes give the yen a floor."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Slipped against the yen ahead of Thursday's European Central Bank decision, expected to be a hold."
-        }
-      ],
-      "watch": "Friday's Bank of Japan decision and any hint on December, or a fast slide in the yen toward 160 per dollar."
     },
     {
       "id": "iranintl-wsj-post-midterm-iran-20261028",
