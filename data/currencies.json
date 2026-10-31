@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-10-30T15:05:00-05:00",
-  "updated": "2026-10-30T15:05:00-05:00",
+  "as_of": "2026-10-31T00:51:00-05:00",
+  "updated": "2026-10-31T00:51:00-05:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
   "note": "Overnight read, Friday 2026-10-30 (~1:00 AM CT). BoJ held at 1.25% (8-1) with the Outlook Report calling the 2% target reached — December hike ~80%; Ueda presser 1:30am CT. Dollar slipped below 102.00 on AI-led risk-off; oil jumped (Brent ~$116) on Iran-strike reports. Today: EZ Q3 GDP + flash CPI, Canada GDP, US ECI (all morning CT).",
   "pairs": {},
@@ -34,7 +34,7 @@
         },
         "positioning": {
           "score": 0,
-          "note": "hedge funds leaning for the dollar (flipped from against) — signal 0, not crowded (CFTC, Oct 13)"
+          "note": "Oct 27 CFTC: aggregate dollar longs ~$39.3B (forex.com, Oct 20 vintage) — leaning for the dollar but not crowded; ICE USD-index futures net short is a different measure and is not scored."
         },
         "fiscal": {
           "score": 0,
@@ -71,7 +71,7 @@
         },
         "positioning": {
           "score": 1,
-          "note": "contrarian +1: leveraged funds' euro net short largest since March 2020 (94,138 contracts, +1,305 w/w — CFTC, Oct 20) — the squeeze side is up"
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -143,894 contracts, a 3-year low (forexop); 6th percentile of 20 years (Financial Oracle) — the squeeze side is up; deeper than the Oct 20 leveraged-funds read (-94,138)."
         },
         "fiscal": {
           "score": -1,
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD ~1.3397 at the NY close, near the 1.3434 high, sterling bid into the BoE's Nov 5 meeting (hike ~94% to 4.00%); EUR/GBP ~0.8337, holding near the 19-month low. Nationwide house prices flat in Oct (0.0% m/m).",
+      "summary": "GBP/USD ~1.3397 at the NY close, near the 1.3434 high, sterling bid into the BoE's Nov 5 meeting (hike ~94% to 4.00%); EUR/GBP ~0.8337, holding near the 19-month low. Nationwide house prices flat in Oct (0.0% m/m). CFTC Oct 27: specs net short at a 5th-percentile extreme — contrarian +1.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -107,8 +107,8 @@
           "note": "no fresh terms-of-trade read"
         },
         "positioning": {
-          "score": 0,
-          "note": "all G10 signals neutral (CFTC, Oct 13)"
+          "score": 1,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -79,414 contracts, 5th percentile of 20 years (Financial Oracle) — stretched short, squeeze fuel into the Nov 5 BoE."
         },
         "fiscal": {
           "score": 0,
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY ~157.48 at the NY close, after dipping to 157.12 on the BoJ hold and recovering through Ueda's presser; BoJ HELD at 1.25% (8-1, Takata for 1.50%), underlying inflation judged 'generally consistent' with 2% — December hike ~80%.",
+      "summary": "USD/JPY ~157.48 at the NY close, after dipping to 157.12 on the BoJ hold and recovering through Ueda's presser; BoJ HELD at 1.25% (8-1, Takata for 1.50%), underlying inflation judged 'generally consistent' with 2% — December hike ~80%. CFTC Oct 27: yen longs at a 98th-percentile extreme — contrarian -1.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -144,8 +144,8 @@
           "note": "net energy importer — Brent $116.72 (highest close since April) is a terms-of-trade tax; Sep trade deficit wider than expected"
         },
         "positioning": {
-          "score": 0,
-          "note": "hedge funds CUT yen shorts (CFTC, Oct 20) — yen rose a second straight week; not crowded (0)"
+          "score": -1,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net long yen +101,591 contracts (+31,713 w/w), 98th percentile of 20 years (Financial Oracle) — stretched long, unwind risk; the percentile feed the Oct 12 decision waited on has landed."
         },
         "fiscal": {
           "score": 0,
@@ -182,7 +182,7 @@
         },
         "positioning": {
           "score": 0,
-          "note": "all G10 signals neutral (CFTC, Oct 13)"
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -20,049 contracts, COT index 64 (forexop) — not extreme, neutral."
         },
         "fiscal": {
           "score": 0,
@@ -195,7 +195,7 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD ~0.7038 at the NY close, the softest major vs the dollar on the day despite the oil bid; RBA Nov 2-3 meeting next (hike ~79-85% to 4.85%) after a touch-hot Q3 PPI (+1.1% q/q).",
+      "summary": "AUD/USD ~0.7038 at the NY close, the softest major vs the dollar on the day despite the oil bid; RBA Nov 2-3 meeting next (hike ~79-85% to 4.85%) after a touch-hot Q3 PPI (+1.1% q/q). CFTC Oct 27: specs net short at a 1st-percentile extreme — contrarian +1.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -218,8 +218,8 @@
           "note": "net energy exporter — Brent $116.72 (highest close since April) is a terms-of-trade tailwind"
         },
         "positioning": {
-          "score": 0,
-          "note": "hedge funds ADDED AUD longs (CFTC, Oct 20); splits: hedge funds for the Aussie but real money strongly against — not crowded (0)"
+          "score": 1,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short at the 1st percentile of 20 years (Financial Oracle) — a flip from the Oct 20 leveraged-funds read (added longs); stretched short, squeeze fuel into the RBA."
         },
         "fiscal": {
           "score": 0,
@@ -256,7 +256,7 @@
         },
         "positioning": {
           "score": 0,
-          "note": "funds' CAD net short largest since early August (CFTC, Oct 20) — signal 0, squeeze fuel if BoC hikes Wednesday"
+          "note": "Oct 27 CFTC read is population-mixed (legacy non-commercial net long vs the Oct 20 leveraged-funds net short, largest since early Aug) — held neutral pending a like-for-like leveraged read; squeeze fuel noted either way into December."
         },
         "fiscal": {
           "score": 0,
@@ -269,7 +269,7 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD ~0.5638 at the NY close, flat for the month after the RBNZ's surprise hold (4-3, 2.75%); the hike case is delayed to Dec 9, not abandoned.",
+      "summary": "NZD/USD ~0.5638 at the NY close, flat for the month after the RBNZ's surprise hold (4-3, 2.75%); the hike case is delayed to Dec 9, not abandoned. CFTC Oct 27: specs net short at a 1st-percentile extreme — contrarian +1.",
       "drivers": {
         "policy": {
           "score": 0,
@@ -292,8 +292,8 @@
           "note": "GDT dairy powders firm; crude bid a mild tailwind"
         },
         "positioning": {
-          "score": 0,
-          "note": "hedge funds betting against the kiwi, added — signal 0 (CFTC, Oct 13)"
+          "score": 1,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short at the 1st percentile of 20 years (Financial Oracle) — stretched short, squeeze fuel; RBNZ delay, not abandonment, is the fundamental side."
         },
         "fiscal": {
           "score": 0,
@@ -614,6 +614,19 @@
         "AUD": 2,
         "CAD": 2,
         "NZD": 3
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 4,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 3,
+        "CAD": 2,
+        "NZD": 4
       }
     }
   ]
