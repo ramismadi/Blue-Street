@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T22:45:00Z",
+  "updated": "2026-10-31T02:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,13 +19,13 @@
     },
     "JPY": {
       "lean": "bullish",
-      "ts": "2026-10-30T19:00:00Z",
-      "text": "The Bank of Japan held its rate at 1.25% on Friday but said underlying inflation has now reached its 2% goal, and one board member wanted a rise straight away, so a December hike looks likely. A tech-stock sell-off adds some shelter demand, keeping the yen a little firmer near 157 per dollar, though costly oil still weighs on Japan."
+      "ts": "2026-10-31T02:55:00Z",
+      "text": "The Bank of Japan held its rate at 1.25% on Friday but said underlying inflation has reached its 2% goal, and one board member wanted a rise straight away, so a December hike looks likely. Friday's tech-led stock sell-off and lower US yields add shelter demand near 157 per dollar, though oil near $118 a barrel keeps weighing on Japan."
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-10-30T19:00:00Z",
-      "text": "The Swiss franc draws shelter money when stocks fall, as in Friday's tech sell-off, and when war risk with Iran rises; hopeful US words about a deal pull the other way. A Swiss outlook gauge slipped in October but stays healthy, and Swiss rates far below US rates keep the pressure running both ways."
+      "ts": "2026-10-31T02:55:00Z",
+      "text": "The Swiss franc draws shelter money when stocks fall, as in Friday's worst US stock day since June, and when Iran attacks ships near Hormuz. President Trump's talk of the war ending soon pulls the other way, and Swiss rates far below US rates keep pressure running both ways."
     },
     "CAD": {
       "lean": "mixed",
@@ -33,14 +33,14 @@
       "text": "The Bank of Canada raised its rate to 2.5% on Wednesday, its first hike in three years, and oil above $100 a barrel, a big Canadian export, has the loonie just under 1.40 per US dollar. But Friday's figures showed the economy flat in August and likely shrinking in September, well below the bank's forecast, which makes another rise harder to justify."
     },
     "AUD": {
-      "lean": "bullish",
-      "text": "Australian inflation came in hotter than the Reserve Bank of Australia forecast, and business-level prices also kept rising last quarter (3.6% over the year), so markets give a high chance of a fifth rate rise on November 3. That rate edge has the Australian dollar near 70 US cents and at its strongest against the New Zealand dollar in over a decade.",
-      "ts": "2026-10-30T03:20:00Z"
+      "lean": "mixed",
+      "ts": "2026-10-31T02:55:00Z",
+      "text": "Hot Australian inflation means markets see a strong chance the Reserve Bank of Australia raises rates again on November 3, which supports the Australian dollar near 70 US cents. But China, Australia's biggest customer, saw factory and service activity shrink in October, and Friday's slide in world stocks also weighs."
     },
     "NZD": {
       "lean": "bearish",
-      "text": "The Reserve Bank of New Zealand kept its rate at 2.75% on October 28 when nearly everyone expected a rise to 3%, and the kiwi fell about 1.7% to roughly 55.9 US cents. A business survey since showed more firms planning price rises, which could bring a hike back sooner, but for now the kiwi has lost its rate support.",
-      "ts": "2026-10-30T03:20:00Z"
+      "ts": "2026-10-31T02:55:00Z",
+      "text": "The Reserve Bank of New Zealand surprised by keeping its rate at 2.75% on October 28 instead of raising it, so the kiwi has lost its rate support and sits near 56 US cents. Weaker-than-expected Chinese business surveys, a key market for New Zealand's dairy, add to the drag."
     },
     "XAU": {
       "lean": "bearish",
@@ -49,11 +49,134 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-10-30T19:00:00Z",
-      "text": "Brent crude briefly topped $117 a barrel on Friday and is set for a fourth monthly gain, even though Gulf exports are back above pre-war levels. Thin stockpiles, shipping costs about ten times normal, a tanker hit near the Strait of Hormuz and reports of possible new US strikes on Iran after the November 3 midterms keep prices high."
+      "ts": "2026-10-31T02:55:00Z",
+      "text": "Brent crude closed Friday near $118 a barrel, its highest since April, and rose about 14% in October. Iran says four tankers caught fire in the Strait of Hormuz on Friday alone, and traders fear new fighting after the US midterms on November 3, even though President Trump says the war will end soon."
     }
   },
   "items": [
+    {
+      "id": "newsquawk-china-nbs-pmi-oct-miss-20261031",
+      "ts": "2026-10-31T01:50:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/chinese-nbs-manufacturing-pmi-oct-493-vs-exp-50-prev-501",
+      "image": null,
+      "headline": "Chinese NBS Manufacturing PMI (Oct) 49.3 vs. Exp. 50 (Prev. 50.1)",
+      "story": "china-economy",
+      "story_title": "China: a slowing economy",
+      "pillar": "growth",
+      "summary": "China's official business surveys for October fell below the 50 line that splits growth from shrinking, for both factories and services, and both missed forecasts.",
+      "beats": {
+        "was": "China's National Bureau of Statistics publishes monthly purchasing managers' surveys, where readings above 50 mean activity is growing. In September both factories (50.1) and services and construction (50.2) were just above that line.",
+        "happened": "On Saturday the factory reading dropped to 49.3, against 50.0 expected, and the services and construction reading fell to 49.7, against 50.5 expected. The combined measure slid to 49.7 from 50.7, with weak demand, including for exports, blamed.",
+        "means": "The world's second-largest economy slipped back into shrinking across the board in October, with costly oil and softer overseas orders weighing. It raises the odds Beijing adds more support.",
+        "fx": "China buys much of Australia's iron ore and much of New Zealand's dairy, so a weaker China tends to weigh on both their currencies, and on demand for oil and metals."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "China is Australia's biggest customer, and both factory and service activity there shrank more than expected."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Softer Chinese demand is a worry for New Zealand's exports."
+        },
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Shrinking Chinese activity trims hopes for oil demand, though war supply worries dominate for now."
+        }
+      ],
+      "watch": "China's private-sector surveys early next week and any sign Beijing steps up spending or rate cuts."
+    },
+    {
+      "id": "brecorder-oil-settles-highest-since-april-20261031",
+      "ts": "2026-10-31T00:33:00Z",
+      "source": "Business Recorder (Reuters)",
+      "url": "https://www.brecorder.com/news/40446766/oil-jumps-2pc",
+      "image": "https://i.brecorder.com/large/2026/09/23074917357c51e.webp",
+      "headline": "Oil jumps 2pc",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "Oil closed Friday at its highest since late April and gained about 14% in October, as traders braced for the Iran war to flare again after next week's US elections.",
+      "beats": {
+        "was": "Oil has climbed for four months as the war with Iran disrupts Gulf shipping, even though Gulf exports have recovered by sending more crude around the Strait of Hormuz.",
+        "happened": "Brent crude for December, which expired on Friday, settled up 2.4% at $117.64 a barrel after touching $118; US crude settled near $104. Brent rose 13.6% over October and US crude 15.2%. Maritime sources called a tanker hit by a small boat's explosives the first successful limpet-mine attack in the strait since the war began.",
+        "means": "Oil is ending the month near its highs, with traders paying up in case fighting resumes after the November 3 midterms. Qatari mediators are back in Tehran, but Iran has yet to answer a US letter.",
+        "fx": "Dear oil supports Canada's dollar and keeps pressure on oil importers such as Japan and the euro zone, while feeding inflation worries that keep rate-rise talk alive."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Prices closed at a six-month high on fears of new fighting after the midterms."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher crude prices help Canada's export earnings."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A bigger oil import bill weighs on Japan."
+        }
+      ],
+      "watch": "Any reply from Iran to the US letter, and tanker traffic through the strait when markets reopen."
+    },
+    {
+      "id": "uanews-irgc-fourth-tanker-mine-20261031",
+      "date": "2026-10-31",
+      "source": "UA.News (via Anadolu)",
+      "url": "https://ua.news/en/dovkolo-svitu/kvir-zaiaviv-pro-urazhennia-chetvertogo-tankera-minoiu-v-ormuzkii-prototsi-anadolu-agency",
+      "image": "https://cdn-cabinet.ua.news/uploads/images/ircg_says_fourth_tanker_hit_mine_strait_1793406583638.webp",
+      "headline": "IRGC says fourth tanker hit mine in Strait of Hormuz",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "Iran's Revolutionary Guards said a fourth tanker in a single day caught fire in the Strait of Hormuz, a supertanker carrying over 2 million barrels, and Britain's maritime agency reported a separate ship hit by a projectile.",
+      "beats": {
+        "was": "Since the US-Israeli war with Iran began in February, Iran has limited traffic through the Strait of Hormuz, the narrow sea route for much of the world's oil, and says ships must use routes it approves.",
+        "happened": "Late on Friday, Iran's Revolutionary Guards navy said a supertanker leaving by a southern route it calls unauthorised struck a mine and caught fire, the fourth tanker fire since Friday began. Separately, the UK Maritime Trade Operations agency said an unknown projectile hit a ship about 40 nautical miles south of Iran's Lavan Island; the crew was safe.",
+        "means": "Iran is showing it can still threaten ships that defy it, even as the US says it has cleared Iranian mines from the strait. Each new attack lifts insurance and freight costs for Gulf oil.",
+        "fx": "More danger to Gulf shipping supports oil prices, which helps oil exporters like Canada and hurts big importers like Japan, and it can draw money into havens such as the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Repeated tanker strikes in the main Gulf export route keep supply fears high."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so dearer crude hurts its trade balance."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising war risk tends to draw shelter money to the franc."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices help Canada, a big crude exporter."
+        }
+      ],
+      "watch": "Whether shipping firms confirm the strikes, and whether tanker traffic through the strait slows over the weekend."
+    },
     {
       "id": "wbow-reuters-fitch-france-outlook-negative-20261030",
       "ts": "2026-10-30T22:18:00Z",
@@ -80,6 +203,51 @@
         }
       ],
       "watch": "How French bonds trade on Monday after weekend protests, and whether the budget makes it through parliament."
+    },
+    {
+      "id": "wptf-wall-street-worst-day-since-june-20261030",
+      "ts": "2026-10-30T21:09:00Z",
+      "source": "WPTF (AP)",
+      "url": "https://www.wptf.com/2026/10/30/18859/",
+      "image": "https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/3836/files/2026/09/gettyimages-2293173556-1200x675.jpg",
+      "headline": "THE CLOSING BELL: Wall Street drops to its worst day since June after the sell-off for tech stocks deepens",
+      "story": "ai-selloff",
+      "story_title": "Wall Street: doubts over AI spending",
+      "pillar": "risk",
+      "summary": "US stocks had their worst day since June on Friday as doubts about the payoff from heavy AI spending spread, while investors bought government bonds and pushed yields lower.",
+      "beats": {
+        "was": "Big US tech firms have been spending huge sums on AI data centres, and this week's earnings from Alphabet, Amazon and Intel raised doubts about when that spending pays off.",
+        "happened": "The S&P 500 fell 1.8%, a third weekly loss, and the tech-heavy Nasdaq fell 2.9%. Intel dropped about 29%, its worst day since 1974, after a weak forecast. The 10-year US Treasury yield slipped to 4.93%, down from above 5.30% earlier in October.",
+        "means": "Fear is spreading from a few AI names to the wider market just before Tuesday's US midterm elections. Falling bond yields show money hiding in safer assets.",
+        "fx": "Lower US yields take away some of the dollar's rate support, while stock-market stress usually helps the yen and the Swiss franc and hurts riskier currencies like the Australian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stock-market stress and lower US yields tend to help the yen."
+        },
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Lower yields weigh on the dollar, but shelter demand for US bonds pulls the other way."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A broad stock sell-off tends to draw money to the franc."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The Australian dollar usually falls when global stocks slide."
+        }
+      ],
+      "watch": "Whether the sell-off spreads in Asia on Monday and how markets treat Tuesday's midterm results."
     },
     {
       "id": "gvwire-reuters-logan-two-more-hikes-20261030",
@@ -175,12 +343,345 @@
       "watch": "The US jobs report on November 6; a weak one would make a December rise harder to argue for."
     },
     {
+      "id": "siasat-trump-iran-war-wrapped-up-soon-20261030",
+      "ts": "2026-10-30T13:05:00Z",
+      "source": "Siasat Daily",
+      "url": "https://www.siasat.com/iran-war-will-get-wrapped-up-soon-trump-says-3567228/",
+      "image": "https://cdn.siasat.com/wp-content/uploads/2026/10/donald-trump-dalton-campaign-rally-october-2026.webp",
+      "headline": "Iran war will 'get wrapped up soon', Trump says",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "President Donald Trump said the war with Iran will end soon and that the US won't strike Iran before Tuesday's midterm elections, but gave no timeline or plan.",
+      "beats": {
+        "was": "Reports this week said the head of US Central Command briefed Trump on options for new strikes on Iran, possibly after the November 3 midterm elections, while Qatar tries to restart talks.",
+        "happened": "In a Kansas City radio interview on Friday, Trump said the war will be 'wrapped up soon' and that the US needs a guarantee Iran will never get a nuclear weapon. He said there would be no strikes before the midterms and that petrol prices would fall once the war ends.",
+        "means": "The comments rule out action in the next few days but leave the period after the elections open. Markets did not take them as a sign of an imminent deal; oil rose on the day.",
+        "fx": "Talk of an end to the war tends to ease oil and lift riskier currencies, but with no details it does little against the tanker attacks."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Talk of the war ending soon offers some relief, though without a plan."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Less near-term war risk trims shelter demand slightly."
+        }
+      ],
+      "watch": "Whether talks with Iran restart through Qatar, and what Washington signals after Tuesday's vote."
+    },
+    {
+      "id": "finimize-canada-gdp-aug-flat-20261030",
+      "ts": "2026-10-30T12:40:24Z",
+      "source": "Finimize",
+      "url": "https://finimize.com/content/canadas-economy-flatlined-again-in-august",
+      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2Ftag_reuters_com_2026_newsml_L2N46G0LT_1573331930.jpeg?ixlib=python-3.1.2&s=a35b5552477221092a905b73e4f835c7",
+      "headline": "Canada's Economy Flatlined Again In August",
+      "story": "canada-growth",
+      "story_title": "Canada: a stalling economy after the rate rise",
+      "pillar": "growth",
+      "summary": "Canada's economy did not grow in August for a second month running, short of the small gain forecast, and an early read points to a dip in September.",
+      "beats": {
+        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise in three years, betting the economy could take it; it expected growth near 2% a year.",
+        "happened": "Statistics Canada said output was flat in August against a forecast 0.2% gain, with wholesale trade down 1.4%, and its early estimate shows a 0.1% fall in September. That leaves the third quarter growing at only about 1.3% a year.",
+        "means": "Growth is running well below what the central bank assumed when it raised rates, which makes another rise harder to justify soon.",
+        "fx": "Less room for more hikes → mild weight on the Canadian dollar, though oil above $100 is holding it up for now."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Weaker growth than the Bank of Canada expected cools talk of another rate rise."
+        }
+      ],
+      "watch": "If Bank of Canada officials brush off the weak figures and repeat that more rises may be needed, the loonie's support returns."
+    },
+    {
+      "id": "gbaf-euro-zone-gdp-q3-beat-20261030",
+      "ts": "2026-10-30T10:06:26Z",
+      "source": "Global Banking & Finance Review (Reuters)",
+      "url": "https://www.globalbankingandfinance.com/euro-zone-growth-beats-projections/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-9f307d3c-9f86-4580-b212-5f218000eb92/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "Euro Zone Economic Growth Surpasses Forecasts Despite Energy Headwinds",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holds up as prices climb",
+      "pillar": "growth",
+      "summary": "The euro zone economy grew 0.4% in the third quarter, twice what economists expected, even as France shrank and Italy stalled.",
+      "beats": {
+        "was": "High energy costs from the Iran war have squeezed Europe, and the European Central Bank held its rate at 2.5% on Thursday while hinting at a December rise.",
+        "happened": "Output rose 0.4% on the quarter and 1.3% on the year, both above forecast, though slower than the 0.6% of the quarter before. Germany grew 0.2%, Spain 0.6% and Ireland 5.5%, while Italy was flat and France slipped 0.1%.",
+        "means": "A sturdier economy gives the central bank more room to raise rates to fight inflation. Ireland's jump flatters the total, and France's slide shows the strain underneath.",
+        "fx": "Better growth backs a December rate rise → support for the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Growth twice the forecast makes a December rate rise easier for the central bank."
+        }
+      ],
+      "watch": "Weak business surveys next week, or energy prices jumping again, would undo the growth story."
+    },
+    {
+      "id": "investinglive-italy-cpi-oct-20261030",
+      "ts": "2026-10-30T10:01:45Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/italy-october-preliminary-cpi-5-4-vs-4-6-y-y-expected/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/italy-cpi-featured-1785486858.jpg?width=960&format=webp",
+      "headline": "Italy October preliminary CPI +5.4% vs +4.6% y/y expected",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holds up as prices climb",
+      "pillar": "inflation",
+      "summary": "Italian inflation jumped to 5.4% in October from 4.2%, far above the 4.6% expected, as energy bills surged.",
+      "beats": {
+        "was": "Energy prices across Europe have climbed since the Iran war closed much of the Strait of Hormuz, and the European Central Bank is weighing a December rate rise.",
+        "happened": "Italy's statistics office said consumer prices rose 5.4% over the year in October, and 5.6% on the European measure. Regulated energy prices were up nearly 60%, and goods prices rose 7.5%.",
+        "means": "Earlier on Friday France also came in hotter than expected, so October inflation for the whole euro zone looks likely to rise again, adding pressure on the central bank to raise rates.",
+        "fx": "Hotter inflation → stronger case for a December rise → support for the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A big inflation surprise in the zone's third-largest economy raises the odds of a December rate rise."
+        }
+      ],
+      "watch": "If the euro-zone-wide inflation figure comes in softer than these country prints suggest, the push for a December rise would ease."
+    },
+    {
+      "id": "newsquawk-gbp-leads-eurgbp-2026-low-20261030",
+      "ts": "2026-10-30T09:58:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-softer-with-g10s-broadly-firmer-gbp-leads-as-eurgbp-prints-a-fresh-2026-low-usdjpy-dips-after-the-boj",
+      "image": null,
+      "headline": "DXY softer with G10s broadly firmer; GBP leads as EUR/GBP prints a fresh 2026 low, USD/JPY dips after the BoJ",
+      "story": "boe-path",
+      "story_title": "Bank of England: a rate rise in November?",
+      "pillar": "policy",
+      "summary": "The pound led the major currencies on Friday, rising above $1.34 and to its strongest level against the euro this year, as a softer dollar lifted most others.",
+      "beats": {
+        "was": "The Bank of England meets on November 5, and a rate rise is widely expected because UK inflation has been pushed up by energy costs from the Iran war.",
+        "happened": "Sterling climbed above $1.34 and the euro fell to about 0.834 pounds, a 2026 low. A Bank of England survey of firms showed they expect prices to rise 3.3% over the next year, up from 3.1%, and UK house prices held flat in October.",
+        "means": "Firms expecting faster price rises makes a November rate rise easier to justify, and the pound is gaining against a euro weighed by France's shrinking economy.",
+        "fx": "Rising price expectations and a likely rate rise → support for the pound, most clearly against the euro."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Top performer among majors and a fresh 2026 high against the euro ahead of a likely rate rise."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lost ground to the pound despite firm euro-zone figures."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The dollar index edged lower again, near 101.6 to 101.9."
+        }
+      ],
+      "watch": "A softer UK inflation reading or Bank of England officials playing down a November rise would cool the pound's run."
+    },
+    {
+      "id": "finimize-german-states-cpi-oct-20261030",
+      "ts": "2026-10-30T09:24:37Z",
+      "source": "Finimize (Reuters)",
+      "url": "https://finimize.com/content/german-inflation-looked-softer-in-october-state-by-state",
+      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2Ftag_reuters_com_2026_newsml_L5N46G0GY_463495993.jpeg?ixlib=python-3.1.2&s=b373c636faa01142b0986ec1d356c9fd",
+      "headline": "German Inflation Looked Softer In October, State By State",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holds up as prices climb",
+      "pillar": "inflation",
+      "summary": "Inflation cooled in Germany's biggest states in October, pointing to a dip in the national rate even as Italy and France ran hotter.",
+      "beats": {
+        "was": "German inflation rose to 3.3% in September, its highest since late 2023, on energy costs from the Iran war, and the European Central Bank has hinted at a December rate rise.",
+        "happened": "Early state figures showed prices up 2.8% over the year in Bavaria (from 3.2%) and 2.7% in North Rhine-Westphalia (from 3.3%), with Lower Saxony and Baden-Wuerttemberg also lower. Economists expect the national rate to ease to about 3.1%.",
+        "means": "Germany, the euro zone's largest economy, may be cooling while Italy and France heat up, which softens the case for a December rise a little.",
+        "fx": "Cooler German prices → slightly less pressure on the central bank to raise rates → a small drag on the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Softer prices in the biggest economy take a little heat out of the December rate-rise case."
+        }
+      ],
+      "watch": "A national German figure well below 3.1%, or a soft euro-zone figure next Wednesday, would weaken the case for a December rise."
+    },
+    {
+      "id": "instaforex-kof-oct-20261030",
+      "ts": "2026-10-30T08:14:52Z",
+      "source": "InstaForex",
+      "url": "https://www.instaforex.com/forex-news/3261100",
+      "image": null,
+      "headline": "Swiss KOF Barometer Falls in October",
+      "story": "swiss-economy",
+      "story_title": "Switzerland: economy and the franc",
+      "pillar": "growth",
+      "summary": "A closely watched gauge of Switzerland's economic outlook slipped in October and missed forecasts, though it stays above its long-run average.",
+      "beats": {
+        "was": "The Swiss franc has drawn shelter money during the Iran war, and Swiss interest rates are far below those in the US.",
+        "happened": "The KOF economic barometer, a monthly forecast gauge from Zurich's ETH university, fell to 107.6 from 109.1, below the 108.3 expected. The drop was broad, though factories added to it.",
+        "means": "Switzerland's outlook is still solid, just a little less upbeat, which gives the Swiss National Bank no new reason to change course.",
+        "fx": "Slight miss but still strong → little lasting pressure on the franc."
+      },
+      "impact": [
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A small miss on the outlook gauge, from a still-healthy level."
+        }
+      ],
+      "watch": "A sharper fall in next month's gauge or weak Swiss inflation figures would raise talk of easier Swiss policy."
+    },
+    {
+      "id": "reuters-boj-holds-instant-view-20261030",
+      "ts": "2026-10-30T04:16:00Z",
+      "source": "Yahoo Finance (Reuters)",
+      "url": "https://finance.yahoo.com/economy/policy/articles/instant-view-analysts-react-boj-032614967.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/eea88709f62a255eac6cb68552d9ba9743072b75cddb6fda1f2d40c57a424d05/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F72a3854be94f001b5fc2452fb1b86cd2.jpg",
+      "headline": "Analysts react to BOJ decision to keep rates steady",
+      "story": "boj-path",
+      "story_title": "Bank of Japan: how soon the next rate rise",
+      "pillar": "policy",
+      "summary": "The Bank of Japan kept its rate at 1.25% on Friday, but said for the first time that underlying inflation has reached its 2% goal, which keeps a December rise firmly on the table.",
+      "beats": {
+        "was": "Japan's central bank has been raising rates slowly from near zero, and the yen has been weak near 158 per dollar because Japanese rates sit far below US rates.",
+        "happened": "The bank held at 1.25% in an 8-1 vote; board member Hajime Takata wanted a rise now. It lifted its inflation forecasts, judged underlying inflation to be in line with 2%, and sped up the sale of its stock-fund holdings.",
+        "means": "Saying the 2% goal is met removes a main reason to wait, so economists see a rise as soon as December and possibly more often after that. The hold itself was expected, so the yen's first gain was partly given back.",
+        "fx": "A clearer path to higher Japanese rates → some support for the yen, capped because the hold was expected."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "The bank says its inflation goal is met and one member already wants a rise."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A narrower gap between US and Japanese rates trims the dollar's edge over the yen."
+        }
+      ],
+      "watch": "If spring wage talks or the December data disappoint, or the bank sounds in no hurry, the yen would lose this support."
+    },
+    {
+      "id": "reuters-oil-fourth-monthly-gain-hormuz-20261030",
+      "ts": "2026-10-30T03:59:00Z",
+      "source": "Yahoo Finance (Reuters)",
+      "url": "https://finance.yahoo.com/news/oil-rises-supply-concerns-houthis-022725347.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/b153b2eb6c8d76ef71160cf42cad5a372339b196eda28943a88a724845e69ec0/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2Faf0151ca22c62f13b15ed57e38f075a9.jpg",
+      "headline": "Oil set for fourth monthly gain as Hormuz tanker attack highlights supply risks from war",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "A tanker was hit by explosives in the Strait of Hormuz, lifting Brent crude to about $116 a barrel and putting oil on course for a fourth straight monthly gain.",
+      "beats": {
+        "was": "The US-Israeli war with Iran is in its eighth month, and the Strait of Hormuz, the route for about a fifth of the world's oil, has been largely shut.",
+        "happened": "The UK's maritime security agency said a small boat attached explosives to a tanker in the strait; the attacker is unknown. Brent rose about 1% to near $116 and US crude to about $103, after Yemen's Houthi group said it struck Saudi refineries on Thursday.",
+        "means": "Fresh attacks on ships and Saudi sites keep the war premium in oil even as the US tries to restart talks with Iran. Brent is up about 11% this month.",
+        "fx": "Higher oil → support for oil exporters like the Canadian dollar, a heavier import bill for Japan and Europe."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A new attack inside the strait adds to supply fears."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada exports oil, so higher prices help its currency."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so costlier crude weighs on the yen."
+        }
+      ],
+      "watch": "A reply from Iran to the US letter seeking talks, or ships passing the strait safely, would cool prices."
+    },
+    {
+      "id": "finimize-australia-ppi-q3-20261030",
+      "ts": "2026-10-30T01:33:00Z",
+      "source": "Finimize",
+      "url": "https://finimize.com/content/australias-producer-prices-kept-climbing-in-the-september-quarter",
+      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2FG2711249_xml.jpeg",
+      "headline": "Australia's producer prices kept climbing in the September quarter",
+      "story": "rba-nov3",
+      "story_title": "RBA: a fifth hike on November 3?",
+      "pillar": "inflation",
+      "summary": "Prices Australian businesses charge each other rose 1.1% in the July–September quarter and 3.6% over the year, the same yearly pace as before.",
+      "beats": {
+        "was": "Australia's consumer inflation came in hotter than the Reserve Bank of Australia expected this week, and markets lean heavily toward a rate rise at its November 3 meeting.",
+        "happened": "The producer price index, which tracks what firms pay and charge further up the supply chain, rose 1.1% in the quarter. The yearly rate held at 3.6%. Building and health-care costs rose, while manufacturing prices fell.",
+        "means": "Price pressure is not easing at the business level either, which keeps the case for a November rise intact. Steady, not rising, yearly growth means it adds little new.",
+        "fx": "Firm producer prices → support for an RBA rise and the Australian dollar, but mostly already priced."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Sticky business prices back the case for an RBA rate rise next week."
+        }
+      ],
+      "watch": "The RBA decision on November 3; a hold would surprise and hit the Australian dollar."
+    },
+    {
+      "id": "investinglive-japan-ip-beat-retail-miss-20261030",
+      "ts": "2026-10-30T00:05:53Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/japan-september-factory-output-beats-forecasts-but-retail-sales-disappoint-ahead-of-boj/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/USDJPY%20update%20%2030%20October%202026-featured-1793318703.jpg?width=960&format=webp",
+      "headline": "Japan September factory output beats forecasts, but retail sales disappoint ahead of BoJ",
+      "story": "boj-path",
+      "story_title": "Bank of Japan: when the next hike comes",
+      "pillar": "growth",
+      "summary": "Japan's factories produced more in September than expected, but shop sales fell for a second month, giving a mixed picture hours before the Bank of Japan decides on rates.",
+      "beats": {
+        "was": "Japan's factory output dropped 2.4% in August, and the Bank of Japan, which holds its rate at 1.25%, wants signs the economy can cope with more rate rises.",
+        "happened": "Factory output rose 2.2% in September, well above the 1.3% expected, and manufacturers expect a further 5.1% gain in October. Retail sales slipped 0.7% on the month, a second fall, and were up only 2.3% on the year against 3.3% forecast.",
+        "means": "Industry looks to be recovering while households are spending less. That balance is unlikely to change Friday's expected hold, but weak shoppers give the bank a reason to move slowly.",
+        "fx": "Strong factories, soft shoppers → no clear new reason for a faster Bank of Japan → the yen waits for the decision itself."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Better industry and weaker spending roughly cancel out before the rate decision."
+        }
+      ],
+      "watch": "The Bank of Japan's statement on Friday and whether it mentions weak household spending as a reason for caution."
+    },
+    {
       "id": "indexbox-chicago-pmi-oct-553-20261030",
       "date": "2026-10-30",
       "source": "IndexBox",
       "url": "https://www.indexbox.io/blog/chicago-pmi-falls-to-553-missing-forecast-and-signaling-slower-manufacturing-growth/",
       "image": "https://www.indexbox.io/landing/img/blog/telegram-fallback/26ac83d146da86a3b98d871363427233.webp",
-      "headline": "Chicago PMI Drops to 55.3 vs 55.8 Forecast \u2014 Manufacturing Growth Slows",
+      "headline": "Chicago PMI Drops to 55.3 vs 55.8 Forecast — Manufacturing Growth Slows",
       "story": "us-economy",
       "story_title": "US economy: strong growth, cooling signs",
       "pillar": "growth",
@@ -200,33 +701,6 @@
         }
       ],
       "watch": "The national ISM manufacturing survey on Monday, November 2, which covers the whole country."
-    },
-    {
-      "id": "finimize-canada-gdp-aug-flat-20261030",
-      "ts": "2026-10-30T12:40:24Z",
-      "source": "Finimize",
-      "url": "https://finimize.com/content/canadas-economy-flatlined-again-in-august",
-      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2Ftag_reuters_com_2026_newsml_L2N46G0LT_1573331930.jpeg?ixlib=python-3.1.2&s=a35b5552477221092a905b73e4f835c7",
-      "headline": "Canada's Economy Flatlined Again In August",
-      "story": "canada-growth",
-      "story_title": "Canada: a stalling economy after the rate rise",
-      "pillar": "growth",
-      "summary": "Canada's economy did not grow in August for a second month running, short of the small gain forecast, and an early read points to a dip in September.",
-      "beats": {
-        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise in three years, betting the economy could take it; it expected growth near 2% a year.",
-        "happened": "Statistics Canada said output was flat in August against a forecast 0.2% gain, with wholesale trade down 1.4%, and its early estimate shows a 0.1% fall in September. That leaves the third quarter growing at only about 1.3% a year.",
-        "means": "Growth is running well below what the central bank assumed when it raised rates, which makes another rise harder to justify soon.",
-        "fx": "Less room for more hikes \u2192 mild weight on the Canadian dollar, though oil above $100 is holding it up for now."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Weaker growth than the Bank of Canada expected cools talk of another rate rise."
-        }
-      ],
-      "watch": "If Bank of Canada officials brush off the weak figures and repeat that more rises may be needed, the loonie's support returns."
     },
     {
       "id": "investing-reuters-nasdaq-2trn-ai-fears-20261030",
@@ -315,7 +789,7 @@
         "was": "The European Central Bank held its deposit rate at 2.5% on Thursday and hinted it may raise rates in December because energy costs keep prices high. Earlier Friday, inflation in Italy and France came in hot.",
         "happened": "Germany's first estimate showed prices up 2.8% from a year ago on the EU-wide measure, against 3.1% expected. Energy inflation slowed to 12.2% from 14.9%, and prices excluding food and energy rose 2.1%, down from 2.4%.",
         "means": "Germany is the euro zone's biggest economy, so a cooler reading there takes some heat out of the case for a December rise, even with Italy and France running hot.",
-        "fx": "Softer prices in Germany \u2192 some weight on the euro, which has already been losing ground to the pound."
+        "fx": "Softer prices in Germany → some weight on the euro, which has already been losing ground to the pound."
       },
       "impact": [
         {
@@ -342,7 +816,7 @@
         "was": "The Federal Reserve held rates on Wednesday but left a December rise open, and Thursday's strong growth and inflation figures made one look more likely.",
         "happened": "The Employment Cost Index, a broad gauge of what employers pay in wages and benefits, rose 0.8% from July to September after 0.9% in the spring. The yearly rise held at 3.4%.",
         "means": "Pay is not adding new inflation pressure, so the figure neither strengthens nor weakens the case for a December rise.",
-        "fx": "In line with forecasts \u2192 little change for the dollar."
+        "fx": "In line with forecasts → little change for the dollar."
       },
       "impact": [
         {
@@ -369,7 +843,7 @@
         "was": "Hours earlier the bank held its rate at 1.25% and said underlying inflation is now in line with its 2% goal.",
         "happened": "At his press conference Ueda said the goal is not fully reached yet, that upside risks to prices have not grown sharply in the past month, and that the bank will adjust policy as needed rather than wait.",
         "means": "His words keep December possible without promising it, so they added little to the morning's decision.",
-        "fx": "No firm signal on timing \u2192 the yen trimmed its gains, near 157.4 per dollar."
+        "fx": "No firm signal on timing → the yen trimmed its gains, near 157.4 per dollar."
       },
       "impact": [
         {
@@ -396,7 +870,7 @@
         "was": "Google's owner Alphabet reported results this week that revived doubts about whether huge spending on artificial intelligence will pay off, and stocks fell.",
         "happened": "Investors moved into safe US Treasury bonds, and the 10-year yield fell to about 4.9%, its lowest in over a month. The dollar index eased to near 101.8, the yen held near 157.8 per dollar before the Bank of Japan's decision, and the euro sat near $1.118.",
         "means": "Lower US yields shrink the dollar's interest-rate edge, so a stock scare is softening the dollar rather than lifting it. The dollar is still set for a second monthly gain.",
-        "fx": "Falling US yields \u2192 mild pressure on the dollar; the yen waits on the Bank of Japan."
+        "fx": "Falling US yields → mild pressure on the dollar; the yen waits on the Bank of Japan."
       },
       "impact": [
         {
@@ -429,7 +903,7 @@
         "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the sea lane for about a fifth of the world's oil, largely shut. Talks have stalled, and President Donald Trump has hinted at new strikes after the November 3 midterm elections.",
         "happened": "The Wall Street Journal reported that Admiral Brad Cooper, head of US Central Command, briefed Trump on options including a return to major fighting. Brent crude rose to about $115.70 a barrel and US crude to about $102.80; both are heading for a fourth straight month of gains above 10%.",
         "means": "Each sign that fighting could restart adds to the war premium in oil. Low US crude stocks and Houthi missile fire at Saudi Arabia keep supply worries alive too.",
-        "fx": "Talk of new US strikes \u2192 firmer oil; that helps oil exporters like Canada and weighs on big importers like Japan."
+        "fx": "Talk of new US strikes → firmer oil; that helps oil exporters like Canada and weighs on big importers like Japan."
       },
       "impact": [
         {
@@ -454,279 +928,6 @@
       "watch": "Whether Iran accepts a deal through Qatar's mediators, or US strikes resume after the November 3 election."
     },
     {
-      "id": "gbaf-euro-zone-gdp-q3-beat-20261030",
-      "ts": "2026-10-30T10:06:26Z",
-      "source": "Global Banking & Finance Review (Reuters)",
-      "url": "https://www.globalbankingandfinance.com/euro-zone-growth-beats-projections/",
-      "image": "https://www.globalbankingandfinance.com/i/cloud-9f307d3c-9f86-4580-b212-5f218000eb92/width=1200,height=630,quality=80,format=auto,fit=cover/",
-      "headline": "Euro Zone Economic Growth Surpasses Forecasts Despite Energy Headwinds",
-      "story": "ez-growth-inflation",
-      "story_title": "Euro zone: growth holds up as prices climb",
-      "pillar": "growth",
-      "summary": "The euro zone economy grew 0.4% in the third quarter, twice what economists expected, even as France shrank and Italy stalled.",
-      "beats": {
-        "was": "High energy costs from the Iran war have squeezed Europe, and the European Central Bank held its rate at 2.5% on Thursday while hinting at a December rise.",
-        "happened": "Output rose 0.4% on the quarter and 1.3% on the year, both above forecast, though slower than the 0.6% of the quarter before. Germany grew 0.2%, Spain 0.6% and Ireland 5.5%, while Italy was flat and France slipped 0.1%.",
-        "means": "A sturdier economy gives the central bank more room to raise rates to fight inflation. Ireland's jump flatters the total, and France's slide shows the strain underneath.",
-        "fx": "Better growth backs a December rate rise \u2192 support for the euro."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Growth twice the forecast makes a December rate rise easier for the central bank."
-        }
-      ],
-      "watch": "Weak business surveys next week, or energy prices jumping again, would undo the growth story."
-    },
-    {
-      "id": "investinglive-italy-cpi-oct-20261030",
-      "ts": "2026-10-30T10:01:45Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/italy-october-preliminary-cpi-5-4-vs-4-6-y-y-expected/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/italy-cpi-featured-1785486858.jpg?width=960&format=webp",
-      "headline": "Italy October preliminary CPI +5.4% vs +4.6% y/y expected",
-      "story": "ez-growth-inflation",
-      "story_title": "Euro zone: growth holds up as prices climb",
-      "pillar": "inflation",
-      "summary": "Italian inflation jumped to 5.4% in October from 4.2%, far above the 4.6% expected, as energy bills surged.",
-      "beats": {
-        "was": "Energy prices across Europe have climbed since the Iran war closed much of the Strait of Hormuz, and the European Central Bank is weighing a December rate rise.",
-        "happened": "Italy's statistics office said consumer prices rose 5.4% over the year in October, and 5.6% on the European measure. Regulated energy prices were up nearly 60%, and goods prices rose 7.5%.",
-        "means": "Earlier on Friday France also came in hotter than expected, so October inflation for the whole euro zone looks likely to rise again, adding pressure on the central bank to raise rates.",
-        "fx": "Hotter inflation \u2192 stronger case for a December rise \u2192 support for the euro."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A big inflation surprise in the zone's third-largest economy raises the odds of a December rate rise."
-        }
-      ],
-      "watch": "If the euro-zone-wide inflation figure comes in softer than these country prints suggest, the push for a December rise would ease."
-    },
-    {
-      "id": "newsquawk-gbp-leads-eurgbp-2026-low-20261030",
-      "ts": "2026-10-30T09:58:00Z",
-      "source": "Newsquawk",
-      "url": "https://www.newsquawk.com/headlines/market-analysis-dxy-softer-with-g10s-broadly-firmer-gbp-leads-as-eurgbp-prints-a-fresh-2026-low-usdjpy-dips-after-the-boj",
-      "image": null,
-      "headline": "DXY softer with G10s broadly firmer; GBP leads as EUR/GBP prints a fresh 2026 low, USD/JPY dips after the BoJ",
-      "story": "boe-path",
-      "story_title": "Bank of England: a rate rise in November?",
-      "pillar": "policy",
-      "summary": "The pound led the major currencies on Friday, rising above $1.34 and to its strongest level against the euro this year, as a softer dollar lifted most others.",
-      "beats": {
-        "was": "The Bank of England meets on November 5, and a rate rise is widely expected because UK inflation has been pushed up by energy costs from the Iran war.",
-        "happened": "Sterling climbed above $1.34 and the euro fell to about 0.834 pounds, a 2026 low. A Bank of England survey of firms showed they expect prices to rise 3.3% over the next year, up from 3.1%, and UK house prices held flat in October.",
-        "means": "Firms expecting faster price rises makes a November rate rise easier to justify, and the pound is gaining against a euro weighed by France's shrinking economy.",
-        "fx": "Rising price expectations and a likely rate rise \u2192 support for the pound, most clearly against the euro."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Top performer among majors and a fresh 2026 high against the euro ahead of a likely rate rise."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lost ground to the pound despite firm euro-zone figures."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The dollar index edged lower again, near 101.6 to 101.9."
-        }
-      ],
-      "watch": "A softer UK inflation reading or Bank of England officials playing down a November rise would cool the pound's run."
-    },
-    {
-      "id": "finimize-german-states-cpi-oct-20261030",
-      "ts": "2026-10-30T09:24:37Z",
-      "source": "Finimize (Reuters)",
-      "url": "https://finimize.com/content/german-inflation-looked-softer-in-october-state-by-state",
-      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2Ftag_reuters_com_2026_newsml_L5N46G0GY_463495993.jpeg?ixlib=python-3.1.2&s=b373c636faa01142b0986ec1d356c9fd",
-      "headline": "German Inflation Looked Softer In October, State By State",
-      "story": "ez-growth-inflation",
-      "story_title": "Euro zone: growth holds up as prices climb",
-      "pillar": "inflation",
-      "summary": "Inflation cooled in Germany's biggest states in October, pointing to a dip in the national rate even as Italy and France ran hotter.",
-      "beats": {
-        "was": "German inflation rose to 3.3% in September, its highest since late 2023, on energy costs from the Iran war, and the European Central Bank has hinted at a December rate rise.",
-        "happened": "Early state figures showed prices up 2.8% over the year in Bavaria (from 3.2%) and 2.7% in North Rhine-Westphalia (from 3.3%), with Lower Saxony and Baden-Wuerttemberg also lower. Economists expect the national rate to ease to about 3.1%.",
-        "means": "Germany, the euro zone's largest economy, may be cooling while Italy and France heat up, which softens the case for a December rise a little.",
-        "fx": "Cooler German prices \u2192 slightly less pressure on the central bank to raise rates \u2192 a small drag on the euro."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Softer prices in the biggest economy take a little heat out of the December rate-rise case."
-        }
-      ],
-      "watch": "A national German figure well below 3.1%, or a soft euro-zone figure next Wednesday, would weaken the case for a December rise."
-    },
-    {
-      "id": "instaforex-kof-oct-20261030",
-      "ts": "2026-10-30T08:14:52Z",
-      "source": "InstaForex",
-      "url": "https://www.instaforex.com/forex-news/3261100",
-      "image": null,
-      "headline": "Swiss KOF Barometer Falls in October",
-      "story": "swiss-economy",
-      "story_title": "Switzerland: economy and the franc",
-      "pillar": "growth",
-      "summary": "A closely watched gauge of Switzerland's economic outlook slipped in October and missed forecasts, though it stays above its long-run average.",
-      "beats": {
-        "was": "The Swiss franc has drawn shelter money during the Iran war, and Swiss interest rates are far below those in the US.",
-        "happened": "The KOF economic barometer, a monthly forecast gauge from Zurich's ETH university, fell to 107.6 from 109.1, below the 108.3 expected. The drop was broad, though factories added to it.",
-        "means": "Switzerland's outlook is still solid, just a little less upbeat, which gives the Swiss National Bank no new reason to change course.",
-        "fx": "Slight miss but still strong \u2192 little lasting pressure on the franc."
-      },
-      "impact": [
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A small miss on the outlook gauge, from a still-healthy level."
-        }
-      ],
-      "watch": "A sharper fall in next month's gauge or weak Swiss inflation figures would raise talk of easier Swiss policy."
-    },
-    {
-      "id": "reuters-boj-holds-instant-view-20261030",
-      "ts": "2026-10-30T04:16:00Z",
-      "source": "Yahoo Finance (Reuters)",
-      "url": "https://finance.yahoo.com/economy/policy/articles/instant-view-analysts-react-boj-032614967.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/eea88709f62a255eac6cb68552d9ba9743072b75cddb6fda1f2d40c57a424d05/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F72a3854be94f001b5fc2452fb1b86cd2.jpg",
-      "headline": "Analysts react to BOJ decision to keep rates steady",
-      "story": "boj-path",
-      "story_title": "Bank of Japan: how soon the next rate rise",
-      "pillar": "policy",
-      "summary": "The Bank of Japan kept its rate at 1.25% on Friday, but said for the first time that underlying inflation has reached its 2% goal, which keeps a December rise firmly on the table.",
-      "beats": {
-        "was": "Japan's central bank has been raising rates slowly from near zero, and the yen has been weak near 158 per dollar because Japanese rates sit far below US rates.",
-        "happened": "The bank held at 1.25% in an 8-1 vote; board member Hajime Takata wanted a rise now. It lifted its inflation forecasts, judged underlying inflation to be in line with 2%, and sped up the sale of its stock-fund holdings.",
-        "means": "Saying the 2% goal is met removes a main reason to wait, so economists see a rise as soon as December and possibly more often after that. The hold itself was expected, so the yen's first gain was partly given back.",
-        "fx": "A clearer path to higher Japanese rates \u2192 some support for the yen, capped because the hold was expected."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "The bank says its inflation goal is met and one member already wants a rise."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A narrower gap between US and Japanese rates trims the dollar's edge over the yen."
-        }
-      ],
-      "watch": "If spring wage talks or the December data disappoint, or the bank sounds in no hurry, the yen would lose this support."
-    },
-    {
-      "id": "reuters-oil-fourth-monthly-gain-hormuz-20261030",
-      "ts": "2026-10-30T03:59:00Z",
-      "source": "Yahoo Finance (Reuters)",
-      "url": "https://finance.yahoo.com/news/oil-rises-supply-concerns-houthis-022725347.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/b153b2eb6c8d76ef71160cf42cad5a372339b196eda28943a88a724845e69ec0/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2Faf0151ca22c62f13b15ed57e38f075a9.jpg",
-      "headline": "Oil set for fourth monthly gain as Hormuz tanker attack highlights supply risks from war",
-      "story": "iran-hormuz",
-      "story_title": "Hormuz: shipping attacks and the oil supply",
-      "pillar": "commodities",
-      "summary": "A tanker was hit by explosives in the Strait of Hormuz, lifting Brent crude to about $116 a barrel and putting oil on course for a fourth straight monthly gain.",
-      "beats": {
-        "was": "The US-Israeli war with Iran is in its eighth month, and the Strait of Hormuz, the route for about a fifth of the world's oil, has been largely shut.",
-        "happened": "The UK's maritime security agency said a small boat attached explosives to a tanker in the strait; the attacker is unknown. Brent rose about 1% to near $116 and US crude to about $103, after Yemen's Houthi group said it struck Saudi refineries on Thursday.",
-        "means": "Fresh attacks on ships and Saudi sites keep the war premium in oil even as the US tries to restart talks with Iran. Brent is up about 11% this month.",
-        "fx": "Higher oil \u2192 support for oil exporters like the Canadian dollar, a heavier import bill for Japan and Europe."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A new attack inside the strait adds to supply fears."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Canada exports oil, so higher prices help its currency."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so costlier crude weighs on the yen."
-        }
-      ],
-      "watch": "A reply from Iran to the US letter seeking talks, or ships passing the strait safely, would cool prices."
-    },
-    {
-      "id": "finimize-australia-ppi-q3-20261030",
-      "ts": "2026-10-30T01:33:00Z",
-      "source": "Finimize",
-      "url": "https://finimize.com/content/australias-producer-prices-kept-climbing-in-the-september-quarter",
-      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2FG2711249_xml.jpeg",
-      "headline": "Australia's producer prices kept climbing in the September quarter",
-      "story": "rba-nov3",
-      "story_title": "RBA: a fifth hike on November 3?",
-      "pillar": "inflation",
-      "summary": "Prices Australian businesses charge each other rose 1.1% in the July\u2013September quarter and 3.6% over the year, the same yearly pace as before.",
-      "beats": {
-        "was": "Australia's consumer inflation came in hotter than the Reserve Bank of Australia expected this week, and markets lean heavily toward a rate rise at its November 3 meeting.",
-        "happened": "The producer price index, which tracks what firms pay and charge further up the supply chain, rose 1.1% in the quarter. The yearly rate held at 3.6%. Building and health-care costs rose, while manufacturing prices fell.",
-        "means": "Price pressure is not easing at the business level either, which keeps the case for a November rise intact. Steady, not rising, yearly growth means it adds little new.",
-        "fx": "Firm producer prices \u2192 support for an RBA rise and the Australian dollar, but mostly already priced."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Sticky business prices back the case for an RBA rate rise next week."
-        }
-      ],
-      "watch": "The RBA decision on November 3; a hold would surprise and hit the Australian dollar."
-    },
-    {
-      "id": "investinglive-japan-ip-beat-retail-miss-20261030",
-      "ts": "2026-10-30T00:05:53Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/japan-september-factory-output-beats-forecasts-but-retail-sales-disappoint-ahead-of-boj/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/USDJPY%20update%20%2030%20October%202026-featured-1793318703.jpg?width=960&format=webp",
-      "headline": "Japan September factory output beats forecasts, but retail sales disappoint ahead of BoJ",
-      "story": "boj-path",
-      "story_title": "Bank of Japan: when the next hike comes",
-      "pillar": "growth",
-      "summary": "Japan's factories produced more in September than expected, but shop sales fell for a second month, giving a mixed picture hours before the Bank of Japan decides on rates.",
-      "beats": {
-        "was": "Japan's factory output dropped 2.4% in August, and the Bank of Japan, which holds its rate at 1.25%, wants signs the economy can cope with more rate rises.",
-        "happened": "Factory output rose 2.2% in September, well above the 1.3% expected, and manufacturers expect a further 5.1% gain in October. Retail sales slipped 0.7% on the month, a second fall, and were up only 2.3% on the year against 3.3% forecast.",
-        "means": "Industry looks to be recovering while households are spending less. That balance is unlikely to change Friday's expected hold, but weak shoppers give the bank a reason to move slowly.",
-        "fx": "Strong factories, soft shoppers \u2192 no clear new reason for a faster Bank of Japan \u2192 the yen waits for the decision itself."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Better industry and weaker spending roughly cancel out before the rate decision."
-        }
-      ],
-      "watch": "The Bank of Japan's statement on Friday and whether it mentions weak household spending as a reason for caution."
-    },
-    {
       "id": "economies-dollar-retreats-despite-gdp-20261029",
       "ts": "2026-10-29T19:41:00Z",
       "source": "Economies.com",
@@ -741,7 +942,7 @@
         "was": "The Federal Reserve held its rate at 3.75% to 4% on Wednesday. Two officials wanted a rise, but Fed Chair Kevin Warsh would not promise one in December.",
         "happened": "Thursday's figures showed the US economy grew at a 3.4% yearly pace last quarter, above forecasts, and the Fed's preferred price gauge rose to 3.6%. Even so, the dollar index slipped about 0.2% to near 102, and the pound gained about 0.3% to near $1.336.",
         "means": "Strong numbers were not enough to lift the dollar while the Fed itself stays vague about December. Traders seem to want a clear signal from the bank, not just good data, before buying more dollars.",
-        "fx": "Strong data but an unclear Fed \u2192 a small dollar dip; a firm hint of a December rise would likely turn it back up."
+        "fx": "Strong data but an unclear Fed → a small dollar dip; a firm hint of a December rise would likely turn it back up."
       },
       "impact": [
         {
@@ -774,7 +975,7 @@
         "was": "The European Central Bank has raised its deposit rate twice this year, to 2.5%, because costly energy keeps pushing prices up. It held on Thursday, and the euro first fell to its weakest since May 2025.",
         "happened": "At her press conference, Lagarde said a rise had been discussed, that inflation risks lean higher on energy costs, and that the bank has tools to calm any disorderly selling of French bonds. Markets now see a better than 80% chance of a rise on December 17. The euro, down about 0.4% earlier, ended slightly higher.",
         "means": "The pause looks like a short wait, not the end of rate rises. Her stress on tighter lending and steady underlying inflation leaves some room for doubt, which is why the bounce was small.",
-        "fx": "A December rise looks likely again \u2192 support for the euro after its early drop; it is still near a 17-month low, so the lift is modest."
+        "fx": "A December rise looks likely again → support for the euro after its early drop; it is still near a 17-month low, so the lift is modest."
       },
       "impact": [
         {
@@ -801,7 +1002,7 @@
         "was": "The European Central Bank has raised its deposit rate twice this year, to 2.5%, because expensive energy is pushing prices up. The euro was already sliding on worry over France's government debt.",
         "happened": "The bank held rates as expected and warned that energy costs keep the risk of higher inflation alive, so a December rise stays possible. It also noted that borrowing has become harder for firms and households, which some analysts read as a higher bar for more rises.",
         "means": "The bank still leans toward tighter policy, but it did not commit, and tighter lending plus France's troubles give it reasons to wait.",
-        "fx": "No firm promise of a December rise \u2192 the euro slipped to a 17-month low; a clear signal later toward a rise would help it, more worry over France would push it lower."
+        "fx": "No firm promise of a December rise → the euro slipped to a 17-month low; a clear signal later toward a rise would help it, more worry over France would push it lower."
       },
       "impact": [
         {
@@ -812,6 +1013,105 @@
         }
       ],
       "watch": "European Central Bank speeches before the December 17 meeting, eurozone inflation for October, and French bond yields."
+    },
+    {
+      "id": "srn-us-pce-september-heats-up-20261029",
+      "ts": "2026-10-29T11:50:00Z",
+      "source": "Reuters via SRN News",
+      "url": "https://srnnews.com/us-inflation-heats-up-in-september-consumer-spending-rises/",
+      "image": "https://www.srnnews.com/media/2026/10/1793279118803494VqIoKX120j.jpg?x35475",
+      "headline": "US inflation heats up in September; consumer spending rises",
+      "story": "fed-oct28",
+      "story_title": "Fed: the October 28 decision and what comes next",
+      "pillar": "inflation",
+      "summary": "The Federal Reserve's preferred price gauge rose to 3.6% a year in September, from 3.4%, mostly on gasoline. Prices outside food and energy rose 3.1%, as expected.",
+      "beats": {
+        "was": "The Federal Reserve held rates at 3.75% to 4% on Wednesday and said inflation is still too high; markets were already betting on a rise in December.",
+        "happened": "The personal consumption expenditures price index rose 0.5% in September and 3.6% from a year earlier. Without food and energy it rose 0.3% on the month and 3.1% on the year, in line with forecasts. Household spending rose 0.5%, but nothing once higher prices are taken out.",
+        "means": "Energy is still pushing inflation up, while the underlying pace held where economists expected, so the case for a December rise stands without getting stronger.",
+        "fx": "Hotter headline prices → mild support for the dollar and a weight on gold; no surprise in the core figure → no big move."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Keeps a December rate rise on the table, about 85% priced, but adds little new."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher odds of a US rate rise weigh on a metal that pays no interest."
+        }
+      ],
+      "watch": "The October jobs report and October inflation figures before the Fed's December 9 decision."
+    },
+    {
+      "id": "euronews-lagarde-steps-down-feb-20261029",
+      "ts": "2026-10-29T10:25:00Z",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/10/29/ecb-president-christine-lagarde-to-step-down-in-february-months-before-her-term-ends",
+      "image": "https://images.euronews.com/articles/stories/09/97/16/46/1200x675_cmsv2_81b2ead3-3f5e-55ea-8845-42cceedf1a15-9971646.jpg",
+      "headline": "ECB President Christine Lagarde to step down next February, months before her mandate ends",
+      "story": "ecb-oct29",
+      "story_title": "ECB: the October 29 decision",
+      "pillar": "policy",
+      "summary": "Christine Lagarde will leave as head of the European Central Bank on February 7, 2027, about nine months before her eight-year term ends. The search for her successor starts now.",
+      "beats": {
+        "was": "Lagarde has led the European Central Bank since November 2019, and talk that she might leave early had been building for months.",
+        "happened": "On the morning of the bank's rate decision, the bank said she will step down on February 7, 2027, giving no reason. European Council President António Costa said the choice of a successor begins at once; EU leaders pick the new head on the advice of finance ministers. Former central bank chiefs Klaas Knot of the Netherlands and Pablo Hernández de Cos of Spain are often named as likely picks.",
+        "means": "Policy is unlikely to change because of her exit, but who replaces her, and whether they lean toward tighter or looser policy, becomes a new question for the euro in the months ahead.",
+        "fx": "The euro barely moved because the exit was widely expected; a successor seen as firmer on inflation → support for the euro, a softer pick → pressure."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 2,
+          "why": "A leadership change at the bank that sets euro rates; the direction depends on who comes next."
+        }
+      ],
+      "watch": "Which candidates EU finance ministers put forward, and how quickly leaders agree on a name."
+    },
+    {
+      "id": "ap-us-warns-allies-iran-strikes-20261029",
+      "ts": "2026-10-29T00:37:00Z",
+      "source": "AP via CP24",
+      "url": "https://www.cp24.com/news/world/2026/10/29/us-warns-allies-to-prepare-for-possible-iran-strikes-retaliation-after-midterms-ap-sources/",
+      "image": "https://www.cp24.com/resizer/v2/6SLMHQN722UJB7KTLWUHSMQXY4.jpg",
+      "headline": "U.S. warns allies to prepare for possible Iran strikes, retaliation after midterms: AP sources",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Two diplomats told the Associated Press that the US has warned Middle East allies to brace for possible new US strikes on Iran after the November 3 midterm elections, and for Iranian attacks in return.",
+      "beats": {
+        "was": "The US and Iran fought earlier this year, and the Strait of Hormuz, a route for about a fifth of the world's oil, is still largely shut. The US has not struck Iran since early September, and talks helped by Qatar have stalled.",
+        "happened": "The diplomats said US officials told allies new strikes could last several days, and urged them to protect energy sites and other key infrastructure from Iranian retaliation. President Trump has not made a final decision. Iran's foreign minister, Abbas Araghchi, said Tehran is still giving talks a chance.",
+        "means": "A second news group now backs an earlier Wall Street Journal report, so the risk of fighting after November 3 looks more real. The warning about energy sites points straight at Gulf oil supply.",
+        "fx": "More signs of US strikes after the election → risk to Gulf oil sites → keeps oil high, which helps Canada and weighs on Japan and Europe, and adds shelter demand for the dollar and Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Allies were told to guard energy sites against Iranian retaliation."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising war risk draws money to the franc."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so higher fuel costs weigh on the yen."
+        }
+      ],
+      "watch": "Whether Trump decides on strikes after November 3, or talks with Iran restart first."
     },
     {
       "id": "indexbox-us-gdp-q3-34-20261029",
@@ -828,7 +1128,7 @@
         "was": "The Federal Reserve is weighing a rate rise in December because inflation is running hot; a strong economy makes that easier to do.",
         "happened": "The first official estimate of third-quarter growth showed business investment, especially in computers and equipment, household spending and government spending all rising. Falling exports and rising imports held growth back a little.",
         "means": "The economy is strong enough that a December rate rise would not obviously hurt it, which keeps the Fed's tighter path in place.",
-        "fx": "A growth beat \u2192 mild support for the dollar; the dollar barely moved because a December rise was already expected."
+        "fx": "A growth beat → mild support for the dollar; the dollar barely moved because a December rise was already expected."
       },
       "impact": [
         {
@@ -855,7 +1155,7 @@
         "was": "The Reserve Bank of Australia has raised its rate four times this year, to 4.6%. On Wednesday, official figures showed prices up 4.3% from a year earlier in September, above the 4.2% expected.",
         "happened": "The Australian dollar firmed to about 70.55 US cents. Bets on a quarter-point rise next Tuesday jumped from about 60% before the figures to about 85%, and bets on another rise early next year grew too. Underlying inflation for the July-September quarter, 3.7%, is well above the bank's own forecast.",
         "means": "Australia now looks set to keep raising rates while some neighbours pause. That rate edge is what is holding the currency up.",
-        "fx": "Another rate rise all but priced \u2192 support for the Australian dollar; a weak US inflation reading later on Thursday would add to it, a hot one would test it."
+        "fx": "Another rate rise all but priced → support for the Australian dollar; a weak US inflation reading later on Thursday would add to it, a hot one would test it."
       },
       "impact": [
         {
@@ -882,7 +1182,7 @@
         "was": "Oil has been above $100 for weeks because the war between the US, Israel and Iran has largely shut the Strait of Hormuz, the sea lane for about a fifth of the world's oil. Yemen's Houthi rebels, who back Iran, said on Tuesday they hit Saudi Arabia's biggest refinery.",
         "happened": "Brent slipped $1.27 to about $114 and US crude fell 1.5% to about $101 by mid-morning in London. The Wall Street Journal reported that Vice President JD Vance wrote to a senior Iranian security official to restart talks, and Qatar has put a new draft deal to Iran. But a Saudi-led coalition said it shot down a missile fired at eastern Saudi Arabia early Thursday, and Iran's Revolutionary Guards said three tankers hit sea mines south of Hormuz.",
         "means": "Talk of a deal is enough to shave a little off the war premium, but every new attack shows supply is still at risk. Worry that the US could strike Iran after its November 3 midterm elections keeps buyers from leaving.",
-        "fx": "Talks gain ground \u2192 oil eases \u2192 small relief for oil importers like the euro and yen, less help for the Canadian dollar; new attacks or US strikes \u2192 oil jumps back."
+        "fx": "Talks gain ground → oil eases → small relief for oil importers like the euro and yen, less help for the Canadian dollar; new attacks or US strikes → oil jumps back."
       },
       "impact": [
         {
@@ -921,7 +1221,7 @@
         "was": "The Bank of Japan raised its rate in September to 1.25%, its highest in 31 years, and decides again later on Friday, October 30. It is expected to hold, but has said it will keep raising rates if inflation runs too hot. The yen is weak near 158 per dollar.",
         "happened": "Tokyo prices excluding fresh food rose 2.6% in October, as forecast, after 2.7% in September. The measure that also leaves out fuel, which the bank watches for the underlying trend, slowed to 2.6% from 2.9%.",
         "means": "Inflation is still above target, so the case for another rise stays alive, but the cooling in the underlying trend gives the bank less reason to sound urgent on Friday.",
-        "fx": "Inflation above 2% but easing \u2192 no push for a faster Bank of Japan \u2192 little help for the yen before the decision."
+        "fx": "Inflation above 2% but easing → no push for a faster Bank of Japan → little help for the yen before the decision."
       },
       "impact": [
         {
@@ -948,7 +1248,7 @@
         "was": "The Strait of Hormuz, the narrow sea lane that normally carries about a fifth of the world's oil, has been largely shut since Iran's war with the US began this year, and Iran has mined it. Yemen's Houthi rebels, allied with Iran, have been firing at Saudi Arabia.",
         "happened": "Iran's Revolutionary Guards said three tankers using a southern route through the strait hit mines and caught fire within a day; Iran's army later reported a fourth stuck and burning east of the strait. Iran says the ships had switched off their tracking and ignored its warnings; no one else has confirmed the details. Saudi air defences also brought down two Houthi missiles aimed at Riyadh, and Iran's foreign minister, Abbas Araghchi, warned that any Israeli-led attack in the Gulf would badly hurt world markets.",
         "means": "Ships trying to slip through the strait are being hit, so even the small flow of oil still getting out is at risk. Together with missiles at Saudi Arabia, the world's biggest oil exporter, this keeps the war premium in oil despite talk of peace efforts.",
-        "fx": "Tankers hit and Saudi Arabia targeted \u2192 more risk to Gulf oil supply \u2192 support for oil prices, which helps Canada and weighs on Japan and Europe, and adds shelter demand for the Swiss franc."
+        "fx": "Tankers hit and Saudi Arabia targeted → more risk to Gulf oil supply → support for oil prices, which helps Canada and weighs on Japan and Europe, and adds shelter demand for the Swiss franc."
       },
       "impact": [
         {
@@ -987,7 +1287,7 @@
         "was": "The US and Iran have been at war for about eight months, and the Strait of Hormuz, a key oil route, is still largely shut. Reports this week said the US has warned Gulf allies to prepare for new strikes on Iran after the November 3 US midterm elections.",
         "happened": "Barrack, the US ambassador to Turkey and special envoy to Syria, told CNN on Thursday the two sides were very close to an initial deal on a process to bring tensions down, and thanked Qatar and Pakistan for their help. He asked for a time-out in the fighting. A senior Iranian official, though, rejected the latest proposals passed on by Qatar.",
         "means": "Washington is sending peace signals and strike warnings in the same week, so neither outcome is settled. Iran's rejection means the hopeful words are not yet a deal.",
-        "fx": "Talk of a deal \u2192 a little less war premium in oil and less shelter demand; Iran's rejection keeps that effect small."
+        "fx": "Talk of a deal → a little less war premium in oil and less shelter demand; Iran's rejection keeps that effect small."
       },
       "impact": [
         {
@@ -1006,165 +1306,6 @@
       "watch": "Whether Iran answers with its own proposal, and any US decision on strikes after the November 3 elections."
     },
     {
-      "id": "srn-us-pce-september-heats-up-20261029",
-      "ts": "2026-10-29T11:50:00Z",
-      "source": "Reuters via SRN News",
-      "url": "https://srnnews.com/us-inflation-heats-up-in-september-consumer-spending-rises/",
-      "image": "https://www.srnnews.com/media/2026/10/1793279118803494VqIoKX120j.jpg?x35475",
-      "headline": "US inflation heats up in September; consumer spending rises",
-      "story": "fed-oct28",
-      "story_title": "Fed: the October 28 decision and what comes next",
-      "pillar": "inflation",
-      "summary": "The Federal Reserve's preferred price gauge rose to 3.6% a year in September, from 3.4%, mostly on gasoline. Prices outside food and energy rose 3.1%, as expected.",
-      "beats": {
-        "was": "The Federal Reserve held rates at 3.75% to 4% on Wednesday and said inflation is still too high; markets were already betting on a rise in December.",
-        "happened": "The personal consumption expenditures price index rose 0.5% in September and 3.6% from a year earlier. Without food and energy it rose 0.3% on the month and 3.1% on the year, in line with forecasts. Household spending rose 0.5%, but nothing once higher prices are taken out.",
-        "means": "Energy is still pushing inflation up, while the underlying pace held where economists expected, so the case for a December rise stands without getting stronger.",
-        "fx": "Hotter headline prices \u2192 mild support for the dollar and a weight on gold; no surprise in the core figure \u2192 no big move."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Keeps a December rate rise on the table, about 85% priced, but adds little new."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher odds of a US rate rise weigh on a metal that pays no interest."
-        }
-      ],
-      "watch": "The October jobs report and October inflation figures before the Fed's December 9 decision."
-    },
-    {
-      "id": "euronews-lagarde-steps-down-feb-20261029",
-      "ts": "2026-10-29T10:25:00Z",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/10/29/ecb-president-christine-lagarde-to-step-down-in-february-months-before-her-term-ends",
-      "image": "https://images.euronews.com/articles/stories/09/97/16/46/1200x675_cmsv2_81b2ead3-3f5e-55ea-8845-42cceedf1a15-9971646.jpg",
-      "headline": "ECB President Christine Lagarde to step down next February, months before her mandate ends",
-      "story": "ecb-oct29",
-      "story_title": "ECB: the October 29 decision",
-      "pillar": "policy",
-      "summary": "Christine Lagarde will leave as head of the European Central Bank on February 7, 2027, about nine months before her eight-year term ends. The search for her successor starts now.",
-      "beats": {
-        "was": "Lagarde has led the European Central Bank since November 2019, and talk that she might leave early had been building for months.",
-        "happened": "On the morning of the bank's rate decision, the bank said she will step down on February 7, 2027, giving no reason. European Council President Ant\u00f3nio Costa said the choice of a successor begins at once; EU leaders pick the new head on the advice of finance ministers. Former central bank chiefs Klaas Knot of the Netherlands and Pablo Hern\u00e1ndez de Cos of Spain are often named as likely picks.",
-        "means": "Policy is unlikely to change because of her exit, but who replaces her, and whether they lean toward tighter or looser policy, becomes a new question for the euro in the months ahead.",
-        "fx": "The euro barely moved because the exit was widely expected; a successor seen as firmer on inflation \u2192 support for the euro, a softer pick \u2192 pressure."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 2,
-          "why": "A leadership change at the bank that sets euro rates; the direction depends on who comes next."
-        }
-      ],
-      "watch": "Which candidates EU finance ministers put forward, and how quickly leaders agree on a name."
-    },
-    {
-      "id": "currencynews-gbp-eur-budget-growth-cut-20261029",
-      "ts": "2026-10-29T06:31:00Z",
-      "source": "CurrencyNews",
-      "url": "https://www.currencynews.co.uk/forecast/20261029-47605_british-pound-to-euro-forecast-uk-budget-growth-downgrade-halts-gbp-rally.html",
-      "image": null,
-      "headline": "British Pound to Euro Forecast: UK Budget Growth Downgrade Halts GBP Rally",
-      "story": "uk-budget-oct28",
-      "story_title": "UK budget: Chancellor Healey's first, on October 28",
-      "pillar": "fiscal",
-      "summary": "The pound eased from an 18-month high against the euro, to about \u20ac1.194, as the budget's official forecasts cut UK growth for next year. Euro weakness kept the dip small.",
-      "beats": {
-        "was": "Chancellor John Healey presented his first budget on Wednesday, October 28. Markets feared a bond-market scare, but it passed calmly, and the pound had been climbing against a weak euro.",
-        "happened": "The Office for Budget Responsibility, the UK's official forecaster, raised its 2026 growth forecast to 1.2% but cut 2027 to 1.0% from 1.6%. The government's spare room against its borrowing rules fell to \u00a315 billion from \u00a324 billion in March. The pound slipped from just above \u20ac1.196 to about \u20ac1.194.",
-        "means": "The budget changed little for the pound. The weaker growth outlook and thinner cushion matter more over time, especially if high energy prices keep squeezing the economy and the public finances.",
-        "fx": "Slower expected UK growth \u2192 a small drag on the pound; France's budget worries weighing on the euro \u2192 the pound stays firm against it for now."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A growth downgrade weighs a little, but a weak euro keeps the pound near its highs against it."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Worry over France's finances keeps the euro soft against the pound."
-        }
-      ],
-      "watch": "The Bank of England's decision on Thursday, November 5, where a rate rise is widely expected."
-    },
-    {
-      "id": "actionforex-nz-anz-confidence-oct-20261029",
-      "ts": "2026-10-29T01:49:34Z",
-      "source": "ActionForex",
-      "url": "https://www.actionforex.com/live-comments/659085-new-zealand-anz-business-confidence-rises-to-52-5-pricing-intentions-reach-52-2/",
-      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-nz1.jpg",
-      "headline": "New Zealand ANZ Business Confidence Rises to 52.5, Pricing Intentions Reach 52.2",
-      "story": "rbnz-oct28",
-      "story_title": "RBNZ: the October 28 decision",
-      "pillar": "inflation",
-      "summary": "A monthly ANZ survey of New Zealand firms showed confidence edging up in October and more businesses planning to raise prices.",
-      "beats": {
-        "was": "The Reserve Bank of New Zealand surprised markets on October 28 by keeping its rate at 2.75% instead of raising it, and the kiwi dollar fell sharply.",
-        "happened": "ANZ's October business survey had confidence at 52.5, up from 51.9. A net 52% of firms plan to raise prices, up from 48%, and expected inflation a year ahead rose to 3.3%. Firms' views of their own activity and investment plans dipped.",
-        "means": "Rising price plans make it harder for the central bank to wait long before raising rates, which could rebuild some of the support the kiwi lost this week.",
-        "fx": "More firms planning price rises \u2192 a small lift for odds of a later RBNZ hike and the kiwi."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher price plans strengthen the case for a later rate rise."
-        }
-      ],
-      "watch": "Comments from RBNZ officials on how soon a rise could come; softer jobs figures next week would weaken the case."
-    },
-    {
-      "id": "ap-us-warns-allies-iran-strikes-20261029",
-      "ts": "2026-10-29T00:37:00Z",
-      "source": "AP via CP24",
-      "url": "https://www.cp24.com/news/world/2026/10/29/us-warns-allies-to-prepare-for-possible-iran-strikes-retaliation-after-midterms-ap-sources/",
-      "image": "https://www.cp24.com/resizer/v2/6SLMHQN722UJB7KTLWUHSMQXY4.jpg",
-      "headline": "U.S. warns allies to prepare for possible Iran strikes, retaliation after midterms: AP sources",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Two diplomats told the Associated Press that the US has warned Middle East allies to brace for possible new US strikes on Iran after the November 3 midterm elections, and for Iranian attacks in return.",
-      "beats": {
-        "was": "The US and Iran fought earlier this year, and the Strait of Hormuz, a route for about a fifth of the world's oil, is still largely shut. The US has not struck Iran since early September, and talks helped by Qatar have stalled.",
-        "happened": "The diplomats said US officials told allies new strikes could last several days, and urged them to protect energy sites and other key infrastructure from Iranian retaliation. President Trump has not made a final decision. Iran's foreign minister, Abbas Araghchi, said Tehran is still giving talks a chance.",
-        "means": "A second news group now backs an earlier Wall Street Journal report, so the risk of fighting after November 3 looks more real. The warning about energy sites points straight at Gulf oil supply.",
-        "fx": "More signs of US strikes after the election \u2192 risk to Gulf oil sites \u2192 keeps oil high, which helps Canada and weighs on Japan and Europe, and adds shelter demand for the dollar and Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Allies were told to guard energy sites against Iranian retaliation."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rising war risk draws money to the franc."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so higher fuel costs weigh on the yen."
-        }
-      ],
-      "watch": "Whether Trump decides on strikes after November 3, or talks with Iran restart first."
-    },
-    {
       "id": "yahoo-fed-holds-split-vote-20261028",
       "ts": "2026-10-28T19:32:00Z",
       "source": "CoinDesk",
@@ -1179,7 +1320,7 @@
         "was": "The Fed raised rates in September for the first time in three years, because the Iran war pushed fuel prices up and US inflation reached 3.7% in September. Markets saw a pause this time as near certain and were already pricing a likely hike at the December 8-9 meeting.",
         "happened": "The vote was 10-2: Governor Lisa Cook and Cleveland Fed President Beth Hammack wanted a quarter-point hike. The statement called growth strong and said more information will help the Fed set the right level of rates. At the briefing, Chair Kevin Warsh repeated that line and announced that from 2027 one of the eight yearly meetings will be a strategy session with no rate vote and no statement, rising to two in 2028.",
         "means": "December is not settled: the Fed wants to see more data first, but two votes for a hike show pressure inside the bank. Markets still see about an 86% chance of a December hike, up from 78% on Tuesday. Fewer voting meetings from 2027 mean fewer dates on which rates can change.",
-        "fx": "Pause with hawkish votes, no promise on December \u2192 hike odds stay high but depend on the data \u2192 the dollar keeps its rate support and stays near its high for the year, waiting on Thursday's figures."
+        "fx": "Pause with hawkish votes, no promise on December → hike odds stay high but depend on the data → the dollar keeps its rate support and stays near its high for the year, waiting on Thursday's figures."
       },
       "impact": [
         {
@@ -1196,111 +1337,6 @@
         }
       ],
       "watch": "Thursday's US figures: third-quarter growth and the September PCE price index, the Fed's preferred inflation gauge; a hot reading firms up December."
-    },
-    {
-      "id": "iranintl-wsj-post-midterm-iran-20261028",
-      "ts": "2026-10-28T04:07:16Z",
-      "source": "Iran International (WSJ report)",
-      "url": "https://www.iranintl.com/en/202610282501",
-      "image": "https://i.iranintl.com/images/rdk9umy0/production/6a5988b540a282daaa246d29858fd4efc9ff4468-1200x675.jpg?rect=0,23,1200,630&w=1200&h=630&q=66&fit=max&auto=format",
-      "headline": "US warns Persian Gulf states of possible post-election Iran strikes - WSJ",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "The US has reportedly told Gulf Arab governments to get ready for a short, heavy US attack on Iran after the November 3 US midterm elections. The White House would not comment, and the Wall Street Journal says no final decision has been made.",
-      "beats": {
-        "was": "The US and Israel fought a war with Iran this year that partly blocked the Strait of Hormuz, the route for about a fifth of the world's oil. Talks with Iran, helped by Qatar, have stalled in recent days.",
-        "happened": "The Wall Street Journal reported that the US warned several Gulf states, through diplomats and the military, to prepare for a possible short, intense campaign against Iran after the midterms. President Trump is said to lean toward a large strike on Iran's infrastructure and nuclear sites. The US is moving air-defence systems, fresh munitions, bombers and another aircraft carrier group into the region.",
-        "means": "This puts a rough date on the risk of the war restarting: the days after November 3. Until then, the chance of new fighting keeps a fear premium in oil and keeps demand for safe places to hold money.",
-        "fx": "Talk of new US strikes \u2192 bigger risk to Gulf oil \u2192 higher oil, which helps Canada and hurts Japan and Europe, and more demand for the dollar and Swiss franc as shelter."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Puts a possible date on new fighting near the Gulf's oil routes."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "War fears add to demand for the dollar as shelter."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The franc draws money when war risk rises."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so the fuel bill risk rises."
-        }
-      ],
-      "watch": "Whether talks with Iran restart before November 3, or the White House confirms or denies the plan."
-    },
-    {
-      "id": "actionforex-rbnz-hold-275-20261028",
-      "ts": "2026-10-28T01:19:25Z",
-      "source": "ActionForex",
-      "url": "https://www.actionforex.com/live-comments/658943-rbnz-surprises-with-4-3-hold-at-2-75-but-further-rate-hikes-remain-likely/",
-      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-nz1.jpg",
-      "headline": "RBNZ Surprises with 4\u20133 Hold at 2.75%, but Further Rate Hikes Remain Likely",
-      "story": "rbnz-oct28",
-      "story_title": "RBNZ: the October 28 decision",
-      "pillar": "policy",
-      "summary": "The Reserve Bank of New Zealand kept its rate at 2.75% when almost everyone expected a rise to 3%. The kiwi fell about 1.7% to roughly 55.9 US cents.",
-      "beats": {
-        "was": "The Reserve Bank of New Zealand raised its rate in July and September to fight inflation pushed up by fuel costs from the Iran war. Markets saw about a 90% chance of a third rise on Wednesday, October 28, and all five big New Zealand banks forecast one.",
-        "happened": "The bank held at 2.75% in a 4-3 vote. Governor Anna Breman and three others wanted to wait and see how the earlier hikes are working; three members wanted a rise now. All seven agreed more tightening is likely, but the timing depends on the data. Inflation slowed to 3.7% in the third quarter, below the bank's forecast.",
-        "means": "Markets had treated the hike as done, so the hold forced a quick rethink. The bank still sounds ready to raise rates later, so this reads more as a delay than a turn toward cuts.",
-        "fx": "Expected hike didn't come \u2192 lower New Zealand rates for longer than priced \u2192 less reason to hold the kiwi \u2192 New Zealand dollar weaker, especially against the Australian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 3,
-          "why": "A hike nearly everyone expected didn't happen, so rate expectations dropped fast."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Gains against the kiwi as the two central banks move apart."
-        }
-      ],
-      "watch": "The Reserve Bank of New Zealand's December decision, which comes with new forecasts. A weaker kiwi raises import prices, which could bring the hike back sooner."
-    },
-    {
-      "id": "abs-cpi-sep-20261028",
-      "ts": "2026-10-28T00:30:00Z",
-      "source": "Australian Bureau of Statistics",
-      "url": "https://www.abs.gov.au/media-centre/media-releases/cpi-rose-43-year-september-2026",
-      "image": null,
-      "headline": "CPI rose 4.3% in the year to September 2026",
-      "story": "rba-nov3",
-      "story_title": "RBA: a fifth hike on November 3?",
-      "pillar": "policy",
-      "summary": "Australian prices rose 4.3% in the year to September, up from 4.0% and a little above the 4.2% forecasters expected. The core measure the Reserve Bank of Australia watches rose 1.0% in the quarter, above the bank's own forecast.",
-      "beats": {
-        "was": "The Reserve Bank of Australia has raised its rate four times this year, to 4.60%, as higher fuel costs from the Iran war push up prices. It decides again on November 3, and markets already leaned toward a fifth hike.",
-        "happened": "The Australian Bureau of Statistics said prices rose 0.8% in September alone and 1.3% over the July-to-September quarter. Petrol was up 9.4% in the month after a 14.8% jump in August. The trimmed mean, which drops the biggest price swings, held at 3.6% a year and rose 1.0% in the quarter, against the bank's August forecast of 0.8%. Housing and electricity were the largest drivers.",
-        "means": "Inflation is running faster than the central bank planned for, and not only because of fuel: the core measure is also too high. That makes a hike on November 3 harder to skip.",
-        "fx": "Inflation above the bank's forecast \u2192 November hike more likely \u2192 wider rate gap with other countries \u2192 support for the Australian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Core inflation beat the central bank's forecast, firming up a November hike."
-        }
-      ],
-      "watch": "The Reserve Bank of Australia's decision on Tuesday, November 3."
     }
   ]
 }
