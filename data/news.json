@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T19:49:09Z",
+  "updated": "2026-11-01T23:47:59Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "mixed",
-      "ts": "2026-10-30T22:45:00Z",
-      "text": "The European Central Bank hinted at a December rate rise on Thursday, and the euro zone grew 0.4% last quarter, twice the forecast, while prices jumped in Italy and France. But German inflation cooled to 2.8%, France's economy shrank and Fitch warned late Friday it may cut France's credit rating, so the euro sits near $1.117 and keeps losing ground to the pound."
+      "ts": "2026-11-01T23:47:59Z",
+      "text": "The European Central Bank hinted at a December rate rise last week, and the euro zone grew 0.4% last quarter, twice the forecast. But German inflation cooled, France's economy shrank, Fitch may cut France's credit rating, and Germany starts winter with gas stores well short of target, so the euro sits near $1.117 and keeps losing ground to the pound."
     },
     "GBP": {
       "lean": "bullish",
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "mixed",
-      "ts": "2026-10-30T13:55:00Z",
-      "text": "The Bank of Canada raised its rate to 2.5% on Wednesday, its first hike in three years, and oil above $100 a barrel, a big Canadian export, has the loonie just under 1.40 per US dollar. But Friday's figures showed the economy flat in August and likely shrinking in September, well below the bank's forecast, which makes another rise harder to justify."
+      "ts": "2026-11-01T23:47:59Z",
+      "text": "The Bank of Canada raised its rate to 2.5% last week, its first hike in three years, and oil above $100 a barrel, a big Canadian export, has the loonie just under 1.40 per US dollar. Figures showing the economy stalled argue against more rises, but President Trump now says a US-Canada trade deal is very close, which would help if it brings tariff cuts."
     },
     "AUD": {
       "lean": "mixed",
@@ -49,11 +49,38 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-01T19:49:09Z",
-      "text": "Brent crude ended last week near $117 a barrel, up about 14% in October, as ships kept getting hit in the Gulf, now including a Qatari gas carrier. On Sunday Yemen's Houthis renewed threats against Saudi oil sites and Iran's leaders warned against new US strikes, while Washington says no decision is made and OPEC+ is holding output steady for December."
+      "ts": "2026-11-01T23:47:59Z",
+      "text": "Brent crude ended last week near $117 a barrel, up about 14% in October, as ships kept getting hit in the Gulf. On Sunday Iran said two more tankers struck its mines in the Strait of Hormuz and Yemen's Houthis renewed threats against Saudi oil sites, while Washington says no decision on new strikes is made and OPEC+ is holding output steady for December."
     }
   },
   "items": [
+    {
+      "id": "sbs-trump-canada-deal-close-keystone-20261101",
+      "ts": "2026-11-01T23:34:00Z",
+      "source": "SBS News",
+      "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008825593",
+      "image": "https://img.sbs.co.kr/newimg/news/20261102/202236919_1280.jpg",
+      "headline": "Trump Says U.S. and Canada 'Very Close' to Trade Deal, Carney Cites Constructive Talks",
+      "story": "us-canada-trade",
+      "story_title": "US-Canada trade: tariffs and talks",
+      "pillar": "growth",
+      "summary": "President Trump told an Iowa rally on Sunday that the US and Canada are very close to a trade deal that would include the Keystone XL oil pipeline, while Prime Minister Mark Carney said talks will take weeks.",
+      "beats": {
+        "was": "The US and Canada have put billions of dollars of tariffs on each other's goods in recent months, hurting Canadian steel and car makers. The Keystone XL pipeline, which would carry Canadian crude to the US, was cancelled in 2021.",
+        "happened": "Trump said he spoke with Carney by phone on Saturday and that the two sides have outlined a very good deal, with Canada paying to build the pipeline. Carney called the talks constructive but said negotiators will work on a framework over the coming weeks; no terms or tariff cuts were announced.",
+        "means": "It is the warmest tone in months, two days before the US midterm elections, but nothing is signed and Carney has said before that Canada will not rush into a bad deal.",
+        "fx": "Lower US tariffs would help Canada's exports and economy, which have stalled, so real progress would support the Canadian dollar; the market will want details first."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Talk of a deal that could cut tariffs on Canadian goods helps, but there are no terms yet."
+        }
+      ],
+      "watch": "Whether either side publishes terms, especially tariff relief on Canadian steel and cars."
+    },
     {
       "id": "24newshd-houthi-threats-aramco-airspace-20261101",
       "ts": "2026-11-01T15:47:00Z",
@@ -88,6 +115,33 @@
       "watch": "Whether the Houthis follow through with a strike on Aramco sites, or the Saudi coalition's raids push them to escalate."
     },
     {
+      "id": "energyconnects-bbg-germany-gas-storage-miss-20261101",
+      "ts": "2026-11-01T15:13:00Z",
+      "source": "Energy Connects (Bloomberg)",
+      "url": "https://www.energyconnects.com/news/gas-lng/2026/november/germany-misses-gas-storage-target-as-cold-snap-sets-in/",
+      "image": "https://www.energyconnects.com/media/rhjbv5fz/bloombergmedia_tnnt2zt96osg00_01-11-2026_15-05-19_639290880000000000.jpg?width=1200&height=628&v=1dd6a12690761f0",
+      "headline": "Germany Misses Gas Storage Target as Cold Snap Sets In",
+      "story": "europe-gas",
+      "story_title": "Europe's gas: thin reserves going into winter",
+      "pillar": "commodities",
+      "summary": "Germany's gas stores were only about 61% full on November 1, short of its 70% goal, just as colder-than-usual weather arrives.",
+      "beats": {
+        "was": "Germany sets fill targets for its gas storage so it can get through winter, and European gas prices have roughly tripled this year because the Iran war cut Gulf supplies, topping €100 per megawatt-hour last week for the first time since 2022.",
+        "happened": "Data from Gas Infrastructure Europe showed German storage at 61% on Friday versus a 70% target, well below the EU average of 75%. The economy ministry admitted the target will be missed but said reserves should last the winter thanks to Norwegian pipelines and LNG terminals. Forecasts show temperatures below normal in Berlin, Frankfurt and Munich.",
+        "means": "Thin reserves plus a cold, possibly windless spell mean Germany may have to buy more gas at high prices, which raises costs for its factories and keeps energy inflation up.",
+        "fx": "Pricier energy hurts Europe's trade balance and growth, a weight on the euro, though it also keeps inflation high enough for the European Central Bank to consider raising rates."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Low gas stores before a cold spell raise the euro zone's energy bill and the risk to German industry."
+        }
+      ],
+      "watch": "How cold November turns out and whether European gas prices climb back above €100."
+    },
+    {
       "id": "britisheye-boe-expected-hike-4pc-20261101",
       "ts": "2026-11-01T14:00:00Z",
       "source": "The British Eye",
@@ -113,39 +167,6 @@
         }
       ],
       "watch": "The vote split and the Bank's guidance on Thursday; a hold would be a real surprise."
-    },
-    {
-      "id": "thestandard-china-regulators-stock-support-20261101",
-      "date": "2026-11-01",
-      "source": "The Standard (Hong Kong)",
-      "url": "https://www.thestandard.com.hk/finance/article/347145/China-regulators-act-to-support-stocks-after-October-slump-mainland-media-reports",
-      "image": "https://image.hkstandard.com.hk/f/1200p0/0x0/100/none/a780e955d16d99d6b9db7d9f1d1c7173/2026-11/FIL51_CHINA-MONEYLAUNDERING_0711_11.JPG",
-      "headline": "China's regulators to meet banks on Monday on steps to steady stocks after an October slump",
-      "story": "china-slowdown",
-      "story_title": "China's slowdown and Beijing's response",
-      "pillar": "growth",
-      "summary": "China's central bank and its market and banking regulators meet big banks and fund firms on Monday to discuss more support for a stock market that slid hard in October.",
-      "beats": {
-        "was": "Chinese shares had a bad October: the Shanghai index fell about 6% and the tech-heavy Shenzhen index about 16%, with the main growth boards down over 23%. Official figures on Saturday also showed factory and service activity shrinking.",
-        "happened": "Mainland media reported on Sunday that the People's Bank of China, the China Securities Regulatory Commission and the National Financial Regulatory Administration will meet major banks and fund companies on Monday, November 2. They are expected to discuss widening cheap loans that help companies and big holders buy back shares.",
-        "means": "Beijing is signalling it will not let the sell-off run unchecked. A meeting is not yet new money, so the effect depends on what measures come out of it.",
-        "fx": "Steadier Chinese markets help currencies tied to China's demand, chiefly the Australian and New Zealand dollars. If the steps disappoint, the weak October figures would weigh again."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Support for Chinese stocks eases worry about Australia's biggest customer, but no measures are announced yet."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "China is a major buyer of New Zealand's exports, so steadier Chinese markets help a little."
-        }
-      ],
-      "watch": "What the Monday meeting in Beijing announces, and China's private-sector factory survey the same day."
     },
     {
       "id": "aol-reuters-opec-keeps-december-steady-20261101",
@@ -181,37 +202,76 @@
       "watch": "The OPEC+ meeting on November 29 that sets 2027 output, and the capacity review due by mid-November."
     },
     {
-      "id": "fox-rubio-no-decision-strikes-20261101",
-      "ts": "2026-11-01T11:38:00Z",
-      "source": "Fox News",
-      "url": "https://www.foxnews.com/live-news/iran-war-news-trump-us-israel-november-1",
-      "image": "https://assets.foxnews.com/liveblog/fn/prod/images/2026/11/f69f0609b8f0620e5399603c32cd76df.jpg",
-      "headline": "Trump, Rubio say more Iran strikes are still on the table, but not likely before midterms",
-      "story": "us-iran-talks",
-      "story_title": "US-Iran talks and the threat of new strikes",
-      "pillar": "risk",
-      "summary": "US Secretary of State Marco Rubio said President Trump has not decided whether to resume strikes on Iran and would rather reach a deal; Trump said talks are going fine.",
+      "id": "jpost-irgc-two-tankers-mines-20261101",
+      "date": "2026-11-01",
+      "source": "Jerusalem Post",
+      "url": "https://www.jpost.com/middle-east/iran-news/article-913514",
+      "image": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/742073",
+      "headline": "Two oil tankers explode after hitting mine in Hormuz Strait, IRGC says",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "Iran's Revolutionary Guards said two oil tankers hit Iranian sea mines in the Strait of Hormuz on Sunday, leaving one supertanker on fire, while a UK shipping-security agency reported another tanker struck by an unknown projectile.",
       "beats": {
-        "was": "The US and Iran have been at war since February, with a pause in fighting while Qatar mediates. Weekend reports said the US was preparing possible new strikes, and Iran has offered to reopen the Strait of Hormuz on its own terms.",
-        "happened": "On Saturday, Rubio said Trump has made no decision on new strikes and prefers a diplomatic outcome. Trump called the talks fine but questioned how much Iran's negotiators can be trusted and said he is in no rush to sign. The report says new strikes look unlikely before Tuesday's US midterm elections.",
-        "means": "Washington is keeping both options open: talks continue in Doha while strikes stay possible. The near-term risk of fresh fighting looks a little lower, but nothing is settled.",
-        "fx": "A pause in the threat of strikes takes a little of the war premium out of oil and eases shelter demand for the Swiss franc. A collapse of the talks would quickly reverse that."
+        "was": "The Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil, has been largely shut since the US-Iran war began in February, and ships trying to pass have been mined, shot at or seized. Several tankers were hit last week.",
+        "happened": "A spokesman for the Guards' navy told Iranian state TV the two tankers took an unapproved route with their tracking systems off and blamed their owners. Separately, the UK Maritime Trade Operations centre said a tanker was hit by an unknown object earlier on Sunday. None of this has been independently confirmed.",
+        "means": "Ships keep getting hit even as Iran and the US talk through Qatar, so the few routes still open look riskier and insurance and freight costs stay high.",
+        "fx": "More damage to Gulf shipping supports oil prices, which helps oil exporters like Canada and hurts big importers such as Japan and the euro zone."
       },
       "impact": [
         {
           "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Talk of preferring a deal trims the odds of fighting in the next few days."
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Two more tankers hit in the main Gulf oil lane raises the risk that even less crude gets out."
         },
         {
-          "ccy": "CHF",
+          "ccy": "JPY",
           "dir": "bearish",
           "strength": 1,
-          "why": "Less immediate war risk means less need for the franc as shelter."
+          "why": "Japan buys almost all its oil abroad, so a higher import bill weighs on the yen."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada sells a lot of oil, so Gulf supply scares tend to lift the loonie a little."
         }
       ],
-      "watch": "Whether the US answers Iran's two-day Hormuz offer, and any move toward strikes after Tuesday's midterm elections."
+      "watch": "Whether Monday's oil trading opens higher, and whether the US Navy or shipping agencies confirm the Iranian account."
+    },
+    {
+      "id": "thestandard-china-regulators-stock-support-20261101",
+      "date": "2026-11-01",
+      "source": "The Standard (Hong Kong)",
+      "url": "https://www.thestandard.com.hk/finance/article/347145/China-regulators-act-to-support-stocks-after-October-slump-mainland-media-reports",
+      "image": "https://image.hkstandard.com.hk/f/1200p0/0x0/100/none/a780e955d16d99d6b9db7d9f1d1c7173/2026-11/FIL51_CHINA-MONEYLAUNDERING_0711_11.JPG",
+      "headline": "China's regulators to meet banks on Monday on steps to steady stocks after an October slump",
+      "story": "china-slowdown",
+      "story_title": "China's slowdown and Beijing's response",
+      "pillar": "growth",
+      "summary": "China's central bank and its market and banking regulators meet big banks and fund firms on Monday to discuss more support for a stock market that slid hard in October.",
+      "beats": {
+        "was": "Chinese shares had a bad October: the Shanghai index fell about 6% and the tech-heavy Shenzhen index about 16%, with the main growth boards down over 23%. Official figures on Saturday also showed factory and service activity shrinking.",
+        "happened": "Mainland media reported on Sunday that the People's Bank of China, the China Securities Regulatory Commission and the National Financial Regulatory Administration will meet major banks and fund companies on Monday, November 2. They are expected to discuss widening cheap loans that help companies and big holders buy back shares.",
+        "means": "Beijing is signalling it will not let the sell-off run unchecked. A meeting is not yet new money, so the effect depends on what measures come out of it.",
+        "fx": "Steadier Chinese markets help currencies tied to China's demand, chiefly the Australian and New Zealand dollars. If the steps disappoint, the weak October figures would weigh again."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Support for Chinese stocks eases worry about Australia's biggest customer, but no measures are announced yet."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "China is a major buyer of New Zealand's exports, so steadier Chinese markets help a little."
+        }
+      ],
+      "watch": "What the Monday meeting in Beijing announces, and China's private-sector factory survey the same day."
     },
     {
       "id": "gulfnews-qatar-lng-carrier-struck-20261101",
@@ -311,6 +371,39 @@
         }
       ],
       "watch": "The formal statement from Sunday's meeting and any hint about 2027 quotas."
+    },
+    {
+      "id": "fox-rubio-no-decision-strikes-20261101",
+      "ts": "2026-11-01T11:38:00Z",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/live-news/iran-war-news-trump-us-israel-november-1",
+      "image": "https://assets.foxnews.com/liveblog/fn/prod/images/2026/11/f69f0609b8f0620e5399603c32cd76df.jpg",
+      "headline": "Trump, Rubio say more Iran strikes are still on the table, but not likely before midterms",
+      "story": "us-iran-talks",
+      "story_title": "US-Iran talks and the threat of new strikes",
+      "pillar": "risk",
+      "summary": "US Secretary of State Marco Rubio said President Trump has not decided whether to resume strikes on Iran and would rather reach a deal; Trump said talks are going fine.",
+      "beats": {
+        "was": "The US and Iran have been at war since February, with a pause in fighting while Qatar mediates. Weekend reports said the US was preparing possible new strikes, and Iran has offered to reopen the Strait of Hormuz on its own terms.",
+        "happened": "On Saturday, Rubio said Trump has made no decision on new strikes and prefers a diplomatic outcome. Trump called the talks fine but questioned how much Iran's negotiators can be trusted and said he is in no rush to sign. The report says new strikes look unlikely before Tuesday's US midterm elections.",
+        "means": "Washington is keeping both options open: talks continue in Doha while strikes stay possible. The near-term risk of fresh fighting looks a little lower, but nothing is settled.",
+        "fx": "A pause in the threat of strikes takes a little of the war premium out of oil and eases shelter demand for the Swiss franc. A collapse of the talks would quickly reverse that."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Talk of preferring a deal trims the odds of fighting in the next few days."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Less immediate war risk means less need for the franc as shelter."
+        }
+      ],
+      "watch": "Whether the US answers Iran's two-day Hormuz offer, and any move toward strikes after Tuesday's midterm elections."
     },
     {
       "id": "aljazeera-vance-letter-talks-20261101",
@@ -533,258 +626,6 @@
         }
       ],
       "watch": "Any reply from Iran to the US letter, and tanker traffic through the strait when markets reopen."
-    },
-    {
-      "id": "indexbox-chicago-pmi-oct-553-20261030",
-      "date": "2026-10-30",
-      "source": "IndexBox",
-      "url": "https://www.indexbox.io/blog/chicago-pmi-falls-to-553-missing-forecast-and-signaling-slower-manufacturing-growth/",
-      "image": "https://www.indexbox.io/landing/img/blog/telegram-fallback/26ac83d146da86a3b98d871363427233.webp",
-      "headline": "Chicago PMI Drops to 55.3 vs 55.8 Forecast — Manufacturing Growth Slows",
-      "story": "us-economy",
-      "story_title": "US economy: strong growth, cooling signs",
-      "pillar": "growth",
-      "summary": "A survey of businesses around Chicago showed activity still growing in October, but more slowly than in September and a bit below forecasts.",
-      "beats": {
-        "was": "The US economy grew at a 3.4% yearly pace last quarter, and the Federal Reserve is weighing a rate rise in December.",
-        "happened": "The Chicago Business Barometer, a monthly survey of purchasing managers, fell to 55.3 from 58.8, a little under the roughly 56 economists expected. Any reading above 50 means activity is growing.",
-        "means": "Business in the Midwest is still expanding at a solid clip, just less briskly. It is a small sign of cooling, not a reason for the Fed to change course.",
-        "fx": "A slight miss on a second-tier survey barely changes the outlook for US rates, so the effect on the dollar is small."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Slower, though still solid, business growth trims the case for more Fed rises a little."
-        }
-      ],
-      "watch": "The national ISM manufacturing survey on Monday, November 2, which covers the whole country."
-    },
-    {
-      "id": "investing-reuters-nasdaq-2trn-ai-fears-20261030",
-      "date": "2026-10-30",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/stock-market-news/nasdaq-faces-2-trillion-wipeout-in-october-as-ai-spending-fears-deepen-4988211",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEM9T1J0_L.jpg",
-      "headline": "Nasdaq faces $2 trillion wipeout in October as AI spending fears deepen",
-      "story": "ai-selloff",
-      "story_title": "Wall Street: doubts over AI spending",
-      "pillar": "risk",
-      "summary": "More than $2 trillion is set to be wiped off the Nasdaq 100 index of big US tech firms this month, as investors doubt that huge spending on artificial intelligence will pay off soon.",
-      "beats": {
-        "was": "US tech giants have been raising their spending plans on AI data centres for months, and those shares have carried the US stock market.",
-        "happened": "The Nasdaq 100 was down nearly 6% for October by Friday. Alphabet had its worst one-day fall on record after weak search-ad results, Meta plans a record $97.5 billion fund-raise, and Meta, Alphabet and Amazon all raised spending forecasts again.",
-        "means": "Money is leaving tech shares for safer places like US government bonds, which pushes US yields down and makes investors more cautious overall.",
-        "fx": "Lower US yields take some shine off the dollar, while the yen and Swiss franc tend to gain when investors get nervous."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Money moving into US bonds pulls yields down, trimming the dollar's rate edge."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Nervous markets tend to draw money into the yen."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The franc draws shelter money when stocks fall."
-        }
-      ],
-      "watch": "If Apple next week and Nvidia in mid-November show AI spending paying off, the selling could ease and yields recover."
-    },
-    {
-      "id": "aljazeera-oil-flows-up-prices-rise-20261030",
-      "date": "2026-10-30",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/economy/2026/10/30/oil-flows-are-up-as-iran-war-turmoil-eases-why-do-prices-keep-rising",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/10/AP26253657242641-1-1793234091_8cc3e0-1793343640.jpg?resize=1200%2C630&quality=80",
-      "headline": "Oil flows are up as Iran war turmoil eases. Why do prices keep rising?",
-      "story": "hormuz",
-      "story_title": "Hormuz: war risk keeps oil high",
-      "pillar": "tot",
-      "summary": "Gulf oil exports are back above pre-war levels, yet Brent crude briefly topped $117 a barrel on Friday, because stockpiles are low, shipping costs are huge and traders fear new US strikes on Iran.",
-      "beats": {
-        "was": "The US war on Iran left the Strait of Hormuz, the main exit for Gulf oil, largely shut, and Brent is up more than 60% since the war began.",
-        "happened": "Gulf crude exports averaged about 24.6 million barrels a day in mid-October, above pre-war levels, with 40% now bypassing the strait. But world stocks are about 509 million barrels below pre-war levels, freight costs about $40 a barrel, roughly ten times normal, and October saw a record 32 attacks on ships.",
-        "means": "Even with oil moving again, thin stockpiles and the risk of more fighting keep prices high, and a drop back to $70 would need lasting peace and normal shipping.",
-        "fx": "Supports oil and the currencies of oil sellers like Canada, and weighs on big importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Low stockpiles and costly shipping keep a floor under prices even as flows recover."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "High oil prices help Canada, a big oil exporter."
-        }
-      ],
-      "watch": "A lasting US-Iran deal and safe shipping through Hormuz would start to bring prices down; new US strikes would lift them."
-    },
-    {
-      "id": "investing-germany-cpi-oct-28-20261030",
-      "date": "2026-10-30",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/economic-indicators/germany-october-inflation-slows-more-than-expected-to-28-4987753",
-      "image": "https://content-media.investing.com/news/LYNXMPED0C0KP_L.jpg",
-      "headline": "Germany October inflation slows more than expected to 2.8%",
-      "story": "ez-growth-inflation",
-      "story_title": "Euro zone: growth holds up as prices climb",
-      "pillar": "inflation",
-      "summary": "German inflation fell to 2.8% in October from 3.3%, cooler than forecast, as energy costs rose more slowly and the underlying rate eased to 2.1%.",
-      "beats": {
-        "was": "The European Central Bank held its deposit rate at 2.5% on Thursday and hinted it may raise rates in December because energy costs keep prices high. Earlier Friday, inflation in Italy and France came in hot.",
-        "happened": "Germany's first estimate showed prices up 2.8% from a year ago on the EU-wide measure, against 3.1% expected. Energy inflation slowed to 12.2% from 14.9%, and prices excluding food and energy rose 2.1%, down from 2.4%.",
-        "means": "Germany is the euro zone's biggest economy, so a cooler reading there takes some heat out of the case for a December rise, even with Italy and France running hot.",
-        "fx": "Softer prices in Germany → some weight on the euro, which has already been losing ground to the pound."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Cooler German prices than expected weaken the case for a December ECB rise."
-        }
-      ],
-      "watch": "The euro-zone-wide inflation estimate next week; a hot figure despite Germany would put the December rise back in view."
-    },
-    {
-      "id": "wbow-reuters-us-eci-q3-20261030",
-      "date": "2026-10-30",
-      "source": "102.7 WBOW (Reuters)",
-      "url": "https://1027wbow.com/2026/10/30/us-labor-costs-rise-moderately-in-third-quarter/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/30/2026-10-30T124017Z_1_LYNXNPEM9T18S_RTROPTP_3_USA-ELECTION-ECONOMY-JOBS.JPG",
-      "headline": "US labor costs rise moderately in third quarter",
-      "story": "fed-oct28",
-      "story_title": "Federal Reserve: the October 28 decision",
-      "pillar": "inflation",
-      "summary": "US labor costs rose 0.8% in the third quarter, exactly as forecast, and 3.4% over the year, the same pace as before.",
-      "beats": {
-        "was": "The Federal Reserve held rates on Wednesday but left a December rise open, and Thursday's strong growth and inflation figures made one look more likely.",
-        "happened": "The Employment Cost Index, a broad gauge of what employers pay in wages and benefits, rose 0.8% from July to September after 0.9% in the spring. The yearly rise held at 3.4%.",
-        "means": "Pay is not adding new inflation pressure, so the figure neither strengthens nor weakens the case for a December rise.",
-        "fx": "In line with forecasts → little change for the dollar."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Wage costs matched forecasts, so they add no new pressure either way on Fed rates."
-        }
-      ],
-      "watch": "A sharp jump in pay growth in the next jobs report would add to the case for a December Fed rise."
-    },
-    {
-      "id": "reuters-ueda-presser-20261030",
-      "date": "2026-10-30",
-      "source": "93.3 The Drive (Reuters)",
-      "url": "https://www.933thedrive.com/2026/10/30/boj-governor-uedas-comments-at-news-conference-27/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/30/2026-10-30T064927Z_1_LYNXNPEM9T0FN_RTROPTP_3_JAPAN-BOJ.JPG",
-      "headline": "BOJ Governor Ueda's comments at news conference",
-      "story": "boj-path",
-      "story_title": "Bank of Japan: how soon the next rate rise",
-      "pillar": "policy",
-      "summary": "Bank of Japan Governor Kazuo Ueda said the bank won't sit and wait, but stopped short of naming a date for the next rate rise, and the yen gave back some of its gains.",
-      "beats": {
-        "was": "Hours earlier the bank held its rate at 1.25% and said underlying inflation is now in line with its 2% goal.",
-        "happened": "At his press conference Ueda said the goal is not fully reached yet, that upside risks to prices have not grown sharply in the past month, and that the bank will adjust policy as needed rather than wait.",
-        "means": "His words keep December possible without promising it, so they added little to the morning's decision.",
-        "fx": "No firm signal on timing → the yen trimmed its gains, near 157.4 per dollar."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Open to a rise but no date given, so the yen's gains faded a little."
-        }
-      ],
-      "watch": "A clear hint of a December rise from Ueda or his deputies would give the yen a stronger lift."
-    },
-    {
-      "id": "reuters-yen-steady-before-boj-ai-treasury-20261030",
-      "date": "2026-10-30",
-      "source": "Investing.com (Reuters)",
-      "url": "https://www.investing.com/news/economy-news/yen-steady-before-boj-ai-jitters-drive-treasury-rally-weigh-on-dollar-4985701",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEM9T046_L.jpg",
-      "headline": "Yen steady before BOJ, AI jitters drive Treasury rally, weigh on dollar",
-      "story": "ai-earnings",
-      "story_title": "Big Tech results and the AI spending boom",
-      "pillar": "risk",
-      "summary": "Worries about how much tech companies spend on AI sent money into US government bonds, pulling yields to one-month lows and leaving the dollar a little softer as Asia opened Friday.",
-      "beats": {
-        "was": "Google's owner Alphabet reported results this week that revived doubts about whether huge spending on artificial intelligence will pay off, and stocks fell.",
-        "happened": "Investors moved into safe US Treasury bonds, and the 10-year yield fell to about 4.9%, its lowest in over a month. The dollar index eased to near 101.8, the yen held near 157.8 per dollar before the Bank of Japan's decision, and the euro sat near $1.118.",
-        "means": "Lower US yields shrink the dollar's interest-rate edge, so a stock scare is softening the dollar rather than lifting it. The dollar is still set for a second monthly gain.",
-        "fx": "Falling US yields → mild pressure on the dollar; the yen waits on the Bank of Japan."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower Treasury yields trim the dollar's rate edge."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Narrower US yields help the yen, but traders are waiting for the Bank of Japan."
-        }
-      ],
-      "watch": "If US yields bounce back above 5%, or the stock selloff deepens into wider fear, the dollar's direction could change."
-    },
-    {
-      "id": "investing-oil-rises-us-military-action-iran-20261030",
-      "date": "2026-10-30",
-      "source": "Investing.com",
-      "url": "https://ph.investing.com/news/commodities-news/oil-rises-on-prospects-of-fresh-us-military-action-against-iran-2661785",
-      "image": "https://content-media.investing.com/news/LYNXMPEA601BL_L.jpg",
-      "headline": "Oil rises on prospects of fresh U.S. military action against Iran",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Oil rose about 0.7% in early Asian trading Friday after a report that the top US commander for the Middle East briefed President Trump on new military options against Iran.",
-      "beats": {
-        "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the sea lane for about a fifth of the world's oil, largely shut. Talks have stalled, and President Donald Trump has hinted at new strikes after the November 3 midterm elections.",
-        "happened": "The Wall Street Journal reported that Admiral Brad Cooper, head of US Central Command, briefed Trump on options including a return to major fighting. Brent crude rose to about $115.70 a barrel and US crude to about $102.80; both are heading for a fourth straight month of gains above 10%.",
-        "means": "Each sign that fighting could restart adds to the war premium in oil. Low US crude stocks and Houthi missile fire at Saudi Arabia keep supply worries alive too.",
-        "fx": "Talk of new US strikes → firmer oil; that helps oil exporters like Canada and weighs on big importers like Japan."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The chance of renewed US strikes on Iran adds to supply fears."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil lifts Canada's main export earnings."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so a higher bill hurts the yen."
-        }
-      ],
-      "watch": "Whether Iran accepts a deal through Qatar's mediators, or US strikes resume after the November 3 election."
     },
     {
       "id": "wbow-reuters-fitch-france-outlook-negative-20261030",
@@ -1051,6 +892,258 @@
       "watch": "If Bank of Canada officials brush off the weak figures and repeat that more rises may be needed, the loonie's support returns."
     },
     {
+      "id": "indexbox-chicago-pmi-oct-553-20261030",
+      "date": "2026-10-30",
+      "source": "IndexBox",
+      "url": "https://www.indexbox.io/blog/chicago-pmi-falls-to-553-missing-forecast-and-signaling-slower-manufacturing-growth/",
+      "image": "https://www.indexbox.io/landing/img/blog/telegram-fallback/26ac83d146da86a3b98d871363427233.webp",
+      "headline": "Chicago PMI Drops to 55.3 vs 55.8 Forecast — Manufacturing Growth Slows",
+      "story": "us-economy",
+      "story_title": "US economy: strong growth, cooling signs",
+      "pillar": "growth",
+      "summary": "A survey of businesses around Chicago showed activity still growing in October, but more slowly than in September and a bit below forecasts.",
+      "beats": {
+        "was": "The US economy grew at a 3.4% yearly pace last quarter, and the Federal Reserve is weighing a rate rise in December.",
+        "happened": "The Chicago Business Barometer, a monthly survey of purchasing managers, fell to 55.3 from 58.8, a little under the roughly 56 economists expected. Any reading above 50 means activity is growing.",
+        "means": "Business in the Midwest is still expanding at a solid clip, just less briskly. It is a small sign of cooling, not a reason for the Fed to change course.",
+        "fx": "A slight miss on a second-tier survey barely changes the outlook for US rates, so the effect on the dollar is small."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slower, though still solid, business growth trims the case for more Fed rises a little."
+        }
+      ],
+      "watch": "The national ISM manufacturing survey on Monday, November 2, which covers the whole country."
+    },
+    {
+      "id": "investing-reuters-nasdaq-2trn-ai-fears-20261030",
+      "date": "2026-10-30",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/stock-market-news/nasdaq-faces-2-trillion-wipeout-in-october-as-ai-spending-fears-deepen-4988211",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEM9T1J0_L.jpg",
+      "headline": "Nasdaq faces $2 trillion wipeout in October as AI spending fears deepen",
+      "story": "ai-selloff",
+      "story_title": "Wall Street: doubts over AI spending",
+      "pillar": "risk",
+      "summary": "More than $2 trillion is set to be wiped off the Nasdaq 100 index of big US tech firms this month, as investors doubt that huge spending on artificial intelligence will pay off soon.",
+      "beats": {
+        "was": "US tech giants have been raising their spending plans on AI data centres for months, and those shares have carried the US stock market.",
+        "happened": "The Nasdaq 100 was down nearly 6% for October by Friday. Alphabet had its worst one-day fall on record after weak search-ad results, Meta plans a record $97.5 billion fund-raise, and Meta, Alphabet and Amazon all raised spending forecasts again.",
+        "means": "Money is leaving tech shares for safer places like US government bonds, which pushes US yields down and makes investors more cautious overall.",
+        "fx": "Lower US yields take some shine off the dollar, while the yen and Swiss franc tend to gain when investors get nervous."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Money moving into US bonds pulls yields down, trimming the dollar's rate edge."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Nervous markets tend to draw money into the yen."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The franc draws shelter money when stocks fall."
+        }
+      ],
+      "watch": "If Apple next week and Nvidia in mid-November show AI spending paying off, the selling could ease and yields recover."
+    },
+    {
+      "id": "aljazeera-oil-flows-up-prices-rise-20261030",
+      "date": "2026-10-30",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/economy/2026/10/30/oil-flows-are-up-as-iran-war-turmoil-eases-why-do-prices-keep-rising",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/10/AP26253657242641-1-1793234091_8cc3e0-1793343640.jpg?resize=1200%2C630&quality=80",
+      "headline": "Oil flows are up as Iran war turmoil eases. Why do prices keep rising?",
+      "story": "hormuz",
+      "story_title": "Hormuz: war risk keeps oil high",
+      "pillar": "tot",
+      "summary": "Gulf oil exports are back above pre-war levels, yet Brent crude briefly topped $117 a barrel on Friday, because stockpiles are low, shipping costs are huge and traders fear new US strikes on Iran.",
+      "beats": {
+        "was": "The US war on Iran left the Strait of Hormuz, the main exit for Gulf oil, largely shut, and Brent is up more than 60% since the war began.",
+        "happened": "Gulf crude exports averaged about 24.6 million barrels a day in mid-October, above pre-war levels, with 40% now bypassing the strait. But world stocks are about 509 million barrels below pre-war levels, freight costs about $40 a barrel, roughly ten times normal, and October saw a record 32 attacks on ships.",
+        "means": "Even with oil moving again, thin stockpiles and the risk of more fighting keep prices high, and a drop back to $70 would need lasting peace and normal shipping.",
+        "fx": "Supports oil and the currencies of oil sellers like Canada, and weighs on big importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Low stockpiles and costly shipping keep a floor under prices even as flows recover."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "High oil prices help Canada, a big oil exporter."
+        }
+      ],
+      "watch": "A lasting US-Iran deal and safe shipping through Hormuz would start to bring prices down; new US strikes would lift them."
+    },
+    {
+      "id": "investing-germany-cpi-oct-28-20261030",
+      "date": "2026-10-30",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/economic-indicators/germany-october-inflation-slows-more-than-expected-to-28-4987753",
+      "image": "https://content-media.investing.com/news/LYNXMPED0C0KP_L.jpg",
+      "headline": "Germany October inflation slows more than expected to 2.8%",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holds up as prices climb",
+      "pillar": "inflation",
+      "summary": "German inflation fell to 2.8% in October from 3.3%, cooler than forecast, as energy costs rose more slowly and the underlying rate eased to 2.1%.",
+      "beats": {
+        "was": "The European Central Bank held its deposit rate at 2.5% on Thursday and hinted it may raise rates in December because energy costs keep prices high. Earlier Friday, inflation in Italy and France came in hot.",
+        "happened": "Germany's first estimate showed prices up 2.8% from a year ago on the EU-wide measure, against 3.1% expected. Energy inflation slowed to 12.2% from 14.9%, and prices excluding food and energy rose 2.1%, down from 2.4%.",
+        "means": "Germany is the euro zone's biggest economy, so a cooler reading there takes some heat out of the case for a December rise, even with Italy and France running hot.",
+        "fx": "Softer prices in Germany → some weight on the euro, which has already been losing ground to the pound."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Cooler German prices than expected weaken the case for a December ECB rise."
+        }
+      ],
+      "watch": "The euro-zone-wide inflation estimate next week; a hot figure despite Germany would put the December rise back in view."
+    },
+    {
+      "id": "wbow-reuters-us-eci-q3-20261030",
+      "date": "2026-10-30",
+      "source": "102.7 WBOW (Reuters)",
+      "url": "https://1027wbow.com/2026/10/30/us-labor-costs-rise-moderately-in-third-quarter/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/30/2026-10-30T124017Z_1_LYNXNPEM9T18S_RTROPTP_3_USA-ELECTION-ECONOMY-JOBS.JPG",
+      "headline": "US labor costs rise moderately in third quarter",
+      "story": "fed-oct28",
+      "story_title": "Federal Reserve: the October 28 decision",
+      "pillar": "inflation",
+      "summary": "US labor costs rose 0.8% in the third quarter, exactly as forecast, and 3.4% over the year, the same pace as before.",
+      "beats": {
+        "was": "The Federal Reserve held rates on Wednesday but left a December rise open, and Thursday's strong growth and inflation figures made one look more likely.",
+        "happened": "The Employment Cost Index, a broad gauge of what employers pay in wages and benefits, rose 0.8% from July to September after 0.9% in the spring. The yearly rise held at 3.4%.",
+        "means": "Pay is not adding new inflation pressure, so the figure neither strengthens nor weakens the case for a December rise.",
+        "fx": "In line with forecasts → little change for the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Wage costs matched forecasts, so they add no new pressure either way on Fed rates."
+        }
+      ],
+      "watch": "A sharp jump in pay growth in the next jobs report would add to the case for a December Fed rise."
+    },
+    {
+      "id": "reuters-ueda-presser-20261030",
+      "date": "2026-10-30",
+      "source": "93.3 The Drive (Reuters)",
+      "url": "https://www.933thedrive.com/2026/10/30/boj-governor-uedas-comments-at-news-conference-27/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/30/2026-10-30T064927Z_1_LYNXNPEM9T0FN_RTROPTP_3_JAPAN-BOJ.JPG",
+      "headline": "BOJ Governor Ueda's comments at news conference",
+      "story": "boj-path",
+      "story_title": "Bank of Japan: how soon the next rate rise",
+      "pillar": "policy",
+      "summary": "Bank of Japan Governor Kazuo Ueda said the bank won't sit and wait, but stopped short of naming a date for the next rate rise, and the yen gave back some of its gains.",
+      "beats": {
+        "was": "Hours earlier the bank held its rate at 1.25% and said underlying inflation is now in line with its 2% goal.",
+        "happened": "At his press conference Ueda said the goal is not fully reached yet, that upside risks to prices have not grown sharply in the past month, and that the bank will adjust policy as needed rather than wait.",
+        "means": "His words keep December possible without promising it, so they added little to the morning's decision.",
+        "fx": "No firm signal on timing → the yen trimmed its gains, near 157.4 per dollar."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Open to a rise but no date given, so the yen's gains faded a little."
+        }
+      ],
+      "watch": "A clear hint of a December rise from Ueda or his deputies would give the yen a stronger lift."
+    },
+    {
+      "id": "reuters-yen-steady-before-boj-ai-treasury-20261030",
+      "date": "2026-10-30",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/economy-news/yen-steady-before-boj-ai-jitters-drive-treasury-rally-weigh-on-dollar-4985701",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEM9T046_L.jpg",
+      "headline": "Yen steady before BOJ, AI jitters drive Treasury rally, weigh on dollar",
+      "story": "ai-earnings",
+      "story_title": "Big Tech results and the AI spending boom",
+      "pillar": "risk",
+      "summary": "Worries about how much tech companies spend on AI sent money into US government bonds, pulling yields to one-month lows and leaving the dollar a little softer as Asia opened Friday.",
+      "beats": {
+        "was": "Google's owner Alphabet reported results this week that revived doubts about whether huge spending on artificial intelligence will pay off, and stocks fell.",
+        "happened": "Investors moved into safe US Treasury bonds, and the 10-year yield fell to about 4.9%, its lowest in over a month. The dollar index eased to near 101.8, the yen held near 157.8 per dollar before the Bank of Japan's decision, and the euro sat near $1.118.",
+        "means": "Lower US yields shrink the dollar's interest-rate edge, so a stock scare is softening the dollar rather than lifting it. The dollar is still set for a second monthly gain.",
+        "fx": "Falling US yields → mild pressure on the dollar; the yen waits on the Bank of Japan."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower Treasury yields trim the dollar's rate edge."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Narrower US yields help the yen, but traders are waiting for the Bank of Japan."
+        }
+      ],
+      "watch": "If US yields bounce back above 5%, or the stock selloff deepens into wider fear, the dollar's direction could change."
+    },
+    {
+      "id": "investing-oil-rises-us-military-action-iran-20261030",
+      "date": "2026-10-30",
+      "source": "Investing.com",
+      "url": "https://ph.investing.com/news/commodities-news/oil-rises-on-prospects-of-fresh-us-military-action-against-iran-2661785",
+      "image": "https://content-media.investing.com/news/LYNXMPEA601BL_L.jpg",
+      "headline": "Oil rises on prospects of fresh U.S. military action against Iran",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Oil rose about 0.7% in early Asian trading Friday after a report that the top US commander for the Middle East briefed President Trump on new military options against Iran.",
+      "beats": {
+        "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the sea lane for about a fifth of the world's oil, largely shut. Talks have stalled, and President Donald Trump has hinted at new strikes after the November 3 midterm elections.",
+        "happened": "The Wall Street Journal reported that Admiral Brad Cooper, head of US Central Command, briefed Trump on options including a return to major fighting. Brent crude rose to about $115.70 a barrel and US crude to about $102.80; both are heading for a fourth straight month of gains above 10%.",
+        "means": "Each sign that fighting could restart adds to the war premium in oil. Low US crude stocks and Houthi missile fire at Saudi Arabia keep supply worries alive too.",
+        "fx": "Talk of new US strikes → firmer oil; that helps oil exporters like Canada and weighs on big importers like Japan."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The chance of renewed US strikes on Iran adds to supply fears."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil lifts Canada's main export earnings."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so a higher bill hurts the yen."
+        }
+      ],
+      "watch": "Whether Iran accepts a deal through Qatar's mediators, or US strikes resume after the November 3 election."
+    },
+    {
       "id": "gbaf-euro-zone-gdp-q3-beat-20261030",
       "ts": "2026-10-30T10:06:26Z",
       "source": "Global Banking & Finance Review (Reuters)",
@@ -1268,60 +1361,6 @@
         }
       ],
       "watch": "A reply from Iran to the US letter seeking talks, or ships passing the strait safely, would cool prices."
-    },
-    {
-      "id": "finimize-australia-ppi-q3-20261030",
-      "ts": "2026-10-30T01:33:00Z",
-      "source": "Finimize",
-      "url": "https://finimize.com/content/australias-producer-prices-kept-climbing-in-the-september-quarter",
-      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2FG2711249_xml.jpeg",
-      "headline": "Australia's producer prices kept climbing in the September quarter",
-      "story": "rba-nov3",
-      "story_title": "RBA: a fifth hike on November 3?",
-      "pillar": "inflation",
-      "summary": "Prices Australian businesses charge each other rose 1.1% in the July–September quarter and 3.6% over the year, the same yearly pace as before.",
-      "beats": {
-        "was": "Australia's consumer inflation came in hotter than the Reserve Bank of Australia expected this week, and markets lean heavily toward a rate rise at its November 3 meeting.",
-        "happened": "The producer price index, which tracks what firms pay and charge further up the supply chain, rose 1.1% in the quarter. The yearly rate held at 3.6%. Building and health-care costs rose, while manufacturing prices fell.",
-        "means": "Price pressure is not easing at the business level either, which keeps the case for a November rise intact. Steady, not rising, yearly growth means it adds little new.",
-        "fx": "Firm producer prices → support for an RBA rise and the Australian dollar, but mostly already priced."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Sticky business prices back the case for an RBA rate rise next week."
-        }
-      ],
-      "watch": "The RBA decision on November 3; a hold would surprise and hit the Australian dollar."
-    },
-    {
-      "id": "investinglive-japan-ip-beat-retail-miss-20261030",
-      "ts": "2026-10-30T00:05:53Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/japan-september-factory-output-beats-forecasts-but-retail-sales-disappoint-ahead-of-boj/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/USDJPY%20update%20%2030%20October%202026-featured-1793318703.jpg?width=960&format=webp",
-      "headline": "Japan September factory output beats forecasts, but retail sales disappoint ahead of BoJ",
-      "story": "boj-path",
-      "story_title": "Bank of Japan: when the next hike comes",
-      "pillar": "growth",
-      "summary": "Japan's factories produced more in September than expected, but shop sales fell for a second month, giving a mixed picture hours before the Bank of Japan decides on rates.",
-      "beats": {
-        "was": "Japan's factory output dropped 2.4% in August, and the Bank of Japan, which holds its rate at 1.25%, wants signs the economy can cope with more rate rises.",
-        "happened": "Factory output rose 2.2% in September, well above the 1.3% expected, and manufacturers expect a further 5.1% gain in October. Retail sales slipped 0.7% on the month, a second fall, and were up only 2.3% on the year against 3.3% forecast.",
-        "means": "Industry looks to be recovering while households are spending less. That balance is unlikely to change Friday's expected hold, but weak shoppers give the bank a reason to move slowly.",
-        "fx": "Strong factories, soft shoppers → no clear new reason for a faster Bank of Japan → the yen waits for the decision itself."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Better industry and weaker spending roughly cancel out before the rate decision."
-        }
-      ],
-      "watch": "The Bank of Japan's statement on Friday and whether it mentions weak household spending as a reason for caution."
     }
   ]
 }
