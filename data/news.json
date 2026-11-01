@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T12:48:13Z",
+  "updated": "2026-11-01T14:48:11Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-01T11:49:51Z",
-      "text": "The Swiss franc draws shelter money when stocks fall, as in Friday's worst US stock day since June, and the weekend's reports of US preparations for new strikes on Iran add to that. Iran's offer to reopen Hormuz and Swiss rates far below US rates pull the other way."
+      "ts": "2026-11-01T14:48:11Z",
+      "text": "The Swiss franc draws shelter money when stocks fall, as in Friday's worst US stock day since June, and talk of possible new US strikes on Iran adds to that. But Washington now says no decision on strikes has been made and talks continue, and Swiss rates far below US rates also pull the other way."
     },
     "CAD": {
       "lean": "mixed",
@@ -49,11 +49,77 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-01T12:48:13Z",
-      "text": "Brent crude ended last week near $117 a barrel, up about 14% in October, as ships kept getting hit in the Gulf, now including a Qatari gas carrier. The US is reported to be readying possible new strikes on Iran after Tuesday's midterm elections, though a softer letter from Vice President Vance and Iran's offer to reopen Hormuz within two days keep a path to talks open; OPEC+ is holding output steady."
+      "ts": "2026-11-01T14:48:11Z",
+      "text": "Brent crude ended last week near $117 a barrel, up about 14% in October, as ships kept getting hit in the Gulf, now including a Qatari gas carrier. US Secretary of State Rubio says no decision has been made on new strikes on Iran and a deal is preferred, while Iran offers to reopen Hormuz within two days on its terms; OPEC+ confirmed it is holding output steady for December."
     }
   },
   "items": [
+    {
+      "id": "aol-reuters-opec-keeps-december-steady-20261101",
+      "ts": "2026-11-01T13:35:00Z",
+      "source": "Reuters via AOL",
+      "url": "https://www.aol.com/articles/opec-set-keep-oil-output-094130000.html",
+      "image": "https://hermes.media.transform.aol.com/da29ff49c8abbe2feb0a266468ed26b0646586cd/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/01/7918c89a-859a-3ccf-8517-21dfb2d4a918/42c0f286-17ba-4762-ac09-bdc3dd0089ca.jpg",
+      "headline": "OPEC+ keeps December oil output targets steady ahead of tougher call for 2027",
+      "story": "opec-output",
+      "story_title": "OPEC+ output: holding steady while war decides supply",
+      "pillar": "commodities",
+      "summary": "Seven leading OPEC+ oil producers confirmed on Sunday that their output targets stay unchanged for December; the harder decision on 2027 comes on November 29.",
+      "beats": {
+        "was": "OPEC+ is the group of oil exporters led by Saudi Arabia and Russia that sets production targets. The US-Iran war has disrupted Gulf exports for months, so most Gulf members are pumping well below their targets anyway.",
+        "happened": "In an online meeting on Sunday, Saudi Arabia, Russia, Iraq, Kuwait, Algeria, Kazakhstan and Oman left December targets where they were, as they did for October and November. All 21 members meet on November 29 to set quotas for 2027.",
+        "means": "Nothing changes for now; actual supply still depends on how freely ships can pass the Strait of Hormuz. Forecasters warn of too much oil in 2027 if Gulf flows return to normal, which makes the November 29 meeting the one that matters.",
+        "fx": "Little direct effect on currencies this week. Oil prices, and with them the Canadian dollar and the yen's import bill, keep taking their lead from the war news."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "An expected hold; war disruptions, not quotas, are setting supply."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "No change in output plans, so oil's support for Canada's currency rests on the war news."
+        }
+      ],
+      "watch": "The OPEC+ meeting on November 29 that sets 2027 output, and the capacity review due by mid-November."
+    },
+    {
+      "id": "fox-rubio-no-decision-strikes-20261101",
+      "ts": "2026-11-01T11:38:00Z",
+      "source": "Fox News",
+      "url": "https://www.foxnews.com/live-news/iran-war-news-trump-us-israel-november-1",
+      "image": "https://assets.foxnews.com/liveblog/fn/prod/images/2026/11/f69f0609b8f0620e5399603c32cd76df.jpg",
+      "headline": "Trump, Rubio say more Iran strikes are still on the table, but not likely before midterms",
+      "story": "us-iran-talks",
+      "story_title": "US-Iran talks and the threat of new strikes",
+      "pillar": "risk",
+      "summary": "US Secretary of State Marco Rubio said President Trump has not decided whether to resume strikes on Iran and would rather reach a deal; Trump said talks are going fine.",
+      "beats": {
+        "was": "The US and Iran have been at war since February, with a pause in fighting while Qatar mediates. Weekend reports said the US was preparing possible new strikes, and Iran has offered to reopen the Strait of Hormuz on its own terms.",
+        "happened": "On Saturday, Rubio said Trump has made no decision on new strikes and prefers a diplomatic outcome. Trump called the talks fine but questioned how much Iran's negotiators can be trusted and said he is in no rush to sign. The report says new strikes look unlikely before Tuesday's US midterm elections.",
+        "means": "Washington is keeping both options open: talks continue in Doha while strikes stay possible. The near-term risk of fresh fighting looks a little lower, but nothing is settled.",
+        "fx": "A pause in the threat of strikes takes a little of the war premium out of oil and eases shelter demand for the Swiss franc. A collapse of the talks would quickly reverse that."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Talk of preferring a deal trims the odds of fighting in the next few days."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Less immediate war risk means less need for the franc as shelter."
+        }
+      ],
+      "watch": "Whether the US answers Iran's two-day Hormuz offer, and any move toward strikes after Tuesday's midterm elections."
+    },
     {
       "id": "gulfnews-qatar-lng-carrier-struck-20261101",
       "date": "2026-11-01",
@@ -1190,33 +1256,6 @@
         }
       ],
       "watch": "Eurozone inflation for October, due early next week, and French bond yields; a hot price reading would firm up a December rise."
-    },
-    {
-      "id": "gbaf-ecb-holds-euro-slips-20261029",
-      "ts": "2026-10-29T13:38:07Z",
-      "source": "Global Banking & Finance Review",
-      "url": "https://www.globalbankingandfinance.com/ecb-keeps-rates-unchanged-euro-slips/",
-      "image": "https://www.globalbankingandfinance.com/i/cloud-7f8d1445-210e-4df0-8760-05e5f4cf2cf5/width=1200,height=630,quality=80,format=auto,fit=cover/",
-      "headline": "ECB keeps rates unchanged, euro slips",
-      "story": "ecb-oct29",
-      "story_title": "ECB: the October 29 decision",
-      "pillar": "policy",
-      "summary": "The European Central Bank kept its deposit rate at 2.5% on Thursday and left a December rise possible without promising one. The euro dipped about 0.3% to near $1.11, its lowest since May 2025.",
-      "beats": {
-        "was": "The European Central Bank has raised its deposit rate twice this year, to 2.5%, because expensive energy is pushing prices up. The euro was already sliding on worry over France's government debt.",
-        "happened": "The bank held rates as expected and warned that energy costs keep the risk of higher inflation alive, so a December rise stays possible. It also noted that borrowing has become harder for firms and households, which some analysts read as a higher bar for more rises.",
-        "means": "The bank still leans toward tighter policy, but it did not commit, and tighter lending plus France's troubles give it reasons to wait.",
-        "fx": "No firm promise of a December rise → the euro slipped to a 17-month low; a clear signal later toward a rise would help it, more worry over France would push it lower."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A hold with no promise on December, and the euro fell to its lowest since May 2025."
-        }
-      ],
-      "watch": "European Central Bank speeches before the December 17 meeting, eurozone inflation for October, and French bond yields."
     }
   ]
 }
