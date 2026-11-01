@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T16:48:31Z",
+  "updated": "2026-11-01T19:49:09Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -14,8 +14,8 @@
     },
     "GBP": {
       "lean": "bullish",
-      "text": "The pound led the major currencies on Friday, above $1.34 and at its strongest against the euro this year, after a Bank of England survey showed firms expecting faster price rises. The Bank of England is widely expected to raise rates for the first time in this cycle on Thursday, November 5, and a hold would likely knock the pound.",
-      "ts": "2026-11-01T11:49:51Z"
+      "ts": "2026-11-01T19:49:09Z",
+      "text": "The pound led the major currencies on Friday, above $1.34 and at its strongest against the euro this year, after a Bank of England survey showed firms expecting faster price rises. Economists expect the Bank to lift its rate from 3.75% to 4% on Thursday, November 5, its first rise since 2023, so a hold or a reluctant-sounding vote would likely knock the pound."
     },
     "JPY": {
       "lean": "bullish",
@@ -49,11 +49,71 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-01T15:47:38Z",
-      "text": "Brent crude ended last week near $117 a barrel, up about 14% in October, as ships kept getting hit in the Gulf, now including a Qatari gas carrier. Iran's Supreme Leader warns any new US attack would get a reply with no limits, while Washington says no strike decision is made and a deal is preferred; OPEC+ is holding output steady for December."
+      "ts": "2026-11-01T19:49:09Z",
+      "text": "Brent crude ended last week near $117 a barrel, up about 14% in October, as ships kept getting hit in the Gulf, now including a Qatari gas carrier. On Sunday Yemen's Houthis renewed threats against Saudi oil sites and Iran's leaders warned against new US strikes, while Washington says no decision is made and OPEC+ is holding output steady for December."
     }
   },
   "items": [
+    {
+      "id": "24newshd-houthi-threats-aramco-airspace-20261101",
+      "ts": "2026-11-01T15:47:00Z",
+      "source": "24 News HD (AFP)",
+      "url": "https://www.24newshd.tv/01-Nov-2026/houthi-media-renews-threats-saudi-oil-giant-aviation",
+      "image": "https://www.24newshd.tv/digital_images/large/2026-11-01/houthi-media-renews-threats-saudi-oil-giant-aviation-1793548033-6068.png",
+      "headline": "Houthi media renews threats on Saudi oil giant, aviation",
+      "story": "yemen-saudi",
+      "story_title": "Yemen's Houthis vs Saudi Arabia",
+      "pillar": "risk",
+      "summary": "Yemen's Houthi rebels, who are allied with Iran, warned again on Sunday that Saudi Aramco's oil sites are within their reach and told airlines to stay out of Saudi airspace.",
+      "beats": {
+        "was": "Fighting between the Houthis and Saudi-backed Yemeni forces restarted in July, and Houthi missiles and drones have since hit Saudi oil sites and airports, including a deadly strike on Riyadh's airport on October 10. A Saudi-led coalition struck Houthi supply sites in Yemen on Sunday morning.",
+        "happened": "An unnamed Houthi military official, quoted by the group's Saba news agency, said Aramco facilities are in range and investing in them is risky, and warned foreign airlines off Saudi airspace apart from over Mecca and Medina. No new attack was reported.",
+        "means": "It is a threat, not a strike, but it comes as the Saudi coalition hits back and Iran warns against new US attacks, so the risk to Saudi oil output stays live.",
+        "fx": "Any real damage to Saudi oil sites would add to oil prices that are already high because of the Gulf shipping attacks. Higher oil helps the Canadian dollar and hurts big oil importers like Japan and the euro zone."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A repeated threat to the world's biggest oil exporter keeps supply worries up, though nothing new was hit."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada exports a lot of oil, so oil supply scares tend to help the loonie a little."
+        }
+      ],
+      "watch": "Whether the Houthis follow through with a strike on Aramco sites, or the Saudi coalition's raids push them to escalate."
+    },
+    {
+      "id": "britisheye-boe-expected-hike-4pc-20261101",
+      "ts": "2026-11-01T14:00:00Z",
+      "source": "The British Eye",
+      "url": "https://thebritisheye.com/2026/11/01/bank-of-england-interest-rate-rise/",
+      "image": "https://thebritisheye.com/wp-content/uploads/2026/11/IMG_1372.jpeg",
+      "headline": "Bank of England expected to raise interest rates to 4%",
+      "story": "boe-hike",
+      "story_title": "Bank of England's first rate rise since 2023",
+      "pillar": "policy",
+      "summary": "Economists expect the Bank of England to lift its main rate from 3.75% to 4% on Thursday, November 5, its first rise since August 2023.",
+      "beats": {
+        "was": "UK inflation has stayed well above the Bank of England's 2% goal, and fuel costs have risen with the Middle East war. The household energy price cap went up 3.6% in October, and a far bigger rise is forecast for January.",
+        "happened": "Ahead of Thursday's decision, economists at Investec and the ICAEW, the accountants' body, said a quarter-point rise to 4% looks close to certain, framed as a move to stop high prices from becoming the norm.",
+        "means": "A rise is now the expected outcome, so it would confirm what markets already assume. What matters more is how many of the nine policymakers vote for it and whether the Bank hints at more.",
+        "fx": "The pound has gained on this expectation. A rise with signals of more could add to it, while a hold or a split vote that sounds reluctant would likely knock it."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher UK rates support the pound, but the rise is largely priced in already."
+        }
+      ],
+      "watch": "The vote split and the Bank's guidance on Thursday; a hold would be a real surprise."
+    },
     {
       "id": "thestandard-china-regulators-stock-support-20261101",
       "date": "2026-11-01",
@@ -1262,39 +1322,6 @@
         }
       ],
       "watch": "The Bank of Japan's statement on Friday and whether it mentions weak household spending as a reason for caution."
-    },
-    {
-      "id": "economies-dollar-retreats-despite-gdp-20261029",
-      "ts": "2026-10-29T19:41:00Z",
-      "source": "Economies.com",
-      "url": "https://www.economies.com/stocks/united-states-news/us-dollar-retreats-despite-strong-gdp-growth-as-fed-rate-outlook-remains-uncertain-50396",
-      "image": "https://dylta6p24nxqg.cloudfront.net/images/1793302917_2b6a9a.png",
-      "headline": "US dollar retreats despite strong GDP growth as Fed rate outlook remains uncertain",
-      "story": "fed-oct28",
-      "story_title": "Fed week: the October 28 decision and December hike bets",
-      "pillar": "policy",
-      "summary": "The dollar ended Thursday a little lower against most major currencies, even though US growth and inflation figures came in strong.",
-      "beats": {
-        "was": "The Federal Reserve held its rate at 3.75% to 4% on Wednesday. Two officials wanted a rise, but Fed Chair Kevin Warsh would not promise one in December.",
-        "happened": "Thursday's figures showed the US economy grew at a 3.4% yearly pace last quarter, above forecasts, and the Fed's preferred price gauge rose to 3.6%. Even so, the dollar index slipped about 0.2% to near 102, and the pound gained about 0.3% to near $1.336.",
-        "means": "Strong numbers were not enough to lift the dollar while the Fed itself stays vague about December. Traders seem to want a clear signal from the bank, not just good data, before buying more dollars.",
-        "fx": "Strong data but an unclear Fed → a small dollar dip; a firm hint of a December rise would likely turn it back up."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The dollar slipped as the Fed's silence on December outweighed strong growth and price figures."
-        },
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The pound was the day's best gainer against a softer dollar."
-        }
-      ],
-      "watch": "Comments from Fed officials before the December meeting, and next week's US jobs report; a clear hint of a rise would lift the dollar."
     }
   ]
 }
