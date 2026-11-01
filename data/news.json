@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T15:47:38Z",
+  "updated": "2026-11-01T16:48:31Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "mixed",
-      "ts": "2026-11-01T11:49:51Z",
-      "text": "Hot Australian inflation has markets giving about 79% odds that the Reserve Bank of Australia raises rates on Tuesday, November 3, which supports the Australian dollar near 70 US cents. But China, Australia's biggest customer, saw factory and service activity shrink in October, and a hold on Tuesday would likely hit the currency."
+      "ts": "2026-11-01T16:48:31Z",
+      "text": "Hot Australian inflation has markets giving about 79% odds that the Reserve Bank of Australia raises rates on Tuesday, November 3, which supports the Australian dollar near 70 US cents. China, Australia's biggest customer, saw activity shrink in October and its stocks slump, though Beijing's regulators meet banks on Monday to discuss support; a hold on Tuesday would likely hit the currency."
     },
     "NZD": {
       "lean": "bearish",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "thestandard-china-regulators-stock-support-20261101",
+      "date": "2026-11-01",
+      "source": "The Standard (Hong Kong)",
+      "url": "https://www.thestandard.com.hk/finance/article/347145/China-regulators-act-to-support-stocks-after-October-slump-mainland-media-reports",
+      "image": "https://image.hkstandard.com.hk/f/1200p0/0x0/100/none/a780e955d16d99d6b9db7d9f1d1c7173/2026-11/FIL51_CHINA-MONEYLAUNDERING_0711_11.JPG",
+      "headline": "China's regulators to meet banks on Monday on steps to steady stocks after an October slump",
+      "story": "china-slowdown",
+      "story_title": "China's slowdown and Beijing's response",
+      "pillar": "growth",
+      "summary": "China's central bank and its market and banking regulators meet big banks and fund firms on Monday to discuss more support for a stock market that slid hard in October.",
+      "beats": {
+        "was": "Chinese shares had a bad October: the Shanghai index fell about 6% and the tech-heavy Shenzhen index about 16%, with the main growth boards down over 23%. Official figures on Saturday also showed factory and service activity shrinking.",
+        "happened": "Mainland media reported on Sunday that the People's Bank of China, the China Securities Regulatory Commission and the National Financial Regulatory Administration will meet major banks and fund companies on Monday, November 2. They are expected to discuss widening cheap loans that help companies and big holders buy back shares.",
+        "means": "Beijing is signalling it will not let the sell-off run unchecked. A meeting is not yet new money, so the effect depends on what measures come out of it.",
+        "fx": "Steadier Chinese markets help currencies tied to China's demand, chiefly the Australian and New Zealand dollars. If the steps disappoint, the weak October figures would weigh again."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Support for Chinese stocks eases worry about Australia's biggest customer, but no measures are announced yet."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "China is a major buyer of New Zealand's exports, so steadier Chinese markets help a little."
+        }
+      ],
+      "watch": "What the Monday meeting in Beijing announces, and China's private-sector factory survey the same day."
+    },
     {
       "id": "aol-reuters-opec-keeps-december-steady-20261101",
       "ts": "2026-11-01T13:35:00Z",
@@ -1262,33 +1295,6 @@
         }
       ],
       "watch": "Comments from Fed officials before the December meeting, and next week's US jobs report; a clear hint of a rise would lift the dollar."
-    },
-    {
-      "id": "instaforex-euro-rebounds-lagarde-december-20261029",
-      "ts": "2026-10-29T15:53:32Z",
-      "source": "InstaForex",
-      "url": "https://www.instaforex.com/forex-news/3258467",
-      "image": null,
-      "headline": "Euro rebounds as Lagarde signals December hike",
-      "story": "ecb-oct29",
-      "story_title": "ECB: the October 29 decision",
-      "pillar": "policy",
-      "summary": "The euro won back an early loss to trade near $1.116 after European Central Bank President Christine Lagarde said policymakers had talked about raising rates on Thursday before deciding to wait.",
-      "beats": {
-        "was": "The European Central Bank has raised its deposit rate twice this year, to 2.5%, because costly energy keeps pushing prices up. It held on Thursday, and the euro first fell to its weakest since May 2025.",
-        "happened": "At her press conference, Lagarde said a rise had been discussed, that inflation risks lean higher on energy costs, and that the bank has tools to calm any disorderly selling of French bonds. Markets now see a better than 80% chance of a rise on December 17. The euro, down about 0.4% earlier, ended slightly higher.",
-        "means": "The pause looks like a short wait, not the end of rate rises. Her stress on tighter lending and steady underlying inflation leaves some room for doubt, which is why the bounce was small.",
-        "fx": "A December rise looks likely again → support for the euro after its early drop; it is still near a 17-month low, so the lift is modest."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Lagarde's word that a rise was discussed revived December hike bets and pulled the euro off its lows."
-        }
-      ],
-      "watch": "Eurozone inflation for October, due early next week, and French bond yields; a hot price reading would firm up a December rise."
     }
   ]
 }
