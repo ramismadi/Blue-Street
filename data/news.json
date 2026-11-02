@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-02T16:50:00Z",
+  "updated": "2026-11-02T19:49:23Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "ts": "2026-11-02T16:50:00Z",
-      "text": "The dollar sits near a one-month low as falling oil and hopes of a deal to end the Iran war pull shelter money out, even though US factories grew faster than expected in October and Federal Reserve officials still talk of raising rates. Tuesday's midterm elections and Friday's October jobs report decide whether that support comes back."
+      "ts": "2026-11-02T19:49:23Z",
+      "text": "The dollar slipped to around a one-month low on Monday, with the euro near $1.121, as a likelier end to the Iran war pulled oil down and reduced demand for safe places to park money. US factories grew faster than expected in October and Federal Reserve officials still talk of raising rates, so Tuesday's midterm elections and Friday's October jobs report decide whether that support returns."
     },
     "EUR": {
       "lean": "mixed",
@@ -29,13 +29,13 @@
     },
     "CAD": {
       "lean": "bearish",
-      "ts": "2026-11-02T16:50:00Z",
-      "text": "The Bank of Canada raised its rate to 2.5% last week, its first rise in three years, but oil, Canada's main export, fell about 6% on Monday with US crude below $100 on hopes of an end to the Iran war. Figures show Canada's economy stalled, and a US-Canada trade deal that President Trump calls very close would help only if it brings tariff cuts."
+      "ts": "2026-11-02T19:49:23Z",
+      "text": "The Bank of Canada raised its rate to 2.5% last week, its first rise in three years, but oil, Canada's main export, fell about 7% on Monday on growing hopes of a deal to end the Iran war. Canada's economy has stalled, and a US-Canada trade deal that President Trump calls very close would help only if it brings tariff cuts."
     },
     "AUD": {
       "lean": "mixed",
-      "ts": "2026-11-02T12:52:00Z",
-      "text": "The Reserve Bank of Australia is widely expected to raise its rate to 4.85% on Tuesday, November 3, its fifth rise this year, which supports the Australian dollar near 70 US cents. But much of that is priced in, many economists think it will be the last rise, and China, Australia's biggest customer, sent mixed signals from its factory surveys; a hold would likely hit the currency."
+      "ts": "2026-11-02T19:49:23Z",
+      "text": "Markets give about an 81% chance that the Reserve Bank of Australia raises its rate to 4.85% on Tuesday, November 3, which supports the Australian dollar near 70 US cents. But a rise is largely priced in, many economists think it will be the last, and new forecasts plus Governor Michele Bullock's tone will matter more; a hold would likely hit the currency."
     },
     "NZD": {
       "lean": "bearish",
@@ -49,8 +49,8 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-02T16:50:00Z",
-      "text": "Oil fell about 6% on Monday, taking US crude below $100 a barrel and Brent toward $106, after President Trump said talks with Iran were going fine and a draft deal began circulating in Qatar. Nothing is agreed, Iran wants the US blockade lifted first and tankers are still hitting mines near Hormuz, so the drop could reverse fast if talks stall after Tuesday's US midterm elections."
+      "ts": "2026-11-02T19:49:23Z",
+      "text": "Oil fell about 7% on Monday, with Brent near $105 a barrel and US crude under $100, after Iran's president said Supreme Leader Mojtaba Khamenei has given the government powers to negotiate an end to the war, and a draft deal circulated in Qatar. Nothing is signed, Iran still wants the US port blockade lifted first, and world stockpiles are badly drained, so a setback after Tuesday's US midterm elections could reverse the drop fast."
     }
   },
   "items": [
@@ -134,6 +134,96 @@
         }
       ],
       "watch": "Thursday's Bank of England decision and how many policymakers vote to raise rates."
+    },
+    {
+      "id": "energyconnects-bbg-khamenei-authorizes-talks-20261102",
+      "ts": "2026-11-02T19:00:00Z",
+      "source": "Energy Connects (Bloomberg)",
+      "url": "https://www.energyconnects.com/news/oil/2026/november/iran-s-khamenei-gives-government-powers-to-hold-talks-on-war/",
+      "image": "https://www.energyconnects.com/media/q2hffihn/bloombergmedia_tnvpmkkiupt100_02-11-2026_19-00-03_639291744000000000.jpg?width=1200&height=628&v=1dd6afc5e7ce850",
+      "headline": "Iran's Khamenei Gives Government Powers to Hold Talks on War",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Iran's President Masoud Pezeshkian said Supreme Leader Mojtaba Khamenei has given the government powers to seek an end to the war with the US through talks.",
+      "beats": {
+        "was": "The US and Iran have been at war since late February, and Iran has kept the Strait of Hormuz, the sea route for about a fifth of the world's oil, mostly shut. Iranian officials have been meeting Qatari go-betweens in Doha, and President Trump had threatened new strikes after Tuesday's US midterm elections.",
+        "happened": "Pezeshkian, speaking through Iran's state news agency, said Iran wants a solution through dialogue and that the Supreme Leader, who has the final say in Iran, has handed the government some powers to pursue it. He did not say what those powers are. Separately, Trump reportedly told Israeli Prime Minister Benjamin Netanyahu he is willing to give diplomacy more time.",
+        "means": "It is the clearest sign yet that Iran's top authority backs the talks, which makes a deal more believable. But Iran still says it will only ease Hormuz shipping and return to formal talks once the US lifts its blockade of Iranian ports, so the hardest step is untouched.",
+        "fx": "A likelier end to the war lowers oil and cuts demand for safe places to park money, which tends to weigh on the dollar and the Swiss franc and help energy importers such as Japan and the euro zone."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Backing from Iran's Supreme Leader makes a deal that reopens Hormuz more believable."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Less war risk trims demand for the dollar as a safe place."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Calmer markets reduce the pull of the franc as shelter."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan buys almost all its energy abroad, so cheaper oil helps it."
+        }
+      ],
+      "watch": "Whether Washington answers the draft proposal circulating in Qatar, and whether it moves on Iran's demand to lift the port blockade first."
+    },
+    {
+      "id": "virginiabusiness-reuters-oil-drops-7pc-20261102",
+      "ts": "2026-11-02T18:37:00Z",
+      "source": "Virginia Business (Reuters)",
+      "url": "https://virginiabusiness.com/oil-prices-drop-7-percent-iran-peace-talks/",
+      "image": "https://virginiabusiness.com/files/1/2026/11/2026-11-01T231257Z_1_LYNXNPEMA01FO_RTROPTP_4_USA-OIL-EIA-650x400.jpg",
+      "headline": "Oil drops 7% as Iran signals openness to peace talks",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Oil's slide deepened to about 7% by midday Monday, with Brent near $105 a barrel and US crude near $96.6, as Iran signalled it is ready to negotiate.",
+      "beats": {
+        "was": "Brent crude, the global oil benchmark, ended October at a six-month high because the US-Iran war has kept most tankers out of the Strait of Hormuz. Prices had already fallen in Asian and European trading on hopes for talks in Qatar.",
+        "happened": "By midday in New York, Brent was down about $8.50 at roughly $105 and US crude down $7.50 at about $96.6, the lowest of the day. Iran's leaders said they have authority to negotiate, and an official said a draft deal is circulating with another meeting possible. The head of Abu Dhabi's state oil company said the world has drawn close to a billion barrels from stockpiles since the war began.",
+        "means": "This is one of the biggest one-day drops of the war, driven by hope rather than a signed deal. Analysts warn there have been many false dawns, and with stockpiles drained, any setback could send prices back up quickly; Goldman Sachs sees $140 Brent in 2027 if Gulf output stays well below normal.",
+        "fx": "A lower oil bill helps Japan and the euro zone and takes support away from oil exporters such as Canada. It also eases the inflation worry that has kept talk of further US rate rises alive."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "About 7% wiped off prices in a day on hopes of a deal to reopen Hormuz."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Oil is Canada's biggest export, so a sharp fall cuts its income."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan imports nearly all its energy, so cheaper oil eases its trade bill."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The euro zone is a big energy buyer and gains from lower prices."
+        }
+      ],
+      "watch": "Monday's closing prices and any fresh tanker attack near Hormuz, which could undo the drop."
     },
     {
       "id": "mansfield-oil-below-100-iran-talks-20261102",
@@ -290,6 +380,39 @@
         }
       ],
       "watch": "Tuesday's midterm results and Friday's October US jobs report; renewed fighting in the Gulf would likely send money back into the dollar."
+    },
+    {
+      "id": "newsquawk-rba-preview-nov-20261102",
+      "ts": "2026-11-02T07:15:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/preview-rba-rate-decision-scheduled-for-tuesday-3rd-november-2026-at-0330gmt-2230est-on-monday",
+      "image": null,
+      "headline": "[PREVIEW] RBA Rate Decision Scheduled for Tuesday 3rd November 2026 at 03:30GMT",
+      "story": "rba-hike",
+      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
+      "pillar": "policy",
+      "summary": "Markets give about an 81% chance that the Reserve Bank of Australia raises its rate by a quarter point to 4.85% on Tuesday, alongside new inflation forecasts.",
+      "beats": {
+        "was": "Australia's central bank has been raising its cash rate this year to fight inflation, taking it to 4.60%. Its September rise was unanimous, and Governor Michele Bullock warned that higher oil prices from the Iran war would push inflation above the bank's earlier forecasts.",
+        "happened": "Ahead of the decision at 03:30 GMT Tuesday (9:30 PM CT Monday), money markets price roughly four-in-five odds of a rise to 4.85%. Recent quarterly and monthly inflation figures matched or beat forecasts. The bank also publishes its quarterly Statement on Monetary Policy, with updated forecasts, and Bullock speaks an hour later.",
+        "means": "A rise is mostly expected, so the currency will react more to the message: whether the bank keeps the door open to December, how much it lifts its inflation forecasts, and whether the vote stays unanimous. In September Bullock sounded softer at her news conference than the written statement, which faded the Australian dollar's early gain.",
+        "fx": "A rise with a firm tone would support the Australian dollar; a hold, a split vote, or a hint that this is the last rise would weigh on it. The New Zealand dollar often moves with it."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A likely rate rise keeps Australian rates high, though it is largely priced in."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The kiwi tends to follow the Australian dollar on RBA news."
+        }
+      ],
+      "watch": "The decision and new forecasts at 03:30 GMT Tuesday, then Bullock's news conference an hour later."
     },
     {
       "id": "thenational-oil-slides-trump-more-time-diplomacy-20261102",
@@ -1151,66 +1274,6 @@
         }
       ],
       "watch": "Whether the sell-off spreads in Asia on Monday and how markets treat Tuesday's midterm results."
-    },
-    {
-      "id": "gvwire-reuters-logan-two-more-hikes-20261030",
-      "ts": "2026-10-30T18:31:29Z",
-      "source": "Reuters via GV Wire",
-      "url": "https://gvwire.com/2026/10/30/fed-needs-at-least-two-more-rate-hikes-logan-says/",
-      "image": "https://gvwire.com/wp-content/uploads/2026/10/Federal-Reserve-Bank-of-Dallas-President-Lorie-Logan-speaks-at-a-conference-of-the-National-Association-for-Business-Economics-in-Dallas-Texas-U.S.-October-9-2023.-Reuters-File.jpg",
-      "headline": "Fed needs at least two more rate hikes, Logan says",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "policy",
-      "summary": "Dallas Fed President Lorie Logan, who votes on rates this year, said the Fed should raise rates at least twice more, by a quarter point each, and then pause to take stock.",
-      "beats": {
-        "was": "The Federal Reserve kept its rate at 3.75% to 4% on Wednesday in a 10-2 vote, and Chair Kevin Warsh declined to promise a rise in December even after strong growth and inflation figures.",
-        "happened": "Logan, who backed Wednesday's hold, told students at Davidson College that rates should end at least half a point higher to bring inflation back to 2%, and that skipping one meeting does not change where policy is heading. Earlier in the day St. Louis Fed President Alberto Musalem said a rise is needed soon.",
-        "means": "Two policymakers in one day are now pushing for more rises, and Logan put a number on it, which makes a December rise and at least one more after it easier to price.",
-        "fx": "A higher path for US rates supports the dollar and weighs on gold, though falling bond yields on stock-market worries blunted the effect on Friday."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A voting Fed official calling for two more rises firms up the case for higher US rates."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher expected US rates make gold, which pays no interest, less attractive."
-        }
-      ],
-      "watch": "If Warsh or other voters push back on a set path, or US jobs figures next week come in weak, the case for two more rises fades."
-    },
-    {
-      "id": "coinpaper-gold-below-3900-year-low-20261030",
-      "ts": "2026-10-30T18:07:24Z",
-      "source": "Coinpaper",
-      "url": "https://coinpaper.com/38139/gold-crashes-below-3-900-to-one-year-low-even-as-global-stock-markets-plunge",
-      "image": "https://imagecodex.com/v1/coinpaper/media/463f51ae-7720-4bba-926e-f4d2d058b8ec.jpg",
-      "headline": "Gold Crashes Below $3,900 to One-Year Low Even as Global Stock Markets Plunge",
-      "story": "gold-slide",
-      "story_title": "Gold: sliding as Fed rate-rise bets build",
-      "pillar": "policy",
-      "summary": "Gold fell about 3% on Friday to just under $3,900 an ounce, its lowest in a year, even as stocks sold off, which would normally help it.",
-      "beats": {
-        "was": "Gold peaked near $5,600 in January and had been drifting lower as hot US inflation figures raised the odds of another Federal Reserve rate rise in December.",
-        "happened": "Spot gold dropped about 3.1% to roughly $3,897, leaving it some 30% below its record; silver fell about 6% to under $50 for the first time in nearly a year. Analysts quoted by Reuters suggested some investors sold gold to cover losses on falling tech shares.",
-        "means": "Rising US rate expectations and oil-driven inflation worries are outweighing gold's usual pull as a safe place in a sell-off, and forced selling made the drop sharper.",
-        "fx": "Clear pressure on gold; the selling is about higher US rates rather than a stronger dollar, which was softer on the day."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A one-year low on bets for higher US rates and selling to cover stock losses."
-        }
-      ],
-      "watch": "If US stocks steady and the margin-call selling stops, or Fed officials soften their talk of more rises, gold could find a floor."
     }
   ]
 }
