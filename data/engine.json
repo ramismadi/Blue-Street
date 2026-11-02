@@ -1,165 +1,129 @@
 {
-  "updated": "2026-10-30T15:35:00-05:00",
-  "rows": [
+ "updated": "2026-11-02T01:45:00-06:00",
+ "rows": [
+  {
+   "id": "policy",
+   "title": "Monetary Policy",
+   "read": "Most central banks still lean toward higher rates because energy keeps inflation high, and this week Australia and Britain are both expected to raise them. With those hikes mostly priced, their currencies will move on whether the banks hint at more. In the US, bets on a December Fed hike held firm.",
+   "figure": "RBA Nov 3 hike to 4.85% ~81–90%; BoE Nov 5 hike to 4.00% ~94%; Fed Dec hike ~72–75% (from ~70% Oct 30); ECB Dec ~86%; BoJ Dec ~80%; BoC Dec ~45%; RBNZ Dec ~75%",
+   "sources": [
     {
-      "id": "policy",
-      "title": "Policy",
-      "figure": "Fed 3.75–4.00%, Dec hike ~70% (from ~84% after Oct 28); Logan: at least two more hikes; Musalem: hike needed soon; BoJ held 1.25% (8–1), Dec ~80%; ECB 2.50%, Dec hike likely; RBA Nov 3 ~79–85%; BoE Nov 5 ~94%; BoC Dec ~45%",
-      "read": "Most central banks still lean toward higher rates because energy keeps inflation high. Two Fed officials called for more hikes, yet markets trimmed the odds of a December hike as tech shares fell, so the dollar's rate edge is wobbling. The Bank of Japan held but moved closer to a December hike.",
-      "sources": [
-        {
-          "label": "Reuters (Oct 30): Fed needs at least two more rate hikes, Logan says",
-          "url": "https://www.reuters.com/business/fed-needs-least-two-more-rate-hikes-logan-says-2026-10-30/"
-        },
-        {
-          "label": "Reuters (Oct 30): Fed's Musalem says a rate hike is needed 'soon'",
-          "url": "https://www.reuters.com/business/feds-musalem-says-rate-hike-is-needed-soon-2026-10-30/"
-        },
-        {
-          "label": "Reuters via 93.3 The Drive (Oct 30): BOJ Governor Ueda's comments at news conference",
-          "url": "https://www.933thedrive.com/2026/10/30/boj-governor-uedas-comments-at-news-conference-27/"
-        },
-        {
-          "label": "InvestingLive (Oct 30): BoJ declares underlying inflation at 2% target, lifts FY2027 price forecast as rates held",
-          "url": "https://investinglive.com/central-banks/boj-declares-underlying-inflation-at-2-target-lifts-fy2027-price-forecast-as-rates-held/"
-        },
-        {
-          "label": "Blue Street central bank data (Hercules, Oct 30 New York close run): pricing and notes",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-        }
-      ]
+     "label": "Blue Street market levels (Hercules, Nov 2 London open run, 12:47 AM CT; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     },
     {
-      "id": "growth",
-      "title": "Growth",
-      "figure": "Euro-area Q3 GDP +0.4% q/q (fc 0.2%): Germany +0.2%, France −0.1%, Italy 0.0%, Ireland +5.5%; Canada Aug GDP 0.0% (fc 0.2%); Chicago PMI 55.3 (fc 56.0); KOF 107.6 (fc 108.1)",
-      "read": "The euro area grew faster than expected over the summer, but mostly thanks to Ireland, with France shrinking and Italy flat. Canada's economy has stalled since before its rate hike, which weakens the case for another. US business activity is cooling a little from a fast pace.",
-      "sources": [
-        {
-          "label": "Global Banking & Finance Review / Reuters (Oct 30): Euro zone growth beats projections",
-          "url": "https://www.globalbankingandfinance.com/euro-zone-growth-beats-projections/"
-        },
-        {
-          "label": "Reuters (Oct 30): Canada's economic growth stalls again in August",
-          "url": "https://www.reuters.com/world/americas/canadas-economic-growth-stalls-again-august-september-likely-decline-2026-10-30/"
-        },
-        {
-          "label": "MNI (Oct 30): Chicago Business Barometer dipped to 55.3 in October",
-          "url": "https://www.mnimarkets.com/articles/chicago-business-barometertm-dipped-to-553-in-october-1793367900286"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Oct 30): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-        }
-      ]
+     "label": "Blue Street central bank data (Hercules, Nov 2 London open run): rates, meetings, pricing",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
     },
     {
-      "id": "inflation",
-      "title": "Inflation",
-      "figure": "German HICP 2.8% (fc 3.1%; Sep 3.3%); Italy CPI 5.4% (fc ~4.6%); France CPI 3.4%, HICP 3.8%; US ECI +0.8% q/q (in line), 3.4% y/y; Chicago prices paid highest since Dec 2021; BoJ FY2027 core forecast 2.6%",
-      "read": "Energy keeps prices high nearly everywhere, but unevenly: inflation cooled in Germany while it jumped in Italy and France. US wage growth held steady, so pay is not adding fresh pressure. Japan's central bank says underlying inflation has reached its goal.",
-      "sources": [
-        {
-          "label": "Destatis (Oct 30): Inflation rate of +2.8% expected in October 2026",
-          "url": "https://www.destatis.de/EN/Press/2026/10/PE26_382_611.html"
-        },
-        {
-          "label": "investingLive (Oct 30): Italy October preliminary CPI +5.4% vs +4.6% expected",
-          "url": "https://investinglive.com/news/italy-october-preliminary-cpi-5-4-vs-4-6-y-y-expected/"
-        },
-        {
-          "label": "Reuters (Oct 30): US labor costs rise moderately in third quarter",
-          "url": "https://www.reuters.com/business/us-labor-costs-rise-moderately-third-quarter-2026-10-30/"
-        },
-        {
-          "label": "MNI (Oct 30): Chicago Business Barometer dipped to 55.3 in October",
-          "url": "https://www.mnimarkets.com/articles/chicago-business-barometertm-dipped-to-553-in-october-1793367900286"
-        },
-        {
-          "label": "InvestingLive (Oct 30): BoJ declares underlying inflation at 2% target, lifts FY2027 price forecast as rates held",
-          "url": "https://investinglive.com/central-banks/boj-declares-underlying-inflation-at-2-target-lifts-fy2027-price-forecast-as-rates-held/"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Oct 30): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-        }
-      ]
-    },
-    {
-      "id": "risk",
-      "title": "Risk",
-      "figure": "Nasdaq 100 ~−6% in October; US 10-year ~4.94%; USD/CHF 0.8236 (−0.3%); USD/JPY 157.48 (−0.15%); gold $3,882.50 (−3.4%)",
-      "read": "A slide in big tech shares over AI spending sent money into US government bonds and the safe-haven currencies. That pulled US yields down, so the dollar slipped even as investors grew nervous. Gold got no safety boost and fell as some investors sold it to cover losses.",
-      "sources": [
-        {
-          "label": "Reuters via Investing.com (Oct 30): Nasdaq faces $2 trillion wipeout in October as AI spending fears deepen",
-          "url": "https://www.investing.com/news/stock-market-news/nasdaq-faces-2-trillion-wipeout-in-october-as-ai-spending-fears-deepen-4988211"
-        },
-        {
-          "label": "Coinpaper (Oct 30): Gold crashes below $3,900 to one-year low even as global stock markets plunge",
-          "url": "https://coinpaper.com/38139/gold-crashes-below-3-900-to-one-year-low-even-as-global-stock-markets-plunge"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 30 New York close run, 3:05 PM CT)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        }
-      ]
-    },
-    {
-      "id": "tot",
-      "title": "Terms of trade",
-      "figure": "Brent $116.57 (+0.7%), WTI $104.15 (+2.1%); Gulf crude exports ~24.6m b/d mid-October; shipping ~$40/bbl; OPEC+ meets Sunday",
-      "read": "Oil stayed high as fear of new US strikes on Iran outweighed a recovery in Gulf exports. That keeps helping exporters like Canada and Australia and costing importers like Japan and the euro area.",
-      "sources": [
-        {
-          "label": "Investing.com (Oct 30): Oil rises on prospects of fresh U.S. military action against Iran",
-          "url": "https://ph.investing.com/news/commodities-news/oil-rises-on-prospects-of-fresh-us-military-action-against-iran-2661785"
-        },
-        {
-          "label": "Al Jazeera (Oct 30): Oil flows are up as Iran war turmoil eases. Why do prices keep rising?",
-          "url": "https://www.aljazeera.com/economy/2026/10/30/oil-flows-are-up-as-iran-war-turmoil-eases-why-do-prices-keep-rising"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Oct 30 New York close run, 3:05 PM CT)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        }
-      ]
-    },
-    {
-      "id": "positioning",
-      "title": "Positioning",
-      "figure": "CFTC Oct 20: funds strongly against CAD (sharply added), against NZD and EUR (euro net short largest since March 2020), for GBP and AUD (real money strongly against), strongly for gold",
-      "read": "Hedge funds hold their biggest bets against the Canadian dollar, and the loonie's climb since Canada's rate hike puts those bets under pressure. Their bets against the euro are the largest in years, so good euro news could force them to buy it back. Their big bets on gold are losing money as it slides.",
-      "sources": [
-        {
-          "label": "CFTC Traders in Financial Futures (futures only), report date Oct 20",
-          "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
-        },
-        {
-          "label": "Blue Street positioning (CFTC, report date Oct 20; newer report not yet processed)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/cot.json"
-        }
-      ]
-    },
-    {
-      "id": "fiscal",
-      "title": "Fiscal",
-      "figure": "French revenue vote Nov 3; S&P reviews France Nov 27; France Q3 GDP −0.1%; UK Budget headroom £15bn",
-      "read": "France's budget fight is still unresolved and keeps a weight on the euro, with a vote on taxes due November 3. France's economy shrank over the summer, which makes its deficit harder to close. The UK Budget passed calmly, so the pound is trading on rates, not borrowing.",
-      "sources": [
-        {
-          "label": "Global Banking & Finance Review / Reuters (Oct 30): Euro zone growth beats projections",
-          "url": "https://www.globalbankingandfinance.com/euro-zone-growth-beats-projections/"
-        },
-        {
-          "label": "Blue Street central bank data (Hercules, Oct 30 New York close run): pricing and notes",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Oct 30): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-        }
-      ]
+     "label": "Reuters via Business Recorder (Nov 2): Australian dollar steadies ahead of RBA, kiwi braces for election risk",
+     "url": "https://www.brecorder.com/news/40447013/australian-dollar-steadies-ahead-of-rba-kiwi-braces-for-election-risk"
     }
-  ]
+   ]
+  },
+  {
+   "id": "growth",
+   "title": "Growth",
+   "read": "China sent mixed signals: the official factory survey slipped into decline, but a private survey of smaller firms stayed solid. That leaves Australia and New Zealand without a clear push either way. US factory figures later today give the first look at how the US economy began the autumn quarter.",
+   "figure": "China official manufacturing PMI 49.3 (poll 50.0); RatingDog PMI 52.0 (poll 51.6); US ISM manufacturing today, forecast 54.5",
+   "sources": [
+    {
+     "label": "Reuters (Nov 2): China factory growth slows in October as export orders ease, private PMI shows",
+     "url": "https://www.reuters.com/world/asia-pacific/china-factory-growth-slows-october-export-orders-ease-private-pmi-shows-2026-11-02/"
+    },
+    {
+     "label": "Blue Street calendar (Hercules, Nov 2): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    }
+   ]
+  },
+  {
+   "id": "inflation",
+   "title": "Inflation",
+   "read": "Cheaper oil overnight eased some of the fear that energy will keep pushing prices up. But inflation is still well above target in the US, the euro area, Britain and Australia, so central banks have little room to relax. Euro-area figures on Wednesday are the week's main inflation test.",
+   "figure": "Euro-area flash HICP Nov 4: forecast 4.0% (Sep 3.8%), core 2.5%; Swiss CPI Nov 3: forecast 0.0% m/m; Brent ~$110 (−3%)",
+   "sources": [
+    {
+     "label": "Blue Street calendar (Hercules, Nov 2): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    },
+    {
+     "label": "Blue Street market levels (Hercules, Nov 2 London open run, 12:47 AM CT; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+    }
+   ]
+  },
+  {
+   "id": "risk",
+   "title": "Risk Sentiment",
+   "read": "Markets started November calmer after October's tech share slide, and the weekend passed without a US strike on Iran. That cut demand for the safe-haven yen and franc. Attacks on Gulf shipping continue, so the calm could break quickly.",
+   "figure": "USD/JPY ~157.8 (+0.2%); USD/CHF ~0.824; gold ~$3,907 (+0.6%); ~10 Gulf shipping incidents in three days",
+   "sources": [
+    {
+     "label": "Blue Street market levels (Hercules, Nov 2 London open run, 12:47 AM CT; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+    },
+    {
+     "label": "Reuters via FXStreet (Nov 2): UKMTO reports two projectiles strike tanker off Saudi Arabia's coast",
+     "url": "https://www.fxstreet.com/news/ukmto-reports-two-projectiles-strike-tanker-off-saudi-arabias-coast-202611020222"
+    }
+   ]
+  },
+  {
+   "id": "tot",
+   "title": "Terms of Trade",
+   "read": "Oil fell as talks in Qatar raised hopes of ending the US–Iran war. That trims the boost oil exporters like Canada get, and eases the cost for importers like Japan and the euro area. Prices are still high by historical standards, so the gap between winners and losers remains.",
+   "figure": "Brent ~$109.8 (−3.2%), WTI ~$100.5 (−3.5%); OPEC+ December targets unchanged",
+   "sources": [
+    {
+     "label": "Blue Street market levels (Hercules, Nov 2 London open run, 12:47 AM CT; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+    },
+    {
+     "label": "Reuters via WDSM (Nov 2): Oil prices ease 3% on optimism for Qatari-led talks on ending Iran war",
+     "url": "https://wdsm710.com/2026/11/01/oil-slips-more-than-1-as-talks-continue-on-ending-iran-war/"
+    },
+    {
+     "label": "AOL/Reuters (Nov 1): OPEC+ keeps December oil output targets steady",
+     "url": "https://www.aol.com/articles/opec-set-keep-oil-output-094130000.html"
+    }
+   ]
+  },
+  {
+   "id": "positioning",
+   "title": "Positioning",
+   "read": "Hedge funds hold their biggest bets against the Canadian dollar, and cheaper oil now takes some pressure off those bets. They are also betting against the euro and the kiwi, while real money investors bet for the euro. Their large bets on gold are shrinking, and their bets on oil rising are among the weakest in a decade.",
+   "figure": "CFTC Oct 27: funds strongly against CAD (added), against EUR (real money for), against NZD (sharply added), for AUD (real money strongly against), strongly for gold (cut); oil net long among weakest since 2015",
+   "sources": [
+    {
+     "label": "CFTC Traders in Financial Futures (futures only), report date Oct 27",
+     "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
+    },
+    {
+     "label": "CFTC Disaggregated (futures only), report date Oct 27",
+     "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy"
+    }
+   ]
+  },
+  {
+   "id": "fiscal",
+   "title": "Fiscal",
+   "read": "Fitch joined Moody's in putting France's credit rating on negative outlook, which keeps a weight on the euro. France's parliament votes on the revenue side of its budget on Tuesday. Canada presents its budget on Thursday.",
+   "figure": "Fitch: France A+, outlook negative (Oct 30); Moody's Aa3 negative; French revenue vote Nov 3; S&P review Nov 27; Canada budget Nov 5, 3:00 PM CT",
+   "sources": [
+    {
+     "label": "Reuters via WBOW (Oct 30): Fitch revises France's outlook to negative on worsening debt dynamics",
+     "url": "https://1027wbow.com/2026/10/30/fitch-revises-frances-outlook-to-negative-on-worsening-debt-dynamics/"
+    },
+    {
+     "label": "Blue Street calendar (Hercules, Nov 2): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    },
+    {
+     "label": "Blue Street central bank data (Hercules, Nov 2 London open run): rates, meetings, pricing",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+    }
+   ]
+  }
+ ]
 }
