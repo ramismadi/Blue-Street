@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-11-02T00:47:04-06:00",
-  "updated": "2026-11-02T00:47:04-06:00",
+  "as_of": "2026-11-02T07:32:44-06:00",
+  "updated": "2026-11-02T07:32:44-06:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "Monday London-open read, 2026-11-02 (~1:00 AM CT). Asia: dollar rangebound into Tuesday's US midterms (DXY ~101.83); oil slides ~3% on Doha talks (front-month Brent ~$109.77, WTI ~$100.53); Fitch cut France's outlook to negative Oct 30 (A+ affirmed) and the euro sits near a 17-month low (~$1.1170); China RatingDog PMI beat the poll at 52.0 vs the official 49.3 contraction. Week ahead: RBA tonight 9:30pm CT (hike ~81%), EZ flash CPI Wed 4:00am CT, BoE Thu 6:00am CT (hike ~94.4%), US payrolls Fri 7:30am CT. Levels are indicative index quotes, not executable prices.",
+  "note": "Monday NY-open read, 2026-11-02 (morning CT). London: dollar softer (DXY low ~101.44) as oil slid a further ~4% on a third day of Iran-Qatar talks in Doha and yields eased (10Y into the 4.90s); Nasdaq futures rebounded just under 1% after Friday's tech rout. No 7:30am CT US release on the calendar today; ISM manufacturing at 9:00am CT (fcst 54.5) is the morning's print. Week ahead: RBA tonight 9:30pm CT (hike ~71-81%), US midterms Tue, EZ flash CPI Wed 4:00am CT, BoE Thu 6:00am CT (hike ~94.4%), US payrolls Fri 7:30am CT.",
   "pairs": {},
   "currencies": [
     {
@@ -10,7 +10,7 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY ~101.83 in Asia Monday, steady into a week headlined by Tuesday's US midterms, tonight's RBA decision (9:30pm CT) and Thursday's BoE (6:00am CT); Dec Fed hike pricing ~72-75% (futures via Stockbiz/NordFX), up slightly from ~70% at the Oct 30 close. ISM manufacturing due 9:00am CT (fcst 54.5).",
+      "summary": "DXY slipped in London to a ~101.44 low (from ~101.83 in Asia, Fri close 101.88) as falling oil (~-4%) and lower yields (10Y into the 4.90s) softened the dollar into Tuesday's US midterms; Dec Fed hike ~72-75%. ISM manufacturing at 9:00am CT (fcst 54.5, prev 54.5) is the morning's data point.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -47,7 +47,7 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD ~1.1170 in Asia, near a 17-month low after Fitch cut France's outlook to negative (Oct 30, unscheduled; A+ affirmed, debt seen at 124% of GDP by 2028) — euro languished at $1.1159 in early Asia (Reuters). Dec ECB hike still ~86%; EZ flash CPI due Wed 4:00am CT (fcst 4.0%).",
+      "summary": "EUR/USD rose to ~1.1237 in London (from ~1.1170 in Asia) on the dollar pullback, still near the 17-month low after Fitch cut France's outlook to negative on Oct 30 (unscheduled; A+ affirmed, debt seen at ~124% of GDP by 2028). EZ flash CPI due Wed 4:00am CT.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD ~1.3390 in Asia, flat into the BoE's Thu 6:00am CT meeting (hike ~94.4% to 4.00%); EUR/GBP ~0.8343, near the 19-month low. Nationwide house prices flat in Oct (0.0% m/m). CFTC Oct 27: specs net short at a 5th-percentile extreme — contrarian +1.",
+      "summary": "GBP/USD rose to ~1.3448 in London (from ~1.3390 in Asia), near 1.3418 into the NY open, into Thu's BoE meeting at 6:00am CT (hike ~94.4% to 4.00%); EUR/GBP ~0.8358 on the NY-open cross.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY ~157.80 in Asia, up from 157.48 at the NY close; BoJ HELD at 1.25% (8-1, Takata for 1.50%), underlying inflation judged 'generally consistent' with 2% — December hike ~80%. CFTC Oct 27: yen longs at a 98th-percentile extreme — contrarian -1.",
+      "summary": "USD/JPY failed at 158 in Tokyo, slipped into the 157.60s in London, back near 157.90 into the NY open. Finance Minister Katayama said Nov 2 (Reuters) that US-Japan FX coordination is unchanged after the midterms and Tokyo will act on disorderly moves; BoJ Dec hike ~80%.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF ~0.8241 in Asia, near the NY close; KOF barometer missed (107.6 vs 108.1 fcst, prev 109.1); SNB December pricing still conflicted.",
+      "summary": "USD/CHF ~0.8250 in London, near the Asia level; KOF barometer missed (107.6 vs 108.1 fcst, prev 109.1); SNB December pricing still conflicted. Swiss CPI due Tue 1:30am CT (fcst 0.0% m/m).",
       "drivers": {
         "policy": {
           "score": 0,
@@ -195,7 +195,7 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD ~0.7022 in Asia, flat into tonight's RBA decision (9:30pm CT, hike ~81% to 4.85%) after a touch-hot Q3 PPI (+1.1% q/q). CFTC Oct 27: specs net short at a 1st-percentile extreme — contrarian +1. China two-speed: official PMIs missed Saturday (mfg 49.3, back in contraction) but RatingDog beat the poll at 52.0.",
+      "summary": "AUD/USD ~0.7022-0.7033, flat into tonight's RBA decision (9:30pm CT, hike ~71-81% to 4.85%); Melbourne Institute and all four big banks expect a hike, published-research tally 10 hike / 2 hold. China RatingDog PMI 52.0 beat the poll but export orders slowed.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -232,7 +232,7 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD ~1.3985 in Asia, loonie softer as front-month WTI slid ~3.4% to ~$100.50 on the Doha talks; BoC Dec further hike ~45%. August GDP missed (flat 0.0% vs +0.2% exp).",
+      "summary": "USD/CAD ~1.3985, loonie facing a terms-of-trade drag as WTI broke under $100 (-4%+) on the Doha talks; BoC Dec further hike ~45%. August GDP missed (flat 0.0% vs +0.2% exp).",
       "drivers": {
         "policy": {
           "score": 1,
@@ -269,7 +269,7 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD ~0.5616 in Asia (-0.26%), down ~1.2% last week after the RBNZ's surprise hold (4-3, 2.75%); the hike case is delayed to Dec 9, not abandoned. CFTC Oct 27: specs net short at a 1st-percentile extreme — contrarian +1.",
+      "summary": "NZD/USD ~0.5616-0.5625, still soft after the RBNZ's surprise Oct 28 hold (4-3, 2.75%); the hike case is delayed to Dec 9, not abandoned. NZ Q3 jobs due Tue afternoon CT.",
       "drivers": {
         "policy": {
           "score": 0,
