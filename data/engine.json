@@ -1,35 +1,47 @@
 {
- "updated": "2026-11-02T01:45:00-06:00",
+ "updated": "2026-11-02T15:35:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "read": "Most central banks still lean toward higher rates because energy keeps inflation high, and this week Australia and Britain are both expected to raise them. With those hikes mostly priced, their currencies will move on whether the banks hint at more. In the US, bets on a December Fed hike held firm.",
-   "figure": "RBA Nov 3 hike to 4.85% ~81–90%; BoE Nov 5 hike to 4.00% ~94%; Fed Dec hike ~72–75% (from ~70% Oct 30); ECB Dec ~86%; BoJ Dec ~80%; BoC Dec ~45%; RBNZ Dec ~75%",
+   "figure": "Fed Dec hike ~72–76%; RBA Nov 3 hike to 4.85% ~81%; BoE Nov 5 hike to 4.00% ~94%; ECB Dec ~86%; BoJ Dec ~80%; BoC Dec ~45%",
+   "read": "Most central banks still lean toward higher rates, and Australia and Britain are both expected to raise them this week. Oil's sharp fall eases some of the pressure behind those hikes, but none of the expected moves were priced out today. Currencies will move on whether banks hint at more.",
    "sources": [
     {
-     "label": "Blue Street market levels (Hercules, Nov 2 London open run, 12:47 AM CT; indicative)",
+     "label": "Blue Street market levels (Hercules, Nov 2 New York close run, 2:55 PM CT; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     },
     {
-     "label": "Blue Street central bank data (Hercules, Nov 2 London open run): rates, meetings, pricing",
+     "label": "Blue Street central bank data (Hercules, Nov 2): rates, meetings, pricing",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
     },
     {
-     "label": "Reuters via Business Recorder (Nov 2): Australian dollar steadies ahead of RBA, kiwi braces for election risk",
-     "url": "https://www.brecorder.com/news/40447013/australian-dollar-steadies-ahead-of-rba-kiwi-braces-for-election-risk"
+     "label": "Newsquawk (Nov 2): Preview of the RBA rate decision, Tuesday Nov 3 at 03:30 GMT",
+     "url": "https://www.newsquawk.com/headlines/preview-rba-rate-decision-scheduled-for-tuesday-3rd-november-2026-at-0330gmt-2230est-on-monday"
     }
    ]
   },
   {
    "id": "growth",
    "title": "Growth",
-   "read": "China sent mixed signals: the official factory survey slipped into decline, but a private survey of smaller firms stayed solid. That leaves Australia and New Zealand without a clear push either way. US factory figures later today give the first look at how the US economy began the autumn quarter.",
-   "figure": "China official manufacturing PMI 49.3 (poll 50.0); RatingDog PMI 52.0 (poll 51.6); US ISM manufacturing today, forecast 54.5",
+   "figure": "US ISM manufacturing 55.5 (fcst 54.5), production 59.0; UK factory PMI 52.8 (5-month high); euro-area factory PMI 52.7",
+   "read": "Factories started the autumn strongly in the US and Britain, and euro-area industry kept growing. Solid growth gives central banks room to keep raising rates, which supports the dollar and the pound. Today it was outweighed by oil.",
    "sources": [
     {
-     "label": "Reuters (Nov 2): China factory growth slows in October as export orders ease, private PMI shows",
-     "url": "https://www.reuters.com/world/asia-pacific/china-factory-growth-slows-october-export-orders-ease-private-pmi-shows-2026-11-02/"
+     "label": "Reuters (Nov 2): US manufacturing picks up in October; input prices stay high",
+     "url": "https://www.reuters.com/world/us/us-manufacturing-picks-up-october-input-prices-stay-high-2026-11-02/"
+    },
+    {
+     "label": "ActionForex (Nov 2): US ISM manufacturing jumps to 55.5 as production surges",
+     "url": "https://www.actionforex.com/live-comments/659568-us-ism-manufacturing-jumps-to-55-5-as-production-surges-but-price-pressures-persist/"
+    },
+    {
+     "label": "Investing.com (Nov 2): UK manufacturing PMI rises to 52.8 in October",
+     "url": "https://www.investing.com/news/economic-indicators/uk-manufacturing-pmi-rises-to-528-in-october-4990481"
+    },
+    {
+     "label": "Investing.com (Nov 2): Eurozone manufacturing growth holds steady in October",
+     "url": "https://www.investing.com/news/economic-indicators/eurozone-manufacturing-growth-holds-steady-in-october-4990343"
     },
     {
      "label": "Blue Street calendar (Hercules, Nov 2): times, forecasts and actuals",
@@ -40,60 +52,68 @@
   {
    "id": "inflation",
    "title": "Inflation",
-   "read": "Cheaper oil overnight eased some of the fear that energy will keep pushing prices up. But inflation is still well above target in the US, the euro area, Britain and Australia, so central banks have little room to relax. Euro-area figures on Wednesday are the week's main inflation test.",
-   "figure": "Euro-area flash HICP Nov 4: forecast 4.0% (Sep 3.8%), core 2.5%; Swiss CPI Nov 3: forecast 0.0% m/m; Brent ~$110 (−3%)",
+   "figure": "Brent settled $104.77 (−7.6%); ISM prices paid 75.2 (from 77.9); euro-area flash inflation Nov 4: forecast 4.0%",
+   "read": "Cheaper oil cut one of the main forces pushing prices up, and US factories reported costs rising a little more slowly. Inflation is still well above target in most big economies, so central banks have little room to relax yet. Euro-area figures on Wednesday are the week's main inflation test.",
    "sources": [
+    {
+     "label": "Finimize (Nov 2): Oil sank over 7% as US-Iran talks looked more real (Brent settled $104.77, WTI $96.46)",
+     "url": "https://finimize.com/content/oil-sank-over-7-as-us-iran-talks-looked-more-real"
+    },
+    {
+     "label": "The Private Banker (Nov 2): Oil sinks more than 7% and WTI breaks below $100 (settlements, 10-year yield, gold, Nasdaq)",
+     "url": "https://leprivatebanker.com/2026/11/02/oil-sinks-more-than-7-and-wti-breaks-below-100-as-iran-signals-room-for-peace-talks/"
+    },
+    {
+     "label": "Reuters (Nov 2): US manufacturing picks up in October; input prices stay high",
+     "url": "https://www.reuters.com/world/us/us-manufacturing-picks-up-october-input-prices-stay-high-2026-11-02/"
+    },
     {
      "label": "Blue Street calendar (Hercules, Nov 2): times, forecasts and actuals",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, Nov 2 London open run, 12:47 AM CT; indicative)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
   },
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "read": "Markets started November calmer after October's tech share slide, and the weekend passed without a US strike on Iran. That cut demand for the safe-haven yen and franc. Attacks on Gulf shipping continue, so the calm could break quickly.",
-   "figure": "USD/JPY ~157.8 (+0.2%); USD/CHF ~0.824; gold ~$3,907 (+0.6%); ~10 Gulf shipping incidents in three days",
+   "figure": "Nasdaq −1.07%; USD/CHF ~0.8185 (−0.61%); gold ~$3,941 (+1.7%); USD/JPY ~157.9",
+   "read": "Hope for an end to the US–Iran war calmed energy markets, but US tech shares fell, so the mood was mixed. The Swiss franc drew the most shelter money, while the yen was held back by the wide gap in rates. Attacks on Gulf shipping continue, so the calm is fragile.",
    "sources": [
     {
-     "label": "Blue Street market levels (Hercules, Nov 2 London open run, 12:47 AM CT; indicative)",
+     "label": "Blue Street market levels (Hercules, Nov 2 New York close run, 2:55 PM CT; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     },
     {
-     "label": "Reuters via FXStreet (Nov 2): UKMTO reports two projectiles strike tanker off Saudi Arabia's coast",
-     "url": "https://www.fxstreet.com/news/ukmto-reports-two-projectiles-strike-tanker-off-saudi-arabias-coast-202611020222"
+     "label": "The Private Banker (Nov 2): Oil sinks more than 7% and WTI breaks below $100 (settlements, 10-year yield, gold, Nasdaq)",
+     "url": "https://leprivatebanker.com/2026/11/02/oil-sinks-more-than-7-and-wti-breaks-below-100-as-iran-signals-room-for-peace-talks/"
     }
    ]
   },
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "read": "Oil fell as talks in Qatar raised hopes of ending the US–Iran war. That trims the boost oil exporters like Canada get, and eases the cost for importers like Japan and the euro area. Prices are still high by historical standards, so the gap between winners and losers remains.",
-   "figure": "Brent ~$109.8 (−3.2%), WTI ~$100.5 (−3.5%); OPEC+ December targets unchanged",
+   "figure": "Brent $104.77 (−7.6%), WTI $96.46 (−7.4%) at settlement",
+   "read": "Oil had one of its biggest one-day falls of the war after Iran backed peace talks. That shrinks the boost oil exporters like Canada get and eases the bill for importers like Japan and the euro area. Prices are still high by historical standards, and a failed deal could send them back up fast.",
    "sources": [
     {
-     "label": "Blue Street market levels (Hercules, Nov 2 London open run, 12:47 AM CT; indicative)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+     "label": "Finimize (Nov 2): Oil sank over 7% as US-Iran talks looked more real (Brent settled $104.77, WTI $96.46)",
+     "url": "https://finimize.com/content/oil-sank-over-7-as-us-iran-talks-looked-more-real"
     },
     {
-     "label": "Reuters via WDSM (Nov 2): Oil prices ease 3% on optimism for Qatari-led talks on ending Iran war",
-     "url": "https://wdsm710.com/2026/11/01/oil-slips-more-than-1-as-talks-continue-on-ending-iran-war/"
+     "label": "The Private Banker (Nov 2): Oil sinks more than 7% and WTI breaks below $100 (settlements, 10-year yield, gold, Nasdaq)",
+     "url": "https://leprivatebanker.com/2026/11/02/oil-sinks-more-than-7-and-wti-breaks-below-100-as-iran-signals-room-for-peace-talks/"
     },
     {
-     "label": "AOL/Reuters (Nov 1): OPEC+ keeps December oil output targets steady",
-     "url": "https://www.aol.com/articles/opec-set-keep-oil-output-094130000.html"
+     "label": "Energy Connects/Bloomberg (Nov 2): Iran's Khamenei gives government powers to hold talks on war",
+     "url": "https://www.energyconnects.com/news/oil/2026/november/iran-s-khamenei-gives-government-powers-to-hold-talks-on-war/"
     }
    ]
   },
   {
    "id": "positioning",
    "title": "Positioning",
-   "read": "Hedge funds hold their biggest bets against the Canadian dollar, and cheaper oil now takes some pressure off those bets. They are also betting against the euro and the kiwi, while real money investors bet for the euro. Their large bets on gold are shrinking, and their bets on oil rising are among the weakest in a decade.",
-   "figure": "CFTC Oct 27: funds strongly against CAD (added), against EUR (real money for), against NZD (sharply added), for AUD (real money strongly against), strongly for gold (cut); oil net long among weakest since 2015",
+   "figure": "CFTC Oct 27: funds strongly against CAD, against EUR (real money for), against NZD, for AUD (real money strongly against), strongly for gold (cut); oil net long among weakest since 2015",
+   "read": "Hedge funds hold their biggest bets against the Canadian dollar, and the loonie held up today despite cheaper oil. They are also betting against the euro and the kiwi, while real money investors bet for the euro. Their large bets on gold are shrinking; new figures arrive Friday.",
    "sources": [
     {
      "label": "CFTC Traders in Financial Futures (futures only), report date Oct 27",
@@ -108,8 +128,8 @@
   {
    "id": "fiscal",
    "title": "Fiscal",
-   "read": "Fitch joined Moody's in putting France's credit rating on negative outlook, which keeps a weight on the euro. France's parliament votes on the revenue side of its budget on Tuesday. Canada presents its budget on Thursday.",
-   "figure": "Fitch: France A+, outlook negative (Oct 30); Moody's Aa3 negative; French revenue vote Nov 3; S&P review Nov 27; Canada budget Nov 5, 3:00 PM CT",
+   "figure": "Fitch: France A+, outlook negative (Oct 30); Moody's Aa3 negative; French revenue vote Nov 3; Canada budget Nov 5, 3:00 PM CT",
+   "read": "France's debt worries, with two rating firms on negative outlook, keep a weight on the euro. France's parliament votes on the revenue side of its budget on Tuesday, and Canada presents its budget on Thursday.",
    "sources": [
     {
      "label": "Reuters via WBOW (Oct 30): Fitch revises France's outlook to negative on worsening debt dynamics",
@@ -118,10 +138,6 @@
     {
      "label": "Blue Street calendar (Hercules, Nov 2): times, forecasts and actuals",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-    },
-    {
-     "label": "Blue Street central bank data (Hercules, Nov 2 London open run): rates, meetings, pricing",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
     }
    ]
   }
