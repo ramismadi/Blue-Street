@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01T23:47:59Z",
+  "updated": "2026-11-02T03:48:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "bullish",
-      "ts": "2026-10-31T02:55:00Z",
-      "text": "The Bank of Japan held its rate at 1.25% on Friday but said underlying inflation has reached its 2% goal, and one board member wanted a rise straight away, so a December hike looks likely. Friday's tech-led stock sell-off and lower US yields add shelter demand near 157 per dollar, though oil near $118 a barrel keeps weighing on Japan."
+      "ts": "2026-11-02T03:48:00Z",
+      "text": "The Bank of Japan held its rate at 1.25% on Friday but said underlying inflation has reached its 2% goal, and one board member wanted a rise straight away, so a December hike looks likely. Oil easing at Monday's open helps Japan, which buys almost all its energy abroad, but fresh attacks on Gulf shipping keep that cost risk alive."
     },
     "CHF": {
       "lean": "mixed",
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "mixed",
-      "ts": "2026-11-01T16:48:31Z",
-      "text": "Hot Australian inflation has markets giving about 79% odds that the Reserve Bank of Australia raises rates on Tuesday, November 3, which supports the Australian dollar near 70 US cents. China, Australia's biggest customer, saw activity shrink in October and its stocks slump, though Beijing's regulators meet banks on Monday to discuss support; a hold on Tuesday would likely hit the currency."
+      "ts": "2026-11-02T03:48:00Z",
+      "text": "Hot Australian inflation has markets giving about 79% odds that the Reserve Bank of Australia raises rates on Tuesday, November 3, which supports the Australian dollar near 70 US cents. China, Australia's biggest customer, sent mixed signals: the official factory survey showed shrinking activity, but a private one released Monday beat forecasts; a hold on Tuesday would likely hit the currency."
     },
     "NZD": {
       "lean": "bearish",
@@ -48,12 +48,117 @@
       "text": "Gold fell more than 3% on Friday to below $3,900 an ounce, its lowest in a year and some 30% under January's record, as Fed officials talked up more rate rises and some investors sold it to cover stock losses. Central-bank buying and the Iran war have not been enough to stop a second monthly fall."
     },
     "OIL": {
-      "lean": "bullish",
-      "ts": "2026-11-01T23:47:59Z",
-      "text": "Brent crude ended last week near $117 a barrel, up about 14% in October, as ships kept getting hit in the Gulf. On Sunday Iran said two more tankers struck its mines in the Strait of Hormuz and Yemen's Houthis renewed threats against Saudi oil sites, while Washington says no decision on new strikes is made and OPEC+ is holding output steady for December."
+      "lean": "mixed",
+      "ts": "2026-11-02T03:48:00Z",
+      "text": "Brent crude ended October at a six-month high, about $113 a barrel, after a month of attacks on Gulf shipping, and a tanker was hit off Saudi Arabia early Monday. But oil opened the week lower, near $111, as Iran and Qatar kept talking about ending the war; the risk is that fighting resumes after Tuesday's US midterm elections."
     }
   },
   "items": [
+    {
+      "id": "brecorder-reuters-oil-slips-doha-talks-20261102",
+      "ts": "2026-11-02T02:40:00Z",
+      "source": "Business Recorder (Reuters)",
+      "url": "https://www.brecorder.com/news/40446999/oil-slips-more-than-1-as-talks-continue-on-ending-iran-war",
+      "image": "https://i.brecorder.com/large/2026/09/23074917357c51e.webp",
+      "headline": "Oil slips more than 1% as talks continue on ending Iran war",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Oil fell about 1.5% as trading opened in Asia on Monday, with Brent near $112 a barrel, as Iran and Qatar held a third day of talks on ending the war.",
+      "beats": {
+        "was": "Brent crude ended October at a six-month high after weeks of attacks on Gulf shipping, and the US has said it may strike Iran again. Qatar is acting as go-between for Washington and Tehran.",
+        "happened": "Brent fell $1.59 to about $111.84 and US crude to about $102.56 early Monday. Iran's foreign minister, Abbas Araghchi, said the talks in Doha were progressing, and a quiet weekend with no major military escalation took some urgency out of prices; OPEC+ also kept December output targets unchanged.",
+        "means": "The market is shaving a little of the war premium on hopes of a deal, but it remains nervous that fighting could resume after Tuesday's US midterm elections.",
+        "fx": "Cheaper oil eases the import bill for Japan and Europe and takes a little support away from oil exporters such as Canada."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Hopes for a deal to end the war pulled prices well off last week's highs at the open."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil trims support for Canada's biggest export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A smaller energy bill helps Japan, which buys nearly all its oil abroad."
+        }
+      ],
+      "watch": "Whether the Doha talks produce a plan to reopen Hormuz, and what Washington says about strikes after Tuesday's vote."
+    },
+    {
+      "id": "investinglive-tanker-hit-off-khafji-20261102",
+      "ts": "2026-11-02T02:12:55Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/commodities/tanker-hit-by-two-projectiles-off-saudi-coast-as-gulf-incidents-reach-10-in-three-days/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Oil%20still%20lower%20on%20the%20session%2002%20November%202026-featured-1793585382.jpg?width=960&format=webp",
+      "headline": "Tanker hit by two projectiles off Saudi coast as Gulf incidents reach 10 in three days",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "A tanker was struck by two unidentified projectiles in the northern Gulf off Saudi Arabia early Monday, the tenth reported attack on shipping in the region since Saturday.",
+      "beats": {
+        "was": "Since the US-Israeli war on Iran began, ships in and near the Strait of Hormuz, the narrow channel that carries about a fifth of the world's oil, have been hit by mines, drones and missiles. Iran's Revolutionary Guards have claimed several of these attacks.",
+        "happened": "The UK Maritime Trade Operations centre, which tracks shipping security for the Royal Navy, said a tanker sailing southeast was hit on its side about 72 nautical miles east of Ras Al Khafji, near the Saudi-Kuwaiti border. All crew are safe and no spill was reported; the ship and the attacker were not named.",
+        "means": "The attacks are no longer limited to the strait itself but reach the northern Gulf, where Saudi and Kuwaiti crude is loaded. That tends to lift insurance and freight costs even while talks to end the war continue in Qatar.",
+        "fx": "More risk to Gulf shipping supports oil prices, which helps oil exporters like Canada and Norway and hurts big importers such as Japan and the euro zone."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A new attack further up the Gulf adds to supply risk, but no damage to oil flows was reported and prices stayed lower on the day."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports almost all its oil, so pricier shipping through the Gulf is a cost for its economy."
+        }
+      ],
+      "watch": "Whether anyone claims the attack, and whether tanker traffic out of Saudi and Kuwaiti ports slows."
+    },
+    {
+      "id": "investinglive-china-ratingdog-pmi-oct-20261102",
+      "ts": "2026-11-02T01:51:51Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/china-private-factory-pmi-at-52-0-beats-forecasts-output-growth-fastest-since-april/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/china-ratingdog-manufacturing-pmi-october-2026-featured-1793584289.jpg?width=960&format=webp",
+      "headline": "China private factory PMI at 52.0 beats forecasts, output growth fastest since April",
+      "story": "china-economy",
+      "story_title": "China: a slowing economy",
+      "pillar": "growth",
+      "summary": "A private survey of Chinese factories came in at 52.0 for October, better than the 51.6 expected, with output growing at its fastest pace in six months.",
+      "beats": {
+        "was": "China's official factory survey, released on Saturday, showed activity shrinking in October (49.3, below the 50 line that splits growth from decline), which had raised worries about Australia's and New Zealand's biggest customer.",
+        "happened": "The RatingDog survey, compiled by S&P Global and tilted toward exporters, slipped only slightly from 52.1 in September. Output and buying picked up, but export orders grew at their slowest in three months, factories cut selling prices, and business confidence fell to a nine-month low.",
+        "means": "China's private exporters are holding up better than the official numbers suggest, which eases fears of a sharp slowdown. Falling factory prices still point to weak demand at home and keep pressure on Beijing to add support.",
+        "fx": "Better Chinese factory activity gives some relief to currencies tied to China's demand, mainly the Australian and New Zealand dollars."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A beat from Australia's biggest customer softens Saturday's weak official survey, though the mix inside is soft."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Steadier Chinese factories help demand for New Zealand's exports a little."
+        }
+      ],
+      "watch": "China's services survey later this week, and whether Beijing's market regulators announce support after meeting banks on Monday."
+    },
     {
       "id": "sbs-trump-canada-deal-close-keystone-20261101",
       "ts": "2026-11-01T23:34:00Z",
@@ -1264,33 +1369,6 @@
       "watch": "A national German figure well below 3.1%, or a soft euro-zone figure next Wednesday, would weaken the case for a December rise."
     },
     {
-      "id": "instaforex-kof-oct-20261030",
-      "ts": "2026-10-30T08:14:52Z",
-      "source": "InstaForex",
-      "url": "https://www.instaforex.com/forex-news/3261100",
-      "image": null,
-      "headline": "Swiss KOF Barometer Falls in October",
-      "story": "swiss-economy",
-      "story_title": "Switzerland: economy and the franc",
-      "pillar": "growth",
-      "summary": "A closely watched gauge of Switzerland's economic outlook slipped in October and missed forecasts, though it stays above its long-run average.",
-      "beats": {
-        "was": "The Swiss franc has drawn shelter money during the Iran war, and Swiss interest rates are far below those in the US.",
-        "happened": "The KOF economic barometer, a monthly forecast gauge from Zurich's ETH university, fell to 107.6 from 109.1, below the 108.3 expected. The drop was broad, though factories added to it.",
-        "means": "Switzerland's outlook is still solid, just a little less upbeat, which gives the Swiss National Bank no new reason to change course.",
-        "fx": "Slight miss but still strong → little lasting pressure on the franc."
-      },
-      "impact": [
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A small miss on the outlook gauge, from a still-healthy level."
-        }
-      ],
-      "watch": "A sharper fall in next month's gauge or weak Swiss inflation figures would raise talk of easier Swiss policy."
-    },
-    {
       "id": "reuters-boj-holds-instant-view-20261030",
       "ts": "2026-10-30T04:16:00Z",
       "source": "Yahoo Finance (Reuters)",
@@ -1322,45 +1400,6 @@
         }
       ],
       "watch": "If spring wage talks or the December data disappoint, or the bank sounds in no hurry, the yen would lose this support."
-    },
-    {
-      "id": "reuters-oil-fourth-monthly-gain-hormuz-20261030",
-      "ts": "2026-10-30T03:59:00Z",
-      "source": "Yahoo Finance (Reuters)",
-      "url": "https://finance.yahoo.com/news/oil-rises-supply-concerns-houthis-022725347.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/b153b2eb6c8d76ef71160cf42cad5a372339b196eda28943a88a724845e69ec0/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2Faf0151ca22c62f13b15ed57e38f075a9.jpg",
-      "headline": "Oil set for fourth monthly gain as Hormuz tanker attack highlights supply risks from war",
-      "story": "iran-hormuz",
-      "story_title": "Hormuz: shipping attacks and the oil supply",
-      "pillar": "commodities",
-      "summary": "A tanker was hit by explosives in the Strait of Hormuz, lifting Brent crude to about $116 a barrel and putting oil on course for a fourth straight monthly gain.",
-      "beats": {
-        "was": "The US-Israeli war with Iran is in its eighth month, and the Strait of Hormuz, the route for about a fifth of the world's oil, has been largely shut.",
-        "happened": "The UK's maritime security agency said a small boat attached explosives to a tanker in the strait; the attacker is unknown. Brent rose about 1% to near $116 and US crude to about $103, after Yemen's Houthi group said it struck Saudi refineries on Thursday.",
-        "means": "Fresh attacks on ships and Saudi sites keep the war premium in oil even as the US tries to restart talks with Iran. Brent is up about 11% this month.",
-        "fx": "Higher oil → support for oil exporters like the Canadian dollar, a heavier import bill for Japan and Europe."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A new attack inside the strait adds to supply fears."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Canada exports oil, so higher prices help its currency."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so costlier crude weighs on the yen."
-        }
-      ],
-      "watch": "A reply from Iran to the US letter seeking talks, or ships passing the strait safely, would cool prices."
     }
   ]
 }
