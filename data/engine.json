@@ -1,50 +1,46 @@
 {
-  "updated": "2026-11-03T01:35:00-06:00",
+  "updated": "2026-11-03T15:20:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "RBA hiked to 4.85% Nov 3 (6–3); BoE Nov 5 hike to 4.00% ~94%; Fed Dec hike ~72–76%; ECB Dec ~86%; BoJ Dec ~80%; BoC Dec ~45%",
-      "read": "Australia raised rates overnight, but a split vote and a cautious governor suggest it may be near the top. Britain is still expected to hike on Thursday, and most other big central banks still lean toward higher rates. Currencies are moving on hints about what comes after each hike, not the hikes themselves.",
+      "figure": "RBA 4.85% (Nov 3, 6–3); BoE Nov 5 hike to 4.00% ~94%; Fed Dec hike ~79% (from ~74%); BoC Dec ~56% (from ~45%); ECB Dec ~86%; BoJ Dec ~80%",
+      "read": "Most big central banks still lean toward higher rates, and strong US jobs figures made a December Fed hike look more likely. Canada’s central bank repeated that more rises may be needed, while Australia’s looks ready to pause after its latest hike. Currencies are moving on hints about the next step, not the hikes already made.",
       "sources": [
         {
-          "label": "Blue Street central bank data (Hercules, Nov 3): rates, meetings, pricing",
+          "label": "Blue Street central bank data (Hercules, Nov 3, 3:00 PM CT): rates, meetings, pricing",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "InvestingLive (Nov 3): RBA’s Bullock offers no guidance, says it is probably good to wait for data after hike",
-          "url": "https://investinglive.com/central-banks/rba-s-bullock-offers-no-guidance-says-it-is-probably-good-to-wait-for-data-after-hike/"
+          "label": "Blue Street market levels (Hercules, Nov 3 New York close run, 3:00 PM CT; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, Nov 3 London open run, 12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Bank of Canada (Nov 3): Macklem opening statement to the Commons finance committee",
+          "url": "https://www.bankofcanada.ca/2026/11/opening-statement-house-commons-standing-committee-finance-2026-11-03/"
+        },
+        {
+          "label": "InvestingLive (Nov 3): RBA’s Bullock offers no guidance after the hike",
+          "url": "https://investinglive.com/central-banks/rba-s-bullock-offers-no-guidance-says-it-is-probably-good-to-wait-for-data-after-hike/"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "US ISM manufacturing 55.5 (fcst 54.5), production 59.0; UK factory PMI 52.8 (5-month high); euro-area factory PMI 52.7",
-      "read": "Factories started the autumn strongly in the US and Britain, and euro-area industry kept growing. Solid growth gives central banks room to keep raising rates, which supports the dollar and the pound. Australia is the soft spot, with a weakening job market behind its central bank’s caution.",
+      "figure": "US job openings 7.52M Sep (fcst 7.11M); US factory orders +1.8% Sep (fcst +1.2%); US ISM manufacturing 55.5 Oct; dairy auction +3.0%",
+      "read": "The US economy keeps surprising on the strong side, with more open jobs and busier factories than expected. That gives the Federal Reserve room to keep raising rates and supports the dollar. Canada and Australia remain the soft spots.",
       "sources": [
         {
-          "label": "Reuters (Nov 2): US manufacturing picks up in October; input prices stay high",
-          "url": "https://www.reuters.com/world/us/us-manufacturing-picks-up-october-input-prices-stay-high-2026-11-02/"
+          "label": "ANI (Nov 3): US job openings rise to 7.52 million in September",
+          "url": "https://www.aninews.in/news/business/us-job-openings-rise-to-752-million-in-september-quits-increase-to-34-million20261103205648/"
         },
         {
-          "label": "ActionForex (Nov 2): US ISM manufacturing jumps to 55.5 as production surges",
-          "url": "https://www.actionforex.com/live-comments/659568-us-ism-manufacturing-jumps-to-55-5-as-production-surges-but-price-pressures-persist/"
+          "label": "Reuters via 102.7 WBOW (Nov 3): US factory orders beat expectations in September",
+          "url": "https://1027wbow.com/2026/11/03/us-factory-orders-beat-expectations-in-september-amid-broad-strength/"
         },
         {
-          "label": "Investing.com (Nov 2): UK manufacturing PMI rises to 52.8 in October",
-          "url": "https://www.investing.com/news/economic-indicators/uk-manufacturing-pmi-rises-to-528-in-october-4990481"
-        },
-        {
-          "label": "Investing.com (Nov 2): Eurozone manufacturing growth holds steady in October",
-          "url": "https://www.investing.com/news/economic-indicators/eurozone-manufacturing-growth-holds-steady-in-october-4990343"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Nov 2): times, forecasts and actuals",
+          "label": "Blue Street calendar (Hercules, Nov 3): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -52,16 +48,16 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "Brent ~$105.25 (Monday settle $104.77, −7.6%); RBA: inflation back to top of 2–3% band only by late 2027; euro-area flash inflation Nov 4: forecast 4.0%",
-      "read": "Cheaper oil has eased one of the main forces pushing prices up, but inflation is still well above target in most big economies. Australia’s central bank now expects inflation to stay high until late 2027. Euro-area figures on Wednesday are the week’s main inflation test.",
+      "figure": "Swiss CPI 1.5% y/y Oct (fcst 1.3%), core 0.5%; Brent ~$104.68; euro-area flash CPI Nov 4: forecast 4.0%",
+      "read": "Fuel is still pushing prices up almost everywhere, even in Switzerland, where inflation had been very low. Underlying prices there stayed calm, so the jump says more about energy than about a broad rise. Euro-area figures on Wednesday are the week’s main inflation check.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Nov 3 London open run, 12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Investing.com (Nov 3): Swiss inflation hits 1.5% in October on fuel costs",
+          "url": "https://www.investing.com/news/economic-indicators/swiss-inflation-hits-15-in-october-above-forecasts-on-fuel-costs-93CH-4993743"
         },
         {
-          "label": "InvestingLive (Nov 3): RBA’s Bullock offers no guidance, says it is probably good to wait for data after hike",
-          "url": "https://investinglive.com/central-banks/rba-s-bullock-offers-no-guidance-says-it-is-probably-good-to-wait-for-data-after-hike/"
+          "label": "Blue Street market levels (Hercules, Nov 3 New York close run, 3:00 PM CT; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 3): times, forecasts and actuals",
@@ -72,40 +68,48 @@
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "DXY ~101.81; US limited strikes on Iranian targets (Qeshm) Nov 2; offshore yuan −0.3% after PBoC FX reserve ratio rise; USD/CHF ~0.8186",
-      "read": "Markets were calm but cautious before the US midterm elections. Limited US strikes on Iranian targets reminded investors that peace talks are not a deal, and a slide in AI-linked shares is still weighing on the mood. The dollar firmed slightly and the Swiss franc kept its gains as a shelter.",
+      "figure": "DXY ~101.86; limited US strikes on Qeshm Island; Iran says it downed a US drone; US 10Y touched ~4.97%; USD/JPY ~158.46",
+      "read": "Markets stayed calm on US midterm election day, even as US and Iranian forces clashed near the Strait of Hormuz. Investors are betting the peace talks carry on, so the safe-haven currencies got little extra lift. Rising US yields, not fear, drove the biggest move, a weaker yen.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Nov 3 London open run, 12:55 AM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, Nov 3 New York close run, 3:00 PM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Reuters via Regional Media News (Nov 3): Dollar drifts on Mideast, midterm risks; Aussie dips after expected RBA hike",
-          "url": "https://www.regionalmedianews.com/news/national/business/dollar-drifts-on-mideast-midterm-risks-aussie-dips-after-expected-rba-hike/"
+          "label": "Daily Maverick / Reuters (Nov 3): Iran-US deal still out of reach",
+          "url": "https://www.dailymaverick.co.za/article/2026-11-03-iran-us-deal-still-out-of-reach-despite-heightened-diplomatic-efforts/"
         },
         {
-          "label": "AP via Scripps (Nov 2): US makes defensive strikes on Iranian targets in Strait of Hormuz, official says",
-          "url": "https://www.tampabay28.com/us-news/iran-war/us-has-conducted-defensive-strikes-on-some-iranian-targets-in-the-strait-of-hormuz-us-official-says"
+          "label": "Arab News / Reuters (Nov 3): oil rises after US hits Iran's Qeshm Island",
+          "url": "https://www.arabnews.com/energy/oil-rises-as-peace-prospects-dim-after-us-hits-irans-qeshm-island-3009556"
+        },
+        {
+          "label": "FXEmpire (Nov 3): US dollar gains ground ahead of midterm elections",
+          "url": "https://www.fxempire.com/forecasts/article/u-s-dollar-gains-ground-ahead-of-midterm-elections-analysis-for-eur-usd-gbp-usd-usd-cad-usd-jpy-1642270"
         }
       ]
     },
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$105.25, WTI ~$96.93 (+0.5% in Asia); Monday settlements $104.77 / $96.46",
-      "read": "Oil steadied after one of its biggest one-day falls of the war. That leaves exporters like Canada with less support than a week ago and importers like Japan and the euro area with a smaller bill. A setback in talks could send prices back up fast.",
+      "figure": "Brent ~$104.68, WTI ~$96.58 at the NY close (London highs ~$106.61 / ~$98.06); dairy auction index +3.0%",
+      "read": "Oil ended near Monday’s lower level after an early bounce faded, so exporters like Canada still have less support than a week ago and importers like Japan and the euro area a smaller bill. Iran’s offer to reopen Hormuz quickly shows how fast prices could fall on a deal. Firm dairy prices helped New Zealand.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Nov 3 London open run, 12:55 AM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, Nov 3 New York close run, 3:00 PM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "AP via Scripps (Nov 2): US makes defensive strikes on Iranian targets in Strait of Hormuz, official says",
-          "url": "https://www.tampabay28.com/us-news/iran-war/us-has-conducted-defensive-strikes-on-some-iranian-targets-in-the-strait-of-hormuz-us-official-says"
+          "label": "Yahoo Finance live (Nov 3): stocks and oil on midterm day",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-3-dow-sp-500-nasdaq-midterms-amd-earnings-141143244.html"
         },
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 2–3): Iran Hormuz blacklist, Trump on post-midterm strikes",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
+          "label": "People's Daily / Xinhua (Nov 3): Iran offers to reopen Hormuz within two days on terms",
+          "url": "https://en.people.cn/n3/2026/1103/c90000-20514895.html"
+        },
+        {
+          "label": "eDairy News (Nov 3): Global Dairy Trade index rises 3.0% in Event 415",
+          "url": "https://en.edairynews.com/global-dairy-trade-index-rises-3-0-in-event-415/"
         }
       ]
     },
@@ -113,7 +117,7 @@
       "id": "positioning",
       "title": "Positioning",
       "figure": "CFTC Oct 27: funds strongly against CAD, against EUR (real money for), against NZD, for AUD (real money strongly against), strongly for gold (cut); oil net long among weakest since 2015",
-      "read": "Hedge funds hold their biggest bets against the Canadian dollar, and they are also betting against the euro and the kiwi, while real money investors bet for the euro. Their large bets on gold are shrinking. New figures arrive Friday.",
+      "read": "Hedge funds hold their biggest bets against the Canadian dollar, and they are also betting against the euro and the kiwi, while real money investors bet for the euro. Their large bets on gold have been shrinking. New figures arrive Friday.",
       "sources": [
         {
           "label": "CFTC Traders in Financial Futures (futures only), report date Oct 27",
@@ -128,15 +132,15 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "Fitch: France A+, outlook negative (Oct 30); Moody’s Aa3 negative; French budget revenue vote Nov 3; Canada budget Nov 5, 3:00 PM CT",
-      "read": "France’s debt worries, with two rating firms on negative outlook, keep a weight on the euro. France’s parliament votes on the revenue side of its budget today, and Canada presents its budget on Thursday.",
+      "figure": "Fitch: France A+, outlook negative (Oct 30); Moody’s Aa3 negative; Canada federal budget Nov 5, 3:00 PM CT",
+      "read": "Debt worries in France, where two rating firms have a negative outlook, keep a weight on the euro. Canada presents its federal budget on Thursday, and a big rise in borrowing would weigh on the loonie.",
       "sources": [
         {
           "label": "Reuters via WBOW (Oct 30): Fitch revises France's outlook to negative on worsening debt dynamics",
           "url": "https://1027wbow.com/2026/10/30/fitch-revises-frances-outlook-to-negative-on-worsening-debt-dynamics/"
         },
         {
-          "label": "Blue Street calendar (Hercules, Nov 2): times, forecasts and actuals",
+          "label": "Blue Street calendar (Hercules, Nov 3): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
