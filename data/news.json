@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T16:55:00Z",
+  "updated": "2026-11-03T17:48:10Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "mixed",
-      "ts": "2026-11-02T11:50:00Z",
-      "text": "The euro jumped to about $1.123 on Monday as the dollar weakened and oil fell, and euro-zone factories kept growing in October with costs rising fast, which backs the European Central Bank's hint of a December rate rise. France is the weak spot: its economy shrank and Fitch warned it may cut the country's credit rating, while German gas stores start winter short of target."
+      "ts": "2026-11-03T17:48:10Z",
+      "text": "The euro sits near $1.12 as the dollar has weakened and oil fell, and euro-zone factories kept growing in October with costs rising fast, which keeps a December rate rise by the European Central Bank possible. The race to replace ECB President Christine Lagarde, who leaves in February, has begun, while France's shrinking economy and Germany's low gas stores going into winter are the weak spots."
     },
     "GBP": {
       "lean": "bullish",
@@ -49,8 +49,8 @@
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-03T14:56:00Z",
-      "text": "Oil fell about 7% on Monday, with Brent near $105 a barrel, on hopes that talks would end the Iran war, but it climbed back almost 2% on Tuesday after US strikes on Iran's Qeshm Island and an Iranian official saying a deal is still far off. With nothing signed and world stockpiles drained, each setback in the talks quickly pushes prices back up."
+      "ts": "2026-11-03T17:48:10Z",
+      "text": "Oil fell about 7% on Monday on hopes that talks would end the Iran war, bounced early Tuesday after US strikes on Iran's Qeshm Island, then slipped again to near $103 for Brent as traders bet the talks will go on. With nothing signed and world stockpiles drained, each setback can still push prices back up quickly."
     }
   },
   "items": [
@@ -134,6 +134,45 @@
         }
       ],
       "watch": "Friday's US October jobs report, which shows whether the hiring signal holds up."
+    },
+    {
+      "id": "yahoo-oil-falls-second-day-talks-20261103",
+      "date": "2026-11-03",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-3-dow-sp-500-nasdaq-midterms-amd-earnings-141143244.html",
+      "image": null,
+      "headline": "Oil gives back its morning bounce and falls for a second day on peace-talk hopes",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Oil turned lower in US trading on Tuesday, with Brent near $103 a barrel and US crude near $95, as hopes for US-Iran peace talks outweighed overnight US strikes on an Iranian island.",
+      "beats": {
+        "was": "The US and Iran have been at war since late February, and Iran keeps most traffic through the Strait of Hormuz, a key route for Gulf oil, shut. Oil fell about 7% on Monday on hopes of a peace deal, then rose almost 2% early Tuesday after US strikes on Iran's Qeshm Island.",
+        "happened": "By midday in New York the early rise had gone. Brent slipped about 1% to near $103 and US crude to near $95, a second daily fall, as traders bet the talks will carry on despite the strikes.",
+        "means": "The market is treating the Qeshm strikes as a one-off rather than a return to full fighting, and is pricing a better chance of a deal. Prices are still far above where they started the year, so any setback can quickly undo the drop.",
+        "fx": "Cheaper oil helps big energy buyers like Japan and the euro zone and eases inflation worries, while it takes some support from the Canadian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Hopes for a peace deal win out over the overnight strikes, pulling prices down a second day."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Oil is Canada's main export, so a lower price trims support for the loonie."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan buys almost all its energy abroad, so cheaper oil eases the drain on the yen."
+        }
+      ],
+      "watch": "Whether Washington replies to Iran's latest proposal, and whether Iran answers the Qeshm strikes."
     },
     {
       "id": "boc-macklem-commons-finance-20261103",
@@ -305,6 +344,33 @@
         }
       ],
       "watch": "Midterm results overnight, then US job openings data and Friday's October jobs report."
+    },
+    {
+      "id": "euronews-ecb-lagarde-successor-race-20261103",
+      "ts": "2026-11-03T10:10:00Z",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/11/03/who-will-replace-lagarde-eurozone-picks-nominees-as-race-for-ecb-top-job-begins",
+      "image": "https://images.euronews.com/articles/stories/09/97/75/57/1200x675_cmsv2_70ce3f43-6dae-5e01-a1f8-14cc81d11c9e-9977557.jpg",
+      "headline": "Race to replace Lagarde at the ECB begins, with nominations due Friday",
+      "story": "ecb-leadership",
+      "story_title": "ECB: choosing Lagarde's successor",
+      "pillar": "policy",
+      "summary": "Euro-zone governments have until Friday, November 6, to name candidates to succeed Christine Lagarde as European Central Bank president; Spain's Pablo Hernández de Cos and the Netherlands' Klaas Knot lead early betting.",
+      "beats": {
+        "was": "Christine Lagarde, president of the European Central Bank, said on October 29 she will leave on February 7, about nine months before her term ends. The same day the bank held its deposit rate at 2.5%.",
+        "happened": "Euro-zone finance ministers will review nominations on November 9, and a winner needs the backing of at least 16 of the 21 member countries. Front-runners are Pablo Hernández de Cos, head of the Bank for International Settlements and former Bank of Spain governor, and Klaas Knot, who ran the Dutch central bank for 14 years. Executive Board member Isabel Schnabel also leaves in January and chief economist Philip Lane's term ends in May, so half the bank's top board changes within five months.",
+        "means": "The next president will shape euro-zone rates for eight years. Knot has a record of favouring tighter policy, while Hernández de Cos is seen as more middle-of-the-road, so the choice could shift how quickly the bank raises or cuts in future. Lagarde still chairs the December and February meetings.",
+        "fx": "Little effect on the euro for now, since nothing changes before February, but a clear lean toward a tougher-on-inflation pick would give the euro mild support."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A leadership change ahead, with the direction of policy depending on who wins."
+        }
+      ],
+      "watch": "Which names governments submit by Friday, November 6, and what the finance ministers signal on November 9."
     },
     {
       "id": "arabnews-reuters-oil-rises-deal-far-off-20261103",
@@ -1304,72 +1370,6 @@
         }
       ],
       "watch": "Whether Monday's oil trading opens higher, and whether the US Navy or shipping agencies confirm the Iranian account."
-    },
-    {
-      "id": "thestandard-china-regulators-stock-support-20261101",
-      "date": "2026-11-01",
-      "source": "The Standard (Hong Kong)",
-      "url": "https://www.thestandard.com.hk/finance/article/347145/China-regulators-act-to-support-stocks-after-October-slump-mainland-media-reports",
-      "image": "https://image.hkstandard.com.hk/f/1200p0/0x0/100/none/a780e955d16d99d6b9db7d9f1d1c7173/2026-11/FIL51_CHINA-MONEYLAUNDERING_0711_11.JPG",
-      "headline": "China's regulators to meet banks on Monday on steps to steady stocks after an October slump",
-      "story": "china-slowdown",
-      "story_title": "China's slowdown and Beijing's response",
-      "pillar": "growth",
-      "summary": "China's central bank and its market and banking regulators meet big banks and fund firms on Monday to discuss more support for a stock market that slid hard in October.",
-      "beats": {
-        "was": "Chinese shares had a bad October: the Shanghai index fell about 6% and the tech-heavy Shenzhen index about 16%, with the main growth boards down over 23%. Official figures on Saturday also showed factory and service activity shrinking.",
-        "happened": "Mainland media reported on Sunday that the People's Bank of China, the China Securities Regulatory Commission and the National Financial Regulatory Administration will meet major banks and fund companies on Monday, November 2. They are expected to discuss widening cheap loans that help companies and big holders buy back shares.",
-        "means": "Beijing is signalling it will not let the sell-off run unchecked. A meeting is not yet new money, so the effect depends on what measures come out of it.",
-        "fx": "Steadier Chinese markets help currencies tied to China's demand, chiefly the Australian and New Zealand dollars. If the steps disappoint, the weak October figures would weigh again."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Support for Chinese stocks eases worry about Australia's biggest customer, but no measures are announced yet."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "China is a major buyer of New Zealand's exports, so steadier Chinese markets help a little."
-        }
-      ],
-      "watch": "What the Monday meeting in Beijing announces, and China's private-sector factory survey the same day."
-    },
-    {
-      "id": "gulfnews-qatar-lng-carrier-struck-20261101",
-      "date": "2026-11-01",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/world/gulf/qatar/qatar-lng-tanker-hit-in-gulf-crew-safe-no-oil-spill-reported-1.500731634",
-      "image": "https://media.assettype.com/gulfnews%2F2026-04-06%2Fgat1g2jk%2FQatarflag?rect=0%2C0%2C5760%2C3024&w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "Qatar LNG tanker struck in Gulf: crew safe, no oil spill reported",
-      "story": "iran-hormuz",
-      "story_title": "Hormuz: shipping attacks and the oil supply",
-      "pillar": "risk",
-      "summary": "A Qatari tanker carrying liquefied natural gas was hit by unidentified objects in the Gulf on Friday evening; the crew is safe and the ship still works.",
-      "beats": {
-        "was": "Gulf shipping has been under attack since the US-Iran war began in February, and Iran says ships need its permission to pass the Strait of Hormuz. Qatar is one of the world's biggest gas exporters and is also mediating between Washington and Tehran.",
-        "happened": "Qatar's state news agency said on Sunday that the Al Mayeda, a gas carrier run by Qatari shipper Nakilat, was struck while sailing in the Gulf on Friday, October 30. No one was hurt, nothing leaked and the ship remains in service. No one has said who was behind it.",
-        "means": "The attacks are no longer limited to oil tankers, and this one hit a ship from the country trying to broker peace. Damage was light, so supply is not affected for now.",
-        "fx": "More risk to Gulf gas shipments would push up energy costs for big gas buyers in Europe and Asia, a weight on the euro and the yen. It also keeps oil prices carrying a war premium."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Another ship hit in the Gulf keeps shipping risk high, though damage was light."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Europe relies on imported gas, so threats to Gulf gas cargoes raise its energy bill."
-        }
-      ],
-      "watch": "Whether attacks on gas carriers continue and whether insurers or shippers start avoiding Qatari routes."
     },
     {
       "id": "toi-trump-netanyahu-call-iran-strikes-20261101",
