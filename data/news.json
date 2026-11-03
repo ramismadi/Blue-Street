@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T19:49:15Z",
+  "updated": "2026-11-03T23:48:40Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -39,8 +39,8 @@
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-03T16:55:00Z",
-      "text": "The Reserve Bank of New Zealand surprised by keeping its rate at 2.75% on October 28 instead of raising it, so the kiwi has lost its rate support and sits near 56 US cents. Dairy prices, the country's biggest export, rose for a third auction in a row on Tuesday, a small help, but Australia's central bank also hints at a pause and China is leaning against a stronger yuan."
+      "ts": "2026-11-03T23:48:40Z",
+      "text": "New Zealand's unemployment rate rose to 5.7% in the third quarter, its highest in about ten years and worse than expected, which backs the central bank's surprise decision on October 28 to hold its rate at 2.75%. With less chance of another rate rise, the kiwi slipped toward 56 US cents, and three straight gains in dairy prices, its biggest export, are only a small offset."
     },
     "XAU": {
       "lean": "bearish",
@@ -49,11 +49,116 @@
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-03T19:49:15Z",
-      "text": "Oil fell about 7% on Monday on hopes that talks would end the Iran war, and Iran says it could reopen the Strait of Hormuz within two days if the US meets its terms. But nothing is signed: US and Iranian forces traded fire around the strait on Tuesday and Yemen's Houthi rebels are pushing toward the Red Sea's Bab el-Mandeb, so each setback can still lift prices quickly."
+      "ts": "2026-11-03T23:48:40Z",
+      "text": "Brent crude closed near $103.60 on Tuesday, its lowest in about four weeks, on hopes that talks will end the Iran war and that Russia, Ukraine and the US will meet in Abu Dhabi next week. But nothing is signed, US and Iranian forces still trade fire around the Strait of Hormuz, and an industry survey shows US stockpiles falling again, so setbacks can still lift prices quickly."
     }
   },
   "items": [
+    {
+      "id": "reuters-nz-unemployment-q3-57pc-20261103",
+      "ts": "2026-11-03T21:53:00Z",
+      "source": "Reuters",
+      "url": "https://1027wbow.com/2026/11/03/new-zealand-unemployment-hits-5-7-in-q3-highest-since-2015/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/03/2026-11-03T215342Z_1_LYNXNPEMA21WS_RTROPTP_3_NZEALAND-DAILYLIFE.JPG",
+      "headline": "New Zealand's jobless rate rises to 5.7%, its highest since 2015",
+      "story": "nz-jobs",
+      "story_title": "New Zealand: a weakening jobs market",
+      "pillar": "growth",
+      "summary": "New Zealand's unemployment rate rose to 5.7% in the July–September quarter, worse than the 5.5% expected, and the number of people in work fell.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand kept its rate at 2.75% on October 28 when many expected a rise, saying it wanted to see how its two earlier increases were working. It still said more rises were likely.",
+        "happened": "Statistics New Zealand said unemployment rose to 5.7% from 5.6%, the highest in about ten years, against forecasts of 5.5%. Jobs fell 0.1% in the quarter when a 0.4% gain was expected, fewer people were looking for work, and private-sector pay growth slowed to 2.0% over the year.",
+        "means": "A softer jobs market and slower pay growth make it less likely prices keep rising fast, which supports the central bank's decision to wait and weakens the case for another rate rise soon.",
+        "fx": "Less chance of higher New Zealand rates takes support from the kiwi, which slipped toward 55.9 US cents after the release as two-year interest-rate bets fell."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A clear jobs miss lowers the odds of another New Zealand rate rise."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Weak news next door adds to the soft mood for the Australian dollar after its own central bank hinted at a pause."
+        }
+      ],
+      "watch": "Whether New Zealand's central bank drops its hint of more rate rises at its next decision."
+    },
+    {
+      "id": "fxco-api-crude-draw-527m-20261103",
+      "ts": "2026-11-03T21:30:00Z",
+      "source": "FX.co",
+      "url": "https://www.fx.co/en/forex-news/3269975",
+      "image": "https://cdn.fx.co/forex-news/3269975_en.png",
+      "headline": "US crude stocks fell 5.3 million barrels last week, an industry survey shows",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "The American Petroleum Institute's weekly survey showed US crude stocks fell by about 5.3 million barrels, a much bigger drop than the week before.",
+      "beats": {
+        "was": "With Gulf supply cut by the Iran war, analysts watch US stockpiles for signs of how tight the market is. Analysts had expected a small rise last week, which would have been the first in five weeks.",
+        "happened": "The American Petroleum Institute, an industry group, said crude stocks fell 5.27 million barrels in the week to October 30, after a 2.0 million barrel fall the week before. The government's official figures follow on Wednesday.",
+        "means": "A fifth straight weekly fall, if the government numbers confirm it, says US demand and exports are still drawing down reserves even as peace hopes pull prices lower.",
+        "fx": "Falling stockpiles put a small floor under oil prices, a mild help for oil-linked currencies such as the Canadian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A bigger-than-expected stock drop points to a tight US market, pending official figures."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil gives Canada's currency slight support."
+        }
+      ],
+      "watch": "The US Energy Information Administration's official stock figures on Wednesday morning."
+    },
+    {
+      "id": "reuters-oil-settles-4wk-low-20261103",
+      "date": "2026-11-03",
+      "source": "Reuters",
+      "url": "https://www.centraloregondaily.com/news/consumer/oil-prices-ease-to-settle-near-4-week-low-on-hopes-peace-talks-will-end/article_fb735ac6-1ebb-585c-8284-af7d770292d0.html",
+      "image": "https://bloximages.chicago2.vip.townnews.com/centraloregondaily.com/content/tncms/assets/v3/editorial/4/8a/48acc184-af80-5564-98d4-e7d816a244da/6ae93b16a0ff0.image.jpg?crop=800%2C420%2C0%2C14",
+      "headline": "Oil ends near a four-week low as hopes grow for talks on both the Iran and Ukraine wars",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Brent crude closed about 1% lower on Tuesday at $103.60 a barrel, its lowest close since early October, as traders bet on talks to end the wars in Iran and Ukraine.",
+      "beats": {
+        "was": "Iran has blocked most tanker traffic through the Strait of Hormuz, a key Gulf shipping lane, during an eight-month war with the US, which pushed oil well above $100. Prices fell 7% on Monday on signs of peace talks.",
+        "happened": "Brent, the global benchmark, settled at $103.60 and US crude at $96.09, both their lowest closes in several weeks. Russia said it will hold three-way talks with Ukraine and the US in Abu Dhabi on November 10–11, and Qatar, which is carrying messages between Washington and Tehran, said both sides are still reviewing proposals, even though an Iranian official says a deal is far off.",
+        "means": "Two separate peace tracks give the market reasons to expect more supply later, but nothing is agreed and fighting goes on, so prices are falling slowly rather than collapsing.",
+        "fx": "Cheaper oil eases pressure on big energy buyers such as Japan and the euro zone, while it takes some support from oil-linked currencies like the Canadian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Peace-talk hopes on two fronts pull prices to multi-week lows."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil prices trim Canada's export income."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan buys almost all its energy abroad, so cheaper oil helps its trade balance."
+        }
+      ],
+      "watch": "The US-Russia-Ukraine talks in Abu Dhabi on November 10–11, and any word from Qatar on a US-Iran proposal."
+    },
     {
       "id": "fxempire-dollar-firms-yen-158-20261103",
       "ts": "2026-11-03T16:32:00Z",
@@ -826,51 +931,6 @@
       "watch": "Monday's closing prices and any fresh tanker attack near Hormuz, which could undo the drop."
     },
     {
-      "id": "mansfield-oil-below-100-iran-talks-20261102",
-      "ts": "2026-11-02T15:30:25Z",
-      "source": "Mansfield Energy",
-      "url": "https://mansfield.energy/2026/11/02/oil-prices-fall-below-100-as-trump-signals-progress-in-iran-negotiations/",
-      "image": "https://mansfield.energy/wp-content/uploads/2026/11/Picture2.jpg",
-      "headline": "Oil Prices Fall Below $100 as Trump Signals Progress in Iran Negotiations",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "commodities",
-      "summary": "US crude dropped below $100 a barrel on Monday for the first time since October's climb, as President Trump said talks with Iran were going fine.",
-      "beats": {
-        "was": "The US and Iran have been at war since late February, and Iran has kept the Strait of Hormuz, the route for about a fifth of the world's oil, mostly shut. Brent crude ended October at a six-month high. Iran has been talking to Qatari go-betweens about a plan to end the war.",
-        "happened": "US crude fell more than $4 to just under $100, and Brent dropped almost $5 to about $108.7, with later reports showing both down around 6% on the day. Trump said talks were going fine and the war could end very soon. Petrol and diesel futures fell sharply too.",
-        "means": "Markets are betting on a deal, not reacting to one: nothing is signed, Iran wants the US blockade of its ports lifted first, and tankers are still hitting mines near Hormuz. Goldman Sachs still sees Brent at $105 in December, so much of the war premium remains.",
-        "fx": "Cheaper oil helps energy buyers such as Japan and the euro zone and removes some support from oil exporters such as Canada; it also eases the inflation worry that has backed the dollar."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Hope of a US-Iran deal is cutting the war premium fast, taking US crude under $100."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil trims Canada's export income."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Japan buys almost all its energy abroad, so a lower oil bill helps."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Falling oil eases US inflation fears and the demand for the dollar as a safe place."
-        }
-      ],
-      "watch": "A US answer to the draft deal in Qatar, or fresh attacks on Gulf shipping, which could reverse the drop quickly."
-    },
-    {
       "id": "actionforex-us-ism-mfg-oct-555-20261102",
       "ts": "2026-11-02T15:07:30Z",
       "source": "ActionForex",
@@ -1154,90 +1214,6 @@
         }
       ],
       "watch": "The decision and new forecasts at 03:30 GMT Tuesday, then Bullock's news conference an hour later."
-    },
-    {
-      "id": "thenational-oil-slides-trump-more-time-diplomacy-20261102",
-      "ts": "2026-11-02T05:12:49Z",
-      "source": "The National",
-      "url": "https://www.thenationalnews.com/business/2026/11/02/oil-prices-slide-more-than-3-as-trump-signals-more-time-for-iran-diplomacy/",
-      "image": "https://www.thenationalnews.com/resizer/v2/ECEAZS53NKVXSQCG3DJJY2QPKM.jpg",
-      "headline": "Oil prices slide more than 3% as Trump signals more time for Iran diplomacy",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "commodities",
-      "summary": "Oil fell more than 3% on Monday, with Brent near $110 a barrel, after reports that President Trump wants to give talks with Iran more time before any new US strikes.",
-      "beats": {
-        "was": "Brent crude rose about 15% in October to a six-month high as attacks on Gulf shipping and talk of fresh US strikes on Iran raised fears for supply. Iranian officials have been meeting go-betweens in Qatar about ending the war.",
-        "happened": "Brent dropped to about $110 and US crude to about $101. Axios reported that Trump told Israel's prime minister, Benjamin Netanyahu, he wanted diplomacy to run longer before weighing more strikes, and Trump said on Sunday the war would end soon one way or another. Ships were still being hit near the Strait of Hormuz and off Saudi Arabia's Gulf coast over the weekend.",
-        "means": "The market is pricing a better chance of a deal and a smaller chance of new strikes this week, but the attacks at sea show supply is still at risk. The bank UBS still sees Brent near $110 at year-end.",
-        "fx": "Cheaper oil helps big energy buyers such as Japan and the euro zone and takes some support from oil exporters such as Canada and Norway."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Signs Washington will hold off on new strikes cut the war premium in prices."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil trims support for Canada's main export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A cheaper energy bill eases a long-running drag on Japan's trade balance."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The euro zone imports most of its energy, so lower oil helps."
-        }
-      ],
-      "watch": "Whether the Qatar talks yield a plan to reopen Hormuz, and what Washington says about strikes once Tuesday's vote is over."
-    },
-    {
-      "id": "brecorder-reuters-oil-slips-doha-talks-20261102",
-      "ts": "2026-11-02T02:40:00Z",
-      "source": "Business Recorder (Reuters)",
-      "url": "https://www.brecorder.com/news/40446999/oil-slips-more-than-1-as-talks-continue-on-ending-iran-war",
-      "image": "https://i.brecorder.com/large/2026/09/23074917357c51e.webp",
-      "headline": "Oil slips more than 1% as talks continue on ending Iran war",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "commodities",
-      "summary": "Oil fell about 1.5% as trading opened in Asia on Monday, with Brent near $112 a barrel, as Iran and Qatar held a third day of talks on ending the war.",
-      "beats": {
-        "was": "Brent crude ended October at a six-month high after weeks of attacks on Gulf shipping, and the US has said it may strike Iran again. Qatar is acting as go-between for Washington and Tehran.",
-        "happened": "Brent fell $1.59 to about $111.84 and US crude to about $102.56 early Monday. Iran's foreign minister, Abbas Araghchi, said the talks in Doha were progressing, and a quiet weekend with no major military escalation took some urgency out of prices; OPEC+ also kept December output targets unchanged.",
-        "means": "The market is shaving a little of the war premium on hopes of a deal, but it remains nervous that fighting could resume after Tuesday's US midterm elections.",
-        "fx": "Cheaper oil eases the import bill for Japan and Europe and takes a little support away from oil exporters such as Canada."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Hopes for a deal to end the war pulled prices well off last week's highs at the open."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil trims support for Canada's biggest export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A smaller energy bill helps Japan, which buys nearly all its oil abroad."
-        }
-      ],
-      "watch": "Whether the Doha talks produce a plan to reopen Hormuz, and what Washington says about strikes after Tuesday's vote."
     },
     {
       "id": "investinglive-tanker-hit-off-khafji-20261102",
