@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-03T14:56:00Z",
+  "updated": "2026-11-03T15:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
-      "lean": "bearish",
-      "ts": "2026-11-03T11:54:14Z",
-      "text": "The dollar sits near a one-month low, with the euro around $1.12, as a likelier end to the Iran war pulled oil down and cut demand for safe places to park money. Americans vote in midterm elections for control of Congress on Tuesday, and with US factories growing and Federal Reserve officials still talking of rate rises, the results and Friday's October jobs report decide whether the dollar finds support."
+      "lean": "mixed",
+      "ts": "2026-11-03T15:50:00Z",
+      "text": "The dollar sits near a one-month low, with the euro around $1.12, after hopes of an end to the Iran war pulled oil down and cut demand for safe places to park money. But US job openings jumped in September and layoffs fell, which backs the Federal Reserve officials who want a December rate rise, so the midterm results and Friday's jobs report decide whether the dollar steadies."
     },
     "EUR": {
       "lean": "mixed",
@@ -54,6 +54,66 @@
     }
   },
   "items": [
+    {
+      "id": "ani-us-jolts-september-20261103",
+      "ts": "2026-11-03T15:26:48Z",
+      "source": "ANI",
+      "url": "https://www.aninews.in/news/business/us-job-openings-rise-to-752-million-in-september-quits-increase-to-34-million20261103205648/",
+      "image": "https://d3lzcn6mbbadaf.cloudfront.net/media/details/__sized__/ANI-20261103152157-thumbnail-320x180-70.jpg",
+      "headline": "US job openings jump to 7.52 million in September, and more people quit",
+      "story": "fed-december",
+      "story_title": "Fed: the case for a December rate rise",
+      "pillar": "growth",
+      "summary": "US employers had about 7.52 million unfilled jobs at the end of September, well above the roughly 7.1 million economists expected, while layoffs fell and more workers quit to move on.",
+      "beats": {
+        "was": "The Federal Reserve held its main rate at 3.75% to 4.00% on October 28, but two governors voted for a rise, and markets have leaned toward a December hike. The JOLTS survey, the US Labor Department's monthly count of job openings, hires, quits and layoffs, is one of the last checks on hiring before Friday's October jobs report.",
+        "happened": "Openings rose by about 333,000 to 7.52 million, and August was revised up to about 7.2 million. Quits, people leaving a job by choice, rose to about 3.37 million, a sign workers feel they can find another one. Layoffs fell to about 1.64 million.",
+        "means": "Firms still want workers and few are cutting staff, so pay pressure is unlikely to fade fast. That supports the Fed officials who want one more rate rise to cool inflation. The survey gets fewer replies than it used to, so one month can be noisy.",
+        "fx": "A firmer job market gives the dollar some support, because it makes a December rate rise easier to justify. The bigger tests are tonight's midterm results and Friday's jobs report."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "More openings and fewer layoffs back the case for a December Fed rate rise."
+        }
+      ],
+      "watch": "Friday's US October jobs report, which shows whether the hiring signal holds up."
+    },
+    {
+      "id": "investing-reuters-dollar-poll-midterms-20261103",
+      "date": "2026-11-03",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/economy-news/weaker-dollar-views-stick-running-into-us-midterms-but-strategists-brace-for-resilience-reuters-poll-4994618",
+      "image": null,
+      "headline": "Strategists still see a weaker dollar ahead, but more now fear it holds up",
+      "story": "us-midterms",
+      "story_title": "US midterms: a week of elections, central banks and jobs data",
+      "pillar": "policy",
+      "summary": "A Reuters poll of currency strategists still sees the euro climbing to about $1.16 within a year, but most of those asked think the dollar is more likely to beat their forecasts than fall short.",
+      "beats": {
+        "was": "The dollar has slipped to near a one-month low, with the euro around $1.12, as oil fell on hopes of an end to the Iran war. Americans vote on Tuesday in midterm elections that decide control of Congress.",
+        "happened": "Reuters' monthly poll of 66 forecasters put the euro at about $1.13 in three months and about $1.16 in a year, so the call for a weaker dollar stands. But 17 of 30 strategists asked a follow-up question said the dollar is more likely to come in stronger than they forecast.",
+        "means": "Forecasters keep their view of a slowly weaker dollar, but they are less sure of it, with US growth holding up and the Federal Reserve leaning toward another rate rise rather than cuts.",
+        "fx": "The poll adds little new pressure on its own. It shows the expected path for the dollar is lower, but the risks around that path tilt toward a firmer dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Forecasts still point lower, but most strategists asked see more risk of a stronger dollar."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The median forecast has the euro rising toward $1.16 over the next year."
+        }
+      ],
+      "watch": "Midterm results overnight and Friday's US jobs report, the next tests of the dollar."
+    },
     {
       "id": "arabnews-reuters-oil-rises-deal-far-off-20261103",
       "ts": "2026-11-03T08:38:00Z",
@@ -1156,33 +1216,6 @@
       "watch": "Any US decision on strikes after the November 3 midterm elections, and any reply to Iran's two-day reopening offer."
     },
     {
-      "id": "reuters-opec-hold-december-20261101",
-      "date": "2026-11-01",
-      "source": "Reuters",
-      "url": "https://www.933thedrive.com/2026/11/01/opec-set-to-keep-oil-output-targets-steady-sources-say/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/01/2026-11-01T094130Z_1_LYNXNPEMA00XI_RTROPTP_3_OPEC-IRAQ.JPG",
-      "headline": "OPEC+ set to keep oil output targets steady, sources say",
-      "story": "opec-output",
-      "story_title": "OPEC+: oil output targets",
-      "pillar": "commodities",
-      "summary": "The OPEC+ oil producers are set to keep their December output targets unchanged at an online meeting on Sunday, a third month without change.",
-      "beats": {
-        "was": "OPEC+ is the group of oil producers led by Saudi Arabia and Russia. It finished undoing one round of output cuts in September and kept its targets unchanged for October and November.",
-        "happened": "Three sources told Reuters the seven core members agreed in principle on Saturday to leave December targets alone, with the formal decision due at an online meeting on Sunday. Changes are not expected until next year, after a review of how much each member can pump.",
-        "means": "No surprise here. Gulf members are still pumping well below their targets because the Iran war has disrupted their exports, so the targets matter less than the war right now.",
-        "fx": "A steady OPEC+ leaves oil, and the currencies tied to it like the Canadian dollar and the Norwegian krone, driven by news from the Strait of Hormuz."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "An expected hold that changes little while war disruptions decide supply."
-        }
-      ],
-      "watch": "The formal statement from Sunday's meeting and any hint about 2027 quotas."
-    },
-    {
       "id": "sbs-trump-canada-deal-close-keystone-20261101",
       "ts": "2026-11-01T23:34:00Z",
       "source": "SBS News",
@@ -1394,39 +1427,6 @@
         }
       ],
       "watch": "Whether the US answers Iran's two-day Hormuz offer, and any move toward strikes after Tuesday's midterm elections."
-    },
-    {
-      "id": "aljazeera-vance-letter-talks-20261101",
-      "ts": "2026-11-01T11:14:00Z",
-      "source": "Al Jazeera",
-      "url": "https://aljazeera.com/news/2026/11/1/mediators-continue-us-iran-negotiations-amid-war-rhetoric-what-we-know",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/14405187-1793530964.jpg?resize=1920%2C1440",
-      "headline": "Mediators continue US-Iran negotiations amid war rhetoric: What we know",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "A letter from US Vice President JD Vance has softened the tone between Washington and Tehran, even as both sides prepare for possible new fighting.",
-      "beats": {
-        "was": "The US and Iran have been at war since late February, and a June truce brokered by Qatar and Pakistan fell apart in August. The two mediators are trying to restart talks.",
-        "happened": "Vance wrote this week to Mohsen Rezaei, a senior Iranian security official, who said the letter's tone was completely different from earlier US messages and claimed Washington was ready to accept Iran's terms. The US has not confirmed that. Secretary of State Marco Rubio said talks go on with no timeline, while Iran's Supreme Leader Mojtaba Khamenei told commanders to widen their list of targets.",
-        "means": "Both tracks are running at once: a warmer channel for talks and open preparation for another short round of strikes after the US midterm elections on November 3. Neither side has committed to either path.",
-        "fx": "A real opening in talks would ease oil prices and help oil importers like Japan and the euro zone. Renewed strikes would do the opposite and lift shelter currencies like the Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A friendlier US letter points toward talks, but both sides are also readying for more fighting."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Shelter demand rises or fades depending on which track wins."
-        }
-      ],
-      "watch": "Whether the US confirms Iran's claim that it will accept Tehran's terms, and any strike decision after November 3."
     }
   ]
 }
