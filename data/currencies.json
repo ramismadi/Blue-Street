@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-11-03T00:55:00-06:00",
-  "updated": "2026-11-03T00:55:00-06:00",
+  "as_of": "2026-11-03T07:17:00-06:00",
+  "updated": "2026-11-03T07:17:00-06:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "Tuesday London-open read, 2026-11-03 (Asia session, ~12:55 AM CT). Overnight: RBA hiked 25bp to 4.85% in a 6-3 split but Bullock gave no guidance and AUD/USD slipped below $0.70 ($0.6974 low); oil bounced ~0.5% in Asia (Brent ~$105.25, WTI ~$96.93) after US strikes on Iran's Qeshm Island were reported, after Monday's >7% slide on Doha diplomacy hopes; PBoC raised the FX deposit reserve ratio to 6% (from 4%) from Nov 15 to slow the yuan's rise. Dollar steadier in Asia (DXY ~101.81) ahead of today's US midterms. Today: Swiss CPI 1:30am CT, US midterms, JOLTS 9:00am CT, Macklem 10:00am CT, NZ Q3 jobs 3:45pm CT; EZ flash CPI Wed 4:00am CT, BoE Thu 6:00am CT, US payrolls Fri 7:30am CT. Levels are indicative index quotes, not executable prices.",
+  "note": "Tuesday NY-open read, 2026-11-03 (London session, ~7:40 AM CT). Overnight: RBA hiked 25bp to 4.85% in a 6-3 split but Bullock gave no guidance and AUD/USD slipped below $0.70; Swiss CPI beat (1.5% y/y) and the franc firmed in London; oil rebounded in London (Brent ~$106.61, WTI ~$98.06) after the Qeshm strike report. No 7:30 AM CT US release today — JOLTS (fcst 7.11M) and factory orders land 9:00 AM CT, ahead of Friday payrolls; US midterms vote today.",
   "pairs": {},
   "currencies": [
     {
@@ -10,11 +10,11 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY ~101.81 in Asia - a shade firmer after Monday's slide to a one-month low (101.44); the ISM beat (55.5) drew no dollar reaction and Dec Fed hike pricing sits ~72-76%. US midterms today are the next risk event.",
+      "summary": "DXY ~101.74 in London, drifting after Monday's slide to a one-month low (101.44); the ISM beat (55.5) drew no dollar reaction and Dec Fed hike pricing sits ~75% (CME FedWatch, Nov 3). US midterms today; JOLTS (fcst 7.11M) + factory orders at 9:00am CT.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~70% into the Oct 30 NY close (Prime Terminal via FXStreet, from 84% after the Oct 28 meeting); Oct 30 voices hawkish — Musalem wants a hike 'again soon', Logan 'at least two more' 25bp hikes then a pause — Fed still the highest G10 rate; next meeting Dec 8-9 with SEP/dot plot. Nov 2 Asia: Dec hike ~72% (futures via Stockbiz) to ~75% (NordFX)."
+          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~70% into the Oct 30 NY close (Prime Terminal via FXStreet, from 84% after the Oct 28 meeting); Oct 30 voices hawkish — Musalem wants a hike 'again soon', Logan 'at least two more' 25bp hikes then a pause — Fed still the highest G10 rate; next meeting Dec 8-9 with SEP/dot plot. Nov 2 Asia: Dec hike ~72% (futures via Stockbiz) to ~75% (NordFX). Nov 3 morning: Dec hike ~75% (CME FedWatch via Cointime; Kalshi ~73%) — steady vs 72-76% Nov 2."
         },
         "growth": {
           "score": 0,
@@ -47,7 +47,7 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD ~1.1182 in Asia, steady after Monday's +0.32% to ~1.1194 - the euro faded from the London high (1.1237) as the dollar trimmed losses; EZ flash CPI Wed 4:00am CT (fcst 4.0% y/y, prev 3.8%) is the euro test.",
+      "summary": "EUR/USD ~1.1201 in London (+0.14%), steady after Monday's +0.32% to ~1.1194 — the euro faded from the London high (1.1237) as the dollar trimmed losses; EZ flash CPI Wed 4:00am CT (fcst 4.0% y/y, prev 3.8%) is the euro test.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -84,11 +84,11 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD ~1.3401 in Asia, holding above 1.34 after Monday's +0.17% - sterling firmed as oil slid; BoE Thu 6:00am CT (hike ~94.4% to 4.00%). EUR/GBP ~0.8344.",
+      "summary": "GBP/USD ~1.3421 in London (+0.1%), holding above 1.34 after Monday's +0.17%; BoE Thu 6:00am CT (hike ~92-95% to 4.00%, Goldman now also sees a Feb hike). EUR/GBP ~0.8346.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Nov 5 hike ~90-97% to 4.00% (OIS ~90%; post-CPI ~96-97%, Oct 21-23; Sep CPI 3.5% sealed it); December back-to-back ~48-61% — the most hawkish G10 front-end. Nov 2: 94.4% (ActionForex)."
+          "note": "Nov 5 hike ~90-97% to 4.00% (OIS ~90%; post-CPI ~96-97%, Oct 21-23; Sep CPI 3.5% sealed it); December back-to-back ~48-61% — the most hawkish G10 front-end. Nov 2: 94.4% (ActionForex). Nov 2: Goldman now expects a Feb hike too (after Thu's); LSEG ~92% for Thu."
         },
         "growth": {
           "score": 1,
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY ~157.92 in Asia, flat after failing at 158 in Tokyo on Monday - yen haven bid faded as equities steadied; Katayama: Tokyo ready to act on disorderly moves.",
+      "summary": "USD/JPY ~157.80 in London, a fraction firmer for the yen after failing at 158 in Tokyo on Monday; Tokyo closed for Culture Day; Katayama: Tokyo ready to act on disorderly moves.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF ~0.8186 in Asia, near Monday's close - the franc was Monday's G10 leader (-0.61%); Swiss CPI lands 1:30am CT today (fcst 0.0% m/m).",
+      "summary": "USD/CHF ~0.8164 in London (-0.3%), franc firmer after the Swiss CPI beat (+0.2% m/m, 1.5% y/y — highest since Dec 2023, energy-led, core 0.5% unchanged); EUR/CHF 0.9137, lowest since June. The hotter print cools the December SNB cut case.",
       "drivers": {
         "policy": {
           "score": 0,
@@ -170,7 +170,7 @@
         },
         "inflation": {
           "score": -1,
-          "note": "sub-target inflation keeps the SNB off the hike path — the disinflationary anchor"
+          "note": "sub-target inflation keeps the SNB off the hike path — the disinflationary anchor Nov 3: CPI BEAT — +0.2% m/m (vs 0.0% fcst), 1.5% y/y (vs 1.3%, highest since Dec 2023, energy-led; core 0.5% unchanged) — cools the December cut case; franc firmer in London (USD/CHF 0.8164)."
         },
         "risk": {
           "score": 1,
@@ -195,11 +195,11 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD ~0.6978 in Asia, below $0.70 after the split RBA hike - the Aussie fell to $0.6974 (-0.35%, two-week low) as Bullock gave no guidance; next RBA decision Dec 8.",
+      "summary": "AUD/USD ~0.6963 in London (-0.5%), below $0.70 after the split RBA hike — the Aussie fell to $0.6974 (-0.35%, two-week low) as Bullock gave no guidance; next RBA decision Dec 8.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Nov 3: HIKED +25bp to 4.85% (6-3; three voted to hold), fifth hike of 2026, highest since Dec 2008 - the most hawkish G10 level vs the Fed's 3.75-4.00%, so the gap still scores +1; but Bullock gave no guidance ('probably good to take stock', a further hike 'not as obvious'), tempering the forward path."
+          "note": "Nov 3: HIKED +25bp to 4.85% (6-3; three voted to hold), fifth hike of 2026, highest since Dec 2008 - the most hawkish G10 level vs the Fed's 3.75-4.00%, so the gap still scores +1; but Bullock gave no guidance ('probably good to take stock', a further hike 'not as obvious'), tempering the forward path. London: AUD/USD 0.6963 (-0.5%), near the two-week low, as the split vote tempered further-hike bets."
         },
         "growth": {
           "score": -1,
@@ -232,7 +232,7 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD ~1.3987 in Asia, steady despite WTI under $100 on Monday's oil slide; Macklem speaks 10:00am CT today; BoC Dec further hike ~45%.",
+      "summary": "USD/CAD ~1.3978 in London, steady despite the oil rebound; Macklem speaks 10:00am CT today; BoC Dec further hike ~45%.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -269,7 +269,7 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD ~0.5616 in Asia, flat after Monday's -0.17% - kiwi soft into today's Q3 jobs (3:45pm CT, fcst +0.4% q/q, unemployment 5.5%); RBNZ's Oct 28 hold (4-3, 2.75%) still frames Dec 9.",
+      "summary": "NZD/USD ~0.5616, flat after Monday's -0.17% — kiwi soft into today's Q3 jobs (3:45pm CT, fcst +0.4% q/q, unemployment 5.5%); RBNZ's Oct 28 hold (4-3, 2.75%) still frames Dec 9.",
       "drivers": {
         "policy": {
           "score": 0,
