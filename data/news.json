@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-03T15:50:00Z",
+  "updated": "2026-11-03T16:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "mixed",
-      "ts": "2026-11-03T15:50:00Z",
-      "text": "The dollar sits near a one-month low, with the euro around $1.12, after hopes of an end to the Iran war pulled oil down and cut demand for safe places to park money. But US job openings jumped in September and layoffs fell, which backs the Federal Reserve officials who want a December rate rise, so the midterm results and Friday's jobs report decide whether the dollar steadies."
+      "ts": "2026-11-03T16:55:00Z",
+      "text": "The dollar sits near a one-month low, with the euro around $1.12, after hopes of an end to the Iran war pulled oil down and cut demand for safe places to park money. But US job openings and factory orders both beat forecasts on Tuesday, which backs the Federal Reserve officials who want a December rate rise, so the midterm results and Friday's jobs report decide whether the dollar steadies."
     },
     "EUR": {
       "lean": "mixed",
@@ -28,9 +28,9 @@
       "text": "Swiss inflation jumped to 1.5% in October on dearer fuel, above forecasts, which makes a December rate cut by the Swiss National Bank harder to justify. The franc also gains when investors look for shelter, and while Iran peace talks sap that demand, US strikes on an Iranian island and a deadly attack on a ship off Oman show the fighting has not stopped."
     },
     "CAD": {
-      "lean": "bearish",
-      "ts": "2026-11-02T19:49:23Z",
-      "text": "The Bank of Canada raised its rate to 2.5% last week, its first rise in three years, but oil, Canada's main export, fell about 7% on Monday on growing hopes of a deal to end the Iran war. Canada's economy has stalled, and a US-Canada trade deal that President Trump calls very close would help only if it brings tariff cuts."
+      "lean": "mixed",
+      "ts": "2026-11-03T16:55:00Z",
+      "text": "The Bank of Canada raised its rate to 2.5% last week, its first rise in three years, and on Tuesday Governor Tiff Macklem repeated that more rises may be needed as fuel costs keep inflation near 3%. That rate support is offset by oil, Canada's main export, which has swung with every turn in the Iran peace talks, and by a stalled economy facing new US tariffs."
     },
     "AUD": {
       "lean": "bearish",
@@ -39,8 +39,8 @@
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-03T11:54:14Z",
-      "text": "The Reserve Bank of New Zealand surprised by keeping its rate at 2.75% on October 28 instead of raising it, so the kiwi has lost its rate support and sits near 56 US cents. Australia's central bank now also hints at a pause, and China, New Zealand's biggest customer, is leaning against a stronger yuan, so the kiwi gets little help from its neighbours."
+      "ts": "2026-11-03T16:55:00Z",
+      "text": "The Reserve Bank of New Zealand surprised by keeping its rate at 2.75% on October 28 instead of raising it, so the kiwi has lost its rate support and sits near 56 US cents. Dairy prices, the country's biggest export, rose for a third auction in a row on Tuesday, a small help, but Australia's central bank also hints at a pause and China is leaning against a stronger yuan."
     },
     "XAU": {
       "lean": "bearish",
@@ -54,6 +54,60 @@
     }
   },
   "items": [
+    {
+      "id": "edairynews-gdt-event-415-up-3pc-20261103",
+      "ts": "2026-11-03T16:18:53Z",
+      "source": "eDairy News",
+      "url": "https://en.edairynews.com/global-dairy-trade-index-rises-3-0-in-event-415/",
+      "image": "https://en.edairynews.com/wp-content/uploads/2026/11/gdt-405-5.png",
+      "headline": "Global dairy prices rise 3% at the latest auction, a third gain in a row",
+      "story": "nz-dairy",
+      "story_title": "New Zealand: dairy prices and the kiwi",
+      "pillar": "tot",
+      "summary": "Prices at the Global Dairy Trade auction, where New Zealand's Fonterra and others sell milk products, rose 3% on Tuesday, more than expected and the third rise in a row.",
+      "beats": {
+        "was": "Dairy is New Zealand's biggest export, so prices at the twice-monthly Global Dairy Trade auction feed straight into farm incomes and demand for the New Zealand dollar. The kiwi has been weak since New Zealand's central bank skipped an expected rate rise on October 28.",
+        "happened": "The auction's price index rose 3.0%, after a 2.5% gain at the previous sale, with an average price of about $4,166 a tonne. Forecasters had expected no change, and 111 buyers won at least one bid.",
+        "means": "Three firm auctions in a row point to steady overseas demand for New Zealand's main product, which helps farm incomes and the country's trade balance.",
+        "fx": "Better dairy prices give the kiwi mild support, but on their own they rarely outweigh interest rates, and New Zealand's central bank has stepped back from raising them."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher prices for New Zealand's biggest export lift its trade income."
+        }
+      ],
+      "watch": "New Zealand's third-quarter jobs figures, out this evening US time."
+    },
+    {
+      "id": "reuters-us-factory-orders-sep-18pc-20261103",
+      "ts": "2026-11-03T15:36:00Z",
+      "source": "Reuters via 102.7 WBOW",
+      "url": "https://1027wbow.com/2026/11/03/us-factory-orders-beat-expectations-in-september-amid-broad-strength/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/03/2026-11-03T153638Z_1_LYNXNPEMA21GS_RTROPTP_3_USA-TRUMP-ECONOMY-MANUFACTURING.JPG",
+      "headline": "US factory orders rise 1.8% in September, beating forecasts",
+      "story": "fed-december",
+      "story_title": "Fed: the case for a December rate rise",
+      "pillar": "growth",
+      "summary": "Orders placed with US factories rose 1.8% in September, more than the 1.2% economists expected, led by aircraft and spending tied to artificial intelligence.",
+      "beats": {
+        "was": "The Federal Reserve held its main rate at 3.75% to 4.00% on October 28, but two governors wanted a rise, and markets lean toward a December hike. Monday's survey of purchasing managers showed US factory output booming in October.",
+        "happened": "The Commerce Department's monthly count of new factory orders rose 1.8%, and August was revised up. Aircraft orders jumped about 28%. Orders for business equipment outside aircraft and defence, a guide to company investment plans, rose 0.6%.",
+        "means": "Firms are still spending, especially on computers and data centres for artificial intelligence, so the economy is not slowing much. Economists warn that higher rates and squeezed household budgets could cool factories next year.",
+        "fx": "Solid spending gives the dollar a little support, since it adds to the case for another Fed rate rise. It lands after a strong job-openings report, so the two point the same way."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Strong orders add a little to the case for a December Fed rate rise."
+        }
+      ],
+      "watch": "Friday's US October jobs report."
+    },
     {
       "id": "ani-us-jolts-september-20261103",
       "ts": "2026-11-03T15:26:48Z",
@@ -80,6 +134,33 @@
         }
       ],
       "watch": "Friday's US October jobs report, which shows whether the hiring signal holds up."
+    },
+    {
+      "id": "boc-macklem-commons-finance-20261103",
+      "date": "2026-11-03",
+      "source": "Bank of Canada",
+      "url": "https://www.bankofcanada.ca/2026/11/opening-statement-house-commons-standing-committee-finance-2026-11-03/",
+      "image": null,
+      "headline": "Bank of Canada's Macklem tells MPs further rate rises could be needed",
+      "story": "boc-hike",
+      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
+      "pillar": "policy",
+      "summary": "Bank of Canada Governor Tiff Macklem told a parliamentary committee the bank may need to raise rates again but will move carefully, repeating last week's message.",
+      "beats": {
+        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise since 2023, to stop high fuel prices from spreading into wider inflation. Canada's inflation has run near 3% since April.",
+        "happened": "Speaking to the House of Commons finance committee, Macklem said inflation could reach about 3.5% by year-end and stay at or above 3% through much of 2027. Further rises are possible, he said, but the bank will decide one meeting at a time.",
+        "means": "Nothing new: he repeated last week's guidance almost word for word. Markets see roughly even odds of another rise at the December 9 meeting.",
+        "fx": "The message keeps some rate support under the Canadian dollar, but since it was already expected, it adds little. Oil, Canada's main export, still matters more day to day."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Keeps a December Bank of Canada rate rise possible, though already expected."
+        }
+      ],
+      "watch": "Macklem speaks to a Senate committee on Thursday, November 5; the next rate decision is December 9."
     },
     {
       "id": "investing-reuters-dollar-poll-midterms-20261103",
@@ -112,73 +193,7 @@
           "why": "The median forecast has the euro rising toward $1.16 over the next year."
         }
       ],
-      "watch": "Midterm results overnight and Friday's US jobs report, the next tests of the dollar."
-    },
-    {
-      "id": "arabnews-reuters-oil-rises-deal-far-off-20261103",
-      "ts": "2026-11-03T08:38:00Z",
-      "source": "Arab News (Reuters)",
-      "url": "https://www.arabnews.com/energy/oil-rises-as-peace-prospects-dim-after-us-hits-irans-qeshm-island-3009556",
-      "image": null,
-      "headline": "Oil climbs back as Iran says a peace deal is still far off",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "commodities",
-      "summary": "Oil rose almost 2% on Tuesday, with Brent near $106.60 a barrel, after a senior Iranian official said Tehran and Washington are far from a deal to end their war.",
-      "beats": {
-        "was": "The US and Iran have been at war for about eight months, and Iran's grip on the Strait of Hormuz, the narrow sea lane that carries much of the Gulf's oil, has kept prices high. On Monday oil fell more than 7% on hopes that talks hosted by Qatar would end the fighting.",
-        "happened": "A US official confirmed American forces struck Iran's Qeshm Island, inside the strait, calling it a defensive move to stop attacks on merchant ships. A senior Iranian official then said the two sides are far apart and Tehran will not accept what it sees as too much being asked of it, though parliament speaker Mohammad Bagher Qalibaf said Iran had sent its reply and now waits on Washington. Brent rose about $1.80 and US crude about $1.60, to near $98.",
-        "means": "Monday's hope that the war is ending has cooled a little, so some of the extra price for war risk is back in oil. Talks have not collapsed, which keeps a lid on the bounce for now.",
-        "fx": "Dearer oil helps the Canadian and Norwegian currencies and hurts big oil buyers like Japan and the euro zone; it also nudges up inflation fears, which tends to support the dollar."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Iran says a deal is far off, putting some war risk back into prices after Monday's big fall."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Oil is Canada's main export, so a rebound gives the loonie a little help."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its energy abroad, so dearer oil weighs on the yen."
-        }
-      ],
-      "watch": "Whether Washington answers Iran's reply, and any new attacks on ships in the Strait of Hormuz."
-    },
-    {
-      "id": "brecorder-reuters-gold-eases-midterms-20261103",
-      "ts": "2026-11-03T03:53:00Z",
-      "source": "Business Recorder (Reuters)",
-      "url": "https://www.brecorder.com/news/40447185/gold-eases-ahead-of-us-midterm-elections",
-      "image": null,
-      "headline": "Gold slips as US voters go to the polls",
-      "story": "gold-slide",
-      "story_title": "Gold: sliding as Fed rate-rise bets build",
-      "pillar": "rates",
-      "summary": "Gold eased about 0.5% to near $3,927 an ounce early Tuesday, giving back part of Monday's 2% bounce from a one-year low, as markets still expect a US rate rise in December.",
-      "beats": {
-        "was": "Gold fell to its lowest in a year on Friday as US Federal Reserve officials talked of raising rates again, and some investors sold it to raise cash after stock market losses. It bounced more than 2% on Monday as oil fell.",
-        "happened": "Spot gold dipped to around $3,927 in Asian trading. Futures markets put about a 74% chance on the Fed raising rates in December, and Americans vote in midterm elections for Congress on Tuesday. One analyst said gold is still being sold to cover losses elsewhere rather than bought as a shelter.",
-        "means": "Gold earns no interest, so the prospect of higher US rates keeps weighing on it. Until that December rate-rise chance fades, bounces like Monday's struggle to last.",
-        "fx": "Mild pressure on gold; no big push for currencies."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A small dip as a likely December US rate rise keeps weighing on gold."
-        }
-      ],
-      "watch": "Midterm results overnight and Friday's US October jobs report, which shape the odds of a December rate rise."
+      "watch": "Midterm results overnight and Friday's US jobs report, which will show whether the dollar steadies."
     },
     {
       "id": "investing-swiss-cpi-oct-15pc-20261103",
@@ -292,6 +307,45 @@
       "watch": "Midterm results overnight, then US job openings data and Friday's October jobs report."
     },
     {
+      "id": "arabnews-reuters-oil-rises-deal-far-off-20261103",
+      "ts": "2026-11-03T08:38:00Z",
+      "source": "Arab News (Reuters)",
+      "url": "https://www.arabnews.com/energy/oil-rises-as-peace-prospects-dim-after-us-hits-irans-qeshm-island-3009556",
+      "image": null,
+      "headline": "Oil climbs back as Iran says a peace deal is still far off",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Oil rose almost 2% on Tuesday, with Brent near $106.60 a barrel, after a senior Iranian official said Tehran and Washington are far from a deal to end their war.",
+      "beats": {
+        "was": "The US and Iran have been at war for about eight months, and Iran's grip on the Strait of Hormuz, the narrow sea lane that carries much of the Gulf's oil, has kept prices high. On Monday oil fell more than 7% on hopes that talks hosted by Qatar would end the fighting.",
+        "happened": "A US official confirmed American forces struck Iran's Qeshm Island, inside the strait, calling it a defensive move to stop attacks on merchant ships. A senior Iranian official then said the two sides are far apart and Tehran will not accept what it sees as too much being asked of it, though parliament speaker Mohammad Bagher Qalibaf said Iran had sent its reply and now waits on Washington. Brent rose about $1.80 and US crude about $1.60, to near $98.",
+        "means": "Monday's hope that the war is ending has cooled a little, so some of the extra price for war risk is back in oil. Talks have not collapsed, which keeps a lid on the bounce for now.",
+        "fx": "Dearer oil helps the Canadian and Norwegian currencies and hurts big oil buyers like Japan and the euro zone; it also nudges up inflation fears, which tends to support the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Iran says a deal is far off, putting some war risk back into prices after Monday's big fall."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Oil is Canada's main export, so a rebound gives the loonie a little help."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its energy abroad, so dearer oil weighs on the yen."
+        }
+      ],
+      "watch": "Whether Washington answers Iran's reply, and any new attacks on ships in the Strait of Hormuz."
+    },
+    {
       "id": "businesstoday-al-jusufi-struck-off-oman-20261103",
       "ts": "2026-11-03T05:50:00Z",
       "source": "Business Today",
@@ -350,6 +404,33 @@
         }
       ],
       "watch": "Australian jobs and inflation data before the December 8 meeting."
+    },
+    {
+      "id": "brecorder-reuters-gold-eases-midterms-20261103",
+      "ts": "2026-11-03T03:53:00Z",
+      "source": "Business Recorder (Reuters)",
+      "url": "https://www.brecorder.com/news/40447185/gold-eases-ahead-of-us-midterm-elections",
+      "image": null,
+      "headline": "Gold slips as US voters go to the polls",
+      "story": "gold-slide",
+      "story_title": "Gold: sliding as Fed rate-rise bets build",
+      "pillar": "rates",
+      "summary": "Gold eased about 0.5% to near $3,927 an ounce early Tuesday, giving back part of Monday's 2% bounce from a one-year low, as markets still expect a US rate rise in December.",
+      "beats": {
+        "was": "Gold fell to its lowest in a year on Friday as US Federal Reserve officials talked of raising rates again, and some investors sold it to raise cash after stock market losses. It bounced more than 2% on Monday as oil fell.",
+        "happened": "Spot gold dipped to around $3,927 in Asian trading. Futures markets put about a 74% chance on the Fed raising rates in December, and Americans vote in midterm elections for Congress on Tuesday. One analyst said gold is still being sold to cover losses elsewhere rather than bought as a shelter.",
+        "means": "Gold earns no interest, so the prospect of higher US rates keeps weighing on it. Until that December rate-rise chance fades, bounces like Monday's struggle to last.",
+        "fx": "Mild pressure on gold; no big push for currencies."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A small dip as a likely December US rate rise keeps weighing on gold."
+        }
+      ],
+      "watch": "Midterm results overnight and Friday's US October jobs report, which shape the odds of a December rate rise."
     },
     {
       "id": "investinglive-rba-hikes-485-split-20261103",
@@ -416,114 +497,6 @@
         }
       ],
       "watch": "Whether the yuan's daily reference rate keeps coming in weaker than expected after the change takes effect on November 15."
-    },
-    {
-      "id": "saxo-gold-rebounds-from-year-low-20261102",
-      "date": "2026-11-02",
-      "source": "Saxo Bank",
-      "url": "https://home.saxo/en-ch/content/articles/macro/market-quick-take---markets-find-calm-after-friday-turmoil----2-november-2026-02112026",
-      "image": "https://www.home.saxo/-/media/content-hub/images/categories/backgrounds/qt-quicktake.jpg",
-      "headline": "Market Quick Take - Markets find calm after Friday turmoil - 2 November 2026",
-      "story": "gold-slide",
-      "story_title": "Gold: sliding as Fed rate-rise bets build",
-      "pillar": "policy",
-      "summary": "Gold bounced about 1% to near $3,915 an ounce early Monday after Friday's drop to its lowest in a year, as markets calmed after the worst US stock day since June.",
-      "beats": {
-        "was": "Gold fell almost 7% in October and broke below $3,900 on Friday, hit by talk of more US rate rises and by investors selling it to cover losses in technology stocks.",
-        "happened": "Saxo Bank's morning note shows gold up about 1% to roughly $3,915 and silver up about 2% to near $50.20 early Monday, with stock markets in Asia steadier and oil about 3% lower.",
-        "means": "This is a small recovery from forced selling, not a turn: the main weight on gold, the chance of a Federal Reserve rate rise in December, has not gone away.",
-        "fx": "A softer dollar on Monday helps gold a little; Friday's US jobs report matters most for the next big move."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A modest bounce after a sharp fall as panic selling eased."
-        }
-      ],
-      "watch": "Friday's October US jobs report; strong hiring would revive bets on a December Fed rate rise and pressure gold again."
-    },
-    {
-      "id": "investing-ez-manufacturing-pmi-oct-final-20261102",
-      "date": "2026-11-02",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/economic-indicators/eurozone-manufacturing-growth-holds-steady-in-october-4990343",
-      "image": "https://content-media.investing.com/news/LYNXNPEBAG0BO_L.jpg",
-      "headline": "Eurozone manufacturing growth holds steady in October",
-      "story": "ez-growth-inflation",
-      "story_title": "Euro zone: growth holding up, prices still rising",
-      "pillar": "growth",
-      "summary": "Euro-zone factories kept growing in October for a ninth month, though a bit more slowly, while their costs rose at the fastest pace since May.",
-      "beats": {
-        "was": "The European Central Bank hinted last week it could raise rates in December, after the euro zone grew faster than expected last quarter. A purchasing managers' index (PMI) reading above 50 means activity is growing.",
-        "happened": "S&P Global's final euro-zone manufacturing PMI for October came in at 52.7, down from 52.9 in September. Output grew at its slowest in four months, but exports rose at the quickest pace in over four years. Input costs climbed at the fastest rate since May and selling prices kept rising sharply. France and Italy were the only big members where factories shrank.",
-        "means": "Industry is holding up, helped by defence spending and firms building stock, and the rise in costs keeps pressure on the ECB to act on prices.",
-        "fx": "Steady factory growth with firmer prices backs the case for a December ECB hike, mildly supportive for the euro."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Solid factory growth and rising costs keep a December ECB rate rise on the table."
-        }
-      ],
-      "watch": "Wednesday's flash euro-zone inflation figure for October; a softer reading would cool the hike talk."
-    },
-    {
-      "id": "investing-uk-manufacturing-pmi-oct-528-20261102",
-      "date": "2026-11-02",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/economic-indicators/uk-manufacturing-pmi-rises-to-528-in-october-4990481",
-      "image": "https://content-media.investing.com/news/LYNXMPEB59082_L.jpg",
-      "headline": "UK manufacturing PMI rises to 52.8 in October",
-      "story": "boe-hike",
-      "story_title": "Bank of England: first rate rise since 2023?",
-      "pillar": "growth",
-      "summary": "British factories had their best month in two years for output in October, and their selling prices rose at the fastest pace in three months, days before an expected Bank of England rate rise.",
-      "beats": {
-        "was": "Economists expect the Bank of England to lift its rate from 3.75% to 4% on Thursday, November 5, its first rise since 2023, because price pressures are building. A purchasing managers' index (PMI) reading above 50 means activity is growing.",
-        "happened": "S&P Global's UK manufacturing PMI rose to 52.8 in October from 51.9, a five-month high. Production grew at its fastest pace in 25 months and new orders picked up at home and abroad. Input costs rose at one of the sharpest rates in four years, factory prices climbed faster, and hiring stalled. Shipping detours and conflict-related disruption slowed deliveries.",
-        "means": "Firm demand plus rising costs fits the case for a Bank of England hike this week rather than against it.",
-        "fx": "Supports the pound by making a Thursday rate rise look safer."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Stronger factory activity and faster price rises back the expected rate rise on Thursday."
-        }
-      ],
-      "watch": "Thursday's Bank of England decision and how many policymakers vote to raise rates."
-    },
-    {
-      "id": "tass-kazakhstan-atyrau-samara-halt-20261102",
-      "date": "2026-11-02",
-      "source": "TASS",
-      "url": "https://tass.com/economy/2212083",
-      "image": null,
-      "headline": "Kazakhstan's Energy Ministry reports suspension of oil pumping via Atyrau-Samara pipeline",
-      "story": "russia-oil-drones",
-      "story_title": "Drone strikes on Russian oil routes",
-      "pillar": "commodities",
-      "summary": "Kazakhstan stopped pumping oil through the Atyrau-Samara pipeline into Russia early Monday after drones hit a pumping hub near Samara; officials expect it to restart soon.",
-      "beats": {
-        "was": "Kazakhstan, a mid-sized oil producer, sends part of its crude north through the Atyrau-Samara pipeline into Russia's network for export. Drone attacks on Russian oil sites have disrupted Kazakh exports before.",
-        "happened": "Drones struck facilities at the Samara pumping and dispatch hub overnight, and pumping stopped at about 6 a.m. Kazakh time on Monday, November 2, according to Asel Serikpayeva, spokeswoman for Kazakhstan's Energy Ministry. Engineers are checking the damage. No volumes were given and no one was named as the attacker.",
-        "means": "This is a small, likely short break in supply. It barely registered on a day when hopes of ending the US-Iran war cut oil prices by about 7%, but it is another reminder that supply routes are fragile while world stockpiles are low.",
-        "fx": "Only a slight lift for oil and so for oil-exporting currencies such as the Canadian dollar; it matters more if the outage drags on."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A brief halt on a secondary export route; restart expected soon."
-        }
-      ],
-      "watch": "Whether pumping restarts within days, and any further drone strikes on oil sites in Russia."
     },
     {
       "id": "thestar-reuters-trump-no-strikes-after-midterms-20261102",
@@ -776,6 +749,114 @@
         }
       ],
       "watch": "Any seizure, fine or turn-back of a newly listed ship, and whether insurers raise war-risk costs again."
+    },
+    {
+      "id": "saxo-gold-rebounds-from-year-low-20261102",
+      "date": "2026-11-02",
+      "source": "Saxo Bank",
+      "url": "https://home.saxo/en-ch/content/articles/macro/market-quick-take---markets-find-calm-after-friday-turmoil----2-november-2026-02112026",
+      "image": "https://www.home.saxo/-/media/content-hub/images/categories/backgrounds/qt-quicktake.jpg",
+      "headline": "Market Quick Take - Markets find calm after Friday turmoil - 2 November 2026",
+      "story": "gold-slide",
+      "story_title": "Gold: sliding as Fed rate-rise bets build",
+      "pillar": "policy",
+      "summary": "Gold bounced about 1% to near $3,915 an ounce early Monday after Friday's drop to its lowest in a year, as markets calmed after the worst US stock day since June.",
+      "beats": {
+        "was": "Gold fell almost 7% in October and broke below $3,900 on Friday, hit by talk of more US rate rises and by investors selling it to cover losses in technology stocks.",
+        "happened": "Saxo Bank's morning note shows gold up about 1% to roughly $3,915 and silver up about 2% to near $50.20 early Monday, with stock markets in Asia steadier and oil about 3% lower.",
+        "means": "This is a small recovery from forced selling, not a turn: the main weight on gold, the chance of a Federal Reserve rate rise in December, has not gone away.",
+        "fx": "A softer dollar on Monday helps gold a little; Friday's US jobs report matters most for the next big move."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A modest bounce after a sharp fall as panic selling eased."
+        }
+      ],
+      "watch": "Friday's October US jobs report; strong hiring would revive bets on a December Fed rate rise and pressure gold again."
+    },
+    {
+      "id": "investing-ez-manufacturing-pmi-oct-final-20261102",
+      "date": "2026-11-02",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/economic-indicators/eurozone-manufacturing-growth-holds-steady-in-october-4990343",
+      "image": "https://content-media.investing.com/news/LYNXNPEBAG0BO_L.jpg",
+      "headline": "Eurozone manufacturing growth holds steady in October",
+      "story": "ez-growth-inflation",
+      "story_title": "Euro zone: growth holding up, prices still rising",
+      "pillar": "growth",
+      "summary": "Euro-zone factories kept growing in October for a ninth month, though a bit more slowly, while their costs rose at the fastest pace since May.",
+      "beats": {
+        "was": "The European Central Bank hinted last week it could raise rates in December, after the euro zone grew faster than expected last quarter. A purchasing managers' index (PMI) reading above 50 means activity is growing.",
+        "happened": "S&P Global's final euro-zone manufacturing PMI for October came in at 52.7, down from 52.9 in September. Output grew at its slowest in four months, but exports rose at the quickest pace in over four years. Input costs climbed at the fastest rate since May and selling prices kept rising sharply. France and Italy were the only big members where factories shrank.",
+        "means": "Industry is holding up, helped by defence spending and firms building stock, and the rise in costs keeps pressure on the ECB to act on prices.",
+        "fx": "Steady factory growth with firmer prices backs the case for a December ECB hike, mildly supportive for the euro."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Solid factory growth and rising costs keep a December ECB rate rise on the table."
+        }
+      ],
+      "watch": "Wednesday's flash euro-zone inflation figure for October; a softer reading would cool the hike talk."
+    },
+    {
+      "id": "investing-uk-manufacturing-pmi-oct-528-20261102",
+      "date": "2026-11-02",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/economic-indicators/uk-manufacturing-pmi-rises-to-528-in-october-4990481",
+      "image": "https://content-media.investing.com/news/LYNXMPEB59082_L.jpg",
+      "headline": "UK manufacturing PMI rises to 52.8 in October",
+      "story": "boe-hike",
+      "story_title": "Bank of England: first rate rise since 2023?",
+      "pillar": "growth",
+      "summary": "British factories had their best month in two years for output in October, and their selling prices rose at the fastest pace in three months, days before an expected Bank of England rate rise.",
+      "beats": {
+        "was": "Economists expect the Bank of England to lift its rate from 3.75% to 4% on Thursday, November 5, its first rise since 2023, because price pressures are building. A purchasing managers' index (PMI) reading above 50 means activity is growing.",
+        "happened": "S&P Global's UK manufacturing PMI rose to 52.8 in October from 51.9, a five-month high. Production grew at its fastest pace in 25 months and new orders picked up at home and abroad. Input costs rose at one of the sharpest rates in four years, factory prices climbed faster, and hiring stalled. Shipping detours and conflict-related disruption slowed deliveries.",
+        "means": "Firm demand plus rising costs fits the case for a Bank of England hike this week rather than against it.",
+        "fx": "Supports the pound by making a Thursday rate rise look safer."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stronger factory activity and faster price rises back the expected rate rise on Thursday."
+        }
+      ],
+      "watch": "Thursday's Bank of England decision and how many policymakers vote to raise rates."
+    },
+    {
+      "id": "tass-kazakhstan-atyrau-samara-halt-20261102",
+      "date": "2026-11-02",
+      "source": "TASS",
+      "url": "https://tass.com/economy/2212083",
+      "image": null,
+      "headline": "Kazakhstan's Energy Ministry reports suspension of oil pumping via Atyrau-Samara pipeline",
+      "story": "russia-oil-drones",
+      "story_title": "Drone strikes on Russian oil routes",
+      "pillar": "commodities",
+      "summary": "Kazakhstan stopped pumping oil through the Atyrau-Samara pipeline into Russia early Monday after drones hit a pumping hub near Samara; officials expect it to restart soon.",
+      "beats": {
+        "was": "Kazakhstan, a mid-sized oil producer, sends part of its crude north through the Atyrau-Samara pipeline into Russia's network for export. Drone attacks on Russian oil sites have disrupted Kazakh exports before.",
+        "happened": "Drones struck facilities at the Samara pumping and dispatch hub overnight, and pumping stopped at about 6 a.m. Kazakh time on Monday, November 2, according to Asel Serikpayeva, spokeswoman for Kazakhstan's Energy Ministry. Engineers are checking the damage. No volumes were given and no one was named as the attacker.",
+        "means": "This is a small, likely short break in supply. It barely registered on a day when hopes of ending the US-Iran war cut oil prices by about 7%, but it is another reminder that supply routes are fragile while world stockpiles are low.",
+        "fx": "Only a slight lift for oil and so for oil-exporting currencies such as the Canadian dollar; it matters more if the outage drags on."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A brief halt on a secondary export route; restart expected soon."
+        }
+      ],
+      "watch": "Whether pumping restarts within days, and any further drone strikes on oil sites in Russia."
     },
     {
       "id": "newstribune-reuters-iran-leaves-doha-draft-deal-20261102",
@@ -1072,6 +1153,120 @@
       "watch": "How fast the dollar moves against the yen around Tuesday's US vote and Friday's jobs report; a quick run back toward 160 is what would bring sharper words or action."
     },
     {
+      "id": "sbs-trump-canada-deal-close-keystone-20261101",
+      "ts": "2026-11-01T23:34:00Z",
+      "source": "SBS News",
+      "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008825593",
+      "image": "https://img.sbs.co.kr/newimg/news/20261102/202236919_1280.jpg",
+      "headline": "Trump Says U.S. and Canada 'Very Close' to Trade Deal, Carney Cites Constructive Talks",
+      "story": "us-canada-trade",
+      "story_title": "US-Canada trade: tariffs and talks",
+      "pillar": "growth",
+      "summary": "President Trump told an Iowa rally on Sunday that the US and Canada are very close to a trade deal that would include the Keystone XL oil pipeline, while Prime Minister Mark Carney said talks will take weeks.",
+      "beats": {
+        "was": "The US and Canada have put billions of dollars of tariffs on each other's goods in recent months, hurting Canadian steel and car makers. The Keystone XL pipeline, which would carry Canadian crude to the US, was cancelled in 2021.",
+        "happened": "Trump said he spoke with Carney by phone on Saturday and that the two sides have outlined a very good deal, with Canada paying to build the pipeline. Carney called the talks constructive but said negotiators will work on a framework over the coming weeks; no terms or tariff cuts were announced.",
+        "means": "It is the warmest tone in months, two days before the US midterm elections, but nothing is signed and Carney has said before that Canada will not rush into a bad deal.",
+        "fx": "Lower US tariffs would help Canada's exports and economy, which have stalled, so real progress would support the Canadian dollar; the market will want details first."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Talk of a deal that could cut tariffs on Canadian goods helps, but there are no terms yet."
+        }
+      ],
+      "watch": "Whether either side publishes terms, especially tariff relief on Canadian steel and cars."
+    },
+    {
+      "id": "sharecafe-rba-hike-looms-20261102",
+      "ts": "2026-11-01T21:23:20Z",
+      "source": "ShareCafe",
+      "url": "https://sharecafe.com.au/2026/11/02/rba-rate-hike-looms-amid-global-worries",
+      "image": "https://www.sharecafe.com.au/wp-content/uploads/2026/11/AWBskBh7Bj6E6hqHq2ST_1080x1080-600x454.png",
+      "headline": "RBA Rate Hike Looms Amid Global Worries",
+      "story": "rba-hike",
+      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
+      "pillar": "policy",
+      "summary": "Economists expect the Reserve Bank of Australia to raise its rate on Tuesday, November 3, by a quarter point to 4.85%, and several think it will be the last rise of this run.",
+      "beats": {
+        "was": "Australia's central bank has raised its cash rate four times this year, to 4.60%, because inflation has stayed well above its target. Recent price figures came in hotter than expected.",
+        "happened": "Money markets now give a quarter-point rise a high chance at Tuesday's meeting, which would take the rate to 4.85%, among its highest in nearly two decades. The big Australian banks and several economists say this could be the peak.",
+        "means": "A rise is largely expected, so the Australian dollar's reaction will hang on what the bank says about the next step. A hint that this is the last rise could take some shine off the currency, and a surprise hold would hit it harder.",
+        "fx": "A hike with a firm tone would support the Australian dollar; a hold or a clear signal of a pause would weigh on it."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "An expected rate rise keeps Australian rates high, but it is mostly priced already."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The New Zealand dollar often moves with its neighbour's currency on Australian news."
+        }
+      ],
+      "watch": "The decision and statement at 2:30 PM Australian east coast time on Tuesday (03:30 GMT), then the governor's news conference."
+    },
+    {
+      "id": "energyconnects-bbg-germany-gas-storage-miss-20261101",
+      "ts": "2026-11-01T15:13:00Z",
+      "source": "Energy Connects (Bloomberg)",
+      "url": "https://www.energyconnects.com/news/gas-lng/2026/november/germany-misses-gas-storage-target-as-cold-snap-sets-in/",
+      "image": "https://www.energyconnects.com/media/rhjbv5fz/bloombergmedia_tnnt2zt96osg00_01-11-2026_15-05-19_639290880000000000.jpg?width=1200&height=628&v=1dd6a12690761f0",
+      "headline": "Germany Misses Gas Storage Target as Cold Snap Sets In",
+      "story": "europe-gas",
+      "story_title": "Europe's gas: thin reserves going into winter",
+      "pillar": "commodities",
+      "summary": "Germany's gas stores were only about 61% full on November 1, short of its 70% goal, just as colder-than-usual weather arrives.",
+      "beats": {
+        "was": "Germany sets fill targets for its gas storage so it can get through winter, and European gas prices have roughly tripled this year because the Iran war cut Gulf supplies, topping €100 per megawatt-hour last week for the first time since 2022.",
+        "happened": "Data from Gas Infrastructure Europe showed German storage at 61% on Friday versus a 70% target, well below the EU average of 75%. The economy ministry admitted the target will be missed but said reserves should last the winter thanks to Norwegian pipelines and LNG terminals. Forecasts show temperatures below normal in Berlin, Frankfurt and Munich.",
+        "means": "Thin reserves plus a cold, possibly windless spell mean Germany may have to buy more gas at high prices, which raises costs for its factories and keeps energy inflation up.",
+        "fx": "Pricier energy hurts Europe's trade balance and growth, a weight on the euro, though it also keeps inflation high enough for the European Central Bank to consider raising rates."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Low gas stores before a cold spell raise the euro zone's energy bill and the risk to German industry."
+        }
+      ],
+      "watch": "How cold November turns out and whether European gas prices climb back above €100."
+    },
+    {
+      "id": "britisheye-boe-expected-hike-4pc-20261101",
+      "ts": "2026-11-01T14:00:00Z",
+      "source": "The British Eye",
+      "url": "https://thebritisheye.com/2026/11/01/bank-of-england-interest-rate-rise/",
+      "image": "https://thebritisheye.com/wp-content/uploads/2026/11/IMG_1372.jpeg",
+      "headline": "Bank of England expected to raise interest rates to 4%",
+      "story": "boe-hike",
+      "story_title": "Bank of England's first rate rise since 2023",
+      "pillar": "policy",
+      "summary": "Economists expect the Bank of England to lift its main rate from 3.75% to 4% on Thursday, November 5, its first rise since August 2023.",
+      "beats": {
+        "was": "UK inflation has stayed well above the Bank of England's 2% goal, and fuel costs have risen with the Middle East war. The household energy price cap went up 3.6% in October, and a far bigger rise is forecast for January.",
+        "happened": "Ahead of Thursday's decision, economists at Investec and the ICAEW, the accountants' body, said a quarter-point rise to 4% looks close to certain, framed as a move to stop high prices from becoming the norm.",
+        "means": "A rise is now the expected outcome, so it would confirm what markets already assume. What matters more is how many of the nine policymakers vote for it and whether the Bank hints at more.",
+        "fx": "The pound has gained on this expectation. A rise with signals of more could add to it, while a hold or a split vote that sounds reluctant would likely knock it."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher UK rates support the pound, but the rise is largely priced in already."
+        }
+      ],
+      "watch": "The vote split and the Bank's guidance on Thursday; a hold would be a real surprise."
+    },
+    {
       "id": "jpost-irgc-two-tankers-mines-20261101",
       "date": "2026-11-01",
       "source": "Jerusalem Post",
@@ -1214,219 +1409,6 @@
         }
       ],
       "watch": "Any US decision on strikes after the November 3 midterm elections, and any reply to Iran's two-day reopening offer."
-    },
-    {
-      "id": "sbs-trump-canada-deal-close-keystone-20261101",
-      "ts": "2026-11-01T23:34:00Z",
-      "source": "SBS News",
-      "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008825593",
-      "image": "https://img.sbs.co.kr/newimg/news/20261102/202236919_1280.jpg",
-      "headline": "Trump Says U.S. and Canada 'Very Close' to Trade Deal, Carney Cites Constructive Talks",
-      "story": "us-canada-trade",
-      "story_title": "US-Canada trade: tariffs and talks",
-      "pillar": "growth",
-      "summary": "President Trump told an Iowa rally on Sunday that the US and Canada are very close to a trade deal that would include the Keystone XL oil pipeline, while Prime Minister Mark Carney said talks will take weeks.",
-      "beats": {
-        "was": "The US and Canada have put billions of dollars of tariffs on each other's goods in recent months, hurting Canadian steel and car makers. The Keystone XL pipeline, which would carry Canadian crude to the US, was cancelled in 2021.",
-        "happened": "Trump said he spoke with Carney by phone on Saturday and that the two sides have outlined a very good deal, with Canada paying to build the pipeline. Carney called the talks constructive but said negotiators will work on a framework over the coming weeks; no terms or tariff cuts were announced.",
-        "means": "It is the warmest tone in months, two days before the US midterm elections, but nothing is signed and Carney has said before that Canada will not rush into a bad deal.",
-        "fx": "Lower US tariffs would help Canada's exports and economy, which have stalled, so real progress would support the Canadian dollar; the market will want details first."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Talk of a deal that could cut tariffs on Canadian goods helps, but there are no terms yet."
-        }
-      ],
-      "watch": "Whether either side publishes terms, especially tariff relief on Canadian steel and cars."
-    },
-    {
-      "id": "sharecafe-rba-hike-looms-20261102",
-      "ts": "2026-11-01T21:23:20Z",
-      "source": "ShareCafe",
-      "url": "https://sharecafe.com.au/2026/11/02/rba-rate-hike-looms-amid-global-worries",
-      "image": "https://www.sharecafe.com.au/wp-content/uploads/2026/11/AWBskBh7Bj6E6hqHq2ST_1080x1080-600x454.png",
-      "headline": "RBA Rate Hike Looms Amid Global Worries",
-      "story": "rba-hike",
-      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
-      "pillar": "policy",
-      "summary": "Economists expect the Reserve Bank of Australia to raise its rate on Tuesday, November 3, by a quarter point to 4.85%, and several think it will be the last rise of this run.",
-      "beats": {
-        "was": "Australia's central bank has raised its cash rate four times this year, to 4.60%, because inflation has stayed well above its target. Recent price figures came in hotter than expected.",
-        "happened": "Money markets now give a quarter-point rise a high chance at Tuesday's meeting, which would take the rate to 4.85%, among its highest in nearly two decades. The big Australian banks and several economists say this could be the peak.",
-        "means": "A rise is largely expected, so the Australian dollar's reaction will hang on what the bank says about the next step. A hint that this is the last rise could take some shine off the currency, and a surprise hold would hit it harder.",
-        "fx": "A hike with a firm tone would support the Australian dollar; a hold or a clear signal of a pause would weigh on it."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "An expected rate rise keeps Australian rates high, but it is mostly priced already."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The New Zealand dollar often moves with its neighbour's currency on Australian news."
-        }
-      ],
-      "watch": "The decision and statement at 2:30 PM Australian east coast time on Tuesday (03:30 GMT), then the governor's news conference."
-    },
-    {
-      "id": "24newshd-houthi-threats-aramco-airspace-20261101",
-      "ts": "2026-11-01T15:47:00Z",
-      "source": "24 News HD (AFP)",
-      "url": "https://www.24newshd.tv/01-Nov-2026/houthi-media-renews-threats-saudi-oil-giant-aviation",
-      "image": "https://www.24newshd.tv/digital_images/large/2026-11-01/houthi-media-renews-threats-saudi-oil-giant-aviation-1793548033-6068.png",
-      "headline": "Houthi media renews threats on Saudi oil giant, aviation",
-      "story": "yemen-saudi",
-      "story_title": "Yemen's Houthis vs Saudi Arabia",
-      "pillar": "risk",
-      "summary": "Yemen's Houthi rebels, who are allied with Iran, warned again on Sunday that Saudi Aramco's oil sites are within their reach and told airlines to stay out of Saudi airspace.",
-      "beats": {
-        "was": "Fighting between the Houthis and Saudi-backed Yemeni forces restarted in July, and Houthi missiles and drones have since hit Saudi oil sites and airports, including a deadly strike on Riyadh's airport on October 10. A Saudi-led coalition struck Houthi supply sites in Yemen on Sunday morning.",
-        "happened": "An unnamed Houthi military official, quoted by the group's Saba news agency, said Aramco facilities are in range and investing in them is risky, and warned foreign airlines off Saudi airspace apart from over Mecca and Medina. No new attack was reported.",
-        "means": "It is a threat, not a strike, but it comes as the Saudi coalition hits back and Iran warns against new US attacks, so the risk to Saudi oil output stays live.",
-        "fx": "Any real damage to Saudi oil sites would add to oil prices that are already high because of the Gulf shipping attacks. Higher oil helps the Canadian dollar and hurts big oil importers like Japan and the euro zone."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A repeated threat to the world's biggest oil exporter keeps supply worries up, though nothing new was hit."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Canada exports a lot of oil, so oil supply scares tend to help the loonie a little."
-        }
-      ],
-      "watch": "Whether the Houthis follow through with a strike on Aramco sites, or the Saudi coalition's raids push them to escalate."
-    },
-    {
-      "id": "energyconnects-bbg-germany-gas-storage-miss-20261101",
-      "ts": "2026-11-01T15:13:00Z",
-      "source": "Energy Connects (Bloomberg)",
-      "url": "https://www.energyconnects.com/news/gas-lng/2026/november/germany-misses-gas-storage-target-as-cold-snap-sets-in/",
-      "image": "https://www.energyconnects.com/media/rhjbv5fz/bloombergmedia_tnnt2zt96osg00_01-11-2026_15-05-19_639290880000000000.jpg?width=1200&height=628&v=1dd6a12690761f0",
-      "headline": "Germany Misses Gas Storage Target as Cold Snap Sets In",
-      "story": "europe-gas",
-      "story_title": "Europe's gas: thin reserves going into winter",
-      "pillar": "commodities",
-      "summary": "Germany's gas stores were only about 61% full on November 1, short of its 70% goal, just as colder-than-usual weather arrives.",
-      "beats": {
-        "was": "Germany sets fill targets for its gas storage so it can get through winter, and European gas prices have roughly tripled this year because the Iran war cut Gulf supplies, topping €100 per megawatt-hour last week for the first time since 2022.",
-        "happened": "Data from Gas Infrastructure Europe showed German storage at 61% on Friday versus a 70% target, well below the EU average of 75%. The economy ministry admitted the target will be missed but said reserves should last the winter thanks to Norwegian pipelines and LNG terminals. Forecasts show temperatures below normal in Berlin, Frankfurt and Munich.",
-        "means": "Thin reserves plus a cold, possibly windless spell mean Germany may have to buy more gas at high prices, which raises costs for its factories and keeps energy inflation up.",
-        "fx": "Pricier energy hurts Europe's trade balance and growth, a weight on the euro, though it also keeps inflation high enough for the European Central Bank to consider raising rates."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Low gas stores before a cold spell raise the euro zone's energy bill and the risk to German industry."
-        }
-      ],
-      "watch": "How cold November turns out and whether European gas prices climb back above €100."
-    },
-    {
-      "id": "britisheye-boe-expected-hike-4pc-20261101",
-      "ts": "2026-11-01T14:00:00Z",
-      "source": "The British Eye",
-      "url": "https://thebritisheye.com/2026/11/01/bank-of-england-interest-rate-rise/",
-      "image": "https://thebritisheye.com/wp-content/uploads/2026/11/IMG_1372.jpeg",
-      "headline": "Bank of England expected to raise interest rates to 4%",
-      "story": "boe-hike",
-      "story_title": "Bank of England's first rate rise since 2023",
-      "pillar": "policy",
-      "summary": "Economists expect the Bank of England to lift its main rate from 3.75% to 4% on Thursday, November 5, its first rise since August 2023.",
-      "beats": {
-        "was": "UK inflation has stayed well above the Bank of England's 2% goal, and fuel costs have risen with the Middle East war. The household energy price cap went up 3.6% in October, and a far bigger rise is forecast for January.",
-        "happened": "Ahead of Thursday's decision, economists at Investec and the ICAEW, the accountants' body, said a quarter-point rise to 4% looks close to certain, framed as a move to stop high prices from becoming the norm.",
-        "means": "A rise is now the expected outcome, so it would confirm what markets already assume. What matters more is how many of the nine policymakers vote for it and whether the Bank hints at more.",
-        "fx": "The pound has gained on this expectation. A rise with signals of more could add to it, while a hold or a split vote that sounds reluctant would likely knock it."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher UK rates support the pound, but the rise is largely priced in already."
-        }
-      ],
-      "watch": "The vote split and the Bank's guidance on Thursday; a hold would be a real surprise."
-    },
-    {
-      "id": "aol-reuters-opec-keeps-december-steady-20261101",
-      "ts": "2026-11-01T13:35:00Z",
-      "source": "Reuters via AOL",
-      "url": "https://www.aol.com/articles/opec-set-keep-oil-output-094130000.html",
-      "image": "https://hermes.media.transform.aol.com/da29ff49c8abbe2feb0a266468ed26b0646586cd/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/01/7918c89a-859a-3ccf-8517-21dfb2d4a918/42c0f286-17ba-4762-ac09-bdc3dd0089ca.jpg",
-      "headline": "OPEC+ keeps December oil output targets steady ahead of tougher call for 2027",
-      "story": "opec-output",
-      "story_title": "OPEC+ output: holding steady while war decides supply",
-      "pillar": "commodities",
-      "summary": "Seven leading OPEC+ oil producers confirmed on Sunday that their output targets stay unchanged for December; the harder decision on 2027 comes on November 29.",
-      "beats": {
-        "was": "OPEC+ is the group of oil exporters led by Saudi Arabia and Russia that sets production targets. The US-Iran war has disrupted Gulf exports for months, so most Gulf members are pumping well below their targets anyway.",
-        "happened": "In an online meeting on Sunday, Saudi Arabia, Russia, Iraq, Kuwait, Algeria, Kazakhstan and Oman left December targets where they were, as they did for October and November. All 21 members meet on November 29 to set quotas for 2027.",
-        "means": "Nothing changes for now; actual supply still depends on how freely ships can pass the Strait of Hormuz. Forecasters warn of too much oil in 2027 if Gulf flows return to normal, which makes the November 29 meeting the one that matters.",
-        "fx": "Little direct effect on currencies this week. Oil prices, and with them the Canadian dollar and the yen's import bill, keep taking their lead from the war news."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "An expected hold; war disruptions, not quotas, are setting supply."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "No change in output plans, so oil's support for Canada's currency rests on the war news."
-        }
-      ],
-      "watch": "The OPEC+ meeting on November 29 that sets 2027 output, and the capacity review due by mid-November."
-    },
-    {
-      "id": "fox-rubio-no-decision-strikes-20261101",
-      "ts": "2026-11-01T11:38:00Z",
-      "source": "Fox News",
-      "url": "https://www.foxnews.com/live-news/iran-war-news-trump-us-israel-november-1",
-      "image": "https://assets.foxnews.com/liveblog/fn/prod/images/2026/11/f69f0609b8f0620e5399603c32cd76df.jpg",
-      "headline": "Trump, Rubio say more Iran strikes are still on the table, but not likely before midterms",
-      "story": "us-iran-talks",
-      "story_title": "US-Iran talks and the threat of new strikes",
-      "pillar": "risk",
-      "summary": "US Secretary of State Marco Rubio said President Trump has not decided whether to resume strikes on Iran and would rather reach a deal; Trump said talks are going fine.",
-      "beats": {
-        "was": "The US and Iran have been at war since February, with a pause in fighting while Qatar mediates. Weekend reports said the US was preparing possible new strikes, and Iran has offered to reopen the Strait of Hormuz on its own terms.",
-        "happened": "On Saturday, Rubio said Trump has made no decision on new strikes and prefers a diplomatic outcome. Trump called the talks fine but questioned how much Iran's negotiators can be trusted and said he is in no rush to sign. The report says new strikes look unlikely before Tuesday's US midterm elections.",
-        "means": "Washington is keeping both options open: talks continue in Doha while strikes stay possible. The near-term risk of fresh fighting looks a little lower, but nothing is settled.",
-        "fx": "A pause in the threat of strikes takes a little of the war premium out of oil and eases shelter demand for the Swiss franc. A collapse of the talks would quickly reverse that."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Talk of preferring a deal trims the odds of fighting in the next few days."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Less immediate war risk means less need for the franc as shelter."
-        }
-      ],
-      "watch": "Whether the US answers Iran's two-day Hormuz offer, and any move toward strikes after Tuesday's midterm elections."
     }
   ]
 }
