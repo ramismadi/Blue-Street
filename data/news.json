@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-04T15:47:37Z",
+  "updated": "2026-11-04T17:49:56Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "ts": "2026-11-04T15:47:37Z",
-      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low on bets that a split government borrows less and could tighten rules on AI, the spending behind much of US growth. Strong job openings and a still-healthy services survey keep a December Federal Reserve rate rise likely, so Friday's jobs report decides whether the slide lasts."
+      "ts": "2026-11-04T17:49:56Z",
+      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low as US yields dropped on bets a split government borrows less; US stocks rallied about 2%. Strong job openings and a healthy services survey still keep a December Federal Reserve rate rise likely, so Friday's jobs report decides whether the slide lasts."
     },
     "EUR": {
       "lean": "bullish",
@@ -28,9 +28,9 @@
       "text": "Swiss inflation jumped to 1.5% in October on dearer fuel, above forecasts, which makes a December rate cut by the Swiss National Bank harder to justify. The franc also gains when investors look for shelter, and while Iran peace talks sap that demand, US strikes on an Iranian island and a deadly attack on a ship off Oman show the fighting has not stopped."
     },
     "CAD": {
-      "lean": "mixed",
-      "text": "The Bank of Canada raised its rate to 2.5% last week, its first rise in three years, and Governor Tiff Macklem told lawmakers more rises may be needed as fuel costs keep inflation near 3%. That support is offset by oil, Canada's main export, which slipped toward $101 a barrel as new US strikes on Iran look less likely.",
-      "ts": "2026-11-04T14:54:03Z"
+      "lean": "bearish",
+      "ts": "2026-11-04T17:49:56Z",
+      "text": "Oil, Canada's main export, fell about 8% on Wednesday as markets bet the Iran war winds down, which weighs on the Canadian dollar. Bank of Canada Governor Tiff Macklem has said more rate rises may be needed with inflation near 3%, but cheaper oil weakens both the trade support and some of the inflation case."
     },
     "AUD": {
       "lean": "bearish",
@@ -49,11 +49,116 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-04T15:47:37Z",
-      "text": "Brent crude slipped toward $101 a barrel, close to a four-week low, as traders bet a Democratic Congress makes new US strikes on Iran less likely, while Qatar keeps mediating peace talks; official US stock figures also showed less tightness than an industry survey had suggested. Fighting around the Strait of Hormuz has not stopped, and a renewed US attack could send prices sharply higher."
+      "ts": "2026-11-04T17:49:56Z",
+      "text": "Brent crude plunged about 8% to near $95 a barrel, its lowest in almost two months, as traders bet that Democratic control of Congress and Vice President JD Vance's comment that the war cost his party the election push Washington toward ending the Iran war. Peace talks through Qatar and Pakistan continue, but a single new strike or attack on Gulf shipping could reverse the drop."
     }
   },
   "items": [
+    {
+      "id": "thenational-brent-slides-94-midterms-20261104",
+      "ts": "2026-11-04T17:01:00Z",
+      "source": "The National",
+      "url": "https://www.thenationalnews.com/business/energy/2026/11/04/brent-oil-slides-to-94-on-iran-uncertainty-after-us-midterms/",
+      "image": "https://www.thenationalnews.com/resizer/v2/4RB6LD2TD5HWDLTE35EQCZB2AA.jpg?auth=09d77c082ac115c34bc184253c082ba45e8574edcd70681ac468cb9050867c11&smart=true&width=1200&height=630",
+      "headline": "Oil plunges about 8%, Brent near $95, as markets bet the Iran war winds down",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Brent crude fell about 8.5% to near $95 a barrel and US crude dropped below $89, the lowest in almost two months, as traders bet that Democratic control of Congress pushes Washington toward ending the war with Iran.",
+      "beats": {
+        "was": "The US-Israel war with Iran has kept oil above $100 for weeks by choking tanker traffic through the Strait of Hormuz, the main exit for Gulf oil. Democrats won both houses of the US Congress in Tuesday's midterm elections, and many voters blamed the war for high fuel prices.",
+        "happened": "Brent fell 8.5% to $94.83 and US crude (WTI) fell 7.5% to $88.88 in Wednesday's US session, more than 15% lower over the week. Peace talks through Qatar and Pakistan have resumed, though Iran's leadership said anyone expecting a US policy shift after the vote is mistaken.",
+        "means": "A large part of the war premium is coming out of the price on the view that the new Congress will limit funding for the war. Gulf exports had already been recovering, so supply looks less tight. Any new strike or attack on shipping could reverse much of the drop quickly.",
+        "fx": "Cheaper oil hurts the Canadian dollar, since oil is Canada's main export, and helps big oil buyers like Japan and the euro zone. It also eases the inflation worry behind the Federal Reserve's expected December rate rise."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 3,
+          "why": "The biggest one-day fall in months as bets grow that the war ends."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Much lower prices for Canada's main export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so a smaller import bill helps the yen."
+        }
+      ],
+      "watch": "Any new US strike or attack on Gulf shipping, and whether the US-Iran talks set a next meeting."
+    },
+    {
+      "id": "cbs-vance-war-cost-midterms-20261104",
+      "ts": "2026-11-04T16:41:00Z",
+      "source": "CBS News",
+      "url": "https://www.cbsnews.com/news/jd-vance-2026-midterms-iran/",
+      "image": null,
+      "headline": "Vice President Vance says the Iran war cost Republicans the midterms",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "US Vice President JD Vance said voter anger over the Iran war was the main reason Republicans lost both houses of Congress, and backed calls for a diplomatic end to the fighting.",
+      "beats": {
+        "was": "The US has been at war with Iran for months, and fuel prices have soared. Democrats won control of the Senate and the House in Tuesday's midterm elections.",
+        "happened": "In his first comments since the results, Vance wrote on X that the war was the reason his party lost, and called a diplomatic resolution sensible. He led US negotiators in spring talks whose deal later collapsed. President Trump said the war will end when he decides it ends.",
+        "means": "A senior figure in the administration openly blaming the war adds to the sense that Washington wants a way out, which helped drive Wednesday's oil slide. It is a signal, not a policy change: Trump still controls the decision.",
+        "fx": "Talk of ending the war lowers oil prices and cuts demand for safe havens like the Swiss franc and gold."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A top official backing diplomacy raises the odds the war ends."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Less need for a safe place to park money if the war winds down."
+        }
+      ],
+      "watch": "Whether the White House changes its Iran stance, and the next round of talks through Qatar and Pakistan."
+    },
+    {
+      "id": "koreatimes-ap-us-stocks-best-day-20261104",
+      "ts": "2026-11-04T15:25:00Z",
+      "source": "The Korea Times (AP)",
+      "url": "https://www.koreatimes.co.kr/world/20261105/us-stocks-rally-toward-their-best-day-in-3-months",
+      "image": "https://newsimg.koreatimes.co.kr/2026/11/05/3357ea61-9a40-4433-a4ae-f7184b1b1886.jpg",
+      "headline": "US stocks head for their best day in three months after the midterms",
+      "story": "us-midterms",
+      "story_title": "US midterms: a week of elections, central banks and jobs data",
+      "pillar": "risk",
+      "summary": "US shares jumped about 2%, with the Dow up more than 1,500 points by midday, and US 10-year borrowing costs fell to 4.90% as investors welcomed the end of one-party control in Washington.",
+      "beats": {
+        "was": "Democrats won both houses of Congress on Tuesday, ending Republican control of Washington. Asian stocks fell overnight on worries about tighter rules for AI firms.",
+        "happened": "By midday in New York the S&P 500 was up 1.8% and the Dow 2.9%. The 10-year Treasury yield fell from 4.95% to 4.90%, as investors expect a split government to add less debt. Oil companies and defense firms fell as oil dropped below $95.",
+        "means": "Wall Street read the result as calmer, not riskier: less new borrowing, and a better chance the Iran war ends. That reverses much of the overnight fear in Asia.",
+        "fx": "Lower US yields take away some of the dollar's appeal, and a strong mood in markets usually favors riskier currencies like the Australian dollar over safe havens."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower US yields and less need for safety."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A strong mood in global stocks tends to lift the Australian dollar."
+        }
+      ],
+      "watch": "The US jobs report on Friday, November 6, and whether stocks hold their gains into the close."
+    },
     {
       "id": "helious-eia-crude-draw-086m-20261104",
       "ts": "2026-11-04T15:30:00Z",
@@ -1268,129 +1373,6 @@
         }
       ],
       "watch": "Whether Washington formally answers the draft deal circulating in Qatar, and whether Iran gets any move on the port blockade."
-    },
-    {
-      "id": "energyconnects-bbg-khamenei-authorizes-talks-20261102",
-      "ts": "2026-11-02T19:00:00Z",
-      "source": "Energy Connects (Bloomberg)",
-      "url": "https://www.energyconnects.com/news/oil/2026/november/iran-s-khamenei-gives-government-powers-to-hold-talks-on-war/",
-      "image": "https://www.energyconnects.com/media/q2hffihn/bloombergmedia_tnvpmkkiupt100_02-11-2026_19-00-03_639291744000000000.jpg?width=1200&height=628&v=1dd6afc5e7ce850",
-      "headline": "Iran's Khamenei Gives Government Powers to Hold Talks on War",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Iran's President Masoud Pezeshkian said Supreme Leader Mojtaba Khamenei has given the government powers to seek an end to the war with the US through talks.",
-      "beats": {
-        "was": "The US and Iran have been at war since late February, and Iran has kept the Strait of Hormuz, the sea route for about a fifth of the world's oil, mostly shut. Iranian officials have been meeting Qatari go-betweens in Doha, and President Trump had threatened new strikes after Tuesday's US midterm elections.",
-        "happened": "Pezeshkian, speaking through Iran's state news agency, said Iran wants a solution through dialogue and that the Supreme Leader, who has the final say in Iran, has handed the government some powers to pursue it. He did not say what those powers are. Separately, Trump reportedly told Israeli Prime Minister Benjamin Netanyahu he is willing to give diplomacy more time.",
-        "means": "It is the clearest sign yet that Iran's top authority backs the talks, which makes a deal more believable. But Iran still says it will only ease Hormuz shipping and return to formal talks once the US lifts its blockade of Iranian ports, so the hardest step is untouched.",
-        "fx": "A likelier end to the war lowers oil and cuts demand for safe places to park money, which tends to weigh on the dollar and the Swiss franc and help energy importers such as Japan and the euro zone."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Backing from Iran's Supreme Leader makes a deal that reopens Hormuz more believable."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Less war risk trims demand for the dollar as a safe place."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Calmer markets reduce the pull of the franc as shelter."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Japan buys almost all its energy abroad, so cheaper oil helps it."
-        }
-      ],
-      "watch": "Whether Washington answers the draft proposal circulating in Qatar, and whether it moves on Iran's demand to lift the port blockade first."
-    },
-    {
-      "id": "virginiabusiness-reuters-oil-drops-7pc-20261102",
-      "ts": "2026-11-02T18:37:00Z",
-      "source": "Virginia Business (Reuters)",
-      "url": "https://virginiabusiness.com/oil-prices-drop-7-percent-iran-peace-talks/",
-      "image": "https://virginiabusiness.com/files/1/2026/11/2026-11-01T231257Z_1_LYNXNPEMA01FO_RTROPTP_4_USA-OIL-EIA-650x400.jpg",
-      "headline": "Oil drops 7% as Iran signals openness to peace talks",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "commodities",
-      "summary": "Oil's slide deepened to about 7% by midday Monday, with Brent near $105 a barrel and US crude near $96.6, as Iran signalled it is ready to negotiate.",
-      "beats": {
-        "was": "Brent crude, the global oil benchmark, ended October at a six-month high because the US-Iran war has kept most tankers out of the Strait of Hormuz. Prices had already fallen in Asian and European trading on hopes for talks in Qatar.",
-        "happened": "By midday in New York, Brent was down about $8.50 at roughly $105 and US crude down $7.50 at about $96.6, the lowest of the day. Iran's leaders said they have authority to negotiate, and an official said a draft deal is circulating with another meeting possible. The head of Abu Dhabi's state oil company said the world has drawn close to a billion barrels from stockpiles since the war began.",
-        "means": "This is one of the biggest one-day drops of the war, driven by hope rather than a signed deal. Analysts warn there have been many false dawns, and with stockpiles drained, any setback could send prices back up quickly; Goldman Sachs sees $140 Brent in 2027 if Gulf output stays well below normal.",
-        "fx": "A lower oil bill helps Japan and the euro zone and takes support away from oil exporters such as Canada. It also eases the inflation worry that has kept talk of further US rate rises alive."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "About 7% wiped off prices in a day on hopes of a deal to reopen Hormuz."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Oil is Canada's biggest export, so a sharp fall cuts its income."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Japan imports nearly all its energy, so cheaper oil eases its trade bill."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The euro zone is a big energy buyer and gains from lower prices."
-        }
-      ],
-      "watch": "Monday's closing prices and any fresh tanker attack near Hormuz, which could undo the drop."
-    },
-    {
-      "id": "actionforex-us-ism-mfg-oct-555-20261102",
-      "ts": "2026-11-02T15:07:30Z",
-      "source": "ActionForex",
-      "url": "https://www.actionforex.com/live-comments/659568-us-ism-manufacturing-jumps-to-55-5-as-production-surges-but-price-pressures-persist/",
-      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-usa4.jpg",
-      "headline": "US ISM Manufacturing Jumps to 55.5 as Production Surges, But Price Pressures Persist",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "growth",
-      "summary": "US factories grew faster than expected in October, with output at its strongest in almost five years, while the rise in the prices they pay slowed a little.",
-      "beats": {
-        "was": "The Federal Reserve held its rate at 3.75% to 4% last week, but several of its officials say rates need to rise again, possibly in December. The ISM survey of factory purchasing managers is the first big US figure of each month; any reading above 50 means growth.",
-        "happened": "The ISM manufacturing index rose to 55.5 in October from 54.5, above the roughly 54.7 economists expected. Its output measure hit 59, the highest since November 2021. The prices-paid measure eased to 75.2 from 77.9, lower than forecast but still very high.",
-        "means": "A strong factory sector adds to the case that the US economy can take another rate rise. The small cooling in input prices takes a little of the urgency away, so this backs a December rise without forcing it.",
-        "fx": "Strong US growth supports the dollar against its rivals, but on the day it was outweighed by falling oil and calmer markets pulling money out of the dollar."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A clear beat on factory growth backs the Fed officials who want higher rates, though cooling input prices soften it."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "More chance of a US rate rise makes gold, which pays no interest, less attractive."
-        }
-      ],
-      "watch": "Wednesday's ISM services survey and Friday's October jobs report; weak figures there would undo the boost from this beat."
     }
   ]
 }
