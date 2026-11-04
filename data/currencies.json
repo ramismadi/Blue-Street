@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-11-04T00:48:41-06:00",
-  "updated": "2026-11-04T00:48:41-06:00",
+  "as_of": "2026-11-04T07:32:00-06:00",
+  "updated": "2026-11-04T07:32:00-06:00",
   "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "Asia-morning read, 2026-11-04 (~1:30am CT snapshot). Democrats swept the midterms — AP called the Senate, NBC/CBS project the House — and the dollar slid in Asia: DXY ~101.45 (-0.4%), EUR/USD ~1.1250 (+0.5%), GBP/USD ~1.3469 (fresh high since Sep 16), USD/JPY ~157.60 (-0.7%), Nikkei -3.6% as AI shares slid. US 10Y eased to ~4.92%. Today: EZ flash CPI 4:00am CT (fcst 4.0%, core 2.5%), US ISM services 9:00am CT (54.8), EIA crude 9:30am CT. Tomorrow: BoE 6:00am CT (hike ~96.7% to 4.00%). Friday: US payrolls 7:30am CT (fcst 65K), NZ elections.",
+  "note": "NY-open read, 2026-11-04 (Europe-morning snapshot). No 7:30am CT US release today — the next prints are ISM services 9:00am CT (fcst 54.8) and EIA crude 9:30am CT; BoE Thu 6:00am CT. The dollar steadied in Europe after the Asia slide on the Democratic midterm sweep (AP Senate call; NBC/CBS House projection): DXY ~101.39, EUR/USD ~1.1251, GBP/USD ~1.3485, USD/JPY back to ~158.43 from the 157.63 Asia low, USD/CHF ~0.8169; equities turned higher in Europe after the Asia selloff (Nikkei -3.6%); gold reclaimed $4,000 (~$4,041); Brent ~$104.36 / WTI ~$96.72 after an early dip; US 10Y ~4.93%. Levels are indicative index quotes, not executable prices.",
   "pairs": {},
   "currencies": [
     {
@@ -10,11 +10,11 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY ~101.45 in Asia (-0.4% from the 101.86 NY close) as Democrats swept the midterms — AP called the Senate, NBC/CBS project the House — and yields eased (10Y ~4.92%); Dec Fed hike pricing ~79% (CME FedWatch Nov 3). Today: ISM services 9:00am CT (54.8); payrolls Fri 7:30am CT (65K).",
+      "summary": "DXY ~101.39 in the Europe morning (-0.5% from the 101.86 NY close), steadying after the Asia slide to ~101.45 on the Democratic midterm sweep (AP Senate call; NBC/CBS House projection); 10Y ~4.93%. Dec Fed hike pricing ~82% (CME FedWatch, Nov 4 morning), up from 78.9% Nov 3.",
       "drivers": {
         "policy": {
           "score": 1,
-          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~78.9% Nov 3 (CME FedWatch, up from 74.4% Monday) after the JOLTS + factory orders beats."
+          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~78.9% Nov 3 (CME FedWatch, up from 74.4% Monday) after the JOLTS + factory orders beats. Nov 4 morning: CME FedWatch December hike ~82% (TradingKey)."
         },
         "growth": {
           "score": 0,
@@ -47,7 +47,7 @@
       "name": "Euro",
       "bank": "ecb",
       "chapter": null,
-      "summary": "EUR/USD ~1.1250 in Asia (+0.5% from the 1.1184 NY close), highest since Oct 16 on the softer dollar; EZ flash CPI today 4:00am CT (fcst 4.0%, core 2.5%). EUR/GBP ~0.8352.",
+      "summary": "EUR/USD ~1.1251 in the Europe morning (+0.6% from the 1.1184 NY close), holding the Asia gain; EZ flash CPI printed inline at 4.0% (prev 3.8%), core steady 2.5% — no fresh impulse for the Dec 17 ECB decision. EUR/GBP ~0.8343.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -59,7 +59,7 @@
         },
         "inflation": {
           "score": 1,
-          "note": "German Sep PPI +6.7% y/y beat (vs 6.2% fcst) — producer-price pipeline still hot; EZ final CPI 3.8%. Fri flash batch: French CPI HOT (3.4% y/y vs 3.2% exp, HICP 3.8% — energy +24.1% y/y), Italian CPI a sharp BEAT (+5.4% y/y vs ~4.6% consensus), Spanish CPI inline at 4.9% y/y; German flash CPI COOLED to 2.8% y/y (HICP 2.8% vs 3.1% poll, core 2.1%); EZ-wide flash due Nov 4"
+          "note": "German Sep PPI +6.7% y/y beat (vs 6.2% fcst) — producer-price pipeline still hot; EZ final CPI 3.8%. Fri flash batch: French CPI HOT (3.4% y/y vs 3.2% exp, HICP 3.8% — energy +24.1% y/y), Italian CPI a sharp BEAT (+5.4% y/y vs ~4.6% consensus), Spanish CPI inline at 4.9% y/y; German flash CPI COOLED to 2.8% y/y (HICP 2.8% vs 3.1% poll, core 2.1%); EZ-wide flash PRINTED Nov 4 inline: headline 4.0% y/y (vs 4.0% fcst, prev 3.8% — a three-year high, energy 20.8% y/y), core steady 2.5% (Reuters/Eurostat) — December ECB hike case intact"
         },
         "risk": {
           "score": 0,
@@ -84,7 +84,7 @@
       "name": "British pound",
       "bank": "boe",
       "chapter": null,
-      "summary": "GBP/USD ~1.3469 in Asia (+0.4%), a fresh high since Sep 16 on the softer dollar; BoE Thu 6:00am CT (hike ~96.7% to 4.00%, first since Aug 2023; ING expects a 7-2 vote).",
+      "summary": "GBP/USD ~1.3485 in the Europe morning (+0.5%), a fresh high since Sep 16 on the softer dollar; BoE Thu 6:00am CT (hike ~96.7% to 4.00%, first since Aug 2023; BBH expects a 7-2 vote — the split and the Monetary Policy Report are the event).",
       "drivers": {
         "policy": {
           "score": 1,
@@ -121,7 +121,7 @@
       "name": "Japanese yen",
       "bank": "boj",
       "chapter": null,
-      "summary": "USD/JPY ~157.60 in Asia (-0.7% from the 158.46 NY close) as the haven bid returned on midterm risk-off (Nikkei -3.6%); Tokyo fixing flows briefly took it back toward 158.50 intraday.",
+      "summary": "USD/JPY ~158.43 in the Europe morning (flat vs the 158.46 NY close) after dipping to ~157.63 in Asia on the haven bid (Nikkei -3.6%); Tokyo flows and the Europe equity rebound unwound most of the move. December BoJ hike ~80%.",
       "drivers": {
         "policy": {
           "score": -1,
@@ -137,7 +137,7 @@
         },
         "risk": {
           "score": 1,
-          "note": "Haven bid back in Asia — USD/JPY to ~157.60 as the Nikkei fell 3.6% on midterm results; yen firmed against every major but kept its 98th-percentile COT long overhang."
+          "note": "Haven bid back in Asia — USD/JPY to ~157.63 in Asia as the Nikkei fell 3.6% on midterm results, then back to ~158.43 in the Europe morning as equities steadied; yen firmed against every major but kept its 98th-percentile COT long overhang."
         },
         "tot": {
           "score": -1,
@@ -158,7 +158,7 @@
       "name": "Swiss franc",
       "bank": "snb",
       "chapter": null,
-      "summary": "USD/CHF ~0.8145 in Asia (-0.6% from the 0.8191 NY close) as the franc caught the haven bid; Nov 3 CPI beat (+0.2% m/m, 1.5% y/y) had already firmed it in London.",
+      "summary": "USD/CHF ~0.8169 in the Europe morning (-0.3% from the 0.8191 NY close), off the ~0.8145 Asia low as the haven bid eased; Nov 3 CPI beat (+0.2% m/m, 1.5% y/y) had already firmed it in London.",
       "drivers": {
         "policy": {
           "score": 0,
@@ -195,7 +195,7 @@
       "name": "Australian dollar",
       "bank": "rba",
       "chapter": null,
-      "summary": "AUD/USD ~0.6965 in Asia, a second session below $0.70 after the split RBA hike — the day's softest major vs the firmer dollar Nov 3, flat overnight despite the softer USD; next RBA decision Dec 8.",
+      "summary": "AUD/USD back toward 0.7000 in the Europe morning (+~0.35% from the 0.6966 NY close) as equities rebounded, after a second straight close below $0.70 on the split RBA hike (6-3 to 4.85%); next RBA Dec 8.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -232,7 +232,7 @@
       "name": "Canadian dollar",
       "bank": "boc",
       "chapter": null,
-      "summary": "USD/CAD ~1.3967 in Asia (-0.2% from the 1.3993 NY close); Macklem's hawkish-but-cautious line (Dec hike ~56%) was overshadowed by oil sliding; Canada jobs Fri 7:30am CT.",
+      "summary": "USD/CAD ~1.397 in the Europe morning (-0.3% from the 1.4010 NY close) as oil rebounded (WTI ~$96.72) and the dollar steadied; Macklem's hawkish-but-cautious line (Dec hike ~56%); Canada jobs Fri 7:30am CT.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -269,7 +269,7 @@
       "name": "New Zealand dollar",
       "bank": "rbnz",
       "chapter": null,
-      "summary": "NZD/USD ~0.5580 in Asia, weakest of the majors overnight after the Q3 jobs miss (employment -0.1% vs +0.4% fcst, jobless rate 5.7% vs 5.5%); RBNZ Dec 9 hike case weakened, NZ elections Fri.",
+      "summary": "NZD/USD slightly above 0.5600 in the Europe morning (+~0.4% from the 0.5586 NY close), recovering from the 0.5581 low after the Q3 jobs miss (employment -0.1% vs +0.4% fcst, jobless rate 5.7% vs 5.5%); RBNZ Dec 9 hike case weakened.",
       "drivers": {
         "policy": {
           "score": 0,
