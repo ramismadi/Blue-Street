@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T15:00:00-06:00",
+  "updated": "2026-11-04T00:48:41-06:00",
   "events": [
     {
       "id": "chf-ppi-20261015",
@@ -16,58 +16,6 @@
       "if_beat": "Hot: import-price heat.",
       "if_miss": "Cool: disinflation intact.",
       "outcome": "Miss: +0.3% vs 0.6% fcst — disinflation intact; pipeline pressures stay soft, keeps December SNB cut risk on the table."
-    },
-    {
-      "id": "nzd-bnzm-20261015",
-      "ts": "2026-10-15T22:30:00Z",
-      "ccy": "NZD",
-      "impact": "low",
-      "category": "sentiment",
-      "title": "NZ BusinessNZ manufacturing PMI (Sep)",
-      "forecast": null,
-      "previous": "53.3",
-      "better": "higher",
-      "why": "New Zealand factory pulse a week and a half before the RBNZ's two-way Oct 28 decision.",
-      "if_beat": "Firm: NZ growth holding — supports the hike side of the two-way bet.",
-      "if_miss": "Soft: growth drag — the hold side gains.",
-      "chapter": null,
-      "bank": null,
-      "actual": "56.5 (vs 53.3 prior)",
-      "outcome": "Beat: 56.5 vs 53.3 prior (August revised up from 53.1 originally) — 15th straight month of expansion, employment back in expansion at 51.8. Solid factory read into the Oct 28 two-way RBNZ decision, where July and September hikes have economists expecting more tightening.",
-      "sources": [
-        {
-          "label": "BusinessNZ (Oct 15): BNZ–BusinessNZ PMI survey listing (official)",
-          "url": "https://businessnz.org.nz/resources_category/surveys-statistics"
-        },
-        {
-          "label": "Morningstar / Dow Jones (Oct 15): New Zealand's manufacturing sector continues solid expansion",
-          "url": "https://www.morningstar.com/news/dow-jones/202610159264/new-zealands-manufacturing-sector-continues-solid-expansion"
-        }
-      ]
-    },
-    {
-      "id": "nzd-fpi-20261015",
-      "ts": "2026-10-15T22:45:00Z",
-      "ccy": "NZD",
-      "impact": "low",
-      "category": "inflation",
-      "title": "NZ food price index m/m (Sep)",
-      "forecast": null,
-      "previous": "0.3%",
-      "better": "higher",
-      "why": "Food prices feed the RBNZ's inflation read into Oct 28.",
-      "if_beat": "Hot: food inflation persists — hawkish texture for NZD.",
-      "if_miss": "Cool: price pressure easing.",
-      "chapter": null,
-      "bank": null,
-      "actual": "0.0% m/m (vs +0.3% prior); 2.4% y/y",
-      "outcome": "Cool: food prices flat m/m after +0.3% — softens the near-term inflation pulse into the RBNZ's two-way Oct 28; card spending fell a second month (-0.4%), so the consumer leg is soft too.",
-      "sources": [
-        {
-          "label": "investinglive (Oct 16): NZ food prices hold flat in September",
-          "url": "https://investinglive.com/news/new-zealand-card-spending-falls-for-second-month-as-food-prices-hold-flat-in-september/"
-        }
-      ]
     },
     {
       "id": "nzd-trade-20261018",
@@ -155,259 +103,6 @@
       ]
     },
     {
-      "id": "eur-german-ppi-20261020",
-      "ts": "2026-10-20T06:00:00Z",
-      "ccy": "EUR",
-      "impact": "low",
-      "category": "inflation",
-      "title": "German PPI m/m (Sep)",
-      "actual": "+1.9% m/m (+6.7% y/y vs 6.2% Reuters poll)",
-      "forecast": "1.5%",
-      "previous": "1.1%",
-      "better": "higher",
-      "why": "Pipeline read after September's wholesale print ran hot (+8.7% y/y) — energy is feeding through German factory gates, and the ECB's December hike case is built on exactly this.",
-      "if_beat": "Hotter: pipeline pressure builds — ECB December firms.",
-      "if_miss": "Cooler: pipeline easing — dovish wriggle room.",
-      "chapter": null,
-      "bank": null,
-      "outcome": "Beat: +6.7% y/y is the largest year-on-year rise since March 2023 (Reuters poll: 6.2%); +1.9% m/m after August's +1.1%. Energy still feeding through factory gates — keeps the ECB December-hike case intact.",
-      "sources": [
-        {
-          "label": "Reuters: German producer prices rise 6.7% y/y in September (Oct 20, 2026)",
-          "url": "https://www.reuters.com/business/german-producer-prices-rise-67-yy-september-2026-10-20/"
-        },
-        {
-          "label": "Destatis: Producer prices in September 2026: +6.7% on September 2025 (Oct 20, 2026)",
-          "url": "https://www.destatis.de/EN/Press/2026/10/PE26_368_61281.html"
-        }
-      ]
-    },
-    {
-      "id": "gb-claimant-20261020",
-      "ts": "2026-10-20T06:00:00Z",
-      "ccy": "GBP",
-      "impact": "low",
-      "category": "jobs",
-      "title": "UK claimant count change (Sep)",
-      "actual": "+30.3K (vs +19.4K exp; Aug revised to +7K from +27.8K)",
-      "forecast": "+19.4K",
-      "previous": "+7K (revised from +27.8K)",
-      "better": "lower",
-      "why": "Jobless-claims read bundled with Tuesday's labor dump — the quantity side of the wage story into Nov 5.",
-      "if_beat": "Fewer claimants: labor holding — hawkish tilt.",
-      "if_miss": "More: loosening — dovish tilt.",
-      "chapter": null,
-      "bank": null,
-      "outcome": "Miss: September claimant count rose 30.3K vs 19.4K expected (ONS bulletin: total count 1.701m, rising since July 2026) -- some loosening on the quantity side, a mildly dovish offset to the headline jobs beat (unemp 4.7%, payrolls +13K). August's rise was revised down to +7K from +27.8K.",
-      "sources": [
-        {
-          "label": "ONS: Employment in the UK, October 2026 bulletin (official, Oct 20, 2026)",
-          "url": "https://cy.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/employmentintheuk/latest"
-        },
-        {
-          "label": "FXStreet: UK Unemployment Rate falls to 4.7%, claimant count +30.3K (Oct 20, 2026)",
-          "url": "https://www.fxstreet.com/news/47-united-kingdom-unemployment-rate-falls-in-its-three-months-to-august-202610200601"
-        }
-      ]
-    },
-    {
-      "id": "uk-labor-20261020",
-      "ts": "2026-10-20T06:00:00Z",
-      "ccy": "GBP",
-      "impact": "medium",
-      "category": "jobs",
-      "title": "UK labor: unemployment + average earnings (Aug)",
-      "actual": "Unemp 4.7% (3m to Aug); regular earnings 3.7% 3m/y (prev 3.6%); Sep payrolls +13K (vs -15K exp)",
-      "forecast": "Unemp 4.9% (prev 4.9%); earnings 3.8% 3m/y (prev 3.9%); claimant +19.4K (27.8K)",
-      "previous": "Unemp 4.9%; earnings 3.9%; claimant +27.8K",
-      "better": "higher",
-      "why": "Tuesday's wage read ahead of Wednesday's CPI — earnings cooling to 3.8% is what Bailey needs to see for his 'second-round pressures subdued' line to hold into the Nov 5 decision.",
-      "if_beat": "Hot wages: stickier pay growth — November hike case firms, GBP bid.",
-      "if_miss": "Cool wages: Bailey's dovish 2027 lean gains — GBP offered.",
-      "chapter": 3,
-      "bank": "boe",
-      "outcome": "Beat: unemployment fell to 4.7% from 4.9% (consensus flat / 5.0%) — lowest since July 2025; payrolls surprised (+13K vs -15K expected) and August revised up (+1K vs -26K estimate). Builds the case for a first BoE rate hike in three years at the November meeting; Wednesday's CPI (exp 3.4% y/y) is the deciding print.",
-      "sources": [
-        {
-          "label": "The Times: Jobless rate falls as labour market shows surprise strength (Oct 20, 2026)",
-          "url": "https://www.thetimes.com/business/economics/article/jobless-rate-falls-as-labour-market-shows-surprise-strength-5htljxzdb"
-        },
-        {
-          "label": "PA (via Vibe 107.6): Surprise dip in jobless rate supports interest rate hike (Oct 20, 2026)",
-          "url": "https://www.vibe1076.co.uk/news/business-news/surprise-dip-in-jobless-rate-supports-interest-rate-hike/"
-        }
-      ]
-    },
-    {
-      "id": "eur-current-account-20261020",
-      "ts": "2026-10-20T08:00:00Z",
-      "ccy": "EUR",
-      "impact": "low",
-      "category": "trade",
-      "title": "Eurozone current account (Aug)",
-      "actual": "EUR 8.7B (vs 29.2B exp; July 27.2B; lowest since Jan 2023 per Reuters)",
-      "forecast": "EUR 29.2B",
-      "previous": "EUR 27.6B",
-      "better": "higher",
-      "why": "The euro's structural bid in one number — the surplus is the flow that has to be recycled, and it widens when energy costs fall.",
-      "if_beat": "Wider: structural EUR support.",
-      "if_miss": "Narrower: surplus eroding.",
-      "chapter": null,
-      "bank": null,
-      "outcome": "Miss: August current account surplus fell to EUR 8.7B vs 29.2B expected (ECB, via Reuters), down from EUR 27.2B in July -- lowest since January 2023. Goods surplus fell to EUR 10.5B (lowest since April 2023); 12m-to-Aug surplus 1.5% of GDP vs 1.8% to July. Surplus eroding, per if_miss. Note: Trading Economics carries EUR 7.7B for August (conflicting, unconfirmed -- Reuters/breakingthenews agree on ~8.7-9B).",
-      "sources": [
-        {
-          "label": "Reuters (via TradingView): Euro zone current account surplus falls to lowest since 2023 (Oct 20, 2026)",
-          "url": "https://www.tradingview.com/news/reuters.com,2026:newsml_S8N3H50AS:0-euro-zone-current-account-surplus-falls-to-lowest-since-2023/"
-        },
-        {
-          "label": "breakingthenews (via BizToc): Eurozone current account surplus at EUR 9 billion in August (Oct 20, 2026)",
-          "url": "https://biztoc.com/x/42eed411d2de0446"
-        }
-      ]
-    },
-    {
-      "id": "eur-zew-20261020",
-      "ts": "2026-10-20T09:00:00Z",
-      "ccy": "EUR",
-      "impact": "low",
-      "category": "sentiment",
-      "title": "German + eurozone ZEW sentiment (Oct)",
-      "actual": "DE 28.1; EZ 18.5",
-      "forecast": "DE 30.2 (prev 34.7); EZ 23.6 (25.8)",
-      "previous": "DE 34.7; EZ 25.8",
-      "better": "higher",
-      "why": "Investor sentiment with energy costs surging back — the expectations component is the forward read on the eurozone's winter.",
-      "if_beat": "Firmer: investors looking through the oil shock.",
-      "if_miss": "Softer: expectations cracking under energy costs.",
-      "chapter": null,
-      "bank": null,
-      "outcome": "Miss: DE expectations 28.1 vs ~30 fcst (prev 34.7, ending a 5-month run of gains); EZ 18.5 vs 23.6 fcst (prev 25.8). Offset: DE current-situation improved more than expected to -35.9 from -47.1. Wambach: recovery \"not self-sustaining\" under high energy prices.",
-      "sources": [
-        {
-          "label": "Reuters: German investor morale falls more than expected to 28.1 in October (Oct 20, 2026)",
-          "url": "https://www.reuters.com/business/retail-consumer/german-investor-morale-falls-more-than-expected-october-zew-finds-2026-10-20/"
-        },
-        {
-          "label": "WSJ: German Investor Confidence Declines for First Time in Six Months (Oct 20, 2026)",
-          "url": "https://www.wsj.com/world/europe/german-investor-confidence-declines-as-energy-prices-weigh-99fa234d"
-        }
-      ]
-    },
-    {
-      "id": "gb-gilt-auction-20261020",
-      "ts": "2026-10-20T09:33:00Z",
-      "ccy": "GBP",
-      "impact": "low",
-      "category": "fiscal",
-      "title": "UK 10-y gilt auction",
-      "actual": "£4.3B sold at 5.418% avg accepted yield (prev 5.38%), bid-to-cover 3.61x (prev 3.3x)",
-      "forecast": null,
-      "previous": "5.38% | 3.3x cover",
-      "better": null,
-      "why": "Auction demand read with UK yields elevated — cover and tail are the market's verdict on fiscal credibility ahead of the Oct 28 budget.",
-      "if_beat": null,
-      "if_miss": null,
-      "chapter": null,
-      "bank": null,
-      "outcome": "Demand solid: cover improved to 3.61x from 3.3x despite clearing yield ~4bp higher — reassuring ahead of the Oct 28 budget.",
-      "sources": [
-        {
-          "label": "Crypto Briefing: UK 10-year gilt yield rises amid higher oil prices, US Treasury yields (Oct 20, 2026)",
-          "url": "https://cryptobriefing.com/uk-10-year-gilt-yield-rises-amid-higher-oil-prices-us-treasury-yields/"
-        },
-        {
-          "label": "breakingthenews (via BizToc): UK sells £4.3B in 10-year notes at 5.418% yield (Oct 20, 2026)",
-          "url": "https://biztoc.com/x/40b22273598ff40b"
-        }
-      ]
-    },
-    {
-      "id": "usd-adp-weekly-20261020",
-      "ts": "2026-10-20T12:15:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "jobs",
-      "title": "ADP weekly employment change",
-      "actual": "18.5K (4-week moving avg, week ending Oct 3; prior week 26.0K)",
-      "forecast": null,
-      "previous": "24.8K",
-      "better": "higher",
-      "why": "Weekly payroll proxy — noisy, but the direction feeds the 'labor floor intact' narrative that underpins December-hike pricing.",
-      "if_beat": "Firmer: hiring holding.",
-      "if_miss": "Softer: hiring cooling.",
-      "chapter": null,
-      "bank": null,
-      "outcome": "Hiring cooling: 4-week avg fell to 18.5K from 26.0K — lowest print since late August. Directional soft note against the December-hike 'labor floor intact' narrative; low-impact weekly proxy, no FX move to cross-check.",
-      "sources": [
-        {
-          "label": "ADP (via PRNewswire/TradingView): NER Pulse for week ending Oct 3, 2026 (Oct 20, 2026)",
-          "url": "https://www.tradingview.com/news/prnewswire:e5441ac08db88:0-adp-national-employment-report-preliminary-estimate-for-october-3-2026/"
-        },
-        {
-          "label": "TradingKey: US ADP Employment Change 4-week average drops to 18.50K (Oct 20, 2026)",
-          "url": "https://www.tradingkey.com/news/economic-indicator/262225842-fxstr"
-        }
-      ]
-    },
-    {
-      "id": "us-housing-20261020",
-      "ts": "2026-10-20T12:30:00Z",
-      "ccy": "USD",
-      "impact": "Medium",
-      "category": "growth",
-      "title": "US housing starts + building permits (Sep)",
-      "forecast": "Starts 1.30M; permits 1.39M",
-      "previous": "Starts 1.28M; permits 1.39M",
-      "better": "higher",
-      "why": "Low-impact housing check with the 10-year at 5.10% — starts are the supply read, permits the forward one. The Fed watches shelter inflation, not starts.",
-      "if_beat": "Firmer: construction holding up under 5%+ mortgages.",
-      "if_miss": "Softer: rate-bite on housing deepens.",
-      "chapter": 1,
-      "bank": "fed",
-      "focus": false,
-      "actual": "Starts 1.221M (-5.2% m/m); permits 1.400M (-0.2% m/m)",
-      "outcome": "Miss on starts: 1.221M SAAR vs 1.30M consensus (prev revised 1.288M), down 7.4% y/y; single-family starts -4.6% to 859K, single-family permits -4.0% to 845K. Permits essentially in line (1.400M vs 1.39M fcst). 30-yr mortgage 7.40%, near a 3-year high; NAHB builder sentiment at its lowest since June 2012 — rate-bite on housing deepening.",
-      "sources": [
-        {
-          "label": "Reuters: US single-family housing starts, building permits tumble in September (Oct 20, 2026)",
-          "url": "https://www.reuters.com/world/us/us-single-family-housing-starts-building-permits-tumble-september-2026-10-20/"
-        },
-        {
-          "label": "WSJ: U.S. Housing Starts Dropped Again in September (Oct 20, 2026)",
-          "url": "https://www.wsj.com/economy/housing/u-s-housing-starts-dropped-again-in-september-808c2f3d"
-        }
-      ]
-    },
-    {
-      "id": "usd-pending-home-20261020",
-      "ts": "2026-10-20T14:00:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "housing",
-      "title": "US pending home sales m/m (Sep)",
-      "actual": "-7.3%",
-      "forecast": "-0.4%",
-      "previous": "+0.3%",
-      "better": "higher",
-      "why": "Contract signings — the forward read on housing demand at 5.10% 10-year. Texture for the growth story, not a Fed input.",
-      "if_beat": "Firmer: demand stabilizing.",
-      "if_miss": "Softer: rate-bite deepening.",
-      "chapter": null,
-      "bank": null,
-      "outcome": "Miss: -7.3% m/m vs -0.5% fcst (prev +0.3%); pending-sales index fell to a record-low 66.0 (series began 2001). Demand-side confirmation of the rate-bite behind the starts miss.",
-      "sources": [
-        {
-          "label": "NAR: Pending Home Sales Decreased 7.3% in September (official, Oct 20, 2026)",
-          "url": "https://www.nar.realtor/newsroom/pending-home-sales-decreased-7-3-percent-in-september"
-        },
-        {
-          "label": "Reuters: US pending home sales tumble to record low in September (Oct 20, 2026)",
-          "url": "https://www.reuters.com/business/us-pending-home-sales-tumble-record-low-september-2026-10-20/"
-        }
-      ]
-    },
-    {
       "id": "nzd-gdt-20261020",
       "ts": "2026-10-20T14:50:00Z",
       "ccy": "NZD",
@@ -428,109 +123,6 @@
         {
           "label": "IndexBox/USDA AMS: Global Dairy Trade Event 414 Report (USDA MyMarketNews, Oct 20, 2026)",
           "url": "https://www.indexbox.io/blog/global-dairy-trade-event-414-mixed-dairy-commodity-pricing-for-november-2026-april-2027/"
-        }
-      ]
-    },
-    {
-      "id": "gb-greene-20261020",
-      "ts": "2026-10-20T17:00:00Z",
-      "ccy": "GBP",
-      "impact": "low",
-      "category": "cb",
-      "title": "MPC member Greene speaks",
-      "actual": "Hawkish: wage disinflation 'has stalled at levels above those consistent with inflation at 2%'; challenged BoE's ~3.25% target-consistent wage-growth estimate — argued forward-looking indicators point higher, signaling preference to keep policy tight into the November meeting",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Greene is the MPC's external hawk-leaning voice — any pushback on the market's 2027 cut path is the only GBP-moving line to listen for.",
-      "if_beat": null,
-      "if_miss": null,
-      "chapter": null,
-      "bank": null,
-      "outcome": "Hawkish voice consistent with the Nov 5 hike repricing — no new verified GBP move off the speech itself (GBP was already at 1.339 / +0.66% on the jobs beat); reinforces the hike case into Wednesday's UK CPI",
-      "sources": [
-        {
-          "label": "MaceNews (via TradingView): MORE BOE'S GREENE: WAGE DISINFLATION HAS STALLED AT LEVELS ABOVE THOSE CONSISTENT WITH INFLATION AT 2% (Oct 20, 2026)",
-          "url": "https://www.tradingview.com/news/macenews:789f8560e094b:0-more-boe-s-greene-wage-disinflation-has-stalled-at-levels-above-those-consistent-with-inflation-at-2/"
-        },
-        {
-          "label": "Crypto Briefing: BOE's Greene challenges wage growth estimates, hints at tighter policy (Oct 20, 2026)",
-          "url": "https://cryptobriefing.com/boes-greene-challenges-wage-growth-estimates-hints-at-tighter-policy/"
-        }
-      ]
-    },
-    {
-      "id": "usd-api-20261020",
-      "ts": "2026-10-20T20:30:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "energy",
-      "title": "API weekly crude stocks",
-      "actual": null,
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Private-inventory read ahead of Wednesday's EIA — a build/draw only matters for crude's $100 handle, not FX directly.",
-      "if_beat": null,
-      "if_miss": null,
-      "chapter": null,
-      "bank": null,
-      "outcome": null,
-      "sources": []
-    },
-    {
-      "id": "aud-hauser-20261020",
-      "ts": "2026-10-20T22:30:00Z",
-      "ccy": "AUD",
-      "impact": "low",
-      "category": "cb",
-      "title": "RBA Deputy Governor Hauser speaks",
-      "actual": "Hawkish: inflation outlook 'materially worse' in part on high oil; policy is 'working' but unsure whether rates must rise further — a fifth 2026 hike stays on the table into the Nov 3 decision",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Hauser into the Nov 2-3 decision — markets listen for whether the Sep 29 hike was the start of a sequence or insurance, with jobs at 4.7% arguing the latter.",
-      "if_beat": null,
-      "if_miss": null,
-      "chapter": null,
-      "bank": null,
-      "outcome": "Reinforces the Nov 3 hike repricing: markets now ~40% chance of a rise to 4.85% next month (from 30% at week's start), fully priced by March. Q3 CPI next week is the hinge (headline could print 4.0%, core ~3.5%); compounds Kent's 'neutral rate rising' read from Oct 19.",
-      "sources": [
-        {
-          "label": "Reuters (via 94.7 The Beast): Australian central banker says policy working, but inflation outlook worse (Oct 20, 2026)",
-          "url": "https://947thebeast.com/2026/10/20/australia-central-banker-says-policy-working-inflation-outlook-worse/"
-        }
-      ]
-    },
-    {
-      "id": "jpy-trade-20261020",
-      "ts": "2026-10-20T23:50:00Z",
-      "ccy": "JPY",
-      "impact": "low",
-      "category": "trade",
-      "title": "Japan trade balance (Sep)",
-      "actual": "-¥0.54T (exports +16.7% y/y, imports +18.9%)",
-      "forecast": "-¥0.21T",
-      "previous": "-¥0.84T",
-      "better": "higher",
-      "why": "The deficit narrowing as energy import costs bite — but at $100+ oil the import bill is the yen's terms-of-trade tax.",
-      "if_beat": "Narrower: export pulse offsetting the oil bill.",
-      "if_miss": "Wider: crude tax dominating.",
-      "chapter": null,
-      "bank": null,
-      "outcome": "Missed — exports +16.7% y/y vs ~+20% expected (13th straight monthly gain); deficit -¥537B vs -¥181B forecast but narrower than August's -¥1.1T. Import growth slowed from 28% as tankers rerouted away from the Houthi-blockaded Bab el-Mandeb, delaying crude arrivals — a real terms-of-trade drag tied to the Gulf shipping squeeze.",
-      "sources": [
-        {
-          "label": "Reuters: Japan September exports rise 16.7% y/y, slower than forecast (Oct 20, 2026)",
-          "url": "https://www.reuters.com/world/asia-pacific/japan-september-exports-rise-167-yy-slower-than-forecast-2026-10-20/"
-        },
-        {
-          "label": "Reuters: Japan's September exports rise 16.7%, helped by chip demand (Oct 21, 2026)",
-          "url": "https://www.reuters.com/world/asia-pacific/japans-september-exports-rise-167-helped-by-chip-demand-2026-10-21/"
-        },
-        {
-          "label": "Bloomberg: Japan's Export Growth Stays Solid, Supported by Chips, Cars (Oct 20, 2026)",
-          "url": "https://news.bloomberglaw.com/international-trade/japans-export-growth-stays-solid-supported-by-chips-cars"
         }
       ]
     },
@@ -3181,7 +2773,7 @@
       "why": "Midterms decide the post-election window for the Iran-strike question and the fiscal path — the timing arc the whole Gulf tape trades on.",
       "if_beat": null,
       "if_miss": null,
-      "outcome": null,
+      "outcome": "Democrats take both chambers: AP called the Senate (flips in North Carolina, South Carolina, Ohio, Texas, Kansas and Iowa; Turek's Iowa win sealed it) and NBC/CBS project a House majority, though the House is still uncalled by AP. Dollar slid in Asia on the result (DXY ~101.4, EUR/USD ~$1.1249, USD/JPY ~157.63, per Reuters) — divided government into 2027 caps the fiscal-expansion path.",
       "chapter": null,
       "bank": null,
       "sources": []
@@ -3327,7 +2919,7 @@
       "category": "growth",
       "title": "US ISM services PMI (Oct)",
       "actual": null,
-      "forecast": "54.9",
+      "forecast": "54.8",
       "previous": "54.9",
       "better": "higher",
       "why": "Services pulse — the larger half of the US economy, after Monday manufacturing.",
@@ -3346,7 +2938,7 @@
       "category": "energy",
       "title": "EIA crude inventories",
       "actual": null,
-      "forecast": null,
+      "forecast": "-1.7M",
       "previous": "-1.9M",
       "better": null,
       "why": "Weekly crude stocks — last week drew 1.9M bbl to 410.6M; oil tape trades the Gulf arc.",
@@ -3362,7 +2954,7 @@
       "forecast": "4.00%",
       "previous": "3.75%",
       "better": "higher",
-      "why": "Decision eight days after Healey Budget — Sep CPI 3.5% beat sealed pricing at ~94.4% for +25bp to 4.00% (ActionForex); the live debate is December back-to-back (~48-61%).",
+      "why": "Decision eight days after Healey's Budget — Sep CPI 3.5% sealed pricing at ~96.7% for +25bp to 4.00% (Morningstar derivatives Nov 2; ~96% MoneyToTheMasses; ING expects a 7-2 vote); the live debate is the vote split and a February follow-up, with markets pricing three to four more hikes through 2027.",
       "if_beat": "Hike: GBP bid — inflation mandate wins.",
       "if_miss": "Hold: GBP pressured — fiscal fears + dovish BoE.",
       "chapter": null,
@@ -3374,6 +2966,25 @@
       "impact": "high",
       "category": "central-bank",
       "title": "BoE decision"
+    },
+    {
+      "id": "gb-bailey-20261105",
+      "ts": "2026-11-05T12:30:00Z",
+      "ccy": "GBP",
+      "impact": "high",
+      "category": "speech",
+      "title": "BoE Gov Bailey speaks",
+      "actual": null,
+      "forecast": null,
+      "previous": null,
+      "better": null,
+      "why": "Bailey presser after the expected first hike since Aug 2023 — the vote split (ING expects 7-2) and any February follow-up signal are the read.",
+      "if_beat": null,
+      "if_miss": null,
+      "outcome": null,
+      "chapter": null,
+      "bank": "boe",
+      "sources": []
     },
     {
       "id": "chf-schlegel-20261105",
@@ -3478,7 +3089,7 @@
       "category": "jobs",
       "title": "Canada employment change (Oct)",
       "actual": null,
-      "forecast": "14.5K",
+      "forecast": "14.6K",
       "previous": "-68.3K",
       "better": "higher",
       "why": "October jobs — September shed 68.3K; the rebound read into the BoC December debate.",
@@ -3535,7 +3146,7 @@
       "category": "jobs",
       "title": "US nonfarm payrolls (Oct)",
       "actual": null,
-      "forecast": "63K",
+      "forecast": "65K",
       "previous": "29K",
       "better": "higher",
       "why": "October payrolls — the week headline: September printed just 29K, claims running 194K, and the Fed December-hike debate hangs on it.",
@@ -3592,7 +3203,7 @@
       "category": "sentiment",
       "title": "US UoM consumer sentiment prelim (Nov)",
       "actual": null,
-      "forecast": "47.8",
+      "forecast": "48.1",
       "previous": "46.3",
       "better": "higher",
       "why": "Prelim consumer mood — depressed levels all year; the direction, not the level, is the read.",

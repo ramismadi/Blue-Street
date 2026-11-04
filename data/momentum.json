@@ -1,7 +1,7 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-11-03T15:00:00-06:00",
+  "updated": "2026-11-04T00:48:41-06:00",
   "currencies": {
     "USD": {
       "recent": [
@@ -13,6 +13,15 @@
           "actual": "7.523M (vs 7.11M fcst, prev 7.08M, revised to 7.19M); openings rate 4.5% (from 4.3%), hires 5.402M, layoffs 1.641M",
           "forecast": "7.11M",
           "note": "Beat: September openings rose 333,000 to 7.523M (vs 7.11M fcst), August revised up to 7.19M — labor demand firmer than expected; the dollar firmed after the release (DXY to 101.86, Reuters NY) and Dec Fed hike pricing rose to ~79% (CME FedWatch)."
+        },
+        {
+          "id": "us-factory-orders-20261103",
+          "date": "2026-11-03",
+          "title": "US factory orders m/m (Sep)",
+          "result": "beat",
+          "actual": "+1.8% (vs +1.2% fcst, prev +0.3%); durable goods +1.9%",
+          "forecast": "+1.2%",
+          "note": "Beat: September factory orders +1.8% m/m (vs +1.2% fcst, prev +0.3%), with durable goods +1.9% — a second firm US print at 9:00am CT alongside the JOLTS beat, lifting Dec Fed hike pricing to ~79%."
         },
         {
           "id": "us-ism-mfg-20261102",
@@ -49,15 +58,6 @@
           "actual": "3.4% SAAR (vs 3.2% consensus; prev 2.2%)",
           "forecast": "3.2%",
           "note": "Beat: Q3 advance 3.4% SAAR vs 3.2% consensus (prev 2.2%); consumer spending +3.8%, final sales +1.7% — the AI-capex quarter."
-        },
-        {
-          "id": "us-pce-20261029",
-          "date": "2026-10-29",
-          "title": "US PCE price index (Sep)",
-          "result": "inline",
-          "actual": "Headline +0.5% m/m, +3.6% y/y; core +0.3% m/m, +3.1% y/y",
-          "forecast": "Headline +0.5% m/m; core +0.3% m/m",
-          "note": "In line: September PCE matched forecasts; core y/y ticked up to 3.1% from 3.0% — sticky, not re-accelerating."
         }
       ]
     },
@@ -385,6 +385,24 @@
     "NZD": {
       "recent": [
         {
+          "id": "nzd-employment-20261103",
+          "date": "2026-11-03",
+          "title": "NZ employment change q/q (Q3)",
+          "result": "miss",
+          "actual": "-0.1% (vs +0.4% fcst, prev +0.5%)",
+          "forecast": "0.4%",
+          "note": "Miss: employment fell 0.1% in Q3 vs +0.4% expected (prev +0.5%) — the jobs block undercut the RBNZ's December hike case; NZD/USD fell to 0.5586, its lowest close in eleven sessions."
+        },
+        {
+          "id": "nzd-unemp-20261103",
+          "date": "2026-11-03",
+          "title": "NZ unemployment rate (Q3)",
+          "result": "miss",
+          "actual": "5.7% (vs 5.5% fcst, prev 5.6%)",
+          "forecast": "5.5%",
+          "note": "Miss (higher): jobless rate rose to 5.7% vs 5.5% expected (prev 5.6%) — slack building into the RBNZ's Dec 9 decision."
+        },
+        {
           "id": "nzd-gdt-20261103",
           "date": "2026-11-03",
           "title": "Global Dairy Trade Event 415",
@@ -419,24 +437,6 @@
           "actual": "-NZ$1,970M",
           "forecast": "-NZ$775M",
           "note": "Miss: NZ$1.97B deficit vs NZ$0.78B fcst — fuel import prices +96% y/y did the damage, not volumes."
-        },
-        {
-          "id": "nzd-fpi-20261015",
-          "date": "2026-10-15",
-          "title": "NZ food price index m/m (Sep)",
-          "result": "miss",
-          "actual": "0.0%",
-          "forecast": "+0.3%",
-          "note": "Food prices flat vs +0.3% prior — softens the near-term inflation pulse into Oct 28."
-        },
-        {
-          "id": "nzd-bnzm-20261015",
-          "date": "2026-10-15",
-          "title": "NZ BusinessNZ manufacturing PMI (Sep)",
-          "result": "beat",
-          "actual": "56.5",
-          "forecast": "53.1",
-          "note": "56.5 vs 53.1 prior — strongest since 2021; 15th straight expansion; employment back growing."
         }
       ]
     }
