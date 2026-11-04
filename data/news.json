@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T17:49:56Z",
+  "updated": "2026-11-04T19:47:44Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -28,9 +28,9 @@
       "text": "Swiss inflation jumped to 1.5% in October on dearer fuel, above forecasts, which makes a December rate cut by the Swiss National Bank harder to justify. The franc also gains when investors look for shelter, and while Iran peace talks sap that demand, US strikes on an Iranian island and a deadly attack on a ship off Oman show the fighting has not stopped."
     },
     "CAD": {
-      "lean": "bearish",
-      "ts": "2026-11-04T17:49:56Z",
-      "text": "Oil, Canada's main export, fell about 8% on Wednesday as markets bet the Iran war winds down, which weighs on the Canadian dollar. Bank of Canada Governor Tiff Macklem has said more rate rises may be needed with inflation near 3%, but cheaper oil weakens both the trade support and some of the inflation case."
+      "lean": "mixed",
+      "ts": "2026-11-04T19:47:44Z",
+      "text": "The Canadian dollar rose to a seven-week high on Wednesday as Canada's trade surplus beat forecasts and the US dollar slid after the midterm elections, even though oil, Canada's main export, fell about 8%. Bank of Canada Governor Tiff Macklem has said more rate rises may be needed, but if oil keeps falling it will weigh on both the currency and that case."
     },
     "AUD": {
       "lean": "bearish",
@@ -127,39 +127,6 @@
       "watch": "Whether the White House changes its Iran stance, and the next round of talks through Qatar and Pakistan."
     },
     {
-      "id": "koreatimes-ap-us-stocks-best-day-20261104",
-      "ts": "2026-11-04T15:25:00Z",
-      "source": "The Korea Times (AP)",
-      "url": "https://www.koreatimes.co.kr/world/20261105/us-stocks-rally-toward-their-best-day-in-3-months",
-      "image": "https://newsimg.koreatimes.co.kr/2026/11/05/3357ea61-9a40-4433-a4ae-f7184b1b1886.jpg",
-      "headline": "US stocks head for their best day in three months after the midterms",
-      "story": "us-midterms",
-      "story_title": "US midterms: a week of elections, central banks and jobs data",
-      "pillar": "risk",
-      "summary": "US shares jumped about 2%, with the Dow up more than 1,500 points by midday, and US 10-year borrowing costs fell to 4.90% as investors welcomed the end of one-party control in Washington.",
-      "beats": {
-        "was": "Democrats won both houses of Congress on Tuesday, ending Republican control of Washington. Asian stocks fell overnight on worries about tighter rules for AI firms.",
-        "happened": "By midday in New York the S&P 500 was up 1.8% and the Dow 2.9%. The 10-year Treasury yield fell from 4.95% to 4.90%, as investors expect a split government to add less debt. Oil companies and defense firms fell as oil dropped below $95.",
-        "means": "Wall Street read the result as calmer, not riskier: less new borrowing, and a better chance the Iran war ends. That reverses much of the overnight fear in Asia.",
-        "fx": "Lower US yields take away some of the dollar's appeal, and a strong mood in markets usually favors riskier currencies like the Australian dollar over safe havens."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower US yields and less need for safety."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A strong mood in global stocks tends to lift the Australian dollar."
-        }
-      ],
-      "watch": "The US jobs report on Friday, November 6, and whether stocks hold their gains into the close."
-    },
-    {
       "id": "helious-eia-crude-draw-086m-20261104",
       "ts": "2026-11-04T15:30:00Z",
       "source": "Helious",
@@ -193,6 +160,39 @@
       "watch": "Any news on US-Iran talks or new attacks on shipping near the Strait of Hormuz."
     },
     {
+      "id": "koreatimes-ap-us-stocks-best-day-20261104",
+      "ts": "2026-11-04T15:25:00Z",
+      "source": "The Korea Times (AP)",
+      "url": "https://www.koreatimes.co.kr/world/20261105/us-stocks-rally-toward-their-best-day-in-3-months",
+      "image": "https://newsimg.koreatimes.co.kr/2026/11/05/3357ea61-9a40-4433-a4ae-f7184b1b1886.jpg",
+      "headline": "US stocks head for their best day in three months after the midterms",
+      "story": "us-midterms",
+      "story_title": "US midterms: a week of elections, central banks and jobs data",
+      "pillar": "risk",
+      "summary": "US shares jumped about 2%, with the Dow up more than 1,500 points by midday, and US 10-year borrowing costs fell to 4.90% as investors welcomed the end of one-party control in Washington.",
+      "beats": {
+        "was": "Democrats won both houses of Congress on Tuesday, ending Republican control of Washington. Asian stocks fell overnight on worries about tighter rules for AI firms.",
+        "happened": "By midday in New York the S&P 500 was up 1.8% and the Dow 2.9%. The 10-year Treasury yield fell from 4.95% to 4.90%, as investors expect a split government to add less debt. Oil companies and defense firms fell as oil dropped below $95.",
+        "means": "Wall Street read the result as calmer, not riskier: less new borrowing, and a better chance the Iran war ends. That reverses much of the overnight fear in Asia.",
+        "fx": "Lower US yields take away some of the dollar's appeal, and a strong mood in markets usually favors riskier currencies like the Australian dollar over safe havens."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower US yields and less need for safety."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A strong mood in global stocks tends to lift the Australian dollar."
+        }
+      ],
+      "watch": "The US jobs report on Friday, November 6, and whether stocks hold their gains into the close."
+    },
+    {
       "id": "investinglive-us-ism-services-oct-545-20261104",
       "ts": "2026-11-04T15:00:06Z",
       "source": "investingLive",
@@ -218,6 +218,33 @@
         }
       ],
       "watch": "The US jobs report on Friday, November 6, the last big test before the Fed's December decision."
+    },
+    {
+      "id": "seekingalpha-treasury-refunding-125b-20261104",
+      "ts": "2026-11-04T13:55:43Z",
+      "source": "Seeking Alpha",
+      "url": "https://seekingalpha.com/news/4664756-treasury-holds-quarterly-refunding-amounts-maturity-mix",
+      "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2291283031/image_2291283031.jpg?io=getty-c-w630",
+      "headline": "US Treasury keeps its quarterly bond sales unchanged at $125 billion",
+      "story": "us-midterms",
+      "story_title": "US midterms: a week of elections, central banks and jobs data",
+      "pillar": "rates",
+      "summary": "The US Treasury said it will sell $125 billion of longer-dated debt next week, the same amount and mix as last quarter, so there is no new supply of bonds to push US yields higher.",
+      "beats": {
+        "was": "Every three months the US Treasury, which manages the government's borrowing, says how much longer-term debt it will sell. Bigger sales can lift US interest rates, and the dollar with them. Yields had already fallen this week after Democrats won Congress, on bets a split government borrows less.",
+        "happened": "On Wednesday morning the Treasury kept its quarterly sale of notes and bonds at $125 billion and left the mix of maturities unchanged, in line with what dealers expected.",
+        "means": "No surprise, so it adds nothing new to the fall in US yields. It confirms the government is not leaning harder on long-term borrowing for now.",
+        "fx": "Neutral for the dollar. It removes one possible source of upward pressure on US yields but does not add a new push either way."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "As expected; no extra bond supply to lift yields, and no new reason for them to fall."
+        }
+      ],
+      "watch": "Demand at next week's US bond sales, and the US jobs report on Friday, November 6."
     },
     {
       "id": "marketscreener-dj-oil-falls-midterms-iran-20261104",
@@ -521,6 +548,45 @@
         }
       ],
       "watch": "China's October trade figures, due later this week."
+    },
+    {
+      "id": "investing-cad-7wk-high-trade-surplus-20261104",
+      "date": "2026-11-04",
+      "source": "Investing.com",
+      "url": "https://ca.investing.com/news/forex-news/canadian-dollar-advances-as-greenback-slides-on-us-election-fallout-4929885",
+      "image": "https://content-media.investing.com/news/LYNXNPED8A18G_L.jpg",
+      "headline": "Canadian dollar reaches a seven-week high on a bigger trade surplus and a weaker US dollar",
+      "story": "cad-trade",
+      "story_title": "Canada: trade, oil and the loonie",
+      "pillar": "growth",
+      "summary": "The Canadian dollar rose about 0.3% to near C$1.3965 per US dollar, its strongest since mid-September, after Canada's September trade surplus came in well above forecasts and the US dollar slid on the midterm results.",
+      "beats": {
+        "was": "Canada sends most of its exports to the US, so its trade balance is a quick check on how US tariffs and oil prices are hitting the economy. The US dollar has been falling since Democrats won both houses of Congress in Tuesday's midterm elections.",
+        "happened": "Statistics Canada said the goods trade surplus widened to about C$5.35 billion in September, against roughly C$4.1 billion expected, and August was revised up. Export volumes still fell 4%, and a separate survey showed Canada's services sector shrank for a fifth month in October. The loonie touched C$1.3930 during the day.",
+        "means": "The bigger surplus came partly from imports falling, not exports booming, so it is a modest sign of strength rather than a turnaround. The loonie's gain is notable because oil, Canada's main export, fell about 8% on the same day.",
+        "fx": "Supports the Canadian dollar for now, with most of the push coming from a weaker US dollar. Cheaper oil is the main force pulling the other way."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A clear trade beat and a falling US dollar lifted it to a seven-week high."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The US dollar's broad slide after the midterms did much of the work."
+        },
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The loonie rose even as oil fell, showing the link is loose today."
+        }
+      ],
+      "watch": "Canada's October jobs report on Friday, November 6, and whether oil keeps falling as Iran peace talks go on."
     },
     {
       "id": "euronext-dollar-retreats-ai-regulation-20261104",
@@ -1147,45 +1213,6 @@
       "watch": "The US-Russia-Ukraine talks in Abu Dhabi on November 10–11, and any word from Qatar on a US-Iran proposal."
     },
     {
-      "id": "yahoo-oil-falls-second-day-talks-20261103",
-      "date": "2026-11-03",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-3-dow-sp-500-nasdaq-midterms-amd-earnings-141143244.html",
-      "image": null,
-      "headline": "Oil gives back its morning bounce and falls for a second day on peace-talk hopes",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "commodities",
-      "summary": "Oil turned lower in US trading on Tuesday, with Brent near $103 a barrel and US crude near $95, as hopes for US-Iran peace talks outweighed overnight US strikes on an Iranian island.",
-      "beats": {
-        "was": "The US and Iran have been at war since late February, and Iran keeps most traffic through the Strait of Hormuz, a key route for Gulf oil, shut. Oil fell about 7% on Monday on hopes of a peace deal, then rose almost 2% early Tuesday after US strikes on Iran's Qeshm Island.",
-        "happened": "By midday in New York the early rise had gone. Brent slipped about 1% to near $103 and US crude to near $95, a second daily fall, as traders bet the talks will carry on despite the strikes.",
-        "means": "The market is treating the Qeshm strikes as a one-off rather than a return to full fighting, and is pricing a better chance of a deal. Prices are still far above where they started the year, so any setback can quickly undo the drop.",
-        "fx": "Cheaper oil helps big energy buyers like Japan and the euro zone and eases inflation worries, while it takes some support from the Canadian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Hopes for a peace deal win out over the overnight strikes, pulling prices down a second day."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Oil is Canada's main export, so a lower price trims support for the loonie."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Japan buys almost all its energy abroad, so cheaper oil eases the drain on the yen."
-        }
-      ],
-      "watch": "Whether Washington replies to Iran's latest proposal, and whether Iran answers the Qeshm strikes."
-    },
-    {
       "id": "boc-macklem-commons-finance-20261103",
       "date": "2026-11-03",
       "source": "Bank of Canada",
@@ -1322,57 +1349,6 @@
         }
       ],
       "watch": "Whether Iran answers the Qeshm strikes, and whether the draft deal from the Qatar talks survives them."
-    },
-    {
-      "id": "thestar-reuters-trump-no-strikes-after-midterms-20261102",
-      "ts": "2026-11-02T21:03:00Z",
-      "source": "The Star (Reuters)",
-      "url": "https://www.thestar.com.my/news/world/2026/11/03/trump-raises-doubts-about-renewed-attacks-on-iran",
-      "image": "https://apicms.thestar.com.my/uploads/images/2026/11/03/4194154.jpg",
-      "headline": "Trump raises doubts about renewed attacks on Iran",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Asked on Monday whether he was weighing new strikes on Iran after Tuesday's US midterm elections, President Trump said no, and Vice President JD Vance said talks with Iran have gone well.",
-      "beats": {
-        "was": "The US and Iran have been at war since late February, and Iran has kept most traffic through the Strait of Hormuz, the route for about a fifth of the world's oil, shut. Trump had hinted for days that strikes could resume once the midterm vote was over, which kept a risk of fresh fighting hanging over markets.",
-        "happened": "After a speech in Washington he billed as his closing pitch before the vote, Trump answered no when reporters asked about post-election strikes, and said he thinks Iran wants a deal and one could happen. Vance said there had been several good conversations with the Iranians and that he and Trump feel hopeful about a negotiated end. Trump repeated that Iran can never have a nuclear weapon.",
-        "means": "This is the clearest sign yet that the feared post-election strike window may not come, coming a day after Iran's leadership backed the talks. Nothing is agreed, though: Iran still wants the US blockade of its ports lifted first, and attacks on Gulf shipping have not stopped.",
-        "fx": "Less chance of new strikes takes some war premium out of oil and trims demand for the dollar and the Swiss franc as safe places to hold money, while it helps big energy buyers like Japan and the euro zone."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Ruling out post-election strikes lowers the risk of a new hit to Gulf supply."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower war risk trims demand for the dollar as a safe place."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Calmer markets reduce the pull of the franc as shelter."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Japan buys almost all its energy abroad, so a softer oil price helps it."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Canada exports a lot of oil, so a lower oil price weighs on its currency."
-        }
-      ],
-      "watch": "Whether Washington formally answers the draft deal circulating in Qatar, and whether Iran gets any move on the port blockade."
     }
   ]
 }
