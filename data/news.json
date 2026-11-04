@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-04T14:54:03Z",
+  "updated": "2026-11-04T15:47:37Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low on bets that a split government borrows less and could tighten rules on AI, the spending behind much of US growth. Strong US job openings still keep a December Federal Reserve rate rise likely, so Friday's jobs report decides whether the slide lasts.",
-      "ts": "2026-11-04T14:54:03Z"
+      "ts": "2026-11-04T15:47:37Z",
+      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low on bets that a split government borrows less and could tighten rules on AI, the spending behind much of US growth. Strong job openings and a still-healthy services survey keep a December Federal Reserve rate rise likely, so Friday's jobs report decides whether the slide lasts."
     },
     "EUR": {
       "lean": "bullish",
@@ -49,11 +49,71 @@
     },
     "OIL": {
       "lean": "bearish",
-      "text": "Brent crude fell about 2% to near $101 a barrel, close to a four-week low, as traders bet a Democratic Congress makes new US strikes on Iran less likely, while Qatar keeps mediating peace talks. Fighting around the Strait of Hormuz has not stopped, and a renewed US attack could send prices sharply higher.",
-      "ts": "2026-11-04T14:54:03Z"
+      "ts": "2026-11-04T15:47:37Z",
+      "text": "Brent crude slipped toward $101 a barrel, close to a four-week low, as traders bet a Democratic Congress makes new US strikes on Iran less likely, while Qatar keeps mediating peace talks; official US stock figures also showed less tightness than an industry survey had suggested. Fighting around the Strait of Hormuz has not stopped, and a renewed US attack could send prices sharply higher."
     }
   },
   "items": [
+    {
+      "id": "helious-eia-crude-draw-086m-20261104",
+      "ts": "2026-11-04T15:30:00Z",
+      "source": "Helious",
+      "url": "https://helious.io/news/rel-ev-ba4c1b324fd331f0/eia-crude-oil-stocks-change-0-86m",
+      "image": "https://helious.io/api/og/rel-ev-ba4c1b324fd331f0.png",
+      "headline": "US crude stocks fall only slightly, far less than an industry survey suggested",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "Official US government figures showed crude oil stocks fell by about 0.9 million barrels last week, a much smaller drop than the 5.3 million barrel fall an industry survey reported on Tuesday.",
+      "beats": {
+        "was": "The US-Israel war with Iran has disrupted tanker traffic through the Strait of Hormuz, keeping oil above $100 a barrel. Weekly US stock figures show how tight supply is; Tuesday's industry survey from the American Petroleum Institute hinted at a big drawdown.",
+        "happened": "The Energy Information Administration, the US government's energy statistics agency, said commercial crude stocks fell about 0.9 million barrels in the week to October 30.",
+        "means": "US supply looks less tight than Tuesday's survey implied, which takes a little support away from prices. Talks between Washington and Tehran still matter far more than one week of stock data.",
+        "fx": "A small weight on oil is a small weight on the Canadian dollar, since oil is Canada's main export."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A smaller fall in stocks than the industry survey pointed to."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slightly less support for Canada's main export."
+        }
+      ],
+      "watch": "Any news on US-Iran talks or new attacks on shipping near the Strait of Hormuz."
+    },
+    {
+      "id": "investinglive-us-ism-services-oct-545-20261104",
+      "ts": "2026-11-04T15:00:06Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/october-us-ism-services-vs-54-8-expected/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/US%20services-featured-1793802474.jpg?width=960&format=webp",
+      "headline": "US services growth eases a little in October, slightly below forecasts",
+      "story": "fed-december",
+      "story_title": "Fed: the case for a December rate rise",
+      "pillar": "growth",
+      "summary": "The Institute for Supply Management's survey of US service firms slipped to 54.5 in October from 54.9, just under the 54.8 expected, but hiring improved and every part of the survey still showed growth.",
+      "beats": {
+        "was": "Services are most of the US economy. Strong figures this week, including a jump in job openings, have kept markets expecting the Federal Reserve to raise rates in December to fight inflation.",
+        "happened": "The survey read 54.5 (above 50 means growth). New orders and business activity slowed, while the hiring gauge rose to 51.4 and the prices firms pay stayed very high at 73. The survey said many firms have not yet passed tariff and fuel costs on to customers.",
+        "means": "Services are still growing at a healthy pace and price pressure is not fading, so this does little to weaken the case for a December Fed rate rise. The dollar barely moved.",
+        "fx": "A neutral print for the dollar: it neither adds to nor reverses today's slide after the midterm results."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Slightly softer growth, but firmer hiring and high prices keep a December Fed rise on the table."
+        }
+      ],
+      "watch": "The US jobs report on Friday, November 6, the last big test before the Fed's December decision."
+    },
     {
       "id": "marketscreener-dj-oil-falls-midterms-iran-20261104",
       "ts": "2026-11-04T13:54:00Z",
@@ -1331,39 +1391,6 @@
         }
       ],
       "watch": "Wednesday's ISM services survey and Friday's October jobs report; weak figures there would undo the boost from this beat."
-    },
-    {
-      "id": "investinglive-katayama-fx-statement-alive-20261102",
-      "ts": "2026-11-02T00:55:14Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/forex/japan-s-katayama-says-us-japan-fx-statement-alive-warns-on-disorderly-yen-moves/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/usdyen%20hourly%20chart%2002%20November%202026-featured-1793580899.jpg?width=960&format=webp",
-      "headline": "Japan's Katayama says US-Japan FX statement 'alive', warns on disorderly yen moves",
-      "story": "yen-intervention-watch",
-      "story_title": "Japan: guarding the yen near 160 per dollar",
-      "pillar": "policy",
-      "summary": "Japan's finance minister said Tokyo's currency pact with Washington still stands whatever happens in Tuesday's US midterm elections, and that Japan will step in against wild swings in the yen.",
-      "beats": {
-        "was": "The yen has been weak all year and slid close to 160 per dollar, a level where Japan has sold dollars to prop it up before. Japan and the US agreed a joint statement on currencies that accepts action against disorderly moves.",
-        "happened": "Satsuki Katayama, Japan's finance minister, said on Monday that the joint statement is still in force and that the two governments will stay aligned after the US vote. She would not judge the yen's current level, but said markets are calmer than before and that Japan will act against disorderly or speculative moves.",
-        "means": "The warning is a reminder that Tokyo is still watching, which puts a soft ceiling on how far the dollar can climb against the yen. But she sounded less urgent than when the yen was near 160, so this is a standing guard, not a sign of action soon.",
-        "fx": "It mildly supports the yen by keeping the threat of Japanese buying alive, and limits the dollar's room to rise against it."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Repeats a known warning; it keeps a floor under the yen but adds no new pressure."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Caps how far the dollar can rise against the yen while the threat of action stands."
-        }
-      ],
-      "watch": "How fast the dollar moves against the yen around Tuesday's US vote and Friday's jobs report; a quick run back toward 160 is what would bring sharper words or action."
     }
   ]
 }
