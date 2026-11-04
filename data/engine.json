@@ -1,43 +1,39 @@
 {
-  "updated": "2026-11-04T01:40:00-06:00",
+  "updated": "2026-11-04T15:30:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~79%; BoE Nov 5 hike to 4.00% ~97%; RBNZ Dec hike ~57% (from ~80%); BoC Dec ~56%; ECB Dec ~86%; BoJ Dec ~80%; RBA easing priced by end-2027",
-      "read": "Most big central banks still lean toward higher rates, and the Bank of England is set to raise on Thursday. New Zealand’s weak jobs figures cut bets on a December hike there, and Australia’s central bank now looks done. Currencies are moving on hints about the next step, not the hikes already made.",
+      "figure": "Fed Dec hike ~83% (from ~77%); BoE Nov 5 hike to 4.00% ~97%; ECB Dec ~89%; BoJ Dec ~80%; BoC Dec ~56%; RBNZ Dec ~57%; RBA easing priced by end-2027",
+      "read": "Most big central banks still lean toward higher rates, and the Bank of England is set to raise on Thursday. Bets on a December Fed hike rose even as the dollar fell, so US rate support is intact. Currencies are moving on hints about the next step, not on hikes already expected.",
       "sources": [
         {
-          "label": "Blue Street central bank data (Hercules, Nov 4, 12:48 AM CT): rates, meetings and pricing",
+          "label": "Blue Street central bank data (Hercules, Nov 4, 3:00 PM CT): rates, meetings and pricing",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, Nov 4 Asia run, about 7:30 PM CT Tuesday; gold since moved, see below)",
+          "label": "Blue Street market levels (Hercules, New York close run, Nov 4, 3:00 PM CT)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Business Recorder / Reuters (Nov 4): kiwi skids after weak jobs data, Aussie pressured by RBA turn",
-          "url": "https://www.brecorder.com/news/40447365/kiwi-in-brief-skid-after-weak-jobs-data-aussie-pressured-by-dovish-rba-turn"
-        },
-        {
-          "label": "The Standard / Reuters (Nov 4, 06:19 GMT): gold jumps over 2% to $4,016",
-          "url": "https://www.thestandard.com.hk/finance/article/347478/Gold-jumps-over-2pc-on-softer-dollar-after-Democratic-midterm-wins"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "NZ unemployment 5.7% Q3 (fcst 5.5%), jobs −0.1%; US job openings 7.52M Sep; US ISM services today 9:00 AM CT (fcst 54.8)",
-      "read": "The US economy keeps surprising on the strong side, but a Democratic Congress is expected to spend less, which could slow it next year. New Zealand’s job market weakened more than expected, a drag on the kiwi. The US services survey today is the next check on American strength.",
+      "figure": "US ADP +86K (fcst +67K); ISM services 54.5 (fcst 54.8); Canada goods trade surplus C$5.35B Sep (fcst ~C$4.1B); China services PMI 50.8 (from 51.6)",
+      "read": "US figures were mixed: hiring at private firms beat forecasts while the services survey slipped a little but stayed healthy. A Democratic Congress is expected to spend less, which could slow US growth next year. Canada's trade surplus beat, though its exports are still shrinking.",
       "sources": [
         {
-          "label": "InvestingLive (Nov 4): New Zealand jobless rate hits 11-year high, kiwi slips as hike bets fade",
-          "url": "https://investinglive.com/news/recap-new-zealand-jobless-rate-hits-11-year-high-kiwi-slips-as-rbnz-hike-bets-fade/"
+          "label": "investingLive (Nov 4): October US ISM services 54.5 vs 54.8 expected",
+          "url": "https://investinglive.com/news/october-us-ism-services-vs-54-8-expected/"
         },
         {
-          "label": "Reuters via Yahoo Finance (Nov 4, Asia): dollar drops sharply on Democrats' early midterm gains",
-          "url": "https://finance.yahoo.com/markets/currencies/articles/dollar-drops-sharply-democrats-early-034310225.html"
+          "label": "Investing.com (Nov 4): Canadian dollar advances; September trade surplus beats",
+          "url": "https://ca.investing.com/news/forex-news/canadian-dollar-advances-as-greenback-slides-on-us-election-fallout-4929885"
+        },
+        {
+          "label": "investingLive (Nov 4): China's services PMI slows to 50.8",
+          "url": "https://investinglive.com/news/china-services-pmi-slows-to-50-8-in-october-as-price-cuts-meet-rising-costs/"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 4): times, forecasts and actuals",
@@ -48,64 +44,72 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "Euro-area flash CPI Oct today 4:00 AM CT (fcst 4.0%, Sep 3.8%; core fcst 2.5%); Swiss CPI 1.5% Oct; Brent ~$104.6",
-      "read": "Fuel is still pushing prices up almost everywhere, though oil has eased from its late-October high. This morning’s euro-area figures are the week’s main inflation check, and a hot reading would firm up a December hike by the European Central Bank. Cheaper oil, if it lasts, would ease pressure on central banks across the board.",
+      "figure": "Euro-area flash CPI 4.0% Oct (fcst 4.0%, core 2.5%); ISM services prices paid ~73; Brent $94.29 (−9%); Swiss CPI 1.5% Oct",
+      "read": "Euro-area inflation rose as expected, driven by energy, which keeps a December rate hike there on track without adding urgency. Oil's sharp fall, if it lasts, would ease price pressure almost everywhere and take some heat off central banks. For now, US service firms still report high costs.",
       "sources": [
+        {
+          "label": "MarketScreener / Reuters (Nov 4): euro-zone inflation rises to 4.0% in October",
+          "url": "https://www.marketscreener.com/news/euro-zone-flash-inflation-in-october-ce785fdfd88af42d"
+        },
+        {
+          "label": "investingLive (Nov 4): October US ISM services 54.5 vs 54.8 expected",
+          "url": "https://investinglive.com/news/october-us-ism-services-vs-54-8-expected/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York close run, Nov 4, 3:00 PM CT)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
         {
           "label": "Blue Street calendar (Hercules, Nov 4): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-        },
-        {
-          "label": "Angel One (Nov 4): crude rises about 1% on mixed US–Iran signals; API stocks",
-          "url": "https://www.angelone.in/news/commodities/crude-oil-prices-rise-as-mixed-us-iran-signals-weigh-on-peace-hopes-november-4-2026"
-        },
-        {
-          "label": "Blue Street currency board (Hercules, Nov 4, 12:48 AM CT)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "Nikkei −2.9%, Taiex −2.3%, ASX −0.8%; USD/CHF ~0.813; USD/JPY ~157.6; gold ~$4,016; US 10Y ~4.92%",
-      "read": "Asian shares fell as Democrats won the US Senate and headed for the House, with chip and AI stocks hit hardest. This time the dollar was not the safe place: money went to the franc, the yen, gold and US government bonds. Currencies tied to growth, like the Aussie and kiwi, missed out on the dollar’s fall.",
+      "figure": "Nikkei ~−3% (Asia); S&P 500 ~+1.8% by midday; USD/JPY 158.29; USD/CHF 0.8162; AUD/USD 0.7008; gold ~$4,059",
+      "read": "Asia sold off on the US midterm results, but Wall Street rallied hard, reading a split government and a possible end to the Iran war as calmer, not riskier. Safe havens like the franc and yen gave back early gains, and growth-linked currencies like the Aussie recovered. Gold rose anyway, helped by the weaker dollar.",
       "sources": [
         {
-          "label": "Euronews (Nov 4): Asian stocks and the dollar fall as Democrats gain ground",
-          "url": "https://www.euronews.com/2026/11/04/asian-stocks-and-dollar-fall-as-democrats-gain-ground-in-us-midterms"
+          "label": "The Star / Reuters (Nov 4): Nikkei drops 3% as Democratic gains hit AI stocks",
+          "url": "https://www.thestar.com.my/business/business-news/2026/11/04/japan039s-nikkei-drops-3-as-democratic-gains-in-us-midterms-hit-ai-stocks"
         },
         {
-          "label": "Reuters via Yahoo Finance (Nov 4, Asia): dollar drops sharply on Democrats' early midterm gains",
-          "url": "https://finance.yahoo.com/markets/currencies/articles/dollar-drops-sharply-democrats-early-034310225.html"
+          "label": "The Korea Times / AP (Nov 5): US stocks rally toward their best day in three months",
+          "url": "https://www.koreatimes.co.kr/world/20261105/us-stocks-rally-toward-their-best-day-in-3-months"
         },
         {
-          "label": "The Standard / Reuters (Nov 4, 06:19 GMT): gold jumps over 2% to $4,016",
-          "url": "https://www.thestandard.com.hk/finance/article/347478/Gold-jumps-over-2pc-on-softer-dollar-after-Democratic-midterm-wins"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Nov 4 Asia run, about 7:30 PM CT Tuesday; gold since moved, see below)",
+          "label": "Blue Street market levels (Hercules, New York close run, Nov 4, 3:00 PM CT)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "USAGOLD (Nov 4): gold surges 3% to $4,053 as Democrats sweep Congress",
+          "url": "https://www.usagold.com/daily-precious-metals-market-report-november-4-2026/"
         }
       ]
     },
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$104.6 (+1%), WTI ~$96.8 in Asia; Tuesday settle ~$103.6 (near 4-week low); IRGC claims four tankers hit mines; API crude −5.3M bbl",
-      "read": "Oil bounced a little after Iran’s Revolutionary Guards said tankers hit mines near Hormuz, but it stays well below its late-October high. That leaves exporters like Canada with less support than a month ago and importers like Japan and the euro area with a smaller bill. A peace deal would widen that gap quickly.",
+      "figure": "Brent $94.29 (−8.9%, lowest since Sep 4); WTI $87.70 (−8.7%); EIA crude stocks −0.9M bbl (fcst −1.7M)",
+      "read": "Oil fell about 9% in a day on bets the Iran war winds down. That cuts the energy bill for importers like Japan and the euro area and trims income for exporters like Canada. The loonie held up only because the US dollar fell faster.",
       "sources": [
         {
-          "label": "Angel One (Nov 4): crude rises about 1% on mixed US–Iran signals; API stocks",
-          "url": "https://www.angelone.in/news/commodities/crude-oil-prices-rise-as-mixed-us-iran-signals-weigh-on-peace-hopes-november-4-2026"
+          "label": "BusinessDay / Reuters (Nov 4): oil prices plunge as the midterm defeat raises hopes of peace",
+          "url": "https://www.businessday.co.za/markets/2026-11-04-oil-prices-plunge-as-trumps-midterm-defeat-raises-hopes-of-peace/"
         },
         {
-          "label": "InvestingLive (Nov 4, 03:44 UTC): Iran's Revolutionary Guards say four tankers hit mines south of Hormuz",
-          "url": "https://investinglive.com/commodities/iran-s-irgc-says-four-tankers-destroyed-by-mines-south-of-hormuz-two-vessels-detained/"
+          "label": "The National (Nov 4): Brent oil slides to $94 on Iran uncertainty after US midterms",
+          "url": "https://www.thenationalnews.com/business/energy/2026/11/04/brent-oil-slides-to-94-on-iran-uncertainty-after-us-midterms/"
         },
         {
-          "label": "AAP via The Examiner (Nov 4): no sign of an Iran–US deal as Trump wavers on new strikes",
-          "url": "https://www.examiner.com.au/story/9385895/no-sign-of-iran-us-deal-as-trump-wavers-on-new-strikes/"
+          "label": "Blue Street market levels (Hercules, New York close run, Nov 4, 3:00 PM CT)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Nov 4): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
@@ -128,24 +132,24 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "AP: Democrats win the Senate; networks project the House (AP not yet called); Fitch France A+ negative (Oct 30); Canada budget Nov 5, 3:00 PM CT",
-      "read": "A Democratic Congress is expected to limit President Trump’s spending plans, which takes some support away from the dollar. Debt worries in France still weigh on the euro. Canada presents its federal budget on Thursday, and a big rise in borrowing would weigh on the loonie.",
+      "figure": "AP calls the House for Democrats (Senate called Nov 3); Treasury refunding $125B, unchanged; Canada budget Nov 5, 3:00 PM CT; Fitch France A+ negative (Oct 30)",
+      "read": "Democrats now control both houses of Congress, so President Trump's spending plans look harder to pass, which takes some support away from the dollar. The US Treasury kept its bond sales unchanged, adding no new pressure on yields. Canada presents its federal budget on Thursday, and France's debt worries still weigh on the euro.",
       "sources": [
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 3, 11:32 PM CT): AP calls the Senate for Democrats",
+          "label": "Blue Street breaking watch (Hercules, Nov 4): AP calls the House for Democrats",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         },
         {
-          "label": "Reuters via Yahoo Finance (Nov 4, Asia): dollar drops sharply on Democrats' early midterm gains",
-          "url": "https://finance.yahoo.com/markets/currencies/articles/dollar-drops-sharply-democrats-early-034310225.html"
-        },
-        {
-          "label": "Reuters via WBOW (Oct 30): Fitch revises France's outlook to negative",
-          "url": "https://1027wbow.com/2026/10/30/fitch-revises-frances-outlook-to-negative-on-worsening-debt-dynamics/"
+          "label": "Seeking Alpha (Nov 4): US Treasury holds quarterly refunding at $125 billion",
+          "url": "https://seekingalpha.com/news/4664756-treasury-holds-quarterly-refunding-amounts-maturity-mix"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 4): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+        },
+        {
+          "label": "Reuters via WBOW (Oct 30): Fitch revises France's outlook to negative",
+          "url": "https://1027wbow.com/2026/10/30/fitch-revises-frances-outlook-to-negative-on-worsening-debt-dynamics/"
         }
       ]
     }
