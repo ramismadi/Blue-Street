@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T14:52:35Z",
+  "updated": "2026-11-05T15:47:56Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "bullish",
-      "text": "Swiss inflation jumped to 1.5% in October on dearer fuel, above forecasts, which makes a December rate cut by the Swiss National Bank harder to justify. The franc also gains when investors look for shelter; hopes for Iran peace talks sap that demand, but tough words from Iran's leader and President Trump show the war is not over.",
-      "ts": "2026-11-05T12:49:49Z"
+      "ts": "2026-11-05T15:47:56Z",
+      "text": "Swiss inflation jumped to 1.5% in October on dearer fuel, above forecasts, which makes a December rate cut by the Swiss National Bank harder to justify. The franc also gains when investors look for shelter, and while hopes for Iran peace talks sap that demand, more tanker attacks near Hormuz and talk of new US strikes show the war is not over."
     },
     "CAD": {
       "lean": "mixed",
@@ -48,12 +48,51 @@
       "ts": "2026-11-05T12:49:49Z"
     },
     "OIL": {
-      "lean": "bearish",
-      "text": "Brent crude fell more than 8% on Wednesday to its lowest in over two months on bets Democratic control of Congress pushes Washington toward ending the Iran war, then bounced to about $96 on Thursday. Iran's leader and President Trump both talked tough afterward and no deal is in sight, so the drop rests on hope, and a new attack on shipping near Hormuz could reverse it.",
-      "ts": "2026-11-05T12:49:49Z"
+      "lean": "mixed",
+      "ts": "2026-11-05T15:47:56Z",
+      "text": "Brent crude fell more than 8% on Wednesday to its lowest in over two months on bets that the new Democratic Congress pushes Washington toward ending the Iran war, then steadied near $96 on Thursday. Attacks on tankers near Hormuz are picking up again and sources say President Trump may still restart strikes, so the drop rests on hopes for peace that could fade quickly."
     }
   },
   "items": [
+    {
+      "id": "boereport-reuters-hormuz-tankers-strikes-20261105",
+      "ts": "2026-11-05T15:04:45Z",
+      "source": "Reuters via BOE Report",
+      "url": "https://boereport.com/2026/11/05/tankers-hit-in-hormuz-as-iran-keeps-up-pressure-after-us-vote/",
+      "image": null,
+      "headline": "Three more tankers hit near Hormuz as sources say Trump may still restart strikes on Iran",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "Iran said three more tankers were damaged in the Strait of Hormuz on Thursday, and two people familiar with the matter told Reuters that President Trump is still likely to order new strikes on Iran.",
+      "beats": {
+        "was": "The US-Israel war with Iran has disrupted tanker traffic through the Strait of Hormuz, the channel for about a fifth of the world's oil. Oil fell more than $20 a barrel in a week on bets that Democratic control of the US Congress, won in Tuesday's midterms, pushes Washington to end the war.",
+        "happened": "Iran's Revolutionary Guards, who rarely own up to firing on merchant ships, said two tankers hit naval mines and a third caught fire. The UK navy's shipping office counts at least five ships hit since Sunday, close to October's pace, the worst month of the war. Two sources told Reuters Trump only held off on strikes until after the vote; there is no confirmed decision, and talks through Qatar have made no breakthrough.",
+        "means": "The peace bet that drove oil down sits next to rising attacks at sea and talk of renewed US bombing. The danger to Gulf supply has not gone away, so the recent drop in oil is fragile.",
+        "fx": "Oil steadied a little on Thursday. A confirmed US strike or more ship losses would lift oil, help the Canadian dollar and safe havens such as the Swiss franc, and weigh on big oil buyers like Japan and the euro zone."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "More ships hit and talk of new US strikes threaten Gulf supply again."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A war that may flare up again keeps some demand for a safe haven."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so supply risks raise its import bill."
+        }
+      ],
+      "watch": "Whether Trump orders new strikes, and whether ship attacks near Hormuz keep rising."
+    },
     {
       "id": "bls-us-claims-productivity-q3-20261105",
       "ts": "2026-11-05T13:30:00Z",
@@ -1079,33 +1118,6 @@
         }
       ],
       "watch": "Whether ships keep crossing Hormuz safely and whether the US-Iran talks set a next meeting."
-    },
-    {
-      "id": "investinglive-wgc-cb-gold-q3-42pc-20261103",
-      "ts": "2026-11-03T23:06:01Z",
-      "source": "InvestingLive",
-      "url": "https://investinglive.com/commodities/central-bank-gold-buying-jumps-42-in-q3-as-high-prices-hit-jewellery-demand-wgc-says/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Gold%20bulls%20looking%20for%20a%20spring%20from%20here%2004%20November%202026-featured-1793747146-featured-1793747182.jpg?width=960&format=webp",
-      "headline": "Central banks bought 42% more gold in the third quarter, the World Gold Council says",
-      "story": "gold-slide",
-      "story_title": "Gold: Fed rate-rise bets vs a weaker dollar",
-      "pillar": "commodities",
-      "summary": "Central banks bought about 320 tonnes of gold from July to September, 42% more than a year earlier, even as high prices cut jewellery buying to a record low for the quarter.",
-      "beats": {
-        "was": "Gold has fallen to near its lowest in a year as markets bet on a December rate rise by the US Federal Reserve, since higher US rates make gold, which pays no interest, less attractive.",
-        "happened": "The World Gold Council, the gold industry's research body, said central banks stepped up purchases in the third quarter, and gold funds took in about 210 tonnes. Jewellery demand fell 17% and coin and bar buying fell 19% as prices averaged about $4,260 an ounce. Total demand was roughly flat.",
-        "means": "Steady buying by central banks puts a floor under demand even when households pull back. It is backward-looking, though, and does not change the near-term pull from US interest rates.",
-        "fx": "Mild support for gold; the bigger driver remains Fed rate expectations."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Strong central-bank buying supports demand, though it covers last quarter, not this week."
-        }
-      ],
-      "watch": "Friday's US jobs report and what it does to the odds of a December Fed rate rise."
     },
     {
       "id": "reuters-nz-unemployment-q3-57pc-20261103",
