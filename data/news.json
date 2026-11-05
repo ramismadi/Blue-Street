@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T03:55:00Z",
+  "updated": "2026-11-05T12:26:56Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -14,8 +14,8 @@
     },
     "GBP": {
       "lean": "bullish",
-      "ts": "2026-11-05T03:55:00Z",
-      "text": "The pound sits near its highest since mid-September, helped by a weaker dollar after the US midterms, and the Bank of England is expected to raise its rate to 4% from 3.75% at noon London time on Thursday, its first rise since 2023. The rise is priced in, so the vote split and whether the Bank backs more rises next year decide where the pound goes."
+      "ts": "2026-11-05T12:26:56Z",
+      "text": "The Bank of England raised its rate to 4% on Thursday, its first rise since 2023, and now expects UK inflation to climb to about 5% next year because of higher energy costs from the Iran war. Governor Andrew Bailey said another rise could follow unless the Middle East conflict moves toward a settlement, which supports the pound, already near its highest since mid-September on a weaker dollar."
     },
     "JPY": {
       "lean": "mixed",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "martincid-boe-hikes-4pc-20261105",
+      "ts": "2026-11-05T12:05:16Z",
+      "source": "Martin Cid Magazine",
+      "url": "https://www.martincid.com/business/bank-of-england-raises-rates-4-percent-energy-inflation/",
+      "image": "https://images.martincid.com/2026/11/pexels-photo-18111345-scaled.jpeg?f=orig",
+      "headline": "Bank of England raises rates to 4%, its first hike since 2023, as energy bites",
+      "story": "boe-hike",
+      "story_title": "Bank of England's first rate rise since 2023",
+      "pillar": "policy",
+      "summary": "The Bank of England raised its rate to 4% from 3.75%, its first rise since 2023, and now sees UK inflation peaking near 5% next year as the Iran war lifts energy costs.",
+      "beats": {
+        "was": "The Bank of England had not raised rates since August 2023 and held at 3.75% in September, when three of its nine policymakers already wanted a rise. UK inflation then climbed to 3.5% as fuel and gas costs jumped with the Iran war.",
+        "happened": "On Thursday the Bank lifted its rate by a quarter point to 4%, with almost all policymakers in favour. Its staff now expect inflation to reach about 5% by the middle of next year, far above its earlier forecasts. Governor Andrew Bailey said that without real progress toward ending the Middle East conflict he could see the case for another rise, but the Bank did not commit to a set path.",
+        "means": "The rise itself was expected. The new news is a much higher inflation forecast and an open door to more rises tied to the war, which leans toward the market's view of further increases rather than one and done.",
+        "fx": "A higher inflation forecast and talk of possible further rises support the pound; a real step toward peace in the Middle East would weaken that case."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A sharply higher inflation forecast and a door left open to more rises back the pound."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Another central bank raising rates on energy costs keeps a European Central Bank rise in view, but the pound gains more against the euro."
+        }
+      ],
+      "watch": "The next decision on 17 December, UK inflation figures, and any progress toward ending the Iran war, which Bailey tied to the rate outlook."
+    },
     {
       "id": "ap-asian-shares-kospi-chips-yen-158-20261105",
       "ts": "2026-11-05T02:59:25Z",
@@ -1304,39 +1337,6 @@
         }
       ],
       "watch": "Australian jobs and inflation data before the December 8 meeting."
-    },
-    {
-      "id": "investinglive-rba-hikes-485-split-20261103",
-      "ts": "2026-11-03T03:30:00Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/reserve-bank-of-australia-rba-25bp-rate-hike-as-widely-expected/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/aud%20chart%20Reserve%20Bank%20of%20Australia%20announcement%2003%20November%202026-featured-1793676491.jpg?width=960&format=webp",
-      "headline": "Reserve Bank of Australia raises rates to 4.85%, as widely expected",
-      "story": "rba-hike",
-      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
-      "pillar": "policy",
-      "summary": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday, its fifth rise this year, but three of its nine board members wanted to hold and it gave no hint of more.",
-      "beats": {
-        "was": "Australian prices have kept rising fast this year, helped by fuel costs from the Iran war, and the central bank had already lifted its rate four times in 2026. Markets put the chance of another rise at close to 90%, so the move itself was no surprise.",
-        "happened": "The board lifted the cash rate by a quarter point to 4.85%, its highest since 2008. The vote was six to three, with three members preferring to stay at 4.60%. New forecasts show inflation above 3% for the next year and only reaching the top of the 2-3% target by late 2027, while unemployment rises more than expected. The bank said it will watch the data rather than promising further rises.",
-        "means": "A split board and no signal of more rises suggest this could be the last increase for now, even though inflation is expected to stay too high for longer. Governor Michele Bullock's press conference is the next clue on whether a December rise is still on the table.",
-        "fx": "The higher rate was already priced, so the Australian dollar gets little new lift from it; the three dissents and the open-ended wording lean against a lasting gain."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "mixed",
-          "strength": 2,
-          "why": "A higher rate supports it, but the 6-3 split and no hint of more rises cut the case for further gains."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The kiwi often moves with the Australian dollar, so a cautious hike gives it little help."
-        }
-      ],
-      "watch": "Governor Michele Bullock's press conference on whether more rises are possible, and the December 8 decision."
     }
   ]
 }
