@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T23:50:24Z",
+  "updated": "2026-11-05T01:47:51Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "mixed",
-      "ts": "2026-11-04T23:50:24Z",
-      "text": "The yen firmed slightly to about 158.3 per dollar as US yields fell after the Democratic midterm sweep and Tokyo stocks dropped 3%. The Bank of Japan has signalled a possible December rate rise, and Thursday's minutes of its September hike will show how keen the board is; the dollar still sits near the 160 area where Tokyo has stepped in before."
+      "ts": "2026-11-05T01:47:51Z",
+      "text": "The yen holds near 158 per dollar after US yields fell on the Democratic sweep of Congress. Minutes of the Bank of Japan's September rate rise show the board wants to keep raising rates, and one member floated a faster pace, which backs talk of a December move; the dollar still sits close to the 160 area where Tokyo has stepped in before."
     },
     "CHF": {
       "lean": "bullish",
@@ -33,9 +33,9 @@
       "text": "The Canadian dollar rose to a seven-week high on Wednesday as Canada's trade surplus beat forecasts and the US dollar slid after the midterm elections, even though oil, Canada's main export, fell about 8%. Bank of Canada Governor Tiff Macklem has said more rate rises may be needed, but if oil keeps falling it will weigh on both the currency and that case."
     },
     "AUD": {
-      "lean": "bearish",
-      "ts": "2026-11-04T03:48:42Z",
-      "text": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday, but Governor Michele Bullock said it is time to take stock, which reads as a pause. China's services growth slowed to a three-month low and Asian stocks fell on the US midterm results, both of which weigh on the Australian dollar, though a weaker US dollar softens the hit."
+      "lean": "mixed",
+      "ts": "2026-11-05T01:47:51Z",
+      "text": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday, but Governor Michele Bullock signalled a pause, and China's services growth slowed to a three-month low. Against that, Australia's trade surplus jumped to a seven-month high in September and the US dollar is weaker after the midterms, which cushions the Australian dollar."
     },
     "NZD": {
       "lean": "bearish",
@@ -49,11 +49,65 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-04T23:50:24Z",
-      "text": "Brent crude fell about 9% on Wednesday to near $94 a barrel, its lowest in two months, as traders bet that Democratic control of Congress pushes Washington toward ending the Iran war. Attacks on tankers near the Strait of Hormuz and Iran's warning that it will hit back at any new strike show the fighting has not stopped, so one new incident could reverse much of the drop."
+      "ts": "2026-11-05T01:47:51Z",
+      "text": "Brent crude fell about 9% on Wednesday to near $95 a barrel, its lowest close since August, and held there in Asian trade, as traders bet Democratic control of Congress pushes Washington toward ending the Iran war. No deal is signed and tankers are still being hit near the Strait of Hormuz, so one new incident could reverse much of the drop."
     }
   },
   "items": [
+    {
+      "id": "investinglive-au-trade-sep-28bn-20261105",
+      "ts": "2026-11-05T00:48:59Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/australia-s-trade-surplus-jumps-to-a-2-8-billion-a-seven-month-high-on-lng-and-metals/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/AUD%20chart%20update%2005%20November%202026-featured-1793839697.jpg?width=960&format=webp",
+      "headline": "Australia's trade surplus jumps to A$2.8 billion, a seven-month high",
+      "story": "rba-hike",
+      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
+      "pillar": "growth",
+      "summary": "Australia sold far more abroad than it bought in September, as gas and metals exports rose and gold imports dropped sharply.",
+      "beats": {
+        "was": "Australia's goods trade surplus had shrunk to under A$0.2 billion in August, and forecasts for September were about A$1 billion. The Reserve Bank of Australia raised its rate to 4.85% on Tuesday.",
+        "happened": "The September surplus widened to about A$2.8 billion, the biggest in seven months. Exports rose 2.3%, led by liquefied natural gas and metals, while imports fell 3.3%, mostly because gold imports dropped by about a third.",
+        "means": "Stronger exports help Australia's growth, but gold shipments swing a lot from month to month, so the jump overstates the real improvement. On its own it is unlikely to change the rate outlook.",
+        "fx": "More foreign income gives the Australian dollar mild support, but slowing China and a central bank that has signalled a pause matter more."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A big trade beat, but flattered by volatile gold flows."
+        }
+      ],
+      "watch": "Whether gas and metals exports stay strong once gold flows settle."
+    },
+    {
+      "id": "investinglive-boj-sept-minutes-hawkish-20261104",
+      "ts": "2026-11-04T23:58:27Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/central-banks/boj-minutes-board-backed-further-hikes-flagged-50-oil-surge-as-government-urged-caution/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/usdyen%20chart%20Bank%20of%20Japan%20September%202026%20minutes%20response-featured-1793836691.jpg?width=960&format=webp",
+      "headline": "Bank of Japan minutes show the board backed more rate rises, one member floated a faster pace",
+      "story": "yen-intervention-watch",
+      "story_title": "Japan: guarding the yen near 160 per dollar",
+      "pillar": "policy",
+      "summary": "The record of the Bank of Japan's September meeting shows members agreed to keep raising rates, and one said the pace may need to quicken if prices run too hot.",
+      "beats": {
+        "was": "In September the Bank of Japan raised its rate to 1.25%, the highest since 1995, by a 7-2 vote; two members wanted to wait. It held in October, and markets have been weighing another rise in December.",
+        "happened": "Minutes released Thursday morning in Tokyo show members agreed to keep lifting rates as underlying inflation nears the 2% goal. One member said rises may need to speed up if prices overshoot; others noted oil up about 50% since July. The government's Cabinet Office asked the bank to weigh the build-up of past rises carefully.",
+        "means": "The board sounds set on more rises, and the talk of a faster pace is new. It supports the view that December is a live meeting, though the government's call for care is a brake.",
+        "fx": "A keener Bank of Japan helps the yen, which sits near 158 per dollar, close to the 160 area where Tokyo has stepped in before."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Minutes lean toward more rate rises, but they look back to September and add little to December pricing."
+        }
+      ],
+      "watch": "Whether Bank of Japan officials repeat the faster-pace idea in speeches before the December meeting."
+    },
     {
       "id": "investinglive-boj-sept-minutes-preview-20261104",
       "ts": "2026-11-04T21:03:26Z",
@@ -332,6 +386,39 @@
         }
       ],
       "watch": "Official US oil stock figures at 9:30 a.m. CT today, and any sign of new US strikes or a deal with Iran."
+    },
+    {
+      "id": "investing-oil-holds-losses-asia-20261104",
+      "date": "2026-11-04",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/oil-holds-steep-losses-after-us-election-fuels-iran-peace-hopes-5001939",
+      "image": "https://content-media.investing.com/news/moved_LYNXMPEK4N0FY_L.jpg",
+      "headline": "Oil holds near two-month lows in Asian trade after the US election lifts Iran peace hopes",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "commodities",
+      "summary": "Oil barely moved in early Asian trading on Thursday after its 9% drop on Wednesday, its lowest close since the end of August.",
+      "beats": {
+        "was": "Oil had climbed through the Iran war as attacks near the Strait of Hormuz, the Gulf's main shipping route, threatened supply. On Wednesday Brent fell about 9% to $94.62 a barrel after Democrats won both houses of the US Congress, and US President Trump admitted the war hurt his party.",
+        "happened": "US crude edged down 0.2% to about $88 in Asian trading, holding the drop. Qatar is trying to broker talks, but a senior Iranian official says the two sides are still far from a deal, and Trump says he has no plans for new strikes for now. US crude stocks fell less than forecast last week.",
+        "means": "Traders kept the bet that Washington is now more likely to wind the war down, which takes out much of the extra price paid for supply risk. With no deal yet, the drop rests on hopes rather than signed terms.",
+        "fx": "Cheaper oil eases pressure on big importers like Japan and the euro zone and weighs on the Canadian dollar, whose economy leans on oil exports."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Holds Wednesday's drop; no new news, just the peace bet staying in place."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil trims Canada's export income."
+        }
+      ],
+      "watch": "Any new attack on shipping near Hormuz, or word from Qatar's mediation, could move oil sharply either way."
     },
     {
       "id": "investing-cad-7wk-high-trade-surplus-20261104",
@@ -1277,66 +1364,6 @@
         }
       ],
       "watch": "Governor Michele Bullock's press conference on whether more rises are possible, and the December 8 decision."
-    },
-    {
-      "id": "investinglive-pboc-fx-rrr-6pc-20261103",
-      "ts": "2026-11-03T00:56:55Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/china-s-pboc-lifts-fx-reserve-ratio-to-6-what-it-means-for-the-yuan-aud/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/aud%20pboc%20fx%20policy%20change%2003%20November%202026-featured-1793667406.jpg?width=960&format=webp",
-      "headline": "China's PBOC lifts FX reserve ratio to 6%: what it means for the yuan, AUD",
-      "story": "china-yuan",
-      "story_title": "China: slowing the yuan's climb",
-      "pillar": "policy",
-      "summary": "China's central bank will make banks hold more of their foreign-currency deposits in reserve from November 15, a step aimed at slowing the yuan's rise.",
-      "beats": {
-        "was": "The yuan has gained more than 5% against the dollar this year, one of Asia's best runs, and sits near a four-year high. The People's Bank of China had already been setting its daily reference rate weaker than expected, a sign it wanted the climb to slow.",
-        "happened": "The bank said banks must hold 6% of foreign-currency deposits in reserve, up from 4%, starting November 15. That takes dollars out of China's banking system, making them a bit scarcer and so less cheap to buy with yuan. It reverses a cut made in 2023, when Beijing was fighting a falling yuan.",
-        "means": "Beijing is telling markets it does not want the yuan to rise too fast, since a strong currency hurts its exporters while the economy is slowing. The direct effect on money flows is modest; the message matters more.",
-        "fx": "A slower-rising yuan tends to drag a little on currencies that trade as stand-ins for China, chiefly the Australian and New Zealand dollars."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The Australian dollar often tracks the yuan, so Beijing leaning against yuan gains weighs on it."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "China is New Zealand's biggest buyer, so a capped yuan gives the kiwi less support."
-        }
-      ],
-      "watch": "Whether the yuan's daily reference rate keeps coming in weaker than expected after the change takes effect on November 15."
-    },
-    {
-      "id": "xinhua-iran-hormuz-two-day-plan-20261103",
-      "ts": "2026-11-03T00:28:00Z",
-      "source": "People's Daily (Xinhua)",
-      "url": "https://en.people.cn/n3/2026/1103/c90000-20514895.html",
-      "image": null,
-      "headline": "Iran offers to reopen Hormuz within two days if the US meets its terms",
-      "story": "iran-hormuz",
-      "story_title": "Hormuz: shipping attacks and the oil supply",
-      "pillar": "commodities",
-      "summary": "Iran's foreign ministry said it could restore safe passage through the Strait of Hormuz within two days, down from a seven-day plan, if Washington accepts its demands.",
-      "beats": {
-        "was": "Iran has restricted the Strait of Hormuz, the main route for Gulf oil, since the war with the US and Israel began in February. In September Tehran set out a seven-day plan to reopen it, tied to ending the war, lifting oil sanctions and freeing its frozen money.",
-        "happened": "Foreign ministry spokesman Esmaeil Baghaei said on Monday that Iran had cut that timetable to two days as a sign of good faith, as long as its demands are met. President Masoud Pezeshkian said the Supreme Leader has given the government room to negotiate, while Iran's navy said another tanker caught fire after hitting mines near the strait.",
-        "means": "It is the clearest sign yet of how fast oil could flow again if a deal is struck. But the conditions are the same ones Washington has resisted, and the Wall Street Journal reported the US told Gulf states to prepare for a short, heavy strike campaign after the midterms.",
-        "fx": "A quick reopening would pull oil down sharply, helping Japan and the euro zone and weighing on Canada's dollar; for now it is an offer, not a deal."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Shows supply could return within days of a deal, but the offer comes with terms the US has not accepted."
-        }
-      ],
-      "watch": "Whether the US responds to Iran's terms, and whether any tankers cross Hormuz without being hit."
     }
   ]
 }
