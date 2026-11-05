@@ -1,6 +1,6 @@
 {
- "as_of": "2026-11-04T15:00:00-06:00",
- "updated": "2026-11-04T15:00:00-06:00",
+ "as_of": "2026-11-05T00:42:31-06:00",
+ "updated": "2026-11-05T00:42:31-06:00",
  "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
  "note": "Wednesday NY-close read, 2026-11-04 (~3:00 PM CT). US session: dollar slid to a one-month low on the Democratic midterm sweep (DXY 101.41, -0.44%) as markets priced divided government, tougher AI regulation and less fiscal expansion; EUR/USD $1.1236, GBP/USD $1.3475, USD/JPY 158.29, USD/CHF 0.8162. Oil crashed ~9% (Brent $94.29, WTI $87.70) as the White House tied the midterm rout to the Iran war, pricing an end to the conflict; gold jumped 3.0% past $4,050. US data split: ADP BEAT (+86K vs +67K) but ISM services small MISS (54.5 vs 54.8); Dec Fed hike pricing ~83% (up from 78.9%). Tomorrow: BoE Thu 6:00am CT (hike ~96.7% to 4.00%), US jobless claims 7:30am CT, payrolls Fri 7:30am CT. Levels are indicative index quotes, not executable prices.",
  "pairs": {},
@@ -10,11 +10,11 @@
    "name": "US dollar",
    "bank": "fed",
    "chapter": null,
-   "summary": "DXY 101.41 in the US session (-0.44%, one-month low) on the Democratic midterm sweep — divided government, AI-regulation fears and less fiscal expansion; ADP beat (+86K) vs ISM services miss (54.5) roughly offset; Dec Fed hike pricing ~83% (CME FedWatch, up from 78.9%); 10Y ~4.92%. Payrolls Fri 7:30am CT.",
+   "summary": "DXY 101.41 overnight, flat vs the NY close after the -0.44% Nov 4 slide to a one-month low on the Democratic midterm sweep; Dec Fed hike pricing 81.2% (CME FedWatch via Reuters Tokyo). Payrolls Fri 7:30am CT (FF fcst +65K).",
    "drivers": {
     "policy": {
      "score": 1,
-     "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~82.6-83% Nov 4 US session (CME FedWatch via Reuters NY/Barchart, up from 78.9% Nov 3 and 77.4% prior session) despite the dollar slide — the midterm sweep moved FX more than rate pricing."
+     "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~82.6-83% Nov 4 US session (CME FedWatch via Reuters NY/Barchart, up from 78.9% Nov 3 and 77.4% prior session) despite the dollar slide — the midterm sweep moved FX more than rate pricing. Nov 5 Tokyo: Dec hike 81.2% for at least 25bp (CME FedWatch via Reuters), vs ~82.6% in the Nov 4 US session — essentially steady after the sweep."
     },
     "growth": {
      "score": 0,
@@ -47,7 +47,7 @@
    "name": "Euro",
    "bank": "ecb",
    "chapter": null,
-   "summary": "EUR/USD $1.1236 in the US session (+0.46%, 4-week high) on the broad dollar slide; Oct flash CPI printed inline at 4.0% (prev 3.8%, 3-year high), core steady 2.5% — Dec ECB hike ~89%, no fresh impulse. EUR/GBP ~0.834.",
+   "summary": "EUR/USD $1.1241 overnight (+0.04% vs NY close) after the Nov 4 climb to a 4-week high; Oct flash CPI inline at 4.0% keeps the Dec 17 ECB hike ~89% priced. Lagarde speaks today 12:00pm CT.",
    "drivers": {
     "policy": {
      "score": -1,
@@ -84,7 +84,7 @@
    "name": "British pound",
    "bank": "boe",
    "chapter": null,
-   "summary": "GBP/USD $1.3475 in the US session (+0.43%), holding near its Sep 16 high on the softer dollar; BoE Thu 6:00am CT (hike ~96.7% to 4.00%, first since Aug 2023; vote split and MPR are the event).",
+   "summary": "GBP/USD $1.3462 overnight after touching a 7-week high of $1.3503; BoE decides TODAY 6:00am CT — hike ~96.7% to 4.00%, vote split and MPR are the event; Bailey 6:30am CT.",
    "drivers": {
     "policy": {
      "score": 1,
@@ -121,11 +121,11 @@
    "name": "Japanese yen",
    "bank": "boj",
    "chapter": null,
-   "summary": "USD/JPY 158.29 in the US session (-0.11%) after the Asia slide to 157.92 on the midterm result and Nikkei's 5.5-month low; yen gained least among havens as US yields eased only slightly (10Y ~4.92%). BoJ minutes due Thu.",
+   "summary": "USD/JPY 158.25 overnight, yen firming after the September BoJ minutes reinforced December hike expectations (~80%); Ueda speaks Fri 10:00am CT.",
    "drivers": {
     "policy": {
      "score": -1,
-     "note": "Oct 30 HELD at 1.25% (8-1; Takata dissented for 1.50%); Outlook Report judged underlying inflation 'generally consistent' with the 2% target — first such assessment since 2013 — FY2027 core CPI raised to 2.6%; Ueda: vigilant on overshoot risk, pace depends on data; December hike ~80% (OIS/Nikkei). The policy gap vs the Fed still favors the dollar side near-term"
+     "note": "Oct 30 HELD at 1.25% (8-1; Takata dissented for 1.50%); Outlook Report judged underlying inflation 'generally consistent' with the 2% target — first such assessment since 2013 — FY2027 core CPI raised to 2.6%; Ueda: vigilant on overshoot risk, pace depends on data; December hike ~80% (OIS/Nikkei). The policy gap vs the Fed still favors the dollar side near-term. September meeting minutes (released Nov 4) reinforced December hike expectations — Tokyo Nov 5: yen firmer on the minutes."
     },
     "growth": {
      "score": 0,
@@ -158,7 +158,7 @@
    "name": "Swiss franc",
    "bank": "snb",
    "chapter": null,
-   "summary": "USD/CHF 0.8162 in the US session (-0.35%), franc firmer on the dollar slide after touching an 8-week low of 0.8124 in Asia; Swiss CPI beat (1.5% y/y) still cools the Dec SNB cut case. Schlegel speaks Thu 6:40am CT.",
+   "summary": "USD/CHF 0.8140 in Asia, a second straight day lower on the dollar slide after hot Oct CPI (1.5% y/y); Schlegel speaks today 6:40am CT.",
    "drivers": {
     "policy": {
      "score": 0,
@@ -195,7 +195,7 @@
    "name": "Australian dollar",
    "bank": "rba",
    "chapter": null,
-   "summary": "AUD/USD 0.7008 in the US session (+0.27%), back above $0.70 after the RBA hike (4.85%, 6-3) failed to hold gains and oil crashed ~9%; next RBA decision Dec 8.",
+   "summary": "AUD/USD $0.7010 overnight, holding above $0.70 after the Nov 3 RBA hike to 4.85%; RBA Deputy Gov Hauser speaks ~12:45am CT.",
    "drivers": {
     "policy": {
      "score": 1,
@@ -232,7 +232,7 @@
    "name": "Canadian dollar",
    "bank": "boc",
    "chapter": null,
-   "summary": "USD/CAD 1.3950 in the US session (-0.31%) as the ~9% oil crash (Brent $94.29) offset the softer dollar; Macklem speaks Thu 9:30am CT, Canada budget Thu 3:00pm CT, Canada jobs + US payrolls Fri.",
+   "summary": "USD/CAD 1.3949 overnight, near 7-week lows as the ~9% oil crash offsets the softer dollar; Canada budget today 3:00pm CT, jobs Fri 7:30am CT (fcst +14.6K).",
    "drivers": {
     "policy": {
      "score": 1,
@@ -269,7 +269,7 @@
    "name": "New Zealand dollar",
    "bank": "rbnz",
    "chapter": null,
-   "summary": "NZD/USD 0.5633 in the US session (+0.27%), holding the post-jobs-miss bounce as the broad dollar slide offset the weak Q3 jobs print (employment -0.1%, unemployment 5.7%); NZ parliamentary elections Fri.",
+   "summary": "NZD/USD $0.5627 overnight, holding the post-jobs-miss bounce on the broad dollar slide; NZ parliamentary elections Fri 3:45pm CT.",
    "drivers": {
     "policy": {
      "score": 0,
@@ -670,6 +670,19 @@
   },
   {
    "date": "2026-11-04",
+   "scores": {
+    "USD": 1,
+    "EUR": -2,
+    "GBP": 4,
+    "JPY": -2,
+    "CHF": 0,
+    "AUD": 3,
+    "CAD": 2,
+    "NZD": 1
+   }
+  },
+  {
+   "date": "2026-11-05",
    "scores": {
     "USD": 1,
     "EUR": -2,
