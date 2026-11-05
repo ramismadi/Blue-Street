@@ -1,46 +1,50 @@
 {
-  "updated": "2026-11-05T01:40:00-06:00",
+  "updated": "2026-11-05T15:30:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "BoE Nov 5 hike to 4.00% ~97% (7–2 vote expected); Fed Dec hike ~81% (from ~83%); ECB Dec ~89%; BoJ Dec ~80%; BoC Dec ~56%; RBA hiked to 4.85% Nov 3",
-      "read": "Most big central banks still lean toward higher rates, and the Bank of England is set to raise on Thursday. Bank of Japan minutes backed more rises, and bets on a December Fed hike barely moved after the US elections. Currencies now move on hints about the next step, not on hikes already expected.",
+      "figure": "BoE hiked to 4.00% (8–1; Mann for +50bp); Fed Dec hike ~80%; ECB Dec ~89%; BoJ Dec ~80%; BoC Dec ~56%; RBNZ Dec <50%",
+      "read": "The Bank of England raised rates and hinted at more, joining most big central banks that still lean toward higher rates. Fed officials kept arguing for a December hike, and European Central Bank President Christine Lagarde kept hers open without promising it. With these moves expected, currencies react to hints about the next step.",
       "sources": [
         {
-          "label": "Blue Street central bank data (Hercules, Nov 5, 12:42 AM CT): rates, meetings and pricing",
+          "label": "Bank of England (Nov 5): Bank Rate increased to 4%, November 2026 Monetary Policy Summary",
+          "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026"
+        },
+        {
+          "label": "Blue Street central bank data (Hercules, Nov 5, 3:00 PM CT): rates, meetings and pricing",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "AOL / Reuters (Nov 5): Bank of England poised to raise rates to 4%, its first rise in three years",
-          "url": "https://www.aol.com/articles/bank-england-poised-hike-rates-000259000.html"
+          "label": "Finimize (Nov 5): Cleveland Fed's Hammack says rates need to rise further",
+          "url": "https://finimize.com/content/cleveland-feds-hammack-keeps-the-door-open-to-more-hikes"
         },
         {
-          "label": "investingLive (Nov 4): Bank of Japan September minutes show the board backed further hikes",
-          "url": "https://investinglive.com/central-banks/boj-minutes-board-backed-further-hikes-flagged-50-oil-surge-as-government-urged-caution/"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, London open run, Nov 5, 12:42 AM CT)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Blue Street calendar (Hercules, Nov 5): times, forecasts, actuals and speeches",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "Australia trade surplus A$2.8B Sep (7-month high); US ADP +86K (fcst +67K); ISM services 54.5 (fcst 54.8); US jobless claims fcst 197K",
-      "read": "Australia's exports rose strongly, giving it its biggest trade surplus in seven months. US figures this week have been mixed but healthy, and a Democratic Congress is expected to spend less, which could slow US growth next year. US jobs figures on Thursday and Friday are the next real read.",
+      "figure": "US jobless claims 189K (fcst 197K); Q3 productivity +3.6%, unit labour costs −0.7%; German factory orders +4.4% Sep (fcst +4.8%)",
+      "read": "The US job market stays firm, with very few layoffs, and workers are producing more per hour, which lets firms grow without pushing up prices. German factories recovered part of a deep August slump. Friday's US and Canadian jobs figures are the next big read.",
       "sources": [
         {
-          "label": "investingLive (Nov 5): Australia's trade surplus jumps to A$2.8 billion, a seven-month high",
-          "url": "https://investinglive.com/news/australia-s-trade-surplus-jumps-to-a-2-8-billion-a-seven-month-high-on-lng-and-metals/"
+          "label": "US Labor Department (Nov 5): weekly jobless claims",
+          "url": "https://www.dol.gov/ui/data.pdf"
         },
         {
-          "label": "investingLive (Nov 4): October US ISM services 54.5 vs 54.8 expected",
-          "url": "https://investinglive.com/news/october-us-ism-services-vs-54-8-expected/"
+          "label": "BLS (Nov 5): Productivity and Costs, third quarter 2026, preliminary",
+          "url": "https://www.bls.gov/news.release/prod2.nr0.htm"
         },
         {
-          "label": "Blue Street calendar (Hercules, Nov 5): times, forecasts and actuals",
+          "label": "Global Banking & Finance Review / Reuters (Nov 5): German factory orders rise 4.4% in September",
+          "url": "https://www.globalbankingandfinance.com/german-industrial-orders-rise-4-4-september/"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Nov 5): times, forecasts, actuals and speeches",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -48,39 +52,39 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "Brent ~$93.65 (4th daily fall; Wed settle $94.62, −8.7%); euro-area flash CPI 4.0% Oct; Swiss CPI 1.5% Oct; ISM services prices paid ~73",
-      "read": "Oil's slide on hopes of an end to the Iran war, if it lasts, would ease price pressure almost everywhere and take some heat off central banks. For now inflation is still high in the US, the UK and the euro area, so the hikes already planned stay on track.",
+      "figure": "Brent ~$97.9 (+3.5%); US unit labour costs −0.7% Q3; BoE sees UK CPI near 5% by mid-2027; euro-area CPI 4.0% Oct",
+      "read": "Oil bounced back after new tanker attacks, so the energy push on prices has not gone away. In the US, falling labour costs per unit of output ease the risk that wages keep inflation high. The Bank of England now expects UK inflation to climb further next year, which is why it is still raising rates.",
       "sources": [
         {
-          "label": "Business Recorder / Reuters (Nov 5): oil falls for a fourth day on a lower risk of Iran war escalation",
-          "url": "https://www.brecorder.com/news/40447519/oil-falls-for-a-fourth-day-on-expectations-for-lower-risk-of-iran-war-escalation"
-        },
-        {
-          "label": "MarketScreener / Reuters (Nov 4): euro-zone inflation rises to 4.0% in October",
-          "url": "https://www.marketscreener.com/news/euro-zone-flash-inflation-in-october-ce785fdfd88af42d"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, London open run, Nov 5, 12:42 AM CT)",
+          "label": "Blue Street market levels (Hercules, New York close run, Nov 5, 3:00 PM CT; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "BLS (Nov 5): Productivity and Costs, third quarter 2026, preliminary",
+          "url": "https://www.bls.gov/news.release/prod2.nr0.htm"
+        },
+        {
+          "label": "Bank of England (Nov 5): Bank Rate increased to 4%, November 2026 Monetary Policy Summary",
+          "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026"
+        },
+        {
+          "label": "The National (Nov 5): oil rebounds from a two-month low as uncertainty lingers over the Iran war",
+          "url": "https://www.thenationalnews.com/business/energy/2026/11/05/oil-rebounds-from-two-month-low-as-uncertainty-lingers-over-iran-war/"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "Kospi lower on chip selling; USD/JPY 158.25; USD/CHF 0.8140; AUD/USD 0.7010; gold ~$4,135 (+1.9%)",
-      "read": "Markets stayed mostly calm overnight after Wall Street's big rally, though chip stocks fell in Seoul and Tokyo on worries about tighter US rules on AI. The franc firmed and gold climbed, but on a weaker dollar more than on fear.",
+      "figure": "Nasdaq ~−5%, S&P 500 ~−4%, chip index ~−10%, VIX +60% (late session); USD/JPY 157.82 (−0.4%); AUD/USD 0.6935 (−1.0%); gold $4,124 (+1.6%)",
+      "read": "A sharp selloff in US chip and AI stocks turned markets fearful, wiping out the gains that followed Tuesday's election. Money went to the yen, gold and Treasury bonds, while the Australian and New Zealand dollars fell most. Whether this fear lasts is now a bigger driver than any single data release.",
       "sources": [
         {
-          "label": "WSLS / AP (Nov 5): Asian shares mostly rise after the US midterms, but Korea's Kospi falls on chip selling",
-          "url": "https://www.wsls.com/business/2026/11/05/asian-shares-mostly-advance-following-us-midterms-though-kospi-falls-on-selling-of-chipmakers/"
+          "label": "Yahoo Finance live (Nov 5): Nasdaq down about 5%, chip index down about 10%, VIX up over 60% (late-session figures)",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html"
         },
         {
-          "label": "FinanceFeeds (Nov 5): gold near $4,135 Thursday, highest since October 22",
-          "url": "https://financefeeds.com/gold-price-today-4135-thursday-before-6-november-jobs-report-dollar-near-one-month-low-bull-4225-bear-4000/"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, London open run, Nov 5, 12:42 AM CT)",
+          "label": "Blue Street market levels (Hercules, New York close run, Nov 5, 3:00 PM CT; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -88,56 +92,52 @@
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$93.65, WTI ~$86.98 in Asia; lowest since Aug 31; Australia trade surplus A$2.8B Sep",
-      "read": "Oil fell for a fourth day on bets the Iran war winds down, cutting the energy bill for importers like Japan and the euro area. Exporters like Canada and Australia earn less, though Australia's latest trade figures still showed strong gas and metals sales.",
+      "figure": "Brent $97.94 (+3.5%), WTI $90.64 (+2.8%); at least five ships hit near Hormuz since Sunday; Eurasia Group deal odds 10%",
+      "read": "Oil climbed back after more tankers were hit near the Strait of Hormuz and hopes for a US–Iran deal faded. That raises the energy bill again for importers like Japan and the euro area and gives exporters like Canada a little more income. Today the stock slump mattered more to those currencies than oil did.",
       "sources": [
         {
-          "label": "Business Recorder / Reuters (Nov 5): oil falls for a fourth day on a lower risk of Iran war escalation",
-          "url": "https://www.brecorder.com/news/40447519/oil-falls-for-a-fourth-day-on-expectations-for-lower-risk-of-iran-war-escalation"
-        },
-        {
-          "label": "investingLive (Nov 5): Australia's trade surplus jumps to A$2.8 billion, a seven-month high",
-          "url": "https://investinglive.com/news/australia-s-trade-surplus-jumps-to-a-2-8-billion-a-seven-month-high-on-lng-and-metals/"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, London open run, Nov 5, 12:42 AM CT)",
+          "label": "Blue Street market levels (Hercules, New York close run, Nov 5, 3:00 PM CT; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Reuters via BOE Report (Nov 5): three more tankers hit near Hormuz; sources say Trump may restart strikes",
+          "url": "https://boereport.com/2026/11/05/tankers-hit-in-hormuz-as-iran-keeps-up-pressure-after-us-vote/"
+        },
+        {
+          "label": "Cornerstone Futures (Nov 5): Eurasia Group cuts its odds of a US-Iran deal to 10%",
+          "url": "https://www.cornerstonefuturesllc.com/post/morning-highlights-eurasia-group-cuts-odds-of-an-iran-deal-to-10-as-oil-steadies-after-an-8-drop"
+        },
+        {
+          "label": "The National (Nov 5): oil rebounds from a two-month low as uncertainty lingers over the Iran war",
+          "url": "https://www.thenationalnews.com/business/energy/2026/11/05/oil-rebounds-from-two-month-low-as-uncertainty-lingers-over-iran-war/"
         }
       ]
     },
     {
       "id": "positioning",
       "title": "Positioning",
-      "figure": "CFTC Oct 27: funds strongly against CAD, against EUR (real money for), against NZD, for AUD (real money strongly against), strongly for gold (cut); oil net long among weakest since 2015",
-      "read": "Hedge funds hold their biggest bets against the Canadian dollar, and they are also betting against the euro and the kiwi, while real money investors bet for the euro. Their large bets on gold have been shrinking. New figures arrive Friday.",
+      "figure": "CFTC Oct 27: funds strongly against CAD, against EUR (real money for), against NZD, for AUD (real money strongly against), strongly for gold (cut); new report Fri Nov 6",
+      "read": "Hedge funds hold their biggest bets against the Canadian dollar and also bet against the euro and the kiwi, while real money investors bet for the euro. Big bets on the yen and gold mean days like today, when both rose, reward the side that is already full. New figures arrive Friday afternoon.",
       "sources": [
         {
-          "label": "CFTC Traders in Financial Futures (futures only), report date Oct 27",
-          "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
-        },
-        {
-          "label": "CFTC Disaggregated (futures only), report date Oct 27",
-          "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy"
+          "label": "Blue Street positioning (CFTC Traders in Financial Futures and Disaggregated, report date Oct 27)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/cot.json"
         }
       ]
     },
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "Democrats win House and Senate (AP, Nov 3–4); Treasury refunding $125B, unchanged; Canada budget Nov 5, 3:00 PM CT; Fitch France A+ negative (Oct 30)",
-      "read": "Democrats now control both houses of Congress, so President Trump's spending plans look harder to pass, which takes some support away from the dollar. Canada presents its federal budget on Thursday afternoon, and France's debt worries still weigh on the euro.",
+      "figure": "Canada Budget 2026 tabled Nov 5, 3:00 PM CT (PBO pre-budget deficit ~C$63.3B for 2026–27); Democrats control House and Senate; Fitch France A+ negative",
+      "read": "Canada tabled its federal budget with tax breaks for business investment and money for energy projects; the full borrowing figures are still being checked. A Democratic Congress makes President Trump's spending plans harder to pass, which trims support for the dollar. France's debt worries still weigh on the euro.",
       "sources": [
+        {
+          "label": "Blue Street calendar (Hercules, Nov 5): times, forecasts, actuals and speeches",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+        },
         {
           "label": "Blue Street breaking watch (Hercules, Nov 4): AP calls the House for Democrats",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
-        },
-        {
-          "label": "Seeking Alpha (Nov 4): US Treasury holds quarterly refunding at $125 billion",
-          "url": "https://seekingalpha.com/news/4664756-treasury-holds-quarterly-refunding-amounts-maturity-mix"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Nov 4): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
           "label": "Reuters via WBOW (Oct 30): Fitch revises France's outlook to negative",
