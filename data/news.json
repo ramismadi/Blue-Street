@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-05T12:49:49Z",
+  "updated": "2026-11-05T14:52:35Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "ts": "2026-11-04T23:50:24Z",
-      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low as US yields dropped on bets a split government borrows less. Private hiring beat forecasts slightly and job openings are strong, so a December Federal Reserve rate rise is still likely; Friday's jobs report decides whether the slide lasts."
+      "ts": "2026-11-05T14:52:35Z",
+      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low as US yields dropped on bets a split government borrows less. Thursday's data were solid, with few layoffs and strong productivity, so a December Federal Reserve rate rise is still likely; Friday's jobs report decides whether the slide lasts."
     },
     "EUR": {
       "lean": "mixed",
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "mixed",
-      "ts": "2026-11-05T01:47:51Z",
-      "text": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday, but Governor Michele Bullock signalled a pause, and China's services growth slowed to a three-month low. Against that, Australia's trade surplus jumped to a seven-month high in September and the US dollar is weaker after the midterms, which cushions the Australian dollar."
+      "ts": "2026-11-05T14:52:35Z",
+      "text": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday and Governor Michele Bullock signalled a pause, though her deputy Andrew Hauser said Thursday that inflation is still too high. A seven-month-high trade surplus and a weaker US dollar cushion the Australian dollar, while slowing growth in China's services weighs on it."
     },
     "NZD": {
       "lean": "bearish",
@@ -54,6 +54,33 @@
     }
   },
   "items": [
+    {
+      "id": "bls-us-claims-productivity-q3-20261105",
+      "ts": "2026-11-05T13:30:00Z",
+      "source": "US Bureau of Labor Statistics",
+      "url": "https://www.bls.gov/news.release/prod2.htm",
+      "image": null,
+      "headline": "US jobless claims come in below forecasts and worker productivity jumps 3.6%",
+      "story": "fed-december",
+      "story_title": "Fed: the case for a December rate rise",
+      "pillar": "growth",
+      "summary": "Fewer Americans filed new jobless claims than expected last week, and output per hour worked rose 3.6% in the third quarter while labour costs per unit of output fell.",
+      "beats": {
+        "was": "The US Federal Reserve is weighing a rate rise in December to fight inflation near 3.7%. The dollar had just fallen to a one-month low after Democrats won both houses of Congress in Tuesday's midterm elections.",
+        "happened": "Thursday's figures showed 189,000 new claims for unemployment benefits, below the roughly 197,000 forecast. Separately, productivity, the amount produced per hour of work, grew at a 3.6% yearly pace in July to September, well above forecasts near 2.8%, and unit labour costs fell 0.7% when a small rise was expected.",
+        "means": "Layoffs stay low, so the job market looks solid. Faster productivity and falling labour costs mean wages are adding less to inflation, which cuts both ways for the Fed: a firm economy backs a rise, softer cost pressure argues for patience.",
+        "fx": "The dollar firmed a little off its overnight low after the release, but the mixed message left it near one-month lows ahead of Friday's jobs report."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Low jobless claims support the dollar, while falling labour costs ease the inflation case for a December Fed rise."
+        }
+      ],
+      "watch": "Friday's official US jobs report for October, expected to show around 60,000 new jobs."
+    },
     {
       "id": "martincid-boe-hikes-4pc-20261105",
       "ts": "2026-11-05T12:05:16Z",
@@ -299,6 +326,33 @@
         }
       ],
       "watch": "Whether US-Iran talks resume, and any new strikes or attacks on shipping near Hormuz."
+    },
+    {
+      "id": "fxstreet-rba-hauser-inflation-too-high-20261105",
+      "date": "2026-11-05",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/rbas-hauser-inflation-is-too-high-whichever-measure-you-use-202611050751",
+      "image": null,
+      "headline": "Australia's Hauser says inflation is too high on every measure",
+      "story": "rba-hike",
+      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
+      "pillar": "inflation",
+      "summary": "Reserve Bank of Australia Deputy Governor Andrew Hauser said inflation is too high however it is measured and warned that public trust in the bank's fight against it is slipping.",
+      "beats": {
+        "was": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday, and Governor Michele Bullock then said it was time to pause and see how the rises work.",
+        "happened": "On Thursday Hauser, the bank's number two, said inflation is too high whichever gauge you use and that public confidence in the bank's ability to bring it down is weakening. He also denied that his remarks in October were meant to push the board toward a rise.",
+        "means": "His tone is firmer than Bullock's talk of a pause, a reminder that another rise is not ruled out if prices keep running hot. It adds no new data, so it changes little on its own.",
+        "fx": "Firm words from a senior policymaker give the Australian dollar mild support; it barely moved, holding near 70 US cents."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Tough talk on inflation keeps another rate rise possible, but the market barely reacted."
+        }
+      ],
+      "watch": "Australia's quarterly inflation figures and speeches by Bullock for any shift from the pause message."
     },
     {
       "id": "investinglive-boj-sept-minutes-hawkish-20261104",
@@ -1085,66 +1139,6 @@
         }
       ],
       "watch": "Whether New Zealand's central bank drops its hint of more rate rises at its next decision."
-    },
-    {
-      "id": "fxco-api-crude-draw-527m-20261103",
-      "ts": "2026-11-03T21:30:00Z",
-      "source": "FX.co",
-      "url": "https://www.fx.co/en/forex-news/3269975",
-      "image": "https://cdn.fx.co/forex-news/3269975_en.png",
-      "headline": "US crude stocks fell 5.3 million barrels last week, an industry survey shows",
-      "story": "iran-hormuz",
-      "story_title": "Hormuz: shipping attacks and the oil supply",
-      "pillar": "commodities",
-      "summary": "The American Petroleum Institute's weekly survey showed US crude stocks fell by about 5.3 million barrels, a much bigger drop than the week before.",
-      "beats": {
-        "was": "With Gulf supply cut by the Iran war, analysts watch US stockpiles for signs of how tight the market is. Analysts had expected a small rise last week, which would have been the first in five weeks.",
-        "happened": "The American Petroleum Institute, an industry group, said crude stocks fell 5.27 million barrels in the week to October 30, after a 2.0 million barrel fall the week before. The government's official figures follow on Wednesday.",
-        "means": "A fifth straight weekly fall, if the government numbers confirm it, says US demand and exports are still drawing down reserves even as peace hopes pull prices lower.",
-        "fx": "Falling stockpiles put a small floor under oil prices, a mild help for oil-linked currencies such as the Canadian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A bigger-than-expected stock drop points to a tight US market, pending official figures."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firmer oil gives Canada's currency slight support."
-        }
-      ],
-      "watch": "The US Energy Information Administration's official stock figures on Wednesday morning."
-    },
-    {
-      "id": "reuters-us-factory-orders-sep-18pc-20261103",
-      "ts": "2026-11-03T15:36:00Z",
-      "source": "Reuters via 102.7 WBOW",
-      "url": "https://1027wbow.com/2026/11/03/us-factory-orders-beat-expectations-in-september-amid-broad-strength/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/03/2026-11-03T153638Z_1_LYNXNPEMA21GS_RTROPTP_3_USA-TRUMP-ECONOMY-MANUFACTURING.JPG",
-      "headline": "US factory orders rise 1.8% in September, beating forecasts",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "growth",
-      "summary": "Orders placed with US factories rose 1.8% in September, more than the 1.2% economists expected, led by aircraft and spending tied to artificial intelligence.",
-      "beats": {
-        "was": "The Federal Reserve held its main rate at 3.75% to 4.00% on October 28, but two governors wanted a rise, and markets lean toward a December hike. Monday's survey of purchasing managers showed US factory output booming in October.",
-        "happened": "The Commerce Department's monthly count of new factory orders rose 1.8%, and August was revised up. Aircraft orders jumped about 28%. Orders for business equipment outside aircraft and defence, a guide to company investment plans, rose 0.6%.",
-        "means": "Firms are still spending, especially on computers and data centres for artificial intelligence, so the economy is not slowing much. Economists warn that higher rates and squeezed household budgets could cool factories next year.",
-        "fx": "Solid spending gives the dollar a little support, since it adds to the case for another Fed rate rise. It lands after a strong job-openings report, so the two point the same way."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Strong orders add a little to the case for a December Fed rate rise."
-        }
-      ],
-      "watch": "Friday's US October jobs report."
     },
     {
       "id": "ani-us-jolts-september-20261103",
