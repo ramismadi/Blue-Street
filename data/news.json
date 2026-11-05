@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T15:47:56Z",
+  "updated": "2026-11-05T16:47:34Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "mixed",
-      "text": "The Canadian dollar reached a seven-week high this week on a bigger trade surplus and a weaker US dollar, even as oil, Canada's main export, fell about 8% before steadying on Thursday. Bank of Canada Governor Tiff Macklem has said more rate rises may be needed, but a lasting slide in oil would weigh on both the currency and that case.",
-      "ts": "2026-11-05T12:49:49Z"
+      "ts": "2026-11-05T16:47:34Z",
+      "text": "The Canadian dollar reached a seven-week high this week on a bigger trade surplus and a weaker US dollar, even as oil, Canada's main export, fell about 8% before steadying near $96. Bank of Canada Governor Tiff Macklem told senators on Thursday that another rate rise may be needed but spare capacity lets the bank go slowly; Thursday's federal budget is next."
     },
     "AUD": {
       "lean": "mixed",
@@ -49,8 +49,8 @@
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-05T15:47:56Z",
-      "text": "Brent crude fell more than 8% on Wednesday to its lowest in over two months on bets that the new Democratic Congress pushes Washington toward ending the Iran war, then steadied near $96 on Thursday. Attacks on tankers near Hormuz are picking up again and sources say President Trump may still restart strikes, so the drop rests on hopes for peace that could fade quickly."
+      "ts": "2026-11-05T16:47:34Z",
+      "text": "Brent crude fell more than 8% on Wednesday to its lowest in over two months on bets that the new Democratic Congress pushes Washington toward ending the Iran war, then steadied near $96 on Thursday. Tanker attacks near Hormuz are picking up, sources say President Trump may still restart strikes, and Eurasia Group now gives a deal only a 10% chance, so the drop rests on peace hopes that could fade quickly."
     }
   },
   "items": [
@@ -119,6 +119,45 @@
         }
       ],
       "watch": "Friday's official US jobs report for October, expected to show around 60,000 new jobs."
+    },
+    {
+      "id": "cornerstone-eurasia-iran-deal-odds-10pc-20261105",
+      "ts": "2026-11-05T12:08:29Z",
+      "source": "Cornerstone Futures",
+      "url": "https://www.cornerstonefuturesllc.com/post/morning-highlights-eurasia-group-cuts-odds-of-an-iran-deal-to-10-as-oil-steadies-after-an-8-drop",
+      "image": null,
+      "headline": "Eurasia Group cuts its odds of a US-Iran deal to 10%, as oil steadies after an 8% drop",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "Political risk firm Eurasia Group now puts the chance of a US-Iran deal at just 10%, half its earlier view, and sees new US strikes as the most likely outcome. Brent recovered to about $96 a barrel.",
+      "beats": {
+        "was": "The US-Israel war with Iran has choked tanker traffic through the Strait of Hormuz, the route for about a fifth of the world's oil. On Wednesday oil fell more than 8%, to its lowest since late August, on bets that the Democratic win in Tuesday's US midterm elections pushes Washington toward peace.",
+        "happened": "Eurasia Group, a firm that advises investors on political risk, lowered its odds of a deal to 10% from 20%, put renewed US strikes at 60% and a drawn-out standoff at 30%. It says Iran has not budged on its demands and President Trump is unlikely to accept terms that look like a defeat. Citi also warned the White House could act on its own before the new Congress sits in January.",
+        "means": "Wednesday's slide priced a path to peace that this firm now sees as unlikely. If its view is right, the risk to Gulf supply lasts longer than the oil price suggests; it estimates Brent at $110 to $125 if fighting escalates.",
+        "fx": "This is an outside forecast, not news of a decision, so its pull is mild. It leans toward higher oil, which helps the Canadian dollar and safe havens such as the Swiss franc and hurts big oil buyers like Japan."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A respected forecaster sees peace as unlikely and new US strikes as more likely."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Lower odds of a deal keep some demand for a safe haven."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so a longer war raises its fuel bill."
+        }
+      ],
+      "watch": "Whether Trump orders new strikes on Iran before the new Congress takes its seats in January."
     },
     {
       "id": "martincid-boe-hikes-4pc-20261105",
@@ -392,6 +431,33 @@
         }
       ],
       "watch": "Australia's quarterly inflation figures and speeches by Bullock for any shift from the pause message."
+    },
+    {
+      "id": "boc-macklem-senate-banking-20261105",
+      "date": "2026-11-05",
+      "source": "Bank of Canada",
+      "url": "https://www.bankofcanada.ca/2026/11/opening-statement-standing-senate-committee-banking-commerce-and-economy-2026-11-05/",
+      "image": null,
+      "headline": "Bank of Canada's Macklem tells senators another rate rise may be needed but the bank will go carefully",
+      "story": "boc-hike",
+      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
+      "pillar": "policy",
+      "summary": "Bank of Canada Governor Tiff Macklem told a Senate committee the bank may have to raise rates again, but with slack in the economy it will decide one meeting at a time.",
+      "beats": {
+        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise since July 2023, because the Iran war has kept fuel prices high. Canada's inflation has been about 3%, above the bank's 2% target, since April.",
+        "happened": "Speaking to the Senate banking committee on Thursday, Macklem said inflation should reach about 3.5% by year-end and stay at or above 3% for much of 2027. He said new US tariffs will likely slow growth late this year and that the economy still has some spare capacity, so the bank will move carefully.",
+        "means": "This repeats what he told MPs on Tuesday, when he also said federal spending is not really adding to inflation. The door to a December rise stays open, but spare capacity gives the bank room to wait.",
+        "fx": "Steady words that markets already expected, so little support for the Canadian dollar on their own. Thursday's federal budget and the price of oil, Canada's main export, matter more for now."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Keeps a further rate rise possible, but stresses caution and spare capacity."
+        }
+      ],
+      "watch": "Canada's federal budget, due Thursday afternoon, and the Bank of Canada's next decision on December 9."
     },
     {
       "id": "investinglive-boj-sept-minutes-hawkish-20261104",
@@ -910,39 +976,6 @@
       "watch": "China's October trade figures, due later this week."
     },
     {
-      "id": "investing-oil-holds-losses-asia-20261104",
-      "date": "2026-11-04",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/commodities-news/oil-holds-steep-losses-after-us-election-fuels-iran-peace-hopes-5001939",
-      "image": "https://content-media.investing.com/news/moved_LYNXMPEK4N0FY_L.jpg",
-      "headline": "Oil holds near two-month lows in Asian trade after the US election lifts Iran peace hopes",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "commodities",
-      "summary": "Oil barely moved in early Asian trading on Thursday after its 9% drop on Wednesday, its lowest close since the end of August.",
-      "beats": {
-        "was": "Oil had climbed through the Iran war as attacks near the Strait of Hormuz, the Gulf's main shipping route, threatened supply. On Wednesday Brent fell about 9% to $94.62 a barrel after Democrats won both houses of the US Congress, and US President Trump admitted the war hurt his party.",
-        "happened": "US crude edged down 0.2% to about $88 in Asian trading, holding the drop. Qatar is trying to broker talks, but a senior Iranian official says the two sides are still far from a deal, and Trump says he has no plans for new strikes for now. US crude stocks fell less than forecast last week.",
-        "means": "Traders kept the bet that Washington is now more likely to wind the war down, which takes out much of the extra price paid for supply risk. With no deal yet, the drop rests on hopes rather than signed terms.",
-        "fx": "Cheaper oil eases pressure on big importers like Japan and the euro zone and weighs on the Canadian dollar, whose economy leans on oil exports."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Holds Wednesday's drop; no new news, just the peace bet staying in place."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil trims Canada's export income."
-        }
-      ],
-      "watch": "Any new attack on shipping near Hormuz, or word from Qatar's mediation, could move oil sharply either way."
-    },
-    {
       "id": "investing-cad-7wk-high-trade-surplus-20261104",
       "date": "2026-11-04",
       "source": "Investing.com",
@@ -1019,39 +1052,6 @@
         }
       ],
       "watch": "Friday's US jobs report for October, and whether AI-linked US stocks keep falling."
-    },
-    {
-      "id": "tradingpedia-pound-multiweek-peak-20261104",
-      "date": "2026-11-04",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/11/04/pound-surges-to-multi-week-peak-as-dollar-slides/",
-      "image": null,
-      "headline": "Pound climbs to its highest since mid-September as the dollar slides",
-      "story": "boe-hike",
-      "story_title": "Bank of England's first rate rise since 2023",
-      "pillar": "policy",
-      "summary": "The pound rose above $1.345 in Asian trading on Wednesday, its highest since September 16, as the dollar fell on the US midterm results and markets wait for a Bank of England rate rise on Thursday.",
-      "beats": {
-        "was": "The pound has been helped by expectations that the Bank of England will raise its rate from 3.75% to 4% on Thursday, November 5, its first rise since 2023, because energy costs are pushing UK inflation up.",
-        "happened": "Sterling rose past the middle of the $1.34s, a seven-week high, as the dollar index fell to its lowest in over a month on Democratic wins in the US midterms. Easing worries about UK public finances after recent budget updates also helped.",
-        "means": "Most of the move came from a weaker dollar rather than news from Britain, so Thursday's Bank of England vote and guidance decide whether the pound can hold its gains.",
-        "fx": "Pressure is upward for the pound and downward for the dollar; a cautious Bank of England could take some of the gain back."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A weaker dollar and an expected Bank of England rate rise lift the pound."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The dollar's slide on the midterm results drove most of the move."
-        }
-      ],
-      "watch": "The Bank of England's vote split and guidance on Thursday, November 5."
     },
     {
       "id": "finwire-gold-ends-3pc-higher-20261104",
