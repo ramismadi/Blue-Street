@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-05T19:48:30Z",
+  "updated": "2026-11-05T23:58:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "ts": "2026-11-05T19:48:30Z",
-      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low as US yields dropped. On Thursday US stocks slumped about 5% on the Nasdaq as chip shares sank, pushing yields lower again, though Cleveland Fed head Beth Hammack said rates still need to rise; Friday's jobs report decides whether a December Federal Reserve rise holds."
+      "ts": "2026-11-05T23:58:00Z",
+      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low as US yields dropped. Thursday's stock crash left the dollar flat, as safe-haven buying met lower yields and bets that the next Federal Reserve rise comes later; Friday's jobs report will show whether that view holds."
     },
     "EUR": {
       "lean": "mixed",
@@ -29,13 +29,13 @@
     },
     "CAD": {
       "lean": "mixed",
-      "ts": "2026-11-05T19:48:30Z",
-      "text": "The Canadian dollar reached a seven-week high this week on a bigger trade surplus and a weaker US dollar, and oil, Canada's main export, bounced back toward $97 on Thursday after a steep fall. Bank of Canada Governor Tiff Macklem told senators another rate rise may be needed but the bank can go slowly; a slump in US stocks is a drag on risk appetite."
+      "ts": "2026-11-05T23:58:00Z",
+      "text": "The Canadian dollar reached a seven-week high this week on a bigger trade surplus and a weaker US dollar, and oil, Canada's main export, bounced back on Thursday. Thursday's federal budget added C$142 billion of measures and keeps deficits above C$50 billion a year, but most of it was known; the slump in US stocks is the bigger drag."
     },
     "AUD": {
-      "lean": "mixed",
-      "ts": "2026-11-05T19:48:30Z",
-      "text": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday and deputy governor Andrew Hauser said Thursday inflation is still too high, which supports the Australian dollar along with a weaker US dollar. Against that, Thursday's slump in US stocks, led by chipmakers, weighs on currencies tied to global growth, and China's services sector is slowing."
+      "lean": "bearish",
+      "ts": "2026-11-05T23:58:00Z",
+      "text": "The Australian dollar fell 1% on Thursday, the most of the major currencies, as US stocks had their worst day in over a year on a crash in chip shares. The Reserve Bank of Australia's rise to 4.85% on Tuesday and its warning that inflation is still too high give some support, but for now the global sell-off weighs more."
     },
     "NZD": {
       "lean": "bearish",
@@ -54,6 +54,78 @@
     }
   },
   "items": [
+    {
+      "id": "reuters-trading-day-bonfire-aud-20261105",
+      "ts": "2026-11-05T22:09:50Z",
+      "source": "Reuters",
+      "url": "https://www.globalbankingandfinance.com/trading-day-november-5-market-bonfire/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-c64fae00-c9e9-42d2-83a0-74f64f1efc4c/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "Wall Street ends its worst day in over a year as chip stocks crash; Australian dollar falls most",
+      "story": "ai-stock-selloff",
+      "story_title": "AI stocks sell off after the US midterms",
+      "pillar": "risk",
+      "summary": "US stocks closed sharply lower on Thursday, with the Nasdaq down 5.5% and a chip-stock index down about 12%. The Australian dollar fell 1%, the most of the major currencies, while the US dollar barely moved.",
+      "beats": {
+        "was": "Democrats won control of both houses of the US Congress on Tuesday, raising worries about tighter rules on artificial intelligence and slower building of data centres. AI and chip shares had driven much of this year's stock gains.",
+        "happened": "The S&P 500 fell 4.4% and the Dow 3.4%, with every sector lower. The Philadelphia chip index had its second-worst day on record. US 10-year yields slipped to about 4.9%, oil ended 3-4% higher and gold rose about 1%.",
+        "means": "A sell-off this deep hits currencies tied to global growth and risk appetite first. Traders now see the next Federal Reserve rate rise later, around March 2027, which takes a little support away from the dollar.",
+        "fx": "The Australian dollar took the biggest hit; the US dollar held steady as falling yields offset its safe-haven pull."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "The currency most tied to global growth fell 1% as stocks slumped."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Moves with the Australian dollar when risk appetite drops."
+        },
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Safe-haven demand met lower yields and later Fed rate-rise bets."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Gold rose about 1% as money looked for shelter and yields fell."
+        }
+      ],
+      "watch": "Friday's US jobs report for October and whether Asian stock markets extend the slide."
+    },
+    {
+      "id": "ctv-canada-budget-2026-142b-20261105",
+      "date": "2026-11-05",
+      "source": "CTV News / BNN Bloomberg",
+      "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/05/carney-government-adds-142b-in-new-spending-to-spur-economic-growth-address-affordability/",
+      "image": "https://www.bnnbloomberg.ca/resizer/v2/CCZTHH4ESNATDBM3PUIXQ46UUM.JPG?smart=true&auth=34e226c21ee72cd1ccd84e751e8f983ca8312d17d98495e4a20dfd983de858e8&width=1200&height=630",
+      "headline": "Canada's budget adds C$142 billion in new measures and keeps deficits above C$50 billion a year",
+      "story": "cad-budget",
+      "story_title": "Canada's 2026 budget",
+      "pillar": "fiscal",
+      "summary": "Finance Minister François-Philippe Champagne tabled Canada's 2026 budget on Thursday, with C$142.1 billion of new tax breaks and spending over five years and no plan to balance the books.",
+      "beats": {
+        "was": "Prime Minister Mark Carney's government had promised a budget aimed at lifting growth and investment, while the parliamentary budget watchdog warned deficits were getting bigger.",
+        "happened": "This year's deficit is put at C$62.3 billion, about C$3 billion less than projected in the spring, with deficits above C$50 billion in each of the next four years. The biggest item is a C$36.1 billion tax break for business investment, announced earlier.",
+        "means": "Much of the plan was already known, so it brings few surprises for markets. More borrowing adds a little pressure on Canadian bond yields over time and gives the Bank of Canada one more reason to watch inflation.",
+        "fx": "Little direct effect on the Canadian dollar for now; oil prices and the US dollar matter more this week."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Large, mostly expected spending: growth support versus more debt."
+        }
+      ],
+      "watch": "Whether the budget passes a confidence vote in Parliament, and Canada's October jobs report on Friday."
+    },
     {
       "id": "finimize-hammack-hikes-20261105",
       "ts": "2026-11-05T18:23:26Z",
@@ -1276,33 +1348,6 @@
       "watch": "Australian jobs and inflation data before the December 8 meeting."
     },
     {
-      "id": "boc-macklem-commons-finance-20261103",
-      "date": "2026-11-03",
-      "source": "Bank of Canada",
-      "url": "https://www.bankofcanada.ca/2026/11/opening-statement-house-commons-standing-committee-finance-2026-11-03/",
-      "image": null,
-      "headline": "Bank of Canada's Macklem tells MPs further rate rises could be needed",
-      "story": "boc-hike",
-      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
-      "pillar": "policy",
-      "summary": "Bank of Canada Governor Tiff Macklem told a parliamentary committee the bank may need to raise rates again but will move carefully, repeating last week's message.",
-      "beats": {
-        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise since 2023, to stop high fuel prices from spreading into wider inflation. Canada's inflation has run near 3% since April.",
-        "happened": "Speaking to the House of Commons finance committee, Macklem said inflation could reach about 3.5% by year-end and stay at or above 3% through much of 2027. Further rises are possible, he said, but the bank will decide one meeting at a time.",
-        "means": "Nothing new: he repeated last week's guidance almost word for word. Markets see roughly even odds of another rise at the December 9 meeting.",
-        "fx": "The message keeps some rate support under the Canadian dollar, but since it was already expected, it adds little. Oil, Canada's main export, still matters more day to day."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Keeps a December Bank of Canada rate rise possible, though already expected."
-        }
-      ],
-      "watch": "Macklem speaks to a Senate committee on Thursday, November 5; the next rate decision is December 9."
-    },
-    {
       "id": "investing-swiss-cpi-oct-15pc-20261103",
       "date": "2026-11-03",
       "source": "Investing.com",
@@ -1328,57 +1373,6 @@
         }
       ],
       "watch": "The Swiss National Bank's December 10 decision, and whether fuel costs keep rising."
-    },
-    {
-      "id": "jpost-reuters-us-strikes-qeshm-20261103",
-      "date": "2026-11-03",
-      "source": "Jerusalem Post (Reuters)",
-      "url": "https://www.jpost.com/middle-east/iran-news/article-913644",
-      "image": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/744648",
-      "headline": "US carries out 'defensive' strikes on Iran's Qeshm Island, officials say",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "US officials said American forces made limited strikes on Iran's Qeshm Island in the Strait of Hormuz on Monday, hours after President Trump played down new attacks; oil edged back up in Asia.",
-      "beats": {
-        "was": "The US and Iran have been at war since late February, and Iran keeps most traffic through the Strait of Hormuz, the route for about a fifth of the world's oil, shut. Oil fell about 7% on Monday on hopes for a peace deal after Trump said he was not planning strikes after the US midterm elections.",
-        "happened": "The Wall Street Journal first reported, and a US official then confirmed, strikes on Qeshm, the biggest island in the strait. Officials called them limited and defensive, a reply to Iran firing missiles at US aircraft, and said they do not mean full fighting has restarted. Iranian state media reported several blasts on the island. Brent crude rose about 0.5% to near $105 a barrel in early Asian trade.",
-        "means": "Even with talks moving and both sides sounding hopeful, the two militaries are still trading fire around the strait. That keeps a risk of escalation alive and makes the market's bet on a quick deal shakier.",
-        "fx": "Any sign the fighting is not over adds some war premium back to oil and supports the dollar and Swiss franc as safe places to hold money, while it hurts big energy buyers like Japan."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Fresh US-Iran fire in the strait revives the risk to Gulf supply after Monday's big drop."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Renewed war risk adds some demand for the dollar as shelter."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Investors lean on the franc when conflict risk rises."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports almost all its energy, so pricier oil weighs on it."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Canada exports oil, so a firmer oil price helps its currency."
-        }
-      ],
-      "watch": "Whether Iran answers the Qeshm strikes, and whether the draft deal from the Qatar talks survives them."
     }
   ]
 }
