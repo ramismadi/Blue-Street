@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T01:47:51Z",
+  "updated": "2026-11-05T03:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -14,13 +14,13 @@
     },
     "GBP": {
       "lean": "bullish",
-      "text": "The pound climbed to its highest since mid-September as the dollar fell on the US midterm results, and economists expect the Bank of England to raise its rate from 3.75% to 4% on Thursday, November 5, its first rise since 2023. Most of the gain came from a weaker dollar, so the Bank's vote split and guidance decide whether it holds.",
-      "ts": "2026-11-04T11:55:18Z"
+      "ts": "2026-11-05T03:55:00Z",
+      "text": "The pound sits near its highest since mid-September, helped by a weaker dollar after the US midterms, and the Bank of England is expected to raise its rate to 4% from 3.75% at noon London time on Thursday, its first rise since 2023. The rise is priced in, so the vote split and whether the Bank backs more rises next year decide where the pound goes."
     },
     "JPY": {
       "lean": "mixed",
-      "ts": "2026-11-05T01:47:51Z",
-      "text": "The yen holds near 158 per dollar after US yields fell on the Democratic sweep of Congress. Minutes of the Bank of Japan's September rate rise show the board wants to keep raising rates, and one member floated a faster pace, which backs talk of a December move; the dollar still sits close to the 160 area where Tokyo has stepped in before."
+      "ts": "2026-11-05T03:55:00Z",
+      "text": "The yen edged firmer to just under 158 per dollar early Thursday as chip stocks slid in Seoul and Tokyo and US yields fell after the Democratic sweep of Congress. Minutes of the Bank of Japan's September rate rise show the board wants to keep raising rates, which backs talk of a December move; the dollar is still close to the 160 area where Tokyo has stepped in before."
     },
     "CHF": {
       "lean": "bullish",
@@ -49,11 +49,44 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-05T01:47:51Z",
-      "text": "Brent crude fell about 9% on Wednesday to near $95 a barrel, its lowest close since August, and held there in Asian trade, as traders bet Democratic control of Congress pushes Washington toward ending the Iran war. No deal is signed and tankers are still being hit near the Strait of Hormuz, so one new incident could reverse much of the drop."
+      "ts": "2026-11-05T03:55:00Z",
+      "text": "Brent crude fell about 9% on Wednesday to near $95 a barrel, its lowest since August, and slipped below $94 in Asian trade on Thursday, as traders bet Democratic control of Congress pushes Washington toward ending the Iran war. No deal is signed and tankers are still being hit near the Strait of Hormuz, so one new incident could reverse much of the drop."
     }
   },
   "items": [
+    {
+      "id": "ap-asian-shares-kospi-chips-yen-158-20261105",
+      "ts": "2026-11-05T02:59:25Z",
+      "source": "AP (via WSLS)",
+      "url": "https://www.wsls.com/business/2026/11/05/asian-shares-mostly-advance-following-us-midterms-though-kospi-falls-on-selling-of-chipmakers/",
+      "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/S6D2C3PUFFBLHCGFA3PPW5DAVE.jpg?api_key=wsls_8c3a4bc35af7684e",
+      "headline": "Yen edges below 158 per dollar as chip stocks slide in Seoul and Tokyo",
+      "story": "us-midterms",
+      "story_title": "US midterms: a week of elections, central banks and jobs data risk",
+      "pillar": "risk",
+      "summary": "The dollar slipped under 158 yen early Thursday as chipmakers sold off across Asia on fears a Democratic Congress will rein in the AI boom.",
+      "beats": {
+        "was": "Democrats won control of both chambers of the US Congress in Tuesday's midterm elections. Investors fear tighter rules on artificial intelligence, which has driven big gains in Asian chip stocks this year.",
+        "happened": "South Korea's Kospi fell about 3.5% by late morning, with Samsung Electronics and SK Hynix down 6-7%, and Japan's Nikkei slipped 0.5% as chip-test and equipment makers fell sharply. Hong Kong and Australian shares rose. The dollar eased to about 157.96 yen from 158.41, and Brent crude dipped below $94.",
+        "means": "Money is moving out of the AI trade that did best under Republican rule, while the wider market still takes the election calmly.",
+        "fx": "Selling of risky assets plus lower US yields gives the yen mild support, though the move is small."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A small move as chip stocks fall and the dollar softens."
+        },
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Brent drifts a little lower after Wednesday's big drop."
+        }
+      ],
+      "watch": "Whether the chip sell-off spreads beyond Korea and Japan when Europe opens."
+    },
     {
       "id": "investinglive-au-trade-sep-28bn-20261105",
       "ts": "2026-11-05T00:48:59Z",
@@ -82,6 +115,33 @@
       "watch": "Whether gas and metals exports stay strong once gold flows settle."
     },
     {
+      "id": "aol-reuters-boe-poised-first-hike-20261105",
+      "ts": "2026-11-05T00:02:00Z",
+      "source": "Reuters (via AOL)",
+      "url": "https://www.aol.com/articles/bank-england-poised-hike-rates-000259000.html",
+      "image": "https://hermes.media.transform.aol.com/83fbdd6a0eb70433cc87b592f8b9a5765a9f2874/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/05/a37620dd-e646-33df-9b1a-5222668d34a7/8214c2cf-06ec-4e62-9526-03583c63e221.jpg",
+      "headline": "Bank of England expected to raise rates to 4% on Thursday, its first rise in three years",
+      "story": "boe-hike",
+      "story_title": "Bank of England's first rate rise since 2023",
+      "pillar": "policy",
+      "summary": "Economists polled by Reuters expect the Bank of England to lift its rate to 4% from 3.75% today, with seven of nine policymakers voting for it.",
+      "beats": {
+        "was": "The Bank of England has not raised rates since August 2023. In September it held at 3.75%, but three of its nine policymakers already wanted a rise, and UK inflation then climbed to 3.5%, well above the Bank's own forecast, as the Iran war pushed up fuel and gas costs.",
+        "happened": "Ahead of Thursday's decision at noon London time, economists expect a 7-2 vote for a rise to 4%. Markets go further and price at least three more quarter-point rises next year, while many economists, including PIMCO's, expect only one more early next year and then a long pause.",
+        "means": "The rise itself is almost fully expected. What matters is whether the Bank's new forecasts and wording back the market's path of several more rises or lean toward the economists' view of one more and done.",
+        "fx": "A rise with hints of more would support the pound; a split vote or talk of a pause could pull it back from its highest level since mid-September."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The rise is expected; the guidance on what comes next decides the pound's move."
+        }
+      ],
+      "watch": "The vote split and whether the Bank's new forecasts show inflation peaking above 4% next year."
+    },
+    {
       "id": "investinglive-boj-sept-minutes-hawkish-20261104",
       "ts": "2026-11-04T23:58:27Z",
       "source": "investingLive",
@@ -107,33 +167,6 @@
         }
       ],
       "watch": "Whether Bank of Japan officials repeat the faster-pace idea in speeches before the December meeting."
-    },
-    {
-      "id": "investinglive-boj-sept-minutes-preview-20261104",
-      "ts": "2026-11-04T21:03:26Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/economic-and-event-calendar-in-asia-thursday-november-5-2026-we-hear-from-the-bank-of-japan/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/yen%20chart%20update%2005%20November%202026-featured-1793826121.jpg?width=960&format=webp",
-      "headline": "Bank of Japan publishes the minutes of its September rate rise on Thursday",
-      "story": "yen-intervention-watch",
-      "story_title": "Japan: guarding the yen near 160 per dollar",
-      "pillar": "policy",
-      "summary": "The Bank of Japan releases the full record of its September meeting, when it raised its rate to 1.25%, on Thursday morning Tokyo time; markets will read it for hints of another rise in December.",
-      "beats": {
-        "was": "In September the Bank of Japan raised its rate to 1.25%, the highest since 1995, by a 7-2 vote, with two members preferring to wait. In October it held, but one member, Hajime Takata, voted to go to 1.5%.",
-        "happened": "The minutes of the September meeting come out at 8:50 a.m. Tokyo time on Thursday, November 5 (5:50 p.m. Wednesday in Chicago). They show how board members weighed inflation, wages and the weak yen when they decided to raise rates.",
-        "means": "The minutes are backward-looking, but a board that sounds keen on further rises would back the view that a December move is likely. Talk of caution would push that view back.",
-        "fx": "Signs the bank wants to keep raising rates would help the yen, which sits near 158 per dollar, close to the 160 area where Tokyo has stepped in before."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A preview: the tone of the minutes could nudge December rate-rise bets either way."
-        }
-      ],
-      "watch": "Whether the minutes show most members open to another rate rise in December."
     },
     {
       "id": "thenational-brent-slides-94-midterms-20261104",
@@ -928,39 +961,6 @@
       "watch": "The US Energy Information Administration's official stock figures on Wednesday morning."
     },
     {
-      "id": "fxempire-dollar-firms-yen-158-20261103",
-      "ts": "2026-11-03T16:32:00Z",
-      "source": "FXEmpire",
-      "url": "https://www.fxempire.com/forecasts/article/u-s-dollar-gains-ground-ahead-of-midterm-elections-analysis-for-eur-usd-gbp-usd-usd-cad-usd-jpy-1642270",
-      "image": "https://responsive.fxempire.com/v7/_fxempire_/2026/11/us-dollar-index-dxy-06.jpg?width=1201",
-      "headline": "Dollar edges up after strong US data, pushing the yen toward 158.5 per dollar",
-      "story": "yen-intervention-watch",
-      "story_title": "Japan: guarding the yen near 160 per dollar",
-      "pillar": "rates",
-      "summary": "The dollar gained a little on Tuesday after US job openings and factory orders beat forecasts and US bond yields rose, and the yen weakened toward 158.5 per dollar.",
-      "beats": {
-        "was": "The yen fell to about 160 per dollar earlier this year, a level where Japan's government has stepped in before to buy yen. Since then Tokyo has repeated that it will act against wild moves, and the Bank of Japan has hinted at a rate rise in December.",
-        "happened": "US job openings rose to about 7.5 million in September and factory orders grew 1.8%, both above forecasts. US two-year bond yields rose above 4.6% and ten-year yields above 4.9%, and the dollar climbed toward 158.5 yen, a level it has failed to break several times.",
-        "means": "Firm US data supports the Federal Reserve officials who want another rate rise in December, which keeps the interest gap between the US and Japan wide. That gap is the main reason the yen stays weak.",
-        "fx": "Higher US yields help the dollar most against the yen; the closer it gets to 160, the more likely Japan's warnings turn into action, which caps how far the move can go."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Rising US yields widen the gap with Japan's low rates and push the yen weaker."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Two data beats and higher bond yields give the dollar a small lift before the midterm results."
-        }
-      ],
-      "watch": "Whether the dollar breaks above 158.5 yen, and any new warning from Japan's Finance Minister Satsuki Katayama."
-    },
-    {
       "id": "edairynews-gdt-event-415-up-3pc-20261103",
       "ts": "2026-11-03T16:18:53Z",
       "source": "eDairy News",
@@ -1205,33 +1205,6 @@
         }
       ],
       "watch": "Which names governments submit by Friday, November 6, and what the finance ministers signal on November 9."
-    },
-    {
-      "id": "investing-sterling-boe-hike-ing-20261103",
-      "ts": "2026-11-03T10:07:00Z",
-      "source": "Investing.com",
-      "url": "https://uk.investing.com/news/forex-news/sterling-today-pound-edges-up-as-dollar-eases-boe-hike-in-view-4951707",
-      "image": "https://content-media.investing.com/news/LYNXNPEC6L0GQ_L.jpg",
-      "headline": "Pound holds near $1.344 as banks expect the Bank of England to raise rates on Thursday",
-      "story": "boe-hike",
-      "story_title": "Bank of England's first rate rise since 2023",
-      "pillar": "policy",
-      "summary": "The pound sat near $1.344 on Tuesday as economists expect the Bank of England to lift its rate to 4% on Thursday, with ING forecasting a 7-2 vote.",
-      "beats": {
-        "was": "The Bank of England has kept its rate at 3.75%, but the jump in energy costs from the Iran war has pushed UK inflation up. It has not raised rates since 2023.",
-        "happened": "ING economists James Smith and Michiel Tukker expect a quarter-point rise to 4% on Thursday, November 5, with seven of nine policymakers voting for it. They note markets already expect more than a full percentage point of rises in total, and the pound held near $1.344.",
-        "means": "A rise is close to certain, so the vote split and what the Bank says about further rises matter more than the decision. A message that more rises are likely would back what markets already expect.",
-        "fx": "The pound has been helped by the view that high energy costs leave the Bank little choice; firm guidance would support it, while a wide split or a softer tone could knock it."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A rate rise is widely expected and mostly priced; the vote and guidance decide the move."
-        }
-      ],
-      "watch": "The Bank of England decision and vote on Thursday, November 5."
     },
     {
       "id": "arabnews-reuters-oil-rises-deal-far-off-20261103",
