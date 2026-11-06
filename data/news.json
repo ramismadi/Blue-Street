@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T03:47:33Z",
+  "updated": "2026-11-06T11:48:03Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "mixed",
-      "text": "The euro is near $1.127, close to a one-month high, mostly because the dollar fell after Democrats won the US Congress. At home the news is middling: inflation rose to 4.0% in October as expected, keeping a December European Central Bank rate rise in view, while German factory orders bounced back in September by a little less than forecast.",
-      "ts": "2026-11-05T12:49:49Z"
+      "ts": "2026-11-06T11:48:03Z",
+      "text": "The euro is near $1.127, close to a one-month high, mostly because the dollar fell after Democrats won the US Congress. News at home is mixed but improving: inflation rose to 4.0% in October, keeping a December European Central Bank rate rise in view, and German factory orders and output both rose in September, though markets paid little attention amid the stock sell-off."
     },
     "GBP": {
       "lean": "bullish",
@@ -43,17 +43,116 @@
       "text": "New Zealand's jobless rate rose to 5.7% in the third quarter, its highest since 2015, which makes further Reserve Bank of New Zealand rate cuts more likely. Slower services growth in China, its biggest customer, adds to the pressure, while a third straight rise in global dairy prices is the main support."
     },
     "XAU": {
-      "lean": "bullish",
-      "text": "Gold climbed to about $4,135 an ounce on Thursday, its highest since late October, after a 3.5% jump on Wednesday as the dollar and US yields fell on the Democratic sweep of Congress; central banks also kept buying last quarter. Markets still expect a December Federal Reserve rate rise, so Friday's US jobs report decides whether the rebound holds.",
-      "ts": "2026-11-05T12:49:49Z"
+      "lean": "mixed",
+      "ts": "2026-11-06T11:48:03Z",
+      "text": "Gold jumped this week as the dollar and US yields fell after Democrats won Congress, reaching about $4,145 on Thursday. On Friday it fell about 1% as oil's bounce revived inflation worries and the chance of a December Federal Reserve rate rise; Goldman Sachs also cut its year-end forecast. Friday's US jobs report decides the next move."
     },
     "OIL": {
-      "lean": "mixed",
-      "ts": "2026-11-06T03:47:33Z",
-      "text": "Brent crude fell to a two-month low near $93 on Wednesday on bets the new Democratic Congress pushes Washington to end the Iran war, then rose for two days to near $100 as more tankers were hit near the Strait of Hormuz. It is still set for about a 12% weekly fall; Iran's nuclear proposal through Qatar comes with demands that keep Hormuz shut for now."
+      "lean": "bearish",
+      "ts": "2026-11-06T11:48:03Z",
+      "text": "Brent crude is heading for a fall of about 16% this week, its steepest since early 2020, on bets that the new Democratic Congress pushes Washington to end the Iran war and more Middle East oil reaches the market. Tanker attacks near the Strait of Hormuz still lift it at times, as on Friday when it briefly topped $100 before slipping back to about $97.50."
     }
   },
   "items": [
+    {
+      "id": "rte-reuters-oil-16pc-weekly-drop-20261106",
+      "ts": "2026-11-06T10:54:38Z",
+      "source": "RTÉ (Reuters)",
+      "url": "https://www.rte.ie/news/business/2026/1106/1598252-world-oil-prices/",
+      "image": "https://www.rte.ie/images/00241fb5-1600.jpg",
+      "headline": "Brent slips back to about $97.50 after briefly topping $100, on track for its worst week since early 2020",
+      "story": "iran-oil",
+      "story_title": "Oil and the Iran war after the US midterms",
+      "pillar": "commodities",
+      "summary": "Brent crude fell about 0.8% to near $97.55 a barrel on Friday morning in Europe, giving up an early climb above $100. It is heading for a fall of about 16% this week.",
+      "beats": {
+        "was": "Oil prices had jumped this year because the Iran war choked shipping through the Strait of Hormuz, the route for about a fifth of the world's oil. After Democrats won both houses of the US Congress on Tuesday, Brent fell 8% on Wednesday on hopes Washington pushes to end the war.",
+        "happened": "Brent briefly rose above $100 early on Friday as more tankers were attacked near Hormuz, then slipped back to about $97.55; US crude was near $89.80. A 16% weekly drop would be Brent's steepest since the start of the Covid pandemic and its biggest in dollar terms in records back to 1988.",
+        "means": "Ship attacks still put a floor under prices, but the bigger force this week is the bet that more Middle East oil will reach the market and that supply may soon outrun demand.",
+        "fx": "Cheaper oil eases pressure on big importers like Japan and the euro area and weighs on the Canadian dollar, which leans on oil exports."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "On track for its steepest weekly fall since early 2020 on hopes of more Middle East supply."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Oil is Canada's main export, so a lower price takes away some support."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so cheaper crude eases a drag on the yen."
+        }
+      ],
+      "watch": "Any US answer to Iran's proposal sent through Qatar, and whether tanker attacks near Hormuz keep rising."
+    },
+    {
+      "id": "brecorder-reuters-gold-drops-1pc-20261106",
+      "ts": "2026-11-06T05:54:22Z",
+      "source": "Reuters (via Business Recorder)",
+      "url": "https://www.brecorder.com/news/40447728/gold-drops-over-1-on-higher-oil-prices-us-payrolls-data-in-focus",
+      "image": "https://i.brecorder.com/large/2026/11/040753331c129b5.jpg",
+      "headline": "Gold falls about 1% to near $4,044 as oil's rebound revives inflation worries; Goldman lowers its forecast",
+      "story": "gold-midterms",
+      "story_title": "Gold after the US midterms",
+      "pillar": "rates",
+      "summary": "Gold dropped about 1.1% to near $4,044 an ounce in Asian trading on Friday, though it is still heading for its best week since late August. Goldman Sachs cut its end-2026 forecast to $4,150 from $4,650.",
+      "beats": {
+        "was": "Gold jumped about 3.5% on Wednesday after Democrats won the US Congress and the dollar and US yields fell, and reached about $4,145 on Thursday. Gold tends to struggle when interest rates are expected to stay high, because it pays no interest.",
+        "happened": "Spot gold fell 1.1% on Friday as oil climbed back toward $100, reviving fears that inflation keeps US rates high for longer. Some investors also sold gold to cover losses in the stock sell-off. Futures give about a 68% chance the Federal Reserve raises rates in December.",
+        "means": "The midterm bounce in gold is being tested: dearer oil and the risk of a December Fed rise pull against it, and a big bank has turned less upbeat on where the price ends the year.",
+        "fx": "Gold faces downward pressure for now; Friday's US jobs report will shape the Fed outlook that is driving it."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Fell about 1% on renewed inflation and rate worries, and Goldman cut its year-end forecast."
+        },
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Higher-for-longer rate talk helps it, while the stock rout keeps December Fed bets below where they were."
+        }
+      ],
+      "watch": "The US jobs report for October, due Friday at 7:30 AM CT, and how it moves the odds of a December Fed rise."
+    },
+    {
+      "id": "tradingpedia-de-industrial-output-sep-07pc-20261106",
+      "date": "2026-11-06",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/11/06/eur-gbp-holds-range-despite-strong-german-output-data/",
+      "image": null,
+      "headline": "German industrial output rises 0.7% in September, beating forecasts of no change",
+      "story": "de-industry",
+      "story_title": "Germany's factory orders swing back",
+      "pillar": "growth",
+      "summary": "Germany's factories produced 0.7% more in September than in August, when economists expected no change. The euro barely moved against the pound.",
+      "beats": {
+        "was": "German industry, the core of Europe's biggest economy, has been struggling with high energy costs. On Thursday, figures showed factory orders bounced 4.4% in September after a big drop in August.",
+        "happened": "Germany's statistics office said on Friday that industrial output rose 0.7% in September, led by cars and medicines, while construction and machinery fell. Compared with a year earlier, output was up just 0.4%.",
+        "means": "A better month for German factories, but the yearly gain is small and the stock-market sell-off is drowning out good news from Europe.",
+        "fx": "A mild plus for the euro that markets largely ignored, with the euro steady near 0.834 pounds."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Output beat forecasts, though the yearly pace stays weak and traders paid it little attention."
+        }
+      ],
+      "watch": "Euro-zone retail sales for September, and whether German orders and output keep rising in October."
+    },
     {
       "id": "asiaone-reuters-dollar-holds-yen-1574-20261106",
       "ts": "2026-11-06T03:08:25Z",
@@ -1304,111 +1403,6 @@
         }
       ],
       "watch": "Whether US bond yields keep falling, and whether Friday's US jobs report keeps a December Federal Reserve rate rise likely."
-    },
-    {
-      "id": "reuters-dems-projected-house-20261104",
-      "ts": "2026-11-04T03:20:00Z",
-      "source": "Reuters",
-      "url": "https://www.yahoo.com/news/politics/articles/democrats-projected-win-majority-control-031736338.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/fc561f990c14c09a70dff13cf828a400f5dae87e8eddf219a3d08a72a297de05/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F578ae6d10ff869e4812182e4ac955cd2.jpg",
-      "headline": "Democrats projected to win control of the US House of Representatives",
-      "story": "us-midterms",
-      "story_title": "US midterms: a week of elections, central banks and jobs data",
-      "pillar": "policy",
-      "summary": "US networks projected late Tuesday that Democrats will take the House from President Trump's Republicans; the Senate is still too close to call.",
-      "beats": {
-        "was": "Americans voted on Tuesday in the midterm elections, which decide all 435 House seats and 35 of 100 Senate seats. Republicans held both chambers, which let President Trump pass tax cuts and spending with little resistance.",
-        "happened": "Major US networks projected just before 10 p.m. Eastern that Democrats will win a House majority. In the Senate, Democrat Roy Cooper took a Republican seat in North Carolina, but control was still open, and a 50-50 split would leave Republicans in charge through Vice President JD Vance's tie-breaking vote.",
-        "means": "A Democratic House can block new tax cuts and big spending plans from next year, which points to less government borrowing and lower US bond yields. Much of this was expected, so the Senate result now decides how big the shift is.",
-        "fx": "Lower expected yields weigh on the dollar; a Democratic Senate as well would add to that pressure."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A split government means less borrowing and lower yields, which takes some support from the dollar."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Lower US yields make gold, which pays no interest, a little more attractive."
-        }
-      ],
-      "watch": "Whether Democrats also win the Senate, and whether the Associated Press confirms the House call."
-    },
-    {
-      "id": "thestar-reuters-nikkei-drops-3pc-midterms-20261104",
-      "ts": "2026-11-04T03:06:00Z",
-      "source": "Reuters",
-      "url": "https://www.thestar.com.my/business/business-news/2026/11/04/japan039s-nikkei-drops-3-as-democratic-gains-in-us-midterms-hit-ai-stocks",
-      "image": "https://apicms.thestar.com.my/uploads/images/2026/11/04/4196102.jpg",
-      "headline": "Japan's Nikkei drops 3% as Democratic gains in the US midterms hit AI stocks",
-      "story": "us-midterms",
-      "story_title": "US midterms: a week of elections, central banks and jobs data",
-      "pillar": "risk",
-      "summary": "Tokyo's main share index fell about 3% on Wednesday, led by chip and AI names, on worry that a Democratic Congress will tighten rules on data centres.",
-      "beats": {
-        "was": "Japanese shares had climbed to records this year on the boom in artificial-intelligence spending, with chip and cable makers among the biggest winners.",
-        "happened": "The Nikkei 225 fell 3.1% to about 61,128 early Wednesday. SoftBank Group lost about 7%, memory maker Kioxia 10% and chip-testing firm Advantest 6.4%, as investors bet Democrats would bring tighter rules on data-centre projects.",
-        "means": "A sharp fall in stocks tends to send money toward safe assets, and the yen usually benefits when Japanese investors pull back from risk.",
-        "fx": "Mild support for the yen through risk aversion, against the much bigger pull of the gap between US and Japanese interest rates."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Falling stocks tend to send money into the yen as a safe place."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The Australian dollar tends to slip when Asian stocks sell off."
-        }
-      ],
-      "watch": "Whether the sell-off spreads to US stocks when New York opens on Wednesday."
-    },
-    {
-      "id": "brecorder-reuters-stocks-dollar-slide-dem-wins-20261104",
-      "ts": "2026-11-04T02:59:00Z",
-      "source": "Reuters",
-      "url": "https://www.brecorder.com/news/40447347/stocks-dollar-slide-after-some-early-wins-for-democrats-in-us-midterm-election",
-      "image": "https://i.brecorder.com/large/2026/11/020742152fdf773.jpg",
-      "headline": "Stocks and the dollar slide after early Democratic wins in the US midterms",
-      "story": "us-midterms",
-      "story_title": "US midterms: a week of elections, central banks and jobs data",
-      "pillar": "rates",
-      "summary": "The dollar fell about 0.3% and US bond yields dropped as early midterm results favoured the Democrats, lifting the euro and pound.",
-      "beats": {
-        "was": "The dollar had firmed earlier on Tuesday after strong US job-openings and factory figures, which raised the odds of a Federal Reserve rate rise in December.",
-        "happened": "As Democrats won key Senate races in Georgia and North Carolina, the dollar index, which tracks the dollar against six major currencies, fell 0.3% to about 101.4. The 10-year US Treasury yield dropped about 6 basis points to 4.91%, the euro rose 0.4% to about $1.124 and the pound 0.4% to about $1.346.",
-        "means": "Traders read Democratic gains as a check on government borrowing, which lowers the yields that have been pulling money into the dollar.",
-        "fx": "The euro and pound gain most directly from a softer dollar; how far it goes depends on the Senate count."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Falling Treasury yields on Democratic gains pulled the dollar lower across the board."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The euro rose to about $1.124 as the dollar weakened."
-        },
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The pound rose to about $1.346 ahead of Thursday's expected Bank of England rate rise."
-        }
-      ],
-      "watch": "Friday's US jobs report, which could restore the dollar's support if it is strong."
     }
   ]
 }
