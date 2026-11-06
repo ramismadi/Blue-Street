@@ -1,50 +1,34 @@
 {
-  "updated": "2026-11-05T15:30:00-06:00",
+  "updated": "2026-11-06T01:35:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "BoE hiked to 4.00% (8–1; Mann for +50bp); Fed Dec hike ~80%; ECB Dec ~89%; BoJ Dec ~80%; BoC Dec ~56%; RBNZ Dec <50%",
-      "read": "The Bank of England raised rates and hinted at more, joining most big central banks that still lean toward higher rates. Fed officials kept arguing for a December hike, and European Central Bank President Christine Lagarde kept hers open without promising it. With these moves expected, currencies react to hints about the next step.",
+      "figure": "Fed Dec hike ~68% (from ~80%); ECB Dec ~89%; BoJ Dec ~80%; BoC Dec ~56%; BoE 4.00% after Nov 5 hike; RBNZ Dec <50%",
+      "read": "Most big central banks still lean toward raising rates, led by the Bank of England's hike on Thursday. The stock slump has trimmed bets that the Federal Reserve hikes in December, which narrows one of the dollar's supports. Today's US jobs report will show whether that holds.",
       "sources": [
         {
-          "label": "Bank of England (Nov 5): Bank Rate increased to 4%, November 2026 Monetary Policy Summary",
-          "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026"
-        },
-        {
-          "label": "Blue Street central bank data (Hercules, Nov 5, 3:00 PM CT): rates, meetings and pricing",
+          "label": "Blue Street central bank data (Hercules, Nov 6, 12:45 AM CT): rates, meetings and pricing",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Finimize (Nov 5): Cleveland Fed's Hammack says rates need to rise further",
-          "url": "https://finimize.com/content/cleveland-feds-hammack-keeps-the-door-open-to-more-hikes"
+          "label": "Reuters via AsiaOne (Nov 6): dollar holds, yen gains as equity rout saps risk appetite ahead of payrolls",
+          "url": "https://www.asiaone.com/money/dollar-holds-yen-gains-equity-rout-saps-risk-appetite-ahead-payrolls"
         },
         {
-          "label": "Blue Street calendar (Hercules, Nov 5): times, forecasts, actuals and speeches",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+          "label": "Bank of England (Nov 5): Bank Rate increased to 4%, November 2026 Monetary Policy Summary",
+          "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "US jobless claims 189K (fcst 197K); Q3 productivity +3.6%, unit labour costs −0.7%; German factory orders +4.4% Sep (fcst +4.8%)",
-      "read": "The US job market stays firm, with very few layoffs, and workers are producing more per hour, which lets firms grow without pushing up prices. German factories recovered part of a deep August slump. Friday's US and Canadian jobs figures are the next big read.",
+      "figure": "US payrolls Oct fcst 65K (Sep 29K), unemployment fcst 4.2%; Canada jobs fcst +14.6K (Sep −68.3K); US jobless claims 189K (Nov 5)",
+      "read": "Layoffs in the US remain rare, but hiring has been slow, so today's jobs report is the key check on the economy. Canada needs a rebound after losing jobs in September. A falling stock market could also start to weigh on spending if it lasts.",
       "sources": [
         {
-          "label": "US Labor Department (Nov 5): weekly jobless claims",
-          "url": "https://www.dol.gov/ui/data.pdf"
-        },
-        {
-          "label": "BLS (Nov 5): Productivity and Costs, third quarter 2026, preliminary",
-          "url": "https://www.bls.gov/news.release/prod2.nr0.htm"
-        },
-        {
-          "label": "Global Banking & Finance Review / Reuters (Nov 5): German factory orders rise 4.4% in September",
-          "url": "https://www.globalbankingandfinance.com/german-industrial-orders-rise-4-4-september/"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Nov 5): times, forecasts, actuals and speeches",
+          "label": "Blue Street calendar (Hercules, Nov 6): times, forecasts and speeches",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -52,39 +36,43 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "Brent ~$97.9 (+3.5%); US unit labour costs −0.7% Q3; BoE sees UK CPI near 5% by mid-2027; euro-area CPI 4.0% Oct",
-      "read": "Oil bounced back after new tanker attacks, so the energy push on prices has not gone away. In the US, falling labour costs per unit of output ease the risk that wages keep inflation high. The Bank of England now expects UK inflation to climb further next year, which is why it is still raising rates.",
+      "figure": "Brent ~$99.7 (+1.8%); euro-area CPI 4.0% Oct; BoE sees UK CPI near 5% by mid-2027; UMich 1-yr expectations prior 4.7%",
+      "read": "Oil climbed back toward $100, so the energy push on prices has not gone away. That keeps central banks in Europe, the UK and Canada worried about inflation. US households' own inflation expectations, out this morning, are the next read.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, New York close run, Nov 5, 3:00 PM CT; indicative quotes)",
+          "label": "Blue Street market levels (Hercules, London open run, Nov 6, ~12:50 AM CT; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "BLS (Nov 5): Productivity and Costs, third quarter 2026, preliminary",
-          "url": "https://www.bls.gov/news.release/prod2.nr0.htm"
+          "label": "Blue Street calendar (Hercules, Nov 6): times, forecasts and speeches",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
           "label": "Bank of England (Nov 5): Bank Rate increased to 4%, November 2026 Monetary Policy Summary",
           "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026"
-        },
-        {
-          "label": "The National (Nov 5): oil rebounds from a two-month low as uncertainty lingers over the Iran war",
-          "url": "https://www.thenationalnews.com/business/energy/2026/11/05/oil-rebounds-from-two-month-low-as-uncertainty-lingers-over-iran-war/"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "Nasdaq ~−5%, S&P 500 ~−4%, chip index ~−10%, VIX +60% (late session); USD/JPY 157.82 (−0.4%); AUD/USD 0.6935 (−1.0%); gold $4,124 (+1.6%)",
-      "read": "A sharp selloff in US chip and AI stocks turned markets fearful, wiping out the gains that followed Tuesday's election. Money went to the yen, gold and Treasury bonds, while the Australian and New Zealand dollars fell most. Whether this fear lasts is now a bigger driver than any single data release.",
+      "figure": "Nikkei −6.1%, Kospi ~−6%, ASX −0.5% (Nov 6); Nasdaq −5.5%, S&P 500 −4.4%, VIX ~28 (Nov 5); AUD/USD ~0.6916; NZD/USD ~0.5565",
+      "read": "The selloff in AI and chip stocks spread from Wall Street to Asia, where Japan's and South Korea's markets fell hardest. The Australian and New Zealand dollars took the hit, while the yen and the US dollar held up. If European and US stocks keep falling today, fear becomes the main driver for currencies again.",
       "sources": [
         {
-          "label": "Yahoo Finance live (Nov 5): Nasdaq down about 5%, chip index down about 10%, VIX up over 60% (late-session figures)",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html"
+          "label": "AP (Nov 6): Japan's Nikkei falls more than 6% as Asian benchmarks tumble after Wall Street drop",
+          "url": "https://www.click2houston.com/business/2026/11/06/japans-nikkei-falls-more-than-6-as-asian-benchmarks-tumble-after-wall-street-drop/"
         },
         {
-          "label": "Blue Street market levels (Hercules, New York close run, Nov 5, 3:00 PM CT; indicative quotes)",
+          "label": "NordFX Market Pulse (Nov 6): Thursday's US closes and Friday's Asian moves",
+          "url": "https://nordfx.com/market-news/market-pulse-november-06-2026"
+        },
+        {
+          "label": "Reuters via Global Banking & Finance Review (Nov 5): Trading Day, a November 5 market bonfire",
+          "url": "https://www.globalbankingandfinance.com/trading-day-november-5-market-bonfire/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, London open run, Nov 6, ~12:50 AM CT; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -92,32 +80,28 @@
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent $97.94 (+3.5%), WTI $90.64 (+2.8%); at least five ships hit near Hormuz since Sunday; Eurasia Group deal odds 10%",
-      "read": "Oil climbed back after more tankers were hit near the Strait of Hormuz and hopes for a US–Iran deal faded. That raises the energy bill again for importers like Japan and the euro area and gives exporters like Canada a little more income. Today the stock slump mattered more to those currencies than oil did.",
+      "figure": "Brent ~$99.7 (+1.8%), WTI ~$91.4 (+0.8%); Brent heading for ~12% weekly fall; Iran nuclear proposal sent via Qatar",
+      "read": "Oil rose a second day as tanker attacks near the Strait of Hormuz continued, even after Iran sent the US a proposal for talks. That raises the energy bill for importers like Japan and the euro area. Exporters like Canada would normally gain, but the global stock slump mattered more overnight.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, New York close run, Nov 5, 3:00 PM CT; indicative quotes)",
+          "label": "Reuters via Business Recorder (Nov 6): oil set for sharp weekly drop, but Middle East supply worries provide a floor",
+          "url": "https://www.brecorder.com/news/40447719/oil-set-for-sharp-weekly-drop-but-middle-east-supply-concerns-provide-floor"
+        },
+        {
+          "label": "Reuters (Nov 5): Iran sent nuclear proposal to the US via Qatar, senior Iranian official says",
+          "url": "https://www.reuters.com/world/middle-east/iran-sent-nuclear-proposal-us-via-qatar-senior-iranian-official-tells-reuters-2026-11-05/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, London open run, Nov 6, ~12:50 AM CT; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Reuters via BOE Report (Nov 5): three more tankers hit near Hormuz; sources say Trump may restart strikes",
-          "url": "https://boereport.com/2026/11/05/tankers-hit-in-hormuz-as-iran-keeps-up-pressure-after-us-vote/"
-        },
-        {
-          "label": "Cornerstone Futures (Nov 5): Eurasia Group cuts its odds of a US-Iran deal to 10%",
-          "url": "https://www.cornerstonefuturesllc.com/post/morning-highlights-eurasia-group-cuts-odds-of-an-iran-deal-to-10-as-oil-steadies-after-an-8-drop"
-        },
-        {
-          "label": "The National (Nov 5): oil rebounds from a two-month low as uncertainty lingers over the Iran war",
-          "url": "https://www.thenationalnews.com/business/energy/2026/11/05/oil-rebounds-from-two-month-low-as-uncertainty-lingers-over-iran-war/"
         }
       ]
     },
     {
       "id": "positioning",
       "title": "Positioning",
-      "figure": "CFTC Oct 27: funds strongly against CAD, against EUR (real money for), against NZD, for AUD (real money strongly against), strongly for gold (cut); new report Fri Nov 6",
-      "read": "Hedge funds hold their biggest bets against the Canadian dollar and also bet against the euro and the kiwi, while real money investors bet for the euro. Big bets on the yen and gold mean days like today, when both rose, reward the side that is already full. New figures arrive Friday afternoon.",
+      "figure": "CFTC Oct 27: funds strongly against CAD, against EUR (real money for), against NZD and CHF, for AUD (real money strongly against), strongly for gold; new report Fri Nov 6, 2:30 PM CT",
+      "read": "Hedge funds hold their biggest bets against the Canadian dollar and also bet against the euro and the kiwi. They still lean toward the Aussie while real money investors bet heavily against it, so this week's Aussie slide hurts the funds' side. Fresh figures arrive this afternoon.",
       "sources": [
         {
           "label": "Blue Street positioning (CFTC Traders in Financial Futures and Disaggregated, report date Oct 27)",
@@ -128,20 +112,16 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "Canada Budget 2026 tabled Nov 5, 3:00 PM CT (PBO pre-budget deficit ~C$63.3B for 2026–27); Democrats control House and Senate; Fitch France A+ negative",
-      "read": "Canada tabled its federal budget with tax breaks for business investment and money for energy projects; the full borrowing figures are still being checked. A Democratic Congress makes President Trump's spending plans harder to pass, which trims support for the dollar. France's debt worries still weigh on the euro.",
+      "figure": "Canada 2025–26 deficit C$39.3B (forecast C$66.9B); C$50–60B a year ahead; Democrats control House and Senate; France on negative outlook at Fitch and Moody's",
+      "read": "Canada's budget showed a smaller deficit than planned thanks to oil income, and markets barely reacted. A Democratic Congress makes President Trump's spending plans harder to pass, which trims support for the dollar. France's debt worries still weigh on the euro.",
       "sources": [
         {
-          "label": "Blue Street calendar (Hercules, Nov 5): times, forecasts, actuals and speeches",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+          "label": "BNN Bloomberg (Nov 5): Canada's budget adds C$142 billion in new measures",
+          "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/05/carney-government-adds-142b-in-new-spending-to-spur-economic-growth-address-affordability/"
         },
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 4): AP calls the House for Democrats",
+          "label": "Blue Street breaking watch (Hercules, Nov 5)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
-        },
-        {
-          "label": "Reuters via WBOW (Oct 30): Fitch revises France's outlook to negative",
-          "url": "https://1027wbow.com/2026/10/30/fitch-revises-frances-outlook-to-negative-on-worsening-debt-dynamics/"
         }
       ]
     }
