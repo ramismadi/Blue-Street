@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T23:58:00Z",
+  "updated": "2026-11-06T01:48:07Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -18,9 +18,9 @@
       "text": "The Bank of England raised its rate to 4% on Thursday, its first rise since 2023, and now expects UK inflation to climb to about 5% next year because of higher energy costs from the Iran war. Governor Andrew Bailey said another rise could follow unless the Middle East conflict moves toward a settlement, which supports the pound, already near its highest since mid-September on a weaker dollar."
     },
     "JPY": {
-      "lean": "bullish",
-      "ts": "2026-11-05T19:48:30Z",
-      "text": "US stocks fell sharply on Thursday, with the Nasdaq down about 5% as chip shares sank, and US yields slipped, which usually draws money into the yen. Minutes show the Bank of Japan's board wants to keep raising rates; the main drag is dearer oil, which Japan imports almost entirely, and the dollar is still near the 160 level where Tokyo has stepped in before."
+      "lean": "mixed",
+      "ts": "2026-11-06T01:48:07Z",
+      "text": "Stocks in Tokyo fell more than 6% early on Friday after Wall Street's worst day in over a year, and US yields slipped, which usually helps the yen; yet it barely moved, near 157.8 per dollar. Bank of Japan minutes show the board wants more rate rises, but dearer oil, which Japan imports almost entirely, keeps weighing on the currency."
     },
     "CHF": {
       "lean": "bullish",
@@ -49,11 +49,170 @@
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-05T19:48:30Z",
-      "text": "Brent crude fell to a two-month low near $93 on Wednesday on bets the new Democratic Congress pushes Washington to end the Iran war, then climbed back to about $97 on Thursday as more tankers were hit near Hormuz. With no peace deal and sources saying President Trump may still restart strikes, prices can still swing sharply either way."
+      "ts": "2026-11-06T01:48:07Z",
+      "text": "Brent crude fell to a two-month low near $93 on Wednesday on bets the new Democratic Congress pushes Washington to end the Iran war, then climbed back to about $98 on Thursday as more tankers were hit near the Strait of Hormuz. Iran has since sent the US a nuclear proposal through Qatar, but says it won't reopen Hormuz until its seven demands are met, so supply risk stays."
     }
   },
   "items": [
+    {
+      "id": "ap-nikkei-6pc-kospi-7pc-20261106",
+      "ts": "2026-11-06T00:43:24Z",
+      "source": "AP",
+      "url": "https://www.click2houston.com/business/2026/11/06/japans-nikkei-falls-more-than-6-as-asian-benchmarks-tumble-after-wall-street-drop/",
+      "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/RA7DRMF66VES3K5KARK7SUIMOI.jpg?api_key=click2houston_85fdeb57f8cd3635",
+      "headline": "Japan's Nikkei falls more than 6% and South Korea's Kospi about 7% as the AI-stock sell-off spreads to Asia",
+      "story": "ai-stock-selloff",
+      "story_title": "AI stocks sell off after the US midterms",
+      "pillar": "risk",
+      "summary": "Tokyo's Nikkei 225 fell more than 6% and Seoul's Kospi about 7% early on Friday, following Wall Street's worst day in over a year. The yen barely moved, near 157.8 per dollar.",
+      "beats": {
+        "was": "Democrats won both houses of the US Congress on Tuesday, raising worries about tighter rules on artificial intelligence and slower building of data centres. On Thursday the Nasdaq fell 5.5% and the S&P 500 4.4% as chip shares crashed.",
+        "happened": "In Friday morning trading the Nikkei dropped about 6.2% and the Kospi about 7.1%, both heavy in chip and tech makers. Australia's ASX 200 fell a milder 0.7%. US 10-year yields eased to about 4.84%.",
+        "means": "The sell-off has moved from New York to Asia's tech-heavy markets, so worry about global growth is spreading. Falls this big usually pull money toward safer assets and away from growth-linked currencies.",
+        "fx": "The yen held near 157.8 per dollar rather than jumping, as dearer oil still weighs on Japan; the Korean won and the Australian dollar are the most exposed."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Safe-haven pull and lower US yields help, but the yen hardly moved as Tokyo stocks sank."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Asia's stock slump adds to Thursday's hit to the most growth-linked major currency."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Tends to fall with the Australian dollar when risk appetite drops."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Investors tend to park money in the franc during steep stock sell-offs."
+        }
+      ],
+      "watch": "Whether European and US stocks steady on Friday, and the US jobs report for October at 7:30 AM CT."
+    },
+    {
+      "id": "ctv-canada-budget-2026-142b-20261105",
+      "date": "2026-11-05",
+      "source": "CTV News / BNN Bloomberg",
+      "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/05/carney-government-adds-142b-in-new-spending-to-spur-economic-growth-address-affordability/",
+      "image": "https://www.bnnbloomberg.ca/resizer/v2/CCZTHH4ESNATDBM3PUIXQ46UUM.JPG?smart=true&auth=34e226c21ee72cd1ccd84e751e8f983ca8312d17d98495e4a20dfd983de858e8&width=1200&height=630",
+      "headline": "Canada's budget adds C$142 billion in new measures and keeps deficits above C$50 billion a year",
+      "story": "cad-budget",
+      "story_title": "Canada's 2026 budget",
+      "pillar": "fiscal",
+      "summary": "Finance Minister François-Philippe Champagne tabled Canada's 2026 budget on Thursday, with C$142.1 billion of new tax breaks and spending over five years and no plan to balance the books.",
+      "beats": {
+        "was": "Prime Minister Mark Carney's government had promised a budget aimed at lifting growth and investment, while the parliamentary budget watchdog warned deficits were getting bigger.",
+        "happened": "This year's deficit is put at C$62.3 billion, about C$3 billion less than projected in the spring, with deficits above C$50 billion in each of the next four years. The biggest item is a C$36.1 billion tax break for business investment, announced earlier.",
+        "means": "Much of the plan was already known, so it brings few surprises for markets. More borrowing adds a little pressure on Canadian bond yields over time and gives the Bank of Canada one more reason to watch inflation.",
+        "fx": "Little direct effect on the Canadian dollar for now; oil prices and the US dollar matter more this week."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Large, mostly expected spending: growth support versus more debt."
+        }
+      ],
+      "watch": "Whether the budget passes a confidence vote in Parliament, and Canada's October jobs report on Friday."
+    },
+    {
+      "id": "aljazeera-khamenei-hostility-trump-war-20261105",
+      "date": "2026-11-05",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/5/iran-war-live-trump-admits-war-caused-election-loss-but-had-to-do-it",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/AFP__20261104__D6G26HH__v1__HighRes__IranUsIsraelWar-1793846826.jpg?resize=1920%2C1440",
+      "headline": "Iran's leader says US hostility won't end with the midterms; Trump says the war was needed despite the election loss",
+      "story": "iran-oil",
+      "story_title": "Oil and the Iran war after the US midterms",
+      "pillar": "risk",
+      "summary": "Iran's Supreme Leader Mojtaba Khamenei said the US midterm result won't change Washington's hostility, while President Trump admitted the war largely cost his party the election but said it had to be done.",
+      "beats": {
+        "was": "Markets have been betting that Democratic control of the US Congress would push Washington toward ending its war with Iran, which sent oil sharply lower on Wednesday.",
+        "happened": "Iran's Supreme Leader Mojtaba Khamenei said US hostility toward Iran will continue whatever the election result. President Donald Trump said the attack on Iran was the main reason Republicans lost, but insisted it was necessary to stop Iran building a nuclear weapon.",
+        "means": "Neither side is signalling a quick climb-down, which tempers the hope for a fast peace deal that drove oil down.",
+        "fx": "Tough words from both capitals add a little risk back to oil and to safe havens such as the Swiss franc; actual talks or new attacks would matter far more than words."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Hard-line words from both sides cool hopes of a quick settlement."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A lingering war keeps some demand for a safe haven."
+        }
+      ],
+      "watch": "Whether US-Iran talks resume, and any new strikes or attacks on shipping near Hormuz."
+    },
+    {
+      "id": "fxstreet-rba-hauser-inflation-too-high-20261105",
+      "date": "2026-11-05",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/rbas-hauser-inflation-is-too-high-whichever-measure-you-use-202611050751",
+      "image": null,
+      "headline": "Australia's Hauser says inflation is too high on every measure",
+      "story": "rba-hike",
+      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
+      "pillar": "inflation",
+      "summary": "Reserve Bank of Australia Deputy Governor Andrew Hauser said inflation is too high however it is measured and warned that public trust in the bank's fight against it is slipping.",
+      "beats": {
+        "was": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday, and Governor Michele Bullock then said it was time to pause and see how the rises work.",
+        "happened": "On Thursday Hauser, the bank's number two, said inflation is too high whichever gauge you use and that public confidence in the bank's ability to bring it down is weakening. He also denied that his remarks in October were meant to push the board toward a rise.",
+        "means": "His tone is firmer than Bullock's talk of a pause, a reminder that another rise is not ruled out if prices keep running hot. It adds no new data, so it changes little on its own.",
+        "fx": "Firm words from a senior policymaker give the Australian dollar mild support; it barely moved, holding near 70 US cents."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Tough talk on inflation keeps another rate rise possible, but the market barely reacted."
+        }
+      ],
+      "watch": "Australia's quarterly inflation figures and speeches by Bullock for any shift from the pause message."
+    },
+    {
+      "id": "boc-macklem-senate-banking-20261105",
+      "date": "2026-11-05",
+      "source": "Bank of Canada",
+      "url": "https://www.bankofcanada.ca/2026/11/opening-statement-standing-senate-committee-banking-commerce-and-economy-2026-11-05/",
+      "image": null,
+      "headline": "Bank of Canada's Macklem tells senators another rate rise may be needed but the bank will go carefully",
+      "story": "boc-hike",
+      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
+      "pillar": "policy",
+      "summary": "Bank of Canada Governor Tiff Macklem told a Senate committee the bank may have to raise rates again, but with slack in the economy it will decide one meeting at a time.",
+      "beats": {
+        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise since July 2023, because the Iran war has kept fuel prices high. Canada's inflation has been about 3%, above the bank's 2% target, since April.",
+        "happened": "Speaking to the Senate banking committee on Thursday, Macklem said inflation should reach about 3.5% by year-end and stay at or above 3% for much of 2027. He said new US tariffs will likely slow growth late this year and that the economy still has some spare capacity, so the bank will move carefully.",
+        "means": "This repeats what he told MPs on Tuesday, when he also said federal spending is not really adding to inflation. The door to a December rise stays open, but spare capacity gives the bank room to wait.",
+        "fx": "Steady words that markets already expected, so little support for the Canadian dollar on their own. Thursday's federal budget and the price of oil, Canada's main export, matter more for now."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Keeps a further rate rise possible, but stresses caution and spare capacity."
+        }
+      ],
+      "watch": "Canada's federal budget, due Thursday afternoon, and the Bank of Canada's next decision on December 9."
+    },
     {
       "id": "reuters-trading-day-bonfire-aud-20261105",
       "ts": "2026-11-05T22:09:50Z",
@@ -100,31 +259,43 @@
       "watch": "Friday's US jobs report for October and whether Asian stock markets extend the slide."
     },
     {
-      "id": "ctv-canada-budget-2026-142b-20261105",
-      "date": "2026-11-05",
-      "source": "CTV News / BNN Bloomberg",
-      "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/05/carney-government-adds-142b-in-new-spending-to-spur-economic-growth-address-affordability/",
-      "image": "https://www.bnnbloomberg.ca/resizer/v2/CCZTHH4ESNATDBM3PUIXQ46UUM.JPG?smart=true&auth=34e226c21ee72cd1ccd84e751e8f983ca8312d17d98495e4a20dfd983de858e8&width=1200&height=630",
-      "headline": "Canada's budget adds C$142 billion in new measures and keeps deficits above C$50 billion a year",
-      "story": "cad-budget",
-      "story_title": "Canada's 2026 budget",
-      "pillar": "fiscal",
-      "summary": "Finance Minister François-Philippe Champagne tabled Canada's 2026 budget on Thursday, with C$142.1 billion of new tax breaks and spending over five years and no plan to balance the books.",
+      "id": "arabnews-reuters-iran-nuclear-proposal-qatar-20261105",
+      "ts": "2026-11-05T21:42:03Z",
+      "source": "Arab News (Reuters)",
+      "url": "https://www.arabnews.com/middle-east/iran-sent-nuclear-proposal-to-the-us-via-qatar-senior-iranian-official-says-3010067",
+      "image": "https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/1793914868958-97a7413bd26e293c.jpg",
+      "headline": "Iran sends the US a nuclear proposal through Qatar, but only for after its seven conditions are met",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "A senior Iranian official says Iran has passed the US a nuclear proposal through Qatar, and Washington is reviewing it. Iran says it will only discuss it, and only reopen the Strait of Hormuz, once its seven demands are met.",
       "beats": {
-        "was": "Prime Minister Mark Carney's government had promised a budget aimed at lifting growth and investment, while the parliamentary budget watchdog warned deficits were getting bigger.",
-        "happened": "This year's deficit is put at C$62.3 billion, about C$3 billion less than projected in the spring, with deficits above C$50 billion in each of the next four years. The biggest item is a C$36.1 billion tax break for business investment, announced earlier.",
-        "means": "Much of the plan was already known, so it brings few surprises for markets. More borrowing adds a little pressure on Canadian bond yields over time and gives the Bank of Canada one more reason to watch inflation.",
-        "fx": "Little direct effect on the Canadian dollar for now; oil prices and the US dollar matter more this week."
+        "was": "The US and Israel have been at war with Iran since February 28, and Iran has kept the Strait of Hormuz, a key route for Gulf oil, largely shut. Talks through Qatar ended without a breakthrough on Monday, and President Trump has not ruled out new strikes.",
+        "happened": "On Thursday Iran sent the US a nuclear proposal via Qatar. Mohsen Rezaei, a top Iranian security official, said Iran will neither reopen Hormuz nor negotiate until its seven conditions, including lifting sanctions, freeing frozen assets and war reparations, are carried out. Washington wants nuclear issues in the first round.",
+        "means": "It keeps a diplomatic channel open, but the two sides still disagree on what comes first, so a deal is not close. Oil supply through Hormuz stays at risk either way.",
+        "fx": "A small push toward lower oil and calmer markets, weighed against Iran's hard conditions; oil-sensitive currencies such as the yen and Canadian dollar would feel any real progress first."
       },
       "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Talks stay alive, but Iran won't reopen Hormuz until its demands are met."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Japan imports almost all its oil, so any real progress would ease a drag on the yen."
+        },
         {
           "ccy": "CAD",
           "dir": "mixed",
           "strength": 1,
-          "why": "Large, mostly expected spending: growth support versus more debt."
+          "why": "Oil is Canada's main export; the price outlook moves with these talks."
         }
       ],
-      "watch": "Whether the budget passes a confidence vote in Parliament, and Canada's October jobs report on Friday."
+      "watch": "Washington's reply to the proposal, and any sign that Trump picks renewed strikes over talks."
     },
     {
       "id": "finimize-hammack-hikes-20261105",
@@ -568,91 +739,148 @@
       "watch": "The vote split and whether the Bank's new forecasts show inflation peaking above 4% next year."
     },
     {
-      "id": "aljazeera-khamenei-hostility-trump-war-20261105",
-      "date": "2026-11-05",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/11/5/iran-war-live-trump-admits-war-caused-election-loss-but-had-to-do-it",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/AFP__20261104__D6G26HH__v1__HighRes__IranUsIsraelWar-1793846826.jpg?resize=1920%2C1440",
-      "headline": "Iran's leader says US hostility won't end with the midterms; Trump says the war was needed despite the election loss",
-      "story": "iran-oil",
-      "story_title": "Oil and the Iran war after the US midterms",
-      "pillar": "risk",
-      "summary": "Iran's Supreme Leader Mojtaba Khamenei said the US midterm result won't change Washington's hostility, while President Trump admitted the war largely cost his party the election but said it had to be done.",
+      "id": "investing-cad-7wk-high-trade-surplus-20261104",
+      "date": "2026-11-04",
+      "source": "Investing.com",
+      "url": "https://ca.investing.com/news/forex-news/canadian-dollar-advances-as-greenback-slides-on-us-election-fallout-4929885",
+      "image": "https://content-media.investing.com/news/LYNXNPED8A18G_L.jpg",
+      "headline": "Canadian dollar reaches a seven-week high on a bigger trade surplus and a weaker US dollar",
+      "story": "cad-trade",
+      "story_title": "Canada: trade, oil and the loonie",
+      "pillar": "growth",
+      "summary": "The Canadian dollar rose about 0.3% to near C$1.3965 per US dollar, its strongest since mid-September, after Canada's September trade surplus came in well above forecasts and the US dollar slid on the midterm results.",
       "beats": {
-        "was": "Markets have been betting that Democratic control of the US Congress would push Washington toward ending its war with Iran, which sent oil sharply lower on Wednesday.",
-        "happened": "Iran's Supreme Leader Mojtaba Khamenei said US hostility toward Iran will continue whatever the election result. President Donald Trump said the attack on Iran was the main reason Republicans lost, but insisted it was necessary to stop Iran building a nuclear weapon.",
-        "means": "Neither side is signalling a quick climb-down, which tempers the hope for a fast peace deal that drove oil down.",
-        "fx": "Tough words from both capitals add a little risk back to oil and to safe havens such as the Swiss franc; actual talks or new attacks would matter far more than words."
+        "was": "Canada sends most of its exports to the US, so its trade balance is a quick check on how US tariffs and oil prices are hitting the economy. The US dollar has been falling since Democrats won both houses of Congress in Tuesday's midterm elections.",
+        "happened": "Statistics Canada said the goods trade surplus widened to about C$5.35 billion in September, against roughly C$4.1 billion expected, and August was revised up. Export volumes still fell 4%, and a separate survey showed Canada's services sector shrank for a fifth month in October. The loonie touched C$1.3930 during the day.",
+        "means": "The bigger surplus came partly from imports falling, not exports booming, so it is a modest sign of strength rather than a turnaround. The loonie's gain is notable because oil, Canada's main export, fell about 8% on the same day.",
+        "fx": "Supports the Canadian dollar for now, with most of the push coming from a weaker US dollar. Cheaper oil is the main force pulling the other way."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A clear trade beat and a falling US dollar lifted it to a seven-week high."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The US dollar's broad slide after the midterms did much of the work."
+        },
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The loonie rose even as oil fell, showing the link is loose today."
+        }
+      ],
+      "watch": "Canada's October jobs report on Friday, November 6, and whether oil keeps falling as Iran peace talks go on."
+    },
+    {
+      "id": "euronext-dollar-retreats-ai-regulation-20261104",
+      "date": "2026-11-04",
+      "source": "Euronext",
+      "url": "https://live.euronext.com/en/financial-news/dollar-retreats-democratic-wins-us-midterms-stoke-ai-regulation-jitters",
+      "image": null,
+      "headline": "Dollar falls to a one-month low as Democratic wins raise worries about tighter AI rules",
+      "story": "us-midterms",
+      "story_title": "US midterms: a week of elections, central banks and jobs data",
+      "pillar": "growth",
+      "summary": "The dollar index slipped to about 101.4, a one-month low, as investors worried a Democratic Congress could tighten rules on artificial intelligence, the spending that has driven much of US growth.",
+      "beats": {
+        "was": "US growth this year has leaned heavily on company spending on AI and data centres. Strong US data had markets expecting a December Federal Reserve rate rise, which supported the dollar.",
+        "happened": "After Democrats won the House and the Senate on Tuesday, the dollar index fell to 101.41. The euro rose 0.4% to $1.1236, the pound rose 0.46% to $1.3475, a seven-week high, and the dollar slipped to 158.09 yen and 0.8162 Swiss francs. The 10-year Treasury yield eased to about 4.92%.",
+        "means": "Investors fear tougher AI rules could slow growth and lessen the need for Fed rate rises. Strategists at Convera and OCBC bank noted that passing laws stays hard while President Trump holds a veto, so yields and economic data matter more than politics for the dollar.",
+        "fx": "Mild pressure on the dollar against every major currency; a Commonwealth Bank of Australia strategist said a sharp rise in oil is the main thing that would lift it again."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Worries that tighter AI rules slow US growth and the need for rate rises."
+        },
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Pound at a seven-week high as the dollar slips."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Euro at its highest in nearly two weeks."
+        }
+      ],
+      "watch": "Friday's US jobs report for October, and whether AI-linked US stocks keep falling."
+    },
+    {
+      "id": "finwire-gold-ends-3pc-higher-20261104",
+      "date": "2026-11-04",
+      "source": "Finwire (BabyPips)",
+      "url": "https://finwire.io/news/forex-news/financial-forex-market-recap-nov-4-2026",
+      "image": "https://finwire.io/api/v1/images/288",
+      "headline": "Gold ends the day about 3% higher near $4,060 as the dollar falls",
+      "story": "gold-slide",
+      "story_title": "Gold: Fed rate-rise bets vs a weaker dollar",
+      "pillar": "commodities",
+      "summary": "Gold finished Wednesday up about 3.3% near $4,063 an ounce, one of its best days in months, as the dollar and US bond yields fell after Democrats won control of Congress.",
+      "beats": {
+        "was": "Gold fell through October to near its lowest in a year as markets came to expect a December rate rise from the US Federal Reserve, since higher rates make gold, which pays no interest, less attractive.",
+        "happened": "After Democrats won both the House and the Senate in Tuesday's midterm elections, the dollar index fell to about 101.5 and the 10-year US Treasury yield slipped to about 4.89%. Gold built on its early gains through the US session; silver also rose sharply.",
+        "means": "Markets expect a split government to borrow less, which keeps yields lower and the dollar softer, both good for gold. A December Fed rate rise is still seen as likely, so the rebound rests on the dollar staying weak.",
+        "fx": "Gold's jump is the mirror image of the dollar's slide to a one-month low."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A 3% one-day jump as the dollar and yields fall."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Part of the same broad dollar slide after the midterms."
+        }
+      ],
+      "watch": "Friday's US jobs report for October, which will shape December Fed rate-rise bets."
+    },
+    {
+      "id": "aljazeera-iran-deterrence-tanker-hit-20261104",
+      "date": "2026-11-04",
+      "source": "Al Jazeera",
+      "url": "https://aljazeera.com/news/liveblog/2026/11/4/iran-war-live-tehran-prepares-maximum-deterrence-plan-for-any-new-attack",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/AFP__20261103__D68W7VW__v1__HighRes__IranUsIsraelWar-1793765510.jpg?resize=1920%2C1440",
+      "headline": "Iran readies a response plan for any new US attack as another tanker is hit near Hormuz",
+      "story": "iran-hormuz",
+      "story_title": "Hormuz: shipping attacks and the oil supply",
+      "pillar": "commodities",
+      "summary": "Iran said it has a plan ready to hit back at once against any new US attack, while a tanker was struck by two unidentified projectiles near the Strait of Hormuz, the British navy's shipping office said.",
+      "beats": {
+        "was": "The US-Israel war with Iran has disrupted tanker traffic through the Strait of Hormuz, the channel for about a fifth of the world's oil. Peace talks through Qatar and Pakistan are under way, and markets now expect the new Democratic Congress to push for an end to the war.",
+        "happened": "Iran's military said it is updating its list of targets to include US and Israeli sites across a wider area. UK Maritime Trade Operations, which tracks Gulf shipping, reported a tanker hit by two projectiles near the strait; Iran's Revolutionary Guards separately said three tankers had exploded on mines after crossing without permission. These claims have not been independently confirmed.",
+        "means": "The waters around Hormuz remain dangerous even as diplomacy moves ahead, which keeps shipping and insurance costs high. Oil still fell about 9% on the day, so for now traders are betting on peace more than on new supply losses.",
+        "fx": "Any confirmed hit to Gulf supply would lift oil and help the Canadian dollar, while weighing on big oil buyers like Japan and the euro zone."
       },
       "impact": [
         {
           "ccy": "OIL",
           "dir": "bullish",
           "strength": 1,
-          "why": "Hard-line words from both sides cool hopes of a quick settlement."
+          "why": "Fresh attacks on shipping, but oil fell anyway on peace bets."
         },
         {
           "ccy": "CHF",
           "dir": "bullish",
           "strength": 1,
-          "why": "A lingering war keeps some demand for a safe haven."
+          "why": "Continued fighting keeps some demand for safe havens."
         }
       ],
-      "watch": "Whether US-Iran talks resume, and any new strikes or attacks on shipping near Hormuz."
-    },
-    {
-      "id": "fxstreet-rba-hauser-inflation-too-high-20261105",
-      "date": "2026-11-05",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/rbas-hauser-inflation-is-too-high-whichever-measure-you-use-202611050751",
-      "image": null,
-      "headline": "Australia's Hauser says inflation is too high on every measure",
-      "story": "rba-hike",
-      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
-      "pillar": "inflation",
-      "summary": "Reserve Bank of Australia Deputy Governor Andrew Hauser said inflation is too high however it is measured and warned that public trust in the bank's fight against it is slipping.",
-      "beats": {
-        "was": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday, and Governor Michele Bullock then said it was time to pause and see how the rises work.",
-        "happened": "On Thursday Hauser, the bank's number two, said inflation is too high whichever gauge you use and that public confidence in the bank's ability to bring it down is weakening. He also denied that his remarks in October were meant to push the board toward a rise.",
-        "means": "His tone is firmer than Bullock's talk of a pause, a reminder that another rise is not ruled out if prices keep running hot. It adds no new data, so it changes little on its own.",
-        "fx": "Firm words from a senior policymaker give the Australian dollar mild support; it barely moved, holding near 70 US cents."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Tough talk on inflation keeps another rate rise possible, but the market barely reacted."
-        }
-      ],
-      "watch": "Australia's quarterly inflation figures and speeches by Bullock for any shift from the pause message."
-    },
-    {
-      "id": "boc-macklem-senate-banking-20261105",
-      "date": "2026-11-05",
-      "source": "Bank of Canada",
-      "url": "https://www.bankofcanada.ca/2026/11/opening-statement-standing-senate-committee-banking-commerce-and-economy-2026-11-05/",
-      "image": null,
-      "headline": "Bank of Canada's Macklem tells senators another rate rise may be needed but the bank will go carefully",
-      "story": "boc-hike",
-      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
-      "pillar": "policy",
-      "summary": "Bank of Canada Governor Tiff Macklem told a Senate committee the bank may have to raise rates again, but with slack in the economy it will decide one meeting at a time.",
-      "beats": {
-        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise since July 2023, because the Iran war has kept fuel prices high. Canada's inflation has been about 3%, above the bank's 2% target, since April.",
-        "happened": "Speaking to the Senate banking committee on Thursday, Macklem said inflation should reach about 3.5% by year-end and stay at or above 3% for much of 2027. He said new US tariffs will likely slow growth late this year and that the economy still has some spare capacity, so the bank will move carefully.",
-        "means": "This repeats what he told MPs on Tuesday, when he also said federal spending is not really adding to inflation. The door to a December rise stays open, but spare capacity gives the bank room to wait.",
-        "fx": "Steady words that markets already expected, so little support for the Canadian dollar on their own. Thursday's federal budget and the price of oil, Canada's main export, matter more for now."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Keeps a further rate rise possible, but stresses caution and spare capacity."
-        }
-      ],
-      "watch": "Canada's federal budget, due Thursday afternoon, and the Bank of Canada's next decision on December 9."
+      "watch": "Whether ships keep crossing Hormuz safely and whether the US-Iran talks set a next meeting."
     },
     {
       "id": "investinglive-boj-sept-minutes-hawkish-20261104",
@@ -1136,216 +1364,6 @@
         }
       ],
       "watch": "China's October trade figures, due later this week."
-    },
-    {
-      "id": "investing-cad-7wk-high-trade-surplus-20261104",
-      "date": "2026-11-04",
-      "source": "Investing.com",
-      "url": "https://ca.investing.com/news/forex-news/canadian-dollar-advances-as-greenback-slides-on-us-election-fallout-4929885",
-      "image": "https://content-media.investing.com/news/LYNXNPED8A18G_L.jpg",
-      "headline": "Canadian dollar reaches a seven-week high on a bigger trade surplus and a weaker US dollar",
-      "story": "cad-trade",
-      "story_title": "Canada: trade, oil and the loonie",
-      "pillar": "growth",
-      "summary": "The Canadian dollar rose about 0.3% to near C$1.3965 per US dollar, its strongest since mid-September, after Canada's September trade surplus came in well above forecasts and the US dollar slid on the midterm results.",
-      "beats": {
-        "was": "Canada sends most of its exports to the US, so its trade balance is a quick check on how US tariffs and oil prices are hitting the economy. The US dollar has been falling since Democrats won both houses of Congress in Tuesday's midterm elections.",
-        "happened": "Statistics Canada said the goods trade surplus widened to about C$5.35 billion in September, against roughly C$4.1 billion expected, and August was revised up. Export volumes still fell 4%, and a separate survey showed Canada's services sector shrank for a fifth month in October. The loonie touched C$1.3930 during the day.",
-        "means": "The bigger surplus came partly from imports falling, not exports booming, so it is a modest sign of strength rather than a turnaround. The loonie's gain is notable because oil, Canada's main export, fell about 8% on the same day.",
-        "fx": "Supports the Canadian dollar for now, with most of the push coming from a weaker US dollar. Cheaper oil is the main force pulling the other way."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A clear trade beat and a falling US dollar lifted it to a seven-week high."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The US dollar's broad slide after the midterms did much of the work."
-        },
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The loonie rose even as oil fell, showing the link is loose today."
-        }
-      ],
-      "watch": "Canada's October jobs report on Friday, November 6, and whether oil keeps falling as Iran peace talks go on."
-    },
-    {
-      "id": "euronext-dollar-retreats-ai-regulation-20261104",
-      "date": "2026-11-04",
-      "source": "Euronext",
-      "url": "https://live.euronext.com/en/financial-news/dollar-retreats-democratic-wins-us-midterms-stoke-ai-regulation-jitters",
-      "image": null,
-      "headline": "Dollar falls to a one-month low as Democratic wins raise worries about tighter AI rules",
-      "story": "us-midterms",
-      "story_title": "US midterms: a week of elections, central banks and jobs data",
-      "pillar": "growth",
-      "summary": "The dollar index slipped to about 101.4, a one-month low, as investors worried a Democratic Congress could tighten rules on artificial intelligence, the spending that has driven much of US growth.",
-      "beats": {
-        "was": "US growth this year has leaned heavily on company spending on AI and data centres. Strong US data had markets expecting a December Federal Reserve rate rise, which supported the dollar.",
-        "happened": "After Democrats won the House and the Senate on Tuesday, the dollar index fell to 101.41. The euro rose 0.4% to $1.1236, the pound rose 0.46% to $1.3475, a seven-week high, and the dollar slipped to 158.09 yen and 0.8162 Swiss francs. The 10-year Treasury yield eased to about 4.92%.",
-        "means": "Investors fear tougher AI rules could slow growth and lessen the need for Fed rate rises. Strategists at Convera and OCBC bank noted that passing laws stays hard while President Trump holds a veto, so yields and economic data matter more than politics for the dollar.",
-        "fx": "Mild pressure on the dollar against every major currency; a Commonwealth Bank of Australia strategist said a sharp rise in oil is the main thing that would lift it again."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Worries that tighter AI rules slow US growth and the need for rate rises."
-        },
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Pound at a seven-week high as the dollar slips."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Euro at its highest in nearly two weeks."
-        }
-      ],
-      "watch": "Friday's US jobs report for October, and whether AI-linked US stocks keep falling."
-    },
-    {
-      "id": "finwire-gold-ends-3pc-higher-20261104",
-      "date": "2026-11-04",
-      "source": "Finwire (BabyPips)",
-      "url": "https://finwire.io/news/forex-news/financial-forex-market-recap-nov-4-2026",
-      "image": "https://finwire.io/api/v1/images/288",
-      "headline": "Gold ends the day about 3% higher near $4,060 as the dollar falls",
-      "story": "gold-slide",
-      "story_title": "Gold: Fed rate-rise bets vs a weaker dollar",
-      "pillar": "commodities",
-      "summary": "Gold finished Wednesday up about 3.3% near $4,063 an ounce, one of its best days in months, as the dollar and US bond yields fell after Democrats won control of Congress.",
-      "beats": {
-        "was": "Gold fell through October to near its lowest in a year as markets came to expect a December rate rise from the US Federal Reserve, since higher rates make gold, which pays no interest, less attractive.",
-        "happened": "After Democrats won both the House and the Senate in Tuesday's midterm elections, the dollar index fell to about 101.5 and the 10-year US Treasury yield slipped to about 4.89%. Gold built on its early gains through the US session; silver also rose sharply.",
-        "means": "Markets expect a split government to borrow less, which keeps yields lower and the dollar softer, both good for gold. A December Fed rate rise is still seen as likely, so the rebound rests on the dollar staying weak.",
-        "fx": "Gold's jump is the mirror image of the dollar's slide to a one-month low."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A 3% one-day jump as the dollar and yields fall."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Part of the same broad dollar slide after the midterms."
-        }
-      ],
-      "watch": "Friday's US jobs report for October, which will shape December Fed rate-rise bets."
-    },
-    {
-      "id": "aljazeera-iran-deterrence-tanker-hit-20261104",
-      "date": "2026-11-04",
-      "source": "Al Jazeera",
-      "url": "https://aljazeera.com/news/liveblog/2026/11/4/iran-war-live-tehran-prepares-maximum-deterrence-plan-for-any-new-attack",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/AFP__20261103__D68W7VW__v1__HighRes__IranUsIsraelWar-1793765510.jpg?resize=1920%2C1440",
-      "headline": "Iran readies a response plan for any new US attack as another tanker is hit near Hormuz",
-      "story": "iran-hormuz",
-      "story_title": "Hormuz: shipping attacks and the oil supply",
-      "pillar": "commodities",
-      "summary": "Iran said it has a plan ready to hit back at once against any new US attack, while a tanker was struck by two unidentified projectiles near the Strait of Hormuz, the British navy's shipping office said.",
-      "beats": {
-        "was": "The US-Israel war with Iran has disrupted tanker traffic through the Strait of Hormuz, the channel for about a fifth of the world's oil. Peace talks through Qatar and Pakistan are under way, and markets now expect the new Democratic Congress to push for an end to the war.",
-        "happened": "Iran's military said it is updating its list of targets to include US and Israeli sites across a wider area. UK Maritime Trade Operations, which tracks Gulf shipping, reported a tanker hit by two projectiles near the strait; Iran's Revolutionary Guards separately said three tankers had exploded on mines after crossing without permission. These claims have not been independently confirmed.",
-        "means": "The waters around Hormuz remain dangerous even as diplomacy moves ahead, which keeps shipping and insurance costs high. Oil still fell about 9% on the day, so for now traders are betting on peace more than on new supply losses.",
-        "fx": "Any confirmed hit to Gulf supply would lift oil and help the Canadian dollar, while weighing on big oil buyers like Japan and the euro zone."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Fresh attacks on shipping, but oil fell anyway on peace bets."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Continued fighting keeps some demand for safe havens."
-        }
-      ],
-      "watch": "Whether ships keep crossing Hormuz safely and whether the US-Iran talks set a next meeting."
-    },
-    {
-      "id": "reuters-nz-unemployment-q3-57pc-20261103",
-      "ts": "2026-11-03T21:53:00Z",
-      "source": "Reuters",
-      "url": "https://1027wbow.com/2026/11/03/new-zealand-unemployment-hits-5-7-in-q3-highest-since-2015/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/03/2026-11-03T215342Z_1_LYNXNPEMA21WS_RTROPTP_3_NZEALAND-DAILYLIFE.JPG",
-      "headline": "New Zealand's jobless rate rises to 5.7%, its highest since 2015",
-      "story": "nz-jobs",
-      "story_title": "New Zealand: a weakening jobs market",
-      "pillar": "growth",
-      "summary": "New Zealand's unemployment rate rose to 5.7% in the July–September quarter, worse than the 5.5% expected, and the number of people in work fell.",
-      "beats": {
-        "was": "The Reserve Bank of New Zealand kept its rate at 2.75% on October 28 when many expected a rise, saying it wanted to see how its two earlier increases were working. It still said more rises were likely.",
-        "happened": "Statistics New Zealand said unemployment rose to 5.7% from 5.6%, the highest in about ten years, against forecasts of 5.5%. Jobs fell 0.1% in the quarter when a 0.4% gain was expected, fewer people were looking for work, and private-sector pay growth slowed to 2.0% over the year.",
-        "means": "A softer jobs market and slower pay growth make it less likely prices keep rising fast, which supports the central bank's decision to wait and weakens the case for another rate rise soon.",
-        "fx": "Less chance of higher New Zealand rates takes support from the kiwi, which slipped toward 55.9 US cents after the release as two-year interest-rate bets fell."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A clear jobs miss lowers the odds of another New Zealand rate rise."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Weak news next door adds to the soft mood for the Australian dollar after its own central bank hinted at a pause."
-        }
-      ],
-      "watch": "Whether New Zealand's central bank drops its hint of more rate rises at its next decision."
-    },
-    {
-      "id": "abc-bullock-take-stock-aud-below-70c-20261103",
-      "ts": "2026-11-03T04:46:00Z",
-      "source": "ABC News (Australia)",
-      "url": "https://abc.net.au/news/2026-11-03/rba-interest-rates-markets-live-coverage/107338216",
-      "image": null,
-      "headline": "Australia's Bullock says it is time to take stock after the rate rise; Aussie dips below 70 US cents",
-      "story": "rba-hike",
-      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
-      "pillar": "policy",
-      "summary": "Reserve Bank of Australia Governor Michele Bullock said after Tuesday's rate rise that it is a good moment to pause and check the data, and the Australian dollar slipped below 70 US cents.",
-      "beats": {
-        "was": "Earlier on Tuesday the Reserve Bank of Australia raised its rate by a quarter point to 4.85%, its fifth rise of 2026, in a six-to-three vote with three board members wanting to hold.",
-        "happened": "At her press conference, Governor Bullock said she does not know what the next move will be, but it is probably a good point to take stock and see whether the data match the bank's forecasts. She said the three who wanted to hold worried more about housing and rising unemployment, and that the bank is not aiming for a recession. The Australian dollar fell about 0.3% to near 69.8 US cents, around a two-week low.",
-        "means": "Together with the split vote, this reads as a pause after a long run of rises, though she kept the door open because inflation risks still point up. A December rise now looks less likely than before the meeting.",
-        "fx": "Leans on the Australian dollar, since markets see fewer rate rises ahead than they did a day ago."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A clear hint of a pause, and the currency dropped below 70 US cents."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The kiwi tends to follow the Australian dollar."
-        }
-      ],
-      "watch": "Australian jobs and inflation data before the December 8 meeting."
     },
     {
       "id": "investing-swiss-cpi-oct-15pc-20261103",
