@@ -1,16 +1,16 @@
 {
-  "updated": "2026-11-06T15:47:31Z",
+  "updated": "2026-11-06T16:46:55Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-06T15:47:31Z",
-      "text": "The dollar fell to a one-month low this week after Democrats won the US Congress, but Friday's jobs report turned it around: 165,000 new jobs in October, far above forecasts, with unemployment down to 4.1% and pay rising faster. That revives the case for a December Federal Reserve rate rise, though a consumer survey showing lower expected inflation slightly softens it."
+      "ts": "2026-11-06T16:46:55Z",
+      "text": "The dollar fell to a one-month low this week after Democrats won the US Congress, but Friday's jobs report turned it around: 165,000 new jobs in October, far above forecasts, with unemployment down to 4.1%. Investors now see roughly a 78% chance of a December Federal Reserve rate rise, up from about two in three a day earlier."
     },
     "EUR": {
       "lean": "bearish",
-      "ts": "2026-11-06T15:47:31Z",
-      "text": "The euro slipped back to about $1.115 on Friday, down roughly 0.6%, as a strong US jobs report lifted the dollar and undid much of its post-election drop. At home, inflation rose to 4.0% in October, keeping a December European Central Bank rate rise in view, and German factories had a better September."
+      "ts": "2026-11-06T16:46:55Z",
+      "text": "The euro slipped back to about $1.115 on Friday as a strong US jobs report lifted the dollar and undid much of its post-election drop. At home, inflation is at 4.0%, and European Central Bank President Christine Lagarde says the coming data will decide a December rate rise, keeping it possible but not promised."
     },
     "GBP": {
       "lean": "mixed",
@@ -499,6 +499,39 @@
       "watch": "Whether European and US stocks steady on Friday, and the US jobs report for October at 7:30 AM CT."
     },
     {
+      "id": "investing-reuters-fed-december-after-payrolls-20261106",
+      "date": "2026-11-06",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://ca.investing.com/news/economy-news/fed-seen-sticking-to-december-rate-hike-after-jobs-data-4939832",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA51BU_L.jpg",
+      "headline": "Markets now see about a 78% chance the Fed raises rates in December after the strong jobs report",
+      "story": "fed-december",
+      "story_title": "Fed: the case for a December rate rise",
+      "pillar": "policy",
+      "summary": "After Friday's jobs surprise, investors now put the odds of a Federal Reserve rate rise at its December 8–9 meeting near 78%, up from about 67% on Thursday. Several Fed officials said this week that inflation is still too high.",
+      "beats": {
+        "was": "The Federal Reserve held its rate at 3.75%–4% last week after raising it in September, and Chair Kevin Warsh said the next step would depend on how the data add up.",
+        "happened": "The US added 165,000 jobs in October, more than twice what was expected, and unemployment fell to 4.1%. Bets on a December rise jumped to about 85% right after the release before settling near 78%, and investors now expect the last rise of this cycle in April rather than June. St. Louis Fed President Alberto Musalem called inflation a tax that hits poorer households hardest.",
+        "means": "A December rise is now the market's main expectation, and the path of US rates looks a little higher and sooner than it did a day ago.",
+        "fx": "Higher expected US rates support the dollar and weigh on gold, which pays no interest."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer bets on a December Fed rise add support, though most of the move came with the jobs data itself."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher expected US rates raise the cost of holding gold."
+        }
+      ],
+      "watch": "US inflation figures next week; a soft reading would pull December bets back down."
+    },
+    {
       "id": "investing-reuters-ca-ivey-pmi-oct-583-20261106",
       "date": "2026-11-06",
       "source": "Reuters via Investing.com",
@@ -668,6 +701,33 @@
         }
       ],
       "watch": "Friday's US jobs report, which could firm up or weaken the case for a December rise."
+    },
+    {
+      "id": "yahoo-reuters-lagarde-december-indicators-20261105",
+      "ts": "2026-11-05T17:34:00Z",
+      "source": "Reuters (via Yahoo Finance)",
+      "url": "https://finance.yahoo.com/economy/policy/articles/ecb-looking-indicators-see-december-170613489.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/cbbd182dfe8db1e7deda2a9b8774eb9ad430484031836dfa33715b55eeefdf49/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F8af44a9bda956dad3b39bd79de51f3ea.jpg",
+      "headline": "ECB's Lagarde says the data over the next month will decide whether a December rate rise is needed",
+      "story": "ecb-december",
+      "story_title": "European Central Bank: a December rate rise?",
+      "pillar": "policy",
+      "summary": "European Central Bank President Christine Lagarde kept a December rate rise open but did not commit, saying many readings due before then will settle it. She said most of the rise in inflation comes from energy.",
+      "beats": {
+        "was": "The European Central Bank held its deposit rate at 2.5% last week, while euro-area inflation climbed to 4.0% in October, a three-year high, largely because of the energy shock from the Iran war.",
+        "happened": "On Thursday Lagarde said inflation is too high for the bank's 2% goal but mainly driven by energy, and that the figures due between now and the December meeting will show whether a rise is needed. She warned against using rates too bluntly. Fresh staff forecasts arrive with that meeting.",
+        "means": "A December rise stays possible, but Lagarde's stress on energy as the cause sounds more patient than a firm signal would.",
+        "fx": "Mildly supportive of the euro by keeping a rise in view, but not enough to commit the bank."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A December rise stays on the table, but with no commitment and a patient tone."
+        }
+      ],
+      "watch": "Euro-area wage and inflation figures before the December meeting, and the bank's new forecasts then."
     },
     {
       "id": "yahoo-us-stocks-chip-selloff-20261105",
@@ -1349,60 +1409,6 @@
         }
       ],
       "watch": "The US jobs report on Friday, November 6, the last big test before the Fed's December decision."
-    },
-    {
-      "id": "sedaily-adp-oct-86k-20261104",
-      "ts": "2026-11-04T13:57:42Z",
-      "source": "Seoul Economic Daily",
-      "url": "https://en.sedaily.com/international/2026/11/04/us-private-payrolls-rise-86000-in-october-topping-forecasts",
-      "image": "https://wimg.sedaily.com/news/cms/2026/11/04/news-p.v1.20261104.a42c02ab3cbb4222888b48a06c574acd_P1.jpg",
-      "headline": "US private employers add 86,000 jobs in October, a little more than expected",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "growth",
-      "summary": "The ADP survey of US private payrolls showed 86,000 new jobs in October, slightly above forecasts and the same pace as September, with pay for people who switch jobs still rising fast.",
-      "beats": {
-        "was": "The US Federal Reserve is weighing a rate rise in December to fight inflation running near 3.7%. Monthly hiring has been slow, so each jobs survey is read for whether the economy can take a higher rate.",
-        "happened": "ADP, a payroll company, said private employers added 86,000 jobs in October against forecasts of roughly 70,000 to 75,000. Shops, transport and health care hired; business services cut jobs. Pay for job switchers rose 4.8% from a year earlier.",
-        "means": "Hiring is modest but steady, and pay is still growing quickly, which supports the case for a December rate rise. It is only a preview: the government's official jobs report on Friday, November 6, matters more.",
-        "fx": "A slightly firmer jobs picture gives the dollar some support, but it was drowned out by the slide after Tuesday's midterm results."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A small hiring beat that keeps a December Fed rate rise likely."
-        }
-      ],
-      "watch": "Friday's official US jobs report for October, expected to show around 60,000 new jobs."
-    },
-    {
-      "id": "seekingalpha-treasury-refunding-125b-20261104",
-      "ts": "2026-11-04T13:55:43Z",
-      "source": "Seeking Alpha",
-      "url": "https://seekingalpha.com/news/4664756-treasury-holds-quarterly-refunding-amounts-maturity-mix",
-      "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2291283031/image_2291283031.jpg?io=getty-c-w630",
-      "headline": "US Treasury keeps its quarterly bond sales unchanged at $125 billion",
-      "story": "us-midterms",
-      "story_title": "US midterms: a week of elections, central banks and jobs data",
-      "pillar": "rates",
-      "summary": "The US Treasury said it will sell $125 billion of longer-dated debt next week, the same amount and mix as last quarter, so there is no new supply of bonds to push US yields higher.",
-      "beats": {
-        "was": "Every three months the US Treasury, which manages the government's borrowing, says how much longer-term debt it will sell. Bigger sales can lift US interest rates, and the dollar with them. Yields had already fallen this week after Democrats won Congress, on bets a split government borrows less.",
-        "happened": "On Wednesday morning the Treasury kept its quarterly sale of notes and bonds at $125 billion and left the mix of maturities unchanged, in line with what dealers expected.",
-        "means": "No surprise, so it adds nothing new to the fall in US yields. It confirms the government is not leaning harder on long-term borrowing for now.",
-        "fx": "Neutral for the dollar. It removes one possible source of upward pressure on US yields but does not add a new push either way."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "As expected; no extra bond supply to lift yields, and no new reason for them to fall."
-        }
-      ],
-      "watch": "Demand at next week's US bond sales, and the US jobs report on Friday, November 6."
     }
   ]
 }
