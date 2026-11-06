@@ -1,10 +1,28 @@
 {
   "since": "2026-10-14",
   "window": 6,
-  "updated": "2026-11-06T07:47:00-06:00",
+  "updated": "2026-11-06T15:00:00-06:00",
   "currencies": {
     "USD": {
       "recent": [
+        {
+          "id": "us-uom-sentiment-20261106",
+          "date": "2026-11-06",
+          "title": "US UoM consumer sentiment prelim (Nov)",
+          "result": "beat",
+          "actual": "51.0 (vs 48.1 fcst, prev 48.0 Oct final); beat",
+          "forecast": "48.1",
+          "note": "Beat: sentiment 51.0 (vs 48.1 fcst, prev 48.0) — mood improving but still near historic lows; the dollar held its payrolls gains after the print."
+        },
+        {
+          "id": "us-uom-infl-exp-20261106",
+          "date": "2026-11-06",
+          "title": "US UoM inflation expectations prelim (Nov)",
+          "result": "beat",
+          "actual": "4.3% (vs 4.7% prev; 5-yr 3.4% vs 3.5%); cooler",
+          "forecast": null,
+          "note": "Beat (lower): 1-yr inflation expectations cooled to 4.3% (vs 4.7% prev; 5-yr 3.4% vs 3.5%) — household inflation fears easing into Tuesday's CPI."
+        },
         {
           "id": "us-nfp-20261106",
           "date": "2026-11-06",
@@ -40,29 +58,29 @@
           "actual": "189K (vs 197K fcst, prev 195K revised from 194K)",
           "forecast": "197K",
           "note": "Beat (lower): initial claims 189K (vs 197K fcst) in the week to Oct 31, down 6K from the prior week's revised 195K; 4-week average 194,750 (-2,250); continuing claims 1.718M (+23K). Low-hire, low-fire intact into Friday payrolls (DOL, Nov 5)."
-        },
-        {
-          "id": "us-productivity-20261105",
-          "date": "2026-11-05",
-          "title": "US prelim nonfarm productivity q/q (Q3)",
-          "result": "beat",
-          "actual": "3.6% (vs 2.8% fcst, prev 2.1% revised from 1.4%)",
-          "forecast": "2.8%",
-          "note": "Beat: Q3 productivity rose 3.6% annualized (vs 2.8% fcst; Q2 revised up to 2.1% from 1.4%) — output +3.7%, hours +0.1%; strong output per hour caps wage-push inflation pressure (BLS, Nov 5)."
-        },
-        {
-          "id": "us-ulc-20261105",
-          "date": "2026-11-05",
-          "title": "US prelim unit labor costs q/q (Q3)",
-          "result": "beat",
-          "actual": "-0.7% (vs 0.3% fcst, prev 1.9% revised from 1.2%)",
-          "forecast": "0.3%",
-          "note": "Beat (lower): unit labor costs FELL 0.7% annualized in Q3 (vs +0.3% fcst; Q2 revised up to +1.9% from +1.2%) — hourly compensation +2.9% outrun by +3.6% productivity; wage-cost pressure cooling into Friday payrolls (BLS, Nov 5)."
         }
       ]
     },
     "EUR": {
       "recent": [
+        {
+          "id": "ez-retail-20261106",
+          "date": "2026-11-06",
+          "title": "Eurozone retail sales m/m (Sep)",
+          "result": "miss",
+          "actual": "-0.7% m/m (vs -0.1% fcst, prev +0.4% revised from +0.1%); y/y +0.4% (vs +0.6% fcst)",
+          "forecast": "-0.1%",
+          "note": "Miss: retail sales -0.7% m/m (vs -0.1% fcst), the biggest fall since June 2024; Germany -2.0% led the drop."
+        },
+        {
+          "id": "de-ip-20261106",
+          "date": "2026-11-06",
+          "title": "Germany industrial production m/m (Sep)",
+          "result": "beat",
+          "actual": "+0.7% m/m (vs 0.0% fcst, prev +1.0% revised from +2.0%); auto +17.1%",
+          "forecast": "0.0%",
+          "note": "Beat: industrial production +0.7% m/m (vs 0.0% fcst) on a +17.1% auto rebound; Aug revised down to +1.0% — a post-holiday bounce (ING)."
+        },
         {
           "id": "eur-cpi-flash-20261030",
           "date": "2026-11-04",
@@ -98,24 +116,6 @@
           "actual": "+0.4% q/q (vs 0.2% fcst, prev 0.6%); +1.3% y/y (vs 1.1% exp)",
           "forecast": "0.2%",
           "note": "Beat: Q3 GDP +0.4% q/q vs 0.2% expected, +1.3% y/y vs 1.1% — but Ireland's +5.5% flatters the headline; ex-Ireland growth ~0.2% (Eurostat, Oct 30). EUR/USD ticked up to ~1.1202 on the print."
-        },
-        {
-          "id": "eur-unemp-20261030",
-          "date": "2026-10-30",
-          "title": "Eurozone unemployment rate (Sep)",
-          "result": "miss",
-          "actual": "6.5% (vs 6.4% fcst; Aug revised to 6.5% from 6.4%)",
-          "forecast": "6.4%",
-          "note": "Miss: September jobless 6.5% vs 6.4% expected — though August was revised up to 6.5%, so no real deterioration (Eurostat, Oct 30)."
-        },
-        {
-          "id": "it-cpi-flash-20261030",
-          "date": "2026-10-30",
-          "title": "Italian prelim CPI (Oct)",
-          "result": "beat",
-          "actual": "+0.9% m/m (vs 0.1% fcst, prev 0.7%); +5.4% y/y (vs ~4.6% consensus, prev 4.2%)",
-          "forecast": "0.1%",
-          "note": "Sharp beat: Italian prelim CPI +0.9% m/m, +5.4% y/y vs ~4.6% consensus — the hot print in the eurozone flash batch (ISTAT, Oct 30)."
         }
       ]
     },
@@ -256,6 +256,15 @@
           "note": "Miss: KOF barometer slipped to 107.6 vs 108.1 expected, from 109.1 — Swiss momentum cooling into the SNB's Dec 10 meeting (KOF, Oct 30)."
         },
         {
+          "id": "chf-ubs-20261028",
+          "date": "2026-10-28",
+          "title": "UBS economic expectations (Oct)",
+          "result": "miss",
+          "actual": "-15.3 (vs +2.6 prior; current conditions +26.7 vs +18)",
+          "forecast": null,
+          "note": "Miss: expectations -15.3 (vs +2.6 prior) — sharpest monthly drop since March; current conditions improved to +26.7 (from +18), so the gloom is forward-looking."
+        },
+        {
           "id": "chf-ppi-20261015",
           "date": "2026-10-15",
           "title": "Swiss PPI m/m (Sep)",
@@ -327,6 +336,15 @@
     "CAD": {
       "recent": [
         {
+          "id": "cad-ivey-20261106",
+          "date": "2026-11-06",
+          "title": "Canada Ivey PMI (Oct)",
+          "result": "beat",
+          "actual": "58.3 (vs 57.7 fcst, prev 58.2); small beat",
+          "forecast": "57.7",
+          "note": "Small beat: Ivey PMI 58.3 (vs 57.7 fcst, prev 58.2) — activity expanding at a slightly faster pace."
+        },
+        {
           "id": "cad-employment-20261106",
           "date": "2026-11-06",
           "title": "Canada employment change (Oct)",
@@ -370,15 +388,6 @@
           "actual": "+2.0%",
           "forecast": "0.7%",
           "note": "Beat: +2.0% m/m vs 0.7% fcst (Aug rev. to +1.2%) — +14.5% y/y, 24th straight annual gain; upstream pressure supports the hawkish BoC repricing."
-        },
-        {
-          "id": "cad-rmpi-20261022",
-          "date": "2026-10-22",
-          "title": "Canada raw materials price index m/m (Sep)",
-          "result": "beat",
-          "actual": "+4.8%",
-          "forecast": "0.1%",
-          "note": "Big beat: +4.8% m/m vs 0.1% fcst (prev 3.1%) — +27.0% y/y; raw-material costs surging alongside the IPPI beat."
         }
       ]
     },
@@ -412,6 +421,15 @@
           "note": "Beat: dairy firm — GDT index +3.0% at Event 415, a third straight firm auction; average winning price $4,166/MT with 39,806 MT sold."
         },
         {
+          "id": "nzd-anz-20261029",
+          "date": "2026-10-29",
+          "title": "ANZ business confidence (Oct)",
+          "result": "beat",
+          "actual": "52.5",
+          "forecast": null,
+          "note": "Slightly firmer: confidence 52.5 vs 51.9 in September, but own activity eased to 46.2 from 47.9; pricing intentions firmed to their highest since May. Kiwi flat near $0.5623 — no fresh NZD leg."
+        },
+        {
           "id": "nzd-cpi-20261022",
           "date": "2026-10-21",
           "title": "NZ CPI (Q3) q/q + y/y",
@@ -428,15 +446,6 @@
           "actual": "WMP +4.4% ($3,760/t), SMP +3.4%",
           "forecast": "n/a",
           "note": "Beat: powder-led firm — WMP +4.4% to $3,760/t, SMP +3.4% — positive terms-of-trade read into the Oct-28 RBNZ."
-        },
-        {
-          "id": "nzd-trade-20261018",
-          "date": "2026-10-18",
-          "title": "NZ trade balance (Sep)",
-          "result": "miss",
-          "actual": "-NZ$1,970M",
-          "forecast": "-NZ$775M",
-          "note": "Miss: NZ$1.97B deficit vs NZ$0.78B fcst — fuel import prices +96% y/y did the damage, not volumes."
         }
       ]
     }
