@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-06T01:48:07Z",
+  "updated": "2026-11-06T03:47:33Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bearish",
-      "ts": "2026-11-05T23:58:00Z",
-      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low as US yields dropped. Thursday's stock crash left the dollar flat, as safe-haven buying met lower yields and bets that the next Federal Reserve rise comes later; Friday's jobs report will show whether that view holds."
+      "ts": "2026-11-06T03:47:33Z",
+      "text": "Democrats won both the US Senate and the House in Tuesday's midterm elections, and the dollar fell to a one-month low as US yields dropped. Since Thursday's stock crash it has held steady: markets now give about a 70% chance of a December Federal Reserve rate rise, down from over 80%, while fear in stocks brings in safety buying. Friday's October jobs report will show which wins."
     },
     "EUR": {
       "lean": "mixed",
@@ -19,13 +19,13 @@
     },
     "JPY": {
       "lean": "mixed",
-      "ts": "2026-11-06T01:48:07Z",
-      "text": "Stocks in Tokyo fell more than 6% early on Friday after Wall Street's worst day in over a year, and US yields slipped, which usually helps the yen; yet it barely moved, near 157.8 per dollar. Bank of Japan minutes show the board wants more rate rises, but dearer oil, which Japan imports almost entirely, keeps weighing on the currency."
+      "ts": "2026-11-06T03:47:33Z",
+      "text": "The yen briefly reached its strongest in a week, near 157.4 per dollar, on Friday as Tokyo stocks fell more than 6% and US yields slipped, then gave some of that back. Bank of Japan minutes show the board wants more rate rises, but dearer oil, which Japan imports almost entirely, keeps weighing on the currency."
     },
     "CHF": {
       "lean": "bullish",
-      "ts": "2026-11-05T19:48:30Z",
-      "text": "Swiss inflation jumped to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify. Thursday's sharp fall in US stocks and more tanker attacks near Hormuz add to demand for the franc as a safe place to park money."
+      "ts": "2026-11-06T03:47:33Z",
+      "text": "The franc rose against the dollar on Friday as the stock sell-off spread from New York to Asia, adding to demand for it as a safe place to park money. Swiss inflation jumped to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
     },
     "CAD": {
       "lean": "mixed",
@@ -49,11 +49,89 @@
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-06T01:48:07Z",
-      "text": "Brent crude fell to a two-month low near $93 on Wednesday on bets the new Democratic Congress pushes Washington to end the Iran war, then climbed back to about $98 on Thursday as more tankers were hit near the Strait of Hormuz. Iran has since sent the US a nuclear proposal through Qatar, but says it won't reopen Hormuz until its seven demands are met, so supply risk stays."
+      "ts": "2026-11-06T03:47:33Z",
+      "text": "Brent crude fell to a two-month low near $93 on Wednesday on bets the new Democratic Congress pushes Washington to end the Iran war, then rose for two days to near $100 as more tankers were hit near the Strait of Hormuz. It is still set for about a 12% weekly fall; Iran's nuclear proposal through Qatar comes with demands that keep Hormuz shut for now."
     }
   },
   "items": [
+    {
+      "id": "asiaone-reuters-dollar-holds-yen-1574-20261106",
+      "ts": "2026-11-06T03:08:25Z",
+      "source": "Reuters (via AsiaOne)",
+      "url": "https://www.asiaone.com/money/dollar-holds-yen-gains-equity-rout-saps-risk-appetite-ahead-payrolls",
+      "image": "https://www.asiaone.com/sites/default/files/styles/article_top_image/public/original_images/Nov2026/dollar%20and%20yen.JPG?itok=B29Xj3JW",
+      "headline": "Yen touches a one-week high near 157.4 per dollar as the stock rout spreads; markets trim bets on a December Fed rate rise",
+      "story": "ai-stock-selloff",
+      "story_title": "AI stocks sell off after the US midterms",
+      "pillar": "rates",
+      "summary": "The yen and Swiss franc each rose about 0.2% against the dollar in Asian trading on Friday as stocks slid. Futures now give about a 70% chance the Federal Reserve raises rates in December, down from over 80% on Wednesday.",
+      "beats": {
+        "was": "The Federal Reserve has been raising US interest rates to fight inflation pushed up by dearer oil from the Iran war, and markets expected another rise in December. Democrats won both houses of Congress on Tuesday, and on Thursday the Nasdaq had its worst day since April 2025.",
+        "happened": "In Asia on Friday the yen briefly reached 157.40 per dollar, its strongest in a week, before giving some back. The two-year US Treasury yield fell about 0.1 point to 4.47%, and the dollar index held flat near 101.55.",
+        "means": "Investors now see a smaller chance of a December Fed rise, which takes some support away from the dollar. At the same time, fear in stock markets brings in money looking for safety, so the two forces roughly cancel out.",
+        "fx": "Lower US yields and safety buying help the yen and franc; the dollar is steady, not falling, and Friday's October jobs report will decide which force wins."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Safety buying and lower US yields lifted it to a one-week high, though the gain partly faded."
+        },
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Fewer bets on a December Fed rise weigh on it, while safety demand holds it up."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rose about 0.2% as investors looked for a safe place for money."
+        }
+      ],
+      "watch": "The US jobs report for October, due Friday at 7:30 AM CT."
+    },
+    {
+      "id": "brecorder-reuters-oil-weekly-drop-floor-20261106",
+      "ts": "2026-11-06T03:02:28Z",
+      "source": "Reuters (via Business Recorder)",
+      "url": "https://www.brecorder.com/news/40447719/oil-set-for-sharp-weekly-drop-but-middle-east-supply-concerns-provide-floor",
+      "image": "https://i.brecorder.com/large/2026/10/2607485146b693a.webp",
+      "headline": "Brent rises toward $100 for a second day, but is still set for a 12% weekly fall",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Brent crude rose about 1.6% to near $99.90 a barrel early on Friday, its second daily gain, as tanker attacks near Hormuz continue. It is still on track to end the week about 12% lower.",
+      "beats": {
+        "was": "The US and Israel have been at war with Iran for about nine months, and Iran controls shipping through the Strait of Hormuz, a key route for Gulf oil. Oil fell 8% on Wednesday to a two-month low on bets that the new Democratic Congress pushes Washington to end the war.",
+        "happened": "By early Friday Brent was up $1.57 at about $99.86 and US crude up about 1.2% at $91.62. Iran said three more tankers were attacked near Hormuz on Thursday, and attacks are running near a record pace.",
+        "means": "Wednesday's plunge looks like it went too far for some buyers, since actual supply through Hormuz has not improved. Hopes for peace pull prices down, while each new attack pushes them back up.",
+        "fx": "Dearer oil helps the Canadian dollar and Norway's crown and weighs on big importers such as Japan; the weekly fall still leaves oil well below last week's levels."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A second day of gains on tanker attacks, after a steep weekly fall."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Oil is Canada's biggest export, so higher prices help the currency."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so dearer crude weighs on the yen."
+        }
+      ],
+      "watch": "Whether more tankers are hit near Hormuz, and any US response to Iran's nuclear proposal sent through Qatar."
+    },
     {
       "id": "ap-nikkei-6pc-kospi-7pc-20261106",
       "ts": "2026-11-06T00:43:24Z",
@@ -1331,66 +1409,6 @@
         }
       ],
       "watch": "Friday's US jobs report, which could restore the dollar's support if it is strong."
-    },
-    {
-      "id": "investinglive-china-services-pmi-oct-508-20261104",
-      "ts": "2026-11-04T01:59:46Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/china-services-pmi-slows-to-50-8-in-october-as-price-cuts-meet-rising-costs/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/china-services-pmi-featured-1793757273.jpg?width=960&format=webp",
-      "headline": "China's services growth slows to a three-month low in October",
-      "story": "china-economy",
-      "story_title": "China: a slowing economy",
-      "pillar": "growth",
-      "summary": "China's private services survey fell to 50.8 in October from 51.6, still growing but at the slowest pace in three months.",
-      "beats": {
-        "was": "China's private factory survey beat forecasts on Monday, but the wider economy has been uneven, with firms cutting prices to win customers.",
-        "happened": "The RatingDog China services PMI, a business survey where 50 separates growth from shrinking, fell to 50.8 from 51.6. Companies kept cutting prices while their costs, including oil and wages, rose at the fastest pace in five months, and their confidence dropped to a three-month low. The combined factory and services reading eased to 52.0 from 52.4.",
-        "means": "China's economy is still growing, but firms are squeezed between rising costs and price wars, which caps how much they buy from abroad.",
-        "fx": "A small drag on the Australian and New Zealand dollars, whose exports depend on Chinese demand."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Slower Chinese services growth hints at softer demand for Australian exports."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "China is New Zealand's biggest buyer, so slower growth there weighs on the kiwi."
-        }
-      ],
-      "watch": "China's October trade figures, due later this week."
-    },
-    {
-      "id": "investing-swiss-cpi-oct-15pc-20261103",
-      "date": "2026-11-03",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/economic-indicators/swiss-inflation-hits-15-in-october-above-forecasts-on-fuel-costs-93CH-4993743",
-      "image": "https://content-media.investing.com/news/LYNXNPEB6R0AQ_L.jpg",
-      "headline": "Swiss inflation jumps to 1.5% in October on fuel costs",
-      "story": "swiss-inflation",
-      "story_title": "Switzerland: inflation picks up on fuel costs",
-      "pillar": "inflation",
-      "summary": "Swiss prices rose 1.5% from a year earlier in October, up from 1.0% and above the 1.3% expected, almost entirely because fuel got dearer; underlying prices stayed calm.",
-      "beats": {
-        "was": "Swiss inflation has been very low for two years, inside the Swiss National Bank's 0-2% target, and some traders had hoped the bank would cut its rate again in December. The Iran war has pushed fuel prices sharply higher this year.",
-        "happened": "The Federal Statistical Office said prices rose 0.2% in the month, against no change expected, and 1.5% over the year, the highest since late 2023. Petrol, diesel and heating oil drove nearly all of it. Core inflation, which leaves out energy and fresh food, held at just 0.5%.",
-        "means": "Higher headline inflation makes a December rate cut by the Swiss National Bank harder to argue for. But because the rise is in fuel and not in everyday prices, the bank is unlikely to feel pushed to raise rates.",
-        "fx": "Supports the Swiss franc by cutting the odds of a December rate cut; the calm core reading limits how far that goes."
-      },
-      "impact": [
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A clear beat that makes a December rate cut less likely."
-        }
-      ],
-      "watch": "The Swiss National Bank's December 10 decision, and whether fuel costs keep rising."
     }
   ]
 }
