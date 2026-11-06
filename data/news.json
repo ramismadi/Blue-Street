@@ -1,16 +1,16 @@
 {
-  "updated": "2026-11-06T16:46:55Z",
+  "updated": "2026-11-06T19:52:33Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-06T16:46:55Z",
-      "text": "The dollar fell to a one-month low this week after Democrats won the US Congress, but Friday's jobs report turned it around: 165,000 new jobs in October, far above forecasts, with unemployment down to 4.1%. Investors now see roughly a 78% chance of a December Federal Reserve rate rise, up from about two in three a day earlier."
+      "ts": "2026-11-06T19:52:33Z",
+      "text": "The dollar fell to a one-month low this week after Democrats won the US Congress, but Friday's jobs report turned it around: 165,000 new jobs in October, far above forecasts, with unemployment down to 4.1%. Investors now see roughly a 78% chance of a December Federal Reserve rate rise, and the 10-year US yield rose to about 4.86% as stocks steadied."
     },
     "EUR": {
       "lean": "bearish",
-      "ts": "2026-11-06T16:46:55Z",
-      "text": "The euro slipped back to about $1.115 on Friday as a strong US jobs report lifted the dollar and undid much of its post-election drop. At home, inflation is at 4.0%, and European Central Bank President Christine Lagarde says the coming data will decide a December rate rise, keeping it possible but not promised."
+      "ts": "2026-11-06T19:52:33Z",
+      "text": "The euro slipped back to about $1.115 on Friday as a strong US jobs report lifted the dollar. At home, shop sales fell far more than expected in September, and the European Central Bank's chief economist Philip Lane sounded cautious, so a December rate rise looks less certain even with inflation near 4%."
     },
     "GBP": {
       "lean": "mixed",
@@ -19,13 +19,13 @@
     },
     "JPY": {
       "lean": "mixed",
-      "ts": "2026-11-06T14:24:37Z",
-      "text": "The yen reached its strongest in a week, near 157.4 per dollar, on Friday as Tokyo stocks fell up to 7% and investors sought safety. A much stronger US jobs report pulls the other way by pointing to higher US rates, and dearer oil, which Japan imports almost entirely, still weighs on the currency."
+      "ts": "2026-11-06T19:52:33Z",
+      "text": "The yen reached its strongest in a week, near 157.4 per dollar, on Friday as Tokyo stocks fell about 6% and investors sought safety, and Bank of Japan minutes kept a December rate rise in view. A much stronger US jobs report and a bounce in US stocks pull the other way, and dearer oil, which Japan imports almost entirely, still weighs on the currency."
     },
     "CHF": {
       "lean": "bullish",
-      "ts": "2026-11-06T03:47:33Z",
-      "text": "The franc rose against the dollar on Friday as the stock sell-off spread from New York to Asia, adding to demand for it as a safe place to park money. Swiss inflation jumped to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
+      "ts": "2026-11-06T19:52:33Z",
+      "text": "The franc drew safe-haven money on Friday as the stock sell-off hit Asia and Europe, even as US shares bounced. Swiss inflation jumped to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
     },
     "CAD": {
       "lean": "bearish",
@@ -54,6 +54,84 @@
     }
   },
   "items": [
+    {
+      "id": "cp24-reuters-wall-st-relief-rally-20261106",
+      "ts": "2026-11-06T16:53:24Z",
+      "source": "Reuters via CP24",
+      "url": "https://www.cp24.com/news/money/2026/11/06/wall-street-stocks-in-relief-rally-after-heavy-ai-related-selloff/",
+      "image": "https://www.cp24.com/resizer/v2/LBA2EGBSHW5CH7JXAH5AWRGP4A.jpg?smart=true&auth=4502fc6e5efa66baa603afafb8baaa768ed876efad84d7c71a448ed28d0e222b&width=1200&height=630",
+      "headline": "US chip stocks bounce about 4% after their worst day in over a year, while the 10-year US yield edges up to 4.86%",
+      "story": "ai-selloff",
+      "story_title": "The AI-stock sell-off",
+      "pillar": "risk",
+      "summary": "US stocks partly recovered on Friday after Thursday's steep fall in technology shares, led by a 4% bounce in chipmakers. Markets in Europe and Asia still ended lower, and money kept flowing into the dollar, yen and Swiss franc as safe places to wait.",
+      "beats": {
+        "was": "On Thursday the Nasdaq, the US index heavy in technology firms, fell about 5.5%, its worst day since April 2025, on worries that the new Democratic Congress will tighten rules on artificial-intelligence companies. Tokyo and Seoul fell about 6% on Friday.",
+        "happened": "On Friday the S&P 500 rose about 0.6% and the Nasdaq about 1.1%, and a chip-stock index gained about 4%, with Nvidia up about 4%. All three main US indexes were still set for a losing week. The 10-year US Treasury yield rose to about 4.86% after a stronger-than-expected jobs report.",
+        "means": "The panic eased but did not reverse: the bounce came only in the US, and investors still kept money in safe currencies. Higher US yields after the jobs data add a second reason to hold dollars.",
+        "fx": "The dollar gains on both safety demand and higher yields; the yen and franc keep some support from caution, while riskier currencies such as the Australian dollar get only modest relief."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Safe-haven demand and a higher 10-year yield after strong jobs data both favour the dollar."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Caution still draws money to the yen, but the US stock bounce and higher US yields pull the other way."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The franc kept drawing safe-haven money as Europe's stocks fell over 1%."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A US stock bounce offers some relief, but Asian markets still fell hard."
+        }
+      ],
+      "watch": "Whether the chip-stock bounce holds into next week, or the sell-off returns to Asia on Monday."
+    },
+    {
+      "id": "tradingpedia-ez-retail-sep-minus07-lane-20261106",
+      "date": "2026-11-06",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/11/06/eur-jpy-slips-on-weak-eurozone-data-hawkish-boj/",
+      "image": null,
+      "headline": "Euro-area shop sales fall 0.7% in September, far worse than expected, as the ECB's Lane urges caution",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates in December?",
+      "pillar": "growth",
+      "summary": "Shoppers across the euro area spent 0.7% less in September than in August, a much bigger drop than forecast, after an even sharper fall in August. The European Central Bank's chief economist Philip Lane said rising energy costs must not spread into wages, but sounded cautious ahead of December.",
+      "beats": {
+        "was": "Inflation in the euro area is running at about 4% because of dearer energy from the Iran war, and the European Central Bank is weighing a rate rise in December. Higher prices have been squeezing household budgets.",
+        "happened": "Eurostat said retail sales fell 0.7% in September, against a forecast drop of 0.1%, and August was revised to a 2% fall. Compared with a year earlier, sales grew just 0.4%. ECB chief economist Philip Lane said policy must stop energy costs feeding into wages, but noted that borrowing conditions have already tightened and governments will likely spend less next year.",
+        "means": "Households are cutting back, which weakens the case for a December ECB rate rise. Lane's comments keep a rise possible but suggest the bank is in no hurry.",
+        "fx": "Weak spending and a cautious ECB weigh on the euro, which slipped against the yen on Friday."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A much bigger drop in shop sales than expected, plus a cautious ECB chief economist, lowers the odds of a December rate rise."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The euro fell against the yen as Bank of Japan minutes kept a December rate rise in view."
+        }
+      ],
+      "watch": "Euro-area inflation and wage figures before the ECB's December meeting, and whether other ECB officials echo Lane's caution."
+    },
     {
       "id": "kitco-gold-4050-after-payrolls-sentiment-20261106",
       "ts": "2026-11-06T15:00:16Z",
@@ -1349,66 +1427,6 @@
         }
       ],
       "watch": "Whether the White House changes its Iran stance, and the next round of talks through Qatar and Pakistan."
-    },
-    {
-      "id": "helious-eia-crude-draw-086m-20261104",
-      "ts": "2026-11-04T15:30:00Z",
-      "source": "Helious",
-      "url": "https://helious.io/news/rel-ev-ba4c1b324fd331f0/eia-crude-oil-stocks-change-0-86m",
-      "image": "https://helious.io/api/og/rel-ev-ba4c1b324fd331f0.png",
-      "headline": "US crude stocks fall only slightly, far less than an industry survey suggested",
-      "story": "iran-hormuz",
-      "story_title": "Hormuz: shipping attacks and the oil supply",
-      "pillar": "commodities",
-      "summary": "Official US government figures showed crude oil stocks fell by about 0.9 million barrels last week, a much smaller drop than the 5.3 million barrel fall an industry survey reported on Tuesday.",
-      "beats": {
-        "was": "The US-Israel war with Iran has disrupted tanker traffic through the Strait of Hormuz, keeping oil above $100 a barrel. Weekly US stock figures show how tight supply is; Tuesday's industry survey from the American Petroleum Institute hinted at a big drawdown.",
-        "happened": "The Energy Information Administration, the US government's energy statistics agency, said commercial crude stocks fell about 0.9 million barrels in the week to October 30.",
-        "means": "US supply looks less tight than Tuesday's survey implied, which takes a little support away from prices. Talks between Washington and Tehran still matter far more than one week of stock data.",
-        "fx": "A small weight on oil is a small weight on the Canadian dollar, since oil is Canada's main export."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A smaller fall in stocks than the industry survey pointed to."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Slightly less support for Canada's main export."
-        }
-      ],
-      "watch": "Any news on US-Iran talks or new attacks on shipping near the Strait of Hormuz."
-    },
-    {
-      "id": "investinglive-us-ism-services-oct-545-20261104",
-      "ts": "2026-11-04T15:00:06Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/october-us-ism-services-vs-54-8-expected/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/US%20services-featured-1793802474.jpg?width=960&format=webp",
-      "headline": "US services growth eases a little in October, slightly below forecasts",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "growth",
-      "summary": "The Institute for Supply Management's survey of US service firms slipped to 54.5 in October from 54.9, just under the 54.8 expected, but hiring improved and every part of the survey still showed growth.",
-      "beats": {
-        "was": "Services are most of the US economy. Strong figures this week, including a jump in job openings, have kept markets expecting the Federal Reserve to raise rates in December to fight inflation.",
-        "happened": "The survey read 54.5 (above 50 means growth). New orders and business activity slowed, while the hiring gauge rose to 51.4 and the prices firms pay stayed very high at 73. The survey said many firms have not yet passed tariff and fuel costs on to customers.",
-        "means": "Services are still growing at a healthy pace and price pressure is not fading, so this does little to weaken the case for a December Fed rate rise. The dollar barely moved.",
-        "fx": "A neutral print for the dollar: it neither adds to nor reverses today's slide after the midterm results."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Slightly softer growth, but firmer hiring and high prices keep a December Fed rise on the table."
-        }
-      ],
-      "watch": "The US jobs report on Friday, November 6, the last big test before the Fed's December decision."
     }
   ]
 }
