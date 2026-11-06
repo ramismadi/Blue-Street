@@ -1,698 +1,711 @@
 {
- "as_of": "2026-11-05T15:00:00-06:00",
- "updated": "2026-11-05T15:00:00-06:00",
- "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
- "note": "Thursday NY-close read, 2026-11-05 (~3:00 PM CT). Quiet dollar day after Wednesday's midterm slide — DXY ~101.4, little changed — but sharp moves underneath: Aussie weakest (-1.02% to 0.6935) and yen strongest (USD/JPY 157.82, -0.38%) as a tech-led US equity selloff drove haven flows; oil rebounded +3.5% (Brent $97.94) after Wednesday's ~9% crash as Iran-deal odds were cut to 10%; gold $4,124. BoE hiked to 4.00% (8-1) with a hawkish tilt; Lagarde and Macklem both kept December doors open without committing; Canada's Budget 2026 tabled at the close. Tomorrow: US payrolls + Canada jobs Fri 7:30am CT, NZ elections Fri. Levels are indicative index quotes, not executable prices.",
- "pairs": {},
- "currencies": [
-  {
-   "ccy": "USD",
-   "name": "US dollar",
-   "bank": "fed",
-   "chapter": null,
-   "summary": "DXY ~101.4 into the NY close, little changed after recovering from the 101.20 Asia low; the 7:30am CT triple beat (claims 189K, productivity +3.6%, ULC -0.7%) held the Dec Fed hike at ~80% (CME FedWatch, vs 81.2% this morning). Payrolls Fri 7:30am CT (consensus ~+60K, unemployment 4.2%).",
-   "drivers": {
-    "policy": {
-     "score": 1,
-     "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~80% Nov 5 US session (CME FedWatch reads 79-82%, vs 81.2% this morning) after the 7:30am CT triple beat — payrolls Fri 7:30am CT is the next test."
+  "as_of": "2026-11-06T00:45:58-06:00",
+  "updated": "2026-11-06T00:45:58-06:00",
+  "method": "per-currency pillar drivers -1/0/+1 from the morning engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
+  "note": "Friday Asia read, 2026-11-06 (~00:50 AM CT). Dollar firmer (DXY ~101.7) as the AI/data-center equity rout spread to Asia — Nasdaq -5.5% Thursday, steepest since April 2025; haven bid to yen (one-week high 157.27) and franc; Aussie weakest again (~0.6916) and kiwi soft into today's NZ elections. Oil up a second day (Brent ~$99.7) on Hormuz supply worries; gold eased to ~$4,063. Dec Fed hike slipped to ~68% (CME FedWatch) from ~80%. Today: US payrolls + Canada jobs 7:30am CT, UoM 9:00am, Ueda 10:00am, Bowman 12:15pm, NZ elections 3:45pm, CFTC 2:30pm. Levels are indicative index quotes, not executable prices.",
+  "pairs": {},
+  "currencies": [
+    {
+      "ccy": "USD",
+      "name": "US dollar",
+      "bank": "fed",
+      "chapter": null,
+      "summary": "DXY ~101.7 in Asia (+0.27% vs the 101.43 close) as the AI/data-center equity rout spread to Asia; the haven bid went to JPY/CHF, not the dollar. Dec Fed hike slipped to ~68% (CME FedWatch via Reuters) from ~80%. Payrolls Fri 7:30am CT (fcst 65K, unemployment 4.2%) is the day's test.",
+      "drivers": {
+        "policy": {
+          "score": 1,
+          "note": "Oct 28 HELD at 3.75-4.00% (10-2; Cook + Hammack dissented for a hike); December hike ~68% Nov 6 Asia (CME FedWatch via Reuters), down from ~80% Nov 5 US session and 81.2% Nov 5 morning, after the AI/data-center equity rout pulled yields lower (10Y ~4.84%, 2Y ~4.47%) — payrolls Fri 7:30am CT (fcst 65K) is the next test."
+        },
+        "growth": {
+          "score": 0,
+          "note": "Triple beat Nov 5 at 7:30am CT — claims 189K (vs 197K fcst), Q3 productivity +3.6% (vs 2.8%), ULC -0.7% (vs +0.3%) — into Friday payrolls (fcst 65K, unemployment 4.2%). ADP beat Nov 4 (+86K); ISM services small miss (54.5)."
+        },
+        "inflation": {
+          "score": 1,
+          "note": "CPI 3.7%, PPI hot; import prices +8.1% y/y (4-yr high); Brent ~$93.6 Asia Nov 5 (from $116.72 Oct 30 close) — the energy impulse has collapsed, but CPI at 3.7% is still above the Fed's comfort zone. Nov 5: Q3 ULC -0.7% (vs +0.3% fcst) — wage-cost pressure cooling; hourly compensation +2.9% outrun by +3.6% productivity."
+        },
+        "risk": {
+          "score": 0,
+          "note": "AI/data-center rout: Nasdaq -5.5% Thursday (steepest since April 2025), Asia tech crumbled Friday — the haven bid went to JPY/CHF, not the dollar; DXY firmed only to ~101.7 in Asia (from 101.43 close)."
+        },
+        "tot": {
+          "score": 0,
+          "note": "no direct terms-of-trade read for the dollar"
+        },
+        "positioning": {
+          "score": 0,
+          "note": "Oct 27 CFTC: aggregate dollar longs ~$39.3B (forex.com, Oct 20 vintage) — leaning for the dollar but not crowded; ICE USD-index futures net short is a different measure and is not scored."
+        },
+        "fiscal": {
+          "score": -1,
+          "note": "Midterm sweep: Democrats take both chambers (AP Senate call; NBC/CBS House projection) — divided government into 2027 caps the fiscal-expansion path; yields + DXY fell in Asia on the result."
+        }
+      }
     },
-    "growth": {
-     "score": 0,
-     "note": "Triple beat Nov 5 at 7:30am CT — claims 189K (vs 197K fcst), Q3 productivity +3.6% (vs 2.8%), ULC -0.7% (vs +0.3%) — into Friday payrolls (consensus ~+60K, unemployment 4.2%). ADP beat Nov 4 (+86K); ISM services small miss (54.5)."
+    {
+      "ccy": "EUR",
+      "name": "Euro",
+      "bank": "ecb",
+      "chapter": null,
+      "summary": "EUR/USD ~$1.1191 in Asia (-0.30% vs the $1.1225 close) as the dollar firmed on haven flows; Lagarde: the Dec hike decision rests on 'many indicators between now and December' — no new commitment, Dec hike ~89%. EZ flash CPI 4.0% inline keeps the hike case intact.",
+      "drivers": {
+        "policy": {
+          "score": -1,
+          "note": "Oct 29 HELD at 2.50% as expected; Lagarde Nov 5 (Milan): 'many indicators between now and December' will determine whether a hike is necessary — no new commitment; Dec 17 hike ~89% (Barchart/CME) after the inline Oct flash CPI (4.0% y/y, core 2.5%)."
+        },
+        "growth": {
+          "score": -1,
+          "note": "October flash PMIs all missed: EZ comp 51.9 vs 52.7 fcst (slowest in 4 months); France 48.4 vs 50.5 (back in contraction); Germany comp 52.8 vs 53.3; Ifo Oct 90.2 beat (expectations 91.6 best in 4.5+ yrs, current conditions 88.8 softer). Thu: EZ economic sentiment missed again, 96.9 vs 97.5 (prev 97.9). Fri morning: EZ Q3 GDP BEAT (+0.4% q/q vs 0.2% fcst, +1.3% y/y — Ireland's +5.5% flatters it, ex-Ireland ~0.2%) but France MISSED (-0.1% q/q vs +0.1% exp), Italy flat (0.0% vs +0.1%), Germany BEAT (+0.2% vs +0.1%); EZ jobless up to 6.5% (vs 6.4% fcst, Aug revised to 6.5%); Fri: EZ Q3 GDP BEAT (+0.4% q/q vs 0.2% fcst, Ireland-flattered) but France CONTRACTED (-0.1%) and Italy flat (0.0%)"
+        },
+        "inflation": {
+          "score": 1,
+          "note": "German Sep PPI +6.7% y/y beat (vs 6.2% fcst) — producer-price pipeline still hot; EZ final CPI 3.8%. Fri flash batch: French CPI HOT (3.4% y/y vs 3.2% exp, HICP 3.8% — energy +24.1% y/y), Italian CPI a sharp BEAT (+5.4% y/y vs ~4.6% consensus), Spanish CPI inline at 4.9% y/y; German flash CPI COOLED to 2.8% y/y (HICP 2.8% vs 3.1% poll, core 2.1%); EZ-wide flash PRINTED Nov 4 inline: headline 4.0% y/y (vs 4.0% fcst, prev 3.8% — a three-year high, energy 20.8% y/y), core steady 2.5% (Reuters/Eurostat) — December ECB hike case intact"
+        },
+        "risk": {
+          "score": 0,
+          "note": "risk-off tape but no euro haven flow — the France story caps the upside; EUR/CHF 0.9208, retracing toward the May 0.91 lows"
+        },
+        "tot": {
+          "score": -1,
+          "note": "Net energy importer — Brent ~$99.7 in Asia (+1.6%, second straight gain) on Hormuz supply worries, still ~12% down on the week from the $116.72 Oct 30 close; the terms-of-trade tax has eased sharply."
+        },
+        "positioning": {
+          "score": 1,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -143,894 contracts, a 3-year low (forexop); 6th percentile of 20 years (Financial Oracle) — the squeeze side is up; deeper than the Oct 20 leveraged-funds read (-94,138)."
+        },
+        "fiscal": {
+          "score": -1,
+          "note": "Moody's SPARED France Friday (Aa3 affirmed, negative outlook — vs the widely expected A1 cut; wants a deficit-cutting 2027 budget, debt >120% of GDP in 2027); OAT-Bund ~162bp (Action Forex, Oct 27) and ~6bp wider on the week as France contracted and protests resume Saturday (FXStreet, Oct 30); revenue-section vote Nov 3; S&P reviews Nov 27. Fitch cut France's outlook to negative Oct 30 (unscheduled; A+ affirmed; debt to ~124% of GDP by 2028 from 115.7% in 2025, deficit 5.4% in 2026) — both agencies now negative (Moody's Aa3/neg)."
+        }
+      }
     },
-    "inflation": {
-     "score": 1,
-     "note": "CPI 3.7%, PPI hot; import prices +8.1% y/y (4-yr high); Brent ~$93.6 Asia Nov 5 (from $116.72 Oct 30 close) — the energy impulse has collapsed, but CPI at 3.7% is still above the Fed's comfort zone. Nov 5: Q3 ULC -0.7% (vs +0.3% fcst) — wage-cost pressure cooling; hourly compensation +2.9% outrun by +3.6% productivity."
+    {
+      "ccy": "GBP",
+      "name": "British pound",
+      "bank": "boe",
+      "chapter": null,
+      "summary": "GBP/USD ~$1.3441 in Asia (-0.19% vs the $1.3467 close), holding the post-BoE-hike level; BoE hiked to 4.00% (8-1, Mann for +50bp), first since Aug 2023; Bailey: case for another 25bp 'fairly strong' if the Iran conflict stays unresolved. Next decision Dec 17.",
+      "drivers": {
+        "policy": {
+          "score": 1,
+          "note": "Nov 5 HIKED +25bp to 4.00% (8-1; Mann wanted +50bp), first since Aug 2023 — all nine favored a hike vs seven expected; Bailey: case for another 25bp 'fairly strong' if the US–Iran conflict stays unresolved; CPI seen near 5% by mid-2027. Next Dec 17; sterling ~$1.3441 in Asia, holding the post-hike level."
+        },
+        "growth": {
+          "score": 1,
+          "note": "flash PMI beat (comp 53.1 vs 51.8, strongest since Feb) vs retail sales miss (-0.4% m/m vs -0.1%); GfK confidence -24 (biggest monthly drop since COVID); CBI Oct -10 big beat (slowest retail fall since Apr 2025) vs GfK confidence -24 gloom. Thu morning: UK money/credit softer — mortgage approvals 53.4K vs 54K fcst, net lending £5.8B vs £6.2B, M4ex +4.0% y/y (prev 4.5%) Fri: Nationwide house prices flat (0.0% m/m vs -0.2% fcst, +0.5% y/y — slowest annual since Jan 2024); Fri: Nationwide house prices flat (0.0% m/m vs -0.2% fcst), annual +0.5% — slowest since Jan 2024"
+        },
+        "inflation": {
+          "score": 1,
+          "note": "Sep CPI 3.5% y/y beat (vs 3.4% fcst — highest since Oct 2025; core 2.8% in line; services 3.7% sticky); BRC Oct shop prices beat at 2.1% (vs 1.6% fcst, Sep 1.4% — fastest since Feb 2024; food 2.9%, non-food 1.7%) into Wednesday's Budget; GfK inflation expectations at the highest since April"
+        },
+        "risk": {
+          "score": 0,
+          "note": "risk-proxy sterling held firm on the rate repricing — no read-through from the equity rout"
+        },
+        "tot": {
+          "score": 0,
+          "note": "no fresh terms-of-trade read"
+        },
+        "positioning": {
+          "score": 1,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -79,414 contracts, 5th percentile of 20 years (Financial Oracle) — stretched short, squeeze fuel into the Nov 5 BoE."
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "Healey's first Budget DELIVERED Oct 28: headroom £15B in 2029/30 (vs £23.6B March, matching the dealer poll), OBR 2027 growth cut to 1.0% (from 1.6%), 2026 lifted to 1.2%; banks face a surcharge rise to 6%; gilt 10Y -2bp to 5.323%, sterling $1.3298 — muted, as expected"
+        }
+      }
     },
-    "risk": {
-     "score": 0,
-     "note": "Midterm result flipped the tape risk-on (equities strong, oil lower) — the haven bid went to JPY/CHF, not the dollar; DXY fell to a one-month low (~101.25 Asia Nov 5)."
+    {
+      "ccy": "JPY",
+      "name": "Japanese yen",
+      "bank": "boj",
+      "chapter": null,
+      "summary": "USD/JPY ~157.87 in Asia (+0.03% vs the 157.82 close) after touching a one-week high of 157.27; the tech-led equity rout drove haven demand on top of hawkish BoJ September minutes. Dec BoJ hike ~80%. Ueda speaks Fri 10:00am CT.",
+      "drivers": {
+        "policy": {
+          "score": -1,
+          "note": "Oct 30 HELD at 1.25% (8-1; Takata dissented for 1.50%); Outlook Report judged underlying inflation 'generally consistent' with the 2% target — first such assessment since 2013 — FY2027 core CPI raised to 2.6%; Ueda: vigilant on overshoot risk, pace depends on data; December hike ~80% (OIS/Nikkei). The policy gap vs the Fed still favors the dollar side near-term. September meeting minutes (released Nov 4) reinforced December hike expectations — Tokyo Nov 5: yen firmer on the minutes. Nov 5: September minutes reinforced December hike bets (Reuters Tokyo)."
+        },
+        "growth": {
+          "score": 0,
+          "note": "Mixed overnight: IP BEAT (+2.2% m/m vs +1.3% exp, Oct outlook upgraded to +5.1%) but retail MISSED (+2.3% y/y vs 3.3% exp, -0.7% m/m); jobs tightened (2.4%, jobs ratio 1.19); housing starts MISSED (-2.7% y/y vs +2.5% fcst)"
+        },
+        "inflation": {
+          "score": 0,
+          "note": "national core CPI 2.1% y/y inline (vs 2.1% fcst; up from 1.7%) — first time above the BoJ's 2% target in nine months; core-core 2.4% (from 1.9%); services PPI held at 3.7% y/y inline (Sep) — pipeline steady, not accelerating, into Friday's BoJ decision"
+        },
+        "risk": {
+          "score": 1,
+          "note": "Yen strongest again in Asia: USD/JPY hit a one-week high of 157.27 before paring to ~157.87, as the tech-led equity rout drove haven demand on top of hawkish BoJ September minutes; Dec BoJ hike ~80%. Ueda speaks Fri 10:00am CT."
+        },
+        "tot": {
+          "score": -1,
+          "note": "Net energy importer — Brent ~$93.6 Asia Nov 5 (from $116.72 Oct 30 close) eases the terms-of-trade tax, but Sep trade deficit still wide."
+        },
+        "positioning": {
+          "score": -1,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net long yen +101,591 contracts (+31,713 w/w), 98th percentile of 20 years (Financial Oracle) — stretched long, unwind risk; the percentile feed the Oct 12 decision waited on has landed."
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "no fiscal read"
+        }
+      }
     },
-    "tot": {
-     "score": 0,
-     "note": "no direct terms-of-trade read for the dollar"
+    {
+      "ccy": "CHF",
+      "name": "Swiss franc",
+      "bank": "snb",
+      "chapter": null,
+      "summary": "USD/CHF ~0.8171 in Asia (+0.16% vs the 0.8158 close) as the franc firmed on haven flows; Schlegel Nov 5: policy rate remains the main tool, FX intervention available when needed. Swiss CPI beat (1.5% y/y) still cools the Dec SNB cut case.",
+      "drivers": {
+        "policy": {
+          "score": 0,
+          "note": "SNB held at 0.00% (Sep); Schlegel Nov 5: policy rate remains the main tool, FX intervention available when needed — no fresh signal. Swiss CPI beat (1.5% y/y) cools the Dec 10 cut case; Dec SNB pricing conflicted (~50-50 LSEG vs ~82% no-change)."
+        },
+        "growth": {
+          "score": 0,
+          "note": "KOF barometer MISSED: 107.6 vs 108.1 fcst (prev 109.1) — Swiss momentum cooling into the SNB's Dec 10 meeting"
+        },
+        "inflation": {
+          "score": -1,
+          "note": "Nov 3 CPI BEAT: +0.2% m/m (vs 0.0% fcst), 1.5% y/y (vs 1.3% fcst, prev 1.0%) — hotter, but still inside the SNB's 0-2% stability range, so the Dec 10 pricing stays ~82% no-change."
+        },
+        "risk": {
+          "score": 1,
+          "note": "Haven bid in Asia — USD/CHF ~0.8171 as equities slid on the AI/data-center rout; the franc's haven status reasserted after fading into the Nov 3 NY close."
+        },
+        "tot": {
+          "score": 0,
+          "note": "no direct read"
+        },
+        "positioning": {
+          "score": 0,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -20,049 contracts, COT index 64 (forexop) — not extreme, neutral."
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "no fiscal read"
+        }
+      }
     },
-    "positioning": {
-     "score": 0,
-     "note": "Oct 27 CFTC: aggregate dollar longs ~$39.3B (forex.com, Oct 20 vintage) — leaning for the dollar but not crowded; ICE USD-index futures net short is a different measure and is not scored."
+    {
+      "ccy": "AUD",
+      "name": "Australian dollar",
+      "bank": "rba",
+      "chapter": null,
+      "summary": "AUD/USD ~0.6916 in Asia (-0.27% vs the 0.6935 close, ~1.5% down from Wednesday's close), the weakest major again — the tech-led risk-off slide plus the dovish read of Tuesday's RBA hike (4.85%) overwhelm the wider Sep trade surplus (A$2.826B). Next RBA decision Dec 8.",
+      "drivers": {
+        "policy": {
+          "score": 1,
+          "note": "Nov 3: HIKED +25bp to 4.85% (6-3; three voted to hold), fifth hike of 2026, highest since Dec 2008 - the most hawkish G10 level vs the Fed's 3.75-4.00%, so the gap still scores +1; but Bullock gave no guidance ('probably good to take stock', a further hike 'not as obvious'), tempering the forward path. London: AUD/USD 0.6963 (-0.5%), near the two-week low, as the split vote tempered further-hike bets. Nov 5: Hauser — 'inflation is too high, whichever measure you use'; public confidence in the RBA's inflation fight eroding (Reuters); AUD unmoved (~$0.7013)."
+        },
+        "growth": {
+          "score": -1,
+          "note": "flash PMIs a big miss: composite 47.7 (first contraction in 5 months); employment -39.3K, unemp 4.7% — a five-year high; Q3 CPI Oct 28 the pivot RatingDog Oct mfg 52.0 (vs 51.6 Reuters poll, prev 52.1) vs official 49.3 — private factories still expanding, export-order growth at a 3-month low."
+        },
+        "inflation": {
+          "score": 1,
+          "note": "Q3 CPI hotter than the RBA's path: trimmed +1.0% q/q vs the Bank's 0.8% forecast (Q3 trimmed 3.7% y/y); monthly Sep headline 4.3% y/y vs 4.2% exp — the bank is expected to act in November; Q3 import prices fell 1.1% q/q (vs +1.8% exp), reversing Q2's +5.7% surge — pipeline pressure cooled even as CPI ran hot."
+        },
+        "risk": {
+          "score": 0,
+          "note": "Aussie weakest again in Asia (~0.6916, down ~1.5% from Wednesday's close) in the tech-led risk-off slide; the RBA's Nov 3 hike to 4.85% (6-3) still reads dovish; Citi bearish, target 0.6660."
+        },
+        "tot": {
+          "score": 1,
+          "note": "Net energy exporter — Brent ~$99.7 in Asia (+1.6%, second straight gain) gives back some tailwind, but the Aussie is trading risk, not crude, into payrolls."
+        },
+        "positioning": {
+          "score": 1,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short at the 1st percentile of 20 years (Financial Oracle) — a flip from the Oct 20 leveraged-funds read (added longs); stretched short, squeeze fuel into the RBA."
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "no fiscal read"
+        }
+      }
     },
-    "fiscal": {
-     "score": -1,
-     "note": "Midterm sweep: Democrats take both chambers (AP Senate call; NBC/CBS House projection) — divided government into 2027 caps the fiscal-expansion path; yields + DXY fell in Asia on the result."
+    {
+      "ccy": "CAD",
+      "name": "Canadian dollar",
+      "bank": "boc",
+      "chapter": null,
+      "summary": "USD/CAD ~1.4031 in Asia (+0.30% vs the 1.3989 close) as the loonie lagged despite oil's second straight gain; Macklem (Senate): further hike possible but 'proceed carefully'; Budget 2026 tabled Nov 5. Canada jobs Fri 7:30am CT (fcst +14.6K after -68.3K).",
+      "drivers": {
+        "policy": {
+          "score": 1,
+          "note": "Oct 28 HIKED to 2.50% (first since Jul 2023); Macklem Nov 5 (Senate): further hike possible but 'proceed carefully', one meeting at a time; fiscal not stoking inflation. Dec further-hike ~56% (Nov 3 read)."
+        },
+        "growth": {
+          "score": -1,
+          "note": "Aug retail +1.2% m/m (a tenth light of +1.3% fcst; Jul -0.7%); ex-autos +1.2% beat vs +1.0%; Sep advance +0.7% — essentially inline; Aug GDP MISSED (0.0% m/m vs +0.2% fcst, prev 0.0%) — Q3 tracking softer than the BoC's 1.5% annualized call"
+        },
+        "inflation": {
+          "score": 1,
+          "note": "Sep IPPI +2.0% beat (vs 0.7% fcst; +14.5% y/y, 24th straight annual gain) and RMPI +4.8% beat (vs 0.1% fcst; +27.0% y/y) — pipeline pressure into the decision"
+        },
+        "risk": {
+          "score": 0,
+          "note": "no risk read — loonie traded the BoC repricing, not the tape"
+        },
+        "tot": {
+          "score": 1,
+          "note": "Crude tailwind returning: WTI ~$91.4 in Asia (+1.2%, second straight gain) after Wednesday's ~9% crash; Brent spread ~$8.3. Canada jobs Fri 7:30am CT (fcst +14.6K after -68.3K)."
+        },
+        "positioning": {
+          "score": 0,
+          "note": "Oct 27 CFTC read is population-mixed (legacy non-commercial net long vs the Oct 20 leveraged-funds net short, largest since early Aug) — held neutral pending a like-for-like leveraged read; squeeze fuel noted either way into December."
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "Budget 2026 tabled Nov 5 ('Masters of Our Destiny') at the 3:00pm CT close; headline deficit figure not cleanly verified at the close — PBO pre-budget outlook $63.3B for 2026-27. Macklem: January outlook will reflect the budget."
+        }
+      }
+    },
+    {
+      "ccy": "NZD",
+      "name": "New Zealand dollar",
+      "bank": "rbnz",
+      "chapter": null,
+      "summary": "NZD/USD ~0.5565 in Asia (-0.57% vs the 0.5597 close), weakest of the majors overnight as equities slid; RBNZ Dec hike now priced <50% after the Q3 jobs miss (unemployment 5.7%, 11-year high). NZ parliamentary elections Fri 3:45pm CT.",
+      "drivers": {
+        "policy": {
+          "score": 0,
+          "note": "Oct 28 HELD at 2.75% (4-3); markets now price <50% chance of a Dec 9 hike (down from ~75% earlier this week) after the Q3 jobs miss (unemployment 5.7%, 11-year high). NZ parliamentary elections Fri 3:45pm CT."
+        },
+        "growth": {
+          "score": -1,
+          "note": "Q3 jobs MISS: employment -0.1% q/q (vs +0.4% fcst, prev +0.5%), unemployment 5.7% (vs 5.5% fcst, prev 5.6%) — the week's big NZ print went the wrong way for the Dec hike case."
+        },
+        "inflation": {
+          "score": 0,
+          "note": "Q3 CPI soft miss: 0.7% q/q, 3.7% y/y (vs 0.8%/3.8%; below RBNZ's 3.9% proj, still above the 1-3% target) — priced through"
+        },
+        "risk": {
+          "score": 0,
+          "note": "Risk-off Asia tape — NZD weakest of the majors overnight (USD +0.58% vs NZD) as equities slid; NZ parliamentary elections Fri 3:45pm CT."
+        },
+        "tot": {
+          "score": 1,
+          "note": "GDT dairy powders firm; crude bid a mild tailwind"
+        },
+        "positioning": {
+          "score": 1,
+          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short at the 1st percentile of 20 years (Financial Oracle) — stretched short, squeeze fuel; RBNZ delay, not abandonment, is the fundamental side."
+        },
+        "fiscal": {
+          "score": 0,
+          "note": "no fiscal read"
+        }
+      }
     }
-   }
-  },
-  {
-   "ccy": "EUR",
-   "name": "Euro",
-   "bank": "ecb",
-   "chapter": null,
-   "summary": "EUR/USD ~$1.1225 into the close (-0.10%), giving back the Asia high of $1.1268 as the dollar steadied; Lagarde today: the Dec hike decision rests on 'many indicators between now and December' — no new commitment, Dec hike ~89%. Germany factory orders weaker than expected.",
-   "drivers": {
-    "policy": {
-     "score": -1,
-     "note": "Oct 29 HELD at 2.50% as expected; Lagarde Nov 5 (Milan): 'many indicators between now and December' will determine whether a hike is necessary — no new commitment; Dec 17 hike ~89% (Barchart/CME) after the inline Oct flash CPI (4.0% y/y, core 2.5%)."
+  ],
+  "history": [
+    {
+      "date": "2026-10-08",
+      "scores": {
+        "AUD": 0,
+        "CAD": 1,
+        "CHF": 1,
+        "EUR": -2,
+        "GBP": 1,
+        "JPY": 1,
+        "NZD": 0,
+        "USD": 3
+      }
     },
-    "growth": {
-     "score": -1,
-     "note": "October flash PMIs all missed: EZ comp 51.9 vs 52.7 fcst (slowest in 4 months); France 48.4 vs 50.5 (back in contraction); Germany comp 52.8 vs 53.3; Ifo Oct 90.2 beat (expectations 91.6 best in 4.5+ yrs, current conditions 88.8 softer). Thu: EZ economic sentiment missed again, 96.9 vs 97.5 (prev 97.9). Fri morning: EZ Q3 GDP BEAT (+0.4% q/q vs 0.2% fcst, +1.3% y/y — Ireland's +5.5% flatters it, ex-Ireland ~0.2%) but France MISSED (-0.1% q/q vs +0.1% exp), Italy flat (0.0% vs +0.1%), Germany BEAT (+0.2% vs +0.1%); EZ jobless up to 6.5% (vs 6.4% fcst, Aug revised to 6.5%); Fri: EZ Q3 GDP BEAT (+0.4% q/q vs 0.2% fcst, Ireland-flattered) but France CONTRACTED (-0.1%) and Italy flat (0.0%)"
+    {
+      "date": "2026-10-09",
+      "scores": {
+        "AUD": 1,
+        "CAD": 1,
+        "CHF": 1,
+        "EUR": -2,
+        "GBP": 1,
+        "JPY": 1,
+        "NZD": 1,
+        "USD": 3
+      }
     },
-    "inflation": {
-     "score": 1,
-     "note": "German Sep PPI +6.7% y/y beat (vs 6.2% fcst) — producer-price pipeline still hot; EZ final CPI 3.8%. Fri flash batch: French CPI HOT (3.4% y/y vs 3.2% exp, HICP 3.8% — energy +24.1% y/y), Italian CPI a sharp BEAT (+5.4% y/y vs ~4.6% consensus), Spanish CPI inline at 4.9% y/y; German flash CPI COOLED to 2.8% y/y (HICP 2.8% vs 3.1% poll, core 2.1%); EZ-wide flash PRINTED Nov 4 inline: headline 4.0% y/y (vs 4.0% fcst, prev 3.8% — a three-year high, energy 20.8% y/y), core steady 2.5% (Reuters/Eurostat) — December ECB hike case intact"
+    {
+      "date": "2026-10-10",
+      "scores": {
+        "AUD": 0,
+        "CAD": -1,
+        "CHF": 0,
+        "EUR": -1,
+        "GBP": 2,
+        "JPY": 3,
+        "NZD": -1,
+        "USD": 2
+      }
     },
-    "risk": {
-     "score": 0,
-     "note": "risk-off tape but no euro haven flow — the France story caps the upside; EUR/CHF 0.9208, retracing toward the May 0.91 lows"
+    {
+      "date": "2026-10-11",
+      "scores": {
+        "AUD": 0,
+        "CAD": -1,
+        "CHF": 0,
+        "EUR": -1,
+        "GBP": 2,
+        "JPY": 3,
+        "NZD": -1,
+        "USD": 2
+      }
     },
-    "tot": {
-     "score": -1,
-     "note": "Net energy importer — Brent ~$93.6 Asia Nov 5 (from $116.72 Oct 30 close) on de-escalation bets; the terms-of-trade tax has eased sharply."
+    {
+      "date": "2026-10-12",
+      "scores": {
+        "USD": 2,
+        "EUR": -1,
+        "GBP": 2,
+        "JPY": 2,
+        "CHF": -1,
+        "AUD": 1,
+        "CAD": -1,
+        "NZD": 0
+      }
     },
-    "positioning": {
-     "score": 1,
-     "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -143,894 contracts, a 3-year low (forexop); 6th percentile of 20 years (Financial Oracle) — the squeeze side is up; deeper than the Oct 20 leveraged-funds read (-94,138)."
+    {
+      "date": "2026-10-12",
+      "evening_scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 1,
+        "JPY": 1,
+        "CHF": -1,
+        "AUD": 0,
+        "CAD": -1,
+        "NZD": 0
+      },
+      "note": "evening read: dollar +2 day (war+rate bids), EUR -2 (17-mo low, French spread), oil premium back"
     },
-    "fiscal": {
-     "score": -1,
-     "note": "Moody's SPARED France Friday (Aa3 affirmed, negative outlook — vs the widely expected A1 cut; wants a deficit-cutting 2027 budget, debt >120% of GDP in 2027); OAT-Bund ~162bp (Action Forex, Oct 27) and ~6bp wider on the week as France contracted and protests resume Saturday (FXStreet, Oct 30); revenue-section vote Nov 3; S&P reviews Nov 27. Fitch cut France's outlook to negative Oct 30 (unscheduled; A+ affirmed; debt to ~124% of GDP by 2028 from 115.7% in 2025, deficit 5.4% in 2026) — both agencies now negative (Moody's Aa3/neg)."
+    {
+      "date": "2026-10-13",
+      "scores": {
+        "AUD": 2,
+        "CAD": -1,
+        "CHF": 1,
+        "EUR": -3,
+        "GBP": 2,
+        "JPY": -2,
+        "NZD": 0,
+        "USD": 3
+      }
+    },
+    {
+      "date": "2026-10-14",
+      "scores": {
+        "USD": 2,
+        "EUR": -3,
+        "GBP": 2,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 2,
+        "CAD": -1,
+        "NZD": 0
+      }
+    },
+    {
+      "date": "2026-10-15",
+      "scores": {
+        "USD": 3,
+        "EUR": -1,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 1,
+        "AUD": -1,
+        "CAD": -1,
+        "NZD": -1
+      }
+    },
+    {
+      "date": "2026-10-16",
+      "scores": {
+        "USD": 3,
+        "EUR": -3,
+        "GBP": 2,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": -1,
+        "CAD": 0,
+        "NZD": 1
+      }
+    },
+    {
+      "date": "2026-10-17",
+      "scores": {
+        "USD": 3,
+        "EUR": -3,
+        "GBP": 2,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": -1,
+        "CAD": 0,
+        "NZD": 2
+      }
+    },
+    {
+      "date": "2026-10-18",
+      "scores": {
+        "USD": 3,
+        "EUR": -3,
+        "GBP": 2,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": -1,
+        "CAD": 0,
+        "NZD": 2
+      }
+    },
+    {
+      "date": "2026-10-19",
+      "scores": {
+        "USD": 3,
+        "EUR": -3,
+        "GBP": 3,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 0,
+        "NZD": 2
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "scores": {
+        "USD": 3,
+        "EUR": -3,
+        "GBP": 3,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 1,
+        "NZD": 3
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "scores": {
+        "USD": 2,
+        "EUR": -3,
+        "GBP": 3,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 1,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "scores": {
+        "AUD": 1,
+        "CAD": 1,
+        "CHF": 0,
+        "EUR": -3,
+        "GBP": 3,
+        "JPY": -2,
+        "NZD": 4,
+        "USD": 2
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "scores": {
+        "USD": 2,
+        "EUR": -3,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 2,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 2,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 2,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 2,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 1,
+        "CAD": 2,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 2,
+        "CAD": 2,
+        "NZD": 3
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 2,
+        "CAD": 2,
+        "NZD": 3
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 3,
+        "JPY": -1,
+        "CHF": 0,
+        "AUD": 2,
+        "CAD": 2,
+        "NZD": 3
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 4,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 3,
+        "CAD": 2,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-11-01",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 4,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 3,
+        "CAD": 2,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 4,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 3,
+        "CAD": 2,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "scores": {
+        "USD": 2,
+        "EUR": -2,
+        "GBP": 4,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 3,
+        "CAD": 2,
+        "NZD": 4
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "scores": {
+        "USD": 1,
+        "EUR": -2,
+        "GBP": 4,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 3,
+        "CAD": 2,
+        "NZD": 1
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "scores": {
+        "USD": 1,
+        "EUR": -2,
+        "GBP": 4,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 3,
+        "CAD": 2,
+        "NZD": 1
+      }
+    },
+    {
+      "date": "2026-11-06",
+      "scores": {
+        "USD": 1,
+        "EUR": -2,
+        "GBP": 4,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 3,
+        "CAD": 2,
+        "NZD": 1
+      }
     }
-   }
-  },
-  {
-   "ccy": "GBP",
-   "name": "British pound",
-   "bank": "boe",
-   "chapter": null,
-   "summary": "GBP/USD ~$1.3467 into the close (-0.06%), unable to hold the post-BoE pop to $1.3506; BoE hiked to 4.00% (8-1, Mann for +50bp), first since Aug 2023; Bailey: case for another 25bp 'fairly strong' if the Iran conflict stays unresolved; CPI seen near 5% by mid-2027. Next decision Dec 17.",
-   "drivers": {
-    "policy": {
-     "score": 1,
-     "note": "Nov 5 HIKED +25bp to 4.00% (8-1; Mann wanted +50bp), first since Aug 2023 — all nine favored a hike vs seven expected; Bailey: case for another 25bp 'fairly strong' if the US–Iran conflict stays unresolved; CPI seen near 5% by mid-2027. Next Dec 17."
-    },
-    "growth": {
-     "score": 1,
-     "note": "flash PMI beat (comp 53.1 vs 51.8, strongest since Feb) vs retail sales miss (-0.4% m/m vs -0.1%); GfK confidence -24 (biggest monthly drop since COVID); CBI Oct -10 big beat (slowest retail fall since Apr 2025) vs GfK confidence -24 gloom. Thu morning: UK money/credit softer — mortgage approvals 53.4K vs 54K fcst, net lending £5.8B vs £6.2B, M4ex +4.0% y/y (prev 4.5%) Fri: Nationwide house prices flat (0.0% m/m vs -0.2% fcst, +0.5% y/y — slowest annual since Jan 2024); Fri: Nationwide house prices flat (0.0% m/m vs -0.2% fcst), annual +0.5% — slowest since Jan 2024"
-    },
-    "inflation": {
-     "score": 1,
-     "note": "Sep CPI 3.5% y/y beat (vs 3.4% fcst — highest since Oct 2025; core 2.8% in line; services 3.7% sticky); BRC Oct shop prices beat at 2.1% (vs 1.6% fcst, Sep 1.4% — fastest since Feb 2024; food 2.9%, non-food 1.7%) into Wednesday's Budget; GfK inflation expectations at the highest since April"
-    },
-    "risk": {
-     "score": 0,
-     "note": "risk-proxy sterling held firm on the rate repricing — no read-through from the equity rout"
-    },
-    "tot": {
-     "score": 0,
-     "note": "no fresh terms-of-trade read"
-    },
-    "positioning": {
-     "score": 1,
-     "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -79,414 contracts, 5th percentile of 20 years (Financial Oracle) — stretched short, squeeze fuel into the Nov 5 BoE."
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "Healey's first Budget DELIVERED Oct 28: headroom £15B in 2029/30 (vs £23.6B March, matching the dealer poll), OBR 2027 growth cut to 1.0% (from 1.6%), 2026 lifted to 1.2%; banks face a surcharge rise to 6%; gilt 10Y -2bp to 5.323%, sterling $1.3298 — muted, as expected"
-    }
-   }
-  },
-  {
-   "ccy": "JPY",
-   "name": "Japanese yen",
-   "bank": "boj",
-   "chapter": null,
-   "summary": "USD/JPY 157.82 into the close (-0.38%), the day's strongest major as the tech-led US equity selloff drove haven demand on top of hawkish BoJ September minutes; Dec BoJ hike ~80%. Ueda speaks Fri 10:00am CT; Japan labor cash earnings Fri Asia.",
-   "drivers": {
-    "policy": {
-     "score": -1,
-     "note": "Oct 30 HELD at 1.25% (8-1; Takata dissented for 1.50%); Outlook Report judged underlying inflation 'generally consistent' with the 2% target — first such assessment since 2013 — FY2027 core CPI raised to 2.6%; Ueda: vigilant on overshoot risk, pace depends on data; December hike ~80% (OIS/Nikkei). The policy gap vs the Fed still favors the dollar side near-term. September meeting minutes (released Nov 4) reinforced December hike expectations — Tokyo Nov 5: yen firmer on the minutes. Nov 5: September minutes reinforced December hike bets (Reuters Tokyo)."
-    },
-    "growth": {
-     "score": 0,
-     "note": "Mixed overnight: IP BEAT (+2.2% m/m vs +1.3% exp, Oct outlook upgraded to +5.1%) but retail MISSED (+2.3% y/y vs 3.3% exp, -0.7% m/m); jobs tightened (2.4%, jobs ratio 1.19); housing starts MISSED (-2.7% y/y vs +2.5% fcst)"
-    },
-    "inflation": {
-     "score": 0,
-     "note": "national core CPI 2.1% y/y inline (vs 2.1% fcst; up from 1.7%) — first time above the BoJ's 2% target in nine months; core-core 2.4% (from 1.9%); services PPI held at 3.7% y/y inline (Sep) — pipeline steady, not accelerating, into Friday's BoJ decision"
-    },
-    "risk": {
-     "score": 1,
-     "note": "Yen strongest Nov 5 (USD/JPY 157.82, -0.38%) as the tech-led US equity selloff drove haven demand; BoJ September minutes reinforced Dec hike bets (~80%). Ueda speaks Fri 10:00am CT."
-    },
-    "tot": {
-     "score": -1,
-     "note": "Net energy importer — Brent ~$93.6 Asia Nov 5 (from $116.72 Oct 30 close) eases the terms-of-trade tax, but Sep trade deficit still wide."
-    },
-    "positioning": {
-     "score": -1,
-     "note": "Oct 27 CFTC (non-commercial, released Oct 30): net long yen +101,591 contracts (+31,713 w/w), 98th percentile of 20 years (Financial Oracle) — stretched long, unwind risk; the percentile feed the Oct 12 decision waited on has landed."
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "no fiscal read"
-    }
-   }
-  },
-  {
-   "ccy": "CHF",
-   "name": "Swiss franc",
-   "bank": "snb",
-   "chapter": null,
-   "summary": "USD/CHF ~0.8158 into the close (-0.05%), franc steady as the dollar steadied; Schlegel today: policy rate remains the main tool, FX intervention available when needed. Swiss CPI beat (1.5% y/y) still cools the Dec SNB cut case.",
-   "drivers": {
-    "policy": {
-     "score": 0,
-     "note": "SNB held at 0.00% (Sep); Schlegel Nov 5: policy rate remains the main tool, FX intervention available when needed — no fresh signal. Swiss CPI beat (1.5% y/y) cools the Dec 10 cut case; Dec SNB pricing conflicted (~50-50 LSEG vs ~82% no-change)."
-    },
-    "growth": {
-     "score": 0,
-     "note": "KOF barometer MISSED: 107.6 vs 108.1 fcst (prev 109.1) — Swiss momentum cooling into the SNB's Dec 10 meeting"
-    },
-    "inflation": {
-     "score": -1,
-     "note": "Nov 3 CPI BEAT: +0.2% m/m (vs 0.0% fcst), 1.5% y/y (vs 1.3% fcst, prev 1.0%) — hotter, but still inside the SNB's 0-2% stability range, so the Dec 10 pricing stays ~82% no-change."
-    },
-    "risk": {
-     "score": 1,
-     "note": "Haven bid back in Asia — USD/CHF to ~0.8145 as equities slid on midterm results; the franc's haven status reasserted after fading into the Nov 3 NY close."
-    },
-    "tot": {
-     "score": 0,
-     "note": "no direct read"
-    },
-    "positioning": {
-     "score": 0,
-     "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -20,049 contracts, COT index 64 (forexop) — not extreme, neutral."
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "no fiscal read"
-    }
-   }
-  },
-  {
-   "ccy": "AUD",
-   "name": "Australian dollar",
-   "bank": "rba",
-   "chapter": null,
-   "summary": "AUD/USD 0.6935 into the close (-1.02%), the day's weakest major — the tech-led risk-off slide plus the dovish read of Tuesday's RBA hike (4.85%) overwhelmed the wider Sep trade surplus (A$2.826B); Citi bearish, target 0.6660. Next RBA decision Dec 8.",
-   "drivers": {
-    "policy": {
-     "score": 1,
-     "note": "Nov 3: HIKED +25bp to 4.85% (6-3; three voted to hold), fifth hike of 2026, highest since Dec 2008 - the most hawkish G10 level vs the Fed's 3.75-4.00%, so the gap still scores +1; but Bullock gave no guidance ('probably good to take stock', a further hike 'not as obvious'), tempering the forward path. London: AUD/USD 0.6963 (-0.5%), near the two-week low, as the split vote tempered further-hike bets. Nov 5: Hauser — 'inflation is too high, whichever measure you use'; public confidence in the RBA's inflation fight eroding (Reuters); AUD unmoved (~$0.7013)."
-    },
-    "growth": {
-     "score": -1,
-     "note": "flash PMIs a big miss: composite 47.7 (first contraction in 5 months); employment -39.3K, unemp 4.7% — a five-year high; Q3 CPI Oct 28 the pivot RatingDog Oct mfg 52.0 (vs 51.6 Reuters poll, prev 52.1) vs official 49.3 — private factories still expanding, export-order growth at a 3-month low."
-    },
-    "inflation": {
-     "score": 1,
-     "note": "Q3 CPI hotter than the RBA's path: trimmed +1.0% q/q vs the Bank's 0.8% forecast (Q3 trimmed 3.7% y/y); monthly Sep headline 4.3% y/y vs 4.2% exp — the bank is expected to act in November; Q3 import prices fell 1.1% q/q (vs +1.8% exp), reversing Q2's +5.7% surge — pipeline pressure cooled even as CPI ran hot."
-    },
-    "risk": {
-     "score": 0,
-     "note": "Aussie weakest Nov 5 (-1.02% to 0.6935) in the tech-led risk-off slide; RBA's Nov 3 hike to 4.85% (6-3) read as dovish; Citi bearish, target 0.6660. Sep trade surplus widened to A$2.826B."
-    },
-    "tot": {
-     "score": 1,
-     "note": "Net energy exporter — but the tailwind eased further: Brent ~$93.6 Asia Nov 5 (from $116.72 Oct 30 close) on de-escalation bets."
-    },
-    "positioning": {
-     "score": 1,
-     "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short at the 1st percentile of 20 years (Financial Oracle) — a flip from the Oct 20 leveraged-funds read (added longs); stretched short, squeeze fuel into the RBA."
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "no fiscal read"
-    }
-   }
-  },
-  {
-   "ccy": "CAD",
-   "name": "Canadian dollar",
-   "bank": "boc",
-   "chapter": null,
-   "summary": "USD/CAD ~1.3989 into the close (+0.28%) as the loonie lagged despite oil's +2.8% rebound; Macklem (Senate): further hike possible but 'proceed carefully'; Budget 2026 tabled at the close ('Masters of Our Destiny'). Canada jobs Fri 7:30am CT (fcst +14.6K after -68.3K).",
-   "drivers": {
-    "policy": {
-     "score": 1,
-     "note": "Oct 28 HIKED to 2.50% (first since Jul 2023); Macklem Nov 5 (Senate): further hike possible but 'proceed carefully', one meeting at a time; fiscal not stoking inflation. Dec further-hike ~56% (Nov 3 read)."
-    },
-    "growth": {
-     "score": -1,
-     "note": "Aug retail +1.2% m/m (a tenth light of +1.3% fcst; Jul -0.7%); ex-autos +1.2% beat vs +1.0%; Sep advance +0.7% — essentially inline; Aug GDP MISSED (0.0% m/m vs +0.2% fcst, prev 0.0%) — Q3 tracking softer than the BoC's 1.5% annualized call"
-    },
-    "inflation": {
-     "score": 1,
-     "note": "Sep IPPI +2.0% beat (vs 0.7% fcst; +14.5% y/y, 24th straight annual gain) and RMPI +4.8% beat (vs 0.1% fcst; +27.0% y/y) — pipeline pressure into the decision"
-    },
-    "risk": {
-     "score": 0,
-     "note": "no risk read — loonie traded the BoC repricing, not the tape"
-    },
-    "tot": {
-     "score": 1,
-     "note": "Crude tailwind fading: WTI ~$87.0 Asia Nov 5 (from $103.27 Oct 30, a 22-week high) — still a terms-of-trade boost, but $16 off the high."
-    },
-    "positioning": {
-     "score": 0,
-     "note": "Oct 27 CFTC read is population-mixed (legacy non-commercial net long vs the Oct 20 leveraged-funds net short, largest since early Aug) — held neutral pending a like-for-like leveraged read; squeeze fuel noted either way into December."
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "Budget 2026 tabled Nov 5 ('Masters of Our Destiny') at the 3:00pm CT close; headline deficit figure not cleanly verified at the close — PBO pre-budget outlook $63.3B for 2026-27. Macklem: January outlook will reflect the budget."
-    }
-   }
-  },
-  {
-   "ccy": "NZD",
-   "name": "New Zealand dollar",
-   "bank": "rbnz",
-   "chapter": null,
-   "summary": "NZD/USD 0.5597 into the close (-0.45%), giving back the Asia bounce to 0.5658 as the dollar steadied; RBNZ Dec hike now priced <50% after the Q3 jobs miss (unemployment 5.7%, 11-year high). NZ parliamentary elections Fri 3:45pm CT.",
-   "drivers": {
-    "policy": {
-     "score": 0,
-     "note": "Oct 28 HELD at 2.75% (4-3); markets now price <50% chance of a Dec 9 hike (down from ~75% earlier this week) after the Q3 jobs miss (unemployment 5.7%, 11-year high). NZ parliamentary elections Fri 3:45pm CT."
-    },
-    "growth": {
-     "score": -1,
-     "note": "Q3 jobs MISS: employment -0.1% q/q (vs +0.4% fcst, prev +0.5%), unemployment 5.7% (vs 5.5% fcst, prev 5.6%) — the week's big NZ print went the wrong way for the Dec hike case."
-    },
-    "inflation": {
-     "score": 0,
-     "note": "Q3 CPI soft miss: 0.7% q/q, 3.7% y/y (vs 0.8%/3.8%; below RBNZ's 3.9% proj, still above the 1-3% target) — priced through"
-    },
-    "risk": {
-     "score": 0,
-     "note": "Risk-off Asia tape — NZD weakest of the majors overnight as equities slid on midterm results, unwinding the post-GDT firmness."
-    },
-    "tot": {
-     "score": 1,
-     "note": "GDT dairy powders firm; crude bid a mild tailwind"
-    },
-    "positioning": {
-     "score": 1,
-     "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short at the 1st percentile of 20 years (Financial Oracle) — stretched short, squeeze fuel; RBNZ delay, not abandonment, is the fundamental side."
-    },
-    "fiscal": {
-     "score": 0,
-     "note": "no fiscal read"
-    }
-   }
-  }
- ],
- "history": [
-  {
-   "date": "2026-10-08",
-   "scores": {
-    "AUD": 0,
-    "CAD": 1,
-    "CHF": 1,
-    "EUR": -2,
-    "GBP": 1,
-    "JPY": 1,
-    "NZD": 0,
-    "USD": 3
-   }
-  },
-  {
-   "date": "2026-10-09",
-   "scores": {
-    "AUD": 1,
-    "CAD": 1,
-    "CHF": 1,
-    "EUR": -2,
-    "GBP": 1,
-    "JPY": 1,
-    "NZD": 1,
-    "USD": 3
-   }
-  },
-  {
-   "date": "2026-10-10",
-   "scores": {
-    "AUD": 0,
-    "CAD": -1,
-    "CHF": 0,
-    "EUR": -1,
-    "GBP": 2,
-    "JPY": 3,
-    "NZD": -1,
-    "USD": 2
-   }
-  },
-  {
-   "date": "2026-10-11",
-   "scores": {
-    "AUD": 0,
-    "CAD": -1,
-    "CHF": 0,
-    "EUR": -1,
-    "GBP": 2,
-    "JPY": 3,
-    "NZD": -1,
-    "USD": 2
-   }
-  },
-  {
-   "date": "2026-10-12",
-   "scores": {
-    "USD": 2,
-    "EUR": -1,
-    "GBP": 2,
-    "JPY": 2,
-    "CHF": -1,
-    "AUD": 1,
-    "CAD": -1,
-    "NZD": 0
-   }
-  },
-  {
-   "date": "2026-10-12",
-   "evening_scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 1,
-    "JPY": 1,
-    "CHF": -1,
-    "AUD": 0,
-    "CAD": -1,
-    "NZD": 0
-   },
-   "note": "evening read: dollar +2 day (war+rate bids), EUR -2 (17-mo low, French spread), oil premium back"
-  },
-  {
-   "date": "2026-10-13",
-   "scores": {
-    "AUD": 2,
-    "CAD": -1,
-    "CHF": 1,
-    "EUR": -3,
-    "GBP": 2,
-    "JPY": -2,
-    "NZD": 0,
-    "USD": 3
-   }
-  },
-  {
-   "date": "2026-10-14",
-   "scores": {
-    "USD": 2,
-    "EUR": -3,
-    "GBP": 2,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 2,
-    "CAD": -1,
-    "NZD": 0
-   }
-  },
-  {
-   "date": "2026-10-15",
-   "scores": {
-    "USD": 3,
-    "EUR": -1,
-    "GBP": 3,
-    "JPY": -1,
-    "CHF": 1,
-    "AUD": -1,
-    "CAD": -1,
-    "NZD": -1
-   }
-  },
-  {
-   "date": "2026-10-16",
-   "scores": {
-    "USD": 3,
-    "EUR": -3,
-    "GBP": 2,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": -1,
-    "CAD": 0,
-    "NZD": 1
-   }
-  },
-  {
-   "date": "2026-10-17",
-   "scores": {
-    "USD": 3,
-    "EUR": -3,
-    "GBP": 2,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": -1,
-    "CAD": 0,
-    "NZD": 2
-   }
-  },
-  {
-   "date": "2026-10-18",
-   "scores": {
-    "USD": 3,
-    "EUR": -3,
-    "GBP": 2,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": -1,
-    "CAD": 0,
-    "NZD": 2
-   }
-  },
-  {
-   "date": "2026-10-19",
-   "scores": {
-    "USD": 3,
-    "EUR": -3,
-    "GBP": 3,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 1,
-    "CAD": 0,
-    "NZD": 2
-   }
-  },
-  {
-   "date": "2026-10-20",
-   "scores": {
-    "USD": 3,
-    "EUR": -3,
-    "GBP": 3,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 1,
-    "CAD": 1,
-    "NZD": 3
-   }
-  },
-  {
-   "date": "2026-10-21",
-   "scores": {
-    "USD": 2,
-    "EUR": -3,
-    "GBP": 3,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 1,
-    "CAD": 1,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-10-22",
-   "scores": {
-    "AUD": 1,
-    "CAD": 1,
-    "CHF": 0,
-    "EUR": -3,
-    "GBP": 3,
-    "JPY": -2,
-    "NZD": 4,
-    "USD": 2
-   }
-  },
-  {
-   "date": "2026-10-23",
-   "scores": {
-    "USD": 2,
-    "EUR": -3,
-    "GBP": 3,
-    "JPY": -1,
-    "CHF": 0,
-    "AUD": 1,
-    "CAD": 2,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-10-24",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 3,
-    "JPY": -1,
-    "CHF": 0,
-    "AUD": 1,
-    "CAD": 2,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-10-25",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 3,
-    "JPY": -1,
-    "CHF": 0,
-    "AUD": 1,
-    "CAD": 2,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-10-26",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 3,
-    "JPY": -1,
-    "CHF": 0,
-    "AUD": 1,
-    "CAD": 2,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-10-27",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 3,
-    "JPY": -1,
-    "CHF": 0,
-    "AUD": 1,
-    "CAD": 2,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-10-28",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 3,
-    "JPY": -1,
-    "CHF": 0,
-    "AUD": 2,
-    "CAD": 2,
-    "NZD": 3
-   }
-  },
-  {
-   "date": "2026-10-29",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 3,
-    "JPY": -1,
-    "CHF": 0,
-    "AUD": 2,
-    "CAD": 2,
-    "NZD": 3
-   }
-  },
-  {
-   "date": "2026-10-30",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 3,
-    "JPY": -1,
-    "CHF": 0,
-    "AUD": 2,
-    "CAD": 2,
-    "NZD": 3
-   }
-  },
-  {
-   "date": "2026-10-31",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 4,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 3,
-    "CAD": 2,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-11-01",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 4,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 3,
-    "CAD": 2,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-11-02",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 4,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 3,
-    "CAD": 2,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-11-03",
-   "scores": {
-    "USD": 2,
-    "EUR": -2,
-    "GBP": 4,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 3,
-    "CAD": 2,
-    "NZD": 4
-   }
-  },
-  {
-   "date": "2026-11-04",
-   "scores": {
-    "USD": 1,
-    "EUR": -2,
-    "GBP": 4,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 3,
-    "CAD": 2,
-    "NZD": 1
-   }
-  },
-  {
-   "date": "2026-11-05",
-   "scores": {
-    "USD": 1,
-    "EUR": -2,
-    "GBP": 4,
-    "JPY": -2,
-    "CHF": 0,
-    "AUD": 3,
-    "CAD": 2,
-    "NZD": 1
-   }
-  }
- ]
+  ]
 }
