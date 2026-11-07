@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-31T00:51:43.812Z",
- "report_date": "2026-10-27",
+ "updated": "2026-11-07T00:57:55.838Z",
+ "report_date": "2026-11-03",
  "method": "flip = (long − short) / open interest × 100; percentile = mid-rank vs all weekly history since Jan 2015; positive flip = net long (betting the market rises); split = hedge funds and real money on opposite sides; zones (for the engine signal): ≥90 very bullish, ≥60 bullish, ≤40 bearish, ≤10 very bearish, otherwise neutral; signal (hedge funds): very bullish −1, very bearish +1, else 0",
  "sources": [
   {
@@ -22,55 +22,49 @@
    "contract": "ICE US Dollar Index",
    "code": "098662",
    "long_means": "dollar up against a basket of majors",
-   "as_of": "2026-10-27",
-   "oi": 48263,
+   "as_of": "2026-11-03",
+   "oi": 49091,
    "hf": {
-    "net": 3158,
-    "long": 16907,
-    "short": 13749,
-    "flip": 6.54,
-    "pct": 64.4,
+    "net": 3311,
+    "long": 18677,
+    "short": 15366,
+    "flip": 6.74,
+    "pct": 64.6,
     "zone": "bullish",
     "z": {
-     "all": 0.37,
-     "y10": 0.33,
-     "y1": 0.95
+     "all": 0.38,
+     "y10": 0.34,
+     "y1": 0.94
     },
-    "range12": 57,
-    "chg1": -25,
-    "chg4": 2797,
-    "weeks": 617,
+    "range12": 58,
+    "chg1": 153,
+    "chg4": 2447,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": 16713,
-    "long": 18905,
-    "short": 2192,
-    "flip": 34.63,
-    "pct": 71.7,
+    "net": 16820,
+    "long": 18660,
+    "short": 1840,
+    "flip": 34.26,
+    "pct": 71.1,
     "zone": "bullish",
     "z": {
-     "all": 0.73,
-     "y10": 0.66,
-     "y1": 0.72
+     "all": 0.7,
+     "y10": 0.64,
+     "y1": 0.67
     },
-    "range12": 53,
-    "chg1": -307,
-    "chg4": -1294,
-    "weeks": 617,
+    "range12": 55,
+    "chg1": 107,
+    "chg4": -2276,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": -5805,
-     "oi": 32496,
-     "rm": 10575
-    },
     {
      "d": "2026-05-12",
      "hf": -4751,
@@ -220,6 +214,12 @@
      "hf": 3158,
      "oi": 48263,
      "rm": 16713
+    },
+    {
+     "d": "2026-11-03",
+     "hf": 3311,
+     "oi": 49091,
+     "rm": 16820
     }
    ],
    "summary": "Hedge funds are leaning for the dollar. Over the past month they added to their bet on the dollar."
@@ -233,55 +233,49 @@
    "contract": "CME Euro FX",
    "code": "099741",
    "long_means": "euro up against the dollar",
-   "as_of": "2026-10-27",
-   "oi": 868188,
+   "as_of": "2026-11-03",
+   "oi": 876122,
    "hf": {
-    "net": -71574,
-    "long": 125046,
-    "short": 196620,
-    "flip": -8.24,
-    "pct": 35.1,
+    "net": -78559,
+    "long": 119238,
+    "short": 197797,
+    "flip": -8.97,
+    "pct": 34.9,
     "zone": "bearish",
     "z": {
-     "all": -0.07,
-     "y10": -0.43,
-     "y1": -1.75
+     "all": -0.14,
+     "y10": -0.52,
+     "y1": -1.81
     },
     "range12": 0,
-    "chg1": -2734,
-    "chg4": -32309,
-    "weeks": 617,
+    "chg1": -6985,
+    "chg4": -34298,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": 173249,
-    "long": 494892,
-    "short": 321643,
-    "flip": 19.96,
-    "pct": 20.2,
+    "net": 144925,
+    "long": 485147,
+    "short": 340222,
+    "flip": 16.54,
+    "pct": 19.3,
     "zone": "bearish",
     "z": {
-     "all": -0.56,
-     "y10": -1.45,
-     "y1": -2.08
+     "all": -0.76,
+     "y10": -1.77,
+     "y1": -2.37
     },
     "range12": 0,
-    "chg1": -17172,
-    "chg4": -47354,
-    "weeks": 617,
+    "chg1": -28324,
+    "chg4": -44956,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": true,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": 11846,
-     "oi": 815942,
-     "rm": 285613
-    },
     {
      "d": "2026-05-12",
      "hf": 18003,
@@ -431,6 +425,12 @@
      "hf": -71574,
      "oi": 868188,
      "rm": 173249
+    },
+    {
+     "d": "2026-11-03",
+     "hf": -78559,
+     "oi": 876122,
+     "rm": 144925
     }
    ],
    "summary": "Hedge funds are betting against the euro. Over the past month they added to their bet against the euro. Real money disagrees: it is betting for the euro."
@@ -444,55 +444,49 @@
    "contract": "CME British Pound",
    "code": "096742",
    "long_means": "pound up against the dollar",
-   "as_of": "2026-10-27",
-   "oi": 253937,
+   "as_of": "2026-11-03",
+   "oi": 245590,
    "hf": {
-    "net": 17195,
-    "long": 59342,
-    "short": 42147,
-    "flip": 6.77,
-    "pct": 54.1,
-    "zone": "neutral",
+    "net": 26663,
+    "long": 63342,
+    "short": 36679,
+    "flip": 10.86,
+    "pct": 65.1,
+    "zone": "bullish",
     "z": {
-     "all": 0.19,
-     "y10": 0.06,
-     "y1": -0.61
+     "all": 0.49,
+     "y10": 0.4,
+     "y1": 0.19
     },
-    "range12": 29,
-    "chg1": -6909,
-    "chg4": 12589,
-    "weeks": 617,
+    "range12": 51,
+    "chg1": 9468,
+    "chg4": 14231,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -128893,
-    "long": 21840,
-    "short": 150733,
-    "flip": -50.76,
-    "pct": 1.2,
+    "net": -121163,
+    "long": 22698,
+    "short": 143861,
+    "flip": -49.34,
+    "pct": 1.9,
     "zone": "very bearish",
     "z": {
-     "all": -2.11,
-     "y10": -2.15,
-     "y1": -1.37
+     "all": -2.01,
+     "y10": -2.04,
+     "y1": -1.14
     },
-    "range12": 30,
-    "chg1": 5728,
-    "chg4": -349,
-    "weeks": 617,
+    "range12": 43,
+    "chg1": 7730,
+    "chg4": 24279,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
-   "split": false,
+   "split": true,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": 26049,
-     "oi": 276143,
-     "rm": -102630
-    },
     {
      "d": "2026-05-12",
      "hf": 37302,
@@ -642,9 +636,15 @@
      "hf": 17195,
      "oi": 253937,
      "rm": -128893
+    },
+    {
+     "d": "2026-11-03",
+     "hf": 26663,
+     "oi": 245590,
+     "rm": -121163
     }
    ],
-   "summary": "Hedge funds are leaning for the pound. Over the past month they added to their bet on the pound."
+   "summary": "Hedge funds are betting for the pound. Over the past month they added to their bet on the pound. Real money disagrees: it is strongly betting against the pound."
   },
   {
    "id": "JPY",
@@ -655,55 +655,49 @@
    "contract": "CME Japanese Yen",
    "code": "097741",
    "long_means": "yen up against the dollar",
-   "as_of": "2026-10-27",
-   "oi": 374026,
+   "as_of": "2026-11-03",
+   "oi": 380641,
    "hf": {
-    "net": -14630,
-    "long": 76365,
-    "short": 90995,
-    "flip": -3.91,
-    "pct": 70.9,
+    "net": -14817,
+    "long": 82058,
+    "short": 96875,
+    "flip": -3.89,
+    "pct": 71,
     "zone": "bullish",
     "z": {
      "all": 0.48,
      "y10": 0.7,
-     "y1": 1.7
+     "y1": 1.63
     },
     "range12": 70,
-    "chg1": 8260,
-    "chg4": -469,
-    "weeks": 617,
+    "chg1": -187,
+    "chg4": 10226,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": 91191,
-    "long": 161424,
-    "short": 70233,
-    "flip": 24.38,
-    "pct": 88.9,
+    "net": 79387,
+    "long": 151254,
+    "short": 71867,
+    "flip": 20.86,
+    "pct": 86.5,
     "zone": "bullish",
     "z": {
-     "all": 1.44,
-     "y10": 1.3,
-     "y1": 1.63
+     "all": 1.25,
+     "y10": 1.11,
+     "y1": 1.38
     },
-    "range12": 100,
-    "chg1": 12088,
-    "chg4": 39557,
-    "weeks": 617,
+    "range12": 90,
+    "chg1": -11804,
+    "chg4": 11592,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": -52897,
-     "oi": 354005,
-     "rm": -10596
-    },
     {
      "d": "2026-05-12",
      "hf": -62440,
@@ -853,9 +847,15 @@
      "hf": -14630,
      "oi": 374026,
      "rm": 91191
+    },
+    {
+     "d": "2026-11-03",
+     "hf": -14817,
+     "oi": 380641,
+     "rm": 79387
     }
    ],
-   "summary": "Hedge funds are leaning against the yen. Little has changed over the past month."
+   "summary": "Hedge funds are leaning against the yen. Over the past month they cut their bet against the yen."
   },
   {
    "id": "CHF",
@@ -866,55 +866,49 @@
    "contract": "CME Swiss Franc",
    "code": "092741",
    "long_means": "franc up against the dollar",
-   "as_of": "2026-10-27",
-   "oi": 135489,
+   "as_of": "2026-11-03",
+   "oi": 133162,
    "hf": {
-    "net": -17502,
-    "long": 8421,
-    "short": 25923,
-    "flip": -12.92,
-    "pct": 28.4,
+    "net": -16845,
+    "long": 7441,
+    "short": 24286,
+    "flip": -12.65,
+    "pct": 29.4,
     "zone": "bearish",
     "z": {
-     "all": -0.54,
-     "y10": -0.66,
-     "y1": -1.72
+     "all": -0.52,
+     "y10": -0.65,
+     "y1": -1.59
     },
-    "range12": 0,
-    "chg1": -3895,
-    "chg4": -3507,
-    "weeks": 617,
+    "range12": 8,
+    "chg1": 657,
+    "chg4": -5495,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -25067,
-    "long": 23343,
-    "short": 48410,
-    "flip": -18.5,
-    "pct": 48.5,
+    "net": -20853,
+    "long": 26973,
+    "short": 47826,
+    "flip": -15.66,
+    "pct": 54.8,
     "zone": "neutral",
     "z": {
-     "all": -0.07,
-     "y10": 0.11,
-     "y1": 1.9
+     "all": 0.11,
+     "y10": 0.29,
+     "y1": 2.01
     },
     "range12": 100,
-    "chg1": 468,
-    "chg4": 11344,
-    "weeks": 617,
+    "chg1": 4214,
+    "chg4": 16526,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": -6634,
-     "oi": 94468,
-     "rm": -37613
-    },
     {
      "d": "2026-05-12",
      "hf": -7708,
@@ -1064,6 +1058,12 @@
      "hf": -17502,
      "oi": 135489,
      "rm": -25067
+    },
+    {
+     "d": "2026-11-03",
+     "hf": -16845,
+     "oi": 133162,
+     "rm": -20853
     }
    ],
    "summary": "Hedge funds are betting against the franc. Over the past month they added to their bet against the franc."
@@ -1077,55 +1077,49 @@
    "contract": "CME Canadian Dollar",
    "code": "090741",
    "long_means": "Canadian dollar up against the US dollar",
-   "as_of": "2026-10-27",
-   "oi": 360941,
+   "as_of": "2026-11-03",
+   "oi": 348660,
    "hf": {
-    "net": -96747,
-    "long": 22424,
-    "short": 119171,
-    "flip": -26.8,
-    "pct": 13,
+    "net": -86302,
+    "long": 25334,
+    "short": 111636,
+    "flip": -24.75,
+    "pct": 20.8,
     "zone": "bearish",
     "z": {
-     "all": -0.98,
-     "y10": -1.04,
-     "y1": -0.95
+     "all": -0.84,
+     "y10": -0.9,
+     "y1": -0.56
     },
-    "range12": 0,
-    "chg1": -5634,
-    "chg4": -27103,
-    "weeks": 617,
+    "range12": 18,
+    "chg1": 10445,
+    "chg4": -6677,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -1325,
-    "long": 108416,
-    "short": 109741,
-    "flip": -0.37,
-    "pct": 40,
-    "zone": "bearish",
+    "net": 16453,
+    "long": 117157,
+    "short": 100704,
+    "flip": 4.72,
+    "pct": 51.2,
+    "zone": "neutral",
     "z": {
-     "all": -0.06,
-     "y10": 0.04,
-     "y1": 0.36
+     "all": 0.19,
+     "y10": 0.29,
+     "y1": 0.61
     },
     "range12": 100,
-    "chg1": 4074,
-    "chg4": 26256,
-    "weeks": 617,
+    "chg1": 17778,
+    "chg4": 52259,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": -47758,
-     "oi": 243793,
-     "rm": 29790
-    },
     {
      "d": "2026-05-12",
      "hf": -37663,
@@ -1275,9 +1269,15 @@
      "hf": -96747,
      "oi": 360941,
      "rm": -1325
+    },
+    {
+     "d": "2026-11-03",
+     "hf": -86302,
+     "oi": 348660,
+     "rm": 16453
     }
    ],
-   "summary": "Hedge funds are strongly betting against the Canadian dollar. Over the past month they added to their bet against the Canadian dollar."
+   "summary": "Hedge funds are strongly betting against the Canadian dollar. Over the past month they slightly added to their bet against the Canadian dollar."
   },
   {
    "id": "AUD",
@@ -1288,55 +1288,49 @@
    "contract": "CME Australian Dollar",
    "code": "232741",
    "long_means": "Aussie up against the US dollar",
-   "as_of": "2026-10-27",
-   "oi": 325008,
+   "as_of": "2026-11-03",
+   "oi": 328599,
    "hf": {
-    "net": 48414,
-    "long": 86736,
-    "short": 38322,
-    "flip": 14.9,
-    "pct": 76.3,
+    "net": 50106,
+    "long": 89778,
+    "short": 39672,
+    "flip": 15.25,
+    "pct": 77.3,
     "zone": "bullish",
     "z": {
-     "all": 0.78,
-     "y10": 0.77,
+     "all": 0.79,
+     "y10": 0.8,
      "y1": 0.05
     },
-    "range12": 0,
-    "chg1": -4083,
-    "chg4": -12178,
-    "weeks": 617,
+    "range12": 13,
+    "chg1": 1692,
+    "chg4": -4027,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -125237,
-    "long": 86291,
-    "short": 211528,
-    "flip": -38.53,
-    "pct": 7.1,
+    "net": -130780,
+    "long": 83852,
+    "short": 214632,
+    "flip": -39.8,
+    "pct": 5.1,
     "zone": "very bearish",
     "z": {
-     "all": -1.46,
-     "y10": -1.4,
-     "y1": -1.72
+     "all": -1.53,
+     "y10": -1.47,
+     "y1": -1.77
     },
-    "range12": 4,
-    "chg1": 3502,
-    "chg4": -52038,
-    "weeks": 617,
+    "range12": 0,
+    "chg1": -5543,
+    "chg4": -29352,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": true,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": 56600,
-     "oi": 279532,
-     "rm": 44874
-    },
     {
      "d": "2026-05-12",
      "hf": 55851,
@@ -1486,9 +1480,15 @@
      "hf": 48414,
      "oi": 325008,
      "rm": -125237
+    },
+    {
+     "d": "2026-11-03",
+     "hf": 50106,
+     "oi": 328599,
+     "rm": -130780
     }
    ],
-   "summary": "Hedge funds are betting for the Aussie. Over the past month they cut their bet on the Aussie. Real money disagrees: it is strongly betting against the Aussie."
+   "summary": "Hedge funds are betting for the Aussie. Over the past month they slightly cut their bet on the Aussie. Real money disagrees: it is strongly betting against the Aussie."
   },
   {
    "id": "NZD",
@@ -1499,55 +1499,49 @@
    "contract": "CME NZ Dollar",
    "code": "112741",
    "long_means": "kiwi up against the US dollar",
-   "as_of": "2026-10-27",
-   "oi": 129053,
+   "as_of": "2026-11-03",
+   "oi": 132550,
    "hf": {
-    "net": -22554,
-    "long": 10906,
-    "short": 33460,
-    "flip": -17.48,
-    "pct": 19,
+    "net": -23154,
+    "long": 12225,
+    "short": 35379,
+    "flip": -17.47,
+    "pct": 19.2,
     "zone": "bearish",
     "z": {
      "all": -0.78,
      "y10": -0.79,
-     "y1": -0.18
+     "y1": -0.15
     },
-    "range12": 33,
-    "chg1": -3274,
-    "chg4": -21488,
-    "weeks": 617,
+    "range12": 28,
+    "chg1": -600,
+    "chg4": -22367,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Leveraged Money)",
    "rm": {
-    "net": -46841,
-    "long": 10756,
-    "short": 57597,
-    "flip": -36.3,
-    "pct": 26.2,
+    "net": -46700,
+    "long": 11541,
+    "short": 58241,
+    "flip": -35.23,
+    "pct": 27.8,
     "zone": "bearish",
     "z": {
-     "all": -0.8,
-     "y10": -0.77,
-     "y1": 0.11
+     "all": -0.75,
+     "y10": -0.72,
+     "y1": 0.16
     },
     "range12": 4,
-    "chg1": 2472,
-    "chg4": -25613,
-    "weeks": 617,
+    "chg1": 141,
+    "chg4": -14166,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "rm_label": "Real money (Asset Managers)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": -19294,
-     "oi": 85340,
-     "rm": -43049
-    },
     {
      "d": "2026-05-12",
      "hf": -19435,
@@ -1697,6 +1691,12 @@
      "hf": -22554,
      "oi": 129053,
      "rm": -46841
+    },
+    {
+     "d": "2026-11-03",
+     "hf": -23154,
+     "oi": 132550,
+     "rm": -46700
     }
    ],
    "summary": "Hedge funds are betting against the kiwi. Over the past month they sharply added to their bet against the kiwi."
@@ -1710,35 +1710,30 @@
    "contract": "COMEX Gold",
    "code": "088691",
    "long_means": "gold price up",
-   "as_of": "2026-10-27",
-   "oi": 396810,
+   "as_of": "2026-11-03",
+   "oi": 399169,
    "hf": {
-    "net": 105562,
-    "long": 122508,
-    "short": 16946,
-    "flip": 26.6,
-    "pct": 64.4,
+    "net": 103614,
+    "long": 122283,
+    "short": 18669,
+    "flip": 25.96,
+    "pct": 62.2,
     "zone": "bullish",
     "z": {
-     "all": 0.51,
-     "y10": 0.53,
-     "y1": -0.3
+     "all": 0.46,
+     "y10": 0.48,
+     "y1": -0.48
     },
-    "range12": 3,
-    "chg1": 1356,
-    "chg4": -14756,
-    "weeks": 617,
+    "range12": 0,
+    "chg1": -1948,
+    "chg4": -7373,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Managed Money)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": 94254,
-     "oi": 367932
-    },
     {
      "d": "2026-05-12",
      "hf": 98015,
@@ -1863,9 +1858,14 @@
      "d": "2026-10-27",
      "hf": 105562,
      "oi": 396810
+    },
+    {
+     "d": "2026-11-03",
+     "hf": 103614,
+     "oi": 399169
     }
    ],
-   "summary": "Hedge funds are strongly betting for gold. Over the past month they cut their bet on gold."
+   "summary": "Hedge funds are strongly betting for gold. Over the past month they slightly cut their bet on gold."
   },
   {
    "id": "XAG",
@@ -1876,35 +1876,30 @@
    "contract": "COMEX Silver",
    "code": "084691",
    "long_means": "silver price up",
-   "as_of": "2026-10-27",
-   "oi": 116226,
+   "as_of": "2026-11-03",
+   "oi": 115583,
    "hf": {
-    "net": 3321,
-    "long": 16864,
-    "short": 13543,
-    "flip": 2.86,
-    "pct": 18.7,
+    "net": 4035,
+    "long": 17522,
+    "short": 13487,
+    "flip": 3.49,
+    "pct": 19.8,
     "zone": "bearish",
     "z": {
-     "all": -0.86,
-     "y10": -0.81,
-     "y1": -2.17
+     "all": -0.81,
+     "y10": -0.76,
+     "y1": -1.87
     },
-    "range12": 0,
-    "chg1": -184,
-    "chg4": -4293,
-    "weeks": 617,
+    "range12": 6,
+    "chg1": 714,
+    "chg4": -3493,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Managed Money)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": 10843,
-     "oi": 96932
-    },
     {
      "d": "2026-05-12",
      "hf": 15761,
@@ -2029,6 +2024,11 @@
      "d": "2026-10-27",
      "hf": 3321,
      "oi": 116226
+    },
+    {
+     "d": "2026-11-03",
+     "hf": 4035,
+     "oi": 115583
     }
    ],
    "summary": "Hedge funds are leaning for silver. Over the past month they cut their bet on silver."
@@ -2042,35 +2042,30 @@
    "contract": "NYMEX WTI",
    "code": "067651",
    "long_means": "oil price up",
-   "as_of": "2026-10-27",
-   "oi": 1886280,
+   "as_of": "2026-11-03",
+   "oi": 1908732,
    "hf": {
-    "net": 31128,
-    "long": 157433,
-    "short": 126305,
-    "flip": 1.65,
-    "pct": 3.3,
+    "net": 21728,
+    "long": 147382,
+    "short": 125654,
+    "flip": 1.14,
+    "pct": 2.5,
     "zone": "very bearish",
     "z": {
-     "all": -1.82,
-     "y10": -1.78,
-     "y1": -0.79
+     "all": -1.93,
+     "y10": -1.88,
+     "y1": -1.08
     },
     "range12": 0,
-    "chg1": -5059,
-    "chg4": -48464,
-    "weeks": 617,
+    "chg1": -9400,
+    "chg4": -31870,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Managed Money)",
    "split": false,
    "signal": 1,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": 70791,
-     "oi": 2067827
-    },
     {
      "d": "2026-05-12",
      "hf": 72801,
@@ -2195,9 +2190,14 @@
      "d": "2026-10-27",
      "hf": 31128,
      "oi": 1886280
+    },
+    {
+     "d": "2026-11-03",
+     "hf": 21728,
+     "oi": 1908732
     }
    ],
-   "summary": "Hedge funds are evenly split on oil. Their bet on oil rising is among the weakest since 2015. Over the past month they cut their bet on oil."
+   "summary": "Hedge funds are evenly split on oil. Their bet on oil rising is among the weakest since 2015. Over the past month they slightly cut their bet on oil."
   },
   {
    "id": "HG",
@@ -2208,35 +2208,30 @@
    "contract": "COMEX Copper",
    "code": "085692",
    "long_means": "copper price up",
-   "as_of": "2026-10-27",
-   "oi": 337019,
+   "as_of": "2026-11-03",
+   "oi": 327850,
    "hf": {
-    "net": 40575,
-    "long": 62199,
-    "short": 21624,
-    "flip": 12.04,
-    "pct": 58.6,
+    "net": 34890,
+    "long": 58634,
+    "short": 23744,
+    "flip": 10.64,
+    "pct": 55.4,
     "zone": "neutral",
     "z": {
-     "all": 0.26,
-     "y10": 0.14,
-     "y1": -2.97
+     "all": 0.17,
+     "y10": 0.05,
+     "y1": -2.98
     },
     "range12": 0,
-    "chg1": -7115,
-    "chg4": -37483,
-    "weeks": 617,
+    "chg1": -5685,
+    "chg4": -26244,
+    "weeks": 618,
     "since": "2015-01-06"
    },
    "hf_label": "Hedge funds & CTAs (Managed Money)",
    "split": false,
    "signal": 0,
    "history": [
-    {
-     "d": "2026-05-05",
-     "hf": 63473,
-     "oi": 232609
-    },
     {
      "d": "2026-05-12",
      "hf": 74488,
@@ -2361,9 +2356,14 @@
      "d": "2026-10-27",
      "hf": 40575,
      "oi": 337019
+    },
+    {
+     "d": "2026-11-03",
+     "hf": 34890,
+     "oi": 327850
     }
    ],
-   "summary": "Hedge funds are betting for copper. Over the past month they sharply cut their bet on copper."
+   "summary": "Hedge funds are betting for copper. Over the past month they cut their bet on copper."
   }
  ]
 }
