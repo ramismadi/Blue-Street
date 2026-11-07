@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-11-06T15:00:00-06:00",
-  "updated": "2026-11-06T15:00:00-06:00",
+  "as_of": "2026-11-07T00:40:00-06:00",
+  "updated": "2026-11-07T00:40:00-06:00",
   "method": "per-currency pillar drivers -1/0/+1 from the evening engine reads; positioning scored by the single contrarian rule from the TFF hedge-fund cut (crowded long >=90th = -1, crowded short <=10th = +1, else 0)",
-  "note": "NY-close read, 2026-11-06 (3:00 PM CT). Payrolls BEAT +165K (vs 65K fcst; Sep revised to +60K, Aug to +186K), unemployment 4.1%, wages +0.4% m/m — DXY closed 102.33 (+0.73%), its biggest daily gain in nearly five months; Dec Fed hike ~77% (CME FedWatch), up from ~67% Thu. Canada jobs MISSED (-4.7K, unemp 6.7%), USD/CAD 1.4101. UoM sentiment beat 51.0, inflation expectations cooled to 4.3%. Ueda: real rates 'have not risen significantly' — Dec BoJ hike ~80% intact. Lane: gather info to December. Tonight: NZ elections 3:45pm CT; Tue: US CPI. Levels are indicative index quotes, not executable prices.",
+  "note": "London-open read, 2026-11-07 (12:40 AM CT). Friday close: payrolls BEAT +165K (vs 65K fcst; Sep revised to +60K, Aug to +186K), unemployment 4.1%, wages +0.4% m/m — DXY closed 102.33 (+0.73%), its biggest daily gain in nearly five months; Dec Fed hike ~77% (CME FedWatch), up from ~67% Thu. Canada jobs MISSED (-4.7K, unemp 6.7%), USD/CAD 1.4101. Nov 3 CFTC (released Nov 6): EUR net short -157,791 (5th pct of 20y, 11-yr extreme) and JPY net long +102,321 (98th pct) still crowded; GBP's short unwound out of the extreme (+19,593 w/w to -59,821) — GBP positioning 1 → 0, GBP total 4 → 3. NZ election count under way overnight; official result Nov 27. Next test: US Oct CPI Tue Nov 10 7:30am CT. Levels are indicative index quotes, not executable prices.",
   "pairs": {},
   "currencies": [
     {
@@ -10,7 +10,7 @@
       "name": "US dollar",
       "bank": "fed",
       "chapter": null,
-      "summary": "DXY 102.33 at the close (+0.73%, FXStreet — biggest daily gain in nearly five months) after the +165K NFP beat (vs 65K fcst; Sep revised to +60K, Aug to +186K); unemployment 4.1%, wages +0.4% m/m. Dec Fed hike ~77% (CME FedWatch), up from ~67% Thu; UoM sentiment beat 51.0. Next test: Oct CPI Tue Nov 10.",
+      "summary": "DXY 102.33 at the close (+0.73%, FXStreet — biggest daily gain in nearly five months) after the +165K NFP beat (vs 65K fcst; Sep revised to +60K, Aug to +186K); unemployment 4.1%, wages +0.4% m/m. Dec Fed hike ~77% (CME FedWatch), up from ~67% Thu; UoM sentiment beat 51.0. NZ election count under way overnight (polls closed 7pm NZDT; early results Labour ahead, Opportunity above 5%). Next test: Oct CPI Tue Nov 10.",
       "drivers": {
         "policy": {
           "score": 1,
@@ -34,7 +34,7 @@
         },
         "positioning": {
           "score": 0,
-          "note": "Oct 27 CFTC: aggregate dollar longs ~$39.3B (forex.com, Oct 20 vintage) — leaning for the dollar but not crowded; ICE USD-index futures net short is a different measure and is not scored."
+          "note": "Nov 3 CFTC (released Nov 6): aggregate dollar longs ~$35.6B (forex.com), down $1.8B for a third week but still elevated; DXY-index futures net long +14,190. Not scored as crowded — score 0."
         },
         "fiscal": {
           "score": -1,
@@ -71,7 +71,7 @@
         },
         "positioning": {
           "score": 1,
-          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -143,894 contracts, a 3-year low (forexop); 6th percentile of 20 years (Financial Oracle) — the squeeze side is up; deeper than the Oct 20 leveraged-funds read (-94,138)."
+          "note": "Nov 3 CFTC (non-commercial, released Nov 6): net short -157,791 (-13,897 w/w), 5th percentile of 20 years (Financial Oracle) — an 11-year extreme, record gross shorts; crowded short, squeeze fuel intact."
         },
         "fiscal": {
           "score": -1,
@@ -107,8 +107,8 @@
           "note": "no fresh terms-of-trade read"
         },
         "positioning": {
-          "score": 1,
-          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -79,414 contracts, 5th percentile of 20 years (Financial Oracle) — stretched short, squeeze fuel into the Nov 5 BoE."
+          "score": 0,
+          "note": "Nov 3 CFTC (non-commercial, released Nov 6): net short -59,821 (+19,593 w/w) — the short has unwound out of the extreme; Financial Oracle's 20y crowded list now names only JPY (98th) and EUR (5th). Score 1 → 0."
         },
         "fiscal": {
           "score": 0,
@@ -145,7 +145,7 @@
         },
         "positioning": {
           "score": -1,
-          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net long yen +101,591 contracts (+31,713 w/w), 98th percentile of 20 years (Financial Oracle) — stretched long, unwind risk; the percentile feed the Oct 12 decision waited on has landed."
+          "note": "Nov 3 CFTC (non-commercial, released Nov 6): net long +102,321 (+730 w/w), 98th percentile of 20 years (Financial Oracle) — stretched long, unwind risk; the percentile feed the Oct 12 decision waited on still says crowded."
         },
         "fiscal": {
           "score": 0,
@@ -182,7 +182,7 @@
         },
         "positioning": {
           "score": 0,
-          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short -20,049 contracts, COT index 64 (forexop) — not extreme, neutral."
+          "note": "Nov 3 CFTC (non-commercial, released Nov 6): net short -16,589 (+3,460 w/w) — not extreme on the 20y read, neutral."
         },
         "fiscal": {
           "score": 0,
@@ -219,7 +219,7 @@
         },
         "positioning": {
           "score": 1,
-          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short at the 1st percentile of 20 years (Financial Oracle) — a flip from the Oct 20 leveraged-funds read (added longs); stretched short, squeeze fuel into the RBA."
+          "note": "Nov 3 CFTC (non-commercial, released Nov 6): net short -129,457 (-1,142 w/w), 0th percentile of 20 years — record gross shorts; crowded short, squeeze fuel."
         },
         "fiscal": {
           "score": 0,
@@ -256,7 +256,7 @@
         },
         "positioning": {
           "score": 0,
-          "note": "Oct 27 CFTC read is population-mixed (legacy non-commercial net long vs the Oct 20 leveraged-funds net short, largest since early Aug) — held neutral pending a like-for-like leveraged read; squeeze fuel noted either way into December."
+          "note": "Nov 3 CFTC (non-commercial, released Nov 6): net short -41,775 (+24,649 w/w — heavy short-covering into the print); mid-range, not extreme."
         },
         "fiscal": {
           "score": 0,
@@ -293,7 +293,7 @@
         },
         "positioning": {
           "score": 1,
-          "note": "Oct 27 CFTC (non-commercial, released Oct 30): net short at the 1st percentile of 20 years (Financial Oracle) — stretched short, squeeze fuel; RBNZ delay, not abandonment, is the fundamental side."
+          "note": "Nov 3 CFTC (non-commercial, released Nov 6): net short -60,015 (-2,325 w/w), 7th percentile — crowded short, squeeze fuel."
         },
         "fiscal": {
           "score": 0,
@@ -700,6 +700,19 @@
         "USD": 1,
         "EUR": -2,
         "GBP": 4,
+        "JPY": -2,
+        "CHF": 0,
+        "AUD": 3,
+        "CAD": 2,
+        "NZD": 1
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "scores": {
+        "USD": 1,
+        "EUR": -2,
+        "GBP": 3,
         "JPY": -2,
         "CHF": 0,
         "AUD": 3,
