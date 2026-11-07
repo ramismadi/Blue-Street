@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T01:51:30Z",
+  "updated": "2026-11-07T03:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "bullish",
-      "ts": "2026-11-06T19:52:33Z",
-      "text": "The franc drew safe-haven money on Friday as the stock sell-off hit Asia and Europe, even as US shares bounced. Swiss inflation jumped to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
+      "ts": "2026-11-07T03:55:00Z",
+      "text": "The franc drew safe-haven money on Friday as the stock sell-off hit Asia and Europe, and a new, small US strike on Iran late Friday keeps war risk alive into the weekend. Swiss inflation jumped to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
     },
     "CAD": {
       "lean": "bearish",
@@ -43,17 +43,62 @@
       "text": "The New Zealand dollar fell about 1.2% on Friday, the most of the major currencies, as a strong US jobs report lifted the US dollar, and the country's jobless rate is already at its highest since 2015. New Zealanders vote in a general election on Saturday; a close result that needs long coalition talks would add uncertainty."
     },
     "XAU": {
-      "lean": "bearish",
-      "ts": "2026-11-06T15:47:31Z",
-      "text": "Gold rose early this week to about $4,145 an ounce as the dollar fell after Democrats won Congress, then dropped about 1% to near $4,050 on Friday. A strong US jobs report makes a December Federal Reserve rate rise more likely, and higher rates weigh on gold because it pays no interest."
+      "lean": "mixed",
+      "ts": "2026-11-07T03:55:00Z",
+      "text": "Gold dropped about 1% to near $4,050 an ounce on Friday after a strong US jobs report made a December Federal Reserve rate rise more likely; higher rates weigh on gold because it pays no interest. A new, small US strike on Iran late Friday pulls the other way, since war risk usually draws buyers to gold."
     },
     "OIL": {
-      "lean": "bearish",
-      "ts": "2026-11-07T01:51:30Z",
-      "text": "Brent crude ended the week about 13% lower, near $98 a barrel, on bets the new Democratic Congress pushes Washington to end the Iran war and on signs the world already has more oil than it needs. Reports that the US and Iran are edging toward a deal added to the drop, while tanker attacks near the Strait of Hormuz still lift prices at times. Late Friday, Fox News reported President Trump is weighing new strikes on Iran as soon as November 9, even as Iran studies Qatari proposals, so prices could jump either way when trading resumes."
+      "lean": "mixed",
+      "ts": "2026-11-07T03:55:00Z",
+      "text": "Brent crude ended the week about 13% lower, near $98 a barrel, on bets that Washington moves to end the Iran war and on signs the world already has more oil than it needs. But on Friday evening President Trump said US forces carried out a small new strike on an Iranian air defense site, even as Iran studies a Qatari peace plan that could reopen the Strait of Hormuz, so prices could jump either way when trading resumes Sunday evening."
     }
   },
   "items": [
+    {
+      "id": "wishtv-ap-us-limited-strikes-iran-air-defense-20261107",
+      "ts": "2026-11-07T02:49:07Z",
+      "source": "AP via WISH-TV",
+      "url": "https://www.wishtv.com/news/politics/trump-says-us-carried-out-new-limited-strikes-on-iran/",
+      "image": "https://www.wishtv.com/wp-content/uploads/2026/11/07/Donald-Trump-AP26311039654303-scaled-e1794019738582.jpg",
+      "headline": "Trump says the US carried out new limited strikes on an Iranian air defense site on Friday, while talks continue",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "President Trump said US forces hit an Iranian air defense system on Friday, calling it a minor strike, and said Washington is still talking to Tehran. Iranian state media reported two blasts on Qeshm Island, near the Strait of Hormuz.",
+      "beats": {
+        "was": "The US and Israel have been at war with Iran since late February, and attacks on ships near the Strait of Hormuz, the route for about a fifth of the world's oil, have kept crude prices high. This week oil fell about 13% on hopes of a deal, and Iran is studying peace proposals carried by Qatar.",
+        "happened": "Speaking on Friday evening, Trump said the military had knocked out an Iranian anti-aircraft system in a short, limited strike, the first since Tuesday's US midterm elections. Iranian state media reported two explosions on Qeshm Island. Regional officials described a possible first step under the Qatari plan: the US would ease its blockade of Iranian ports and free some frozen funds, and Iran would let nuclear inspectors in and reopen Hormuz, though Washington has not agreed to the shipping terms.",
+        "means": "The US is pairing small military hits with diplomacy rather than choosing one, so the risk of a wider flare-up is back on the table even as the outline of a deal takes shape.",
+        "fx": "Markets are shut for the weekend. When trading resumes Sunday evening, the strike could add back some of the risk premium oil lost this week and draw some money to havens like the franc and gold, unless talks show clear progress first."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A fresh US strike after a week of deal hopes puts supply risk back into crude prices."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More fighting tends to draw safe-haven money to the franc; Trump called the strike minor."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Gold usually gains when war risk rises, though the strike was small."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Dearer oil lifts Canada's export earnings."
+        }
+      ],
+      "watch": "Whether Iran answers the strike, and whether the Qatari first-step plan is confirmed by Washington or Tehran before markets reopen Sunday evening."
+    },
     {
       "id": "timesofisrael-us-iran-progress-strikes-weighed-20261106",
       "date": "2026-11-06",
@@ -119,6 +164,126 @@
         }
       ],
       "watch": "Saturday night's preliminary count, and whether any party can form a government without long coalition talks."
+    },
+    {
+      "id": "tradingpedia-ez-retail-sep-minus07-lane-20261106",
+      "date": "2026-11-06",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/11/06/eur-jpy-slips-on-weak-eurozone-data-hawkish-boj/",
+      "image": null,
+      "headline": "Euro-area shop sales fall 0.7% in September, far worse than expected, as the ECB's Lane urges caution",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates in December?",
+      "pillar": "growth",
+      "summary": "Shoppers across the euro area spent 0.7% less in September than in August, a much bigger drop than forecast, after an even sharper fall in August. The European Central Bank's chief economist Philip Lane said rising energy costs must not spread into wages, but sounded cautious ahead of December.",
+      "beats": {
+        "was": "Inflation in the euro area is running at about 4% because of dearer energy from the Iran war, and the European Central Bank is weighing a rate rise in December. Higher prices have been squeezing household budgets.",
+        "happened": "Eurostat said retail sales fell 0.7% in September, against a forecast drop of 0.1%, and August was revised to a 2% fall. Compared with a year earlier, sales grew just 0.4%. ECB chief economist Philip Lane said policy must stop energy costs feeding into wages, but noted that borrowing conditions have already tightened and governments will likely spend less next year.",
+        "means": "Households are cutting back, which weakens the case for a December ECB rate rise. Lane's comments keep a rise possible but suggest the bank is in no hurry.",
+        "fx": "Weak spending and a cautious ECB weigh on the euro, which slipped against the yen on Friday."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A much bigger drop in shop sales than expected, plus a cautious ECB chief economist, lowers the odds of a December rate rise."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The euro fell against the yen as Bank of Japan minutes kept a December rate rise in view."
+        }
+      ],
+      "watch": "Euro-area inflation and wage figures before the ECB's December meeting, and whether other ECB officials echo Lane's caution."
+    },
+    {
+      "id": "investing-reuters-fed-december-after-payrolls-20261106",
+      "date": "2026-11-06",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://ca.investing.com/news/economy-news/fed-seen-sticking-to-december-rate-hike-after-jobs-data-4939832",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA51BU_L.jpg",
+      "headline": "Markets now see about a 78% chance the Fed raises rates in December after the strong jobs report",
+      "story": "fed-december",
+      "story_title": "Fed: the case for a December rate rise",
+      "pillar": "policy",
+      "summary": "After Friday's jobs surprise, investors now put the odds of a Federal Reserve rate rise at its December 8–9 meeting near 78%, up from about 67% on Thursday. Several Fed officials said this week that inflation is still too high.",
+      "beats": {
+        "was": "The Federal Reserve held its rate at 3.75%–4% last week after raising it in September, and Chair Kevin Warsh said the next step would depend on how the data add up.",
+        "happened": "The US added 165,000 jobs in October, more than twice what was expected, and unemployment fell to 4.1%. Bets on a December rise jumped to about 85% right after the release before settling near 78%, and investors now expect the last rise of this cycle in April rather than June. St. Louis Fed President Alberto Musalem called inflation a tax that hits poorer households hardest.",
+        "means": "A December rise is now the market's main expectation, and the path of US rates looks a little higher and sooner than it did a day ago.",
+        "fx": "Higher expected US rates support the dollar and weigh on gold, which pays no interest."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer bets on a December Fed rise add support, though most of the move came with the jobs data itself."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher expected US rates raise the cost of holding gold."
+        }
+      ],
+      "watch": "US inflation figures next week; a soft reading would pull December bets back down."
+    },
+    {
+      "id": "investing-reuters-ca-ivey-pmi-oct-583-20261106",
+      "date": "2026-11-06",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/economic-indicators/canadas-ivey-pmi-edges-higherin-october-as-employment-rises-5008743",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA51I5_L.jpg",
+      "headline": "Canadian business activity grew at a steady pace in October and hiring picked up, a survey shows",
+      "story": "boc-hike",
+      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
+      "pillar": "growth",
+      "summary": "The Ivey survey of Canadian purchasing managers edged up to 58.3 in October, a solid pace of growth. Its hiring gauge rose and its prices gauge eased.",
+      "beats": {
+        "was": "Earlier on Friday Canada reported a second straight month of job losses, with unemployment up to 6.7%, which raised doubts about another Bank of Canada rate rise in December.",
+        "happened": "The Ivey purchasing managers index, which tracks business activity (above 50 means growth), rose to 58.3 in October from 58.2. Its employment measure climbed to 58.3 from 56.5, while its prices measure fell to 81.7 from 82.8.",
+        "means": "Businesses report steady growth and more hiring, a softer picture than the official jobs data but not enough to offset it. Slightly cooler price pressure fits a more cautious Bank of Canada.",
+        "fx": "A small offset to the weak jobs report for the Canadian dollar, which is mostly being driven by the stronger US dollar and oil prices today."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Steady business growth and more hiring soften the blow from the weak jobs report."
+        }
+      ],
+      "watch": "Canada's October inflation figures and whether the Bank of Canada signals a pause in December."
+    },
+    {
+      "id": "tradingpedia-de-industrial-output-sep-07pc-20261106",
+      "date": "2026-11-06",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/11/06/eur-gbp-holds-range-despite-strong-german-output-data/",
+      "image": null,
+      "headline": "German industrial output rises 0.7% in September, beating forecasts of no change",
+      "story": "de-industry",
+      "story_title": "Germany's factory orders swing back",
+      "pillar": "growth",
+      "summary": "Germany's factories produced 0.7% more in September than in August, when economists expected no change. The euro barely moved against the pound.",
+      "beats": {
+        "was": "German industry, the core of Europe's biggest economy, has been struggling with high energy costs. On Thursday, figures showed factory orders bounced 4.4% in September after a big drop in August.",
+        "happened": "Germany's statistics office said on Friday that industrial output rose 0.7% in September, led by cars and medicines, while construction and machinery fell. Compared with a year earlier, output was up just 0.4%.",
+        "means": "A better month for German factories, but the yearly gain is small and the stock-market sell-off is drowning out good news from Europe.",
+        "fx": "A mild plus for the euro that markets largely ignored, with the euro steady near 0.834 pounds."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Output beat forecasts, though the yearly pace stays weak and traders paid it little attention."
+        }
+      ],
+      "watch": "Euro-zone retail sales for September, and whether German orders and output keep rising in October."
     },
     {
       "id": "gvwire-reuters-dollar-best-day-since-june-20261106",
@@ -421,126 +586,6 @@
       "watch": "Any US reply to Iran's sanctions demand, and independent confirmation of the tanker attacks."
     },
     {
-      "id": "tradingpedia-ez-retail-sep-minus07-lane-20261106",
-      "date": "2026-11-06",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/11/06/eur-jpy-slips-on-weak-eurozone-data-hawkish-boj/",
-      "image": null,
-      "headline": "Euro-area shop sales fall 0.7% in September, far worse than expected, as the ECB's Lane urges caution",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates in December?",
-      "pillar": "growth",
-      "summary": "Shoppers across the euro area spent 0.7% less in September than in August, a much bigger drop than forecast, after an even sharper fall in August. The European Central Bank's chief economist Philip Lane said rising energy costs must not spread into wages, but sounded cautious ahead of December.",
-      "beats": {
-        "was": "Inflation in the euro area is running at about 4% because of dearer energy from the Iran war, and the European Central Bank is weighing a rate rise in December. Higher prices have been squeezing household budgets.",
-        "happened": "Eurostat said retail sales fell 0.7% in September, against a forecast drop of 0.1%, and August was revised to a 2% fall. Compared with a year earlier, sales grew just 0.4%. ECB chief economist Philip Lane said policy must stop energy costs feeding into wages, but noted that borrowing conditions have already tightened and governments will likely spend less next year.",
-        "means": "Households are cutting back, which weakens the case for a December ECB rate rise. Lane's comments keep a rise possible but suggest the bank is in no hurry.",
-        "fx": "Weak spending and a cautious ECB weigh on the euro, which slipped against the yen on Friday."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A much bigger drop in shop sales than expected, plus a cautious ECB chief economist, lowers the odds of a December rate rise."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The euro fell against the yen as Bank of Japan minutes kept a December rate rise in view."
-        }
-      ],
-      "watch": "Euro-area inflation and wage figures before the ECB's December meeting, and whether other ECB officials echo Lane's caution."
-    },
-    {
-      "id": "investing-reuters-fed-december-after-payrolls-20261106",
-      "date": "2026-11-06",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://ca.investing.com/news/economy-news/fed-seen-sticking-to-december-rate-hike-after-jobs-data-4939832",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA51BU_L.jpg",
-      "headline": "Markets now see about a 78% chance the Fed raises rates in December after the strong jobs report",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "policy",
-      "summary": "After Friday's jobs surprise, investors now put the odds of a Federal Reserve rate rise at its December 8–9 meeting near 78%, up from about 67% on Thursday. Several Fed officials said this week that inflation is still too high.",
-      "beats": {
-        "was": "The Federal Reserve held its rate at 3.75%–4% last week after raising it in September, and Chair Kevin Warsh said the next step would depend on how the data add up.",
-        "happened": "The US added 165,000 jobs in October, more than twice what was expected, and unemployment fell to 4.1%. Bets on a December rise jumped to about 85% right after the release before settling near 78%, and investors now expect the last rise of this cycle in April rather than June. St. Louis Fed President Alberto Musalem called inflation a tax that hits poorer households hardest.",
-        "means": "A December rise is now the market's main expectation, and the path of US rates looks a little higher and sooner than it did a day ago.",
-        "fx": "Higher expected US rates support the dollar and weigh on gold, which pays no interest."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firmer bets on a December Fed rise add support, though most of the move came with the jobs data itself."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher expected US rates raise the cost of holding gold."
-        }
-      ],
-      "watch": "US inflation figures next week; a soft reading would pull December bets back down."
-    },
-    {
-      "id": "investing-reuters-ca-ivey-pmi-oct-583-20261106",
-      "date": "2026-11-06",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/economic-indicators/canadas-ivey-pmi-edges-higherin-october-as-employment-rises-5008743",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA51I5_L.jpg",
-      "headline": "Canadian business activity grew at a steady pace in October and hiring picked up, a survey shows",
-      "story": "boc-hike",
-      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
-      "pillar": "growth",
-      "summary": "The Ivey survey of Canadian purchasing managers edged up to 58.3 in October, a solid pace of growth. Its hiring gauge rose and its prices gauge eased.",
-      "beats": {
-        "was": "Earlier on Friday Canada reported a second straight month of job losses, with unemployment up to 6.7%, which raised doubts about another Bank of Canada rate rise in December.",
-        "happened": "The Ivey purchasing managers index, which tracks business activity (above 50 means growth), rose to 58.3 in October from 58.2. Its employment measure climbed to 58.3 from 56.5, while its prices measure fell to 81.7 from 82.8.",
-        "means": "Businesses report steady growth and more hiring, a softer picture than the official jobs data but not enough to offset it. Slightly cooler price pressure fits a more cautious Bank of Canada.",
-        "fx": "A small offset to the weak jobs report for the Canadian dollar, which is mostly being driven by the stronger US dollar and oil prices today."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Steady business growth and more hiring soften the blow from the weak jobs report."
-        }
-      ],
-      "watch": "Canada's October inflation figures and whether the Bank of Canada signals a pause in December."
-    },
-    {
-      "id": "tradingpedia-de-industrial-output-sep-07pc-20261106",
-      "date": "2026-11-06",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/11/06/eur-gbp-holds-range-despite-strong-german-output-data/",
-      "image": null,
-      "headline": "German industrial output rises 0.7% in September, beating forecasts of no change",
-      "story": "de-industry",
-      "story_title": "Germany's factory orders swing back",
-      "pillar": "growth",
-      "summary": "Germany's factories produced 0.7% more in September than in August, when economists expected no change. The euro barely moved against the pound.",
-      "beats": {
-        "was": "German industry, the core of Europe's biggest economy, has been struggling with high energy costs. On Thursday, figures showed factory orders bounced 4.4% in September after a big drop in August.",
-        "happened": "Germany's statistics office said on Friday that industrial output rose 0.7% in September, led by cars and medicines, while construction and machinery fell. Compared with a year earlier, output was up just 0.4%.",
-        "means": "A better month for German factories, but the yearly gain is small and the stock-market sell-off is drowning out good news from Europe.",
-        "fx": "A mild plus for the euro that markets largely ignored, with the euro steady near 0.834 pounds."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Output beat forecasts, though the yearly pace stays weak and traders paid it little attention."
-        }
-      ],
-      "watch": "Euro-zone retail sales for September, and whether German orders and output keep rising in October."
-    },
-    {
       "id": "rte-reuters-oil-16pc-weekly-drop-20261106",
       "ts": "2026-11-06T10:54:38Z",
       "source": "RTÉ (Reuters)",
@@ -812,6 +857,120 @@
         }
       ],
       "watch": "Whether European and US stocks steady on Friday, and the US jobs report for October at 7:30 AM CT."
+    },
+    {
+      "id": "ctv-canada-budget-2026-142b-20261105",
+      "date": "2026-11-05",
+      "source": "CTV News / BNN Bloomberg",
+      "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/05/carney-government-adds-142b-in-new-spending-to-spur-economic-growth-address-affordability/",
+      "image": "https://www.bnnbloomberg.ca/resizer/v2/CCZTHH4ESNATDBM3PUIXQ46UUM.JPG?smart=true&auth=34e226c21ee72cd1ccd84e751e8f983ca8312d17d98495e4a20dfd983de858e8&width=1200&height=630",
+      "headline": "Canada's budget adds C$142 billion in new measures and keeps deficits above C$50 billion a year",
+      "story": "cad-budget",
+      "story_title": "Canada's 2026 budget",
+      "pillar": "fiscal",
+      "summary": "Finance Minister François-Philippe Champagne tabled Canada's 2026 budget on Thursday, with C$142.1 billion of new tax breaks and spending over five years and no plan to balance the books.",
+      "beats": {
+        "was": "Prime Minister Mark Carney's government had promised a budget aimed at lifting growth and investment, while the parliamentary budget watchdog warned deficits were getting bigger.",
+        "happened": "This year's deficit is put at C$62.3 billion, about C$3 billion less than projected in the spring, with deficits above C$50 billion in each of the next four years. The biggest item is a C$36.1 billion tax break for business investment, announced earlier.",
+        "means": "Much of the plan was already known, so it brings few surprises for markets. More borrowing adds a little pressure on Canadian bond yields over time and gives the Bank of Canada one more reason to watch inflation.",
+        "fx": "Little direct effect on the Canadian dollar for now; oil prices and the US dollar matter more this week."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Large, mostly expected spending: growth support versus more debt."
+        }
+      ],
+      "watch": "Whether the budget passes a confidence vote in Parliament, and Canada's October jobs report on Friday."
+    },
+    {
+      "id": "aljazeera-khamenei-hostility-trump-war-20261105",
+      "date": "2026-11-05",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/5/iran-war-live-trump-admits-war-caused-election-loss-but-had-to-do-it",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/AFP__20261104__D6G26HH__v1__HighRes__IranUsIsraelWar-1793846826.jpg?resize=1920%2C1440",
+      "headline": "Iran's leader says US hostility won't end with the midterms; Trump says the war was needed despite the election loss",
+      "story": "iran-oil",
+      "story_title": "Oil and the Iran war after the US midterms",
+      "pillar": "risk",
+      "summary": "Iran's Supreme Leader Mojtaba Khamenei said the US midterm result won't change Washington's hostility, while President Trump admitted the war largely cost his party the election but said it had to be done.",
+      "beats": {
+        "was": "Markets have been betting that Democratic control of the US Congress would push Washington toward ending its war with Iran, which sent oil sharply lower on Wednesday.",
+        "happened": "Iran's Supreme Leader Mojtaba Khamenei said US hostility toward Iran will continue whatever the election result. President Donald Trump said the attack on Iran was the main reason Republicans lost, but insisted it was necessary to stop Iran building a nuclear weapon.",
+        "means": "Neither side is signalling a quick climb-down, which tempers the hope for a fast peace deal that drove oil down.",
+        "fx": "Tough words from both capitals add a little risk back to oil and to safe havens such as the Swiss franc; actual talks or new attacks would matter far more than words."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Hard-line words from both sides cool hopes of a quick settlement."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A lingering war keeps some demand for a safe haven."
+        }
+      ],
+      "watch": "Whether US-Iran talks resume, and any new strikes or attacks on shipping near Hormuz."
+    },
+    {
+      "id": "fxstreet-rba-hauser-inflation-too-high-20261105",
+      "date": "2026-11-05",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/rbas-hauser-inflation-is-too-high-whichever-measure-you-use-202611050751",
+      "image": null,
+      "headline": "Australia's Hauser says inflation is too high on every measure",
+      "story": "rba-hike",
+      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
+      "pillar": "inflation",
+      "summary": "Reserve Bank of Australia Deputy Governor Andrew Hauser said inflation is too high however it is measured and warned that public trust in the bank's fight against it is slipping.",
+      "beats": {
+        "was": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday, and Governor Michele Bullock then said it was time to pause and see how the rises work.",
+        "happened": "On Thursday Hauser, the bank's number two, said inflation is too high whichever gauge you use and that public confidence in the bank's ability to bring it down is weakening. He also denied that his remarks in October were meant to push the board toward a rise.",
+        "means": "His tone is firmer than Bullock's talk of a pause, a reminder that another rise is not ruled out if prices keep running hot. It adds no new data, so it changes little on its own.",
+        "fx": "Firm words from a senior policymaker give the Australian dollar mild support; it barely moved, holding near 70 US cents."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Tough talk on inflation keeps another rate rise possible, but the market barely reacted."
+        }
+      ],
+      "watch": "Australia's quarterly inflation figures and speeches by Bullock for any shift from the pause message."
+    },
+    {
+      "id": "boc-macklem-senate-banking-20261105",
+      "date": "2026-11-05",
+      "source": "Bank of Canada",
+      "url": "https://www.bankofcanada.ca/2026/11/opening-statement-standing-senate-committee-banking-commerce-and-economy-2026-11-05/",
+      "image": null,
+      "headline": "Bank of Canada's Macklem tells senators another rate rise may be needed but the bank will go carefully",
+      "story": "boc-hike",
+      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
+      "pillar": "policy",
+      "summary": "Bank of Canada Governor Tiff Macklem told a Senate committee the bank may have to raise rates again, but with slack in the economy it will decide one meeting at a time.",
+      "beats": {
+        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise since July 2023, because the Iran war has kept fuel prices high. Canada's inflation has been about 3%, above the bank's 2% target, since April.",
+        "happened": "Speaking to the Senate banking committee on Thursday, Macklem said inflation should reach about 3.5% by year-end and stay at or above 3% for much of 2027. He said new US tariffs will likely slow growth late this year and that the economy still has some spare capacity, so the bank will move carefully.",
+        "means": "This repeats what he told MPs on Tuesday, when he also said federal spending is not really adding to inflation. The door to a December rise stays open, but spare capacity gives the bank room to wait.",
+        "fx": "Steady words that markets already expected, so little support for the Canadian dollar on their own. Thursday's federal budget and the price of oil, Canada's main export, matter more for now."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Keeps a further rate rise possible, but stresses caution and spare capacity."
+        }
+      ],
+      "watch": "Canada's federal budget, due Thursday afternoon, and the Bank of Canada's next decision on December 9."
     },
     {
       "id": "reuters-trading-day-bonfire-aud-20261105",
@@ -1184,120 +1343,6 @@
         }
       ],
       "watch": "The next decision on 17 December, UK inflation figures, and any progress toward ending the Iran war, which Bailey tied to the rate outlook."
-    },
-    {
-      "id": "ctv-canada-budget-2026-142b-20261105",
-      "date": "2026-11-05",
-      "source": "CTV News / BNN Bloomberg",
-      "url": "https://www.bnnbloomberg.ca/business/politics/2026/11/05/carney-government-adds-142b-in-new-spending-to-spur-economic-growth-address-affordability/",
-      "image": "https://www.bnnbloomberg.ca/resizer/v2/CCZTHH4ESNATDBM3PUIXQ46UUM.JPG?smart=true&auth=34e226c21ee72cd1ccd84e751e8f983ca8312d17d98495e4a20dfd983de858e8&width=1200&height=630",
-      "headline": "Canada's budget adds C$142 billion in new measures and keeps deficits above C$50 billion a year",
-      "story": "cad-budget",
-      "story_title": "Canada's 2026 budget",
-      "pillar": "fiscal",
-      "summary": "Finance Minister François-Philippe Champagne tabled Canada's 2026 budget on Thursday, with C$142.1 billion of new tax breaks and spending over five years and no plan to balance the books.",
-      "beats": {
-        "was": "Prime Minister Mark Carney's government had promised a budget aimed at lifting growth and investment, while the parliamentary budget watchdog warned deficits were getting bigger.",
-        "happened": "This year's deficit is put at C$62.3 billion, about C$3 billion less than projected in the spring, with deficits above C$50 billion in each of the next four years. The biggest item is a C$36.1 billion tax break for business investment, announced earlier.",
-        "means": "Much of the plan was already known, so it brings few surprises for markets. More borrowing adds a little pressure on Canadian bond yields over time and gives the Bank of Canada one more reason to watch inflation.",
-        "fx": "Little direct effect on the Canadian dollar for now; oil prices and the US dollar matter more this week."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Large, mostly expected spending: growth support versus more debt."
-        }
-      ],
-      "watch": "Whether the budget passes a confidence vote in Parliament, and Canada's October jobs report on Friday."
-    },
-    {
-      "id": "aljazeera-khamenei-hostility-trump-war-20261105",
-      "date": "2026-11-05",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/11/5/iran-war-live-trump-admits-war-caused-election-loss-but-had-to-do-it",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/AFP__20261104__D6G26HH__v1__HighRes__IranUsIsraelWar-1793846826.jpg?resize=1920%2C1440",
-      "headline": "Iran's leader says US hostility won't end with the midterms; Trump says the war was needed despite the election loss",
-      "story": "iran-oil",
-      "story_title": "Oil and the Iran war after the US midterms",
-      "pillar": "risk",
-      "summary": "Iran's Supreme Leader Mojtaba Khamenei said the US midterm result won't change Washington's hostility, while President Trump admitted the war largely cost his party the election but said it had to be done.",
-      "beats": {
-        "was": "Markets have been betting that Democratic control of the US Congress would push Washington toward ending its war with Iran, which sent oil sharply lower on Wednesday.",
-        "happened": "Iran's Supreme Leader Mojtaba Khamenei said US hostility toward Iran will continue whatever the election result. President Donald Trump said the attack on Iran was the main reason Republicans lost, but insisted it was necessary to stop Iran building a nuclear weapon.",
-        "means": "Neither side is signalling a quick climb-down, which tempers the hope for a fast peace deal that drove oil down.",
-        "fx": "Tough words from both capitals add a little risk back to oil and to safe havens such as the Swiss franc; actual talks or new attacks would matter far more than words."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Hard-line words from both sides cool hopes of a quick settlement."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A lingering war keeps some demand for a safe haven."
-        }
-      ],
-      "watch": "Whether US-Iran talks resume, and any new strikes or attacks on shipping near Hormuz."
-    },
-    {
-      "id": "fxstreet-rba-hauser-inflation-too-high-20261105",
-      "date": "2026-11-05",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/rbas-hauser-inflation-is-too-high-whichever-measure-you-use-202611050751",
-      "image": null,
-      "headline": "Australia's Hauser says inflation is too high on every measure",
-      "story": "rba-hike",
-      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
-      "pillar": "inflation",
-      "summary": "Reserve Bank of Australia Deputy Governor Andrew Hauser said inflation is too high however it is measured and warned that public trust in the bank's fight against it is slipping.",
-      "beats": {
-        "was": "The Reserve Bank of Australia raised its rate to 4.85% on Tuesday, and Governor Michele Bullock then said it was time to pause and see how the rises work.",
-        "happened": "On Thursday Hauser, the bank's number two, said inflation is too high whichever gauge you use and that public confidence in the bank's ability to bring it down is weakening. He also denied that his remarks in October were meant to push the board toward a rise.",
-        "means": "His tone is firmer than Bullock's talk of a pause, a reminder that another rise is not ruled out if prices keep running hot. It adds no new data, so it changes little on its own.",
-        "fx": "Firm words from a senior policymaker give the Australian dollar mild support; it barely moved, holding near 70 US cents."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Tough talk on inflation keeps another rate rise possible, but the market barely reacted."
-        }
-      ],
-      "watch": "Australia's quarterly inflation figures and speeches by Bullock for any shift from the pause message."
-    },
-    {
-      "id": "boc-macklem-senate-banking-20261105",
-      "date": "2026-11-05",
-      "source": "Bank of Canada",
-      "url": "https://www.bankofcanada.ca/2026/11/opening-statement-standing-senate-committee-banking-commerce-and-economy-2026-11-05/",
-      "image": null,
-      "headline": "Bank of Canada's Macklem tells senators another rate rise may be needed but the bank will go carefully",
-      "story": "boc-hike",
-      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
-      "pillar": "policy",
-      "summary": "Bank of Canada Governor Tiff Macklem told a Senate committee the bank may have to raise rates again, but with slack in the economy it will decide one meeting at a time.",
-      "beats": {
-        "was": "The Bank of Canada raised its rate to 2.5% on October 28, its first rise since July 2023, because the Iran war has kept fuel prices high. Canada's inflation has been about 3%, above the bank's 2% target, since April.",
-        "happened": "Speaking to the Senate banking committee on Thursday, Macklem said inflation should reach about 3.5% by year-end and stay at or above 3% for much of 2027. He said new US tariffs will likely slow growth late this year and that the economy still has some spare capacity, so the bank will move carefully.",
-        "means": "This repeats what he told MPs on Tuesday, when he also said federal spending is not really adding to inflation. The door to a December rise stays open, but spare capacity gives the bank room to wait.",
-        "fx": "Steady words that markets already expected, so little support for the Canadian dollar on their own. Thursday's federal budget and the price of oil, Canada's main export, matter more for now."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Keeps a further rate rise possible, but stresses caution and spare capacity."
-        }
-      ],
-      "watch": "Canada's federal budget, due Thursday afternoon, and the Bank of Canada's next decision on December 9."
     },
     {
       "id": "gbaf-reuters-de-orders-sep-44pc-20261105",
