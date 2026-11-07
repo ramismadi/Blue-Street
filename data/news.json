@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T23:55:00Z",
+  "updated": "2026-11-07T01:51:30Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -39,8 +39,8 @@
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-04T03:48:42Z",
-      "text": "New Zealand's jobless rate rose to 5.7% in the third quarter, its highest since 2015, which makes further Reserve Bank of New Zealand rate cuts more likely. Slower services growth in China, its biggest customer, adds to the pressure, while a third straight rise in global dairy prices is the main support."
+      "ts": "2026-11-07T01:51:30Z",
+      "text": "The New Zealand dollar fell about 1.2% on Friday, the most of the major currencies, as a strong US jobs report lifted the US dollar, and the country's jobless rate is already at its highest since 2015. New Zealanders vote in a general election on Saturday; a close result that needs long coalition talks would add uncertainty."
     },
     "XAU": {
       "lean": "bearish",
@@ -49,11 +49,77 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-06T23:55:00Z",
-      "text": "Brent crude ended the week about 13% lower, near $98 a barrel, on bets the new Democratic Congress pushes Washington to end the Iran war and on signs the world already has more oil than it needs. Reports that the US and Iran are edging toward a deal added to the drop, while tanker attacks near the Strait of Hormuz still lift prices at times."
+      "ts": "2026-11-07T01:51:30Z",
+      "text": "Brent crude ended the week about 13% lower, near $98 a barrel, on bets the new Democratic Congress pushes Washington to end the Iran war and on signs the world already has more oil than it needs. Reports that the US and Iran are edging toward a deal added to the drop, while tanker attacks near the Strait of Hormuz still lift prices at times. Late Friday, Fox News reported President Trump is weighing new strikes on Iran as soon as November 9, even as Iran studies Qatari proposals, so prices could jump either way when trading resumes."
     }
   },
   "items": [
+    {
+      "id": "timesofisrael-us-iran-progress-strikes-weighed-20261106",
+      "date": "2026-11-06",
+      "source": "Times of Israel",
+      "url": "https://www.timesofisrael.com/us-iran-talks-show-signs-of-progress-even-as-trump-weighs-renewed-strikes/",
+      "image": "https://static-cdn.toi-media.com/www/uploads/2026/11/AP26308348424574.jpg",
+      "headline": "US-Iran talks show some progress, but Trump is also reported to be weighing fresh strikes as soon as Monday night",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Iran is reviewing Qatari proposals to limit its nuclear program in return for sanctions relief, but Fox News reported that President Trump discussed renewed strikes on Thursday, with the military said to favour November 9. Another tanker blast near the Strait of Hormuz was reported, with its crew safe.",
+      "beats": {
+        "was": "The US and Israel have been at war with Iran since late February, and attacks on shipping around the Strait of Hormuz, the route for about a fifth of the world's oil, have kept crude prices high. Qatar is carrying messages between the two sides.",
+        "happened": "A US official and a diplomat said Iran's negotiators are studying Qatari proposals that would curb its nuclear work in exchange for easing sanctions. Ali Bagheri, a senior Iranian negotiator, said Tehran wants concrete US steps rather than promises on paper. Separately, Fox News reported Trump talked through new strikes on Thursday, and that military planners prefer the night of November 9. The UK's maritime security agency reported an explosion on a tanker near Hormuz.",
+        "means": "Talks and threats are running side by side, so the weekend could swing either way: a framework would point to more Gulf oil reaching the market, while new strikes would put the supply risk back in prices.",
+        "fx": "Oil ended the week near $98 a barrel for Brent, about 13% lower, largely on hopes of a deal. A strike would hit that hope and could lift crude and safe havens like the franc and gold when markets reopen Sunday evening."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Signs of progress pull one way, a reported strike date the other; neither is confirmed."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "New strikes would draw safe-haven money to the franc; a deal would ease that need."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Canada's oil earnings rise or fall with whichever way the Iran news breaks."
+        }
+      ],
+      "watch": "Any US strikes on or around November 9, or a confirmed framework from Washington, Tehran or Qatar before markets reopen."
+    },
+    {
+      "id": "spinoff-nz-election-result-timing-20261106",
+      "date": "2026-11-06",
+      "source": "The Spinoff",
+      "url": "https://thespinoff.co.nz/politics/06-11-2026/when-will-we-know-the-nz-election-result-november-2026",
+      "image": "https://images.thespinoff.co.nz/images/01a1a999-13c1-71fd-8111-ae86eeb48ea4",
+      "headline": "New Zealand votes on Saturday, with most of the preliminary count due within hours of polls closing",
+      "story": "nz-election",
+      "story_title": "New Zealand's 2026 general election",
+      "pillar": "fiscal",
+      "summary": "New Zealanders elect a new parliament on Saturday November 7. Polls close at 7pm local time and most preliminary results should be in by late evening, though about a fifth of votes may be counted later.",
+      "beats": {
+        "was": "New Zealand holds a general election every three years. Over 1.5 million people voted early this time, and their ballots are counted first.",
+        "happened": "The Electoral Commission aims to report half of polling places by 10pm and 95% of the preliminary count by 11:30pm Saturday, New Zealand time (early Saturday morning US Central time). Special votes, just over 20% of the total in 2020, are counted later; the official result is due Friday November 27.",
+        "means": "A clear winner on the night would settle the question of who sets taxes and spending for the next three years. A close result could mean days or weeks of coalition talks, especially if special votes shift seats.",
+        "fx": "The New Zealand dollar was the weakest major currency on Friday, down about 1.2% against the US dollar. A drawn-out or uncertain result could add pressure when trading resumes Monday morning in Wellington."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A preview: the direction depends on how clear the result is and what the winners plan for spending."
+        }
+      ],
+      "watch": "Saturday night's preliminary count, and whether any party can form a government without long coalition talks."
+    },
     {
       "id": "gvwire-reuters-dollar-best-day-since-june-20261106",
       "ts": "2026-11-06T21:13:39Z",
@@ -1294,39 +1360,6 @@
       "watch": "Friday's US jobs report (forecast around 65,000) and any change in odds of a December Fed rise."
     },
     {
-      "id": "ap-asian-shares-kospi-chips-yen-158-20261105",
-      "ts": "2026-11-05T02:59:25Z",
-      "source": "AP (via WSLS)",
-      "url": "https://www.wsls.com/business/2026/11/05/asian-shares-mostly-advance-following-us-midterms-though-kospi-falls-on-selling-of-chipmakers/",
-      "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/S6D2C3PUFFBLHCGFA3PPW5DAVE.jpg?api_key=wsls_8c3a4bc35af7684e",
-      "headline": "Yen edges below 158 per dollar as chip stocks slide in Seoul and Tokyo",
-      "story": "us-midterms",
-      "story_title": "US midterms: a week of elections, central banks and jobs data risk",
-      "pillar": "risk",
-      "summary": "The dollar slipped under 158 yen early Thursday as chipmakers sold off across Asia on fears a Democratic Congress will rein in the AI boom.",
-      "beats": {
-        "was": "Democrats won control of both chambers of the US Congress in Tuesday's midterm elections. Investors fear tighter rules on artificial intelligence, which has driven big gains in Asian chip stocks this year.",
-        "happened": "South Korea's Kospi fell about 3.5% by late morning, with Samsung Electronics and SK Hynix down 6-7%, and Japan's Nikkei slipped 0.5% as chip-test and equipment makers fell sharply. Hong Kong and Australian shares rose. The dollar eased to about 157.96 yen from 158.41, and Brent crude dipped below $94.",
-        "means": "Money is moving out of the AI trade that did best under Republican rule, while the wider market still takes the election calmly.",
-        "fx": "Selling of risky assets plus lower US yields gives the yen mild support, though the move is small."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A small move as chip stocks fall and the dollar softens."
-        },
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Brent drifts a little lower after Wednesday's big drop."
-        }
-      ],
-      "watch": "Whether the chip sell-off spreads beyond Korea and Japan when Europe opens."
-    },
-    {
       "id": "investinglive-au-trade-sep-28bn-20261105",
       "ts": "2026-11-05T00:48:59Z",
       "source": "investingLive",
@@ -1352,33 +1385,6 @@
         }
       ],
       "watch": "Whether gas and metals exports stay strong once gold flows settle."
-    },
-    {
-      "id": "aol-reuters-boe-poised-first-hike-20261105",
-      "ts": "2026-11-05T00:02:00Z",
-      "source": "Reuters (via AOL)",
-      "url": "https://www.aol.com/articles/bank-england-poised-hike-rates-000259000.html",
-      "image": "https://hermes.media.transform.aol.com/83fbdd6a0eb70433cc87b592f8b9a5765a9f2874/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/05/a37620dd-e646-33df-9b1a-5222668d34a7/8214c2cf-06ec-4e62-9526-03583c63e221.jpg",
-      "headline": "Bank of England expected to raise rates to 4% on Thursday, its first rise in three years",
-      "story": "boe-hike",
-      "story_title": "Bank of England's first rate rise since 2023",
-      "pillar": "policy",
-      "summary": "Economists polled by Reuters expect the Bank of England to lift its rate to 4% from 3.75% today, with seven of nine policymakers voting for it.",
-      "beats": {
-        "was": "The Bank of England has not raised rates since August 2023. In September it held at 3.75%, but three of its nine policymakers already wanted a rise, and UK inflation then climbed to 3.5%, well above the Bank's own forecast, as the Iran war pushed up fuel and gas costs.",
-        "happened": "Ahead of Thursday's decision at noon London time, economists expect a 7-2 vote for a rise to 4%. Markets go further and price at least three more quarter-point rises next year, while many economists, including PIMCO's, expect only one more early next year and then a long pause.",
-        "means": "The rise itself is almost fully expected. What matters is whether the Bank's new forecasts and wording back the market's path of several more rises or lean toward the economists' view of one more and done.",
-        "fx": "A rise with hints of more would support the pound; a split vote or talk of a pause could pull it back from its highest level since mid-September."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The rise is expected; the guidance on what comes next decides the pound's move."
-        }
-      ],
-      "watch": "The vote split and whether the Bank's new forecasts show inflation peaking above 4% next year."
     },
     {
       "id": "investinglive-boj-sept-minutes-hawkish-20261104",
