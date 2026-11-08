@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T16:47:58Z",
+  "updated": "2026-11-08T19:48:28Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "bullish",
-      "ts": "2026-11-08T11:48:02Z",
-      "text": "The franc drew safe-haven money last week as stocks sold off, and weekend news from Iran (a small US strike, tankers hitting mines near Hormuz and a wider US blockade) keeps war risk alive as markets reopen. Swiss inflation rose to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
+      "ts": "2026-11-08T19:48:28Z",
+      "text": "The franc drew safe-haven money last week as stocks sold off, and weekend attacks on tankers near Hormuz keep war risk alive as markets reopen, though Trump's Sunday remark that new strikes are unlikely if talks progress softens that a little. Swiss inflation rose to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
     },
     "CAD": {
       "lean": "bearish",
@@ -44,16 +44,100 @@
     },
     "XAU": {
       "lean": "mixed",
-      "ts": "2026-11-08T14:48:37Z",
-      "text": "Gold fell about 1% to near $4,050 an ounce on Friday after a strong US jobs report made a December Federal Reserve rate rise more likely; higher rates weigh on gold because it pays no interest. Weekend attacks on tankers near Hormuz and on Saudi Arabia pull the other way, and Tuesday's US inflation figures will decide which force wins."
+      "ts": "2026-11-08T19:48:28Z",
+      "text": "Gold fell about 1% to near $4,050 an ounce on Friday after a strong US jobs report made a December Federal Reserve rate rise more likely; higher rates weigh on gold because it pays no interest. Weekend tanker attacks near Hormuz support it, while Trump's softer tone on new strikes takes a little away, and Tuesday's US inflation figures will matter most."
     },
     "OIL": {
-      "lean": "bullish",
-      "ts": "2026-11-08T14:48:37Z",
-      "text": "Brent crude ended last week about 13% lower, near $98 a barrel, on hopes the Iran war is winding down. The weekend pulled the other way: Iran's Revolutionary Guards say five tankers burned near the Strait of Hormuz on Saturday and Sunday, the US widened its blockade of Iran, and missiles fired from Yemen damaged an Aramco office in Saudi Arabia, though no oil output was lost."
+      "lean": "mixed",
+      "ts": "2026-11-08T19:48:28Z",
+      "text": "Brent crude ended last week about 13% lower, near $98 a barrel, on hopes the Iran war is winding down, and on Sunday President Trump said new US strikes are very unlikely while talks progress. Against that, Iran says more tankers burned near the Strait of Hormuz this weekend, the US widened its blockade, and a record amount of oil is stuck on ships while global stocks run thin."
     }
   },
   "items": [
+    {
+      "id": "almonitor-reuters-trump-iran-strikes-unlikely-20261108",
+      "date": "2026-11-08",
+      "source": "Al-Monitor (Reuters)",
+      "url": "https://www.al-monitor.com/originals/2026/11/trump-says-he-unlikely-order-iran-attack-if-talks-progress-cnn-reports",
+      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-08T175946Z_1_LYNXNPEMA70GF_RTROPTP_3_IRAN-CRISIS-USA-TRUMP.JPG?h=ba88677a&itok=No-v-Sau",
+      "headline": "Trump says new US attacks on Iran are very unlikely as long as peace talks keep moving forward",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "US President Donald Trump told CNN on Sunday he is very unlikely to order fresh attacks on Iran while talks to end the war make progress. He tied that to Iran signing what he called a very strong agreement.",
+      "beats": {
+        "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, largely shut. Talks in Qatar have produced a draft deal, but on Friday the US hit an Iranian air-defence site and over the weekend Iran said several tankers caught fire near Hormuz.",
+        "happened": "In a Sunday phone interview with CNN, Trump said renewed US strikes were very unlikely if negotiations keep progressing, provided Iran agrees to a strong deal. He also said the US has picked out possible targets, including 38 bridges it could destroy within an hour. No agreement has been announced.",
+        "means": "It is a softer tone than last week's talk of fresh strikes, but it comes with conditions and a clear threat. It lowers the near-term risk of a new round of fighting without settling the war or reopening Hormuz.",
+        "fx": "Less chance of new strikes takes a little of the war premium out of oil and safe havens like gold and the Swiss franc. Ship attacks near Hormuz pull the other way, so Monday's reopening will show which weighs more."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Fewer odds of new US strikes ease some fear of fresh supply losses, though nothing is signed."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Calmer war talk trims demand for the franc as a safe place to park money."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Gold loses a little of its war-risk support if strikes look less likely."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Cheaper oil helps Japan, which imports almost all of its energy, but calmer markets cut safe-haven demand for the yen."
+        }
+      ],
+      "watch": "Whether Iran answers the draft deal from the Qatar talks, and any new attacks on ships near Hormuz."
+    },
+    {
+      "id": "247wallst-record-oil-at-sea-128bn-20261108",
+      "ts": "2026-11-08T16:17:54Z",
+      "source": "24/7 Wall St.",
+      "url": "https://247wallst.com/investing/2026/11/08/a-record-1-28-billion-barrels-of-oil-are-stuck-at-sea-and-that-could-mean-higher-gas-prices/",
+      "image": "https://247wallst.com/wp-content/uploads/2020/10/imageForEntry1-BJJ.jpg",
+      "headline": "A record 1.28 billion barrels of oil sit on tankers at sea as the Hormuz shutdown snarls shipping",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Crude held on tankers has hit a record of about 1.28 billion barrels, up roughly 16%, as the Iran war forces longer routes and slower transfers. Shipping now makes up a far bigger share of what a barrel costs.",
+      "beats": {
+        "was": "With the Strait of Hormuz largely shut by the Iran war, oil from the Gulf has to take longer, costlier paths, and countries have drawn down their stored oil. Brent crude fell sharply last week to near $98 a barrel on hopes the war is ending.",
+        "happened": "A market newsletter, The Kobeissi Letter, counts a record 1.28 billion barrels of crude on ships, up from about 1.1 billion. The head of Abu Dhabi's state oil company, Sultan Al Jaber, said earlier this month that shipping has risen from under 5% to over 30% of a barrel's cost, and that close to a billion barrels have come out of global stocks.",
+        "means": "A lot of oil is in transit rather than reaching refineries quickly, while stockpiles are thinner. That keeps supply fragile even if prices dipped last week.",
+        "fx": "This adds to the case that oil stays costly, which tends to help oil exporters like Canada and hurt big importers like Japan. It is a background figure rather than fresh news, so the push is mild."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Thinner stockpiles and slow shipping keep supply tight beneath last week's price drop."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada sells a lot of oil abroad, so costly oil supports its currency."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys nearly all its oil abroad, so higher costs weigh on the yen."
+        }
+      ],
+      "watch": "Whether tankers start moving through Hormuz again, and how fast global oil stocks are being drawn down."
+    },
     {
       "id": "fxempire-week-ahead-us-cpi-20261108",
       "ts": "2026-11-08T13:58:00Z",
@@ -64,7 +148,7 @@
       "story": "fed-december",
       "story_title": "Fed: will it raise rates in December?",
       "pillar": "policy",
-      "summary": "US consumer prices for October come out Tuesday, with forecasters expecting a 0.3% monthly rise after 0.6% in September. Markets see about an 80% chance the Federal Reserve raises rates at its December 8–9 meeting.",
+      "summary": "US consumer prices for October come out Tuesday, with forecasters expecting a 0.3% monthly rise after 0.6% in September. Markets see about an 80% chance the Federal Reserve raises rates at its December 8\u20139 meeting.",
       "beats": {
         "was": "The Federal Reserve, the US central bank, has been weighing another rate rise because inflation is still too high. Last Friday's jobs report, with 165,000 new jobs in October, made a December rise look much more likely and gave the dollar its best day since June.",
         "happened": "A weekly preview lists the US consumer price index for October on Tuesday, November 10, expected to rise 0.3% on the month, or 0.2% leaving out food and energy. Producer prices follow Friday, and more than a dozen Fed officials speak during the week. US stocks fell about 3% last week on worries about spending on AI data centres.",
@@ -274,7 +358,7 @@
       "summary": "Labour won 29.4% of the party vote against National's 29.2% in Saturday's preliminary count, but National, ACT and NZ First together hold 67 of 131 seats, one more than needed. About 400,000 special votes are still to come, with the official result on November 27.",
       "beats": {
         "was": "Christopher Luxon's National Party has led a three-party government with ACT and NZ First since 2023. Polls before Saturday's vote showed a close race with Chris Hipkins' Labour, and unemployment is at its highest since 2015.",
-        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te Pāti Māori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
+        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te P\u0101ti M\u0101ori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
         "means": "The current government is most likely to stay, but its one-seat edge could vanish when special votes are counted, which in past elections have tended to favour the left. That leaves about three weeks of uncertainty over who governs.",
         "fx": "Elections rarely move the New Zealand dollar much on their own. A likely return of the same government means little change in policy, but a slim, unsettled outcome is a small extra worry for a currency that was already the weakest of the majors on Friday."
       },
@@ -442,9 +526,9 @@
       "story": "fed-december",
       "story_title": "Fed: the case for a December rate rise",
       "pillar": "policy",
-      "summary": "After Friday's jobs surprise, investors now put the odds of a Federal Reserve rate rise at its December 8–9 meeting near 78%, up from about 67% on Thursday. Several Fed officials said this week that inflation is still too high.",
+      "summary": "After Friday's jobs surprise, investors now put the odds of a Federal Reserve rate rise at its December 8\u20139 meeting near 78%, up from about 67% on Thursday. Several Fed officials said this week that inflation is still too high.",
       "beats": {
-        "was": "The Federal Reserve held its rate at 3.75%–4% last week after raising it in September, and Chair Kevin Warsh said the next step would depend on how the data add up.",
+        "was": "The Federal Reserve held its rate at 3.75%\u20134% last week after raising it in September, and Chair Kevin Warsh said the next step would depend on how the data add up.",
         "happened": "The US added 165,000 jobs in October, more than twice what was expected, and unemployment fell to 4.1%. Bets on a December rise jumped to about 85% right after the release before settling near 78%, and investors now expect the last rise of this cycle in April rather than June. St. Louis Fed President Alberto Musalem called inflation a tax that hits poorer households hardest.",
         "means": "A December rise is now the market's main expectation, and the path of US rates looks a little higher and sooner than it did a day ago.",
         "fx": "Higher expected US rates support the dollar and weigh on gold, which pays no interest."
@@ -822,7 +906,7 @@
     {
       "id": "rte-reuters-oil-16pc-weekly-drop-20261106",
       "ts": "2026-11-06T10:54:38Z",
-      "source": "RTÉ (Reuters)",
+      "source": "RT\u00c9 (Reuters)",
       "url": "https://www.rte.ie/news/business/2026/1106/1598252-world-oil-prices/",
       "image": "https://www.rte.ie/images/00241fb5-1600.jpg",
       "headline": "Brent slips back to about $97.50 after briefly topping $100, on track for its worst week since early 2020",
@@ -1175,117 +1259,6 @@
         }
       ],
       "watch": "Washington's reply to the proposal, and any sign that Trump picks renewed strikes over talks."
-    },
-    {
-      "id": "finimize-hammack-hikes-20261105",
-      "ts": "2026-11-05T18:23:26Z",
-      "source": "Finimize",
-      "url": "https://finimize.com/content/cleveland-feds-hammack-keeps-the-door-open-to-more-hikes",
-      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2FM3747013_xml.jpeg?ixlib=python-3.1.2&s=bb5c49cd2d905817ce9b0cbc54ee6113",
-      "headline": "Cleveland Fed's Hammack says US rates need to rise further, in small, steady steps",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "policy",
-      "summary": "Beth Hammack, head of the Cleveland Federal Reserve, said on Thursday that US rates should rise further to bring down inflation, preferably in quarter-point steps spread over several meetings.",
-      "beats": {
-        "was": "The Federal Reserve held its rate at 3.75%-4% last week, but Hammack was one of two officials who voted for a rise. The Fed's preferred inflation gauge was 3.6% in September, and 3.1% without food and energy, well above the 2% goal.",
-        "happened": "Speaking at a conference held by the Swiss National Bank's watchers in Zurich, Hammack said inflation is broad and rates must move high enough to slow the economy. She favours small, frequent rises so the Fed does not fall behind. Markets put the chance of a December quarter-point rise at about 69%.",
-        "means": "Hammack already voted for a rise, so her view is not new, but it shows the hawks at the Fed are not backing down after the midterms. It keeps a December rise as the most likely outcome.",
-        "fx": "Talk of further US rate rises gives the dollar some support at a time when the election result and a stock slump are pulling it lower."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A known hawk repeats that rates should keep rising; mostly already priced."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher US rates make gold, which pays no interest, less attractive."
-        }
-      ],
-      "watch": "Friday's US jobs report, which could firm up or weaken the case for a December rise."
-    },
-    {
-      "id": "yahoo-reuters-lagarde-december-indicators-20261105",
-      "ts": "2026-11-05T17:34:00Z",
-      "source": "Reuters (via Yahoo Finance)",
-      "url": "https://finance.yahoo.com/economy/policy/articles/ecb-looking-indicators-see-december-170613489.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/cbbd182dfe8db1e7deda2a9b8774eb9ad430484031836dfa33715b55eeefdf49/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F8af44a9bda956dad3b39bd79de51f3ea.jpg",
-      "headline": "ECB's Lagarde says the data over the next month will decide whether a December rate rise is needed",
-      "story": "ecb-december",
-      "story_title": "European Central Bank: a December rate rise?",
-      "pillar": "policy",
-      "summary": "European Central Bank President Christine Lagarde kept a December rate rise open but did not commit, saying many readings due before then will settle it. She said most of the rise in inflation comes from energy.",
-      "beats": {
-        "was": "The European Central Bank held its deposit rate at 2.5% last week, while euro-area inflation climbed to 4.0% in October, a three-year high, largely because of the energy shock from the Iran war.",
-        "happened": "On Thursday Lagarde said inflation is too high for the bank's 2% goal but mainly driven by energy, and that the figures due between now and the December meeting will show whether a rise is needed. She warned against using rates too bluntly. Fresh staff forecasts arrive with that meeting.",
-        "means": "A December rise stays possible, but Lagarde's stress on energy as the cause sounds more patient than a firm signal would.",
-        "fx": "Mildly supportive of the euro by keeping a rise in view, but not enough to commit the bank."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A December rise stays on the table, but with no commitment and a patient tone."
-        }
-      ],
-      "watch": "Euro-area wage and inflation figures before the December meeting, and the bank's new forecasts then."
-    },
-    {
-      "id": "yahoo-us-stocks-chip-selloff-20261105",
-      "ts": "2026-11-05T17:13:00Z",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/991c829f48a08bbb131b2e193e3d3a5ac8c8588b633383ba4173fc62882c68d1/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2025-05%2F157444b0-3163-11f0-a91b-eb382a4eb590",
-      "headline": "US stocks slump, Nasdaq down about 5%, as chipmakers sink and wipe out the post-election rally",
-      "story": "ai-stock-selloff",
-      "story_title": "The AI and chip stock selloff after the US midterms",
-      "pillar": "risk",
-      "summary": "US stocks fell hard on Thursday, with the tech-heavy Nasdaq down about 5% and the S&P 500 down more than 3%, as chipmaker shares dropped and erased Wednesday's post-election gains.",
-      "beats": {
-        "was": "Democrats won both houses of the US Congress in Tuesday's midterm elections. Investors worry a Democratic Congress will bring tighter rules on artificial intelligence and data centers, the spending that has powered US stocks this year; chip shares in Seoul and Tokyo already fell early Thursday.",
-        "happened": "A US index of chipmaker shares fell about 11%, led by Nvidia, Micron, Broadcom and AMD, and Arm fell nearly 11% after weaker royalty income. Tesla and SpaceX dropped more than 9%. The VIX, a gauge of how much turbulence investors expect in US stocks, jumped more than 50%, and the 10-year US Treasury yield slipped to about 4.83%.",
-        "means": "Wednesday's relief rally was short-lived. A deep fall in the market's favourite shares hits confidence broadly and adds to worries that US growth slows if AI spending is cut back.",
-        "fx": "Sharp stock drops usually lift safe havens such as the Japanese yen and Swiss franc and weigh on currencies tied to global growth, like the Australian and New Zealand dollars. Lower US yields also take some support from the US dollar."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Investors fleeing risky assets tend to buy the yen, and US yields fell."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "The Australian dollar tends to fall when global stocks slump."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Fear in markets brings some demand for the franc as a safe haven."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Like the Aussie, the kiwi suffers when investors cut risk."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower US yields and worries about US growth weigh on the dollar."
-        }
-      ],
-      "watch": "Whether the chip selloff spreads into Friday's US jobs report, and whether the yen strengthens further."
     }
   ]
 }
