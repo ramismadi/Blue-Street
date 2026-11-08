@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T19:48:28Z",
+  "updated": "2026-11-08T23:46:56Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "bullish",
-      "ts": "2026-11-08T19:48:28Z",
-      "text": "The franc drew safe-haven money last week as stocks sold off, and weekend attacks on tankers near Hormuz keep war risk alive as markets reopen, though Trump's Sunday remark that new strikes are unlikely if talks progress softens that a little. Swiss inflation rose to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
+      "ts": "2026-11-08T23:46:56Z",
+      "text": "The franc drew safe-haven money last week as stocks sold off, and weekend attacks on tankers near Hormuz plus tougher talk from Iran's Revolutionary Guards keep war risk alive as markets reopen. Softer words from both Washington and Tehran on Sunday about a deal take a little of that away, and Swiss inflation at 1.5% makes a December rate cut by the Swiss National Bank harder to justify."
     },
     "CAD": {
       "lean": "bearish",
@@ -44,13 +44,13 @@
     },
     "XAU": {
       "lean": "mixed",
-      "ts": "2026-11-08T19:48:28Z",
-      "text": "Gold fell about 1% to near $4,050 an ounce on Friday after a strong US jobs report made a December Federal Reserve rate rise more likely; higher rates weigh on gold because it pays no interest. Weekend tanker attacks near Hormuz support it, while Trump's softer tone on new strikes takes a little away, and Tuesday's US inflation figures will matter most."
+      "ts": "2026-11-08T23:46:56Z",
+      "text": "Gold fell about 1% to near $4,050 an ounce on Friday after a strong US jobs report made a December Federal Reserve rate rise more likely; higher rates weigh on gold because it pays no interest. War risk around Iran still gives it some support, and Tuesday's US inflation figures will matter most."
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-08T19:48:28Z",
-      "text": "Brent crude ended last week about 13% lower, near $98 a barrel, on hopes the Iran war is winding down, and on Sunday President Trump said new US strikes are very unlikely while talks progress. Against that, Iran says more tankers burned near the Strait of Hormuz this weekend, the US widened its blockade, and a record amount of oil is stuck on ships while global stocks run thin."
+      "ts": "2026-11-08T23:46:56Z",
+      "text": "Brent crude ended last week about 13% lower, near $98 a barrel, on hopes the Iran war is winding down. On Sunday President Trump said new US strikes are unlikely while talks progress and Iran's foreign minister said its offer to reopen the Strait of Hormuz within two days still stands, but ships keep getting hit near the strait, Iran's military is talking tougher, and a record amount of oil is stuck at sea."
     }
   },
   "items": [
@@ -98,6 +98,45 @@
         }
       ],
       "watch": "Whether Iran answers the draft deal from the Qatar talks, and any new attacks on ships near Hormuz."
+    },
+    {
+      "id": "trend-araghchi-hormuz-offer-stands-20261108",
+      "ts": "2026-11-08T18:45:01Z",
+      "source": "Trend",
+      "url": "https://www.trend.az/iran/4244519.html",
+      "image": "https://www.trend.az/media/2024/08/21/iran_mfa.jpg",
+      "headline": "Iran's foreign minister says its offer to reopen the Strait of Hormuz within two days still stands",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Iran's Foreign Minister Abbas Araghchi said on Sunday that Tehran's offer to the US, which would reopen the Strait of Hormuz within two days, is still on the table. He said the decision now sits with the White House, and warned Iran would hit back if the US chose war.",
+      "beats": {
+        "was": "The US and Iran have been at war for months, and the Strait of Hormuz, the narrow sea lane that normally carries about a fifth of the world's oil, is close to shut. Through mediators in Qatar, Iran has offered a two-day plan: the US eases its naval blockade and frees some Iranian money, and Iran lets ships through Hormuz again.",
+        "happened": "Araghchi wrote on X on Sunday evening that the offer remains in force. He said US voters had already spoken in last week's midterm elections, so it is now up to the White House, and he set an end to fighting on all fronts as part of the terms. He also warned of a military answer if Washington picks war. The US has not publicly replied.",
+        "means": "Both sides are now saying the door is open: President Trump said earlier on Sunday new strikes are unlikely while talks progress. That keeps a deal possible, but nothing is agreed and Iran's terms go wider than Hormuz.",
+        "fx": "Any real sign the strait could reopen would pull oil lower and help energy importers such as Japan and the euro area. Until the US answers, the risk of more fighting keeps some support under oil, gold and the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Iran repeats it could reopen Hormuz in two days, but the offer is not new and the US has not replied."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan buys almost all its energy abroad, so a path to cheaper oil helps the yen a little."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Canada exports oil, so talk of more supply getting through weighs slightly on its currency."
+        }
+      ],
+      "watch": "A public US reply to the two-day offer, or fresh attacks on ships near Hormuz."
     },
     {
       "id": "247wallst-record-oil-at-sea-128bn-20261108",
@@ -148,7 +187,7 @@
       "story": "fed-december",
       "story_title": "Fed: will it raise rates in December?",
       "pillar": "policy",
-      "summary": "US consumer prices for October come out Tuesday, with forecasters expecting a 0.3% monthly rise after 0.6% in September. Markets see about an 80% chance the Federal Reserve raises rates at its December 8\u20139 meeting.",
+      "summary": "US consumer prices for October come out Tuesday, with forecasters expecting a 0.3% monthly rise after 0.6% in September. Markets see about an 80% chance the Federal Reserve raises rates at its December 8–9 meeting.",
       "beats": {
         "was": "The Federal Reserve, the US central bank, has been weighing another rate rise because inflation is still too high. Last Friday's jobs report, with 165,000 new jobs in October, made a December rise look much more likely and gave the dollar its best day since June.",
         "happened": "A weekly preview lists the US consumer price index for October on Tuesday, November 10, expected to rise 0.3% on the month, or 0.2% leaving out food and energy. Producer prices follow Friday, and more than a dozen Fed officials speak during the week. US stocks fell about 3% last week on worries about spending on AI data centres.",
@@ -262,6 +301,45 @@
       "watch": "Whether the Houthis hit Saudi oil sites or export terminals, rather than offices; damage to production would be a much bigger deal for oil."
     },
     {
+      "id": "arabnews-ap-irgc-lifts-missile-range-limit-20261108",
+      "ts": "2026-11-08T02:57:39Z",
+      "source": "Arab News (AP)",
+      "url": "https://www.arabnews.com/middle-east/iran-says-it-has-lifted-its-self-imposed-limit-on-missile-ranges-3010423",
+      "image": "https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/1794106477854-715ffaf82944ca89.jpg",
+      "headline": "Iran's Revolutionary Guards say they have dropped their own 2,000 km limit on missile range",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "A spokesman for Iran's Revolutionary Guards said the country no longer holds itself to a 2,000 km cap on how far its ballistic missiles can fly. Iran is not known to have longer-range missiles yet, so for now this is a threat more than a new capability.",
+      "beats": {
+        "was": "For years Iran said it kept its ballistic missiles to a range of about 2,000 km, roughly enough to reach Israel and US bases in the Gulf but not Europe. The country has been at war with the US for months, and Iran's supreme leader recently warned any threat would be met with a response without geographic limits.",
+        "happened": "At a news conference in Tehran, Revolutionary Guards spokesman General Hossein Mohebbi said the cap has been lifted. He gave no sign that a longer-range missile exists, and outside experts say none is known. US officials have warned before that Iran's space-rocket work could be turned toward longer-range missiles.",
+        "means": "It is a harder tone at the same time as Iran says its peace offer stands, so it reads as pressure on Washington rather than a change on the ground. It adds to the worry that the war could widen if talks fail.",
+        "fx": "Tougher talk from Tehran keeps some war-risk support under oil, gold and the Swiss franc. With no new weapon shown, the effect is small next to whether the talks deliver a deal."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A harder line from Iran's military adds to the risk the war drags on, though nothing changed on the ground."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More war worry tends to send some money to the franc for safety."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Gold gains a little support from higher war risk."
+        }
+      ],
+      "watch": "Any Iranian test of a longer-range missile, or whether the threat fades if the Qatar talks produce a deal."
+    },
+    {
       "id": "sharetrader-aud-week-below-69c-20261108",
       "ts": "2026-11-08T02:00:00Z",
       "source": "Sharetrader",
@@ -358,7 +436,7 @@
       "summary": "Labour won 29.4% of the party vote against National's 29.2% in Saturday's preliminary count, but National, ACT and NZ First together hold 67 of 131 seats, one more than needed. About 400,000 special votes are still to come, with the official result on November 27.",
       "beats": {
         "was": "Christopher Luxon's National Party has led a three-party government with ACT and NZ First since 2023. Polls before Saturday's vote showed a close race with Chris Hipkins' Labour, and unemployment is at its highest since 2015.",
-        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te P\u0101ti M\u0101ori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
+        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te Pāti Māori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
         "means": "The current government is most likely to stay, but its one-seat edge could vanish when special votes are counted, which in past elections have tended to favour the left. That leaves about three weeks of uncertainty over who governs.",
         "fx": "Elections rarely move the New Zealand dollar much on their own. A likely return of the same government means little change in policy, but a slim, unsettled outcome is a small extra worry for a currency that was already the weakest of the majors on Friday."
       },
@@ -526,9 +604,9 @@
       "story": "fed-december",
       "story_title": "Fed: the case for a December rate rise",
       "pillar": "policy",
-      "summary": "After Friday's jobs surprise, investors now put the odds of a Federal Reserve rate rise at its December 8\u20139 meeting near 78%, up from about 67% on Thursday. Several Fed officials said this week that inflation is still too high.",
+      "summary": "After Friday's jobs surprise, investors now put the odds of a Federal Reserve rate rise at its December 8–9 meeting near 78%, up from about 67% on Thursday. Several Fed officials said this week that inflation is still too high.",
       "beats": {
-        "was": "The Federal Reserve held its rate at 3.75%\u20134% last week after raising it in September, and Chair Kevin Warsh said the next step would depend on how the data add up.",
+        "was": "The Federal Reserve held its rate at 3.75%–4% last week after raising it in September, and Chair Kevin Warsh said the next step would depend on how the data add up.",
         "happened": "The US added 165,000 jobs in October, more than twice what was expected, and unemployment fell to 4.1%. Bets on a December rise jumped to about 85% right after the release before settling near 78%, and investors now expect the last rise of this cycle in April rather than June. St. Louis Fed President Alberto Musalem called inflation a tax that hits poorer households hardest.",
         "means": "A December rise is now the market's main expectation, and the path of US rates looks a little higher and sooner than it did a day ago.",
         "fx": "Higher expected US rates support the dollar and weigh on gold, which pays no interest."
@@ -906,7 +984,7 @@
     {
       "id": "rte-reuters-oil-16pc-weekly-drop-20261106",
       "ts": "2026-11-06T10:54:38Z",
-      "source": "RT\u00c9 (Reuters)",
+      "source": "RTÉ (Reuters)",
       "url": "https://www.rte.ie/news/business/2026/1106/1598252-world-oil-prices/",
       "image": "https://www.rte.ie/images/00241fb5-1600.jpg",
       "headline": "Brent slips back to about $97.50 after briefly topping $100, on track for its worst week since early 2020",
@@ -1175,90 +1253,6 @@
         }
       ],
       "watch": "Whether European and US stocks steady on Friday, and the US jobs report for October at 7:30 AM CT."
-    },
-    {
-      "id": "reuters-trading-day-bonfire-aud-20261105",
-      "ts": "2026-11-05T22:09:50Z",
-      "source": "Reuters",
-      "url": "https://www.globalbankingandfinance.com/trading-day-november-5-market-bonfire/",
-      "image": "https://www.globalbankingandfinance.com/i/cloud-c64fae00-c9e9-42d2-83a0-74f64f1efc4c/width=1200,height=630,quality=80,format=auto,fit=cover/",
-      "headline": "Wall Street ends its worst day in over a year as chip stocks crash; Australian dollar falls most",
-      "story": "ai-stock-selloff",
-      "story_title": "AI stocks sell off after the US midterms",
-      "pillar": "risk",
-      "summary": "US stocks closed sharply lower on Thursday, with the Nasdaq down 5.5% and a chip-stock index down about 12%. The Australian dollar fell 1%, the most of the major currencies, while the US dollar barely moved.",
-      "beats": {
-        "was": "Democrats won control of both houses of the US Congress on Tuesday, raising worries about tighter rules on artificial intelligence and slower building of data centres. AI and chip shares had driven much of this year's stock gains.",
-        "happened": "The S&P 500 fell 4.4% and the Dow 3.4%, with every sector lower. The Philadelphia chip index had its second-worst day on record. US 10-year yields slipped to about 4.9%, oil ended 3-4% higher and gold rose about 1%.",
-        "means": "A sell-off this deep hits currencies tied to global growth and risk appetite first. Traders now see the next Federal Reserve rate rise later, around March 2027, which takes a little support away from the dollar.",
-        "fx": "The Australian dollar took the biggest hit; the US dollar held steady as falling yields offset its safe-haven pull."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "The currency most tied to global growth fell 1% as stocks slumped."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Moves with the Australian dollar when risk appetite drops."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Safe-haven demand met lower yields and later Fed rate-rise bets."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Gold rose about 1% as money looked for shelter and yields fell."
-        }
-      ],
-      "watch": "Friday's US jobs report for October and whether Asian stock markets extend the slide."
-    },
-    {
-      "id": "arabnews-reuters-iran-nuclear-proposal-qatar-20261105",
-      "ts": "2026-11-05T21:42:03Z",
-      "source": "Arab News (Reuters)",
-      "url": "https://www.arabnews.com/middle-east/iran-sent-nuclear-proposal-to-the-us-via-qatar-senior-iranian-official-says-3010067",
-      "image": "https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/1793914868958-97a7413bd26e293c.jpg",
-      "headline": "Iran sends the US a nuclear proposal through Qatar, but only for after its seven conditions are met",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "A senior Iranian official says Iran has passed the US a nuclear proposal through Qatar, and Washington is reviewing it. Iran says it will only discuss it, and only reopen the Strait of Hormuz, once its seven demands are met.",
-      "beats": {
-        "was": "The US and Israel have been at war with Iran since February 28, and Iran has kept the Strait of Hormuz, a key route for Gulf oil, largely shut. Talks through Qatar ended without a breakthrough on Monday, and President Trump has not ruled out new strikes.",
-        "happened": "On Thursday Iran sent the US a nuclear proposal via Qatar. Mohsen Rezaei, a top Iranian security official, said Iran will neither reopen Hormuz nor negotiate until its seven conditions, including lifting sanctions, freeing frozen assets and war reparations, are carried out. Washington wants nuclear issues in the first round.",
-        "means": "It keeps a diplomatic channel open, but the two sides still disagree on what comes first, so a deal is not close. Oil supply through Hormuz stays at risk either way.",
-        "fx": "A small push toward lower oil and calmer markets, weighed against Iran's hard conditions; oil-sensitive currencies such as the yen and Canadian dollar would feel any real progress first."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Talks stay alive, but Iran won't reopen Hormuz until its demands are met."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Japan imports almost all its oil, so any real progress would ease a drag on the yen."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Oil is Canada's main export; the price outlook moves with these talks."
-        }
-      ],
-      "watch": "Washington's reply to the proposal, and any sign that Trump picks renewed strikes over talks."
     }
   ]
 }
