@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T14:48:37Z",
+  "updated": "2026-11-08T16:47:58Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "bearish",
-      "ts": "2026-11-05T23:58:00Z",
-      "text": "The Australian dollar fell 1% on Thursday, the most of the major currencies, as US stocks had their worst day in over a year on a crash in chip shares. The Reserve Bank of Australia's rise to 4.85% on Tuesday and its warning that inflation is still too high give some support, but for now the global sell-off weighs more."
+      "ts": "2026-11-08T16:47:58Z",
+      "text": "The Australian dollar ended last week below 69 US cents, down about 2.4% and the weakest of the major currencies, as a crash in US chip stocks and a strong US jobs report hit it. The Reserve Bank of Australia's rate rise to 4.85% did not help much, and the bank's softer view of growth suggests few more rises are coming."
     },
     "NZD": {
       "lean": "bearish",
@@ -178,6 +178,39 @@
       "watch": "Whether the Houthis hit Saudi oil sites or export terminals, rather than offices; damage to production would be a much bigger deal for oil."
     },
     {
+      "id": "sharetrader-aud-week-below-69c-20261108",
+      "ts": "2026-11-08T02:00:00Z",
+      "source": "Sharetrader",
+      "url": "https://sharetrader.com.au/news/2026-11-08-australian-dollar-tumbles-below-69-us-cents-despite-rba-rate-rise-the-week-in-currencies",
+      "image": "https://sharetrader.com.au/news/images/2026-11-08-australian-dollar-tumbles-below-69-us-cents-despite-rba-rate-rise-the-week-in-currencies/currency-board.webp",
+      "headline": "The Australian dollar ends the week below 69 US cents, the weakest major currency, despite a rate rise",
+      "story": "aud-week",
+      "story_title": "Australian dollar: rate rise vs global sell-off",
+      "pillar": "risk",
+      "summary": "The Australian dollar lost about 2.4% last week to near 68.7 US cents, its first weekly close below 69 cents since July. Only the Swiss franc gained against the US dollar.",
+      "beats": {
+        "was": "The Reserve Bank of Australia, the country's central bank, raised its main rate on Tuesday to 4.85%, its fifth rise this year and the highest since 2008. A higher rate usually helps a currency.",
+        "happened": "A weekly currency wrap shows the Australian dollar fell the most of the major currencies anyway. A crash in US chip stocks hit risk appetite, and a strong US jobs report on Friday lifted the US dollar. The bank also said growth has slowed and house prices are down nearly 5% from their March peak.",
+        "means": "The rate rise was outweighed by a global flight from risk. The bank's softer view of growth also hints the run of rises may be near its end.",
+        "fx": "Headline pressure on the Australian dollar stays down while stocks are shaky and US rates look set to rise. The Swiss franc, the week's only gainer against the US dollar, shows where nervous money went."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A global stock sell-off and a stronger US dollar outweighed the Reserve Bank's rate rise."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The franc was the only major currency to gain on the US dollar last week as investors sought safety."
+        }
+      ],
+      "watch": "Whether US stocks steady this week, and Tuesday's US inflation figures, which could push the US dollar further either way."
+    },
+    {
       "id": "abc-hormuz-explosions-iron-gate-20261108",
       "ts": "2026-11-08T01:07:51Z",
       "source": "ABC News (Australia)",
@@ -229,6 +262,33 @@
       "watch": "Whether Iran accepts the Qatari first steps, which would reopen Hormuz in exchange for the US easing its blockade, or whether more ships are hit before markets reopen."
     },
     {
+      "id": "electionsnz-preliminary-result-20261107",
+      "date": "2026-11-07",
+      "source": "NZ Electoral Commission",
+      "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results",
+      "image": null,
+      "headline": "New Zealand's election ends nearly tied: Labour edges the party vote, but Prime Minister Luxon's bloc holds a one-seat majority",
+      "story": "nz-election",
+      "story_title": "New Zealand election: who governs next",
+      "pillar": "fiscal",
+      "summary": "Labour won 29.4% of the party vote against National's 29.2% in Saturday's preliminary count, but National, ACT and NZ First together hold 67 of 131 seats, one more than needed. About 400,000 special votes are still to come, with the official result on November 27.",
+      "beats": {
+        "was": "Christopher Luxon's National Party has led a three-party government with ACT and NZ First since 2023. Polls before Saturday's vote showed a close race with Chris Hipkins' Labour, and unemployment is at its highest since 2015.",
+        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te Pāti Māori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
+        "means": "The current government is most likely to stay, but its one-seat edge could vanish when special votes are counted, which in past elections have tended to favour the left. That leaves about three weeks of uncertainty over who governs.",
+        "fx": "Elections rarely move the New Zealand dollar much on their own. A likely return of the same government means little change in policy, but a slim, unsettled outcome is a small extra worry for a currency that was already the weakest of the majors on Friday."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The same government looks likely to continue, but its one-seat majority hangs on special votes counted over the next three weeks."
+        }
+      ],
+      "watch": "The official count on November 27: if special votes cost the right bloc a seat, coalition talks get harder and a change of government becomes possible."
+    },
+    {
       "id": "wishtv-ap-us-limited-strikes-iran-air-defense-20261107",
       "ts": "2026-11-07T02:49:07Z",
       "source": "AP via WISH-TV",
@@ -274,31 +334,190 @@
       "watch": "Whether Iran answers the strike, and whether the Qatari first-step plan is confirmed by Washington or Tehran before markets reopen Sunday evening."
     },
     {
-      "id": "electionsnz-preliminary-result-20261107",
-      "date": "2026-11-07",
-      "source": "NZ Electoral Commission",
-      "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results",
-      "image": null,
-      "headline": "New Zealand's election ends nearly tied: Labour edges the party vote, but Prime Minister Luxon's bloc holds a one-seat majority",
-      "story": "nz-election",
-      "story_title": "New Zealand election: who governs next",
-      "pillar": "fiscal",
-      "summary": "Labour won 29.4% of the party vote against National's 29.2% in Saturday's preliminary count, but National, ACT and NZ First together hold 67 of 131 seats, one more than needed. About 400,000 special votes are still to come, with the official result on November 27.",
+      "id": "timesofisrael-us-iran-progress-strikes-weighed-20261106",
+      "date": "2026-11-06",
+      "source": "Times of Israel",
+      "url": "https://www.timesofisrael.com/us-iran-talks-show-signs-of-progress-even-as-trump-weighs-renewed-strikes/",
+      "image": "https://static-cdn.toi-media.com/www/uploads/2026/11/AP26308348424574.jpg",
+      "headline": "US-Iran talks show some progress, but Trump is also reported to be weighing fresh strikes as soon as Monday night",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Iran is reviewing Qatari proposals to limit its nuclear program in return for sanctions relief, but Fox News reported that President Trump discussed renewed strikes on Thursday, with the military said to favour November 9. Another tanker blast near the Strait of Hormuz was reported, with its crew safe.",
       "beats": {
-        "was": "Christopher Luxon's National Party has led a three-party government with ACT and NZ First since 2023. Polls before Saturday's vote showed a close race with Chris Hipkins' Labour, and unemployment is at its highest since 2015.",
-        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te Pāti Māori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
-        "means": "The current government is most likely to stay, but its one-seat edge could vanish when special votes are counted, which in past elections have tended to favour the left. That leaves about three weeks of uncertainty over who governs.",
-        "fx": "Elections rarely move the New Zealand dollar much on their own. A likely return of the same government means little change in policy, but a slim, unsettled outcome is a small extra worry for a currency that was already the weakest of the majors on Friday."
+        "was": "The US and Israel have been at war with Iran since late February, and attacks on shipping around the Strait of Hormuz, the route for about a fifth of the world's oil, have kept crude prices high. Qatar is carrying messages between the two sides.",
+        "happened": "A US official and a diplomat said Iran's negotiators are studying Qatari proposals that would curb its nuclear work in exchange for easing sanctions. Ali Bagheri, a senior Iranian negotiator, said Tehran wants concrete US steps rather than promises on paper. Separately, Fox News reported Trump talked through new strikes on Thursday, and that military planners prefer the night of November 9. The UK's maritime security agency reported an explosion on a tanker near Hormuz.",
+        "means": "Talks and threats are running side by side, so the weekend could swing either way: a framework would point to more Gulf oil reaching the market, while new strikes would put the supply risk back in prices.",
+        "fx": "Oil ended the week near $98 a barrel for Brent, about 13% lower, largely on hopes of a deal. A strike would hit that hope and could lift crude and safe havens like the franc and gold when markets reopen Sunday evening."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Signs of progress pull one way, a reported strike date the other; neither is confirmed."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "New strikes would draw safe-haven money to the franc; a deal would ease that need."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Canada's oil earnings rise or fall with whichever way the Iran news breaks."
+        }
+      ],
+      "watch": "Any US strikes on or around November 9, or a confirmed framework from Washington, Tehran or Qatar before markets reopen."
+    },
+    {
+      "id": "spinoff-nz-election-result-timing-20261106",
+      "date": "2026-11-06",
+      "source": "The Spinoff",
+      "url": "https://thespinoff.co.nz/politics/06-11-2026/when-will-we-know-the-nz-election-result-november-2026",
+      "image": "https://images.thespinoff.co.nz/images/01a1a999-13c1-71fd-8111-ae86eeb48ea4",
+      "headline": "New Zealand votes on Saturday, with most of the preliminary count due within hours of polls closing",
+      "story": "nz-election",
+      "story_title": "New Zealand's 2026 general election",
+      "pillar": "fiscal",
+      "summary": "New Zealanders elect a new parliament on Saturday November 7. Polls close at 7pm local time and most preliminary results should be in by late evening, though about a fifth of votes may be counted later.",
+      "beats": {
+        "was": "New Zealand holds a general election every three years. Over 1.5 million people voted early this time, and their ballots are counted first.",
+        "happened": "The Electoral Commission aims to report half of polling places by 10pm and 95% of the preliminary count by 11:30pm Saturday, New Zealand time (early Saturday morning US Central time). Special votes, just over 20% of the total in 2020, are counted later; the official result is due Friday November 27.",
+        "means": "A clear winner on the night would settle the question of who sets taxes and spending for the next three years. A close result could mean days or weeks of coalition talks, especially if special votes shift seats.",
+        "fx": "The New Zealand dollar was the weakest major currency on Friday, down about 1.2% against the US dollar. A drawn-out or uncertain result could add pressure when trading resumes Monday morning in Wellington."
       },
       "impact": [
         {
           "ccy": "NZD",
           "dir": "mixed",
           "strength": 1,
-          "why": "The same government looks likely to continue, but its one-seat majority hangs on special votes counted over the next three weeks."
+          "why": "A preview: the direction depends on how clear the result is and what the winners plan for spending."
         }
       ],
-      "watch": "The official count on November 27: if special votes cost the right bloc a seat, coalition talks get harder and a change of government becomes possible."
+      "watch": "Saturday night's preliminary count, and whether any party can form a government without long coalition talks."
+    },
+    {
+      "id": "tradingpedia-ez-retail-sep-minus07-lane-20261106",
+      "date": "2026-11-06",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/11/06/eur-jpy-slips-on-weak-eurozone-data-hawkish-boj/",
+      "image": null,
+      "headline": "Euro-area shop sales fall 0.7% in September, far worse than expected, as the ECB's Lane urges caution",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates in December?",
+      "pillar": "growth",
+      "summary": "Shoppers across the euro area spent 0.7% less in September than in August, a much bigger drop than forecast, after an even sharper fall in August. The European Central Bank's chief economist Philip Lane said rising energy costs must not spread into wages, but sounded cautious ahead of December.",
+      "beats": {
+        "was": "Inflation in the euro area is running at about 4% because of dearer energy from the Iran war, and the European Central Bank is weighing a rate rise in December. Higher prices have been squeezing household budgets.",
+        "happened": "Eurostat said retail sales fell 0.7% in September, against a forecast drop of 0.1%, and August was revised to a 2% fall. Compared with a year earlier, sales grew just 0.4%. ECB chief economist Philip Lane said policy must stop energy costs feeding into wages, but noted that borrowing conditions have already tightened and governments will likely spend less next year.",
+        "means": "Households are cutting back, which weakens the case for a December ECB rate rise. Lane's comments keep a rise possible but suggest the bank is in no hurry.",
+        "fx": "Weak spending and a cautious ECB weigh on the euro, which slipped against the yen on Friday."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A much bigger drop in shop sales than expected, plus a cautious ECB chief economist, lowers the odds of a December rate rise."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The euro fell against the yen as Bank of Japan minutes kept a December rate rise in view."
+        }
+      ],
+      "watch": "Euro-area inflation and wage figures before the ECB's December meeting, and whether other ECB officials echo Lane's caution."
+    },
+    {
+      "id": "investing-reuters-fed-december-after-payrolls-20261106",
+      "date": "2026-11-06",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://ca.investing.com/news/economy-news/fed-seen-sticking-to-december-rate-hike-after-jobs-data-4939832",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA51BU_L.jpg",
+      "headline": "Markets now see about a 78% chance the Fed raises rates in December after the strong jobs report",
+      "story": "fed-december",
+      "story_title": "Fed: the case for a December rate rise",
+      "pillar": "policy",
+      "summary": "After Friday's jobs surprise, investors now put the odds of a Federal Reserve rate rise at its December 8–9 meeting near 78%, up from about 67% on Thursday. Several Fed officials said this week that inflation is still too high.",
+      "beats": {
+        "was": "The Federal Reserve held its rate at 3.75%–4% last week after raising it in September, and Chair Kevin Warsh said the next step would depend on how the data add up.",
+        "happened": "The US added 165,000 jobs in October, more than twice what was expected, and unemployment fell to 4.1%. Bets on a December rise jumped to about 85% right after the release before settling near 78%, and investors now expect the last rise of this cycle in April rather than June. St. Louis Fed President Alberto Musalem called inflation a tax that hits poorer households hardest.",
+        "means": "A December rise is now the market's main expectation, and the path of US rates looks a little higher and sooner than it did a day ago.",
+        "fx": "Higher expected US rates support the dollar and weigh on gold, which pays no interest."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer bets on a December Fed rise add support, though most of the move came with the jobs data itself."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher expected US rates raise the cost of holding gold."
+        }
+      ],
+      "watch": "US inflation figures next week; a soft reading would pull December bets back down."
+    },
+    {
+      "id": "investing-reuters-ca-ivey-pmi-oct-583-20261106",
+      "date": "2026-11-06",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/economic-indicators/canadas-ivey-pmi-edges-higherin-october-as-employment-rises-5008743",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA51I5_L.jpg",
+      "headline": "Canadian business activity grew at a steady pace in October and hiring picked up, a survey shows",
+      "story": "boc-hike",
+      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
+      "pillar": "growth",
+      "summary": "The Ivey survey of Canadian purchasing managers edged up to 58.3 in October, a solid pace of growth. Its hiring gauge rose and its prices gauge eased.",
+      "beats": {
+        "was": "Earlier on Friday Canada reported a second straight month of job losses, with unemployment up to 6.7%, which raised doubts about another Bank of Canada rate rise in December.",
+        "happened": "The Ivey purchasing managers index, which tracks business activity (above 50 means growth), rose to 58.3 in October from 58.2. Its employment measure climbed to 58.3 from 56.5, while its prices measure fell to 81.7 from 82.8.",
+        "means": "Businesses report steady growth and more hiring, a softer picture than the official jobs data but not enough to offset it. Slightly cooler price pressure fits a more cautious Bank of Canada.",
+        "fx": "A small offset to the weak jobs report for the Canadian dollar, which is mostly being driven by the stronger US dollar and oil prices today."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Steady business growth and more hiring soften the blow from the weak jobs report."
+        }
+      ],
+      "watch": "Canada's October inflation figures and whether the Bank of Canada signals a pause in December."
+    },
+    {
+      "id": "tradingpedia-de-industrial-output-sep-07pc-20261106",
+      "date": "2026-11-06",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/11/06/eur-gbp-holds-range-despite-strong-german-output-data/",
+      "image": null,
+      "headline": "German industrial output rises 0.7% in September, beating forecasts of no change",
+      "story": "de-industry",
+      "story_title": "Germany's factory orders swing back",
+      "pillar": "growth",
+      "summary": "Germany's factories produced 0.7% more in September than in August, when economists expected no change. The euro barely moved against the pound.",
+      "beats": {
+        "was": "German industry, the core of Europe's biggest economy, has been struggling with high energy costs. On Thursday, figures showed factory orders bounced 4.4% in September after a big drop in August.",
+        "happened": "Germany's statistics office said on Friday that industrial output rose 0.7% in September, led by cars and medicines, while construction and machinery fell. Compared with a year earlier, output was up just 0.4%.",
+        "means": "A better month for German factories, but the yearly gain is small and the stock-market sell-off is drowning out good news from Europe.",
+        "fx": "A mild plus for the euro that markets largely ignored, with the euro steady near 0.834 pounds."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Output beat forecasts, though the yearly pace stays weak and traders paid it little attention."
+        }
+      ],
+      "watch": "Euro-zone retail sales for September, and whether German orders and output keep rising in October."
     },
     {
       "id": "gvwire-reuters-dollar-best-day-since-june-20261106",
@@ -874,192 +1093,6 @@
       "watch": "Whether European and US stocks steady on Friday, and the US jobs report for October at 7:30 AM CT."
     },
     {
-      "id": "timesofisrael-us-iran-progress-strikes-weighed-20261106",
-      "date": "2026-11-06",
-      "source": "Times of Israel",
-      "url": "https://www.timesofisrael.com/us-iran-talks-show-signs-of-progress-even-as-trump-weighs-renewed-strikes/",
-      "image": "https://static-cdn.toi-media.com/www/uploads/2026/11/AP26308348424574.jpg",
-      "headline": "US-Iran talks show some progress, but Trump is also reported to be weighing fresh strikes as soon as Monday night",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Iran is reviewing Qatari proposals to limit its nuclear program in return for sanctions relief, but Fox News reported that President Trump discussed renewed strikes on Thursday, with the military said to favour November 9. Another tanker blast near the Strait of Hormuz was reported, with its crew safe.",
-      "beats": {
-        "was": "The US and Israel have been at war with Iran since late February, and attacks on shipping around the Strait of Hormuz, the route for about a fifth of the world's oil, have kept crude prices high. Qatar is carrying messages between the two sides.",
-        "happened": "A US official and a diplomat said Iran's negotiators are studying Qatari proposals that would curb its nuclear work in exchange for easing sanctions. Ali Bagheri, a senior Iranian negotiator, said Tehran wants concrete US steps rather than promises on paper. Separately, Fox News reported Trump talked through new strikes on Thursday, and that military planners prefer the night of November 9. The UK's maritime security agency reported an explosion on a tanker near Hormuz.",
-        "means": "Talks and threats are running side by side, so the weekend could swing either way: a framework would point to more Gulf oil reaching the market, while new strikes would put the supply risk back in prices.",
-        "fx": "Oil ended the week near $98 a barrel for Brent, about 13% lower, largely on hopes of a deal. A strike would hit that hope and could lift crude and safe havens like the franc and gold when markets reopen Sunday evening."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Signs of progress pull one way, a reported strike date the other; neither is confirmed."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "New strikes would draw safe-haven money to the franc; a deal would ease that need."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Canada's oil earnings rise or fall with whichever way the Iran news breaks."
-        }
-      ],
-      "watch": "Any US strikes on or around November 9, or a confirmed framework from Washington, Tehran or Qatar before markets reopen."
-    },
-    {
-      "id": "spinoff-nz-election-result-timing-20261106",
-      "date": "2026-11-06",
-      "source": "The Spinoff",
-      "url": "https://thespinoff.co.nz/politics/06-11-2026/when-will-we-know-the-nz-election-result-november-2026",
-      "image": "https://images.thespinoff.co.nz/images/01a1a999-13c1-71fd-8111-ae86eeb48ea4",
-      "headline": "New Zealand votes on Saturday, with most of the preliminary count due within hours of polls closing",
-      "story": "nz-election",
-      "story_title": "New Zealand's 2026 general election",
-      "pillar": "fiscal",
-      "summary": "New Zealanders elect a new parliament on Saturday November 7. Polls close at 7pm local time and most preliminary results should be in by late evening, though about a fifth of votes may be counted later.",
-      "beats": {
-        "was": "New Zealand holds a general election every three years. Over 1.5 million people voted early this time, and their ballots are counted first.",
-        "happened": "The Electoral Commission aims to report half of polling places by 10pm and 95% of the preliminary count by 11:30pm Saturday, New Zealand time (early Saturday morning US Central time). Special votes, just over 20% of the total in 2020, are counted later; the official result is due Friday November 27.",
-        "means": "A clear winner on the night would settle the question of who sets taxes and spending for the next three years. A close result could mean days or weeks of coalition talks, especially if special votes shift seats.",
-        "fx": "The New Zealand dollar was the weakest major currency on Friday, down about 1.2% against the US dollar. A drawn-out or uncertain result could add pressure when trading resumes Monday morning in Wellington."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A preview: the direction depends on how clear the result is and what the winners plan for spending."
-        }
-      ],
-      "watch": "Saturday night's preliminary count, and whether any party can form a government without long coalition talks."
-    },
-    {
-      "id": "tradingpedia-ez-retail-sep-minus07-lane-20261106",
-      "date": "2026-11-06",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/11/06/eur-jpy-slips-on-weak-eurozone-data-hawkish-boj/",
-      "image": null,
-      "headline": "Euro-area shop sales fall 0.7% in September, far worse than expected, as the ECB's Lane urges caution",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates in December?",
-      "pillar": "growth",
-      "summary": "Shoppers across the euro area spent 0.7% less in September than in August, a much bigger drop than forecast, after an even sharper fall in August. The European Central Bank's chief economist Philip Lane said rising energy costs must not spread into wages, but sounded cautious ahead of December.",
-      "beats": {
-        "was": "Inflation in the euro area is running at about 4% because of dearer energy from the Iran war, and the European Central Bank is weighing a rate rise in December. Higher prices have been squeezing household budgets.",
-        "happened": "Eurostat said retail sales fell 0.7% in September, against a forecast drop of 0.1%, and August was revised to a 2% fall. Compared with a year earlier, sales grew just 0.4%. ECB chief economist Philip Lane said policy must stop energy costs feeding into wages, but noted that borrowing conditions have already tightened and governments will likely spend less next year.",
-        "means": "Households are cutting back, which weakens the case for a December ECB rate rise. Lane's comments keep a rise possible but suggest the bank is in no hurry.",
-        "fx": "Weak spending and a cautious ECB weigh on the euro, which slipped against the yen on Friday."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A much bigger drop in shop sales than expected, plus a cautious ECB chief economist, lowers the odds of a December rate rise."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The euro fell against the yen as Bank of Japan minutes kept a December rate rise in view."
-        }
-      ],
-      "watch": "Euro-area inflation and wage figures before the ECB's December meeting, and whether other ECB officials echo Lane's caution."
-    },
-    {
-      "id": "investing-reuters-fed-december-after-payrolls-20261106",
-      "date": "2026-11-06",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://ca.investing.com/news/economy-news/fed-seen-sticking-to-december-rate-hike-after-jobs-data-4939832",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA51BU_L.jpg",
-      "headline": "Markets now see about a 78% chance the Fed raises rates in December after the strong jobs report",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "policy",
-      "summary": "After Friday's jobs surprise, investors now put the odds of a Federal Reserve rate rise at its December 8–9 meeting near 78%, up from about 67% on Thursday. Several Fed officials said this week that inflation is still too high.",
-      "beats": {
-        "was": "The Federal Reserve held its rate at 3.75%–4% last week after raising it in September, and Chair Kevin Warsh said the next step would depend on how the data add up.",
-        "happened": "The US added 165,000 jobs in October, more than twice what was expected, and unemployment fell to 4.1%. Bets on a December rise jumped to about 85% right after the release before settling near 78%, and investors now expect the last rise of this cycle in April rather than June. St. Louis Fed President Alberto Musalem called inflation a tax that hits poorer households hardest.",
-        "means": "A December rise is now the market's main expectation, and the path of US rates looks a little higher and sooner than it did a day ago.",
-        "fx": "Higher expected US rates support the dollar and weigh on gold, which pays no interest."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firmer bets on a December Fed rise add support, though most of the move came with the jobs data itself."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher expected US rates raise the cost of holding gold."
-        }
-      ],
-      "watch": "US inflation figures next week; a soft reading would pull December bets back down."
-    },
-    {
-      "id": "investing-reuters-ca-ivey-pmi-oct-583-20261106",
-      "date": "2026-11-06",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/economic-indicators/canadas-ivey-pmi-edges-higherin-october-as-employment-rises-5008743",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA51I5_L.jpg",
-      "headline": "Canadian business activity grew at a steady pace in October and hiring picked up, a survey shows",
-      "story": "boc-hike",
-      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
-      "pillar": "growth",
-      "summary": "The Ivey survey of Canadian purchasing managers edged up to 58.3 in October, a solid pace of growth. Its hiring gauge rose and its prices gauge eased.",
-      "beats": {
-        "was": "Earlier on Friday Canada reported a second straight month of job losses, with unemployment up to 6.7%, which raised doubts about another Bank of Canada rate rise in December.",
-        "happened": "The Ivey purchasing managers index, which tracks business activity (above 50 means growth), rose to 58.3 in October from 58.2. Its employment measure climbed to 58.3 from 56.5, while its prices measure fell to 81.7 from 82.8.",
-        "means": "Businesses report steady growth and more hiring, a softer picture than the official jobs data but not enough to offset it. Slightly cooler price pressure fits a more cautious Bank of Canada.",
-        "fx": "A small offset to the weak jobs report for the Canadian dollar, which is mostly being driven by the stronger US dollar and oil prices today."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Steady business growth and more hiring soften the blow from the weak jobs report."
-        }
-      ],
-      "watch": "Canada's October inflation figures and whether the Bank of Canada signals a pause in December."
-    },
-    {
-      "id": "tradingpedia-de-industrial-output-sep-07pc-20261106",
-      "date": "2026-11-06",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/11/06/eur-gbp-holds-range-despite-strong-german-output-data/",
-      "image": null,
-      "headline": "German industrial output rises 0.7% in September, beating forecasts of no change",
-      "story": "de-industry",
-      "story_title": "Germany's factory orders swing back",
-      "pillar": "growth",
-      "summary": "Germany's factories produced 0.7% more in September than in August, when economists expected no change. The euro barely moved against the pound.",
-      "beats": {
-        "was": "German industry, the core of Europe's biggest economy, has been struggling with high energy costs. On Thursday, figures showed factory orders bounced 4.4% in September after a big drop in August.",
-        "happened": "Germany's statistics office said on Friday that industrial output rose 0.7% in September, led by cars and medicines, while construction and machinery fell. Compared with a year earlier, output was up just 0.4%.",
-        "means": "A better month for German factories, but the yearly gain is small and the stock-market sell-off is drowning out good news from Europe.",
-        "fx": "A mild plus for the euro that markets largely ignored, with the euro steady near 0.834 pounds."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Output beat forecasts, though the yearly pace stays weak and traders paid it little attention."
-        }
-      ],
-      "watch": "Euro-zone retail sales for September, and whether German orders and output keep rising in October."
-    },
-    {
       "id": "reuters-trading-day-bonfire-aud-20261105",
       "ts": "2026-11-05T22:09:50Z",
       "source": "Reuters",
@@ -1253,84 +1286,6 @@
         }
       ],
       "watch": "Whether the chip selloff spreads into Friday's US jobs report, and whether the yen strengthens further."
-    },
-    {
-      "id": "thenational-oil-rebound-20261105",
-      "ts": "2026-11-05T16:05:24Z",
-      "source": "The National",
-      "url": "https://www.thenationalnews.com/business/energy/2026/11/05/oil-rebounds-from-two-month-low-as-uncertainty-lingers-over-iran-war/",
-      "image": "https://www.thenationalnews.com/resizer/v2/O6OOW74L24W243SOBU7FLA4FBI.jpg?auth=d026bb431a26e5cdd1a0b6b961bb60d285179868b163fa62e23120355d59cb27&smart=true&width=1200&height=630",
-      "headline": "Oil climbs back to about $97 a barrel after a two-month low, as a tanker hits a mine near Hormuz",
-      "story": "iran-oil",
-      "story_title": "Oil and the Iran war after the US midterms",
-      "pillar": "commodities",
-      "summary": "Brent crude rose about 2.5% to near $97 a barrel on Thursday, recovering part of this week's slide, after Iran's navy said a tanker east of the Strait of Hormuz struck a mine and caught fire.",
-      "beats": {
-        "was": "Oil fell to a two-month low on Wednesday, with Brent briefly near $93, on bets that Democratic control of the US Congress pushes Washington to end the US-Israel war with Iran. The war has disrupted tanker traffic through Hormuz, the route for about a fifth of the world's oil.",
-        "happened": "Brent rose to about $97 and US crude to near $90, cutting the week's loss to about 14%. Ole Hansen, commodity strategist at Saxo Bank, said that without a peace deal oil can still swing sharply either way. Iran's foreign minister, Abbas Araghchi, spoke with his Saudi and Qatari counterparts.",
-        "means": "The quick bounce shows the market does not trust the peace bet yet. Supply of refined fuels such as diesel has also not recovered as fast as crude exports from the Gulf.",
-        "fx": "Firmer oil helps the Canadian dollar, Canada's main export, and raises import bills for Japan and the euro zone."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A mined tanker and no peace deal pull prices back up from a two-month low."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil prices lift Canada's export earnings."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so dearer crude raises its import bill."
-        }
-      ],
-      "watch": "Whether more ships are hit near Hormuz and whether Washington moves toward talks or new strikes."
-    },
-    {
-      "id": "boereport-reuters-hormuz-tankers-strikes-20261105",
-      "ts": "2026-11-05T15:04:45Z",
-      "source": "Reuters via BOE Report",
-      "url": "https://boereport.com/2026/11/05/tankers-hit-in-hormuz-as-iran-keeps-up-pressure-after-us-vote/",
-      "image": null,
-      "headline": "Three more tankers hit near Hormuz as sources say Trump may still restart strikes on Iran",
-      "story": "iran-hormuz",
-      "story_title": "Hormuz: shipping attacks and the oil supply",
-      "pillar": "commodities",
-      "summary": "Iran said three more tankers were damaged in the Strait of Hormuz on Thursday, and two people familiar with the matter told Reuters that President Trump is still likely to order new strikes on Iran.",
-      "beats": {
-        "was": "The US-Israel war with Iran has disrupted tanker traffic through the Strait of Hormuz, the channel for about a fifth of the world's oil. Oil fell more than $20 a barrel in a week on bets that Democratic control of the US Congress, won in Tuesday's midterms, pushes Washington to end the war.",
-        "happened": "Iran's Revolutionary Guards, who rarely own up to firing on merchant ships, said two tankers hit naval mines and a third caught fire. The UK navy's shipping office counts at least five ships hit since Sunday, close to October's pace, the worst month of the war. Two sources told Reuters Trump only held off on strikes until after the vote; there is no confirmed decision, and talks through Qatar have made no breakthrough.",
-        "means": "The peace bet that drove oil down sits next to rising attacks at sea and talk of renewed US bombing. The danger to Gulf supply has not gone away, so the recent drop in oil is fragile.",
-        "fx": "Oil steadied a little on Thursday. A confirmed US strike or more ship losses would lift oil, help the Canadian dollar and safe havens such as the Swiss franc, and weigh on big oil buyers like Japan and the euro zone."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "More ships hit and talk of new US strikes threaten Gulf supply again."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A war that may flare up again keeps some demand for a safe haven."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so supply risks raise its import bill."
-        }
-      ],
-      "watch": "Whether Trump orders new strikes, and whether ship attacks near Hormuz keep rising."
     }
   ]
 }
