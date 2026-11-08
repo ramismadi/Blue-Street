@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T03:55:00Z",
+  "updated": "2026-11-08T11:48:02Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "bullish",
-      "ts": "2026-11-07T03:55:00Z",
-      "text": "The franc drew safe-haven money on Friday as the stock sell-off hit Asia and Europe, and a new, small US strike on Iran late Friday keeps war risk alive into the weekend. Swiss inflation jumped to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
+      "ts": "2026-11-08T11:48:02Z",
+      "text": "The franc drew safe-haven money last week as stocks sold off, and weekend news from Iran (a small US strike, tankers hitting mines near Hormuz and a wider US blockade) keeps war risk alive as markets reopen. Swiss inflation rose to 1.5% in October on dearer fuel, which makes a December rate cut by the Swiss National Bank harder to justify."
     },
     "CAD": {
       "lean": "bearish",
@@ -39,21 +39,99 @@
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-07T01:51:30Z",
-      "text": "The New Zealand dollar fell about 1.2% on Friday, the most of the major currencies, as a strong US jobs report lifted the US dollar, and the country's jobless rate is already at its highest since 2015. New Zealanders vote in a general election on Saturday; a close result that needs long coalition talks would add uncertainty."
+      "ts": "2026-11-08T11:48:02Z",
+      "text": "The New Zealand dollar fell about 1.2% on Friday, the most of the major currencies, as a strong US jobs report lifted the US dollar, and the country's jobless rate is already at its highest since 2015. Saturday's election left Prime Minister Christopher Luxon's three-party bloc with a one-seat majority that special votes could still erase, so who governs may not be clear until November 27."
     },
     "XAU": {
       "lean": "mixed",
-      "ts": "2026-11-07T03:55:00Z",
-      "text": "Gold dropped about 1% to near $4,050 an ounce on Friday after a strong US jobs report made a December Federal Reserve rate rise more likely; higher rates weigh on gold because it pays no interest. A new, small US strike on Iran late Friday pulls the other way, since war risk usually draws buyers to gold."
+      "ts": "2026-11-08T11:48:02Z",
+      "text": "Gold fell about 1% to near $4,050 an ounce on Friday after a strong US jobs report made a December Federal Reserve rate rise more likely; higher rates weigh on gold because it pays no interest. Weekend news from Iran, with tankers hitting mines near Hormuz and a wider US blockade, pulls the other way, since war risk usually draws buyers to gold."
     },
     "OIL": {
-      "lean": "mixed",
-      "ts": "2026-11-07T03:55:00Z",
-      "text": "Brent crude ended the week about 13% lower, near $98 a barrel, on bets that Washington moves to end the Iran war and on signs the world already has more oil than it needs. But on Friday evening President Trump said US forces carried out a small new strike on an Iranian air defense site, even as Iran studies a Qatari peace plan that could reopen the Strait of Hormuz, so prices could jump either way when trading resumes Sunday evening."
+      "lean": "bullish",
+      "ts": "2026-11-08T11:48:02Z",
+      "text": "Brent crude ended last week about 13% lower, near $98 a barrel, on hopes the Iran war is winding down. Over the weekend the risks swung back: a small US strike on Friday, two tankers hitting mines near the Strait of Hormuz, and a wider US blockade of Iran, while Iran is still only reviewing Qatar's plan to reopen the strait."
     }
   },
   "items": [
+    {
+      "id": "abc-hormuz-explosions-iron-gate-20261108",
+      "ts": "2026-11-08T01:07:51Z",
+      "source": "ABC News (Australia)",
+      "url": "https://www.abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730",
+      "image": "https://live-production.wcms.abc-cdn.net.au/f51ee3872700886ee60510f6bfa6ec80?impolicy=wcms_watermark_news&cropH=2813&cropW=5000&xPos=0&yPos=0&width=862&height=485&imformat=generic",
+      "headline": "Blasts reported near the Strait of Hormuz and two tankers hit mines, as the US widens its blockade of Iran to land routes",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Iranian state media reported explosions on Qeshm Island and at the port of Jask on Saturday, and Iran's military said two tankers caught fire after hitting mines. The US set up a new task force to stop Iranian trade over land, while Iran studies Qatar's peace proposals.",
+      "beats": {
+        "was": "The US and Israel have been at war with Iran since late February, and Iran has kept the Strait of Hormuz, the route for about a fifth of the world's oil, largely shut, while the US blockades Iran's ports. Oil fell about 13% last week on hopes of a deal, and on Friday President Trump said US forces made a small new strike on an Iranian air defense site.",
+        "happened": "On Saturday evening Iranian state media reported two blasts on Qeshm Island and several at Jask, with the cause unclear. Iran's military said two tankers caught fire after hitting mines on a route it had not approved, and the US military said it disabled a ship in the Gulf of Oman that ignored warnings. US Central Command launched Task Force Iron Gate to block weapons and sanctioned goods moving across Iran's land borders and the Caspian Sea, and Iran's Revolutionary Guard said it no longer limits the range of its missiles. Iran is still reviewing proposals carried by Qatar, but officials say it won't discuss its nuclear program until the US meets several conditions.",
+        "means": "The weekend brought more pressure from both sides, not less: mines and ship incidents near Hormuz, a wider US blockade, and tougher talk from Tehran, while the Qatari plan is still only under review.",
+        "fx": "Markets reopen Sunday evening. Tankers hitting mines and a tighter blockade could push oil back up after last week's big drop, which tends to help the Canadian dollar and safe havens like the franc and gold, and hurt oil importers like Japan."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Tankers hitting mines near Hormuz and a wider US blockade add back supply risk after a 13% weekly fall."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising war risk tends to draw safe-haven money to the franc."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Gold usually gains when the war looks set to drag on."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Dearer oil lifts Canada's export earnings."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so a higher oil bill weighs on the yen."
+        }
+      ],
+      "watch": "Whether Iran accepts the Qatari first steps, which would reopen Hormuz in exchange for the US easing its blockade, or whether more ships are hit before markets reopen."
+    },
+    {
+      "id": "electionsnz-preliminary-result-20261107",
+      "date": "2026-11-07",
+      "source": "NZ Electoral Commission",
+      "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results",
+      "image": null,
+      "headline": "New Zealand's election ends nearly tied: Labour edges the party vote, but Prime Minister Luxon's bloc holds a one-seat majority",
+      "story": "nz-election",
+      "story_title": "New Zealand election: who governs next",
+      "pillar": "fiscal",
+      "summary": "Labour won 29.4% of the party vote against National's 29.2% in Saturday's preliminary count, but National, ACT and NZ First together hold 67 of 131 seats, one more than needed. About 400,000 special votes are still to come, with the official result on November 27.",
+      "beats": {
+        "was": "Christopher Luxon's National Party has led a three-party government with ACT and NZ First since 2023. Polls before Saturday's vote showed a close race with Chris Hipkins' Labour, and unemployment is at its highest since 2015.",
+        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te Pāti Māori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
+        "means": "The current government is most likely to stay, but its one-seat edge could vanish when special votes are counted, which in past elections have tended to favour the left. That leaves about three weeks of uncertainty over who governs.",
+        "fx": "Elections rarely move the New Zealand dollar much on their own. A likely return of the same government means little change in policy, but a slim, unsettled outcome is a small extra worry for a currency that was already the weakest of the majors on Friday."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The same government looks likely to continue, but its one-seat majority hangs on special votes counted over the next three weeks."
+        }
+      ],
+      "watch": "The official count on November 27: if special votes cost the right bloc a seat, coalition talks get harder and a change of government becomes possible."
+    },
     {
       "id": "wishtv-ap-us-limited-strikes-iran-air-defense-20261107",
       "ts": "2026-11-07T02:49:07Z",
@@ -1343,159 +1421,6 @@
         }
       ],
       "watch": "The next decision on 17 December, UK inflation figures, and any progress toward ending the Iran war, which Bailey tied to the rate outlook."
-    },
-    {
-      "id": "gbaf-reuters-de-orders-sep-44pc-20261105",
-      "ts": "2026-11-05T07:07:41Z",
-      "source": "Global Banking & Finance Review (Reuters)",
-      "url": "https://www.globalbankingandfinance.com/german-industrial-orders-rise-4-4-september/",
-      "image": "https://www.globalbankingandfinance.com/i/cloud-1e7bce6e-99b8-4bf6-80df-19f8371bb50b/width=1200,height=630,quality=80,format=auto,fit=cover/",
-      "headline": "German factory orders bounce 4.4% in September, a little short of forecasts",
-      "story": "de-industry",
-      "story_title": "Germany's factory orders swing back",
-      "pillar": "growth",
-      "summary": "New orders at German factories rose 4.4% in September after a 10.6% drop in August, a solid rebound but slightly below the 4.8% economists expected.",
-      "beats": {
-        "was": "German factory orders swing hard from month to month because a few very large public contracts, such as defence and infrastructure, land at once. In August they fell 10.6% after earlier big gains.",
-        "happened": "Germany's statistics office said on Thursday that orders rose 4.4% in September from August, after adjusting for seasons and working days. Economists polled by Reuters had expected 4.8%.",
-        "means": "The rebound undoes less than half of August's fall, so it reads as normal lumpiness rather than a new upturn in Europe's biggest economy.",
-        "fx": "A small miss on a noisy figure barely changes the outlook for the euro, which is moving far more on the dollar and on inflation."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A rebound in orders, but smaller than expected and not enough to undo August's slump."
-        }
-      ],
-      "watch": "German industrial output on Friday and whether large public orders keep coming in coming months."
-    },
-    {
-      "id": "financefeeds-gold-4135-20261105",
-      "ts": "2026-11-05T06:54:09Z",
-      "source": "FinanceFeeds",
-      "url": "https://financefeeds.com/gold-price-today-4135-thursday-before-6-november-jobs-report-dollar-near-one-month-low-bull-4225-bear-4000/",
-      "image": "https://financefeeds.com/wp-content/uploads/2026/08/gold-400-oz-good-delivery-bars.jpg",
-      "headline": "Gold rises to about $4,135, its highest since late October, ahead of the US jobs report",
-      "story": "gold-midterms",
-      "story_title": "Gold after the US midterms",
-      "pillar": "risk",
-      "summary": "Gold kept climbing in Asian trade on Thursday to about $4,135 an ounce, its highest since 22 October, with the dollar holding near a one-month low.",
-      "beats": {
-        "was": "Gold jumped about 3.5% on Wednesday after Democrats won both houses of the US Congress, which pushed the dollar and US bond yields down. Gold usually gains when the dollar and yields fall.",
-        "happened": "Early on Thursday spot gold reached about $4,135, adding roughly another 2%. Markets still see about an 80% chance the Federal Reserve raises rates in December.",
-        "means": "The rebound is carrying on rather than fading, but it rests on a weaker dollar, and the US jobs report on Friday will test that.",
-        "fx": "Gold has upward pressure while the dollar stays soft; a strong jobs report that firms up a December Fed rise would work against it."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Follow-through buying after Wednesday's jump, helped by a dollar near a one-month low."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Gold's climb mirrors the dollar staying weak after the midterms."
-        }
-      ],
-      "watch": "Friday's US jobs report (forecast around 65,000) and any change in odds of a December Fed rise."
-    },
-    {
-      "id": "investinglive-au-trade-sep-28bn-20261105",
-      "ts": "2026-11-05T00:48:59Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/australia-s-trade-surplus-jumps-to-a-2-8-billion-a-seven-month-high-on-lng-and-metals/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/AUD%20chart%20update%2005%20November%202026-featured-1793839697.jpg?width=960&format=webp",
-      "headline": "Australia's trade surplus jumps to A$2.8 billion, a seven-month high",
-      "story": "rba-hike",
-      "story_title": "Reserve Bank of Australia: a fifth rate rise this year?",
-      "pillar": "growth",
-      "summary": "Australia sold far more abroad than it bought in September, as gas and metals exports rose and gold imports dropped sharply.",
-      "beats": {
-        "was": "Australia's goods trade surplus had shrunk to under A$0.2 billion in August, and forecasts for September were about A$1 billion. The Reserve Bank of Australia raised its rate to 4.85% on Tuesday.",
-        "happened": "The September surplus widened to about A$2.8 billion, the biggest in seven months. Exports rose 2.3%, led by liquefied natural gas and metals, while imports fell 3.3%, mostly because gold imports dropped by about a third.",
-        "means": "Stronger exports help Australia's growth, but gold shipments swing a lot from month to month, so the jump overstates the real improvement. On its own it is unlikely to change the rate outlook.",
-        "fx": "More foreign income gives the Australian dollar mild support, but slowing China and a central bank that has signalled a pause matter more."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A big trade beat, but flattered by volatile gold flows."
-        }
-      ],
-      "watch": "Whether gas and metals exports stay strong once gold flows settle."
-    },
-    {
-      "id": "investinglive-boj-sept-minutes-hawkish-20261104",
-      "ts": "2026-11-04T23:58:27Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/boj-minutes-board-backed-further-hikes-flagged-50-oil-surge-as-government-urged-caution/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/usdyen%20chart%20Bank%20of%20Japan%20September%202026%20minutes%20response-featured-1793836691.jpg?width=960&format=webp",
-      "headline": "Bank of Japan minutes show the board backed more rate rises, one member floated a faster pace",
-      "story": "yen-intervention-watch",
-      "story_title": "Japan: guarding the yen near 160 per dollar",
-      "pillar": "policy",
-      "summary": "The record of the Bank of Japan's September meeting shows members agreed to keep raising rates, and one said the pace may need to quicken if prices run too hot.",
-      "beats": {
-        "was": "In September the Bank of Japan raised its rate to 1.25%, the highest since 1995, by a 7-2 vote; two members wanted to wait. It held in October, and markets have been weighing another rise in December.",
-        "happened": "Minutes released Thursday morning in Tokyo show members agreed to keep lifting rates as underlying inflation nears the 2% goal. One member said rises may need to speed up if prices overshoot; others noted oil up about 50% since July. The government's Cabinet Office asked the bank to weigh the build-up of past rises carefully.",
-        "means": "The board sounds set on more rises, and the talk of a faster pace is new. It supports the view that December is a live meeting, though the government's call for care is a brake.",
-        "fx": "A keener Bank of Japan helps the yen, which sits near 158 per dollar, close to the 160 area where Tokyo has stepped in before."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Minutes lean toward more rate rises, but they look back to September and add little to December pricing."
-        }
-      ],
-      "watch": "Whether Bank of Japan officials repeat the faster-pace idea in speeches before the December meeting."
-    },
-    {
-      "id": "thenational-brent-slides-94-midterms-20261104",
-      "ts": "2026-11-04T17:01:00Z",
-      "source": "The National",
-      "url": "https://www.thenationalnews.com/business/energy/2026/11/04/brent-oil-slides-to-94-on-iran-uncertainty-after-us-midterms/",
-      "image": "https://www.thenationalnews.com/resizer/v2/4RB6LD2TD5HWDLTE35EQCZB2AA.jpg?auth=09d77c082ac115c34bc184253c082ba45e8574edcd70681ac468cb9050867c11&smart=true&width=1200&height=630",
-      "headline": "Oil plunges about 8%, Brent near $95, as markets bet the Iran war winds down",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "commodities",
-      "summary": "Brent crude fell about 8.5% to near $95 a barrel and US crude dropped below $89, the lowest in almost two months, as traders bet that Democratic control of Congress pushes Washington toward ending the war with Iran.",
-      "beats": {
-        "was": "The US-Israel war with Iran has kept oil above $100 for weeks by choking tanker traffic through the Strait of Hormuz, the main exit for Gulf oil. Democrats won both houses of the US Congress in Tuesday's midterm elections, and many voters blamed the war for high fuel prices.",
-        "happened": "Brent fell 8.5% to $94.83 and US crude (WTI) fell 7.5% to $88.88 in Wednesday's US session, more than 15% lower over the week. Peace talks through Qatar and Pakistan have resumed, though Iran's leadership said anyone expecting a US policy shift after the vote is mistaken.",
-        "means": "A large part of the war premium is coming out of the price on the view that the new Congress will limit funding for the war. Gulf exports had already been recovering, so supply looks less tight. Any new strike or attack on shipping could reverse much of the drop quickly.",
-        "fx": "Cheaper oil hurts the Canadian dollar, since oil is Canada's main export, and helps big oil buyers like Japan and the euro zone. It also eases the inflation worry behind the Federal Reserve's expected December rate rise."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 3,
-          "why": "The biggest one-day fall in months as bets grow that the war ends."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Much lower prices for Canada's main export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so a smaller import bill helps the yen."
-        }
-      ],
-      "watch": "Any new US strike or attack on Gulf shipping, and whether the US-Iran talks set a next meeting."
     }
   ]
 }
