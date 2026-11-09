@@ -1,22 +1,22 @@
 {
-  "updated": "2026-11-06T15:35:00-06:00",
+  "updated": "2026-11-09T01:40:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~77% (from ~68% in Asia); ECB Dec ~89% (Nov 4); BoJ Dec ~80%; BoC Dec ~56% (Nov 3, before jobs); BoE 4.00% after Nov 5 hike; RBA 4.85%; RBNZ Dec <50%",
-      "read": "The strong US jobs report made a December Federal Reserve hike the market's main expectation again, which firms up the dollar's rate support. Most other big central banks still lean toward hiking, but Canada's job losses and weak European spending give their banks reasons to go slower. For now the rate story tilts toward the dollar.",
+      "figure": "Fed Dec hike ~79% (from 71% a week ago); ECB Dec ~89% (Nov 4); BoJ Dec ~80%; BoC Dec ~35%; RBNZ Dec <50%; BoE 4.00% and RBA 4.85% after November hikes",
+      "read": "A December Federal Reserve hike stays the market's main expectation after last week's strong US jobs report, which keeps rate support under the dollar. Hikes are also expected in Europe and Japan, while job losses in Canada and New Zealand give those banks reasons to wait. Tuesday's US inflation figures are the next big check.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, New York close run, Nov 6, 3:00 PM CT; indicative quotes)",
+          "label": "Blue Street market levels (Hercules, 12:40 AM CT run, Nov 9; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Reuters via Investing.com (Nov 6): Fed seen sticking to December rate hike after jobs data",
-          "url": "https://ca.investing.com/news/economy-news/fed-seen-sticking-to-december-rate-hike-after-jobs-data-4939832"
+          "label": "Reuters via Finwire (Nov 9): US dollar holds onto payrolls gains, NZ dollar rises after election",
+          "url": "https://finwire.io/news/forex-news/us-dollar-holds-onto-payrolls-gains-nz-dollar-rises-after-election"
         },
         {
-          "label": "Blue Street central bank data (Hercules, Nov 6, 3:00 PM CT): rates, meetings and pricing",
+          "label": "Blue Street central bank data (Hercules, Nov 9): rates, meetings and pricing",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         }
       ]
@@ -24,31 +24,19 @@
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "US payrolls +165K (fcst 65K), unemployment 4.1%, revisions +84K; Canada jobs −4.7K, unemployment 6.7%; euro-area retail −0.7% m/m; German output +0.7%; UMich 51.0; Ivey 58.3",
-      "read": "The US job market is much firmer than it looked, while Canada lost jobs for a second month and euro-area shoppers cut back. That split favours the dollar over the loonie and the euro. A long stock slump could still weigh on spending if it lasts.",
+      "figure": "US payrolls +165K (fcst 65K), unemployment 4.1%; Canada −4.7K, unemployment 6.7%; NZ unemployment 5.7%; China Oct CPI 0.7% y/y (fcst 0.8%); UK Q3 GDP Thu 1:00 AM CT, fcst +0.7% q/q",
+      "read": "The US job market looks much firmer than Canada's or New Zealand's, a split that favours the US dollar. China's figures showed weak shopping at home, a soft spot for the currencies that sell to it, like the Aussie and the kiwi. UK growth figures on Thursday are the next big read.",
       "sources": [
         {
-          "label": "Reuters (Nov 6): US job growth beats expectations in October; unemployment rate falls to 4.1%",
-          "url": "https://www.reuters.com/business/us-job-growth-beats-expectations-october-unemployment-rate-falls-41-2026-11-06/"
+          "label": "Reuters (Nov 9): China's October producer inflation quickens further, consumer prices edge down",
+          "url": "https://www.reuters.com/world/asia-pacific/chinas-october-producer-inflation-quickens-further-consumer-prices-edge-down-2026-11-09/"
         },
         {
-          "label": "Reuters via BNN Bloomberg (Nov 6): Canada's unemployment rate edges up to six-month high in October",
-          "url": "https://www.bnnbloomberg.ca/business/economics/2026/11/06/canadas-unemployment-rate-edges-up-to-six-month-high-in-october/"
+          "label": "Blue Street currency board (Hercules, Nov 9)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
         },
         {
-          "label": "Tradingpedia (Nov 6): euro-area retail sales fall 0.7% in September; ECB's Lane urges caution",
-          "url": "https://www.tradingpedia.com/2026/11/06/eur-jpy-slips-on-weak-eurozone-data-hawkish-boj/"
-        },
-        {
-          "label": "Tradingpedia (Nov 6): German industrial output rises 0.7% in September",
-          "url": "https://www.tradingpedia.com/2026/11/06/eur-gbp-holds-range-despite-strong-german-output-data/"
-        },
-        {
-          "label": "investingLive (Nov 6): University of Michigan November preliminary consumer sentiment",
-          "url": "https://investinglive.com/news/november-us-umich-prelim-consumer-sentiment-vs-48-0-expected/"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Nov 6): actuals and forecasts",
+          "label": "Blue Street calendar (Hercules, Nov 9): forecasts and release times",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -56,19 +44,19 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "US hourly pay +0.4% m/m, +3.1% y/y; UMich 1-yr expectations 4.3% (from 4.7%); euro-area CPI 4.0% Oct; Brent ~$97.8; US October CPI due Tue Nov 10, 7:30 AM CT",
-      "read": "Faster US pay growth adds to inflation worries, though households expect prices to rise a little less than before. Oil slipped back below $100, so the energy push has eased this week. Next Tuesday's US inflation figures are the next big check.",
+      "figure": "China PPI 5.7% y/y (fcst 5.3%, four-year high); US Sep CPI 3.7% y/y, Oct due Tue 7:30 AM CT (fcst +0.3% m/m, core +0.2%); euro-area Oct 4.0%; Brent ~$98",
+      "read": "Factory prices in China are climbing fast on dear oil while shop prices cool, so the energy shock is still working through supply chains. US inflation is well above the Fed's goal, and Tuesday's figures will show whether it is cooling. Hot prices would favour the dollar; soft ones would weigh on it.",
       "sources": [
         {
-          "label": "ActionForex (Nov 6): US payrolls surge 165K, revisions add 84K, unemployment falls to 4.1%",
-          "url": "https://www.actionforex.com/live-comments/660099-us-non-farm-payrolls-surge-165k-revisions-add-84k-as-unemployment-falls-to-4-1/"
+          "label": "Reuters (Nov 9): China's October producer inflation quickens further, consumer prices edge down",
+          "url": "https://www.reuters.com/world/asia-pacific/chinas-october-producer-inflation-quickens-further-consumer-prices-edge-down-2026-11-09/"
         },
         {
-          "label": "investingLive (Nov 6): University of Michigan November preliminary consumer sentiment",
-          "url": "https://investinglive.com/news/november-us-umich-prelim-consumer-sentiment-vs-48-0-expected/"
+          "label": "Blue Street calendar (Hercules, Nov 9): forecasts and release times",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, New York close run, Nov 6, 3:00 PM CT; indicative quotes)",
+          "label": "Blue Street market levels (Hercules, 12:40 AM CT run, Nov 9; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -76,23 +64,19 @@
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "Nikkei −6%+, Kospi ~−7% (Nov 6, Asia); US chip stocks ~+4%, S&P 500 ~+0.6% midday (Reuters); AUD/USD 0.6857 (−1.1%); NZD/USD 0.5530 (−1.2%)",
-      "read": "The AI and chip-stock selloff hit Asia hard, then US chip stocks bounced, so the panic eased without reversing. The Aussie and the kiwi still fell hardest, while the yen and the franc held up against them. Fear and higher US yields together left the dollar the day's clear winner.",
+      "figure": "Nikkei +3.45%, Taiex +5.72%, Kospi +1.68% (04:00 GMT Mon); S&P 500 futures +0.6%; Friday: Nikkei ~−6%, Kospi ~−9%",
+      "read": "Asian stocks bounced hard after last week's AI and chip-stock rout, so fear eased and demand for safe havens faded a little. The Aussie and the kiwi, which were hit hardest, won back some ground. News that Nvidia's board is investigating its chief executive barely dented the mood.",
       "sources": [
         {
-          "label": "AP (Nov 6): Japan's Nikkei falls more than 6% as Asian benchmarks tumble",
-          "url": "https://www.click2houston.com/business/2026/11/06/japans-nikkei-falls-more-than-6-as-asian-benchmarks-tumble-after-wall-street-drop/"
+          "label": "Al Jazeera (Nov 9): Asian stock markets climb after earlier tech rout",
+          "url": "https://www.aljazeera.com/economy/2026/11/9/asian-stock-markets-climb-after-earlier-tech-rout"
         },
         {
-          "label": "Reuters via CP24 (Nov 6): Wall Street stocks in relief rally after heavy AI-related selloff",
-          "url": "https://www.cp24.com/news/money/2026/11/06/wall-street-stocks-in-relief-rally-after-heavy-ai-related-selloff/"
+          "label": "Reuters via Finwire (Nov 9): US dollar holds onto payrolls gains, NZ dollar rises after election",
+          "url": "https://finwire.io/news/forex-news/us-dollar-holds-onto-payrolls-gains-nz-dollar-rises-after-election"
         },
         {
-          "label": "Euronews (Nov 6): global stock rout deepens as AI data-centre fears fuel worst US chip sell-off since 2020",
-          "url": "https://www.euronews.com/2026/11/06/global-stock-rout-deepens-as-ai-data-centre-fears-fuel-worst-us-chip-sell-off-since-2020"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, New York close run, Nov 6, 3:00 PM CT; indicative quotes)",
+          "label": "Blue Street market levels (Hercules, 12:40 AM CT run, Nov 9; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -100,31 +84,31 @@
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$97.76 (−0.5%; briefly >$100), WTI ~$90.24; steepest weekly fall since early 2020 (Reuters); Iran offers to reopen Hormuz for sanctions relief",
-      "read": "Oil briefly topped $100 on new tanker attacks, then slipped back as hopes of more Middle East supply held. Cheaper oil this week eases the bill for importers like Japan and the euro area. It also takes away some support from the Canadian dollar.",
+      "figure": "Brent ~$98.32 (flat), WTI ~$91.31; Brent $116.72 at the Oct 30 close; Khor Mor gas field halted (local power, not exports)",
+      "read": "Oil held near $98 a barrel as softer US war talk and fresh attacks around the Gulf cancelled each other out. Prices well below October's highs ease the bill for importers like Japan and the euro area. They also give less support to the Canadian dollar.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, New York close run, Nov 6, 3:00 PM CT; indicative quotes)",
+          "label": "Blue Street market levels (Hercules, 12:40 AM CT run, Nov 9; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Reuters via RTÉ (Nov 6): Brent slips back after briefly topping $100, on track for worst week since early 2020",
-          "url": "https://www.rte.ie/news/business/2026/1106/1598252-world-oil-prices/"
+          "label": "CNN (Nov 8): Trump interview on Iran",
+          "url": "https://www.cnn.com/2026/11/08/politics/trump-interview-on-iran?cid=external-feeds_iluminar_meta"
         },
         {
-          "label": "The Private Banker (Nov 6): oil swings near $100 as Iran offers Hormuz reopening on sanctions relief",
-          "url": "https://leprivatebanker.com/2026/11/06/oil-swings-near-100-as-iran-studies-qatari-nuclear-proposals-and-offers-hormuz-reopening-within-two-days-on-sanctions-relief/"
+          "label": "Reuters (Nov 8): production suspended at Iraq's Khor Mor gas field after drone attack",
+          "url": "https://www.reuters.com/business/energy/production-suspended-iraqs-khor-mor-gas-field-after-drone-attack-sources-say-2026-11-08/"
         }
       ]
     },
     {
       "id": "positioning",
       "title": "Positioning",
-      "figure": "CFTC Oct 27: funds strongly against CAD, against EUR (real money for), against NZD and CHF, for AUD (real money strongly against), strongly for gold; next report released Fri Nov 6, 2:30 PM CT, not yet loaded",
-      "read": "Hedge funds hold their biggest bets against the Canadian dollar, so Friday's slide in the loonie went their way. They still lean toward the Aussie while real-money investors bet heavily against it, and the Aussie's fall this week hurts the funds' side. Fresh figures came out this afternoon and will show here once processed.",
+      "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD (19th percentile), CAD (21st), EUR (35th); 4-week change NZD −22K, EUR −34K contracts; real money very bearish GBP and AUD",
+      "read": "Hedge funds lean toward the dollar and the yen and against the kiwi, the Canadian dollar and the euro, and over the past month they sharply added to their bets against the kiwi and the euro. In the Aussie and the pound, hedge funds and real-money investors sit on opposite sides, with real money betting heavily against both.",
       "sources": [
         {
-          "label": "Blue Street positioning (CFTC Commitments of Traders, report of Oct 27)",
+          "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 3, released Nov 6)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/cot.json"
         }
       ]
@@ -132,15 +116,15 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "Canada 2025–26 deficit C$39.3B; C$50–60B a year ahead; Democrats control House and Senate; France on negative outlook at Fitch and Moody's",
-      "read": "No new budget news moved currencies on Friday. A Democratic Congress makes President Trump's spending plans harder to pass, a mild drag on the dollar that the jobs report overshadowed. France's debt worries still weigh on the euro.",
+      "figure": "NZ governing bloc 67 of 131 seats, official result Nov 27; Democrats control House and Senate; Canada deficits C$50–60B a year ahead; France on negative outlook at Moody's",
+      "read": "No new budget news moved currencies overnight. New Zealand's election count points to the same coalition staying, which lowers the risk of a big budget change. A Democratic Congress still makes President Trump's spending plans harder to pass, a mild drag on the dollar.",
       "sources": [
         {
-          "label": "Blue Street central bank data (Hercules, Nov 6, 3:00 PM CT): rates, meetings and pricing",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+          "label": "Reuters via Finwire (Nov 9): US dollar holds onto payrolls gains, NZ dollar rises after election",
+          "url": "https://finwire.io/news/forex-news/us-dollar-holds-onto-payrolls-gains-nz-dollar-rises-after-election"
         },
         {
-          "label": "Blue Street currency board (Hercules, Nov 6)",
+          "label": "Blue Street currency board (Hercules, Nov 9)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
         }
       ]
