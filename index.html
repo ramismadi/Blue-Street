@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=117">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=117">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=118">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=118">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=117">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=118">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=117">
+<link rel="stylesheet" href="assets/style.css?v=118">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=117" defer></script>
-<script src="assets/app.js?v=117" defer></script>
+<script src="assets/cot.js?v=118" defer></script>
+<script src="assets/app.js?v=118" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
@@ -105,92 +105,35 @@
 
 <main class="wrap">
 
-  <!-- ============ TODAY: a scroll story — headline → chapters → go deeper ============ -->
+  <!-- ============ TODAY: a one-screen dashboard (Rami, 2026-11-09) ============
+       Compact Today's read on top, then two side-scrolling rows: the top
+       headlines, then a strength gauge per currency. No scrolling down. -->
   <section class="view today" id="view-today" role="tabpanel" aria-labelledby="tab-today">
-    <div class="read-bar" aria-hidden="true"><span id="read-bar"></span></div>
-    <nav class="story-dots" id="story-dots" aria-label="Jump to chapter"></nav>
-
     <!-- Focus Mode: big-event takeover (preview → live → recap), from data/focus.json -->
     <section class="focus" id="focus" aria-live="polite" hidden></section>
 
-    <section class="scene hero-scene" data-scene>
-      <div class="pin">
-        <div class="pin-inner hero-inner">
-          <p class="kicker">Today&rsquo;s read <span id="hero-date"></span></p>
-          <h1 id="today-headline" class="display hero-hl">Loading the edition…</h1>
-          <ol class="hero-chapters" id="hero-chapters" aria-label="In this edition"></ol>
-          <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
-        </div>
-      </div>
+    <section class="t-read" aria-labelledby="t-read-k">
+      <p class="kicker" id="t-read-k">Today&rsquo;s read <span id="hero-date"></span></p>
+      <p id="today-headline" class="t-read-hl">Loading the edition…</p>
+      <a class="more t-read-more" href="#story/1">Full read →</a>
     </section>
 
-    <!-- At a glance: the things Rami acts on, right under the headline.
-         Readers can reorder the tiles; the order is saved per browser. -->
-    <section class="glance" id="today-glance" aria-label="At a glance">
-      <div class="glance-bar">
-        <p class="kicker">At a glance</p>
-        <div class="glance-actions">
-          <button type="button" class="glance-reset" id="glance-reset" hidden>Reset</button>
-          <button type="button" class="glance-edit" id="glance-edit" aria-pressed="false">Rearrange</button>
-        </div>
+    <section class="t-row" aria-labelledby="t-news-h">
+      <div class="t-row-head">
+        <h2 class="section-label" id="t-news-h">Top headlines</h2>
+        <span class="t-row-nav" data-strip="today-news"></span>
+        <a class="more" href="#news">All news →</a>
       </div>
-      <p class="sr-only" id="glance-status" aria-live="polite"></p>
-      <div class="glance-tile" data-tile="next">
-        <div class="card glance-next">
-          <div class="card-head">
-            <h2 class="section-label">Next up</h2>
-            <a class="more" href="#calendar">Calendar →</a>
-          </div>
-          <ul class="nextup" id="today-next"></ul>
-        </div>
-      </div>
-      <div class="glance-tile" data-tile="lean">
-        <div class="card glance-lean">
-          <div class="card-head">
-            <h2 class="section-label">Strength board</h2>
-            <a class="more" href="#fx">Board →</a>
-          </div>
-          <ol class="gl-lean" id="glance-lean" aria-label="Pillars for and against, strongest to weakest"></ol>
-        </div>
-      </div>
+      <ol class="t-strip t-news" id="today-news" aria-label="Top headlines"></ol>
     </section>
 
-    <div id="today-story"></div>
-
-    <section class="deeper">
-      <div class="deeper-head" data-reveal>
-        <p class="kicker">Go deeper</p>
-        <h2 class="display">The rest of the desk</h2>
+    <section class="t-row" aria-labelledby="t-gauge-h">
+      <div class="t-row-head">
+        <h2 class="section-label" id="t-gauge-h">Currency strength</h2>
+        <span class="t-row-nav" data-strip="today-gauges"></span>
+        <a class="more" href="#fx">Strength board →</a>
       </div>
-
-      <div class="card pulse-card" data-reveal>
-        <div class="card-head">
-          <h2 class="section-label">Macro pulse</h2>
-          <a class="more" href="#engine">Full engine →</a>
-        </div>
-        <ul class="pulse" id="today-pulse"></ul>
-      </div>
-
-      <div class="card lean-card" data-reveal>
-        <div class="card-head">
-          <h2 class="section-label">Where the evidence leans</h2>
-          <a class="more" href="#fx">Currencies →</a>
-        </div>
-        <p class="meta lean-sub">How the pillars weigh on each currency this edition. Evidence, not a call.</p>
-        <ol class="lean" id="today-lean"></ol>
-        <p class="meta lean-key">Dots, left to right: Policy · Growth · Inflation · Risk · Terms of trade · Positioning · Fiscal. Green supports, red weighs, grey neutral. “Data” is recent releases beating vs missing expectations.</p>
-      </div>
-
-      <div class="tiles" id="today-tiles">
-        <a class="tile card" href="#story" data-reveal><b>Story</b><span>Every chapter, with scenarios and sources</span></a>
-        <a class="tile card" href="#fx" data-reveal><b>Currencies</b><span>Strength board and pair picker</span></a>
-        <a class="tile card" href="#engine" data-reveal><b>Macro engine</b><span>The pillars behind every move</span></a>
-        <a class="tile card" href="#positioning" data-reveal><b>Positioning</b><span>Who&rsquo;s stretched, from the CFTC</span></a>
-        <a class="tile card" href="#banks" data-reveal><b>Central banks</b><span>Rates, next decisions, pricing</span></a>
-        <a class="tile card" href="#calendar" data-reveal><b>Calendar</b><span>Every catalyst in your time zone</span></a>
-        <a class="tile card" href="#news" data-reveal><b>News</b><span>What&rsquo;s developing, and every headline read for FX</span></a>
-        <a class="tile card" href="#learn" data-reveal><b>Learn</b><span>Every term and event, explained</span></a>
-      </div>
+      <ol class="t-strip t-gauges" id="today-gauges" aria-label="Strength score per currency, strongest to weakest"></ol>
     </section>
   </section>
 
@@ -225,6 +168,12 @@
         <ol class="board" id="fx-board"></ol>
       </section>
     </div>
+    <!-- Today by currency (moved from Today, Rami 2026-11-09): each chapter's
+         read, its lean and its top headlines, as cards. -->
+    <section class="fx-reads" aria-labelledby="fx-reads-h">
+      <h2 class="section-label" id="fx-reads-h">Today by currency</h2>
+      <div id="fx-cards"></div>
+    </section>
   </section>
 
   <!-- ============ MACRO ENGINE ============ -->

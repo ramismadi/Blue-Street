@@ -22,7 +22,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 
 | Tab | Route | Fed by |
 |---|---|---|
-| Today | `/` (also `#today`) | story, engine, calendar, news |
+| Today | `/` (also `#today`) | story (headline), news, currencies |
 | Story (opens from Today) | `#story`, `#story/2` = chapter 2 | `data/story.json` |
 | Currencies | `#fx`, `#fx/AUD` = currency page | `data/currencies.json` (+ banks, calendar, story joins) |
 | Drivers: Macro engine | `#engine` | `data/engine.json` + `data/pillars.json` |
@@ -32,28 +32,31 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | News | `#news`, `#news/JPY` = filtered to a market (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
 | Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
-- **Today's chapters are cards** (Rami, 2026-10-19; replaces the pinned full-screen chapter scenes): a grid (3 across on desktop, 2 on tablet, 1 on phones) in chapter order. Each card: flag + chapter title, a lean mark (strength-board score for the 8 currencies, the News read for gold/oil — evidence, not a call), today's read (`teaser`, 1–3 sentences), "In the news" (top 3 headlines touching that market from `news.json`, by impact — each opens its card expanded on News), and "More on … →" into the full Story chapter. Quiet chapters still fold into the "Quiet today" line.
-- **Today (as built, 2026-10-19):** full-screen headline (the one pinned scene,
-  `hero-scene`) → **At a glance** (two tiles: *Next up*, the next two high/medium
-  events with times + zone, and *Evidence leans*, the ranked chips) → the
-  chapter cards above → "Go deeper" (macro pulse, where the evidence leans,
-  tiles). Chapters with `"quiet": true` fold into one "Quiet today" line; the
-  Story view still shows them in full. The full narrative lives only in Story.
-  The scroll code ("today: scroll engine" in app.js) drives the hero and the
-  fade-up of Go deeper; `route()` re-runs it after every tab change, so Today
-  never comes back blank. `prefers-reduced-motion` gets a plain, fully visible
-  page.
-- **At a glance is reorderable** (Rami, 2026-10-12): "Rearrange" turns on edit
-  mode — ↑/↓ on each tile (works on touch), drag on desktop, Reset, Done/Esc.
-  Saved per browser in localStorage `bluestreet-glance` (array of tile ids:
-  `next`, `lean`); unknown ids are dropped, missing ones appended, so
-  a new tile only needs a `.glance-tile[data-tile]` wrapper + entries in
-  `GLANCE_IDS`/`GLANCE_NAMES`. The first visible tile spans the full width.
-  Per-device for now; accounts (same layout on every device) would need a
-  backend — a later decision.
+- **Today is a one-screen dashboard** (Rami, 2026-11-09; replaces the
+  full-screen headline, At a glance, the chapter cards and Go deeper). Top to
+  bottom, all visible without scrolling down, phones included:
+  1. **Today's read**, compact: kicker + date, the headline (1–2 sentences;
+     clamped to 3 lines on phones), "Full read →" into Story.
+  2. **Top headlines**, a side-scrolling row: up to 10 `news.json` items, by
+     impact then newest (items from the last 36h when there are 4+, else the
+     whole feed). Each tile: bias tags for up to 3 markets it moves, the
+     headline, source · time. Tap = that story opened on News.
+  3. **Currency strength**, a side-scrolling row: one speedometer per
+     currency, strongest to weakest. Same score as the strength board (sum of
+     the seven pillar scores) on a fixed −7…+7 dial, so a needle means the
+     same thing every edition; the arc fills green/red from the middle out.
+     Tap = that currency's page.
+  Rows swipe on touch and snap to tiles; on mouse screens ‹ › buttons sit
+  beside the row title (hidden when the row fits). Code: `renderTodayNews`,
+  `renderGauges` / `gaugeSvg`, `initStrips` in app.js; `.t-*` in style.css.
+- **Today by currency moved to Currencies** (Rami, 2026-11-09): the chapter
+  cards (flag + title, lean mark, `teaser`, top 3 headlines, "More on … →")
+  now sit under the picker and strength board, `#fx-cards`
+  (`renderCcyCards`). 3 across on desktop, 2 on tablet, 1 on phones. Quiet
+  chapters still fold into the "Quiet today" line.
 - **Prose first, site-wide:** narrative leads; figures sit in a "Details"
   drawer (tap to open) — story `numbers`, engine `figure` + sources, bank
-  rate definition / last move / sources, the currency score table. Scene mechanics are commented in app.js ("today: scroll engine");
+  rate definition / last move / sources, the currency score table.
   `prefers-reduced-motion` gets a plain, fully visible page.
 - The masthead wordmark is lettered like the sign — big "BLUE" with a small raised "ST" (Inter 800), beside the symbol; it shows on phones too. The wordmark and the Today tab go to the clean site URL (no hash).
 - **Brand (Rami, 2026-10-19):** one colour, **#0A84FF** (the MT5 profit blue; CSS `--brand`, the same in every theme), with ivory **#f6f2ea**. A two-piece family sharing one geometry (512 viewBox: post `x92 y88 w30 h336 rx15`, arrow `M108 150 H384 L438 210 L384 270 H108 Z`, 14px round-join stroke):
@@ -116,7 +119,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   component rules.
 - Fonts: serif (Source Serif 4 → Georgia) for headlines and ledes; system sans
   for UI/body; monospace only for tabular numerals.
-- Flags: `assets/flags/<us|eu|gb|jp|ch|ca|au|nz|xau|oil>.svg` (hand-drawn 4:3 SVGs; gold and oil are icons), placed with `flagEl(code)` in app.js. On the News chips, bias tags, news read, Developing thread tags and the Today glance tile. Emoji flags aren't used — Windows shows them as letters.
+- Flags: `assets/flags/<us|eu|gb|jp|ch|ca|au|nz|xau|oil>.svg` (hand-drawn 4:3 SVGs; gold and oil are icons), placed with `flagEl(code)` in app.js. On the News chips, bias tags, news read, Developing thread tags, the Today rows and the currency cards. Emoji flags aren't used — Windows shows them as letters.
 - Session chips (masthead): SYD 07–16, TYO 09–18, LDN 08–17, NYC 08–17, each
   in its own city's local time (DST-correct), Mon–Fri, and only while the FX
   week is open (Sun 17:00 → Fri 17:00 New York). Holidays not modelled.
@@ -140,8 +143,7 @@ work). Engine rows and story chapters may instead use `"source"` (string) +
    "scenarios":{"base","bull","bear"},"sources":[]}]}
 ```
 - `headline` — **Today's read: 1–2 sentences, ~35 words max** (Rami, 2026-10-19). The page shows at most the first two sentences (one if two run past ~45 words), so anything longer is cut, not shown.
-- Chips under Today's read: flag + code (USD, EUR…; Gold and Oil by name), matching the News market chips. Tap = that currency's card on Today, or its Story chapter when quiet (Rami, 2026-10-19).
-- `teaser` — **the Today card: 1–3 sentences, ~50 words max**, the delta only (Rami, 2026-10-19). The card shows at most three sentences / ~60 words; "Read the chapter →" opens the full chapter for anyone who wants more.
+- `teaser` — **the currency card (Currencies → Today by currency): 1–3 sentences, ~50 words max**, the delta only (Rami, 2026-10-19). The card shows at most three sentences / ~60 words; "Read the chapter →" opens the full chapter for anyone who wants more.
 - `meaning` (+ `fx`) — the narrative. Section labels `The story so far:`,
   `What changed:`, `What it means:` (in `meaning`) and `What's next:` (in
   `fx`) become headed sections in the Story tab, in that order (Rami,
@@ -152,7 +154,7 @@ work). Engine rows and story chapters may instead use `"source"` (string) +
   away").
 - `numbers` — 3–4 crisp figures for the Details drawer, never paragraphs.
 - `quiet` (optional boolean, Hercules) — true only when the chapter has no
-  real delta since the previous edition. Today folds quiet chapters into one
+  real delta since the previous edition. Today by currency folds quiet chapters into one
   line; never set it to skip writing a chapter.
 
 ### `data/engine.json`
@@ -250,14 +252,7 @@ has no "What is this?" button.
 
 How it renders: currency page → "Data surprises" under Trend (coloured squares
 oldest→newest, "Beat 3 · missed 1 · in line 0 of the last 4", the `note`, the
-three newest releases). Today → "data 3–1" on that currency's evidence row.
-
-### Today: "Where the evidence leans" (render only, from currencies.json)
-A card in Go deeper: every currency, board order, one dot per pillar (seven,
-eight once the Rate gap pillar is live) in engine order (green supports, red weighs, grey neutral; tooltips
-carry each driver note), "N for · N against", plus the momentum chip. Copy
-says "Evidence, not a call" — this is a tally of evidence, never a verdict.
-The currency page header also shows "Pillars: N for · N against · N neutral".
+three newest releases).
 
 ### `data/glossary.json` — inline definitions
 ```
@@ -388,7 +383,7 @@ headline, bias tags (▲ bullish / ▼ bearish / ◆ mixed; faint arrow = mild,
 outlined = strong), pillar tag, summary. Tapping the headline or "Key
 takeaways" opens the card across the row: the four beats, "By currency" with
 each `why`, "What would change it", the publisher button, and "Earlier on this
-story". Today's tiles link the tab.
+story". Today's "Top headlines" row opens a story here, expanded.
 
 ### `data/latest.json` — Developing now (was the Flash tab)
 **Rami, 2026-10-18 (late): the Developing strip is removed from the site** —
@@ -522,7 +517,7 @@ How it renders: times shown in the reader's chosen zone (local by default),
 grouped by day, filterable by range / impact / currency, live countdowns, a
 "Now" marker, actual vs forecast coloured beat/miss using `better`, and an
 expandable briefing (why / beat / miss / bank today / story link / add to
-calendar). Today's "Next up" shows the next three high/medium events.
+calendar).
 
 **Keeping it fresh (Hercules):** the seed covers only the events the site
 already listed plus central-bank decisions at each bank's standard
@@ -549,7 +544,7 @@ trend line (`bias` is Claude's label from words.json, applied regardless of date
 `summary` and each driver `note` in `currencies.json` (board, currency page, pair picker lines),
 same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a non-zero score:
 one plain sentence each, readable cold, no strings of numbers. The pair picker lists every pair,
-best edge first, with no group headings (edge tiles get a blue edge, no-edge tiles go flat, against-your-view tiles fade), as tiles styled like Today's currency tiles (card,
+best edge first, with no group headings (edge tiles get a blue edge, no-edge tiles go flat, against-your-view tiles fade), as tiles styled like the currency cards (card,
 rounded): score, both flags, the pair in serif, and a green (rises if the reader's view is
 right) or red (falls) trend pill, then +. Opening a tile shows a score breakdown (each pillar for both currencies and what it adds for the reader's view, summing to the tile score), then the why, interest and events
 under a divider. Bullish/Bearish are solid green #279a41 / red #e3262c with text in the site

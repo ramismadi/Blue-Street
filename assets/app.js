@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '117';
+  var ASSET_VERSION = '118';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -63,7 +63,7 @@
     initSideNav();
     initTabs();
     startClock();
-    initScrollStory();
+    initReveal();
 
     // Plain-words text lives in data/words.json (Claude's file); Herc's files
     // keep the numbers. words.json loads first and is merged in on render.
@@ -75,13 +75,13 @@
       story = d;
       renderEdition(d);
       hideSplash();
-      renderScenes(d);
+      renderCcyCards(d);
       renderRail(d);
       renderFocus();
       route();
       renderFx();
     }).catch(function () {
-      note('#today-story', 'Story unavailable.');
+      note('#fx-cards', 'Story unavailable.');
       note('#chapter-view', 'Story unavailable.');
       setText('#today-headline', 'Edition unavailable');
     });
@@ -92,10 +92,8 @@
     }).catch(function () { /* explainers are optional */ });
     withWords('data/engine.json', 'engine').then(function (d) {
       renderEngine(d);
-      renderPulse(d);
     }).catch(function () {
       note('#engine-rows', 'Macro engine data unavailable.');
-      note('#today-pulse', 'Macro engine data unavailable.');
     });
     withWords('data/banks.json', 'banks').then(function (d) {
       renderBanks(d);
@@ -107,17 +105,17 @@
     });
     initCalendar();
     initFx();
-    initGlance();
+    initStrips();
     initFocus();
     initCot();
     withWords('data/currencies.json', 'currencies').then(function (d) {
       fx.data = d;
       syncPillars();
       renderFx();
-      if (story) renderScenes(story);
+      if (story) renderCcyCards(story);
     }).catch(function () {
       note('#fx-board', 'Currency data unavailable.');
-      note('#today-lean', 'Currency data unavailable.');
+      note('#today-gauges', 'Currency data unavailable.');
     });
     // Surprise momentum is optional: until the feed exists the site shows
     // when tracking starts.
@@ -140,7 +138,6 @@
       renderLearn();   // live release numbers on an open explainer
     }).catch(function () {
       note('#cal-list', 'Calendar data unavailable.');
-      note('#today-next', 'Calendar data unavailable.');
     });
     fetchJSON('data/latest.json').then(renderWire).catch(function () {
       note('#latest-items', 'Nothing developing right now.');
@@ -149,10 +146,12 @@
     fetchJSON('data/news.json').then(function (d) {
       news.data = d;
       renderNews();
-      if (story) renderScenes(story);
+      renderTodayNews();
+      if (story) renderCcyCards(story);
       renderFx();   // "In the news" on currency pages
     }).catch(function () {
       note('#news-grid', 'News feed unavailable.');
+      note('#today-news', 'News feed unavailable.');
     });
   }
 
@@ -591,8 +590,7 @@
     var active = $('#tab-' + (parent || tab));
     if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     window.scrollTo(0, 0);
-    // Redraw the scroll-driven scenes now: returning to Today at scroll 0 fires no scroll event,
-    // so it would otherwise keep its stale faded-out state until the next scroll.
+    // Returning to a view at scroll 0 fires no scroll event: reveal now.
     measureScenes();
     queueScroll();
   }
@@ -1045,39 +1043,8 @@
     }
     // Rami, 2026-10-19: Today's read is 1–2 sentences, max. The editions are
     // told so; this keeps the page honest if a long one slips through.
-    // Headline as word spans so it can rise in word by word.
-    var h = $('#today-headline');
-    h.textContent = '';
-    (shortHeadline(d.headline) || 'Today’s edition').split(/\s+/).forEach(function (w, i) {
-      if (i) h.appendChild(document.createTextNode(' '));
-      var s = el('span', 'hw', w);
-      s.style.setProperty('--i', i);
-      h.appendChild(s);
-    });
-    var hc = $('#hero-chapters');
-    hc.textContent = '';
-    (d.chapters || []).forEach(function (ch, i) {
-      var li = el('li');
-      li.style.setProperty('--i', i);
-      // Each chip jumps straight to its chapter card (or, if quiet, the Story
-      // chapter). Rami, 2026-10-19: flag + code, like the News market chips.
-      var code = chapterCcy(ch, i);
-      var b = el('button', ch.quiet ? 'quiet' : null);
-      if (code && FLAG_FILE[code]) {
-        b.appendChild(flagEl(code));
-        b.appendChild(el('span', null, code === 'XAU' || code === 'OIL' ? mktName(code) : code));
-        b.setAttribute('aria-label', ch.title);
-      } else b.textContent = ch.title;
-      b.type = 'button';
-      if (ch.quiet) b.title = 'Quiet today — opens the full chapter';
-      b.addEventListener('click', function () {
-        var sc = $('#scene-' + (i + 1));
-        if (sc) jumpTo(sc);
-        else location.hash = '#story/' + (i + 1);
-      });
-      li.appendChild(b);
-      hc.appendChild(li);
-    });
+    // Rami, 2026-11-09: a compact banner now, not the full-screen hero.
+    setText('#today-headline', shortHeadline(d.headline) || 'Today’s edition');
   }
 
   /* Numbers inside a data point get emphasis (split + textContent, no HTML). */
@@ -1090,18 +1057,14 @@
     return node;
   }
 
-  /* One pinned scene per chapter: number + title, then the teaser (the delta
-     — what changed and why it matters), then the way into the full chapter.
-     Each child with data-at reveals once the scene's scroll progress (0–1)
-     passes that value. The full narrative lives in the Story tab, so the tap
-     always earns itself. */
-  /* Today's chapters as cards (Rami, 2026-10-19): currency, today's read
-     (1–3 sentences), the top related headlines, and "More on …" into the
-     full Story chapter. Re-rendered when news.json / currencies.json land. */
-  function renderScenes(d) {
-    var box = $('#today-story'), dots = $('#story-dots');
+  /* Today by currency (Rami, 2026-10-19 as Today's chapter cards; moved to
+     the Currencies page 2026-11-09): currency, today's read (1–3
+     sentences), the top related headlines, and "More on …" into the full
+     Story chapter. Re-rendered when news.json / currencies.json land. */
+  function renderCcyCards(d) {
+    var box = $('#fx-cards');
+    if (!box) return;
     box.textContent = '';
-    dots.textContent = '';
     var chs = d.chapters || [];
     var quiet = [];
     var grid = el('div', 'ch-cards');
@@ -1111,7 +1074,6 @@
       if (ch.quiet) { quiet.push(i); return; }
       var code = chapterCcy(ch, i);
       var card = el('article', 'card ch-card gl-scope');
-      card.id = 'scene-' + (i + 1);
 
       var head = el('header', 'chc-head');
       if (code) head.appendChild(flagEl(code));
@@ -1177,8 +1139,6 @@
       q.appendChild(el('span', 'quiet-note', 'No real change since the last edition — full chapters in Story.'));
       box.appendChild(q);
     }
-    measureScenes();
-    queueScroll();
   }
 
   /* Lean for a chapter card: the strength-board score for a currency (sum of
@@ -1204,11 +1164,8 @@
     return all.slice(0, n);
   }
 
-  /* Background mark behind each chapter scene: the chapter's currency symbol
-     (currencies.json `chapter` join, else the chapter title), or the chapter
-     number when a chapter isn't about one currency. */
-  var CCY_SYMBOL = { USD: '$', EUR: '€', GBP: '£', JPY: '¥', CHF: 'Fr', AUD: 'A$', CAD: 'C$', NZD: 'NZ$',
-    XAU: 'Au', OIL: 'Oil' };
+  /* Which market a chapter is about: currencies.json `chapter` join, else
+     the chapter title. */
   var CCY_TITLE = [[/new zealand|kiwi/i, 'NZD'], [/austral|aussie/i, 'AUD'], [/canad|loonie/i, 'CAD'],
     [/\b(us|u\.s\.)\s+dollar|greenback/i, 'USD'], [/\beuro\b/i, 'EUR'], [/pound|sterling|\bgbp\b/i, 'GBP'],
     [/\byen\b/i, 'JPY'], [/franc|swiss/i, 'CHF'], [/\bgold\b/i, 'XAU'], [/\boil\b|crude|brent|\bwti\b/i, 'OIL']];
@@ -1218,197 +1175,14 @@
     for (var j = 0; j < CCY_TITLE.length; j++) if (CCY_TITLE[j][0].test(ch.title || '')) return CCY_TITLE[j][1];
     return null;
   }
-  function ghostMark(ch, i) {
-    var sym = CCY_SYMBOL[chapterCcy(ch, i)];
-    var g = el('span', 'ghost-num mono' + (sym && sym.length > 1 ? ' len-' + Math.min(sym.length, 3) : ''),
-      sym || String(i + 1).padStart(2, '0'));
-    g.setAttribute('aria-hidden', 'true');
-    return g;
-  }
-  /* currencies.json can land after the story: re-mark the scenes. */
-  function refreshGhosts() {
-    if (!story) return;
-    Array.prototype.forEach.call(document.querySelectorAll('.ch-scene'), function (sc) {
-      var i = +sc.getAttribute('data-ch');
-      var old = sc.querySelector('.ghost-num'), ch = (story.chapters || [])[i];
-      if (old && ch) old.parentNode.replaceChild(ghostMark(ch, i), old);
-    });
-  }
-
-  /* ---------------- today: at a glance (reorderable) ----------------
-     The strip's tiles can be put in any order. Arrow buttons work everywhere
-     (touch included); on desktop a tile can also be dragged. The order is
-     saved per browser (localStorage `bluestreet-glance`), unknown ids are
-     dropped and new tiles are appended, so adding a tile later is safe. The
-     first visible tile spans the full width. */
-  var GLANCE_IDS = ['next', 'lean'];   // 'flash' (Developing) removed 2026-10-18
-  var GLANCE_NAMES = { flash: 'Developing', next: 'Next up', lean: 'Strength board' };
-  var glance = { editing: false, drag: null };
-
-  function glanceOrder() {
-    var saved = null;
-    try { saved = JSON.parse(localStorage.getItem('bluestreet-glance') || 'null'); } catch (e) { /* private mode */ }
-    var out = (Array.isArray(saved) ? saved : []).filter(function (id, i, a) {
-      return GLANCE_IDS.indexOf(id) >= 0 && a.indexOf(id) === i;
-    });
-    GLANCE_IDS.forEach(function (id) { if (out.indexOf(id) < 0) out.push(id); });
-    return out;
-  }
-  function saveGlance(order) {
-    try {
-      if (order) localStorage.setItem('bluestreet-glance', JSON.stringify(order));
-      else localStorage.removeItem('bluestreet-glance');
-    } catch (e) { /* private mode: order lasts for this visit only */ }
-  }
-  function glanceTile(id) { return document.querySelector('.glance-tile[data-tile="' + id + '"]'); }
-  function tileVisible(t) {
-    var c = t.querySelector('.card');
-    return !c || !c.hidden;
-  }
-
-  /* Put the tiles in order. animate = slide them from where they were (FLIP). */
-  function applyGlance(animate, order) {
-    var box = $('#today-glance');
-    if (!box) return;
-    order = order || glanceOrder();
-    var tiles = order.map(glanceTile).filter(Boolean);
-    var before = animate && !sx.reduced ? tiles.map(function (t) { return t.getBoundingClientRect(); }) : null;
-    var lead = null, shownCount = 0;
-    tiles.forEach(function (t, i) {
-      box.appendChild(t);
-      var show = glance.editing || tileVisible(t);
-      t.hidden = !show;
-      if (show) shownCount++;
-      if (show && !lead) lead = t;
-      var up = t.querySelector('.tc-up'), dn = t.querySelector('.tc-dn');
-      if (up) up.disabled = i === 0;
-      if (dn) dn.disabled = i === tiles.length - 1;
-      var pos = t.querySelector('.tc-pos');
-      if (pos) pos.textContent = (i + 1) + ' of ' + tiles.length;
-    });
-    // The first tile spans the full row only when it would otherwise leave a
-    // gap (an odd count); two tiles sit side by side (Rami, 2026-10-28).
-    tiles.forEach(function (t) { t.classList.toggle('lead', t === lead && shownCount % 2 === 1); });
-    if (before) {
-      tiles.forEach(function (t, i) {
-        var a = before[i], b = t.getBoundingClientRect();
-        var dx = a.left - b.left, dy = a.top - b.top;
-        if (!dx && !dy) return;
-        t.style.transition = 'none';
-        t.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            t.style.transition = 'transform 0.35s var(--ease)';
-            t.style.transform = '';
-          });
-        });
-      });
-    }
-    var reset = $('#glance-reset');
-    if (reset) reset.hidden = !glance.editing;
-  }
-
-  function moveGlance(id, to) {
-    var order = glanceOrder(), from = order.indexOf(id);
-    if (from < 0 || to < 0 || to >= order.length || to === from) return;
-    order.splice(from, 1);
-    order.splice(to, 0, id);
-    saveGlance(order);
-    applyGlance(true, order);
-    setText('#glance-status', GLANCE_NAMES[id] + ' moved to position ' + (to + 1) + ' of ' + order.length + '.');
-  }
-
-  function setGlanceEditing(on) {
-    glance.editing = on;
-    var box = $('#today-glance'), btn = $('#glance-edit');
-    if (box) box.classList.toggle('editing', on);
-    if (btn) {
-      btn.textContent = on ? 'Done' : 'Rearrange';
-      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-    }
-    Array.prototype.forEach.call(document.querySelectorAll('.glance-tile'), function (t) {
-      t.draggable = on;
-      // While editing, the cards are not links (a tap shouldn't navigate away).
-      Array.prototype.forEach.call(t.querySelectorAll('.card a, a.card'), function (a) {
-        if (on) a.setAttribute('tabindex', '-1'); else a.removeAttribute('tabindex');
-      });
-    });
-    applyGlance(false);
-    setText('#glance-status', on ? 'Rearranging. Use the arrows to move tiles; your order is saved.' : 'Order saved.');
-  }
-
-  function initGlance() {
-    var box = $('#today-glance');
-    if (!box) return;
-    Array.prototype.forEach.call(box.querySelectorAll('.glance-tile'), function (t) {
-      var id = t.getAttribute('data-tile');
-      var ctl = el('div', 'tile-ctl');
-      ctl.appendChild(el('span', 'tc-grip', '⋮⋮'));
-      ctl.appendChild(el('span', 'tc-name', GLANCE_NAMES[id] || id));
-      ctl.appendChild(el('span', 'tc-pos meta'));
-      [['tc-up', '↑', 'Move ' + GLANCE_NAMES[id] + ' up', -1], ['tc-dn', '↓', 'Move ' + GLANCE_NAMES[id] + ' down', 1]]
-        .forEach(function (b) {
-          var btn = el('button', 'tc-btn ' + b[0], b[1]);
-          btn.type = 'button';
-          btn.setAttribute('aria-label', b[2]);
-          btn.addEventListener('click', function () {
-            moveGlance(id, glanceOrder().indexOf(id) + b[3]);
-            if (btn.disabled) { var other = t.querySelector(b[0] === 'tc-up' ? '.tc-dn' : '.tc-up'); if (other) other.focus(); }
-            else btn.focus();
-          });
-          ctl.appendChild(btn);
-        });
-      t.insertBefore(ctl, t.firstChild);
-
-      // Desktop drag: drop onto another tile to take its place.
-      t.addEventListener('dragstart', function (e) {
-        if (!glance.editing) { e.preventDefault(); return; }
-        glance.drag = id;
-        t.classList.add('dragging');
-        try { e.dataTransfer.setData('text/plain', id); e.dataTransfer.effectAllowed = 'move'; } catch (x) {}
-      });
-      t.addEventListener('dragend', function () {
-        glance.drag = null;
-        Array.prototype.forEach.call(box.querySelectorAll('.glance-tile'), function (n) { n.classList.remove('dragging', 'drop-target'); });
-      });
-      t.addEventListener('dragover', function (e) {
-        if (!glance.drag || glance.drag === id) return;
-        e.preventDefault();
-        t.classList.add('drop-target');
-      });
-      t.addEventListener('dragleave', function () { t.classList.remove('drop-target'); });
-      t.addEventListener('drop', function (e) {
-        e.preventDefault();
-        t.classList.remove('drop-target');
-        if (glance.drag && glance.drag !== id) moveGlance(glance.drag, glanceOrder().indexOf(id));
-      });
-      // Editing: swallow clicks on the card so nothing navigates.
-      t.addEventListener('click', function (e) {
-        if (glance.editing && !e.target.closest('.tile-ctl')) e.preventDefault();
-      }, true);
-    });
-    var edit = $('#glance-edit'), reset = $('#glance-reset');
-    if (edit) edit.addEventListener('click', function () { setGlanceEditing(!glance.editing); });
-    if (reset) reset.addEventListener('click', function () {
-      saveGlance(null);
-      applyGlance(true);
-      setText('#glance-status', 'Back to the default order.');
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && glance.editing) setGlanceEditing(false);
-    });
-    applyGlance(false);
-  }
-
-  /* ---------------- today: scroll engine ----------------
-     Each [data-scene] is taller than the screen; its .pin sticks under the
-     masthead while the scene scrolls past. Progress p (0 → 1) through that
-     travel is written to --p (continuous effects in CSS) and flips .in on
-     [data-at] steps (eased CSS transitions). [data-reveal] blocks fade up
-     once they enter the viewport. Reduced motion: no pinning, all shown. */
+  /* ---------------- reveal on scroll ----------------
+     [data-reveal] blocks (Focus Mode) fade up as they enter the viewport;
+     --mast-h is the masthead height for sticky offsets. Reduced motion: all
+     shown at once. (The pinned scroll-story scenes went with the Today
+     redesign, 2026-11-09.) */
   var sx = { raf: 0, mast: 0, reduced: false };
 
-  function initScrollStory() {
+  function initReveal() {
     var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
     var setReduced = function () {
       sx.reduced = !!(mq && mq.matches);
@@ -1420,94 +1194,23 @@
     if (mq && mq.addEventListener) mq.addEventListener('change', setReduced);
     window.addEventListener('scroll', queueScroll, { passive: true });
     window.addEventListener('resize', function () { measureScenes(); queueScroll(); });
-    window.addEventListener('hashchange', function () { setTimeout(function () { measureScenes(); queueScroll(); }, 0); });
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { measureScenes(); queueScroll(); });
-    measureScenes();
   }
 
   function queueScroll() {
     if (!sx.raf) sx.raf = requestAnimationFrame(updateScroll);
   }
 
-  /* Masthead height (sticky offset) and, per scene, how far the pinned
-     content overflows the screen — it then drifts up as you scroll. */
   function measureScenes() {
     var m = $('.masthead');
     sx.mast = m ? m.offsetHeight : 0;
     document.documentElement.style.setProperty('--mast-h', sx.mast + 'px');
-    var v = $('#view-today');
-    if (!v || v.hidden) return;
-    Array.prototype.forEach.call(v.querySelectorAll('[data-scene]'), function (sc) {
-      var pin = sc.querySelector('.pin'), inner = sc.querySelector('.pin-inner');
-      if (!pin || !inner) return;
-      if (sc.classList.contains('ch-scene')) {
-        // Never shorter than its content + a brief hold, so it can't overlap the next.
-        sc.style.minHeight = sx.reduced ? '' : Math.round(pin.offsetHeight + window.innerHeight * 0.22) + 'px';
-        return;
-      }
-      var ov = Math.max(0, inner.offsetHeight - pin.clientHeight + 48);
-      sc.style.setProperty('--ov', ov + 'px');
-      sc.classList.toggle('tall', ov > 0);
-    });
   }
 
   function updateScroll() {
     sx.raf = 0;
-    var v = $('#view-today');
-    if (!v || v.hidden) return;
-    var vh = window.innerHeight, avail = vh - sx.mast;
-    var scenes = v.querySelectorAll('[data-scene]');
-    var reads = [], active = -1;
-    Array.prototype.forEach.call(scenes, function (sc) {
-      reads.push(sc.getBoundingClientRect());
-    });
-    Array.prototype.forEach.call(scenes, function (sc, i) {
-      var r = reads[i], span = Math.max(1, r.height - avail);
-      var p = sx.reduced ? 1 : Math.min(1, Math.max(0, (sx.mast - r.top) / span));
-      if (sc.classList.contains('ch-scene') && !sx.reduced) {
-        // Short scenes: 0 as the top enters the lower screen, 1 as it reaches the masthead.
-        var start = vh * 0.85;
-        p = Math.min(1, Math.max(0, (start - r.top) / Math.max(1, start - sx.mast)));
-      }
-      sc.style.setProperty('--p', p.toFixed(4));
-      Array.prototype.forEach.call(sc.querySelectorAll('[data-at]'), function (n) {
-        n.classList.toggle('in', sx.reduced || p >= +n.getAttribute('data-at'));
-      });
-      if (sc.classList.contains('ch-scene') && r.top <= sx.mast + avail * 0.5) active = i - 1;
-    });
-    Array.prototype.forEach.call(v.querySelectorAll('[data-reveal]'), function (n) {
+    var vh = window.innerHeight;
+    Array.prototype.forEach.call(document.querySelectorAll('[data-reveal]'), function (n) {
       if (sx.reduced || n.getBoundingClientRect().top < vh * 0.9) n.classList.add('in');
-    });
-
-    // Reading progress through the chapters, and the chapter dots.
-    var story = $('#today-story'), bar = $('#read-bar');
-    if (story && bar) {
-      var sr = story.getBoundingClientRect();
-      var prog = Math.min(1, Math.max(0, (sx.mast - sr.top) / Math.max(1, sr.height - avail)));
-      bar.style.transform = 'scaleX(' + prog.toFixed(4) + ')';
-      var inStory = sr.top < sx.mast + avail * 0.5 && sr.bottom > sx.mast + avail * 0.5;
-      $('#story-dots').classList.toggle('on', inStory);
-    }
-    Array.prototype.forEach.call(document.querySelectorAll('#story-dots .sdot'), function (d, i) {
-      if (i === active) d.setAttribute('aria-current', 'step'); else d.removeAttribute('aria-current');
-    });
-  }
-
-  /* Scroll so a chapter scene's content is fully revealed. */
-  function jumpTo(sc) {
-    var span = sc.classList.contains('ch-scene') ? 0 : sc.offsetHeight - (window.innerHeight - sx.mast);
-    var y = sc.getBoundingClientRect().top + window.pageYOffset - sx.mast + Math.max(0, span) * 0.86;
-    window.scrollTo({ top: y, behavior: sx.reduced ? 'auto' : 'smooth' });
-  }
-
-  /* Macro pulse: pillar title + its one-line read. */
-  function renderPulse(d) {
-    var box = $('#today-pulse');
-    (d.rows || []).forEach(function (row) {
-      var li = el('li');
-      li.appendChild(el('span', 'p-title', row.title));
-      li.appendChild(el('span', 'p-read', firstSentences(row.read || '', 1, 40)));
-      box.appendChild(li);
     });
   }
 
@@ -2431,7 +2134,6 @@
     var sel = $('#cal-tz');
     if (sel && sel.options.length) sel.options[0].textContent = 'Local time (' + (cal.prefs.tz === 'local' ? tzAbbr() : 'device') + ')';
 
-    renderNextUp(now, todayKey);
     renderUpNext(now);
 
     var list = $('#cal-list');
@@ -2660,27 +2362,6 @@
     cd.setAttribute('data-ts', w.getTime());
     box.appendChild(cd);
     box.hidden = false;
-  }
-
-  /* Today tab "Next up": next three high/medium events. */
-  function renderNextUp(now, todayKey) {
-    var box = $('#today-next');
-    if (!box) return;
-    box.textContent = '';
-    var evs = ((cal.data && cal.data.events) || []).filter(function (e) {
-      return e.impact !== 'low' && evUpcoming(e, now, todayKey);
-    }).sort(function (a, b) { return evSort(a) - evSort(b); }).slice(0, 2);
-    if (!evs.length) { box.appendChild(el('li', 'meta', 'Nothing scheduled.')); return; }
-    evs.forEach(function (e) {
-      var w = evWhen(e), k = evKey(e), p = k.split('-');
-      var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
-      var row = el('li', e.impact === 'high' ? 'key' : null);
-      row.appendChild(el('span', 'n-day mono', d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' })));
-      var what = el('span', 'n-what', e.ccy + ' · ' + e.title);
-      if (w && !e.time_tbd) what.appendChild(el('small', 'n-time', fmtClock(w) + ' ' + tzAbbr(w)));
-      row.appendChild(what);
-      box.appendChild(row);
-    });
   }
 
   /* Live countdowns; full re-render when an event crosses "now". */
@@ -2949,7 +2630,7 @@
 
     renderFxDetail(ranked, max);
     renderPicker();
-    renderLean(ranked);
+    renderGauges(ranked);
   }
 
   /* How many pillars support / weigh on / sit neutral for a currency. */
@@ -3029,59 +2710,127 @@
     return wrap;
   }
 
-  /* At a glance: each currency's pillar tally, strongest to weakest. */
-  function renderGlanceLean(ranked) {
-    var box = $('#glance-lean');
+  /* Today: one speedometer per currency (Rami, 2026-11-09), strongest to
+     weakest. Same score as the strength board (sum of the seven pillar
+     scores, each −1/0/+1), on a fixed ±7 dial so a needle means the same
+     thing every edition. Tap = that currency on the Currencies page. */
+  var GAUGE_MAX = 7;
+  function gaugeSvg(score) {
+    var NS = 'http://www.w3.org/2000/svg';
+    function n(tag, attrs) {
+      var x = document.createElementNS(NS, tag);
+      Object.keys(attrs).forEach(function (k) { x.setAttribute(k, attrs[k]); });
+      return x;
+    }
+    var f = Math.max(-1, Math.min(1, score / GAUGE_MAX));
+    var svg = n('svg', { viewBox: '0 0 100 58', 'class': 'gauge', 'aria-hidden': 'true' });
+    // Track: weak (left) → strong (right), a top half-circle, r 40 around (50, 52).
+    svg.appendChild(n('path', { d: 'M10 52 A40 40 0 0 1 90 52', 'class': 'g-track' }));
+    if (f) {   // filled from the middle out to the score
+      var a = (90 - f * 90) * Math.PI / 180;
+      var x = 50 + 40 * Math.cos(a), y = 52 - 40 * Math.sin(a);
+      svg.appendChild(n('path', { d: 'M50 12 A40 40 0 0 ' + (f > 0 ? 1 : 0) + ' ' + x.toFixed(2) + ' ' + y.toFixed(2),
+        'class': 'g-fill ' + (f > 0 ? 'pos' : 'neg') }));
+    }
+    svg.appendChild(n('line', { x1: 50, y1: 6, x2: 50, y2: 15, 'class': 'g-tick' }));
+    var needle = n('g', { 'class': 'g-needle' });
+    needle.style.setProperty('--rot', (f * 90).toFixed(1) + 'deg');
+    needle.appendChild(n('line', { x1: 50, y1: 52, x2: 50, y2: 20 }));
+    needle.appendChild(n('circle', { cx: 50, cy: 52, r: 4.5 }));
+    svg.appendChild(needle);
+    return svg;
+  }
+  function renderGauges(ranked) {
+    var box = $('#today-gauges');
     if (!box) return;
     box.textContent = '';
     ranked.forEach(function (c) {
-      var t = fxTally(c), net = t.pos - t.neg;
-      var li = el('li', net > 0 ? 'pos' : net < 0 ? 'neg' : 'zero');
-      var a = el('a');
-      a.href = '#fx/' + c.ccy;
-      a.title = c.ccy + ': ' + tallyText(t);
-      a.appendChild(el('b', 'mono', c.ccy));
-      a.appendChild(el('span', 'mono', t.pos + '–' + t.neg));
-      li.appendChild(a);
-      box.appendChild(li);
-    });
-  }
-
-  /* Today: where the evidence leans — every currency's pillars as dots. */
-  function renderLean(ranked) {
-    renderGlanceLean(ranked);
-    var box = $('#today-lean');
-    if (!box || !fx.data) return;
-    box.textContent = '';
-    ranked.forEach(function (c) {
+      var sc = fxScore(c);
       var li = el('li');
-      var a = el('a', 'lean-row');
+      var a = el('a', 'gauge-tile card ' + (sc > 0 ? 'pos' : sc < 0 ? 'neg' : 'zero'));
       a.href = '#fx/' + c.ccy;
-      a.appendChild(el('b', 'l-id mono', c.ccy));
-      var dots = el('span', 'l-dots');
-      PILLARS.forEach(function (k) {
-        var d = (c.drivers || {})[k[0]], sc = d ? +d.score || 0 : 0;
-        var i = el('i', sc > 0 ? 'pos' : sc < 0 ? 'neg' : 'zero');
-        i.title = k[1] + ': ' + (sc > 0 ? 'supports' : sc < 0 ? 'weighs' : 'neutral') + (d && d.note && sc ? ' — ' + d.note : '');
-        dots.appendChild(i);
-      });
-      var t = fxTally(c);
-      dots.setAttribute('role', 'img');
-      dots.setAttribute('aria-label', c.ccy + ': ' + tallyText(t));
-      a.appendChild(dots);
-      a.appendChild(el('span', 'l-tally', t.pos + ' for · ' + t.neg + ' against'));
-      var s = momFor(c.ccy);
-      var dt = el('span', 'l-data mono');
-      if (s.recent.length) {
-        dt.textContent = 'data ' + s.n.beat + '–' + s.n.miss;
-        dt.title = 'Last ' + s.recent.length + ' releases: ' + s.n.beat + ' beat, ' + s.n.miss + ' missed, ' + s.n.inline + ' in line';
-      }
-      a.appendChild(dt);
+      a.setAttribute('aria-label', c.name + ': strength score ' + signed(sc) + ' (range −7 to +7)');
+      var hd = el('span', 'gt-id');
+      hd.appendChild(flagEl(c.ccy));
+      hd.appendChild(el('b', 'mono', c.ccy));
+      a.appendChild(hd);
+      a.appendChild(gaugeSvg(sc));
+      a.appendChild(el('span', 'gt-score mono', sc === 0 ? '0' : signed(sc)));
       li.appendChild(a);
       box.appendChild(li);
     });
+    updateStripNav();
   }
 
+  /* Today: the top headlines (Rami, 2026-11-09), by impact then newest —
+     the same order as News' default. Each tile carries the markets it moves;
+     a tap opens that story expanded on News. */
+  var TODAY_NEWS_MAX = 10;   // top headlines on Today
+  function renderTodayNews() {
+    var box = $('#today-news');
+    if (!box) return;
+    box.textContent = '';
+    var items = ((news.data && news.data.items) || []).filter(function (it) {
+      return it && it.headline && (it.ts || it.date);
+    });
+    // A dashboard wants what's fresh: the last day and a half, unless that
+    // leaves too few (quiet weekends), then everything in the feed.
+    var fresh = items.filter(function (it) { return Date.now() - newsTime(it) < 36 * 3600e3; });
+    if (fresh.length >= 4) items = fresh;
+    items.sort(function (a, b) { return (newsImpact(b) - newsImpact(a)) || (newsTime(b) - newsTime(a)); });
+    items = items.slice(0, TODAY_NEWS_MAX);
+    if (!items.length) { box.appendChild(el('li', 'meta', 'No headlines yet.')); return; }
+    items.forEach(function (it) {
+      var li = el('li');
+      var a = el('a', 'news-tile card');
+      a.href = '#news';
+      a.setAttribute('data-open-news', slugId(it.id || it.url || it.headline));
+      var tags = el('span', 'nt-tags');
+      (it.impact || []).filter(function (x) { return x && x.ccy; }).slice(0, 3)
+        .forEach(function (x) { tags.appendChild(biasTag(x)); });
+      a.appendChild(tags);
+      a.appendChild(el('span', 'nt-hl', it.headline));
+      var m = el('span', 'nt-src meta');
+      m.appendChild(document.createTextNode((it.source || '') + ' · '));
+      m.appendChild(newsWhenEl(it));
+      a.appendChild(m);
+      li.appendChild(a);
+      box.appendChild(li);
+    });
+    updateStripNav();
+  }
+
+  /* Side-scrolling rows: on screens with a mouse, ‹ › buttons beside the row
+     title scroll it by about a screenful; touch screens just swipe. */
+  function initStrips() {
+    Array.prototype.forEach.call(document.querySelectorAll('.t-row-nav[data-strip]'), function (nav) {
+      var strip = document.getElementById(nav.getAttribute('data-strip'));
+      if (!strip) return;
+      [['prev', '‹', 'Scroll back', -1], ['next', '›', 'Scroll on', 1]].forEach(function (b) {
+        var btn = el('button', 'strip-btn ' + b[0], b[1]);
+        btn.type = 'button';
+        btn.setAttribute('aria-label', b[2]);
+        btn.setAttribute('aria-controls', strip.id);
+        btn.addEventListener('click', function () {
+          strip.scrollBy({ left: b[3] * Math.max(160, strip.clientWidth * 0.85), behavior: sx.reduced ? 'auto' : 'smooth' });
+        });
+        nav.appendChild(btn);
+      });
+      strip.addEventListener('scroll', updateStripNav, { passive: true });
+    });
+    window.addEventListener('resize', updateStripNav);
+  }
+  function updateStripNav() {
+    Array.prototype.forEach.call(document.querySelectorAll('.t-row-nav[data-strip]'), function (nav) {
+      var strip = document.getElementById(nav.getAttribute('data-strip'));
+      if (!strip) return;
+      var max = strip.scrollWidth - strip.clientWidth;
+      var p = nav.querySelector('.prev'), x = nav.querySelector('.next');
+      if (p) p.disabled = strip.scrollLeft <= 2;
+      if (x) x.disabled = strip.scrollLeft >= max - 2;
+      nav.hidden = max <= 2;
+    });
+  }
 
   function renderPicker() {
     if (!fx.data) return;
@@ -3609,33 +3358,6 @@
     }
     filterDev();
 
-    // Teaser on the Today tab.
-    var t0 = threads[0], tz = $('#today-wire');
-    if (tz) {
-      tz.textContent = '';
-      var cool0 = Date.now() - new Date(t0.latest.ts).getTime() > COOL_AFTER;
-      var top = el('div', 'gf-top');
-      top.appendChild(el('span', cool0 ? 'thread-pill' : 'live-pill',
-        (t0.items.length > 1 ? (cool0 ? 'Thread' : 'Developing') : 'Latest') + ' · ' + relTime(t0.latest.ts)));
-      if (t0.items.length > 1) top.appendChild(el('span', 'meta', t0.items.length + ' updates'));
-      top.appendChild(el('span', 'tk-cta', 'Open News →'));
-      tz.appendChild(top);
-      tz.appendChild(el('p', 'gf-hl', t0.latest.headline));
-      if (t0.ccy.length || t0.pillar) {
-        var tags = el('div', 'wire-tags');
-        t0.ccy.forEach(function (c) {
-          var tg = el('span', 'tag ccy');
-          tg.appendChild(flagEl(c));
-          tg.appendChild(document.createTextNode(c));
-          tags.appendChild(tg);
-        });
-        if (t0.pillar) tags.appendChild(el('span', 'tag pillar', pillarName(t0.pillar)));
-        tz.appendChild(tags);
-      }
-      if (t0.next) tz.appendChild(el('p', 'gf-next', t0.next));
-      tz.hidden = false;
-      applyGlance(false);   // the Flash tile may now lead
-    }
     renderFx();
   }
 

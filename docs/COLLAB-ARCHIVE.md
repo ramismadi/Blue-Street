@@ -615,3 +615,43 @@ everywhere visible. Done on Claude's side:
 **Change:** move the two edition runs to **1:30 AM and 3:30 PM CT** and have
 them refresh those data files only — no longer write `story.json` or
 `engine.json`.
+
+## Old Today page — DESIGN.md text retired 2026-11-09 (Today became a one-screen dashboard)
+```
+| Today | `/` (also `#today`) | story, engine, calendar, news |
+- **Today's chapters are cards** (Rami, 2026-10-19; replaces the pinned full-screen chapter scenes): a grid (3 across on desktop, 2 on tablet, 1 on phones) in chapter order. Each card: flag + chapter title, a lean mark (strength-board score for the 8 currencies, the News read for gold/oil — evidence, not a call), today's read (`teaser`, 1–3 sentences), "In the news" (top 3 headlines touching that market from `news.json`, by impact — each opens its card expanded on News), and "More on … →" into the full Story chapter. Quiet chapters still fold into the "Quiet today" line.
+- **Today (as built, 2026-10-19):** full-screen headline (the one pinned scene,
+  `hero-scene`) → **At a glance** (two tiles: *Next up*, the next two high/medium
+  events with times + zone, and *Evidence leans*, the ranked chips) → the
+  chapter cards above → "Go deeper" (macro pulse, where the evidence leans,
+  tiles). Chapters with `"quiet": true` fold into one "Quiet today" line; the
+  Story view still shows them in full. The full narrative lives only in Story.
+  The scroll code ("today: scroll engine" in app.js) drives the hero and the
+  fade-up of Go deeper; `route()` re-runs it after every tab change, so Today
+  never comes back blank. `prefers-reduced-motion` gets a plain, fully visible
+  page.
+- **At a glance is reorderable** (Rami, 2026-10-12): "Rearrange" turns on edit
+  mode — ↑/↓ on each tile (works on touch), drag on desktop, Reset, Done/Esc.
+  Saved per browser in localStorage `bluestreet-glance` (array of tile ids:
+  `next`, `lean`); unknown ids are dropped, missing ones appended, so
+  a new tile only needs a `.glance-tile[data-tile]` wrapper + entries in
+  `GLANCE_IDS`/`GLANCE_NAMES`. The first visible tile spans the full width.
+  Per-device for now; accounts (same layout on every device) would need a
+  backend — a later decision.
+  rate definition / last move / sources, the currency score table. Scene mechanics are commented in app.js ("today: scroll engine");
+- Flags: `assets/flags/<us|eu|gb|jp|ch|ca|au|nz|xau|oil>.svg` (hand-drawn 4:3 SVGs; gold and oil are icons), placed with `flagEl(code)` in app.js. On the News chips, bias tags, news read, Developing thread tags and the Today glance tile. Emoji flags aren't used — Windows shows them as letters.
+- Chips under Today's read: flag + code (USD, EUR…; Gold and Oil by name), matching the News market chips. Tap = that currency's card on Today, or its Story chapter when quiet (Rami, 2026-10-19).
+- `teaser` — **the Today card: 1–3 sentences, ~50 words max**, the delta only (Rami, 2026-10-19). The card shows at most three sentences / ~60 words; "Read the chapter →" opens the full chapter for anyone who wants more.
+  real delta since the previous edition. Today folds quiet chapters into one
+three newest releases). Today → "data 3–1" on that currency's evidence row.
+
+### Today: "Where the evidence leans" (render only, from currencies.json)
+A card in Go deeper: every currency, board order, one dot per pillar (seven,
+eight once the Rate gap pillar is live) in engine order (green supports, red weighs, grey neutral; tooltips
+carry each driver note), "N for · N against", plus the momentum chip. Copy
+says "Evidence, not a call" — this is a tally of evidence, never a verdict.
+The currency page header also shows "Pillars: N for · N against · N neutral".
+story". Today's tiles link the tab.
+calendar). Today's "Next up" shows the next three high/medium events.
+best edge first, with no group headings (edge tiles get a blue edge, no-edge tiles go flat, against-your-view tiles fade), as tiles styled like Today's currency tiles (card,
+```
