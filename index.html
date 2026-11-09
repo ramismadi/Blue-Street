@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=132">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=132">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=133">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=133">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=132">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=133">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=132">
+<link rel="stylesheet" href="assets/style.css?v=133">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=132" defer></script>
-<script src="assets/app.js?v=132" defer></script>
+<script src="assets/cot.js?v=133" defer></script>
+<script src="assets/app.js?v=133" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
@@ -236,19 +236,23 @@
 
     <div class="card cal-next" id="cal-next" hidden></div>
 
-    <div class="cal-filters" id="cal-filters">
+    <!-- Rami, 2026-11-09: two ranges and one currency button; no impact
+         filter (smaller events open per day). -->
+    <div class="cal-controls" id="cal-filters">
       <div class="segmented" role="tablist" aria-label="Date range" id="cal-range">
-        <button type="button" class="seg" data-range="past">Last 7 days</button>
-        <button type="button" class="seg" data-range="today">Today</button>
-        <button type="button" class="seg" data-range="week">This week</button>
-        <button type="button" class="seg" data-range="next">Next week</button>
-        <button type="button" class="seg" data-range="all">All</button>
+        <button type="button" class="seg" data-range="next">Coming up</button>
+        <button type="button" class="seg" data-range="past">Past week</button>
       </div>
-      <div class="chip-row" id="cal-impact" aria-label="Impact"></div>
-      <div class="chip-row" id="cal-ccy" aria-label="Currencies"></div>
+      <button type="button" class="cal-ccy-btn" id="cal-ccy-btn" aria-expanded="false" aria-controls="cal-ccy">All currencies</button>
     </div>
+    <div class="chip-row cal-ccy" id="cal-ccy" aria-label="Currencies" hidden></div>
 
     <div class="cal-list" id="cal-list"></div>
+  </section>
+
+  <!-- ============ AN EVENT'S OWN PAGE (#event/<id>; Rami, 2026-11-09) ============ -->
+  <section class="view" id="view-event" role="region" aria-label="Event" hidden>
+    <div id="event-body"></div>
   </section>
 
   <!-- ============ NEWS (data/news.json, Claude's job) ============ -->

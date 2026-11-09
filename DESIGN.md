@@ -566,11 +566,20 @@ an `outcome`, the briefing drops the `if_beat`/`if_miss` boxes — the outcome
 supersedes them (speeches/minutes included, which never get an `actual`). Render-only: keep writing all fields. The feed keeps a
 7-day lookback; the "Last 7 days" range shows it.
 
-How it renders: times shown in the reader's chosen zone (local by default),
-grouped by day, filterable by range / impact / currency, live countdowns, a
-"Now" marker, actual vs forecast coloured beat/miss using `better`, and an
-expandable briefing (why / beat / miss / bank today / story link / add to
-calendar).
+How it renders (Rami, 2026-11-09; header, clocks, central bank row and Up
+next unchanged): times in the reader's zone (local by default), two ranges —
+**Coming up** (today + 6 days) and **Past week** (newest first) — and one
+"All currencies" button that opens the flag chips. No impact filter: each day
+shows high and medium events, with "Show N smaller events" for the low ones.
+Each row (`eventRow`): time, flag + code + impact pips, the event, and one
+plain line — "Expected <lead figure>" before, or **Beat / Missed / In line**
+(via `better`) + the actual after — and a live countdown. `plainFig` keeps only
+the lead figure and writes m/m, y/y, q/q as words. A tap opens the event's own
+page, `#event/<id>` (`renderEvent`): when, the title, Starts in / Result /
+Expected / Last time, then "What it meant", "Why it matters", "If it beats /
+misses" — each only when it reads as plain words (`plainText` rejects
+number-heavy text and trader shorthand) — the currency page link, Add to my
+calendar, and Sources behind a tap.
 
 **Keeping it fresh (Hercules):** the seed covers only the events the site
 already listed plus central-bank decisions at each bank's standard

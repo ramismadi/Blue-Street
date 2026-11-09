@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '132';
+  var ASSET_VERSION = '133';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -17,12 +17,12 @@
     document.documentElement.classList.add('is-app');
   }
 
-  var TABS = ['today', 'fx', 'engine', 'positioning', 'calendar', 'news', 'article', 'learn', 'about'];   // views
+  var TABS = ['today', 'fx', 'engine', 'positioning', 'calendar', 'event', 'news', 'article', 'learn', 'about'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
      their own light up their parent: the macro engine and positioning are
      the Drivers sections. (Central banks moved into each currency's page,
      2026-11-09.) */
-  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', article: 'news', learn: null, about: null };
+  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', article: 'news', event: 'calendar', learn: null, about: null };
   var DRIVER_VIEWS = ['engine', 'positioning'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
@@ -575,6 +575,7 @@
       renderFx();
     }
     if (tab === 'learn') renderLearn();
+    if (tab === 'event') { cal.event = h.slice(1).join('/'); renderEvent(); } else cal.event = '';
     if (tab === 'about') {   // About & help (Rami, 2026-11-09): one page at a time
       var pg = h[1] || 'about';
       if (!document.querySelector('.info-page[data-page="' + pg + '"]')) pg = 'about';
@@ -1600,7 +1601,9 @@
      Herc's number-heavy text never shows here (plainText). */
   function plainText(t, max) {
     t = String(t || '');
-    return !!t && t.length <= (max || 400) && (t.match(/\d/g) || []).length <= 14 && !/[;~→|]|\(\w+:|\+\d/.test(t);
+    return !!t && t.length <= (max || 400) && (t.match(/\d/g) || []).length <= 14 && !/[;~→|]|\(\w+:|\+\d/.test(t) &&
+      // trader shorthand never reads as plain words (Rami, 2026-11-09)
+      !/\b(bid|offered|\d+Y|bps?|[ymq]\/[ymq]|FOMC|NFP|OIS|TFF|DXY|hawks?|doves?)\b/.test(t);
   }
   function bankSection(c) {
     var b = cal.banks[c.bank];
@@ -1983,7 +1986,6 @@
      currency); why / if_beat / if_miss; chapter (story link); bank (joins
      banks.json); sources. Reader prefs persist in localStorage. */
   var CCYS = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'NZD'];
-  var IMPACTS = [['high', 'High'], ['medium', 'Medium'], ['low', 'Low']];
   var TZS = [
     ['local', 'Local time'], ['America/Chicago', 'Chicago (CT)'], ['America/New_York', 'New York (ET)'],
     ['Europe/London', 'London'], ['Asia/Tokyo', 'Tokyo'], ['UTC', 'UTC']
@@ -1992,7 +1994,9 @@
     data: null,
     banks: {},
     open: {},
-    prefs: { range: 'week', impact: { high: true, medium: true, low: false }, ccy: [], tz: 'local' },
+    prefs: { range: 'next', ccy: [], tz: 'local' },
+    small: {},   // days whose smaller events are shown (this visit)
+    event: '',
     timer: null
   };
 
@@ -2006,8 +2010,8 @@
     try {
       var p = JSON.parse(localStorage.getItem('bluestreet-cal') || 'null');
       if (p && typeof p === 'object') {
-        if (p.range) cal.prefs.range = p.range;
-        if (p.impact) cal.prefs.impact = p.impact;
+        // Rami, 2026-11-09: two ranges only, Coming up and Past week.
+        cal.prefs.range = p.range === 'past' ? 'past' : 'next';
         if (Array.isArray(p.ccy)) cal.prefs.ccy = p.ccy;
         if (p.tz) cal.prefs.tz = p.tz;
       }
@@ -2019,13 +2023,7 @@
 
   function tzOpt() { return cal.prefs.tz === 'local' ? undefined : cal.prefs.tz; }
 
-  function tzAbbr() {
-    try {
-      var parts = new Intl.DateTimeFormat('en-US', { timeZone: tzOpt(), timeZoneName: 'short' }).formatToParts(new Date());
-      for (var i = 0; i < parts.length; i++) if (parts[i].type === 'timeZoneName') return parts[i].value;
-    } catch (e) {}
-    return '';
-  }
+
 
   /* "YYYY-MM-DD" of a Date in the chosen zone. */
   function dayKeyOf(date) {
@@ -2059,7 +2057,7 @@
   /* Short zone name for a time ("CDT"), in the reader's chosen zone. */
   function tzAbbr(date) {
     try {
-      var parts = date.toLocaleTimeString('en-US', { timeZone: tzOpt(), timeZoneName: 'short' }).split(' ');
+      var parts = (date || new Date()).toLocaleTimeString('en-US', { timeZone: tzOpt(), timeZoneName: 'short' }).split(' ');
       return parts[parts.length - 1];
     } catch (e) { return ''; }
   }
@@ -2111,35 +2109,26 @@
       sel.value = cal.prefs.tz;
       sel.addEventListener('change', function () { cal.prefs.tz = sel.value; saveCalPrefs(); renderCalendar(); });
     }
+    // Rami, 2026-11-09: few controls. Coming up / Past week, and the
+    // currencies tucked behind one button; smaller events per day on a tap.
     var range = $('#cal-range');
     if (range) range.addEventListener('click', function (e) {
       var b = e.target.closest('[data-range]');
       if (!b) return;
       cal.prefs.range = b.getAttribute('data-range'); saveCalPrefs(); renderCalendar();
     });
-    var imp = $('#cal-impact');
-    if (imp) {
-      IMPACTS.forEach(function (i) {
-        var b = el('button', 'fchip imp-' + i[0]);
-        b.type = 'button';
-        b.setAttribute('data-impact', i[0]);
-        b.appendChild(makePips(i[0]));
-        b.appendChild(document.createTextNode(i[1]));
-        imp.appendChild(b);
+    var cbtn = $('#cal-ccy-btn'), cc = $('#cal-ccy');
+    if (cbtn && cc) {
+      cbtn.addEventListener('click', function () {
+        cc.hidden = !cc.hidden;
+        cbtn.setAttribute('aria-expanded', cc.hidden ? 'false' : 'true');
       });
-      imp.addEventListener('click', function (e) {
-        var b = e.target.closest('[data-impact]');
-        if (!b) return;
-        var k = b.getAttribute('data-impact');
-        cal.prefs.impact[k] = !cal.prefs.impact[k]; saveCalPrefs(); renderCalendar();
-      });
-    }
-    var cc = $('#cal-ccy');
-    if (cc) {
       ['ALL'].concat(CCYS).forEach(function (c) {
-        var b = el('button', 'fchip ccy', c === 'ALL' ? 'All' : c);
+        var b = el('button', 'fchip ccy');
         b.type = 'button';
         b.setAttribute('data-ccy', c);
+        if (c !== 'ALL') b.appendChild(flagEl(c));
+        b.appendChild(document.createTextNode(c === 'ALL' ? 'All' : c));
         cc.appendChild(b);
       });
       cc.addEventListener('click', function (e) {
@@ -2155,262 +2144,244 @@
         saveCalPrefs(); renderCalendar();
       });
     }
-    var list = $('#cal-list');
-    if (list) list.addEventListener('click', function (e) {
+    document.addEventListener('click', function (e) {
       var ics = e.target.closest('[data-ics]');
       if (ics) { downloadIcs(ics.getAttribute('data-ics')); return; }
-      var row = e.target.closest('.ev-row');
-      if (!row) return;
-      var id = row.getAttribute('data-id');
-      cal.open[id] = !cal.open[id];
-      row.setAttribute('aria-expanded', cal.open[id] ? 'true' : 'false');
-      var det = row.parentNode.querySelector('.ev-detail');
-      if (det) det.hidden = !cal.open[id];
+      var sm = e.target.closest('[data-small]');
+      if (sm) { var k = sm.getAttribute('data-small'); cal.small[k] = !cal.small[k]; renderCalendar(); }
     });
     if (!cal.timer) cal.timer = setInterval(tickCalendar, 1000);
   }
 
+  /* Coming up = today and the next six days; Past week = the seven days
+     before today plus today's released events. Currency filter applies. */
   function filtered(now) {
     var evs = (cal.data && cal.data.events) || [];
     var todayKey = dayKeyOf(now);
-    var monday = keyAdd(todayKey, -((keyDow(todayKey) + 6) % 7));
-    var lo, hi;
-    switch (cal.prefs.range) {
-      case 'today': lo = hi = todayKey; break;
-      case 'next': lo = keyAdd(monday, 7); hi = keyAdd(monday, 13); break;
-      case 'past': lo = keyAdd(todayKey, -7); hi = todayKey; break;
-      case 'all': lo = keyAdd(todayKey, -7) < monday ? keyAdd(todayKey, -7) : monday; hi = '9999-12-31'; break;
-      default: lo = monday; hi = keyAdd(monday, 6);
-    }
+    var past = cal.prefs.range === 'past';
+    var lo = past ? keyAdd(todayKey, -7) : todayKey, hi = past ? todayKey : keyAdd(todayKey, 6);
     return evs.filter(function (e) {
       var k = evKey(e);
       if (!k || k < lo || k > hi) return false;
-      if (!cal.prefs.impact[e.impact]) return false;
+      if (past && k === todayKey && evUpcoming(e, now, todayKey)) return false;
       if (cal.prefs.ccy.length && cal.prefs.ccy.indexOf(e.ccy) < 0) return false;
       return true;
-    }).sort(function (a, b) { return evSort(a) - evSort(b); });
+    }).sort(function (a, b) { return past ? evSort(b) - evSort(a) : evSort(a) - evSort(b); });
   }
+
+  /* Plain figures: the lead number of a forecast or result, with m/m, y/y
+     and q/q in words; the rest stays on the event's page. "+0.3% m/m (core
+     +0.2%); no y/y published" → "+0.3% on the month". */
+  function plainFig(v) {
+    if (v == null || v === '') return '';
+    var t = String(v).split(/;|\s\(|\s\/\s|\s·\s|\s—\s/)[0].trim();
+    t = t.replace(/\bm\/m\b/g, 'on the month').replace(/\by\/y\b/g, 'on the year').replace(/\bq\/q\b/g, 'on the quarter');
+    return t.length > 42 ? '' : t;
+  }
+  var SP_WORD = { good: 'Beat', bad: 'Missed', inline: 'In line' };
 
   function renderCalendar() {
     if (!cal.data) return;
     var now = new Date();
     var todayKey = dayKeyOf(now);
 
-    // Controls reflect prefs.
     Array.prototype.forEach.call(document.querySelectorAll('#cal-range [data-range]'), function (b) {
       b.setAttribute('aria-selected', b.getAttribute('data-range') === cal.prefs.range ? 'true' : 'false');
-    });
-    Array.prototype.forEach.call(document.querySelectorAll('#cal-impact [data-impact]'), function (b) {
-      b.setAttribute('aria-pressed', cal.prefs.impact[b.getAttribute('data-impact')] ? 'true' : 'false');
     });
     Array.prototype.forEach.call(document.querySelectorAll('#cal-ccy [data-ccy]'), function (b) {
       var c = b.getAttribute('data-ccy');
       var on = c === 'ALL' ? !cal.prefs.ccy.length : cal.prefs.ccy.indexOf(c) >= 0;
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
+    var cbtn = $('#cal-ccy-btn');
+    if (cbtn) {
+      var n = cal.prefs.ccy.length;
+      cbtn.textContent = n ? (n === 1 ? cal.prefs.ccy[0] : n + ' currencies') : 'All currencies';
+      cbtn.classList.toggle('on', !!n);
+    }
     var sel = $('#cal-tz');
-    if (sel && sel.options.length) sel.options[0].textContent = 'Local time (' + (cal.prefs.tz === 'local' ? tzAbbr() : 'device') + ')';
+    if (sel && sel.options.length) sel.options[0].textContent = 'Local time (' + (tzAbbr() || 'device') + ')';
 
     renderUpNext(now);
+    if (cal.event) renderEvent();
 
     var list = $('#cal-list');
     list.textContent = '';
     var evs = filtered(now);
     if (!evs.length) {
       var empty = el('div', 'card cal-empty');
-      empty.appendChild(el('p', null, 'No events match these filters.'));
+      empty.appendChild(el('p', null, cal.prefs.ccy.length ? 'Nothing for these currencies in this window.' : 'Nothing scheduled in this window.'));
       list.appendChild(empty);
       return;
     }
-    var bar = el('div', 'cal-bar');
-    bar.appendChild(el('span', 'meta', evs.length + (evs.length === 1 ? ' event' : ' events') + ' · times in ' + tzAbbr()));
-    var ex = el('button', 'btn ghost small', 'Add these to my calendar');
-    ex.type = 'button';
-    ex.setAttribute('data-ics', '__visible');
-    bar.appendChild(ex);
-    list.appendChild(bar);
-
-    // This week / All: days already gone fold into one "Earlier" line so
-    // today and what's next come first. Not in "Last 7 days" (that's the
-    // point there), and not when nothing is left to come.
-    var fold = null;
-    var pastN = evs.filter(function (e) { return evKey(e) < todayKey; }).length;
-    if ((cal.prefs.range === 'week' || cal.prefs.range === 'all') && pastN && pastN < evs.length) {
-      fold = earlierFold(pastN, cal.prefs.range === 'week' ? 'Earlier this week' : 'Earlier');
-      list.appendChild(fold.wrap);
-    }
-
-    var group = null, groupKey = null, nowDrawn = false;
+    // Group by day; smaller (low-impact) events fold behind a link per day.
+    var days = [], byDay = {};
     evs.forEach(function (e) {
       var k = evKey(e);
-      if (k !== groupKey) {
-        groupKey = k;
-        group = el('section', 'cal-day card' + (k === todayKey ? ' today' : '') + (k < todayKey ? ' past' : ''));
-        group.appendChild(el('h3', 'cal-day-head', keyLabel(k, todayKey)));
-        (fold && k < todayKey ? fold.body : list).appendChild(group);
-      }
-      if (k === todayKey && !nowDrawn && evUpcoming(e, now, todayKey) && evWhen(e)) {
-        var nl = el('div', 'now-line');
-        nl.appendChild(el('span', null, 'Now · ' + fmtClock(now)));
-        group.appendChild(nl);
-        nowDrawn = true;
-      }
-      group.appendChild(eventRow(e, now, todayKey));
+      if (!byDay[k]) { byDay[k] = []; days.push(k); }
+      byDay[k].push(e);
     });
-    // Today's events all done: put "Now" at the end of today's list.
-    var todayGroup = list.querySelector('.cal-day.today');
-    if (todayGroup && !nowDrawn) {
-      var end = el('div', 'now-line');
-      end.appendChild(el('span', null, 'Now \u00b7 ' + fmtClock(now)));
-      todayGroup.appendChild(end);
-    }
+    days.forEach(function (k) {
+      var all = byDay[k];
+      var big = all.filter(function (e) { return e.impact !== 'low'; });
+      var small = all.length - big.length;
+      var shown = cal.small[k] ? all : big;
+      var group = el('section', 'cal-day card' + (k === todayKey ? ' today' : '') + (k < todayKey ? ' past' : ''));
+      group.appendChild(el('h3', 'cal-day-head', keyLabel(k, todayKey)));
+      var nowDrawn = cal.prefs.range === 'past';
+      if (!shown.length) group.appendChild(el('p', 'meta cr-none', 'No major events.'));
+      shown.forEach(function (e) {
+        if (k === todayKey && !nowDrawn && evUpcoming(e, now, todayKey) && evWhen(e)) {
+          var nl = el('div', 'now-line');
+          nl.appendChild(el('span', null, 'Now · ' + fmtClock(now)));
+          group.appendChild(nl);
+          nowDrawn = true;
+        }
+        group.appendChild(eventRow(e, now, todayKey));
+      });
+      if (k === todayKey && !nowDrawn && shown.length) {
+        var end = el('div', 'now-line');
+        end.appendChild(el('span', null, 'Now · ' + fmtClock(now)));
+        group.appendChild(end);
+      }
+      if (small) {
+        var more = el('button', 'cr-small', cal.small[k] ? 'Hide smaller events' : 'Show ' + small + ' smaller event' + (small === 1 ? '' : 's'));
+        more.type = 'button';
+        more.setAttribute('data-small', k);
+        group.appendChild(more);
+      }
+      list.appendChild(group);
+    });
   }
 
-  /* The "Earlier this week · N events" toggle; open state lasts the visit. */
-  function earlierFold(n, label) {
-    var wrap = el('div', 'cal-earlier' + (cal.earlierOpen ? ' open' : ''));
-    var btn = el('button', 'cal-earlier-btn');
-    btn.type = 'button';
-    btn.setAttribute('aria-expanded', cal.earlierOpen ? 'true' : 'false');
-    btn.appendChild(el('span', 'ce-lbl', label));
-    btn.appendChild(el('span', 'ce-n', n + (n === 1 ? ' event' : ' events')));
-    btn.appendChild(el('span', 'ce-act', cal.earlierOpen ? 'Hide' : 'Show'));
-    var body = el('div', 'cal-earlier-body');
-    body.hidden = !cal.earlierOpen;
-    btn.addEventListener('click', function () {
-      cal.earlierOpen = !cal.earlierOpen;
-      body.hidden = !cal.earlierOpen;
-      wrap.classList.toggle('open', cal.earlierOpen);
-      btn.setAttribute('aria-expanded', cal.earlierOpen ? 'true' : 'false');
-      btn.querySelector('.ce-act').textContent = cal.earlierOpen ? 'Hide' : 'Show';
-    });
-    wrap.appendChild(btn);
-    wrap.appendChild(body);
-    return { wrap: wrap, body: body };
-  }
-
+  /* One event row (Rami, 2026-11-09): time, flag, the event, and one plain
+     line — what's expected, or once it's out, Beat / Missed / In line with
+     the actual. A tap opens the event's own page. */
   function eventRow(e, now, todayKey) {
     var w = evWhen(e), up = evUpcoming(e, now, todayKey), sp = surprise(e);
-    var wrap = el('div', 'ev imp-' + e.impact + (up ? '' : ' past'));
-    var row = el('button', 'ev-row');
-    row.type = 'button';
-    row.setAttribute('data-id', e.id);
-    row.setAttribute('aria-expanded', cal.open[e.id] ? 'true' : 'false');
-
-    row.appendChild(el('span', 'ev-time mono', w && !e.time_tbd ? fmtClock(w) : 'TBD'));
-    // Currency + impact travel together as one tag.
-    var tag = el('span', 'ev-tag');
-    tag.appendChild(el('span', 'ev-ccy mono', e.ccy));
+    var a = el('a', 'cr imp-' + e.impact + (up ? '' : ' past'));
+    a.href = '#event/' + encodeURIComponent(e.id);
+    a.appendChild(el('span', 'cr-time mono', w && !e.time_tbd ? fmtClock(w) : 'TBD'));
+    var tag = el('span', 'cr-tag');
+    if (FLAG_FILE[e.ccy]) tag.appendChild(flagEl(e.ccy));
+    tag.appendChild(el('span', 'mono', e.ccy));
     var pips = makePips(e.impact);
     pips.title = e.impact.charAt(0).toUpperCase() + e.impact.slice(1) + ' impact';
     tag.appendChild(pips);
-    row.appendChild(tag);
-
-    var t = el('span', 'ev-title');
-    var nm = el('span', 'ev-name', e.title);
-    if (e.focus && FOCUS_ON) nm.appendChild(el('span', 'ev-focus', 'Focus'));
-    t.appendChild(nm);
-    // Outcome text lives in Details only ("What it meant"); rows show figures (Rami, 2026-10-21).
+    a.appendChild(tag);
+    var body = el('span', 'cr-body');
+    body.appendChild(el('span', 'cr-name', e.title));
+    var line = el('span', 'cr-line');
+    var act = plainFig(e.actual), fc = plainFig(e.forecast);
+    if (!up && act) {
+      if (sp) line.appendChild(el('span', 'cr-sp sp-' + sp, SP_WORD[sp]));
+      line.appendChild(document.createTextNode(act + (fc && sp ? ' vs ' + fc + ' expected' : '')));
+    } else if (fc) {
+      line.appendChild(document.createTextNode('Expected ' + fc));
+    }
+    if (line.childNodes.length) body.appendChild(line);
+    a.appendChild(body);
     if (up && w) {
-      var cd = el('span', 'ev-cd', 'in ' + countdown(w - now));
+      var cd = el('span', 'cr-cd mono', countdown(w - now));
       cd.setAttribute('data-ts', w.getTime());
-      t.appendChild(cd);
-    }
-    row.appendChild(t);
+      a.appendChild(cd);
+    } else a.appendChild(el('span', 'cr-cd'));
+    return a;
+  }
 
-    // Compound values ("+6.1K / 6.5%", "5.300% (b/c 2.77)") show the lead
-    // figure, with the rest as a small line under it — no mid-value wraps.
-    function cell(lbl, v, cls) {
-      var nil = v == null || v === '';
-      var c = el('span', 'ev-num' + (nil ? ' nil' : ''));
-      c.appendChild(el('small', null, lbl));
-      var parts = nil ? ['—'] : String(v).split(/\s+\/\s+|\s+(?=\()/);
-      c.appendChild(el('b', 'mono' + (cls ? ' ' + cls : ''), parts[0]));
-      if (parts.length > 1) c.appendChild(el('span', 'ev-sub mono', parts.slice(1).join(' · ')));
-      return c;
+  /* An event's own page (#event/<id>; Rami, 2026-11-09). Plain words only:
+     anything that reads like raw shorthand is left out (plainText). */
+  function renderEvent() {
+    var box = $('#event-body');
+    if (!box) return;
+    box.textContent = '';
+    var back = el('a', 'more art-back', '← Calendar');
+    back.href = '#calendar';
+    box.appendChild(back);
+    if (!cal.data) { box.appendChild(el('p', 'meta', 'Loading…')); return; }
+    var id = decodeURIComponent(cal.event), e = null;
+    (cal.data.events || []).forEach(function (x) { if (x.id === id) e = x; });
+    if (!e) {
+      var gone = el('div', 'card art-gone');
+      gone.appendChild(el('h1', 'display', 'This event isn’t on the calendar any more'));
+      var nl = el('a', 'btn', 'Go to the Calendar →');
+      nl.href = '#calendar';
+      gone.appendChild(nl);
+      box.appendChild(gone);
+      return;
     }
-    var nums = el('span', 'ev-nums');
-    // Speeches, minutes, auctions without figures: no wall of dashes.
-    if ([e.actual, e.forecast, e.previous].some(function (v) { return v != null && v !== ''; })) {
-      nums.appendChild(cell('Actual', e.actual, sp ? 'sp-' + sp : null));
-      nums.appendChild(cell('Forecast', e.forecast));
-      nums.appendChild(cell('Previous', e.previous));
-    }
-    row.appendChild(nums);
-    row.appendChild(el('span', 'ev-caret', '›'));
-    wrap.appendChild(row);
+    document.title = e.title + ' — Blue Street';
+    var now = new Date(), todayKey = dayKeyOf(now), w = evWhen(e), up = evUpcoming(e, now, todayKey), sp = surprise(e);
+    var c = el('article', 'card evp gl-scope');
+    var k = evKey(e);
+    c.appendChild(el('p', 'kicker', keyLabel(k, todayKey) + (w && !e.time_tbd ? ' · ' + fmtClock(w) + ' ' + tzAbbr(w) : '') +
+      ' · ' + e.impact.charAt(0).toUpperCase() + e.impact.slice(1) + ' impact'));
+    var h = el('h1', 'display evp-title');
+    if (FLAG_FILE[e.ccy]) h.appendChild(flagEl(e.ccy));
+    h.appendChild(document.createTextNode(' ' + e.title));
+    c.appendChild(h);
 
-    var det = el('div', 'ev-detail gl-scope');
-    det.hidden = !cal.open[e.id];
-    if (sp && sp !== 'inline') {
-      det.appendChild(el('p', 'sp-note sp-' + sp, (sp === 'good' ? 'Beat' : 'Missed') + ' forecast — ' +
-        (sp === 'good' ? 'supportive' : 'negative') + ' for ' + e.ccy));
+    var facts = el('div', 'hb-facts');
+    function fact(lbl, val, sub) {
+      if (!val) return;
+      var f = el('div', 'hb-fact');
+      f.appendChild(el('span', 'mt-lbl', lbl));
+      if (typeof val === 'string') f.appendChild(el('span', 'mt-val', val)); else f.appendChild(val);
+      if (sub) f.appendChild(el('span', 'mt-sub', sub));
+      facts.appendChild(f);
     }
-    if (e.outcome && !up) {
-      var oc = el('div', 'ev-outcome-box');
-      oc.appendChild(el('span', 'callout-lbl', 'What it meant'));
-      oc.appendChild(el('p', null, e.outcome));
-      det.appendChild(oc);
+    if (up && w) {
+      var cd = el('span', 'mt-val mono', countdown(w - now));
+      cd.setAttribute('data-ts', w.getTime());
+      fact('Starts in', cd);
     }
-    if (e.why) det.appendChild(el('p', 'ev-why', e.why));
-    // Once the outcome is in, it supersedes the beat/miss branches (speeches
-    // and minutes never get an actual) — render-only; the feed keeps all fields.
-    var settled = !!e.outcome && !up;
-    if (!settled && (e.if_beat || e.if_miss)) {
+    var act = plainFig(e.actual), fc = plainFig(e.forecast), pv = plainFig(e.previous);
+    if (!up && act) fact('Result', act, sp ? SP_WORD[sp] + (sp === 'inline' ? '' : sp === 'good' ? ', good for the ' + e.ccy : ', bad for the ' + e.ccy) : '');
+    fact('Expected', fc);
+    fact('Last time', pv);
+    if (facts.childNodes.length) c.appendChild(facts);
+
+    if (e.outcome && !up && plainText(e.outcome, 500)) {
+      var oc = el('section', 'narr');
+      oc.appendChild(el('h2', 'narr-lbl', 'What it meant'));
+      oc.appendChild(el('p', 'narr-p', e.outcome));
+      c.appendChild(oc);
+    }
+    if (e.why && plainText(e.why, 400)) {
+      var wy = el('section', 'narr');
+      wy.appendChild(el('h2', 'narr-lbl', 'Why it matters'));
+      wy.appendChild(el('p', 'narr-p', e.why));
+      c.appendChild(wy);
+    }
+    if (up || !e.outcome) {
       var cb = e.category === 'central-bank';
-      var g = el('div', 'ev-scen');
-      if (e.if_beat) {
-        var b1 = el('div', 'sc-box sc-bull');
-        b1.appendChild(el('span', 'callout-lbl', cb ? 'Hawkish outcome' : 'If it beats'));
-        b1.appendChild(el('p', null, e.if_beat));
-        g.appendChild(b1);
-      }
-      if (e.if_miss) {
-        var b2 = el('div', 'sc-box sc-bear');
-        b2.appendChild(el('span', 'callout-lbl', cb ? 'Dovish outcome' : 'If it misses'));
-        b2.appendChild(el('p', null, e.if_miss));
-        g.appendChild(b2);
-      }
-      det.appendChild(g);
+      [[e.if_beat, cb ? 'If it’s more hawkish than expected' : 'If it beats', 'sc-bull'],
+       [e.if_miss, cb ? 'If it’s more dovish than expected' : 'If it misses', 'sc-bear']].forEach(function (r) {
+        if (!r[0] || !plainText(r[0], 400)) return;
+        var b = el('section', 'evp-if ' + r[2]);
+        b.appendChild(el('h2', 'narr-lbl', r[1]));
+        b.appendChild(el('p', 'narr-p', r[0]));
+        c.appendChild(b);
+      });
     }
-    var bk = e.bank && cal.banks[e.bank];
-    if (bk) {
-      var bx = el('div', 'ev-bank');
-      bx.appendChild(el('span', 'callout-lbl', bk.short + ' today'));
-      var bits = [];
-      if (bk.rate) bits.push(bk.rate + (bk.rate_label ? ' ' + bk.rate_label.toLowerCase() : ''));
-      if (bk.last_move && bk.last_move.bp != null) {
-        var lm = ymd(bk.last_move.date);
-        bits.push((bk.last_move.bp > 0 ? 'hiked +' + bk.last_move.bp + 'bp' : bk.last_move.bp < 0 ? 'cut ' + bk.last_move.bp + 'bp' : 'held') +
-          (lm ? ' ' + MONTHS[lm.getMonth()] + ' ' + lm.getDate() : ''));
-      }
-      if (bk.priced) bits.push('priced: ' + bk.priced);
-      if (bk.bias) bits.push(bk.bias);
-      bx.appendChild(el('p', null, bits.join(' · ')));
-      det.appendChild(bx);
+    var links = el('div', 'ev-links evp-links');
+    if (CCYS.indexOf(e.ccy) >= 0) {
+      var cl = el('a', 'btn ghost', 'The ' + e.ccy + ' page →');
+      cl.href = '#fx/' + e.ccy;
+      links.appendChild(cl);
     }
-    var links = el('div', 'ev-links');
-    if (e.chapter && chapterHref(e.chapter)) {
-      var ch = el('a', 'more', 'Read the full story →');
-      ch.href = chapterHref(e.chapter);
-      links.appendChild(ch);
-    }
-    if (bk) {
-      var bl = el('a', 'more', (bk.short || 'Central bank') + ' on the ' + bk.ccy + ' page →');
-      bl.href = '#fx/' + bk.ccy;
-      links.appendChild(bl);
-    }
-    var add = el('button', 'btn ghost small', 'Add to calendar');
+    var add = el('button', 'btn ghost', 'Add to my calendar');
     add.type = 'button';
     add.setAttribute('data-ics', e.id);
     links.appendChild(add);
-    det.appendChild(links);
-    if ((e.sources || []).length) det.appendChild(sourceChips(e.sources));
-    if (!e.why && !e.if_beat && !(e.outcome && !up) && !bk && !(e.sources || []).length) {
-      det.insertBefore(el('p', 'meta', 'No briefing for this event yet.'), det.firstChild);
+    c.appendChild(links);
+    var srcN = (e.sources || []).length;
+    if (srcN) {
+      var sd = drawer('Sources', srcN + (srcN === 1 ? ' source' : ' sources'));
+      sd.appendChild(sourceChips(e.sources));
+      c.appendChild(sd);
     }
-    wrap.appendChild(det);
-    return wrap;
+    box.appendChild(c);
   }
 
   /* "Up next": the next high-impact event, with a live countdown. */
@@ -2447,7 +2418,7 @@
     Array.prototype.forEach.call(document.querySelectorAll('[data-ts]'), function (n) {
       var ms = +n.getAttribute('data-ts') - now;
       if (ms <= 0) crossed = true;
-      n.textContent = (n.classList.contains('ev-cd') ? 'in ' : '') + countdown(ms);
+      n.textContent = countdown(ms);
     });
     if (crossed) renderCalendar();
   }
@@ -2473,14 +2444,14 @@
   }
   function downloadIcs(which) {
     var evs = (cal.data && cal.data.events) || [];
-    var pick = which === '__visible' ? filtered(new Date()) : evs.filter(function (e) { return e.id === which; });
+    var pick = evs.filter(function (e) { return e.id === which; });
     if (!pick.length) return;
     var body = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Blue Street//Calendar//EN', 'CALSCALE:GREGORIAN']
       .concat(pick.map(icsEvent)).concat(['END:VCALENDAR']).join('\r\n');
     var blob = new Blob([body], { type: 'text/calendar;charset=utf-8' });
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = (which === '__visible' ? 'bluestreet-calendar' : which) + '.ics';
+    a.download = which + '.ics';
     document.body.appendChild(a);
     a.click();
     setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
