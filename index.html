@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=133">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=133">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=134">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=134">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=133">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=134">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=133">
+<link rel="stylesheet" href="assets/style.css?v=134">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=133" defer></script>
-<script src="assets/app.js?v=133" defer></script>
+<script src="assets/cot.js?v=134" defer></script>
+<script src="assets/app.js?v=134" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
@@ -156,20 +156,6 @@
       <h1 class="view-title">Currencies</h1>
     </div>
     <div id="fx-detail" hidden></div>
-    <!-- Pair picker (Rami, 2026-11-09): a fill-in sentence, black and white.
-         The blanks are underlined; the choices are outlined until picked. -->
-    <section class="fx-picker" id="fx-picker" aria-label="Pair picker">
-      <p class="picker-q">I&rsquo;m <span class="blank" id="fx-dir-blank" aria-hidden="true"></span> on <span class="blank" id="fx-ccy-blank" aria-hidden="true"></span></p>
-      <div class="picker-opts">
-        <span class="segmented" role="group" aria-label="Direction" id="fx-dir">
-          <button type="button" class="seg" data-dir="bull" aria-pressed="false">Bullish</button>
-          <button type="button" class="seg" data-dir="bear" aria-pressed="false">Bearish</button>
-        </span>
-        <div class="chip-row" id="fx-ccy" aria-label="Currency"></div>
-      </div>
-      <ol class="picks" id="fx-picks"></ol>
-    </section>
-
     <!-- Today by currency: the full cards, side by side (Rami, 2026-11-09). -->
     <section class="t-row fx-reads" aria-labelledby="fx-reads-h">
       <div class="t-row-head">
@@ -178,6 +164,24 @@
       </div>
       <ol class="t-strip ch-cards" id="fx-cards" aria-label="Today's read for each currency"></ol>
       <p class="quiet-line" id="fx-quiet" hidden></p>
+    </section>
+
+    <!-- Pair picker (Rami, 2026-11-09): a fill-in sentence, black and white.
+         The blanks are underlined; the choices are outlined until picked.
+         Sits under Today by currency but peeks in above the fold; once both
+         blanks are filled it scrolls up to the top with the pairs below. -->
+    <section class="fx-picker" id="fx-picker" aria-label="Pair picker">
+      <div class="picker-dock" id="picker-dock">
+      <p class="picker-q">I&rsquo;m <span class="blank" id="fx-dir-blank" aria-hidden="true"></span> on <span class="blank" id="fx-ccy-blank" aria-hidden="true"></span></p>
+      <div class="picker-opts">
+        <span class="segmented" role="group" aria-label="Direction" id="fx-dir">
+          <button type="button" class="seg" data-dir="bull" aria-pressed="false">Bullish</button>
+          <button type="button" class="seg" data-dir="bear" aria-pressed="false">Bearish</button>
+        </span>
+        <div class="chip-row" id="fx-ccy" aria-label="Currency"></div>
+      </div>
+      </div>
+      <ol class="picks" id="fx-picks"></ol>
     </section>
 
     <!-- Strength board as a side-scrolling row (Rami, 2026-11-09). -->

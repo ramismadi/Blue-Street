@@ -54,9 +54,14 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   beside the row title (hidden when the row fits). Code: `renderEdition`,
   `renderTodayNews`, `renderMiniCards`, `renderGauges` / `gaugeSvg`,
   `initStrips` in app.js; `.t-*`, `.mini-card` in style.css.
-- **Currencies** (Rami, 2026-11-09): pair picker, then **Today by currency**,
-  then the **strength board as a side-scrolling row** of tiles (rank, flag +
-  code, score and change, name, the bar, the summary). Today by currency is the full chapter
+- **Currencies** (Rami, 2026-11-09): **Today by currency**, then the pair
+  picker, then the **strength board as a side-scrolling row** of tiles (rank,
+  flag + code, score and change, name, the bar, the summary). The picker's
+  sentence and choices (`#picker-dock`) are `position: sticky; bottom` (the
+  section is `display: contents` so it can stick across the page): docked
+  above the fold — over the phone tab bar — until scrolled to. Once both
+  blanks are filled, `pickerToTop` scrolls it smoothly to just under the
+  masthead with the pairs below (and settles once the masthead compacts). Today by currency is the full chapter
   cards (flag + title, lean mark, `teaser`, top 3 headlines, "More on … →"),
   unchanged in design, at full size in a side-scrolling row (`#fx-cards`,
   `renderCcyCards`). Quiet chapters fold into the "Quiet today" line under

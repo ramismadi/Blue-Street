@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '133';
+  var ASSET_VERSION = '134';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -575,6 +575,7 @@
       renderFx();
     }
     if (tab === 'learn') renderLearn();
+    if (tab === 'fx') setTimeout(queueScroll, 60);
     if (tab === 'event') { cal.event = h.slice(1).join('/'); renderEvent(); } else cal.event = '';
     if (tab === 'about') {   // About & help (Rami, 2026-11-09): one page at a time
       var pg = h[1] || 'about';
@@ -1282,7 +1283,14 @@
   function updateScroll() {
     sx.raf = 0;
     var vh = window.innerHeight;
-    // Today's read blurs and lifts away as you scroll past it.
+    // The pair picker docks to the bottom of the screen until scrolled to;
+    // mark it so it gets its own backdrop while docked (Rami, 2026-11-09).
+    var dock = $('#picker-dock');
+    if (dock && dock.offsetParent) {
+      var db = dock.getBoundingClientRect().bottom, lim = vh - (parseFloat(getComputedStyle(dock).bottom) || 0);
+      dock.classList.toggle('docked', db >= lim - 1);
+    }
+        // Today's read blurs and lifts away as you scroll past it.
     var hero = $('#t-hero');
     if (hero && hero.offsetParent) {
       var r = hero.getBoundingClientRect();
@@ -2481,7 +2489,7 @@
       var b = e.target.closest('[data-dir]');
       if (b) {   // tap the picked side again to clear it (Rami, 2026-10-28)
         var d = b.getAttribute('data-dir');
-        fx.dir = fx.dir === d ? '' : d; fx.pickOpen = {}; renderPicker();
+        fx.dir = fx.dir === d ? '' : d; fx.pickOpen = {}; renderPicker(); pickerToTop();
       }
     });
     var cc = $('#fx-ccy');
@@ -2498,7 +2506,7 @@
         var b = e.target.closest('[data-ccy]');
         if (b) {   // tap the picked currency again to clear it
           var c = b.getAttribute('data-ccy');
-          fx.ccy = fx.ccy === c ? '' : c; fx.pickOpen = {}; renderPicker();
+          fx.ccy = fx.ccy === c ? '' : c; fx.pickOpen = {}; renderPicker(); pickerToTop();
         }
       });
     }
@@ -2523,6 +2531,7 @@
       if (!a) return;
       var v = a.getAttribute('data-express').split(':');
       fx.dir = v[0]; fx.ccy = v[1]; fx.pickOpen = {};
+      setTimeout(pickerToTop, 250);   // after the hash change lands on #fx
     });
   }
 
@@ -2932,6 +2941,32 @@
     });
   }
 
+  /* Once both blanks are filled, glide the picker up so it sits just under
+     the masthead with the pairs below (Rami, 2026-11-09). */
+  function pickerToTop() {
+    if (!fx.dir || !fx.ccy) return;
+    var pk = $('#picker-dock');
+    if (!pk || !pk.offsetParent) return;
+    // Its natural place, not where it's docked: measure from the pairs under
+    // it. The masthead compacts as the page scrolls, so aim, then settle.
+    function target() {
+      var m = $('.masthead'), list = $('#fx-picks');
+      var top = list ? list.getBoundingClientRect().top - (parseFloat(getComputedStyle(list).marginTop) || 0) - pk.offsetHeight
+        : pk.getBoundingClientRect().top;
+      return Math.max(0, top + window.pageYOffset - (m ? m.offsetHeight : 0) - 4);
+    }
+    var smooth = sx.reduced ? 'auto' : 'smooth';
+    requestAnimationFrame(function () {
+      var y = target();
+      if (Math.abs(window.pageYOffset - y) < 4) return;
+      window.scrollTo({ top: y, behavior: smooth });
+      setTimeout(function () {
+        var y2 = target();
+        if (Math.abs(window.pageYOffset - y2) > 3) window.scrollTo({ top: y2, behavior: smooth });
+      }, sx.reduced ? 30 : 650);
+    });
+  }
+
   function renderPicker() {
     if (!fx.data) return;
     Array.prototype.forEach.call(document.querySelectorAll('#fx-dir [data-dir]'), function (b) {
@@ -2956,6 +2991,7 @@
     var ready = !!(fx.dir && fx.ccy && fxGet(fx.ccy));
     box.hidden = !ready;
     $('#fx-picker').classList.toggle('picked', ready);
+    queueScroll();   // re-check whether the picker is docked
     if (!ready) return;
     // Rami, 2026-10-28: one list, best edge first, no group headings.
     fxPicks(fx.dir, fx.ccy).forEach(function (p) { box.appendChild(pickRow(p)); });

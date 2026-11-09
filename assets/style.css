@@ -632,7 +632,8 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .mini-card:hover .mc-more { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Currencies: the strength board and the currency cards as side rows */
-.fx-board, .fx-reads { margin-top: 26px; }
+.fx-board { margin-top: 26px; }
+.fx-reads { margin-top: 8px; }
 .board > li { width: 210px; }
 .board-tile { display: flex; flex-direction: column; gap: 8px; width: 100%; padding: 14px 16px; text-decoration: none; color: var(--ink); }
 .board-tile:hover { border-color: var(--accent-2); }
@@ -1155,7 +1156,31 @@ a.metric:hover { border-color: var(--accent-2); }
 /* Pair picker (Rami, 2026-11-09): black and white only. A fill-in sentence —
    "I'm ____ on ____" with underlined blanks that fill as you choose — and
    the choices under it, outlined until picked, then solid ink. */
-.fx-picker { padding: 10px 0 22px; }
+/* The section is display: contents so the dock's sticky range is the whole
+   Currencies page, not just the picker. */
+.fx-picker { display: contents; }
+#fx-picks { margin-bottom: 22px; }
+/* Docked: the sentence and choices stay at the bottom of the screen until
+   you scroll to them, so the picker is always in reach (Rami, 2026-11-09). */
+.picker-dock {
+  position: sticky; bottom: 0; z-index: 20;
+  margin: 18px -18px 0; padding: 10px 18px 12px;
+  scroll-margin-top: calc(var(--mast-h, 100px) + 4px);
+  background: var(--bg);
+  transition: box-shadow .2s;
+}
+.picker-dock.docked { box-shadow: 0 -10px 24px rgba(10, 14, 22, 0.10); border-top: 1px solid var(--line); }
+.picker-dock.docked .picker-q { font-size: 1.45rem; margin-bottom: 10px; }
+@media (max-width: 640px) {
+  .picker-dock { bottom: calc(78px + env(safe-area-inset-bottom, 0px)); margin: 14px -16px 0; padding: 10px 16px 12px; }
+  .picker-dock.docked .picker-q { font-size: 1.15rem; margin-bottom: 8px; }
+  /* fill the strip behind the floating tab bar so the page doesn't peek through */
+  .picker-dock.docked { box-shadow: 0 -10px 24px rgba(10, 14, 22, 0.10), 0 90px 0 var(--bg); }
+  .picker-dock #fx-ccy { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 2px 16px; }
+  .picker-dock #fx-ccy::-webkit-scrollbar { display: none; }
+  .picker-dock #fx-ccy .fchip { flex: none; }
+  .is-app .picker-dock { bottom: 100px; }
+}
 .picker-q { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; margin: 0 0 16px; font-family: var(--serif); font-size: 1.9rem; line-height: 1.25; color: var(--ink); }
 .blank {
   display: inline-flex; align-items: baseline; justify-content: center; gap: 8px;
