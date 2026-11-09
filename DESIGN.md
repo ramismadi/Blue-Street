@@ -53,9 +53,9 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   beside the row title (hidden when the row fits). Code: `renderEdition`,
   `renderTodayNews`, `renderMiniCards`, `renderGauges` / `gaugeSvg`,
   `initStrips` in app.js; `.t-*`, `.mini-card` in style.css.
-- **Currencies** (Rami, 2026-11-09): pair picker, then the **strength board
-  as a side-scrolling row** of tiles (rank, flag + code, score and change,
-  name, the bar, the summary), then **Today by currency**: the full chapter
+- **Currencies** (Rami, 2026-11-09): pair picker, then **Today by currency**,
+  then the **strength board as a side-scrolling row** of tiles (rank, flag +
+  code, score and change, name, the bar, the summary). Today by currency is the full chapter
   cards (flag + title, lean mark, `teaser`, top 3 headlines, "More on … →"),
   unchanged in design, at full size in a side-scrolling row (`#fx-cards`,
   `renderCcyCards`). Quiet chapters fold into the "Quiet today" line under
