@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '120';
+  var ASSET_VERSION = '121';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -1187,6 +1187,8 @@
       a.appendChild(head);
       a.appendChild(el('span', 'mc-read', ch.quiet ? 'Quiet today: no real change since the last edition.'
         : firstSentences(ch.teaser || ch.fx || '', 1, 40)));
+      // Say it's tappable (Rami, 2026-11-09): same place the tile goes.
+      a.appendChild(el('span', 'mc-more', 'See more →'));
       li.appendChild(a);
       box.appendChild(li);
     });

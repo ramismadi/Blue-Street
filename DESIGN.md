@@ -42,7 +42,8 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
      headline, source · time. Tap = that story opened on News.
   3. **By currency**, a side-scrolling row of mini cards, one per chapter:
      flag + name, the lean mark top right, one line of the `teaser`
-     (quiet chapters say so). Tap = that currency's page.
+     (quiet chapters say so), and "See more →" at the bottom so it reads as
+     tappable. Tap anywhere = that currency's page.
   4. **Currency strength**, a side-scrolling row: one speedometer per
      currency, strongest to weakest. Same score as the strength board (sum of
      the seven pillar scores) on a fixed −7…+7 dial, so a needle means the

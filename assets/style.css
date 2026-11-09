@@ -628,6 +628,8 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
 .mini-card.quiet .mc-read { color: var(--ink-3); font-style: italic; }
+.mc-more { margin-top: auto; padding-top: 2px; font-size: 0.84rem; font-weight: 700; color: var(--accent); }
+.mini-card:hover .mc-more { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Currencies: the strength board and the currency cards as side rows */
 .fx-board, .fx-reads { margin-top: 26px; }
