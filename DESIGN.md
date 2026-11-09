@@ -168,6 +168,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 - Fonts: serif (Source Serif 4 → Georgia) for headlines and ledes; system sans
   for UI/body; monospace only for tabular numerals.
 - Flags: `assets/flags/<us|eu|gb|jp|ch|ca|au|nz|xau|oil>.svg` (hand-drawn 4:3 SVGs; gold and oil are icons), placed with `flagEl(code)` in app.js. On the News chips, bias tags, news read, Developing thread tags, the Today rows and the currency cards. Emoji flags aren't used — Windows shows them as letters.
+- **Phone tab bar gesture** (Rami, 2026-11-09; `initTabSwipe`, phones only): the selected pill is one element (`.tab-pill`) that slides between tabs. Press a tab and slide: the bar swells a little (`.tb-press`), the pill follows the finger, the tab under it lifts, and past either end the pill eases out and the bar stretches up to 2% toward the pull (`--tb-sx`, `--tb-tx` keep the far edge put); letting go opens that tab. A plain tap is still a tap (the pointer is only captured once the finger moves 8px). Links get `draggable=false` and no long-press menu so the slide isn't cancelled. Reduced motion: no swell or springs.
 - Session chips (masthead): SYD 07–16, TYO 09–18, LDN 08–17, NYC 08–17, each
   in its own city's local time (DST-correct), Mon–Fri, and only while the FX
   week is open (Sun 17:00 → Fri 17:00 New York). Holidays not modelled.

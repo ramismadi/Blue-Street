@@ -2292,7 +2292,29 @@ html, body { overflow-x: clip; max-width: 100%; }
     -webkit-tap-highlight-color: transparent;
   }
   .tabs a .sn-ico { width: 22px; height: 22px; opacity: 1; }
-  .tabs a[aria-selected="true"] { background: var(--accent-wash); color: var(--accent); font-weight: 700; }
+  .tabs a[aria-selected="true"] { color: var(--accent); font-weight: 700; }
+  /* The selected pill is one element that slides between tabs (Rami,
+     2026-11-09): press a tab and slide, the pill follows; let go to switch. */
+  .tabs { position: relative; touch-action: none; user-select: none; -webkit-user-select: none; }
+  .tabs a { position: relative; z-index: 1; -webkit-touch-callout: none; transition: color .15s, transform .2s cubic-bezier(.2,.8,.2,1); }
+  .tab-pill {
+    position: absolute; z-index: 0; top: 5px; bottom: 5px; left: 0;
+    border-radius: 24px; background: var(--accent-wash);
+    transition: transform .38s cubic-bezier(.3, 1.3, .5, 1), width .38s cubic-bezier(.3, 1.3, .5, 1), opacity .2s;
+    pointer-events: none;
+  }
+  .tabbar { transition: transform .32s cubic-bezier(.3, 1.4, .5, 1); transform: translateX(var(--tb-tx, 0px)) scale(var(--tb-s, 1)) scaleX(var(--tb-sx, 1)); }
+  .tabbar.tb-press { --tb-s: 1.025; }
+  .tabbar .wrap { overflow: hidden; border-radius: 30px; }   /* keep the pill inside the bar's rounded ends */
+  .tabbar.tb-drag { transition: transform .12s ease-out; }
+  .tabbar.tb-drag .tab-pill { transition: width .25s ease-out, opacity .2s; }
+  .tabbar.tb-drag .tabs a[aria-selected="true"] { color: var(--ink-2); font-weight: 600; }
+  .tabbar .tabs a.tab-over { color: var(--accent); }
+  .tabbar.tb-press .tabs a.tab-over { transform: translateY(-2px) scale(1.06); }
+  @media (prefers-reduced-motion: reduce) {
+    .tabbar, .tab-pill, .tabs a { transition: none !important; }
+    .tabbar.tb-press { --tb-s: 1; }
+  }
   .tabs a[aria-selected="true"]::after { display: none; }
   .tabs a .focus-badge { position: absolute; top: 3px; left: calc(50% + 6px); margin: 0; }
   /* Room so the last lines of every page clear the bar. */
@@ -2381,3 +2403,5 @@ html, body { overflow-x: clip; max-width: 100%; }
   .news-group-head + .news-card.news-row { border-top: 0; }
   .news-card.news-row:has(+ .news-group-head), .news-card.news-row:has(+ .news-more-btn) { border-bottom: 1px solid var(--line); }
 }
+
+@media (min-width: 641px) { .tab-pill { display: none; } }

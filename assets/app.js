@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '135';
+  var ASSET_VERSION = '136';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -530,8 +530,115 @@
       next.click();
       e.preventDefault();
     });
+    initTabSwipe(bar);
     route();
   }
+
+  /* Phone tab bar gesture (Rami, 2026-11-09): press a tab and slide — a pill
+     follows the finger from tab to tab, the bar swells a little while held
+     and stretches like rubber past either end; letting go opens the tab under
+     the finger. A plain tap still works as a tap. Desktop is untouched. */
+  function initTabSwipe(bar) {
+    var mq = window.matchMedia ? window.matchMedia('(max-width: 640px)') : null;
+    var nav = bar.closest('.tabbar');
+    var pill = el('span', 'tab-pill');
+    pill.setAttribute('aria-hidden', 'true');
+    bar.insertBefore(pill, bar.firstChild);
+    var g = null, swallowClick = false;
+    // Links would otherwise start a native drag (or a long-press preview)
+    // and cancel the slide.
+    Array.prototype.forEach.call(bar.querySelectorAll('[role=tab]'), function (t) { t.setAttribute('draggable', 'false'); });
+    bar.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    bar.addEventListener('contextmenu', function (e) { if (mq && mq.matches) e.preventDefault(); });
+    function tabs() { return Array.prototype.slice.call(bar.querySelectorAll('[role=tab]')); }
+    function place(x, w) {
+      pill.style.width = w + 'px';
+      pill.style.transform = 'translateX(' + x + 'px)';
+    }
+    function settle() {   // pill to the selected tab
+      if (!(mq && mq.matches)) return;
+      var on = bar.querySelector('[role=tab][aria-selected="true"]');
+      if (!on) { pill.style.opacity = '0'; return; }
+      pill.style.opacity = '1';
+      place(on.offsetLeft, on.offsetWidth);
+    }
+    function tabAt(x) {
+      var ts = tabs(), r0 = bar.getBoundingClientRect();
+      for (var i = 0; i < ts.length; i++) {
+        var r = ts[i].getBoundingClientRect();
+        if (x >= r.left && x < r.right) return ts[i];
+      }
+      return x < r0.left + r0.width / 2 ? ts[0] : ts[ts.length - 1];
+    }
+    function hover(t) {
+      if (g.over === t) return;
+      if (g.over) g.over.classList.remove('tab-over');
+      g.over = t;
+      t.classList.add('tab-over');
+      if (navigator.vibrate && g.moved) { try { navigator.vibrate(6); } catch (e) { /* no haptics */ } }
+    }
+    bar.addEventListener('pointerdown', function (e) {
+      if (!(mq && mq.matches) || e.button) return;
+      var t = e.target.closest('[role=tab]');
+      if (!t) return;
+      g = { id: e.pointerId, x0: e.clientX, moved: false, over: null, held: false };
+      g.timer = setTimeout(function () { if (g) { g.held = true; nav.classList.add('tb-press'); } }, 180);
+      nav.classList.add('tb-touch');
+      hover(t);
+    });
+    bar.addEventListener('pointermove', function (e) {
+      if (!g || e.pointerId !== g.id) return;
+      var dx = e.clientX - g.x0;
+      if (!g.moved && Math.abs(dx) < 8) return;
+      if (!g.moved) {
+        g.moved = true;
+        nav.classList.add('tb-press', 'tb-drag');
+        // only now take over the pointer, so a plain tap stays a tap
+        try { bar.setPointerCapture(e.pointerId); } catch (err) { /* older browsers */ }
+      }
+      var br = bar.getBoundingClientRect();
+      var w = g.over.offsetWidth;
+      var x = e.clientX - br.left - w / 2;
+      var min = tabs()[0].offsetLeft, last = tabs()[tabs().length - 1], max = last.offsetLeft;
+      // Rubber band past the ends: the pill eases out, the bar stretches.
+      var over = x < min ? x - min : x > max ? x - max : 0;
+      var pull = over ? (over > 0 ? 1 : -1) * Math.min(Math.abs(over), 120) : 0;
+      x = over ? (over < 0 ? min : max) + pull * 0.12 : x;
+      place(x, w);
+      // Stretch toward the pull, at most 2%, nudged so the far edge stays put.
+      var sxv = 1 + Math.abs(pull) / 6000;
+      nav.style.setProperty('--tb-sx', sxv.toFixed(4));
+      nav.style.setProperty('--tb-tx', ((pull < 0 ? -1 : 1) * (sxv - 1) * nav.offsetWidth / 2).toFixed(2) + 'px');
+      hover(tabAt(e.clientX));
+    });
+    function end(e) {
+      if (!g || (e && e.pointerId !== g.id)) return;
+      clearTimeout(g.timer);
+      var go = g.moved && e && e.type === 'pointerup' ? g.over : null;
+      if (g.over) g.over.classList.remove('tab-over');
+      nav.classList.remove('tb-press', 'tb-drag', 'tb-touch');
+      nav.style.setProperty('--tb-sx', '1');
+      nav.style.setProperty('--tb-tx', '0px');
+      g = null;
+      if (go) {
+        swallowClick = true;   // the click that follows a slide isn't a second tap
+        setTimeout(function () { swallowClick = false; }, 400);
+        if (go.getAttribute('aria-selected') === 'true') settle();
+        else go.click();
+      } else settle();
+    }
+    bar.addEventListener('pointerup', end);
+    bar.addEventListener('pointercancel', end);
+    bar.addEventListener('click', function (e) {
+      if (swallowClick && e.isTrusted) { e.preventDefault(); e.stopPropagation(); swallowClick = false; }
+    }, true);
+    window.addEventListener('hashchange', function () { setTimeout(settle, 0); });
+    window.addEventListener('popstate', function () { setTimeout(settle, 0); });
+    window.addEventListener('resize', settle);
+    if (mq && mq.addEventListener) mq.addEventListener('change', settle);
+    tabSettle = settle;
+  }
+  var tabSettle = function () {};
 
   function route() {
     var h = (location.hash || '#today').slice(1).split('/');
@@ -561,6 +668,7 @@
       a.setAttribute('aria-selected', on ? 'true' : 'false');
       a.tabIndex = on ? 0 : -1;
     });
+    tabSettle();
     var dn = $('#drivers-nav');
     if (dn) {
       dn.hidden = DRIVER_VIEWS.indexOf(tab) < 0;
