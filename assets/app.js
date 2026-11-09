@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '122';
+  var ASSET_VERSION = '123';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -17,11 +17,11 @@
     document.documentElement.classList.add('is-app');
   }
 
-  var TABS = ['today', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
+  var TABS = ['today', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'article', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
      their own light up their parent: the macro engine, positioning and
      central banks are the three Drivers sections. */
-  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', banks: 'drivers', learn: null };
+  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', banks: 'drivers', article: 'news', learn: null };
   var DRIVER_VIEWS = ['engine', 'positioning', 'banks'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
@@ -38,6 +38,7 @@
     for (var i = 0; i < COLORWAYS.length; i++) if (COLORWAYS[i].light === id || COLORWAYS[i].dark === id) return COLORWAYS[i];
     return COLORWAYS[0];
   }
+  var SITE_TITLE = document.title;
   var story = null;      // story.json, once loaded
 
   document.addEventListener('DOMContentLoaded', init);
@@ -144,6 +145,7 @@
       news.data = d;
       renderNews();
       renderTodayNews();
+      if (news.article) renderArticle();
       if (story) renderCcyCards(story);
       renderFx();   // "In the news" on currency pages
     }).catch(function () {
@@ -574,10 +576,13 @@
       var nm = (h[1] || '').toUpperCase();
       news.ccy = NEWS_MKTS.indexOf(nm) >= 0 ? nm : '';
       renderNews();
-      if (news.pending) {
-        var pid = news.pending; news.pending = null;
-        setTimeout(function () { var c = document.getElementById('news-' + pid); if (c && c.scrollIntoView) c.scrollIntoView({ block: 'start', behavior: 'smooth' }); }, 80);
-      }
+    }
+    if (tab === 'article') {
+      news.article = h.slice(1).join('/');
+      renderArticle();
+    } else {
+      news.article = '';
+      document.title = SITE_TITLE;
     }
     if (tab === 'positioning') {
       cot.focus = (h[1] || '').toUpperCase();
@@ -586,7 +591,9 @@
     updateSideNav(tab, parent);
     var active = $('#tab-' + (parent || tab));
     if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-    window.scrollTo(0, 0);
+    var backY = tab === 'news' && news.listHash === location.hash && news.listY ? news.listY : 0;
+    window.scrollTo(0, backY);
+    if (backY) setTimeout(function () { window.scrollTo(0, backY); }, 60);
     // Returning to a view at scroll 0 fires no scroll event: reveal now.
     measureScenes();
     queueScroll();
@@ -1128,8 +1135,7 @@
         items.forEach(function (it) {
           var nli = el('li');
           var a = el('a', 'chc-hl');
-          a.href = '#news/' + code;
-          a.setAttribute('data-open-news', slugId(it.id || it.url || it.headline));
+          a.href = newsHref(it);
           var x = (it.impact || []).filter(function (y) { return y && y.ccy === code; })[0];
           if (x) { var Lx = NEWS_LEAN[x.dir] || NEWS_LEAN.mixed; var ic = el('span', 'chc-ic ' + Lx.cls); ic.appendChild(trendIcon(Lx.cls)); a.appendChild(ic); }
           a.appendChild(el('span', 'chc-hl-t', it.headline));
@@ -2843,12 +2849,11 @@
   /* One headline tile (Today's Top headlines, a currency hub's news): the
      story's picture on top (Rami, 2026-11-09), same as on News, with the
      market tile as the fallback; tags; headline; source · time. A tap opens
-     the story on News. */
+     the story's own page. */
   function newsTile(it) {
     var li = el('li');
     var a = el('a', 'news-tile card');
-    a.href = '#news';
-    a.setAttribute('data-open-news', slugId(it.id || it.url || it.headline));
+    a.href = newsHref(it);
     a.appendChild(newsFigure(it));
     var body = el('span', 'nt-body');
     var tags = el('span', 'nt-tags');
@@ -3528,7 +3533,7 @@
     ['means', 'What it means'], ['fx', 'For the currency']];
   /* Rami, 2026-10-26: News always opens on By impact; Latest is a per-visit
      choice, not remembered. */
-  var news = { data: null, ccy: '', src: '', open: {}, sort: 'impact', more: {} };
+  var news = { data: null, ccy: '', src: '', sort: 'impact', more: {}, article: '', listHash: '', listY: 0 };
   /* Impact ranking (Rami, 2026-10-18): strongest push on any market first,
      then how many markets it clearly moves, then newest. */
   function newsImpact(it) {
@@ -3563,13 +3568,13 @@
   }
 
   function initNews() {
-    // A headline tapped on a Today card opens expanded on News.
+    // Leaving the News list for a story: remember where it was, so "← News"
+    // and the back button land in the same place.
     document.addEventListener('click', function (e) {
-      var a = e.target.closest('[data-open-news]');
-      if (!a) return;
-      var id = a.getAttribute('data-open-news');
-      news.open[id] = true;
-      news.pending = id;
+      var a = e.target.closest('a[href^="#article/"]');
+      if (!a || $('#view-news').hidden) return;
+      news.listHash = location.hash || '#news';
+      news.listY = window.pageYOffset;
     }, true);
     var row = $('#news-mkts');
     if (row) {
@@ -3607,21 +3612,11 @@
     if (grid) grid.addEventListener('click', function (e) {
       var mb = e.target.closest('[data-news-more]');
       if (mb) { var gk = mb.getAttribute('data-news-more'); news.more[gk] = !news.more[gk]; renderNews(); return; }
-      var t = e.target.closest('[data-news-toggle]');
-      // Rows (phone 2026-10-26, desktop 2026-10-28): a closed row opens from anywhere on it.
-      if (!t && !e.target.closest('a, button, select')) {
-        var row = e.target.closest('.news-card.news-row:not(.open)');
-        if (row) t = row.querySelector('[data-news-toggle]');
-      }
-      if (!t) return;
-      var id = t.getAttribute('data-news-toggle');
-      news.open[id] = !news.open[id];
-      renderNews();
-      var card = document.getElementById('news-' + id);
-      if (card && news.open[id] && card.scrollIntoView) {
-        var r = card.getBoundingClientRect();
-        if (r.top < 60 || r.top > window.innerHeight * 0.6) card.scrollIntoView({ block: 'start', behavior: 'smooth' });
-      }
+      // A story opens on its own page (Rami, 2026-11-09), from anywhere on its card.
+      if (e.target.closest('a, button, select')) return;
+      var card = e.target.closest('.news-card');
+      var go = card && card.querySelector('a.news-hl-link');
+      if (go) { news.listHash = location.hash || '#news'; news.listY = window.pageYOffset; location.hash = go.getAttribute('href'); }
     });
   }
 
@@ -3711,7 +3706,7 @@
       var showAll = !!news.more[g.key];
       g.items.forEach(function (s, i) {
         // An opened headline stays visible even inside a folded group.
-        if (showAll || i < NEWS_GROUP_MAX || news.open[s.id]) out.push({ s: s });
+        if (showAll || i < NEWS_GROUP_MAX) out.push({ s: s });
       });
       var hidden = g.items.length - NEWS_GROUP_MAX;
       if (hidden > 0) {
@@ -3887,11 +3882,11 @@
     newsLayout(stories).forEach(function (en) {
       if (en.node) { grid.appendChild(en.node); return; }
       var s = en.s, si = en.hero ? 0 : 1;
-      var it = s.lead, open = !!news.open[s.id];
+      var it = s.lead;
       /* Phone layout (Rami, 2026-10-26): the first story is the hero card,
          the rest are compact rows (arrow · headline · thumbnail). The
          same on desktop since 2026-10-28, with rows in two columns. */
-      var card = el('article', 'card news-card' + (si ? ' news-row' : ' news-hero') + (open ? ' open' : ''));
+      var card = el('article', 'card news-card' + (si ? ' news-row' : ' news-hero'));
       card.id = 'news-' + s.id;
       var top = null;   // the market this headline moves most
       (it.impact || []).forEach(function (x) { if (x && x.ccy && (!top || (+x.strength || 1) > (+top.strength || 1))) top = x; });
@@ -3916,10 +3911,8 @@
       body.appendChild(meta);
 
       var h = el('h3', 'news-hl');
-      var hb = el('button', 'news-hl-btn', it.headline);
-      hb.type = 'button';
-      hb.setAttribute('data-news-toggle', s.id);
-      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var hb = el('a', 'news-hl-link', it.headline);
+      hb.href = newsHref(it);
       h.appendChild(hb);
       body.appendChild(h);
 
@@ -3930,78 +3923,125 @@
         body.appendChild(tags);
       }
 
-      if (it.summary) body.appendChild(el('p', 'news-sum' + (open ? ' gl-scope' : ''), it.summary));
+      if (it.summary) body.appendChild(el('p', 'news-sum', it.summary));
 
-      if (open) {
-        var x = el('div', 'news-open gl-scope');
-        var beats = it.beats || {};
-        var hasBeats = NEWS_BEATS.some(function (b) { return beats[b[0]]; });
-        if (hasBeats) {
-          x.appendChild(el('h4', 'section-label', 'Key takeaways'));
-          var ol = el('ol', 'news-beats');
-          NEWS_BEATS.forEach(function (b) {
-            if (!beats[b[0]]) return;
-            var li = el('li');
-            li.appendChild(el('span', 'lbl', b[1]));
-            li.appendChild(el('p', null, beats[b[0]]));
-            ol.appendChild(li);
-          });
-          x.appendChild(ol);
-        }
-        if (imp.some(function (y) { return y.why; })) {
-          x.appendChild(el('h4', 'section-label', 'By currency'));
-          var ul = el('ul', 'news-why');
-          imp.forEach(function (y) {
-            var li = el('li');
-            li.appendChild(biasTag(y));
-            if (y.why) li.appendChild(el('p', null, y.why));
-            ul.appendChild(li);
-          });
-          x.appendChild(ul);
-        }
-        if (it.watch) {
-          var w = el('div', 'wire-next');
-          w.appendChild(el('span', 'callout-lbl', 'What would change it'));
-          w.appendChild(el('p', null, it.watch));
-          x.appendChild(w);
-        }
-        var go = safeUrl(it.url);
-        if (go) {
-          var a2 = extLink('Read the full article on ' + (it.source || new URL(go).hostname) + ' ↗', go);
-          a2.className = 'btn news-go';
-          x.appendChild(a2);
-        }
-        if (s.items.length > 1) {
-          var arc = el('div', 'thread-arc');
-          arc.appendChild(el('h4', 'section-label', 'Earlier on this story'));
-          var list = el('ol', 'arc');
-          s.items.slice(1).forEach(function (u) {
-            var li = el('li');
-            li.appendChild(newsWhenEl(u));
-            var bd = el('div', 'arc-body');
-            var hl = el('p', 'arc-hl');
-            var uu = safeUrl(u.url);
-            if (uu) hl.appendChild(extLink(u.headline, uu)); else hl.textContent = u.headline;
-            bd.appendChild(hl);
-            if (u.summary) bd.appendChild(el('p', 'arc-fx', u.summary));
-            if (u.source) bd.appendChild(el('p', 'meta', u.source));
-            li.appendChild(bd);
-            list.appendChild(li);
-          });
-          arc.appendChild(list);
-          x.appendChild(arc);
-        }
-        body.appendChild(x);
-      }
-
-      var tg = el('button', 'news-toggle', open ? 'Close' : 'Key takeaways');
-      tg.type = 'button';
-      tg.setAttribute('data-news-toggle', s.id);
-      tg.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var tg = el('a', 'news-toggle', 'Read the story →');
+      tg.href = newsHref(it);
+      tg.setAttribute('aria-hidden', 'true');
+      tg.tabIndex = -1;
       body.appendChild(tg);
       card.appendChild(body);
       grid.appendChild(card);
     });
+  }
+
+  /* ---------------- a story's own page (Rami, 2026-11-09) ----------------
+     #article/<id>: tapping a story anywhere (News, Today, a currency hub)
+     opens it here instead of expanding in place. Picture, headline, source
+     and time, the markets it moves, the summary, then the full read: the
+     four beats, what it means for each currency, what would change it, the
+     publisher's article, and earlier updates on the same storyline. */
+  function newsId(it) { return slugId(it.id || it.url || it.headline); }
+  function newsHref(it) { return '#article/' + newsId(it); }
+  function renderArticle() {
+    var box = $('#article-body');
+    if (!box) return;
+    box.textContent = '';
+    var back = el('a', 'more art-back', '← News');
+    back.href = news.listHash || '#news';
+    box.appendChild(back);
+    if (!news.data) { box.appendChild(el('p', 'meta', 'Loading the story…')); return; }
+    var all = (news.data.items || []).filter(function (x) { return x && x.headline; });
+    var it = null;
+    for (var i = 0; i < all.length; i++) if (newsId(all[i]) === news.article) { it = all[i]; break; }
+    if (!it) {
+      var gone = el('div', 'card art-gone');
+      gone.appendChild(el('h1', 'display', 'This story has left the feed'));
+      gone.appendChild(el('p', 'lede', 'Headlines roll off after a few days. The latest are on News.'));
+      var nl = el('a', 'btn', 'Go to News →');
+      nl.href = '#news';
+      gone.appendChild(nl);
+      box.appendChild(gone);
+      return;
+    }
+    document.title = it.headline + ' — Blue Street';
+    var art = el('article', 'art card');
+    var fig = newsFigure(it);
+    fig.classList.add('art-fig');
+    art.appendChild(fig);
+    var body = el('div', 'art-body gl-scope');
+    var kick = [];
+    if (it.story_title) kick.push(it.story_title);
+    if (it.pillar) kick.push(pillarName(it.pillar));
+    if (kick.length) body.appendChild(el('p', 'kicker', kick.join(' · ')));
+    body.appendChild(el('h1', 'display art-hl', it.headline));
+    var meta = el('p', 'art-meta meta');
+    meta.appendChild(document.createTextNode((it.source || 'Source') + ' · '));
+    meta.appendChild(newsWhenEl(it));
+    body.appendChild(meta);
+    var imp = (it.impact || []).filter(function (x) { return x && x.ccy; });
+    if (imp.length) {
+      var tags = el('div', 'news-tags art-tags');
+      imp.forEach(function (x) { tags.appendChild(biasTag(x)); });
+      body.appendChild(tags);
+    }
+    if (it.summary) body.appendChild(el('p', 'lede art-sum', it.summary));
+
+    var beats = it.beats || {};
+    NEWS_BEATS.forEach(function (b) {
+      if (!beats[b[0]]) return;
+      var sec = el('section', 'narr');
+      sec.appendChild(el('h2', 'narr-lbl', b[1]));
+      sec.appendChild(el('p', 'narr-p', beats[b[0]]));
+      body.appendChild(sec);
+    });
+    if (imp.some(function (y) { return y.why; })) {
+      var bc = el('section', 'art-sec');
+      bc.appendChild(el('h2', 'narr-lbl', 'What it means for each currency'));
+      var ul = el('ul', 'news-why');
+      imp.forEach(function (y) {
+        var li = el('li');
+        var tg = biasTag(y);
+        if (NEWS_MKTS.slice(0, 8).indexOf(y.ccy) >= 0 || chapterFor(y.ccy)) {
+          var link = el('a', 'art-ccy');
+          link.href = '#fx/' + y.ccy;
+          link.appendChild(tg);
+          tg = link;
+        }
+        li.appendChild(tg);
+        if (y.why) li.appendChild(el('p', null, y.why));
+        ul.appendChild(li);
+      });
+      bc.appendChild(ul);
+      body.appendChild(bc);
+    }
+    if (it.watch) {
+      var w = el('section', 'narr narr-watch');
+      w.appendChild(el('h2', 'narr-lbl', 'What would change it'));
+      w.appendChild(el('p', 'narr-p', it.watch));
+      body.appendChild(w);
+    }
+    var go = safeUrl(it.url);
+    if (go) {
+      var a2 = extLink('Read the full article on ' + (it.source || new URL(go).hostname) + ' ↗', go);
+      a2.className = 'btn news-go';
+      body.appendChild(a2);
+    }
+    art.appendChild(body);
+    box.appendChild(art);
+
+    // Earlier on this storyline: the other headlines that share its story.
+    var same = it.story ? all.filter(function (x) { return x !== it && x.story === it.story; }) : [];
+    same.sort(function (a, b) { return newsTime(b) - newsTime(a); });
+    if (same.length) {
+      var row = hubRow('art-more', 'More on this story');
+      var ol = row.querySelector('ol');
+      ol.classList.add('t-news');
+      same.slice(0, 10).forEach(function (x) { ol.appendChild(newsTile(x)); });
+      box.appendChild(row);
+      initStrips();
+      updateStripNav();
+    }
   }
 
   /* ---------------- inline glossary ----------------

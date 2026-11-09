@@ -695,3 +695,12 @@ Never Buy/Sell (Rami, 2026-10-28).
   scenarios and sources. Gold and oil get a small page of their own
   (`renderMarketDetail`). Chapters join to currencies by `chapterCcy`.
 ```
+
+## News expand-in-place — DESIGN.md text retired 2026-11-09 (stories got their own pages)
+```
+| News | `#news`, `#news/JPY` = filtered to a market (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
+outlined = strong), pillar tag, summary. Tapping the headline or "Key
+takeaways" opens the card across the row: the four beats, "By currency" with
+each `why`, "What would change it", the publisher button, and "Earlier on this
+story". Today's "Top headlines" row opens a story here, expanded.
+```

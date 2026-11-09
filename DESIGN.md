@@ -28,7 +28,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Drivers: Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
 | Drivers: Central banks | `#banks` | `data/banks.json` |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join) |
-| News | `#news`, `#news/JPY` = filtered to a market (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
+| News | `#news`, `#news/JPY` = filtered to a market, `#article/<id>` = one story's own page (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
 | Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
 - **Today** (Rami, 2026-11-09, round 2). Top to bottom:
@@ -412,10 +412,18 @@ market shows its **news read** card (`narratives`). Cards: publisher image (or a
 generated tile — market + pillar, edged by the lean — if there is none or it
 fails to load), source · time, storyline kicker when 2+ items share a `story`,
 headline, bias tags (▲ bullish / ▼ bearish / ◆ mixed; faint arrow = mild,
-outlined = strong), pillar tag, summary. Tapping the headline or "Key
-takeaways" opens the card across the row: the four beats, "By currency" with
-each `why`, "What would change it", the publisher button, and "Earlier on this
-story". Today's "Top headlines" row opens a story here, expanded.
+outlined = strong), pillar tag, summary, "Read the story →".
+**Each story has its own page** (Rami, 2026-11-09; replaces expanding the
+card in place): `#article/<id>` (`renderArticle`, id = slug of the item `id`).
+Tapping a card anywhere on News, a Today headline tile, a currency hub's news
+tile or a currency card's headline opens it. The page: the picture, storyline
+and pillar kicker, headline, source · time, bias tags, the summary, the four
+beats as labelled sections, "What it means for each currency" (each `why`;
+the tag links to that currency's hub), "What would change it", the
+publisher's article button, and "More on this story" (other items with the
+same `story`, as photo tiles). "← News" returns to the list as it was
+(filter and scroll position); a story that has rolled out of the feed shows
+a short note and a link to News.
 
 ### `data/latest.json` — Developing now (was the Flash tab)
 **Rami, 2026-10-18 (late): the Developing strip is removed from the site** —
