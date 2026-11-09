@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '130';
+  var ASSET_VERSION = '131';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -17,12 +17,12 @@
     document.documentElement.classList.add('is-app');
   }
 
-  var TABS = ['today', 'fx', 'engine', 'positioning', 'calendar', 'news', 'article', 'learn'];   // views
+  var TABS = ['today', 'fx', 'engine', 'positioning', 'calendar', 'news', 'article', 'learn', 'about'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
      their own light up their parent: the macro engine and positioning are
      the Drivers sections. (Central banks moved into each currency's page,
      2026-11-09.) */
-  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', article: 'news', learn: null };
+  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', article: 'news', learn: null, about: null };
   var DRIVER_VIEWS = ['engine', 'positioning'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
@@ -575,6 +575,14 @@
       renderFx();
     }
     if (tab === 'learn') renderLearn();
+    if (tab === 'about') {   // About & help (Rami, 2026-11-09): one page at a time
+      var pg = h[1] || 'about';
+      if (!document.querySelector('.info-page[data-page="' + pg + '"]')) pg = 'about';
+      Array.prototype.forEach.call(document.querySelectorAll('.info-page'), function (x) { x.hidden = x.getAttribute('data-page') !== pg; });
+      Array.prototype.forEach.call(document.querySelectorAll('#info-nav a'), function (a) {
+        if (a.getAttribute('data-page') === pg) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+      });
+    }
     if (tab === 'news') {
       var nm = (h[1] || '').toUpperCase();
       news.ccy = NEWS_MKTS.indexOf(nm) >= 0 ? nm : '';
@@ -621,7 +629,9 @@
     { id: 'calendar', label: 'Calendar', href: '#calendar',
       ico: 'M2.5 4h11v9.5h-11z M2.5 7h11 M5.5 2.5v3 M10.5 2.5v3' },
     { id: 'learn', label: 'Learn', href: '#learn', minor: true,
-      ico: 'M2.5 3.5H7a1.5 1.5 0 0 1 1 .5v9a1.5 1.5 0 0 0-1-.5H2.5z M13.5 3.5H9a1.5 1.5 0 0 0-1 .5v9a1.5 1.5 0 0 1 1-.5h4.5z' }
+      ico: 'M2.5 3.5H7a1.5 1.5 0 0 1 1 .5v9a1.5 1.5 0 0 0-1-.5H2.5z M13.5 3.5H9a1.5 1.5 0 0 0-1 .5v9a1.5 1.5 0 0 1 1-.5h4.5z' },
+    { id: 'about', label: 'About & help', href: '#about', minor: true,
+      ico: 'M8 2a6 6 0 1 0 0 12A6 6 0 1 0 8 2z M8 7.2v4 M8 4.8v.2' }
   ];
   var nav = { mode: 'top', collapsed: false };
   function navIcon(d) {

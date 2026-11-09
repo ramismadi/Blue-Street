@@ -29,6 +29,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Drivers: Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join; the row of upcoming central bank decisions) |
 | News | `#news`, `#news/JPY` = filtered to a market, `#article/<id>` = one story's own page (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
+| About & help (not a tab) | `#about`, `#about/<page>`: about, method, faq, schedule, sources, new, privacy, contact, feedback | static pages in index.html (Claude's words); reached from the footer on every page and, on phones, the settings sheet (Rami, 2026-11-09). Contact and Feedback are "coming soon" placeholders. Keep `method` in step with how the score is computed, `schedule` with the editions, and add a line to `new` for notable site changes. |
 | Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
 - **Today** (Rami, 2026-11-09, round 2). Top to bottom:

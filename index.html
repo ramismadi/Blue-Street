@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=130">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=130">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=131">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=131">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=130">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=131">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=130">
+<link rel="stylesheet" href="assets/style.css?v=131">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=130" defer></script>
-<script src="assets/app.js?v=130" defer></script>
+<script src="assets/cot.js?v=131" defer></script>
+<script src="assets/app.js?v=131" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
@@ -281,6 +281,187 @@
     <div id="article-body"></div>
   </section>
 
+  <!-- ============ ABOUT & HELP (#about, #about/<page>; Rami, 2026-11-09) ============
+       Reached from the footer on every page and, on phones, the settings menu. -->
+  <section class="view info" id="view-about" role="region" aria-label="About and help" hidden>
+    <nav class="info-nav" id="info-nav" aria-label="About and help">
+      <a href="#about" data-page="about">About</a>
+      <a href="#about/method" data-page="method">How the scores work</a>
+      <a href="#about/faq" data-page="faq">FAQ</a>
+      <a href="#about/schedule" data-page="schedule">Update schedule</a>
+      <a href="#about/sources" data-page="sources">Sources</a>
+      <a href="#about/new" data-page="new">What&rsquo;s new</a>
+      <a href="#about/privacy" data-page="privacy">Privacy &amp; disclaimer</a>
+      <a href="#about/contact" data-page="contact">Contact</a>
+      <a href="#about/feedback" data-page="feedback">Feedback</a>
+    </nav>
+
+    <article class="info-page card gl-scope" data-page="about">
+      <p class="kicker">About</p>
+      <h1 class="display">Blue Street</h1>
+      <p class="lede">Blue Street turns the raw data behind the currency markets into plain reads, so you can form your own view of where the major currencies are heading and why.</p>
+      <h2>What it covers</h2>
+      <p>The eight major currencies (the US dollar, euro, British pound, Japanese yen, Swiss franc, Australian dollar, Canadian dollar and New Zealand dollar), plus gold and oil: what moved them, what is driving them underneath, and what could move them next.</p>
+      <h2>What it&rsquo;s for</h2>
+      <p>A five-minute read. Open it, see what changed, and know where each currency stands. The depth is there for whoever wants it, from each currency&rsquo;s own page to the full story behind every headline.</p>
+      <h2>What it believes</h2>
+      <ul>
+        <li><b>Meaning before numbers.</b> Every figure comes with what it was, what happened, what it means, and what it does to the currency, in short plain sentences.</li>
+        <li><b>Evidence, not a verdict.</b> Blue Street weighs the evidence and shows its work. It never tells you to buy or sell; the call is yours.</li>
+        <li><b>Readable cold.</b> Every page should make sense to someone who hasn&rsquo;t opened it in a week.</li>
+      </ul>
+      <h2>Who it&rsquo;s for</h2>
+      <p>Traders who want a fundamental view behind their charts, and anyone who wants to understand why currencies move without wading through raw data.</p>
+      <h2>How it&rsquo;s made</h2>
+      <p>Blue Street is an independent project, written and updated around the clock by AI assistants working from public data, under a trader&rsquo;s direction. Every story links to its sources.</p>
+    </article>
+
+    <article class="info-page card gl-scope" data-page="method" hidden>
+      <p class="kicker">How the scores work</p>
+      <h1 class="display">The strength score</h1>
+      <p class="lede">Each currency gets a score from &minus;7 to +7. It adds up seven factors that drive currencies over weeks and months.</p>
+      <h2>The seven factors</h2>
+      <ul>
+        <li><b>Policy:</b> what the central bank is doing with interest rates, and what markets expect next. Higher rates tend to draw money in.</li>
+        <li><b>Growth:</b> how strong the economy and the job market look.</li>
+        <li><b>Inflation:</b> how far prices are running above or below the central bank&rsquo;s goal, which shapes what it does next.</li>
+        <li><b>Risk sentiment:</b> whether markets are calm or nervous. Nervous markets favour the yen, the franc and the dollar.</li>
+        <li><b>Terms of trade:</b> what the country earns for what it sells abroad compared with what it pays for what it buys, like oil for Canada or iron ore for Australia.</li>
+        <li><b>Positioning:</b> how heavily speculators are betting on the currency. When bets are unusually one-sided, they tend to unwind.</li>
+        <li><b>Fiscal &amp; sovereign:</b> government budgets, debt and politics, when they shake confidence in the currency.</li>
+      </ul>
+      <h2>How each factor is scored</h2>
+      <p>Every edition, each factor gets one of three marks for each currency: <b>+1 (supports)</b> when it&rsquo;s currently a reason for the currency to be stronger, <b>&minus;1 (weighs)</b> when it&rsquo;s a reason to be weaker, and <b>0 (neutral)</b> when it isn&rsquo;t doing much. Positioning follows a fixed rule: a bet in the most extreme tenth of its history counts against the crowd.</p>
+      <p>The score adds the seven marks, so it runs from &minus;7 to +7. Every currency page shows exactly how its score adds up under &ldquo;How it&rsquo;s scored&rdquo;.</p>
+      <h2>Pairs</h2>
+      <p>A pair&rsquo;s score is one currency&rsquo;s score minus the other&rsquo;s, from the side of your view. The pair picker also shows whether holding the pair pays or costs interest, and the next big event for it.</p>
+      <h2>What it isn&rsquo;t</h2>
+      <p>The score is a summary of the evidence, not a forecast and not a trade signal. Prices can move against the fundamentals for weeks, especially around big news.</p>
+      <h2>What&rsquo;s next</h2>
+      <p>A measured version is being tested: each factor read from data instead of a judgment call, scored on a scale, and checked against years of price history before anything changes here. If it doesn&rsquo;t do better, it won&rsquo;t replace this one.</p>
+    </article>
+
+    <article class="info-page card gl-scope" data-page="faq" hidden>
+      <p class="kicker">FAQ</p>
+      <h1 class="display">Questions and answers</h1>
+      <dl class="faq">
+        <dt>Is this trading advice?</dt>
+        <dd>No. Blue Street is market context only. It explains what&rsquo;s driving currencies; it never tells you what to trade.</dd>
+        <dt>Why doesn&rsquo;t it say buy or sell?</dt>
+        <dd>Because the call depends on your timeframe, your risk and your charts. Blue Street gives you the evidence for each side so you can make it.</dd>
+        <dt>When does it update?</dt>
+        <dd>Three editions every weekday, before the London open, the New York open and the New York close, one each weekend morning, and the news through the day. The <a href="#about/schedule">update schedule</a> has the times.</dd>
+        <dt>Where does the data come from?</dt>
+        <dd>Central banks, official statistics, market prices, the US futures regulator&rsquo;s positioning reports and major news publishers. See <a href="#about/sources">sources</a>.</dd>
+        <dt>What do &ldquo;Supports&rdquo; and &ldquo;Weighs&rdquo; mean?</dt>
+        <dd>Supports means that factor is currently a reason for the currency to be stronger; weighs means a reason for it to be weaker. <a href="#about/method">How the scores work</a> explains the rest.</dd>
+        <dt>Why is a currency falling when its score is high?</dt>
+        <dd>The score reads the fundamentals, which play out over weeks and months. Day to day, prices also move on surprises, positioning and plain noise.</dd>
+        <dt>Does the score ever change during the day?</dt>
+        <dd>It&rsquo;s set at each edition. Breaking news shows up on the News tab between editions, and the next edition folds it in.</dd>
+        <dt>What are the arrows on the headlines?</dt>
+        <dd>They show which way a story pushes each currency it touches: up, down, or mixed. It&rsquo;s the push from that story, not a call on the currency.</dd>
+        <dt>Can I use it like an app?</dt>
+        <dd>Yes. On iPhone, open the site in Safari, tap Share, then &ldquo;Add to Home Screen&rdquo;. On Android, use the browser menu&rsquo;s &ldquo;Add to Home screen&rdquo; or &ldquo;Install app&rdquo;.</dd>
+        <dt>Does it cost anything?</dt>
+        <dd>No. Blue Street is free while it&rsquo;s being built.</dd>
+        <dt>Does it track me?</dt>
+        <dd>No. There are no accounts and no analytics. See <a href="#about/privacy">privacy</a>.</dd>
+        <dt>How do I suggest something or report a mistake?</dt>
+        <dd>A <a href="#about/feedback">feedback</a> form is coming soon.</dd>
+      </dl>
+    </article>
+
+    <article class="info-page card gl-scope" data-page="schedule" hidden>
+      <p class="kicker">Update schedule</p>
+      <h1 class="display">When Blue Street updates</h1>
+      <p class="lede">All times are US Central Time (CT). Each edition is ready by the time shown.</p>
+      <h2>Weekdays</h2>
+      <ul class="sched">
+        <li><b>2:00 AM</b><span><b>London open.</b> What happened overnight in Asia and what&rsquo;s ahead for the day.</span></li>
+        <li><b>8:30 AM</b><span><b>New York open.</b> What the morning&rsquo;s news and the 7:30 AM US data did, before New York gets going.</span></li>
+        <li><b>4:00 PM</b><span><b>New York close.</b> What the day did.</span></li>
+      </ul>
+      <h2>Weekends</h2>
+      <ul class="sched">
+        <li><b>Saturday morning</b><span>The week in review.</span></li>
+        <li><b>Sunday morning</b><span>The week ahead, with the key events by day. Markets reopen Sunday afternoon, and Monday&rsquo;s London edition covers the reopening.</span></li>
+      </ul>
+      <h2>Through the day</h2>
+      <ul class="sched">
+        <li><b>News</b><span>New headlines are read and added about ten times a day, Sunday to Friday.</span></li>
+        <li><b>Fed days</b><span>A preview in the 8:30 AM edition and the full story by 4:00 PM, with the decision itself added to News soon after it&rsquo;s announced.</span></li>
+        <li><b>Positioning</b><span>Weekly, after the US futures regulator publishes its report on Friday afternoon.</span></li>
+      </ul>
+    </article>
+
+    <article class="info-page card gl-scope" data-page="sources" hidden>
+      <p class="kicker">Sources</p>
+      <h1 class="display">Where the data comes from</h1>
+      <p class="lede">Every story and every pillar read links to its own sources. These are the main places Blue Street draws on.</p>
+      <ul>
+        <li><b>Central banks:</b> each bank&rsquo;s own statements, minutes and rate decisions, with market pricing for upcoming meetings from CME FedWatch and major news reports.</li>
+        <li><b>Economic data:</b> national statistics agencies, with history from FRED (the Federal Reserve Bank of St. Louis) and the New York Fed.</li>
+        <li><b>Market levels:</b> indicative exchange rates, yields, oil and gold from major news services such as Reuters. These are for context, not prices you can trade at.</li>
+        <li><b>Positioning:</b> the weekly Commitments of Traders report from the CFTC, the US futures regulator.</li>
+        <li><b>News:</b> major publishers and wire services, credited and linked on every story. Summaries and currency reads are Blue Street&rsquo;s own.</li>
+      </ul>
+    </article>
+
+    <article class="info-page card" data-page="new" hidden>
+      <p class="kicker">What&rsquo;s new</p>
+      <h1 class="display">Recent changes</h1>
+      <h2>November 9, 2026</h2>
+      <ul>
+        <li>Today is now a dashboard: the day&rsquo;s read, top headlines with pictures, a row per currency and strength gauges.</li>
+        <li>Every currency has its own page: its gauge, key numbers, news, central bank, what&rsquo;s moving it, the full read and pairs to watch.</li>
+        <li>Every news story has its own page.</li>
+        <li>Central banks moved into each currency&rsquo;s page, and the Calendar now opens with every bank&rsquo;s next decision.</li>
+        <li>The pair picker is simpler to use and shows why each pair fits your view.</li>
+        <li>The Macro engine shows what each factor is doing to each currency, in plain words.</li>
+        <li>This About &amp; help section.</li>
+      </ul>
+      <h2>October 28, 2026</h2>
+      <ul>
+        <li>News groups its headlines into trending storylines and topics.</li>
+        <li>Pairs show a score breakdown and the interest gap.</li>
+      </ul>
+      <h2>October 27, 2026</h2>
+      <ul>
+        <li>A bottom tab bar on phones, and the site works as a home-screen app.</li>
+        <li>News on phones: a lead story, then compact rows.</li>
+      </ul>
+    </article>
+
+    <article class="info-page card" data-page="privacy" hidden>
+      <p class="kicker">Privacy &amp; disclaimer</p>
+      <h1 class="display">The fine print, kept short</h1>
+      <h2>Disclaimer</h2>
+      <p>Blue Street is market context only. Nothing on it is financial advice or a recommendation to buy or sell anything. Markets are risky; trade only with money you can afford to lose. Prices shown are indicative and can be out of date.</p>
+      <h2>Privacy</h2>
+      <ul>
+        <li>No accounts, no analytics, no ads, no tracking.</li>
+        <li>Your settings (light or dark mode, menu style, calendar time zone) are saved only in your own browser.</li>
+        <li>The site&rsquo;s fonts load from Google Fonts, and story pictures load from the publishers&rsquo; own sites, so those services see a normal web request.</li>
+        <li>Links to publishers take you to their sites, which have their own policies.</li>
+      </ul>
+    </article>
+
+    <article class="info-page card" data-page="contact" hidden>
+      <p class="kicker">Contact</p>
+      <h1 class="display">Get in touch</h1>
+      <p class="soon">Coming soon</p>
+      <p>A way to reach the Blue Street team is on its way.</p>
+    </article>
+
+    <article class="info-page card" data-page="feedback" hidden>
+      <p class="kicker">Feedback</p>
+      <h1 class="display">Tell us what you think</h1>
+      <p class="soon">Coming soon</p>
+      <p>A short form to suggest features, flag a mistake or say what&rsquo;s working is on its way.</p>
+    </article>
+  </section>
+
   <!-- ============ LEARN: terms & events library (reached from popovers + footer, not a tab) ============ -->
   <section class="view" id="view-learn" role="region" aria-label="Learn: terms and events" hidden>
     <div id="learn-body"></div>
@@ -288,10 +469,34 @@
 
 </main>
 
-<footer>
+<footer class="site-foot">
   <div class="wrap">
-    <p class="disclaimer">Market context only — not financial advice, not trade recommendations.</p>
-    <p class="meta">Blue Street · edition data: FRED, Reuters, CME FedWatch, NY Fed, CFTC · <a href="#learn">Learn: terms &amp; events</a></p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="foot-logo" href="./" data-home aria-label="Blue Street, back to Today">BLUE<span class="wm-st" aria-hidden="true">ST</span></a>
+        <p>Global fundamentals for FX, in plain words.</p>
+      </div>
+      <nav class="foot-col" aria-label="Blue Street">
+        <h2>Blue Street</h2>
+        <a href="#about">About</a>
+        <a href="#about/method">How the scores work</a>
+        <a href="#learn">Learn: terms &amp; events</a>
+        <a href="#about/new">What&rsquo;s new</a>
+      </nav>
+      <nav class="foot-col" aria-label="Help">
+        <h2>Help</h2>
+        <a href="#about/faq">FAQ</a>
+        <a href="#about/schedule">Update schedule</a>
+        <a href="#about/sources">Sources</a>
+      </nav>
+      <nav class="foot-col" aria-label="Contact">
+        <h2>Contact</h2>
+        <a href="#about/contact">Contact <span class="soon-tag">Soon</span></a>
+        <a href="#about/feedback">Feedback <span class="soon-tag">Soon</span></a>
+        <a href="#about/privacy">Privacy &amp; disclaimer</a>
+      </nav>
+    </div>
+    <p class="disclaimer">Market context only. Not financial advice, not trade recommendations.</p>
   </div>
 </footer>
 

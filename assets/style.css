@@ -1585,9 +1585,54 @@ button.btn { border: 1px solid var(--line); }
 .more-detail[open] summary::before { content: "– "; }
 .more-detail p { font-size: 0.9rem; color: var(--ink-2); margin: 10px 0 0; }
 
-/* ---------- footer ---------- */
-footer { padding: 34px 0 44px; text-align: center; }
-.disclaimer { font-size: 0.8rem; color: var(--ink-3); margin: 0 0 4px; }
+/* ---------- footer (Rami, 2026-11-09): on every page ---------- */
+.site-foot { margin-top: 40px; padding: 34px 0 44px; border-top: 1px solid var(--line); }
+.foot-grid { display: grid; grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr)); gap: 24px; }
+.foot-logo { font-weight: 800; font-size: 1.3rem; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+.foot-logo .wm-st { font-size: 0.5em; vertical-align: 0.9em; margin-left: 1px; }
+.foot-brand p { margin: 6px 0 0; font-size: 0.86rem; color: var(--ink-2); }
+.foot-col { display: flex; flex-direction: column; gap: 8px; }
+.foot-col h2 { margin: 0 0 2px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+.foot-col a { font-size: 0.88rem; color: var(--ink-2); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.foot-col a:hover { color: var(--accent); }
+.soon-tag { padding: 0 6px; border-radius: 999px; background: var(--surface-2); color: var(--ink-3); font-size: 0.66rem; font-weight: 700; }
+.disclaimer { font-size: 0.8rem; color: var(--ink-3); margin: 26px 0 0; }
+@media (max-width: 760px) {
+  .foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 16px; }
+  .foot-brand { grid-column: 1 / -1; }
+}
+
+/* ---------- About & help (#about) ---------- */
+.info { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 24px; align-items: start; }
+.info-nav { position: sticky; top: calc(var(--mast-h, 100px) + 16px); display: flex; flex-direction: column; gap: 2px; }
+.info-nav a { padding: 8px 12px; border-radius: 8px; font-size: 0.9rem; color: var(--ink-2); text-decoration: none; }
+.info-nav a:hover { background: var(--surface); color: var(--ink); }
+.info-nav a[aria-current] { background: var(--surface); color: var(--accent); font-weight: 700; box-shadow: var(--shadow); }
+.info-page { padding: 30px 36px 34px; max-width: 760px; }
+.info-page h1 { margin: 6px 0 12px; font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.15; }
+.info-page h2 { margin: 26px 0 8px; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.info-page p, .info-page li, .info-page dd { font-family: var(--serif); font-size: 1.04rem; line-height: 1.6; color: var(--ink); }
+.info-page p { margin: 0 0 12px; }
+.info-page p.kicker { font-family: var(--sans); font-size: 0.72rem; line-height: 1.2; margin: 0; color: var(--accent); }
+.info-page ul { margin: 0 0 12px; padding-left: 20px; display: grid; gap: 8px; }
+.info-page .lede { font-size: 1.15rem; color: var(--ink-2); }
+.faq { margin: 18px 0 0; }
+.faq dt { margin: 18px 0 4px; font-weight: 700; font-size: 1rem; }
+.faq dt:first-child { margin-top: 0; }
+.faq dd { margin: 0; }
+.sched { list-style: none; padding: 0 !important; gap: 0 !important; }
+.sched li { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 14px; padding: 10px 0; border-top: 1px solid var(--line); }
+.sched li:first-child { border-top: 0; }
+.sched li > b { font-family: var(--sans); font-size: 0.92rem; color: var(--accent); }
+.soon { display: inline-block; margin: 4px 0 14px !important; padding: 3px 10px; border-radius: 999px; background: var(--surface-2); font-family: var(--sans) !important; font-size: 0.78rem !important; font-weight: 700; color: var(--ink-2) !important; }
+@media (max-width: 760px) {
+  .info { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .info-nav { position: static; flex-direction: row; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px 2px; }
+  .info-nav::-webkit-scrollbar { display: none; }
+  .info-nav a { flex: none; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 0.82rem; }
+  .info-page { padding: 22px 18px 24px; }
+  .sched li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
 
 /* ---------- responsive ---------- */
 @media (max-width: 980px) {
@@ -2007,7 +2052,7 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 @media (min-width: 981px) {
   [data-nav="side"] main.wrap { margin-left: calc(216px + max(0px, (100vw - 216px - 1120px) / 2)); }
-  [data-nav="side"] footer { padding-left: 216px; }
+  [data-nav="side"] .site-foot { padding-left: 216px; }
   [data-nav="side"][data-nav-collapsed] .sidenav { width: 66px; }
   [data-nav="side"][data-nav-collapsed] .sn-label,
   [data-nav="side"][data-nav-collapsed] .sn-subs { display: none !important; }
@@ -2015,7 +2060,7 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
   [data-nav="side"][data-nav-collapsed] .sn-badge { position: absolute; top: 2px; right: 4px; }
   [data-nav="side"][data-nav-collapsed] .sn-collapse .sn-ico { transform: scaleX(-1); }
   [data-nav="side"][data-nav-collapsed] main.wrap { margin-left: calc(66px + max(0px, (100vw - 66px - 1120px) / 2)); }
-  [data-nav="side"][data-nav-collapsed] footer { padding-left: 66px; }
+  [data-nav="side"][data-nav-collapsed] .site-foot { padding-left: 66px; }
   .sidenav-scrim { display: none; }
 }
 @media (max-width: 980px) {
@@ -2253,7 +2298,7 @@ html, body { overflow-x: clip; max-width: 100%; }
 
 /* Phones (Rami, 2026-10-27): the bottom bar has the sections, so the
    masthead button becomes Settings — a short sheet from the bottom with
-   Dark mode, Colorway and Learn. */
+   Dark mode, Colorway, Learn and About & help. */
 .nav-btn .ico-gear { display: none; }
 @media (max-width: 640px) {
   .nav-btn .ico-menu { display: none; }
@@ -2270,7 +2315,7 @@ html, body { overflow-x: clip; max-width: 100%; }
     content: ""; align-self: center; flex: none; width: 36px; height: 4px; border-radius: 2px; background: var(--line); margin-bottom: 6px;
   }
   .sidenav-scrim { z-index: 61; }
-  .sn-logo, .sn-collapse, .sn-top, .sn-subs, .sn-list .sn-item:not([data-nav="learn"]) { display: none !important; }
+  .sn-logo, .sn-collapse, .sn-top, .sn-subs, .sn-list .sn-item:not(.minor) { display: none !important; }
   .sn-list { order: 2; }
   .sn-foot { order: 1; margin-top: 0; border-top: 0; padding-top: 0; }
   .sn-item.minor { margin-top: 0; font-weight: 600; color: var(--ink-2); }
