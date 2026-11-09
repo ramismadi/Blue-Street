@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '127';
+  var ASSET_VERSION = '128';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -1397,7 +1397,11 @@
   var NUMWORDS = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
   var explainers = null;   // data/pillars.json, keyed by engine row id
 
+  var engineData = null;
   function renderEngine(d) {
+    d = d || engineData;
+    if (!d) return;
+    engineData = d;
     if (d.updated) setText('#engine-updated', fmtDateTime(d.updated, true));
     var rows = d.rows || [];
     setText('#pillar-count', NUMWORDS[rows.length] || String(rows.length));
@@ -1416,13 +1420,57 @@
       // The read leads; the figures behind it sit one tap away.
       // Rami, 2026-10-19: the read is the meaning in 2–3 plain sentences; numbers live in Details.
       c.appendChild(el('p', 'pillar-read', firstSentences(row.read || '', 3, 70)));
-      var det = drawer('Details');
-      if (row.figure) det.appendChild(withFigures(el('p', 'pillar-figure'), row.figure));
-      det.appendChild(sourceChips(row.sources || row.source, row.source_url));
-      c.appendChild(det);
+      // Rami, 2026-11-09: the old Details showed the raw figures. Now it's
+      // what this pillar is doing to each currency right now, in plain words
+      // (the board's scores and Claude's driver notes); sources sit apart.
+      var bc = pillarByCurrency(row.id);
+      if (bc) {
+        var det = drawer('By currency', bc.hint);
+        det.appendChild(bc.node);
+        c.appendChild(det);
+      }
+      var sl = sourceList(row.sources || row.source, row.source_url).length;
+      if (sl) {
+        var sd = drawer('Sources', sl + (sl === 1 ? ' source' : ' sources'));
+        sd.appendChild(sourceChips(row.sources || row.source, row.source_url));
+        c.appendChild(sd);
+      }
       box.appendChild(c);
     });
     attachExplainers();
+  }
+
+  /* One pillar across the board: which currencies it supports or weighs on
+     this edition, each with its plain one-line note (plainNote guards
+     against raw shorthand), strongest first; the rest in one line. */
+  function pillarByCurrency(id) {
+    if (!fx.data) return null;
+    var pos = [], neg = [], zero = [];
+    fxRanked().forEach(function (c) {
+      var d = (c.drivers || {})[id], v = d ? +d.score || 0 : 0;
+      (v > 0 ? pos : v < 0 ? neg : zero).push({ c: c, d: d, v: v });
+    });
+    var wrap = el('div', 'pbc');
+    var ul = el('ul', 'pbc-list');
+    pos.concat(neg).forEach(function (x) {
+      var li = el('li', x.v > 0 ? 'pos' : 'neg');
+      var a = el('a', 'pbc-ccy');
+      a.href = '#fx/' + x.c.ccy;
+      a.appendChild(flagEl(x.c.ccy));
+      a.appendChild(el('b', 'mono', x.c.ccy));
+      var tag = el('span', 'pt-tag ' + (x.v > 0 ? 'bull' : 'bear'));
+      tag.appendChild(trendIcon(x.v > 0 ? 'bull' : 'bear'));
+      tag.appendChild(document.createTextNode(x.v > 0 ? 'Supports' : 'Weighs'));
+      a.appendChild(tag);
+      li.appendChild(a);
+      li.appendChild(el('p', 'pbc-note', x.d && x.d.note && plainNote(x.d.note) ? x.d.note
+        : (x.v > 0 ? 'Working in the ' + inName(x.c.name) + '’s favour this edition.' : 'Working against the ' + inName(x.c.name) + ' this edition.')));
+      ul.appendChild(li);
+    });
+    if (ul.children.length) wrap.appendChild(ul);
+    if (zero.length) wrap.appendChild(el('p', 'meta pbc-zero', (pos.length || neg.length ? 'Not moving: ' : 'Not moving any currency today: ') +
+      zero.map(function (x) { return x.c.ccy; }).join(', ') + '.'));
+    return { node: wrap, hint: pos.length + ' supported · ' + neg.length + ' weighed on' };
   }
 
   /* "What is this?" toggle on each pillar that has an explainer. */
@@ -2718,6 +2766,7 @@
     renderFxDetail(ranked, max);
     renderPicker();
     renderGauges(ranked);
+    renderEngine();
   }
 
   /* How many pillars support / weigh on / sit neutral for a currency. */
