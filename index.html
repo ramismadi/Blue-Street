@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=123">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=123">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=124">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=124">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=123">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=124">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=123">
+<link rel="stylesheet" href="assets/style.css?v=124">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=123" defer></script>
-<script src="assets/app.js?v=123" defer></script>
+<script src="assets/cot.js?v=124" defer></script>
+<script src="assets/app.js?v=124" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
@@ -191,11 +191,10 @@
   </section>
 
   <!-- ============ MACRO ENGINE ============ -->
-  <!-- Drivers: one tab, three sections (Rami, 2026-10-18) -->
+  <!-- Drivers: one tab, two sections (Rami, 2026-10-18; central banks moved to the currency pages 2026-11-09) -->
   <nav class="subnav" id="drivers-nav" aria-label="Drivers" hidden>
     <a href="#engine" data-view="engine">Macro engine</a>
     <a href="#positioning" data-view="positioning">Positioning</a>
-    <a href="#banks" data-view="banks">Central banks</a>
   </nav>
   <section class="view" id="view-engine" role="tabpanel" aria-label="Macro engine" hidden>
     <div class="view-head">
@@ -212,16 +211,6 @@
     <div id="cot-body"></div>
   </section>
 
-  <!-- ============ CENTRAL BANKS (hand-seeded) ============ -->
-  <section class="view" id="view-banks" role="tabpanel" aria-label="Central banks" hidden>
-    <div class="view-head">
-      <h1 class="view-title">Central banks</h1>
-    </div>
-    <div class="bank-next card" id="bank-next" hidden></div>
-    <div class="bank-grid" id="bank-grid"></div>
-    <p class="meta bank-foot" id="bank-foot"></p>
-  </section>
-
   <!-- ============ CALENDAR (hand-seeded; Today's "Next up" reads this list) ============ -->
   <section class="view" id="view-calendar" role="tabpanel" aria-labelledby="tab-calendar" hidden>
     <div class="view-head cal-head">
@@ -234,6 +223,16 @@
         <select id="cal-tz" aria-label="Time zone"></select>
       </label>
     </div>
+
+    <!-- Upcoming central bank decisions, every bank (Rami, 2026-11-09: moved
+         here from the retired Central banks page). Tap = that currency's page. -->
+    <section class="t-row cal-banks" id="cal-banks-row" aria-labelledby="cal-banks-h" hidden>
+      <div class="t-row-head">
+        <h2 class="section-label" id="cal-banks-h">Central bank decisions</h2>
+        <span class="t-row-nav" data-strip="cal-banks"></span>
+      </div>
+      <ol class="t-strip" id="cal-banks" aria-label="Upcoming central bank decisions, soonest first"></ol>
+    </section>
 
     <div class="card cal-next" id="cal-next" hidden></div>
 

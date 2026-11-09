@@ -705,6 +705,31 @@ a.metric:hover { border-color: var(--accent-2); }
 .pt-quiet { margin: 10px 0 0; }
 
 .hub-read { padding: 22px 28px; }
+
+/* The currency's central bank, on its page (Rami, 2026-11-09) */
+.hub-bank { padding: 22px 28px; }
+.hb-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.hb-lbl { margin: 0 0 4px; }
+.hb-name { margin: 0; font-family: var(--serif); font-size: 1.4rem; font-weight: 600; line-height: 1.2; }
+.hb-bias { display: inline-flex; align-items: center; gap: 7px; flex: none; }
+.hb-facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px 18px; margin: 18px 0 4px; }
+.hb-fact { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border-radius: 10px; background: var(--surface-2); }
+.hb-fact.wide { grid-column: span 2; }
+.hb-fact .mt-sub { margin-top: 0; }
+.hb-summary { margin: 14px 0 10px; font-family: var(--serif); font-size: 1.06rem; line-height: 1.55; color: var(--ink); }
+.hb-note { margin: 0 0 12px; font-family: var(--serif); font-size: 1rem; line-height: 1.5; color: var(--ink); }
+
+/* Calendar: upcoming central bank decisions, every bank */
+.cal-banks { margin: 0 0 18px; }
+.cal-banks .t-strip > li { width: 170px; }
+.cb-tile { display: flex; flex-direction: column; gap: 6px; width: 100%; padding: 12px 14px; text-decoration: none; color: var(--ink); }
+.cb-tile:hover { border-color: var(--accent-2); }
+.cb-top { display: flex; align-items: center; gap: 7px; }
+.cb-top .flag { width: 18px; height: 13.5px; border-radius: 2px; }
+.cb-top b { flex: 1; font-size: 0.95rem; }
+.cb-top .mt-bias { padding: 1px 6px; font-size: 0.68rem; }
+.cb-when { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; }
+.cb-in { font-size: 0.78rem; }
 .fd-read > .section-label { margin: 0; }
 .fd-read .drawer .sources-lbl { display: none; }
 .fd-read .drawer .sources { margin: 2px 0 12px; }
@@ -729,7 +754,9 @@ a.metric:hover { border-color: var(--accent-2); }
   .metrics > li { width: 176px; }
   .mt-val { font-size: 1.15rem; }
   .pillar-tiles { grid-template-columns: minmax(0, 1fr); }
-  .hub-read { padding: 18px; }
+  .hub-read, .hub-bank { padding: 18px; }
+  .hb-fact.wide { grid-column: auto; }
+  .hb-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .pw-cols { grid-template-columns: minmax(0, 1fr); }
 }
 
@@ -767,13 +794,6 @@ a.metric:hover { border-color: var(--accent-2); }
 .drawer .numbers { margin: 2px 0 14px; }
 .card .drawer { margin-bottom: 0; border-bottom: 0; }
 .card .drawer > :last-child { margin-bottom: 10px; }
-.bank .bank-priced { border-top: 0; padding-top: 4px; }
-.bank .bank-priced span:last-child { font-family: var(--serif); font-size: 1.08rem; line-height: 1.4; color: var(--ink); }
-.bank .bank-rate { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
-.bank .bank-rate .rate-val { font-size: 1.05rem; font-weight: 700; }
-.bank-summary { margin: 2px 0 0; font-family: var(--serif); font-size: 1rem; line-height: 1.45; color: var(--ink); }
-.bank .drawer .rate-lbl { margin: 0 0 8px; font-size: 0.82rem; color: var(--ink-2); }
-.bank .drawer .sources { margin-top: 8px; }
 .dp-pillar { font-family: var(--sans); font-size: 0.74rem; color: var(--ink-3); }
 
 /* ---------- inline glossary ---------- */
@@ -1285,78 +1305,6 @@ a.metric:hover { border-color: var(--accent-2); }
 .pillar .drawer .pillar-figure { font-size: 0.86rem; line-height: 1.5; }
 .pillar .drawer .sources { margin-top: 10px; }
 
-/* ---------- BANKS ---------- */
-.bank-next {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  flex-wrap: wrap;
-  padding: 14px 20px;
-  margin-bottom: 14px;
-}
-.bank-next .kicker { margin: 0; }
-.bank-next-line { margin: 0; font-size: 0.95rem; color: var(--ink-2); }
-.bank-next-line b { color: var(--ink); font-weight: 600; }
-
-.bank-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  align-items: start;
-}
-.bank { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px; }
-.bank-head { display: flex; align-items: center; gap: 8px; }
-.bank-short { font-weight: 700; font-size: 1.02rem; color: var(--accent); }
-.bank-ccy { font-size: 0.72rem; color: var(--ink-3); flex: 1; }
-.bank-name { margin: -6px 0 0; font-size: 0.78rem; color: var(--ink-3); }
-.bank-rate { display: flex; flex-direction: column; }
-.rate-val {
-  font-family: var(--sans);
-  font-variant-numeric: tabular-nums;
-  font-size: 1.9rem;
-  font-weight: 600;
-  line-height: 1.1;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-.rate-lbl { font-size: 0.72rem; color: var(--ink-3); margin-top: 2px; }
-.move {
-  align-self: flex-start;
-  padding: 2px 9px;
-  border-radius: 20px;
-  font-size: 0.72rem;
-  font-weight: 700;
-}
-.move.up { background: var(--gold-wash); color: var(--gold); }
-.move.dn { background: var(--accent-wash); color: var(--accent); }
-.move.flat { background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line); }
-.bank-meet, .bank-priced {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-  font-size: 0.88rem;
-}
-.meet-lbl {
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-}
-.meet-when { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-.meet-when b { font-weight: 600; }
-.meet-when.muted { color: var(--ink-3); }
-.meet-in { font-size: 0.78rem; color: var(--gold); font-weight: 600; }
-.bank .sources { margin-top: auto; padding-top: 4px; }
-.bank.thin { box-shadow: none; background: var(--surface-2); }
-.bank.thin .bank-short { color: var(--ink-2); }
-.bank-foot { margin-top: 14px; }
-
-/* Central-bank bias pill: word + trend line (colours come from .bias-pill.bull/bear/mixed) */
-.bank-bias { display: inline-flex; align-items: center; gap: 7px; }
-
 /* ---------- CALENDAR ---------- */
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -1623,7 +1571,6 @@ footer { padding: 34px 0 44px; text-align: center; }
   .engine-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pillar, .pillar.half { grid-column: span 1; }
   .engine-grid .pillar:last-child:nth-child(odd) { grid-column: span 2; }
-  .bank-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fx-grid { grid-template-columns: minmax(0, 1fr); }
   .ev-row { grid-template-columns: 66px 62px minmax(0, 1fr) 220px 12px; gap: 8px; padding: 12px 14px; }
   .ev-detail { padding-left: 14px; padding-right: 14px; }
@@ -1638,9 +1585,8 @@ footer { padding: 34px 0 44px; text-align: center; }
 }
 
 @media (max-width: 560px) {
-  .engine-grid, .bank-grid { grid-template-columns: minmax(0, 1fr); }
+  .engine-grid { grid-template-columns: minmax(0, 1fr); }
   .engine-grid .pillar:last-child:nth-child(odd) { grid-column: span 1; }
-  .bank.thin { gap: 6px; padding: 14px 16px; }
   .arc li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   /* Phone row: time with the ccy + impact tag under it; title and the
      figures that exist to the right. */
@@ -1668,8 +1614,6 @@ footer { padding: 34px 0 44px; text-align: center; }
   .cal-filters { gap: 8px; }
   #cal-range { max-width: 100%; overflow-x: auto; scrollbar-width: none; }
   #cal-range .seg { padding: 6px 10px; white-space: nowrap; }
-  .bank.thin .bank-name { display: none; }
-  .bank.thin .bank-meet { flex-direction: row; justify-content: space-between; align-items: baseline; }
   .sc-head { flex-direction: column; align-items: flex-start; }
   .timeline::before { left: 7px; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; padding-left: 26px; }
@@ -1968,7 +1912,7 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .nr-kicker { display: inline-flex; align-items: center; gap: 7px; }
 .fchip.empty .flag { opacity: 0.7; }
 
-/* Drivers sub-navigation (Macro engine · Positioning · Central banks) */
+/* Drivers sub-navigation (Macro engine · Positioning) */
 .subnav {
   display: inline-flex; gap: 4px; padding: 4px; margin: 0 0 18px; border-radius: 12px;
   background: var(--surface-2); border: 1px solid var(--line); max-width: 100%; overflow-x: auto; scrollbar-width: none;
@@ -2198,11 +2142,6 @@ main .card, main [class*="-grid"] > *, main .ev-row > *, main .chip-row > * { mi
 html, body { overflow-x: clip; max-width: 100%; }
 @media (max-width: 360px) { .l-tally { white-space: normal; font-size: 0.74rem; } }
 
-.bank-summary { font-size: 1.04rem; line-height: 1.5; margin: 6px 0 10px; }
-.bank-note { margin: 0 0 12px; }
-.bank-note p { margin: 3px 0 0; font-size: 0.95rem; line-height: 1.45; color: var(--ink); }
-.bank-detail { font-size: 0.86rem; line-height: 1.5; color: var(--ink-2); margin: 0 0 10px; }
-.bank .bank-priced span:last-child { font-family: var(--sans); font-size: 0.92rem; line-height: 1.4; }
 
 /* News on phones (Rami, 2026-10-26): first story is the hero card, the rest
    are compact rows — arrow on the left, headline + source/time, small square

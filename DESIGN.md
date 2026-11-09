@@ -11,8 +11,9 @@ Collaboration rules and the update schedule live in `COLLAB.md`.
 story?) ·
 Currencies (where does each stand? — the currency page carries its bank,
 positioning, chapter, Developing threads and "In the news") · News ·
-**Drivers** (what's moving things underneath? — Macro engine, Positioning and
-Central banks as three sections with a sub-nav; `#drivers` opens the last one
+**Drivers** (what's moving things underneath? — Macro engine and Positioning
+as two sections with a sub-nav; central banks moved into each currency's page
+2026-11-09; `#drivers` opens the last one
 read, saved in localStorage `bluestreet-driver`) · Calendar. Tab order (Rami,
 2026-10-21): Today, Currencies, News, Drivers, Calendar. Every old route
 still works. The table below lists the views.
@@ -26,8 +27,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Currencies | `#fx`, `#fx/AUD` = currency page, `#fx/OIL` / `#fx/XAU` = gold and oil (header + full read). Old `#story/N` links redirect to chapter N's page (Story view retired 2026-11-09) | `data/currencies.json` (+ banks, calendar, story joins) |
 | Drivers: Macro engine | `#engine` | `data/engine.json` + `data/pillars.json` |
 | Drivers: Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
-| Drivers: Central banks | `#banks` | `data/banks.json` |
-| Calendar | `#calendar` | `data/calendar.json` (+ banks.json join) |
+| Calendar | `#calendar` | `data/calendar.json` (+ banks.json join; the row of upcoming central bank decisions) |
 | News | `#news`, `#news/JPY` = filtered to a market, `#article/<id>` = one story's own page (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
 | Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
@@ -68,18 +68,24 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
      line (the currency `summary`, else the chapter `teaser`), and the
      speedometer with the score and its change since the last edition.
   2. **At a glance**, a side-scrolling row of metric tiles: the central bank
-     (rate, hawkish/neutral/dovish pill, next decision), what markets expect
-     at that meeting (only when `priced` is a short plain line), the next
+     (rate, hawkish/neutral/dovish pill, next decision), the next
      high-impact event with a live countdown, hedge-fund positioning in
      words, data beats vs misses with the dots, and the score trend.
-  3. **What's moving it:** a tile per pillar that is moving it (Supports /
+  3. **<Currency> in the news:** the same photo headline tiles as Today,
+     filtered to this currency, newest first (right under At a glance, Rami
+     2026-11-09).
+  4. **Central bank** (`bankSection`; Rami, 2026-11-09 — the Central banks
+     page in Drivers is retired and `#banks` lands on Currencies): name and
+     stance pill, then interest rate, last move, next decision (days to go)
+     and what markets expect; the plain `summary`; "What's driving it"
+     (`why`), "What to watch" (`watch`) and Sources each behind a tap. Herc's
+     number-heavy `detail` never shows (`plainText` guard).
+  5. **What's moving it:** a tile per pillar that is moving it (Supports /
      Weighs + its one-line note); pillars at zero are listed in one line.
-  4. **<Currency> in the news:** the same photo headline tiles as Today,
-     filtered to this currency, newest first.
-  5. **The full read** (`chapterRead`, what used to be the Story chapter):
+  6. **The full read** (`chapterRead`, what used to be the Story chapter):
      the labelled narrative, then Details, the scenarios and Sources, each
      behind a tap. The Story chapter view is retired.
-  6. **Pairs to watch:** the top three pairs with an edge for a bullish and
+  7. **Pairs to watch:** the top three pairs with an edge for a bullish and
      a bearish view; a tap presets the pair picker. Evidence, not a call.
   Gold and oil (`#fx/XAU`, `#fx/OIL`, `renderMarketDetail`): header with the
   lean, the news row and the full read. **No raw data on the hub:** a note,
@@ -523,9 +529,10 @@ shows a one-line "Positioning" link under Trend.
   "priced":"Oct hike ~60%"|null, "bias":"hawkish"|"neutral"|"dovish"|null,
   "sources":[]}]}
 ```
-**Meaning, not data** (Rami, 2026-10-19): `summary` = 1–2 plain sentences on where the bank stands and what it means for its currency (shown first); `priced` = ONE short line on what markets expect, in words ("October: hold expected; December: hike likely"); `detail` (optional) = the numbers, odds, prints and dates — shown only inside Details. The card trims summary to 2 sentences and priced to 1.
-A bank with `rate`, `priced` or `bias` gets a full card; others show date
-only. Cards sort by soonest meeting. Use the headline policy rate (Fed: the
+**Meaning, not data** (Rami, 2026-10-19): `summary` = 1–3 plain sentences on where the bank stands and what it means for its currency (shown first); `priced` = ONE short line on what markets expect, in words ("December: hike likely"); `detail` (optional) = the numbers, odds, prints and dates — no longer shown on the site.
+Where it renders (2026-11-09): the Central bank section on its currency's
+page (`bankSection`), and the Calendar's "Central bank decisions" row
+(every bank with a date, soonest first; tap = that currency's page). Use the headline policy rate (Fed: the
 target range; ECB: deposit facility) and say which in `rate_label`. Source
 the rate from the bank's own site (Fed target range: FRED `DFEDTARU` /
 `DFEDTARL`; `FEDFUNDS` is the *effective* rate).

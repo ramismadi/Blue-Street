@@ -704,3 +704,21 @@ takeaways" opens the card across the row: the four beats, "By currency" with
 each `why`, "What would change it", the publisher button, and "Earlier on this
 story". Today's "Top headlines" row opens a story here, expanded.
 ```
+
+## Central banks page — DESIGN.md text retired 2026-11-09 (banks moved into the currency pages)
+```
+**Drivers** (what's moving things underneath? — Macro engine, Positioning and
+Central banks as three sections with a sub-nav; `#drivers` opens the last one
+| Drivers: Central banks | `#banks` | `data/banks.json` |
+| Calendar | `#calendar` | `data/calendar.json` (+ banks.json join) |
+     (rate, hawkish/neutral/dovish pill, next decision), what markets expect
+     at that meeting (only when `priced` is a short plain line), the next
+  3. **What's moving it:** a tile per pillar that is moving it (Supports /
+  4. **<Currency> in the news:** the same photo headline tiles as Today,
+     filtered to this currency, newest first.
+  5. **The full read** (`chapterRead`, what used to be the Story chapter):
+  6. **Pairs to watch:** the top three pairs with an edge for a bullish and
+**Meaning, not data** (Rami, 2026-10-19): `summary` = 1–2 plain sentences on where the bank stands and what it means for its currency (shown first); `priced` = ONE short line on what markets expect, in words ("October: hold expected; December: hike likely"); `detail` (optional) = the numbers, odds, prints and dates — shown only inside Details. The card trims summary to 2 sentences and priced to 1.
+A bank with `rate`, `priced` or `bias` gets a full card; others show date
+only. Cards sort by soonest meeting. Use the headline policy rate (Fed: the
+```

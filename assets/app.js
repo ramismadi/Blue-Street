@@ -1,5 +1,5 @@
 /* Blue Street — premium desk renderer. Plain static JS, no build step.
-   Tabbed views (hash-routed: #today, #fx, #fx/USD, #engine, #positioning, #banks,
+   Tabbed views (hash-routed: #today, #fx, #fx/USD, #engine, #positioning,
    #calendar, #news; old #story links land on the matching currency page), a theme picker, and edition data (story, macro engine,
    developing stories, news) from local JSON files. textContent-only DOM, no HTML injection. */
 
@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '123';
+  var ASSET_VERSION = '124';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -17,12 +17,13 @@
     document.documentElement.classList.add('is-app');
   }
 
-  var TABS = ['today', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'article', 'learn'];   // views
+  var TABS = ['today', 'fx', 'engine', 'positioning', 'calendar', 'news', 'article', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
-     their own light up their parent: the macro engine, positioning and
-     central banks are the three Drivers sections. */
-  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', banks: 'drivers', article: 'news', learn: null };
-  var DRIVER_VIEWS = ['engine', 'positioning', 'banks'];
+     their own light up their parent: the macro engine and positioning are
+     the Drivers sections. (Central banks moved into each currency's page,
+     2026-11-09.) */
+  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', article: 'news', learn: null };
+  var DRIVER_VIEWS = ['engine', 'positioning'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
@@ -98,9 +99,7 @@
       (d.banks || []).forEach(function (b) { cal.banks[b.id] = b; });
       renderCalendar();
       renderFx();
-    }).catch(function () {
-      note('#bank-grid', 'Central bank data unavailable.');
-    });
+    }).catch(function () { /* the currency pages and calendar do without */ });
     initCalendar();
     initFx();
     initStrips();
@@ -544,6 +543,10 @@
       h = (chapterHref(+h[1]) || '#fx').slice(1).split('/');
       history.replaceState(null, '', '#' + h.join('/'));
     }
+    if (h[0] === 'banks') {     // Central banks moved into each currency's page (2026-11-09)
+      h = ['fx'];
+      history.replaceState(null, '', '#fx');
+    }
     if (h[0] === 'drivers') {   // the tab opens the Drivers section last read
       var last = 'engine';
       try { last = localStorage.getItem('bluestreet-driver') || 'engine'; } catch (e) { /* private mode */ }
@@ -614,7 +617,7 @@
       ico: 'M2.5 4.5h9v8h-9z M11.5 6.5h2v5a1 1 0 0 1-2 0 M4.5 6.5h5 M4.5 8.5h5 M4.5 10.5h3' },
     { id: 'drivers', label: 'Drivers', href: '#drivers',
       ico: 'M2.5 11.5a5.5 5.5 0 1 1 11 0 M8 11.5l2.6-3.6',
-      subs: [['engine', 'Macro engine'], ['positioning', 'Positioning'], ['banks', 'Central banks']] },
+      subs: [['engine', 'Macro engine'], ['positioning', 'Positioning']] },
     { id: 'calendar', label: 'Calendar', href: '#calendar',
       ico: 'M2.5 4h11v9.5h-11z M2.5 7h11 M5.5 2.5v3 M10.5 2.5v3' },
     { id: 'learn', label: 'Learn', href: '#learn', minor: true,
@@ -1454,8 +1457,9 @@
   }
 
   /* ---------------- central banks ----------------
-     data/banks.json → one card per bank, soonest decision first. Banks with
-     no data yet sink to the end as compact "not covered" cards. */
+     data/banks.json. Rami, 2026-11-09: no page of its own any more — each
+     bank sits on its currency's page (bankSection), and the Calendar opens
+     with the upcoming decisions across every bank (renderBanks). */
   var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
   function ymd(str) {               // "2026-10-27" -> local Date at midnight
@@ -1484,13 +1488,7 @@
     return n === 0 ? 'today' : n === 1 ? 'tomorrow' : 'in ' + n + ' days';
   }
 
-  function moveChip(mv) {
-    if (!mv || mv.bp == null) return null;
-    var d = ymd(mv.date), when = d ? ' · ' + MONTHS[d.getMonth()] + ' ' + d.getDate() : '';
-    if (mv.bp > 0) return el('span', 'move up', 'Hiked +' + mv.bp + 'bp' + when);
-    if (mv.bp < 0) return el('span', 'move dn', 'Cut ' + mv.bp + 'bp' + when);
-    return el('span', 'move flat', 'Held' + when);
-  }
+
 
   /* Rami, 2026-10-19: the trend line next to the bias shows which way it tends to push
      the currency. Hawkish (rates up) lifts it, dovish (rates down) weighs on it,
@@ -1502,109 +1500,105 @@
   };
 
   function renderBanks(d) {
-    if (d.updated) setText('#banks-updated', fmtDateTime(d.updated, true));
-    var grid = $('#bank-grid');
+    var box = $('#cal-banks');
+    if (!box) return;
+    box.textContent = '';
     var banks = (d.banks || []).map(function (b) {
       var nm = b.next_meeting && b.next_meeting.start ? b.next_meeting : null;
-      return { b: b, nm: nm, days: nm ? daysUntil(nm) : null, covered: !!(b.rate || b.priced || b.bias) };
-    });
-    // Covered first, then by soonest meeting; unknown dates last.
-    banks.sort(function (x, y) {
-      if (x.covered !== y.covered) return x.covered ? -1 : 1;
-      var dx = x.days == null ? 1e9 : x.days, dy = y.days == null ? 1e9 : y.days;
-      return dx - dy;
-    });
-
-    var thin = [];
+      return { b: b, nm: nm, days: nm ? daysUntil(nm) : null };
+    }).filter(function (o) { return o.days != null; })
+      .sort(function (x, y) { return x.days - y.days; });
     banks.forEach(function (o) {
-      var b = o.b;
-      var c = el('article', 'card bank gl-scope' + (o.covered ? '' : ' thin'));
-      var head = el('div', 'bank-head');
-      head.appendChild(flagEl(b.ccy));   // Rami, 2026-10-19: each bank carries its flag
-      head.appendChild(el('span', 'bank-short', b.short));
-      head.appendChild(el('span', 'bank-ccy mono', b.ccy || ''));
+      var b = o.b, li = el('li');
+      var a = el('a', 'cb-tile card');
+      a.href = '#fx/' + b.ccy;
+      var top = el('span', 'cb-top');
+      top.appendChild(flagEl(b.ccy));
+      top.appendChild(el('b', null, b.short));
       if (b.bias && BIAS[b.bias]) {
-        var BX = BIAS[b.bias], bp = el('span', 'bias-pill bank-bias ' + BX[1]);
-        bp.appendChild(el('span', null, BX[0]));
+        var BX = BIAS[b.bias], bp = el('span', 'mt-bias ' + BX[1]);
         bp.appendChild(trendIcon(BX[1]));
-        bp.title = BX[0] + ': ' + BX[2] + ' ' + (b.ccy || 'the currency');
-        head.appendChild(bp);
+        bp.appendChild(document.createTextNode(BX[0]));
+        top.appendChild(bp);
       }
-      c.appendChild(head);
-      c.appendChild(el('p', 'bank-name', b.name));
-
-      // Prose first: the bank's story (summary, if the feed gives one) and
-      // what the market prices lead; the rate stays as a compact figure.
-      // Rami, 2026-10-19: lead with the meaning in 1–2 plain sentences; the numbers sit in Details.
-      if (b.summary) c.appendChild(el('p', 'bank-summary', firstSentences(b.summary, 2, 45)));
-      if (b.priced) {
-        var pr = el('div', 'bank-priced');
-        pr.appendChild(el('span', 'meet-lbl', 'Market pricing'));
-        pr.appendChild(el('span', null, b.summary ? firstSentences(b.priced, 1, 25) : b.priced));
-        c.appendChild(pr);
-      }
-      if (o.covered && b.rate) {
-        var rate = el('div', 'bank-rate');
-        rate.appendChild(el('span', 'meet-lbl', 'Policy rate'));
-        rate.appendChild(el('span', 'rate-val', b.rate));
-        c.appendChild(rate);
-      }
-
-      var meet = el('div', 'bank-meet');
-      meet.appendChild(el('span', 'meet-lbl', 'Next decision'));
-      if (o.nm) {
-        var when = el('span', 'meet-when');
-        when.appendChild(el('b', null, fmtMeeting(o.nm)));
-        if (o.days != null) when.appendChild(el('span', 'meet-in', inDays(o.days)));
-        meet.appendChild(when);
-      } else {
-        meet.appendChild(el('span', 'meet-when muted', 'Date to come'));
-      }
-      c.appendChild(meet);
-
-      if (o.covered) {
-        // Raw numbers: rate definition, last move, sources — on tap.
-        var mc = moveChip(b.last_move);
-        var plain = !!(b.why || b.watch);
-        if (b.rate_label || mc || b.detail || plain || (b.sources || []).length) {
-          var det = drawer('Details');
-          // Rami, 2026-10-19: the old Details read like data slop. When plain-words text
-          // exists (words.json) it replaces the number-heavy detail; otherwise fall back.
-          [['What is driving it', b.why], ['What to watch', b.watch]].forEach(function (r) {
-            if (!r[1]) return;
-            var blk = el('div', 'bank-note');
-            blk.appendChild(el('span', 'meet-lbl', r[0]));
-            blk.appendChild(el('p', null, r[1]));
-            det.appendChild(blk);
-          });
-          if (b.detail && !plain) det.appendChild(el('p', 'bank-detail', b.detail));
-          if (b.rate_label) det.appendChild(el('p', 'rate-lbl', b.rate_label + ': ' + (b.rate || '—')));
-          if (mc) det.appendChild(mc);
-          if ((b.sources || []).length) det.appendChild(sourceChips(b.sources));
-          c.appendChild(det);
-        }
-      } else {
-        thin.push(b.short);
-      }
-      grid.appendChild(c);
+      a.appendChild(top);
+      a.appendChild(el('span', 'cb-when', fmtMeeting(o.nm)));
+      a.appendChild(el('span', 'cb-in meta', inDays(o.days)));
+      li.appendChild(a);
+      box.appendChild(li);
     });
+    $('#cal-banks-row').hidden = !banks.length;
+    initStrips();
+    updateStripNav();
+  }
 
-    // Headline strip: the very next decision across all banks.
-    var next = banks.filter(function (o) { return o.days != null; })
-      .sort(function (x, y) { return x.days - y.days; })[0];
-    var strip = $('#bank-next');
-    if (next && strip) {
-      strip.textContent = '';
-      strip.appendChild(el('span', 'kicker', 'Next decision'));
-      var line = el('p', 'bank-next-line');
-      line.appendChild(el('b', null, next.b.name));
-      line.appendChild(document.createTextNode(' · ' + fmtMeeting(next.nm) + ' · ' + inDays(next.days)));
-      strip.appendChild(line);
-      strip.hidden = false;
+  /* A currency's central bank, on its page (Rami, 2026-11-09): rate, stance,
+     last move, next decision with a countdown, what markets expect, the
+     plain summary; why and what to watch, and the sources, behind a tap.
+     Herc's number-heavy text never shows here (plainText). */
+  function plainText(t, max) {
+    t = String(t || '');
+    return !!t && t.length <= (max || 400) && (t.match(/\d/g) || []).length <= 14 && !/[;~→|]|\(\w+:|\+\d/.test(t);
+  }
+  function bankSection(c) {
+    var b = cal.banks[c.bank];
+    if (!b) return null;
+    var sec = el('section', 'hub-sec hub-bank card gl-scope');
+    var hd = el('div', 'hb-head');
+    var nmb = el('div');
+    nmb.appendChild(el('p', 'section-label hb-lbl', 'Central bank'));
+    nmb.appendChild(el('h2', 'hb-name', b.name));
+    hd.appendChild(nmb);
+    if (b.bias && BIAS[b.bias]) {
+      var BX = BIAS[b.bias], bp = el('span', 'bias-pill hb-bias ' + BX[1]);
+      bp.appendChild(el('span', null, BX[0]));
+      bp.appendChild(trendIcon(BX[1]));
+      bp.title = BX[0] + ': ' + BX[2] + ' the ' + inName(c.name);
+      hd.appendChild(bp);
     }
-    setText('#bank-foot', thin.length
-      ? 'Rates and pricing for ' + thin.join(', ') + ' arrive as the data feed covers them.'
-      : '');
+    sec.appendChild(hd);
+
+    var facts = el('div', 'hb-facts');
+    function fact(lbl, val, sub, cls) {
+      var f = el('div', 'hb-fact' + (cls ? ' ' + cls : ''));
+      f.appendChild(el('span', 'mt-lbl', lbl));
+      if (typeof val === 'string') f.appendChild(el('span', 'mt-val', val)); else f.appendChild(val);
+      if (sub) f.appendChild(el('span', 'mt-sub', sub));
+      facts.appendChild(f);
+    }
+    if (b.rate) fact('Interest rate', b.rate, b.rate_label || '');
+    var mv = b.last_move;
+    if (mv && mv.bp != null) {
+      var d0 = ymd(mv.date);
+      fact('Last move', mv.bp > 0 ? 'Raised ' + (mv.bp / 100).toFixed(2) + ' pt' : mv.bp < 0 ? 'Cut ' + (Math.abs(mv.bp) / 100).toFixed(2) + ' pt' : 'Held',
+        d0 ? MONTHS[d0.getMonth()] + ' ' + d0.getDate() + ', ' + d0.getFullYear() : '');
+    }
+    var nm = b.next_meeting && b.next_meeting.start ? b.next_meeting : null;
+    if (nm) {
+      var dn = daysUntil(nm);
+      var cd = el('span', 'mt-val mono', dn == null ? '—' : dn === 0 ? 'Today' : dn + (dn === 1 ? ' day' : ' days'));
+      fact('Next decision', cd, fmtMeeting(nm));
+    }
+    if (b.priced && plainText(b.priced, 120)) {
+      var pr = b.priced.replace(/^[A-Z][a-z]+:\s*/, '');
+      fact('Markets expect', pr.charAt(0).toUpperCase() + pr.slice(1), nm ? 'At the ' + fmtMeeting(nm) + ' meeting' : '', 'wide');
+    }
+    sec.appendChild(facts);
+
+    if (plainText(b.summary)) sec.appendChild(el('p', 'hb-summary', firstSentences(b.summary, 3, 70)));
+    var notes = [['What’s driving it', b.why], ['What to watch', b.watch]].filter(function (r) { return r[1] && plainText(r[1], 500); });
+    notes.forEach(function (r) {
+      var det = drawer(r[0]);
+      det.appendChild(el('p', 'hb-note', r[1]));
+      sec.appendChild(det);
+    });
+    var srcN = (b.sources || []).length;
+    if (srcN) {
+      var sd = drawer('Sources', srcN + (srcN === 1 ? ' source' : ' sources'));
+      sd.appendChild(sourceChips(b.sources));
+      sec.appendChild(sd);
+    }
+    return sec;
   }
 
   /* ---------------- positioning (COT) ----------------
@@ -2340,8 +2334,8 @@
       links.appendChild(ch);
     }
     if (bk) {
-      var bl = el('a', 'more', 'Central bank card →');
-      bl.href = '#banks';
+      var bl = el('a', 'more', (bk.short || 'Central bank') + ' on the ' + bk.ccy + ' page →');
+      bl.href = '#fx/' + bk.ccy;
       links.appendChild(bl);
     }
     var add = el('button', 'btn ghost small', 'Add to calendar');
@@ -3143,11 +3137,7 @@
       }
       var nm = bk.next_meeting && bk.next_meeting.start ? bk.next_meeting : null, dn = nm ? daysUntil(nm) : null;
       mol.appendChild(metricTile(bk.short || 'Central bank', bk.rate || '—',
-        nm && dn != null ? 'Next decision ' + fmtMeeting(nm) + ', ' + inDays(dn) : 'Interest rate', '#banks', bx));
-      if (bk.priced && plainNote(bk.priced) && bk.priced.length <= 90) {
-        var pr = bk.priced.replace(/^[A-Z][a-z]+:\s*/, '');
-        mol.appendChild(metricTile('Markets expect', pr.charAt(0).toUpperCase() + pr.slice(1), nm ? 'At the ' + fmtMeeting(nm) + ' meeting' : '', '#banks'));
-      }
+        nm && dn != null ? 'Next decision ' + fmtMeeting(nm) + ', ' + inDays(dn) : 'Interest rate', null, bx));
     }
     var ev = eventsFor([c.ccy], 30)[0];
     if (ev) {
@@ -3176,7 +3166,14 @@
     }
     box.appendChild(mrow);
 
-    // 3. What's moving it: a tile per pillar that is moving it.
+    // 3. News for this currency, right under At a glance (Rami, 2026-11-09).
+    hubNewsRow(box, c.ccy, c.name);
+
+    // 4. Its central bank (moved here from Drivers, 2026-11-09).
+    var bs = bankSection(c);
+    if (bs) box.appendChild(bs);
+
+    // 5. What's moving it: a tile per pillar that is moving it.
     var mv = hubSection('What’s moving it', 'hub-pillars');
     var grid = el('ul', 'pillar-tiles');
     var quiet = [];
@@ -3200,13 +3197,10 @@
     if (quiet.length) mv.appendChild(el('p', 'meta pt-quiet', 'Not moving it today: ' + quiet.join(', ') + '.'));
     box.appendChild(mv);
 
-    // 4. News for this currency.
-    hubNewsRow(box, c.ccy, c.name);
-
-    // 5. The full read.
+    // 6. The full read.
     hubRead(box, ch);
 
-    // 6. Pairs to watch: the strongest setups for each view, into the picker.
+    // 7. Pairs to watch: the strongest setups for each view, into the picker.
     var pw = hubSection('Pairs to watch', 'hub-pairs');
     var cols = el('div', 'pw-cols');
     [['bull', 'If you’re bullish on ' + c.ccy], ['bear', 'If you’re bearish on ' + c.ccy]].forEach(function (d) {
@@ -4056,7 +4050,7 @@
   var gloss = { re: null, map: {}, list: [], byId: {}, loaded: false, pop: null, pinned: null, queued: false };
   var GL_SKIP = 'a, button, summary, h1, h2, time, script, style, .gl, .mono, .fig, .chip, .kicker, ' +
     '.section-label, .callout-lbl, .lbl, .narr-lbl, .drawer-lbl, .tag, .badge, .ev-ccy, .sr-only, ' +
-    '.bias-pill, .meet-lbl, .rate-val, .bank-short, .bank-name, .seg';
+    '.bias-pill, .mt-lbl, .mt-val, .hb-name, .seg';
 
   function initGlossary() {
     fetchJSON('data/glossary.json').then(function (d) {
