@@ -655,3 +655,33 @@ story". Today's tiles link the tab.
 calendar). Today's "Next up" shows the next three high/medium events.
 best edge first, with no group headings (edge tiles get a blue edge, no-edge tiles go flat, against-your-view tiles fade), as tiles styled like Today's currency tiles (card,
 ```
+
+## Story view, compact Today read and old picker — DESIGN.md text retired 2026-11-09 (round 2)
+```
+story? — Story chapters open from here, `#story` lights up Today) ·
+| Story (opens from Today) | `#story`, `#story/2` = chapter 2 | `data/story.json` |
+| Currencies | `#fx`, `#fx/AUD` = currency page | `data/currencies.json` (+ banks, calendar, story joins) |
+- **Today is a one-screen dashboard** (Rami, 2026-11-09; replaces the
+  full-screen headline, At a glance, the chapter cards and Go deeper). Top to
+  bottom, all visible without scrolling down, phones included:
+  1. **Today's read**, compact: kicker + date, the headline (1–2 sentences;
+     clamped to 3 lines on phones), "Full read →" into Story.
+  3. **Currency strength**, a side-scrolling row: one speedometer per
+     Tap = that currency's page.
+  beside the row title (hidden when the row fits). Code: `renderTodayNews`,
+  `renderGauges` / `gaugeSvg`, `initStrips` in app.js; `.t-*` in style.css.
+- **Today by currency moved to Currencies** (Rami, 2026-11-09): the chapter
+  cards (flag + title, lean mark, `teaser`, top 3 headlines, "More on … →")
+  now sit under the picker and strength board, `#fx-cards`
+  (`renderCcyCards`). 3 across on desktop, 2 on tablet, 1 on phones. Quiet
+  chapters still fold into the "Quiet today" line.
+- **Currencies:** the Pair picker sits above the Strength board with no card, as part of the page: a large left-aligned "I'm Bullish / Bearish on" sentence and the currency buttons (with flags). It starts blank every visit (no remembered pick); the pairs appear only once a side and a currency are chosen (Rami, 2026-10-27).
+  `fx`) become headed sections in the Story tab, in that order (Rami,
+best edge first, with no group headings (edge tiles get a blue edge, no-edge tiles go flat, against-your-view tiles fade), as tiles styled like the currency cards (card,
+rounded): score, both flags, the pair in serif, and a green (rises if the reader's view is
+right) or red (falls) trend pill, then +. Opening a tile shows a score breakdown (each pillar for both currencies and what it adds for the reader's view, summing to the tile score), then the why, interest and events
+under a divider. Bullish/Bearish are solid green #279a41 / red #e3262c with text in the site
+background color. The prompt is left-aligned; currency buttons and the strength board show
+flags. Tapping a picked side or currency again clears it. The strength board has no card.
+Never Buy/Sell (Rami, 2026-10-28).
+```

@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=118">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=118">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=119">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=119">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=118">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=119">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=118">
+<link rel="stylesheet" href="assets/style.css?v=119">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=118" defer></script>
-<script src="assets/app.js?v=118" defer></script>
+<script src="assets/cot.js?v=119" defer></script>
+<script src="assets/app.js?v=119" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
@@ -112,10 +112,14 @@
     <!-- Focus Mode: big-event takeover (preview → live → recap), from data/focus.json -->
     <section class="focus" id="focus" aria-live="polite" hidden></section>
 
-    <section class="t-read" aria-labelledby="t-read-k">
-      <p class="kicker" id="t-read-k">Today&rsquo;s read <span id="hero-date"></span></p>
-      <p id="today-headline" class="t-read-hl">Loading the edition…</p>
-      <a class="more t-read-more" href="#story/1">Full read →</a>
+    <!-- Today's read: the big headline, rising word by word, then blurring and
+         lifting away as you scroll (Rami, 2026-11-09: keep the character,
+         a bit shorter than a full screen so the rows peek in). -->
+    <section class="t-hero" id="t-hero" aria-labelledby="t-read-k">
+      <div class="t-hero-inner">
+        <p class="kicker" id="t-read-k">Today&rsquo;s read <span id="hero-date"></span></p>
+        <h1 id="today-headline" class="display t-hero-hl">Loading the edition…</h1>
+      </div>
     </section>
 
     <section class="t-row" aria-labelledby="t-news-h">
@@ -125,6 +129,15 @@
         <a class="more" href="#news">All news →</a>
       </div>
       <ol class="t-strip t-news" id="today-news" aria-label="Top headlines"></ol>
+    </section>
+
+    <section class="t-row" aria-labelledby="t-ccy-h">
+      <div class="t-row-head">
+        <h2 class="section-label" id="t-ccy-h">By currency</h2>
+        <span class="t-row-nav" data-strip="today-ccys"></span>
+        <a class="more" href="#fx">Currencies →</a>
+      </div>
+      <ol class="t-strip t-ccys" id="today-ccys" aria-label="Today's read for each currency"></ol>
     </section>
 
     <section class="t-row" aria-labelledby="t-gauge-h">
@@ -137,42 +150,43 @@
     </section>
   </section>
 
-  <!-- ============ STORY: one chapter at a time ============ -->
-  <section class="view" id="view-story" role="tabpanel" aria-label="Story" hidden>
-    <a class="more story-back" href="./" data-home>← Today</a>
-    <div class="story-layout">
-      <ol class="chapter-rail" id="chapter-rail" aria-label="Chapters"></ol>
-      <article class="chapter-view card" id="chapter-view" aria-live="polite"></article>
-    </div>
-  </section>
-
   <!-- ============ CURRENCIES: strength board, currency detail, pair picker ============ -->
   <section class="view" id="view-fx" role="tabpanel" aria-labelledby="tab-fx" hidden>
     <div class="view-head">
       <h1 class="view-title">Currencies</h1>
     </div>
     <div id="fx-detail" hidden></div>
-    <div class="fx-grid">
-      <!-- Pair picker (Rami, 2026-10-27): no card; the sentence sits on the
-           page and starts blank. Pairs appear once a side and a currency are picked. -->
-      <section class="fx-picker" id="fx-picker" aria-label="Pair picker">
-        <p class="picker-q">I&rsquo;m <span class="segmented" role="tablist" aria-label="Direction" id="fx-dir">
-          <button type="button" class="seg" data-dir="bull">Bullish</button>
-          <button type="button" class="seg" data-dir="bear">Bearish</button>
-        </span> on</p>
+    <!-- Pair picker (Rami, 2026-11-09): a fill-in sentence, black and white.
+         The blanks are underlined; the choices are outlined until picked. -->
+    <section class="fx-picker" id="fx-picker" aria-label="Pair picker">
+      <p class="picker-q">I&rsquo;m <span class="blank" id="fx-dir-blank" aria-hidden="true"></span> on <span class="blank" id="fx-ccy-blank" aria-hidden="true"></span></p>
+      <div class="picker-opts">
+        <span class="segmented" role="group" aria-label="Direction" id="fx-dir">
+          <button type="button" class="seg" data-dir="bull" aria-pressed="false">Bullish</button>
+          <button type="button" class="seg" data-dir="bear" aria-pressed="false">Bearish</button>
+        </span>
         <div class="chip-row" id="fx-ccy" aria-label="Currency"></div>
-        <ol class="picks" id="fx-picks"></ol>
-      </section>
-      <section class="fx-board" aria-label="Strength board">
-        <h2 class="section-label">Strength board</h2>
-        <ol class="board" id="fx-board"></ol>
-      </section>
-    </div>
-    <!-- Today by currency (moved from Today, Rami 2026-11-09): each chapter's
-         read, its lean and its top headlines, as cards. -->
-    <section class="fx-reads" aria-labelledby="fx-reads-h">
-      <h2 class="section-label" id="fx-reads-h">Today by currency</h2>
-      <div id="fx-cards"></div>
+      </div>
+      <ol class="picks" id="fx-picks"></ol>
+    </section>
+
+    <!-- Strength board as a side-scrolling row (Rami, 2026-11-09). -->
+    <section class="t-row fx-board" aria-labelledby="fx-board-h">
+      <div class="t-row-head">
+        <h2 class="section-label" id="fx-board-h">Strength board</h2>
+        <span class="t-row-nav" data-strip="fx-board"></span>
+      </div>
+      <ol class="t-strip board" id="fx-board" aria-label="Strength board, strongest to weakest"></ol>
+    </section>
+
+    <!-- Today by currency: the full cards, side by side (Rami, 2026-11-09). -->
+    <section class="t-row fx-reads" aria-labelledby="fx-reads-h">
+      <div class="t-row-head">
+        <h2 class="section-label" id="fx-reads-h">Today by currency</h2>
+        <span class="t-row-nav" data-strip="fx-cards"></span>
+      </div>
+      <ol class="t-strip ch-cards" id="fx-cards" aria-label="Today's read for each currency"></ol>
+      <p class="quiet-line" id="fx-quiet" hidden></p>
     </section>
   </section>
 

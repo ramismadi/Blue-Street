@@ -8,7 +8,7 @@ Collaboration rules and the update schedule live in `COLLAB.md`.
 
 ## Product shape
 **Five tabs, one question each (Rami, 2026-10-18):** Today (what's the
-story? — Story chapters open from here, `#story` lights up Today) ·
+story?) ·
 Currencies (where does each stand? — the currency page carries its bank,
 positioning, chapter, Developing threads and "In the news") · News ·
 **Drivers** (what's moving things underneath? — Macro engine, Positioning and
@@ -23,8 +23,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Tab | Route | Fed by |
 |---|---|---|
 | Today | `/` (also `#today`) | story (headline), news, currencies |
-| Story (opens from Today) | `#story`, `#story/2` = chapter 2 | `data/story.json` |
-| Currencies | `#fx`, `#fx/AUD` = currency page | `data/currencies.json` (+ banks, calendar, story joins) |
+| Currencies | `#fx`, `#fx/AUD` = currency page, `#fx/OIL` / `#fx/XAU` = gold and oil (header + full read). Old `#story/N` links redirect to chapter N's page (Story view retired 2026-11-09) | `data/currencies.json` (+ banks, calendar, story joins) |
 | Drivers: Macro engine | `#engine` | `data/engine.json` + `data/pillars.json` |
 | Drivers: Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
 | Drivers: Central banks | `#banks` | `data/banks.json` |
@@ -32,28 +31,40 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | News | `#news`, `#news/JPY` = filtered to a market (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
 | Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
-- **Today is a one-screen dashboard** (Rami, 2026-11-09; replaces the
-  full-screen headline, At a glance, the chapter cards and Go deeper). Top to
-  bottom, all visible without scrolling down, phones included:
-  1. **Today's read**, compact: kicker + date, the headline (1–2 sentences;
-     clamped to 3 lines on phones), "Full read →" into Story.
+- **Today** (Rami, 2026-11-09, round 2). Top to bottom:
+  1. **Today's read**, the big centred serif headline, whole (1–2
+     sentences, nothing cut), no link, no divider. Words rise in on load;
+     it blurs and lifts away as you scroll (`--p` on `#t-hero`, set in
+     `updateScroll`). Shorter than a full screen so Top headlines peeks in.
   2. **Top headlines**, a side-scrolling row: up to 10 `news.json` items, by
      impact then newest (items from the last 36h when there are 4+, else the
      whole feed). Each tile: bias tags for up to 3 markets it moves, the
      headline, source · time. Tap = that story opened on News.
-  3. **Currency strength**, a side-scrolling row: one speedometer per
+  3. **By currency**, a side-scrolling row of mini cards, one per chapter:
+     flag + name, the lean mark top right, one line of the `teaser`
+     (quiet chapters say so). Tap = that currency's page.
+  4. **Currency strength**, a side-scrolling row: one speedometer per
      currency, strongest to weakest. Same score as the strength board (sum of
      the seven pillar scores) on a fixed −7…+7 dial, so a needle means the
      same thing every edition; the arc fills green/red from the middle out.
-     Tap = that currency's page.
+     Tap = that currency's page. A short scroll down on phones is fine.
   Rows swipe on touch and snap to tiles; on mouse screens ‹ › buttons sit
-  beside the row title (hidden when the row fits). Code: `renderTodayNews`,
-  `renderGauges` / `gaugeSvg`, `initStrips` in app.js; `.t-*` in style.css.
-- **Today by currency moved to Currencies** (Rami, 2026-11-09): the chapter
-  cards (flag + title, lean mark, `teaser`, top 3 headlines, "More on … →")
-  now sit under the picker and strength board, `#fx-cards`
-  (`renderCcyCards`). 3 across on desktop, 2 on tablet, 1 on phones. Quiet
-  chapters still fold into the "Quiet today" line.
+  beside the row title (hidden when the row fits). Code: `renderEdition`,
+  `renderTodayNews`, `renderMiniCards`, `renderGauges` / `gaugeSvg`,
+  `initStrips` in app.js; `.t-*`, `.mini-card` in style.css.
+- **Currencies** (Rami, 2026-11-09): pair picker, then the **strength board
+  as a side-scrolling row** of tiles (rank, flag + code, score and change,
+  name, the bar, the summary), then **Today by currency**: the full chapter
+  cards (flag + title, lean mark, `teaser`, top 3 headlines, "More on … →"),
+  unchanged in design, at full size in a side-scrolling row (`#fx-cards`,
+  `renderCcyCards`). Quiet chapters fold into the "Quiet today" line under
+  the row. Rami's favourite tile: don't shrink or trim it.
+- **The full read lives on each currency page** (Rami, 2026-11-09; the
+  Story chapter view, "chapter 1 of 10", is retired). "More on …" and the
+  card titles open `#fx/<CCY>`; the page's left column carries "The full
+  read" (`chapterRead`): the labelled narrative, the Details drawer, the
+  scenarios and sources. Gold and oil get a small page of their own
+  (`renderMarketDetail`). Chapters join to currencies by `chapterCcy`.
 - **Prose first, site-wide:** narrative leads; figures sit in a "Details"
   drawer (tap to open) — story `numbers`, engine `figure` + sources, bank
   rate definition / last move / sources, the currency score table.
@@ -74,7 +85,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   narrative data.
 
 - **No subtitle lines under page titles** (Rami, 2026-10-19): Currencies, Drivers' three sections, News, Calendar and Learn show just the title. (The positioning "as of / next report" line went with it.)
-- **Currencies:** the Pair picker sits above the Strength board with no card, as part of the page: a large left-aligned "I'm Bullish / Bearish on" sentence and the currency buttons (with flags). It starts blank every visit (no remembered pick); the pairs appear only once a side and a currency are chosen (Rami, 2026-10-27).
+- **Pair picker** (Rami, 2026-11-09): black and white only, no red or green. A fill-in sentence, "I'm ____ on ____", with underlined blanks that fill as you choose; under it, Bullish / Bearish and the currency buttons (with flags), outlined until picked, then solid ink (light on dark at night). No instruction text. It starts blank every visit (no remembered pick); the pairs appear only once a side and a currency are chosen (Rami, 2026-10-27).
 
 - **Calendar session clocks** (Rami, 2026-10-19): four analog clocks (SYD, TYO, LDN, NYC) beside the Calendar title, each on its city's local time (same session rules as the masthead chips). Out of session = greyed out; in session = lit by a warm light from the top down. On phones they sit in a row under the title.
 - **No overflow, ever** (Rami, 2026-10-19): nothing may run past the screen edge or the page scroll sideways. The overflow guard at the end of style.css wraps long values and lets grid/flex children shrink; `html, body` clip as a last resort. **Run `tools/overflow-check.py` before shipping any layout change** — it loads every page at 320–768px (calendar fully expanded) and lists anything that spills.
@@ -146,7 +157,7 @@ work). Engine rows and story chapters may instead use `"source"` (string) +
 - `teaser` — **the currency card (Currencies → Today by currency): 1–3 sentences, ~50 words max**, the delta only (Rami, 2026-10-19). The card shows at most three sentences / ~60 words; "Read the chapter →" opens the full chapter for anyone who wants more.
 - `meaning` (+ `fx`) — the narrative. Section labels `The story so far:`,
   `What changed:`, `What it means:` (in `meaning`) and `What's next:` (in
-  `fx`) become headed sections in the Story tab, in that order (Rami,
+  `fx`) become headed sections in each currency page's full read, in that order (Rami,
   2026-10-20). Older editions' `Thread:` shows as "The story so far" and
   `What to watch:` as "What's next". Unlabelled `fx` renders as the old
   "What it means for FX" callout. Every chapter must read cold for someone
@@ -544,10 +555,14 @@ trend line (`bias` is Claude's label from words.json, applied regardless of date
 `summary` and each driver `note` in `currencies.json` (board, currency page, pair picker lines),
 same `as_of` rule; Herc keeps the scores. Write a note only for pillars with a non-zero score:
 one plain sentence each, readable cold, no strings of numbers. The pair picker lists every pair,
-best edge first, with no group headings (edge tiles get a blue edge, no-edge tiles go flat, against-your-view tiles fade), as tiles styled like the currency cards (card,
-rounded): score, both flags, the pair in serif, and a green (rises if the reader's view is
-right) or red (falls) trend pill, then +. Opening a tile shows a score breakdown (each pillar for both currencies and what it adds for the reader's view, summing to the tile score), then the why, interest and events
-under a divider. Bullish/Bearish are solid green #279a41 / red #e3262c with text in the site
-background color. The prompt is left-aligned; currency buttons and the strength board show
-flags. Tapping a picked side or currency again clears it. The strength board has no card.
-Never Buy/Sell (Rami, 2026-10-28).
+best edge first, with no group headings (edge tiles get an ink edge, no-edge tiles go flat, against-your-view tiles fade), as cards:
+score, both flags, the pair in serif, an ink "Rises"/"Falls" pill (which way the pair moves if the
+reader is right), then +. Under that, on the tile itself (Rami, 2026-11-09), the why that tells
+equal scores apart: the other currency's one-line driver note (`pickFace`), whether holding the
+pair pays or costs interest, and the next high-impact event within a week. Opening a tile shows
+a plain-words read first, two or three sentences on why the pair fits (or doesn't fit) the view,
+built from the driver notes and the rate gap (`pickRead`), then the scoreboard (each pillar for
+both currencies and what it adds for the view, summing to the tile score). No fine print. Notes
+that read like raw data (long or number-heavy, i.e. words.json is behind) are skipped and a plain
+score line stands in. Evidence only: it never names a better pair. Tapping a picked side or
+currency again clears it. Never Buy/Sell (Rami, 2026-10-28).

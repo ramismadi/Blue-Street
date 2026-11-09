@@ -478,19 +478,39 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .card-head { display: flex; justify-content: space-between; align-items: baseline; }
 .more { font-size: 0.8rem; font-weight: 600; text-decoration: none; }
 
-.t-read { padding: 4px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 18px; }
-.t-read .kicker { margin: 0 0 6px; }
-.t-read-hl {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: clamp(1.15rem, 2.1vw, 1.45rem);
-  font-weight: 600;
-  line-height: 1.32;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  max-width: 62ch;
+/* Today's read (Rami, 2026-11-09): the big centred headline is back — words
+   rise in on load, and it blurs and lifts away as you scroll (--p, 0 → 1,
+   set by app.js). Shorter than a full screen so the first row peeks in. */
+.t-hero {
+  min-height: calc(100svh - var(--mast-h, 100px) - 230px);
+  display: flex; align-items: center;
+  padding: 3svh 0 4svh;
 }
-.t-read-more { display: inline-block; margin-top: 8px; }
+.t-hero-inner {
+  width: 100%; max-width: 940px; margin: 0 auto; text-align: center;
+  transform: translateY(calc(var(--p, 0) * -48px)) scale(calc(1 - var(--p, 0) * 0.06));
+  opacity: calc(1 - var(--p, 0) * 1.3);
+  filter: blur(calc(var(--p, 0) * 9px));
+  will-change: transform, opacity, filter;
+}
+.t-hero .kicker { margin: 0 0 16px; }
+.t-hero-hl {
+  margin: 0;
+  font-size: clamp(1.9rem, 4.6vw, 3.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.hw {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.45em);
+  filter: blur(6px);
+  animation: wordIn 0.9s var(--ease) forwards;
+  animation-delay: calc(var(--i) * 40ms + 80ms);
+}
+@keyframes wordIn { to { opacity: 1; transform: none; filter: none; } }
+.no-motion .hw { animation: none; opacity: 1; transform: none; filter: none; }
+.no-motion .t-hero-inner { transform: none; opacity: 1; filter: none; }
 
 .t-row { margin-bottom: 18px; min-width: 0; }
 .t-row-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
@@ -561,9 +581,12 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 
 /* Phones: tighter, so the read and both rows fit above the bottom tab bar. */
 @media (max-width: 640px) {
-  .t-read { padding: 0 0 12px; margin-bottom: 12px; }
-  .t-read-hl { font-size: 1.04rem; line-height: 1.34; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .t-read-more { margin-top: 6px; }
+  .t-hero { min-height: 0; padding: 5svh 0 6svh; }
+  .t-hero-hl { font-size: clamp(1.6rem, 7vw, 2.1rem); line-height: 1.12; }
+  .t-hero .kicker { margin-bottom: 12px; }
+  .t-ccys > li { width: 220px; }
+  .board > li { width: 188px; }
+  .ch-cards > li { width: 86vw; max-width: 340px; }
   .t-row { margin-bottom: 12px; }
   .t-row-head { margin-bottom: 8px; }
   .t-strip { gap: 10px; }
@@ -586,9 +609,46 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .no-motion [data-reveal] { opacity: 1; transform: none; filter: none; transition: none; }
 .no-motion .g-needle { transition: none; }
 
-/* Currencies: today by currency (the cards that used to be on Today) */
-.fx-reads { margin-top: 28px; }
-.fx-reads .ch-cards { margin-top: 10px; }
+/* Today: "By currency", the small version of the currency card */
+.t-ccys > li { width: 248px; }
+.mini-card { display: flex; flex-direction: column; gap: 8px; width: 100%; padding: 14px 16px; text-decoration: none; color: var(--ink); }
+.mini-card:hover { border-color: var(--accent-2); }
+.mini-card:hover .mc-title { color: var(--accent); }
+.mc-head { display: flex; align-items: center; gap: 8px; }
+.mc-head .flag { width: 20px; height: 15px; border-radius: 2px; flex: none; }
+.mc-title { flex: 1; font-family: var(--serif); font-size: 1.05rem; font-weight: 600; line-height: 1.2; }
+.mc-head .chc-lean { padding: 3px 7px; }
+.mc-head .chc-lean .trend-ico { width: 18px; height: 11px; }
+.mc-read {
+  font-family: var(--serif); font-size: 0.92rem; line-height: 1.42; color: var(--ink-2);
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.mini-card.quiet .mc-read { color: var(--ink-3); font-style: italic; }
+
+/* Currencies: the strength board and the currency cards as side rows */
+.fx-board, .fx-reads { margin-top: 26px; }
+.board > li { width: 210px; }
+.board-tile { display: flex; flex-direction: column; gap: 8px; width: 100%; padding: 14px 16px; text-decoration: none; color: var(--ink); }
+.board-tile:hover { border-color: var(--accent-2); }
+.board-tile.on { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.bt-top { display: flex; align-items: center; gap: 8px; }
+.bt-id { display: inline-flex; align-items: center; gap: 6px; font-size: 0.98rem; color: var(--accent); }
+.bt-id .flag { width: 18px; height: 13.5px; border-radius: 2px; }
+.bt-score { margin-left: auto; display: inline-flex; align-items: baseline; gap: 6px; }
+.board-tile .b-score { font-size: 1.15rem; }
+.bt-name { margin-top: -4px; font-size: 0.74rem; color: var(--ink-3); }
+.board-tile .dbar { height: 8px; }
+.board-tile .b-sum {
+  white-space: normal; font-size: 0.82rem; line-height: 1.42;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+}
+.t-strip.ch-cards { display: flex; margin-top: -4px; }
+.ch-cards > li { width: 352px; }
+.ch-cards > li > .ch-card { width: 100%; }
+.fx-reads .quiet-line { margin: 10px 0 0; }
+.fd-lean { vertical-align: middle; margin-left: 4px; }
+.fd-read { margin-top: 22px; padding-top: 6px; border-top: 1px solid var(--line); }
+.fd-read > .section-label { margin: 14px 0 0; }
 
 /* Quiet chapters folded into one line */
 .quiet-line { margin: 0 0 8svh; padding: 14px 18px; border-left: 3px solid var(--line); color: var(--ink-2); font-size: 0.92rem; }
@@ -891,40 +951,6 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 @keyframes blink { 50% { opacity: 0.3; } }
 @media (prefers-reduced-motion: reduce) { .live-pill::before { animation: none; } }
 
-/* ---------- STORY ---------- */
-.story-layout {
-  display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  gap: 22px;
-  align-items: start;
-}
-.chapter-rail {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: sticky;
-  top: 130px;
-}
-.chapter-rail a {
-  display: flex;
-  gap: 10px;
-  padding: 11px 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: var(--ink-2);
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-.chapter-rail a:hover { background: var(--surface); color: var(--ink); }
-.chapter-rail a[aria-current="true"] {
-  background: var(--surface);
-  color: var(--accent);
-  font-weight: 600;
-  box-shadow: var(--shadow);
-}
-.r-num { color: var(--gold); font-size: 0.75rem; padding-top: 2px; }
-
-.chapter-view { padding: 30px 34px; }
 .lede {
   font-family: var(--serif);
   font-size: 1.12rem;
@@ -984,50 +1010,18 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .sc-body.sc-bull { background: var(--bull-wash); }
 .sc-body.sc-bear { background: var(--bear-wash); }
 
-.chapter-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 26px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-}
-
 /* ---------- CURRENCIES ---------- */
 .fx-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; align-items: start; }
 /* Pair picker sits above the strength board (Rami, 2026-10-19). The board
    has no card either (Rami, 2026-10-28). */
-.fx-board { padding: 8px 0 0; border-top: 1px solid var(--line); }
-.fx-board > .section-label { margin: 14px 0 8px; }
-.board { list-style: none; margin: 0; padding: 0; }
-.board-row {
-  display: grid;
-  grid-template-columns: 20px 92px minmax(80px, 1fr) 34px 34px;
-  grid-template-areas: "rank id bar score delta" ". sum sum sum sum";
-  align-items: center;
-  column-gap: 12px;
-  row-gap: 2px;
-  padding: 10px 8px;
-  border-top: 1px solid var(--line);
-  border-radius: 8px;
-  color: inherit;
-  text-decoration: none;
-}
-.board li:first-child .board-row { border-top: 0; }
-.board-row:hover, .board-row.on { background: var(--surface-2); }
-.board-row.on { box-shadow: inset 3px 0 0 var(--gold); }
-.b-rank { grid-area: rank; font-size: 0.74rem; color: var(--ink-3); }
-.b-id { grid-area: id; display: flex; flex-direction: column; line-height: 1.2; }
-.b-id b { font-size: 0.95rem; color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
-.b-id b .flag { width: 16px; height: 12px; border-radius: 1px; flex: none; }
-.b-id small { font-size: 0.7rem; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.b-score { grid-area: score; text-align: right; font-weight: 700; font-size: 0.92rem; }
-.b-delta { grid-area: delta; font-size: 0.72rem; color: var(--ink-3); text-align: right; }
+.b-rank { font-size: 0.74rem; color: var(--ink-3); }
+.b-score { font-weight: 700; font-size: 0.92rem; }
+.b-delta { font-size: 0.72rem; color: var(--ink-3); }
 .b-delta.up { color: var(--bull); }
 .b-delta.dn { color: var(--bear); }
-.b-sum { grid-area: sum; font-size: 0.8rem; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.b-sum { font-size: 0.8rem; color: var(--ink-2); }
 /* diverging bar: zero in the middle, strong right, weak left */
-.dbar { grid-area: bar; position: relative; height: 10px; border-radius: 5px; background: var(--surface-2); }
+.dbar { position: relative; height: 10px; border-radius: 5px; background: var(--surface-2); }
 .dbar::after { content: ""; position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px; background: var(--ink-3); opacity: 0.5; }
 .dbar i { position: absolute; top: 0; bottom: 0; }
 .dbar i.pos { left: 50%; background: var(--bull); border-radius: 0 4px 4px 0; }
@@ -1052,24 +1046,33 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .mom-list li.mom-miss b { color: var(--bear); }
 .mom-list li.mom-inline b { color: var(--ink-3); }
 
-/* Pair picker (Rami, 2026-10-28): no card, centered, part of the page. A
-   large sentence, then the pairs once a side and a currency are picked.
-   Picker colors: a saturated loss red (like MT5) and a green a little
-   lighter than forest green; text in the site background color (follows
-   light/dark). */
-.fx-picker { --pick-up: #279a41; --pick-dn: #e3262c; --pick-ink: var(--bg); padding: 10px 0 22px; }
-.picker-q { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin: 0 0 18px; font-family: var(--serif); font-size: 1.9rem; line-height: 1.2; color: var(--ink); }
-.picker-q .segmented { background: transparent; border: 0; padding: 0; gap: 8px; }
-.picker-q .seg {
-  font-family: var(--serif); font-size: inherit; font-weight: 700; padding: 4px 16px; border-radius: 10px; border: 0; box-shadow: none;
-  color: var(--pick-ink); background: var(--pick-up); cursor: pointer;
-  transition: opacity .2s, transform .15s;
+/* Pair picker (Rami, 2026-11-09): black and white only. A fill-in sentence —
+   "I'm ____ on ____" with underlined blanks that fill as you choose — and
+   the choices under it, outlined until picked, then solid ink. */
+.fx-picker { padding: 10px 0 22px; }
+.picker-q { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; margin: 0 0 16px; font-family: var(--serif); font-size: 1.9rem; line-height: 1.25; color: var(--ink); }
+.blank {
+  display: inline-flex; align-items: baseline; justify-content: center; gap: 8px;
+  min-width: 5.2em; padding: 0 6px 2px; border-bottom: 2px solid var(--ink);
+  font-weight: 700; color: var(--ink);
 }
-.picker-q .seg[data-dir="bear"] { background: var(--pick-dn); }
-.picker-q .seg:hover { transform: translateY(-1px); }
-.picker-q .seg:active { transform: scale(0.97); }
-.picker-q .segmented.has-dir .seg[aria-selected="false"] { opacity: 0.3; }
-.picker-q .segmented.has-dir .seg[aria-selected="false"]:hover { opacity: 0.6; }
+.blank:empty::after { content: "\00a0"; }
+.blank.filled { animation: picks-in .25s ease-out; }
+.blank .flag { width: 0.9em; height: 0.675em; border-radius: 2px; align-self: center; }
+.picker-opts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; }
+.picker-opts .segmented { background: transparent; border: 0; padding: 0; gap: 8px; }
+.picker-opts .seg,
+.fx-picker .fchip.ccy {
+  font: inherit; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+  padding: 7px 16px; border-radius: 999px;
+  border: 1.5px solid var(--ink); background: transparent; color: var(--ink); box-shadow: none;
+  transition: background .15s, color .15s, transform .15s;
+}
+.fx-picker .fchip.ccy { font-family: var(--mono); font-size: 0.8rem; padding: 6px 12px; }
+.picker-opts .seg:hover, .fx-picker .fchip.ccy:hover { background: var(--surface-2); }
+.picker-opts .seg:active, .fx-picker .fchip.ccy:active { transform: scale(0.97); }
+.picker-opts .seg[aria-pressed="true"],
+.fx-picker .fchip.ccy[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .fx-picker .fchip.ccy .flag { width: 14px; height: 10.5px; margin-right: 5px; border-radius: 1px; }
 .picks { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; align-items: start; }
 .fx-picker.picked .picks { animation: picks-in .35s ease-out; }
@@ -1082,13 +1085,13 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 /* At a glance (Rami, 2026-10-28): edge = full tile with an accent edge;
    no edge = flat and quieter; against your view = faded. Hover or open
    brings any tile back to full. */
-.pick.edge { border-color: var(--accent-2); box-shadow: var(--shadow), inset 3px 0 0 var(--accent); }
+.pick.edge { border-color: var(--ink-3); box-shadow: var(--shadow), inset 3px 0 0 var(--ink); }
 .pick.flat { box-shadow: none; background: transparent; }
 .pick.flat .pb-pair { color: var(--ink-2); }
 .pick.against { box-shadow: none; background: transparent; border-style: dashed; opacity: 0.5; }
 .pick.against:hover, .pick.against.open { opacity: 1; }
 .pick-box {
-  width: 100%; display: flex; align-items: center; gap: 9px; padding: 14px 16px;
+  width: 100%; display: flex; flex-direction: column; align-items: stretch; gap: 8px; padding: 14px 16px;
   border: 0; background: none; color: var(--ink); text-align: left; cursor: pointer; font: inherit; border-radius: var(--radius);
 }
 .pick-box:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
@@ -1100,11 +1103,24 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .pb-more::before { content: "+"; font-size: 1.05rem; font-weight: 500; line-height: 1; }
 .pick.open .pb-more::before { content: "\2013"; }
 .pick-box:hover .pb-pair { color: var(--accent); }
+.pb-top { display: flex; align-items: center; gap: 9px; }
+/* Which way the pair moves if you're right: ink, no colour (Rami, 2026-11-09). */
+.pb-dir {
+  display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px;
+  border: 1px solid var(--line); font-size: 0.72rem; font-weight: 700; color: var(--ink);
+}
+.pb-dir .trend-ico { width: 16px; height: 10px; }
+/* The why, on the tile: the other side, the interest, the next event. */
+.pb-face { display: grid; gap: 4px; padding-left: calc(2em + 9px); font-size: 0.8rem; line-height: 1.4; color: var(--ink-2); }
+.pf-line { display: flex; align-items: flex-start; gap: 6px; }
+.pf-line .flag { width: 14px; height: 10.5px; border-radius: 1px; flex: none; margin-top: 3px; }
+.pf-other span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.pf-carry, .pf-event { color: var(--ink-3); }
+.pick-read { margin: 0 0 14px; font-family: var(--serif); font-size: 1rem; line-height: 1.55; color: var(--ink); }
 .pick-body { display: none; margin: 0 16px; padding: 10px 0 14px; border-top: 1px solid var(--line); }
 .pick.open .pick-body { display: block; animation: picks-in .25s ease-out; }
-.pick-why { margin: 0; font-family: var(--serif); font-size: 0.98rem; line-height: 1.5; }
 /* Score breakdown (Rami, 2026-10-28) */
-.pick-bd { width: 100%; border-collapse: collapse; margin: 0 0 12px; font-size: 0.84rem; }
+.pick-bd { width: 100%; border-collapse: collapse; margin: 0; font-size: 0.84rem; }
 .pick-bd th, .pick-bd td { padding: 4px 0; text-align: right; font-weight: 400; }
 .pick-bd thead th { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); padding-bottom: 6px; }
 .pick-bd .bd-ccy { white-space: nowrap; }
@@ -1112,13 +1128,12 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .pick-bd .bd-pillar { text-align: left; color: var(--ink-2); }
 .pick-bd td.nil { color: var(--ink-3); }
 .pick-bd .bd-net { width: 4.5em; font-weight: 700; }
-.pick-bd tr.pos .bd-net { color: var(--bull); }
-.pick-bd tr.neg .bd-net { color: var(--bear); }
+.pick-bd tr.pos .bd-net { color: var(--ink); }
+.pick-bd tr.neg .bd-net { color: var(--ink-3); }
 .pick-bd tr.zero .bd-net { color: var(--ink-3); font-weight: 400; }
 .pick-bd tbody tr + tr { border-top: 1px solid var(--line); }
 .pick-bd tr.bd-total { border-top: 1px solid var(--ink-3); }
 .pick-bd tr.bd-total th, .pick-bd tr.bd-total td { font-weight: 700; color: var(--ink); padding-top: 6px; }
-.pick-meta { margin: 6px 0 0; }
 @media (prefers-reduced-motion: reduce) { .pick.open .pick-body { animation: none; } }
 
 /* The pair box (Rami, 2026-10-28): solid green if the pair rises when your
@@ -1613,16 +1628,6 @@ footer { padding: 34px 0 44px; text-align: center; }
   .wrap { padding: 0 16px; }
   .mh-inner { min-height: 50px; }
   .edition { display: none; }
-  .story-layout { grid-template-columns: minmax(0, 1fr); gap: 14px; }
-  .chapter-rail {
-    position: static;
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .chapter-rail a { white-space: nowrap; padding: 8px 12px; background: var(--surface); border: 1px solid var(--line); }
-  .chapter-view { padding: 22px 18px; }
 }
 
 @media (max-width: 560px) {
@@ -1630,8 +1635,6 @@ footer { padding: 34px 0 44px; text-align: center; }
   .engine-grid .pillar:last-child:nth-child(odd) { grid-column: span 1; }
   .bank.thin { gap: 6px; padding: 14px 16px; }
   .arc li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
-  .board-row { grid-template-columns: 16px 64px minmax(40px, 1fr) 28px 28px; column-gap: 8px; }
-  .b-id small { display: none; }
   .fd-head { flex-direction: column; }
   .fd-score { align-items: flex-start; text-align: left; }
   .drivers li { grid-template-columns: 96px 32px minmax(0, 1fr); }
@@ -1665,8 +1668,6 @@ footer { padding: 34px 0 44px; text-align: center; }
   .bank.thin .bank-name { display: none; }
   .bank.thin .bank-meet { flex-direction: row; justify-content: space-between; align-items: baseline; }
   .sc-head { flex-direction: column; align-items: flex-start; }
-  .chapter-nav { flex-direction: column; }
-  .chapter-nav .btn { text-align: center; }
   .timeline::before { left: 7px; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; padding-left: 26px; }
   .timeline li::before { left: 3px; }
@@ -2127,7 +2128,7 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 [data-theme="night"] .news-pillar.p-inflation, [data-theme="night"] .news-pillar.p-tot { color: var(--ink-2); background: var(--surface-2); border-color: var(--line); }
 
 /* ---------- Today: chapter cards (Rami, 2026-10-19) ---------- */
-.ch-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; margin: 28px 0 22px; }
+
 .ch-card { display: flex; flex-direction: column; gap: 12px; padding: 18px 20px; }
 .chc-head { display: flex; align-items: center; gap: 9px; }
 .chc-head .flag { width: 22px; height: 16.5px; }
@@ -2150,8 +2151,6 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .chc-src { display: block; margin: 2px 0 0 23px; font-size: 0.72rem; }
 .chc-more { margin-top: auto; padding-top: 4px; font-size: 0.86rem; font-weight: 700; color: var(--accent); text-decoration: none; }
 .chc-more:hover { text-decoration: underline; text-underline-offset: 3px; }
-@media (max-width: 1060px) { .ch-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 680px) { .ch-cards { grid-template-columns: minmax(0, 1fr); gap: 12px; } }
 /* Cards read as prose: numbers stay in the sentence's own type, just a touch bolder. */
 .chc-read .fig { font-family: inherit; font-size: inherit; font-weight: 700; color: var(--ink); letter-spacing: 0; }
 
@@ -2254,13 +2253,13 @@ html, body { overflow-x: clip; max-width: 100%; }
 /* Pair picker on phones (Rami, 2026-10-28): tiles one per row. */
 @media (max-width: 640px) {
   .picker-q { font-size: 1.45rem; gap: 8px; }
-  .picker-q .seg { padding: 3px 12px; }
+  .pb-face { padding-left: 0; }
   .picks { grid-template-columns: minmax(0, 1fr); gap: 8px; margin-top: 18px; }
   .pick-box { padding: 12px 14px; }
   .pick-body { margin: 0 14px; }
 }
 @media (max-width: 360px) {
-  .picker-q { font-size: 1.2rem; }
+  .picker-q { font-size: 1.25rem; }
   .pick-box { gap: 7px; padding: 11px 12px; }
   .pb-pair { font-size: 1.08rem; }
 }

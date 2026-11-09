@@ -1,13 +1,13 @@
 /* Blue Street — premium desk renderer. Plain static JS, no build step.
-   Tabbed views (hash-routed: #today, #story, #story/2, #engine, #positioning, #banks,
-   #calendar, #news), a theme picker, and edition data (story, macro engine,
+   Tabbed views (hash-routed: #today, #fx, #fx/USD, #engine, #positioning, #banks,
+   #calendar, #news; old #story links land on the matching currency page), a theme picker, and edition data (story, macro engine,
    developing stories, news) from local JSON files. textContent-only DOM, no HTML injection. */
 
 (function () {
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '118';
+  var ASSET_VERSION = '119';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -17,11 +17,11 @@
     document.documentElement.classList.add('is-app');
   }
 
-  var TABS = ['today', 'story', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
+  var TABS = ['today', 'fx', 'engine', 'positioning', 'banks', 'calendar', 'news', 'learn'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
-     their own light up their parent: Story lives under Today; the macro
-     engine, positioning and central banks are the three Drivers sections. */
-  var TAB_PARENT = { story: 'today', engine: 'drivers', positioning: 'drivers', banks: 'drivers', learn: null };
+     their own light up their parent: the macro engine, positioning and
+     central banks are the three Drivers sections. */
+  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', banks: 'drivers', learn: null };
   var DRIVER_VIEWS = ['engine', 'positioning', 'banks'];
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
@@ -39,7 +39,6 @@
     return COLORWAYS[0];
   }
   var story = null;      // story.json, once loaded
-  var chapterIdx = 0;    // chapter shown in the Story tab
 
   document.addEventListener('DOMContentLoaded', init);
 
@@ -76,13 +75,11 @@
       renderEdition(d);
       hideSplash();
       renderCcyCards(d);
-      renderRail(d);
       renderFocus();
       route();
       renderFx();
     }).catch(function () {
       note('#fx-cards', 'Story unavailable.');
-      note('#chapter-view', 'Story unavailable.');
       setText('#today-headline', 'Edition unavailable');
     });
     initGlossary();
@@ -541,6 +538,10 @@
       h[0] = 'news';
       history.replaceState(null, '', '#' + h.join('/'));
     }
+    if (h[0] === 'story') {     // Story view retired 2026-11-09: a chapter lands on its currency page
+      h = (chapterHref(+h[1]) || '#fx').slice(1).split('/');
+      history.replaceState(null, '', '#' + h.join('/'));
+    }
     if (h[0] === 'drivers') {   // the tab opens the Drivers section last read
       var last = 'engine';
       try { last = localStorage.getItem('bluestreet-driver') || 'engine'; } catch (e) { /* private mode */ }
@@ -563,10 +564,6 @@
         if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
       });
       if (!dn.hidden) { try { localStorage.setItem('bluestreet-driver', tab); } catch (e) { /* private mode */ } }
-    }
-    if (tab === 'story' && story) {
-      var n = parseInt(h[1], 10);
-      showChapter(isFinite(n) ? n - 1 : chapterIdx);
     }
     if (tab === 'fx') {
       fx.focus = (h[1] || '').toUpperCase();
@@ -1043,8 +1040,16 @@
     }
     // Rami, 2026-10-19: Today's read is 1–2 sentences, max. The editions are
     // told so; this keeps the page honest if a long one slips through.
-    // Rami, 2026-11-09: a compact banner now, not the full-screen hero.
-    setText('#today-headline', shortHeadline(d.headline) || 'Today’s edition');
+    // Rami, 2026-11-09: the whole read, big, rising in word by word.
+    var h = $('#today-headline');
+    h.textContent = '';
+    (shortHeadline(d.headline) || 'Today’s edition').split(/\s+/).forEach(function (w, i) {
+      if (i) h.appendChild(document.createTextNode(' '));
+      var sp = el('span', 'hw', w);
+      sp.style.setProperty('--i', i);
+      h.appendChild(sp);
+    });
+    queueScroll();
   }
 
   /* Numbers inside a data point get emphasis (split + textContent, no HTML). */
@@ -1058,39 +1063,57 @@
   }
 
   /* Today by currency (Rami, 2026-10-19 as Today's chapter cards; moved to
-     the Currencies page 2026-11-09): currency, today's read (1–3
-     sentences), the top related headlines, and "More on …" into the full
-     Story chapter. Re-rendered when news.json / currencies.json land. */
+     Currencies 2026-11-09, as a side-scrolling row at full size): currency,
+     lean, today's read (1–3 sentences), the top related headlines, and
+     "More on …" into that currency's page, which carries the full read.
+     Today gets a mini version (flag, name, lean, one line). Re-rendered when
+     news.json / currencies.json land. */
+  function chapterHref(n) {
+    var chs = (story && story.chapters) || [];
+    if (!(n >= 1 && n <= chs.length)) return null;
+    var code = chapterCcy(chs[n - 1], n - 1);
+    return code ? '#fx/' + code : '#fx';
+  }
+  function chapterFor(code) {
+    var chs = (story && story.chapters) || [];
+    for (var i = 0; i < chs.length; i++) if (chapterCcy(chs[i], i) === code) return chs[i];
+    return null;
+  }
+  function leanMark(code) {
+    var lean = chapterLean(code);
+    if (!lean) return null;
+    var L = NEWS_LEAN[lean.dir];
+    var lt = el('span', 'chc-lean ' + L.cls);
+    lt.appendChild(trendIcon(L.cls));
+    lt.title = lean.title;
+    lt.appendChild(el('span', 'sr-only', lean.title));
+    return lt;
+  }
   function renderCcyCards(d) {
-    var box = $('#fx-cards');
+    renderMiniCards(d);
+    var box = $('#fx-cards'), qbox = $('#fx-quiet');
     if (!box) return;
     box.textContent = '';
     var chs = d.chapters || [];
     var quiet = [];
-    var grid = el('div', 'ch-cards');
     chs.forEach(function (ch, i) {
       // Hercules flags a chapter `quiet` when nothing really changed since the
-      // last edition: Today folds it into one line; Story still has it in full.
+      // last edition: it folds into one line under the row.
       if (ch.quiet) { quiet.push(i); return; }
       var code = chapterCcy(ch, i);
+      var href = code ? '#fx/' + code : '#fx';
+      var li = el('li');
       var card = el('article', 'card ch-card gl-scope');
 
       var head = el('header', 'chc-head');
       if (code) head.appendChild(flagEl(code));
       var h = el('h2', 'chc-title');
       var ha = el('a', null, ch.title);
-      ha.href = '#story/' + (i + 1);
+      ha.href = href;
       h.appendChild(ha);
       head.appendChild(h);
-      var lean = chapterLean(code);
-      if (lean) {
-        var L = NEWS_LEAN[lean.dir];
-        var lt = el('span', 'chc-lean ' + L.cls);
-        lt.appendChild(trendIcon(L.cls));
-        lt.title = lean.title;
-        lt.appendChild(el('span', 'sr-only', lean.title));
-        head.appendChild(lt);
-      }
+      var lt = leanMark(code);
+      if (lt) head.appendChild(lt);
       card.appendChild(head);
 
       var read = el('p', 'chc-read');
@@ -1103,42 +1126,71 @@
         nw.appendChild(el('h3', 'section-label', 'In the news'));
         var ul = el('ul');
         items.forEach(function (it) {
-          var li = el('li');
+          var nli = el('li');
           var a = el('a', 'chc-hl');
           a.href = '#news/' + code;
           a.setAttribute('data-open-news', slugId(it.id || it.url || it.headline));
           var x = (it.impact || []).filter(function (y) { return y && y.ccy === code; })[0];
           if (x) { var Lx = NEWS_LEAN[x.dir] || NEWS_LEAN.mixed; var ic = el('span', 'chc-ic ' + Lx.cls); ic.appendChild(trendIcon(Lx.cls)); a.appendChild(ic); }
           a.appendChild(el('span', 'chc-hl-t', it.headline));
-          li.appendChild(a);
+          nli.appendChild(a);
           var m = el('span', 'chc-src meta');
           m.appendChild(document.createTextNode((it.source || '') + ' · '));
           m.appendChild(newsWhenEl(it));
-          li.appendChild(m);
-          ul.appendChild(li);
+          nli.appendChild(m);
+          ul.appendChild(nli);
         });
         nw.appendChild(ul);
         card.appendChild(nw);
       }
 
       var more = el('a', 'chc-more', 'More on ' + ch.title + ' →');
-      more.href = '#story/' + (i + 1);
+      more.href = href;
       card.appendChild(more);
-      grid.appendChild(card);
+      li.appendChild(card);
+      box.appendChild(li);
     });
-    box.appendChild(grid);
-    if (quiet.length) {
-      var q = el('p', 'quiet-line');
-      q.appendChild(el('span', 'quiet-lbl', 'Quiet today'));
-      quiet.forEach(function (i, k) {
-        if (k) q.appendChild(document.createTextNode(' · '));
-        var a = el('a', null, chs[i].title);
-        a.href = '#story/' + (i + 1);
-        q.appendChild(a);
-      });
-      q.appendChild(el('span', 'quiet-note', 'No real change since the last edition — full chapters in Story.'));
-      box.appendChild(q);
+    if (qbox) {
+      qbox.textContent = '';
+      qbox.hidden = !quiet.length;
+      if (quiet.length) {
+        qbox.appendChild(el('span', 'quiet-lbl', 'Quiet today'));
+        quiet.forEach(function (i, k) {
+          if (k) qbox.appendChild(document.createTextNode(' · '));
+          var a = el('a', null, chs[i].title);
+          a.href = chapterHref(i + 1);
+          qbox.appendChild(a);
+        });
+        qbox.appendChild(el('span', 'quiet-note', 'No real change since the last edition.'));
+      }
     }
+    updateStripNav();
+  }
+
+  /* Today's "By currency" row (Rami, 2026-11-09): a small version of the
+     card above — flag and name, the lean at top right, one line of the
+     read. Tap = that currency's page. */
+  function renderMiniCards(d) {
+    var box = $('#today-ccys');
+    if (!box) return;
+    box.textContent = '';
+    (d.chapters || []).forEach(function (ch, i) {
+      var code = chapterCcy(ch, i);
+      var li = el('li');
+      var a = el('a', 'mini-card card' + (ch.quiet ? ' quiet' : ''));
+      a.href = code ? '#fx/' + code : '#fx';
+      var head = el('span', 'mc-head');
+      if (code) head.appendChild(flagEl(code));
+      head.appendChild(el('b', 'mc-title', ch.title));
+      var lt = leanMark(code);
+      if (lt) head.appendChild(lt);
+      a.appendChild(head);
+      a.appendChild(el('span', 'mc-read', ch.quiet ? 'Quiet today: no real change since the last edition.'
+        : firstSentences(ch.teaser || ch.fx || '', 1, 40)));
+      li.appendChild(a);
+      box.appendChild(li);
+    });
+    updateStripNav();
   }
 
   /* Lean for a chapter card: the strength-board score for a currency (sum of
@@ -1177,9 +1229,8 @@
   }
   /* ---------------- reveal on scroll ----------------
      [data-reveal] blocks (Focus Mode) fade up as they enter the viewport;
-     --mast-h is the masthead height for sticky offsets. Reduced motion: all
-     shown at once. (The pinned scroll-story scenes went with the Today
-     redesign, 2026-11-09.) */
+     Today's read gets --p (0 → 1) as it scrolls away, for the blur and lift;
+     --mast-h is the masthead height. Reduced motion: all shown, no blur. */
   var sx = { raf: 0, mast: 0, reduced: false };
 
   function initReveal() {
@@ -1209,51 +1260,33 @@
   function updateScroll() {
     sx.raf = 0;
     var vh = window.innerHeight;
+    // Today's read blurs and lifts away as you scroll past it.
+    var hero = $('#t-hero');
+    if (hero && hero.offsetParent) {
+      var r = hero.getBoundingClientRect();
+      var p = sx.reduced ? 0 : Math.min(1, Math.max(0, (sx.mast - r.top) / Math.max(1, r.height * 0.75)));
+      hero.style.setProperty('--p', p.toFixed(4));
+    }
     Array.prototype.forEach.call(document.querySelectorAll('[data-reveal]'), function (n) {
       if (sx.reduced || n.getBoundingClientRect().top < vh * 0.9) n.classList.add('in');
     });
   }
 
-  /* ---------------- story ---------------- */
-  function renderRail(d) {
-    var rail = $('#chapter-rail');
-    (d.chapters || []).forEach(function (ch, i) {
-      var li = el('li');
-      var a = el('a');
-      a.href = '#story/' + (i + 1);
-      a.appendChild(el('span', 'r-num mono', String(i + 1).padStart(2, '0')));
-      a.appendChild(el('span', 'r-title', ch.title));
-      li.appendChild(a);
-      rail.appendChild(li);
-    });
-  }
-
-  function showChapter(i) {
-    var chs = story.chapters || [];
-    if (!chs.length) return;
-    chapterIdx = Math.max(0, Math.min(chs.length - 1, i));
-    var ch = chs[chapterIdx];
-
-    Array.prototype.forEach.call(document.querySelectorAll('#chapter-rail a'), function (a, k) {
-      if (k === chapterIdx) a.setAttribute('aria-current', 'true');
-      else a.removeAttribute('aria-current');
-    });
-
-    var v = $('#chapter-view');
-    v.textContent = '';
-    v.appendChild(el('p', 'kicker', 'Chapter ' + (chapterIdx + 1) + ' of ' + chs.length));
-    v.appendChild(el('h1', 'display', ch.title));
-
-    // Prose leads: the narrative under its labels (The story so far / What
-    // changed / What it means / What's next). An unlabelled `fx` (older editions) is
-    // still the FX takeaway up top.
+  /* ---------------- the full read (on each currency's page) ----------------
+     Rami, 2026-11-09: the Story chapter view is retired; a chapter's full
+     read sits on its currency page. Prose leads, under its labels (The story
+     so far / What changed / What it means / What's next); figures sit in a
+     Details drawer; then the scenarios and sources. */
+  function chapterRead(ch) {
+    var wrap = el('section', 'fd-read');
+    wrap.appendChild(el('h2', 'section-label', 'The full read'));
     var body = el('div', 'narrative gl-scope');
     var fxSecs = narrativeSections(ch.fx);
-    if (ch.fx && !fxSecs[0].label) {
-      var fx = el('div', 'fx-callout');
-      fx.appendChild(el('span', 'callout-lbl', 'What it means for FX'));
-      fx.appendChild(el('p', null, ch.fx));
-      body.appendChild(fx);
+    if (ch.fx && !fxSecs[0].label) {   // older editions: an unlabelled FX takeaway
+      var fxc = el('div', 'fx-callout');
+      fxc.appendChild(el('span', 'callout-lbl', 'What it means for FX'));
+      fxc.appendChild(el('p', null, ch.fx));
+      body.appendChild(fxc);
       fxSecs = [];
     }
     narrativeSections(ch.meaning).concat(fxSecs).forEach(function (sec) {
@@ -1263,36 +1296,17 @@
       part.appendChild(el('p', 'narr-p', sec.label ? sec.text.charAt(0).toUpperCase() + sec.text.slice(1) : sec.text));
       body.appendChild(part);
     });
-    v.appendChild(body);
-
-    // Figures serve the prose: one tap away.
+    wrap.appendChild(body);
     if ((ch.numbers || []).length) {
       var det = drawer('Details', ch.numbers.length + (ch.numbers.length === 1 ? ' figure' : ' figures'));
       var ul = el('ul', 'numbers');
       ch.numbers.forEach(function (n) { ul.appendChild(withFigures(el('li'), n)); });
       det.appendChild(ul);
-      v.appendChild(det);
+      wrap.appendChild(det);
     }
-
-    if (ch.scenarios) v.appendChild(scenarioSwitch(ch.scenarios));
-
-    v.appendChild(sourceChips(ch.sources || ch.source, ch.source_url));
-
-    // Prev / next
-    var nav = el('div', 'chapter-nav');
-    if (chapterIdx > 0) {
-      var p = el('a', 'btn ghost', '← ' + chs[chapterIdx - 1].title);
-      p.href = '#story/' + chapterIdx;
-      nav.appendChild(p);
-    } else {
-      nav.appendChild(el('span'));
-    }
-    if (chapterIdx < chs.length - 1) {
-      var n = el('a', 'btn', chs[chapterIdx + 1].title + ' →');
-      n.href = '#story/' + (chapterIdx + 2);
-      nav.appendChild(n);
-    }
-    v.appendChild(nav);
+    if (ch.scenarios) wrap.appendChild(scenarioSwitch(ch.scenarios));
+    wrap.appendChild(sourceChips(ch.sources || ch.source, ch.source_url));
+    return wrap;
   }
 
   /* Split narrative prose on its section labels. Text before the first label
@@ -2313,9 +2327,9 @@
       det.appendChild(bx);
     }
     var links = el('div', 'ev-links');
-    if (e.chapter) {
-      var ch = el('a', 'more', 'Read the story chapter →');
-      ch.href = '#story/' + e.chapter;
+    if (e.chapter && chapterHref(e.chapter)) {
+      var ch = el('a', 'more', 'Read the full story →');
+      ch.href = chapterHref(e.chapter);
       links.appendChild(ch);
     }
     if (bk) {
@@ -2578,15 +2592,83 @@
     }).sort(function (a, b) { return b.gap - a.gap || (b.carry || 0) - (a.carry || 0); });
   }
 
-  /* Why this counterpart: its drivers pointing the useful way. */
-  function pickWhy(p, dir) {
-    var want = dir === 'bull' ? -1 : 1;      // bullish X wants a weak counterpart
-    var d = p.y.drivers || {};
-    var notes = PILLARS.filter(function (k) { return d[k[0]] && Math.sign(d[k[0]].score) === want; })
-      .map(function (k) { return d[k[0]].note; });
-    if (p.gap < 0) return p.y.ccy + ' is ' + (dir === 'bull' ? 'stronger' : 'weaker') + ' on the board (' + signed(p.sy) + '), so this pair works against your view.';
-    if (notes.length) return notes.slice(0, 2).join(' · ');
-    return p.y.summary || '';
+  /* The "why" behind a pair (Rami, 2026-11-09), in plain words. Notes are
+     Claude's one-sentence driver notes (words.json). Evidence, not a call:
+     it explains each pair and never names a better one. */
+  function sentence(t) {
+    t = String(t || '').trim();
+    return t && !/[.!?]$/.test(t) ? t + '.' : t;
+  }
+  /* A currency's first driver note pointing a given way (+1 supports it,
+     −1 weighs on it), in pillar order. Only Claude's plain one-liners are
+     used: if the words are a day behind, Herc's raw shorthand would show
+     through, so a note that reads like data (long, number-heavy) is skipped. */
+  function plainNote(t) {
+    t = String(t || '');
+    return t.length <= 200 && (t.match(/\d/g) || []).length <= 8;
+  }
+  function noteFor(c, sign) {
+    var d = (c && c.drivers) || {};
+    for (var i = 0; i < PILLARS.length; i++) {
+      var x = d[PILLARS[i][0]];
+      if (x && Math.sign(+x.score || 0) === sign && x.note && plainNote(x.note)) return x.note;
+    }
+    return '';
+  }
+  function carryText(p) {
+    if (p.carry == null) return '';
+    var v = Math.abs(p.carry).toFixed(2);
+    if (Math.abs(p.carry) < 0.13) return 'Holding it neither pays nor costs much in interest';
+    return p.carry > 0 ? 'Holding it pays about ' + v + '% a year in interest' : 'Holding it costs about ' + v + '% a year in interest';
+  }
+  /* Tile face: the other side's story, the interest, the next big event. */
+  function pickFace(p) {
+    var X = fx.ccy, want = fx.dir === 'bull' ? -1 : 1;   // a bullish view wants a weak other side
+    var lines = [];
+    var other = p.gap < 0 ? noteFor(p.y, -want) : noteFor(p.y, want);
+    if (!other && plainNote(p.y.summary)) other = firstSentences(p.y.summary, 1, 30);
+    if (!other) other = p.y.name + ' scores ' + signed(p.sy) + ' on the board';
+    if (other) lines.push(['other', p.y.ccy, sentence(other)]);
+    var ct = carryText(p);
+    if (ct) lines.push(['carry', '', ct + '.']);
+    var ev = p.events.filter(function (e) { var w = evWhen(e); return !w || w - Date.now() < 7 * 864e5; })[0];
+    if (ev) {
+      var w = evWhen(ev);
+      lines.push(['event', '', 'Next: ' + ev.title +
+        (w ? ', ' + w.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) : '') + '.']);
+    }
+    var box = el('span', 'pb-face');
+    lines.forEach(function (l) {
+      var ln = el('span', 'pf-line pf-' + l[0]);
+      if (l[1]) { ln.appendChild(flagEl(l[1])); }
+      ln.appendChild(el('span', null, l[2]));
+      box.appendChild(ln);
+    });
+    return box;
+  }
+  /* Opened pair: two or three plain sentences on why this pair fits (or
+     doesn't fit) the reader's view. The scoreboard goes under it. */
+  function pickRead(p) {
+    var X = fx.ccy, cx = fxGet(X), Y = p.y.ccy, bull = fx.dir === 'bull';
+    var out = [];
+    if (p.gap > 0) {
+      var mine = noteFor(cx, bull ? 1 : -1), theirs = noteFor(p.y, bull ? -1 : 1);
+      if (mine) out.push(sentence(mine));
+      if (theirs) out.push(sentence(theirs));
+      if (!out.length) out.push(X + ' scores ' + signed(fxScore(cx)) + ' on the board and ' + Y + ' ' + signed(p.sy) + ', a gap of ' + p.gap + ' in your favour.');
+      else out.push('Both point the same way: ' + p.pair + (p.action === 'Buy' ? ' rises' : ' falls') + ' if your view on ' + X + ' is right.');
+    } else if (p.gap === 0) {
+      out.push(X + ' and ' + Y + ' score the same on the board (' + signed(p.sy) + '), so this pair has no edge for your view.');
+      var t0 = noteFor(p.y, bull ? 1 : -1);
+      if (t0) out.push('What holds ' + Y + ' level: ' + sentence(t0.charAt(0).toLowerCase() + t0.slice(1)));
+    } else {
+      out.push(Y + ' is ' + (bull ? 'stronger' : 'weaker') + ' on the board than ' + X + ', so this pair works against your view.');
+      var t1 = noteFor(p.y, bull ? 1 : -1);
+      if (t1) out.push(sentence(t1));
+    }
+    var ct = carryText(p);
+    if (ct && out.length < 3) out.push(ct + (p.gap > 0 && p.carry < -0.13 ? ', which works against the trade.' : '.'));
+    return out.slice(0, 3).join(' ');
   }
 
   function diverging(score, max) {
@@ -2604,29 +2686,34 @@
     var ranked = fxRanked();
     var max = Math.max(4, Math.max.apply(null, ranked.map(function (c) { return Math.abs(fxScore(c)); })));
 
+    // Strength board as a side-scrolling row of tiles (Rami, 2026-11-09):
+    // rank, flag + code, name, score with its change, the bar, the summary.
     var board = $('#fx-board');
     board.textContent = '';
     ranked.forEach(function (c, i) {
       var li = el('li');
-      var a = el('a', 'board-row' + (fx.focus === c.ccy ? ' on' : ''));
+      var a = el('a', 'board-tile card' + (fx.focus === c.ccy ? ' on' : ''));
       a.href = '#fx/' + c.ccy;
-      a.appendChild(el('span', 'b-rank mono', String(i + 1)));
-      var id = el('span', 'b-id');
-      var idb = el('b', 'mono');   // flag beside the code (Rami, 2026-10-28)
+      var top = el('span', 'bt-top');
+      top.appendChild(el('span', 'b-rank mono', '#' + (i + 1)));
+      var idb = el('b', 'bt-id mono');
       idb.appendChild(flagEl(c.ccy));
       idb.appendChild(document.createTextNode(c.ccy));
-      id.appendChild(idb);
-      id.appendChild(el('small', null, c.name));
-      a.appendChild(id);
-      a.appendChild(diverging(fxScore(c), max));
-      a.appendChild(el('span', 'b-score mono', signed(fxScore(c))));
+      top.appendChild(idb);
+      var sc = el('span', 'bt-score');
+      sc.appendChild(el('span', 'b-score mono', signed(fxScore(c))));
       var dl = fxDelta(c);
-      a.appendChild(el('span', 'b-delta mono' + (dl > 0 ? ' up' : dl < 0 ? ' dn' : ''),
-        dl == null ? '' : dl === 0 ? '=' : (dl > 0 ? '▲' : '▼') + Math.abs(dl)));
+      if (dl != null) sc.appendChild(el('span', 'b-delta mono' + (dl > 0 ? ' up' : dl < 0 ? ' dn' : ''),
+        dl === 0 ? '=' : (dl > 0 ? '▲' : '▼') + Math.abs(dl)));
+      top.appendChild(sc);
+      a.appendChild(top);
+      a.appendChild(el('small', 'bt-name', c.name));
+      a.appendChild(diverging(fxScore(c), max));
       a.appendChild(el('span', 'b-sum', c.summary || ''));
       li.appendChild(a);
       board.appendChild(li);
     });
+    updateStripNav();
 
     renderFxDetail(ranked, max);
     renderPicker();
@@ -2835,8 +2922,16 @@
   function renderPicker() {
     if (!fx.data) return;
     Array.prototype.forEach.call(document.querySelectorAll('#fx-dir [data-dir]'), function (b) {
-      b.setAttribute('aria-selected', b.getAttribute('data-dir') === fx.dir ? 'true' : 'false');
+      b.setAttribute('aria-pressed', b.getAttribute('data-dir') === fx.dir ? 'true' : 'false');
     });
+    // The sentence's blanks fill in as you choose (Rami, 2026-11-09).
+    var db = $('#fx-dir-blank'), cb = $('#fx-ccy-blank');
+    if (db) { db.textContent = fx.dir === 'bull' ? 'bullish' : fx.dir === 'bear' ? 'bearish' : ''; db.classList.toggle('filled', !!fx.dir); }
+    if (cb) {
+      cb.textContent = '';
+      cb.classList.toggle('filled', !!fx.ccy);
+      if (fx.ccy) { cb.appendChild(flagEl(fx.ccy)); cb.appendChild(document.createTextNode(fx.ccy)); }
+    }
     Array.prototype.forEach.call(document.querySelectorAll('#fx-ccy [data-ccy]'), function (b) {
       b.setAttribute('aria-pressed', b.getAttribute('data-ccy') === fx.ccy ? 'true' : 'false');
     });
@@ -2899,62 +2994,75 @@
     return t;
   }
 
-  /* One pair (Rami, 2026-10-28): a tile like Today's currency tiles. Score,
-     both flags and the pair name; a green (rises if you're right) or red
-     (falls) trend pill on the right. Tap for the why, interest and events. */
+  /* One pair (Rami, 2026-10-28; reworked 2026-11-09). The tile shows the
+     score, flags, pair, which way it moves if you're right (black and
+     white), and its why: the other side's story, the interest, the next big
+     event. Tap for a plain-words read, then the scoreboard. */
   function pickRow(p) {
     var open = !!fx.pickOpen[p.pair];
     var up = p.action === 'Buy';
-    // Rami, 2026-10-28: tell edges apart at a glance — pairs with an edge
-    // stand out, no-edge pairs go quiet, pairs against your view fade.
+    // Pairs with an edge stand out, no-edge pairs go quiet, pairs against
+    // your view fade (Rami, 2026-10-28).
     var tier = p.gap > 0 ? 'edge' : p.gap === 0 ? 'flat' : 'against';
     var li = el('li', 'pick card ' + tier + (open ? ' open' : ''));
     li.setAttribute('data-pair', p.pair);
     var bx = el('button', 'pick-box');
     bx.type = 'button';
     bx.setAttribute('aria-expanded', open ? 'true' : 'false');
-    bx.setAttribute('aria-label', p.pair + (up ? ' rises' : ' falls') + ' if your view is right, score ' + signed(p.gap) + '. More');
+    var top = el('span', 'pb-top');
     var sc = el('span', 'pb-score mono', signed(p.gap));
     sc.title = 'Score: how far apart the two currencies are on the board, for your view';
-    bx.appendChild(sc);
+    top.appendChild(sc);
     var fl = el('span', 'pb-flags');
     p.pair.split('/').forEach(function (c) { fl.appendChild(flagEl(c)); });
-    bx.appendChild(fl);
-    bx.appendChild(el('span', 'pb-pair', p.pair));
-    var lt = el('span', 'chc-lean ' + (up ? 'bull' : 'bear'));
-    lt.appendChild(trendIcon(up ? 'bull' : 'bear'));
-    lt.title = p.pair + (up ? ' rises' : ' falls') + ' if your view is right';
-    bx.appendChild(lt);
-    bx.appendChild(el('span', 'pb-more'));
+    top.appendChild(fl);
+    top.appendChild(el('span', 'pb-pair', p.pair));
+    var dirp = el('span', 'pb-dir');
+    dirp.appendChild(trendIcon(up ? 'bull' : 'bear'));
+    dirp.appendChild(el('span', null, up ? 'Rises' : 'Falls'));
+    dirp.title = p.pair + (up ? ' rises' : ' falls') + ' if your view is right';
+    top.appendChild(dirp);
+    top.appendChild(el('span', 'pb-more'));
+    bx.appendChild(top);
+    bx.appendChild(pickFace(p));
     li.appendChild(bx);
     var body = el('div', 'pick-body');
+    body.appendChild(el('p', 'pick-read', pickRead(p)));
     body.appendChild(scoreBreakdown(p));
-    body.appendChild(el('p', 'pick-why', pickWhy(p, fx.dir)));
-    var meta = [];
-    if (p.carry != null) {
-      var cm = 'interest ' + (p.carry >= 0 ? '+' : '−') + Math.abs(p.carry).toFixed(2) + '% a year' + (p.carry >= 0 ? ' (you earn)' : ' (you pay)');
-      // Say so when the rates cut against the score's lean.
-      if (p.gap >= 1 && p.carry < 0) cm += ', rates work against this one';
-      meta.push(cm);
-    }
-    if (p.ygap) {
-      var mv = p.ygap.move;
-      meta.push('rate gap ' + (mv >= 0.1 ? 'widening your way' : mv <= -0.1 ? 'narrowing against you' : 'steady') + ' over a month');
-    }
-    if (p.events.length) {
-      var e0 = p.events[0], w0 = evWhen(e0);
-      meta.push(p.events.length + ' high-impact in 14d — next ' + e0.ccy + ' ' + e0.title +
-        (w0 ? ' ' + MONTHS[new Date(w0).getMonth()] + ' ' + new Date(w0).getDate() : ''));
-    }
-    if (meta.length) body.appendChild(el('p', 'meta pick-meta', meta.join(' · ')));
     li.appendChild(body);
     return li;
+  }
+
+  /* Gold and oil have no board score, but they have a chapter: their page
+     is the header, the headline lean and the full read (Rami, 2026-11-09). */
+  function renderMarketDetail(box) {
+    var code = fx.focus, ch = code && chapterFor(code);
+    if (!ch) { box.hidden = true; box.textContent = ''; return; }
+    box.hidden = false;
+    box.textContent = '';
+    var card = el('article', 'card fx-detail gl-scope');
+    var back = el('a', 'more', '← All currencies');
+    back.href = '#fx';
+    card.appendChild(back);
+    var head = el('div', 'fd-head');
+    var t = el('div');
+    var h = el('h1', 'display');
+    h.appendChild(flagEl(code));
+    h.appendChild(document.createTextNode(' ' + ch.title + ' '));
+    var lt = leanMark(code);
+    if (lt) { lt.classList.add('fd-lean'); h.appendChild(lt); }
+    t.appendChild(h);
+    if (ch.teaser) t.appendChild(el('p', 'lede', firstSentences(ch.teaser, 3, 60)));
+    head.appendChild(t);
+    card.appendChild(head);
+    card.appendChild(chapterRead(ch));
+    box.appendChild(card);
   }
 
   function renderFxDetail(ranked, max) {
     var box = $('#fx-detail');
     var c = fxGet(fx.focus);
-    if (!c) { box.hidden = true; box.textContent = ''; return; }
+    if (!c) { renderMarketDetail(box); return; }
     box.hidden = false;
     box.textContent = '';
     var card = el('article', 'card fx-detail gl-scope');
@@ -3014,6 +3122,9 @@
       ul.appendChild(li);
     });
     sdet.appendChild(ul);
+    // The full read (Rami, 2026-11-09): what used to be the Story chapter.
+    var chap = chapterFor(c.ccy);
+    if (chap) bd.appendChild(chapterRead(chap));
     cols.appendChild(bd);
 
     var side = el('section', 'fd-side');
@@ -3023,14 +3134,6 @@
     side.appendChild(momentumBlock(c));
     var cl = cotLine(c.ccy);
     if (cl) side.appendChild(cl);
-    // Story chapter
-    if (c.chapter && story && story.chapters && story.chapters[c.chapter - 1]) {
-      var sl = el('a', 'fd-story');
-      sl.href = '#story/' + c.chapter;
-      sl.appendChild(el('span', 'callout-lbl', 'The story behind it'));
-      sl.appendChild(el('span', null, story.chapters[c.chapter - 1].title + ' →'));
-      side.appendChild(sl);
-    }
     // Central bank
     var bk = cal.banks[c.bank];
     if (bk) {
@@ -4695,7 +4798,7 @@
     row.setAttribute('data-reveal', '');
     if (meta.chapter && story && (story.chapters || [])[meta.chapter - 1]) {
       var a = el('a', 'btn', 'In the world story: ' + story.chapters[meta.chapter - 1].title + ' →');
-      a.href = '#story/' + meta.chapter;
+      a.href = chapterHref(meta.chapter) || '#fx';
       row.appendChild(a);
     }
     var c = el('a', 'btn ghost', 'On the calendar →');
