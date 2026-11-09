@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '121';
+  var ASSET_VERSION = '122';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -1307,7 +1307,14 @@
       wrap.appendChild(det);
     }
     if (ch.scenarios) wrap.appendChild(scenarioSwitch(ch.scenarios));
-    wrap.appendChild(sourceChips(ch.sources || ch.source, ch.source_url));
+    // Sources sit behind a tap, like the figures: no fine print up front.
+    var n = sourceList(ch.sources || ch.source, ch.source_url).length;
+    if (n) {
+      var src = sourceChips(ch.sources || ch.source, ch.source_url);
+      var sd = drawer('Sources', n + (n === 1 ? ' source' : ' sources'));
+      sd.appendChild(src);
+      wrap.appendChild(sd);
+    }
     return wrap;
   }
 
@@ -1905,15 +1912,7 @@
   }
 
   /* Currency page: one line on positioning, linking to the tab. */
-  function cotLine(ccy) {
-    var m = cotMarket(ccy);
-    if (!m) return null;
-    var a = el('a', 'fd-cot');
-    a.href = '#positioning/' + ccy;
-    a.appendChild(el('span', 'callout-lbl', 'Positioning'));
-    a.appendChild(el('span', null, 'Hedge funds ' + cotStance(m.hf).text.toLowerCase() + (m.rm ? ' · real money ' + cotStance(m.rm).text.toLowerCase() : '') + ' →'));
-    return a;
-  }
+
 
   /* ---------------- calendar ----------------
      data/calendar.json → filterable, time-zone-aware event list.
@@ -2438,12 +2437,9 @@
   var PRIORITY = ['EUR', 'GBP', 'AUD', 'NZD', 'USD', 'CAD', 'CHF', 'JPY'];
   // Rami, 2026-10-27: the picker starts blank every visit (no remembered pick).
   var fx = { data: null, focus: '', dir: '', ccy: '', pickOpen: {} };
-  /* data/momentum.json — per-currency economic surprises (Hercules). Counting
-     starts fresh with the first scored release; MOMENTUM_START is only the
-     fallback shown before the feed exists. */
+  /* data/momentum.json — per-currency economic surprises (Hercules). */
   var momentum = { data: null };
   var rates = { data: null };   // data/rates.json (Hercules), optional
-  var MOMENTUM_START = '2026-10-14';
 
   function initFx() {
     try { localStorage.removeItem('bluestreet-fx'); } catch (e) {}
@@ -2607,8 +2603,10 @@
      through, so a note that reads like data (long, number-heavy) is skipped. */
   function plainNote(t) {
     t = String(t || '');
-    return t.length <= 200 && (t.match(/\d/g) || []).length <= 8;
+    return t.length <= 200 && (t.match(/\d/g) || []).length <= 8 && !/[;()+~→|]/.test(t);
   }
+  /* "US dollar" stays "US dollar"; "Euro" becomes "euro" mid-sentence. */
+  function inName(n) { return /^[A-Z]{2}/.test(n) ? n : n.charAt(0).toLowerCase() + n.slice(1); }
   function noteFor(c, sign) {
     var d = (c && c.drivers) || {};
     for (var i = 0; i < PILLARS.length; i++) {
@@ -2766,38 +2764,7 @@
     return row;
   }
 
-  function momentumBlock(c) {
-    var wrap = el('div', 'mom');
-    wrap.appendChild(el('h2', 'section-label', 'Data surprises'));
-    var since = (momentum.data && momentum.data.since) || MOMENTUM_START;
-    var s = momFor(c.ccy);
-    if (!s.recent.length) {
-      wrap.appendChild(el('p', 'meta', momentum.data
-        ? 'No ' + c.ccy + ' releases scored since ' + shortDate(since) + ' yet.'
-        : 'Tracking starts ' + shortDate(since) + ' with US CPI. From then on every scored release lands here: beat or miss versus expectations, judged by what is good for the currency.'));
-      return wrap;
-    }
-    var top = el('div', 'mom-top');
-    top.appendChild(momDots(s.recent));
-    top.appendChild(el('span', 'mom-count', 'Beat ' + s.n.beat + ' · missed ' + s.n.miss + ' · in line ' + s.n.inline +
-      ' of the last ' + s.recent.length));
-    wrap.appendChild(top);
-    if (s.m && s.m.note) wrap.appendChild(el('p', 'mom-note', s.m.note));
-    var ul = el('ul', 'mom-list');
-    s.recent.slice(0, 3).forEach(function (r) {
-      var li = el('li', 'mom-' + (MOM_LBL[r.result] ? r.result : 'inline'));
-      li.appendChild(el('span', 'mono', shortDate(r.date)));
-      var t = el('span');
-      t.appendChild(el('b', null, (MOM_LBL[r.result] || 'In line') + ' '));
-      t.appendChild(document.createTextNode((r.title || '') +
-        (r.actual != null ? ' — ' + r.actual + (r.forecast != null ? ' vs ' + r.forecast + ' expected' : '') : '')));
-      li.appendChild(t);
-      ul.appendChild(li);
-    });
-    wrap.appendChild(ul);
-    wrap.appendChild(el('p', 'meta', 'Since ' + shortDate(since) + '. A beat means better than expected for the currency, not just a higher number.'));
-    return wrap;
-  }
+
 
   /* Today: one speedometer per currency (Rami, 2026-11-09), strongest to
      weakest. Same score as the strength board (sum of the seven pillar
@@ -2869,37 +2836,43 @@
     items.sort(function (a, b) { return (newsImpact(b) - newsImpact(a)) || (newsTime(b) - newsTime(a)); });
     items = items.slice(0, TODAY_NEWS_MAX);
     if (!items.length) { box.appendChild(el('li', 'meta', 'No headlines yet.')); return; }
-    items.forEach(function (it) {
-      var li = el('li');
-      var a = el('a', 'news-tile card');
-      a.href = '#news';
-      a.setAttribute('data-open-news', slugId(it.id || it.url || it.headline));
-      // The story's picture on top (Rami, 2026-11-09), same as on News;
-      // a market tile stands in when there is none.
-      a.appendChild(newsFigure(it));
-      var body = el('span', 'nt-body');
-      var tags = el('span', 'nt-tags');
-      (it.impact || []).filter(function (x) { return x && x.ccy; }).slice(0, 3)
-        .forEach(function (x) { tags.appendChild(biasTag(x)); });
-      body.appendChild(tags);
-      body.appendChild(el('span', 'nt-hl', it.headline));
-      var m = el('span', 'nt-src meta');
-      m.appendChild(document.createTextNode((it.source || '') + ' · '));
-      m.appendChild(newsWhenEl(it));
-      body.appendChild(m);
-      a.appendChild(body);
-      li.appendChild(a);
-      box.appendChild(li);
-    });
+    items.forEach(function (it) { box.appendChild(newsTile(it)); });
     updateStripNav();
+  }
+
+  /* One headline tile (Today's Top headlines, a currency hub's news): the
+     story's picture on top (Rami, 2026-11-09), same as on News, with the
+     market tile as the fallback; tags; headline; source · time. A tap opens
+     the story on News. */
+  function newsTile(it) {
+    var li = el('li');
+    var a = el('a', 'news-tile card');
+    a.href = '#news';
+    a.setAttribute('data-open-news', slugId(it.id || it.url || it.headline));
+    a.appendChild(newsFigure(it));
+    var body = el('span', 'nt-body');
+    var tags = el('span', 'nt-tags');
+    (it.impact || []).filter(function (x) { return x && x.ccy; }).slice(0, 3)
+      .forEach(function (x) { tags.appendChild(biasTag(x)); });
+    body.appendChild(tags);
+    body.appendChild(el('span', 'nt-hl', it.headline));
+    var m = el('span', 'nt-src meta');
+    m.appendChild(document.createTextNode((it.source || '') + ' · '));
+    m.appendChild(newsWhenEl(it));
+    body.appendChild(m);
+    a.appendChild(body);
+    li.appendChild(a);
+    return li;
   }
 
   /* Side-scrolling rows: on screens with a mouse, ‹ › buttons beside the row
      title scroll it by about a screenful; touch screens just swipe. */
+  var stripsInit = false;
   function initStrips() {
-    Array.prototype.forEach.call(document.querySelectorAll('.t-row-nav[data-strip]'), function (nav) {
+    Array.prototype.forEach.call(document.querySelectorAll('.t-row-nav[data-strip]:not([data-bound])'), function (nav) {
       var strip = document.getElementById(nav.getAttribute('data-strip'));
       if (!strip) return;
+      nav.setAttribute('data-bound', '');
       [['prev', '‹', 'Scroll back', -1], ['next', '›', 'Scroll on', 1]].forEach(function (b) {
         var btn = el('button', 'strip-btn ' + b[0], b[1]);
         btn.type = 'button';
@@ -2912,7 +2885,7 @@
       });
       strip.addEventListener('scroll', updateStripNav, { passive: true });
     });
-    window.addEventListener('resize', updateStripNav);
+    if (!stripsInit) { stripsInit = true; window.addEventListener('resize', updateStripNav); }
   }
   function updateStripNav() {
     Array.prototype.forEach.call(document.querySelectorAll('.t-row-nav[data-strip]'), function (nav) {
@@ -2955,16 +2928,7 @@
     fxPicks(fx.dir, fx.ccy).forEach(function (p) { box.appendChild(pickRow(p)); });
   }
 
-  /* A pair name in a solid box (Rami, 2026-10-28): green if the pair rises
-     when your view is right, red if it falls. No words. */
-  function pairBox(p, tag) {
-    var up = p.action === 'Buy';
-    var b = el(tag || 'b', 'pair-box mono ' + (up ? 'up' : 'dn'), p.pair);
-    var say = p.pair + (up ? ' rises' : ' falls') + ' if your view is right';
-    b.title = say;
-    b.setAttribute('aria-label', say);
-    return b;
-  }
+
 
   /* Score breakdown (Rami, 2026-10-28): each pillar's score for both sides
      of the pair, and what it adds to the pair's score for your view. The
@@ -3040,165 +3004,239 @@
     return li;
   }
 
-  /* Gold and oil have no board score, but they have a chapter: their page
-     is the header, the headline lean and the full read (Rami, 2026-11-09). */
+  /* ---------------- currency hub (Rami, 2026-11-09, round 3) ----------------
+     Tapping a currency opens its own dashboard, not a column of raw data:
+     header (gauge, score, one plain line) → quick metrics → what's moving
+     it → its news → the full read → pairs to watch. Plain words only:
+     anything that reads like raw shorthand (words.json behind) is left out.
+     Gold and oil get the header, news and the full read. */
+  function hubRow(id, title, more) {
+    var sec = el('section', 't-row hub-row');
+    var hd = el('div', 't-row-head');
+    hd.appendChild(el('h2', 'section-label', title));
+    var nav = el('span', 't-row-nav');
+    nav.setAttribute('data-strip', id);
+    hd.appendChild(nav);
+    if (more) { var a = el('a', 'more', more[0]); a.href = more[1]; hd.appendChild(a); }
+    sec.appendChild(hd);
+    var ol = el('ol', 't-strip');
+    ol.id = id;
+    sec.appendChild(ol);
+    return sec;
+  }
+  function hubSection(title, cls) {
+    var sec = el('section', 'hub-sec ' + (cls || ''));
+    sec.appendChild(el('h2', 'section-label', title));
+    return sec;
+  }
+  /* A metric tile: small label, a big value, a plain line under it. */
+  function metricTile(label, value, sub, href, extra) {
+    var li = el('li');
+    var a = el(href ? 'a' : 'div', 'metric card');
+    if (href) a.href = href;
+    a.appendChild(el('span', 'mt-lbl', label));
+    var v = el('span', 'mt-val', value);
+    a.appendChild(v);
+    if (extra) a.appendChild(extra);
+    if (sub) a.appendChild(el('span', 'mt-sub', sub));
+    li.appendChild(a);
+    return li;
+  }
+  function hubNews(code) {
+    var items = ((news.data && news.data.items) || []).filter(function (it) {
+      return it && it.headline && (it.ts || it.date) && newsTouches(it, code);
+    });
+    items.sort(function (a, b) { return (newsTime(b) - newsTime(a)) || (newsImpact(b) - newsImpact(a)); });
+    return items.slice(0, 10);
+  }
+  function hubHeader(code, name, opts) {
+    var head = el('header', 'hub-head card');
+    var id = el('div', 'hh-id');
+    var top = el('div', 'hh-name');
+    top.appendChild(flagEl(code));
+    top.appendChild(el('h1', 'display', name));
+    if (opts.lean) top.appendChild(opts.lean);
+    id.appendChild(top);
+    if (opts.kicker) id.appendChild(el('p', 'kicker hh-kicker', opts.kicker));
+    if (opts.read) id.appendChild(el('p', 'hh-read', opts.read));
+    head.appendChild(id);
+    if (opts.score != null) {
+      var g = el('div', 'hh-gauge ' + (opts.score > 0 ? 'pos' : opts.score < 0 ? 'neg' : 'zero'));
+      g.appendChild(gaugeSvg(opts.score));
+      g.appendChild(el('span', 'hh-score mono', opts.score === 0 ? '0' : signed(opts.score)));
+      g.appendChild(el('span', 'hh-delta meta', opts.delta));
+      g.setAttribute('role', 'img');
+      g.setAttribute('aria-label', 'Strength score ' + signed(opts.score) + ', range −7 to +7. ' + opts.delta);
+      head.appendChild(g);
+    }
+    return head;
+  }
+  function backLink(box) {
+    var back = el('a', 'more hub-back', '← All currencies');
+    back.href = '#fx';
+    box.appendChild(back);
+  }
+  function hubNewsRow(box, code, name) {
+    var items = hubNews(code);
+    if (!items.length) return;
+    var row = hubRow('hub-news', name + ' in the news', ['All news →', '#news/' + code]);
+    var ol = row.querySelector('ol');
+    ol.classList.add('t-news');
+    items.forEach(function (it) { ol.appendChild(newsTile(it)); });
+    box.appendChild(row);
+  }
+  function hubRead(box, ch) {
+    if (!ch) return;
+    var sec = el('section', 'hub-sec hub-read card gl-scope');
+    sec.appendChild(chapterRead(ch));
+    box.appendChild(sec);
+  }
+
   function renderMarketDetail(box) {
     var code = fx.focus, ch = code && chapterFor(code);
-    if (!ch) { box.hidden = true; box.textContent = ''; return; }
+    if (!ch) { box.hidden = true; box.textContent = ''; return false; }
     box.hidden = false;
     box.textContent = '';
-    var card = el('article', 'card fx-detail gl-scope');
-    var back = el('a', 'more', '← All currencies');
-    back.href = '#fx';
-    card.appendChild(back);
-    var head = el('div', 'fd-head');
-    var t = el('div');
-    var h = el('h1', 'display');
-    h.appendChild(flagEl(code));
-    h.appendChild(document.createTextNode(' ' + ch.title + ' '));
-    var lt = leanMark(code);
-    if (lt) { lt.classList.add('fd-lean'); h.appendChild(lt); }
-    t.appendChild(h);
-    if (ch.teaser) t.appendChild(el('p', 'lede', firstSentences(ch.teaser, 3, 60)));
-    head.appendChild(t);
-    card.appendChild(head);
-    card.appendChild(chapterRead(ch));
-    box.appendChild(card);
+    backLink(box);
+    box.appendChild(hubHeader(code, ch.title, { lean: leanMark(code), read: firstSentences(ch.teaser || '', 2, 50) }));
+    hubNewsRow(box, code, ch.title);
+    hubRead(box, ch);
+    return true;
   }
 
   function renderFxDetail(ranked, max) {
-    var box = $('#fx-detail');
+    var box = $('#fx-detail'), view = $('#view-fx');
     var c = fxGet(fx.focus);
-    if (!c) { renderMarketDetail(box); return; }
+    var on = c ? true : renderMarketDetail(box);
+    if (view) view.classList.toggle('hub-on', !!on);
+    if (!c) { initStrips(); updateStripNav(); return; }
     box.hidden = false;
     box.textContent = '';
-    var card = el('article', 'card fx-detail gl-scope');
+    backLink(box);
+    var sc = fxScore(c), dl = fxDelta(c), ch = chapterFor(c.ccy);
 
-    var back = el('a', 'more', '← All currencies');
-    back.href = '#fx';
-    card.appendChild(back);
+    // 1. Header: name, rank, one plain line, the gauge.
+    var line = plainNote(c.summary) ? firstSentences(c.summary, 2, 45) : (ch ? firstSentences(ch.teaser || '', 2, 45) : '');
+    box.appendChild(hubHeader(c.ccy, c.name, {
+      kicker: '#' + (ranked.indexOf(c) + 1) + ' of ' + ranked.length + ' on the strength board',
+      read: line, score: sc,
+      delta: dl == null ? 'First edition scored' : dl === 0 ? 'Unchanged since the last edition' : signed(dl) + ' since the last edition'
+    }));
 
-    var head = el('div', 'fd-head');
-    var t = el('div');
-    t.appendChild(el('p', 'kicker', '#' + (ranked.indexOf(c) + 1) + ' of ' + ranked.length + ' on the board'));
-    var h = el('h1', 'display');
-    h.appendChild(el('span', 'mono fd-code', c.ccy));
-    h.appendChild(document.createTextNode(' ' + c.name));
-    t.appendChild(h);
-    if (c.summary) t.appendChild(el('p', 'lede', c.summary));
-    head.appendChild(t);
-    var sc = el('div', 'fd-score');
-    sc.appendChild(el('span', 'fd-num mono', signed(fxScore(c))));
-    var dl = fxDelta(c);
-    sc.appendChild(el('span', 'meta', dl == null ? 'score' : 'score · ' + (dl === 0 ? 'unchanged' : signed(dl)) + ' vs prior edition'));
-    sc.appendChild(el('span', 'meta fd-tally', 'Pillars: ' + tallyText(fxTally(c))));
-    head.appendChild(sc);
-    card.appendChild(head);
-
-    var cols = el('div', 'fd-cols');
-
-    // What's driving it, as prose: the live drivers' notes, supportive first.
-    // The full scored table (all pillars, -1/0/+1) sits behind a tap.
-    var bd = el('section', 'fd-break');
-    bd.appendChild(el('h2', 'section-label', 'What’s driving it'));
-    var live = PILLARS.map(function (k) { return { k: k, d: (c.drivers || {})[k[0]] }; })
-      .filter(function (x) { return x.d && +x.d.score && x.d.note; })
-      .sort(function (a, b) { return +b.d.score - +a.d.score; });
-    var why = el('ul', 'driver-prose');
-    if (!live.length) why.appendChild(el('li', 'meta', 'No pillar is moving it today.'));
-    live.forEach(function (x) {
-      var li = el('li', +x.d.score > 0 ? 'pos' : 'neg');
-      li.appendChild(el('span', 'sr-only', +x.d.score > 0 ? 'Supportive: ' : 'Weighing: '));
-      li.appendChild(document.createTextNode(x.d.note));
-      li.appendChild(el('span', 'dp-pillar', ' · ' + x.k[1]));
-      why.appendChild(li);
-    });
-    bd.appendChild(why);
-    var sdet = drawer('Score breakdown', 'all pillars');
-    bd.appendChild(sdet);
-    var ul = el('ul', 'drivers');
-    PILLARS.forEach(function (k) {
-      var d = (c.drivers || {})[k[0]];
-      var s = d ? +d.score || 0 : 0;
-      var li = el('li', s > 0 ? 'pos' : s < 0 ? 'neg' : 'zero');
-      var a = el('a', 'dr-name', k[1]);
-      a.href = '#engine';
-      li.appendChild(a);
-      li.appendChild(el('span', 'dr-score mono', s === 0 ? '0' : signed(s)));
-      li.appendChild(el('span', 'dr-note', d && d.note ? d.note : 'Not a driver today'));
-      ul.appendChild(li);
-    });
-    sdet.appendChild(ul);
-    // The full read (Rami, 2026-11-09): what used to be the Story chapter.
-    var chap = chapterFor(c.ccy);
-    if (chap) bd.appendChild(chapterRead(chap));
-    cols.appendChild(bd);
-
-    var side = el('section', 'fd-side');
-    // Trend
-    side.appendChild(el('h2', 'section-label', 'Trend'));
-    side.appendChild(sparkline(fxHistory(c)));
-    side.appendChild(momentumBlock(c));
-    var cl = cotLine(c.ccy);
-    if (cl) side.appendChild(cl);
-    // Central bank
+    // 2. Quick metrics.
+    var mrow = hubRow('hub-metrics', 'At a glance');
+    var mol = mrow.querySelector('ol');
+    mol.classList.add('metrics');
     var bk = cal.banks[c.bank];
     if (bk) {
-      var bx = el('a', 'fd-bank');
-      bx.href = '#banks';
-      bx.appendChild(el('span', 'callout-lbl', bk.short));
-      bx.appendChild(el('span', null, (bk.rate || '') + (bk.bias ? ' · ' + bk.bias : '') +
-        (bk.next_meeting ? ' · next ' + fmtMeeting(bk.next_meeting) : '')));
-      side.appendChild(bx);
+      var bx = null;
+      if (bk.bias && BIAS[bk.bias]) {
+        var B = BIAS[bk.bias];
+        bx = el('span', 'mt-bias ' + B[1]);
+        bx.appendChild(trendIcon(B[1]));
+        bx.appendChild(document.createTextNode(B[0]));
+      }
+      var nm = bk.next_meeting && bk.next_meeting.start ? bk.next_meeting : null, dn = nm ? daysUntil(nm) : null;
+      mol.appendChild(metricTile(bk.short || 'Central bank', bk.rate || '—',
+        nm && dn != null ? 'Next decision ' + fmtMeeting(nm) + ', ' + inDays(dn) : 'Interest rate', '#banks', bx));
+      if (bk.priced && plainNote(bk.priced) && bk.priced.length <= 90) {
+        var pr = bk.priced.replace(/^[A-Z][a-z]+:\s*/, '');
+        mol.appendChild(metricTile('Markets expect', pr.charAt(0).toUpperCase() + pr.slice(1), nm ? 'At the ' + fmtMeeting(nm) + ' meeting' : '', '#banks'));
+      }
     }
-    // Events
-    var evs = eventsFor([c.ccy], 45);
-    side.appendChild(el('h2', 'section-label', 'Next high-impact events'));
-    var el2 = el('ul', 'fd-events');
-    if (!evs.length) el2.appendChild(el('li', 'meta', 'None in the next 6 weeks.'));
-    evs.slice(0, 4).forEach(function (e) {
-      var w = evWhen(e), li = el('li');
-      li.appendChild(el('span', 'mono', w ? MONTHS[w.getMonth()] + ' ' + w.getDate() : e.date));
-      li.appendChild(el('span', null, e.title));
-      el2.appendChild(li);
+    var ev = eventsFor([c.ccy], 30)[0];
+    if (ev) {
+      var w = evWhen(ev);
+      var cd = el('span', 'mt-val mono', w ? countdown(w - Date.now()) : 'Date to come');
+      if (w) cd.setAttribute('data-ts', w.getTime());
+      var t = metricTile('Next big event', '', ev.title + (w ? ' · ' + w.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }) : ''), '#calendar');
+      var tv = t.querySelector('.mt-val');
+      tv.parentNode.replaceChild(cd, tv);
+      mol.appendChild(t);
+    }
+    var cm = cotMarket(c.ccy);
+    if (cm && cm.hf) {
+      var st = cotStance(cm.hf);
+      mol.appendChild(metricTile('Hedge funds', st.text, 'Their bets on the ' + c.ccy + ', from the weekly positioning report', '#positioning/' + c.ccy));
+    }
+    var ms = momFor(c.ccy);
+    if (ms.recent.length) {
+      mol.appendChild(metricTile('Data vs forecasts', ms.n.beat + ' beat · ' + ms.n.miss + ' missed',
+        'The last ' + ms.recent.length + ' releases', null, momDots(ms.recent)));
+    }
+    var hist = fxHistory(c);
+    if (hist.length > 1) {
+      mol.appendChild(metricTile('Score trend', signed(hist[0].v) + ' → ' + signed(hist[hist.length - 1].v),
+        'Over the last ' + hist.length + ' editions', null, sparkline(hist)));
+    }
+    box.appendChild(mrow);
+
+    // 3. What's moving it: a tile per pillar that is moving it.
+    var mv = hubSection('What’s moving it', 'hub-pillars');
+    var grid = el('ul', 'pillar-tiles');
+    var quiet = [];
+    PILLARS.forEach(function (k) {
+      var d = (c.drivers || {})[k[0]], s2 = d ? +d.score || 0 : 0;
+      if (!s2) { quiet.push(k[1]); return; }
+      var li = el('li', 'pt card ' + (s2 > 0 ? 'pos' : 'neg'));
+      var hd = el('div', 'pt-head');
+      hd.appendChild(el('span', 'pt-name', k[1]));
+      var tag = el('span', 'pt-tag ' + (s2 > 0 ? 'bull' : 'bear'));
+      tag.appendChild(trendIcon(s2 > 0 ? 'bull' : 'bear'));
+      tag.appendChild(document.createTextNode(s2 > 0 ? 'Supports' : 'Weighs'));
+      hd.appendChild(tag);
+      li.appendChild(hd);
+      li.appendChild(el('p', 'pt-note', d.note && plainNote(d.note) ? d.note
+        : (s2 > 0 ? 'Working in the ' + inName(c.name) + '’s favour this edition.' : 'Working against the ' + inName(c.name) + ' this edition.')));
+      grid.appendChild(li);
     });
-    side.appendChild(el2);
-    // Latest headlines for this currency (news.json)
-    var nItems = ((news.data && news.data.items) || []).filter(function (it) { return newsTouches(it, c.ccy); })
-      .sort(function (a, b) { return newsTime(b) - newsTime(a); }).slice(0, 3);
-    if (nItems.length) {
-      side.appendChild(el('h2', 'section-label', 'In the news'));
-      nItems.forEach(function (it) {
-        var a = el('a', 'fd-wire fd-news');
-        a.href = '#news/' + c.ccy;
-        var lb = el('span', 'callout-lbl');
-        lb.appendChild(document.createTextNode((it.source || '') + ' · '));
-        lb.appendChild(newsWhenEl(it));
-        a.appendChild(lb);
-        a.appendChild(el('span', null, it.headline));
-        var x = (it.impact || []).filter(function (y) { return y.ccy === c.ccy; })[0];
-        if (x) { var tg = el('span', 'news-tags'); tg.appendChild(biasTag(x)); a.appendChild(tg); }
-        side.appendChild(a);
-      });
-    }
-    // Express it
-    side.appendChild(el('h2', 'section-label', 'Express it'));
-    [['bull', 'Bullish'], ['bear', 'Bearish']].forEach(function (d) {
+    if (!grid.children.length) grid.appendChild(el('li', 'meta', 'No pillar is moving it today.'));
+    mv.appendChild(grid);
+    if (quiet.length) mv.appendChild(el('p', 'meta pt-quiet', 'Not moving it today: ' + quiet.join(', ') + '.'));
+    box.appendChild(mv);
+
+    // 4. News for this currency.
+    hubNewsRow(box, c.ccy, c.name);
+
+    // 5. The full read.
+    hubRead(box, ch);
+
+    // 6. Pairs to watch: the strongest setups for each view, into the picker.
+    var pw = hubSection('Pairs to watch', 'hub-pairs');
+    var cols = el('div', 'pw-cols');
+    [['bull', 'If you’re bullish on ' + c.ccy], ['bear', 'If you’re bearish on ' + c.ccy]].forEach(function (d) {
+      var col = el('div', 'pw-col');
+      col.appendChild(el('h3', 'pw-h', d[1]));
       var picks = fxPicks(d[0], c.ccy).filter(function (p) { return p.gap > 0; }).slice(0, 3);
-      var row = el('p', 'fd-express');
-      var lk = el('a', null, d[1] + ' ' + c.ccy + ':');
-      lk.href = '#fx';
-      lk.setAttribute('data-express', d[0] + ':' + c.ccy);
-      row.appendChild(lk);
-      // Same pair boxes as the picker; no rises/falls words (Rami, 2026-10-27).
-      row.appendChild(document.createTextNode(' '));
-      if (picks.length) picks.forEach(function (p) { row.appendChild(pairBox(p, 'span')); });
-      else row.appendChild(document.createTextNode('no cross with an edge today'));
-      side.appendChild(row);
+      var ul = el('ul', 'pw-list');
+      if (!picks.length) ul.appendChild(el('li', 'meta', 'No pair has an edge for this view today.'));
+      picks.forEach(function (p) {
+        var li = el('li');
+        var a = el('a', 'pw-pair card');
+        a.href = '#fx';
+        a.setAttribute('data-express', d[0] + ':' + c.ccy);
+        a.appendChild(el('span', 'pb-score mono', signed(p.gap)));
+        var fl = el('span', 'pb-flags');
+        p.pair.split('/').forEach(function (x) { fl.appendChild(flagEl(x)); });
+        a.appendChild(fl);
+        a.appendChild(el('span', 'pb-pair', p.pair));
+        var up = p.action === 'Buy';
+        var dp = el('span', 'pb-dir');
+        dp.appendChild(trendIcon(up ? 'bull' : 'bear'));
+        dp.appendChild(el('span', null, up ? 'Rises' : 'Falls'));
+        a.appendChild(dp);
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      col.appendChild(ul);
+      cols.appendChild(col);
     });
-    cols.appendChild(side);
-    card.appendChild(cols);
-    box.appendChild(card);
+    pw.appendChild(cols);
+    pw.appendChild(el('p', 'meta', 'Evidence, not a call. Tap a pair to see it in the pair picker.'));
+    box.appendChild(pw);
+
+    initStrips();
+    updateStripNav();
   }
 
   /* Score trend over editions; needs at least two points to draw. */

@@ -60,12 +60,32 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   unchanged in design, at full size in a side-scrolling row (`#fx-cards`,
   `renderCcyCards`). Quiet chapters fold into the "Quiet today" line under
   the row. Rami's favourite tile: don't shrink or trim it.
-- **The full read lives on each currency page** (Rami, 2026-11-09; the
-  Story chapter view, "chapter 1 of 10", is retired). "More on …" and the
-  card titles open `#fx/<CCY>`; the page's left column carries "The full
-  read" (`chapterRead`): the labelled narrative, the Details drawer, the
-  scenarios and sources. Gold and oil get a small page of their own
-  (`renderMarketDetail`). Chapters join to currencies by `chapterCcy`.
+- **Currency hub** (Rami, 2026-11-09, round 3; replaces the old two-column
+  currency page). `#fx/<CCY>` is a dashboard for that currency, and the rest
+  of the Currencies page steps aside while it's open (`#view-fx.hub-on`).
+  Top to bottom (`renderFxDetail`):
+  1. **Header:** flag and name, "#N of 8 on the strength board", one plain
+     line (the currency `summary`, else the chapter `teaser`), and the
+     speedometer with the score and its change since the last edition.
+  2. **At a glance**, a side-scrolling row of metric tiles: the central bank
+     (rate, hawkish/neutral/dovish pill, next decision), what markets expect
+     at that meeting (only when `priced` is a short plain line), the next
+     high-impact event with a live countdown, hedge-fund positioning in
+     words, data beats vs misses with the dots, and the score trend.
+  3. **What's moving it:** a tile per pillar that is moving it (Supports /
+     Weighs + its one-line note); pillars at zero are listed in one line.
+  4. **<Currency> in the news:** the same photo headline tiles as Today,
+     filtered to this currency, newest first.
+  5. **The full read** (`chapterRead`, what used to be the Story chapter):
+     the labelled narrative, then Details, the scenarios and Sources, each
+     behind a tap. The Story chapter view is retired.
+  6. **Pairs to watch:** the top three pairs with an edge for a bullish and
+     a bearish view; a tap presets the pair picker. Evidence, not a call.
+  Gold and oil (`#fx/XAU`, `#fx/OIL`, `renderMarketDetail`): header with the
+  lean, the news row and the full read. **No raw data on the hub:** a note,
+  summary or `priced` line that reads like Herc's shorthand (long, more than
+  8 digits, or any of `; ( ) + ~ → |`, i.e. words.json is behind) is left out
+  and a plain fallback line stands in (`plainNote`).
 - **Prose first, site-wide:** narrative leads; figures sit in a "Details"
   drawer (tap to open) — story `numbers`, engine `figure` + sources, bank
   rate definition / last move / sources, the currency score table.

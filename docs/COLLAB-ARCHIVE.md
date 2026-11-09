@@ -685,3 +685,13 @@ background color. The prompt is left-aligned; currency buttons and the strength 
 flags. Tapping a picked side or currency again clears it. The strength board has no card.
 Never Buy/Sell (Rami, 2026-10-28).
 ```
+
+## Old currency page — DESIGN.md text retired 2026-11-09 (round 3, the currency hub)
+```
+- **The full read lives on each currency page** (Rami, 2026-11-09; the
+  Story chapter view, "chapter 1 of 10", is retired). "More on …" and the
+  card titles open `#fx/<CCY>`; the page's left column carries "The full
+  read" (`chapterRead`): the labelled narrative, the Details drawer, the
+  scenarios and sources. Gold and oil get a small page of their own
+  (`renderMarketDetail`). Chapters join to currencies by `chapterCcy`.
+```
