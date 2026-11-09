@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '134';
+  var ASSET_VERSION = '135';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -2973,8 +2973,9 @@
       b.setAttribute('aria-pressed', b.getAttribute('data-dir') === fx.dir ? 'true' : 'false');
     });
     // The sentence's blanks fill in as you choose (Rami, 2026-11-09).
-    var db = $('#fx-dir-blank'), cb = $('#fx-ccy-blank');
-    if (db) { db.textContent = fx.dir === 'bull' ? 'bullish' : fx.dir === 'bear' ? 'bearish' : ''; db.classList.toggle('filled', !!fx.dir); }
+    var cb = $('#fx-ccy-blank');
+    var dp = $('#fx-dir');
+    if (dp) dp.classList.toggle('chosen', !!fx.dir);
     if (cb) {
       cb.textContent = '';
       cb.classList.toggle('filled', !!fx.ccy);
