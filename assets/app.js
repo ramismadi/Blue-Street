@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '131';
+  var ASSET_VERSION = '132';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -1570,15 +1570,19 @@
       var b = o.b, li = el('li');
       var a = el('a', 'cb-tile card');
       a.href = '#fx/' + b.ccy;
-      var top = el('span', 'cb-top');
-      top.appendChild(flagEl(b.ccy));
-      top.appendChild(el('b', null, b.short));
+      /* Badge on its own line up top; flag + bank name on the line below, so the
+         name keeps the full card width and never wraps mid-word (Rami, 2026-11-09). */
       if (b.bias && BIAS[b.bias]) {
         var BX = BIAS[b.bias], bp = el('span', 'mt-bias ' + BX[1]);
         bp.appendChild(trendIcon(BX[1]));
         bp.appendChild(document.createTextNode(BX[0]));
-        top.appendChild(bp);
+        var bw = el('span', 'cb-badge');
+        bw.appendChild(bp);
+        a.appendChild(bw);
       }
+      var top = el('span', 'cb-top');
+      top.appendChild(flagEl(b.ccy));
+      top.appendChild(el('b', null, b.short));
       a.appendChild(top);
       a.appendChild(el('span', 'cb-when', fmtMeeting(o.nm)));
       a.appendChild(el('span', 'cb-in meta', inDays(o.days)));

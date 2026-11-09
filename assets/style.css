@@ -748,7 +748,8 @@ a.metric:hover { border-color: var(--accent-2); }
 .cb-tile:hover { border-color: var(--accent-2); }
 .cb-top { display: flex; align-items: center; gap: 7px; }
 .cb-top .flag { width: 18px; height: 13.5px; border-radius: 2px; }
-.cb-top b { flex: 1; font-size: 0.95rem; }
+.cb-badge { display: flex; justify-content: flex-end; }
+.cb-top b { flex: 1; font-size: 0.95rem; white-space: nowrap; }
 .cb-top .mt-bias { padding: 1px 6px; font-size: 0.68rem; }
 .cb-when { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; }
 .cb-in { font-size: 0.78rem; }
