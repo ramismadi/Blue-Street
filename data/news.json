@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T23:46:56Z",
+  "updated": "2026-11-09T01:47:36Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -48,12 +48,51 @@
       "text": "Gold fell about 1% to near $4,050 an ounce on Friday after a strong US jobs report made a December Federal Reserve rate rise more likely; higher rates weigh on gold because it pays no interest. War risk around Iran still gives it some support, and Tuesday's US inflation figures will matter most."
     },
     "OIL": {
-      "lean": "mixed",
-      "ts": "2026-11-08T23:46:56Z",
-      "text": "Brent crude ended last week about 13% lower, near $98 a barrel, on hopes the Iran war is winding down. On Sunday President Trump said new US strikes are unlikely while talks progress and Iran's foreign minister said its offer to reopen the Strait of Hormuz within two days still stands, but ships keep getting hit near the strait, Iran's military is talking tougher, and a record amount of oil is stuck at sea."
+      "lean": "bearish",
+      "ts": "2026-11-09T01:47:36Z",
+      "text": "Brent crude ended last week about 13% lower, near $98 a barrel, on hopes the Iran war is winding down, and it slipped again as trading opened on Monday after President Trump said new US strikes are unlikely while talks progress. Ships are still being hit near the Strait of Hormuz and Iran's military is talking tougher, so the risk of fresh supply losses has eased but not gone."
     }
   },
   "items": [
+    {
+      "id": "aol-reuters-oil-falls-open-trump-20261109",
+      "ts": "2026-11-08T23:50:00Z",
+      "source": "AOL (Reuters)",
+      "url": "https://www.aol.com/articles/oil-falls-open-trump-says-235002000.html",
+      "image": "https://hermes.media.transform.aol.com/413b41399a5d9111f095e48adecee36803a34e0e/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/09/5a055913-0bc5-3513-88aa-1f70c021ae47/a1d35fb3-b076-4dee-b3d7-9845e3464102.jpg",
+      "headline": "Oil slips as trading opens for the week after Trump says new Iran strikes are unlikely",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Oil fell as Asian trading opened on Monday, with Brent down about 0.6% to near $97.70 a barrel. It came after US President Donald Trump said fresh attacks on Iran are very unlikely if a strong deal is signed.",
+      "beats": {
+        "was": "The US and Iran have been at war for months, and the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, is still largely shut. Brent crude fell about 13% last week, to near $98, on hopes the war is winding down.",
+        "happened": "At Monday's open in Asia, Brent dropped 64 cents to about $97.70 and briefly lost more than $1, while US crude (WTI) slipped 35 cents to about $90.50. Traders were reacting to Trump telling CNN on Sunday that new US strikes are very unlikely if Iran signs a strong agreement. Both sides also reported ships hit in or near the strait over the weekend.",
+        "means": "The market's first move of the week leans toward the hope of a deal rather than the weekend ship attacks. The drop is small, so the war premium in oil is easing, not gone.",
+        "fx": "Cheaper oil helps big energy importers like Japan and the euro area and takes a little support from oil-linked currencies like the Canadian dollar. It also trims the safe-haven bid that war fears give gold and the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Brent opens the week lower as softer US war talk eases fear of new supply losses."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Canada earns a lot from oil, so a lower price takes a little support from its currency."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan buys almost all its energy abroad, so cheaper oil eases the drain on the yen."
+        }
+      ],
+      "watch": "Whether Iran answers the draft deal from the Qatar talks, and whether ship attacks near Hormuz keep coming."
+    },
     {
       "id": "almonitor-reuters-trump-iran-strikes-unlikely-20261108",
       "date": "2026-11-08",
@@ -1208,51 +1247,6 @@
         }
       ],
       "watch": "Whether more tankers are hit near Hormuz, and any US response to Iran's nuclear proposal sent through Qatar."
-    },
-    {
-      "id": "ap-nikkei-6pc-kospi-7pc-20261106",
-      "ts": "2026-11-06T00:43:24Z",
-      "source": "AP",
-      "url": "https://www.click2houston.com/business/2026/11/06/japans-nikkei-falls-more-than-6-as-asian-benchmarks-tumble-after-wall-street-drop/",
-      "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/RA7DRMF66VES3K5KARK7SUIMOI.jpg?api_key=click2houston_85fdeb57f8cd3635",
-      "headline": "Japan's Nikkei falls more than 6% and South Korea's Kospi about 7% as the AI-stock sell-off spreads to Asia",
-      "story": "ai-stock-selloff",
-      "story_title": "AI stocks sell off after the US midterms",
-      "pillar": "risk",
-      "summary": "Tokyo's Nikkei 225 fell more than 6% and Seoul's Kospi about 7% early on Friday, following Wall Street's worst day in over a year. The yen barely moved, near 157.8 per dollar.",
-      "beats": {
-        "was": "Democrats won both houses of the US Congress on Tuesday, raising worries about tighter rules on artificial intelligence and slower building of data centres. On Thursday the Nasdaq fell 5.5% and the S&P 500 4.4% as chip shares crashed.",
-        "happened": "In Friday morning trading the Nikkei dropped about 6.2% and the Kospi about 7.1%, both heavy in chip and tech makers. Australia's ASX 200 fell a milder 0.7%. US 10-year yields eased to about 4.84%.",
-        "means": "The sell-off has moved from New York to Asia's tech-heavy markets, so worry about global growth is spreading. Falls this big usually pull money toward safer assets and away from growth-linked currencies.",
-        "fx": "The yen held near 157.8 per dollar rather than jumping, as dearer oil still weighs on Japan; the Korean won and the Australian dollar are the most exposed."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Safe-haven pull and lower US yields help, but the yen hardly moved as Tokyo stocks sank."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Asia's stock slump adds to Thursday's hit to the most growth-linked major currency."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Tends to fall with the Australian dollar when risk appetite drops."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Investors tend to park money in the franc during steep stock sell-offs."
-        }
-      ],
-      "watch": "Whether European and US stocks steady on Friday, and the US jobs report for October at 7:30 AM CT."
     }
   ]
 }
