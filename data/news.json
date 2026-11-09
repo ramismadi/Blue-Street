@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-09T11:47:44Z",
+  "updated": "2026-11-09T14:51:59Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
-      "lean": "bullish",
-      "ts": "2026-11-09T03:47:50Z",
-      "text": "Friday's jobs report, with 165,000 new jobs in October, gave the dollar its best day since June, and it held those gains in Asia on Monday. Markets see about an 80% chance of a Federal Reserve rate rise in December, so Tuesday's October inflation figures, expected to show prices up 0.3% on the month, are the week's main test."
+      "lean": "mixed",
+      "ts": "2026-11-09T14:51:59Z",
+      "text": "Friday's strong jobs report gave the dollar its best day since June, but it gave back a little on Monday as calmer stock markets and softer talk on Iran drew money to riskier currencies. Markets still see about an 80% chance of a Federal Reserve rate rise in December, so Tuesday's October inflation figures are the week's main test."
     },
     "EUR": {
       "lean": "bearish",
@@ -14,8 +14,8 @@
     },
     "GBP": {
       "lean": "mixed",
-      "ts": "2026-11-06T15:47:31Z",
-      "text": "The Bank of England raised its rate to 4% on Thursday, its first rise since 2023, and warned another could follow while the Iran war keeps energy costs high, which supports the pound. But on Friday a strong US jobs report lifted the dollar and pushed the pound down about 0.7% to near $1.336."
+      "ts": "2026-11-09T14:51:59Z",
+      "text": "The Bank of England raised its rate to 4% last Thursday, its first rise since 2023, and the pound edged back up to about $1.34 on Monday as the dollar eased. Governor Andrew Bailey's first remarks since the rise, and Thursday's UK growth figures, will show whether another rise is likely in December."
     },
     "JPY": {
       "lean": "mixed",
@@ -39,8 +39,8 @@
     },
     "NZD": {
       "lean": "mixed",
-      "ts": "2026-11-09T11:47:44Z",
-      "text": "The New Zealand dollar fell about 1.2% on Friday as a strong US jobs report lifted the US dollar, then edged up on Monday after Saturday's election left Prime Minister Christopher Luxon's three-party bloc just ahead. About 400,000 votes are still to count, so who governs may not be clear until November 27, and the jobless rate is already at its highest since 2015."
+      "ts": "2026-11-09T14:51:59Z",
+      "text": "The New Zealand dollar led the major currencies on Monday, up about 1% to near 56 US cents, as calmer markets and Saturday's election, which left Prime Minister Christopher Luxon's three-party bloc just ahead, gave it some relief. About 400,000 votes are still to count, so who governs may not be clear until November 27, and the jobless rate is already at its highest since 2015."
     },
     "XAU": {
       "lean": "bullish",
@@ -49,11 +49,77 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-09T11:47:44Z",
-      "text": "Brent crude fell 16% last week, its biggest weekly drop since 2020, and slipped below $97 a barrel on Monday after President Trump said new US strikes on Iran are unlikely while talks go on. Weekend attacks on ships near Hormuz, on a Saudi Aramco office and on an Iraqi gas field show the risk of fresh supply losses has eased but not gone."
+      "ts": "2026-11-09T14:51:59Z",
+      "text": "Brent crude fell 16% last week, its biggest weekly drop since 2020, and slid to about $95 a barrel on Monday after President Trump said new US strikes on Iran are unlikely while talks go on. Weekend attacks on ships near Hormuz, on a Saudi Aramco office and on an Iraqi gas field show the risk of fresh supply losses has eased but not gone."
     }
   },
   "items": [
+    {
+      "id": "reuters-dollar-slips-sterling-rises-20261109",
+      "date": "2026-11-09",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/sterling-rises-versus-dollar-market-sentiment-brightens-2026-11-09/",
+      "image": null,
+      "headline": "The dollar gives back some of Friday's jobs-day gain as fears over AI stocks and the Middle East fade",
+      "story": "fed-december",
+      "story_title": "Fed: will it raise rates in December?",
+      "pillar": "risk",
+      "summary": "The dollar slipped about 0.3% on Monday as calmer stock markets and softer talk on Iran drew money back to riskier currencies. The New Zealand dollar led, up about 1% to near 56 US cents.",
+      "beats": {
+        "was": "A strong US jobs report on Friday, with 165,000 new jobs in October, gave the dollar its best day since June, after a week of selling in AI-linked stocks and attacks on ships near the Strait of Hormuz.",
+        "happened": "In London trading the dollar index eased to about 101.9. The euro rose to about $1.119, the pound to about $1.341, and the dollar dipped just below 158 yen. Markets still see roughly an 81% chance the Federal Reserve raises rates in December, up slightly from the weekend.",
+        "means": "This is a breather, not a change of view. Money is moving back into riskier currencies as fear fades, but the case for a December Fed rate rise has not weakened ahead of Tuesday's US inflation figures.",
+        "fx": "Calmer markets help the New Zealand and Australian dollars and the pound against the US dollar. A firm inflation reading on Tuesday could quickly bring the dollar back."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The kiwi led the bounce in riskier currencies as fear in markets eased."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The dollar gave back part of Friday's jump as demand for safety faded."
+        },
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The pound edged up to about $1.341 as the dollar eased."
+        }
+      ],
+      "watch": "Tuesday's US October inflation figures; a firm reading would likely lift the dollar again."
+    },
+    {
+      "id": "fxstreet-bailey-speaks-after-boe-hike-20261109",
+      "date": "2026-11-09",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/forex-today-us-dollar-retreats-following-nfp-inspired-rally-202611090714",
+      "image": null,
+      "headline": "Bank of England Governor Andrew Bailey speaks on Monday, days after the first UK rate rise since 2023",
+      "story": "boe-hike",
+      "story_title": "Bank of England: rates rise again to fight energy costs",
+      "pillar": "policy",
+      "summary": "Bank of England Governor Andrew Bailey is due to speak later on Monday, his first remarks since the bank raised its rate to 4% last Thursday. Traders want to know whether another rise in December is likely.",
+      "beats": {
+        "was": "The Bank of England raised its main rate to 4% on Thursday, its first rise since 2023, and warned more could follow while the Iran war keeps energy prices high. Oil has fallen sharply since then.",
+        "happened": "A daily market preview lists a speech by Governor Andrew Bailey later on Monday. UK figures for growth in July to September follow on Thursday.",
+        "means": "This is a preview. Bailey's tone will show whether the bank sees last week's rise as one step or the start of a run, and the drop in oil since then gives him room to sound calmer.",
+        "fx": "Talk of further rises would support the pound; a hint that one rise is enough, helped by cheaper oil, would take some support away."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The pound's next step depends on whether Bailey leans toward another rate rise."
+        }
+      ],
+      "watch": "Whether Bailey signals a December rate rise, and UK growth figures on Thursday."
+    },
     {
       "id": "rte-reuters-oil-falls-trump-restraint-20261109",
       "ts": "2026-11-09T08:30:46Z",
@@ -442,6 +508,51 @@
       "watch": "Tuesday's US consumer price figures against the 0.3% forecast, and what Fed officials say about December afterwards."
     },
     {
+      "id": "almonitor-reuters-trump-iran-strikes-unlikely-20261108",
+      "date": "2026-11-08",
+      "source": "Al-Monitor (Reuters)",
+      "url": "https://www.al-monitor.com/originals/2026/11/trump-says-he-unlikely-order-iran-attack-if-talks-progress-cnn-reports",
+      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-08T175946Z_1_LYNXNPEMA70GF_RTROPTP_3_IRAN-CRISIS-USA-TRUMP.JPG?h=ba88677a&itok=No-v-Sau",
+      "headline": "Trump says new US attacks on Iran are very unlikely as long as peace talks keep moving forward",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "US President Donald Trump told CNN on Sunday he is very unlikely to order fresh attacks on Iran while talks to end the war make progress. He tied that to Iran signing what he called a very strong agreement.",
+      "beats": {
+        "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, largely shut. Talks in Qatar have produced a draft deal, but on Friday the US hit an Iranian air-defence site and over the weekend Iran said several tankers caught fire near Hormuz.",
+        "happened": "In a Sunday phone interview with CNN, Trump said renewed US strikes were very unlikely if negotiations keep progressing, provided Iran agrees to a strong deal. He also said the US has picked out possible targets, including 38 bridges it could destroy within an hour. No agreement has been announced.",
+        "means": "It is a softer tone than last week's talk of fresh strikes, but it comes with conditions and a clear threat. It lowers the near-term risk of a new round of fighting without settling the war or reopening Hormuz.",
+        "fx": "Less chance of new strikes takes a little of the war premium out of oil and safe havens like gold and the Swiss franc. Ship attacks near Hormuz pull the other way, so Monday's reopening will show which weighs more."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Fewer odds of new US strikes ease some fear of fresh supply losses, though nothing is signed."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Calmer war talk trims demand for the franc as a safe place to park money."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Gold loses a little of its war-risk support if strikes look less likely."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Cheaper oil helps Japan, which imports almost all of its energy, but calmer markets cut safe-haven demand for the yen."
+        }
+      ],
+      "watch": "Whether Iran answers the draft deal from the Qatar talks, and any new attacks on ships near Hormuz."
+    },
+    {
       "id": "fmt-afp-three-tankers-fire-hormuz-20261108",
       "ts": "2026-11-08T11:34:09Z",
       "source": "Free Malaysia Today (AFP)",
@@ -655,49 +766,31 @@
       "watch": "Whether Iran accepts the Qatari first steps, which would reopen Hormuz in exchange for the US easing its blockade, or whether more ships are hit before markets reopen."
     },
     {
-      "id": "almonitor-reuters-trump-iran-strikes-unlikely-20261108",
-      "date": "2026-11-08",
-      "source": "Al-Monitor (Reuters)",
-      "url": "https://www.al-monitor.com/originals/2026/11/trump-says-he-unlikely-order-iran-attack-if-talks-progress-cnn-reports",
-      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-08T175946Z_1_LYNXNPEMA70GF_RTROPTP_3_IRAN-CRISIS-USA-TRUMP.JPG?h=ba88677a&itok=No-v-Sau",
-      "headline": "Trump says new US attacks on Iran are very unlikely as long as peace talks keep moving forward",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "US President Donald Trump told CNN on Sunday he is very unlikely to order fresh attacks on Iran while talks to end the war make progress. He tied that to Iran signing what he called a very strong agreement.",
+      "id": "electionsnz-preliminary-result-20261107",
+      "date": "2026-11-07",
+      "source": "NZ Electoral Commission",
+      "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results",
+      "image": null,
+      "headline": "New Zealand's election ends nearly tied: Labour edges the party vote, but Prime Minister Luxon's bloc holds a one-seat majority",
+      "story": "nz-election",
+      "story_title": "New Zealand election: who governs next",
+      "pillar": "fiscal",
+      "summary": "Labour won 29.4% of the party vote against National's 29.2% in Saturday's preliminary count, but National, ACT and NZ First together hold 67 of 131 seats, one more than needed. About 400,000 special votes are still to come, with the official result on November 27.",
       "beats": {
-        "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, largely shut. Talks in Qatar have produced a draft deal, but on Friday the US hit an Iranian air-defence site and over the weekend Iran said several tankers caught fire near Hormuz.",
-        "happened": "In a Sunday phone interview with CNN, Trump said renewed US strikes were very unlikely if negotiations keep progressing, provided Iran agrees to a strong deal. He also said the US has picked out possible targets, including 38 bridges it could destroy within an hour. No agreement has been announced.",
-        "means": "It is a softer tone than last week's talk of fresh strikes, but it comes with conditions and a clear threat. It lowers the near-term risk of a new round of fighting without settling the war or reopening Hormuz.",
-        "fx": "Less chance of new strikes takes a little of the war premium out of oil and safe havens like gold and the Swiss franc. Ship attacks near Hormuz pull the other way, so Monday's reopening will show which weighs more."
+        "was": "Christopher Luxon's National Party has led a three-party government with ACT and NZ First since 2023. Polls before Saturday's vote showed a close race with Chris Hipkins' Labour, and unemployment is at its highest since 2015.",
+        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te Pāti Māori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
+        "means": "The current government is most likely to stay, but its one-seat edge could vanish when special votes are counted, which in past elections have tended to favour the left. That leaves about three weeks of uncertainty over who governs.",
+        "fx": "Elections rarely move the New Zealand dollar much on their own. A likely return of the same government means little change in policy, but a slim, unsettled outcome is a small extra worry for a currency that was already the weakest of the majors on Friday."
       },
       "impact": [
         {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Fewer odds of new US strikes ease some fear of fresh supply losses, though nothing is signed."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Calmer war talk trims demand for the franc as a safe place to park money."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Gold loses a little of its war-risk support if strikes look less likely."
-        },
-        {
-          "ccy": "JPY",
+          "ccy": "NZD",
           "dir": "mixed",
           "strength": 1,
-          "why": "Cheaper oil helps Japan, which imports almost all of its energy, but calmer markets cut safe-haven demand for the yen."
+          "why": "The same government looks likely to continue, but its one-seat majority hangs on special votes counted over the next three weeks."
         }
       ],
-      "watch": "Whether Iran answers the draft deal from the Qatar talks, and any new attacks on ships near Hormuz."
+      "watch": "The official count on November 27: if special votes cost the right bloc a seat, coalition talks get harder and a change of government becomes possible."
     },
     {
       "id": "wishtv-ap-us-limited-strikes-iran-air-defense-20261107",
@@ -743,33 +836,6 @@
         }
       ],
       "watch": "Whether Iran answers the strike, and whether the Qatari first-step plan is confirmed by Washington or Tehran before markets reopen Sunday evening."
-    },
-    {
-      "id": "electionsnz-preliminary-result-20261107",
-      "date": "2026-11-07",
-      "source": "NZ Electoral Commission",
-      "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results",
-      "image": null,
-      "headline": "New Zealand's election ends nearly tied: Labour edges the party vote, but Prime Minister Luxon's bloc holds a one-seat majority",
-      "story": "nz-election",
-      "story_title": "New Zealand election: who governs next",
-      "pillar": "fiscal",
-      "summary": "Labour won 29.4% of the party vote against National's 29.2% in Saturday's preliminary count, but National, ACT and NZ First together hold 67 of 131 seats, one more than needed. About 400,000 special votes are still to come, with the official result on November 27.",
-      "beats": {
-        "was": "Christopher Luxon's National Party has led a three-party government with ACT and NZ First since 2023. Polls before Saturday's vote showed a close race with Chris Hipkins' Labour, and unemployment is at its highest since 2015.",
-        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te Pāti Māori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
-        "means": "The current government is most likely to stay, but its one-seat edge could vanish when special votes are counted, which in past elections have tended to favour the left. That leaves about three weeks of uncertainty over who governs.",
-        "fx": "Elections rarely move the New Zealand dollar much on their own. A likely return of the same government means little change in policy, but a slim, unsettled outcome is a small extra worry for a currency that was already the weakest of the majors on Friday."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The same government looks likely to continue, but its one-seat majority hangs on special votes counted over the next three weeks."
-        }
-      ],
-      "watch": "The official count on November 27: if special votes cost the right bloc a seat, coalition talks get harder and a change of government becomes possible."
     },
     {
       "id": "gvwire-reuters-dollar-best-day-since-june-20261106",
@@ -1004,33 +1070,6 @@
         }
       ],
       "watch": "How far markets raise the odds of a December Fed rate rise, and whether Fed officials point to this report in coming speeches."
-    },
-    {
-      "id": "bnn-reuters-ca-lfs-oct-67pc-20261106",
-      "ts": "2026-11-06T13:35:17Z",
-      "source": "BNN Bloomberg (Reuters)",
-      "url": "https://www.bnnbloomberg.ca/business/economics/2026/11/06/canadas-unemployment-rate-edges-up-to-six-month-high-in-october/",
-      "image": "https://www.bnnbloomberg.ca/resizer/v2/LRBN5SFRAFI6S3TQ3VBEPLFNLU.jpg?smart=true&auth=8920dee1fec29cac25bf2d581e232e00c3c72d9d5d3df83c848b313c3008cdb3&width=1200&height=630",
-      "headline": "Canada lost 4,700 jobs in October and unemployment rose to 6.7%, a six-month high",
-      "story": "boc-hike",
-      "story_title": "Bank of Canada: a rate rise to fight energy-driven inflation",
-      "pillar": "growth",
-      "summary": "Canada shed 4,700 jobs in October when economists expected a gain of about 13,600, and the jobless rate rose to 6.7% from 6.5%. Private employers cut about 52,500 jobs and wage growth slowed.",
-      "beats": {
-        "was": "Canada lost about 68,000 jobs in September. The Bank of Canada raised its rate to 2.50% in October, and Governor Tiff Macklem said this week more rises may be needed because dearer energy from the Iran war is lifting inflation.",
-        "happened": "Statistics Canada's monthly Labour Force Survey showed a second straight drop in jobs, with full-time work down about 18,000 and private-sector jobs falling for the first time since February. Unemployment reached 6.7%, the highest since April, and hourly pay for permanent staff grew 2.0% on the year, down from 2.3%.",
-        "means": "Hiring in Canada keeps weakening while pay growth cools, which gives the Bank of Canada a reason to go slower on further rate rises.",
-        "fx": "A weaker job market lowers the odds of more Canadian rate rises, which weighs on the Canadian dollar, especially next to a much stronger US jobs report released at the same moment."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A surprise job loss and a jump in unemployment weaken the case for another Bank of Canada rise."
-        }
-      ],
-      "watch": "Whether Bank of Canada officials soften their talk of more rate rises after a second weak jobs month."
     },
     {
       "id": "leprivatebanker-oil-100-hormuz-reopen-offer-20261106",
