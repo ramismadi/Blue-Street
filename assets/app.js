@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '129';
+  var ASSET_VERSION = '130';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -3258,12 +3258,14 @@
     var bs = bankSection(c);
     if (bs) box.appendChild(bs);
 
-    // 5. What's moving it: every pillar, in engine order (Rami, 2026-11-09:
-    // all seven, like the Macro engine's By currency) — Supports, Weighs or
-    // Neutral, each with its plain line.
+    // 5. What's moving it: every pillar (Rami, 2026-11-09: all seven, like the
+    // Macro engine's By currency) — the ones moving it first, in engine order,
+    // then the neutral ones after, each with its plain line.
     var mv = hubSection('What’s moving it', 'hub-pillars');
     var grid = el('ul', 'pillar-tiles');
-    PILLARS.forEach(function (k) {
+    var moving = PILLARS.filter(function (k) { var d = (c.drivers || {})[k[0]]; return d && +d.score; });
+    var still = PILLARS.filter(function (k) { return moving.indexOf(k) < 0; });
+    moving.concat(still).forEach(function (k) {
       var d = (c.drivers || {})[k[0]], s2 = d ? +d.score || 0 : 0;
       var cls = s2 > 0 ? 'bull' : s2 < 0 ? 'bear' : 'mixed';
       var li = el('li', 'pt card ' + (s2 > 0 ? 'pos' : s2 < 0 ? 'neg' : 'zero'));

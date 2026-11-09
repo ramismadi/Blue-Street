@@ -82,9 +82,10 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
      and what markets expect; the plain `summary`; "What's driving it"
      (`why`), "What to watch" (`watch`) and Sources each behind a tap. Herc's
      number-heavy `detail` never shows (`plainText` guard).
-  5. **What's moving it:** all seven pillars as tiles, in engine order
-     (Supports / Weighs / Neutral + its one-line note), mirroring the Macro
-     engine's By currency (Rami, 2026-11-09). Neutral tiles are flat and grey.
+  5. **What's moving it:** all seven pillars as tiles (Supports / Weighs /
+     Neutral + its one-line note), mirroring the Macro engine's By currency
+     (Rami, 2026-11-09): the pillars moving it first, in engine order, then
+     the neutral ones after, flat and grey.
   6. **The full read** (`chapterRead`, what used to be the Story chapter):
      the labelled narrative, then Details, the scenarios and Sources, each
      behind a tap. The Story chapter view is retired.
