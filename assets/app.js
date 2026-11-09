@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '128';
+  var ASSET_VERSION = '129';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -3258,28 +3258,30 @@
     var bs = bankSection(c);
     if (bs) box.appendChild(bs);
 
-    // 5. What's moving it: a tile per pillar that is moving it.
+    // 5. What's moving it: every pillar, in engine order (Rami, 2026-11-09:
+    // all seven, like the Macro engine's By currency) — Supports, Weighs or
+    // Neutral, each with its plain line.
     var mv = hubSection('What’s moving it', 'hub-pillars');
     var grid = el('ul', 'pillar-tiles');
-    var quiet = [];
     PILLARS.forEach(function (k) {
       var d = (c.drivers || {})[k[0]], s2 = d ? +d.score || 0 : 0;
-      if (!s2) { quiet.push(k[1]); return; }
-      var li = el('li', 'pt card ' + (s2 > 0 ? 'pos' : 'neg'));
+      var cls = s2 > 0 ? 'bull' : s2 < 0 ? 'bear' : 'mixed';
+      var li = el('li', 'pt card ' + (s2 > 0 ? 'pos' : s2 < 0 ? 'neg' : 'zero'));
       var hd = el('div', 'pt-head');
       hd.appendChild(el('span', 'pt-name', k[1]));
-      var tag = el('span', 'pt-tag ' + (s2 > 0 ? 'bull' : 'bear'));
-      tag.appendChild(trendIcon(s2 > 0 ? 'bull' : 'bear'));
-      tag.appendChild(document.createTextNode(s2 > 0 ? 'Supports' : 'Weighs'));
+      var tag = el('span', 'pt-tag ' + cls);
+      tag.appendChild(trendIcon(cls));
+      tag.appendChild(document.createTextNode(s2 > 0 ? 'Supports' : s2 < 0 ? 'Weighs' : 'Neutral'));
       hd.appendChild(tag);
       li.appendChild(hd);
-      li.appendChild(el('p', 'pt-note', d.note && plainNote(d.note) ? d.note
-        : (s2 > 0 ? 'Working in the ' + inName(c.name) + '’s favour this edition.' : 'Working against the ' + inName(c.name) + ' this edition.')));
+      var note = d && d.note && plainNote(d.note) ? sentence(d.note.charAt(0).toUpperCase() + d.note.slice(1))
+        : s2 > 0 ? 'Working in the ' + inName(c.name) + '’s favour this edition.'
+        : s2 < 0 ? 'Working against the ' + inName(c.name) + ' this edition.'
+        : 'Not pushing the ' + inName(c.name) + ' either way right now.';
+      li.appendChild(el('p', 'pt-note', note));
       grid.appendChild(li);
     });
-    if (!grid.children.length) grid.appendChild(el('li', 'meta', 'No pillar is moving it today.'));
     mv.appendChild(grid);
-    if (quiet.length) mv.appendChild(el('p', 'meta pt-quiet', 'Not moving it today: ' + quiet.join(', ') + '.'));
     box.appendChild(mv);
 
     // 6. The full read.

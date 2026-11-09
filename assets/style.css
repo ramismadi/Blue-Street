@@ -715,6 +715,9 @@ a.metric:hover { border-color: var(--accent-2); }
 .pt { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; }
 .pt.pos { box-shadow: var(--shadow), inset 3px 0 0 var(--bull); }
 .pt.neg { box-shadow: var(--shadow), inset 3px 0 0 var(--bear); }
+.pt.zero { box-shadow: none; background: transparent; }
+.pt.zero .pt-note { color: var(--ink-2); }
+.pt-tag.mixed { color: var(--ink-3); background: var(--surface-2); }
 .pt-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .pt-name { font-weight: 700; font-size: 0.92rem; }
 .pt-tag { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; }
@@ -722,7 +725,6 @@ a.metric:hover { border-color: var(--accent-2); }
 .pt-tag.bull { color: var(--bull); background: var(--bull-wash); }
 .pt-tag.bear { color: var(--bear); background: var(--bear-wash); }
 .pt-note { margin: 0; font-family: var(--serif); font-size: 0.98rem; line-height: 1.45; color: var(--ink); }
-.pt-quiet { margin: 10px 0 0; }
 
 .hub-read { padding: 22px 28px; }
 
