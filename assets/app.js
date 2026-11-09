@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '119';
+  var ASSET_VERSION = '120';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -2872,15 +2872,20 @@
       var a = el('a', 'news-tile card');
       a.href = '#news';
       a.setAttribute('data-open-news', slugId(it.id || it.url || it.headline));
+      // The story's picture on top (Rami, 2026-11-09), same as on News;
+      // a market tile stands in when there is none.
+      a.appendChild(newsFigure(it));
+      var body = el('span', 'nt-body');
       var tags = el('span', 'nt-tags');
       (it.impact || []).filter(function (x) { return x && x.ccy; }).slice(0, 3)
         .forEach(function (x) { tags.appendChild(biasTag(x)); });
-      a.appendChild(tags);
-      a.appendChild(el('span', 'nt-hl', it.headline));
+      body.appendChild(tags);
+      body.appendChild(el('span', 'nt-hl', it.headline));
       var m = el('span', 'nt-src meta');
       m.appendChild(document.createTextNode((it.source || '') + ' · '));
       m.appendChild(newsWhenEl(it));
-      a.appendChild(m);
+      body.appendChild(m);
+      a.appendChild(body);
       li.appendChild(a);
       box.appendChild(li);
     });
