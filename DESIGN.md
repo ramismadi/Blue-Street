@@ -66,7 +66,9 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   Top to bottom (`renderFxDetail`):
   1. **Header:** flag and name (no board rank, Rami 2026-11-09), one plain
      line (the currency `summary`, else the chapter `teaser`), and the
-     speedometer with the score and its change since the last edition.
+     speedometer with the score — just the score (Rami, 2026-11-09); "How
+     it's scored" under it opens the breakdown: each pillar's +1 / −1 / 0
+     (Supports / Weighs / Not moving it) adding up to the score (`scoreParts`).
   2. **At a glance**, a side-scrolling row of metric tiles: the central bank
      (rate, hawkish/neutral/dovish pill, next decision), the next
      high-impact event with a live countdown, hedge-fund positioning in

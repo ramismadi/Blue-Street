@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '126';
+  var ASSET_VERSION = '127';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -3060,15 +3060,55 @@
     if (opts.read) id.appendChild(el('p', 'hh-read', opts.read));
     head.appendChild(id);
     if (opts.score != null) {
+      // Just the score (Rami, 2026-11-09); a tap under it shows how it adds up.
       var g = el('div', 'hh-gauge ' + (opts.score > 0 ? 'pos' : opts.score < 0 ? 'neg' : 'zero'));
-      g.appendChild(gaugeSvg(opts.score));
+      var gs = gaugeSvg(opts.score);
+      gs.setAttribute('aria-hidden', 'true');
+      g.appendChild(gs);
       g.appendChild(el('span', 'hh-score mono', opts.score === 0 ? '0' : signed(opts.score)));
-      g.appendChild(el('span', 'hh-delta meta', opts.delta));
-      g.setAttribute('role', 'img');
-      g.setAttribute('aria-label', 'Strength score ' + signed(opts.score) + ', range −7 to +7. ' + opts.delta);
+      if (opts.breakdown) {
+        var btn = el('button', 'hh-how', 'How it’s scored');
+        btn.type = 'button';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-controls', 'hh-bd');
+        btn.addEventListener('click', function () {
+          var open = opts.breakdown.hidden;
+          opts.breakdown.hidden = !open;
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        g.appendChild(btn);
+      }
       head.appendChild(g);
+      if (opts.breakdown) head.appendChild(opts.breakdown);
     }
     return head;
+  }
+  /* The score, added up (Rami, 2026-11-09): each pillar gives +1 if it
+     supports the currency, −1 if it weighs, 0 if it isn't moving it. */
+  function scoreParts(c) {
+    var box = el('div', 'hh-bd');
+    box.id = 'hh-bd';
+    box.hidden = true;
+    box.appendChild(el('p', 'hh-bd-lead', 'Each factor adds +1 when it supports the ' + inName(c.name) +
+      ', −1 when it weighs on it, and 0 when it isn’t moving it. They add up to the score, from −7 to +7.'));
+    var ul = el('ul', 'hh-bd-list');
+    var tot = 0;
+    PILLARS.forEach(function (k) {
+      var d = (c.drivers || {})[k[0]], v = d ? +d.score || 0 : 0;
+      tot += v;
+      var li = el('li', v > 0 ? 'pos' : v < 0 ? 'neg' : 'zero');
+      li.appendChild(el('span', 'bd-name', k[1]));
+      li.appendChild(el('span', 'bd-word', v > 0 ? 'Supports' : v < 0 ? 'Weighs' : 'Not moving it'));
+      li.appendChild(el('b', 'bd-v mono', v === 0 ? '0' : signed(v)));
+      ul.appendChild(li);
+    });
+    var t = el('li', 'bd-total');
+    t.appendChild(el('span', 'bd-name', 'Score'));
+    t.appendChild(el('span', 'bd-word', ''));
+    t.appendChild(el('b', 'bd-v mono', tot === 0 ? '0' : signed(tot)));
+    ul.appendChild(t);
+    box.appendChild(ul);
+    return box;
   }
   function backLink(box) {
     var back = el('a', 'more hub-back', '← All currencies');
@@ -3112,14 +3152,11 @@
     box.hidden = false;
     box.textContent = '';
     backLink(box);
-    var sc = fxScore(c), dl = fxDelta(c), ch = chapterFor(c.ccy);
+    var sc = fxScore(c), ch = chapterFor(c.ccy);
 
     // 1. Header: name, one plain line, the gauge (no board rank: Rami, 2026-11-09).
     var line = plainNote(c.summary) ? firstSentences(c.summary, 2, 45) : (ch ? firstSentences(ch.teaser || '', 2, 45) : '');
-    box.appendChild(hubHeader(c.ccy, c.name, {
-      read: line, score: sc,
-      delta: dl == null ? 'First edition scored' : dl === 0 ? 'Unchanged since the last edition' : signed(dl) + ' since the last edition'
-    }));
+    box.appendChild(hubHeader(c.ccy, c.name, { read: line, score: sc, breakdown: scoreParts(c) }));
 
     // 2. Quick metrics.
     var mrow = hubRow('hub-metrics', 'At a glance');

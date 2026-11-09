@@ -672,7 +672,27 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
 .hh-score { white-space: nowrap; margin-top: 2px; font-size: 2rem; font-weight: 700; line-height: 1; color: var(--ink-2); }
 .hh-gauge.pos .hh-score { color: var(--bull); }
 .hh-gauge.neg .hh-score { color: var(--bear); }
-.hh-delta { margin-top: 4px; font-size: 0.74rem; text-align: center; }
+.hh-how {
+  margin-top: 6px; padding: 4px 10px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface); color: var(--accent);
+  font: inherit; font-size: 0.76rem; font-weight: 700;
+}
+.hh-how::after { content: " +"; }
+.hh-how[aria-expanded="true"]::after { content: " \2013"; }
+.hh-how:hover { border-color: var(--accent-2); }
+.hub-head { flex-wrap: wrap; }
+.hh-bd { flex-basis: 100%; padding-top: 14px; border-top: 1px solid var(--line); animation: picks-in .25s ease-out; }
+.hh-bd[hidden] { display: none; }
+.hh-bd-lead { margin: 0 0 10px; font-size: 0.86rem; line-height: 1.45; color: var(--ink-2); }
+.hh-bd-list { list-style: none; margin: 0; padding: 0; max-width: 460px; }
+.hh-bd-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto 3em; gap: 12px; align-items: baseline; padding: 6px 0; border-top: 1px solid var(--line); font-size: 0.9rem; }
+.hh-bd-list li:first-child { border-top: 0; }
+.bd-word { font-size: 0.78rem; color: var(--ink-3); }
+.bd-v { text-align: right; }
+.hh-bd-list .pos .bd-v, .hh-bd-list .pos .bd-word { color: var(--bull); }
+.hh-bd-list .neg .bd-v, .hh-bd-list .neg .bd-word { color: var(--bear); }
+.hh-bd-list .zero .bd-v { color: var(--ink-3); font-weight: 400; }
+.hh-bd-list .bd-total { border-top: 1.5px solid var(--ink-3); font-weight: 700; }
 #fx-detail .t-row { margin: 0; }
 
 .metrics > li { width: 210px; }
@@ -749,7 +769,7 @@ a.metric:hover { border-color: var(--accent-2); }
   .hh-gauge .gauge { flex: none; }
   .hh-score { font-size: 1.7rem; margin: 0; }
   .hh-gauge .gauge { width: 110px; }
-  .hh-delta { text-align: left; }
+  .hh-how { margin-top: 0; }
   .hh-read { font-size: 1.02rem; }
   .metrics > li { width: 176px; }
   .mt-val { font-size: 1.15rem; }
