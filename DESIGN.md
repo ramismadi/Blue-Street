@@ -64,7 +64,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   currency page). `#fx/<CCY>` is a dashboard for that currency, and the rest
   of the Currencies page steps aside while it's open (`#view-fx.hub-on`).
   Top to bottom (`renderFxDetail`):
-  1. **Header:** flag and name, "#N of 8 on the strength board", one plain
+  1. **Header:** flag and name (no board rank, Rami 2026-11-09), one plain
      line (the currency `summary`, else the chapter `teaser`), and the
      speedometer with the score and its change since the last edition.
   2. **At a glance**, a side-scrolling row of metric tiles: the central bank

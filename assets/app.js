@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '124';
+  var ASSET_VERSION = '125';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -3114,10 +3114,9 @@
     backLink(box);
     var sc = fxScore(c), dl = fxDelta(c), ch = chapterFor(c.ccy);
 
-    // 1. Header: name, rank, one plain line, the gauge.
+    // 1. Header: name, one plain line, the gauge (no board rank: Rami, 2026-11-09).
     var line = plainNote(c.summary) ? firstSentences(c.summary, 2, 45) : (ch ? firstSentences(ch.teaser || '', 2, 45) : '');
     box.appendChild(hubHeader(c.ccy, c.name, {
-      kicker: '#' + (ranked.indexOf(c) + 1) + ' of ' + ranked.length + ' on the strength board',
       read: line, score: sc,
       delta: dl == null ? 'First edition scored' : dl === 0 ? 'Unchanged since the last edition' : signed(dl) + ' since the last edition'
     }));
