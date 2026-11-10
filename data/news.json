@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T17:55:00Z",
+  "updated": "2026-11-10T19:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -14,8 +14,8 @@
     },
     "GBP": {
       "lean": "mixed",
-      "ts": "2026-11-10T14:52:00Z",
-      "text": "The Bank of England raised its rate to 4% last Thursday, and on Tuesday Deputy Governor Clare Lombardelli said she would not rule out another rise in December. That gives the pound some support, but a firmer dollar after hot US inflation pulled it back to about $1.34, so Thursday's UK growth figures matter."
+      "ts": "2026-11-10T19:55:00Z",
+      "text": "The Bank of England raised its rate to 4% last Thursday, and Deputy Governor Clare Lombardelli said on Tuesday she would not rule out another rise in December. But hot US inflation lifted the dollar and the pound fell about 0.8% to near $1.33, the biggest drop among major currencies, so Thursday's UK growth figures matter."
     },
     "JPY": {
       "lean": "bearish",
@@ -28,9 +28,9 @@
       "text": "The franc drew safe-haven money last week as stocks sold off, and weekend attacks on tankers near Hormuz plus tougher talk from Iran's Revolutionary Guards keep war risk alive as markets reopen. Softer words from both Washington and Tehran on Sunday about a deal take a little of that away, and Swiss inflation at 1.5% makes a December rate cut by the Swiss National Bank harder to justify."
     },
     "CAD": {
-      "lean": "bearish",
-      "text": "Canada lost jobs for a second month in October and unemployment rose to 6.7%, which weakens the case for another Bank of Canada rate rise. Oil, Canada's biggest export, kept falling and briefly went below $90 a barrel on Tuesday as fears of new US strikes on Iran faded.",
-      "ts": "2026-11-10T11:48:00Z"
+      "lean": "mixed",
+      "ts": "2026-11-10T19:55:00Z",
+      "text": "Notes from the Bank of Canada's October meeting, when it raised rates to 2.5%, show it is ready to raise again if energy costs spread to other prices, deciding one meeting at a time. Against that, Canada has lost jobs two months running and oil, its main export, has fallen to about $92 a barrel."
     },
     "AUD": {
       "lean": "bearish",
@@ -49,11 +49,110 @@
     },
     "OIL": {
       "lean": "bearish",
-      "text": "Brent crude fell 16% last week, almost 6% more on Monday, and briefly slipped under $90 a barrel on Tuesday for the first time since August, after President Trump said more strikes on Iran weren't needed and the war could end soon. Attacks on ships near Hormuz have not stopped, so the drop could reverse quickly if talks stall.",
-      "ts": "2026-11-10T11:48:00Z"
+      "ts": "2026-11-10T19:55:00Z",
+      "text": "Brent crude has dropped sharply since last week and briefly fell under $90 on Tuesday on hopes the US–Iran war is winding down. Iran's top security official then said no talks are taking place and the Strait of Hormuz stays shut until its conditions are met, which halted the slide near $92."
     }
   },
   "items": [
+    {
+      "id": "investing-reuters-boc-minutes-not-inaction-20261110",
+      "date": "2026-11-10",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/economy-news/bank-of-canada-felt-uncertainty-over-rates-did-not-mean-inaction-minutes-show-5016523",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA91VC_L.jpg",
+      "headline": "Bank of Canada notes show policymakers felt an unclear outlook was no reason to sit still",
+      "story": "boc-next-step",
+      "story_title": "Bank of Canada: one rate rise, or more?",
+      "pillar": "policy",
+      "summary": "Notes from the Bank of Canada's October meeting show its leaders raised rates to stop high energy costs spreading into other prices, and left the door open to doing more.",
+      "beats": {
+        "was": "On October 28 the Bank of Canada raised its main rate by a quarter point to 2.5%, its first rise in more than three years. Canadian inflation was 3.2% in September, driven almost entirely by energy, while measures that strip energy out stayed below 2%.",
+        "happened": "The meeting notes, published on Tuesday, say the bank's leaders agreed that uncertainty about where rates should go was not a reason to do nothing. They judged that the energy shock alone would keep inflation near 3% for more than a year, that people's short-term inflation expectations had risen, and that more rises might be needed, decided one meeting at a time.",
+        "means": "The notes repeat last month's message rather than adding a new push. With Canada losing jobs for a second month in October, the next decision on December 9 still looks like a close call.",
+        "fx": "A bank still willing to raise rates gives the Canadian dollar some support, but weak jobs and falling oil limit how much."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The bank keeps the option of another rate rise, but adds no new signal."
+        }
+      ],
+      "watch": "Canada's October inflation figures and the Bank of Canada's decision on December 9."
+    },
+    {
+      "id": "investing-reuters-rezaei-no-talks-20261110",
+      "date": "2026-11-10",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/commodities-news/irans-top-security-official-says-no-talks-underway-with-us-5016341",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA91QA_L.jpg",
+      "headline": "Iran's top security official says there are no talks with the US right now",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "Mohsen Rezaei, head of Iran's top security council, says Tehran is not negotiating with Washington, cooling hopes that drove oil sharply lower in recent days.",
+      "beats": {
+        "was": "Oil has fallen hard since late last week on hopes the US–Iran war is ending; President Trump met Qatar's prime minister, a go-between, on Monday and played down new strikes. The Strait of Hormuz, a key route for Gulf oil, remains closed.",
+        "happened": "Rezaei told the Al-Mayadeen broadcaster that no negotiations are under way. Iran says the US must meet seven conditions from a June interim deal before Hormuz reopens and talks restart, and that it is still waiting for a clear answer. Iranian media quoted him calling US talk of a meeting in Qatar a lie aimed at pushing oil prices down.",
+        "means": "The quick-peace story behind oil's slide has a weak point: the two sides do not agree that talks are even happening. Brent stopped falling and held near $92 a barrel.",
+        "fx": "Doubts over a deal slow the drop in oil, which helps the Canadian dollar a little and keeps some energy-driven inflation worry alive."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A denial of talks weakens the hopes that drove prices down, though prices moved little."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil helps Canada's main export."
+        }
+      ],
+      "watch": "Whether the US gives Iran a formal answer on its conditions, and any shipping attacks near Hormuz."
+    },
+    {
+      "id": "leprivatebanker-dollar-rebounds-sterling-drops-20261110",
+      "ts": "2026-11-10T18:35:31Z",
+      "source": "The Private Banker",
+      "url": "https://leprivatebanker.com/2026/11/10/dollar-rebounds-on-hot-cpi-as-euro-falls-below-1-12-and-sterling-drops-0-8-but-the-index-stays-under-fridays-close/",
+      "image": "https://leprivatebanker.com/wp-content/uploads/2026/11/pexels-photo-10149296.jpeg",
+      "headline": "The dollar climbs after hot US inflation; sterling falls 0.8% and the euro slips under $1.12",
+      "story": "fed-december",
+      "story_title": "Fed: will it raise rates in December?",
+      "pillar": "policy",
+      "summary": "Hotter-than-expected US inflation lifted the dollar across the board on Tuesday, with the pound hit hardest, as markets began to price a small chance of a half-point Fed rise.",
+      "beats": {
+        "was": "The dollar had slipped on Monday as risk appetite returned, giving back part of Friday's jump after strong US jobs figures.",
+        "happened": "US consumer prices rose 0.4% in October and core prices 0.3%, both above forecasts. The two-year Treasury yield, which tracks Fed expectations, jumped about 0.12 percentage points to 4.68%. Sterling fell about 0.8% to roughly $1.333, the euro dropped about 0.6% to near $1.115, and the dollar rose about 0.5% against the yen and Canadian dollar. Markets now see about an 11% chance of a half-point Fed rise in December, up from none.",
+        "means": "A December rise is close to fully expected, so the new part is talk of a bigger step. The dollar index still ended below Friday's high, so the gain undid only Monday's slide.",
+        "fx": "Higher US rate expectations favour the dollar, and the pound, which had risen on hopes of more Bank of England rises, gave back the most."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher US short-term yields after hot inflation lift the dollar broadly."
+        },
+        {
+          "ccy": "GBP",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The pound was the biggest loser to the firmer dollar."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro slipped back under $1.12."
+        }
+      ],
+      "watch": "US producer prices and retail sales later this week, and whether half-point talk spreads among Fed officials."
+    },
     {
       "id": "aol-reuters-poll-fed-december-last-hike-20261110",
       "ts": "2026-11-10T14:34:00Z",
