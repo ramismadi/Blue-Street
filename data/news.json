@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-10T11:48:00Z",
+  "updated": "2026-11-10T14:52:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "text": "Friday's strong jobs report gave the dollar its best day since June, and it gave some back on Monday as hopes for US–Iran talks calmed markets. On Tuesday Federal Reserve Governor Christopher Waller said he will back a December rate rise even if inflation cools, and markets now see about an 85% chance, so the dollar firmed ahead of the October inflation figures due later that day.",
-      "ts": "2026-11-10T11:48:00Z"
+      "ts": "2026-11-10T14:52:00Z",
+      "text": "US consumer prices rose faster than expected in October, and core prices hit the 0.3% level that Federal Reserve Governor Christopher Waller had named as grounds for a half-point rise. A December rate rise now looks all but certain, with a bigger step under debate, and the dollar rose against every major currency."
     },
     "EUR": {
       "lean": "mixed",
@@ -14,13 +14,13 @@
     },
     "GBP": {
       "lean": "mixed",
-      "ts": "2026-11-09T23:50:00Z",
-      "text": "The Bank of England raised its rate to 4% last Thursday, its first rise since 2023, and the pound edged up to about $1.34 on Monday as the dollar eased. In his first speech since, Governor Andrew Bailey said AI is starting to lift UK growth but gave no hint on December, so Thursday's UK growth figures matter more."
+      "ts": "2026-11-10T14:52:00Z",
+      "text": "The Bank of England raised its rate to 4% last Thursday, and on Tuesday Deputy Governor Clare Lombardelli said she would not rule out another rise in December. That gives the pound some support, but a firmer dollar after hot US inflation pulled it back to about $1.34, so Thursday's UK growth figures matter."
     },
     "JPY": {
-      "lean": "mixed",
-      "text": "The yen is near 158 per dollar, held down by a likely Federal Reserve rate rise in December that Fed Governor Christopher Waller backed again on Tuesday. Notes from the Bank of Japan's October meeting show some members want faster rate rises, and cheaper oil eases Japan's import bill, but very weak household spending argues for going slowly.",
-      "ts": "2026-11-10T11:48:00Z"
+      "lean": "bearish",
+      "ts": "2026-11-10T14:52:00Z",
+      "text": "The yen is near 158 per dollar after hot US inflation figures made a December Federal Reserve rate rise all but certain, keeping the gap between US and Japanese rates wide. Notes from the Bank of Japan's October meeting show some members want faster rate rises, and Japan spent a record sum defending the yen this summer, which limits how far it can slide."
     },
     "CHF": {
       "lean": "bullish",
@@ -33,9 +33,9 @@
       "ts": "2026-11-10T11:48:00Z"
     },
     "AUD": {
-      "lean": "mixed",
-      "ts": "2026-11-10T03:55:00Z",
-      "text": "Australian consumer confidence fell to a four-year low in November as the 4.85% cash rate and high living costs bite, which makes another Reserve Bank of Australia rate rise less likely. China, Australia's biggest customer, bought far more from abroad than expected in October, a mild sign of firmer demand, so the Australian dollar has pulls both ways."
+      "lean": "bearish",
+      "ts": "2026-11-10T14:52:00Z",
+      "text": "The Australian dollar fell the most of the major currencies after hot US inflation figures on Tuesday. At home, consumer confidence is at a four-year low as the 4.85% cash rate bites, which makes another Reserve Bank of Australia rise less likely; stronger-than-expected Chinese imports are a small offset."
     },
     "NZD": {
       "lean": "mixed",
@@ -43,9 +43,9 @@
       "text": "The New Zealand dollar led the major currencies on Monday, up about 1.5% to near 56 US cents, as calmer markets and Saturday's election, which left Prime Minister Christopher Luxon's three-party bloc just ahead, gave it some relief. About 400,000 votes are still to count, so who governs may not be clear until November 27, and the jobless rate is already at its highest since 2015. Stronger-than-expected Chinese imports in October are a small extra help."
     },
     "XAU": {
-      "lean": "mixed",
-      "text": "Gold climbed back to about $4,130 an ounce on Monday as cheaper oil eased inflation fears. But on Tuesday Federal Reserve Governor Christopher Waller backed a December rate rise whatever October inflation shows, which weighs on gold, so the US inflation figures later that day are the big test.",
-      "ts": "2026-11-10T11:48:00Z"
+      "lean": "bearish",
+      "ts": "2026-11-10T14:52:00Z",
+      "text": "Gold slipped back below $4,100 an ounce on Tuesday as hotter US inflation and talk of a bigger Federal Reserve rate rise in December lifted the dollar and the rates investors can earn elsewhere. Cheaper oil easing inflation fears had helped gold on Monday, but that support has faded for now."
     },
     "OIL": {
       "lean": "bearish",
@@ -54,6 +54,33 @@
     }
   },
   "items": [
+    {
+      "id": "investing-reuters-lombardelli-december-hike-20261110",
+      "date": "2026-11-10",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/economy-news/boes-lombardelli-does-not-rule-out-december-rate-hike-she-tells-the-guardian-5014293",
+      "image": null,
+      "headline": "BOE's Lombardelli does not rule out December rate hike, she tells the Guardian",
+      "story": "boe-hike",
+      "story_title": "Bank of England: rates rise again to fight energy costs",
+      "pillar": "policy",
+      "summary": "Clare Lombardelli, the Bank of England's deputy governor for monetary policy, told the Guardian she would not rule out another rate rise in December.",
+      "beats": {
+        "was": "The Bank of England raised its main rate to 4% last Thursday, its first rise since 2023, to lean against inflation. Governor Andrew Bailey gave no hint about December in a speech on Monday.",
+        "happened": "In an interview published Tuesday, Lombardelli, one of the nine people who set UK rates, said a further rise in December was possible, while describing the UK economy as moving in a low gear.",
+        "means": "A senior rate-setter is keeping the door open to a second rise in a row, though she stopped well short of promising one. It suggests last week's move may not be a one-off.",
+        "fx": "Talk of higher UK rates gives the pound some support, but it was outweighed on the day by the dollar's rise after US inflation news, and the pound slipped back to about $1.34."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A senior Bank of England official kept a December rate rise on the table."
+        }
+      ],
+      "watch": "Thursday's UK growth figures for September and the third quarter, and next week's UK inflation report, which will shape whether December's rise happens."
+    },
     {
       "id": "investing-reuters-waller-backs-december-hike-20261110",
       "date": "2026-11-10",
@@ -172,6 +199,51 @@
       "watch": "Any confirmed progress in US–Iran talks, or a fresh attack on ships near Hormuz."
     },
     {
+      "id": "fxstreet-us-cpi-oct-hot-20261110",
+      "ts": "2026-11-10T13:30:00Z",
+      "source": "FXStreet",
+      "url": "https://www.fxstreet.com/news/us-cpi-data-set-to-ease-in-october-as-markets-reassess-fed-rate-hike-expectations-202611100930",
+      "image": null,
+      "headline": "US Consumer Price Index rises 0.4% MoM in October vs. 0.3% expected",
+      "story": "fed-december",
+      "story_title": "Fed: a December rate rise and what US inflation says",
+      "pillar": "policy",
+      "summary": "US consumer prices rose 0.4% in October and core prices, which leave out food and energy, rose 0.3%, both a notch above forecasts. Core landed right on the level a senior Fed official had named as grounds for a bigger rate rise.",
+      "beats": {
+        "was": "The Federal Reserve is raising interest rates because inflation is well above its 2% goal. Hours before this report, Fed Governor Christopher Waller said he would back a December rise anyway, and a half-point step if core prices rose 0.3% or more.",
+        "happened": "The Labor Department's October consumer price figures, published Tuesday, showed prices up 0.4% on the month against 0.3% expected, and core prices up 0.3% against 0.2% expected. No yearly rate was published this time because of a gap in last year's data.",
+        "means": "Inflation is not cooling on its own, and the core figure meets Waller's own test for a half-point rise. Markets now treat a December rise as close to certain; the open question is whether it is a quarter point or a half point.",
+        "fx": "The dollar rose against all the major currencies after the release, most against the Australian dollar and least against the Canadian dollar. Gold, which pays no interest, slipped below $4,100 an ounce."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Hotter inflation makes a December Fed rate rise all but certain and puts a bigger half-point step on the table."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher expected US rates make gold, which pays no interest, less attractive."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The Australian dollar fell the most against the dollar after the figures."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A wider gap between US and Japanese interest rates keeps the yen weak near 158 per dollar."
+        }
+      ],
+      "watch": "Comments from other Fed officials on whether December should be a quarter or a half point, and November's inflation figures before the December 8–9 meeting."
+    },
+    {
       "id": "investinglive-china-oct-trade-imports-416-20261110",
       "ts": "2026-11-10T02:55:31Z",
       "source": "investingLive",
@@ -230,99 +302,6 @@
         }
       ],
       "watch": "Thursday's Australian jobs figures for October; a strong report would revive talk of another rate rise."
-    },
-    {
-      "id": "investinglive-boj-opinions-faster-hikes-20261109",
-      "ts": "2026-11-09T23:58:58Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/boj-opinions-back-faster-hikes-one-sees-neutral-rate-considerably-above-1/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/usdyen%20hourly%20chart%20update%2010%20November%202026-featured-1794268731.jpg?width=960&format=webp",
-      "headline": "Notes from the Bank of Japan's October meeting show some members want faster rate rises",
-      "story": "boj-december",
-      "story_title": "BoJ: a rate rise in December?",
-      "pillar": "policy",
-      "summary": "The Bank of Japan's notes from its October 29–30 meeting show the board now debating how fast to raise rates, not whether, though Japanese household spending fell 6.8% from a year earlier in September.",
-      "beats": {
-        "was": "The Bank of Japan has been slowly raising rates from near zero, and markets already expect another rise, to 1.5%, at its December 17–18 meeting. The yen sits near 158 per dollar, close to where Japan's government has stepped in to support it.",
-        "happened": "The 'Summary of Opinions' from the October meeting said underlying inflation is now broadly in line with the 2% goal. One member said the rate that neither speeds up nor slows the economy is likely well above 1%, and core inflation is seen above 3% toward the end of the fiscal year. More cautious members warned that past rises are still feeding through and that consumer spending is weak. Separate figures showed household spending down 6.8% on a year earlier in September.",
-        "means": "The board's centre of gravity has moved toward more and possibly quicker rate rises, which backs up December pricing. Weak spending is the main reason some members want to go slowly.",
-        "fx": "A firmer path of Japanese rate rises gives the yen some support against the pull of higher US rates."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Some Bank of Japan members want rates to rise faster than markets expect."
-        }
-      ],
-      "watch": "Whether Governor Kazuo Ueda or his deputies hint at December; a very soft spending or wage figure could cool the talk."
-    },
-    {
-      "id": "americanbanker-goolsbee-barkin-ai-demand-20261109",
-      "ts": "2026-11-09T18:35:53Z",
-      "source": "American Banker",
-      "url": "https://www.americanbanker.com/news/feds-goolsbee-says-ai-spending-resembles-demand-shock",
-      "image": "https://arizent.brightspotcdn.com/dims4/default/ccd8326/2147483647/strip/true/crop/4000x2100+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fsource-media-brightspot.s3.us-east-1.amazonaws.com%2F30%2Fd4%2Fb14460484c20b6a885a0406e4a8c%2F453876664.jpg",
-      "headline": "Two Fed presidents warn that inflation is the main risk, with the AI building boom adding to price pressure",
-      "story": "fed-december",
-      "story_title": "Fed: will it raise rates in December?",
-      "pillar": "policy",
-      "summary": "Chicago Fed President Austan Goolsbee said the rush to build AI data centres is pushing up prices like a surge in demand, and Richmond Fed President Tom Barkin said the Fed's path is fairly clear with inflation still high.",
-      "beats": {
-        "was": "A strong October jobs report on Friday left markets seeing roughly an 80% chance that the Federal Reserve raises rates at its December 8–9 meeting.",
-        "happened": "Speaking on Monday, Goolsbee said the cost of land, workers, power and materials for AI projects shows the economy is running into limits, and that services prices are rising in ways oil and tariffs don't explain. Barkin said a healthy economy and stubborn inflation make the Fed's course relatively simple. Both get a vote on rates from January.",
-        "means": "Neither pushed back on a December rate rise. Their words add to the sense that Fed officials see inflation, not jobs, as the bigger worry.",
-        "fx": "Firm talk from Fed officials supports the dollar ahead of Tuesday's October inflation figures."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Two Fed presidents kept the focus on inflation, backing a possible December rate rise."
-        }
-      ],
-      "watch": "Tuesday's US October inflation figures; a soft reading would weaken the case these officials are making."
-    },
-    {
-      "id": "leprivatebanker-brent-93-qatar-hormuz-deal-20261109",
-      "ts": "2026-11-09T17:35:04Z",
-      "source": "The Private Banker",
-      "url": "https://leprivatebanker.com/2026/11/09/brent-falls-almost-5-toward-93-on-reports-of-a-qatar-brokered-hormuz-deal-extending-a-16-weekly-rout/",
-      "image": "https://leprivatebanker.com/wp-content/uploads/2026/11/pexels-photo-36563588-5.jpeg",
-      "headline": "Brent falls almost 5% toward $93 on reports Qatar is carrying an Iranian Hormuz offer to the White House",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran talks: Hormuz reopening offer vs ship attacks",
-      "pillar": "tot",
-      "summary": "Brent crude dropped almost 5% on Monday to about $93 a barrel after reports that Qatar's prime minister is taking an Iranian proposal to reopen the Strait of Hormuz to the White House. Neither Washington nor Tehran has confirmed it.",
-      "beats": {
-        "was": "The Strait of Hormuz, the narrow sea lane that normally carries about a fifth of the world's oil, has been largely shut since the US–Iran war began in late February. Brent already fell 16% last week, its biggest weekly drop since 2020, on hopes of peace talks.",
-        "happened": "Reports said Iran would reopen the strait and stop attacks on tankers if the US lifts its naval blockade and frees about $8 billion of Iranian money held in Qatar. Brent fell to about $93 and US crude to under $88. Secretary of State Marco Rubio said the two sides are not close to a breakthrough.",
-        "means": "Markets are pricing a reopening before any deal is signed. If the offer holds, more oil reaches the market and fuel-driven inflation cools; if it falls through, prices could jump back quickly.",
-        "fx": "Cheaper oil weighs on the Canadian dollar and helps big oil importers such as Japan and the euro area. It also eases inflation fears, which takes some heat off central banks."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A possible Hormuz reopening would put more oil back on the market."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Canada earns less when oil, its biggest export, gets cheaper."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so a lower price shrinks its import bill."
-        }
-      ],
-      "watch": "Whether the White House or Iran confirms the terms; a denial or a fresh tanker attack would likely send oil back up."
     },
     {
       "id": "kitco-reuters-dollar-weakens-iran-talks-20261109",
@@ -509,6 +488,99 @@
         }
       ],
       "watch": "Whether Bailey signals a December rate rise, and UK growth figures on Thursday."
+    },
+    {
+      "id": "investinglive-boj-opinions-faster-hikes-20261109",
+      "ts": "2026-11-09T23:58:58Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/central-banks/boj-opinions-back-faster-hikes-one-sees-neutral-rate-considerably-above-1/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/usdyen%20hourly%20chart%20update%2010%20November%202026-featured-1794268731.jpg?width=960&format=webp",
+      "headline": "Notes from the Bank of Japan's October meeting show some members want faster rate rises",
+      "story": "boj-december",
+      "story_title": "BoJ: a rate rise in December?",
+      "pillar": "policy",
+      "summary": "The Bank of Japan's notes from its October 29–30 meeting show the board now debating how fast to raise rates, not whether, though Japanese household spending fell 6.8% from a year earlier in September.",
+      "beats": {
+        "was": "The Bank of Japan has been slowly raising rates from near zero, and markets already expect another rise, to 1.5%, at its December 17–18 meeting. The yen sits near 158 per dollar, close to where Japan's government has stepped in to support it.",
+        "happened": "The 'Summary of Opinions' from the October meeting said underlying inflation is now broadly in line with the 2% goal. One member said the rate that neither speeds up nor slows the economy is likely well above 1%, and core inflation is seen above 3% toward the end of the fiscal year. More cautious members warned that past rises are still feeding through and that consumer spending is weak. Separate figures showed household spending down 6.8% on a year earlier in September.",
+        "means": "The board's centre of gravity has moved toward more and possibly quicker rate rises, which backs up December pricing. Weak spending is the main reason some members want to go slowly.",
+        "fx": "A firmer path of Japanese rate rises gives the yen some support against the pull of higher US rates."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Some Bank of Japan members want rates to rise faster than markets expect."
+        }
+      ],
+      "watch": "Whether Governor Kazuo Ueda or his deputies hint at December; a very soft spending or wage figure could cool the talk."
+    },
+    {
+      "id": "americanbanker-goolsbee-barkin-ai-demand-20261109",
+      "ts": "2026-11-09T18:35:53Z",
+      "source": "American Banker",
+      "url": "https://www.americanbanker.com/news/feds-goolsbee-says-ai-spending-resembles-demand-shock",
+      "image": "https://arizent.brightspotcdn.com/dims4/default/ccd8326/2147483647/strip/true/crop/4000x2100+0+0/resize/1200x630!/quality/90/?url=https%3A%2F%2Fsource-media-brightspot.s3.us-east-1.amazonaws.com%2F30%2Fd4%2Fb14460484c20b6a885a0406e4a8c%2F453876664.jpg",
+      "headline": "Two Fed presidents warn that inflation is the main risk, with the AI building boom adding to price pressure",
+      "story": "fed-december",
+      "story_title": "Fed: will it raise rates in December?",
+      "pillar": "policy",
+      "summary": "Chicago Fed President Austan Goolsbee said the rush to build AI data centres is pushing up prices like a surge in demand, and Richmond Fed President Tom Barkin said the Fed's path is fairly clear with inflation still high.",
+      "beats": {
+        "was": "A strong October jobs report on Friday left markets seeing roughly an 80% chance that the Federal Reserve raises rates at its December 8–9 meeting.",
+        "happened": "Speaking on Monday, Goolsbee said the cost of land, workers, power and materials for AI projects shows the economy is running into limits, and that services prices are rising in ways oil and tariffs don't explain. Barkin said a healthy economy and stubborn inflation make the Fed's course relatively simple. Both get a vote on rates from January.",
+        "means": "Neither pushed back on a December rate rise. Their words add to the sense that Fed officials see inflation, not jobs, as the bigger worry.",
+        "fx": "Firm talk from Fed officials supports the dollar ahead of Tuesday's October inflation figures."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Two Fed presidents kept the focus on inflation, backing a possible December rate rise."
+        }
+      ],
+      "watch": "Tuesday's US October inflation figures; a soft reading would weaken the case these officials are making."
+    },
+    {
+      "id": "leprivatebanker-brent-93-qatar-hormuz-deal-20261109",
+      "ts": "2026-11-09T17:35:04Z",
+      "source": "The Private Banker",
+      "url": "https://leprivatebanker.com/2026/11/09/brent-falls-almost-5-toward-93-on-reports-of-a-qatar-brokered-hormuz-deal-extending-a-16-weekly-rout/",
+      "image": "https://leprivatebanker.com/wp-content/uploads/2026/11/pexels-photo-36563588-5.jpeg",
+      "headline": "Brent falls almost 5% toward $93 on reports Qatar is carrying an Iranian Hormuz offer to the White House",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran talks: Hormuz reopening offer vs ship attacks",
+      "pillar": "tot",
+      "summary": "Brent crude dropped almost 5% on Monday to about $93 a barrel after reports that Qatar's prime minister is taking an Iranian proposal to reopen the Strait of Hormuz to the White House. Neither Washington nor Tehran has confirmed it.",
+      "beats": {
+        "was": "The Strait of Hormuz, the narrow sea lane that normally carries about a fifth of the world's oil, has been largely shut since the US–Iran war began in late February. Brent already fell 16% last week, its biggest weekly drop since 2020, on hopes of peace talks.",
+        "happened": "Reports said Iran would reopen the strait and stop attacks on tankers if the US lifts its naval blockade and frees about $8 billion of Iranian money held in Qatar. Brent fell to about $93 and US crude to under $88. Secretary of State Marco Rubio said the two sides are not close to a breakthrough.",
+        "means": "Markets are pricing a reopening before any deal is signed. If the offer holds, more oil reaches the market and fuel-driven inflation cools; if it falls through, prices could jump back quickly.",
+        "fx": "Cheaper oil weighs on the Canadian dollar and helps big oil importers such as Japan and the euro area. It also eases inflation fears, which takes some heat off central banks."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A possible Hormuz reopening would put more oil back on the market."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Canada earns less when oil, its biggest export, gets cheaper."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so a lower price shrinks its import bill."
+        }
+      ],
+      "watch": "Whether the White House or Iran confirms the terms; a denial or a fresh tanker attack would likely send oil back up."
     },
     {
       "id": "rte-reuters-oil-falls-trump-restraint-20261109",
@@ -721,6 +793,51 @@
       "watch": "Whether anyone claims the attack, and whether strikes on energy sites in Iraq and the Gulf keep coming during the US-Iran talks."
     },
     {
+      "id": "almonitor-reuters-trump-iran-strikes-unlikely-20261108",
+      "date": "2026-11-08",
+      "source": "Al-Monitor (Reuters)",
+      "url": "https://www.al-monitor.com/originals/2026/11/trump-says-he-unlikely-order-iran-attack-if-talks-progress-cnn-reports",
+      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-08T175946Z_1_LYNXNPEMA70GF_RTROPTP_3_IRAN-CRISIS-USA-TRUMP.JPG?h=ba88677a&itok=No-v-Sau",
+      "headline": "Trump says new US attacks on Iran are very unlikely as long as peace talks keep moving forward",
+      "story": "us-iran-talks",
+      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
+      "pillar": "risk",
+      "summary": "US President Donald Trump told CNN on Sunday he is very unlikely to order fresh attacks on Iran while talks to end the war make progress. He tied that to Iran signing what he called a very strong agreement.",
+      "beats": {
+        "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, largely shut. Talks in Qatar have produced a draft deal, but on Friday the US hit an Iranian air-defence site and over the weekend Iran said several tankers caught fire near Hormuz.",
+        "happened": "In a Sunday phone interview with CNN, Trump said renewed US strikes were very unlikely if negotiations keep progressing, provided Iran agrees to a strong deal. He also said the US has picked out possible targets, including 38 bridges it could destroy within an hour. No agreement has been announced.",
+        "means": "It is a softer tone than last week's talk of fresh strikes, but it comes with conditions and a clear threat. It lowers the near-term risk of a new round of fighting without settling the war or reopening Hormuz.",
+        "fx": "Less chance of new strikes takes a little of the war premium out of oil and safe havens like gold and the Swiss franc. Ship attacks near Hormuz pull the other way, so Monday's reopening will show which weighs more."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Fewer odds of new US strikes ease some fear of fresh supply losses, though nothing is signed."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Calmer war talk trims demand for the franc as a safe place to park money."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Gold loses a little of its war-risk support if strikes look less likely."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Cheaper oil helps Japan, which imports almost all of its energy, but calmer markets cut safe-haven demand for the yen."
+        }
+      ],
+      "watch": "Whether Iran answers the draft deal from the Qatar talks, and any new attacks on ships near Hormuz."
+    },
+    {
       "id": "aol-reuters-oil-falls-open-trump-20261109",
       "ts": "2026-11-08T23:50:00Z",
       "source": "AOL (Reuters)",
@@ -896,51 +1013,6 @@
         }
       ],
       "watch": "Tuesday's US consumer price figures against the 0.3% forecast, and what Fed officials say about December afterwards."
-    },
-    {
-      "id": "almonitor-reuters-trump-iran-strikes-unlikely-20261108",
-      "date": "2026-11-08",
-      "source": "Al-Monitor (Reuters)",
-      "url": "https://www.al-monitor.com/originals/2026/11/trump-says-he-unlikely-order-iran-attack-if-talks-progress-cnn-reports",
-      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-08T175946Z_1_LYNXNPEMA70GF_RTROPTP_3_IRAN-CRISIS-USA-TRUMP.JPG?h=ba88677a&itok=No-v-Sau",
-      "headline": "Trump says new US attacks on Iran are very unlikely as long as peace talks keep moving forward",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "US President Donald Trump told CNN on Sunday he is very unlikely to order fresh attacks on Iran while talks to end the war make progress. He tied that to Iran signing what he called a very strong agreement.",
-      "beats": {
-        "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, largely shut. Talks in Qatar have produced a draft deal, but on Friday the US hit an Iranian air-defence site and over the weekend Iran said several tankers caught fire near Hormuz.",
-        "happened": "In a Sunday phone interview with CNN, Trump said renewed US strikes were very unlikely if negotiations keep progressing, provided Iran agrees to a strong deal. He also said the US has picked out possible targets, including 38 bridges it could destroy within an hour. No agreement has been announced.",
-        "means": "It is a softer tone than last week's talk of fresh strikes, but it comes with conditions and a clear threat. It lowers the near-term risk of a new round of fighting without settling the war or reopening Hormuz.",
-        "fx": "Less chance of new strikes takes a little of the war premium out of oil and safe havens like gold and the Swiss franc. Ship attacks near Hormuz pull the other way, so Monday's reopening will show which weighs more."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Fewer odds of new US strikes ease some fear of fresh supply losses, though nothing is signed."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Calmer war talk trims demand for the franc as a safe place to park money."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Gold loses a little of its war-risk support if strikes look less likely."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Cheaper oil helps Japan, which imports almost all of its energy, but calmer markets cut safe-haven demand for the yen."
-        }
-      ],
-      "watch": "Whether Iran answers the draft deal from the Qatar talks, and any new attacks on ships near Hormuz."
     },
     {
       "id": "fmt-afp-three-tankers-fire-hormuz-20261108",
@@ -1181,135 +1253,6 @@
         }
       ],
       "watch": "The official count on November 27: if special votes cost the right bloc a seat, coalition talks get harder and a change of government becomes possible."
-    },
-    {
-      "id": "wishtv-ap-us-limited-strikes-iran-air-defense-20261107",
-      "ts": "2026-11-07T02:49:07Z",
-      "source": "AP via WISH-TV",
-      "url": "https://www.wishtv.com/news/politics/trump-says-us-carried-out-new-limited-strikes-on-iran/",
-      "image": "https://www.wishtv.com/wp-content/uploads/2026/11/07/Donald-Trump-AP26311039654303-scaled-e1794019738582.jpg",
-      "headline": "Trump says the US carried out new limited strikes on an Iranian air defense site on Friday, while talks continue",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "President Trump said US forces hit an Iranian air defense system on Friday, calling it a minor strike, and said Washington is still talking to Tehran. Iranian state media reported two blasts on Qeshm Island, near the Strait of Hormuz.",
-      "beats": {
-        "was": "The US and Israel have been at war with Iran since late February, and attacks on ships near the Strait of Hormuz, the route for about a fifth of the world's oil, have kept crude prices high. This week oil fell about 13% on hopes of a deal, and Iran is studying peace proposals carried by Qatar.",
-        "happened": "Speaking on Friday evening, Trump said the military had knocked out an Iranian anti-aircraft system in a short, limited strike, the first since Tuesday's US midterm elections. Iranian state media reported two explosions on Qeshm Island. Regional officials described a possible first step under the Qatari plan: the US would ease its blockade of Iranian ports and free some frozen funds, and Iran would let nuclear inspectors in and reopen Hormuz, though Washington has not agreed to the shipping terms.",
-        "means": "The US is pairing small military hits with diplomacy rather than choosing one, so the risk of a wider flare-up is back on the table even as the outline of a deal takes shape.",
-        "fx": "Markets are shut for the weekend. When trading resumes Sunday evening, the strike could add back some of the risk premium oil lost this week and draw some money to havens like the franc and gold, unless talks show clear progress first."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A fresh US strike after a week of deal hopes puts supply risk back into crude prices."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "More fighting tends to draw safe-haven money to the franc; Trump called the strike minor."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Gold usually gains when war risk rises, though the strike was small."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Dearer oil lifts Canada's export earnings."
-        }
-      ],
-      "watch": "Whether Iran answers the strike, and whether the Qatari first-step plan is confirmed by Washington or Tehran before markets reopen Sunday evening."
-    },
-    {
-      "id": "gvwire-reuters-dollar-best-day-since-june-20261106",
-      "ts": "2026-11-06T21:13:39Z",
-      "source": "GV Wire (Reuters)",
-      "url": "https://gvwire.com/2026/11/06/dollar-jumps-after-strong-us-payrolls-report/",
-      "image": "https://gvwire.com/wp-content/uploads/2026/07/U.S.-dollar-banknotes-are-seen-in-this-illustration-taken-March-24-2026.-Reuters-File-1.jpg",
-      "headline": "The dollar heads for its best day since June after strong US jobs data, and two Fed officials lean toward more rate rises",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "policy",
-      "summary": "The dollar index rose about 0.8% on Friday, its biggest one-day gain since mid-June, after a strong US jobs report. Two senior Federal Reserve officials said inflation is still too high, and markets now see about an 80% chance of a December rate rise.",
-      "beats": {
-        "was": "The Federal Reserve has been raising rates to fight inflation that dearer oil from the Iran war has pushed up. Earlier this week the dollar slipped after Democrats won control of Congress and a sell-off in AI stocks shook markets.",
-        "happened": "After the government reported 165,000 new jobs in October, far above the roughly 65,000 expected, the dollar index climbed to about 102.3. New York Fed president John Williams said inflation is too high, and San Francisco Fed president Mary Daly said more rate rises will likely be needed. The 2-year US Treasury yield rose to about 4.52%.",
-        "means": "Strong hiring plus officials openly talking about further rises make a December Fed rate rise the market's main expectation again, after doubts on Thursday.",
-        "fx": "Higher expected US rates lifted the dollar across the board: the euro fell to about $1.114, the pound to about $1.336 a day after the Bank of England's rate rise, and the yen weakened to about 158.4 per dollar."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A jobs beat and Fed officials calling for more rises put a December hike back near 80% odds."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro gave back its gains for the week as US rates rose."
-        },
-        {
-          "ccy": "GBP",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The pound slipped despite Thursday's Bank of England rise, as the dollar's pull was stronger."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A wider gap between US and Japanese rates weighs on the yen."
-        }
-      ],
-      "watch": "US October inflation figures, out Tuesday November 10: a soft reading would cool talk of a December Fed rise."
-    },
-    {
-      "id": "actionforex-us-nfp-oct-165k-20261106",
-      "ts": "2026-11-06T13:39:41Z",
-      "source": "ActionForex",
-      "url": "https://www.actionforex.com/live-comments/660099-us-non-farm-payrolls-surge-165k-revisions-add-84k-as-unemployment-falls-to-4-1/",
-      "image": "https://www.actionforex.com/wp-content/uploads/2021/09/f-job42.jpg",
-      "headline": "US employers added 165,000 jobs in October, far more than expected, and unemployment fell to 4.1%",
-      "story": "fed-december",
-      "story_title": "Fed: the case for a December rate rise",
-      "pillar": "growth",
-      "summary": "The US economy added 165,000 jobs in October, almost three times what economists expected, and the jobless rate dipped to 4.1%. Earlier months were also revised up and pay rose 0.4% in the month.",
-      "beats": {
-        "was": "US hiring had slowed to a crawl this year, with September first reported at just 29,000 new jobs. The Federal Reserve raised rates in September to fight inflation near 3.7%, and markets were weighing another rise in December after Thursday's stock crash and the Democrats' win in Congress.",
-        "happened": "The government's monthly jobs report showed 165,000 new jobs in October against about 60,000 expected, led by business services and health care. August and September were revised up by a combined 84,000, unemployment fell to 4.1% from 4.2%, and average hourly pay rose 0.4% on the month and 3.1% on the year.",
-        "means": "The US job market is much firmer than it looked, and faster pay growth adds to inflation worries. That makes it harder for the Fed to skip a December rate rise.",
-        "fx": "Strong jobs and firmer pay point to higher US rates for longer, which supports the dollar against the euro, yen and franc and tends to weigh on gold, which pays no interest."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 3,
-          "why": "Jobs came in near three times the forecast, with upward revisions and faster pay, backing a December Fed rise."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Higher expected US rates make gold, which pays no interest, less attractive."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A wider gap between US and Japanese rates tends to pull the yen lower."
-        }
-      ],
-      "watch": "How far markets raise the odds of a December Fed rate rise, and whether Fed officials point to this report in coming speeches."
     }
   ]
 }
