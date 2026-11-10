@@ -1,22 +1,30 @@
 {
-  "updated": "2026-11-09T15:35:00-06:00",
+  "updated": "2026-11-10T01:35:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~82% (from ~79% overnight); ECB Dec ~89% (Nov 4); BoJ Dec ~80%; BoC Dec ~35%; RBNZ Dec <50%; BoE 4.00% and RBA 4.85% after November hikes",
-      "read": "A December Federal Reserve hike is still the market's main expectation, and two Fed presidents leaned that way on Monday, which keeps rate support under the dollar. Hikes are also expected in Europe and Japan, while job losses in Canada and New Zealand, and now cheaper oil, give those banks reasons to wait. Tuesday's US inflation figures are the next big check.",
+      "figure": "Fed Dec hike ~80–85%; ECB Dec ~89% (Nov 4); BoJ Dec ~80%; BoC Dec ~35%; RBNZ Dec <50%; BoE 4.00% and RBA 4.85% after November hikes",
+      "read": "A December Federal Reserve hike is still the market's main expectation, which keeps rate support under the dollar before today's US inflation figures. Bank of Japan meeting notes showed several members want to hike faster, backing the yen's case for December. Job losses in Canada and New Zealand, and gloomy Australian households, give those banks reasons to wait.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, 3:00 PM CT New York close, Nov 9; indicative quotes)",
+          "label": "Blue Street market levels (Hercules, 12:53 AM CT Nov 10, Asia session; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "American Banker (Nov 9): Fed's Goolsbee says AI spending resembles a demand shock",
-          "url": "https://www.americanbanker.com/news/feds-goolsbee-says-ai-spending-resembles-demand-shock"
+          "label": "Reuters via Free Malaysia Today (Nov 10): Dollar sellers hit pause for US inflation data",
+          "url": "https://www.freemalaysiatoday.com/category/business/2026/11/10/dollar-sellers-hit-pause-for-us-inflation-data"
         },
         {
-          "label": "Blue Street central banks (Hercules, Nov 9 close)",
+          "label": "Bank of Japan: Summary of Opinions, October 29–30 meeting (released Nov 10)",
+          "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf"
+        },
+        {
+          "label": "investingLive (Nov 10): Australian consumer sentiment sinks to a four-year low",
+          "url": "https://investinglive.com/news/australian-consumer-sentiment-sinks-to-four-year-low-as-rates-and-living-costs-bite/"
+        },
+        {
+          "label": "Blue Street central banks (Hercules, Nov 10)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         }
       ]
@@ -24,23 +32,31 @@
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "US payrolls +165K (fcst 65K); Canada unemployment 6.7%; NZ 5.7%; China Oct CPI 0.7% y/y; China 24% tariff pause extended to Jan 10; UK Q3 GDP Thu 1:00 AM CT, fcst +0.7% q/q",
-      "read": "The US job market looks much firmer than Canada's or New Zealand's, a split that favours the US dollar. China extended its tariff truce with the US to January, which removes a near-term risk for the Aussie and the kiwi, though Chinese shoppers remain cautious. UK growth figures on Thursday are the next big read.",
+      "figure": "China Oct imports +41.6% y/y (fcst +32%), exports +35.2%, surplus $105.3B; Westpac AU confidence 78.2; Japan Sep household spending −6.8% y/y; UK Q3 GDP Thu, fcst +0.7% q/q",
+      "read": "China bought far more from abroad than expected in October, a sign that demand there may be firming, which is mild good news for the Aussie and the kiwi. Australian households, though, are the gloomiest in four years, and Japanese spending is weak. The US job market still looks firmer than Canada's or New Zealand's, a split that favours the US dollar.",
       "sources": [
         {
-          "label": "Reuters (Nov 9): China extends suspension of new rare earth controls until January",
-          "url": "https://www.reuters.com/world/china/china-extends-suspension-new-rare-earth-controls-until-january-2026-11-09/"
+          "label": "Reuters (Nov 10): China's trade surplus soars past $1 trillion, October exports jump 35.2%",
+          "url": "https://www.reuters.com/world/asia-pacific/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-2026-11-10/"
         },
         {
-          "label": "Reuters (Nov 9): China's October producer inflation quickens further, consumer prices edge down",
-          "url": "https://www.reuters.com/world/asia-pacific/chinas-october-producer-inflation-quickens-further-consumer-prices-edge-down-2026-11-09/"
+          "label": "investingLive (Nov 10): China's October exports beat forecasts, imports surge 41.6%",
+          "url": "https://investinglive.com/news/china-october-exports-beat-forecasts-imports-surge-41-6-as-trade-surplus-narrows/"
         },
         {
-          "label": "Blue Street currency board (Hercules, Nov 9 close)",
+          "label": "investingLive (Nov 10): Australian consumer sentiment sinks to a four-year low",
+          "url": "https://investinglive.com/news/australian-consumer-sentiment-sinks-to-four-year-low-as-rates-and-living-costs-bite/"
+        },
+        {
+          "label": "investingLive (Nov 9): BoJ opinions back faster hikes; one sees neutral rate considerably above 1%",
+          "url": "https://investinglive.com/central-banks/boj-opinions-back-faster-hikes-one-sees-neutral-rate-considerably-above-1/"
+        },
+        {
+          "label": "Blue Street currency board (Hercules, Nov 10)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
         },
         {
-          "label": "Blue Street calendar (Hercules, Nov 9): actuals, forecasts and times",
+          "label": "Blue Street calendar (Hercules, Nov 10): actuals, forecasts and times",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -48,23 +64,19 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "NY Fed 1-yr inflation expectations 3.9% (Oct); US Sep CPI +0.6% m/m, Oct due Tue 7:30 AM CT (fcst +0.3%, core +0.2%); China PPI 5.7% y/y; Brent ~$95",
-      "read": "Cheaper oil is easing fears that the energy shock keeps feeding prices, which helped gold and the euro. But Americans still expect prices to rise fast over the next year, and Fed officials see the AI building boom adding to price pressure. Tuesday's US figures will show whether inflation is cooling; hot prices would favour the dollar.",
+      "figure": "US Oct CPI Tue 7:30 AM CT: fcst +0.3% m/m, core +0.2% (Sep +0.6%); NY Fed 1-yr expectations 3.9%; Brent ~$91",
+      "read": "Oil kept falling, which eases fears that the energy shock keeps feeding prices. But Americans still expect prices to rise fast, so today's US figures decide whether the Fed feels more or less pressure. A hot reading would favour the dollar; a soft one would help gold, the euro and the yen.",
       "sources": [
         {
-          "label": "ZeroHedge (Nov 9): NY Fed consumer survey, inflation expectations stuck near 3-year high",
-          "url": "https://www.zerohedge.com/markets/layoff-fears-hit-highest-covid-crash-inflation-expectations-stay-stuck-near-3-year-high-ny"
+          "label": "Blue Street market levels (Hercules, 12:53 AM CT Nov 10, Asia session; indicative quotes)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "American Banker (Nov 9): Fed's Goolsbee says AI spending resembles a demand shock",
-          "url": "https://www.americanbanker.com/news/feds-goolsbee-says-ai-spending-resembles-demand-shock"
+          "label": "Reuters via Free Malaysia Today (Nov 10): Dollar sellers hit pause for US inflation data",
+          "url": "https://www.freemalaysiatoday.com/category/business/2026/11/10/dollar-sellers-hit-pause-for-us-inflation-data"
         },
         {
-          "label": "Reuters (Nov 9): China's October producer inflation quickens further, consumer prices edge down",
-          "url": "https://www.reuters.com/world/asia-pacific/chinas-october-producer-inflation-quickens-further-consumer-prices-edge-down-2026-11-09/"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Nov 9): actuals, forecasts and times",
+          "label": "Blue Street calendar (Hercules, Nov 10): actuals, forecasts and times",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -72,56 +84,56 @@
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "NZD/USD +1.6%, AUD/USD +0.8%, EUR/CHF +0.7%; US 3-year auction high yield 4.627%, weakest bid-to-cover of 2026",
-      "read": "Stocks kept recovering from last week's AI and chip-stock slump, and hopes for a Hormuz deal eased war fears. Money left safe havens like the franc and moved into the kiwi and the Aussie. One wobble is weak demand at a US government bond sale, which keeps borrowing costs high.",
+      "figure": "S&P 500 +2.35% Mon, Nasdaq +2.7%; Nikkei +2.5%, KOSPI +4% in Asia; NZD/USD +1.56% and AUD/USD +0.80% Mon",
+      "read": "Stocks held their rebound from last week's AI and chip-stock slump, and hopes of calm in the Gulf kept war fears low. That keeps safe havens like the franc and the yen quiet and leaves the kiwi and the Aussie near Monday's highs. Markets are calm but waiting, since a hot US inflation reading could shake them.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, 3:00 PM CT New York close, Nov 9; indicative quotes)",
+          "label": "Blue Street market levels (Hercules, 12:53 AM CT Nov 10, Asia session; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Reuters via Free Malaysia Today (Nov 10): Dollar sellers hit pause for US inflation data",
+          "url": "https://www.freemalaysiatoday.com/category/business/2026/11/10/dollar-sellers-hit-pause-for-us-inflation-data"
         },
         {
           "label": "Reuters via Kitco (Nov 9): Dollar weakens against euro, yen as Iran talks lift risk appetite",
           "url": "https://www.kitco.com/news/off-the-wire/2026-11-09/dollar-weakens-against-euro-yen-iran-talks-lift-risk-appetite"
-        },
-        {
-          "label": "CNBC/Reuters (Nov 9): Dollar dips as easing AI and Mideast worries limit its appeal",
-          "url": "https://www.cnbc.com/2026/11/09/us-dollar-holds-onto-payrolls-gains-nz-dollar-rises-after-election.html"
-        },
-        {
-          "label": "InvestingLive (Nov 9): US Treasury sells $58 billion of 3-year notes at 4.627%",
-          "url": "https://investinglive.com/news/u-s-treasury-sells-58-billion-of-3-year-notes-at-a-high-yield-of-4-627/"
         }
       ]
     },
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$94.99 (−3.4%), WTI ~$87.20 (−4.0%); Brent $116.72 at the Oct 30 close; Saudi East-West pipeline hit, output unaffected",
-      "read": "Oil fell about 3% on reports of an Iranian offer to reopen the Strait of Hormuz, though no deal is signed. That cuts the energy bill for importers like Japan and the euro area. It also takes support from the Canadian dollar, which stood still while most currencies rose.",
+      "figure": "Brent ~$91.44, WTI ~$85.72 in Asia; Monday settles $92.57 (−5.85%) and $86.85 (−4.4%); Brent $116.72 at the Oct 30 close",
+      "read": "Oil kept sliding to its lowest since late August as President Trump held off on new strikes on Iran and supply looked more plentiful. That cuts the energy bill for importers like Japan and the euro area. It also takes support from the Canadian dollar, which slipped overnight.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, 3:00 PM CT New York close, Nov 9; indicative quotes)",
+          "label": "Blue Street market levels (Hercules, 12:53 AM CT Nov 10, Asia session; indicative quotes)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "The Private Banker (Nov 9): Brent falls almost 5% toward $93 on reports of a Qatar-brokered Hormuz deal",
-          "url": "https://leprivatebanker.com/2026/11/09/brent-falls-almost-5-toward-93-on-reports-of-a-qatar-brokered-hormuz-deal-extending-a-16-weekly-rout/"
+          "label": "Reuters via SRN News (Nov 10): Oil falls as Trump downplays prospect of escalation with Iran",
+          "url": "https://srnnews.com/oil-falls-as-trump-downplays-prospect-of-escalation-with-iran/"
         },
         {
-          "label": "Fox News (Nov 9): Trump meets Qatar's PM as Rubio warns Iran talks not close to deal",
-          "url": "https://www.foxnews.com/world/trump-meets-key-iran-war-mediator-uae-reveals-major-oil-export-surge-despite-conflict"
+          "label": "FinanceFeeds (Nov 10): Brent near $91 on Tuesday after a 5.85% drop",
+          "url": "https://financefeeds.com/brent-crude-oil-price-91-tuesday-after-5-85-percent-plunge-cpi-today-bull-98-bear-88/"
         },
         {
-          "label": "Reuters (Nov 9): Saudi East-West oil pipeline hit in Medina region, state media reports",
-          "url": "https://www.reuters.com/business/energy/saudi-east-west-oil-pipeline-hit-medina-region-state-media-reports-2026-11-09/"
+          "label": "Gulf News (Nov 10): Oil slides as Iran strike fears ease",
+          "url": "https://gulfnews.com/business/energy/oil-slides-as-iran-strike-fears-ease-brent-falls-1.500741822"
+        },
+        {
+          "label": "DTN (Nov 9): WTI tests $85 as US–Iran de-escalation seen",
+          "url": "https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/11/09/wti-tests-85-u-s-iran-de-escalation"
         }
       ]
     },
     {
       "id": "positioning",
       "title": "Positioning",
-      "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD (19th percentile), CAD (21st), EUR (35th); 4-week change NZD −22K, EUR −34K contracts; real money very bearish GBP and AUD",
-      "read": "Hedge funds lean toward the dollar and the yen and against the kiwi, the Canadian dollar and the euro, and over the past month they sharply added to their bets against the kiwi and the euro. In the Aussie and the pound, hedge funds and real-money investors sit on opposite sides, with real money betting heavily against both.",
+      "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD (19th percentile), CAD (21st), EUR (35th); 4-week change NZD −22K, EUR −34K contracts; real money very bearish GBP and AUD; next report Friday",
+      "read": "Hedge funds lean toward the dollar and the yen and against the kiwi, the Canadian dollar and the euro, and over the past month they sharply added to their bets against the kiwi and the euro. In the Aussie and the pound, hedge funds and real-money investors sit on opposite sides, with real money betting heavily against both. Monday's jump in the kiwi shows how quickly one-sided bets can unwind.",
       "sources": [
         {
           "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 3, released Nov 6)",
@@ -132,20 +144,20 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "NZ governing bloc 67 of 131 seats, official result Nov 27; Democrats control House and Senate; France on negative outlook at Moody's; US 3-year auction weak (bid-to-cover 2.53)",
-      "read": "No new budget news moved currencies today. New Zealand's election count points to the same coalition staying, which lowers the risk of a big budget change and helped the kiwi. A Democratic Congress still makes President Trump's spending plans harder to pass, a mild drag on the dollar.",
+      "figure": "US 10-year auction $42B Tue 12:00 PM CT; 3-year sale Mon bid-to-cover 2.53 (weakest of 2026); NZ official result Nov 27; Democrats control House and Senate",
+      "read": "No new budget news overnight. Weak demand at Monday's US three-year bond sale puts today's 10-year sale under watch, since soft buying keeps US borrowing costs high. A Democratic Congress still makes President Trump's spending plans harder to pass, a mild drag on the dollar.",
       "sources": [
-        {
-          "label": "CNBC/Reuters (Nov 9): Dollar dips as easing AI and Mideast worries limit its appeal",
-          "url": "https://www.cnbc.com/2026/11/09/us-dollar-holds-onto-payrolls-gains-nz-dollar-rises-after-election.html"
-        },
-        {
-          "label": "Blue Street currency board (Hercules, Nov 9 close)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
-        },
         {
           "label": "InvestingLive (Nov 9): US Treasury sells $58 billion of 3-year notes at 4.627%",
           "url": "https://investinglive.com/news/u-s-treasury-sells-58-billion-of-3-year-notes-at-a-high-yield-of-4-627/"
+        },
+        {
+          "label": "Blue Street currency board (Hercules, Nov 10)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Nov 10): actuals, forecasts and times",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     }
