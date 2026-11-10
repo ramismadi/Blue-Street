@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T14:52:00Z",
+  "updated": "2026-11-10T15:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -44,8 +44,8 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-10T14:52:00Z",
-      "text": "Gold slipped back below $4,100 an ounce on Tuesday as hotter US inflation and talk of a bigger Federal Reserve rate rise in December lifted the dollar and the rates investors can earn elsewhere. Cheaper oil easing inflation fears had helped gold on Monday, but that support has faded for now."
+      "ts": "2026-11-10T15:50:00Z",
+      "text": "Gold fell to about $4,046 an ounce on Tuesday, wiping out Monday's gain, after hotter US inflation made a December Federal Reserve rate rise all but certain and raised talk of a bigger step. Cheaper oil easing inflation fears had helped gold earlier in the week, but higher US rates now weigh more."
     },
     "OIL": {
       "lean": "bearish",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "tokenpost-gold-falls-30-hot-cpi-20261110",
+      "ts": "2026-11-10T13:50:16Z",
+      "source": "TokenPost",
+      "url": "https://www.tokenpost.com/news/investing/53132",
+      "image": "https://mzwrodgsdjfdyvnraeya.supabase.co/storage/v1/object/public/article-media/articles/18c3ef4fdf2a4004605e25990a9a92ccb5ec0e2e4e6c6d23c0065ed7e3a4b47a.webp",
+      "headline": "Gold drops more than $30 to about $4,046 after US inflation comes in hotter than expected",
+      "story": "gold-fed-cpi",
+      "story_title": "Gold: cheaper oil vs a likely Fed rate rise",
+      "pillar": "inflation",
+      "summary": "Gold fell more than $30 to about $4,046 an ounce on Tuesday after US consumer prices for October rose faster than forecast. Silver lost more than 3%.",
+      "beats": {
+        "was": "Gold had climbed back to about $4,130 on Monday as cheaper oil eased inflation fears, but slipped under $4,100 early Tuesday after Federal Reserve Governor Christopher Waller backed a December rate rise. Higher US rates hurt gold, which pays no interest.",
+        "happened": "US consumer prices rose 0.4% in October and the core measure, which leaves out food and energy, rose 0.3%, both above forecasts. Gold dropped to about $4,046 within minutes and silver fell to about $51.70.",
+        "means": "Hot inflation makes a December Fed rate rise look all but certain and puts a bigger half-point step on the table. That makes holding gold, which earns nothing, less attractive, so Monday's gain has been wiped out.",
+        "fx": "The same figures lifted the US dollar against every major currency. A lower gold price is a small extra weight on the Australian dollar, since Australia is a big gold producer."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Hotter US inflation raises the odds of bigger Fed rate rises, which weighs on gold."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Cheaper gold takes a little support away from a major gold exporter's currency."
+        }
+      ],
+      "watch": "Whether more Fed officials back a half-point rise in December, and whether gold holds above the $4,000 mark."
+    },
     {
       "id": "investing-reuters-lombardelli-december-hike-20261110",
       "date": "2026-11-10",
@@ -1226,33 +1259,6 @@
         }
       ],
       "watch": "Whether Iran accepts the Qatari first steps, which would reopen Hormuz in exchange for the US easing its blockade, or whether more ships are hit before markets reopen."
-    },
-    {
-      "id": "electionsnz-preliminary-result-20261107",
-      "date": "2026-11-07",
-      "source": "NZ Electoral Commission",
-      "url": "https://elections.nz/media-and-news/2026/2026-general-election-preliminary-results",
-      "image": null,
-      "headline": "New Zealand's election ends nearly tied: Labour edges the party vote, but Prime Minister Luxon's bloc holds a one-seat majority",
-      "story": "nz-election",
-      "story_title": "New Zealand election: who governs next",
-      "pillar": "fiscal",
-      "summary": "Labour won 29.4% of the party vote against National's 29.2% in Saturday's preliminary count, but National, ACT and NZ First together hold 67 of 131 seats, one more than needed. About 400,000 special votes are still to come, with the official result on November 27.",
-      "beats": {
-        "was": "Christopher Luxon's National Party has led a three-party government with ACT and NZ First since 2023. Polls before Saturday's vote showed a close race with Chris Hipkins' Labour, and unemployment is at its highest since 2015.",
-        "happened": "The Electoral Commission's election-night count, covering almost all ordinary votes, put Labour narrowly ahead on the party vote, 29.36% to 29.21%. On seats, National won 42 and Labour 36; with the Greens on 16, ACT 13, NZ First 12 and Te Pāti Māori 5, Luxon's three-party bloc has 67 seats, one over the 66 needed. The new Opportunity party passed the 5% bar and wins 7 seats. About 400,000 special votes remain, and the official count ends November 27. Luxon said National is again the largest party but compromise will be needed; Hipkins said Labour is ready to govern if it gets the chance.",
-        "means": "The current government is most likely to stay, but its one-seat edge could vanish when special votes are counted, which in past elections have tended to favour the left. That leaves about three weeks of uncertainty over who governs.",
-        "fx": "Elections rarely move the New Zealand dollar much on their own. A likely return of the same government means little change in policy, but a slim, unsettled outcome is a small extra worry for a currency that was already the weakest of the majors on Friday."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The same government looks likely to continue, but its one-seat majority hangs on special votes counted over the next three weeks."
-        }
-      ],
-      "watch": "The official count on November 27: if special votes cost the right bloc a seat, coalition talks get harder and a change of government becomes possible."
     }
   ]
 }
