@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T00:53:22-06:00",
+  "updated": "2026-11-10T07:40:18-06:00",
   "events": [
     {
       "id": "chf-ppi-20261015",
@@ -2753,17 +2753,26 @@
       "category": "central-bank",
       "title": "FOMC member Waller speaks",
       "focus": false,
-      "actual": null,
+      "actual": "Waller (BoE Watchers Conference, London): leans +25bp Dec hike even if Oct CPI cools; 50bp should be considered if core CPI ~0.3% or higher — 'hiking only 25bp would put our credibility at risk'",
       "forecast": null,
       "previous": null,
       "better": null,
       "why": "Waller hours before the Oct CPI print — the last Fed voice before the data that decides the ~76-77% December hike; Waller has leaned hawkish through the autumn.",
       "if_beat": null,
       "if_miss": null,
-      "outcome": null,
+      "outcome": "Hawkish turn hours before CPI: Dec hike now fully priced (~95.6-99% vs ~82% Mon); DXY lifted to ~101.7, GBP/USD off 1.3459 to ~1.3425, 2Y +6bp to ~4.61%. Today's CPI is now the 25bp-vs-50bp test.",
       "chapter": null,
       "bank": "fed",
-      "sources": []
+      "sources": [
+        {
+          "label": "FXStreet: Fed's Waller: Further policy tightening will be needed",
+          "url": "https://www.fxstreet.com/news/feds-waller-further-policy-tightening-will-be-needed-202611100908"
+        },
+        {
+          "label": "Reuters: Dollar steadies as Waller argues for more rate hikes, inflation up next",
+          "url": "https://live.euronext.com/en/financial-news/dollar-steadies-waller-argues-more-rate-hikes-inflation-next"
+        }
+      ]
     },
     {
       "id": "us-cpi-20261110",
@@ -2773,17 +2782,26 @@
       "category": "inflation",
       "title": "US CPI (Oct)",
       "focus": true,
-      "actual": null,
+      "actual": "+0.4% m/m (vs +0.3% fcst, prev +0.6%); core +0.3% m/m (vs +0.2% fcst, prev +0.3%). Shelter +0.3% (over 30% of the monthly rise), food +0.5%, energy +0.7% (gasoline +1.0%). No 12-month changes published (Oct 2025 data missing — 2025 shutdown).",
       "forecast": "+0.3% m/m (core +0.2%); no y/y published",
       "previous": "+0.6% m/m; 3.7% y/y (Sep); core 2.6% y/y",
       "better": "higher",
       "why": "The last CPI before the Dec 9 FOMC — after the +165K payrolls beat re-armed the ~77% December hike, a hot print locks it in and a soft one reopens the hold case. BLS will NOT publish y/y rates (no Oct 2025 data — last year's shutdown), so m/m is the read; ING expects headline and core both +0.3% m/m.",
       "if_beat": "Hotter: Dec hike firms toward done-deal — USD bid, 2Y higher.",
       "if_miss": "Softer: hold case reopens — USD offered, Dec hike pricing fades.",
-      "outcome": null,
+      "outcome": "HOT on both: headline +0.4% and core +0.3% both beat — core hits Waller's 50bp trigger exactly (>=0.3%), but the market did NOT price 50bp (CME 0.0% pre-print; post-print monitor 98.2% for +25bp). DXY ~101.9 (+0.36%); USD strongest vs AUD (+0.72%), least vs CAD (+0.30%). 2Y 4.64% (+8.8bp), 10Y 4.94% (+7.7bp).",
       "chapter": null,
       "bank": "fed",
-      "sources": []
+      "sources": [
+        {
+          "label": "FXStreet: US Consumer Price Index rises 0.4% (MoM) in October vs. 0.3% expected",
+          "url": "https://www.fxstreet.com/news/us-cpi-data-set-to-ease-in-october-as-markets-reassess-fed-rate-hike-expectations-202611100930"
+        },
+        {
+          "label": "BLS: Consumer Price Index Summary — October 2026",
+          "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+        }
+      ]
     },
     {
       "id": "us-10y-auction-20261110",
