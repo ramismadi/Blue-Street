@@ -1,38 +1,34 @@
 {
-  "updated": "2026-11-11T01:40:00-06:00",
+  "updated": "2026-11-11T15:30:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~92% for 25bp / ~9% for 50bp, pause priced out (CME FedWatch via Reuters, Nov 11); ECB Dec ~89% (Nov 4); BoJ Dec ~80%; BoC Dec ~34%; BoE 4.00%, RBA 4.85%",
-      "read": "Markets now treat a December Federal Reserve hike as close to certain, and a second hike early next year as more likely than not. Fed officials keep leaning that way, which widens the gap between US rates and most others. Japan and the euro area are expected to hike in December too, but that is already priced.",
+      "figure": "Fed Dec hike ~87% for 25bp / ~13% for 50bp, no pause priced (CME FedWatch via Reuters, Nov 11 NY); ECB Dec ~92%; BoJ Dec ~84%; BoE Dec ~67%; BoC Dec ~34%; BoE 4.00%, RBA 4.85%",
+      "read": "Federal Reserve officials spent the day talking up faster rate rises, so bets grew on a half-point December hike rather than a quarter point. That pulls US rates further ahead of almost everyone, which lifted the dollar against every major currency. Hikes from Europe and Japan are expected too, but already priced.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, New York session Nov 11; quotes from about 11:50 AM to 2:30 PM CT, indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "BNN Bloomberg / AP (Nov 11): Fed officials weigh faster rate rises as higher prices spread",
+          "url": "https://www.bnnbloomberg.ca/business/international/2026/11/11/as-higher-prices-seep-into-broader-economy-us-fed-officials-consider-faster-hikes/"
         },
         {
           "label": "Blue Street central banks (Hercules, Nov 11)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-        },
-        {
-          "label": "investingLive (Nov 10): Fed's Logan says at least two more quarter-point hikes are needed",
-          "url": "https://investinglive.com/central-banks/fed-s-logan-it-s-clear-that-fed-needs-at-least-two-more-quarter-point-rate-hikes/"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "Australia new home loans −15.5% q/q in Q3 (fcst ~−8%), investor loans −32%; UK Q3 GDP Thu 1:00 AM CT, fcst +0.7% q/q; euro-area Q3 GDP 2nd estimate Fri 4:00 AM CT",
-      "read": "Australian home lending slumped in the third quarter, a sign high rates there are biting hard. The US economy still looks firmer than Australia's, Canada's or New Zealand's, a split that favours the dollar. UK growth figures on Thursday are the next big read.",
+      "figure": "UK Q3 GDP Thu 1:00 AM CT, fcst +0.7% q/q; euro-area Q3 GDP 2nd estimate Fri 4:00 AM CT; Australia new home loans −15.5% q/q in Q3",
+      "read": "No major growth figures landed on Wednesday. The US economy still looks firmer than Australia's, Canada's or New Zealand's, a split that favours the dollar. UK growth figures overnight are the next big read.",
       "sources": [
         {
-          "label": "investingLive (Nov 11): Australian investor home lending plunges 32% in Q3",
-          "url": "https://investinglive.com/news/australian-investor-home-lending-plunges-32-in-q3-as-tax-curbs-and-rba-hikes-bite-harder/"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Nov 11): times and forecasts",
+          "label": "Blue Street calendar (Hercules, Nov 11): times, forecasts and results",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
@@ -44,15 +40,19 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "US Oct CPI +0.4% m/m (fcst +0.3%), core +0.3% (fcst +0.2%); US PPI Fri 7:30 AM CT fcst +0.4% m/m, core +0.3%; Japan PPI Wed 5:50 PM CT fcst 6.5% y/y",
-      "read": "US inflation is running at roughly twice the Fed's goal, and no new figures landed overnight to change that. That keeps the Fed hiking, which supports the dollar and weighs on gold. US producer prices on Friday are the next check.",
+      "figure": "US Oct CPI +0.4% m/m (fcst +0.3%), core +0.3% (fcst +0.2%), 4% y/y; US PPI Fri 7:30 AM CT fcst +0.4% m/m; Japan PPI Wed 5:50 PM CT fcst 6.5% y/y; Brent high ~$94.2 Wed",
+      "read": "US inflation is running at about twice the Fed's goal, and Fed officials now say it is spreading beyond energy. Oil's rise on Wednesday adds to that worry. That keeps the Fed hiking, which supports the dollar and weighs on gold.",
       "sources": [
         {
-          "label": "Blue Street calendar (Hercules, Nov 11): times and forecasts",
+          "label": "Blue Street calendar (Hercules, Nov 11): times, forecasts and results",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
+          "label": "BNN Bloomberg / AP (Nov 11): Fed officials weigh faster rate rises as higher prices spread",
+          "url": "https://www.bnnbloomberg.ca/business/international/2026/11/11/as-higher-prices-seep-into-broader-economy-us-fed-officials-consider-faster-hikes/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York session Nov 11; quotes from about 11:50 AM to 2:30 PM CT, indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -60,15 +60,15 @@
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "USD/JPY ~158.72, USD/CHF ~0.8258, AUD/USD ~0.6870 in Asia; Brent ~$92.5 on Hormuz attacks",
-      "read": "Asian markets stayed calm overnight, so there was little demand for safe havens. The franc and the yen stayed weak against the dollar as a result. Tanker attacks in the Gulf are the main thing that could change the mood quickly.",
+      "figure": "USD/CHF ~0.832 (+0.86%), USD/JPY ~159.8 (+0.67%); AUD/USD ~0.6863 (−0.1%); gold ~$3,983 (−1.2%)",
+      "read": "US stocks rallied, so there was little demand for safe havens despite more tanker attacks near Hormuz. The franc and the yen were among the day's biggest losers against the dollar. Gulf news is still the main thing that could change the mood fast.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, New York session Nov 11; quotes from about 11:50 AM to 2:30 PM CT, indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 10–11): oil, Hormuz, Qatar, Iran",
+          "label": "Blue Street breaking watch (Hercules, Nov 11): oil, Hormuz, US–Iran talks",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         }
       ]
@@ -76,20 +76,20 @@
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$92.54 (+1.15% vs Tue settle $91.49), WTI ~$86.68; Brent $116.72 at the Oct 30 close; API crude stocks +9.0M bbl",
-      "read": "Oil bounced off its lowest level in two months as attacks on ships near the Strait of Hormuz continued. Prices are still far below October's peak, which eases the energy bill for Japan and the euro area. Firmer oil gives the Canadian dollar a little support.",
+      "figure": "Brent ~$92.5 at 2:26 PM CT (high ~$94.2; Tue settle $91.49), WTI ~$86.3 (high ~$88.2); OPEC+ Oct output 41.2M b/d (+2.04M); Brent $116.72 at the Oct 30 close",
+      "read": "Oil rose as Iran hardened its stance and tanker attacks went on, though talk of direct US–Iran talks trimmed the gain late in the day. Dearer oil helps the Canadian dollar and weighs on Japan and the euro area. OPEC's output is close to pre-war levels, which caps how far prices can run.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, New York session Nov 11; quotes from about 11:50 AM to 2:30 PM CT, indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Reuters (Nov 11): oil rises from two-month low as Hormuz shipping attacks offset Iran truce hopes",
-          "url": "https://www.reuters.com/business/energy/oil-rises-two-month-low-hormuz-shipping-attacks-offset-iran-truce-hopes-2026-11-11/"
+          "label": "Blue Street breaking watch (Hercules, Nov 11): oil, Hormuz, US–Iran talks",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         },
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 10–11): oil, Hormuz, Qatar, Iran",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
+          "label": "CP24 / Reuters (Nov 11): OPEC oil output in October nears pre-war rate",
+          "url": "https://www.cp24.com/news/money/2026/11/11/opec-oil-output-in-october-nears-pre-iran-war-rate-led-by-saudi-arabia/"
         }
       ]
     },
@@ -97,7 +97,7 @@
       "id": "positioning",
       "title": "Positioning",
       "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD, CAD, EUR; 4-week change NZD −22K, EUR −34K contracts; next report Friday",
-      "read": "Hedge funds lean toward the dollar and the yen and against the kiwi, the Canadian dollar and the euro, with big recent additions to bets against the kiwi and the euro. The dollar's rise this week has gone with those bets, so there is no sign of a squeeze. The next weekly report is due Friday.",
+      "read": "Hedge funds lean toward the dollar and the yen and against the kiwi, the Canadian dollar and the euro. The dollar's rise has gone with most of those bets, though the large bet on the yen is losing money as it weakens. The next weekly report is due Friday.",
       "sources": [
         {
           "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 3)",
@@ -108,19 +108,15 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "US 10-year auction Nov 10: $42B at 5.020%, bid-to-cover 2.46 (6-auction avg 2.60), indirects 61.2%; 10-year ~4.98% at Tuesday's close; $25B 30-year auction Thu",
-      "read": "Weak demand at two US government bond sales this week pushed long-term US borrowing costs up, which supports the dollar for now. The worry is that buyers want more pay to hold US debt. A 30-year bond sale on Thursday is the next check.",
+      "figure": "US 10-year auction Nov 10: $42B at 5.020%, bid-to-cover 2.46 (6-auction avg 2.60); 10-year ~4.98% at Tuesday's close; bond market shut Nov 11; $25B 30-year auction Thu 12:00 PM CT",
+      "read": "Weak demand at US government bond sales this week pushed long-term borrowing costs up, as buyers asked for more pay to hold US debt. That supports the dollar for now but is a worry if it spreads. A 30-year bond sale on Thursday is the next check.",
       "sources": [
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 10–11): oil, Hormuz, Qatar, Iran",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, New York session Nov 11; quotes from about 11:50 AM to 2:30 PM CT, indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street calendar (Hercules, Nov 11): times and forecasts",
+          "label": "Blue Street calendar (Hercules, Nov 11): times, forecasts and results",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
