@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T16:55:00Z",
+  "updated": "2026-11-11T17:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -49,8 +49,8 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-11T16:55:00Z",
-      "text": "Brent crude dipped briefly under $90 a barrel on Tuesday on hopes the US\u2013Iran war is ending, but has climbed back to about $94 as tankers near the Strait of Hormuz keep being hit and Iran refuses a core US demand on its uranium. Against that, OPEC's report shows Gulf output back near pre-war levels, so more oil is getting out than the attacks suggest."
+      "ts": "2026-11-11T17:55:00Z",
+      "text": "Brent crude dipped briefly under $90 a barrel on Tuesday on hopes the US\u2013Iran war is ending, and Qatar says it has bought at least two weeks for talks before any new US strike. But oil has climbed back to about $94 as tankers near the Strait of Hormuz keep being hit and Iran refuses a core US demand on its uranium, while OPEC's report shows Gulf output back near pre-war levels."
     }
   },
   "items": [
@@ -381,6 +381,45 @@
         }
       ],
       "watch": "Whether attacks on ships slow in the coming days; a lull would back the case for a lasting fall in oil, a new wave would undo it."
+    },
+    {
+      "id": "i24-qatar-two-week-window-iran-20261110",
+      "ts": "2026-11-10T18:45:00Z",
+      "source": "i24NEWS",
+      "url": "https://www.i24news.tv/en/news/middle-east/artc-qatar-secured-at-least-two-weeks-for-diplomacy-to-avert-us-strike-on-iran",
+      "image": "https://cdn.i24news.tv/uploads/ae/7e/70/bf/d0/ab/a9/b7/bf/ff/13/be/b4/c6/38/d7/ae7e70bfd0aba9b7bfff13beb4c638d7.jpg",
+      "headline": "Qatar says it has bought at least two weeks for US\u2013Iran diplomacy before any new US strike",
+      "story": "us-iran-talks",
+      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "pillar": "risk",
+      "summary": "Qatar's prime minister told G7 foreign ministers he has secured at least two weeks for talks before the US considers striking Iran again, but warned the two sides still disagree on the order of steps.",
+      "beats": {
+        "was": "The US and Iran have been at war, with Iranian attacks on ships near the Strait of Hormuz, the narrow sea lane that carries much of the world's oil. Qatar is the main go-between.",
+        "happened": "After meeting President Trump and Vice President JD Vance at the White House, Qatari Prime Minister Sheikh Mohammed bin Abdulrahman Al Thani told G7 foreign ministers in Paris on Tuesday that he had won at least two weeks for diplomacy, according to diplomatic sources. He said big gaps remain over what comes first: lifting the US naval blockade, Iran's nuclear programme, or releasing Iran's frozen money. Trump said progress had been made but did not rule out more strikes.",
+        "means": "The risk of the war flaring up again is lower for now, which takes some fear out of oil prices. But with no agreed sequence, a deal is not close, and the window closes in late November.",
+        "fx": "Less war risk eases pressure on oil and trims demand for safe havens like the Swiss franc and gold, though continued attacks on tankers are pulling the other way."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A pause on US strikes lowers the chance of a bigger hit to Gulf supply."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Less immediate war risk trims safe-haven demand."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A calmer outlook slightly reduces demand for gold as a hedge."
+        }
+      ],
+      "watch": "Whether talks resume within the two weeks, and whether attacks on tankers near Hormuz stop or spread."
     },
     {
       "id": "leprivatebanker-dollar-rebounds-sterling-drops-20261110",
@@ -1395,33 +1434,6 @@
         }
       ],
       "watch": "Tuesday's US October inflation figures; a firm reading would likely lift the dollar again."
-    },
-    {
-      "id": "fxstreet-bailey-speaks-after-boe-hike-20261109",
-      "date": "2026-11-09",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/forex-today-us-dollar-retreats-following-nfp-inspired-rally-202611090714",
-      "image": null,
-      "headline": "Bank of England Governor Andrew Bailey speaks on Monday, days after the first UK rate rise since 2023",
-      "story": "boe-hike",
-      "story_title": "Bank of England: rates rise again to fight energy costs",
-      "pillar": "policy",
-      "summary": "Bank of England Governor Andrew Bailey is due to speak later on Monday, his first remarks since the bank raised its rate to 4% last Thursday. Traders want to know whether another rise in December is likely.",
-      "beats": {
-        "was": "The Bank of England raised its main rate to 4% on Thursday, its first rise since 2023, and warned more could follow while the Iran war keeps energy prices high. Oil has fallen sharply since then.",
-        "happened": "A daily market preview lists a speech by Governor Andrew Bailey later on Monday. UK figures for growth in July to September follow on Thursday.",
-        "means": "This is a preview. Bailey's tone will show whether the bank sees last week's rise as one step or the start of a run, and the drop in oil since then gives him room to sound calmer.",
-        "fx": "Talk of further rises would support the pound; a hint that one rise is enough, helped by cheaper oil, would take some support away."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The pound's next step depends on whether Bailey leans toward another rate rise."
-        }
-      ],
-      "watch": "Whether Bailey signals a December rate rise, and UK growth figures on Thursday."
     }
   ]
 }
