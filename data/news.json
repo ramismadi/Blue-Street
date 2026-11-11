@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T11:50:00Z",
+  "updated": "2026-11-11T13:00:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -48,12 +48,91 @@
       "text": "Gold fell to about $4,046 an ounce on Tuesday, wiping out Monday's gain, after hotter US inflation made a December Federal Reserve rate rise all but certain and raised talk of a bigger step. Cheaper oil easing inflation fears had helped gold earlier in the week, but higher US rates now weigh more."
     },
     "OIL": {
-      "lean": "mixed",
-      "ts": "2026-11-11T11:50:00Z",
-      "text": "Brent crude dropped from the mid-$90s to briefly under $90 a barrel on Tuesday on hopes the US–Iran war is ending, then climbed back above $92.50. Ships near the Strait of Hormuz are still being hit, 37 in October alone, and Iran denies any talks are under way, so the physical squeeze on supply is holding prices up."
+      "lean": "bullish",
+      "ts": "2026-11-11T13:00:00Z",
+      "text": "Brent crude dipped briefly under $90 a barrel on Tuesday on hopes the US–Iran war is ending, but is back near $92–93. Ships near the Strait of Hormuz are still being hit, including a tanker that struck a mine on Wednesday, and Iran now says its enriched uranium will not leave the country, a core US demand, so a deal and normal oil flows look further away."
     }
   },
   "items": [
+    {
+      "id": "unn-reuters-iran-keeps-enriched-uranium-oil-up-20261111",
+      "date": "2026-11-11",
+      "source": "UNN (Reuters)",
+      "url": "https://unn.ua/en/news/oil-prices-rose-after-irans-new-statement",
+      "image": "https://unn.ua/img/2026/04/18/1776483406-3642-large.webp",
+      "headline": "Iran says its enriched uranium stays in the country, and oil rises toward $93",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
+      "pillar": "risk",
+      "summary": "Iran's security chief said Tehran will not let any enriched nuclear material leave the country, a clash with Washington's demand that nuclear issues be part of any first round of talks. Brent crude rose about 1.4% to near $92.80.",
+      "beats": {
+        "was": "The US and Israel have been at war with Iran since late February, and Iran has squeezed shipping through the Strait of Hormuz, the route for about a fifth of the world's oil. Washington says any first talks to end the war must cover Iran's nuclear programme, including its stock of enriched uranium.",
+        "happened": "On Wednesday the head of Iran's security service said Tehran would not allow enriched nuclear material to be taken out of the country. Brent crude rose $1.28 to about $92.77 a barrel and US crude to about $86.80 by mid-morning in Europe. An analyst at the Swiss bank UBS said fading hopes of a quick calm-down were holding prices up.",
+        "means": "Moving the uranium out is one of the core US conditions, so a flat refusal makes a quick deal look less likely. That keeps the risk to Gulf oil supply in prices for longer.",
+        "fx": "Firmer oil gives some help to the Canadian dollar and adds to the energy bill for big importers like Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A hard line on a core US demand pushes a deal, and normal Gulf shipping, further off."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Dearer oil helps Canada's biggest export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so higher prices weigh on its trade balance."
+        }
+      ],
+      "watch": "Whether the US softens or repeats its nuclear condition for talks, and whether Brent holds above $92."
+    },
+    {
+      "id": "euronews-tanker-mine-hormuz-20261111",
+      "date": "2026-11-11",
+      "ts": "2026-11-11T10:47:00Z",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/11/11/oil-markets-rise-as-investors-monitor-shipping-disruption-in-the-strait-of-hormuz",
+      "image": "https://images.euronews.com/articles/stories/09/98/81/78/1200x675_cmsv2_760d7d7d-d7f7-50ce-8488-87fa5bbf473e-9988178.jpg",
+      "headline": "Another tanker hit in the Strait of Hormuz, this time by a mine, Iran's army says",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's army said an oil tanker struck a mine and caught fire in the Strait of Hormuz, a day after its Revolutionary Guards said three tankers were set alight there. India said a ship with Indian crew was also hit in the Gulf.",
+      "beats": {
+        "was": "Since the war began in late February, Iran has limited traffic through the Strait of Hormuz and says it targets ships that cross without its permission. The US military recently said all mines in the strait had been cleared, and it has been escorting tankers out.",
+        "happened": "On Wednesday Iran's army said a tanker hit a mine and caught fire in the strait. Separately, India's shipping minister said a Liberia-flagged tanker with Indian crew was struck by a projectile in the Gulf, injuring four. On Tuesday Iran's Revolutionary Guards said three tankers had burned. Brent crude was little changed near $91.70 at the time.",
+        "means": "A mine strike so soon after the US said the waters were clear suggests that reopening the route safely will take longer than hoped, whatever happens in talks.",
+        "fx": "Keeps a supply-risk floor under oil, a mild help for the Canadian dollar and a cost for oil importers such as Japan."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Fresh ship damage and doubt over mine clearing keep supply risk alive."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Ongoing Gulf attacks keep some demand for safe places to park money."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher oil costs weigh on Japan as a big energy importer."
+        }
+      ],
+      "watch": "How many ships are hit this month compared with October's 37, and any word from the US military on mines."
+    },
     {
       "id": "cnbc-reuters-oil-rises-hormuz-attacks-20261111",
       "date": "2026-11-11",
@@ -1337,84 +1416,6 @@
         }
       ],
       "watch": "Whether tankers start moving through Hormuz again, and how fast global oil stocks are being drawn down."
-    },
-    {
-      "id": "fxempire-week-ahead-us-cpi-20261108",
-      "ts": "2026-11-08T13:58:00Z",
-      "source": "FXEmpire",
-      "url": "https://www.fxempire.com/forecasts/article/the-week-ahead-cpi-and-tech-earnings-test-a-fragile-stock-market-1643118",
-      "image": "https://responsive.fxempire.com/v7/_fxempire_/2026/11/wall-street-stock-exchange-09-1.jpg?width=1201",
-      "headline": "US October inflation figures on Tuesday are the week's big test for a December Fed rate rise",
-      "story": "fed-december",
-      "story_title": "Fed: will it raise rates in December?",
-      "pillar": "policy",
-      "summary": "US consumer prices for October come out Tuesday, with forecasters expecting a 0.3% monthly rise after 0.6% in September. Markets see about an 80% chance the Federal Reserve raises rates at its December 8–9 meeting.",
-      "beats": {
-        "was": "The Federal Reserve, the US central bank, has been weighing another rate rise because inflation is still too high. Last Friday's jobs report, with 165,000 new jobs in October, made a December rise look much more likely and gave the dollar its best day since June.",
-        "happened": "A weekly preview lists the US consumer price index for October on Tuesday, November 10, expected to rise 0.3% on the month, or 0.2% leaving out food and energy. Producer prices follow Friday, and more than a dozen Fed officials speak during the week. US stocks fell about 3% last week on worries about spending on AI data centres.",
-        "means": "With a December rate rise mostly expected, Tuesday's figures mainly decide whether that view holds. A hot reading would lock it in; a soft one would revive doubts.",
-        "fx": "This is a preview, not news yet. Inflation at or above forecast would back the dollar and weigh on gold, which pays no interest; a clear miss would do the reverse."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The dollar's next move hangs on whether inflation confirms a December rate rise."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Gold usually falls when US rate-rise odds go up and gains when they fade."
-        }
-      ],
-      "watch": "Tuesday's US consumer price figures against the 0.3% forecast, and what Fed officials say about December afterwards."
-    },
-    {
-      "id": "almonitor-reuters-trump-iran-strikes-unlikely-20261108",
-      "date": "2026-11-08",
-      "source": "Al-Monitor (Reuters)",
-      "url": "https://www.al-monitor.com/originals/2026/11/trump-says-he-unlikely-order-iran-attack-if-talks-progress-cnn-reports",
-      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-08T175946Z_1_LYNXNPEMA70GF_RTROPTP_3_IRAN-CRISIS-USA-TRUMP.JPG?h=ba88677a&itok=No-v-Sau",
-      "headline": "Trump says new US attacks on Iran are very unlikely as long as peace talks keep moving forward",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "US President Donald Trump told CNN on Sunday he is very unlikely to order fresh attacks on Iran while talks to end the war make progress. He tied that to Iran signing what he called a very strong agreement.",
-      "beats": {
-        "was": "The US and Iran have been at war for months, with the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, largely shut. Talks in Qatar have produced a draft deal, but on Friday the US hit an Iranian air-defence site and over the weekend Iran said several tankers caught fire near Hormuz.",
-        "happened": "In a Sunday phone interview with CNN, Trump said renewed US strikes were very unlikely if negotiations keep progressing, provided Iran agrees to a strong deal. He also said the US has picked out possible targets, including 38 bridges it could destroy within an hour. No agreement has been announced.",
-        "means": "It is a softer tone than last week's talk of fresh strikes, but it comes with conditions and a clear threat. It lowers the near-term risk of a new round of fighting without settling the war or reopening Hormuz.",
-        "fx": "Less chance of new strikes takes a little of the war premium out of oil and safe havens like gold and the Swiss franc. Ship attacks near Hormuz pull the other way, so Monday's reopening will show which weighs more."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Fewer odds of new US strikes ease some fear of fresh supply losses, though nothing is signed."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Calmer war talk trims demand for the franc as a safe place to park money."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Gold loses a little of its war-risk support if strikes look less likely."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Cheaper oil helps Japan, which imports almost all of its energy, but calmer markets cut safe-haven demand for the yen."
-        }
-      ],
-      "watch": "Whether Iran answers the draft deal from the Qatar talks, and any new attacks on ships near Hormuz."
     }
   ]
 }
