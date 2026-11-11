@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-11T17:55:00Z",
+  "updated": "2026-11-11T20:10:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-11T14:55:00Z",
-      "text": "US consumer prices rose faster than expected in October, and Federal Reserve officials Christopher Waller and Lorie Logan then argued for bigger or more rate rises. A December rise is now taken as given, with growing odds of a half-point step and a second rise in January, which lifted the dollar to a four-week high on Wednesday, though two soft US government bond sales this week show buyers asking more to hold US debt."
+      "ts": "2026-11-11T20:10:00Z",
+      "text": "US consumer prices rose 4% in the year to October, faster than expected, and several Federal Reserve officials, including Governor Christopher Waller and Dallas Fed President Lorie Logan, now argue for bigger or more rate rises. Markets see a December rise as nearly certain and better-than-even odds of another in January, which has lifted the dollar to a four-week high."
     },
     "EUR": {
       "lean": "bearish",
@@ -49,11 +49,50 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-11T17:55:00Z",
-      "text": "Brent crude dipped briefly under $90 a barrel on Tuesday on hopes the US\u2013Iran war is ending, and Qatar says it has bought at least two weeks for talks before any new US strike. But oil has climbed back to about $94 as tankers near the Strait of Hormuz keep being hit and Iran refuses a core US demand on its uranium, while OPEC's report shows Gulf output back near pre-war levels."
+      "ts": "2026-11-11T20:10:00Z",
+      "text": "Brent crude dipped briefly under $90 a barrel on Tuesday on hopes the US\u2013Iran war is ending, but has climbed back to about $94 as tankers near the Strait of Hormuz keep being hit. Iran now says the strait stays shut until the US meets its conditions, while OPEC's report shows Gulf output back near pre-war levels."
     }
   },
   "items": [
+    {
+      "id": "bnn-ap-fed-officials-faster-hikes-20261111",
+      "ts": "2026-11-11T16:14:46Z",
+      "source": "BNN Bloomberg (AP)",
+      "url": "https://www.bnnbloomberg.ca/business/international/2026/11/11/as-higher-prices-seep-into-broader-economy-us-fed-officials-consider-faster-hikes/",
+      "image": "https://www.bnnbloomberg.ca/resizer/v2/F2FQO2DLWBFZ5FY4V4IKM5QRVQ.jpg?smart=true&auth=097285be94c4c9281de11e9a05efa1a08223d23516d68928b8940e429b2f34dc&width=1200&height=630",
+      "headline": "As higher prices spread through the US economy, Fed officials weigh faster rate rises",
+      "story": "fed-hikes",
+      "story_title": "Fed: how fast to raise rates after hot inflation",
+      "pillar": "policy",
+      "summary": "With US inflation back up to 4% a year, several Federal Reserve officials now say price rises are spreading beyond energy, and markets see a December rate rise as almost certain.",
+      "beats": {
+        "was": "The Federal Reserve raised its key rate in September to fight inflation pushed up by the Iran war's oil shock, then held it near 3.9% in late October.",
+        "happened": "October figures out Tuesday showed US prices up 4% from a year earlier, from 3.7% in September, with gadgets like phones and TVs rising fast. Dallas Fed President Lorie Logan backed at least two more quarter-point rises, Governor Christopher Waller said the figures justify weighing a half-point step, and Governor Michelle Bowman said price pressure may be widening. Philadelphia Fed President Anna Paulson prefers slow, gradual rises, and Fed Chair Kevin Warsh declined to say what comes next.",
+        "means": "Markets put about a 90% chance on a rise at the December 8\u20139 meeting and now see better-than-even odds of another in January, a big jump in two days. The debate inside the Fed is now about pace, not direction.",
+        "fx": "Higher expected US rates support the dollar, especially against low-rate currencies like the yen, and weigh on gold, which pays no interest."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More Fed officials lean toward faster rises, adding to bets already made after Tuesday's inflation figures."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A wider gap between US and Japanese rates keeps pressure on the yen."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher US rates make holding gold less attractive."
+        }
+      ],
+      "watch": "Fed speakers ahead of their December 8\u20139 meeting, and November's US inflation figures; a softer reading or a cautious word from Chair Warsh would cool the bets."
+    },
     {
       "id": "reuters-opec-output-october-near-prewar-20261111",
       "ts": "2026-11-11T14:50:47Z",
@@ -237,6 +276,45 @@
         }
       ],
       "watch": "Australia's October jobs report on Thursday: further weakness would firm up the view that the cash rate has peaked at 4.85%."
+    },
+    {
+      "id": "aljazeera-iran-denies-talks-hormuz-shut-20261111",
+      "date": "2026-11-11",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/afp_6af3eb2f86fc-1794370351.jpg?resize=1920%2C1440",
+      "headline": "Iran denies talks with the US and says the Strait of Hormuz stays shut until its demands are met",
+      "story": "us-iran-talks",
+      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "pillar": "risk",
+      "summary": "Iran's security chief Mohsen Rezaei says there are no talks with the US and the Strait of Hormuz will stay closed until Washington accepts Iran's conditions, even as US leaders talk up diplomacy.",
+      "beats": {
+        "was": "Since the war with Iran began, shipping through the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, has been badly disrupted, and Qatar has been trying to broker US\u2013Iran talks.",
+        "happened": "Rezaei called reports of ongoing talks or a meeting in Qatar false and said Iran is waiting for a US reply to its conditions, which include lifting sanctions and the US naval blockade and ending fighting in Lebanon. Foreign Minister Abbas Araghchi said the strait could reopen within two days if those demands are met. President Trump spoke of positive momentum, and Secretary of State Marco Rubio said the US is open to diplomacy. Iran's Revolutionary Guards said three more tankers hit mines.",
+        "means": "Both sides say a deal is possible, but Iran is tying the reopening of the strait to a long list of demands, so oil supply through the Gulf stays at risk for now.",
+        "fx": "Mild upward pressure on oil, and a small lift for oil-linked currencies like the Canadian dollar and for safe havens."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Iran links reopening Hormuz to demands the US has not met, keeping supply at risk."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil helps Canada's main export."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Unresolved conflict keeps some demand for safe havens."
+        }
+      ],
+      "watch": "A US answer to Iran's conditions or a confirmed meeting in Qatar would ease supply fears; more mine strikes or attacks on tankers would add to them."
     },
     {
       "id": "unn-reuters-iran-keeps-enriched-uranium-oil-up-20261111",
@@ -1368,72 +1446,6 @@
         }
       ],
       "watch": "The 10-year and 30-year bond sales later this week; weak demand again would add to the worry about foreign appetite."
-    },
-    {
-      "id": "zerohedge-nyfed-sce-oct-39-20261109",
-      "date": "2026-11-09",
-      "source": "ZeroHedge",
-      "url": "https://www.zerohedge.com/markets/layoff-fears-hit-highest-covid-crash-inflation-expectations-stay-stuck-near-3-year-high-ny",
-      "image": "https://cms.zerohedge.com/sites/default/files/styles/16_9_max_700/public/2026-11/BBG%20-%20NY%20Fed%20inflation%20expectations%20-%202026-11-09.png?itok=TSI-EAbK",
-      "headline": "Americans still expect 3.9% inflation over the next year, while fear of losing jobs hits its highest since 2020",
-      "story": "fed-december",
-      "story_title": "Fed: will it raise rates in December?",
-      "pillar": "inflation",
-      "summary": "The New York Fed's monthly survey of consumers showed people expect prices to rise 3.9% over the next year, unchanged from September, while worry about rising unemployment jumped to its highest since April 2020.",
-      "beats": {
-        "was": "The Federal Reserve watches what households expect inflation to be, because those expectations can feed into wages and prices. A December rate rise is seen as likely after Friday's strong jobs report.",
-        "happened": "In the New York Fed's October Survey of Consumer Expectations, the one-year inflation outlook held at 3.9%, slightly above forecasts; the three-year outlook was 3.3% and the five-year 3.0%. The average chance people gave of higher unemployment a year from now rose to 45.3%.",
-        "means": "Inflation expectations are stuck near three-year highs, which supports the case for a rate rise. But households are growing more nervous about jobs, which cuts the other way.",
-        "fx": "A small mixed signal for the dollar: sticky inflation expectations back the Fed's tough line, while job fears are a reason for caution."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Inflation expectations stayed high, but worry about jobs rose sharply."
-        }
-      ],
-      "watch": "Tuesday's October inflation figures will show whether actual prices match what households expect."
-    },
-    {
-      "id": "reuters-dollar-slips-sterling-rises-20261109",
-      "date": "2026-11-09",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/business/sterling-rises-versus-dollar-market-sentiment-brightens-2026-11-09/",
-      "image": null,
-      "headline": "The dollar gives back some of Friday's jobs-day gain as fears over AI stocks and the Middle East fade",
-      "story": "fed-december",
-      "story_title": "Fed: will it raise rates in December?",
-      "pillar": "risk",
-      "summary": "The dollar slipped about 0.3% on Monday as calmer stock markets and softer talk on Iran drew money back to riskier currencies. The New Zealand dollar led, up about 1% to near 56 US cents.",
-      "beats": {
-        "was": "A strong US jobs report on Friday, with 165,000 new jobs in October, gave the dollar its best day since June, after a week of selling in AI-linked stocks and attacks on ships near the Strait of Hormuz.",
-        "happened": "In London trading the dollar index eased to about 101.9. The euro rose to about $1.119, the pound to about $1.341, and the dollar dipped just below 158 yen. Markets still see roughly an 81% chance the Federal Reserve raises rates in December, up slightly from the weekend.",
-        "means": "This is a breather, not a change of view. Money is moving back into riskier currencies as fear fades, but the case for a December Fed rate rise has not weakened ahead of Tuesday's US inflation figures.",
-        "fx": "Calmer markets help the New Zealand and Australian dollars and the pound against the US dollar. A firm inflation reading on Tuesday could quickly bring the dollar back."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The kiwi led the bounce in riskier currencies as fear in markets eased."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The dollar gave back part of Friday's jump as demand for safety faded."
-        },
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The pound edged up to about $1.341 as the dollar eased."
-        }
-      ],
-      "watch": "Tuesday's US October inflation figures; a firm reading would likely lift the dollar again."
     }
   ]
 }
