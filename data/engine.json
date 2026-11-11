@@ -1,38 +1,42 @@
 {
-  "updated": "2026-11-10T15:30:00-06:00",
+  "updated": "2026-11-11T01:40:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~85% for 25bp / ~15% for 50bp (CME FedWatch); ECB Dec ~89% (Nov 4); BoJ Dec ~80%; BoC Dec ~34%; BoE 4.00% and RBA 4.85% after November hikes",
-      "read": "Hotter US inflation figures made a December Federal Reserve hike look all but certain, and some traders now bet on a bigger half-point move. That widens the gap between US rates and most others, which favours the dollar. The Bank of Canada's meeting notes confirmed it is in no hurry, while Japan and the euro area are still expected to hike in December.",
+      "figure": "Fed Dec hike ~92% for 25bp / ~9% for 50bp, pause priced out (CME FedWatch via Reuters, Nov 11); ECB Dec ~89% (Nov 4); BoJ Dec ~80%; BoC Dec ~34%; BoE 4.00%, RBA 4.85%",
+      "read": "Markets now treat a December Federal Reserve hike as close to certain, and a second hike early next year as more likely than not. Fed officials keep leaning that way, which widens the gap between US rates and most others. Japan and the euro area are expected to hike in December too, but that is already priced.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, pushed 2:44 PM CT Nov 10; quotes from about 10:00 AM to 2:32 PM CT, indicative)",
+          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central banks (Hercules, Nov 10)",
+          "label": "Blue Street central banks (Hercules, Nov 11)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street calendar (Hercules, Nov 10): actuals, forecasts and times",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+          "label": "investingLive (Nov 10): Fed's Logan says at least two more quarter-point hikes are needed",
+          "url": "https://investinglive.com/central-banks/fed-s-logan-it-s-clear-that-fed-needs-at-least-two-more-quarter-point-rate-hikes/"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "China Oct imports +41.6% y/y (fcst +32%); UK Q3 GDP Thu 1:00 AM CT, fcst +0.7% q/q; euro-area Q3 GDP 2nd estimate Fri 4:00 AM CT",
-      "read": "No big growth figures landed today; strong Chinese imports overnight were drowned out by the US inflation news. The US economy still looks firmer than Canada's or New Zealand's, a split that favours the dollar. UK growth figures on Thursday are the next real read.",
+      "figure": "Australia new home loans −15.5% q/q in Q3 (fcst ~−8%), investor loans −32%; UK Q3 GDP Thu 1:00 AM CT, fcst +0.7% q/q; euro-area Q3 GDP 2nd estimate Fri 4:00 AM CT",
+      "read": "Australian home lending slumped in the third quarter, a sign high rates there are biting hard. The US economy still looks firmer than Australia's, Canada's or New Zealand's, a split that favours the dollar. UK growth figures on Thursday are the next big read.",
       "sources": [
         {
-          "label": "Blue Street calendar (Hercules, Nov 10): actuals, forecasts and times",
+          "label": "investingLive (Nov 11): Australian investor home lending plunges 32% in Q3",
+          "url": "https://investinglive.com/news/australian-investor-home-lending-plunges-32-in-q3-as-tax-curbs-and-rba-hikes-bite-harder/"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Nov 11): times and forecasts",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
-          "label": "Blue Street currency board (Hercules, Nov 10)",
+          "label": "Blue Street currency board (Hercules, Nov 11)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
         }
       ]
@@ -40,51 +44,51 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "US Oct CPI +0.4% m/m (fcst +0.3%), core +0.3% (fcst +0.2%), third straight +0.3% core; 3-month annualized core ~3.7% (Hercules); Brent ~$92",
-      "read": "US consumer prices rose faster than expected in October, and the core measure has now run at roughly twice the Fed's goal for three months. That keeps the Fed under pressure and pushes US yields up, which lifts the dollar and weighs on gold. Falling oil eases price fears elsewhere, especially in energy importers.",
+      "figure": "US Oct CPI +0.4% m/m (fcst +0.3%), core +0.3% (fcst +0.2%); US PPI Fri 7:30 AM CT fcst +0.4% m/m, core +0.3%; Japan PPI Wed 5:50 PM CT fcst 6.5% y/y",
+      "read": "US inflation is running at roughly twice the Fed's goal, and no new figures landed overnight to change that. That keeps the Fed hiking, which supports the dollar and weighs on gold. US producer prices on Friday are the next check.",
       "sources": [
         {
-          "label": "Blue Street calendar (Hercules, Nov 10): actuals, forecasts and times",
+          "label": "Blue Street calendar (Hercules, Nov 11): times and forecasts",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, pushed 2:44 PM CT Nov 10; quotes from about 10:00 AM to 2:32 PM CT, indicative)",
+          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Blue Street breaking watch (Hercules, Nov 10)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "Dow −0.3%, S&P 500 −0.2% in morning trade (Yahoo Finance); USD/CHF +0.89%, USD/JPY +0.56%, AUD/USD −1.0%, NZD/USD −0.59%",
-      "read": "US stocks slipped only a little after the inflation figures, so there was no rush into safe havens. That left the franc and the yen weaker as US yields rose. Growth-linked currencies like the Aussie and the kiwi fell the most.",
+      "figure": "USD/JPY ~158.72, USD/CHF ~0.8258, AUD/USD ~0.6870 in Asia; Brent ~$92.5 on Hormuz attacks",
+      "read": "Asian markets stayed calm overnight, so there was little demand for safe havens. The franc and the yen stayed weak against the dollar as a result. Tanker attacks in the Gulf are the main thing that could change the mood quickly.",
       "sources": [
         {
-          "label": "Yahoo Finance (Nov 10): Dow, S&P 500 slip after CPI data raises Fed rate-hike bets",
-          "url": "https://finance.yahoo.com/markets/article/stock-market-today-tuesday-november-10-dow-sp-500-nasdaq-inflation-data-cpi-090627830.html"
+          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, pushed 2:44 PM CT Nov 10; quotes from about 10:00 AM to 2:32 PM CT, indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Blue Street breaking watch (Hercules, Nov 10–11): oil, Hormuz, Qatar, Iran",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         }
       ]
     },
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$91.99 (−0.6%), low ~$89.20; WTI ~$86.41 (−0.5%), low ~$84.10; Brent $116.72 at the Oct 30 close",
-      "read": "Oil briefly dropped to its lowest since August, then steadied after Iran denied any talks with Washington. Cheaper oil than a month ago lowers the energy bill for Japan and the euro area. Steady prices today gave the Canadian dollar neither help nor harm.",
+      "figure": "Brent ~$92.54 (+1.15% vs Tue settle $91.49), WTI ~$86.68; Brent $116.72 at the Oct 30 close; API crude stocks +9.0M bbl",
+      "read": "Oil bounced off its lowest level in two months as attacks on ships near the Strait of Hormuz continued. Prices are still far below October's peak, which eases the energy bill for Japan and the euro area. Firmer oil gives the Canadian dollar a little support.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, pushed 2:44 PM CT Nov 10; quotes from about 10:00 AM to 2:32 PM CT, indicative)",
+          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 10)",
+          "label": "Reuters (Nov 11): oil rises from two-month low as Hormuz shipping attacks offset Iran truce hopes",
+          "url": "https://www.reuters.com/business/energy/oil-rises-two-month-low-hormuz-shipping-attacks-offset-iran-truce-hopes-2026-11-11/"
+        },
+        {
+          "label": "Blue Street breaking watch (Hercules, Nov 10–11): oil, Hormuz, Qatar, Iran",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         }
       ]
@@ -93,7 +97,7 @@
       "id": "positioning",
       "title": "Positioning",
       "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD, CAD, EUR; 4-week change NZD −22K, EUR −34K contracts; next report Friday",
-      "read": "Hedge funds lean toward the dollar and the yen and against the kiwi, the Canadian dollar and the euro, with big recent additions to bets against the kiwi and the euro. Today's dollar rise went with those bets, so there was no sign of a squeeze. In the Aussie and the pound, hedge funds and real-money investors still sit on opposite sides.",
+      "read": "Hedge funds lean toward the dollar and the yen and against the kiwi, the Canadian dollar and the euro, with big recent additions to bets against the kiwi and the euro. The dollar's rise this week has gone with those bets, so there is no sign of a squeeze. The next weekly report is due Friday.",
       "sources": [
         {
           "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 3)",
@@ -104,16 +108,20 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "US 10-year auction $42B at 5.020%, bid-to-cover 2.46 (6-auction avg 2.60), indirects 61.2%; 10-year yield ~5.02%",
-      "read": "Buyers showed little appetite at a US 10-year bond sale, the second weak sale in two days, which helped push long-term US borrowing costs back above 5%. Higher yields support the dollar for now, but weak demand for US debt is a worry to watch. A Democratic Congress still makes President Trump's spending plans harder to pass.",
+      "figure": "US 10-year auction Nov 10: $42B at 5.020%, bid-to-cover 2.46 (6-auction avg 2.60), indirects 61.2%; 10-year ~4.98% at Tuesday's close; $25B 30-year auction Thu",
+      "read": "Weak demand at two US government bond sales this week pushed long-term US borrowing costs up, which supports the dollar for now. The worry is that buyers want more pay to hold US debt. A 30-year bond sale on Thursday is the next check.",
       "sources": [
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 10)",
+          "label": "Blue Street breaking watch (Hercules, Nov 10–11): oil, Hormuz, Qatar, Iran",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, pushed 2:44 PM CT Nov 10; quotes from about 10:00 AM to 2:32 PM CT, indicative)",
+          "label": "Blue Street market levels (Hercules, pushed 12:55 AM CT Nov 11; Asia quotes about 12:25–12:56 AM CT, oil 9:56 PM CT; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Nov 11): times and forecasts",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     }
