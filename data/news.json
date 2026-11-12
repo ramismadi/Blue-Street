@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T16:47:00Z",
+  "updated": "2026-11-12T17:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "mixed",
-      "ts": "2026-11-12T11:48:35Z",
-      "text": "The Bank of Canada, which raised rates to 2.5% in October, says it is ready to go again if energy costs spread. But oil, Canada's main export, is easing on peace-talk hopes, Canada has lost jobs two months running, and a strong US dollar weighs on the loonie."
+      "ts": "2026-11-12T17:55:00Z",
+      "text": "The Bank of Canada, which raised rates to 2.5% in October, says it is ready to go again if energy costs spread. Oil, Canada's main export, has firmed as US–Iran peace hopes fade, but Canada has lost jobs two months running and a strong US dollar weighs on the loonie."
     },
     "AUD": {
       "lean": "bearish",
@@ -49,11 +49,83 @@
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-12T16:47:00Z",
-      "text": "Brent swings around $92–93 a barrel. Hopes of direct US–Iran talks, peace efforts in Ukraine and more OPEC+ output pull it down, while ships near the Strait of Hormuz are still being hit and President Trump now says the US doesn't need a deal with Iran, which puts some war risk back in."
+      "ts": "2026-11-12T17:55:00Z",
+      "text": "Brent is back near $94 a barrel after President Trump took Vice President JD Vance off Iran talks and said the US doesn't need a deal, fading hopes of a quick end to the war. Bigger-than-expected US stockpiles, peace efforts in Ukraine and more OPEC+ output are the main weights."
     }
   },
   "items": [
+    {
+      "id": "toi-trump-pulls-vance-iran-talks-20261112",
+      "date": "2026-11-12",
+      "source": "Times of Israel",
+      "url": "https://www.timesofisrael.com/trump-tells-vance-to-shift-his-focus-as-us-doesnt-need-a-deal-with-iran/",
+      "image": "https://static-cdn.toi-media.com/www/uploads/2026/11/AP26315588943108-e1794496262884.jpg",
+      "headline": "Trump Takes Vance Off Iran Talks, Says US Doesn't Need a Deal",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran talks: Hormuz reopening offer vs ship attacks",
+      "pillar": "commodities",
+      "summary": "US President Donald Trump told Vice President JD Vance to drop his work on Iran talks and focus on fraud at home, saying a deal with Iran is no longer needed. Oil rose on the news.",
+      "beats": {
+        "was": "The US and Israel went to war with Iran in late February, and Iran has since choked off the Strait of Hormuz, the route for about a fifth of the world's oil. On Wednesday, reports said Vance was weighing a rare face-to-face meeting with a senior Iranian security official.",
+        "happened": "On Thursday Trump wrote on social media that Vance should give his full attention to fraud in the US instead, and that the time for a deal with Iran has passed because the US already holds Iran's money and the strait.",
+        "means": "The most direct channel for peace talks has been shut for now, so hopes of a quick end to the war, which had pulled oil lower this week, have faded.",
+        "fx": "Less chance of a deal keeps oil supported, a small help for the Canadian dollar and a small drag on big oil importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A quick peace deal looks less likely, so war risk stays in the price."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil helps Canada's main export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys nearly all its oil abroad."
+        }
+      ],
+      "watch": "Any reply from Tehran, whether US envoys Steve Witkoff and Jared Kushner pick up the Iran file, and new attacks on ships near Hormuz."
+    },
+    {
+      "id": "investinglive-eia-crude-build-4657-20261112",
+      "date": "2026-11-12",
+      "source": "InvestingLive",
+      "url": "https://investinglive.com/commodities/crude-oil-inventories-4-657-million-versus-1-109-million-estimate/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Crude%20oil%20Trader-featured-1794502835.jpg?width=960&format=webp",
+      "headline": "US Crude Stocks Rise 4.66 Million Barrels Against an Expected Drop",
+      "story": "us-oil-stocks",
+      "story_title": "US oil stockpiles",
+      "pillar": "commodities",
+      "summary": "Official US data showed crude stockpiles rose by about 4.7 million barrels last week when a small drop was expected, with fuel stocks also building.",
+      "beats": {
+        "was": "Each week the US Energy Information Administration (EIA) reports how much crude and fuel sits in US storage. A private survey from the American Petroleum Institute on Tuesday had already pointed to a large crude build of 9 million barrels.",
+        "happened": "The EIA said crude stocks rose 4.66 million barrels in the week to November 6, against forecasts of a 1.1 million drop. Gasoline rose 1.8 million barrels and diesel and heating oil 4.1 million, both against expected small falls.",
+        "means": "More oil in storage points to softer US demand or ample supply, a mild weight on prices. But the build was smaller than the private survey suggested, and the Iran war matters far more for oil right now.",
+        "fx": "Little direct effect on currencies; any lasting dip in oil would be a small minus for the Canadian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Bigger stockpiles than expected point to ample supply."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Softer oil is a small drag on Canada's main export."
+        }
+      ],
+      "watch": "The International Energy Agency's monthly oil report on Friday and next week's EIA figures on Wednesday, November 18."
+    },
     {
       "id": "zetik-cnbc-trump-no-iran-deal-needed-20261112",
       "ts": "2026-11-12T14:21:20Z",
@@ -1067,45 +1139,6 @@
       "watch": "Whether talks resume within the two weeks, and whether attacks on tankers near Hormuz stop or spread."
     },
     {
-      "id": "leprivatebanker-dollar-rebounds-sterling-drops-20261110",
-      "ts": "2026-11-10T18:35:31Z",
-      "source": "The Private Banker",
-      "url": "https://leprivatebanker.com/2026/11/10/dollar-rebounds-on-hot-cpi-as-euro-falls-below-1-12-and-sterling-drops-0-8-but-the-index-stays-under-fridays-close/",
-      "image": "https://leprivatebanker.com/wp-content/uploads/2026/11/pexels-photo-10149296.jpeg",
-      "headline": "The dollar climbs after hot US inflation; sterling falls 0.8% and the euro slips under $1.12",
-      "story": "fed-december",
-      "story_title": "Fed: will it raise rates in December?",
-      "pillar": "policy",
-      "summary": "Hotter-than-expected US inflation lifted the dollar across the board on Tuesday, with the pound hit hardest, as markets began to price a small chance of a half-point Fed rise.",
-      "beats": {
-        "was": "The dollar had slipped on Monday as risk appetite returned, giving back part of Friday's jump after strong US jobs figures.",
-        "happened": "US consumer prices rose 0.4% in October and core prices 0.3%, both above forecasts. The two-year Treasury yield, which tracks Fed expectations, jumped about 0.12 percentage points to 4.68%. Sterling fell about 0.8% to roughly $1.333, the euro dropped about 0.6% to near $1.115, and the dollar rose about 0.5% against the yen and Canadian dollar. Markets now see about an 11% chance of a half-point Fed rise in December, up from none.",
-        "means": "A December rise is close to fully expected, so the new part is talk of a bigger step. The dollar index still ended below Friday's high, so the gain undid only Monday's slide.",
-        "fx": "Higher US rate expectations favour the dollar, and the pound, which had risen on hopes of more Bank of England rises, gave back the most."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher US short-term yields after hot inflation lift the dollar broadly."
-        },
-        {
-          "ccy": "GBP",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The pound was the biggest loser to the firmer dollar."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro slipped back under $1.12."
-        }
-      ],
-      "watch": "US producer prices and retail sales later this week, and whether half-point talk spreads among Fed officials."
-    },
-    {
       "id": "bloomingbit-us-10y-auction-weak-20261110",
       "ts": "2026-11-10T18:10:11Z",
       "source": "Bloomingbit",
@@ -1281,39 +1314,6 @@
         }
       ],
       "watch": "The detailed customs figures showing whether imports rose on prices or volumes, and trade talk at the Trump–Xi meeting later this month."
-    },
-    {
-      "id": "qz-eia-steo-brent-100-20261110",
-      "date": "2026-11-10",
-      "source": "Quartz",
-      "url": "https://qz.com/eia-raises-2027-gasoline-diesel-price-forecasts-111026",
-      "image": null,
-      "headline": "US energy agency expects Brent near $100 a barrel for the rest of 2026",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
-      "pillar": "risk",
-      "summary": "The US Energy Information Administration's monthly outlook sees Brent crude near $100 a barrel through the end of this year if Middle East supply stays tight, easing to about $77 by late 2027.",
-      "beats": {
-        "was": "Oil has been high since the US–Iran war began in late February and Iran squeezed shipping through the Strait of Hormuz, the route for about a fifth of the world's oil. Brent briefly fell below $90 on Tuesday on hopes the war is ending.",
-        "happened": "In its November short-term outlook, the Energy Information Administration, the US government's energy statistics agency, said it expects Brent to stay near $100 a barrel for the rest of 2026, assuming Gulf supply limits persist, then drift down to about $77 on average in the last quarter of 2027 as supply recovers. It also raised its fuel price forecasts for 2027. The forecast was finished before the events of the past week.",
-        "means": "An official forecaster sees today's prices, near $93, as below where tight supply should keep them. It is a forecast, not new supply news, and it predates this week's talk of a truce.",
-        "fx": "A higher oil path would favour the Canadian and Norwegian currencies and weigh on big importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "An official forecast sees Brent above today's level while Gulf supply stays limited."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A higher oil path helps Canada's biggest export."
-        }
-      ],
-      "watch": "Whether attacks on ships near Hormuz keep supply tight, or a US–Iran deal pulls prices toward the agency's lower 2027 path."
     },
     {
       "id": "reuters-russia-ukraine-us-abu-dhabi-talks-20261110",
