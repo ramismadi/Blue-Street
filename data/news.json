@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T02:00:00Z",
+  "updated": "2026-11-12T03:47:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "bearish",
-      "ts": "2026-11-12T02:00:00Z",
-      "text": "The yen has slid to nearly 160 per dollar, its weakest in over two months, as hot US inflation and talk of more Federal Reserve rate rises keep the gap between US and Japanese rates wide. Japan's top currency official, Atsushi Mimura, warned again on Thursday that the fall is too fast; Japan bought yen near 160 this summer, so official action is a real risk."
+      "ts": "2026-11-12T03:47:00Z",
+      "text": "The yen has slid to nearly 160 per dollar as hot US inflation and talk of more Federal Reserve rate rises keep US rates far above Japan's, and Japan's top currency official, Atsushi Mimura, has warned the fall is too fast. Japan's wholesale prices rose faster than expected in October, partly because of the cheap yen, which firms the case for a Bank of Japan rate rise in December and makes official action to support the yen a real risk."
     },
     "CHF": {
       "lean": "bearish",
@@ -54,6 +54,33 @@
     }
   },
   "items": [
+    {
+      "id": "investing-reuters-japan-wholesale-prices-71-20261112",
+      "date": "2026-11-12",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://www.investing.com/news/economy-news/japan-wholesale-inflation-accelerates-keeps-alive-boj-ratehike-view-5020108",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB012_L.jpg",
+      "headline": "Japan wholesale inflation accelerates, keeps alive BOJ rate-hike view",
+      "story": "boj-december",
+      "story_title": "BoJ: a rate rise in December?",
+      "pillar": "inflation",
+      "summary": "Prices that Japanese companies pay each other rose 7.1% in the year to October, faster than the 6.5% expected, partly because the weak yen makes imports dearer.",
+      "beats": {
+        "was": "The Bank of Japan has been slowly lifting its rate from near zero and now sits at 1.25%. Markets expect another rise at its December 17\u201318 meeting, while the yen trades close to 160 per dollar, a level where Japan stepped in to buy yen this summer.",
+        "happened": "Japan's wholesale price index, which tracks what firms pay for goods, rose 7.1% from a year earlier in October, up from 6.8% in September and above forecasts of 6.5%. Import prices measured in yen jumped about 25%, showing the cheap yen is pushing up the cost of raw materials.",
+        "means": "Rising costs for companies tend to reach shop prices later, which gives the Bank of Japan more reason to raise rates in December. It also shows the weak yen is now a source of inflation, which makes officials less willing to let it fall further.",
+        "fx": "Supports the yen by firming the case for a December Bank of Japan rise, though the pull of much higher US rates still weighs on it for now."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A clear beat that strengthens the case for a Bank of Japan rate rise in December."
+        }
+      ],
+      "watch": "Japan's October consumer prices later this month and any hint from Bank of Japan officials on December; a quiet reaction from them would leave the yen at the mercy of US rates."
+    },
     {
       "id": "sbs-ghalibaf-two-day-plan-20261112",
       "ts": "2026-11-12T01:41:26Z",
@@ -1425,39 +1452,6 @@
         }
       ],
       "watch": "Thursday's UK growth figures and UK inflation data next week; either could revive talk of a December rate rise."
-    },
-    {
-      "id": "investinglive-wsj-japan-record-50bn-intervention-20261109",
-      "ts": "2026-11-09T03:06:38Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/wsj-japan-spent-a-record-50-billion-in-one-day-to-defend-the-yen-data-confirms/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/97bn%20usdyen%20intervention%2009%20November%202026-featured-1794193584.jpg?width=960&format=webp",
-      "headline": "Japan spent a record $50 billion in one day defending the yen in July, official data show",
-      "story": "yen-defence",
-      "story_title": "Japan's fight to prop up the yen",
-      "pillar": "policy",
-      "summary": "Figures from Japan's Ministry of Finance confirm it spent almost 8 trillion yen, about $50 billion, buying yen on July 30, the most ever in a single day.",
-      "beats": {
-        "was": "The yen fell to its weakest in about 40 years, near 164 per dollar, earlier this year, because US interest rates are far higher than Japan's. Japan's government buys yen with its dollar reserves when it thinks the fall has gone too far.",
-        "happened": "New detail from the finance ministry shows a record one-day purchase on July 30, and about 15.4 trillion yen, roughly $97 billion, spent across July and August. The US Treasury joined in that operation, the first joint action of its kind since 1998.",
-        "means": "This is old spending made public, not a new move. It does remind traders that Tokyo, with Washington's backing, has acted hard before and could again if the yen slides back toward its lows.",
-        "fx": "The yen sits near 158 per dollar. The record shows there is a line the government will defend, which limits how far sellers dare push it, but the wide gap between US and Japanese rates still pulls the yen down."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Proof of heavy past buying makes a further deep fall riskier to bet on."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "US support for Japan's buying caps the dollar against the yen, though higher US rates still favour it."
-        }
-      ],
-      "watch": "Whether the yen weakens back toward 160 per dollar, warnings from Japan's finance minister, and the Bank of Japan's December meeting."
     }
   ]
 }
