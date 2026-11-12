@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-12T19:47:00Z",
+  "updated": "2026-11-12T23:58:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-12T19:47:00Z",
-      "text": "Faster-than-expected US inflation has Federal Reserve officials arguing for more rate rises, and the dollar is at its highest since April 2025. Most, like San Francisco Fed President Mary Daly and Cleveland's Beth Hammack, favour steady quarter-point steps over a bigger jump, while jobless claims stay very low."
+      "ts": "2026-11-12T23:58:00Z",
+      "text": "The dollar is at its highest since April 2025 because Federal Reserve officials, even usually cautious ones like Chicago's Austan Goolsbee, back more rate rises after hot October inflation. The cost is starting to show: US home sales have fallen to their slowest since 2010."
     },
     "EUR": {
       "lean": "bearish",
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "mixed",
-      "ts": "2026-11-12T19:47:00Z",
-      "text": "Oil, Canada's main export, has jumped above $95 as US\u2013Iran peace hopes fade and tankers are hit near Hormuz, and the Bank of Canada says it is ready to raise rates again if energy costs spread. But Canada has lost jobs two months running and a strong US dollar weighs on the loonie."
+      "ts": "2026-11-12T23:58:00Z",
+      "text": "Oil, Canada's main export, is back near $96 after attacks on Saudi oil sites and tankers near Hormuz, and the Bank of Canada says it is ready to raise rates again if energy costs spread. But Canada has lost jobs two months running and the loonie sits near a 19-month low against a strong US dollar."
     },
     "AUD": {
       "lean": "bearish",
@@ -44,16 +44,127 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-12T14:55:00Z",
-      "text": "Gold has dropped further below $4,000 an ounce, toward $3,900, as hotter US inflation made a December Federal Reserve rate rise all but certain and raised talk of more to follow. A strong dollar outweighs the pull of the Iran war and a wobble in tech shares."
+      "ts": "2026-11-12T23:58:00Z",
+      "text": "Gold has dropped below $3,900 an ounce, its lowest in over a year, as 10-year US bond yields above 5% and a strong dollar outweigh demand from the Middle East war."
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-12T19:47:00Z",
-      "text": "Brent has climbed above $95 a barrel, after President Trump took Vice President JD Vance off Iran talks and said the US doesn't need a deal, and Iran said four more tankers were hit in the Strait of Hormuz. Bigger US stockpiles and more OPEC+ output are the main brakes."
+      "ts": "2026-11-12T23:58:00Z",
+      "text": "Oil jumped back toward $96 a barrel on Thursday after Yemen's Houthis said they hit Saudi oil sites, including the pipeline Saudi Arabia uses to bypass Hormuz, and Iran claimed tanker hits in the strait. Rising US stockpiles and higher OPEC+ output still cap the gains."
     }
   },
   "items": [
+    {
+      "id": "kitco-gold-silver-slide-yields-20261112",
+      "ts": "2026-11-12T22:16:45Z",
+      "source": "Kitco",
+      "url": "https://www.kitco.com/news/article/2026-11-12/gold-silver-slide-treasury-yields-surge-fed-hike-concerns-intensify-kitco",
+      "image": "https://images.kitco.com/img/extract_0_0_1023_576,width_1200,enlarge,format_jpeg/icms/5768df25-c265-4c2d-a489-e51917a45667.jpeg",
+      "headline": "Gold, silver slide as Treasury yields surge, Fed hike concerns intensify",
+      "story": "gold-fed-cpi",
+      "story_title": "Gold: rising US rates vs war risk",
+      "pillar": "rates",
+      "summary": "Gold fell almost 3% on Thursday to about $3,876 an ounce, below $3,900, as US government bond yields jumped on bets the Federal Reserve will keep raising rates.",
+      "beats": {
+        "was": "US consumer prices rose faster than expected in October, and Federal Reserve officials have since talked up more rate rises. Gold had already slipped below $4,000 on Wednesday.",
+        "happened": "Spot gold dropped about $110 and silver fell about 3% to near $50. The 10-year US Treasury yield rose to about 5.10%, and futures put the chance of a December Fed rise at near certain, with about a one-in-seven chance of a bigger half-point move.",
+        "means": "Gold pays no interest, so when safe US bonds pay over 5% it loses appeal, and a strong dollar makes it dearer for buyers abroad. For now that outweighs the pull from the Middle East war.",
+        "fx": "Higher US yields back the dollar; the fall in gold and silver is a mild drag on Australia's metal-heavy exports."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Higher US yields and a firm dollar cut gold's appeal."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising Treasury yields reflect bets on more Fed rate rises."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Cheaper metals trim Australia's export income."
+        }
+      ],
+      "watch": "US producer prices next, Fed speakers' views on a half-point move, and whether war news brings back safe-haven buying."
+    },
+    {
+      "id": "aol-reuters-oil-settles-houthi-saudi-20261112",
+      "ts": "2026-11-12T20:51:00Z",
+      "source": "Reuters (via AOL)",
+      "url": "https://www.aol.com/articles/oil-prices-drop-more-1-014618000.html",
+      "image": "https://hermes.media.transform.aol.com/79c3e9ce2e3a74a3abc3f77033642cff5c26a026/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/12/6a244a3b-220e-3449-ab8a-7f4ae756e832/ae92bb4b-e599-462e-add2-2444bf746951.jpg",
+      "headline": "Oil settles $3 higher on attacks on Saudi energy sites, Strait of Hormuz disruptions",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Oil jumped more than 3% on Thursday after Yemen's Houthi group said it attacked Saudi oil sites, on top of Iranian claims of tankers hit in the Strait of Hormuz. Brent closed near $96 a barrel.",
+      "beats": {
+        "was": "Since the US and Israel went to war with Iran in late February, the Strait of Hormuz, the route for about a fifth of the world's oil, has been restricted. Saudi Arabia's pipeline to the Red Sea port of Yanbu is its main way to ship oil around the strait.",
+        "happened": "The Houthis, an Iran-backed group in Yemen, said they struck a pumping station on that Saudi pipeline, an oil site at Yanbu and a Saudi Aramco building in Riyadh. The Saudi-led coalition said it shot down two drones. Brent settled at $95.82, up $3.06, and US crude at $88.74, though both are still down about 2.5% on the week.",
+        "means": "The war's risks are no longer just inside the strait: the route Saudi Arabia uses to get around it is now a target too. That makes it harder for supply to recover even if ship traffic through Hormuz picks up.",
+        "fx": "Dearer oil helps the Canadian dollar and hurts big oil importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Attacks on Saudi Arabia's bypass pipeline threaten the main way around Hormuz."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices help Canada's biggest export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so its import bill rises."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro area imports most of its energy."
+        }
+      ],
+      "watch": "Whether Saudi Arabia confirms any damage or lost flows, more Houthi attacks, and the International Energy Agency's monthly oil report on Friday."
+    },
+    {
+      "id": "marketscreener-goolsbee-inflation-tough-spot-20261112",
+      "ts": "2026-11-12T20:16:40Z",
+      "source": "MT Newswires (via MarketScreener)",
+      "url": "https://www.marketscreener.com/news/fed-s-goolsbee-says-inflation-inching-into-tough-spot-ce785ed8d08efe20",
+      "image": "https://cdn.zonebourse.com/static/resize/0/0//images/mtnewswires/A3753065.png",
+      "headline": "Fed's Goolsbee Says Inflation 'Inching' Into Tough Spot",
+      "story": "fed-hikes",
+      "story_title": "Fed: how fast to raise rates after hot inflation",
+      "pillar": "policy",
+      "summary": "Chicago Fed President Austan Goolsbee said the Federal Reserve has to act on inflation before the economy overheats, adding to the run of officials backing more rate rises.",
+      "beats": {
+        "was": "US consumer prices rose more than expected in October, and markets now treat a December Fed rate rise as close to certain. The open question is how fast and how far rates go after that.",
+        "happened": "Speaking on Yahoo Finance, Goolsbee said inflation is moving into a difficult place and the Fed should move before price pressures build further. He did not call for a bigger half-point step.",
+        "means": "Goolsbee is usually one of the more cautious officials, so his support for acting firms up the December rise and the case for more after it.",
+        "fx": "Supports the dollar against currencies whose central banks are closer to stopping."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A usually cautious Fed official backs further rate rises."
+        }
+      ],
+      "watch": "New York Fed President John Williams' remarks, US producer prices, and any official openly calling for a half-point rise."
+    },
     {
       "id": "yahoo-reuters-four-tankers-hormuz-explosions-20261112",
       "ts": "2026-11-12T16:27:00Z",
@@ -98,6 +209,177 @@
         }
       ],
       "watch": "Whether shipping firms pause Hormuz trips again, any independent confirmation of the hits, and the International Energy Agency's monthly oil report on Friday."
+    },
+    {
+      "id": "yahoo-nvidia-huang-resigns-20261112",
+      "ts": "2026-11-12T14:41:00Z",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/20cffb91b7d328ceb77205be0cb7d49c01666b95489fcbd58832ce2967a99cfc/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2Fuser-uploaded%2Fgettyimages-1258223529_4244.jpg",
+      "headline": "Stock market today: S&P 500, Nasdaq sink as Nvidia CEO Jensen Huang resigns, stock tanks",
+      "story": "nvidia-ceo",
+      "story_title": "Nvidia: chief executive Jensen Huang steps down",
+      "pillar": "risk",
+      "summary": "Jensen Huang, Nvidia's co-founder and chief executive, resigned with immediate effect on Thursday; the shares fell 7\u201310% in early New York trading and pulled the Nasdaq lower.",
+      "beats": {
+        "was": "Nvidia, the chipmaker at the centre of the AI boom and one of the world's biggest companies, has been under pressure since newspaper reports about Huang's personal conduct led its board to open an investigation last weekend. On Wednesday night the board met to decide his future.",
+        "happened": "Nvidia said Huang has left as chief executive, president and board member, effective at once. Finance chief Colette Kress takes over for now until a permanent pick is named. Nvidia shares dropped sharply at the New York open, other chipmakers slipped, and the Nasdaq fell close to 1% while the wider S&P 500 lost less.",
+        "means": "The man most linked to the AI rally is gone, which hits confidence in the tech shares that have led global stocks. So far the selling is mostly inside tech, not a broad flight from risk, and currency moves are small.",
+        "fx": "A small pull toward safe havens such as the yen and Swiss franc and away from risk-linked currencies like the Australian dollar, which would grow only if the selling spreads to the wider market."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A tech-led stock drop can draw some safe-haven buying."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Weaker stocks weigh on currencies tied to risk appetite."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Mild safe-haven pull if the selling widens."
+        }
+      ],
+      "watch": "Whether the stock slide spreads beyond chipmakers through the US session, and who Nvidia names as its permanent chief executive."
+    },
+    {
+      "id": "zetik-cnbc-trump-no-iran-deal-needed-20261112",
+      "ts": "2026-11-12T14:21:20Z",
+      "source": "Zetik (CNBC)",
+      "url": "https://www.zetik.com/news/article/story_id-p008-231700",
+      "image": "https://prod-static.newsbang.com/media/20261112/222ffeda168af9a2471abefc188f4814-hd.webp",
+      "headline": "Brent Rises to $93.29 as Trump's No-Deal Iran Remarks Revive War Premium",
+      "story": "us-iran-talks",
+      "story_title": "US\u2013Iran talks: Hormuz reopening offer vs ship attacks",
+      "pillar": "commodities",
+      "summary": "US President Donald Trump said on Thursday the US does not need a deal with Iran and claimed control of the Strait of Hormuz, nudging Brent crude back up to about $93 a barrel.",
+      "beats": {
+        "was": "Since the US\u2013Iran war began, ships near the Strait of Hormuz, the route for about a fifth of the world's oil, have been attacked again and again. Oil had dropped earlier this week on hopes of direct US\u2013Iran talks, and US crude is down about 16% in November.",
+        "happened": "Trump said a deal with Iran is not needed and that the US has control of the strait. Brent rose about 0.5% to $93.29 while US crude was little changed near $86, undoing part of the earlier drop.",
+        "means": "The remarks cast doubt on a quick peace deal, so some of the war risk that had been taken out of oil prices is coming back. Analysts also warn the claim of US control could invite more attacks on ships.",
+        "fx": "Firmer oil gives a little help to the Canadian dollar and weighs a little on oil importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Doubt over a deal puts some war risk back into the price."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada's main export gets a small lift."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so dearer crude is a small drag."
+        }
+      ],
+      "watch": "Whether Tehran responds to Trump's claim, any new attacks on ships near Hormuz, and whether the reported meeting between US Vice President JD Vance and Iran's security chief Mohsen Rezaei goes ahead."
+    },
+    {
+      "id": "srn-reuters-jobless-claims-200k-20261112",
+      "ts": "2026-11-12T13:38:48Z",
+      "source": "Reuters (via SRN News)",
+      "url": "https://srnnews.com/us-weekly-jobless-claims-increase-but-labor-market-firming/",
+      "image": "https://www.srnnews.com/media/2026/11/1794492317961998V1rLboaOc2.jpg?x54510",
+      "headline": "US weekly jobless claims increase, but labor market firming",
+      "story": "us-jobs",
+      "story_title": "US jobs: hiring holds up as the Fed raises rates",
+      "pillar": "growth",
+      "summary": "New US claims for unemployment benefits rose to 200,000 last week, a little more than the 195,000 forecast but still very low, so the job market still looks firm.",
+      "beats": {
+        "was": "The US job market has been strong: employers added many more jobs than expected in October and the jobless rate fell to 4.1%. With inflation back up, the Federal Reserve is expected to raise rates in December, and a solid job market supports that.",
+        "happened": "First-time claims for jobless benefits, a weekly read on layoffs, rose by 9,000 to 200,000 in the week to November 7, slightly above forecasts. The number of people still claiming benefits fell by 20,000 to about 1.7 million. Claims have stayed at or under 200,000 since mid-September, close to their lowest since 1969.",
+        "means": "Layoffs remain rare, so nothing here argues against a December Fed rate rise. The small miss is noise; it would take a clear jump in claims to change the Fed's path.",
+        "fx": "Little change for the dollar; it keeps the backing of a firm job market and a Fed still raising rates."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Claims a touch above forecast, but still low enough to keep the Fed on course to raise rates."
+        }
+      ],
+      "watch": "Federal Reserve speakers later this week, and next month's US jobs report before the December Fed meeting."
+    },
+    {
+      "id": "investing-reuters-existing-home-sales-16yr-low-20261112",
+      "date": "2026-11-12",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://www.investing.com/news/economic-indicators/us-existing-home-sales-slump-to-more-than-16year-low-in-october-5022437",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB1O3_L.jpg",
+      "headline": "US existing home sales slump to more than 16-year low in October",
+      "story": "us-housing",
+      "story_title": "US housing: high mortgage rates choke sales",
+      "pillar": "growth",
+      "summary": "Sales of previously owned US homes fell 5.5% in October to the slowest pace since August 2010, as 30-year mortgage rates stay above 7%.",
+      "beats": {
+        "was": "The Federal Reserve has been raising rates to fight inflation, and 30-year mortgage rates are near their highest since 2000.",
+        "happened": "The National Association of Realtors said sales fell to a yearly pace of 3.75 million, below the 3.85 million economists expected and 8.8% lower than a year ago. Prices still rose slightly, to a median of about $422,000, because few homes are for sale.",
+        "means": "Higher rates are clearly hurting the housing market, one of the first parts of the economy to feel them. It is a sign of strain but not yet enough to change the Fed's plan to raise rates in December.",
+        "fx": "A mild drag on the dollar's growth story, outweighed for now by hot inflation and Fed rate-rise bets."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Weak home sales show high rates are slowing part of the economy."
+        }
+      ],
+      "watch": "Whether weakness spreads to building and spending data, and if Fed officials start to mention it."
+    },
+    {
+      "id": "euronext-reuters-dollar-19-month-high-20261112",
+      "date": "2026-11-12",
+      "source": "Reuters (via Euronext)",
+      "url": "https://live.euronext.com/en/financial-news/dollar-reaches-19-month-high-rate-expectations-dominate",
+      "image": null,
+      "headline": "Dollar reaches 19-month high as rate expectations dominate",
+      "story": "fed-hikes",
+      "story_title": "Fed: how fast to raise rates after hot inflation",
+      "pillar": "rates",
+      "summary": "The dollar rose to its highest since April 2025 on Thursday, pushing the euro down to about $1.106 and the yen to almost 160 per dollar, as traders bet on more Federal Reserve rate rises.",
+      "beats": {
+        "was": "Hotter-than-expected US inflation this week led Fed officials and big banks to call for further rate rises, while other central banks are closer to stopping.",
+        "happened": "The dollar index, which tracks the dollar against six major currencies, rose 0.3% to about 103.2. Futures put a December Fed rise at about 91%, and Goldman Sachs expects another early next year. The 10-year US yield sat near 5.07%.",
+        "means": "The dollar's climb rests almost entirely on the gap between US rates and everyone else's, so it now depends on Fed officials keeping that path alive.",
+        "fx": "Broad pressure on the euro and the yen, with Japan's warnings about a weak yen growing louder near 160."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Bets on more Fed rate rises keep lifting the dollar."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro fell to its lowest since spring 2025 as the rate gap widens."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The yen nears 160, where Japan has warned it may step in."
+        }
+      ],
+      "watch": "US producer prices, Fed speakers, and any sign Japan steps in to buy yen."
     },
     {
       "id": "toi-trump-pulls-vance-iran-talks-20261112",
@@ -205,45 +487,6 @@
       "watch": "The International Energy Agency's monthly oil report on Friday and next week's EIA figures on Wednesday, November 18."
     },
     {
-      "id": "zetik-cnbc-trump-no-iran-deal-needed-20261112",
-      "ts": "2026-11-12T14:21:20Z",
-      "source": "Zetik (CNBC)",
-      "url": "https://www.zetik.com/news/article/story_id-p008-231700",
-      "image": "https://prod-static.newsbang.com/media/20261112/222ffeda168af9a2471abefc188f4814-hd.webp",
-      "headline": "Brent Rises to $93.29 as Trump's No-Deal Iran Remarks Revive War Premium",
-      "story": "us-iran-talks",
-      "story_title": "US\u2013Iran talks: Hormuz reopening offer vs ship attacks",
-      "pillar": "commodities",
-      "summary": "US President Donald Trump said on Thursday the US does not need a deal with Iran and claimed control of the Strait of Hormuz, nudging Brent crude back up to about $93 a barrel.",
-      "beats": {
-        "was": "Since the US\u2013Iran war began, ships near the Strait of Hormuz, the route for about a fifth of the world's oil, have been attacked again and again. Oil had dropped earlier this week on hopes of direct US\u2013Iran talks, and US crude is down about 16% in November.",
-        "happened": "Trump said a deal with Iran is not needed and that the US has control of the strait. Brent rose about 0.5% to $93.29 while US crude was little changed near $86, undoing part of the earlier drop.",
-        "means": "The remarks cast doubt on a quick peace deal, so some of the war risk that had been taken out of oil prices is coming back. Analysts also warn the claim of US control could invite more attacks on ships.",
-        "fx": "Firmer oil gives a little help to the Canadian dollar and weighs a little on oil importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Doubt over a deal puts some war risk back into the price."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Canada's main export gets a small lift."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so dearer crude is a small drag."
-        }
-      ],
-      "watch": "Whether Tehran responds to Trump's claim, any new attacks on ships near Hormuz, and whether the reported meeting between US Vice President JD Vance and Iran's security chief Mohsen Rezaei goes ahead."
-    },
-    {
       "id": "investing-reuters-hammack-gradual-hikes-20261112",
       "date": "2026-11-12",
       "source": "Investing.com (Reuters)",
@@ -277,70 +520,91 @@
       "watch": "Comments from New York Fed President John Williams later Thursday, and whether other officials side with steady quarter-point rises or with Waller's half-point option for the December 8\u20139 meeting."
     },
     {
-      "id": "yahoo-nvidia-huang-resigns-20261112",
-      "ts": "2026-11-12T14:41:00Z",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/20cffb91b7d328ceb77205be0cb7d49c01666b95489fcbd58832ce2967a99cfc/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2Fuser-uploaded%2Fgettyimages-1258223529_4244.jpg",
-      "headline": "Stock market today: S&P 500, Nasdaq sink as Nvidia CEO Jensen Huang resigns, stock tanks",
-      "story": "nvidia-ceo",
-      "story_title": "Nvidia: chief executive Jensen Huang steps down",
-      "pillar": "risk",
-      "summary": "Jensen Huang, Nvidia's co-founder and chief executive, resigned with immediate effect on Thursday; the shares fell 7\u201310% in early New York trading and pulled the Nasdaq lower.",
+      "id": "investing-reuters-asada-pushes-back-hike-20261112",
+      "date": "2026-11-12",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://www.investing.com/news/economy-news/dovish-boj-policymaker-asada-pushes-back-against-early-rate-hike-5020198",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB06W_L.jpg",
+      "headline": "Dovish BOJ policymaker Asada pushes back against early rate hike",
+      "story": "boj-december",
+      "story_title": "BoJ: a rate rise in December?",
+      "pillar": "policy",
+      "summary": "Toichiro Asada, a Bank of Japan board member who voted against the last two rate rises, warned that raising rates too soon could hurt growth and push inflation back down.",
       "beats": {
-        "was": "Nvidia, the chipmaker at the centre of the AI boom and one of the world's biggest companies, has been under pressure since newspaper reports about Huang's personal conduct led its board to open an investigation last weekend. On Wednesday night the board met to decide his future.",
-        "happened": "Nvidia said Huang has left as chief executive, president and board member, effective at once. Finance chief Colette Kress takes over for now until a permanent pick is named. Nvidia shares dropped sharply at the New York open, other chipmakers slipped, and the Nasdaq fell close to 1% while the wider S&P 500 lost less.",
-        "means": "The man most linked to the AI rally is gone, which hits confidence in the tech shares that have led global stocks. So far the selling is mostly inside tech, not a broad flight from risk, and currency moves are small.",
-        "fx": "A small pull toward safe havens such as the yen and Swiss franc and away from risk-linked currencies like the Australian dollar, which would grow only if the selling spreads to the wider market."
+        "was": "The Bank of Japan has been lifting its rate step by step and markets expect another rise at its December 17\u201318 meeting, while the yen trades near 160 per dollar. Asada is the board's best-known opponent of faster rises and voted against the moves in June and September.",
+        "happened": "In a speech in Nagasaki on Thursday, Asada said past and future rate rises could weigh on activity and on underlying inflation, and that the pace of any further rises should be weighed carefully. He welcomed wages beating inflation this year but said spending and growth lack momentum.",
+        "means": "It is one dissenting voice, and markets still see a December rise as likely. But it reminds traders the board is split, which caps how fast Japan's rates can rise.",
+        "fx": "A small weight on the yen, which is already near 160 per dollar, the level where Japan bought yen this summer."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A known dove's caution, not a shift by the board majority."
+        }
+      ],
+      "watch": "Comments from Governor Kazuo Ueda or his deputies before December, and whether Japan steps in to buy yen if it breaks 160."
+    },
+    {
+      "id": "investing-reuters-japan-wholesale-prices-71-20261112",
+      "date": "2026-11-12",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://www.investing.com/news/economy-news/japan-wholesale-inflation-accelerates-keeps-alive-boj-ratehike-view-5020108",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB012_L.jpg",
+      "headline": "Japan wholesale inflation accelerates, keeps alive BOJ rate-hike view",
+      "story": "boj-december",
+      "story_title": "BoJ: a rate rise in December?",
+      "pillar": "inflation",
+      "summary": "Prices that Japanese companies pay each other rose 7.1% in the year to October, faster than the 6.5% expected, partly because the weak yen makes imports dearer.",
+      "beats": {
+        "was": "The Bank of Japan has been slowly lifting its rate from near zero and now sits at 1.25%. Markets expect another rise at its December 17\u201318 meeting, while the yen trades close to 160 per dollar, a level where Japan stepped in to buy yen this summer.",
+        "happened": "Japan's wholesale price index, which tracks what firms pay for goods, rose 7.1% from a year earlier in October, up from 6.8% in September and above forecasts of 6.5%. Import prices measured in yen jumped about 25%, showing the cheap yen is pushing up the cost of raw materials.",
+        "means": "Rising costs for companies tend to reach shop prices later, which gives the Bank of Japan more reason to raise rates in December. It also shows the weak yen is now a source of inflation, which makes officials less willing to let it fall further.",
+        "fx": "Supports the yen by firming the case for a December Bank of Japan rise, though the pull of much higher US rates still weighs on it for now."
       },
       "impact": [
         {
           "ccy": "JPY",
           "dir": "bullish",
-          "strength": 1,
-          "why": "A tech-led stock drop can draw some safe-haven buying."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Weaker stocks weigh on currencies tied to risk appetite."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Mild safe-haven pull if the selling widens."
+          "strength": 2,
+          "why": "A clear beat that strengthens the case for a Bank of Japan rate rise in December."
         }
       ],
-      "watch": "Whether the stock slide spreads beyond chipmakers through the US session, and who Nvidia names as its permanent chief executive."
+      "watch": "Japan's October consumer prices later this month and any hint from Bank of Japan officials on December; a quiet reaction from them would leave the yen at the mercy of US rates."
     },
     {
-      "id": "srn-reuters-jobless-claims-200k-20261112",
-      "ts": "2026-11-12T13:38:48Z",
-      "source": "Reuters (via SRN News)",
-      "url": "https://srnnews.com/us-weekly-jobless-claims-increase-but-labor-market-firming/",
-      "image": "https://www.srnnews.com/media/2026/11/1794492317961998V1rLboaOc2.jpg?x54510",
-      "headline": "US weekly jobless claims increase, but labor market firming",
-      "story": "us-jobs",
-      "story_title": "US jobs: hiring holds up as the Fed raises rates",
-      "pillar": "growth",
-      "summary": "New US claims for unemployment benefits rose to 200,000 last week, a little more than the 195,000 forecast but still very low, so the job market still looks firm.",
+      "id": "uanews-cna-mimura-warns-yen-160-20261112",
+      "date": "2026-11-12",
+      "source": "UA.News (Channel NewsAsia)",
+      "url": "https://ua.news/en/dovkolo-svitu/iaponiia-znovu-zasteregla-vid-rizkikh-kolivan-valiutnogo-kursu-channel-newsasia",
+      "image": "https://cdn-cabinet.ua.news/uploads/images/japan_warns_over_sharp_yen_volatility_1794446643821.webp",
+      "headline": "Japan warns again as yen nears 160 per U.S. dollar",
+      "story": "yen-defence",
+      "story_title": "Japan's fight to prop up the yen",
+      "pillar": "policy",
+      "summary": "Japan's top currency official warned again that the yen is falling too fast, as the dollar reached 159.94 yen on Thursday morning, its highest in over two months.",
       "beats": {
-        "was": "The US job market has been strong: employers added many more jobs than expected in October and the jobless rate fell to 4.1%. With inflation back up, the Federal Reserve is expected to raise rates in December, and a solid job market supports that.",
-        "happened": "First-time claims for jobless benefits, a weekly read on layoffs, rose by 9,000 to 200,000 in the week to November 7, slightly above forecasts. The number of people still claiming benefits fell by 20,000 to about 1.7 million. Claims have stayed at or under 200,000 since mid-September, close to their lowest since 1969.",
-        "means": "Layoffs remain rare, so nothing here argues against a December Fed rate rise. The small miss is noise; it would take a clear jump in claims to change the Fed's path.",
-        "fx": "Little change for the dollar; it keeps the backing of a firm job market and a Fed still raising rates."
+        "was": "Japan spent record sums buying yen in late July and early August, once reportedly together with the US, after the dollar rose above 160 yen. Hot US inflation figures this week have pushed the dollar back toward that level.",
+        "happened": "Atsushi Mimura, Japan's vice finance minister for international affairs, said recent moves were too rapid and that it is too early to forget what happened this summer, without commenting on any exact rate. The dollar touched 159.94 yen in Tokyo trading.",
+        "means": "Tokyo is reminding traders that it has stepped in near 160 before and could again. Words alone rarely turn the yen for long while the gap between US and Japanese interest rates stays this wide.",
+        "fx": "Wider rate gaps push the yen weaker; the rising chance of official yen buying pushes the other way."
       },
       "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A repeat warning from Tokyo near the level where it bought yen this summer."
+        },
         {
           "ccy": "USD",
           "dir": "mixed",
           "strength": 1,
-          "why": "Claims a touch above forecast, but still low enough to keep the Fed on course to raise rates."
+          "why": "The dollar's climb against the yen meets resistance from Japanese officials."
         }
       ],
-      "watch": "Federal Reserve speakers later this week, and next month's US jobs report before the December Fed meeting."
+      "watch": "Firmer language such as a 'final warning', sudden sharp yen gains that hint at official buying, and Japan's third-quarter growth figures on Sunday evening (US time)."
     },
     {
       "id": "gbaf-reuters-ecb-poll-last-hike-december-20261112",
@@ -568,93 +832,6 @@
       "watch": "Any formal US reply to Iran's offer through Qatar, and whether the two-week strike window an Iranian aide described is confirmed by Washington."
     },
     {
-      "id": "investing-reuters-asada-pushes-back-hike-20261112",
-      "date": "2026-11-12",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://www.investing.com/news/economy-news/dovish-boj-policymaker-asada-pushes-back-against-early-rate-hike-5020198",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB06W_L.jpg",
-      "headline": "Dovish BOJ policymaker Asada pushes back against early rate hike",
-      "story": "boj-december",
-      "story_title": "BoJ: a rate rise in December?",
-      "pillar": "policy",
-      "summary": "Toichiro Asada, a Bank of Japan board member who voted against the last two rate rises, warned that raising rates too soon could hurt growth and push inflation back down.",
-      "beats": {
-        "was": "The Bank of Japan has been lifting its rate step by step and markets expect another rise at its December 17\u201318 meeting, while the yen trades near 160 per dollar. Asada is the board's best-known opponent of faster rises and voted against the moves in June and September.",
-        "happened": "In a speech in Nagasaki on Thursday, Asada said past and future rate rises could weigh on activity and on underlying inflation, and that the pace of any further rises should be weighed carefully. He welcomed wages beating inflation this year but said spending and growth lack momentum.",
-        "means": "It is one dissenting voice, and markets still see a December rise as likely. But it reminds traders the board is split, which caps how fast Japan's rates can rise.",
-        "fx": "A small weight on the yen, which is already near 160 per dollar, the level where Japan bought yen this summer."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A known dove's caution, not a shift by the board majority."
-        }
-      ],
-      "watch": "Comments from Governor Kazuo Ueda or his deputies before December, and whether Japan steps in to buy yen if it breaks 160."
-    },
-    {
-      "id": "investing-reuters-japan-wholesale-prices-71-20261112",
-      "date": "2026-11-12",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://www.investing.com/news/economy-news/japan-wholesale-inflation-accelerates-keeps-alive-boj-ratehike-view-5020108",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB012_L.jpg",
-      "headline": "Japan wholesale inflation accelerates, keeps alive BOJ rate-hike view",
-      "story": "boj-december",
-      "story_title": "BoJ: a rate rise in December?",
-      "pillar": "inflation",
-      "summary": "Prices that Japanese companies pay each other rose 7.1% in the year to October, faster than the 6.5% expected, partly because the weak yen makes imports dearer.",
-      "beats": {
-        "was": "The Bank of Japan has been slowly lifting its rate from near zero and now sits at 1.25%. Markets expect another rise at its December 17\u201318 meeting, while the yen trades close to 160 per dollar, a level where Japan stepped in to buy yen this summer.",
-        "happened": "Japan's wholesale price index, which tracks what firms pay for goods, rose 7.1% from a year earlier in October, up from 6.8% in September and above forecasts of 6.5%. Import prices measured in yen jumped about 25%, showing the cheap yen is pushing up the cost of raw materials.",
-        "means": "Rising costs for companies tend to reach shop prices later, which gives the Bank of Japan more reason to raise rates in December. It also shows the weak yen is now a source of inflation, which makes officials less willing to let it fall further.",
-        "fx": "Supports the yen by firming the case for a December Bank of Japan rise, though the pull of much higher US rates still weighs on it for now."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A clear beat that strengthens the case for a Bank of Japan rate rise in December."
-        }
-      ],
-      "watch": "Japan's October consumer prices later this month and any hint from Bank of Japan officials on December; a quiet reaction from them would leave the yen at the mercy of US rates."
-    },
-    {
-      "id": "uanews-cna-mimura-warns-yen-160-20261112",
-      "date": "2026-11-12",
-      "source": "UA.News (Channel NewsAsia)",
-      "url": "https://ua.news/en/dovkolo-svitu/iaponiia-znovu-zasteregla-vid-rizkikh-kolivan-valiutnogo-kursu-channel-newsasia",
-      "image": "https://cdn-cabinet.ua.news/uploads/images/japan_warns_over_sharp_yen_volatility_1794446643821.webp",
-      "headline": "Japan warns again as yen nears 160 per U.S. dollar",
-      "story": "yen-defence",
-      "story_title": "Japan's fight to prop up the yen",
-      "pillar": "policy",
-      "summary": "Japan's top currency official warned again that the yen is falling too fast, as the dollar reached 159.94 yen on Thursday morning, its highest in over two months.",
-      "beats": {
-        "was": "Japan spent record sums buying yen in late July and early August, once reportedly together with the US, after the dollar rose above 160 yen. Hot US inflation figures this week have pushed the dollar back toward that level.",
-        "happened": "Atsushi Mimura, Japan's vice finance minister for international affairs, said recent moves were too rapid and that it is too early to forget what happened this summer, without commenting on any exact rate. The dollar touched 159.94 yen in Tokyo trading.",
-        "means": "Tokyo is reminding traders that it has stepped in near 160 before and could again. Words alone rarely turn the yen for long while the gap between US and Japanese interest rates stays this wide.",
-        "fx": "Wider rate gaps push the yen weaker; the rising chance of official yen buying pushes the other way."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A repeat warning from Tokyo near the level where it bought yen this summer."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The dollar's climb against the yen meets resistance from Japanese officials."
-        }
-      ],
-      "watch": "Firmer language such as a 'final warning', sudden sharp yen gains that hint at official buying, and Japan's third-quarter growth figures on Sunday evening (US time)."
-    },
-    {
       "id": "brecorder-reuters-dollar-advances-major-peers-20261111",
       "ts": "2026-11-11T23:29:06Z",
       "source": "Business Recorder (Reuters)",
@@ -877,118 +1054,6 @@
       "watch": "Whether the attacks continue during Qatar's two-week push for US\u2013Iran talks, and the US weekly oil stock figures on Thursday."
     },
     {
-      "id": "euronews-tanker-mine-hormuz-20261111",
-      "date": "2026-11-11",
-      "ts": "2026-11-11T10:47:00Z",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/11/11/oil-markets-rise-as-investors-monitor-shipping-disruption-in-the-strait-of-hormuz",
-      "image": "https://images.euronews.com/articles/stories/09/98/81/78/1200x675_cmsv2_760d7d7d-d7f7-50ce-8488-87fa5bbf473e-9988178.jpg",
-      "headline": "Another tanker hit in the Strait of Hormuz, this time by a mine, Iran's army says",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's army said an oil tanker struck a mine and caught fire in the Strait of Hormuz, a day after its Revolutionary Guards said three tankers were set alight there. India said a ship with Indian crew was also hit in the Gulf.",
-      "beats": {
-        "was": "Since the war began in late February, Iran has limited traffic through the Strait of Hormuz and says it targets ships that cross without its permission. The US military recently said all mines in the strait had been cleared, and it has been escorting tankers out.",
-        "happened": "On Wednesday Iran's army said a tanker hit a mine and caught fire in the strait. Separately, India's shipping minister said a Liberia-flagged tanker with Indian crew was struck by a projectile in the Gulf, injuring four. On Tuesday Iran's Revolutionary Guards said three tankers had burned. Brent crude was little changed near $91.70 at the time.",
-        "means": "A mine strike so soon after the US said the waters were clear suggests that reopening the route safely will take longer than hoped, whatever happens in talks.",
-        "fx": "Keeps a supply-risk floor under oil, a mild help for the Canadian dollar and a cost for oil importers such as Japan."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Fresh ship damage and doubt over mine clearing keep supply risk alive."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Ongoing Gulf attacks keep some demand for safe places to park money."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher oil costs weigh on Japan as a big energy importer."
-        }
-      ],
-      "watch": "How many ships are hit this month compared with October's 37, and any word from the US military on mines."
-    },
-    {
-      "id": "cnbc-dollar-four-week-high-fed-hike-bets-20261111",
-      "ts": "2026-11-11T09:15:00Z",
-      "source": "CNBC (Reuters)",
-      "url": "https://www.cnbc.com/2026/11/11/dollar-gains-traction-as-fed-speakers-warn-of-risks-from-inflation.html",
-      "image": null,
-      "headline": "Dollar climbs to a four-week high in London trading as bets on a bigger Fed rate rise grow",
-      "story": "fed-december",
-      "story_title": "Fed: a December rate rise and what US inflation says",
-      "pillar": "policy",
-      "summary": "The dollar pushed on to its strongest level in four weeks on Wednesday morning in Europe, as traders raised the odds that the Federal Reserve lifts rates by half a point in December.",
-      "beats": {
-        "was": "US consumer prices rose faster than expected in October, and Fed Governor Christopher Waller had said a reading like that would justify a half-point December rise instead of a quarter-point one. The Fed's next decision is on December 9.",
-        "happened": "The dollar index, which measures the dollar against six major currencies, rose about 0.2% to near 102.5, a four-week high. The euro slipped to about $1.114, the pound held near $1.33, the dollar reached about 158.9 yen and the Swiss franc touched a two-week low. Futures pricing put the chance of a quarter-point rise near 85%, down from about 92% overnight, with the rest on a half-point move.",
-        "means": "A rise in December is taken as given; the shift now is toward a bigger step, and a second rise in January is seen as more likely than not. That keeps US rates well above most others.",
-        "fx": "The dollar gains broadly, and the yen is closest to 160 per dollar, a level where Japan stepped in to buy yen this summer."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Growing odds of a half-point Fed rise extend the dollar's gains after the inflation surprise."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The yen nears 160 per dollar as the US\u2013Japan rate gap stays wide."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The franc slips to a two-week low against a firmer dollar."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro eases toward $1.114 as US rate expectations climb."
-        }
-      ],
-      "watch": "US producer prices on Friday, and whether Japan's finance ministry warns about the yen as it nears 160 per dollar."
-    },
-    {
-      "id": "investinglive-abs-home-lending-q3-plunge-20261111",
-      "ts": "2026-11-11T00:46:34Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/australian-investor-home-lending-plunges-32-in-q3-as-tax-curbs-and-rba-hikes-bite-harder/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/australia-investor-home-lending-falls-32-percent-q3-2026-negative-gearing-rba-featured-1794357910.jpg?width=960&format=webp",
-      "headline": "Australian investor home lending plunges 32% in Q3 as tax curbs and RBA hikes bite harder",
-      "story": "rba-pause",
-      "story_title": "RBA: is 4.85% the peak?",
-      "pillar": "growth",
-      "summary": "New home loans in Australia fell 15.5% in the July\u2013September quarter, about twice the drop forecast, led by a 32% fall in loans to property investors.",
-      "beats": {
-        "was": "The Reserve Bank of Australia has raised its cash rate five times this year to 4.85%, the highest since 2008, and the government ended a key tax break for investors buying existing homes in its May budget. At its November meeting the bank dropped its line about more rises to come.",
-        "happened": "The Australian Bureau of Statistics said the value of new home loans fell 15.5% in the third quarter, against a forecast fall of about 8% and after a 5.2% fall in the second quarter. Loans to investors fell 32.3% and loans to people buying a home to live in fell 5.3%. Commonwealth Bank, the country's biggest lender, said the same morning that home loan applications were 16% lower than a year earlier.",
-        "means": "Higher rates and the tax change are cooling housing faster than expected, which adds to the case that the central bank has done enough and may hold from here.",
-        "fx": "A cooling housing market makes another Australian rate rise less likely, a mild weight on the Australian dollar, which was steady near 68.6 US cents after falling on Tuesday."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Home lending fell twice as much as forecast, a sign rates are biting and the central bank may stop raising them."
-        }
-      ],
-      "watch": "Australia's October jobs report on Thursday: further weakness would firm up the view that the cash rate has peaked at 4.85%."
-    },
-    {
       "id": "aljazeera-ghalibaf-hormuz-never-return-20261111",
       "date": "2026-11-11",
       "source": "Al Jazeera",
@@ -1178,31 +1243,116 @@
       "watch": "Fed speakers and US data later this week; any sign October's inflation jump was a one-off would cut the odds of a half-point rise."
     },
     {
-      "id": "bloomingbit-us-10y-auction-weak-20261110",
-      "ts": "2026-11-10T18:10:11Z",
-      "source": "Bloomingbit",
-      "url": "https://en.bloomingbit.io/feed/news/124134",
-      "image": "https://media.bloomingbit.io/news/5274abb3-f59c-46c5-9640-151a12d752e2.webp",
-      "headline": "US sale of $42 billion in 10-year government bonds draws weak demand, with the yield at 5.02%",
-      "story": "fed-december",
-      "story_title": "Fed: will it raise rates in December?",
-      "pillar": "policy",
-      "summary": "The US Treasury sold $42 billion of 10-year notes on Tuesday at 5.02%, a little above where they traded beforehand, with softer demand than last month and less buying from overseas.",
+      "id": "euronews-tanker-mine-hormuz-20261111",
+      "date": "2026-11-11",
+      "ts": "2026-11-11T10:47:00Z",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/11/11/oil-markets-rise-as-investors-monitor-shipping-disruption-in-the-strait-of-hormuz",
+      "image": "https://images.euronews.com/articles/stories/09/98/81/78/1200x675_cmsv2_760d7d7d-d7f7-50ce-8488-87fa5bbf473e-9988178.jpg",
+      "headline": "Another tanker hit in the Strait of Hormuz, this time by a mine, Iran's army says",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's army said an oil tanker struck a mine and caught fire in the Strait of Hormuz, a day after its Revolutionary Guards said three tankers were set alight there. India said a ship with Indian crew was also hit in the Gulf.",
       "beats": {
-        "was": "The US sells new government debt every week, and how eagerly buyers take it up, especially foreign ones, is a gauge of appetite for US assets. A three-year sale on Monday had already drawn the weakest demand of the year.",
-        "happened": "Hours after hotter-than-expected October inflation figures, bids covered the 10-year sale about 2.5 times, down from about 2.8 times last month. The yield came in slightly above the pre-sale level, and overseas-type buyers took a much smaller share than in October.",
-        "means": "This is the second soft sale in two days. Buyers want more pay to hold long-dated US debt while inflation runs hot and the Federal Reserve looks set to raise rates, and 10-year yields now sit around 5%.",
-        "fx": "Higher US yields support the dollar, but weaker foreign appetite for US debt is a slow-burning worry for it. A small, two-sided signal."
+        "was": "Since the war began in late February, Iran has limited traffic through the Strait of Hormuz and says it targets ships that cross without its permission. The US military recently said all mines in the strait had been cleared, and it has been escorting tankers out.",
+        "happened": "On Wednesday Iran's army said a tanker hit a mine and caught fire in the strait. Separately, India's shipping minister said a Liberia-flagged tanker with Indian crew was struck by a projectile in the Gulf, injuring four. On Tuesday Iran's Revolutionary Guards said three tankers had burned. Brent crude was little changed near $91.70 at the time.",
+        "means": "A mine strike so soon after the US said the waters were clear suggests that reopening the route safely will take longer than hoped, whatever happens in talks.",
+        "fx": "Keeps a supply-risk floor under oil, a mild help for the Canadian dollar and a cost for oil importers such as Japan."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Fresh ship damage and doubt over mine clearing keep supply risk alive."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Ongoing Gulf attacks keep some demand for safe places to park money."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher oil costs weigh on Japan as a big energy importer."
+        }
+      ],
+      "watch": "How many ships are hit this month compared with October's 37, and any word from the US military on mines."
+    },
+    {
+      "id": "cnbc-dollar-four-week-high-fed-hike-bets-20261111",
+      "ts": "2026-11-11T09:15:00Z",
+      "source": "CNBC (Reuters)",
+      "url": "https://www.cnbc.com/2026/11/11/dollar-gains-traction-as-fed-speakers-warn-of-risks-from-inflation.html",
+      "image": null,
+      "headline": "Dollar climbs to a four-week high in London trading as bets on a bigger Fed rate rise grow",
+      "story": "fed-december",
+      "story_title": "Fed: a December rate rise and what US inflation says",
+      "pillar": "policy",
+      "summary": "The dollar pushed on to its strongest level in four weeks on Wednesday morning in Europe, as traders raised the odds that the Federal Reserve lifts rates by half a point in December.",
+      "beats": {
+        "was": "US consumer prices rose faster than expected in October, and Fed Governor Christopher Waller had said a reading like that would justify a half-point December rise instead of a quarter-point one. The Fed's next decision is on December 9.",
+        "happened": "The dollar index, which measures the dollar against six major currencies, rose about 0.2% to near 102.5, a four-week high. The euro slipped to about $1.114, the pound held near $1.33, the dollar reached about 158.9 yen and the Swiss franc touched a two-week low. Futures pricing put the chance of a quarter-point rise near 85%, down from about 92% overnight, with the rest on a half-point move.",
+        "means": "A rise in December is taken as given; the shift now is toward a bigger step, and a second rise in January is seen as more likely than not. That keeps US rates well above most others.",
+        "fx": "The dollar gains broadly, and the yen is closest to 160 per dollar, a level where Japan stepped in to buy yen this summer."
       },
       "impact": [
         {
           "ccy": "USD",
-          "dir": "mixed",
+          "dir": "bullish",
           "strength": 1,
-          "why": "Yields rose a touch, but foreign demand for US debt was soft for a second day."
+          "why": "Growing odds of a half-point Fed rise extend the dollar's gains after the inflation surprise."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The yen nears 160 per dollar as the US\u2013Japan rate gap stays wide."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The franc slips to a two-week low against a firmer dollar."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro eases toward $1.114 as US rate expectations climb."
         }
       ],
-      "watch": "Thursday's 30-year bond sale; a third weak result would make the foreign-demand worry harder to dismiss."
+      "watch": "US producer prices on Friday, and whether Japan's finance ministry warns about the yen as it nears 160 per dollar."
+    },
+    {
+      "id": "investinglive-abs-home-lending-q3-plunge-20261111",
+      "ts": "2026-11-11T00:46:34Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/australian-investor-home-lending-plunges-32-in-q3-as-tax-curbs-and-rba-hikes-bite-harder/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/australia-investor-home-lending-falls-32-percent-q3-2026-negative-gearing-rba-featured-1794357910.jpg?width=960&format=webp",
+      "headline": "Australian investor home lending plunges 32% in Q3 as tax curbs and RBA hikes bite harder",
+      "story": "rba-pause",
+      "story_title": "RBA: is 4.85% the peak?",
+      "pillar": "growth",
+      "summary": "New home loans in Australia fell 15.5% in the July\u2013September quarter, about twice the drop forecast, led by a 32% fall in loans to property investors.",
+      "beats": {
+        "was": "The Reserve Bank of Australia has raised its cash rate five times this year to 4.85%, the highest since 2008, and the government ended a key tax break for investors buying existing homes in its May budget. At its November meeting the bank dropped its line about more rises to come.",
+        "happened": "The Australian Bureau of Statistics said the value of new home loans fell 15.5% in the third quarter, against a forecast fall of about 8% and after a 5.2% fall in the second quarter. Loans to investors fell 32.3% and loans to people buying a home to live in fell 5.3%. Commonwealth Bank, the country's biggest lender, said the same morning that home loan applications were 16% lower than a year earlier.",
+        "means": "Higher rates and the tax change are cooling housing faster than expected, which adds to the case that the central bank has done enough and may hold from here.",
+        "fx": "A cooling housing market makes another Australian rate rise less likely, a mild weight on the Australian dollar, which was steady near 68.6 US cents after falling on Tuesday."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Home lending fell twice as much as forecast, a sign rates are biting and the central bank may stop raising them."
+        }
+      ],
+      "watch": "Australia's October jobs report on Thursday: further weakness would firm up the view that the cash rate has peaked at 4.85%."
     },
     {
       "id": "investinglive-logan-two-more-hikes-20261110",
@@ -1242,39 +1392,6 @@
         }
       ],
       "watch": "The Fed's December 8\u20139 meeting: whether officials beyond Waller and Logan back a half-point rise rather than a quarter-point one."
-    },
-    {
-      "id": "tokenpost-gold-falls-30-hot-cpi-20261110",
-      "ts": "2026-11-10T13:50:16Z",
-      "source": "TokenPost",
-      "url": "https://www.tokenpost.com/news/investing/53132",
-      "image": "https://mzwrodgsdjfdyvnraeya.supabase.co/storage/v1/object/public/article-media/articles/18c3ef4fdf2a4004605e25990a9a92ccb5ec0e2e4e6c6d23c0065ed7e3a4b47a.webp",
-      "headline": "Gold drops more than $30 to about $4,046 after US inflation comes in hotter than expected",
-      "story": "gold-fed-cpi",
-      "story_title": "Gold: cheaper oil vs a likely Fed rate rise",
-      "pillar": "inflation",
-      "summary": "Gold fell more than $30 to about $4,046 an ounce on Tuesday after US consumer prices for October rose faster than forecast. Silver lost more than 3%.",
-      "beats": {
-        "was": "Gold had climbed back to about $4,130 on Monday as cheaper oil eased inflation fears, but slipped under $4,100 early Tuesday after Federal Reserve Governor Christopher Waller backed a December rate rise. Higher US rates hurt gold, which pays no interest.",
-        "happened": "US consumer prices rose 0.4% in October and the core measure, which leaves out food and energy, rose 0.3%, both above forecasts. Gold dropped to about $4,046 within minutes and silver fell to about $51.70.",
-        "means": "Hot inflation makes a December Fed rate rise look all but certain and puts a bigger half-point step on the table. That makes holding gold, which earns nothing, less attractive, so Monday's gain has been wiped out.",
-        "fx": "The same figures lifted the US dollar against every major currency. A lower gold price is a small extra weight on the Australian dollar, since Australia is a big gold producer."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Hotter US inflation raises the odds of bigger Fed rate rises, which weighs on gold."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Cheaper gold takes a little support away from a major gold exporter's currency."
-        }
-      ],
-      "watch": "Whether more Fed officials back a half-point rise in December, and whether gold holds above the $4,000 mark."
     },
     {
       "id": "fxstreet-us-cpi-oct-hot-20261110",
@@ -1320,93 +1437,6 @@
         }
       ],
       "watch": "Comments from other Fed officials on whether December should be a quarter or a half point, and November's inflation figures before the December 8\u20139 meeting."
-    },
-    {
-      "id": "reuters-russia-ukraine-us-abu-dhabi-talks-20261110",
-      "date": "2026-11-10",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/russia-pounds-ukraines-power-grid-talks-open-abu-dhabi-2026-11-10/",
-      "image": null,
-      "headline": "Russia hits Ukraine's power grid as US-brokered peace talks open in Abu Dhabi",
-      "story": "ukraine-talks",
-      "story_title": "Ukraine: US-brokered peace talks restart",
-      "pillar": "risk",
-      "summary": "Russia, Ukraine and the US met in Abu Dhabi for their first three-way talks since February, but Russia struck Ukraine's power network the same night and says a ceasefire is not close.",
-      "beats": {
-        "was": "Russia's war in Ukraine is in its fifth year. Three-way talks between Russia, Ukraine and the US stalled after February, and Europe still pays more for energy because of the war.",
-        "happened": "Delegations met in Abu Dhabi on Tuesday. US envoy Jared Kushner said recent contacts had built real momentum. Overnight Russia struck 10 Ukrainian regions and five power substations, and Russian Foreign Minister Sergei Lavrov said there would be no ceasefire until the next steps are clear.",
-        "means": "Talks are back after nine months, which is a small step toward peace, but the attacks and Lavrov's words show a deal is still far off.",
-        "fx": "Any real progress would help the euro, since peace would ease Europe's energy costs and lift confidence; for now it is a faint push."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Peace talks restarting is a mild plus for Europe's outlook, though no ceasefire is in sight."
-        },
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A path to peace could one day loosen limits on Russian energy, though that is distant."
-        }
-      ],
-      "watch": "Whether the talks agree any ceasefire or humanitarian steps, and whether strikes on Ukraine's power grid continue."
-    },
-    {
-      "id": "investing-reuters-boc-minutes-not-inaction-20261110",
-      "date": "2026-11-10",
-      "source": "Investing.com (Reuters)",
-      "url": "https://www.investing.com/news/economy-news/bank-of-canada-felt-uncertainty-over-rates-did-not-mean-inaction-minutes-show-5016523",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA91VC_L.jpg",
-      "headline": "Bank of Canada notes show policymakers felt an unclear outlook was no reason to sit still",
-      "story": "boc-next-step",
-      "story_title": "Bank of Canada: one rate rise, or more?",
-      "pillar": "policy",
-      "summary": "Notes from the Bank of Canada's October meeting show its leaders raised rates to stop high energy costs spreading into other prices, and left the door open to doing more.",
-      "beats": {
-        "was": "On October 28 the Bank of Canada raised its main rate by a quarter point to 2.5%, its first rise in more than three years. Canadian inflation was 3.2% in September, driven almost entirely by energy, while measures that strip energy out stayed below 2%.",
-        "happened": "The meeting notes, published on Tuesday, say the bank's leaders agreed that uncertainty about where rates should go was not a reason to do nothing. They judged that the energy shock alone would keep inflation near 3% for more than a year, that people's short-term inflation expectations had risen, and that more rises might be needed, decided one meeting at a time.",
-        "means": "The notes repeat last month's message rather than adding a new push. With Canada losing jobs for a second month in October, the next decision on December 9 still looks like a close call.",
-        "fx": "A bank still willing to raise rates gives the Canadian dollar some support, but weak jobs and falling oil limit how much."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The bank keeps the option of another rate rise, but adds no new signal."
-        }
-      ],
-      "watch": "Canada's October inflation figures and the Bank of Canada's decision on December 9."
-    },
-    {
-      "id": "investing-reuters-lombardelli-december-hike-20261110",
-      "date": "2026-11-10",
-      "source": "Investing.com (Reuters)",
-      "url": "https://www.investing.com/news/economy-news/boes-lombardelli-does-not-rule-out-december-rate-hike-she-tells-the-guardian-5014293",
-      "image": null,
-      "headline": "BOE's Lombardelli does not rule out December rate hike, she tells the Guardian",
-      "story": "boe-hike",
-      "story_title": "Bank of England: rates rise again to fight energy costs",
-      "pillar": "policy",
-      "summary": "Clare Lombardelli, the Bank of England's deputy governor for monetary policy, told the Guardian she would not rule out another rate rise in December.",
-      "beats": {
-        "was": "The Bank of England raised its main rate to 4% last Thursday, its first rise since 2023, to lean against inflation. Governor Andrew Bailey gave no hint about December in a speech on Monday.",
-        "happened": "In an interview published Tuesday, Lombardelli, one of the nine people who set UK rates, said a further rise in December was possible, while describing the UK economy as moving in a low gear.",
-        "means": "A senior rate-setter is keeping the door open to a second rise in a row, though she stopped well short of promising one. It suggests last week's move may not be a one-off.",
-        "fx": "Talk of higher UK rates gives the pound some support, but it was outweighed on the day by the dollar's rise after US inflation news, and the pound slipped back to about $1.34."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A senior Bank of England official kept a December rate rise on the table."
-        }
-      ],
-      "watch": "Thursday's UK growth figures for September and the third quarter, and next week's UK inflation report, which will shape whether December's rise happens."
     },
     {
       "id": "investing-reuters-waller-backs-december-hike-20261110",
