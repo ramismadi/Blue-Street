@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-12T12:47:23Z",
+  "updated": "2026-11-12T14:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-12T11:48:35Z",
-      "text": "Faster-than-expected US inflation has Federal Reserve officials arguing for more rate rises, and big banks such as Deutsche Bank now expect three in a row from December. That has lifted the dollar to its highest since April 2025."
+      "ts": "2026-11-12T14:55:00Z",
+      "text": "Faster-than-expected US inflation has Federal Reserve officials arguing for more rate rises, and banks such as Deutsche Bank now expect three in a row from December. Jobless claims are still very low, so the job market backs that path, and the dollar is at its highest since April 2025."
     },
     "EUR": {
       "lean": "bearish",
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "bearish",
-      "ts": "2026-11-12T11:48:35Z",
-      "text": "The yen sits near 160 per dollar because US rates are far above Japan's. Faster wholesale prices back a December Bank of Japan rise, but board member Toichiro Asada urged caution, and Japan's warnings about the fast fall make official yen buying a real risk; a slide in Nvidia shares adds a small safe-haven pull."
+      "ts": "2026-11-12T14:55:00Z",
+      "text": "The yen sits near 160 per dollar because US rates are far above Japan's. Faster wholesale prices back a December Bank of Japan rise and Japan keeps warning about the fast fall, while the sudden exit of Nvidia's chief executive and a drop in tech shares add a small safe-haven pull."
     },
     "CHF": {
       "lean": "bearish",
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "bearish",
-      "ts": "2026-11-11T03:55:00Z",
-      "text": "The Australian dollar fell the most of the major currencies after hot US inflation figures on Tuesday. At home, new home loans fell twice as much as forecast in the third quarter and consumer confidence is at a four-year low, signs the 4.85% cash rate is biting that make another Reserve Bank of Australia rise less likely."
+      "ts": "2026-11-12T14:55:00Z",
+      "text": "The Australian dollar is weighed down by a strong US dollar and by falling tech shares after Nvidia's chief executive quit. At home, new home loans and consumer confidence have dropped, signs the 4.85% cash rate is biting that make another Reserve Bank of Australia rise less likely."
     },
     "NZD": {
       "lean": "mixed",
@@ -44,16 +44,82 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-11T23:55:00Z",
-      "text": "Gold has slipped back under $4,000 an ounce after hotter US inflation made a December Federal Reserve rate rise all but certain and raised talk of more to follow. A strong dollar and a rebound in stocks have cut its appeal, even with the Iran war unresolved."
+      "ts": "2026-11-12T14:55:00Z",
+      "text": "Gold has dropped further below $4,000 an ounce, toward $3,900, as hotter US inflation made a December Federal Reserve rate rise all but certain and raised talk of more to follow. A strong dollar outweighs the pull of the Iran war and a wobble in tech shares."
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-12T11:48:35Z",
-      "text": "Brent has slipped back toward $91 a barrel as hopes grow for talks on both Iran and Ukraine and OPEC+ pumps more. Tankers near the Strait of Hormuz are still being hit, which keeps a floor under prices."
+      "ts": "2026-11-12T14:55:00Z",
+      "text": "Brent has slipped back below $92 a barrel on hopes of direct US–Iran talks, peace efforts in Ukraine and more OPEC+ output. Ships near the Strait of Hormuz are still being hit, which keeps a floor under prices."
     }
   },
   "items": [
+    {
+      "id": "yahoo-nvidia-huang-resigns-20261112",
+      "ts": "2026-11-12T14:41:00Z",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/20cffb91b7d328ceb77205be0cb7d49c01666b95489fcbd58832ce2967a99cfc/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2Fuser-uploaded%2Fgettyimages-1258223529_4244.jpg",
+      "headline": "Stock market today: S&P 500, Nasdaq sink as Nvidia CEO Jensen Huang resigns, stock tanks",
+      "story": "nvidia-ceo",
+      "story_title": "Nvidia: chief executive Jensen Huang steps down",
+      "pillar": "risk",
+      "summary": "Jensen Huang, Nvidia's co-founder and chief executive, resigned with immediate effect on Thursday; the shares fell 7–10% in early New York trading and pulled the Nasdaq lower.",
+      "beats": {
+        "was": "Nvidia, the chipmaker at the centre of the AI boom and one of the world's biggest companies, has been under pressure since newspaper reports about Huang's personal conduct led its board to open an investigation last weekend. On Wednesday night the board met to decide his future.",
+        "happened": "Nvidia said Huang has left as chief executive, president and board member, effective at once. Finance chief Colette Kress takes over for now until a permanent pick is named. Nvidia shares dropped sharply at the New York open, other chipmakers slipped, and the Nasdaq fell close to 1% while the wider S&P 500 lost less.",
+        "means": "The man most linked to the AI rally is gone, which hits confidence in the tech shares that have led global stocks. So far the selling is mostly inside tech, not a broad flight from risk, and currency moves are small.",
+        "fx": "A small pull toward safe havens such as the yen and Swiss franc and away from risk-linked currencies like the Australian dollar, which would grow only if the selling spreads to the wider market."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A tech-led stock drop can draw some safe-haven buying."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Weaker stocks weigh on currencies tied to risk appetite."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Mild safe-haven pull if the selling widens."
+        }
+      ],
+      "watch": "Whether the stock slide spreads beyond chipmakers through the US session, and who Nvidia names as its permanent chief executive."
+    },
+    {
+      "id": "srn-reuters-jobless-claims-200k-20261112",
+      "ts": "2026-11-12T13:38:48Z",
+      "source": "Reuters (via SRN News)",
+      "url": "https://srnnews.com/us-weekly-jobless-claims-increase-but-labor-market-firming/",
+      "image": "https://www.srnnews.com/media/2026/11/1794492317961998V1rLboaOc2.jpg?x54510",
+      "headline": "US weekly jobless claims increase, but labor market firming",
+      "story": "us-jobs",
+      "story_title": "US jobs: hiring holds up as the Fed raises rates",
+      "pillar": "growth",
+      "summary": "New US claims for unemployment benefits rose to 200,000 last week, a little more than the 195,000 forecast but still very low, so the job market still looks firm.",
+      "beats": {
+        "was": "The US job market has been strong: employers added many more jobs than expected in October and the jobless rate fell to 4.1%. With inflation back up, the Federal Reserve is expected to raise rates in December, and a solid job market supports that.",
+        "happened": "First-time claims for jobless benefits, a weekly read on layoffs, rose by 9,000 to 200,000 in the week to November 7, slightly above forecasts. The number of people still claiming benefits fell by 20,000 to about 1.7 million. Claims have stayed at or under 200,000 since mid-September, close to their lowest since 1969.",
+        "means": "Layoffs remain rare, so nothing here argues against a December Fed rate rise. The small miss is noise; it would take a clear jump in claims to change the Fed's path.",
+        "fx": "Little change for the dollar; it keeps the backing of a firm job market and a Fed still raising rates."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Claims a touch above forecast, but still low enough to keep the Fed on course to raise rates."
+        }
+      ],
+      "watch": "Federal Reserve speakers later this week, and next month's US jobs report before the December Fed meeting."
+    },
     {
       "id": "gbaf-reuters-ecb-poll-last-hike-december-20261112",
       "ts": "2026-11-12T11:20:25Z",
@@ -109,6 +175,39 @@
       "watch": "Bank of England speakers on December, and UK inflation figures next week; weak price data would cool the case for a second rise."
     },
     {
+      "id": "newsquawk-vance-rezaei-may-meet-oil-dips-20261112",
+      "ts": "2026-11-12T10:55:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/market-analysis-energy-dented-by-reports-that-vance-and-rezaei-could-meet-dutch-ttf-outperforms",
+      "image": "https://www.newsquawk.com/assets/placeholder_images_for_news_by_category/Energy/2.png",
+      "headline": "Energy dented by reports that Vance and Rezaei could meet, Dutch TTF outperforms",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran talks: Hormuz reopening offer vs ship attacks",
+      "pillar": "commodities",
+      "summary": "Oil slipped back below $92 a barrel on a Wall Street Journal report that US Vice President JD Vance could meet Iran's security chief Mohsen Rezaei, even as Iran's Revolutionary Guards reported two more tanker blasts near the Strait of Hormuz.",
+      "beats": {
+        "was": "Since the US–Iran war began, ships near the Strait of Hormuz, the route for about a fifth of the world's oil, have been hit again and again, keeping Brent crude above $90. Tehran has publicly denied holding talks with Washington.",
+        "happened": "Iran's Revolutionary Guards said two oil-carrying ships were hit by explosions in the strait, briefly lifting Brent to about $93.90. Prices then fell back to just under $92 after the Wall Street Journal reported that Vance might meet Rezaei directly. Neither side has confirmed a meeting.",
+        "means": "The chance of direct high-level talks is the clearest sign yet that diplomacy could ease the supply threat, but ships are still being attacked, so the risk to oil flows remains.",
+        "fx": "Softer oil weighs a little on the Canadian dollar and helps oil importers such as Japan and the euro area; a confirmed meeting would push further that way."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Talk of direct US–Iran contact pulls prices down while new ship blasts keep the risk alive."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Canada's main export swings with the odds of a Gulf deal."
+        }
+      ],
+      "watch": "Whether Washington or Tehran confirms a Vance–Rezaei meeting, and any new attacks on ships near Hormuz."
+    },
+    {
       "id": "euronews-nvidia-board-may-oust-huang-20261112",
       "ts": "2026-11-12T07:51:00Z",
       "source": "Euronews (via Yahoo Finance)",
@@ -116,7 +215,7 @@
       "image": "https://s.yimg.com/lo/mysterio/api/700800373329c5f022ab525f9a1892089a8b47f906cb8fc2d385a646cc435f71/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Feuronews_us_articles_576%2F7ee047ae536229a0341e88682f285e74.jpg",
       "headline": "Nvidia shares fall on reports board may oust CEO Jensen Huang",
       "story": "nvidia-ceo",
-      "story_title": "Nvidia: board weighs removing its chief executive",
+      "story_title": "Nvidia: chief executive Jensen Huang steps down",
       "pillar": "risk",
       "summary": "Nvidia shares dropped more than 8% after US hours on reports that its board met to decide whether to remove chief executive Jensen Huang, dragging Asian tech stocks and US futures lower.",
       "beats": {
@@ -155,12 +254,12 @@
       "image": "https://i.brecorder.com/large/2026/10/2707484120ec1ba.jpg",
       "headline": "Oil prices drop more than $1 as hopes for Iran, Ukraine peace talks pressure markets",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran talks: Hormuz reopening offer vs ship attacks",
+      "story_title": "US–Iran talks: Hormuz reopening offer vs ship attacks",
       "pillar": "commodities",
       "summary": "Brent crude fell about 1% to near $91.60 a barrel in Asian trade as hopes grew for peace talks on both Iran and Ukraine, giving back Wednesday's rise.",
       "beats": {
-        "was": "Oil has swung with the US\u2013Iran war: tankers near the Strait of Hormuz, the route for about a fifth of the world's oil, keep being hit, while talks to reopen it come and go. Brent rose about 1.4% on Wednesday after a two-month low the day before.",
-        "happened": "Brent dropped about $1.14 to roughly $91.60 and US crude to about $85.50. Traders pointed to quiet efforts toward a Russia\u2013Ukraine ceasefire after Abu Dhabi talks ended with a prisoner swap, and to lower odds of a bigger Iran clash before next week's US\u2013China summit. Higher OPEC+ output in October and a large rise in US crude stocks added to the fall.",
+        "was": "Oil has swung with the US–Iran war: tankers near the Strait of Hormuz, the route for about a fifth of the world's oil, keep being hit, while talks to reopen it come and go. Brent rose about 1.4% on Wednesday after a two-month low the day before.",
+        "happened": "Brent dropped about $1.14 to roughly $91.60 and US crude to about $85.50. Traders pointed to quiet efforts toward a Russia–Ukraine ceasefire after Abu Dhabi talks ended with a prisoner swap, and to lower odds of a bigger Iran clash before next week's US–China summit. Higher OPEC+ output in October and a large rise in US crude stocks added to the fall.",
         "means": "With supply rising and diplomacy alive on two fronts, the war premium in oil is fading, though ongoing attacks on tankers stop prices falling much further.",
         "fx": "Cheaper oil weighs a little on the Canadian dollar and eases price pressure for oil importers like Japan and the euro area."
       },
@@ -192,8 +291,8 @@
       "pillar": "policy",
       "summary": "Deutsche Bank now expects the Federal Reserve to raise rates in December, January and March, adding a January rise after Tuesday's hot US inflation figures.",
       "beats": {
-        "was": "The Federal Reserve's rate sits at 3.75\u20134%. US consumer prices rose 0.4% in October, more than the 0.3% expected, and some Fed officials have since argued for bigger or faster rises.",
-        "happened": "Deutsche Bank changed its forecast to three quarter-point rises in a row, in December, January and March, which would take the rate to 4.50\u20134.75%; before, it saw a pause in January. It does not expect a half-point rise in December but won't rule it out. UBS still sees two rises, in December and March.",
+        "was": "The Federal Reserve's rate sits at 3.75–4%. US consumer prices rose 0.4% in October, more than the 0.3% expected, and some Fed officials have since argued for bigger or faster rises.",
+        "happened": "Deutsche Bank changed its forecast to three quarter-point rises in a row, in December, January and March, which would take the rate to 4.50–4.75%; before, it saw a pause in January. It does not expect a half-point rise in December but won't rule it out. UBS still sees two rises, in December and March.",
         "means": "Big banks are lining up behind a longer run of US rate rises, not just one. Markets already price a December rise as near certain, so the new part is how many follow.",
         "fx": "Supports the dollar, adding to its climb to a 19-month high; weighs on the yen and gold, which pay no or little interest by comparison."
       },
@@ -221,11 +320,11 @@
       "image": "https://img.sbs.co.kr/newimg/news/20261028/202235429_1280.jpg",
       "headline": "US-Iran talks stalled amid warnings of military conflict as Iran pushes 'two-day plan'",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
       "pillar": "commodities",
       "summary": "Iran has offered, through Qatar, a two-day path to reopening the Strait of Hormuz, but says Washington has not answered, and an aide claims the US is weighing limited air strikes.",
       "beats": {
-        "was": "The US\u2013Iran war, now eight months old, has largely shut the Strait of Hormuz, the route for about a fifth of the world's oil. Iran sent the US a list of seven conditions for reopening it.",
+        "was": "The US–Iran war, now eight months old, has largely shut the Strait of Hormuz, the route for about a fifth of the world's oil. Iran sent the US a list of seven conditions for reopening it.",
         "happened": "Mohammad Bagher Ghalibaf, Iran's parliament speaker and its lead negotiator, said the US has not formally replied. Iran's latest offer squeezes its plan into two days: first the US lifts its blockade of Iranian ports and eases oil sanctions, then Iran reopens the strait. A Ghalibaf adviser claimed the US has given itself about two weeks before President Trump decides on new strikes, and Iran's top security official warned it would hit US bases if attacked.",
         "means": "There is a deal on paper, but the two sides are still apart and the talk of strikes is getting louder. Until Washington answers, Gulf oil stays tight and the risk of a fresh flare-up stays alive.",
         "fx": "Supports oil and oil exporters like the Canadian dollar; a real step toward a deal would do the opposite and help big oil importers such as Japan and the euro area."
@@ -258,7 +357,7 @@
       "pillar": "policy",
       "summary": "Toichiro Asada, a Bank of Japan board member who voted against the last two rate rises, warned that raising rates too soon could hurt growth and push inflation back down.",
       "beats": {
-        "was": "The Bank of Japan has been lifting its rate step by step and markets expect another rise at its December 17\u201318 meeting, while the yen trades near 160 per dollar. Asada is the board's best-known opponent of faster rises and voted against the moves in June and September.",
+        "was": "The Bank of Japan has been lifting its rate step by step and markets expect another rise at its December 17–18 meeting, while the yen trades near 160 per dollar. Asada is the board's best-known opponent of faster rises and voted against the moves in June and September.",
         "happened": "In a speech in Nagasaki on Thursday, Asada said past and future rate rises could weigh on activity and on underlying inflation, and that the pace of any further rises should be weighed carefully. He welcomed wages beating inflation this year but said spending and growth lack momentum.",
         "means": "It is one dissenting voice, and markets still see a December rise as likely. But it reminds traders the board is split, which caps how fast Japan's rates can rise.",
         "fx": "A small weight on the yen, which is already near 160 per dollar, the level where Japan bought yen this summer."
@@ -285,7 +384,7 @@
       "pillar": "inflation",
       "summary": "Prices that Japanese companies pay each other rose 7.1% in the year to October, faster than the 6.5% expected, partly because the weak yen makes imports dearer.",
       "beats": {
-        "was": "The Bank of Japan has been slowly lifting its rate from near zero and now sits at 1.25%. Markets expect another rise at its December 17\u201318 meeting, while the yen trades close to 160 per dollar, a level where Japan stepped in to buy yen this summer.",
+        "was": "The Bank of Japan has been slowly lifting its rate from near zero and now sits at 1.25%. Markets expect another rise at its December 17–18 meeting, while the yen trades close to 160 per dollar, a level where Japan stepped in to buy yen this summer.",
         "happened": "Japan's wholesale price index, which tracks what firms pay for goods, rose 7.1% from a year earlier in October, up from 6.8% in September and above forecasts of 6.5%. Import prices measured in yen jumped about 25%, showing the cheap yen is pushing up the cost of raw materials.",
         "means": "Rising costs for companies tend to reach shop prices later, which gives the Bank of Japan more reason to raise rates in December. It also shows the weak yen is now a source of inflation, which makes officials less willing to let it fall further.",
         "fx": "Supports the yen by firming the case for a December Bank of Japan rise, though the pull of much higher US rates still weighs on it for now."
@@ -384,10 +483,10 @@
       "pillar": "policy",
       "summary": "The dollar climbed to just under 160 yen, its highest since early September, as bets on a December US rate rise firmed. Japan has stepped in to buy yen near this level before.",
       "beats": {
-        "was": "The dollar had spent seven weeks between about 156 and 159 yen. US rates sit at 3.75\u20134.00% against 1.25% in Japan, and Japan spent a record sum buying yen this summer to slow its fall.",
+        "was": "The dollar had spent seven weeks between about 156 and 159 yen. US rates sit at 3.75–4.00% against 1.25% in Japan, and Japan spent a record sum buying yen this summer to slow its fall.",
         "happened": "After hotter-than-expected US inflation figures on Tuesday and Federal Reserve Governor Christopher Waller calling a December rise likely, the dollar broke out of that range and reached just under 160 yen on Wednesday.",
         "means": "The wide gap between US and Japanese rates keeps pulling money out of the yen. But 160 is where Japan's Finance Ministry has acted before, and the last two times the dollar went above it, it fell more than five yen within a week.",
-        "fx": "Rate gaps push the yen weaker; the risk of Japanese buying, and a possible Bank of Japan rise on December 17\u201318, push the other way."
+        "fx": "Rate gaps push the yen weaker; the risk of Japanese buying, and a possible Bank of Japan rise on December 17–18, push the other way."
       },
       "impact": [
         {
@@ -458,7 +557,7 @@
       "beats": {
         "was": "The Federal Reserve raised its key rate in September to fight inflation pushed up by the Iran war's oil shock, then held it near 3.9% in late October.",
         "happened": "October figures out Tuesday showed US prices up 4% from a year earlier, from 3.7% in September, with gadgets like phones and TVs rising fast. Dallas Fed President Lorie Logan backed at least two more quarter-point rises, Governor Christopher Waller said the figures justify weighing a half-point step, and Governor Michelle Bowman said price pressure may be widening. Philadelphia Fed President Anna Paulson prefers slow, gradual rises, and Fed Chair Kevin Warsh declined to say what comes next.",
-        "means": "Markets put about a 90% chance on a rise at the December 8\u20139 meeting and now see better-than-even odds of another in January, a big jump in two days. The debate inside the Fed is now about pace, not direction.",
+        "means": "Markets put about a 90% chance on a rise at the December 8–9 meeting and now see better-than-even odds of another in January, a big jump in two days. The debate inside the Fed is now about pace, not direction.",
         "fx": "Higher expected US rates support the dollar, especially against low-rate currencies like the yen, and weigh on gold, which pays no interest."
       },
       "impact": [
@@ -481,7 +580,7 @@
           "why": "Higher US rates make holding gold less attractive."
         }
       ],
-      "watch": "Fed speakers ahead of their December 8\u20139 meeting, and November's US inflation figures; a softer reading or a cautious word from Chair Warsh would cool the bets."
+      "watch": "Fed speakers ahead of their December 8–9 meeting, and November's US inflation figures; a softer reading or a cautious word from Chair Warsh would cool the bets."
     },
     {
       "id": "reuters-opec-output-october-near-prewar-20261111",
@@ -491,7 +590,7 @@
       "image": "https://www.cp24.com/resizer/v2/3Y6DJJGMNUJXL3EVUAJRZRM2QA.jpg?smart=true&auth=051405cb15dbf3a5b38a73f3157b313908a1d91035982e67a596110807b7a275&width=1200&height=630",
       "headline": "OPEC+ oil output climbs back close to its pre-war level in October, led by Saudi Arabia",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
       "pillar": "risk",
       "summary": "OPEC's monthly report shows the group and its allies pumped about 2 million barrels a day more in October than in September, with Saudi Arabia nearly back to where it was before the Iran war.",
       "beats": {
@@ -528,7 +627,7 @@
       "pillar": "risk",
       "summary": "India's shipping minister says a Saudi-flagged tanker with Indian crew was in a possible attack in the Strait of Hormuz on Wednesday; everyone aboard is safe.",
       "beats": {
-        "was": "Talk of US\u2013Iran peace pulled oil off its war highs last week, but ships near the Strait of Hormuz, the sea lane for much of the world's oil, have kept being hit.",
+        "was": "Talk of US–Iran peace pulled oil off its war highs last week, but ships near the Strait of Hormuz, the sea lane for much of the world's oil, have kept being hit.",
         "happened": "Sarbananda Sonowal, India's shipping minister, said the Saudi-flagged tanker NCC Fajr was involved in a possible attack in the strait on Wednesday and its crew, including three Indians, are safe. He also said a large Liberian-flagged tanker was struck by a projectile in the Gulf on Tuesday, injuring four crew. Who carried out the attacks has not been confirmed.",
         "means": "Attacks are now near-daily, which keeps shipping insurance and freight costs high and makes a quick return to normal flows less likely, whatever the talks produce.",
         "fx": "Brent crude climbed back to about $94 a barrel; that helps oil-linked currencies like the Canadian dollar and adds a little safe-haven support for the Swiss franc."
@@ -553,7 +652,7 @@
           "why": "Fresh attacks keep some demand for safe havens."
         }
       ],
-      "watch": "Whether the attacks continue during Qatar's two-week push for US\u2013Iran talks, and the US weekly oil stock figures on Thursday."
+      "watch": "Whether the attacks continue during Qatar's two-week push for US–Iran talks, and the US weekly oil stock figures on Thursday."
     },
     {
       "id": "euronews-tanker-mine-hormuz-20261111",
@@ -623,7 +722,7 @@
           "ccy": "JPY",
           "dir": "bearish",
           "strength": 1,
-          "why": "The yen nears 160 per dollar as the US\u2013Japan rate gap stays wide."
+          "why": "The yen nears 160 per dollar as the US–Japan rate gap stays wide."
         },
         {
           "ccy": "CHF",
@@ -650,7 +749,7 @@
       "story": "rba-pause",
       "story_title": "RBA: is 4.85% the peak?",
       "pillar": "growth",
-      "summary": "New home loans in Australia fell 15.5% in the July\u2013September quarter, about twice the drop forecast, led by a 32% fall in loans to property investors.",
+      "summary": "New home loans in Australia fell 15.5% in the July–September quarter, about twice the drop forecast, led by a 32% fall in loans to property investors.",
       "beats": {
         "was": "The Reserve Bank of Australia has raised its cash rate five times this year to 4.85%, the highest since 2008, and the government ended a key tax break for investors buying existing homes in its May budget. At its November meeting the bank dropped its line about more rises to come.",
         "happened": "The Australian Bureau of Statistics said the value of new home loans fell 15.5% in the third quarter, against a forecast fall of about 8% and after a 5.2% fall in the second quarter. Loans to investors fell 32.3% and loans to people buying a home to live in fell 5.3%. Commonwealth Bank, the country's biggest lender, said the same morning that home loan applications were 16% lower than a year earlier.",
@@ -675,11 +774,11 @@
       "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/ap_6af4c8b79ab85-1794427063.jpg?resize=1920%2C1440",
       "headline": "Hormuz Strait will 'never return' to pre-war status, Iran's Ghalibaf says",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
       "pillar": "commodities",
       "summary": "Iran's parliament speaker and top negotiator says the Strait of Hormuz will not go back to how it was before the war, with Iran and Oman to oversee it together.",
       "beats": {
-        "was": "The US\u2013Iran war, now eight months old, has largely shut the Strait of Hormuz, the route for about a fifth of the world's oil. Qatar is trying to restart talks.",
+        "was": "The US–Iran war, now eight months old, has largely shut the Strait of Hormuz, the route for about a fifth of the world's oil. Qatar is trying to restart talks.",
         "happened": "Mohammad Bagher Ghalibaf, Iran's parliament speaker, told Al Jazeera that Iran and Oman have agreed to oversee the strait. He said Iran sent seven conditions to Washington through Qatar, including lifting the US naval blockade and sanctions and freeing frozen funds, and that they must be met before talks start.",
         "means": "Even if the war ends, Iran wants a lasting say over who passes through the strait, so a full return to normal oil shipping looks further off. Iran's conditions remain far from what Washington has offered.",
         "fx": "A longer squeeze on Gulf oil supports oil prices and oil exporters like the Canadian dollar, and weighs on big oil importers such as Japan and the euro area."
@@ -714,11 +813,11 @@
       "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/afp_6af3eb2f86fc-1794370351.jpg?resize=1920%2C1440",
       "headline": "Iran denies talks with the US and says the Strait of Hormuz stays shut until its demands are met",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
       "pillar": "risk",
       "summary": "Iran's security chief Mohsen Rezaei says there are no talks with the US and the Strait of Hormuz will stay closed until Washington accepts Iran's conditions, even as US leaders talk up diplomacy.",
       "beats": {
-        "was": "Since the war with Iran began, shipping through the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, has been badly disrupted, and Qatar has been trying to broker US\u2013Iran talks.",
+        "was": "Since the war with Iran began, shipping through the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, has been badly disrupted, and Qatar has been trying to broker US–Iran talks.",
         "happened": "Rezaei called reports of ongoing talks or a meeting in Qatar false and said Iran is waiting for a US reply to its conditions, which include lifting sanctions and the US naval blockade and ending fighting in Lebanon. Foreign Minister Abbas Araghchi said the strait could reopen within two days if those demands are met. President Trump spoke of positive momentum, and Secretary of State Marco Rubio said the US is open to diplomacy. Iran's Revolutionary Guards said three more tankers hit mines.",
         "means": "Both sides say a deal is possible, but Iran is tying the reopening of the strait to a long list of demands, so oil supply through the Gulf stays at risk for now.",
         "fx": "Mild upward pressure on oil, and a small lift for oil-linked currencies like the Canadian dollar and for safe havens."
@@ -753,7 +852,7 @@
       "image": "https://unn.ua/img/2026/04/18/1776483406-3642-large.webp",
       "headline": "Iran says its enriched uranium stays in the country, and oil rises toward $93",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
       "pillar": "risk",
       "summary": "Iran's security chief said Tehran will not let any enriched nuclear material leave the country, a clash with Washington's demand that nuclear issues be part of any first round of talks. Brent crude rose about 1.4% to near $92.80.",
       "beats": {
@@ -792,11 +891,11 @@
       "image": null,
       "headline": "Oil climbs off a two-month low as attacks on ships near Hormuz outweigh hopes of an Iran truce",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
       "pillar": "risk",
-      "summary": "Brent crude edged back above $92.50 a barrel as ships near the Strait of Hormuz keep getting hit, even while talk of a US\u2013Iran truce continues.",
+      "summary": "Brent crude edged back above $92.50 a barrel as ships near the Strait of Hormuz keep getting hit, even while talk of a US–Iran truce continues.",
       "beats": {
-        "was": "Brent had dropped from the mid-$90s to briefly under $90 on Tuesday, its lowest in about two months, after President Trump called the US\u2013Iran war 'effectively over' and held off new strikes. The Strait of Hormuz, the main exit for Gulf oil, is still effectively shut.",
+        "was": "Brent had dropped from the mid-$90s to briefly under $90 on Tuesday, its lowest in about two months, after President Trump called the US–Iran war 'effectively over' and held off new strikes. The Strait of Hormuz, the main exit for Gulf oil, is still effectively shut.",
         "happened": "Brent rose to about $92.50 and US crude to about $86.70 in Asian trading on Wednesday. Attacks on shipping are not slowing: 37 ships were hit in October, the most in any month since the war began, and 10 more so far in November. Analysts at data firm LSEG say even a signed deal would not bring back normal tanker traffic quickly, because mines must be cleared, insurers must return and shipowners must be willing to sail.",
         "means": "Hopes for peace pulled oil down, but the physical problem of moving oil out of the Gulf has not changed, so the fall has stalled. A deal on paper and oil flowing again are two different things.",
         "fx": "Steadier oil gives a little support to the Canadian dollar and keeps energy costs a worry for big importers like Japan."
@@ -821,7 +920,7 @@
           "why": "Japan buys nearly all its oil abroad, so dearer crude weighs on its trade balance."
         }
       ],
-      "watch": "Whether attacks on ships near Hormuz slow, and any firm sign of US\u2013Iran talks actually taking place."
+      "watch": "Whether attacks on ships near Hormuz slow, and any firm sign of US–Iran talks actually taking place."
     },
     {
       "id": "fxstreet-dxy-steadies-fed-hike-odds-20261111",
@@ -851,43 +950,10 @@
           "ccy": "JPY",
           "dir": "bearish",
           "strength": 1,
-          "why": "A wider US\u2013Japan rate gap keeps pressure on the yen near 158.7 per dollar."
+          "why": "A wider US–Japan rate gap keeps pressure on the yen near 158.7 per dollar."
         }
       ],
       "watch": "Fed speakers and US data later this week; any sign October's inflation jump was a one-off would cut the odds of a half-point rise."
-    },
-    {
-      "id": "boereport-reuters-tankers-burn-lima-strike-20261110",
-      "ts": "2026-11-10T19:09:52Z",
-      "source": "BOE Report (Reuters)",
-      "url": "https://boereport.com/2026/11/10/tankers-continue-to-burn-in-the-middle-east-despite-hopes-for-de-escalation/",
-      "image": null,
-      "headline": "Tankers continue to burn in the Middle East despite hopes for de-escalation",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Another tanker was hit off Oman on Tuesday and several ships hit over the weekend were still burning, even as oil fell to two-month lows on hopes the US\u2013Iran war is easing.",
-      "beats": {
-        "was": "The Strait of Hormuz, the narrow sea lane out of the Gulf that normally carries about a fifth of the world's oil, has been largely shut since the US\u2013Iran war began in late February. Oil has fallen sharply in the past week as US President Donald Trump has sounded less keen on new strikes.",
-        "happened": "The UK Maritime Trade Operations centre, which tracks shipping security, said a tanker was struck north-east of Lima on Oman's coast on Tuesday, without saying who did it. A Singapore-flagged products tanker was still on fire off Oman after Sunday's attacks, which Iran's Revolutionary Guards said targeted ships using routes it had not approved, and oil spills have reached Oman's and the UAE's shores. A record 37 ships were attacked in October, and the US keeps blockading Iranian ports.",
-        "means": "Talk of calmer US\u2013Iran relations has not yet stopped attacks at sea, so the supply risk that pushed oil to its war highs is still there under the recent fall in prices.",
-        "fx": "Continued attacks limit how far oil can fall, which helps oil-exporting currencies such as the Canadian dollar and keeps some demand for safe havens such as the Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Ships are still being hit near Hormuz despite hopes of a calmer US\u2013Iran stance."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Ongoing attacks at sea keep some safe-haven demand alive."
-        }
-      ],
-      "watch": "Whether attacks on ships slow in the coming days; a lull would back the case for a lasting fall in oil, a new wave would undo it."
     },
     {
       "id": "i24-qatar-two-week-window-iran-20261110",
@@ -895,9 +961,9 @@
       "source": "i24NEWS",
       "url": "https://www.i24news.tv/en/news/middle-east/artc-qatar-secured-at-least-two-weeks-for-diplomacy-to-avert-us-strike-on-iran",
       "image": "https://cdn.i24news.tv/uploads/ae/7e/70/bf/d0/ab/a9/b7/bf/ff/13/be/b4/c6/38/d7/ae7e70bfd0aba9b7bfff13beb4c638d7.jpg",
-      "headline": "Qatar says it has bought at least two weeks for US\u2013Iran diplomacy before any new US strike",
+      "headline": "Qatar says it has bought at least two weeks for US–Iran diplomacy before any new US strike",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
       "pillar": "risk",
       "summary": "Qatar's prime minister told G7 foreign ministers he has secured at least two weeks for talks before the US considers striking Iran again, but warned the two sides still disagree on the order of steps.",
       "beats": {
@@ -1006,7 +1072,7 @@
       "pillar": "policy",
       "summary": "Dallas Fed President Lorie Logan said the Federal Reserve needs at least two more quarter-point rate rises and may have to move faster this winter, hours after hot US October inflation figures.",
       "beats": {
-        "was": "The Federal Reserve's main rate is 3.75\u20134.00% after rises aimed at inflation well above its 2% goal. On Tuesday, US core consumer prices, which leave out food and energy, rose 0.3% in October against 0.2% expected, and Fed Governor Christopher Waller had said a half-point December rise should be considered at that level.",
+        "was": "The Federal Reserve's main rate is 3.75–4.00% after rises aimed at inflation well above its 2% goal. On Tuesday, US core consumer prices, which leave out food and energy, rose 0.3% in October against 0.2% expected, and Fed Governor Christopher Waller had said a half-point December rise should be considered at that level.",
         "happened": "Logan, who has voted against past decisions in favour of higher rates, said it is clear at least two more quarter-point rises are needed, that rates may need to rise faster than they have so far, and that the Fed could then pause to take stock. She said the main rate is at least half a point below where it would modestly slow the economy, and worried that the hot consumer price figures point to higher readings on the Fed's preferred inflation measure.",
         "means": "Two senior officials in one day have now talked openly about more and possibly bigger rises. Two-year US Treasury yields, which track rate expectations, jumped about 0.2 percentage point to 4.75%, and markets now treat a December rise as close to certain.",
         "fx": "A Fed leaning toward more rises supports the US dollar against most currencies, and weighs on the yen and gold, which pay little or no interest."
@@ -1031,7 +1097,7 @@
           "why": "Higher US rates make gold, which pays no interest, less attractive."
         }
       ],
-      "watch": "The Fed's December 8\u20139 meeting: whether officials beyond Waller and Logan back a half-point rise rather than a quarter-point one."
+      "watch": "The Fed's December 8–9 meeting: whether officials beyond Waller and Logan back a half-point rise rather than a quarter-point one."
     },
     {
       "id": "aol-reuters-poll-fed-december-last-hike-20261110",
@@ -1070,7 +1136,7 @@
           "why": "Higher US rates for longer make gold, which pays no interest, less attractive."
         }
       ],
-      "watch": "The Fed's December 8\u20139 meeting: whether officials signal that December is the last step or that more may follow."
+      "watch": "The Fed's December 8–9 meeting: whether officials signal that December is the last step or that more may follow."
     },
     {
       "id": "tokenpost-gold-falls-30-hot-cpi-20261110",
@@ -1148,7 +1214,7 @@
           "why": "A wider gap between US and Japanese interest rates keeps the yen weak near 158 per dollar."
         }
       ],
-      "watch": "Comments from other Fed officials on whether December should be a quarter or a half point, and November's inflation figures before the December 8\u20139 meeting."
+      "watch": "Comments from other Fed officials on whether December should be a quarter or a half point, and November's inflation figures before the December 8–9 meeting."
     },
     {
       "id": "investinglive-china-oct-trade-imports-416-20261110",
@@ -1181,7 +1247,7 @@
           "why": "Firmer Chinese imports help New Zealand's export earnings."
         }
       ],
-      "watch": "The detailed customs figures showing whether imports rose on prices or volumes, and trade talk at the Trump\u2013Xi meeting later this month."
+      "watch": "The detailed customs figures showing whether imports rose on prices or volumes, and trade talk at the Trump–Xi meeting later this month."
     },
     {
       "id": "investinglive-westpac-sentiment-four-year-low-20261110",
@@ -1193,11 +1259,11 @@
       "story": "rba-pause",
       "story_title": "RBA: is 4.85% the peak?",
       "pillar": "growth",
-      "summary": "The Westpac\u2013Melbourne Institute measure of Australian consumer confidence fell 2.7% to 78.2 in November, its lowest since late 2022, with mortgage holders at a record low.",
+      "summary": "The Westpac–Melbourne Institute measure of Australian consumer confidence fell 2.7% to 78.2 in November, its lowest since late 2022, with mortgage holders at a record low.",
       "beats": {
         "was": "The Reserve Bank of Australia raised its cash rate to 4.85% on November 3, its fifth rise this year and the highest since 2008, with inflation at 4.3% and petrol nearing A$2.40 a litre.",
-        "happened": "The monthly Westpac\u2013Melbourne Institute survey dropped to 78.2 from 80.4, where anything below 100 means pessimists outnumber optimists. Mood among people with a mortgage hit a record low, more than 70% expect mortgage rates to rise further, and households turned gloomy on house prices for the first time since late 2022.",
-        "means": "Households are feeling the rate rises, which makes it harder for the central bank to keep going. Westpac expects it to hold rates at its December 7\u20138 meeting and not raise them in February either.",
+        "happened": "The monthly Westpac–Melbourne Institute survey dropped to 78.2 from 80.4, where anything below 100 means pessimists outnumber optimists. Mood among people with a mortgage hit a record low, more than 70% expect mortgage rates to rise further, and households turned gloomy on house prices for the first time since late 2022.",
+        "means": "Households are feeling the rate rises, which makes it harder for the central bank to keep going. Westpac expects it to hold rates at its December 7–8 meeting and not raise them in February either.",
         "fx": "Weaker spending ahead lowers the chance of more rate rises, which takes some support from the Australian dollar."
       },
       "impact": [
@@ -1218,11 +1284,11 @@
       "image": null,
       "headline": "US energy agency expects Brent near $100 a barrel for the rest of 2026",
       "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: talk of a deal vs attacks on Gulf shipping",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
       "pillar": "risk",
       "summary": "The US Energy Information Administration's monthly outlook sees Brent crude near $100 a barrel through the end of this year if Middle East supply stays tight, easing to about $77 by late 2027.",
       "beats": {
-        "was": "Oil has been high since the US\u2013Iran war began in late February and Iran squeezed shipping through the Strait of Hormuz, the route for about a fifth of the world's oil. Brent briefly fell below $90 on Tuesday on hopes the war is ending.",
+        "was": "Oil has been high since the US–Iran war began in late February and Iran squeezed shipping through the Strait of Hormuz, the route for about a fifth of the world's oil. Brent briefly fell below $90 on Tuesday on hopes the war is ending.",
         "happened": "In its November short-term outlook, the Energy Information Administration, the US government's energy statistics agency, said it expects Brent to stay near $100 a barrel for the rest of 2026, assuming Gulf supply limits persist, then drift down to about $77 on average in the last quarter of 2027 as supply recovers. It also raised its fuel price forecasts for 2027. The forecast was finished before the events of the past week.",
         "means": "An official forecaster sees today's prices, near $93, as below where tight supply should keep them. It is a forecast, not new supply news, and it predates this week's talk of a truce.",
         "fx": "A higher oil path would favour the Canadian and Norwegian currencies and weigh on big importers such as Japan and the euro area."
@@ -1241,7 +1307,7 @@
           "why": "A higher oil path helps Canada's biggest export."
         }
       ],
-      "watch": "Whether attacks on ships near Hormuz keep supply tight, or a US\u2013Iran deal pulls prices toward the agency's lower 2027 path."
+      "watch": "Whether attacks on ships near Hormuz keep supply tight, or a US–Iran deal pulls prices toward the agency's lower 2027 path."
     },
     {
       "id": "reuters-russia-ukraine-us-abu-dhabi-talks-20261110",
@@ -1304,39 +1370,6 @@
       "watch": "Canada's October inflation figures and the Bank of Canada's decision on December 9."
     },
     {
-      "id": "investing-reuters-rezaei-no-talks-20261110",
-      "date": "2026-11-10",
-      "source": "Investing.com (Reuters)",
-      "url": "https://www.investing.com/news/commodities-news/irans-top-security-official-says-no-talks-underway-with-us-5016341",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMA91QA_L.jpg",
-      "headline": "Iran's top security official says there are no talks with the US right now",
-      "story": "us-iran-talks",
-      "story_title": "Iran: talks in Tehran vs the threat of new US strikes",
-      "pillar": "risk",
-      "summary": "Mohsen Rezaei, head of Iran's top security council, says Tehran is not negotiating with Washington, cooling hopes that drove oil sharply lower in recent days.",
-      "beats": {
-        "was": "Oil has fallen hard since late last week on hopes the US\u2013Iran war is ending; President Trump met Qatar's prime minister, a go-between, on Monday and played down new strikes. The Strait of Hormuz, a key route for Gulf oil, remains closed.",
-        "happened": "Rezaei told the Al-Mayadeen broadcaster that no negotiations are under way. Iran says the US must meet seven conditions from a June interim deal before Hormuz reopens and talks restart, and that it is still waiting for a clear answer. Iranian media quoted him calling US talk of a meeting in Qatar a lie aimed at pushing oil prices down.",
-        "means": "The quick-peace story behind oil's slide has a weak point: the two sides do not agree that talks are even happening. Brent stopped falling and held near $92 a barrel.",
-        "fx": "Doubts over a deal slow the drop in oil, which helps the Canadian dollar a little and keeps some energy-driven inflation worry alive."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A denial of talks weakens the hopes that drove prices down, though prices moved little."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firmer oil helps Canada's main export."
-        }
-      ],
-      "watch": "Whether the US gives Iran a formal answer on its conditions, and any shipping attacks near Hormuz."
-    },
-    {
       "id": "investing-reuters-lombardelli-december-hike-20261110",
       "date": "2026-11-10",
       "source": "Investing.com (Reuters)",
@@ -1376,7 +1409,7 @@
       "summary": "Federal Reserve Governor Christopher Waller said in London that he will back a December rate rise even if October inflation cools, and that a half-point rise should be on the table if underlying prices climb fast.",
       "beats": {
         "was": "The Federal Reserve has been raising interest rates to fight inflation that is running well above its 2% goal, and markets already saw a December rise as likely after a strong US jobs report last Friday.",
-        "happened": "Speaking on Tuesday, hours before the US October inflation figures, Waller said he would support a quarter-point rise at the December 8\u20139 meeting even if inflation improves on September. He added that a half-point rise should be considered if core prices, which leave out food and energy, rise 0.3% or more in the month; economists expect about 0.2%. He called inflation his main focus and brushed off recent stock market falls.",
+        "happened": "Speaking on Tuesday, hours before the US October inflation figures, Waller said he would support a quarter-point rise at the December 8–9 meeting even if inflation improves on September. He added that a half-point rise should be considered if core prices, which leave out food and energy, rise 0.3% or more in the month; economists expect about 0.2%. He called inflation his main focus and brushed off recent stock market falls.",
         "means": "One of the Fed's most influential voices has all but committed to a December rise before seeing the data, and opened the door to a bigger step. Markets moved the chance of a December rise to about 85%, so a soft inflation figure later on Tuesday would now do less to change the plan.",
         "fx": "Firmer rate-rise talk supports the US dollar, which rose against most currencies after his remarks, and weighs on the yen and gold, which pay no or little interest."
       },
@@ -1401,84 +1434,6 @@
         }
       ],
       "watch": "Tuesday's US October inflation figures: core prices up 0.3% or more would make a half-point December rise a live option; a clearly softer reading would test how firm Waller's backing is."
-    },
-    {
-      "id": "thenational-brent-below-90-first-since-august-20261110",
-      "date": "2026-11-10",
-      "source": "The National",
-      "url": "https://www.thenationalnews.com/business/energy/2026/11/10/brent-falls-below-90-a-barrel-for-the-first-time-since-august/",
-      "image": "https://www.thenationalnews.com/resizer/v2/F7CDLQJWJCB36GXQPE2OZTK2NE.jpg?auth=0c032b6597a25cddc15611376a61374b006755a4946875e8d2ffb4e05e0e3c9f&smart=true&width=1200&height=630",
-      "headline": "Brent falls below $90 a barrel for the first time since August",
-      "story": "us-iran-talks",
-      "story_title": "US\u2013Iran: talk of a deal pulls oil off its war highs",
-      "pillar": "commodities",
-      "summary": "Brent crude briefly dropped under $90 a barrel on Tuesday, its lowest since August, after President Trump said more strikes on Iran weren't needed and the war could end soon.",
-      "beats": {
-        "was": "Oil had jumped this autumn on the US\u2013Iran war and attacks on shipping near the Strait of Hormuz, the narrow sea route that carries about a fifth of the world's oil. Brent, the main world benchmark, already fell almost 6% on Monday.",
-        "happened": "After meeting Qatar's Prime Minister at the White House on Monday, Trump said further military action against Iran didn't seem very necessary and that the war should end fairly soon. Brent slipped briefly below $90 on Tuesday and US crude fell to about $85, before both won back part of the drop later in the morning.",
-        "means": "Traders are removing the extra price they had paid for the risk of a wider war and blocked supplies. That eases the inflation worry from energy, but the drop could reverse quickly, as ships near the strait are still being attacked.",
-        "fx": "Cheaper oil is a drag on the Canadian dollar, as oil is Canada's biggest export, and a help to the yen, since Japan buys almost all its energy abroad."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Brent fell below $90 for the first time since August as fears of more US strikes on Iran faded."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil prices cut into Canada's main export earnings."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Cheaper oil shrinks Japan's import bill."
-        }
-      ],
-      "watch": "Whether US\u2013Iran talks produce a deal, and any new attacks on ships near Hormuz that would bring the war premium back."
-    },
-    {
-      "id": "gulfnews-brent-9225-iran-strike-fears-ease-20261110",
-      "date": "2026-11-10",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/business/energy/oil-slides-as-iran-strike-fears-ease-brent-falls-1.500741822",
-      "image": "https://media.assettype.com/gulfnews%2F2026-09-22%2Fsgytwliu%2Fnewsml_afp_com_20260922T075947Z_doc_c8yc6cq.jpeg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "Oil keeps sliding in Asia as fears of new US strikes on Iran fade; Brent near $92",
-      "story": "us-iran-talks",
-      "story_title": "Hormuz: reopening offer vs ship attacks",
-      "pillar": "commodities",
-      "summary": "Brent crude traded near $92 a barrel early Tuesday in Asia after settling almost 6% lower on Monday, and Gulf producers are cutting prices to win buyers as ships start moving through Hormuz again.",
-      "beats": {
-        "was": "The war with Iran shut most traffic through the Strait of Hormuz, the route for about a fifth of the world's oil, and pushed Brent well above $100. Last week it fell 16% on hopes of a deal.",
-        "happened": "President Trump played down the chance of new US strikes on Iran, and Brent settled Monday at about $92.57, down $5.75, then slipped to about $92.25 in early Asian trade. US crude was near $87. Middle Eastern producers are cutting their selling prices as flows through Hormuz recover, even though attacks on ships nearby continue.",
-        "means": "Price cuts by Gulf sellers suggest supply is coming back faster than buyers expected, which adds to fears of too much oil. A new attack or a stall in talks could still reverse the drop quickly.",
-        "fx": "Cheaper oil weighs on the Canadian dollar and helps big oil importers like Japan."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Brent extended its slide as strike fears faded and Gulf sellers cut prices."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil prices cut Canada's export earnings."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A smaller oil bill eases pressure on Japan's trade balance."
-        }
-      ],
-      "watch": "Any confirmed progress in US\u2013Iran talks, or a fresh attack on ships near Hormuz."
     }
   ]
 }
