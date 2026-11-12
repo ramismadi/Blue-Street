@@ -1,35 +1,51 @@
 {
   "date": "2026-11-12",
-  "headline": "The dollar held near its highest since April 2025 overnight, keeping the yen just shy of 160 per dollar. UK third-quarter growth matched forecasts, leaving a December Bank of England hike an open question.",
+  "headline": "US bond yields jumped after the Veterans Day break, lifting the dollar to its highest since April 2025 and sinking gold almost 3%. Oil rose after President Trump said America doesn't need an Iran deal.",
   "chapters": [
     {
       "title": "US Dollar",
-      "teaser": "The dollar index edged up to about 103, its highest since April 2025, as bets on faster Federal Reserve rate rises held overnight. US bond trading reopens Thursday after the Veterans Day holiday.",
-      "meaning": "The story so far: High oil from the US–Iran war has kept US inflation at about twice the Federal Reserve's 2% goal, October consumer prices beat forecasts on Tuesday, and Fed officials have since talked of faster rate rises. What changed: In Asian trading the dollar index added a little more, to about 103. Futures still price a December hike as near certain, with about a one-in-eight chance it is a half point. Deutsche Bank now expects three hikes, in December, January and March. Early quotes put the US two-year yield near 4.77%, a touch above Tuesday's close. What it means: The dollar is now trading on how far the Fed goes after December, not whether it hikes. If US yields climb when bonds reopen, the rate gap with Europe and Japan widens again. The question: do Thursday's US yields confirm the dollar's jump?",
-      "fx": "What's next: Coming up, all times CT: Thursday, 7:30 AM, weekly US jobless claims; 12:00 PM, a 30-year Treasury bond sale; late in the day, New York Fed President John Williams speaks on a panel. Friday, 7:30 AM, US producer (wholesale) prices for October. The Fed decides on December 9.",
+      "teaser": "The dollar index rose about 0.3% to near 103.2, its highest since April 2025, as US bond markets reopened after Veterans Day and yields jumped. Federal Reserve officials kept talking about more rate rises.",
+      "meaning": "The story so far: High oil from the US–Iran war has kept US inflation at about twice the Federal Reserve's 2% goal, and hotter-than-expected October consumer prices on Tuesday turned a December rate hike into a near certainty. What changed: With bond trading back after Wednesday's holiday, the two-year Treasury yield jumped about a tenth of a point to near 4.84% and the 10-year rose above 5% for the first time in three weeks. Cleveland Fed President Beth Hammack backed steady quarter-point hikes, and San Francisco Fed President Mary Daly said more rises are likely but there is no rush. A 30-year bond sale drew soft demand, and President Trump's 'we don't need a deal with Iran' post revived oil and inflation worries. Weekly jobless claims rose to 200,000, a little above forecasts but still low. What it means: Markets now price a December quarter-point hike at about nine in ten, and more hikes next year, so US rates keep pulling further ahead of Europe and Japan. That gap is what keeps money flowing into dollars. The question: do Friday's producer prices back up the hot consumer figures?",
+      "fx": "What's next: Coming up, all times CT: Thursday evening, New York Fed President John Williams speaks on a panel. Friday, 7:30 AM, US producer (wholesale) prices for October, forecast +0.4% on the month. Next week: US retail sales Tuesday at 7:30 AM and the Fed's October meeting minutes Wednesday at 1:00 PM. The Fed decides on December 9.",
       "numbers": [
-        "Dollar index ~103.02, +0.16%, highest since April 2025 (Reuters via Hercules)",
-        "December Fed hike: ~87% quarter point, ~13% half point (CME FedWatch via Reuters, Hercules)",
-        "US 2-year ~4.77%, 10-year ~4.99% in early trading (Hercules)",
-        "US producer prices Fri 7:30 AM CT: forecast +0.4% m/m, core +0.3% (Blue Street calendar)"
+        "Dollar index ~103.16, +0.3%, highest since April 2025 (Reuters via Hercules)",
+        "US 2-year ~4.84% (+11bp), 10-year ~5.10% (Reuters, Hercules)",
+        "December Fed hike: ~91% quarter point, ~9–12% half point (CME FedWatch via Hercules)",
+        "Jobless claims 200,000 vs 194,000 forecast (US Labor Department)"
       ],
       "scenarios": {
-        "base": "If US yields hold near Tuesday's levels and jobless claims land near forecast, the dollar index stays roughly between 102.5 and 103.5 into Friday.",
-        "bull": "If yields jump when bonds reopen, or Williams backs a faster pace, the index climbs above 103.5.",
-        "bear": "If the 30-year bond sale draws strong demand and yields slip, or Fed officials push back on a half-point move, the index falls below 102.5."
+        "base": "If producer prices land near the +0.4% forecast, the dollar index holds roughly between 102.6 and 103.6 into next week.",
+        "bull": "If producer prices run hot again, or Williams backs a faster pace Thursday evening, the index climbs above 103.6.",
+        "bear": "If producer prices come in soft and US yields fall back, the index slips below 102.6."
       },
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Reuters (Nov 12): Dollar near one-month high as yen edges toward 160",
-          "url": "https://www.reuters.com/world/asia-pacific/dollar-near-one-month-high-yen-edges-toward-160-2026-11-12/"
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+          "label": "Reuters via Investing.com (Nov 12): Fed's Hammack signals support for gradual rate-hike path",
+          "url": "https://www.investing.com/news/economy-news/feds-hammack-signals-support-for-gradual-ratehike-path-5022530"
+        },
+        {
+          "label": "Investing.com (Nov 12): Fed's Daly says more rate hikes likely needed",
+          "url": "https://www.investing.com/news/economy-news/feds-daly-says-more-rate-hikes-likely-needed-to-fight-inflation-5022988"
+        },
+        {
+          "label": "TreasuryDirect: 30-year bond auction results, Nov 12, 2026",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2026/R_20261112_4.pdf"
+        },
+        {
+          "label": "US Labor Department: weekly jobless claims, Nov 12, 2026",
+          "url": "https://www.dol.gov/ui/data.pdf"
+        },
+        {
+          "label": "Reuters (Nov 12): Trump says Vance should focus on domestic corruption, 'we don't need a deal with Iran'",
+          "url": "https://www.reuters.com/world/us/trump-says-vance-should-focus-domestic-corruption-we-dont-need-deal-with-iran-2026-11-12/"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 12): times, forecasts and results",
@@ -39,27 +55,31 @@
     },
     {
       "title": "Euro",
-      "teaser": "The euro held near $1.110, its lowest since May 2025, as the dollar stayed firm overnight. European Central Bank President Christine Lagarde speaks Thursday afternoon.",
-      "meaning": "The story so far: The euro has slid for weeks on weak growth, dear energy and France's debt worries, and this week's bets on faster US rate rises pushed it to its lowest since May 2025. What changed: Little moved overnight; the euro was flat near $1.110 with no euro-area news. Markets still give a December European Central Bank hike about a nine-in-ten chance. What it means: That December hike is already in the price, while US expectations keep rising, so the rate gap still works against the euro. Speculators already hold a large bet against it, which could make any good euro-area news bite harder. The question: does Lagarde signal hikes beyond December?",
-      "fx": "What's next: Coming up, all times CT: Thursday, 1:30 PM, Lagarde speaks. Friday, 4:00 AM, euro-area third-quarter growth (second estimate); 7:30 AM, US producer prices. The European Central Bank decides on December 17.",
+      "teaser": "The euro fell about 0.3% to near $1.106, its lowest since April 2025, as US yields jumped. European Central Bank President Christine Lagarde spoke at a Paris gala but said nothing about rates.",
+      "meaning": "The story so far: The euro has slid for weeks on weak growth, dear energy and France's debt worries, and this week's bets on faster US rate rises have pushed it to its lowest in more than a year and a half. What changed: The euro lost another 0.3% as US Treasury yields rose sharply when bond trading reopened. Lagarde's evening appearance in Paris was a conversation, not a policy speech, and moved nothing. A Reuters survey found every economist polled expects a European Central Bank hike in December, with most seeing it as the last for now; markets put it at about nine in ten. What it means: A December euro-area hike is already in the price and may be the last, while US hikes keep stacking up, so the rate gap keeps working against the euro. The question: does euro-area growth hold up well enough to keep the European Central Bank hiking after December?",
+      "fx": "What's next: Coming up, all times CT: Friday, 4:00 AM, euro-area third-quarter growth (second estimate); 7:30 AM, US producer (wholesale) prices for October, forecast +0.4% on the month. The European Central Bank decides on December 17.",
       "numbers": [
-        "EUR/USD ~1.1096, flat, lowest since May 2025 (Reuters via Hercules)",
-        "EUR/GBP ~0.836 (computed by Hercules)",
-        "December ECB hike ~92% priced (Hercules)"
+        "EUR/USD ~1.1059, −0.28%, lowest since April 2025 (Reuters via Hercules)",
+        "EUR/GBP ~0.8356 (Hercules)",
+        "December ECB hike ~88% priced (Hercules)"
       ],
       "scenarios": {
-        "base": "If Lagarde avoids rate talk and US data lands near forecast, the euro holds roughly between $1.100 and $1.118 into Friday.",
-        "bull": "If Lagarde hints at more hikes after December or euro-area growth is revised up, the euro rises above $1.118.",
-        "bear": "If US yields jump on Thursday or producer prices run hot on Friday, the euro falls below $1.100."
+        "base": "If euro-area growth is confirmed near the first estimate and US producer prices land near forecast, the euro holds roughly between $1.100 and $1.112.",
+        "bull": "If US producer prices come in soft and US yields fall back, the euro climbs above $1.112.",
+        "bear": "If US producer prices run hot, or euro-area growth is revised down, the euro breaks below $1.100."
       },
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Reuters poll via Global Banking & Finance Review (Nov 12): ECB set for last rate hike in December",
+          "url": "https://www.globalbankingandfinance.com/ecb-set-last-rate-hike-december-inflation-risks-keep-door/"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 12): times, forecasts and results",
@@ -69,32 +89,31 @@
     },
     {
       "title": "British Pound",
-      "teaser": "UK growth was 0.7% in the third quarter, exactly as expected, and September beat forecasts but August was revised down. The pound sat near $1.327, close to a two-week low, before the figures.",
-      "meaning": "The story so far: The Bank of England raised Bank Rate to 4.00% on November 5, its first hike since 2023, and Governor Andrew Bailey said it is unlikely to be the last while the Middle East conflict lasts. What changed: UK third-quarter growth came in at 0.7%, matching forecasts and the Bank of England's own estimate, up from 0.5% in the spring. Services led. September grew 0.2% against a flat forecast, but August was cut to zero, so the two cancel out. Before the release the pound had slipped to about $1.327 as the dollar firmed. What it means: Growth near 3% a year is solid enough that the Bank of England need not worry the hike is choking the economy, but it adds nothing new to the case for a second one. Markets give that second December hike about a two-in-three chance. The question: does UK inflation keep a December hike alive?",
-      "fx": "What's next: Coming up, all times CT: Thursday, 7:30 AM, weekly US jobless claims. Friday, 7:30 AM, US producer prices. UK inflation figures for October are due later this month. The Bank of England decides on December 17.",
+      "teaser": "The pound fell about 0.3% to near $1.324, a three-week low, as the US dollar rose. UK third-quarter growth matched forecasts early Thursday and did little for the pound.",
+      "meaning": "The story so far: The Bank of England raised Bank Rate to 4.00% on November 5, its first hike since 2023, and Governor Andrew Bailey said it is unlikely to be the last while the Middle East conflict lasts. What changed: UK growth was 0.7% in the third quarter, exactly as forecast and up from 0.5% in the spring, led by services. September beat forecasts but August was revised down, so the two cancel out. Later the pound slid as US yields jumped. Markets give a second Bank of England hike in December about a seven-in-ten chance. What it means: Solid growth means the Bank of England need not fear its hike is choking the economy, which keeps a December move alive. But US rates are rising faster, so the pound's rate edge over the dollar is shrinking. The question: do UK inflation figures next Wednesday keep the December hike on track?",
+      "fx": "What's next: Coming up, all times CT: Friday, 7:30 AM, US producer prices. Wednesday, November 18, 1:00 AM, UK inflation figures for October. The Bank of England decides on December 17.",
       "numbers": [
-        "UK GDP Q3 +0.7% q/q (forecast +0.7%, Q2 +0.5%) (ONS)",
-        "September GDP +0.2% m/m vs 0.0% forecast; August revised to 0.0% (ONS)",
-        "GBP/USD ~1.3266, −0.14%, before the release (Reuters via Hercules)",
-        "December Bank of England hike ~67% priced (Hercules)"
+        "GBP/USD ~1.3235, −0.3%, three-week low (Hercules)",
+        "UK GDP Q3 +0.7% q/q, as forecast (ONS)",
+        "December Bank of England hike ~70–75% priced (Reuters, swaps via Hercules)"
       ],
       "scenarios": {
-        "base": "If December hike bets hold near two in three, the pound stays roughly between $1.318 and $1.336 into Friday.",
-        "bull": "If a Bank of England official backs a December hike or the dollar eases, the pound rises above $1.336.",
-        "bear": "If US yields jump or December hike bets fade, the pound falls below $1.318."
+        "base": "If US producer prices land near forecast, the pound holds roughly between $1.316 and $1.331 into next week.",
+        "bull": "If US producer prices come in soft, the pound recovers above $1.331.",
+        "bear": "If US producer prices run hot and US yields climb again, the pound falls below $1.316."
       },
       "sources": [
         {
-          "label": "ONS: GDP monthly estimate, UK — September 2026",
-          "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/latest"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "ONS: GDP monthly estimate, UK — September 2026",
+          "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/latest"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 12): times, forecasts and results",
@@ -104,118 +123,32 @@
     },
     {
       "title": "Japanese Yen",
-      "teaser": "The dollar stayed near 159.8 yen, touching 159.94, just short of 160, where Japan has bought yen before. Japanese wholesale prices rose faster than expected, supporting the case for a Bank of Japan hike in December.",
-      "meaning": "The story so far: The yen is weak because Japanese rates are far below others; the Bank of Japan holds at 1.25% and is expected to hike in December. Japan spent record sums defending the yen in July. What changed: October wholesale prices rose 7.1% from a year earlier, against 6.5% expected, as the weak yen pushed import costs up about a quarter. Board member Kazuyuki Asada warned that hiking too early could hurt growth, but markets still give a December hike more than an eight-in-ten chance. Japan's finance ministry again warned against rapid moves. What it means: A weak yen is now feeding into Japanese prices, which pushes the Bank of Japan toward hiking, but one hike barely dents the gap with US rates. That leaves Japan's warnings, and the risk it steps in to buy yen, as the main brake near 160. The question: does Japan act if the dollar crosses 160?",
-      "fx": "What's next: Coming up, all times CT: Thursday, US bond trading resumes and shows whether yields push the dollar through 160 yen; 7:30 AM, weekly US jobless claims. Friday, 7:30 AM, US producer prices. The Bank of Japan decides on December 18.",
+      "teaser": "The dollar rose to near 160 yen, the yen's weakest since September, as US yields jumped. Japan's top currency official, Atsushi Mimura, again warned against fast moves.",
+      "meaning": "The story so far: The yen is weak because Japanese rates are far below others; the Bank of Japan holds at 1.25% and is expected to hike in December. Japan spent record sums buying yen in July to slow its fall. What changed: The dollar edged up about 0.1% to 159.98 yen as US yields rose. Japanese wholesale prices for October, out overnight, rose 7.1% from a year earlier against 6.5% expected, as the weak yen makes imports dearer. Mimura, Japan's vice finance minister for international affairs, warned again against rapid moves. Markets still give a December Bank of Japan hike more than an eight-in-ten chance. What it means: Even a December hike leaves Japanese rates far below US rates, so the gap keeps pushing the yen down. That leaves Japan's warnings, and the risk it steps in to buy yen, as the main brake near 160. The question: does Japan act if the dollar goes above 160 yen?",
+      "fx": "What's next: Coming up, all times CT: Thursday evening, New York Fed President John Williams speaks. Friday, 7:30 AM, US producer prices. Any statement from Japan's finance ministry can move the yen at any hour. The Bank of Japan decides on December 18.",
       "numbers": [
-        "USD/JPY ~159.83, high ~159.94 overnight (Reuters via Hercules)",
+        "USD/JPY ~159.98, +0.11%, yen weakest since September (Reuters via Hercules)",
         "Japan wholesale prices +7.1% y/y in October vs 6.5% forecast (Bank of Japan)",
         "December Bank of Japan hike ~84% priced (Hercules)",
-        "EUR/JPY ~177.4 (computed by Hercules)"
+        "EUR/JPY ~176.9 (computed by Hercules)"
       ],
       "scenarios": {
-        "base": "If Japan only keeps warning and US yields hold steady, the dollar stays roughly between 158.5 and 160.5 yen into Friday.",
-        "bull": "If US yields jump on Thursday and Japan does not act, the dollar rises above 160.5 yen.",
-        "bear": "If Japan buys yen, or US yields fall back, the dollar drops below 158.5 yen."
+        "base": "If US producer prices land near forecast and Japan sticks to warnings, the dollar holds roughly between 158.8 and 160.8 yen.",
+        "bull": "If US producer prices run hot and Japan does not step in, the dollar climbs above 160.8 yen.",
+        "bear": "If Japan buys yen, or US yields fall back, the dollar drops below 158.8 yen."
       },
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
           "label": "Bank of Japan: Corporate Goods Price Index, October 2026",
           "url": "https://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2610.pdf"
-        },
-        {
-          "label": "Reuters (Nov 12): Dollar near one-month high as yen edges toward 160",
-          "url": "https://www.reuters.com/world/asia-pacific/dollar-near-one-month-high-yen-edges-toward-160-2026-11-12/"
-        },
-        {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-        }
-      ]
-    },
-    {
-      "title": "Swiss Franc",
-      "teaser": "The dollar rose about 0.1% to near 0.833 francs, the highest since mid-October. With no fear in markets, the franc drew little safe-haven money.",
-      "meaning": "The story so far: The franc is a safe haven that gains when markets get scared, but Swiss inflation is low and the Swiss National Bank holds its rate at zero. What changed: No Swiss news; the franc slipped further as the dollar held its gains and markets stayed calm. What it means: The franc pays no interest, so every step up in expected US rates makes holding it more costly. Only a jump in fear, most likely from the Gulf, would bring buyers back. The question: does anything scare markets enough to revive the franc's safe-haven pull?",
-      "fx": "What's next: Coming up, all times CT: Thursday, 7:30 AM, weekly US jobless claims. Friday, 7:30 AM, US producer prices. The Swiss National Bank decides on December 10.",
-      "numbers": [
-        "USD/CHF ~0.8332, +0.14% (Hercules)",
-        "EUR/CHF ~0.925 (computed by Hercules)",
-        "Swiss National Bank rate 0.00% (Hercules)"
-      ],
-      "scenarios": {
-        "base": "If markets stay calm, the dollar holds roughly between 0.826 and 0.838 francs into Friday.",
-        "bull": "If US yields jump, the dollar rises above 0.838 francs.",
-        "bear": "If a Gulf flare-up or a stock sell-off sends money to safety, the dollar falls below 0.826 francs."
-      },
-      "sources": [
-        {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-        }
-      ]
-    },
-    {
-      "title": "Australian Dollar",
-      "teaser": "The Aussie dipped about 0.2% to near 68.5 US cents, close to its lowest in 32 weeks, as the dollar stayed firm.",
-      "meaning": "The story so far: The Reserve Bank of Australia raised rates to 4.85% on November 3, the highest among the major banks, but hinted at a pause; unemployment is at a five-year high and home lending slumped in the third quarter. What changed: No Australian figures overnight. The Aussie edged lower with other currencies as bets on faster Fed hikes held. What it means: Australia's rate lead is shrinking as US rates rise, and with a pause hinted at home, the Aussie leans on stock-market mood and China demand. The question: can Australia's high rates still hold up the Aussie as the Fed speeds up?",
-      "fx": "What's next: Coming up, all times CT: Thursday, 7:30 AM, weekly US jobless claims. Friday, 7:30 AM, US producer prices. The Reserve Bank of Australia decides on December 8.",
-      "numbers": [
-        "AUD/USD ~0.6847, −0.23%, near a 32-week low (Reuters via Hercules)",
-        "RBA cash rate 4.85% after the November 3 hike (Hercules)",
-        "AUD/JPY ~109.4 (computed by Hercules)"
-      ],
-      "scenarios": {
-        "base": "If stocks hold steady and US data lands near forecast, the Aussie stays roughly between 68.0 and 69.2 cents into Friday.",
-        "bull": "If US yields slip or stocks rally hard, the Aussie climbs above 69.2 cents.",
-        "bear": "If US producer prices run hot or stocks sell off, the Aussie falls below 68.0 cents."
-      },
-      "sources": [
-        {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-        }
-      ]
-    },
-    {
-      "title": "Canadian Dollar",
-      "teaser": "The US dollar rose about 0.3% to near 1.426 Canadian dollars as oil gave back Wednesday's gains. Talk of direct US–Iran talks eased the supply worries that had been helping the loonie.",
-      "meaning": "The story so far: The Bank of Canada raised rates to 2.50% in October and said more hikes may be needed, but two months of job losses have cut bets on a December hike to about one in three. What changed: No Canadian news. US crude fell about 1% overnight on reports that Vice President JD Vance may meet Iran's security chief, and the loonie slipped with it. What it means: Oil has been the loonie's cushion against a strong US dollar; when oil falls on hopes of US–Iran talks, that cushion thins. With a December Bank of Canada hike doubtful, there is little else to lean on. The question: does oil hold its ground?",
-      "fx": "What's next: Coming up, all times CT: Thursday, 7:30 AM, weekly US jobless claims; 11:00 AM, US crude stock figures. Friday, 7:30 AM, US producer prices. The Bank of Canada decides on December 9.",
-      "numbers": [
-        "USD/CAD ~1.4262, +0.3% (Hercules)",
-        "WTI ~$85.5, −1.2% in Asia (Hercules)",
-        "December Bank of Canada hike ~34% priced (Hercules)"
-      ],
-      "scenarios": {
-        "base": "If oil holds in the mid-$80s, the US dollar stays roughly between 1.418 and 1.432 Canadian dollars into Friday.",
-        "bull": "If oil rebounds on fresh Gulf attacks, the loonie strengthens and the US dollar falls below 1.418.",
-        "bear": "If US–Iran talks are confirmed and oil slides, the US dollar rises above 1.432."
-      },
-      "sources": [
-        {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "WSJ (Nov 11): Vance considers direct talks with Iran hardliner",
-          "url": "https://www.wsj.com/world/middle-east/vance-considers-direct-talks-with-iran-hardliner-in-push-to-end-war-0c2e3ea4"
-        },
-        {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 12): times, forecasts and results",
@@ -224,28 +157,135 @@
       ]
     },
     {
-      "title": "New Zealand Dollar",
-      "teaser": "The kiwi slipped about 0.2% to near 55.6 US cents as the dollar stayed firm. There was no New Zealand news.",
-      "meaning": "The story so far: The kiwi sank as rising unemployment cut bets on a December Reserve Bank of New Zealand hike, then bounced briefly after the election count pointed to the same government staying. What changed: With no home news, the kiwi drifted lower with the Aussie as bets on faster Fed hikes held. What it means: The kiwi suffers most when US rates rise and New Zealand's own case for hikes is weak. Speculators already bet against it, so it has little support beyond risk appetite. The question: does anything revive the case for a December hike in New Zealand?",
-      "fx": "What's next: Coming up, all times CT: Thursday, 7:30 AM, weekly US jobless claims. Friday, 7:30 AM, US producer prices. The official New Zealand election result is due November 27, and the Reserve Bank of New Zealand decides on December 9.",
+      "title": "Swiss Franc",
+      "teaser": "The dollar rose about 0.1% to near 0.834 francs, a one-month high, as US yields jumped. A sharp drop in Nvidia shares did not send money into the franc.",
+      "meaning": "The story so far: The franc is a safe haven that gains when markets get scared, but Swiss inflation is low and the Swiss National Bank holds its rate at zero. What changed: No Swiss news. The franc slipped again as US yields rose. Nvidia shares fell after chief executive Jensen Huang resigned, but the wider stock market held up, so there was no rush to safety. What it means: The franc pays no interest, so each rise in expected US rates makes holding it costlier. Only real fear, most likely from the Gulf or a deeper stock sell-off, would bring buyers back. The question: does anything scare markets enough to revive the franc's safe-haven pull?",
+      "fx": "What's next: Coming up, all times CT: Friday, 7:30 AM, US producer prices. The Swiss National Bank decides on December 10.",
       "numbers": [
-        "NZD/USD ~0.5559, −0.23% (Reuters via Hercules)",
-        "RBNZ cash rate 2.75%, held October 28 (Hercules)",
-        "Hedge funds net against the kiwi (CFTC, Nov 3)"
+        "USD/CHF ~0.834, +0.14%, one-month high for the dollar (Reuters via Hercules)",
+        "EUR/CHF ~0.922 (computed by Hercules)",
+        "Swiss National Bank rate 0.00% (Hercules)"
       ],
       "scenarios": {
-        "base": "If risk appetite holds steady, the kiwi stays roughly between 55.0 and 56.2 US cents into Friday.",
-        "bull": "If US yields slip or stocks rally hard, the kiwi rises above 56.2 cents.",
-        "bear": "If US producer prices run hot, the kiwi falls below 55.0 cents."
+        "base": "If markets stay calm and US producer prices land near forecast, the dollar holds roughly between 0.828 and 0.840 francs.",
+        "bull": "If US producer prices run hot, the dollar rises above 0.840 francs.",
+        "bear": "If a Gulf flare-up or a stock sell-off sends money to safety, the dollar drops below 0.828 francs."
       },
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Yahoo Finance (Nov 12): Nvidia CEO Jensen Huang resigns, stock falls",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html"
+        }
+      ]
+    },
+    {
+      "title": "Australian Dollar",
+      "teaser": "The Aussie fell about 0.9% to near 68.0 US cents, its lowest in about seven months and the day's weakest major currency. Higher US yields, a slide in gold and a drop in tech shares all weighed on it.",
+      "meaning": "The story so far: The Reserve Bank of Australia raised rates to 4.85% on November 3, the highest among the major banks, but hinted at a pause; unemployment is at a five-year high and home lending slumped in the third quarter. What changed: There was no Australian data, but the Aussie took hits from three sides: US yields jumped, gold, a big Australian export, fell almost 3%, and Nvidia shares dropped after chief executive Jensen Huang resigned, souring the mood toward riskier currencies. Westpac economists said the Reserve Bank's more cautious tone and talk of an end to its hikes will weigh on the Aussie. What it means: Australia's rate lead is shrinking as US rates rise and its own bank signals a pause, so the Aussie now trades mostly on stock-market mood and commodity prices. The question: can high Australian rates still support the Aussie while the Fed keeps hiking?",
+      "fx": "What's next: Coming up, all times CT: Friday, 7:30 AM, US producer prices. Wednesday, November 18, 6:30 PM, Australian jobs figures for October. The Reserve Bank of Australia decides on December 8.",
+      "numbers": [
+        "AUD/USD ~0.6803, −0.88%, near a 32-week low (Hercules)",
+        "RBA cash rate 4.85% after the November 3 hike (Hercules)",
+        "Gold ~$3,874, −2.8% (Kitco via Hercules)",
+        "AUD/JPY ~108.8 (computed by Hercules)"
+      ],
+      "scenarios": {
+        "base": "If US producer prices land near forecast and stocks steady, the Aussie holds roughly between 67.5 and 68.6 US cents.",
+        "bull": "If producer prices come in soft and gold recovers, the Aussie climbs above 68.6 cents.",
+        "bear": "If producer prices run hot or the tech sell-off spreads, the Aussie falls below 67.5 cents."
+      },
+      "sources": [
+        {
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Reuters via Business Recorder (Nov 12): Australian dollar hits 7-month low, kiwi just above a 19-month trough",
+          "url": "https://www.brecorder.com/news/40448558/australian-dollar-hits-7-month-low-kiwi-just-above-a-19-month-trough"
+        },
+        {
+          "label": "Yahoo Finance (Nov 12): Nvidia CEO Jensen Huang resigns, stock falls",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html"
+        },
+        {
+          "label": "Kitco gold spot, 3:00 PM CT Nov 12 (via Hercules)",
+          "url": "https://www.kitco.com/charts/gold"
+        }
+      ]
+    },
+    {
+      "title": "Canadian Dollar",
+      "teaser": "The US dollar rose about 0.3% to near 1.426 Canadian dollars. Oil climbed after President Trump said the US doesn't need a deal with Iran, but the stronger US dollar outweighed it.",
+      "meaning": "The story so far: The Bank of Canada raised rates to 2.50% in October and said more hikes may be needed, but two months of job losses have cut bets on a December hike to about one in three. What changed: No Canadian news. Oil rose more than 3% after Trump pulled Vice President JD Vance off the Iran talks and said a deal is no longer needed, which normally helps the loonie. But US yields jumped, and the US dollar's gains won out. What it means: Oil is the loonie's cushion, yet it only softens the blow when US rates are rising this fast. With a December Bank of Canada hike doubtful, there is little else at home to lean on. The question: can higher oil keep the loonie from sliding further?",
+      "fx": "What's next: Coming up, all times CT: Friday, 7:30 AM, US producer prices. Any word on US–Iran talks or new tanker attacks can move oil, and the loonie, at any hour. The Bank of Canada decides on December 9.",
+      "numbers": [
+        "USD/CAD ~1.4259, +0.28% (Hercules)",
+        "WTI ~$88.9 late Thursday afternoon (OilPriceAPI via Hercules)",
+        "December Bank of Canada hike ~32–36% priced (Hercules)"
+      ],
+      "scenarios": {
+        "base": "If US producer prices land near forecast and oil holds, the US dollar stays roughly between 1.419 and 1.432 Canadian dollars.",
+        "bull": "If producer prices run hot and US yields climb, the US dollar rises above 1.432.",
+        "bear": "If oil keeps climbing and US yields ease, the US dollar falls below 1.419."
+      },
+      "sources": [
+        {
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Reuters (Nov 12): Trump says Vance should focus on domestic corruption, 'we don't need a deal with Iran'",
+          "url": "https://www.reuters.com/world/us/trump-says-vance-should-focus-domestic-corruption-we-dont-need-deal-with-iran-2026-11-12/"
+        },
+        {
+          "label": "OilPriceAPI: Brent ~$96.05 / WTI ~$88.93 at 2:28 PM CT, Nov 12 (via Hercules' breaking watch; his markets.json lists a $93.47 Brent close that doesn't match these afternoon quotes, so it isn't used)",
+          "url": "https://www.oilpriceapi.com/oil-prices-today"
+        }
+      ]
+    },
+    {
+      "title": "New Zealand Dollar",
+      "teaser": "The kiwi fell about 0.5% to near 55.4 US cents, close to its lowest in 19 months, as US yields jumped and the mood toward riskier currencies soured.",
+      "meaning": "The story so far: The kiwi sank as rising unemployment cut bets on a December Reserve Bank of New Zealand hike, then bounced briefly after the election count pointed to the same government staying. What changed: No New Zealand news. The kiwi fell with the Aussie as US yields rose and Nvidia's chief executive resigned, hitting tech shares. It is now just above its 19-month low of about 55.3 cents. What it means: The kiwi suffers most when US rates rise and its own case for hikes is shaky. Speculators already bet against it, so it has little support beyond risk appetite, though any good home news could spark a quick rebound as those bets are closed. The question: does anything revive the case for a December hike in New Zealand?",
+      "fx": "What's next: Coming up, all times CT: Friday, 7:30 AM, US producer prices. The official New Zealand election result is due November 27, and the Reserve Bank of New Zealand decides on December 9.",
+      "numbers": [
+        "NZD/USD ~0.5542, −0.54% (Hercules)",
+        "19-month low ~0.5529 (Reuters via Business Recorder)",
+        "RBNZ cash rate 2.75%, held October 28 (Hercules)"
+      ],
+      "scenarios": {
+        "base": "If US producer prices land near forecast, the kiwi holds roughly between 55.0 and 55.9 US cents.",
+        "bull": "If producer prices come in soft and stocks rebound, the kiwi climbs above 55.9 cents.",
+        "bear": "If producer prices run hot, the kiwi breaks below its 19-month low toward 55.0 cents or lower."
+      },
+      "sources": [
+        {
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Reuters via Business Recorder (Nov 12): Australian dollar hits 7-month low, kiwi just above a 19-month trough",
+          "url": "https://www.brecorder.com/news/40448558/australian-dollar-hits-7-month-low-kiwi-just-above-a-19-month-trough"
         },
         {
           "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 3)",
@@ -255,62 +295,89 @@
     },
     {
       "title": "Oil",
-      "teaser": "Brent crude fell about 1.2% to near $91.6 in Asia, giving back Wednesday's gains. Reports that Vice President JD Vance now leads US talks with Iran, and may meet its security chief, eased supply fears.",
-      "meaning": "The story so far: Oil soared in October on the US–Iran war and the closure of the Strait of Hormuz, with Brent near $117 at the end of the month, then fell sharply as fears of new US strikes eased; tanker attacks near Hormuz keep putting a floor under prices. What changed: The Wall Street Journal reported that President Trump has put Vance in charge of the Iran talks and that a meeting with security chief Mohsen Rezaei is being considered, though no date is set and Rezaei this week ruled out sending enriched uranium abroad. Oil gave back Wednesday's rise. What it means: Oil swings on each hint of talks or new attacks. Lower oil eases inflation worries, which helps the euro and the yen and takes some support from the Canadian dollar. The question: do talks actually start?",
-      "fx": "What's next: Coming up, all times CT: Thursday, 11:00 AM, US crude stock figures. Any word on a Vance–Rezaei meeting or new tanker attacks in the Gulf can move prices at any hour.",
+      "teaser": "Brent crude jumped more than 3% to near $96 after President Trump took Vice President JD Vance off the Iran talks and said the US doesn't need a deal. Iran's claims of new tanker hits in the Strait of Hormuz added to the rise.",
+      "meaning": "The story so far: Oil soared in October on the US–Iran war and the closure of the Strait of Hormuz, with Brent near $117 at the end of the month, then fell sharply as hopes grew for talks; tanker attacks near Hormuz have kept a floor under prices. What changed: Overnight, oil dipped on reports that Vance might meet Iran's security chief. Then Trump told Vance to focus on corruption at home and wrote that a deal with Iran is no longer needed. Brent climbed through the afternoon to a high near $96.2. Iran's military said several tankers were hit by blasts or mines in the Strait; none of this has been independently confirmed. US crude stocks rose by about 4.7 million barrels against a small expected drop, but the rise was smaller than an industry estimate, so traders shrugged it off. What it means: With talks off the table for now, the war premium is back in oil. Higher oil feeds US inflation and Fed hike bets, weighs on energy buyers such as Japan and the euro area, and helps the Canadian dollar. The question: does Washington or Tehran reopen any path to talks?",
+      "fx": "What's next: Coming up: the International Energy Agency's monthly oil report on Friday. Any news on US–Iran talks or new tanker attacks in the Gulf can move prices at any hour. The next US crude stock figures are due Wednesday, November 18.",
       "numbers": [
-        "Brent ~$91.6, −1.24% in Asia vs Wednesday's ~$92.8 settle (Hercules)",
-        "WTI ~$85.5, −1.2% (Hercules)",
-        "Brent high ~$94.2 on Wednesday; $116.72 at the October 30 close (Hercules)"
+        "Brent ~$96.0 late Thursday afternoon, day high ~$96.2 (OilPriceAPI, Nabd Al Mal via Hercules)",
+        "WTI ~$88.9 (OilPriceAPI via Hercules)",
+        "US crude stocks +4.66M barrels vs −1.11M expected (EIA)"
       ],
       "scenarios": {
-        "base": "If talks stay at the planning stage and attacks continue at the recent pace, Brent stays roughly between $88 and $96 into Friday.",
-        "bull": "If new tanker attacks hit or talks collapse, Brent climbs above $96.",
-        "bear": "If a Vance–Rezaei meeting is confirmed or shipping through Hormuz eases, Brent drops below $88."
+        "base": "If there is no news on talks, Brent holds roughly between $92 and $99 into next week.",
+        "bull": "If more tanker hits are confirmed or the US threatens new strikes, Brent climbs above $99.",
+        "bear": "If either side signals talks are back on, Brent drops below $92."
       },
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "OilPriceAPI: Brent ~$96.05 / WTI ~$88.93 at 2:28 PM CT, Nov 12 (via Hercules' breaking watch; his markets.json lists a $93.47 Brent close that doesn't match these afternoon quotes, so it isn't used)",
+          "url": "https://www.oilpriceapi.com/oil-prices-today"
         },
         {
-          "label": "WSJ (Nov 11): Vance considers direct talks with Iran hardliner",
-          "url": "https://www.wsj.com/world/middle-east/vance-considers-direct-talks-with-iran-hardliner-in-push-to-end-war-0c2e3ea4"
+          "label": "Reuters (Nov 12): Trump says Vance should focus on domestic corruption, 'we don't need a deal with Iran'",
+          "url": "https://www.reuters.com/world/us/trump-says-vance-should-focus-domestic-corruption-we-dont-need-deal-with-iran-2026-11-12/"
         },
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 11–12)",
+          "label": "PressTV (Nov 12): Iran's navy says two more tankers struck mines in Hormuz (unverified)",
+          "url": "https://www.presstv.co.uk/Detail/2026/11/12/780586/two-more-tankers-catch-fire-after-striking-naval-mine-in-strait-of-hormuz-irans-army"
+        },
+        {
+          "label": "EIA: Weekly Petroleum Status Report (week ending Nov 6)",
+          "url": "https://ir.eia.gov/wpsr/summary.txt"
+        },
+        {
+          "label": "Blue Street breaking watch (Hercules, Nov 12)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         }
       ]
     },
     {
       "title": "Gold",
-      "teaser": "Gold held just under $4,000, near $3,987, after falling almost 4% over Tuesday and Wednesday. Bets on faster Fed hikes and a firm dollar kept buyers away overnight.",
-      "meaning": "The story so far: Gold has swung this year with war fears and US rate expectations, and it slid below $4,000 this week as hot US inflation and Fed talk of faster hikes lifted the dollar and US yields. What changed: Gold steadied in Asia without winning back $4,000, while the dollar held its gains and US yields edged up in early trading. What it means: Gold pays no interest, so the more the Fed is expected to raise rates, the costlier it is to hold. Easing oil and talk of US–Iran talks also trim its war-time appeal. The question: do US yields keep rising when bond trading resumes?",
-      "fx": "What's next: Coming up, all times CT: Thursday, US bond trading resumes; 12:00 PM, a 30-year Treasury bond sale. Friday, 7:30 AM, US producer prices.",
+      "teaser": "Gold fell almost 3% to near $3,874, touching its lowest since October 2025, as US yields jumped and the dollar hit a 19-month high. Higher oil and Gulf tension did not bring buyers back.",
+      "meaning": "The story so far: Gold has swung this year with war fears and US rate expectations, and it slipped below $4,000 this week after hot US inflation and Federal Reserve talk of faster hikes lifted the dollar and US yields. What changed: When US bond trading reopened after Veterans Day, the 10-year Treasury yield rose back above 5%, and gold fell about $113 on the day, with a low near $3,852. Renewed US–Iran tension, which would normally help gold, made no difference. What it means: Gold pays no interest, so as the Fed is expected to keep raising rates, holding it gets costlier, and right now that outweighs its war-time appeal. The question: do Friday's US producer prices push yields even higher?",
+      "fx": "What's next: Coming up, all times CT: Thursday evening, New York Fed President John Williams speaks. Friday, 7:30 AM, US producer prices for October. Next week, US retail sales on Tuesday and the Fed's meeting minutes on Wednesday.",
       "numbers": [
-        "Gold ~$3,987, below $4,000 (Reuters via Hercules)",
-        "US 10-year ~4.99% in early trading (Hercules)",
-        "December Fed hike ~87% quarter point, ~13% half point (CME FedWatch via Hercules)"
+        "Gold ~$3,874, −$113 (−2.8%) on the day (Kitco via Hercules)",
+        "Session low ~$3,852, lowest since October 2025 (Kitco, BullionVault)",
+        "US 10-year ~5.10% (Hercules)"
       ],
       "scenarios": {
-        "base": "If US yields hold steady, gold stays roughly between $3,930 and $4,050 into Friday.",
-        "bull": "If US yields slip or Gulf tensions flare, gold climbs back above $4,050.",
-        "bear": "If US yields jump or producer prices run hot, gold drops below $3,930."
+        "base": "If US producer prices land near forecast, gold holds roughly between $3,820 and $3,950.",
+        "bull": "If producer prices come in soft and US yields fall back, gold climbs above $3,950.",
+        "bear": "If producer prices run hot and yields keep rising, gold falls below $3,820."
       },
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Kitco gold spot, 3:00 PM CT Nov 12 (via Hercules)",
+          "url": "https://www.kitco.com/charts/gold"
         },
         {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+          "label": "BullionVault (Nov 12): Fed rate hawks push gold to a 13-month low",
+          "url": "https://www.bullionvault.com/gold-news/gold-price-news/gold-inflation-fed-rate-hikes-111220261"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
     }
   ],
   "calls": [
+    {
+      "date": "2026-11-12",
+      "status": "pending",
+      "text": "Gold near $3,874 after its slide to a 13-month low: it stays between $3,820 and $3,950 by Friday's close unless US producer prices at 7:30 AM CT Friday run hot, which sends it below $3,820"
+    },
+    {
+      "date": "2026-11-12",
+      "status": "pending",
+      "text": "Aussie near 68.0 US cents after a slide in gold and tech shares: it stays between 67.5 and 68.6 cents by Friday's close unless US producer prices run hot, which sends it below 67.5"
+    },
+    {
+      "date": "2026-11-12",
+      "status": "pending",
+      "text": "US dollar near 1.426 Canadian dollars as oil jumps on Trump's Iran comments: it stays between 1.419 and 1.432 by Friday's close unless US producer prices run hot, which lifts it above 1.432"
+    },
     {
       "date": "2026-11-12",
       "status": "pending",
@@ -333,8 +400,10 @@
     },
     {
       "date": "2026-11-11",
-      "status": "pending",
-      "text": "Gold near $3,983 after slipping below $4,000: it stays between $3,920 and $4,060 by Friday's close unless US yields jump when bonds reopen Thursday or producer prices run hot, which sends it below $3,920"
+      "status": "confirmed",
+      "text": "Gold near $3,983 after slipping below $4,000: it stays between $3,920 and $4,060 by Friday's close unless US yields jump when bonds reopen Thursday or producer prices run hot, which sends it below $3,920",
+      "resolved": "2026-11-12",
+      "note": "US yields jumped when bonds reopened Thursday and gold fell below $3,920, to about $3,874 at the close."
     },
     {
       "date": "2026-11-11",
@@ -355,8 +424,10 @@
     },
     {
       "date": "2026-11-11",
-      "status": "pending",
-      "text": "Aussie near 68.7 US cents after a slump in Australian home lending: it stays between 68.2 and 69.4 cents by Friday's close unless US producer prices run hot, which sends it below 68.2"
+      "status": "broken",
+      "text": "Aussie near 68.7 US cents after a slump in Australian home lending: it stays between 68.2 and 69.4 cents by Friday's close unless US producer prices run hot, which sends it below 68.2",
+      "resolved": "2026-11-12",
+      "note": "The Aussie fell below 68.2 cents on Thursday, before Friday's producer prices, hit by higher US yields, a gold slide and a tech-share drop; it closed near 68.0."
     },
     {
       "date": "2026-11-10",
@@ -367,13 +438,17 @@
     },
     {
       "date": "2026-11-10",
-      "status": "pending",
-      "text": "Gold near $4,020 after its almost 3% drop on hot US inflation: it stays between $3,960 and $4,090 by Friday's close unless US producer prices run hot, which sends it below $3,960"
+      "status": "broken",
+      "text": "Gold near $4,020 after its almost 3% drop on hot US inflation: it stays between $3,960 and $4,090 by Friday's close unless US producer prices run hot, which sends it below $3,960",
+      "resolved": "2026-11-12",
+      "note": "Gold fell below $3,960 on Thursday, before Friday's producer prices, as US yields jumped when bonds reopened."
     },
     {
       "date": "2026-11-10",
-      "status": "pending",
-      "text": "Euro near $1.117 after hot US inflation: it stays between $1.108 and $1.124 by Friday's close unless US producer prices run hot again, which sends it below $1.108"
+      "status": "broken",
+      "text": "Euro near $1.117 after hot US inflation: it stays between $1.108 and $1.124 by Friday's close unless US producer prices run hot again, which sends it below $1.108",
+      "resolved": "2026-11-12",
+      "note": "The euro broke below $1.108 on Thursday, before Friday's producer prices, as US yields jumped; it closed near $1.106."
     },
     {
       "date": "2026-11-10",
@@ -440,8 +515,10 @@
     },
     {
       "date": "2026-11-08",
-      "status": "pending",
-      "text": "Pound near $1.336 after the US jobs report: it stays between $1.325 and $1.345 by Thursday's close unless UK third-quarter growth at 1:00 AM CT Thursday clearly beats the +0.7% forecast, which lifts it above $1.345"
+      "status": "broken",
+      "text": "Pound near $1.336 after the US jobs report: it stays between $1.325 and $1.345 by Thursday's close unless UK third-quarter growth at 1:00 AM CT Thursday clearly beats the +0.7% forecast, which lifts it above $1.345",
+      "resolved": "2026-11-12",
+      "note": "UK growth matched forecasts rather than beating them, and the pound closed Thursday near $1.324, below the range, as US yields jumped."
     },
     {
       "date": "2026-11-08",

@@ -1,42 +1,50 @@
 {
-  "updated": "2026-11-12T01:40:00-06:00",
+  "updated": "2026-11-12T15:30:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~87% 25bp / ~13% 50bp (CME FedWatch via Reuters); ECB Dec ~92%; BoJ Dec ~84%; BoE Dec ~67%; BoC Dec ~34%; Deutsche Bank sees Fed hikes Dec, Jan, Mar",
-      "read": "Bets on faster Federal Reserve rate rises held overnight, keeping the dollar near its highest since April 2025. Hikes from Europe, Britain and Japan are expected too but already priced, so the gap keeps widening in the dollar's favour. Strong Japanese wholesale prices firmed the case for a Bank of Japan hike in December.",
+      "figure": "Fed Dec hike ~91% 25bp / ~9–12% 50bp (CME FedWatch); ECB Dec ~88%; BoJ Dec ~84%; BoE Dec ~70–75%; BoC Dec ~32–36%; Hammack backs gradual hikes, Daly sees more hikes likely",
+      "read": "Federal Reserve officials kept making the case for more rate rises, and a December hike is now close to fully priced, with more expected next year. Europe, Britain and Japan are also expected to hike, but US rates are rising faster, so the gap keeps favouring the dollar.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Blue Street central banks (Hercules, Nov 12)",
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Reuters (Nov 12): Dollar near one-month high as yen edges toward 160",
-          "url": "https://www.reuters.com/world/asia-pacific/dollar-near-one-month-high-yen-edges-toward-160-2026-11-12/"
+          "label": "Reuters via Investing.com (Nov 12): Fed's Hammack signals support for gradual rate-hike path",
+          "url": "https://www.investing.com/news/economy-news/feds-hammack-signals-support-for-gradual-ratehike-path-5022530"
+        },
+        {
+          "label": "Investing.com (Nov 12): Fed's Daly says more rate hikes likely needed",
+          "url": "https://www.investing.com/news/economy-news/feds-daly-says-more-rate-hikes-likely-needed-to-fight-inflation-5022988"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "UK Q3 GDP +0.7% q/q (fcst +0.7%, Q2 +0.5%); Sep +0.2% m/m (fcst 0.0%), Aug revised to 0.0%; euro-area Q3 GDP 2nd est. Fri 4:00 AM CT",
-      "read": "UK growth matched forecasts in the third quarter, solid enough to back the Bank of England's November hike but not enough to settle December. The US economy still looks firmer than Australia's, Canada's or New Zealand's, a split that favours the dollar. Euro-area growth figures on Friday are the next read.",
+      "figure": "UK Q3 GDP +0.7% q/q (fcst +0.7%); US jobless claims 200K (fcst 194K), continuing 1.697M; euro-area Q3 GDP 2nd est. Fri 4:00 AM CT",
+      "read": "UK growth matched forecasts and US layoffs stayed low, so neither economy shows strain yet. The US still looks firmer than Australia, Canada or New Zealand, which keeps the dollar ahead of those currencies.",
       "sources": [
         {
           "label": "ONS: GDP monthly estimate, UK — September 2026",
           "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/latest"
         },
         {
+          "label": "US Labor Department: weekly jobless claims, Nov 12, 2026",
+          "url": "https://www.dol.gov/ui/data.pdf"
+        },
+        {
           "label": "Blue Street calendar (Hercules, Nov 12): times, forecasts and results",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
-          "label": "Blue Street currency board (Hercules, Nov 12)",
+          "label": "Blue Street currency board (Hercules, Nov 12 close)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/currencies.json"
         }
       ]
@@ -44,39 +52,43 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "Japan Oct wholesale prices +7.1% y/y (fcst 6.5%); US Oct CPI +0.4% m/m, core +0.3%; US PPI Fri 7:30 AM CT fcst +0.4% m/m; Brent ~$91.6",
-      "read": "US inflation is running at about twice the Fed's goal, which keeps the Fed hiking and supports the dollar. In Japan, the weak yen is pushing wholesale prices up fast, adding pressure on the Bank of Japan to raise rates. Oil's dip overnight eases the worry a little.",
+      "figure": "US Oct CPI +0.4% m/m, core +0.3%; US PPI Fri 7:30 AM CT fcst +0.4% m/m; Japan Oct wholesale prices +7.1% y/y (fcst 6.5%); Brent ~$96",
+      "read": "US inflation is running at about twice the Fed's goal, and oil's jump on Thursday adds to that worry. That keeps the Fed hiking and supports the dollar. US producer prices on Friday are the next check.",
       "sources": [
-        {
-          "label": "Bank of Japan: Corporate Goods Price Index, October 2026",
-          "url": "https://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2610.pdf"
-        },
         {
           "label": "Blue Street calendar (Hercules, Nov 12): times, forecasts and results",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Bank of Japan: Corporate Goods Price Index, October 2026",
+          "url": "https://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2610.pdf"
+        },
+        {
+          "label": "OilPriceAPI: Brent ~$96.05 / WTI ~$88.93 at 2:28 PM CT, Nov 12 (via Hercules' breaking watch; his markets.json lists a $93.47 Brent close that doesn't match these afternoon quotes, so it isn't used)",
+          "url": "https://www.oilpriceapi.com/oil-prices-today"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "USD/CHF ~0.833, USD/JPY ~159.8; AUD/USD ~0.685; gold ~$3,987",
-      "read": "Markets stayed calm overnight, so the safe-haven franc and yen drew little support. Talk of direct US–Iran talks eased some Gulf fears. A sudden flare-up in the Gulf is still the main thing that could change the mood fast.",
+      "figure": "Nvidia shares down sharply after CEO Jensen Huang resigned; AUD/USD ~0.680 (−0.9%), NZD/USD ~0.554 (−0.5%); USD/CHF ~0.834; gold ~$3,874",
+      "read": "Nvidia's chief executive quit and renewed US–Iran tension hit the mood, but stocks broadly held up, so there was no rush into safe havens. The Aussie and kiwi took the brunt, while the franc and yen drew no extra support.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
+          "label": "Yahoo Finance (Nov 12): Nvidia CEO Jensen Huang resigns, stock falls",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html"
+        },
+        {
+          "label": "Reuters via Business Recorder (Nov 12): Australian dollar hits 7-month low, kiwi just above a 19-month trough",
+          "url": "https://www.brecorder.com/news/40448558/australian-dollar-hits-7-month-low-kiwi-just-above-a-19-month-trough"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "WSJ (Nov 11): Vance considers direct talks with Iran hardliner",
-          "url": "https://www.wsj.com/world/middle-east/vance-considers-direct-talks-with-iran-hardliner-in-push-to-end-war-0c2e3ea4"
-        },
-        {
-          "label": "Blue Street breaking watch (Hercules, Nov 11–12)",
+          "label": "Blue Street breaking watch (Hercules, Nov 12)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         }
       ]
@@ -84,20 +96,24 @@
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$91.6 (−1.24%), WTI ~$85.5 (−1.2%) in Asia; Brent high ~$94.2 Wed; $116.72 at the Oct 30 close",
-      "read": "Oil gave back Wednesday's gains on reports that Vice President JD Vance may meet Iran's security chief. Cheaper oil helps energy buyers such as Japan and the euro area and takes some support from the Canadian dollar. Tanker attacks near Hormuz keep a floor under prices.",
+      "figure": "Brent ~$96.0, WTI ~$88.9 late Thu (OilPriceAPI); US crude stocks +4.66M vs −1.11M expected (EIA); gold ~$3,874 (−2.8%)",
+      "read": "Oil jumped after President Trump said the US doesn't need a deal with Iran, while gold slid on higher US yields. Dearer oil helps the Canadian dollar and hurts energy buyers like Japan and the euro area. Gold's drop takes some support from the Aussie.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "OilPriceAPI: Brent ~$96.05 / WTI ~$88.93 at 2:28 PM CT, Nov 12 (via Hercules' breaking watch; his markets.json lists a $93.47 Brent close that doesn't match these afternoon quotes, so it isn't used)",
+          "url": "https://www.oilpriceapi.com/oil-prices-today"
         },
         {
-          "label": "WSJ (Nov 11): Vance considers direct talks with Iran hardliner",
-          "url": "https://www.wsj.com/world/middle-east/vance-considers-direct-talks-with-iran-hardliner-in-push-to-end-war-0c2e3ea4"
+          "label": "Reuters (Nov 12): Trump says Vance should focus on domestic corruption, 'we don't need a deal with Iran'",
+          "url": "https://www.reuters.com/world/us/trump-says-vance-should-focus-domestic-corruption-we-dont-need-deal-with-iran-2026-11-12/"
         },
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 11–12)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
+          "label": "EIA: Weekly Petroleum Status Report (week ending Nov 6)",
+          "url": "https://ir.eia.gov/wpsr/summary.txt"
+        },
+        {
+          "label": "Kitco gold spot, 3:00 PM CT Nov 12 (via Hercules)",
+          "url": "https://www.kitco.com/charts/gold"
         }
       ]
     },
@@ -105,7 +121,7 @@
       "id": "positioning",
       "title": "Positioning",
       "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD, CAD, EUR; 4-week change NZD −22K, EUR −34K contracts; next report Friday",
-      "read": "Hedge funds lean toward the dollar and the yen and against the kiwi, the Canadian dollar and the euro. The dollar's rise has gone with most of those bets, though the large bet on the yen is losing money as it weakens. The next weekly report is due Friday.",
+      "read": "Hedge funds lean toward the dollar and against the kiwi, the Canadian dollar and the euro, and Thursday's moves went their way. Their large bet on the yen keeps losing money as it weakens. The next weekly report is due Friday.",
       "sources": [
         {
           "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 3)",
@@ -116,16 +132,20 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "US 10-year ~4.99% in early trading; 10-year auction Nov 10 at 5.020%, bid-to-cover 2.46 (avg 2.60); $25B 30-year auction Thu 12:00 PM CT",
-      "read": "Weak demand at US government bond sales this week pushed long-term borrowing costs up, as buyers asked for more pay to hold US debt. That supports the dollar for now but is a worry if it spreads. A 30-year bond sale on Thursday is the next check.",
+      "figure": "US 10-year ~5.10%; $25B 30-year auction 5.441%, bid-to-cover 2.36 (six-auction avg 2.44); October federal deficit a record for the month (Hercules)",
+      "read": "Soft demand at this week's US government bond sales, ending with the 30-year on Thursday, pushed long-term borrowing costs back above 5%. Higher yields support the dollar for now, but buyers asking for more pay to hold US debt is a worry if it keeps up.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session Nov 12, about 12:00–12:55 AM CT; indicative)",
+          "label": "TreasuryDirect: 30-year bond auction results, Nov 12, 2026",
+          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2026/R_20261112_4.pdf"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York close 3:00 PM CT, Nov 12; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street calendar (Hercules, Nov 12): times, forecasts and results",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+          "label": "Blue Street central banks (Hercules, Nov 12 close)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         }
       ]
     }
