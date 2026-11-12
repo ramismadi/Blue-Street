@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-12T14:55:00Z",
+  "updated": "2026-11-12T15:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-12T14:55:00Z",
-      "text": "Faster-than-expected US inflation has Federal Reserve officials arguing for more rate rises, and banks such as Deutsche Bank now expect three in a row from December. Jobless claims are still very low, so the job market backs that path, and the dollar is at its highest since April 2025."
+      "ts": "2026-11-12T15:50:00Z",
+      "text": "Faster-than-expected US inflation has Federal Reserve officials arguing for more rate rises, and the dollar is at its highest since April 2025. Most, like Cleveland Fed President Beth Hammack, favour steady quarter-point steps over a bigger half-point jump, while jobless claims stay very low."
     },
     "EUR": {
       "lean": "bearish",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "investing-reuters-hammack-gradual-hikes-20261112",
+      "date": "2026-11-12",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/economy-news/feds-hammack-signals-support-for-gradual-ratehike-path-5022530",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB1JH_L.jpg",
+      "headline": "Fed's Hammack signals support for gradual rate-hike path",
+      "story": "fed-hikes",
+      "story_title": "Fed: how fast to raise rates after hot inflation",
+      "pillar": "rates",
+      "summary": "Beth Hammack, president of the Cleveland Federal Reserve, said on Thursday the Fed should keep raising rates in small, steady steps rather than switch to bigger moves.",
+      "beats": {
+        "was": "The Federal Reserve raised its rate to 3.75%–4.00% in September, then held in October while Hammack voted for a rise. After October's US inflation came in hotter than expected, Governor Christopher Waller said a half-point rise in December should be considered.",
+        "happened": "Hammack said inflation is heading the wrong way but the Fed is not yet behind the curve. She argued that steady, smaller and more frequent rises are less disruptive than larger ones.",
+        "means": "A hawkish official is backing more rises, but at the usual quarter-point pace. That supports a December rise while cooling talk of a jump to half a point.",
+        "fx": "Keeps support under the dollar from a longer run of rate rises, but trims the extra lift that a bigger December move would bring."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "More rises backed, but in quarter-point steps rather than a half-point jump."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Higher US rates weigh on gold, but less talk of a bigger move eases the pressure a little."
+        }
+      ],
+      "watch": "Comments from New York Fed President John Williams later Thursday, and whether other officials side with steady quarter-point rises or with Waller's half-point option for the December 8–9 meeting."
+    },
     {
       "id": "yahoo-nvidia-huang-resigns-20261112",
       "ts": "2026-11-12T14:41:00Z",
@@ -1248,33 +1281,6 @@
         }
       ],
       "watch": "The detailed customs figures showing whether imports rose on prices or volumes, and trade talk at the Trump–Xi meeting later this month."
-    },
-    {
-      "id": "investinglive-westpac-sentiment-four-year-low-20261110",
-      "ts": "2026-11-10T01:07:53Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/australian-consumer-sentiment-sinks-to-four-year-low-as-rates-and-living-costs-bite/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Australia%20consumer%20confidence%20four%20year%20low%20graph%2010%20November%202026-featured-1794272797.jpg?width=960&format=webp",
-      "headline": "Australian consumer confidence falls to a four-year low as higher rates and living costs bite",
-      "story": "rba-pause",
-      "story_title": "RBA: is 4.85% the peak?",
-      "pillar": "growth",
-      "summary": "The Westpac–Melbourne Institute measure of Australian consumer confidence fell 2.7% to 78.2 in November, its lowest since late 2022, with mortgage holders at a record low.",
-      "beats": {
-        "was": "The Reserve Bank of Australia raised its cash rate to 4.85% on November 3, its fifth rise this year and the highest since 2008, with inflation at 4.3% and petrol nearing A$2.40 a litre.",
-        "happened": "The monthly Westpac–Melbourne Institute survey dropped to 78.2 from 80.4, where anything below 100 means pessimists outnumber optimists. Mood among people with a mortgage hit a record low, more than 70% expect mortgage rates to rise further, and households turned gloomy on house prices for the first time since late 2022.",
-        "means": "Households are feeling the rate rises, which makes it harder for the central bank to keep going. Westpac expects it to hold rates at its December 7–8 meeting and not raise them in February either.",
-        "fx": "Weaker spending ahead lowers the chance of more rate rises, which takes some support from the Australian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Gloomier households make another Reserve Bank of Australia rate rise less likely."
-        }
-      ],
-      "watch": "Thursday's Australian jobs figures for October; a strong report would revive talk of another rate rise."
     },
     {
       "id": "qz-eia-steo-brent-100-20261110",
