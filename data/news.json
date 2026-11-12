@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T15:50:00Z",
+  "updated": "2026-11-12T16:47:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -48,12 +48,51 @@
       "text": "Gold has dropped further below $4,000 an ounce, toward $3,900, as hotter US inflation made a December Federal Reserve rate rise all but certain and raised talk of more to follow. A strong dollar outweighs the pull of the Iran war and a wobble in tech shares."
     },
     "OIL": {
-      "lean": "bearish",
-      "ts": "2026-11-12T14:55:00Z",
-      "text": "Brent has slipped back below $92 a barrel on hopes of direct US–Iran talks, peace efforts in Ukraine and more OPEC+ output. Ships near the Strait of Hormuz are still being hit, which keeps a floor under prices."
+      "lean": "mixed",
+      "ts": "2026-11-12T16:47:00Z",
+      "text": "Brent swings around $92–93 a barrel. Hopes of direct US–Iran talks, peace efforts in Ukraine and more OPEC+ output pull it down, while ships near the Strait of Hormuz are still being hit and President Trump now says the US doesn't need a deal with Iran, which puts some war risk back in."
     }
   },
   "items": [
+    {
+      "id": "zetik-cnbc-trump-no-iran-deal-needed-20261112",
+      "ts": "2026-11-12T14:21:20Z",
+      "source": "Zetik (CNBC)",
+      "url": "https://www.zetik.com/news/article/story_id-p008-231700",
+      "image": "https://prod-static.newsbang.com/media/20261112/222ffeda168af9a2471abefc188f4814-hd.webp",
+      "headline": "Brent Rises to $93.29 as Trump's No-Deal Iran Remarks Revive War Premium",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran talks: Hormuz reopening offer vs ship attacks",
+      "pillar": "commodities",
+      "summary": "US President Donald Trump said on Thursday the US does not need a deal with Iran and claimed control of the Strait of Hormuz, nudging Brent crude back up to about $93 a barrel.",
+      "beats": {
+        "was": "Since the US–Iran war began, ships near the Strait of Hormuz, the route for about a fifth of the world's oil, have been attacked again and again. Oil had dropped earlier this week on hopes of direct US–Iran talks, and US crude is down about 16% in November.",
+        "happened": "Trump said a deal with Iran is not needed and that the US has control of the strait. Brent rose about 0.5% to $93.29 while US crude was little changed near $86, undoing part of the earlier drop.",
+        "means": "The remarks cast doubt on a quick peace deal, so some of the war risk that had been taken out of oil prices is coming back. Analysts also warn the claim of US control could invite more attacks on ships.",
+        "fx": "Firmer oil gives a little help to the Canadian dollar and weighs a little on oil importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Doubt over a deal puts some war risk back into the price."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada's main export gets a small lift."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so dearer crude is a small drag."
+        }
+      ],
+      "watch": "Whether Tehran responds to Trump's claim, any new attacks on ships near Hormuz, and whether the reported meeting between US Vice President JD Vance and Iran's security chief Mohsen Rezaei goes ahead."
+    },
     {
       "id": "investing-reuters-hammack-gradual-hikes-20261112",
       "date": "2026-11-12",
@@ -1131,45 +1170,6 @@
         }
       ],
       "watch": "The Fed's December 8–9 meeting: whether officials beyond Waller and Logan back a half-point rise rather than a quarter-point one."
-    },
-    {
-      "id": "aol-reuters-poll-fed-december-last-hike-20261110",
-      "ts": "2026-11-10T14:34:00Z",
-      "source": "AOL (Reuters)",
-      "url": "https://www.aol.com/articles/fed-raise-rates-once-more-124512000.html",
-      "image": "https://hermes.media.transform.aol.com/6d7d00c6913cc92bd2b8a9bacde63932543d6a24/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/10/d9bcdddd-d769-3d21-9ee0-cfc763dc854d/e616beae-29a5-4465-88a1-7c2dfe542912.jpg",
-      "headline": "Economists expect one more Fed rate rise in December, but many see more to come",
-      "story": "fed-december",
-      "story_title": "Fed: a December rate rise and what US inflation says",
-      "pillar": "policy",
-      "summary": "A Reuters survey of 101 economists expects the Federal Reserve to raise rates by a quarter point in December, and nearly half think it will have to go further in 2027.",
-      "beats": {
-        "was": "The Federal Reserve raised interest rates in September and held in October, as US inflation stays well above its 2% goal with tariffs and energy costs pushing prices up.",
-        "happened": "In the survey, taken from November 6 to 10, economists expect a December rise to a range of 4.00% to 4.25%. Just over half think that will be the last rise; 45 of them see at least two more, including most of the big banks that deal directly with the Fed. They expect the Fed's preferred inflation gauge to average 3.5% this year and not get back to 2% before 2028.",
-        "means": "The December move is close to settled; the open question is how long the Fed keeps going after it. Hotter-than-expected October inflation, released the same day, gives weight to the camp that sees more rises.",
-        "fx": "Expectations of further US rate rises support the dollar and push up US borrowing costs, with the 10-year Treasury yield close to 5%, which weighs on the yen and gold."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Economists see a December rise as the base case, and many expect more next year."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A longer run of US rate rises keeps the gap with Japanese rates wide."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher US rates for longer make gold, which pays no interest, less attractive."
-        }
-      ],
-      "watch": "The Fed's December 8–9 meeting: whether officials signal that December is the last step or that more may follow."
     },
     {
       "id": "tokenpost-gold-falls-30-hot-cpi-20261110",
