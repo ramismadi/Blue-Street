@@ -152,7 +152,7 @@ def sign_banner(W, H, sign_fill, letter_fill, bg, left_safe=0.0):
     """The banner IS the sign: the board fills the banner (bleeding off the
     left, top and bottom) and the arrow point cuts in on the right."""
     depth = 0.45 * H                      # same arrow angle as the logo
-    tip = W - 0.035 * W
+    tip = W - 0.14 * W                    # open space past the point so it reads as a sign
     shoulder = tip - depth
     r = 0.05 * H                          # rounded tip, like the logo
     board = ('<path fill="%s" stroke="%s" stroke-width="%.1f" stroke-linejoin="round" '
