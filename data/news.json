@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T03:55:00Z",
+  "updated": "2026-11-13T11:47:42Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "bearish",
-      "ts": "2026-11-12T12:47:23Z",
-      "text": "The euro has fallen to about $1.11, its lowest since May 2025, as hot US inflation and talk of more Federal Reserve rate rises lift the dollar. Economists expect the European Central Bank to raise rates in December, but most think that will be its last rise, which offers the euro less support than the Fed's longer path."
+      "ts": "2026-11-13T11:47:42Z",
+      "text": "The euro is near $1.105, its lowest since April 2025, as talk of more US rate rises lifts the dollar. Euro-area growth was confirmed at 0.4% for the third quarter, but most came from Ireland, and economists expect December's European Central Bank rise to be the last, which offers the euro less support than the Fed's longer path."
     },
     "GBP": {
       "lean": "mixed",
@@ -19,18 +19,18 @@
     },
     "JPY": {
       "lean": "bearish",
-      "ts": "2026-11-13T03:55:00Z",
-      "text": "The dollar briefly rose above 160 yen on Thursday night, a level where Japan and the US stepped in to buy yen in September, because US rates are far above Japan's. Japanese officials keep warning about the fast fall and a December Bank of Japan rise is expected, but neither has stopped the slide so far."
+      "ts": "2026-11-13T11:47:42Z",
+      "text": "The dollar crossed 160 yen this week for the first time since early September because US rates are far above Japan's, and Finance Minister Satsuki Katayama warned on Friday that Tokyo, working with the US, will act against fast moves. Japan spent a record sum buying yen when it hit 164 this summer, so the threat is real, but until it acts or the Bank of Japan raises rates in December the rate gap keeps the pressure on."
     },
     "CHF": {
-      "lean": "bearish",
-      "ts": "2026-11-11T14:55:00Z",
-      "text": "The Swiss franc slipped to a two-week low on Wednesday as the dollar climbed on bets of bigger Federal Reserve rate rises. Attacks on ships near the Strait of Hormuz keep some safe-haven demand alive, but for now higher US rates matter more."
+      "lean": "mixed",
+      "ts": "2026-11-13T11:47:42Z",
+      "text": "The Swiss franc has slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Iran's claimed strike on a US base in Bahrain and attacks on ships near Hormuz keep some demand for the franc as a safe place to hold money."
     },
     "CAD": {
       "lean": "mixed",
-      "ts": "2026-11-12T23:58:00Z",
-      "text": "Oil, Canada's main export, is back near $96 after attacks on Saudi oil sites and tankers near Hormuz, and the Bank of Canada says it is ready to raise rates again if energy costs spread. But Canada has lost jobs two months running and the loonie sits near a 19-month low against a strong US dollar."
+      "ts": "2026-11-13T11:47:42Z",
+      "text": "Oil, Canada's main export, is near $96 after attacks on Saudi sites and a claimed Iranian strike on a US base in Bahrain, and the Bank of Canada says it is ready to raise rates again if energy costs spread. But Canada has lost jobs two months running, the energy agency sees an oil surplus ahead, and the loonie is held down by a strong US dollar."
     },
     "AUD": {
       "lean": "bearish",
@@ -49,11 +49,143 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-12T23:58:00Z",
-      "text": "Oil jumped back toward $96 a barrel on Thursday after Yemen's Houthis said they hit Saudi oil sites, including the pipeline Saudi Arabia uses to bypass Hormuz, and Iran claimed tanker hits in the strait. Rising US stockpiles and higher OPEC+ output still cap the gains."
+      "ts": "2026-11-13T11:47:42Z",
+      "text": "Oil is near $96 a barrel after attacks on Saudi oil sites and tankers near Hormuz, and Iran now says it hit a US radar base in Bahrain, which makes a deal to reopen the strait look further off. The International Energy Agency still expects more supply than demand from this quarter on, which caps how far prices can run."
     }
   },
   "items": [
+    {
+      "id": "aljazeera-iran-us-radar-bahrain-20261113",
+      "date": "2026-11-13",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/13/iran-says-it-struck-us-radar-site-in-bahrain",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/05/getty_69f846d446-1777878740.jpg?resize=1920%2C1440",
+      "headline": "Iran says it targeted US radar site in Bahrain",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's Revolutionary Guards say they hit a US early-warning radar in Bahrain, home of the US Navy's Fifth Fleet. Neither Washington nor Bahrain has confirmed it.",
+      "beats": {
+        "was": "The US and Iran have been at war since earlier this year, with the US blockading Iranian ports and Iran keeping the Strait of Hormuz, the route for about a fifth of the world's oil, mostly shut. Ship attacks in the strait have picked up again this month.",
+        "happened": "The Guards said the strike answered an air attack on a telecom tower in Sirik, on Iran's Hormuz coast, and called it a warning over flights and oil smuggling in the strait. Reuters says it is the first claimed Iranian attack on US forces in a Gulf country since early September. Israel's security cabinet has also told its military to prepare for a possible strike on Iran.",
+        "means": "If confirmed, the war is spreading back from shipping to direct hits on US bases, which makes a deal to reopen Hormuz harder. For now it is a claim, and oil had already priced in a lot of risk on Thursday.",
+        "fx": "Adds to the risk premium in oil and to demand for safe places to park money, such as the Swiss franc and gold, though a strong dollar is limiting gold for now."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A claimed strike on a US base makes a quick reopening of Hormuz less likely."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "War news adds to demand for the franc as a safe place to hold money."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil helps Canada, a big oil exporter."
+        }
+      ],
+      "watch": "Whether the US confirms damage or strikes back, and whether Israel acts on its preparations."
+    },
+    {
+      "id": "reuters-katayama-yen-160-20261113",
+      "date": "2026-11-13",
+      "source": "Reuters",
+      "url": "https://www.1049thewolf.com/2026/11/12/japans-finance-minister-vows-action-as-yen-breaches-160-threshold/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/13/2026-11-13T015118Z_1_LYNXNPEMAC025_RTROPTP_3_JAPAN-YEN-MIMURA.JPG",
+      "headline": "Japan's finance minister vows action as yen breaches 160 threshold",
+      "story": "yen-defence",
+      "story_title": "Japan's fight to prop up the yen",
+      "pillar": "policy",
+      "summary": "The dollar crossed 160 yen for the first time since early September, and Japan's Finance Minister Satsuki Katayama warned again that Tokyo will act against fast, one-sided moves, working with the US Treasury.",
+      "beats": {
+        "was": "When the yen weakened to about 164 per dollar this summer, Japan spent a record 15.4 trillion yen buying it back between July 30 and August 3, and the US joined in on July 31, its first yen purchase since 1998.",
+        "happened": "After US inflation data raised bets on more Federal Reserve rate rises, the dollar reached about 160.03 yen. Katayama said on Friday that recent moves have been one-sided and rapid and Japan will respond appropriately. Her top currency official, Atsushi Mimura, gave a similar warning on Thursday.",
+        "means": "Tokyo is signalling it could buy yen again, and mentioning the US Treasury hints a joint move is possible. But talk alone has not reversed the slide, because US interest rates are still far above Japan's.",
+        "fx": "The warnings put a soft ceiling near 160 yen per dollar and raise the chance of a sudden sharp drop in the dollar against the yen, while the rate gap keeps pushing the other way."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 2,
+          "why": "The yen is at a level where Japan stepped in before, but the rate gap with the US still drags it lower."
+        },
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Higher US rates lift the dollar, but a Japanese or joint purchase of yen would hit it."
+        }
+      ],
+      "watch": "Whether Japan actually buys yen, US producer prices on Friday, and Bank of Japan signals ahead of its December meeting."
+    },
+    {
+      "id": "ani-iea-oil-surplus-q4-20261113",
+      "ts": "2026-11-13T11:22:13Z",
+      "source": "ANI",
+      "url": "https://www.aninews.in/news/business/global-oil-market-to-return-to-surplus-in-q4-2026-larger-supply-build-expected-in-2027-iea20261113165213/",
+      "image": "https://d3lzcn6mbbadaf.cloudfront.net/media/details/__sized__/ANI-20261113111741-thumbnail-320x180-70.jpg",
+      "headline": "Global oil market to return to surplus in Q4 2026, larger supply build expected in 2027: IEA",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "tot",
+      "summary": "The International Energy Agency expects the world to produce more oil than it uses again in the last three months of this year, with a bigger surplus in 2027.",
+      "beats": {
+        "was": "The war around Hormuz cut Gulf exports sharply and pushed North Sea crude to about $136 a barrel in early October. Prices have since fallen by about a third as other producers pumped more.",
+        "happened": "In its monthly report, the IEA said world supply rose by 2.3 million barrels a day in October to 105.4 million, while demand this year is set to fall by 2.7 million barrels a day after the price spike. Gulf exports are still about a quarter below pre-war levels, and stocks held on land are the lowest since at least 2016.",
+        "means": "The agency sees the shortage turning into a surplus as other suppliers fill the gap and high prices cut use. Thin stocks mean a new supply hit, like the attacks on Saudi sites this week, can still push prices up fast.",
+        "fx": "A coming surplus weighs on oil over the months ahead, a mild drag for oil exporters such as Canada and a small relief for importers like Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The IEA sees supply running ahead of demand from this quarter on."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A softer oil outlook trims support for Canada's main export."
+        }
+      ],
+      "watch": "Whether Gulf exports keep recovering or new attacks on Saudi sites and tankers cut supply again; OPEC's own monthly report."
+    },
+    {
+      "id": "investinglive-ez-gdp-q3-second-estimate-20261113",
+      "ts": "2026-11-13T10:00:16Z",
+      "source": "InvestingLive",
+      "url": "https://investinglive.com/news/eurozone-q3-gdp-unchanged-in-second-estimate-as-uneven-growth-clouds-the-outlook/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/EU%20Flag%20Data-featured-1794562887.jpg?width=960&format=webp",
+      "headline": "Eurozone Q3 GDP unchanged in second estimate as uneven growth clouds the outlook",
+      "story": "ecb-hikes",
+      "story_title": "European Central Bank: one more rate rise, then a pause?",
+      "pillar": "growth",
+      "summary": "A second look confirmed the euro area grew 0.4% in the third quarter, but most of that came from Ireland while Germany barely grew and France shrank.",
+      "beats": {
+        "was": "The first estimate of euro-area growth for July to September, out in October, showed 0.4%, twice what economists had expected. The European Central Bank kept its deposit rate at 2.5% in October with inflation near 3.8%.",
+        "happened": "The second estimate left growth at 0.4% from the quarter before and 1.3% from a year earlier. Ireland grew about 5.5%, while Germany managed 0.2%, Italy was flat and France slipped 0.1%.",
+        "means": "Ireland's figures swing with big multinational companies, so the core of the euro area is weaker than the headline. That does little to stop an ECB rise in December, which is about inflation, but it argues against many more after it.",
+        "fx": "Gives the euro no new lift; growth in the big economies is soft while the US Federal Reserve looks set to keep raising rates."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Growth confirmed at 0.4%, but most of it came from Ireland, not the big economies."
+        }
+      ],
+      "watch": "Euro-area inflation for November and what ECB officials say about rises after December."
+    },
     {
       "id": "investinglive-williams-work-to-do-20261113",
       "ts": "2026-11-13T00:06:28Z",
@@ -86,72 +218,6 @@
         }
       ],
       "watch": "US producer prices and retail sales, and whether any senior official starts arguing for a half-point rise."
-    },
-    {
-      "id": "investing-asia-fx-yen-160-intervention-20261112",
-      "date": "2026-11-12",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/forex-news/asia-fx-yen-intervention-in-focus-as-rate-hike-bets-put-dollar-near-19mth-high-5024024",
-      "image": "https://content-media.investing.com/news/LYNXMPED560CA-ORUBS_L.jpg",
-      "headline": "Asia FX: yen intervention in focus as rate hike bets put dollar near 19-mth high",
-      "story": "yen-defence",
-      "story_title": "Japan's fight to prop up the yen",
-      "pillar": "policy",
-      "summary": "The US dollar briefly rose above 160 Japanese yen overnight before settling just under it in Asian trading on Friday, a level where Japan has stepped in before.",
-      "beats": {
-        "was": "US interest rates are far above Japan's, which has pushed the yen down for months. In September, Japan and the US acted together to buy yen, and Japanese officials have warned again this week as the yen slid back toward 160 per dollar.",
-        "happened": "The dollar crossed 160 yen for a short time on Thursday night, then traded near 159.96 on Friday. Japanese officials again warned against one-sided currency moves, and top currency official Atsushi Mimura said it was too early to forget the September action.",
-        "means": "The line Japan has defended before has now been touched, so the chance of Japan buying yen again is rising. Until it does, the gap in rates keeps pulling the yen lower.",
-        "fx": "Steady pressure on the yen from US rates, with a risk of a sudden yen jump if Japan steps in."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The yen touched 160 per dollar as the rate gap with the US keeps widening."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The dollar is set for a third weekly rise on bets of more Federal Reserve rate rises."
-        }
-      ],
-      "watch": "Whether Japan buys yen if the dollar stays above 160, Japan's third-quarter growth and October inflation figures next week, and US producer prices on Friday."
-    },
-    {
-      "id": "investing-reuters-us-deficit-october-record-20261112",
-      "date": "2026-11-12",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://www.investing.com/news/economy-news/us-starts-2027-fiscal-year-with-record-october-budget-deficit-of-404-billion-5023006",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB23G_L.jpg",
-      "headline": "US starts 2027 fiscal year with record October budget deficit of $404 billion",
-      "story": "us-deficit",
-      "story_title": "US government borrowing keeps growing",
-      "pillar": "rates",
-      "summary": "The US government spent $404 billion more than it took in during October, the most ever for that month, as tax and tariff income fell and spending hit a record.",
-      "beats": {
-        "was": "The US ran a deficit of nearly $2 trillion in the year to September, about 6.2% of the economy and the biggest in five years. Treasury Secretary Scott Bessent wants to cut it to 3%.",
-        "happened": "The Treasury said the October gap was 42% bigger than a year earlier. Income fell 9%, with tariff collections down 39% from their peak, while spending rose 12% to a record on farm aid, military payments and higher interest on the debt.",
-        "means": "A bigger gap means the government must sell more bonds, which adds upward pressure on US borrowing costs, already above 5% for 10-year bonds. Interest on the debt is itself one of the fastest-rising costs.",
-        "fx": "Higher bond yields help the dollar for now, but steady talk of big deficits is also one of the reasons some buyers prefer gold over US assets."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "More bond sales lift yields, which helps the dollar, but a growing debt load is a long-run worry."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Higher yields weigh on gold, while deficit worries support it over time."
-        }
-      ],
-      "watch": "Demand at upcoming US bond auctions and whether tariff income keeps falling."
     },
     {
       "id": "kitco-gold-silver-slide-yields-20261112",
@@ -413,6 +479,72 @@
         }
       ],
       "watch": "Federal Reserve speakers later this week, and next month's US jobs report before the December Fed meeting."
+    },
+    {
+      "id": "investing-asia-fx-yen-160-intervention-20261112",
+      "date": "2026-11-12",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/forex-news/asia-fx-yen-intervention-in-focus-as-rate-hike-bets-put-dollar-near-19mth-high-5024024",
+      "image": "https://content-media.investing.com/news/LYNXMPED560CA-ORUBS_L.jpg",
+      "headline": "Asia FX: yen intervention in focus as rate hike bets put dollar near 19-mth high",
+      "story": "yen-defence",
+      "story_title": "Japan's fight to prop up the yen",
+      "pillar": "policy",
+      "summary": "The US dollar briefly rose above 160 Japanese yen overnight before settling just under it in Asian trading on Friday, a level where Japan has stepped in before.",
+      "beats": {
+        "was": "US interest rates are far above Japan's, which has pushed the yen down for months. In September, Japan and the US acted together to buy yen, and Japanese officials have warned again this week as the yen slid back toward 160 per dollar.",
+        "happened": "The dollar crossed 160 yen for a short time on Thursday night, then traded near 159.96 on Friday. Japanese officials again warned against one-sided currency moves, and top currency official Atsushi Mimura said it was too early to forget the September action.",
+        "means": "The line Japan has defended before has now been touched, so the chance of Japan buying yen again is rising. Until it does, the gap in rates keeps pulling the yen lower.",
+        "fx": "Steady pressure on the yen from US rates, with a risk of a sudden yen jump if Japan steps in."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The yen touched 160 per dollar as the rate gap with the US keeps widening."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The dollar is set for a third weekly rise on bets of more Federal Reserve rate rises."
+        }
+      ],
+      "watch": "Whether Japan buys yen if the dollar stays above 160, Japan's third-quarter growth and October inflation figures next week, and US producer prices on Friday."
+    },
+    {
+      "id": "investing-reuters-us-deficit-october-record-20261112",
+      "date": "2026-11-12",
+      "source": "Reuters (via Investing.com)",
+      "url": "https://www.investing.com/news/economy-news/us-starts-2027-fiscal-year-with-record-october-budget-deficit-of-404-billion-5023006",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB23G_L.jpg",
+      "headline": "US starts 2027 fiscal year with record October budget deficit of $404 billion",
+      "story": "us-deficit",
+      "story_title": "US government borrowing keeps growing",
+      "pillar": "rates",
+      "summary": "The US government spent $404 billion more than it took in during October, the most ever for that month, as tax and tariff income fell and spending hit a record.",
+      "beats": {
+        "was": "The US ran a deficit of nearly $2 trillion in the year to September, about 6.2% of the economy and the biggest in five years. Treasury Secretary Scott Bessent wants to cut it to 3%.",
+        "happened": "The Treasury said the October gap was 42% bigger than a year earlier. Income fell 9%, with tariff collections down 39% from their peak, while spending rose 12% to a record on farm aid, military payments and higher interest on the debt.",
+        "means": "A bigger gap means the government must sell more bonds, which adds upward pressure on US borrowing costs, already above 5% for 10-year bonds. Interest on the debt is itself one of the fastest-rising costs.",
+        "fx": "Higher bond yields help the dollar for now, but steady talk of big deficits is also one of the reasons some buyers prefer gold over US assets."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "More bond sales lift yields, which helps the dollar, but a growing debt load is a long-run worry."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Higher yields weigh on gold, while deficit worries support it over time."
+        }
+      ],
+      "watch": "Demand at upcoming US bond auctions and whether tariff income keeps falling."
     },
     {
       "id": "investing-reuters-existing-home-sales-16yr-low-20261112",
@@ -1268,163 +1400,6 @@
         }
       ],
       "watch": "Whether the US softens or repeats its nuclear condition for talks, and whether Brent holds above $92."
-    },
-    {
-      "id": "cnbc-reuters-oil-rises-hormuz-attacks-20261111",
-      "date": "2026-11-11",
-      "source": "CNBC (Reuters)",
-      "url": "https://www.cnbc.com/2026/11/11/oil-rises-from-two-month-low-as-hormuz-shipping-attacks-offset-iran-truce-hopes.html",
-      "image": null,
-      "headline": "Oil climbs off a two-month low as attacks on ships near Hormuz outweigh hopes of an Iran truce",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
-      "pillar": "risk",
-      "summary": "Brent crude edged back above $92.50 a barrel as ships near the Strait of Hormuz keep getting hit, even while talk of a US–Iran truce continues.",
-      "beats": {
-        "was": "Brent had dropped from the mid-$90s to briefly under $90 on Tuesday, its lowest in about two months, after President Trump called the US–Iran war 'effectively over' and held off new strikes. The Strait of Hormuz, the main exit for Gulf oil, is still effectively shut.",
-        "happened": "Brent rose to about $92.50 and US crude to about $86.70 in Asian trading on Wednesday. Attacks on shipping are not slowing: 37 ships were hit in October, the most in any month since the war began, and 10 more so far in November. Analysts at data firm LSEG say even a signed deal would not bring back normal tanker traffic quickly, because mines must be cleared, insurers must return and shipowners must be willing to sail.",
-        "means": "Hopes for peace pulled oil down, but the physical problem of moving oil out of the Gulf has not changed, so the fall has stalled. A deal on paper and oil flowing again are two different things.",
-        "fx": "Steadier oil gives a little support to the Canadian dollar and keeps energy costs a worry for big importers like Japan."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Ongoing ship attacks put a floor under prices after the peace-hope slide."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firmer oil helps Canada's biggest export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys nearly all its oil abroad, so dearer crude weighs on its trade balance."
-        }
-      ],
-      "watch": "Whether attacks on ships near Hormuz slow, and any firm sign of US–Iran talks actually taking place."
-    },
-    {
-      "id": "fxstreet-dxy-steadies-fed-hike-odds-20261111",
-      "date": "2026-11-11",
-      "source": "FXStreet",
-      "url": "https://www.fxstreet.com/news/united-states-dollar-index-steadies-on-fed-rate-hike-odds-202611110347",
-      "image": null,
-      "headline": "Dollar holds near a two-week high as markets bet the Fed will raise rates in December",
-      "story": "fed-december",
-      "story_title": "Fed: a December rate rise and what US inflation says",
-      "pillar": "policy",
-      "summary": "The dollar kept Tuesday's gains in Asian trading as traders now see a December Federal Reserve rate rise as near-certain and give better-than-even odds of another in January.",
-      "beats": {
-        "was": "US consumer prices rose faster than expected in October, and Fed officials Christopher Waller and Lorie Logan have since argued for bigger or more rate rises. The Fed's next decision is on December 9.",
-        "happened": "The dollar index, which tracks the dollar against six major currencies, held near 102.2, close to a two-week high. Futures pricing puts the chance of a quarter-point December rise at about 92%, up from 84% a day earlier, with the rest on a half-point move; no-change is no longer priced. Markets now see a second rise in January as more likely than not. US bond markets are shut on Wednesday for Veterans Day, with no US data due.",
-        "means": "Markets have moved from 'will the Fed raise rates?' to 'by how much, and how many times?' That keeps US rates high relative to most other countries.",
-        "fx": "Higher expected US rates support the dollar, with the yen most exposed because Japan's rates are far lower; a quiet US holiday means little to shift that today."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rising odds of more Fed rate rises hold the dollar near recent highs, though much is already priced."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A wider US–Japan rate gap keeps pressure on the yen near 158.7 per dollar."
-        }
-      ],
-      "watch": "Fed speakers and US data later this week; any sign October's inflation jump was a one-off would cut the odds of a half-point rise."
-    },
-    {
-      "id": "euronews-tanker-mine-hormuz-20261111",
-      "date": "2026-11-11",
-      "ts": "2026-11-11T10:47:00Z",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/11/11/oil-markets-rise-as-investors-monitor-shipping-disruption-in-the-strait-of-hormuz",
-      "image": "https://images.euronews.com/articles/stories/09/98/81/78/1200x675_cmsv2_760d7d7d-d7f7-50ce-8488-87fa5bbf473e-9988178.jpg",
-      "headline": "Another tanker hit in the Strait of Hormuz, this time by a mine, Iran's army says",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's army said an oil tanker struck a mine and caught fire in the Strait of Hormuz, a day after its Revolutionary Guards said three tankers were set alight there. India said a ship with Indian crew was also hit in the Gulf.",
-      "beats": {
-        "was": "Since the war began in late February, Iran has limited traffic through the Strait of Hormuz and says it targets ships that cross without its permission. The US military recently said all mines in the strait had been cleared, and it has been escorting tankers out.",
-        "happened": "On Wednesday Iran's army said a tanker hit a mine and caught fire in the strait. Separately, India's shipping minister said a Liberia-flagged tanker with Indian crew was struck by a projectile in the Gulf, injuring four. On Tuesday Iran's Revolutionary Guards said three tankers had burned. Brent crude was little changed near $91.70 at the time.",
-        "means": "A mine strike so soon after the US said the waters were clear suggests that reopening the route safely will take longer than hoped, whatever happens in talks.",
-        "fx": "Keeps a supply-risk floor under oil, a mild help for the Canadian dollar and a cost for oil importers such as Japan."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Fresh ship damage and doubt over mine clearing keep supply risk alive."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Ongoing Gulf attacks keep some demand for safe places to park money."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher oil costs weigh on Japan as a big energy importer."
-        }
-      ],
-      "watch": "How many ships are hit this month compared with October's 37, and any word from the US military on mines."
-    },
-    {
-      "id": "cnbc-dollar-four-week-high-fed-hike-bets-20261111",
-      "ts": "2026-11-11T09:15:00Z",
-      "source": "CNBC (Reuters)",
-      "url": "https://www.cnbc.com/2026/11/11/dollar-gains-traction-as-fed-speakers-warn-of-risks-from-inflation.html",
-      "image": null,
-      "headline": "Dollar climbs to a four-week high in London trading as bets on a bigger Fed rate rise grow",
-      "story": "fed-december",
-      "story_title": "Fed: a December rate rise and what US inflation says",
-      "pillar": "policy",
-      "summary": "The dollar pushed on to its strongest level in four weeks on Wednesday morning in Europe, as traders raised the odds that the Federal Reserve lifts rates by half a point in December.",
-      "beats": {
-        "was": "US consumer prices rose faster than expected in October, and Fed Governor Christopher Waller had said a reading like that would justify a half-point December rise instead of a quarter-point one. The Fed's next decision is on December 9.",
-        "happened": "The dollar index, which measures the dollar against six major currencies, rose about 0.2% to near 102.5, a four-week high. The euro slipped to about $1.114, the pound held near $1.33, the dollar reached about 158.9 yen and the Swiss franc touched a two-week low. Futures pricing put the chance of a quarter-point rise near 85%, down from about 92% overnight, with the rest on a half-point move.",
-        "means": "A rise in December is taken as given; the shift now is toward a bigger step, and a second rise in January is seen as more likely than not. That keeps US rates well above most others.",
-        "fx": "The dollar gains broadly, and the yen is closest to 160 per dollar, a level where Japan stepped in to buy yen this summer."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Growing odds of a half-point Fed rise extend the dollar's gains after the inflation surprise."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The yen nears 160 per dollar as the US–Japan rate gap stays wide."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The franc slips to a two-week low against a firmer dollar."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro eases toward $1.114 as US rate expectations climb."
-        }
-      ],
-      "watch": "US producer prices on Friday, and whether Japan's finance ministry warns about the yen as it nears 160 per dollar."
     },
     {
       "id": "investinglive-abs-home-lending-q3-plunge-20261111",
