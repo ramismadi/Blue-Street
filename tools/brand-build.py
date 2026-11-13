@@ -148,6 +148,33 @@ def place(W, H, body, vb, max_w, max_h, bg):
     return svg(W, H, '<g transform="translate(%.2f %.2f) scale(%.4f)">%s</g>' % (tx, ty, k, body), (0, 0, W, H), bg)
 
 
+def sign_banner(W, H, sign_fill, letter_fill, bg, left_safe=0.0):
+    """The banner IS the sign: the board fills the banner (bleeding off the
+    left, top and bottom) and the arrow point cuts in on the right."""
+    depth = 0.45 * H                      # same arrow angle as the logo
+    tip = W - 0.035 * W
+    shoulder = tip - depth
+    r = 0.05 * H                          # rounded tip, like the logo
+    board = ('<path fill="%s" stroke="%s" stroke-width="%.1f" stroke-linejoin="round" '
+             'd="M -100 -100 H %.1f L %.1f %.1f L %.1f %.1f H -100 Z"/>'
+             % (sign_fill, sign_fill, r, shoulder + depth * 100 / (H / 2), tip, H / 2,
+                shoulder + depth * 100 / (H / 2), H + 100))
+    # Lettering in the logo's proportions: ST is 0.39x BLUE, raised, clear of the E.
+    size = 0.70 * H
+    _, bw = text_path('BLUE', 0, 0, size, -2 * size / 82)
+    _, sw = text_path('ST', 0, 0, 0.39 * size)
+    gap = 0.10 * size
+    total = bw + gap + sw
+    size_k = min(1, 0.62 * shoulder / total)
+    size, bw, sw, gap, total = size * size_k, bw * size_k, sw * size_k, gap * size_k, total * size_k
+    left = max(0.08 * W, left_safe * W)  # keep clear of a profile photo
+    x0 = left + (shoulder - left - total) / 2
+    base = H / 2 + 0.7275 * size / 2
+    b, _ = text_path('BLUE', x0, base, size, -2 * size / 82)
+    st, _ = text_path('ST', x0 + bw + gap, base - 0.66 * size, 0.39 * size)
+    return svg(W, H, board + '<path fill="%s" d="%s %s"/>' % (letter_fill, b, st), (0, 0, W, H), bg)
+
+
 def export_pngs(png):
     """High-res PNGs to save or post (assets/brand/png/): logos on their
     backgrounds, plus social banners in two styles."""
@@ -202,6 +229,11 @@ def export_pngs(png):
     for style, body, vb, bg in styles:
         for plat, W, H in sizes:
             save('banners/' + style, 'banner-%s-%s.png' % (plat, style), place(W, H, body, vb, 0.5, 0.6, bg))
+    # The whole banner as the sign (Rami, 2026-11-13).
+    for style, sf, lf, bg in (('whole-sign', IVORY, BLUE, BLUE), ('whole-sign-blue', BLUE, IVORY, IVORY)):
+        for plat, W, H in sizes:
+            save('banners/' + style, 'banner-%s-%s.png' % (plat, style),
+                 sign_banner(W, H, sf, lf, bg, 0.27 if plat == 'x' else 0.0))
 
 
 if __name__ == '__main__':

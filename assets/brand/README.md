@@ -37,3 +37,6 @@ same script.
   - `ivory-sign`: the blue sign on ivory
   - `black-lockup`: the black sign with "Blue Street" on ivory
   - `ivory-lockup`: the blue sign with "Blue Street" on ivory
+  - `whole-sign`: the banner itself is the sign. It's ivory with BLUE ST
+    on it, and the arrow cuts in on the right over blue.
+  - `whole-sign-blue`: the same idea inverted, a blue sign on ivory.
