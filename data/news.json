@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-13T12:47:49Z",
+  "updated": "2026-11-13T14:47:14Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-13T12:47:49Z",
-      "text": "The dollar is set for its best week in two months, near its highest since April 2025, because Federal Reserve officials, including New York's John Williams, say inflation is too high and rates must keep rising, and markets now see a small chance of a half-point rise. The costs are showing in weak home sales and a record October budget deficit."
+      "ts": "2026-11-13T14:47:14Z",
+      "text": "The dollar is set for its best week in two months, near its highest since April 2025, because Federal Reserve officials say inflation is too high and rates must keep rising. October's producer prices, with a firm 0.5% rise in core business costs, back a December rate rise, though weak home sales and a record October budget deficit show the strain."
     },
     "EUR": {
       "lean": "bearish",
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-13T11:47:42Z",
-      "text": "The Swiss franc has slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Iran's claimed strike on a US base in Bahrain and attacks on ships near Hormuz keep some demand for the franc as a safe place to hold money."
+      "ts": "2026-11-13T14:47:14Z",
+      "text": "The Swiss franc has slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Iran's failed drone attack on a US base in Bahrain and attacks on ships near Hormuz keep some demand for the franc as a safe place to hold money, but the US says the drones did no damage."
     },
     "CAD": {
       "lean": "mixed",
@@ -49,11 +49,77 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-13T11:47:42Z",
-      "text": "Oil is near $96 a barrel after attacks on Saudi oil sites and tankers near Hormuz, and Iran now says it hit a US radar base in Bahrain, which makes a deal to reopen the strait look further off. The International Energy Agency still expects more supply than demand from this quarter on, which caps how far prices can run."
+      "ts": "2026-11-13T14:47:14Z",
+      "text": "Oil is near $96 a barrel after attacks on Saudi oil sites and tankers near Hormuz, and Iran tried to hit a US base in Bahrain, though the US says its drones were shot down. The International Energy Agency expects more supply than demand from this quarter on, which caps how far prices can run, and oil is still heading for a second weekly fall."
     }
   },
   "items": [
+    {
+      "id": "wbow-reuters-us-ppi-october-20261113",
+      "date": "2026-11-13",
+      "source": "Reuters (via WBOW)",
+      "url": "https://1027wbow.com/2026/11/13/us-producer-prices-rise-further-in-october/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/13/2026-11-13T134603Z_3_LYNXNPEMAC166_RTROPTP_3_IRAN-CRISIS-GLOBAL-ECONOMY.JPG",
+      "headline": "US producer prices rise further in October",
+      "story": "fed-december",
+      "story_title": "Fed: a December rate rise and what US inflation says",
+      "pillar": "inflation",
+      "summary": "Prices that US businesses charge rose 0.3% in October, a touch below the 0.4% forecast, but were 6.5% higher than a year ago, the fastest yearly rise since late 2022. Prices outside food, energy and trade rose a firmer 0.5%.",
+      "beats": {
+        "was": "The producer price index, from the Bureau of Labor Statistics, tracks what businesses get for their goods and services and often feeds into shop prices later. October's consumer inflation report, out earlier this week, came in hotter than expected, and the Federal Reserve is widely expected to raise rates again at its December 8–9 meeting.",
+        "happened": "The headline index rose 0.3% on the month after a 1.4% jump in September, which was revised higher. Goods rose 0.5%, led by food, while transport and warehousing costs rose 2%, with truck freight up almost 4%. The core measure that leaves out food, energy and trade margins rose 0.5%, above forecasts.",
+        "means": "The headline was slightly softer than expected, but the core gain shows price pressure spreading through business costs, not just energy. That keeps a December rate rise on track and leaves the debate between a quarter-point and a half-point move open.",
+        "fx": "Supports the dollar by backing more Fed rate rises, and adds to pressure on gold, which earns no interest."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firm core business prices back a December rate rise; the softer headline limits the lift."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "More expected Fed rises raise the cost of holding gold."
+        }
+      ],
+      "watch": "Comments from Fed officials later Friday, including Boston's Susan Collins, Dallas's Lorie Logan and Governor Michelle Bowman, on whether December should be a quarter or a half point."
+    },
+    {
+      "id": "apa-centcom-denies-bahrain-radar-20261113",
+      "date": "2026-11-13",
+      "source": "APA",
+      "url": "https://en.apa.az/america/centcom-denies-irans-claim-of-destroying-us-radar-in-bahrain-535971",
+      "image": "https://en.apa.az/storage/news/2026/november/13/big/6af70fb8219bc6af70fb8219bd17945763126af70fb8219ba6af70fb8219bb.webp",
+      "headline": "CENTCOM denies Iran's claim of destroying US radar in Bahrain",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "US Central Command, which runs American forces in the Middle East, says Iran's two attack drones aimed at Bahrain were shot down, with no damage or injuries, rejecting Iran's claim that it destroyed a US radar there.",
+      "beats": {
+        "was": "The US and Iran have been at war since earlier this year, and shipping through the Strait of Hormuz, the route for about a fifth of the world's oil, is still badly disrupted. Early Friday, Iran's Revolutionary Guards said they had destroyed a US early-warning radar in Bahrain, home of the US Navy's Fifth Fleet.",
+        "happened": "Central Command said on X that the Guards launched two one-way attack drones toward Bahrain and US forces downed both. The Guards had called their attack a reply to a strike on a telecom tower in Sirik, on Iran's Hormuz coast.",
+        "means": "Iran did try to hit a US target in a Gulf country, so the risk of a direct clash is real, but the attack failed, which makes an immediate US counter-strike less pressing. It takes some of the edge off Friday morning's worry.",
+        "fx": "Eases some of the extra war premium in oil and in safe places to park money such as the Swiss franc, though an attempted strike on a US base keeps that premium from fading fully."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A failed attack lowers the damage, but Iran still tried to hit a US base."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Less damage than claimed trims demand for the franc as a safe place to hold money."
+        }
+      ],
+      "watch": "Whether the US answers the attempted drone attack, and whether Israel acts on its order to prepare a possible strike on Iran."
+    },
     {
       "id": "reuters-oil-second-weekly-decline-blockade-20261113",
       "date": "2026-11-13",
@@ -1217,78 +1283,6 @@
         }
       ],
       "watch": "US producer prices on Friday and Fed speakers this week; a softer reading would slow the dollar's climb."
-    },
-    {
-      "id": "vpsi-fxstreet-yen-slides-toward-160-20261111",
-      "ts": "2026-11-11T22:30:00Z",
-      "source": "FXStreet (via VPSI)",
-      "url": "https://www.vpsi.org/yen-slides-toward-160-00-with-fed-speakers-and-us-ppi-ahead/",
-      "image": "https://editorial.fxsstatic.com/miscelaneous/image-1794434828491.png",
-      "headline": "Yen slides toward 160.00 with Fed speakers and US PPI ahead",
-      "story": "yen-defence",
-      "story_title": "Japan's fight to prop up the yen",
-      "pillar": "policy",
-      "summary": "The dollar climbed to just under 160 yen, its highest since early September, as bets on a December US rate rise firmed. Japan has stepped in to buy yen near this level before.",
-      "beats": {
-        "was": "The dollar had spent seven weeks between about 156 and 159 yen. US rates sit at 3.75–4.00% against 1.25% in Japan, and Japan spent a record sum buying yen this summer to slow its fall.",
-        "happened": "After hotter-than-expected US inflation figures on Tuesday and Federal Reserve Governor Christopher Waller calling a December rise likely, the dollar broke out of that range and reached just under 160 yen on Wednesday.",
-        "means": "The wide gap between US and Japanese rates keeps pulling money out of the yen. But 160 is where Japan's Finance Ministry has acted before, and the last two times the dollar went above it, it fell more than five yen within a week.",
-        "fx": "Rate gaps push the yen weaker; the risk of Japanese buying, and a possible Bank of Japan rise on December 17–18, push the other way."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The yen is at its weakest in over two months, though official buying near 160 is a real risk."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firm bets on a December Fed rise keep the dollar in demand."
-        }
-      ],
-      "watch": "Warnings from Japan's Finance Ministry, Japan's third-quarter growth figures on Sunday evening (US time), and US producer prices on Friday."
-    },
-    {
-      "id": "srn-reuters-ai-cheer-rate-hike-fear-20261111",
-      "ts": "2026-11-11T22:04:31Z",
-      "source": "SRN News (Reuters)",
-      "url": "https://srnnews.com/ai-cheer-banishes-rate-hike-fear/",
-      "image": null,
-      "headline": "AI cheer banishes rate hike fear",
-      "story": "ai-stock-selloff",
-      "story_title": "AI stocks: sell-off, then a rebound",
-      "pillar": "risk",
-      "summary": "Stocks bounced on Wednesday as cloud-computing firm CoreWeave gave an upbeat outlook, even as the dollar hit a 19-month high and gold slipped back under $4,000.",
-      "beats": {
-        "was": "Shares in artificial-intelligence companies had sold off after the US midterm elections, and Tuesday's hot inflation figures added fear of faster Federal Reserve rate rises.",
-        "happened": "CoreWeave jumped about 20% on a strong outlook and chipmaker Nvidia recovered. The S&P 500 rose 1.3%, chip stocks 5.6%, and Europe's main index closed at a record. Gold fell about 1% to below $4,000 an ounce.",
-        "means": "Investors are willing to buy shares again despite the prospect of higher US rates, which calms nerves for now. A Reuters columnist notes that mixed messages from Fed officials are adding to the confusion.",
-        "fx": "Calmer markets reduce demand for safe havens like the yen and Swiss franc, and support riskier currencies such as the Australian dollar."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Gold slipped back under $4,000 as higher US rates and calmer stocks cut its appeal."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A rally in shares lowers demand for the yen as a safe place to park money."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rising stocks help currencies tied to global growth."
-        }
-      ],
-      "watch": "UK growth figures and a US 30-year bond sale on Thursday; another slide in AI shares would undo the calm."
     },
     {
       "id": "bnn-ap-fed-officials-faster-hikes-20261111",
