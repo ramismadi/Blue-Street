@@ -1,38 +1,38 @@
 {
-  "updated": "2026-11-13T01:35:00-06:00",
+  "updated": "2026-11-13T15:30:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~85% 25bp / ~14.5% 50bp (CME FedWatch); ECB Dec ~88%; BoJ Dec ~84%; BoE Dec ~70–75%; BoC Dec ~32–36%; US 2Y ~4.86% (+34bp in two sessions)",
-      "read": "New York Fed President John Williams, the Fed's number two, said the Fed still has work to do, backing a December hike and more after it. Europe, Britain and Japan are also expected to hike, but US rates are rising faster, so the gap keeps favouring the dollar.",
+      "figure": "Fed Dec hike ~88% 25bp / ~12% 50bp (CME FedWatch); ECB Dec ~88%; BoJ Dec ~84%; BoE Dec ~70–75%; BoC Dec ~32–36%; US 2Y ~4.85%",
+      "read": "San Francisco Fed President Mary Daly joined the officials saying more rate rises are likely, and a December Fed hike is close to certain. Europe, Britain and Japan are also expected to hike, but US rates are rising faster, so the gap keeps favouring the dollar.",
       "sources": [
         {
-          "label": "Blue Street central banks (Hercules, Nov 13 early run)",
+          "label": "Blue Street central banks and pricing (Hercules, Nov 13 close run)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "InvestingLive (Nov 12): Fed's Williams says inflation stubbornly high and Fed still has work to do",
-          "url": "https://investinglive.com/central-banks/fed-s-williams-says-inflation-stubbornly-high-and-fed-still-has-work-to-do-on-policy/"
+          "label": "Reuters via WBOW (Nov 13): Fed likely to need to raise rates amid worsening inflation, Daly says",
+          "url": "https://1027wbow.com/2026/11/13/fed-likely-to-need-to-raise-rates-amid-worsening-inflation-daly/"
         },
         {
-          "label": "Reuters via MarketScreener (Nov 13): Dollar set for best week in two months on rate hike wagers, yen tests 160",
-          "url": "https://www.marketscreener.com/news/dollar-set-for-best-week-in-two-months-on-rate-hike-wagers-yen-tests-160-ce785ed9db81f02c"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Asia session ~12:52 AM CT, Nov 13; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Blue Street headline log (Hercules, Nov 13 close run)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/news-raw.json"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "UK Q3 GDP +0.7% q/q (in line); US jobless claims 200K; euro-area Q3 GDP 2nd est. today 4:00 AM CT, fcst +0.4% q/q",
-      "read": "The US economy still looks firmer than Australia, Canada or New Zealand, which keeps the dollar ahead of those currencies. Euro-area growth figures this morning show whether Europe is keeping up.",
+      "figure": "Euro-area Q3 GDP +0.4% q/q (unrevised), employment flat; UK Q3 GDP +0.7% q/q; US retail sales Tue 7:30 AM CT",
+      "read": "Euro-area growth was confirmed at a decent pace for the summer quarter, but it did not lift the euro. The US economy still looks firmer than Australia, Canada or New Zealand, which keeps the dollar ahead of those currencies. US retail sales on Tuesday are the next check.",
       "sources": [
         {
-          "label": "Blue Street calendar (Hercules, Nov 13): times and forecasts",
+          "label": "Eurostat (Nov 13): euro-area GDP and employment, Q3 second estimate",
+          "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-13112026-ap"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Nov 13): actuals, times and forecasts",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
@@ -40,79 +40,87 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "US Oct CPI +0.4% m/m; US PPI today 7:30 AM CT fcst +0.4% m/m (core +0.3%); Japan Oct wholesale prices +7.1% y/y; Brent ~$96.5",
-      "read": "US inflation is running at about twice the Fed's goal, and oil's climb back toward $97 adds to that worry. That keeps the Fed hiking and supports the dollar. US producer prices this morning are the next check.",
+      "figure": "US PPI Oct +0.3% m/m (fcst +0.4%), +6.5% y/y; core +0.3% m/m in line; Japan wholesale prices +7.1% y/y",
+      "read": "US wholesale prices cooled a touch in October but still run far above what the Fed wants, so the pressure to hike stays. That keeps supporting the dollar. In Japan, a weak yen is pushing wholesale prices up fast.",
       "sources": [
         {
-          "label": "Blue Street calendar (Hercules, Nov 13): times and forecasts",
+          "label": "US Bureau of Labor Statistics: Producer Price Index, October 2026 (Nov 13)",
+          "url": "https://www.bls.gov/news.release/ppi.nr0.htm"
+        },
+        {
+          "label": "Blue Street calendar (Hercules, Nov 13): actuals, times and forecasts",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         },
         {
-          "label": "OilPriceAPI: Brent $96.55 / WTI $89.16 at 12:56 AM CT, Nov 13 (via Hercules' breaking watch)",
-          "url": "https://www.oilpriceapi.com/oil-prices-today"
+          "label": "Blue Street headline log (Hercules, Nov 13 close run)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/news-raw.json"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "Bitcoin −4% to ~$68,600, lowest since August (Reuters); AUD/USD ~0.681, NZD/USD ~0.555; USD/CHF ~0.835",
-      "read": "Tech shares and Bitcoin are sliding, but not enough to send money into safe havens, so the franc and yen get no lift. The Aussie and kiwi, which track the market mood, stay near their lows.",
+      "figure": "USD/CHF ~0.837; AUD/USD ~0.678; NZD/USD ~0.553; CENTCOM: two IRGC drones shot down, radar-hit claim rejected",
+      "read": "Iran's claims of strikes in the Gulf were denied or unconfirmed, so markets stayed calm and the safe-haven franc and yen got no lift. The Aussie and kiwi, which track the market mood, ended the week near their lows.",
       "sources": [
         {
-          "label": "Reuters via MarketScreener (Nov 13): Dollar set for best week in two months on rate hike wagers, yen tests 160",
-          "url": "https://www.marketscreener.com/news/dollar-set-for-best-week-in-two-months-on-rate-hike-wagers-yen-tests-160-ce785ed9db81f02c"
+          "label": "Blue Street market levels (Hercules, New York close ~3:00 PM CT, Nov 13; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street market levels (Hercules, Asia session ~12:52 AM CT, Nov 13; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Blue Street breaking watch (Hercules, Nov 13)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         }
       ]
     },
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$96.5, WTI ~$88.9 (~1:00 AM CT); Thu settle Brent $95.82 (+$3.06); gold ~$3,875",
-      "read": "Oil climbed back after attacks on Saudi energy sites, while gold sits at its lowest in more than a year. Dearer oil helps the Canadian dollar and hurts energy buyers like Japan and the euro area. Weak gold takes some support from the Aussie.",
+      "figure": "Brent ~$96.1, WTI ~$88.9; Brent about −2.5% on the week; gold ~$3,887",
+      "read": "Oil held near Thursday's jump, but the International Energy Agency says the market is back in surplus, which caps prices. Dearer oil helps the Canadian dollar and hurts energy buyers like Japan and the euro area. Gold stayed well below $4,000, taking some support from the Aussie.",
       "sources": [
         {
-          "label": "OilPriceAPI: Brent $96.55 / WTI $89.16 at 12:56 AM CT, Nov 13 (via Hercules' breaking watch)",
-          "url": "https://www.oilpriceapi.com/oil-prices-today"
-        },
-        {
-          "label": "Reuters via Euronext (Nov 12): Oil settles $3 higher on attacks on Saudi energy sites, Strait of Hormuz disruptions",
-          "url": "https://live.euronext.com/en/financial-news/oil-settles-3-higher-attacks-saudi-energy-sites-strait-hormuz-disruptions"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, Asia session ~12:52 AM CT, Nov 13; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close ~3:00 PM CT, Nov 13; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Reuters via RTÉ (Nov 13): Oil prices set for second weekly decline as Trump sticks with Iran blockade",
+          "url": "https://www.rte.ie/news/business/2026/1113/1599081-world-oil-prices/"
+        },
+        {
+          "label": "ANI (Nov 13): IEA sees global oil market back in surplus in Q4 2026",
+          "url": "https://www.aninews.in/news/business/global-oil-market-to-return-to-surplus-in-q4-2026-larger-supply-build-expected-in-2027-iea20261113165213/"
         }
       ]
     },
     {
       "id": "positioning",
       "title": "Positioning",
-      "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD, CAD, EUR; 4-week change NZD −22K, EUR −34K contracts; next report Friday",
-      "read": "Hedge funds lean toward the dollar and against the kiwi, the Canadian dollar and the euro, and this week's moves went their way. Their large bet on the yen keeps losing money as it weakens. A fresh weekly report from US regulators is due today.",
+      "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD, CAD, EUR; 4-week change NZD −22K, EUR −34K contracts; Nov 10 report not yet posted at 3:00 PM CT",
+      "read": "Hedge funds lean toward the dollar and against the kiwi, the Canadian dollar and the euro, and this week's moves went their way. Their large bet on the yen keeps losing money as it weakens. The newest weekly report from US regulators had not been published by the close.",
       "sources": [
         {
           "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 3)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/cot.json"
+        },
+        {
+          "label": "Blue Street headline log (Hercules, Nov 13 close run)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/news-raw.json"
         }
       ]
     },
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "October deficit $404B, a record for the month; US 10-year ~5.11%; 30-year auction 5.441%, bid-to-cover 2.36",
-      "read": "Record US government borrowing and soft demand at this week's bond sales keep long-term US borrowing costs above 5%. Higher yields support the dollar for now, but a growing deficit is a worry if buyers start asking for more.",
+      "figure": "October deficit $404B, a record for the month; US 10-year ~5.13%, largest weekly sell-off in over 18 months",
+      "read": "Record US government borrowing keeps long-term US borrowing costs above 5%, and this was their biggest weekly rise in more than a year and a half. Higher yields support the dollar for now, but a growing deficit is a worry if buyers start asking for more.",
       "sources": [
         {
           "label": "Reuters via Investing.com (Nov 12): US starts 2027 fiscal year with record October budget deficit of $404 billion",
           "url": "https://www.investing.com/news/economy-news/us-starts-2027-fiscal-year-with-record-october-budget-deficit-of-404-billion-5023006"
         },
         {
-          "label": "Blue Street market levels (Hercules, Asia session ~12:52 AM CT, Nov 13; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close ~3:00 PM CT, Nov 13; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
