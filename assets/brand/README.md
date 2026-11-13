@@ -22,19 +22,18 @@ Exported from these files: `assets/icon-512.png`, `icon-192.png`,
 
 ## `png/`: images to save or post
 
-These are high-res images of every version on its background, for phones,
-decks and social profiles. They're built by the same script.
+These are high-res images of every version, sorted by look and built by the
+same script.
 
-- **Logos:** `sign-*`, `symbol-*`, `lockup-*`, `wordmark-*`. Each name says
-  which background it sits on (blue, ivory or white).
-- **Banners:** `banner-<platform>-<style>.png`, exported at 2x the platform
-  size.
-  - Platforms: `x` (1500×500), `linkedin` (profile, 1584×396),
-    `linkedin-page` (company page, 1128×191), `facebook` (cover, 820×312).
-  - Styles:
-    - `sign`: the full sign on blue
-    - `black-lockup`: the black sign with "Blue Street" on ivory
-    - `white-sign`: the blue sign on white
-    - `white-lockup`: the blue sign with "Blue Street" on white
-  - The logo sits in the middle, so profile photos and phone crops don't
-    cover it.
+- `sign/`: the full logo on blue, ivory or white
+- `symbol/`: the sign without words (blue, ivory, white, black)
+- `lockup/`: the sign with "Blue Street" beside it (blue, ivory, white, black)
+- `wordmark/`: BLUE ST on its own
+- `banners/<style>/`: social headers at 2x size for X (1500×500),
+  LinkedIn profile (1584×396), LinkedIn company page (1128×191) and
+  Facebook (820×312). The logo sits in the middle, so profile photos and
+  phone crops don't cover it.
+  - `sign`: the full sign on blue
+  - `white-sign`: the blue sign on white
+  - `black-lockup`: the black sign with "Blue Street" on ivory
+  - `white-lockup`: the blue sign with "Blue Street" on white

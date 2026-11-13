@@ -154,8 +154,9 @@ def export_pngs(png):
     backgrounds, plus social banners in two styles."""
     out = os.path.join(BRAND, 'png')
     os.makedirs(out, exist_ok=True)
-    for f in os.listdir(out):
-        os.remove(os.path.join(out, f))
+    import shutil
+    shutil.rmtree(out)
+    os.makedirs(out)
     sign_vb = SIGN_BOX
     lock_body, lock_vb = {}, None
     for c in (IVORY, BLUE, BLACK):
@@ -165,11 +166,13 @@ def export_pngs(png):
     word = lambda c: '<path fill="%s" d="%s %s"/>' % (c, b, s)
     word_vb = (0, 22, bw + 9 + sw, 62)
 
-    def save(name, svgtext):
+    def save(group, name, svgtext):
+        # Sorted into folders by look: png/<group>/<file>.
+        os.makedirs(os.path.join(out, group), exist_ok=True)
         tmp = os.path.join(out, '.tmp.svg')
         with open(tmp, 'w') as f:
             f.write(svgtext)
-        subprocess.run(['rsvg-convert', tmp, '-o', os.path.join(out, name)], check=True)
+        subprocess.run(['rsvg-convert', tmp, '-o', os.path.join(out, group, name)], check=True)
         os.remove(tmp)
 
     # Logos, 2048px tall squares / 3000px wide.
@@ -190,7 +193,7 @@ def export_pngs(png):
         ('wordmark-on-ivory.png', wide, word(BLUE), word_vb, IVORY),
     ]
     for name, (W, H), body, vb, bg in logos:
-        save(name, place(W, H, body, vb, 0.7, 0.62, bg))
+        save(name.split('-')[0], name, place(W, H, body, vb, 0.7, 0.62, bg))
 
     # Social banners at 2x the platform size. Logo kept in the middle so
     # profile photos and phone crops don't cover it.
@@ -202,7 +205,7 @@ def export_pngs(png):
               ('white-lockup', lock_body[BLUE], lock_vb, WHITE)]
     for style, body, vb, bg in styles:
         for plat, W, H in sizes:
-            save('banner-%s-%s.png' % (plat, style), place(W, H, body, vb, 0.5, 0.6, bg))
+            save('banners/' + style, 'banner-%s-%s.png' % (plat, style), place(W, H, body, vb, 0.5, 0.6, bg))
 
 
 if __name__ == '__main__':
