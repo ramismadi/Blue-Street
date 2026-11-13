@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T01:55:00Z",
+  "updated": "2026-11-13T03:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "bearish",
-      "ts": "2026-11-12T14:55:00Z",
-      "text": "The yen sits near 160 per dollar because US rates are far above Japan's. Faster wholesale prices back a December Bank of Japan rise and Japan keeps warning about the fast fall, while the sudden exit of Nvidia's chief executive and a drop in tech shares add a small safe-haven pull."
+      "ts": "2026-11-13T03:55:00Z",
+      "text": "The dollar briefly rose above 160 yen on Thursday night, a level where Japan and the US stepped in to buy yen in September, because US rates are far above Japan's. Japanese officials keep warning about the fast fall and a December Bank of Japan rise is expected, but neither has stopped the slide so far."
     },
     "CHF": {
       "lean": "bearish",
@@ -86,6 +86,39 @@
         }
       ],
       "watch": "US producer prices and retail sales, and whether any senior official starts arguing for a half-point rise."
+    },
+    {
+      "id": "investing-asia-fx-yen-160-intervention-20261112",
+      "date": "2026-11-12",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/forex-news/asia-fx-yen-intervention-in-focus-as-rate-hike-bets-put-dollar-near-19mth-high-5024024",
+      "image": "https://content-media.investing.com/news/LYNXMPED560CA-ORUBS_L.jpg",
+      "headline": "Asia FX: yen intervention in focus as rate hike bets put dollar near 19-mth high",
+      "story": "yen-defence",
+      "story_title": "Japan's fight to prop up the yen",
+      "pillar": "policy",
+      "summary": "The US dollar briefly rose above 160 Japanese yen overnight before settling just under it in Asian trading on Friday, a level where Japan has stepped in before.",
+      "beats": {
+        "was": "US interest rates are far above Japan's, which has pushed the yen down for months. In September, Japan and the US acted together to buy yen, and Japanese officials have warned again this week as the yen slid back toward 160 per dollar.",
+        "happened": "The dollar crossed 160 yen for a short time on Thursday night, then traded near 159.96 on Friday. Japanese officials again warned against one-sided currency moves, and top currency official Atsushi Mimura said it was too early to forget the September action.",
+        "means": "The line Japan has defended before has now been touched, so the chance of Japan buying yen again is rising. Until it does, the gap in rates keeps pulling the yen lower.",
+        "fx": "Steady pressure on the yen from US rates, with a risk of a sudden yen jump if Japan steps in."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The yen touched 160 per dollar as the rate gap with the US keeps widening."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The dollar is set for a third weekly rise on bets of more Federal Reserve rate rises."
+        }
+      ],
+      "watch": "Whether Japan buys yen if the dollar stays above 160, Japan's third-quarter growth and October inflation figures next week, and US producer prices on Friday."
     },
     {
       "id": "investing-reuters-us-deficit-october-record-20261112",
@@ -1419,45 +1452,6 @@
         }
       ],
       "watch": "Australia's October jobs report on Thursday: further weakness would firm up the view that the cash rate has peaked at 4.85%."
-    },
-    {
-      "id": "investinglive-logan-two-more-hikes-20261110",
-      "ts": "2026-11-10T15:55:17Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/fed-s-logan-it-s-clear-that-fed-needs-at-least-two-more-quarter-point-rate-hikes/",
-      "image": "https://investinglive.com/cms/media/images/Fed's%20Logan_id_5b0803d1-58a1-4da8-b4b5-4bacd2fb1797_original.jpg?width=960&format=webp",
-      "headline": "Fed's Logan: It's clear that Fed needs at least two more quarter-point rate hikes",
-      "story": "fed-december",
-      "story_title": "Fed: a December rate rise and what US inflation says",
-      "pillar": "policy",
-      "summary": "Dallas Fed President Lorie Logan said the Federal Reserve needs at least two more quarter-point rate rises and may have to move faster this winter, hours after hot US October inflation figures.",
-      "beats": {
-        "was": "The Federal Reserve's main rate is 3.75–4.00% after rises aimed at inflation well above its 2% goal. On Tuesday, US core consumer prices, which leave out food and energy, rose 0.3% in October against 0.2% expected, and Fed Governor Christopher Waller had said a half-point December rise should be considered at that level.",
-        "happened": "Logan, who has voted against past decisions in favour of higher rates, said it is clear at least two more quarter-point rises are needed, that rates may need to rise faster than they have so far, and that the Fed could then pause to take stock. She said the main rate is at least half a point below where it would modestly slow the economy, and worried that the hot consumer price figures point to higher readings on the Fed's preferred inflation measure.",
-        "means": "Two senior officials in one day have now talked openly about more and possibly bigger rises. Two-year US Treasury yields, which track rate expectations, jumped about 0.2 percentage point to 4.75%, and markets now treat a December rise as close to certain.",
-        "fx": "A Fed leaning toward more rises supports the US dollar against most currencies, and weighs on the yen and gold, which pay little or no interest."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A senior Fed official called for at least two more rate rises, possibly at a faster pace."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher US rates widen the gap with Japan and keep the yen near its weakest in weeks."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher US rates make gold, which pays no interest, less attractive."
-        }
-      ],
-      "watch": "The Fed's December 8–9 meeting: whether officials beyond Waller and Logan back a half-point rise rather than a quarter-point one."
     }
   ]
 }
