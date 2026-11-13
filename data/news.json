@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-13T11:47:42Z",
+  "updated": "2026-11-13T12:47:49Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-13T01:55:00Z",
-      "text": "The dollar is at its highest since April 2025 because Federal Reserve officials, including New York's John Williams, say inflation is too high and rates must keep rising. The costs are showing: US home sales are at their slowest since 2010, and the government's record October deficit means more bond sales on top."
+      "ts": "2026-11-13T12:47:49Z",
+      "text": "The dollar is set for its best week in two months, near its highest since April 2025, because Federal Reserve officials, including New York's John Williams, say inflation is too high and rates must keep rising, and markets now see a small chance of a half-point rise. The costs are showing in weak home sales and a record October budget deficit."
     },
     "EUR": {
       "lean": "bearish",
@@ -29,13 +29,13 @@
     },
     "CAD": {
       "lean": "mixed",
-      "ts": "2026-11-13T11:47:42Z",
-      "text": "Oil, Canada's main export, is near $96 after attacks on Saudi sites and a claimed Iranian strike on a US base in Bahrain, and the Bank of Canada says it is ready to raise rates again if energy costs spread. But Canada has lost jobs two months running, the energy agency sees an oil surplus ahead, and the loonie is held down by a strong US dollar."
+      "ts": "2026-11-13T12:47:49Z",
+      "text": "Oil, Canada's main export, is near $96 after attacks on Saudi sites and Iran's claimed strike on a US base in Bahrain, and the Bank of Canada says it is ready to raise rates again if energy costs spread. But oil is still headed for a second weekly fall as Gulf supply recovers, Canada has lost jobs two months running, and the strong US dollar holds the loonie down."
     },
     "AUD": {
       "lean": "bearish",
-      "ts": "2026-11-12T14:55:00Z",
-      "text": "The Australian dollar is weighed down by a strong US dollar and by falling tech shares after Nvidia's chief executive quit. At home, new home loans and consumer confidence have dropped, signs the 4.85% cash rate is biting that make another Reserve Bank of Australia rise less likely."
+      "ts": "2026-11-13T12:47:49Z",
+      "text": "The Australian dollar has been the weakest major currency this past month, down about 2.5% against the US dollar, as Australia is the only big economy where markets expect rate cuts next year. Falling home loans and consumer confidence suggest the Reserve Bank of Australia's 4.85% rate is already biting."
     },
     "NZD": {
       "lean": "mixed",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "reuters-oil-second-weekly-decline-blockade-20261113",
+      "date": "2026-11-13",
+      "source": "Reuters",
+      "url": "https://www.emirates247.com/business/oil-prices-set-for-second-weekly-decline-as-trump-sticks-with-iran-blockade/7755",
+      "image": "https://api.emirates247.com/emirates247/uploads/images/2026/11/13/12116.webp",
+      "headline": "Oil prices set for second weekly decline as Trump sticks with Iran blockade",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "tot",
+      "summary": "Oil is heading for a second weekly fall of around 2%, even after this week's attacks near Hormuz, as the US keeps its pressure on Iran through a blockade rather than wider fighting.",
+      "beats": {
+        "was": "Oil soared earlier this year when the US-Iran war shut most traffic through the Strait of Hormuz. Prices then fell hard last week, Brent by about 16%, as Gulf exports recovered.",
+        "happened": "Brent and US crude were mixed on Friday and on track to lose about 2% on the week. Reports say President Donald Trump is sticking with the US blockade of Iranian ports, which traders read as steady pressure rather than a new escalation.",
+        "means": "Ship attacks and Iran's claimed strike on a US base in Bahrain keep a risk premium in prices, but more Gulf supply and a coming surplus, which the International Energy Agency flagged this week, are pulling the other way.",
+        "fx": "A softer oil week takes some support away from oil exporters like Canada and eases inflation worries a little for big importers like Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Prices are on course for a second weekly drop as supply recovers."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Weaker oil trims support for Canada's main export."
+        }
+      ],
+      "watch": "Whether the US confirms or answers Iran's claimed strike in Bahrain; a direct clash would quickly reverse the decline."
+    },
     {
       "id": "aljazeera-iran-us-radar-bahrain-20261113",
       "date": "2026-11-13",
@@ -187,6 +220,51 @@
       "watch": "Euro-area inflation for November and what ECB officials say about rises after December."
     },
     {
+      "id": "reuters-dollar-best-week-two-months-20261113",
+      "ts": "2026-11-13T05:48:26Z",
+      "source": "Reuters",
+      "url": "https://www.marketscreener.com/news/dollar-set-for-best-week-in-two-months-on-rate-hike-wagers-yen-tests-160-ce785ed9db81f02c",
+      "image": "https://cdn.zonebourse.com/static/resize/0/0//images/reuters/2025-05/2025-05-12T001013Z_1_LYNXMPEL4B007_RTROPTP_4_GLOBAL-FOREX.JPG",
+      "headline": "Dollar set for best week in two months on rate hike wagers, yen tests 160",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "policy",
+      "summary": "The dollar is heading for its biggest weekly gain since September, as markets start to price a chance that the Federal Reserve raises rates by half a point rather than a quarter. The Australian dollar has been the weakest major currency over the past month.",
+      "beats": {
+        "was": "The Federal Reserve has been raising rates to fight inflation, and a hot US consumer price report earlier this week made investors expect more rises. The dollar was already at its highest since April 2025.",
+        "happened": "Over the week the dollar gained close to 1% against a basket of major currencies. Futures now show a small chance of a half-point Fed rise at the next meeting, where a week ago there was none, and two-year US Treasury yields jumped sharply over two days. The yen sat just under 160 per dollar, and the Australian dollar has lost about 2.5% in a month.",
+        "means": "Money keeps moving toward the dollar because US rates look set to climb faster and further than elsewhere. Australia stands out as the one major economy where markets expect rate cuts next year, which leaves its currency with the least support.",
+        "fx": "Supports the dollar against most majors; weighs most on the Australian dollar and keeps the yen near the level where Japan has stepped in before."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Bets on bigger and more Fed rate rises are pulling money into the dollar."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "The only major currency where markets expect rate cuts next year, so it has the least rate support."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The wide gap between US and Japanese rates keeps the yen near 160 per dollar."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro is near its lowest against the dollar since April 2025."
+        }
+      ],
+      "watch": "Friday's US producer price report and next week's Fed speeches: softer price data would cool talk of a half-point rise."
+    },
+    {
       "id": "investinglive-williams-work-to-do-20261113",
       "ts": "2026-11-13T00:06:28Z",
       "source": "InvestingLive",
@@ -218,267 +296,6 @@
         }
       ],
       "watch": "US producer prices and retail sales, and whether any senior official starts arguing for a half-point rise."
-    },
-    {
-      "id": "kitco-gold-silver-slide-yields-20261112",
-      "ts": "2026-11-12T22:16:45Z",
-      "source": "Kitco",
-      "url": "https://www.kitco.com/news/article/2026-11-12/gold-silver-slide-treasury-yields-surge-fed-hike-concerns-intensify-kitco",
-      "image": "https://images.kitco.com/img/extract_0_0_1023_576,width_1200,enlarge,format_jpeg/icms/5768df25-c265-4c2d-a489-e51917a45667.jpeg",
-      "headline": "Gold, silver slide as Treasury yields surge, Fed hike concerns intensify",
-      "story": "gold-fed-cpi",
-      "story_title": "Gold: rising US rates vs war risk",
-      "pillar": "rates",
-      "summary": "Gold fell almost 3% on Thursday to about $3,876 an ounce, below $3,900, as US government bond yields jumped on bets the Federal Reserve will keep raising rates.",
-      "beats": {
-        "was": "US consumer prices rose faster than expected in October, and Federal Reserve officials have since talked up more rate rises. Gold had already slipped below $4,000 on Wednesday.",
-        "happened": "Spot gold dropped about $110 and silver fell about 3% to near $50. The 10-year US Treasury yield rose to about 5.10%, and futures put the chance of a December Fed rise at near certain, with about a one-in-seven chance of a bigger half-point move.",
-        "means": "Gold pays no interest, so when safe US bonds pay over 5% it loses appeal, and a strong dollar makes it dearer for buyers abroad. For now that outweighs the pull from the Middle East war.",
-        "fx": "Higher US yields back the dollar; the fall in gold and silver is a mild drag on Australia's metal-heavy exports."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Higher US yields and a firm dollar cut gold's appeal."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rising Treasury yields reflect bets on more Fed rate rises."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Cheaper metals trim Australia's export income."
-        }
-      ],
-      "watch": "US producer prices next, Fed speakers' views on a half-point move, and whether war news brings back safe-haven buying."
-    },
-    {
-      "id": "aol-reuters-oil-settles-houthi-saudi-20261112",
-      "ts": "2026-11-12T20:51:00Z",
-      "source": "Reuters (via AOL)",
-      "url": "https://www.aol.com/articles/oil-prices-drop-more-1-014618000.html",
-      "image": "https://hermes.media.transform.aol.com/79c3e9ce2e3a74a3abc3f77033642cff5c26a026/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/12/6a244a3b-220e-3449-ab8a-7f4ae756e832/ae92bb4b-e599-462e-add2-2444bf746951.jpg",
-      "headline": "Oil settles $3 higher on attacks on Saudi energy sites, Strait of Hormuz disruptions",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Oil jumped more than 3% on Thursday after Yemen's Houthi group said it attacked Saudi oil sites, on top of Iranian claims of tankers hit in the Strait of Hormuz. Brent closed near $96 a barrel.",
-      "beats": {
-        "was": "Since the US and Israel went to war with Iran in late February, the Strait of Hormuz, the route for about a fifth of the world's oil, has been restricted. Saudi Arabia's pipeline to the Red Sea port of Yanbu is its main way to ship oil around the strait.",
-        "happened": "The Houthis, an Iran-backed group in Yemen, said they struck a pumping station on that Saudi pipeline, an oil site at Yanbu and a Saudi Aramco building in Riyadh. The Saudi-led coalition said it shot down two drones. Brent settled at $95.82, up $3.06, and US crude at $88.74, though both are still down about 2.5% on the week.",
-        "means": "The war's risks are no longer just inside the strait: the route Saudi Arabia uses to get around it is now a target too. That makes it harder for supply to recover even if ship traffic through Hormuz picks up.",
-        "fx": "Dearer oil helps the Canadian dollar and hurts big oil importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Attacks on Saudi Arabia's bypass pipeline threaten the main way around Hormuz."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil prices help Canada's biggest export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so its import bill rises."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro area imports most of its energy."
-        }
-      ],
-      "watch": "Whether Saudi Arabia confirms any damage or lost flows, more Houthi attacks, and the International Energy Agency's monthly oil report on Friday."
-    },
-    {
-      "id": "marketscreener-goolsbee-inflation-tough-spot-20261112",
-      "ts": "2026-11-12T20:16:40Z",
-      "source": "MT Newswires (via MarketScreener)",
-      "url": "https://www.marketscreener.com/news/fed-s-goolsbee-says-inflation-inching-into-tough-spot-ce785ed8d08efe20",
-      "image": "https://cdn.zonebourse.com/static/resize/0/0//images/mtnewswires/A3753065.png",
-      "headline": "Fed's Goolsbee Says Inflation 'Inching' Into Tough Spot",
-      "story": "fed-hikes",
-      "story_title": "Fed: how fast to raise rates after hot inflation",
-      "pillar": "policy",
-      "summary": "Chicago Fed President Austan Goolsbee said the Federal Reserve has to act on inflation before the economy overheats, adding to the run of officials backing more rate rises.",
-      "beats": {
-        "was": "US consumer prices rose more than expected in October, and markets now treat a December Fed rate rise as close to certain. The open question is how fast and how far rates go after that.",
-        "happened": "Speaking on Yahoo Finance, Goolsbee said inflation is moving into a difficult place and the Fed should move before price pressures build further. He did not call for a bigger half-point step.",
-        "means": "Goolsbee is usually one of the more cautious officials, so his support for acting firms up the December rise and the case for more after it.",
-        "fx": "Supports the dollar against currencies whose central banks are closer to stopping."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A usually cautious Fed official backs further rate rises."
-        }
-      ],
-      "watch": "New York Fed President John Williams' remarks, US producer prices, and any official openly calling for a half-point rise."
-    },
-    {
-      "id": "yahoo-reuters-four-tankers-hormuz-explosions-20261112",
-      "ts": "2026-11-12T16:27:00Z",
-      "source": "Reuters (via Yahoo News)",
-      "url": "https://www.yahoo.com/news/articles/four-tankers-struck-explosions-strait-162708977.html",
-      "image": null,
-      "headline": "Iran says four tankers were hit by explosions in the Strait of Hormuz",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Iran's military says four oil tankers were hit by explosions in the Strait of Hormuz over Wednesday and Thursday after ignoring its warnings. Reuters could not check the claim, but oil rose to a new high for the day.",
-      "beats": {
-        "was": "The US and Israel went to war with Iran in late February, and Iran has since restricted the Strait of Hormuz, the route for about a fifth of the world's oil. Ship traffic had been recovering on hopes of a US–Iran deal.",
-        "happened": "Iran's Revolutionary Guards said two large tankers blew up on Wednesday after taking a route it had not approved, and its army said two more hit mines and caught fire on Thursday. A UK shipping agency separately reported a ship struck by a projectile off the United Arab Emirates on Wednesday. At least 10 ships have been hit so far this month, after 37 in October.",
-        "means": "Even with traffic picking up, Iran is showing it can still stop tankers at will, and this comes the same day President Trump said the US no longer needs a deal. Brent rose above $95 a barrel.",
-        "fx": "Higher oil and more war risk help the Canadian dollar and weigh on big oil buyers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Fresh attacks on tankers in the main Gulf oil route keep supply at risk."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Dearer oil helps Canada's main export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so a higher bill hurts."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro area is a big energy importer."
-        }
-      ],
-      "watch": "Whether shipping firms pause Hormuz trips again, any independent confirmation of the hits, and the International Energy Agency's monthly oil report on Friday."
-    },
-    {
-      "id": "yahoo-nvidia-huang-resigns-20261112",
-      "ts": "2026-11-12T14:41:00Z",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/20cffb91b7d328ceb77205be0cb7d49c01666b95489fcbd58832ce2967a99cfc/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2Fuser-uploaded%2Fgettyimages-1258223529_4244.jpg",
-      "headline": "Stock market today: S&P 500, Nasdaq sink as Nvidia CEO Jensen Huang resigns, stock tanks",
-      "story": "nvidia-ceo",
-      "story_title": "Nvidia: chief executive Jensen Huang steps down",
-      "pillar": "risk",
-      "summary": "Jensen Huang, Nvidia's co-founder and chief executive, resigned with immediate effect on Thursday; the shares fell 7–10% in early New York trading and pulled the Nasdaq lower.",
-      "beats": {
-        "was": "Nvidia, the chipmaker at the centre of the AI boom and one of the world's biggest companies, has been under pressure since newspaper reports about Huang's personal conduct led its board to open an investigation last weekend. On Wednesday night the board met to decide his future.",
-        "happened": "Nvidia said Huang has left as chief executive, president and board member, effective at once. Finance chief Colette Kress takes over for now until a permanent pick is named. Nvidia shares dropped sharply at the New York open, other chipmakers slipped, and the Nasdaq fell close to 1% while the wider S&P 500 lost less.",
-        "means": "The man most linked to the AI rally is gone, which hits confidence in the tech shares that have led global stocks. So far the selling is mostly inside tech, not a broad flight from risk, and currency moves are small.",
-        "fx": "A small pull toward safe havens such as the yen and Swiss franc and away from risk-linked currencies like the Australian dollar, which would grow only if the selling spreads to the wider market."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A tech-led stock drop can draw some safe-haven buying."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Weaker stocks weigh on currencies tied to risk appetite."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Mild safe-haven pull if the selling widens."
-        }
-      ],
-      "watch": "Whether the stock slide spreads beyond chipmakers through the US session, and who Nvidia names as its permanent chief executive."
-    },
-    {
-      "id": "zetik-cnbc-trump-no-iran-deal-needed-20261112",
-      "ts": "2026-11-12T14:21:20Z",
-      "source": "Zetik (CNBC)",
-      "url": "https://www.zetik.com/news/article/story_id-p008-231700",
-      "image": "https://prod-static.newsbang.com/media/20261112/222ffeda168af9a2471abefc188f4814-hd.webp",
-      "headline": "Brent Rises to $93.29 as Trump's No-Deal Iran Remarks Revive War Premium",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran talks: Hormuz reopening offer vs ship attacks",
-      "pillar": "commodities",
-      "summary": "US President Donald Trump said on Thursday the US does not need a deal with Iran and claimed control of the Strait of Hormuz, nudging Brent crude back up to about $93 a barrel.",
-      "beats": {
-        "was": "Since the US–Iran war began, ships near the Strait of Hormuz, the route for about a fifth of the world's oil, have been attacked again and again. Oil had dropped earlier this week on hopes of direct US–Iran talks, and US crude is down about 16% in November.",
-        "happened": "Trump said a deal with Iran is not needed and that the US has control of the strait. Brent rose about 0.5% to $93.29 while US crude was little changed near $86, undoing part of the earlier drop.",
-        "means": "The remarks cast doubt on a quick peace deal, so some of the war risk that had been taken out of oil prices is coming back. Analysts also warn the claim of US control could invite more attacks on ships.",
-        "fx": "Firmer oil gives a little help to the Canadian dollar and weighs a little on oil importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Doubt over a deal puts some war risk back into the price."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Canada's main export gets a small lift."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so dearer crude is a small drag."
-        }
-      ],
-      "watch": "Whether Tehran responds to Trump's claim, any new attacks on ships near Hormuz, and whether the reported meeting between US Vice President JD Vance and Iran's security chief Mohsen Rezaei goes ahead."
-    },
-    {
-      "id": "srn-reuters-jobless-claims-200k-20261112",
-      "ts": "2026-11-12T13:38:48Z",
-      "source": "Reuters (via SRN News)",
-      "url": "https://srnnews.com/us-weekly-jobless-claims-increase-but-labor-market-firming/",
-      "image": "https://www.srnnews.com/media/2026/11/1794492317961998V1rLboaOc2.jpg?x54510",
-      "headline": "US weekly jobless claims increase, but labor market firming",
-      "story": "us-jobs",
-      "story_title": "US jobs: hiring holds up as the Fed raises rates",
-      "pillar": "growth",
-      "summary": "New US claims for unemployment benefits rose to 200,000 last week, a little more than the 195,000 forecast but still very low, so the job market still looks firm.",
-      "beats": {
-        "was": "The US job market has been strong: employers added many more jobs than expected in October and the jobless rate fell to 4.1%. With inflation back up, the Federal Reserve is expected to raise rates in December, and a solid job market supports that.",
-        "happened": "First-time claims for jobless benefits, a weekly read on layoffs, rose by 9,000 to 200,000 in the week to November 7, slightly above forecasts. The number of people still claiming benefits fell by 20,000 to about 1.7 million. Claims have stayed at or under 200,000 since mid-September, close to their lowest since 1969.",
-        "means": "Layoffs remain rare, so nothing here argues against a December Fed rate rise. The small miss is noise; it would take a clear jump in claims to change the Fed's path.",
-        "fx": "Little change for the dollar; it keeps the backing of a firm job market and a Fed still raising rates."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Claims a touch above forecast, but still low enough to keep the Fed on course to raise rates."
-        }
-      ],
-      "watch": "Federal Reserve speakers later this week, and next month's US jobs report before the December Fed meeting."
     },
     {
       "id": "investing-asia-fx-yen-160-intervention-20261112",
@@ -838,6 +655,267 @@
       "watch": "Firmer language such as a 'final warning', sudden sharp yen gains that hint at official buying, and Japan's third-quarter growth figures on Sunday evening (US time)."
     },
     {
+      "id": "kitco-gold-silver-slide-yields-20261112",
+      "ts": "2026-11-12T22:16:45Z",
+      "source": "Kitco",
+      "url": "https://www.kitco.com/news/article/2026-11-12/gold-silver-slide-treasury-yields-surge-fed-hike-concerns-intensify-kitco",
+      "image": "https://images.kitco.com/img/extract_0_0_1023_576,width_1200,enlarge,format_jpeg/icms/5768df25-c265-4c2d-a489-e51917a45667.jpeg",
+      "headline": "Gold, silver slide as Treasury yields surge, Fed hike concerns intensify",
+      "story": "gold-fed-cpi",
+      "story_title": "Gold: rising US rates vs war risk",
+      "pillar": "rates",
+      "summary": "Gold fell almost 3% on Thursday to about $3,876 an ounce, below $3,900, as US government bond yields jumped on bets the Federal Reserve will keep raising rates.",
+      "beats": {
+        "was": "US consumer prices rose faster than expected in October, and Federal Reserve officials have since talked up more rate rises. Gold had already slipped below $4,000 on Wednesday.",
+        "happened": "Spot gold dropped about $110 and silver fell about 3% to near $50. The 10-year US Treasury yield rose to about 5.10%, and futures put the chance of a December Fed rise at near certain, with about a one-in-seven chance of a bigger half-point move.",
+        "means": "Gold pays no interest, so when safe US bonds pay over 5% it loses appeal, and a strong dollar makes it dearer for buyers abroad. For now that outweighs the pull from the Middle East war.",
+        "fx": "Higher US yields back the dollar; the fall in gold and silver is a mild drag on Australia's metal-heavy exports."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Higher US yields and a firm dollar cut gold's appeal."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Rising Treasury yields reflect bets on more Fed rate rises."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Cheaper metals trim Australia's export income."
+        }
+      ],
+      "watch": "US producer prices next, Fed speakers' views on a half-point move, and whether war news brings back safe-haven buying."
+    },
+    {
+      "id": "aol-reuters-oil-settles-houthi-saudi-20261112",
+      "ts": "2026-11-12T20:51:00Z",
+      "source": "Reuters (via AOL)",
+      "url": "https://www.aol.com/articles/oil-prices-drop-more-1-014618000.html",
+      "image": "https://hermes.media.transform.aol.com/79c3e9ce2e3a74a3abc3f77033642cff5c26a026/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/12/6a244a3b-220e-3449-ab8a-7f4ae756e832/ae92bb4b-e599-462e-add2-2444bf746951.jpg",
+      "headline": "Oil settles $3 higher on attacks on Saudi energy sites, Strait of Hormuz disruptions",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Oil jumped more than 3% on Thursday after Yemen's Houthi group said it attacked Saudi oil sites, on top of Iranian claims of tankers hit in the Strait of Hormuz. Brent closed near $96 a barrel.",
+      "beats": {
+        "was": "Since the US and Israel went to war with Iran in late February, the Strait of Hormuz, the route for about a fifth of the world's oil, has been restricted. Saudi Arabia's pipeline to the Red Sea port of Yanbu is its main way to ship oil around the strait.",
+        "happened": "The Houthis, an Iran-backed group in Yemen, said they struck a pumping station on that Saudi pipeline, an oil site at Yanbu and a Saudi Aramco building in Riyadh. The Saudi-led coalition said it shot down two drones. Brent settled at $95.82, up $3.06, and US crude at $88.74, though both are still down about 2.5% on the week.",
+        "means": "The war's risks are no longer just inside the strait: the route Saudi Arabia uses to get around it is now a target too. That makes it harder for supply to recover even if ship traffic through Hormuz picks up.",
+        "fx": "Dearer oil helps the Canadian dollar and hurts big oil importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Attacks on Saudi Arabia's bypass pipeline threaten the main way around Hormuz."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices help Canada's biggest export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so its import bill rises."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro area imports most of its energy."
+        }
+      ],
+      "watch": "Whether Saudi Arabia confirms any damage or lost flows, more Houthi attacks, and the International Energy Agency's monthly oil report on Friday."
+    },
+    {
+      "id": "marketscreener-goolsbee-inflation-tough-spot-20261112",
+      "ts": "2026-11-12T20:16:40Z",
+      "source": "MT Newswires (via MarketScreener)",
+      "url": "https://www.marketscreener.com/news/fed-s-goolsbee-says-inflation-inching-into-tough-spot-ce785ed8d08efe20",
+      "image": "https://cdn.zonebourse.com/static/resize/0/0//images/mtnewswires/A3753065.png",
+      "headline": "Fed's Goolsbee Says Inflation 'Inching' Into Tough Spot",
+      "story": "fed-hikes",
+      "story_title": "Fed: how fast to raise rates after hot inflation",
+      "pillar": "policy",
+      "summary": "Chicago Fed President Austan Goolsbee said the Federal Reserve has to act on inflation before the economy overheats, adding to the run of officials backing more rate rises.",
+      "beats": {
+        "was": "US consumer prices rose more than expected in October, and markets now treat a December Fed rate rise as close to certain. The open question is how fast and how far rates go after that.",
+        "happened": "Speaking on Yahoo Finance, Goolsbee said inflation is moving into a difficult place and the Fed should move before price pressures build further. He did not call for a bigger half-point step.",
+        "means": "Goolsbee is usually one of the more cautious officials, so his support for acting firms up the December rise and the case for more after it.",
+        "fx": "Supports the dollar against currencies whose central banks are closer to stopping."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A usually cautious Fed official backs further rate rises."
+        }
+      ],
+      "watch": "New York Fed President John Williams' remarks, US producer prices, and any official openly calling for a half-point rise."
+    },
+    {
+      "id": "yahoo-reuters-four-tankers-hormuz-explosions-20261112",
+      "ts": "2026-11-12T16:27:00Z",
+      "source": "Reuters (via Yahoo News)",
+      "url": "https://www.yahoo.com/news/articles/four-tankers-struck-explosions-strait-162708977.html",
+      "image": null,
+      "headline": "Iran says four tankers were hit by explosions in the Strait of Hormuz",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Iran's military says four oil tankers were hit by explosions in the Strait of Hormuz over Wednesday and Thursday after ignoring its warnings. Reuters could not check the claim, but oil rose to a new high for the day.",
+      "beats": {
+        "was": "The US and Israel went to war with Iran in late February, and Iran has since restricted the Strait of Hormuz, the route for about a fifth of the world's oil. Ship traffic had been recovering on hopes of a US–Iran deal.",
+        "happened": "Iran's Revolutionary Guards said two large tankers blew up on Wednesday after taking a route it had not approved, and its army said two more hit mines and caught fire on Thursday. A UK shipping agency separately reported a ship struck by a projectile off the United Arab Emirates on Wednesday. At least 10 ships have been hit so far this month, after 37 in October.",
+        "means": "Even with traffic picking up, Iran is showing it can still stop tankers at will, and this comes the same day President Trump said the US no longer needs a deal. Brent rose above $95 a barrel.",
+        "fx": "Higher oil and more war risk help the Canadian dollar and weigh on big oil buyers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Fresh attacks on tankers in the main Gulf oil route keep supply at risk."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Dearer oil helps Canada's main export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so a higher bill hurts."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro area is a big energy importer."
+        }
+      ],
+      "watch": "Whether shipping firms pause Hormuz trips again, any independent confirmation of the hits, and the International Energy Agency's monthly oil report on Friday."
+    },
+    {
+      "id": "yahoo-nvidia-huang-resigns-20261112",
+      "ts": "2026-11-12T14:41:00Z",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/20cffb91b7d328ceb77205be0cb7d49c01666b95489fcbd58832ce2967a99cfc/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2Fuser-uploaded%2Fgettyimages-1258223529_4244.jpg",
+      "headline": "Stock market today: S&P 500, Nasdaq sink as Nvidia CEO Jensen Huang resigns, stock tanks",
+      "story": "nvidia-ceo",
+      "story_title": "Nvidia: chief executive Jensen Huang steps down",
+      "pillar": "risk",
+      "summary": "Jensen Huang, Nvidia's co-founder and chief executive, resigned with immediate effect on Thursday; the shares fell 7–10% in early New York trading and pulled the Nasdaq lower.",
+      "beats": {
+        "was": "Nvidia, the chipmaker at the centre of the AI boom and one of the world's biggest companies, has been under pressure since newspaper reports about Huang's personal conduct led its board to open an investigation last weekend. On Wednesday night the board met to decide his future.",
+        "happened": "Nvidia said Huang has left as chief executive, president and board member, effective at once. Finance chief Colette Kress takes over for now until a permanent pick is named. Nvidia shares dropped sharply at the New York open, other chipmakers slipped, and the Nasdaq fell close to 1% while the wider S&P 500 lost less.",
+        "means": "The man most linked to the AI rally is gone, which hits confidence in the tech shares that have led global stocks. So far the selling is mostly inside tech, not a broad flight from risk, and currency moves are small.",
+        "fx": "A small pull toward safe havens such as the yen and Swiss franc and away from risk-linked currencies like the Australian dollar, which would grow only if the selling spreads to the wider market."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A tech-led stock drop can draw some safe-haven buying."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Weaker stocks weigh on currencies tied to risk appetite."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Mild safe-haven pull if the selling widens."
+        }
+      ],
+      "watch": "Whether the stock slide spreads beyond chipmakers through the US session, and who Nvidia names as its permanent chief executive."
+    },
+    {
+      "id": "zetik-cnbc-trump-no-iran-deal-needed-20261112",
+      "ts": "2026-11-12T14:21:20Z",
+      "source": "Zetik (CNBC)",
+      "url": "https://www.zetik.com/news/article/story_id-p008-231700",
+      "image": "https://prod-static.newsbang.com/media/20261112/222ffeda168af9a2471abefc188f4814-hd.webp",
+      "headline": "Brent Rises to $93.29 as Trump's No-Deal Iran Remarks Revive War Premium",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran talks: Hormuz reopening offer vs ship attacks",
+      "pillar": "commodities",
+      "summary": "US President Donald Trump said on Thursday the US does not need a deal with Iran and claimed control of the Strait of Hormuz, nudging Brent crude back up to about $93 a barrel.",
+      "beats": {
+        "was": "Since the US–Iran war began, ships near the Strait of Hormuz, the route for about a fifth of the world's oil, have been attacked again and again. Oil had dropped earlier this week on hopes of direct US–Iran talks, and US crude is down about 16% in November.",
+        "happened": "Trump said a deal with Iran is not needed and that the US has control of the strait. Brent rose about 0.5% to $93.29 while US crude was little changed near $86, undoing part of the earlier drop.",
+        "means": "The remarks cast doubt on a quick peace deal, so some of the war risk that had been taken out of oil prices is coming back. Analysts also warn the claim of US control could invite more attacks on ships.",
+        "fx": "Firmer oil gives a little help to the Canadian dollar and weighs a little on oil importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Doubt over a deal puts some war risk back into the price."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada's main export gets a small lift."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so dearer crude is a small drag."
+        }
+      ],
+      "watch": "Whether Tehran responds to Trump's claim, any new attacks on ships near Hormuz, and whether the reported meeting between US Vice President JD Vance and Iran's security chief Mohsen Rezaei goes ahead."
+    },
+    {
+      "id": "srn-reuters-jobless-claims-200k-20261112",
+      "ts": "2026-11-12T13:38:48Z",
+      "source": "Reuters (via SRN News)",
+      "url": "https://srnnews.com/us-weekly-jobless-claims-increase-but-labor-market-firming/",
+      "image": "https://www.srnnews.com/media/2026/11/1794492317961998V1rLboaOc2.jpg?x54510",
+      "headline": "US weekly jobless claims increase, but labor market firming",
+      "story": "us-jobs",
+      "story_title": "US jobs: hiring holds up as the Fed raises rates",
+      "pillar": "growth",
+      "summary": "New US claims for unemployment benefits rose to 200,000 last week, a little more than the 195,000 forecast but still very low, so the job market still looks firm.",
+      "beats": {
+        "was": "The US job market has been strong: employers added many more jobs than expected in October and the jobless rate fell to 4.1%. With inflation back up, the Federal Reserve is expected to raise rates in December, and a solid job market supports that.",
+        "happened": "First-time claims for jobless benefits, a weekly read on layoffs, rose by 9,000 to 200,000 in the week to November 7, slightly above forecasts. The number of people still claiming benefits fell by 20,000 to about 1.7 million. Claims have stayed at or under 200,000 since mid-September, close to their lowest since 1969.",
+        "means": "Layoffs remain rare, so nothing here argues against a December Fed rate rise. The small miss is noise; it would take a clear jump in claims to change the Fed's path.",
+        "fx": "Little change for the dollar; it keeps the backing of a firm job market and a Fed still raising rates."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Claims a touch above forecast, but still low enough to keep the Fed on course to raise rates."
+        }
+      ],
+      "watch": "Federal Reserve speakers later this week, and next month's US jobs report before the December Fed meeting."
+    },
+    {
       "id": "gbaf-reuters-ecb-poll-last-hike-december-20261112",
       "ts": "2026-11-12T11:20:25Z",
       "source": "Reuters (via Global Banking & Finance Review)",
@@ -1063,6 +1141,45 @@
       "watch": "Any formal US reply to Iran's offer through Qatar, and whether the two-week strike window an Iranian aide described is confirmed by Washington."
     },
     {
+      "id": "aljazeera-iran-denies-talks-hormuz-shut-20261111",
+      "date": "2026-11-11",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/afp_6af3eb2f86fc-1794370351.jpg?resize=1920%2C1440",
+      "headline": "Iran denies talks with the US and says the Strait of Hormuz stays shut until its demands are met",
+      "story": "us-iran-talks",
+      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
+      "pillar": "risk",
+      "summary": "Iran's security chief Mohsen Rezaei says there are no talks with the US and the Strait of Hormuz will stay closed until Washington accepts Iran's conditions, even as US leaders talk up diplomacy.",
+      "beats": {
+        "was": "Since the war with Iran began, shipping through the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, has been badly disrupted, and Qatar has been trying to broker US–Iran talks.",
+        "happened": "Rezaei called reports of ongoing talks or a meeting in Qatar false and said Iran is waiting for a US reply to its conditions, which include lifting sanctions and the US naval blockade and ending fighting in Lebanon. Foreign Minister Abbas Araghchi said the strait could reopen within two days if those demands are met. President Trump spoke of positive momentum, and Secretary of State Marco Rubio said the US is open to diplomacy. Iran's Revolutionary Guards said three more tankers hit mines.",
+        "means": "Both sides say a deal is possible, but Iran is tying the reopening of the strait to a long list of demands, so oil supply through the Gulf stays at risk for now.",
+        "fx": "Mild upward pressure on oil, and a small lift for oil-linked currencies like the Canadian dollar and for safe havens."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Iran links reopening Hormuz to demands the US has not met, keeping supply at risk."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil helps Canada's main export."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Unresolved conflict keeps some demand for safe havens."
+        }
+      ],
+      "watch": "A US answer to Iran's conditions or a confirmed meeting in Qatar would ease supply fears; more mine strikes or attacks on tankers would add to them."
+    },
+    {
       "id": "brecorder-reuters-dollar-advances-major-peers-20261111",
       "ts": "2026-11-11T23:29:06Z",
       "source": "Business Recorder (Reuters)",
@@ -1283,123 +1400,6 @@
         }
       ],
       "watch": "Whether the attacks continue during Qatar's two-week push for US–Iran talks, and the US weekly oil stock figures on Thursday."
-    },
-    {
-      "id": "aljazeera-ghalibaf-hormuz-never-return-20261111",
-      "date": "2026-11-11",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/11/11/strait-of-hormuz-will-never-return-to-pre-war-status-ghalibaf",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/ap_6af4c8b79ab85-1794427063.jpg?resize=1920%2C1440",
-      "headline": "Hormuz Strait will 'never return' to pre-war status, Iran's Ghalibaf says",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
-      "pillar": "commodities",
-      "summary": "Iran's parliament speaker and top negotiator says the Strait of Hormuz will not go back to how it was before the war, with Iran and Oman to oversee it together.",
-      "beats": {
-        "was": "The US–Iran war, now eight months old, has largely shut the Strait of Hormuz, the route for about a fifth of the world's oil. Qatar is trying to restart talks.",
-        "happened": "Mohammad Bagher Ghalibaf, Iran's parliament speaker, told Al Jazeera that Iran and Oman have agreed to oversee the strait. He said Iran sent seven conditions to Washington through Qatar, including lifting the US naval blockade and sanctions and freeing frozen funds, and that they must be met before talks start.",
-        "means": "Even if the war ends, Iran wants a lasting say over who passes through the strait, so a full return to normal oil shipping looks further off. Iran's conditions remain far from what Washington has offered.",
-        "fx": "A longer squeeze on Gulf oil supports oil prices and oil exporters like the Canadian dollar, and weighs on big oil importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Iran signals tighter control of the main Gulf oil route even after a deal."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil helps Canada's main export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so dearer energy hurts it."
-        }
-      ],
-      "watch": "Washington's reply to Iran's seven conditions; any sign of direct talks would ease the pressure on oil."
-    },
-    {
-      "id": "aljazeera-iran-denies-talks-hormuz-shut-20261111",
-      "date": "2026-11-11",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/afp_6af3eb2f86fc-1794370351.jpg?resize=1920%2C1440",
-      "headline": "Iran denies talks with the US and says the Strait of Hormuz stays shut until its demands are met",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
-      "pillar": "risk",
-      "summary": "Iran's security chief Mohsen Rezaei says there are no talks with the US and the Strait of Hormuz will stay closed until Washington accepts Iran's conditions, even as US leaders talk up diplomacy.",
-      "beats": {
-        "was": "Since the war with Iran began, shipping through the Strait of Hormuz, the narrow sea lane that carries much of the world's oil, has been badly disrupted, and Qatar has been trying to broker US–Iran talks.",
-        "happened": "Rezaei called reports of ongoing talks or a meeting in Qatar false and said Iran is waiting for a US reply to its conditions, which include lifting sanctions and the US naval blockade and ending fighting in Lebanon. Foreign Minister Abbas Araghchi said the strait could reopen within two days if those demands are met. President Trump spoke of positive momentum, and Secretary of State Marco Rubio said the US is open to diplomacy. Iran's Revolutionary Guards said three more tankers hit mines.",
-        "means": "Both sides say a deal is possible, but Iran is tying the reopening of the strait to a long list of demands, so oil supply through the Gulf stays at risk for now.",
-        "fx": "Mild upward pressure on oil, and a small lift for oil-linked currencies like the Canadian dollar and for safe havens."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Iran links reopening Hormuz to demands the US has not met, keeping supply at risk."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firmer oil helps Canada's main export."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Unresolved conflict keeps some demand for safe havens."
-        }
-      ],
-      "watch": "A US answer to Iran's conditions or a confirmed meeting in Qatar would ease supply fears; more mine strikes or attacks on tankers would add to them."
-    },
-    {
-      "id": "unn-reuters-iran-keeps-enriched-uranium-oil-up-20261111",
-      "date": "2026-11-11",
-      "source": "UNN (Reuters)",
-      "url": "https://unn.ua/en/news/oil-prices-rose-after-irans-new-statement",
-      "image": "https://unn.ua/img/2026/04/18/1776483406-3642-large.webp",
-      "headline": "Iran says its enriched uranium stays in the country, and oil rises toward $93",
-      "story": "us-iran-talks",
-      "story_title": "US–Iran: talk of a deal vs attacks on Gulf shipping",
-      "pillar": "risk",
-      "summary": "Iran's security chief said Tehran will not let any enriched nuclear material leave the country, a clash with Washington's demand that nuclear issues be part of any first round of talks. Brent crude rose about 1.4% to near $92.80.",
-      "beats": {
-        "was": "The US and Israel have been at war with Iran since late February, and Iran has squeezed shipping through the Strait of Hormuz, the route for about a fifth of the world's oil. Washington says any first talks to end the war must cover Iran's nuclear programme, including its stock of enriched uranium.",
-        "happened": "On Wednesday the head of Iran's security service said Tehran would not allow enriched nuclear material to be taken out of the country. Brent crude rose $1.28 to about $92.77 a barrel and US crude to about $86.80 by mid-morning in Europe. An analyst at the Swiss bank UBS said fading hopes of a quick calm-down were holding prices up.",
-        "means": "Moving the uranium out is one of the core US conditions, so a flat refusal makes a quick deal look less likely. That keeps the risk to Gulf oil supply in prices for longer.",
-        "fx": "Firmer oil gives some help to the Canadian dollar and adds to the energy bill for big importers like Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A hard line on a core US demand pushes a deal, and normal Gulf shipping, further off."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Dearer oil helps Canada's biggest export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so higher prices weigh on its trade balance."
-        }
-      ],
-      "watch": "Whether the US softens or repeats its nuclear condition for talks, and whether Brent holds above $92."
     },
     {
       "id": "investinglive-abs-home-lending-q3-plunge-20261111",
