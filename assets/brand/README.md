@@ -8,7 +8,7 @@ To change the logo, edit `tools/brand-build.py` and run
 `assets/`. Don't hand-edit the files. The letters are saved as shapes, so the
 logo looks the same on any device.
 
-Use ivory files on blue or dark backgrounds, and blue or black files on ivory or white.
+Use ivory files on blue or dark backgrounds, and blue or black files on ivory (Rami prefers ivory to plain white).
 
 | File | What it is | Where it's used |
 |---|---|---|
@@ -25,15 +25,15 @@ Exported from these files: `assets/icon-512.png`, `icon-192.png`,
 These are high-res images of every version, sorted by look and built by the
 same script.
 
-- `sign/`: the full logo on blue, ivory or white
-- `symbol/`: the sign without words (blue, ivory, white, black)
-- `lockup/`: the sign with "Blue Street" beside it (blue, ivory, white, black)
+- `sign/`: the full logo on blue or ivory
+- `symbol/`: the sign without words (blue, ivory, black)
+- `lockup/`: the sign with "Blue Street" beside it (blue, ivory, black)
 - `wordmark/`: BLUE ST on its own
 - `banners/<style>/`: social headers at 2x size for X (1500×500),
   LinkedIn profile (1584×396), LinkedIn company page (1128×191) and
   Facebook (820×312). The logo sits in the middle, so profile photos and
   phone crops don't cover it.
-  - `sign`: the full sign on blue
-  - `white-sign`: the blue sign on white
+  - `blue-sign`: the full sign on blue
+  - `ivory-sign`: the blue sign on ivory
   - `black-lockup`: the black sign with "Blue Street" on ivory
-  - `white-lockup`: the blue sign with "Blue Street" on white
+  - `ivory-lockup`: the blue sign with "Blue Street" on ivory

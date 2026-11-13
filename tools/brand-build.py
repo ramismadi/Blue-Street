@@ -25,7 +25,6 @@ FONTS = '/usr/share/fonts/opentype/inter/'
 BLUE = '#0a84ff'
 IVORY = '#f6f2ea'
 BLACK = '#101319'  # the site's dark ink
-WHITE = '#ffffff'
 
 # ---- The sign's geometry (512 grid) -------------------------------------
 POST = '<rect x="92" y="88" width="30" height="336" rx="15"/>'
@@ -180,9 +179,6 @@ def export_pngs(png):
     logos = [
         ('sign-on-blue.png', sq, sign_shape(IVORY, BLUE), sign_vb, BLUE),
         ('sign-on-ivory.png', sq, sign_shape(BLUE, IVORY), sign_vb, IVORY),
-        ('sign-on-white.png', sq, sign_shape(BLUE, WHITE), sign_vb, WHITE),
-        ('symbol-on-white.png', sq, sign_shape(BLUE), sign_vb, WHITE),
-        ('lockup-on-white.png', wide, lock_body[BLUE], lock_vb, WHITE),
         ('symbol-on-blue.png', sq, sign_shape(IVORY), sign_vb, BLUE),
         ('symbol-on-ivory.png', sq, sign_shape(BLUE), sign_vb, IVORY),
         ('symbol-black-on-ivory.png', sq, sign_shape(BLACK), sign_vb, IVORY),
@@ -199,10 +195,10 @@ def export_pngs(png):
     # profile photos and phone crops don't cover it.
     sizes = [('x', 3000, 1000), ('linkedin', 3168, 792),
              ('linkedin-page', 2256, 382), ('facebook', 1640, 624)]
-    styles = [('sign', sign_shape(IVORY, BLUE), sign_vb, BLUE),
+    styles = [('blue-sign', sign_shape(IVORY, BLUE), sign_vb, BLUE),
               ('black-lockup', lock_body[BLACK], lock_vb, IVORY),
-              ('white-sign', sign_shape(BLUE, WHITE), sign_vb, WHITE),
-              ('white-lockup', lock_body[BLUE], lock_vb, WHITE)]
+              ('ivory-sign', sign_shape(BLUE, IVORY), sign_vb, IVORY),
+              ('ivory-lockup', lock_body[BLUE], lock_vb, IVORY)]
     for style, body, vb, bg in styles:
         for plat, W, H in sizes:
             save('banners/' + style, 'banner-%s-%s.png' % (plat, style), place(W, H, body, vb, 0.5, 0.6, bg))
