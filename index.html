@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=136">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=136">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=137">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=137">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=136">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=137">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=136">
+<link rel="stylesheet" href="assets/style.css?v=137">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,13 +46,13 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=136" defer></script>
-<script src="assets/app.js?v=136" defer></script>
+<script src="assets/cot.js?v=137" defer></script>
+<script src="assets/app.js?v=137" defer></script>
 </head>
 <body>
-<!-- Loading splash: the full sign logo on brand blue, removed by app.js once the edition renders -->
+<!-- Loading splash: the full sign logo on brand blue (from tools/brand-build.py), removed by app.js once the edition renders -->
 <div class="splash" id="splash" aria-hidden="true">
-  <svg viewBox="0 0 512 512" width="132" height="132"><rect x="92" y="88" width="30" height="336" rx="15" fill="#f6f2ea"/><path d="M108 150 H384 L438 210 L384 270 H108 Z" fill="#f6f2ea" stroke="#f6f2ea" stroke-width="14" stroke-linejoin="round"/><text x="134" y="244" fill="#0a84ff" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="82" letter-spacing="-2">BLUE</text><text x="330" y="190" fill="#0a84ff" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="32">ST</text></svg>
+  <svg viewBox="0 0 512 512" width="132" height="132"><g fill="#f6f2ea" stroke="#f6f2ea"><rect x="92" y="88" width="30" height="336" rx="15"/><path d="M108 150 H384 L438 210 L384 270 H108 Z" stroke-width="14" stroke-linejoin="round"/></g><path fill="#0a84ff" d="M138.64453125 244.0H165.23046875C178.443359375 244.0 185.9306640625 236.953125 185.9306640625 227.34375C185.9306640625 218.6953125 179.6845703125 213.2900390625 172.517578125 213.009765625V212.369140625C179.00390625 211.0478515625 183.6083984375 206.3232421875 183.6083984375 199.4765625C183.6083984375 190.4677734375 176.7216796875 184.341796875 163.388671875 184.341796875H138.64453125ZM152.7783203125 232.5888671875V218.0947265625H162.1875C167.7529296875 218.0947265625 171.1962890625 221.09765625 171.1962890625 225.7421875C171.1962890625 229.986328125 168.2333984375 232.5888671875 161.9072265625 232.5888671875ZM152.7783203125 208.92578125V195.6328125H161.2265625C166.111328125 195.6328125 169.1943359375 198.1552734375 169.1943359375 202.1591796875C169.1943359375 206.443359375 165.7509765625 208.92578125 160.986328125 208.92578125ZM191.1376953125 244.0H230.2158203125V232.46875H205.271484375V184.341796875H191.1376953125ZM260.6474609375 244.7607421875C275.662109375 244.7607421875 285.83203125 236.15234375 285.83203125 222.8193359375V184.341796875H271.6982421875V221.658203125C271.6982421875 227.9443359375 267.25390625 232.4287109375 260.6474609375 232.4287109375C254.12109375 232.4287109375 249.63671875 227.9443359375 249.63671875 221.658203125V184.341796875H235.5029296875V222.8193359375C235.5029296875 236.15234375 245.552734375 244.7607421875 260.6474609375 244.7607421875ZM293.12109375 244.0H334.4814453125V232.46875H307.2548828125V219.49609375H332.359375V208.205078125H307.2548828125V195.873046875H334.521484375V184.341796875H293.12109375Z M353.796875 190.3125C359.5625 190.3125 363.0 187.671875 363.0 183.25C363.0 179.53125 360.390625 177.28125 355.890625 176.296875L353.875 175.828125C351.796875 175.359375 350.4375 174.671875 350.4375 173.234375C350.4375 171.9375 351.578125 170.984375 353.78125 170.984375C356.0 170.984375 357.234375 171.96875 357.390625 173.65625H362.6875C362.625 169.34375 359.1875 166.40625 353.796875 166.40625C348.515625 166.40625 344.734375 169.296875 344.734375 173.609375C344.734375 177.109375 347.171875 179.125 351.1875 180.046875L353.65625 180.625C356.203125 181.203125 357.421875 181.90625 357.421875 183.234375C357.421875 184.71875 356.015625 185.734375 353.734375 185.734375C351.21875 185.734375 349.546875 184.578125 349.421875 182.3125H344.125C344.21875 187.6875 347.96875 190.3125 353.796875 190.3125ZM365.15625 171.21875H372.203125V190.0H377.703125V171.21875H384.75V166.71875H365.15625Z"/></svg>
 </div>
 
 <!-- masthead: brand, edition, market clocks, theme picker -->
