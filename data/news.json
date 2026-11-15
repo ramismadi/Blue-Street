@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T17:47:27Z",
+  "updated": "2026-11-15T19:47:36Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "bearish",
-      "ts": "2026-11-15T11:52:10Z",
-      "text": "The euro closed last week near $1.103, its lowest since April 2025, as talk of more US rate rises lifted the dollar. Euro-area growth was confirmed at 0.4% for the third quarter, and economists expect December's European Central Bank rise to be its last, which gives the euro less support than the Fed's longer path."
+      "ts": "2026-11-15T19:47:36Z",
+      "text": "The euro closed last week near $1.103, its lowest since April 2025, as talk of more US rate rises lifted the dollar. Germany's central bank chief Joachim Nagel says another European Central Bank rise is very likely, but markets expect December's to be the last while the Fed keeps going, which still favours the dollar."
     },
     "JPY": {
       "lean": "bearish",
@@ -44,11 +44,56 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-15T15:58:00Z",
-      "text": "Oil ended last week near $96 a barrel, down for a second week as the International Energy Agency expects more supply than demand this quarter. But the weekend pushed the other way: Iran says a supertanker sank after hitting a mine near Hormuz, claimed strikes on a US base in Bahrain, and Yemen's Iran-aligned Houthis took control of the shore at Bab el-Mandeb, the Red Sea route that carries oil around Hormuz."
+      "ts": "2026-11-15T19:47:36Z",
+      "text": "Oil ended last week near $96 a barrel, down for a second week as the International Energy Agency expects more supply than demand this quarter. But the weekend pushed the other way: Iran says a supertanker sank after hitting a mine near Hormuz, claimed strikes on a US base in Bahrain, and Yemen's Iran-aligned Houthis fired missiles at Riyadh and took control of the shore at Bab el-Mandeb, the Red Sea route around Hormuz."
     }
   },
   "items": [
+    {
+      "id": "gulfnews-saudi-intercepts-houthi-missiles-riyadh-20261115",
+      "date": "2026-11-15",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-arabia-intercepts-houthi-missiles-targeting-riyadh-as-bahrain-issues-threat-alert-1.500747797",
+      "image": "https://media.assettype.com/gulfnews%2F2026-10-26%2F1zeomq5w%2FMecca-in-Saudi-Arabia?rect=0%2C850%2C6000%2C3150&w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "Saudi Arabia intercepts Houthi missiles targeting Riyadh as Iran claims Bahrain drone attack",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Saudi air defences shot down two ballistic missiles that Yemen's Houthis fired at Riyadh on Sunday, plus drones over the oil-rich Eastern Province. Nothing was reported hit.",
+      "beats": {
+        "was": "Iran and the US have been at war since February, and Yemen's Houthis, who are backed by Iran, have been firing at Saudi Arabia, the world's biggest oil exporter. Last week Houthi strikes on Saudi energy sites added about $3 to the oil price in a day.",
+        "happened": "The spokesman for the Saudi-led coalition in Yemen said two Houthi ballistic missiles aimed at the Saudi capital were destroyed, along with drones over the Eastern Province, where most Saudi oil is pumped. It came the same morning Bahrain said it stopped Iranian drones aimed at a US radar site.",
+        "means": "No damage this time, but the Houthis are now aiming at the capital and the oil region on the same day, and the Group of Seven rich nations condemned the attacks. A hit on Saudi oil sites would matter far more than another failed attack.",
+        "fx": "Keeps a small war premium in oil, which supports the Canadian dollar and weighs on big oil importers like Japan and the euro area; the Swiss franc gets a little safe-place demand."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Attacks on Saudi Arabia keep supply risk alive, though nothing was hit."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More Gulf attacks add some demand for a safe place to hold money."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil helps Canada's main export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so higher prices hurt."
+        }
+      ],
+      "watch": "Whether any Houthi missile or drone gets through to a Saudi oil site, and whether the Gulf calms around Iran's foreign minister's trip to Oman on Tuesday."
+    },
     {
       "id": "dawn-irna-araghchi-oman-visit-20261115",
       "ts": "2026-11-15T12:20:20Z",
@@ -420,6 +465,39 @@
         }
       ],
       "watch": "US retail sales and the Fed's preferred inflation gauge in the coming weeks, and whether consumer spending slows over the holidays as Daly warned."
+    },
+    {
+      "id": "leprivatebanker-nagel-ecb-hike-highly-probable-20261113",
+      "ts": "2026-11-13T18:34:46Z",
+      "source": "The Private Banker",
+      "url": "https://leprivatebanker.com/2026/11/13/bundesbanks-nagel-says-it-is-highly-probable-the-ecb-must-hike-again-as-december-move-is-priced-at-72/",
+      "image": "https://leprivatebanker.com/wp-content/uploads/2026/11/pexels-photo-20101883-1.jpeg",
+      "headline": "Bundesbank's Nagel says it is \"highly probable\" the ECB must hike again as December move is priced at 72%",
+      "story": "ecb-hikes",
+      "story_title": "European Central Bank: one more rate rise, then a pause?",
+      "pillar": "policy",
+      "summary": "Joachim Nagel, head of Germany's central bank and a European Central Bank rate-setter, said another rate rise is very likely if things stay as they are. Markets already put the odds of a December rise at about 72%.",
+      "beats": {
+        "was": "Euro-area inflation jumped to about 4% in October, the highest in three years, mostly because the Gulf war pushed up energy prices. The European Central Bank raised rates in September and has been weighing one more.",
+        "happened": "Speaking at a bankers' conference in Frankfurt on Friday, Bundesbank President Nagel said a further rise is highly probable, pointing to stubborn underlying inflation and rising short-term inflation expectations.",
+        "means": "Germany's voice carries weight on the ECB's council, so this firms up a December rise. It does not change the bigger picture: markets expect the ECB to stop after December while the Fed keeps going.",
+        "fx": "Gives the euro a little support, but the gap with the US, where more rate rises are expected into next year, still favours the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firms up a December ECB rise, though markets had mostly priced it."
+        },
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Narrows the rate gap slightly, but the Fed is still expected to go further."
+        }
+      ],
+      "watch": "Euro-area final October inflation and any comment from ECB President Christine Lagarde on whether December is the last rise."
     },
     {
       "id": "tokenpost-collins-housing-rates-20261113",
