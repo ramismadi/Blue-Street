@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T11:52:10Z",
+  "updated": "2026-11-15T12:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,13 +19,13 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-15T11:52:10Z",
-      "text": "The Swiss franc slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Israel weighing a new strike on Iran and attacks on ships near Hormuz keep some demand for the franc as a safe place to hold money."
+      "ts": "2026-11-15T12:55:00Z",
+      "text": "The Swiss franc slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Weekend attacks on tankers near Hormuz, on a US base in Bahrain and on Riyadh, plus Israel weighing a new strike on Iran, keep some demand for the franc as a safe place to hold money."
     },
     "CAD": {
       "lean": "mixed",
-      "ts": "2026-11-15T11:52:10Z",
-      "text": "Oil, Canada's main export, is near $96 after attacks on Gulf supply, and the Bank of Canada says it is ready to raise rates again if energy costs spread. But oil fell for a second week, Canada has lost jobs two months running, and the strong US dollar holds the loonie down; October inflation on Monday morning is the next guide."
+      "ts": "2026-11-15T12:55:00Z",
+      "text": "Oil, Canada's main export, is near $96 and weekend attacks on Gulf shipping and Saudi Arabia add support, while the Bank of Canada says it is ready to raise rates again if energy costs spread. But Canada has lost jobs two months running and the strong US dollar holds the loonie down; October inflation on Monday morning is the next guide."
     },
     "AUD": {
       "lean": "bearish",
@@ -43,12 +43,90 @@
       "text": "Gold is heading for a weekly loss of about 4.5%, near $3,880 an ounce and its lowest in over a year, because markets see a December Federal Reserve rate rise as close to certain and 10-year US bond yields sit above 5%. Demand from the Middle East war has not been enough to offset that."
     },
     "OIL": {
-      "lean": "mixed",
-      "ts": "2026-11-15T11:52:10Z",
-      "text": "Oil ended last week near $96 a barrel, down about 2.5% for a second weekly fall, as the International Energy Agency expects more supply than demand from this quarter on despite attacks on Saudi sites and ships near Hormuz. Israel's security cabinet meets Sunday after reports it told the army to prepare for a possible new strike on Iran, and Iran is on the list for Thursday's Trump–Xi–Putin meeting, so war risk can still lift prices quickly."
+      "lean": "bullish",
+      "ts": "2026-11-15T12:55:00Z",
+      "text": "Oil ended last week near $96 a barrel, down for a second week as the International Energy Agency expects more supply than demand this quarter. But over the weekend Iran said three tankers hit mines near Hormuz and claimed drone strikes on a US base in Bahrain, and Saudi Arabia shot down missiles aimed at Riyadh, so the war is pushing harder on supply as markets reopen; Israel's security cabinet meets Sunday on Iran."
     }
   },
   "items": [
+    {
+      "id": "thenational-bahrain-nationwide-alert-20261115",
+      "ts": "2026-11-15T04:57:29Z",
+      "source": "The National",
+      "url": "https://www.thenationalnews.com/news/gulf/2026/11/15/bahrain-issues-first-nationwide-alert-in-months-as-iran-claims-attack-on-base-hosting-us-helicopters/",
+      "image": "https://www.thenationalnews.com/resizer/v2/5IS3HYLXF5AWRAIY7T35R4BQVM.JPG?auth=1942d2bfcde7cc63279149ff2cd2d36befa120cc7b34b3555dbef6dd1483e0f4&smart=true&width=1200&height=630",
+      "headline": "Bahrain issues first nationwide alert in months as Iran claims attack on base hosting US helicopters",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Bahrain told everyone in the country to take shelter on Sunday as explosions were heard, after Iran's Revolutionary Guards said their drones hit a US radar at a Bahraini base. Saudi Arabia also shot down missiles fired at Riyadh by Yemen's Houthi rebels.",
+      "beats": {
+        "was": "The US and Iran have been at war since February, with the US blockading Iranian ports and Iran keeping the Strait of Hormuz, the route for about a fifth of the world's oil, mostly shut. Bahrain hosts the US Navy's main Gulf base, and Iran claimed a strike on a US radar there on Friday.",
+        "happened": "Late Saturday the Guards said six drones hit a US air-defence radar at the Riffa helicopter base. On Sunday Bahrain's Interior Ministry issued its first country-wide alert in months and explosions were reported, while Iranian media said US bases had been attacked. Washington has not confirmed any damage. Saudi Arabia said it destroyed two ballistic missiles aimed at Riyadh and two drones over its oil-rich Eastern Region.",
+        "means": "Attacks on US bases and Saudi Arabia over two days point to the war widening beyond shipping, which makes an early reopening of Hormuz less likely. Most claims are still unconfirmed, and oil fell last week despite similar news.",
+        "fx": "Adds to the war premium in oil when markets reopen Sunday evening US time, and to demand for safe places to hold money such as the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Strikes reaching a US base and Saudi Arabia over a weekend raise the risk to Gulf supply."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "War news adds to demand for the franc as a safe place to hold money."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil helps Canada, a big oil exporter."
+        }
+      ],
+      "watch": "Whether the US confirms damage or answers, and how oil opens on Sunday evening US time."
+    },
+    {
+      "id": "manilatimes-afp-three-tankers-mines-hormuz-20261114",
+      "date": "2026-11-14",
+      "source": "The Manila Times (AFP)",
+      "url": "https://www.manilatimes.net/2026/11/15/world/americas-emea/iran-3-oil-tankers-hit-naval-mines-in-strait-of-hormuz/2470080",
+      "image": "https://manilatimes.net/manilatimes/uploads/images/2026/11/14/1308049.jpg",
+      "headline": "Iran: 3 oil tankers hit naval mines in Strait of Hormuz",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's navy and Revolutionary Guards say three oil tankers, one of them a supertanker, caught fire on Saturday after hitting mines in and near the Strait of Hormuz. No ship names were given and the claims are unconfirmed.",
+      "beats": {
+        "was": "Since the war with the US began in February, Iran has required ships to get its permission to pass through Hormuz, the route for about a fifth of the world's oil. The US says it has cleared the main routes of mines, and Iran said an LNG tanker hit a mine on Friday.",
+        "happened": "The Guards said two tankers that had switched off their tracking to take an unapproved route exploded and caught fire in the south of the strait, and two others turned back after warnings. Iran's regular navy said a third tanker east of the strait hit a mine and stopped, and warned that any ship breaking its rules will be set on fire.",
+        "means": "If true, it is the third weekly round of ship attacks and a sign that Iran can still stop traffic despite US mine clearing, which keeps the strait mostly shut. Without names or outside confirmation, it is weaker evidence than last week's hits.",
+        "fx": "Supports oil when trading resumes, a help for the Canadian dollar and a cost for big energy importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "More tankers hit in the main Gulf oil route keep supply at risk."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Dearer oil helps Canada's main export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so a higher bill hurts."
+        }
+      ],
+      "watch": "Whether shipping trackers or ship owners confirm the hits, and whether insurers raise rates for Gulf voyages."
+    },
     {
       "id": "reuters-trump-xi-putin-shenzhen-agenda-20261114",
       "date": "2026-11-14",
@@ -1028,66 +1106,6 @@
       "watch": "Whether Japan buys yen if the dollar stays above 160, Japan's third-quarter growth and October inflation figures next week, and US producer prices on Friday."
     },
     {
-      "id": "investing-reuters-us-deficit-october-record-20261112",
-      "date": "2026-11-12",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://www.investing.com/news/economy-news/us-starts-2027-fiscal-year-with-record-october-budget-deficit-of-404-billion-5023006",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB23G_L.jpg",
-      "headline": "US starts 2027 fiscal year with record October budget deficit of $404 billion",
-      "story": "us-deficit",
-      "story_title": "US government borrowing keeps growing",
-      "pillar": "rates",
-      "summary": "The US government spent $404 billion more than it took in during October, the most ever for that month, as tax and tariff income fell and spending hit a record.",
-      "beats": {
-        "was": "The US ran a deficit of nearly $2 trillion in the year to September, about 6.2% of the economy and the biggest in five years. Treasury Secretary Scott Bessent wants to cut it to 3%.",
-        "happened": "The Treasury said the October gap was 42% bigger than a year earlier. Income fell 9%, with tariff collections down 39% from their peak, while spending rose 12% to a record on farm aid, military payments and higher interest on the debt.",
-        "means": "A bigger gap means the government must sell more bonds, which adds upward pressure on US borrowing costs, already above 5% for 10-year bonds. Interest on the debt is itself one of the fastest-rising costs.",
-        "fx": "Higher bond yields help the dollar for now, but steady talk of big deficits is also one of the reasons some buyers prefer gold over US assets."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "More bond sales lift yields, which helps the dollar, but a growing debt load is a long-run worry."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Higher yields weigh on gold, while deficit worries support it over time."
-        }
-      ],
-      "watch": "Demand at upcoming US bond auctions and whether tariff income keeps falling."
-    },
-    {
-      "id": "investing-reuters-existing-home-sales-16yr-low-20261112",
-      "date": "2026-11-12",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://www.investing.com/news/economic-indicators/us-existing-home-sales-slump-to-more-than-16year-low-in-october-5022437",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAB1O3_L.jpg",
-      "headline": "US existing home sales slump to more than 16-year low in October",
-      "story": "us-housing",
-      "story_title": "US housing: high mortgage rates choke sales",
-      "pillar": "growth",
-      "summary": "Sales of previously owned US homes fell 5.5% in October to the slowest pace since August 2010, as 30-year mortgage rates stay above 7%.",
-      "beats": {
-        "was": "The Federal Reserve has been raising rates to fight inflation, and 30-year mortgage rates are near their highest since 2000.",
-        "happened": "The National Association of Realtors said sales fell to a yearly pace of 3.75 million, below the 3.85 million economists expected and 8.8% lower than a year ago. Prices still rose slightly, to a median of about $422,000, because few homes are for sale.",
-        "means": "Higher rates are clearly hurting the housing market, one of the first parts of the economy to feel them. It is a sign of strain but not yet enough to change the Fed's plan to raise rates in December.",
-        "fx": "A mild drag on the dollar's growth story, outweighed for now by hot inflation and Fed rate-rise bets."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Weak home sales show high rates are slowing part of the economy."
-        }
-      ],
-      "watch": "Whether weakness spreads to building and spending data, and if Fed officials start to mention it."
-    },
-    {
       "id": "euronext-reuters-dollar-19-month-high-20261112",
       "date": "2026-11-12",
       "source": "Reuters (via Euronext)",
@@ -1317,39 +1335,6 @@
         }
       ],
       "watch": "Japan's October consumer prices later this month and any hint from Bank of Japan officials on December; a quiet reaction from them would leave the yen at the mercy of US rates."
-    },
-    {
-      "id": "uanews-cna-mimura-warns-yen-160-20261112",
-      "date": "2026-11-12",
-      "source": "UA.News (Channel NewsAsia)",
-      "url": "https://ua.news/en/dovkolo-svitu/iaponiia-znovu-zasteregla-vid-rizkikh-kolivan-valiutnogo-kursu-channel-newsasia",
-      "image": "https://cdn-cabinet.ua.news/uploads/images/japan_warns_over_sharp_yen_volatility_1794446643821.webp",
-      "headline": "Japan warns again as yen nears 160 per U.S. dollar",
-      "story": "yen-defence",
-      "story_title": "Japan's fight to prop up the yen",
-      "pillar": "policy",
-      "summary": "Japan's top currency official warned again that the yen is falling too fast, as the dollar reached 159.94 yen on Thursday morning, its highest in over two months.",
-      "beats": {
-        "was": "Japan spent record sums buying yen in late July and early August, once reportedly together with the US, after the dollar rose above 160 yen. Hot US inflation figures this week have pushed the dollar back toward that level.",
-        "happened": "Atsushi Mimura, Japan's vice finance minister for international affairs, said recent moves were too rapid and that it is too early to forget what happened this summer, without commenting on any exact rate. The dollar touched 159.94 yen in Tokyo trading.",
-        "means": "Tokyo is reminding traders that it has stepped in near 160 before and could again. Words alone rarely turn the yen for long while the gap between US and Japanese interest rates stays this wide.",
-        "fx": "Wider rate gaps push the yen weaker; the rising chance of official yen buying pushes the other way."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A repeat warning from Tokyo near the level where it bought yen this summer."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The dollar's climb against the yen meets resistance from Japanese officials."
-        }
-      ],
-      "watch": "Firmer language such as a 'final warning', sudden sharp yen gains that hint at official buying, and Japan's third-quarter growth figures on Sunday evening (US time)."
     }
   ]
 }
