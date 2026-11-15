@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T14:55:00Z",
+  "updated": "2026-11-15T15:58:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-15T12:55:00Z",
-      "text": "The Swiss franc slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Weekend attacks on tankers near Hormuz, on a US base in Bahrain and on Riyadh, plus Israel weighing a new strike on Iran, keep some demand for the franc as a safe place to hold money."
+      "ts": "2026-11-15T15:58:00Z",
+      "text": "The Swiss franc slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. A weekend of Gulf escalation, from Iran's claim that a supertanker sank near Hormuz to strikes on Bahrain and the Houthis gaining ground at the Red Sea's southern entrance, keeps some demand for the franc as a safe place to hold money."
     },
     "CAD": {
       "lean": "mixed",
@@ -44,11 +44,95 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-15T12:55:00Z",
-      "text": "Oil ended last week near $96 a barrel, down for a second week as the International Energy Agency expects more supply than demand this quarter. But over the weekend Iran said three tankers hit mines near Hormuz and claimed drone strikes on a US base in Bahrain, and Saudi Arabia shot down missiles aimed at Riyadh, so the war is pushing harder on supply as markets reopen; Israel's security cabinet meets Sunday on Iran."
+      "ts": "2026-11-15T15:58:00Z",
+      "text": "Oil ended last week near $96 a barrel, down for a second week as the International Energy Agency expects more supply than demand this quarter. But the weekend pushed the other way: Iran says a supertanker sank after hitting a mine near Hormuz, claimed strikes on a US base in Bahrain, and Yemen's Iran-aligned Houthis took control of the shore at Bab el-Mandeb, the Red Sea route that carries oil around Hormuz."
     }
   },
   "items": [
+    {
+      "id": "rte-afp-iran-supertanker-sinks-hormuz-20261115",
+      "ts": "2026-11-15T15:07:29Z",
+      "source": "RTÉ (AFP)",
+      "url": "https://www.rte.ie/news/middle-east/2026/1115/1599293-iran-tanker-hormuz/",
+      "image": "https://www.rte.ie/images/002512a3-1600.jpg",
+      "headline": "Iran says supertanker carrying oil sinks in Hormuz Strait",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's Revolutionary Guards say a supertanker carrying more than two million barrels of crude sank on Sunday after hitting a mine near the Strait of Hormuz, one of two tankers they say were hit. No one outside Iran has confirmed the sinking.",
+      "beats": {
+        "was": "Since the war with the US began in February, Iran has let ships through Hormuz, the route for about a fifth of the world's oil, only with its permission, while the US blockades Iran's ports and escorts tankers. Iran said three tankers hit mines on Saturday.",
+        "happened": "In a statement on state TV, the Guards said two tankers on an unapproved route hit mines in the south of the strait and one, a supertanker, went down; they gave no names. Separately, the UK Navy's shipping-warning office, relaying Indian authorities, reported a tanker attacked in the Gulf just before the strait, with the crew safe and damage unknown.",
+        "means": "A sunk supertanker would be the worst ship loss of the recent attacks and a sign that US mine clearing has not made the route safe. Because the claim is unconfirmed and Iran has made similar claims before, markets may wait for ship owners or trackers before reacting fully.",
+        "fx": "Adds to the war premium in oil when trading resumes Sunday evening US time, which helps the Canadian dollar and costs big energy importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A claimed sinking and a confirmed tanker attack show the main Gulf oil route is still unsafe."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Dearer oil helps Canada's main export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so a higher bill hurts."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Gulf escalation adds demand for a safe place to hold money."
+        }
+      ],
+      "watch": "Whether ship owners or tracking firms name the ship and confirm it sank, and how Brent opens Sunday evening US time."
+    },
+    {
+      "id": "almonitor-reuters-yemen-forces-leave-bab-el-mandeb-20261115",
+      "date": "2026-11-15",
+      "source": "Al-Monitor (Reuters)",
+      "url": "https://www.al-monitor.com/originals/2026/11/yemen-government-forces-withdraw-area-near-bab-el-mandeb-strait-houthis-control",
+      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-15T083942Z_2_LYNXNPEMAE04X_RTROPTP_3_IRAN-CRISIS-YEMEN.JPG?h=c9f93661&itok=turXqShl",
+      "headline": "Yemen government forces withdraw from area near Bab el-Mandeb Strait, Houthis in control",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Saudi-backed Yemeni government forces pulled back on Sunday from the area overlooking Bab el-Mandeb, the narrow southern entrance to the Red Sea, leaving Iran-aligned Houthi rebels in control of its shore.",
+      "beats": {
+        "was": "Bab el-Mandeb links the Red Sea to the Indian Ocean and carries Gulf oil shipped from Saudi Arabia's Red Sea port of Yanbu, the main way around a mostly shut Hormuz. The Houthis, allied with Iran, have already struck Yanbu and other Saudi oil sites, and the government began an offensive in October to retake the coast.",
+        "happened": "Southern forces fighting for Yemen's recognised government said they were leaving the Dhubab airport and Bab el-Mandeb area west of Taiz to move toward Aden and defend it, as the Houthis press into the south. Reuters calls it a major setback for the government side.",
+        "means": "The Houthis now overlook both sides of the Gulf's escape routes problem: with Hormuz mostly shut, the Red Sea is the main bypass, and the group gains more power to threaten it. They have not announced new attacks on ships, so this raises risk rather than cutting supply today.",
+        "fx": "Adds to oil's war premium and to demand for safe places to hold money such as the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Iran-aligned rebels gain control over the Red Sea route that carries oil around a mostly shut Hormuz."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A wider Gulf war adds demand for a safe place to hold money."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices help Canada's main export."
+        }
+      ],
+      "watch": "Whether the Houthis warn or attack ships in the Red Sea, and whether shipping firms reroute away from it."
+    },
     {
       "id": "thenational-bahrain-nationwide-alert-20261115",
       "ts": "2026-11-15T04:57:29Z",
