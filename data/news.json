@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T19:47:36Z",
+  "updated": "2026-11-15T23:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-15T16:48:13Z",
-      "text": "The Swiss franc slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. A weekend of Gulf escalation, from Iran's claim that a supertanker sank near Hormuz to drone strikes on Bahrain that Gulf states now call an attack on them all, keeps some demand for the franc as a safe place to hold money."
+      "ts": "2026-11-15T23:55:00Z",
+      "text": "The Swiss franc slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Weekend Gulf attacks and Iran's warning that it will not wait to be struck keep some demand for the franc as a safe place to hold money, though a possible pause in US strikes could ease that."
     },
     "CAD": {
       "lean": "mixed",
@@ -44,11 +44,83 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-15T19:47:36Z",
-      "text": "Oil ended last week near $96 a barrel, down for a second week as the International Energy Agency expects more supply than demand this quarter. But the weekend pushed the other way: Iran says a supertanker sank after hitting a mine near Hormuz, claimed strikes on a US base in Bahrain, and Yemen's Iran-aligned Houthis fired missiles at Riyadh and took control of the shore at Bab el-Mandeb, the Red Sea route around Hormuz."
+      "ts": "2026-11-15T23:55:00Z",
+      "text": "Oil ended last week near $96 a barrel, down for a second week as the International Energy Agency expects more supply than demand this quarter. The weekend pulled both ways: Iran says a supertanker sank after hitting a mine near Hormuz and talks tougher on new attacks, while President Trump signals he may pause US strikes if Iran and Yemen's Houthis hold back, with the US blockade of Iranian oil staying in place."
     }
   },
   "items": [
+    {
+      "id": "hngn-reuters-trump-may-hold-off-iran-strikes-20261115",
+      "ts": "2026-11-15T20:39:00Z",
+      "source": "HNGN (citing Reuters)",
+      "url": "https://www.hngn.com/articles/273810/20261115/trump-says-no-iran-deal-needed-pulls-vance-talks.htm",
+      "image": null,
+      "headline": "Iran targets Bahrain again as Trump weighs a pause in strikes",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "President Trump has signalled he may hold off on new US strikes on Iran if Tehran and Yemen's Houthis stop provoking, though the US naval blockade of Iran stays in place.",
+      "beats": {
+        "was": "The US and Iran have been at war since February, and the US Navy blocks Iran's oil exports. On Thursday Trump said the US no longer needs a deal with Iran and took Vice President JD Vance off the talks.",
+        "happened": "Reuters reports Trump may pause strikes as long as Iran and the Houthis hold back, while Israeli officials keep pressing Washington to hit Iran again. Over the weekend Iran still claimed drone attacks on a US radar in Bahrain and said more tankers hit mines near Hormuz.",
+        "means": "It is a conditional pause, not a ceasefire, and the weekend attacks already test the condition. The blockade staying means Iranian oil stays off the market either way.",
+        "fx": "A pause would take a little war risk out of oil, which mildly weighs on the Canadian dollar and helps oil importers like Japan; a breakdown would do the opposite."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Fewer US strikes would ease supply fears, but the blockade and Gulf attacks continue."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Safe-place demand eases only if both sides actually hold back."
+        }
+      ],
+      "watch": "Whether Iran or the Houthis launch new attacks before Iran's foreign minister visits Oman on Tuesday, which would likely end the pause."
+    },
+    {
+      "id": "investing-gharibabadi-iran-wont-wait-20261115",
+      "date": "2026-11-15",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/economy-news/iran-claims-fresh-strike-on-us-base-as-hormuz-shipping-crisis-deepens-5027672",
+      "image": "https://content-media.investing.com/news/moved_LYNXMPEM370Y0_1200_L.jpg",
+      "headline": "Iran says it will not wait for the US to attack first",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's deputy foreign minister Kazem Gharibabadi said Iran will not wait to be attacked and suggested US diplomacy is cover to prepare new strikes. He also said UN nuclear inspectors stay locked out for now.",
+      "beats": {
+        "was": "Iran and the US have been at war since February, with Iran mining the Strait of Hormuz, the narrow sea lane that normally carries about a fifth of the world's oil. A June deal opened a 60-day window for talks that has now run out.",
+        "happened": "Gharibabadi said the Revolutionary Guards are building missiles with longer ranges and will not let the International Atomic Energy Agency, the UN nuclear watchdog, into nuclear sites until Iran's conditions are met. The same day Yemen's Houthis claimed drone hits on pumping stations of Saudi Arabia's East-West pipeline, which Saudi Arabia did not confirm.",
+        "means": "Tehran is talking tougher just as Trump weighs pausing strikes, so the risk of a fresh round of fighting has not gone away. The East-West pipeline matters because it lets Saudi oil skip Hormuz.",
+        "fx": "Keeps a war premium in oil, mildly helping the Canadian dollar and hurting oil importers like Japan; adds a little safe-place demand for the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Harder Iranian line and unconfirmed pipeline claims keep supply worries alive."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Threat of new fighting adds some safe-place demand."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so higher prices hurt."
+        }
+      ],
+      "watch": "Whether Saudi Arabia confirms any damage to the East-West pipeline, and what comes out of Iran's foreign minister's Oman visit on Tuesday."
+    },
     {
       "id": "gulfnews-saudi-intercepts-houthi-missiles-riyadh-20261115",
       "date": "2026-11-15",
@@ -1050,117 +1122,6 @@
         }
       ],
       "watch": "US producer prices and retail sales, and whether any senior official starts arguing for a half-point rise."
-    },
-    {
-      "id": "kitco-gold-silver-slide-yields-20261112",
-      "ts": "2026-11-12T22:16:45Z",
-      "source": "Kitco",
-      "url": "https://www.kitco.com/news/article/2026-11-12/gold-silver-slide-treasury-yields-surge-fed-hike-concerns-intensify-kitco",
-      "image": "https://images.kitco.com/img/extract_0_0_1023_576,width_1200,enlarge,format_jpeg/icms/5768df25-c265-4c2d-a489-e51917a45667.jpeg",
-      "headline": "Gold, silver slide as Treasury yields surge, Fed hike concerns intensify",
-      "story": "gold-fed-cpi",
-      "story_title": "Gold: rising US rates vs war risk",
-      "pillar": "rates",
-      "summary": "Gold fell almost 3% on Thursday to about $3,876 an ounce, below $3,900, as US government bond yields jumped on bets the Federal Reserve will keep raising rates.",
-      "beats": {
-        "was": "US consumer prices rose faster than expected in October, and Federal Reserve officials have since talked up more rate rises. Gold had already slipped below $4,000 on Wednesday.",
-        "happened": "Spot gold dropped about $110 and silver fell about 3% to near $50. The 10-year US Treasury yield rose to about 5.10%, and futures put the chance of a December Fed rise at near certain, with about a one-in-seven chance of a bigger half-point move.",
-        "means": "Gold pays no interest, so when safe US bonds pay over 5% it loses appeal, and a strong dollar makes it dearer for buyers abroad. For now that outweighs the pull from the Middle East war.",
-        "fx": "Higher US yields back the dollar; the fall in gold and silver is a mild drag on Australia's metal-heavy exports."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Higher US yields and a firm dollar cut gold's appeal."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Rising Treasury yields reflect bets on more Fed rate rises."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Cheaper metals trim Australia's export income."
-        }
-      ],
-      "watch": "US producer prices next, Fed speakers' views on a half-point move, and whether war news brings back safe-haven buying."
-    },
-    {
-      "id": "aol-reuters-oil-settles-houthi-saudi-20261112",
-      "ts": "2026-11-12T20:51:00Z",
-      "source": "Reuters (via AOL)",
-      "url": "https://www.aol.com/articles/oil-prices-drop-more-1-014618000.html",
-      "image": "https://hermes.media.transform.aol.com/79c3e9ce2e3a74a3abc3f77033642cff5c26a026/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/12/6a244a3b-220e-3449-ab8a-7f4ae756e832/ae92bb4b-e599-462e-add2-2444bf746951.jpg",
-      "headline": "Oil settles $3 higher on attacks on Saudi energy sites, Strait of Hormuz disruptions",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Oil jumped more than 3% on Thursday after Yemen's Houthi group said it attacked Saudi oil sites, on top of Iranian claims of tankers hit in the Strait of Hormuz. Brent closed near $96 a barrel.",
-      "beats": {
-        "was": "Since the US and Israel went to war with Iran in late February, the Strait of Hormuz, the route for about a fifth of the world's oil, has been restricted. Saudi Arabia's pipeline to the Red Sea port of Yanbu is its main way to ship oil around the strait.",
-        "happened": "The Houthis, an Iran-backed group in Yemen, said they struck a pumping station on that Saudi pipeline, an oil site at Yanbu and a Saudi Aramco building in Riyadh. The Saudi-led coalition said it shot down two drones. Brent settled at $95.82, up $3.06, and US crude at $88.74, though both are still down about 2.5% on the week.",
-        "means": "The war's risks are no longer just inside the strait: the route Saudi Arabia uses to get around it is now a target too. That makes it harder for supply to recover even if ship traffic through Hormuz picks up.",
-        "fx": "Dearer oil helps the Canadian dollar and hurts big oil importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Attacks on Saudi Arabia's bypass pipeline threaten the main way around Hormuz."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil prices help Canada's biggest export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so its import bill rises."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro area imports most of its energy."
-        }
-      ],
-      "watch": "Whether Saudi Arabia confirms any damage or lost flows, more Houthi attacks, and the International Energy Agency's monthly oil report on Friday."
-    },
-    {
-      "id": "marketscreener-goolsbee-inflation-tough-spot-20261112",
-      "ts": "2026-11-12T20:16:40Z",
-      "source": "MT Newswires (via MarketScreener)",
-      "url": "https://www.marketscreener.com/news/fed-s-goolsbee-says-inflation-inching-into-tough-spot-ce785ed8d08efe20",
-      "image": "https://cdn.zonebourse.com/static/resize/0/0//images/mtnewswires/A3753065.png",
-      "headline": "Fed's Goolsbee Says Inflation 'Inching' Into Tough Spot",
-      "story": "fed-hikes",
-      "story_title": "Fed: how fast to raise rates after hot inflation",
-      "pillar": "policy",
-      "summary": "Chicago Fed President Austan Goolsbee said the Federal Reserve has to act on inflation before the economy overheats, adding to the run of officials backing more rate rises.",
-      "beats": {
-        "was": "US consumer prices rose more than expected in October, and markets now treat a December Fed rate rise as close to certain. The open question is how fast and how far rates go after that.",
-        "happened": "Speaking on Yahoo Finance, Goolsbee said inflation is moving into a difficult place and the Fed should move before price pressures build further. He did not call for a bigger half-point step.",
-        "means": "Goolsbee is usually one of the more cautious officials, so his support for acting firms up the December rise and the case for more after it.",
-        "fx": "Supports the dollar against currencies whose central banks are closer to stopping."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A usually cautious Fed official backs further rate rises."
-        }
-      ],
-      "watch": "New York Fed President John Williams' remarks, US producer prices, and any official openly calling for a half-point rise."
     },
     {
       "id": "investing-asia-fx-yen-160-intervention-20261112",
