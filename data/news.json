@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T14:52:09Z",
+  "updated": "2026-11-16T16:51:27Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "bearish",
-      "ts": "2026-11-16T11:52:17Z",
-      "text": "The euro is near $1.10, its lowest since April 2025, as expected US rate rises keep lifting the dollar. Germany's central bank chief Joachim Nagel says another European Central Bank rise is very likely, but markets expect the Fed to keep going after the ECB stops, which favours the dollar."
+      "ts": "2026-11-16T16:51:27Z",
+      "text": "The euro is near $1.10, its lowest since April 2025, as expected US rate rises keep lifting the dollar. Most economists expect the European Central Bank to raise rates once more in December and then stop, while markets expect the Fed to keep going into next year, which favours the dollar."
     },
     "GBP": {
       "lean": "bearish",
@@ -308,6 +308,39 @@
         }
       ],
       "watch": "Fed Chair Kevin Warsh's speech on Monday: if he sounds less sure about a December rise, the dollar's run could stall."
+    },
+    {
+      "id": "fxstreet-reuters-poll-ecb-final-hike-20261116",
+      "ts": "2026-11-16T00:34:23Z",
+      "source": "FXStreet / Reuters",
+      "url": "https://www.fxstreet.com/news/euro-softens-below-11050-as-traders-ramp-up-fed-rate-hike-bets-202611160034",
+      "image": null,
+      "headline": "Euro softens below $1.1050 as traders ramp up Fed rate-hike bets",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "policy",
+      "summary": "Most economists in a Reuters survey expect the European Central Bank to raise rates one final time in December. More than a third see another rise early next year, but the euro still slipped toward $1.10.",
+      "beats": {
+        "was": "Euro-area inflation is running at about double the European Central Bank's 2% goal, largely because the Gulf war has pushed up energy prices. The bank raised its deposit rate in September and decides again in December.",
+        "happened": "A Reuters survey of economists, published over the weekend, found most expect a December rise and see it as the last one. Over a third expect a further step in early 2027. Markets already put the odds of a December move at roughly 90%.",
+        "means": "A December rise is close to a done deal, so it adds little new support. The open question is whether the ECB keeps going in 2027, and most economists think it stops.",
+        "fx": "The euro gets little lift from news that is already priced, while the Federal Reserve is expected to raise rates in both December and January. The euro sat near $1.10, its lowest since April 2025."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A December rise is expected and priced; most see it as the last, so it offers little new support."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The Fed is expected to keep raising rates after the ECB stops."
+        }
+      ],
+      "watch": "Euro-area inflation for November, due in early December: a sharp drop would weaken the case for any ECB move after December."
     },
     {
       "id": "investing-gharibabadi-iran-wont-wait-20261115",
@@ -1277,39 +1310,6 @@
         }
       ],
       "watch": "Euro-area final October inflation and any comment from ECB President Christine Lagarde on whether December is the last rise."
-    },
-    {
-      "id": "tokenpost-collins-housing-rates-20261113",
-      "ts": "2026-11-13T14:58:13Z",
-      "source": "TokenPost",
-      "url": "https://www.tokenpost.com/news/regulation/56797",
-      "image": null,
-      "headline": "Boston Fed's Collins Says Higher Rates May Raise Home Purchase and Building Costs",
-      "story": "fed-december",
-      "story_title": "Fed: a December rate rise and what US inflation says",
-      "pillar": "rates",
-      "summary": "Boston Fed President Susan Collins said beating inflation comes first, even if higher interest rates make homes dearer to buy and build for a while.",
-      "beats": {
-        "was": "The Federal Reserve is raising rates to fight inflation that has spread from energy into wider prices, and markets expect another rise at its December 8–9 meeting. US home sales fell in October to their lowest since 2010, with 30-year mortgage rates above 7%.",
-        "happened": "Opening the Boston Fed's yearly economics conference, this year on housing, Collins said tighter policy is sometimes needed to keep prices stable, even though it raises the cost of buying or building a home in the short run. She said stable prices help the housing market over time, and noted New England workers turning down jobs over housing costs.",
-        "means": "A voter on rates is saying the housing slump will not stop the Fed from raising rates further. That adds to the run of officials this week who want rates higher, and gives no sign the Fed is ready to pause.",
-        "fx": "Mildly supports the dollar by keeping a December rise and more after it on the table; it adds a little more pressure on gold."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Another Fed official puts inflation ahead of the housing slump, backing more rate rises."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher expected US rates raise the cost of holding gold."
-        }
-      ],
-      "watch": "Whether Fed Governor Michelle Bowman and San Francisco's Mary Daly, speaking later Friday, back a half-point December move or stick to a quarter point."
     }
   ]
 }
