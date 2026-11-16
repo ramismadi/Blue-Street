@@ -1,16 +1,16 @@
 {
-  "updated": "2026-11-16T03:47:55Z",
+  "updated": "2026-11-16T11:52:17Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-15T11:52:10Z",
-      "text": "The dollar ended last week at its highest since April 2025 because Federal Reserve officials, from usually cautious San Francisco Fed President Mary Daly to Vice Chair Philip Jefferson, kept saying inflation is too high and rates must rise again; markets see a December rise as close to certain and Bank of America expects more in January and March. A Trump–Xi–Putin meeting in Shenzhen on Thursday is the week's wild card, though officials expect no deal."
+      "ts": "2026-11-16T11:52:17Z",
+      "text": "The dollar opened this week at its highest since April 2025 because Federal Reserve officials keep saying inflation is too high, most recently Kansas City Fed President Jeff Schmid on Sunday. Markets see a December rate rise as close to certain and expect about four by next September; Fed Chair Kevin Warsh speaks on Monday."
     },
     "EUR": {
       "lean": "bearish",
-      "ts": "2026-11-15T19:47:36Z",
-      "text": "The euro closed last week near $1.103, its lowest since April 2025, as talk of more US rate rises lifted the dollar. Germany's central bank chief Joachim Nagel says another European Central Bank rise is very likely, but markets expect December's to be the last while the Fed keeps going, which still favours the dollar."
+      "ts": "2026-11-16T11:52:17Z",
+      "text": "The euro is near $1.10, its lowest since April 2025, as expected US rate rises keep lifting the dollar. Germany's central bank chief Joachim Nagel says another European Central Bank rise is very likely, but markets expect the Fed to keep going after the ECB stops, which favours the dollar."
     },
     "JPY": {
       "lean": "bearish",
@@ -49,6 +49,51 @@
     }
   },
   "items": [
+    {
+      "id": "yahoo-reuters-dollar-fifth-day-schmid-20261116",
+      "ts": "2026-11-16T01:09:00Z",
+      "source": "Reuters (via Yahoo Finance)",
+      "url": "https://finance.yahoo.com/markets/currencies/articles/yen-steady-against-euro-dollar-010910695.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/5f9a4f31587e0e89453c54f48f17a5cd9c730e89e1a02ba0a1c310497d72f11f/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F181398ced8bd674ead835171938d8f1f.jpg",
+      "headline": "Yen steady against euro and dollar after soft Japanese GDP data",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "policy",
+      "summary": "The dollar started the week at its highest since April 2025 as another Federal Reserve official said inflation still needs work. The yen held near 160 per dollar despite Japan's economy shrinking slightly.",
+      "beats": {
+        "was": "US inflation came in hot for October, and Federal Reserve officials have spent the past week saying interest rates must rise again in December.",
+        "happened": "In early Monday trade in Asia the dollar index sat near 103.4, its highest since April 2025, and the euro was near $1.10. Kansas City Fed President Jeff Schmid, who does not vote on rates this year, said on Sunday the Fed still has work to do on inflation. Markets put the chance of a quarter-point rise on December 9 at about 94%, while bets on a bigger half-point move eased.",
+        "means": "Markets now expect about four Fed rate rises by next September, and higher US rates keep drawing money into the dollar. The yen barely reacted to Japan's weak July–September growth, because traders still expect the Bank of Japan to raise rates in December and Tokyo has warned it may step in near 160.",
+        "fx": "Steady support for the dollar against the euro and gold. The yen is held weak by the gap in rates but capped by the threat of Japanese intervention; the Australian and New Zealand dollars were flat."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Another Fed official backs more rate rises; the dollar is at its highest since April 2025."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro sits near $1.10, its lowest since April 2025, as the US rate gap widens."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Weak growth and high US rates weigh, but a likely December Bank of Japan rise and intervention threats limit the fall."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "More expected Fed rate rises raise the cost of holding gold, which pays no interest."
+        }
+      ],
+      "watch": "Fed Chair Kevin Warsh's speech on Monday: if he sounds less sure about a December rise, the dollar's run could stall."
+    },
     {
       "id": "actionforex-china-october-activity-miss-20261116",
       "ts": "2026-11-16T03:39:40Z",
