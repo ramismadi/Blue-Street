@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-16T00:56:24-06:00",
-  "note": "NY-close read, Fri 2026-11-13 (~15:00 CT). Dollar extends to a fresh 19-month high (DXY ~103.34, +0.9% on the week, best in two months) after a mixed PPI — headline +0.3% m/m vs +0.4% fcst (softer), standard core exactly in line (+0.3% m/m, +5.0% y/y). Dec Fed hike 25bp ~88% (CME FedWatch post-print 88.2%), 50bp tail ~12%. Daly: 'rate increases likely' as inflation worsens. USD/JPY ~159.93 after touching 160.19 in Tokyo; oil flat after the IEA surplus call (Brent ~$96.12, WTI ~$88.93); gold ~$3,887. Levels are indicative index quotes, not executable prices.",
+  "updated": "2026-11-16T07:40:42-06:00",
+  "note": "NY-open read, Mon 2026-11-16 (~07:40 CT), after the 7:30am CT Canada CPI (+3.1% y/y vs 3.2% consensus; core anchored near 2% — Dec BoC hike case does not strengthen). Dollar holds a 19-month high (DXY ~103.47, 5th straight up); gold at a 13-month low (~$3,860, intraday $3,840.52); oil steady (Brent ~$95.81, WTI ~$88.80). USD/CAD ~1.4291 pre-print, probing the 1.4299 Oct top — post-print level not yet verified in the wires checked at push time. Levels are indicative index quotes, not executable prices.",
   "levels": [
     {
       "id": "DXY",
@@ -46,10 +46,10 @@
     },
     {
       "id": "USDCAD",
-      "value": 1.4267,
-      "chg_pct": 0.06,
-      "as_of": "2026-11-13T15:00:00-06:00",
-      "source": "live-rates.com, 21:58 UTC Nov 13 (Fri close; no fresh Asia read in the wires checked)"
+      "value": 1.4291,
+      "chg_pct": 0.17,
+      "as_of": "2026-11-16T07:40:42-06:00",
+      "source": "FXStreet, pre-print ~12:51Z (post-print level not yet verified in the wires checked)"
     },
     {
       "id": "NZDUSD",
@@ -95,24 +95,24 @@
     },
     {
       "id": "BRENT",
-      "value": 95.69,
-      "chg_pct": -0.16,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters global markets wrap, Mon Nov 16 (Jan contract)"
+      "value": 95.81,
+      "chg_pct": -0.03,
+      "as_of": "2026-11-16T08:35:00Z",
+      "source": "price-chart.com indicative futures reference, 08:35 UTC"
     },
     {
       "id": "WTI",
-      "value": 88.68,
-      "chg_pct": 0.14,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters global markets wrap, Mon Nov 16 (Dec contract)"
+      "value": 88.8,
+      "chg_pct": 0.27,
+      "as_of": "2026-11-16T08:35:00Z",
+      "source": "price-chart.com indicative futures reference, 08:35 UTC"
     },
     {
       "id": "XAUUSD",
-      "value": 3870,
-      "chg_pct": -0.33,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Asia spot: early $3,892 bounce faded to ~$3,863-3,871 by late Asia (Reuters wrap / Hindu live)"
+      "value": 3860.05,
+      "chg_pct": -0.63,
+      "as_of": "2026-11-16T08:10:00Z",
+      "source": "price-chart.com hourly spot reference, 08:10 UTC; Reuters: spot $3,840.52 intraday low, a 13-month low"
     },
     {
       "id": "US2Y",
@@ -134,17 +134,17 @@
       "bank": "fed",
       "meeting": "2026-12-09",
       "move": "hike",
-      "prob": 0.92,
-      "source": "Dec 25bp hike ~92-94% (CME FedWatch 93.9% / fed funds futures 91.1% via Reuters, Nov 16), 50bp tail ~6-8% (from 11.8% post-PPI Fri); Schmid (KC Fed, Sun): inflation 'worryingly above target and moving in the wrong direction'. Warsh speaks today 11:00am CT; FOMC minutes Wed 1:00pm CT. BofA adds a Jan 2027 hike, third by Mar 2027.",
-      "as_of": "2026-11-16T00:56:24-06:00"
+      "prob": 0.93,
+      "source": "Dec 25bp hike ~91-94% (CME FedWatch 93.9% via Reuters; 91.3% via growbeansprout; Kalshi 87.5% 25bp / 8.5% 50bp, 96% any hike); a second hike in Jan ~67%, a third by Mar ~63% (TheStreet/CME). Warsh speaks today 11:00am CT; FOMC minutes Wed 1:00pm CT.",
+      "as_of": "2026-11-16T07:40:42-06:00"
     },
     {
       "bank": "ecb",
       "meeting": "2026-12-17",
       "move": "hike",
-      "prob": 0.88,
-      "source": "Dec 25bp hike ~88% intact (STIR ~79%); EZ GDP 2nd est. +0.4% q/q unrevised (Eurostat), employment flat; EUR/USD ~$1.1036, lowest since Apr 2025.",
-      "as_of": "2026-11-13T15:00:00-06:00"
+      "prob": 0.9,
+      "source": "Dec 25bp hike ~88-92% intact; Reuters poll — most economists expect a final Dec hike, more than a third another in early 2027 as inflation runs at double the 2% target; EUR/USD ~$1.1016, a 19-month low.",
+      "as_of": "2026-11-16T07:40:42-06:00"
     },
     {
       "bank": "boe",
@@ -160,15 +160,15 @@
       "move": "hike",
       "prob": 0.84,
       "source": "Dec hike ~84% intact after the Q3 GDP miss (-0.1% annualized vs +0.3% exp, first contraction in a year); USD/JPY ~159.59 in Asia; FinMin Katayama: government will 'respond appropriately' to FX volatility (Reuters); Japan PPI beat +7.1% y/y; JGB 10Y 2.87% (+5.9bp).",
-      "as_of": "2026-11-16T00:56:24-06:00"
+      "as_of": "2026-11-16T07:40:42-06:00"
     },
     {
       "bank": "boc",
       "meeting": "2026-12-09",
       "move": "hike",
-      "prob": 0.34,
-      "source": "Dec further hike ~32-36% (swaps ~32%, OIS 36.4%, LSEG ~35%) — hold the base case; USD/CAD ~1.4262; WTI ~$88.93 after the IEA surplus call.",
-      "as_of": "2026-11-13T15:00:00-06:00"
+      "prob": 0.58,
+      "source": "Dec further hike ~54-63% PRE-PRINT (OIS ~13.4bp, ActionForex; BBH/SocGen ~63%), up from ~32-36% Nov 7 — but Oct CPI (+3.1% y/y vs 3.2% consensus; core anchored near 2%) does not strengthen the hike case; post-print pricing read not yet verified; hold still the base case, January more likely (ING). USD/CAD ~1.4291 pre-print.",
+      "as_of": "2026-11-16T07:40:42-06:00"
     },
     {
       "bank": "rbnz",
