@@ -1,35 +1,43 @@
 {
-  "updated": "2026-11-16T01:40:00-06:00",
+  "updated": "2026-11-16T15:30:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "read": "Another Fed official, Kansas City's Jeff Schmid, warned that inflation is moving the wrong way, and a December Fed hike now looks all but certain. In Japan, board member Hajime Takata called for an early hike despite a shrinking economy. Europe, Britain and Japan are also expected to hike, but US rates are rising faster, which keeps favouring the dollar.",
-      "figure": "Fed Dec hike ~92–94% 25bp / ~6–8% 50bp (CME FedWatch, futures via Reuters); ECB Dec ~88%; BoJ Dec ~84%; BoE Dec ~70–75%; BoC Dec ~32–36%",
+      "figure": "Fed Dec hike ~93–94% 25bp / ~6% 50bp (CME FedWatch via Reuters); ECB Dec ~88–92%; BoJ Dec ~84%; BoE Dec ~70–75%; BoC Dec ~44% (from ~60% pre-CPI)",
+      "read": "Fed Chair Kevin Warsh gave no hint on rates, so his colleagues' calls for a December hike still set the tone and bets stayed near certain. Canada's calm inflation figures cut the odds of a Bank of Canada hike to below even. Europe, Britain and Japan are still expected to hike, but US rates are rising faster, which keeps favouring the dollar.",
       "sources": [
         {
-          "label": "Blue Street central banks and pricing (Hercules, Nov 16 London-open run)",
+          "label": "Blue Street central banks and pricing (Hercules, Nov 16 New York close run)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Reuters via Devdiscourse (Nov 16): Dollar extends gains, yen looks past soft Japan GDP data",
-          "url": "https://www.devdiscourse.com/article/international/4007259-forex-dollar-extends-gains-yen-looks-past-soft-japan-gdp-data"
+          "label": "AP via ClickOnDetroit (Nov 16): Warsh grapples with AI's potential economic impact, steers clear of its inflation risk",
+          "url": "https://www.clickondetroit.com/business/2026/11/16/warsh-grapples-with-ais-potential-economic-impact-steers-clear-of-its-inflation-risk/"
         },
         {
-          "label": "Reuters via AOL (Nov 16): BOJ's Takata calls for swift hike in rates to 'good' position",
-          "url": "https://www.aol.com/articles/bojs-takata-calls-swift-hike-042928000.html"
+          "label": "Morningstar / Dow Jones (Nov 16): Canada inflation holds steady at 3.1% in October",
+          "url": "https://www.morningstar.com/news/dow-jones/202611166754/canada-inflation-holds-steady-at-31-in-october-2nd-update"
+        },
+        {
+          "label": "Reuters via Devdiscourse (Nov 16): Dollar hits highest since April 2025 as Fed rate bets lend support",
+          "url": "https://www.devdiscourse.com/article/international/4007684-forex-dollar-hits-highest-since-april-2025-as-fed-rate-bets-lend-support?amp"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "read": "Japan's economy shrank slightly in the summer and China's October spending and factory figures all fell short. Neither moved currencies much, but weaker Chinese demand is a quiet drag on the Aussie and kiwi. The US economy still looks firmer, and US retail sales on Tuesday are the next check.",
-      "figure": "Japan Q3 GDP −0.1% annualized (fcst +0.3%); China Oct industrial output +4.8% y/y (fcst +5.3%), retail sales +0.4% (fcst +0.8%), investment −8.1% Jan–Oct",
+      "figure": "Empire State Nov 7.8 (fcst 16.7; Oct 25.5); euro-area IP Sep +0.2% m/m (fcst +0.3%), −1.5% y/y; Japan Q3 GDP −0.1% annualized; China Oct retail sales +0.4% y/y (fcst +0.8%)",
+      "read": "A New York factory survey cooled sharply, though hiring in it was the strongest in four years, so it did little to the US picture. Euro-area factories barely grew, and Japan and China also came in soft. The US still looks firmer than most, and US retail sales on Tuesday are the next check.",
       "sources": [
         {
-          "label": "Reuters (Nov 16): Japan's economy contracts annualised 0.1% in July-September",
-          "url": "https://www.reuters.com/business/japans-economy-contracts-annualised-01-july-september-2026-11-15/"
+          "label": "investinglive (Nov 16): US November Empire manufacturing index 7.8",
+          "url": "https://investinglive.com/news/us-november-empire-manufacturing-index-7-80-vs-18-00-expected/"
+        },
+        {
+          "label": "Eurostat via Sharecast (Nov 16): Eurozone industrial production, September",
+          "url": "https://www.sharecast.com/news/international-economic/eurozone-eurostat-industrial-production-consensus-september-germany--24186076.html"
         },
         {
           "label": "Reuters (Nov 16): China's factory output, retail sales growth slow in October",
@@ -44,83 +52,91 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "read": "US inflation is still running far above the Fed's goal, which keeps the pressure to hike and supports the dollar. Canada's October inflation this morning decides whether a December Bank of Canada hike comes back into view. UK inflation on Wednesday matters just as much for the pound.",
-      "figure": "Canada CPI Oct fcst ~3.0% y/y (Sep 3.1%), 7:30 AM CT today; UK CPI Oct fcst 3.6% (Sep 3.5%), Wed 1:00 AM CT; US PPI Oct +6.5% y/y",
+      "figure": "Canada CPI Oct 3.1% y/y (fcst 3.2%), core median 2.0%, trim 1.8%; UK CPI Oct fcst 3.6% (Sep 3.5%), Wed 1:00 AM CT; Brent −3.6%",
+      "read": "Canadian inflation held steady, with core prices near the Bank of Canada's goal, so energy costs are not yet spreading into everyday prices there. US inflation is still well above the Fed's goal, which keeps the pressure to hike. Falling oil should ease price worries a little, and UK inflation on Wednesday matters most for the pound.",
       "sources": [
+        {
+          "label": "Statistics Canada (Nov 16): Consumer Price Index, October 2026",
+          "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/261116/dq261116a-eng.htm"
+        },
+        {
+          "label": "Morningstar / Dow Jones (Nov 16): Canada inflation holds steady at 3.1% in October",
+          "url": "https://www.morningstar.com/news/dow-jones/202611166754/canada-inflation-holds-steady-at-31-in-october-2nd-update"
+        },
         {
           "label": "Blue Street calendar (Hercules, Nov 16): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-        },
-        {
-          "label": "Blue Street headline log (Hercules, Nov 16 London-open run)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/news-raw.json"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "read": "Iran's weekend claims of a sunk supertanker and strikes in Bahrain went unconfirmed, and US stock futures rose at the open. With markets calm, the safe-haven franc and yen got no lift. The Aussie and kiwi, which track market mood and China, stayed near their lows.",
-      "figure": "AUD/USD ~0.676 (lowest since January); NZD/USD ~0.552; USD/CHF ~0.839 (Saturday feed); Reuters: Trump may pause strikes if Iran and the Houthis hold back",
+      "figure": "Nasdaq −1.3%, S&P 500 −1.0% midday; AUD/USD ~0.675 (lowest since January); USD/JPY ~159.6; USD/CHF ~0.840",
+      "read": "US tech stocks fell sharply ahead of Nvidia's results, souring the mood. The Aussie and kiwi, which track market mood, slipped toward their lows. Yet the safe-haven franc and yen got little lift, because rising US rates still matter more to them than the scare.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session ~12:56 AM CT, Nov 16; indicative)",
+          "label": "Motley Fool (Nov 16): Stock market midday, Nasdaq tumbles as tech selling intensifies",
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/11/16/stock-market-midday-nov-16-stocks-slide-as-tech-selling-intensifies-across-the-market/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York close ~3:02 PM CT, Nov 16; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         },
         {
-          "label": "Blue Street breaking watch (Hercules, Nov 15–16)",
+          "label": "Blue Street breaking watch (Hercules, Nov 16)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
-        },
-        {
-          "label": "HNGN citing Reuters (Nov 15): Iran targets Bahrain again as Trump weighs a pause in strikes",
-          "url": "https://www.hngn.com/articles/273810/20261115/trump-says-no-iran-deal-needed-pulls-vance-talks.htm"
         }
       ]
     },
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "read": "Oil slipped as traders trusted the forecast of a supply surplus more than unconfirmed war claims. Cheaper oil eases the strain on energy buyers like Japan and the euro area and takes a little support from the Canadian dollar. Gold faded back below $3,900, offering the Aussie little help.",
-      "figure": "Brent ~$95.7, WTI ~$88.7; IEA Q4 supply ~1.7 mb/d above demand; gold ~$3,870",
+      "figure": "Brent settled $92.44 (−3.6%), WTI $85.72 (−3.2%); IEA Q4 surplus ~1.7 mb/d; gold ~$3,867, low ~$3,840 (13-month low)",
+      "read": "Oil fell hard as traders bet that supply will outrun demand, with Gulf flows nearly back to normal. That helps energy buyers such as Japan and the euro area and takes support away from the Canadian dollar. Gold's slide to a 13-month low adds to the Aussie's troubles.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, Asia session ~12:56 AM CT, Nov 16; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Bloomberg via Rigzone (Nov 16): Oil retreats as traders weigh supply glut",
+          "url": "https://www.rigzone.com/news/wire/oil_retreats_as_traders_weigh_supply_glut-16-nov-2026-185096-article/"
         },
         {
-          "label": "Reuters via Business Recorder (Nov 16): Oil prices fall on expectations of coming supply surplus",
-          "url": "https://www.brecorder.com/news/40449125/oil-prices-fall-on-expectations-of-coming-supply-surplus"
+          "label": "DTN (Nov 16): Oil down 3%; supply surplus signs offset Hormuz worries",
+          "url": "https://www.dtnpf.com/agriculture/web/ag/news/world-policy/article/2026/11/16/oil-3-supply-surplus-signs-offset"
+        },
+        {
+          "label": "Morningstar / Dow Jones (Nov 16): Goldman sees oil market swelling into sizable surplus in 2027",
+          "url": "https://www.morningstar.com/news/dow-jones/202611167188/goldman-sees-oil-market-swelling-into-sizable-surplus-in-2027-commodities-roundup"
+        },
+        {
+          "label": "CNBC (Nov 16): Gold falls to more than one-year low on resilient dollar",
+          "url": "https://www.cnbc.com/2026/11/16/gold-holds-steady-as-investors-await-warsh-remarks-for-rate-signals.html"
         }
       ]
     },
     {
       "id": "positioning",
       "title": "Positioning",
-      "read": "Hedge funds lean toward the dollar and against the kiwi, the Canadian dollar and the euro, and the dollar's run keeps paying them. Their large bet on the yen keeps losing money as it weakens. A delayed weekly report from US regulators is due this afternoon.",
-      "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD, CAD, EUR; Nov 10 report delayed by Veterans Day, due today 2:30 PM CT",
+      "figure": "CFTC Nov 3: hedge funds for USD, JPY, AUD, GBP; against NZD, CAD, EUR; Nov 10 report delayed by Veterans Day",
+      "read": "Hedge funds lean toward the dollar and against the kiwi, the Canadian dollar and the euro, and the dollar's run keeps paying them. Their large bet on the yen keeps losing money as it weakens. Big bets against the euro, Aussie and kiwi could unwind fast on good news.",
       "sources": [
         {
           "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 3)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/cot.json"
-        },
-        {
-          "label": "Blue Street headline log (Hercules, Nov 16 London-open run)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/news-raw.json"
         }
       ]
     },
     {
       "id": "fiscal",
       "title": "Fiscal",
+      "figure": "US October deficit $404B, a record for the month; US 10-year ~5.13%",
       "read": "Record US government borrowing keeps long-term US borrowing costs above 5%. Higher yields support the dollar for now, but a growing deficit is a worry if buyers start asking for more. France's debt troubles keep weighing on the euro.",
-      "figure": "US October deficit $404B, a record for the month; US 10-year ~5.14%",
       "sources": [
         {
           "label": "Reuters via Investing.com (Nov 12): US starts 2027 fiscal year with record October budget deficit of $404 billion",
           "url": "https://www.investing.com/news/economy-news/us-starts-2027-fiscal-year-with-record-october-budget-deficit-of-404-billion-5023006"
         },
         {
-          "label": "Blue Street market levels (Hercules, Asia session ~12:56 AM CT, Nov 16; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close ~3:02 PM CT, Nov 16; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
