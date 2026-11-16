@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T12:48:01Z",
+  "updated": "2026-11-16T14:52:09Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -28,9 +28,9 @@
       "text": "The Swiss franc slipped to a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Gulf attacks and an Israeli cabinet meeting on Iran keep some demand for the franc as a safe place, but a calm market open and a possible pause in US strikes point the other way."
     },
     "CAD": {
-      "lean": "mixed",
-      "ts": "2026-11-16T12:48:01Z",
-      "text": "Oil, Canada's main export, has slipped to about $95 as Gulf supply recovers, and the strong US dollar holds the loonie down; Canada has also lost jobs two months running. The Bank of Canada says it is ready to raise rates again if energy costs spread, so October inflation on Monday morning is the next guide."
+      "lean": "bearish",
+      "ts": "2026-11-16T14:52:09Z",
+      "text": "Canadian inflation held at 3.1% in October, slightly below forecast, and the Bank of Canada's core measures sit near its 2% goal, so a December rate rise looks less likely. With oil, Canada's main export, drifting near $95 and the US dollar strong, the Canadian dollar has little to lean on."
     },
     "AUD": {
       "lean": "bearish",
@@ -44,8 +44,8 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-14T03:55:00Z",
-      "text": "Gold is heading for a weekly loss of about 4.5%, near $3,880 an ounce and its lowest in over a year, because markets see a December Federal Reserve rate rise as close to certain and 10-year US bond yields sit above 5%. Demand from the Middle East war has not been enough to offset that."
+      "ts": "2026-11-16T14:52:09Z",
+      "text": "Gold fell on Monday to about $3,840 an ounce, its lowest since October 2025, as markets bet on Federal Reserve rate rises in December and January and the dollar hit a 19-month high. War news from the Gulf has not drawn enough safe-haven buying to offset that."
     },
     "OIL": {
       "lean": "bearish",
@@ -54,6 +54,72 @@
     }
   },
   "items": [
+    {
+      "id": "reuters-canada-cpi-october-holds-20261116",
+      "date": "2026-11-16",
+      "source": "Reuters (via TradingView)",
+      "url": "https://www.tradingview.com/news/reuters.com,2026-11-16:newsml_SCLGMEM35:0-canada-s-annual-inflation-rate-holds-at-3-1-in-october/",
+      "image": null,
+      "headline": "Canada's annual inflation rate holds at 3.1% in October",
+      "story": "boc-december",
+      "story_title": "Will the Bank of Canada raise rates on December 9?",
+      "pillar": "inflation",
+      "summary": "Canadian inflation stayed at 3.1% in October, a touch below the 3.2% forecast. The Bank of Canada's preferred core measures sit close to its 2% goal, which weakens the case for a rate rise in December.",
+      "beats": {
+        "was": "Inflation in Canada was 3.1% in September, pushed up by fuel costs from the Middle East war. The Bank of Canada has said it is ready to raise rates if those energy costs spread into other prices, and it next decides on December 9.",
+        "happened": "Statistics Canada said prices rose 3.1% from a year earlier in October, against forecasts of 3.2%, and 0.2% from September. Without food and energy, inflation was 1.8%. The bank's own core measures came in at 2.0% for the median and 1.8% for the trimmed mean.",
+        "means": "Energy is lifting the headline number, but it is not spreading into everyday prices. That gives the Bank of Canada room to hold in December; bank ING sees January as the more likely time for any rise.",
+        "fx": "With fewer reasons for the Bank of Canada to act soon, the Canadian dollar has less support against a US dollar lifted by expected Fed rate rises. The US dollar was near 1.43 Canadian dollars, close to its October high."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slightly softer inflation and core near 2% make a December Bank of Canada rise less likely."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The gap between expected US and Canadian rate rises widens a little."
+        }
+      ],
+      "watch": "Bank of Canada decision on December 9: a hold would confirm that energy costs are not yet a reason to raise rates."
+    },
+    {
+      "id": "cnbc-gold-one-year-low-fed-bets-20261116",
+      "date": "2026-11-16",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/11/16/gold-holds-steady-as-investors-await-warsh-remarks-for-rate-signals.html",
+      "image": null,
+      "headline": "Gold falls to more than one-year low on resilient dollar as hawkish Fed bets build",
+      "story": "gold-fed-cpi",
+      "story_title": "Gold: rising US rates vs war risk",
+      "pillar": "rates",
+      "summary": "Gold fell about 1% on Monday to near $3,840 an ounce, its lowest since October 2025, and silver dropped 3%. A strong dollar and expected Fed rate rises are outweighing demand linked to the Middle East war.",
+      "beats": {
+        "was": "Gold lost about 4.6% last week after US inflation figures for October came in hot and markets moved to price a December Federal Reserve rate rise as close to certain.",
+        "happened": "Spot gold slid to about $3,840 an ounce, briefly near $3,832, after an early bounce faded. Silver fell about 3% to $47.25, also a one-year low. The dollar index stood at its highest since April 2025, and Goldman Sachs cut its end-2027 gold forecast to $4,650.",
+        "means": "Higher US rates make gold, which pays no interest, less attractive to hold, and a dearer dollar makes it costlier for buyers abroad. Gulf attacks and tanker claims have not been enough to bring safe-haven buyers back.",
+        "fx": "Gold is moving with US rate expectations rather than with war news. Fed Chair Kevin Warsh speaks on Monday, and minutes of the Fed's October meeting come on Wednesday."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A fresh one-year low as bets on Fed rate rises firm and the dollar climbs."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The dollar index at its highest since April 2025 is the main weight on gold."
+        }
+      ],
+      "watch": "Fed Chair Kevin Warsh on Monday: talk of further rate rises would keep pressure on gold."
+    },
     {
       "id": "investing-sterling-sixth-day-slide-20261116",
       "ts": "2026-11-16T10:10:00Z",
@@ -1244,45 +1310,6 @@
         }
       ],
       "watch": "Whether Fed Governor Michelle Bowman and San Francisco's Mary Daly, speaking later Friday, back a half-point December move or stick to a quarter point."
-    },
-    {
-      "id": "gcaptain-reuters-lng-tanker-mine-hormuz-20261113",
-      "ts": "2026-11-13T14:37:27Z",
-      "source": "Reuters (via gCaptain)",
-      "url": "https://gcaptain.com/iran-says-tanker-carrying-lng-hit-mine-suffered-explosion-in-hormuz/",
-      "image": null,
-      "headline": "Iran says tanker carrying LNG hit mine, suffered explosion in Hormuz",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Iran's Revolutionary Guards say a ship carrying liquefied natural gas hit a sea mine and exploded in the Strait of Hormuz on Friday. No details on the ship have come out yet.",
-      "beats": {
-        "was": "The US and Israel went to war with Iran in late February, and Iran has since restricted the Strait of Hormuz, the route for about a fifth of the world's oil and much of its liquefied gas. Iran said four oil tankers were hit by explosions there on Wednesday and Thursday.",
-        "happened": "The Guards' navy said the gas carrier struck a mine after taking a route Iran calls unauthorized and dangerous; the claim came through Iranian state media and has not been checked. At least 10 ships were hit in the first 10 days of November, after 37 attacks in October, the most in any month since the war began.",
-        "means": "Iran keeps hitting ships that ignore its rules, even as overall traffic recovers. So far markets are looking past it: oil is still headed for a second weekly fall on more supply and hopes the war winds down.",
-        "fx": "Adds a little war risk to oil and gas prices, which helps the Canadian dollar and weighs on big energy importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Another ship hit in the main Gulf route, though prices barely reacted."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Europe relies on imported liquefied gas, so attacks on gas carriers raise its energy risk."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its energy, including gas from the Gulf."
-        }
-      ],
-      "watch": "Whether the ship's owner or another source confirms the hit, and whether shipping firms slow Hormuz trips again."
     }
   ]
 }
