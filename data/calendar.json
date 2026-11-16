@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T00:56:24-06:00",
+  "updated": "2026-11-16T15:05:00-06:00",
   "events": [
     {
       "id": "chf-ppi-20261015",
@@ -474,25 +474,6 @@
           "url": "https://www.actionforex.com/economic-calendar/658581-eco-data-10-30-26/"
         }
       ]
-    },
-    {
-      "id": "de-cpi-flash-20261030",
-      "ts": "2026-10-30T13:00:00Z",
-      "ccy": "EUR",
-      "impact": "medium",
-      "category": "inflation",
-      "title": "German flash CPI (Oct)",
-      "actual": "+2.8% y/y (vs 3.1% HICP poll, prev 3.3%); CPI -0.2% m/m (vs 0.1% fcst, prev 0.6%); HICP +2.8% y/y; core 2.1% (prev 2.4%); miss",
-      "forecast": "0.1%",
-      "previous": "0.6%",
-      "better": "higher",
-      "why": "Germany's October flash — the input to the EZ aggregate; Sep PPI ran hot at +6.7% y/y and the states print through the morning.",
-      "if_beat": "Hotter: EZ aggregate at risk — ECB hawkish.",
-      "if_miss": "Cooler: relief — dovish lean.",
-      "outcome": "Miss: German CPI cooled to 2.8% y/y (HICP 2.8% vs 3.1% poll, prev 3.3%), CPI -0.2% m/m; core 2.1% (prev 2.4%) — relief after the hot French/Italian flashes.",
-      "chapter": null,
-      "bank": null,
-      "sources": []
     },
     {
       "id": "cny-pmi-20261031",
@@ -1983,6 +1964,34 @@
       ]
     },
     {
+      "id": "ez-ip-20261116",
+      "ts": "2026-11-16T10:00:00Z",
+      "ccy": "EUR",
+      "impact": "medium",
+      "category": "growth",
+      "title": "Eurozone industrial production (Sep)",
+      "actual": "+0.2% m/m (vs +0.3% fcst; Aug -0.5%); -1.5% y/y (vs -0.2% fcst; Aug -1.1%); Germany +1.3% m/m",
+      "forecast": "+0.3% m/m",
+      "previous": "-0.5% m/m (Aug)",
+      "better": "higher",
+      "why": "First hard read on eurozone factory output for September — the manufacturing pulse behind the ECB's growth call.",
+      "if_beat": "Beat: factory stabilization after three declines — EUR supported.",
+      "if_miss": "Miss: the rebound stays shallow — EUR offered.",
+      "outcome": "Miss — +0.2% m/m vs +0.3% expected after three straight declines, and the annual contraction deepened to -1.5% y/y (vs -0.2% expected); ING: 'no signs of a true rebound', only modest gains ahead (Eurostat, Nov 16).",
+      "chapter": null,
+      "bank": null,
+      "sources": [
+        {
+          "label": "Sharecast (Nov 16): Industrial output picks up modestly in Eurozone",
+          "url": "https://www.sharecast.com/news/international-economic/eurozone-eurostat-industrial-production-consensus-september-germany--24186076.html"
+        },
+        {
+          "label": "ING THINK (Nov 16): Eurozone industrial production ticked up but still unimpressive",
+          "url": "https://think.ing.com/snaps/eurozone-industrial-production-ticked-up-but-still-unimpressive-in-september/"
+        }
+      ]
+    },
+    {
       "id": "ca-cpi-20261116",
       "ts": "2026-11-16T13:30:00Z",
       "ccy": "CAD",
@@ -2016,6 +2025,34 @@
       ]
     },
     {
+      "id": "us-empire-20261116",
+      "ts": "2026-11-16T13:30:00Z",
+      "ccy": "USD",
+      "impact": "medium",
+      "category": "growth",
+      "title": "Empire State Manufacturing Survey (Nov)",
+      "actual": "+7.8 (vs +16.7 WSJ consensus; Oct 25.5, a multiyear high); new orders 3.0 (from 23.2), shipments 8.8; employment 18.1 (highest since Jun 2022), prices paid 45.9 (from 59.5)",
+      "forecast": "+16.7",
+      "previous": "25.5 (Oct)",
+      "better": "higher",
+      "why": "Earliest monthly read on US factory conditions — the first hard data point of the week before retail sales Tue and the FOMC minutes Wed.",
+      "if_beat": "Beat: factory momentum intact after October's surge — USD supported.",
+      "if_miss": "Miss: demand cooling after October's surge — USD offered, though hiring strength blunts the signal.",
+      "outcome": "Miss — headline fell 18 points to 7.8 vs 16.7 expected after October's 25.5 surge; new orders nearly stalled (3.0 from 23.2) while hiring hit a four-year high (18.1) and price pressures eased (prices paid 45.9 from 59.5) — a mixed soft read that left Dec hike pricing unmoved (NY Fed, Nov 16).",
+      "chapter": null,
+      "bank": null,
+      "sources": [
+        {
+          "label": "investinglive (Nov 16): US November Empire Manufacturing index +7.80 vs +18.00 expected",
+          "url": "https://investinglive.com/news/us-november-empire-manufacturing-index-7-80-vs-18-00-expected/"
+        },
+        {
+          "label": "TradingView / Dow Jones (Nov 16): New York manufacturing activity moderates",
+          "url": "https://www.tradingview.com/news/DJN_DN20261116005096:0-new-york-manufacturing-activity-moderates-from-october-surge/"
+        }
+      ]
+    },
+    {
       "id": "us-warsh-20261116",
       "ts": "2026-11-16T17:00:00Z",
       "ccy": "USD",
@@ -2023,17 +2060,26 @@
       "category": "speech",
       "title": "Fed Chair Warsh speaks",
       "focus": false,
-      "actual": null,
+      "actual": "Opening remarks at the Fed's Productivity and Jobs Task Force Conference (San Francisco) — Fed staff modeling three AI scenarios (productivity gains, job losses, stock slump); scenarios illustrative, not forecasts; no rate proposal, no December steer",
       "forecast": null,
       "previous": null,
       "better": null,
       "why": "Warsh's first set-piece speech since the Oct 28 hold (10-2, two hawkish dissents) — the market listens for any December steer after the CPI/PPI week.",
       "if_beat": "Hawkish steer: Dec hike pricing firms — USD bid.",
       "if_miss": "Dovish steer: 50bp tail narrows further — USD offered.",
-      "outcome": null,
+      "outcome": "No policy signal — Warsh's first set-piece since the Oct 28 hold carried no December steer; the Dec 25bp hike stays ~93-94% priced and the market's next read is the FOMC minutes Wed 1:00pm CT (KuCoin flash / investinglive, Nov 16).",
       "chapter": null,
       "bank": "fed",
-      "sources": []
+      "sources": [
+        {
+          "label": "investinglive (Nov 16): Gold slips toward $3,876 ahead of Warsh",
+          "url": "https://investinglive.com/commodities/gold-slips-toward-3-876-ahead-of-warsh-as-fed-speakers-line-up-behind-tighter-policy/"
+        },
+        {
+          "label": "KuCoin flash (Nov 16): Fed models three AI scenarios; no rate proposal",
+          "url": "https://www.kucoin.com/news/flash/fed-models-three-ai-scenarios-productivity-gains-job-losses-and-stock-slump"
+        }
+      ]
     },
     {
       "id": "aud-bullock-20261116",

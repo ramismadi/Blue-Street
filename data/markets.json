@@ -1,132 +1,132 @@
 {
-  "updated": "2026-11-16T07:40:42-06:00",
-  "note": "NY-open read, Mon 2026-11-16 (~07:40 CT), after the 7:30am CT Canada CPI (+3.1% y/y vs 3.2% consensus; core anchored near 2% — Dec BoC hike case does not strengthen). Dollar holds a 19-month high (DXY ~103.47, 5th straight up); gold at a 13-month low (~$3,860, intraday $3,840.52); oil steady (Brent ~$95.81, WTI ~$88.80). USD/CAD ~1.4291 pre-print, probing the 1.4299 Oct top — post-print level not yet verified in the wires checked at push time. Levels are indicative index quotes, not executable prices.",
+  "updated": "2026-11-16T15:05:00-06:00",
+  "note": "NY-close read, Mon 2026-11-16 (~15:05 CT). DXY ~103.59, fresh 19-month high (6th straight up); EUR/USD ~$1.1003 (19-month low), GBP/USD ~$1.3189, USD/JPY ~159.55 (capped below 160), USD/CHF ~0.8401, AUD/USD ~$0.6754, USD/CAD ~1.4297 (BoC Dec hike trimmed to ~44% post-CPI), NZD/USD ~$0.5515. Warsh gave no December steer; Empire State missed (7.8 vs 16.7); EZ IP missed. Oil slides (Brent ~$92.29, WTI ~$85.45); gold ~$3867.35 near a 13-month low; 10Y ~5.13%, 2Y ~4.88%. Levels are indicative index quotes, not executable prices.",
   "levels": [
     {
-      "id": "DXY",
-      "value": 103.47,
-      "chg_pct": 0.06,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters Asia FX wrap, Mon Nov 16 (5th straight up, highest since Apr 2025)"
-    },
-    {
-      "id": "EURUSD",
-      "value": 1.1016,
-      "chg_pct": -0.1,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters Asia FX wrap, Mon Nov 16"
-    },
-    {
-      "id": "GBPUSD",
-      "value": 1.3205,
-      "chg_pct": -0.08,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters Asia FX wrap, Mon Nov 16"
-    },
-    {
-      "id": "USDJPY",
-      "value": 159.59,
-      "chg_pct": -0.13,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters Asia FX wrap, Mon Nov 16 (updated 05:08 UTC)"
-    },
-    {
-      "id": "USDCHF",
-      "value": 0.8393,
-      "chg_pct": 0.11,
-      "as_of": "2026-11-14T18:00:00-06:00",
-      "source": "Finnhub OANDA, as of 2026-11-15 00:00 UTC"
-    },
-    {
-      "id": "AUDUSD",
-      "value": 0.6763,
-      "chg_pct": -0.15,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters Asia FX wrap, Mon Nov 16"
-    },
-    {
-      "id": "USDCAD",
-      "value": 1.4291,
+      "as_of": "2026-11-16T15:02:00-06:00",
       "chg_pct": 0.17,
-      "as_of": "2026-11-16T07:40:42-06:00",
-      "source": "FXStreet, pre-print ~12:51Z (post-print level not yet verified in the wires checked)"
+      "source": "dealplexus daily table (open 103.41, high 103.64, low 103.33, close 103.59, +0.17% vs Fri 103.41); FXStreet ~103.53 at 11:37 CT",
+      "value": 103.59,
+      "id": "DXY"
     },
     {
-      "id": "NZDUSD",
-      "value": 0.552,
-      "chg_pct": -0.07,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters Asia FX wrap, Mon Nov 16"
+      "as_of": "2026-11-16T15:02:00-06:00",
+      "chg_pct": -0.17,
+      "source": "Finnhub USD/EUR 0.9090 at 14:36 CT (EUR/USD 1.1001); Reuters NY 1.10093 at 10:22 CT; FXStreet USD +0.13% vs EUR",
+      "value": 1.1003,
+      "id": "EURUSD"
     },
     {
-      "id": "EURGBP",
+      "as_of": "2026-11-16T15:02:00-06:00",
+      "chg_pct": -0.16,
+      "source": "Reuters NY 1.31895 at 10:22 CT; FXStreet USD +0.16% vs GBP",
+      "value": 1.3189,
+      "id": "GBPUSD"
+    },
+    {
+      "as_of": "2026-11-16T15:02:00-06:00",
+      "chg_pct": -0.06,
+      "source": "FXStreet ~159.63 at 11:37 CT; Reuters NY 159.48 at 10:22 CT",
+      "value": 159.55,
+      "id": "USDJPY"
+    },
+    {
+      "as_of": "2026-11-16T15:02:00-06:00",
+      "chg_pct": 0.1,
+      "source": "computed from Fri close 0.8393 (Finnhub OANDA) and FXStreet USD +0.10% vs CHF",
+      "value": 0.8401,
+      "id": "USDCHF"
+    },
+    {
+      "as_of": "2026-11-16T15:02:00-06:00",
+      "chg_pct": -0.34,
+      "source": "Reuters Asia 0.6751; FXStreet USD +0.34% vs AUD",
+      "value": 0.6754,
+      "id": "AUDUSD"
+    },
+    {
+      "as_of": "2026-11-16T15:02:00-06:00",
+      "chg_pct": 0.19,
+      "source": "FXStreet ~1.4291 morning, briefly above 1.4300; Kilambi 1.4302 at 12:33 CT; Finnhub 1.4297",
+      "value": 1.4297,
+      "id": "USDCAD"
+    },
+    {
+      "as_of": "2026-11-16T15:02:00-06:00",
+      "chg_pct": -0.16,
+      "source": "IndexBox 0.5516; FXStreet USD +0.17% vs NZD",
+      "value": 0.5515,
+      "id": "NZDUSD"
+    },
+    {
+      "as_of": "2026-11-16T15:02:00-06:00",
+      "chg_pct": null,
+      "source": "computed from EUR/USD, GBP/USD close reads",
       "value": 0.8342,
+      "id": "EURGBP"
+    },
+    {
+      "as_of": "2026-11-16T15:02:00-06:00",
       "chg_pct": null,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "computed from EUR/USD, GBP/USD Asia reads"
+      "source": "computed from EUR/USD, USD/JPY close reads",
+      "value": 175.55,
+      "id": "EURJPY"
     },
     {
-      "id": "EURJPY",
-      "value": 175.81,
+      "as_of": "2026-11-16T15:02:00-06:00",
       "chg_pct": null,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters Asia FX wrap, Mon Nov 16"
+      "source": "computed from GBP/USD, USD/JPY close reads",
+      "value": 210.43,
+      "id": "GBPJPY"
     },
     {
-      "id": "GBPJPY",
-      "value": 210.74,
+      "as_of": "2026-11-16T15:02:00-06:00",
       "chg_pct": null,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "computed from GBP/USD, USD/JPY Asia reads"
+      "source": "computed from AUD/USD, USD/JPY close reads",
+      "value": 107.76,
+      "id": "AUDJPY"
     },
     {
-      "id": "AUDJPY",
-      "value": 107.93,
+      "as_of": "2026-11-16T15:02:00-06:00",
       "chg_pct": null,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "computed from AUD/USD, USD/JPY Asia reads"
+      "source": "computed from EUR/USD, USD/CHF close reads",
+      "value": 0.9244,
+      "id": "EURCHF"
     },
     {
-      "id": "EURCHF",
-      "value": 0.9246,
+      "as_of": "2026-11-16T14:16:00-06:00",
+      "chg_pct": -3.7,
+      "source": "price-chart.com indicative futures reference, 20:16 UTC",
+      "value": 92.29,
+      "id": "BRENT"
+    },
+    {
+      "as_of": "2026-11-16T14:20:00-06:00",
+      "chg_pct": -3.51,
+      "source": "price-chart.com indicative futures reference, 20:20 UTC",
+      "value": 85.45,
+      "id": "WTI"
+    },
+    {
+      "as_of": "2026-11-16T14:10:00-06:00",
+      "chg_pct": -0.4,
+      "source": "price-chart.com hourly spot reference, 20:10 UTC; Reuters: intraday low $3,840.52, a 13-month low",
+      "value": 3867.35,
+      "id": "XAUUSD"
+    },
+    {
+      "as_of": "2026-11-16T15:02:00-06:00",
       "chg_pct": null,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "computed from EUR/USD, USD/CHF Asia reads"
+      "source": "Reuters Fri close 4.8920%; morning ~4.85% (Samuel & Co); indicative",
+      "value": 4.88,
+      "id": "US2Y"
     },
     {
-      "id": "BRENT",
-      "value": 95.81,
-      "chg_pct": -0.03,
-      "as_of": "2026-11-16T08:35:00Z",
-      "source": "price-chart.com indicative futures reference, 08:35 UTC"
-    },
-    {
-      "id": "WTI",
-      "value": 88.8,
-      "chg_pct": 0.27,
-      "as_of": "2026-11-16T08:35:00Z",
-      "source": "price-chart.com indicative futures reference, 08:35 UTC"
-    },
-    {
-      "id": "XAUUSD",
-      "value": 3860.05,
-      "chg_pct": -0.63,
-      "as_of": "2026-11-16T08:10:00Z",
-      "source": "price-chart.com hourly spot reference, 08:10 UTC; Reuters: spot $3,840.52 intraday low, a 13-month low"
-    },
-    {
-      "id": "US2Y",
-      "value": 4.87,
+      "as_of": "2026-11-16T15:02:00-06:00",
       "chg_pct": null,
-      "as_of": "2026-11-13T15:00:00-06:00",
-      "source": "HDFC Sky Fri close wrap (no fresh Asia read)"
-    },
-    {
-      "id": "US10Y",
-      "value": 5.14,
-      "chg_pct": null,
-      "as_of": "2026-11-16T00:56:24-06:00",
-      "source": "Reuters Asia FX wrap: 10Y 5.1453%, -0.6bp"
+      "source": "FactSet via Morningstar: 10Y 5.12% at 2:34pm ET; Reuters Fri close 5.1433%",
+      "value": 5.13,
+      "id": "US10Y"
     }
   ],
   "pricing": [
@@ -135,40 +135,40 @@
       "meeting": "2026-12-09",
       "move": "hike",
       "prob": 0.93,
-      "source": "Dec 25bp hike ~91-94% (CME FedWatch 93.9% via Reuters; 91.3% via growbeansprout; Kalshi 87.5% 25bp / 8.5% 50bp, 96% any hike); a second hike in Jan ~67%, a third by Mar ~63% (TheStreet/CME). Warsh speaks today 11:00am CT; FOMC minutes Wed 1:00pm CT.",
-      "as_of": "2026-11-16T07:40:42-06:00"
+      "source": "Dec 25bp hike ~93-94% (CME FedWatch 93.9% via Reuters; futures 91.1%); 50bp tail ~6%; a second hike in Jan ~67%, a third by Mar ~63% (TheStreet/CME). Warsh gave no December steer today; FOMC minutes Wed 1:00pm CT.",
+      "as_of": "2026-11-16T15:05:00-06:00"
     },
     {
       "bank": "ecb",
       "meeting": "2026-12-17",
       "move": "hike",
       "prob": 0.9,
-      "source": "Dec 25bp hike ~88-92% intact; Reuters poll — most economists expect a final Dec hike, more than a third another in early 2027 as inflation runs at double the 2% target; EUR/USD ~$1.1016, a 19-month low.",
-      "as_of": "2026-11-16T07:40:42-06:00"
+      "source": "Dec 25bp hike ~88-92% intact; Reuters poll — most economists expect a final Dec hike, more than a third another in early 2027 as inflation runs at double the 2% target; EZ IP missed (+0.2% vs +0.3% m/m; -1.5% y/y). EUR/USD ~$1.1003, a 19-month low.",
+      "as_of": "2026-11-16T15:05:00-06:00"
     },
     {
       "bank": "boe",
       "meeting": "2026-12-17",
       "move": "back-to-back",
       "prob": 0.72,
-      "source": "Dec back-to-back hike ~70-75% (Reuters ~75% / swaps ~70%, STIR 69%); GBP/USD ~$1.3217, near a three-week low; UK Q3 GDP +0.7% q/q in line, Q2 revised to a -1.0% contraction.",
-      "as_of": "2026-11-13T15:00:00-06:00"
+      "source": "Dec back-to-back hike ~70-75% (Reuters ~75% / swaps ~70%, STIR 69%); GBP/USD ~$1.3189; UK earnings Tue 1:00am CT, UK CPI Wed 1:00am CT (3.6% fcst).",
+      "as_of": "2026-11-16T15:05:00-06:00"
     },
     {
       "bank": "boj",
       "meeting": "2026-12-18",
       "move": "hike",
       "prob": 0.84,
-      "source": "Dec hike ~84% intact after the Q3 GDP miss (-0.1% annualized vs +0.3% exp, first contraction in a year); USD/JPY ~159.59 in Asia; FinMin Katayama: government will 'respond appropriately' to FX volatility (Reuters); Japan PPI beat +7.1% y/y; JGB 10Y 2.87% (+5.9bp).",
-      "as_of": "2026-11-16T07:40:42-06:00"
+      "source": "Dec hike ~84% intact after the Q3 GDP miss (-0.1% annualized vs +0.3% exp, first contraction in a year); USD/JPY ~159.55 into the close, capped below 160 by intervention watch (Katayama: government will 'respond appropriately' to FX volatility). JGB 10Y 2.87%.",
+      "as_of": "2026-11-16T15:05:00-06:00"
     },
     {
       "bank": "boc",
       "meeting": "2026-12-09",
       "move": "hike",
-      "prob": 0.58,
-      "source": "Dec further hike ~54-63% PRE-PRINT (OIS ~13.4bp, ActionForex; BBH/SocGen ~63%), up from ~32-36% Nov 7 — but Oct CPI (+3.1% y/y vs 3.2% consensus; core anchored near 2%) does not strengthen the hike case; post-print pricing read not yet verified; hold still the base case, January more likely (ING). USD/CAD ~1.4291 pre-print.",
-      "as_of": "2026-11-16T07:40:42-06:00"
+      "prob": 0.44,
+      "source": "Dec further hike trimmed to ~44% post-CPI (Morningstar/Dow Jones, from ~60% pre-print; Polymarket 44.5% hike / 55% hold) — Oct CPI +3.1% y/y vs 3.2% consensus, core anchored near 2%; hold still the base case, January more likely (ING). USD/CAD ~1.4297 into the close.",
+      "as_of": "2026-11-16T15:05:00-06:00"
     },
     {
       "bank": "rbnz",
