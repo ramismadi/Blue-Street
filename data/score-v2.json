@@ -1,0 +1,389 @@
+{
+ "_about": "Scoring v2, shadow run. Not shown on the site. Compare with the live score before trusting it; thresholds are first guesses and have not been tested against price history.",
+ "updated": "2026-11-17T06:24:56.019Z",
+ "as_of": "2026-11-16",
+ "scale": "-100 to +100",
+ "weights": {
+  "rates": 30,
+  "growth": 15,
+  "risk": 15,
+  "inflation": 10,
+  "tot": 10,
+  "positioning": 10,
+  "fiscal": 10
+ },
+ "inputs": {
+  "vix": true,
+  "brent": true,
+  "yields": [
+   "USD",
+   "EUR",
+   "JPY",
+   "CAD",
+   "AUD"
+  ]
+ },
+ "ranking": [
+  "GBP",
+  "USD",
+  "AUD",
+  "EUR",
+  "NZD",
+  "JPY",
+  "CAD",
+  "CHF"
+ ],
+ "currencies": {
+  "USD": {
+   "score": 23,
+   "measured_share": 70,
+   "v1_score": 1,
+   "drivers": {
+    "rates": {
+     "value": 1.24,
+     "measured": true,
+     "why": "Its policy rate is 1.38 points above the middle of the eight, and its two-year yield has risen faster the others over the past month."
+    },
+    "growth": {
+     "value": 0,
+     "measured": true,
+     "why": "Of its last 6 data releases, 3 beat forecasts and 3 missed."
+    },
+    "risk": {
+     "value": 0.44,
+     "measured": true,
+     "why": "Markets are more nervous than usual, which tends to help the dollar."
+    },
+    "tot": {
+     "value": 0,
+     "measured": false,
+     "why": "No measured feed for what this country sells and buys yet, so this rests on a judged mark."
+    },
+    "positioning": {
+     "value": 0.12,
+     "measured": true,
+     "why": "Hedge fund bets are not at an extreme, so this counts for little."
+    },
+    "inflation": {
+     "value": 1,
+     "measured": false,
+     "why": "Rests on a judged mark until an inflation feed exists."
+    },
+    "fiscal": {
+     "value": -1,
+     "measured": false,
+     "why": "Rests on a judged mark. Fiscal health is hard to read from one number."
+    }
+   }
+  },
+  "EUR": {
+   "score": 1,
+   "measured_share": 80,
+   "v1_score": -2,
+   "drivers": {
+    "rates": {
+     "value": -0.08,
+     "measured": true,
+     "why": "Its policy rate is in the middle of the eight, and its two-year yield has moved in line with the others over the past month."
+    },
+    "growth": {
+     "value": -0.33,
+     "measured": true,
+     "why": "Of its last 6 data releases, 1 beat forecasts and 2 missed."
+    },
+    "risk": {
+     "value": 0,
+     "measured": true,
+     "why": "Markets are more nervous than usual, which does little for the euro."
+    },
+    "tot": {
+     "value": 1,
+     "measured": true,
+     "why": "Oil has fallen over the past month, and the euro belongs to an oil importer."
+    },
+    "positioning": {
+     "value": -0.15,
+     "measured": true,
+     "why": "Hedge fund bets are not at an extreme, so this counts for little."
+    },
+    "inflation": {
+     "value": 1,
+     "measured": false,
+     "why": "Rests on a judged mark until an inflation feed exists."
+    },
+    "fiscal": {
+     "value": -1,
+     "measured": false,
+     "why": "Rests on a judged mark. Fiscal health is hard to read from one number."
+    }
+   }
+  },
+  "GBP": {
+   "score": 34,
+   "measured_share": 40,
+   "v1_score": 3,
+   "drivers": {
+    "rates": {
+     "value": 1.42,
+     "measured": false,
+     "why": "Its policy rate is 1.38 points above the middle of the eight. The direction still rests on a judged mark, because no yield feed covers it yet."
+    },
+    "growth": {
+     "value": 1,
+     "measured": true,
+     "why": "Of its last 6 data releases, 4 beat forecasts and 1 missed."
+    },
+    "risk": {
+     "value": -0.22,
+     "measured": true,
+     "why": "Markets are more nervous than usual, which tends to hurt the pound."
+    },
+    "tot": {
+     "value": 0,
+     "measured": false,
+     "why": "No measured feed for what this country sells and buys yet, so this rests on a judged mark."
+    },
+    "positioning": {
+     "value": 0.3,
+     "measured": true,
+     "why": "Hedge fund bets are not at an extreme, so this counts for little."
+    },
+    "inflation": {
+     "value": 1,
+     "measured": false,
+     "why": "Rests on a judged mark until an inflation feed exists."
+    },
+    "fiscal": {
+     "value": 0,
+     "measured": false,
+     "why": "Rests on a judged mark. Fiscal health is hard to read from one number."
+    }
+   }
+  },
+  "JPY": {
+   "score": -5,
+   "measured_share": 80,
+   "v1_score": -2,
+   "drivers": {
+    "rates": {
+     "value": -1,
+     "measured": true,
+     "why": "Its policy rate is 1.38 points below the middle of the eight, and its two-year yield has moved in line with the others over the past month."
+    },
+    "growth": {
+     "value": -1,
+     "measured": true,
+     "why": "Of its last 6 data releases, 1 beat forecasts and 4 missed."
+    },
+    "risk": {
+     "value": 0.87,
+     "measured": true,
+     "why": "Markets are more nervous than usual, which tends to help the yen."
+    },
+    "tot": {
+     "value": 2,
+     "measured": true,
+     "why": "Oil has fallen over the past month, and the yen belongs to an oil importer."
+    },
+    "positioning": {
+     "value": 0.2,
+     "measured": true,
+     "why": "Hedge fund bets are not at an extreme, so this counts for little."
+    },
+    "inflation": {
+     "value": 0,
+     "measured": false,
+     "why": "Rests on a judged mark until an inflation feed exists."
+    },
+    "fiscal": {
+     "value": 0,
+     "measured": false,
+     "why": "Rests on a judged mark. Fiscal health is hard to read from one number."
+    }
+   }
+  },
+  "CHF": {
+   "score": -22,
+   "measured_share": 40,
+   "v1_score": 0,
+   "drivers": {
+    "rates": {
+     "value": -1,
+     "measured": false,
+     "why": "Its policy rate is 2.63 points below the middle of the eight. The direction still rests on a judged mark, because no yield feed covers it yet."
+    },
+    "growth": {
+     "value": -1,
+     "measured": true,
+     "why": "Of its last 4 data releases, 1 beat forecasts and 3 missed."
+    },
+    "risk": {
+     "value": 0.87,
+     "measured": true,
+     "why": "Markets are more nervous than usual, which tends to help the franc."
+    },
+    "tot": {
+     "value": 0,
+     "measured": false,
+     "why": "No measured feed for what this country sells and buys yet, so this rests on a judged mark."
+    },
+    "positioning": {
+     "value": -0.21,
+     "measured": true,
+     "why": "Hedge fund bets are not at an extreme, so this counts for little."
+    },
+    "inflation": {
+     "value": -1,
+     "measured": false,
+     "why": "Rests on a judged mark until an inflation feed exists."
+    },
+    "fiscal": {
+     "value": 0,
+     "measured": false,
+     "why": "Rests on a judged mark. Fiscal health is hard to read from one number."
+    }
+   }
+  },
+  "CAD": {
+   "score": -9,
+   "measured_share": 80,
+   "v1_score": 2,
+   "drivers": {
+    "rates": {
+     "value": 0.64,
+     "measured": true,
+     "why": "Its policy rate is in the middle of the eight, and its two-year yield has risen faster the others over the past month."
+    },
+    "growth": {
+     "value": -1.33,
+     "measured": true,
+     "why": "Of its last 6 data releases, 1 beat forecasts and 5 missed."
+    },
+    "risk": {
+     "value": -0.44,
+     "measured": true,
+     "why": "Markets are more nervous than usual, which tends to hurt the Canadian dollar."
+    },
+    "tot": {
+     "value": -2,
+     "measured": true,
+     "why": "Oil has fallen over the past month, and the Canadian dollar belongs to an oil exporter."
+    },
+    "positioning": {
+     "value": -0.13,
+     "measured": true,
+     "why": "Hedge fund bets are not at an extreme, so this counts for little."
+    },
+    "inflation": {
+     "value": 1,
+     "measured": false,
+     "why": "Rests on a judged mark until an inflation feed exists."
+    },
+    "fiscal": {
+     "value": 0,
+     "measured": false,
+     "why": "Rests on a judged mark. Fiscal health is hard to read from one number."
+    }
+   }
+  },
+  "AUD": {
+   "score": 12,
+   "measured_share": 70,
+   "v1_score": 3,
+   "drivers": {
+    "rates": {
+     "value": 0.68,
+     "measured": true,
+     "why": "Its policy rate is 2.22 points above the middle of the eight, and its two-year yield has fallen behind the others over the past month."
+    },
+    "growth": {
+     "value": -0.33,
+     "measured": true,
+     "why": "Of its last 6 data releases, 2 beat forecasts and 3 missed."
+    },
+    "risk": {
+     "value": -0.87,
+     "measured": true,
+     "why": "Markets are more nervous than usual, which tends to hurt the Australian dollar."
+    },
+    "tot": {
+     "value": 1,
+     "measured": false,
+     "why": "No measured feed for what this country sells and buys yet, so this rests on a judged mark."
+    },
+    "positioning": {
+     "value": 0.25,
+     "measured": true,
+     "why": "Hedge fund bets are not at an extreme, so this counts for little."
+    },
+    "inflation": {
+     "value": 1,
+     "measured": false,
+     "why": "Rests on a judged mark until an inflation feed exists."
+    },
+    "fiscal": {
+     "value": 0,
+     "measured": false,
+     "why": "Rests on a judged mark. Fiscal health is hard to read from one number."
+    }
+   }
+  },
+  "NZD": {
+   "score": -2,
+   "measured_share": 40,
+   "v1_score": 1,
+   "drivers": {
+    "rates": {
+     "value": 0.08,
+     "measured": false,
+     "why": "Its policy rate is in the middle of the eight. The direction still rests on a judged mark, because no yield feed covers it yet."
+    },
+    "growth": {
+     "value": 0,
+     "measured": true,
+     "why": "Of its last 6 data releases, 3 beat forecasts and 3 missed."
+    },
+    "risk": {
+     "value": -0.87,
+     "measured": true,
+     "why": "Markets are more nervous than usual, which tends to hurt the New Zealand dollar."
+    },
+    "tot": {
+     "value": 1,
+     "measured": false,
+     "why": "No measured feed for what this country sells and buys yet, so this rests on a judged mark."
+    },
+    "positioning": {
+     "value": -0.32,
+     "measured": true,
+     "why": "Hedge fund bets are not at an extreme, so this counts for little."
+    },
+    "inflation": {
+     "value": 0,
+     "measured": false,
+     "why": "Rests on a judged mark until an inflation feed exists."
+    },
+    "fiscal": {
+     "value": 0,
+     "measured": false,
+     "why": "Rests on a judged mark. Fiscal health is hard to read from one number."
+    }
+   }
+  }
+ },
+ "history": [
+  {
+   "date": "2026-11-16",
+   "scores": {
+    "USD": 23,
+    "EUR": 1,
+    "GBP": 34,
+    "JPY": -5,
+    "CHF": -22,
+    "CAD": -9,
+    "AUD": 12,
+    "NZD": -2
+   }
+  }
+ ]
+}
