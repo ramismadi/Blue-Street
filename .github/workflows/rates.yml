@@ -1,5 +1,5 @@
 # Blue Street — yields, central bank rates, data surprises and the currency score (owned by Claude;
-# see DESIGN.md → data/rates.json, data/policy.json, data/surprises.json, data/score-v2.json).
+# see DESIGN.md → data/rates.json, data/policy.json, data/surprises.json, data/score.json).
 # Runs before each edition (Chicago time: about 12:25 AM, 7:35 AM and 2:55 PM in winter) and again
 # whenever Hercules pushes the calendar or the bank file, so the score uses his latest results.
 name: Rates
@@ -59,7 +59,7 @@ jobs:
           else
             node tools/surprise-build.cjs --dry
           fi
-      - name: Build data/score-v2.json (the currency score on the site)
+      - name: Build data/score.json (the currency score on the site)
         run: |
           if [ "${{ github.ref }}" = "refs/heads/main" ]; then
             node tools/score-build.cjs
@@ -70,7 +70,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           # Timestamps change every run; only commit when a number did.
-          git add data/rates.json data/policy.json data/surprises.json data/score-v2.json
+          git add data/rates.json data/policy.json data/surprises.json data/score.json
           if git diff --cached --quiet -I'"updated"'; then
             echo "Nothing new."
             exit 0
