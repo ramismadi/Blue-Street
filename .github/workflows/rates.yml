@@ -1,0 +1,55 @@
+# Blue Street — two-year yields for the rate-gap reads (owned by Claude; see DESIGN.md → data/rates.json).
+# Runs before each edition is written (Chicago time: about 12:25 AM, 7:35 AM and 2:55 PM in winter;
+# an hour later in summer, still ahead of the close edition and refreshed by the next run).
+name: Rates
+
+on:
+  schedule:
+    - cron: '25 6 * * *'
+    - cron: '35 13 * * 1-5'
+    - cron: '55 20 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/rates-build.cjs'
+      - '.github/workflows/rates.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rates
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build data/rates.json
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            node tools/rates-build.cjs
+          else
+            node tools/rates-build.cjs --dry
+          fi
+      - name: Commit if changed
+        if: github.ref == 'refs/heads/main'
+        run: |
+          if [ -z "$(git status --porcelain data/rates.json)" ]; then
+            echo "No new yields."
+            exit 0
+          fi
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add data/rates.json
+          git commit -m "data: two-year yields (official sources snapshot)"
+          for i in 1 2 3; do
+            git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0
+            sleep 10
+          done
+          echo "Push failed after 3 tries" && exit 1

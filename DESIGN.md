@@ -275,7 +275,15 @@ has no "What is this?" button.
 - Scoring is v1 on purpose (Rami + Claude will refine weights/pillars over
   time); keep the method string accurate if it changes.
 
-### `data/rates.json` — yields (Hercules; optional, added 2026-10-28)
+### `data/rates.json` — yields (Claude; built by a GitHub Action since 2026-11-16)
+- **Owner changed (Rami, 2026-11-16):** `tools/rates-build.cjs` builds this file
+  from official sources in `.github/workflows/rates.yml`, three times a day
+  ahead of the editions. No one writes it by hand. Covered: USD (Federal
+  Reserve via FRED), EUR (ECB euro-area AAA curve, not the German bond), JPY
+  (Ministry of Finance), CAD (Bank of Canada), AUD (Reserve Bank of
+  Australia). **Not yet covered: GBP, CHF, NZD** (no simple official daily
+  source answered); those currencies are simply absent and the site shows
+  the headline-rate gap alone for their pairs. `implied` is not built.
 ```
 {"updated":"<ISO-8601>","as_of":"YYYY-MM-DD",
  "yields":{"USD":{"y2":4.72,"chg_1w":0.05,"chg_1m":0.20,"chg_3m":0.40,
