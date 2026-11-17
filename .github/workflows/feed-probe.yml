@@ -1,0 +1,15 @@
+# Temporary (Claude, 2026-11-17): checks candidate sources for Scoring v2 from GitHub's servers. Removed before merging.
+name: Feed probe
+on:
+  push:
+    branches: ['claude/score-v2-feeds']
+    paths: ['tools/feed-probe.cjs', '.github/workflows/feed-probe.yml']
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - run: node tools/feed-probe.cjs
