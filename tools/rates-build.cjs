@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /* Blue Street — two-year government yields (Claude's job; runs in GitHub Actions).
-   Writes data/rates.json: for each of the eight currencies, the latest 2-year
+   Writes data/rates.json: for each currency with an official daily source, the latest 2-year
    yield and its change over a week, a month and three months, each with the
-   name of the source it came from. Official sources first; a market-data
-   fallback only where no official daily series is published in a simple form.
+   name of the source it came from. Official sources only.
 
    A currency whose sources all fail is left out (the site copes with gaps);
    the file is only replaced when at least MIN_OK currencies came through, so
@@ -17,7 +16,7 @@ const fs = require('fs');
 const path = require('path');
 const OUT = path.join(path.resolve(__dirname, '..'), 'data', 'rates.json');
 const DRY = process.argv.includes('--dry');
-const MIN_OK = 5;
+const MIN_OK = 4;
 const UA = { 'User-Agent': 'Mozilla/5.0 (compatible; BlueStreet-rates/1.0; +https://github.com/ramismadi/Blue-Street)' };
 
 async function get(url) {
@@ -81,31 +80,19 @@ const SRC = {
     const c = h ? h.findIndex(x => x.trim() === 'FCMYGBAG2D') : -1;
     if (c < 0) throw new Error('no FCMYGBAG2D column');
     return series(r.map(x => [x[0], x[c]])).slice(-200);
-  },
-  snb: async () => {
-    const from = new Date(Date.now() - 150 * 864e5).toISOString().slice(0, 10);
-    const text = await get('https://data.snb.ch/api/cube/rendoblid/data/csv/en?fromDate=' + from);
-    const out = rows(text, ';').filter(x => x.length >= 3 && /^"?2J"?$/.test(x[1].trim())).map(x => [x[0], x[2]]);
-    const got = series(out);
-    if (got.length < 20) throw new Error(out.length + ' rows for 2J, ' + got.length + ' usable. Sample: ' + text.slice(0, 260).replace(/\s+/g, ' ') + ' ... ' + out.slice(-2).join(' | '));
-    return got;
-  },
-  stooq: sym => async () => {
-    const r = rows(await get('https://stooq.com/q/d/l/?s=' + sym + '&i=d'));
-    const c = r[0].findIndex(x => /^close$/i.test(x.trim()));
-    if (c < 0) throw new Error('not a price file: ' + r[0].join(',').slice(0, 80));
-    return series(r.slice(1).map(x => [x[0], x[c]])).slice(-200);
   }
 };
+/* GBP, CHF and NZD have no official daily 2-year series in a simple public
+   form that answered from GitHub's servers when this was built (2026-11-16):
+   the Swiss National Bank's daily cube stopped updating in mid-2025 and the
+   market-data fallback refuses automated requests. They are left out until a
+   source is found; add them here and the site picks them up. */
 const PLAN = {
-  USD: [['US Treasury 2-year, constant maturity (Federal Reserve, via FRED)', SRC.fred('DGS2')], ['US 2-year yield (Stooq)', SRC.stooq('2yusy.b')]],
-  EUR: [['Euro-area AAA government 2-year spot rate (ECB)', SRC.ecb], ['German 2-year yield (Stooq)', SRC.stooq('2ydey.b')]],
-  GBP: [['UK 2-year gilt yield (Stooq)', SRC.stooq('2yuky.b')]],
-  JPY: [['Japanese government bond 2-year yield (Ministry of Finance)', SRC.mof], ['Japan 2-year yield (Stooq)', SRC.stooq('2yjpy.b')]],
-  CHF: [['Swiss Confederation 2-year spot rate (Swiss National Bank)', SRC.snb], ['Swiss 2-year yield (Stooq)', SRC.stooq('2ychy.b')]],
-  CAD: [['Government of Canada 2-year benchmark yield (Bank of Canada)', SRC.boc], ['Canada 2-year yield (Stooq)', SRC.stooq('2ycay.b')]],
-  AUD: [['Australian government 2-year yield (Reserve Bank of Australia)', SRC.rba], ['Australia 2-year yield (Stooq)', SRC.stooq('2yauy.b')]],
-  NZD: [['New Zealand 2-year yield (Stooq)', SRC.stooq('2ynzy.b')]]
+  USD: [['US Treasury 2-year, constant maturity (Federal Reserve, via FRED)', SRC.fred('DGS2')]],
+  EUR: [['Euro-area AAA government 2-year spot rate (ECB)', SRC.ecb]],
+  JPY: [['Japanese government bond 2-year yield (Ministry of Finance)', SRC.mof]],
+  CAD: [['Government of Canada 2-year benchmark yield (Bank of Canada)', SRC.boc]],
+  AUD: [['Australian government 2-year yield (Reserve Bank of Australia)', SRC.rba]]
 };
 
 function summarise(s) {
@@ -139,7 +126,7 @@ function summarise(s) {
     }
   }
   const ok = Object.keys(yields);
-  console.log('rates-build: ' + ok.length + ' of 8 currencies');
+  console.log('rates-build: ' + ok.length + ' of ' + Object.keys(PLAN).length + ' currencies');
   if (ok.length < MIN_OK) { console.error('rates-build: too few sources answered; keeping the existing file'); process.exit(1); }
   const asOf = ok.map(k => yields[k].as_of).sort().pop();
   let prev = null;

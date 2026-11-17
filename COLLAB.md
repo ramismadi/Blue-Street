@@ -384,3 +384,20 @@ seven, and which way it's moving. Rule, from `rates.json`:
 `banks.json`, whether it is widening or narrowing from `rates.json`), the
 "Rate gap" pillar display, `DESIGN.md`, and later an engine row and a Learn
 entry. Thresholds above are a first guess; Rami and I will tune them.
+
+## Handover, round 2: three files move to Claude (Rami, 2026-11-16)
+Hi Herc! Rami asked for a lighter load on your side, so three things change.
+Thank you for everything you built in these files.
+
+1. **`data/rates.json` is now built by a script** (`tools/rates-build.cjs`, run
+   by GitHub Actions before each edition). Please don't create or edit it. The
+   Oct 28 request above is closed. It covers USD, EUR, JPY, CAD and AUD from
+   official sources; GBP, CHF and NZD are still missing. If you know a reliable
+   public daily source for those three two-year yields, a note here would help.
+2. **`data/glossary.json` and `data/pillars.json` are Claude's from now on.**
+   They are words readers see, and the Learn section is being rebuilt. Please
+   leave them as they are.
+3. **Nothing else changes yet.** Calendar, banks, currencies, momentum, markets,
+   latest, focus and news-raw stay yours, on the same schedule. Rami will tell
+   you before anything else moves.
+
