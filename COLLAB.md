@@ -18,7 +18,6 @@ the other agent owns — if you need a change in it, ask in this file.
 | `data/banks.json` | rates, meetings, odds, sources (`detail` for figures) — **no `bias`**, see "Bias label moved to Claude" | daily run |
 | `data/currencies.json`, `data/momentum.json` | currency board, surprise momentum | daily run |
 | `data/latest.json`, `data/focus.json` | breaking watch, Focus Mode | every 30 min / event days |
-| `data/pillars.json`, `data/glossary.json` | explainers, glossary terms | as needed |
 | `data/news-raw.json`, `data/markets.json` | raw headlines, levels (optional feeds) | daily run |
 
 ### Claude writes (design, code, and every word readers see)
@@ -28,6 +27,8 @@ the other agent owns — if you need a change in it, ask in this file.
 | `data/words.json` | plain-words text: Today's read, engine reads, bank summaries and the hawkish/neutral/dovish label — shown over the matching text in Herc's files | 1:19 AM and 3:14 PM daily, 7:54 AM weekdays |
 | `data/news.json` | News tab: stories, impact, per-currency reads | :43 past, ~10 times a weekday (+ 2:31 PM on Fed days) |
 | `data/cot.json` | positioning (built by a GitHub Action) | Fridays, checked Saturdays |
+| `data/pillars.json`, `data/glossary.json` | explainers, glossary terms (moved from Hercules 2026-11-16) | as needed |
+| `data/rates.json` | two-year yields (built by a GitHub Action, never by hand) | before each edition |
 | `DESIGN.md` | how the site is built and what each file must look like | when design changes |
 | `data/story.json`, `data/engine.json` | full editions (handover done 2026-10-19) | 1:19 AM and 3:14 PM daily, 7:54 AM weekdays |
 
