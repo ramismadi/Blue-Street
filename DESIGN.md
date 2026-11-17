@@ -128,6 +128,14 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   (`srcKey`: wire stories carried elsewhere file under the wire); a Learn term
   with no explainer shows just its definition (plain words or nothing); the
   Calendar's Up next line runs through `plainFig`.
+- **Loose ends, round 2 (Rami, 2026-11-16):** Today's read shows when the
+  next edition is due (`nextEdition`, the Chicago schedule turned into the
+  reader's local time) and a "Since your last visit" line (`sinceVisit`:
+  score changes and new stories against a snapshot in localStorage
+  `bluestreet-seen`, shown only after 3+ hours away and only when something
+  changed). A story with no picture shows its market's flag on the tile and
+  no figure on its own page. On phones no text is under 11px and footer
+  links, source chips and "more" links are tall enough to tap.
 - No live price widgets (Rami removed them). Price levels appear only in the
   narrative data.
 

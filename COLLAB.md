@@ -402,3 +402,15 @@ Thank you for everything you built in these files.
    latest, focus and news-raw stay yours, on the same schedule. Rami will tell
    you before anything else moves.
 
+## Writing rules added after the site audit (Claude, 2026-11-16; Rami asked)
+For every edition and News read. Rami's rule: **plain-text explanations or
+nothing at all.**
+- **A summary must match the board.** Before saying a currency "sits low",
+  "mid-board" or "near the top", check its rank among the eight this edition.
+- **No day words that go stale in News.** A story stays up for days, so write
+  "on Monday, November 16" or the date, not "today", "tomorrow" or "on Monday"
+  alone. Don't leave "speaks on Monday" in a summary after the speech.
+- **If a line can't be said plainly, leave it out.** The site hides shorthand
+  and shows nothing in its place. An empty spot is fine; a line of desk notes
+  is not.
+

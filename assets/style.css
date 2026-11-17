@@ -2408,3 +2408,25 @@ html, body { overflow-x: clip; max-width: 100%; }
 }
 
 @media (min-width: 641px) { .tab-pill { display: none; } }
+
+/* ---------- loose ends, round 2 (2026-11-16) ---------- */
+/* What moved while the reader was away: one quiet line under Today's read. */
+.t-since { margin: 18px auto 0; font-size: 0.86rem; color: var(--ink-3); max-width: 46ch; }
+.t-since b { color: var(--ink); font-weight: 600; }
+/* A story with no picture: the market's flag sits with its name. */
+.news-fig.fallback .nf-flag { position: absolute; top: 14px; right: 16px; width: 44px; height: 33px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); z-index: 1; }
+.news-row .news-fig.fallback .nf-flag { display: none; }
+/* On its own page a picture-less story starts with the headline. */
+.art-fig.news-fig.fallback { display: none; }
+/* Phones: nothing smaller than 11px, and links big enough to tap. */
+@media (max-width: 760px) {
+  #tabs a, .bias-tag .mono, .news-src, .news-pillar, .sources-lbl, .narr-lbl, .sc-city, .cot-flag, .soon-tag { font-size: 0.6875rem; }
+  .foot-col a { padding: 7px 0; }
+  .sources .chip { padding-top: 7px; padding-bottom: 7px; }
+  .pbc-ccy { min-height: 34px; align-items: center; }
+  .chc-more { padding-top: 6px; padding-bottom: 6px; }
+  .cot-body .more, .t-row-head .more, .more.hub-back { display: inline-block; padding: 8px 0; }
+  .explain-btn { min-height: 34px; }
+  .segmented .seg { min-height: 34px; }
+  .news-toggle { padding-top: 6px; padding-bottom: 6px; }
+}
