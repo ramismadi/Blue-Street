@@ -15,7 +15,7 @@ import { createInterface } from 'node:readline';
 
 const SITE = 'https://ramismadi.github.io/Blue-Street/';
 const DATA = (process.env.BLUE_STREET_DATA || SITE + 'data/').replace(/\/?$/, '/');
-const VERSION = '0.1.0';
+const VERSION = '0.1.1';
 const CCYS = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'NZD'];
 const MARKETS = CCYS.concat(['XAU', 'OIL']);
 const PILLARS = [['policy', 'Policy'], ['growth', 'Growth'], ['inflation', 'Inflation'], ['risk', 'Risk sentiment'],
@@ -63,7 +63,8 @@ function fig(v) {
   return t.length > 42 ? '' : t;
 }
 const clean = o => { for (const k of Object.keys(o)) if (o[k] === '' || o[k] == null || (Array.isArray(o[k]) && !o[k].length)) delete o[k]; return o; };
-const rateNum = r => { const m = String(r || '').match(/-?\d+(\.\d+)?/g); return m ? parseFloat(m[m.length - 1]) : null; };
+/* A range ("3.75-4.00%") uses its upper end; the dash in a range is not a minus sign. */
+const rateNum = r => { const t = String(r || '').trim(), m = t.match(/\d+(\.\d+)?/g); return !m ? null : m.length === 1 && /^[-−]/.test(t) ? -parseFloat(m[0]) : parseFloat(m[m.length - 1]); };
 function market(code) {
   const c = String(code || '').trim().toUpperCase().replace('GOLD', 'XAU').replace(/^(WTI|BRENT|CRUDE)$/, 'OIL');
   if (!MARKETS.includes(c)) throw new Error('Unknown market "' + code + '". Use one of: ' + MARKETS.join(', ') + '.');

@@ -12,6 +12,7 @@ on:
   push:
     paths:
       - 'tools/rates-build.cjs'
+      - 'tools/score-build.cjs'
       - '.github/workflows/rates.yml'
 
 permissions:
@@ -37,17 +38,25 @@ jobs:
           else
             node tools/rates-build.cjs --dry
           fi
+      - name: Build data/score-v2.json (Scoring v2, shadow run; not shown on the site)
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            node tools/score-build.cjs
+          else
+            node tools/score-build.cjs --dry
+          fi
       - name: Commit if changed
         if: github.ref == 'refs/heads/main'
         run: |
-          if [ -z "$(git status --porcelain data/rates.json)" ]; then
-            echo "No new yields."
+          # The shadow score's timestamp changes every run; only commit when a number did.
+          git add data/rates.json data/score-v2.json
+          if git diff --cached --quiet -I'"updated"'; then
+            echo "Nothing new."
             exit 0
           fi
           git config user.name "Claude"
           git config user.email "noreply@anthropic.com"
-          git add data/rates.json
-          git commit -m "data: two-year yields (official sources snapshot)"
+          git commit -m "data: two-year yields and shadow score"
           for i in 1 2 3; do
             git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0
             sleep 10

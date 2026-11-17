@@ -1,0 +1,25 @@
+# Blue Street — checks every push that touches the data (owned by Claude).
+# Fails on a broken data file; lists reader-facing text that reads like desk shorthand.
+name: Data check
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/**', 'tools/data-check.cjs', '.github/workflows/data-check.yml']
+  pull_request:
+    paths: ['data/**', 'tools/data-check.cjs']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/data-check.cjs
