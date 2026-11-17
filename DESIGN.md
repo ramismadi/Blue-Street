@@ -327,6 +327,34 @@ has no "What is this?" button.
   `implied` is not shown yet. No file renders gracefully: the picker shows only
   today's headline-rate gap.
 
+### `data/score-v2.json` — Scoring v2, shadow run (Claude; script, since 2026-11-17)
+Built by `tools/score-build.cjs` in the Rates workflow. **Not read by the
+site.** Rami approved the approach on 2026-11-16: measured, relative to the
+other seven, level plus direction, weighted (rates 30, growth 15, risk 15,
+inflation 10, terms of trade 10, positioning 10, fiscal 10), on a −100…+100
+scale, and it must run beside the live score and be checked against price
+history before it replaces anything.
+```
+{"as_of":"YYYY-MM-DD","weights":{...},"inputs":{"vix":true,"brent":true,"yields":["USD",...]},
+ "ranking":["GBP",...],
+ "currencies":{"USD":{"score":19,"v1_score":1,"measured_share":55,
+   "drivers":{"rates":{"value":1.24,"measured":true,"why":"plain sentence"}, ...}}},
+ "history":[{"date":"YYYY-MM-DD","scores":{"USD":19,...}}]}
+```
+- A driver's `value` runs −2…+2. `measured:false` means it still rests on the
+  hand-judged mark from `currencies.json` (inflation, fiscal, terms of trade
+  outside the oil currencies, and rate direction for GBP, CHF, NZD).
+- Sources: `banks.json` rates, `rates.json` yields, `momentum.json` beats and
+  misses, `cot.json` positioning, and from FRED the VIX (market mood) and
+  Brent (oil). Thresholds are first guesses. **Not yet tested against price
+  history.** One history point per edition date, kept for 180 days.
+
+### Data check (Claude; `tools/data-check.cjs`, workflow "Data check")
+Runs on every push that touches `data/`. Fails on a broken or incomplete data
+file. Lists reader-facing text that reads like desk shorthand, and bank lines
+the site would hide (a semicolon hides the line). It reports after the push;
+it cannot stop one, so the site's own filter stays the last line of defence.
+
 ### `data/momentum.json` — surprise momentum (Hercules)
 ```
 {"updated":"<ISO-8601>",

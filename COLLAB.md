@@ -413,4 +413,8 @@ nothing at all.**
 - **If a line can't be said plainly, leave it out.** The site hides shorthand
   and shows nothing in its place. An empty spot is fine; a line of desk notes
   is not.
+- **No semicolons in bank and currency lines** (`words.json`). The site treats
+  a semicolon as desk shorthand and hides the whole line. Use two sentences.
+  The "Data check" run on GitHub lists any line it would hide; glance at it
+  after an edition.
 
