@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '137';
+  var ASSET_VERSION = '138';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -91,6 +91,7 @@
     }).catch(function () { /* explainers are optional */ });
     withWords('data/engine.json', 'engine').then(function (d) {
       renderEngine(d);
+      stampEdition(d && d.updated);
     }).catch(function () {
       note('#engine-rows', 'Macro engine data unavailable.');
     });
@@ -640,6 +641,18 @@
   }
   var tabSettle = function () {};
 
+  /* The browser tab says where you are (2026-11-16). */
+  var PAGE_TITLES = { fx: 'Currencies', engine: 'Macro engine', positioning: 'Positioning',
+    calendar: 'Calendar', news: 'News', learn: 'Learn', about: 'About' };
+  function pageTitle(tab, h) {
+    var t = PAGE_TITLES[tab];
+    if (!t) return SITE_TITLE;
+    var sub = (h[1] || '').toUpperCase();
+    if ((tab === 'fx' || tab === 'news' || tab === 'positioning') && /^[A-Z]{3}$/.test(sub)) {
+      t = (sub === 'XAU' ? 'Gold' : sub === 'OIL' ? 'Oil' : sub) + (tab === 'fx' ? '' : ' · ' + t);
+    }
+    return t + ' — Blue Street';
+  }
   function route() {
     var h = (location.hash || '#today').slice(1).split('/');
     if (h[0] === 'wire' || h[0] === 'flash') {   // Wire → Flash (2026-10-09) → merged into News (2026-10-18)
@@ -703,7 +716,7 @@
       renderArticle();
     } else {
       news.article = '';
-      document.title = SITE_TITLE;
+      document.title = pageTitle(tab, h);
     }
     if (tab === 'positioning') {
       cot.focus = (h[1] || '').toUpperCase();
@@ -1006,9 +1019,13 @@
   function startClock() {
     function tick() {
       var now = new Date();
-      setText('#clock-utc', now.toLocaleTimeString('en-GB', {
-        hour: '2-digit', minute: '2-digit', timeZone: 'UTC'
-      }) + ' UTC');
+      // The reader's own time, with its zone (Rami, 2026-11-16: not UTC).
+      var tz = '';
+      try {
+        tz = (new Intl.DateTimeFormat('en-US', { timeZoneName: 'short' }).formatToParts(now)
+          .filter(function (x) { return x.type === 'timeZoneName'; })[0] || {}).value || '';
+      } catch (e) { /* old browser: time only */ }
+      setText('#clock-utc', now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) + (tz ? ' ' + tz : ''));
       renderSessions(now);
       tickRelTimes();
     }
@@ -1160,6 +1177,33 @@
   }
 
   /* ---------------- edition / today ---------------- */
+  /* Which edition is on screen and how old it is (2026-11-16). The edition's
+     name comes from when its words were written, read in Chicago time, the
+     clock the schedule runs on: London open before 5 AM, New York open before
+     noon, New York close after; one edition a day at weekends. */
+  function editionName(iso) {
+    var d = new Date(iso);
+    if (!isFinite(d)) return '';
+    var parts = {};
+    try {
+      new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', weekday: 'short', hour: 'numeric', hour12: false })
+        .formatToParts(d).forEach(function (x) { parts[x.type] = x.value; });
+    } catch (e) { return ''; }
+    if (parts.weekday === 'Sat' || parts.weekday === 'Sun') return 'Weekend edition';
+    var hr = parseInt(parts.hour, 10) % 24;
+    return hr < 5 ? 'London open' : hr < 12 ? 'New York open' : 'New York close';
+  }
+  function stampEdition(iso) {
+    var name = iso ? editionName(iso) : '';
+    if (!name) return;
+    setText('#edition-name', ' · ' + name);
+    var box = $('#hero-stamp');
+    if (!box) return;
+    box.textContent = '';
+    box.appendChild(document.createTextNode((name === 'Weekend edition' ? name : name + ' edition') + ' · '));
+    box.appendChild(relTimeEl(iso));
+    box.hidden = false;
+  }
   function renderEdition(d) {
     if (d.date) {
       var p = d.date.split('-');
@@ -2014,7 +2058,7 @@
     var fxs = ms.filter(function (m) { return m.kind === 'fx'; }).sort(function (a, b) { return b.hf.flip - a.hf.flip; });
     if (fxs.length > 1) {
       var up = fxs[0], dn = fxs[fxs.length - 1], bits = [];
-      if (up.hf.flip >= 2) bits.push('their biggest bet for is ' + up.ref);
+      if (up.hf.flip >= 2) bits.push('their biggest bet is on ' + up.ref);
       if (dn.hf.flip <= -2) bits.push('their biggest bet against is ' + dn.ref);
       if (bits.length) lines.push('Among currencies, ' + bits.join(' and ') + '.');
     }
@@ -2520,7 +2564,8 @@
     left.appendChild(h);
     var k = dayKeyOf(w);
     left.appendChild(el('p', 'meta', keyLabel(k, todayKey) + ' · ' + fmtClock(w) + ' ' + tzAbbr() +
-      (e.forecast ? ' · forecast ' + e.forecast : '') + (e.previous ? ' · previous ' + e.previous : '')));
+      (plainFig(e.forecast) ? ' · expected ' + plainFig(e.forecast) : '') +
+      (plainFig(e.previous) ? ' · last time ' + plainFig(e.previous) : '')));
     box.appendChild(left);
     var cd = el('div', 'cn-count mono', countdown(w - now));
     cd.setAttribute('data-ts', w.getTime());
@@ -3367,7 +3412,7 @@
     var cm = cotMarket(c.ccy);
     if (cm && cm.hf) {
       var st = cotStance(cm.hf);
-      mol.appendChild(metricTile('Hedge funds', st.text, 'Their bets on the ' + c.ccy + ', from the weekly positioning report', '#positioning/' + c.ccy));
+      mol.appendChild(metricTile('Hedge funds', st.text + ' ' + c.ccy, 'Their bets on the ' + c.ccy + ', from the weekly positioning report', '#positioning/' + c.ccy));
     }
     var ms = momFor(c.ccy);
     if (ms.recent.length) {
@@ -3511,6 +3556,15 @@
 
   /* <time> showing "2h ago"; the exact time is in the tooltip. Kept current
      by tickRelTimes() so an open tab doesn't go stale. */
+  /* The publisher behind a source label: "Reuters (via Yahoo Finance)",
+     "Al-Monitor (Reuters)" and "FXStreet / Reuters" are all Reuters. */
+  function srcKey(src) {
+    var t = String(src || '').trim();
+    var wire = /\b(Reuters|AFP|Bloomberg)\b/.exec(t) || /(^|[\s(\/])(AP)(?=$|[\s)\/])/.exec(t);
+    if (wire) return wire[2] || wire[1];
+    t = t.replace(/\s*\((via|citing)\b[^)]*\)/i, '').trim();
+    return /^investinglive$/i.test(t) ? 'investingLive' : t;
+  }
   function relTimeEl(iso) {
     var t = el('time', 'mono rel', relTime(iso));
     t.dateTime = iso;
@@ -4019,9 +4073,15 @@
     });
 
     // Source chips (only worth showing with 2+ publishers).
-    var srcs = [];
-    all.forEach(function (it) { if (it.source && srcs.indexOf(it.source) < 0) srcs.push(it.source); });
-    srcs.sort();
+    // One entry per publisher (2026-11-16): a wire story carried by another
+    // site files under the wire, and spelling differences fold together. The
+    // card itself still names exactly where the story was read.
+    var srcs = [], seenSrc = {};
+    all.forEach(function (it) {
+      var k = srcKey(it.source);
+      if (k && !seenSrc[k.toLowerCase()]) { seenSrc[k.toLowerCase()] = 1; srcs.push(k); }
+    });
+    srcs.sort(function (a, b) { return a.toLowerCase() < b.toLowerCase() ? -1 : 1; });
     if (news.src && srcs.indexOf(news.src) < 0) news.src = '';
     var srcSel = $('#news-src');
     if (srcSel) {
@@ -4074,7 +4134,7 @@
 
     // Filter, then group.
     var items = all.filter(function (it) {
-      if (news.src && it.source !== news.src) return false;
+      if (news.src && srcKey(it.source).toLowerCase() !== news.src.toLowerCase()) return false;
       return !news.ccy || newsTouches(it, news.ccy);
     });
     var stories = newsStories(items);
@@ -4576,8 +4636,7 @@
 
     var d = t.detail;
     if (!hasDetail(t)) {
-      root.appendChild(el('p', 'meta learn-none', 'No full explainer for this one yet.'));
-      return;
+      return;   // plain words or nothing (Rami, 2026-11-16)
     }
     var card = el('div', 'card learn-card');
     [['What it measures', 'measures'], ['Why it moves currencies', 'why_moves_fx'],

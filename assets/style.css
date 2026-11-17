@@ -494,6 +494,9 @@ a.chip:hover { border-color: var(--accent-2); background: var(--accent-wash); }
   will-change: transform, opacity, filter;
 }
 .t-hero .kicker { margin: 0 0 16px; }
+/* Which edition this is and how old (2026-11-16). */
+.t-stamp { margin: -10px 0 16px; font-size: 0.8rem; color: var(--ink-3); }
+.t-stamp time { font-size: inherit; font-family: inherit; }
 .t-hero-hl {
   margin: 0;
   font-size: clamp(1.9rem, 4.6vw, 3.6rem);
