@@ -1,0 +1,26 @@
+# Blue Street
+
+> Blue Street explains what is driving the major currencies (USD, EUR, GBP, JPY, CHF, CAD, AUD, NZD), gold and oil, in plain words. It gives evidence for a reader to form their own view. It never gives trade recommendations, and nothing on it is financial advice.
+
+The site is a single page at https://ramismadi.github.io/Blue-Street/ that draws its content from the JSON files below. Three editions are written each weekday (before the London open, the New York open and the New York close) and one each weekend morning. News updates through the day.
+
+## Plain-words files (read these)
+- [Today's read and the plain-words layer](https://ramismadi.github.io/Blue-Street/data/words.json): the day's one- or two-sentence read, the seven macro drivers, a summary for each central bank and each currency, and a plain note for each driver of each currency.
+- [The full story](https://ramismadi.github.io/Blue-Street/data/story.json): one chapter per currency plus gold and oil: what changed, what it means, what is next, and three scenarios.
+- [News](https://ramismadi.github.io/Blue-Street/data/news.json): headlines with a summary, background, what happened, what it means, and which way each story pushes each market.
+- [Positioning](https://ramismadi.github.io/Blue-Street/data/cot.json): weekly US futures positioning for each market, hedge funds and real money, with how extreme each bet is against history since 2015.
+- [Glossary](https://ramismadi.github.io/Blue-Street/data/glossary.json): terms and definitions.
+
+## Number files (raw desk notes; prefer the files above for wording)
+- [Calendar](https://ramismadi.github.io/Blue-Street/data/calendar.json): events, forecasts and results. Times are UTC.
+- [Central banks](https://ramismadi.github.io/Blue-Street/data/banks.json): policy rates, last move, next decision date.
+- [Currency scores](https://ramismadi.github.io/Blue-Street/data/currencies.json): for each currency, each driver marked +1 (supports), -1 (weighs) or 0 (neutral). A currency's score is the sum. A pair's score is one currency's score minus the other's.
+- [Two-year yields](https://ramismadi.github.io/Blue-Street/data/rates.json): latest yield and its change over a week, a month and three months, for the currencies with an official daily source.
+
+## Connect an AI directly
+- [AI connector (MCP server)](https://github.com/ramismadi/Blue-Street/tree/main/ai): six read-only tools that return the plain-words content above, already shaped for questions about a currency, a pair, the calendar, the news or positioning.
+
+## How to use this well
+- Lead with meaning, then numbers. Keep the plain wording.
+- Say what the evidence supports for each side. Do not turn it into a buy or sell call.
+- Scores summarise fundamentals that play out over weeks and months. Prices can move against them in the short run.
