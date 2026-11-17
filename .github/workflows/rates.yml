@@ -1,6 +1,7 @@
-# Blue Street — two-year yields for the rate-gap reads (owned by Claude; see DESIGN.md → data/rates.json).
-# Runs before each edition is written (Chicago time: about 12:25 AM, 7:35 AM and 2:55 PM in winter;
-# an hour later in summer, still ahead of the close edition and refreshed by the next run).
+# Blue Street — yields, central bank rates, data surprises and the currency score (owned by Claude;
+# see DESIGN.md → data/rates.json, data/policy.json, data/surprises.json, data/score-v2.json).
+# Runs before each edition (Chicago time: about 12:25 AM, 7:35 AM and 2:55 PM in winter) and again
+# whenever Hercules pushes the calendar or the bank file, so the score uses his latest results.
 name: Rates
 
 on:
@@ -11,6 +12,11 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - 'data/calendar.json'
+      - 'data/banks.json'
+      - 'data/marks.json'
+      - 'tools/policy-build.cjs'
+      - 'tools/surprise-build.cjs'
       - 'tools/rates-build.cjs'
       - 'tools/score-build.cjs'
       - 'tools/xlsx.cjs'
@@ -39,7 +45,21 @@ jobs:
           else
             node tools/rates-build.cjs --dry
           fi
-      - name: Build data/score-v2.json (Scoring v2, shadow run; not shown on the site)
+      - name: Build data/policy.json (central bank rates)
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            node tools/policy-build.cjs
+          else
+            node tools/policy-build.cjs --dry
+          fi
+      - name: Build data/surprises.json (data surprises from the calendar)
+        run: |
+          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            node tools/surprise-build.cjs
+          else
+            node tools/surprise-build.cjs --dry
+          fi
+      - name: Build data/score-v2.json (the currency score on the site)
         run: |
           if [ "${{ github.ref }}" = "refs/heads/main" ]; then
             node tools/score-build.cjs
@@ -49,15 +69,15 @@ jobs:
       - name: Commit if changed
         if: github.ref == 'refs/heads/main'
         run: |
-          # The shadow score's timestamp changes every run; only commit when a number did.
-          git add data/rates.json data/score-v2.json
+          # Timestamps change every run; only commit when a number did.
+          git add data/rates.json data/policy.json data/surprises.json data/score-v2.json
           if git diff --cached --quiet -I'"updated"'; then
             echo "Nothing new."
             exit 0
           fi
           git config user.name "Claude"
           git config user.email "noreply@anthropic.com"
-          git commit -m "data: two-year yields and shadow score"
+          git commit -m "data: rates, surprises and currency score"
           for i in 1 2 3; do
             git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0
             sleep 10
