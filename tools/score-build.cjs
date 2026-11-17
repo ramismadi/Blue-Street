@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 /* Blue Street — Scoring v2, shadow run (Claude's job; runs in GitHub Actions).
 
-   Writes data/score-v2.json. NOT shown on the site yet: Rami approved the
-   approach on 2026-11-16 on the condition that it runs beside the current
-   score and is checked against price history before it replaces anything.
+   Writes data/score.json, the currency score on the site (since 2026-11-17;
+   named score-v2.json until the old hand-kept board was retired).
 
    The idea, in plain terms:
    - Measured, not judged: each driver reads from numbers where a feed exists.
@@ -36,7 +35,7 @@
 const fs = require('fs');
 const path = require('path');
 const DIR = path.join(path.resolve(__dirname, '..'), 'data');
-const OUT = path.join(DIR, 'score-v2.json');
+const OUT = path.join(DIR, 'score.json');
 const DRY = process.argv.includes('--dry'), OFFLINE = process.argv.includes('--offline');
 const CCYS = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'NZD'];
 const NAME = { USD: 'the dollar', EUR: 'the euro', GBP: 'the pound', JPY: 'the yen', CHF: 'the franc', CAD: 'the Canadian dollar', AUD: 'the Australian dollar', NZD: 'the New Zealand dollar' };
@@ -108,10 +107,9 @@ async function rbaCommodities() {
 }
 
 (async () => {
-  const banks = load('banks'), rates = load('rates'), mom = load('surprises') || load('momentum'), cot = load('cot'), cur = load('currencies'), marks = load('marks') || {};
+  const banks = load('banks'), rates = load('rates'), mom = load('surprises'), cot = load('cot'), marks = load('marks') || {};
   const policy = load('policy');
   if (!banks) { console.error('score-build: banks.json is required'); process.exit(1); }
-  const v1 = {}; ((cur && cur.currencies) || []).forEach(c => { v1[c.ccy] = c.drivers || {}; });
   const mark = (c, k) => { const m = ((marks[k] || {})[c]) || {}; return isFinite(+m.mark) ? +m.mark : 0; };
   const markWhy = (c, k, dflt) => ((marks[k] || {})[c] || {}).why || dflt;
 
@@ -212,14 +210,13 @@ async function rbaCommodities() {
       const w = WEIGHTS[k] || 0; let v = w ? Math.round(100 * w * clamp(P[k].value, -2, 2) / 2 / totalW) / 10 : 0;
       if (Math.abs(v) < 0.25) v = 0; P[k].points = v; sumPts += v;
     });
-    out[c] = { points: Math.round(sumPts * 10) / 10, score: avg(counted), tested_score: avg(Object.keys(TESTED)), measured_share: Math.round(measuredW / totalW * 100),
-      v1_score: Object.keys(v1[c] || {}).reduce((a, k) => a + (+v1[c][k].score || 0), 0), drivers: P };
+    out[c] = { points: Math.round(sumPts * 10) / 10, score: avg(counted), tested_score: avg(Object.keys(TESTED)), measured_share: Math.round(measuredW / totalW * 100), drivers: P };
   });
 
   const asOf = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
-  let prev = load('score-v2');
+  let prev = load('score');
   const history = ((prev && prev.history) || []).filter(h => h.date !== asOf);
-  history.push({ date: asOf, points: Object.fromEntries(CCYS.map(c => [c, out[c].points])), scores: Object.fromEntries(CCYS.map(c => [c, out[c].score])), tested: Object.fromEntries(CCYS.map(c => [c, out[c].tested_score])), v1: Object.fromEntries(CCYS.map(c => [c, out[c].v1_score])) });
+  history.push({ date: asOf, points: Object.fromEntries(CCYS.map(c => [c, out[c].points])), scores: Object.fromEntries(CCYS.map(c => [c, out[c].score])), tested: Object.fromEntries(CCYS.map(c => [c, out[c].tested_score])) });
   const doc = {
     _about: 'Blue Street currency score (since 2026-11-17 the score on the site). Rate levels, inflation and terms of trade passed a price-history test (2016-2026) with a small, steady edge; market mood failed and is shown with no weight; growth, positioning and fiscal are not yet tested. Evidence, not a forecast.',
     updated: new Date().toISOString(), as_of: asOf, scale: 'score -100 to +100; points -10 to +10 (what the site shows)', weights: WEIGHTS,
@@ -229,8 +226,8 @@ async function rbaCommodities() {
     ranking: CCYS.slice().sort((a, b) => out[b].points - out[a].points || out[b].score - out[a].score),
     currencies: out, history: history.slice(-180)
   };
-  console.log(CCYS.slice().sort((a, b) => out[b].score - out[a].score).map(c => c + ' ' + out[c].score + ' (tested part ' + out[c].tested_score + ', live score now ' + out[c].v1_score + ', ' + out[c].measured_share + '% measured)').join('\n'));
+  console.log(CCYS.slice().sort((a, b) => out[b].score - out[a].score).map(c => c + ' ' + out[c].score + ' (tested part ' + out[c].tested_score + ', ' + out[c].measured_share + '% measured)').join('\n'));
   if (DRY) return;
   fs.writeFileSync(OUT, JSON.stringify(doc, null, 1) + '\n');
-  console.log('score-build: wrote data/score-v2.json as of ' + asOf);
+  console.log('score-build: wrote data/score.json as of ' + asOf);
 })().catch(e => { console.error('score-build: ' + (e && e.stack || e)); process.exit(1); });

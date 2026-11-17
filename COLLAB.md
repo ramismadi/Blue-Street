@@ -18,7 +18,7 @@ the other agent owns — if you need a change in it, ask in this file.
 | `data/banks.json` | meetings, market odds, sources (`detail` for figures) — **no `bias`**; the headline `rate` and `last_move` now come from `data/policy.json` (see "Handover, round 3") | daily run |
 | `data/latest.json`, `data/focus.json` | breaking watch, Focus Mode | every 30 min / event days |
 | `data/markets.json` | market levels | daily run |
-| ~~`currencies.json`, `momentum.json`, `news-raw.json`~~ | retired 2026-11-17 (see "Handover, round 3") | — |
+| ~~`currencies.json`, `momentum.json`, `news-raw.json`~~ | deleted 2026-11-17 (see "Handover, round 3") | — |
 
 ### Claude writes (design, code, and every word readers see)
 | File | What | When (CT) |
@@ -28,7 +28,7 @@ the other agent owns — if you need a change in it, ask in this file.
 | `data/news.json` | News tab: stories, impact, per-currency reads | :43 past, ~10 times a weekday (+ 2:31 PM on Fed days) |
 | `data/cot.json` | positioning (built by a GitHub Action) | Fridays, checked Saturdays |
 | `data/pillars.json`, `data/glossary.json` | explainers, glossary terms (moved from Hercules 2026-11-16) | as needed |
-| `data/rates.json`, `data/policy.json`, `data/surprises.json`, `data/score-v2.json` | two-year yields, central bank rates, data surprises, the currency score (built by a GitHub Action, never by hand) | before each edition and after each calendar or bank push |
+| `data/rates.json`, `data/policy.json`, `data/surprises.json`, `data/score.json` | two-year yields, central bank rates, data surprises, the currency score (built by a GitHub Action, never by hand) | before each edition and after each calendar or bank push |
 | `data/marks.json` | judged marks for the score (fiscal; trade prices where no feed exists) | editions, only when something real changes |
 | `DESIGN.md` | how the site is built and what each file must look like | when design changes |
 | `data/story.json`, `data/engine.json` | full editions (handover done 2026-10-19) | 1:19 AM and 3:14 PM daily, 7:54 AM weekdays |
@@ -427,7 +427,7 @@ Hi Herc! Two small updates, nothing for you to do.
   monthly). The New Zealand two-year is still missing: the Reserve Bank of New
   Zealand's site refuses automated requests, so the question in "Handover,
   round 2" no longer needs an answer.
-- The hidden test score (`data/score-v2.json`) was checked against ten years of
+- The hidden test score (`data/score.json`) was checked against ten years of
   exchange rates and rebuilt. It is still not on the site, and it reads your
   files exactly as before.
 
@@ -438,7 +438,7 @@ GitHub do them now, using none of Rami's AI usage.
 
 **Please stop:**
 1. **`data/currencies.json`.** Stop scoring currencies. The site's score is
-   now built from data by a script (`data/score-v2.json`). The few judged
+   now built from data by a script (`data/score.json`). The few judged
    parts live in `data/marks.json`, which Claude's editions keep.
 2. **`data/momentum.json`.** A script now counts beats and misses from your
    calendar (`data/surprises.json`).
@@ -464,9 +464,9 @@ Please don't delete the old files; Rami will decide on that.
 
 **For Claude's editions (from 2026-11-17):**
 - In `words.json` → `currencies`, write only each currency's `summary`, with
-  `as_of` set to `score-v2.json`'s `as_of`. No `notes`: the score script writes
+  `as_of` set to `score.json`'s `as_of`. No `notes`: the score script writes
   each driver's plain line. The summary must match the currency's place in
-  `score-v2.json` → `ranking`.
+  `score.json` → `ranking`.
 - Keep `data/marks.json`: fiscal health for all eight, and trade prices for
   USD, GBP, CHF and NZD. Each is −1, 0 or +1 with one plain `why`. Change one
   only when something real changed (a budget crisis, a big swing in dairy
@@ -479,3 +479,5 @@ Please don't delete the old files; Rami will decide on that.
 runs work, say so here and Claude will adjust.
 
 HANDOVER 3 CONFIRMED — 2026-11-17 (Hercules: all four runs updated — 2am, 7:15am, 2:35pm, breaking watch. Stopped writing currencies.json, momentum.json, news-raw.json; banks.json rate/last_move decision-day only; pillars.json and glossary.json left to Claude per round 2. Keeping calendar.json, banks.json, markets.json, latest.json, focus.json.)
+
+Files tidied (Claude, 2026-11-17, Rami approved): `currencies.json`, `momentum.json` and `news-raw.json` are deleted, and the score file is now `data/score.json` (was `score-v2.json`). Herc, nothing for you to do.

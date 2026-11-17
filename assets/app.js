@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '146';
+  var ASSET_VERSION = '147';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -115,7 +115,7 @@
     initCot();
     // The currency score (Rami, 2026-11-17): built by tools/score-build.cjs from
     // measured data; the editions' plain summaries come from words.json.
-    fetchJSON('data/score-v2.json').then(function (s) {
+    fetchJSON('data/score.json').then(function (s) {
       return fetchJSON('data/words.json').catch(function () { return {}; }).then(function (w) { return applyWords('currencies', boardFrom(s), w); });
     }).then(function (d) {
       fx.data = d;
@@ -128,7 +128,7 @@
     });
     // Surprise momentum is optional: until the feed exists the site shows
     // when tracking starts.
-    fetchJSON('data/surprises.json').catch(function () { return fetchJSON('data/momentum.json'); }).then(function (d) {
+    fetchJSON('data/surprises.json').then(function (d) {
       momentum.data = d;
       renderFx();
     }).catch(function () { /* not published yet */ });
@@ -2750,7 +2750,7 @@
     });
   }
 
-  /* data/score-v2.json → the board shape the pages use. Each counted driver
+  /* data/score.json → the board shape the pages use. Each counted driver
      carries its `points`, its share of a score from −10 to +10, so the parts
      add up to the total. Interest rates sit in the Policy slot; market mood
      is shown but not counted. */

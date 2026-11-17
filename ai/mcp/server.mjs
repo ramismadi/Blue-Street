@@ -73,7 +73,7 @@ function market(code) {
 
 /* ---------- shaping ---------- */
 async function board() {
-  const [s, words] = await Promise.all([load('score-v2'), load('words')]);
+  const [s, words] = await Promise.all([load('score'), load('words')]);
   const w = (words.currencies || {}).currencies || {};
   const ID = { rates: 'Interest rates', inflation: 'Inflation', tot: 'Terms of trade', growth: 'Growth', positioning: 'Positioning', fiscal: 'Fiscal & sovereign', risk: 'Market mood' };
   const list = Object.keys(s.currencies || {}).map(code => {
