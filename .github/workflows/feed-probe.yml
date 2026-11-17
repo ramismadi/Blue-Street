@@ -1,15 +1,17 @@
-# Temporary (Claude, 2026-11-17): checks candidate sources for Scoring v2 from GitHub's servers. Removed before merging.
-name: Feed probe
+# Temporary (Claude, 2026-11-17): runs the Scoring v2 price-history test from GitHub's servers. Removed before merging.
+name: Score test
 on:
   push:
     branches: ['claude/score-v2-feeds']
-    paths: ['tools/feed-probe.cjs', '.github/workflows/feed-probe.yml']
+    paths: ['tools/score-backtest.cjs', '.github/workflows/feed-probe.yml']
 jobs:
-  probe:
+  test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: '22' }
-      - run: node tools/feed-probe.cjs
+      - run: node tools/score-backtest.cjs --out score-test.md
+      - uses: actions/upload-artifact@v4
+        with: { name: score-test, path: score-test.md }
