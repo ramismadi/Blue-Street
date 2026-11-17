@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '138';
+  var ASSET_VERSION = '139';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -110,6 +110,7 @@
       fx.data = d;
       syncPillars();
       renderFx();
+      sinceVisit();
       if (story) renderCcyCards(story);
     }).catch(function () {
       note('#fx-board', 'Currency data unavailable.');
@@ -144,6 +145,7 @@
     fetchJSON('data/news.json').then(function (d) {
       news.data = d;
       renderNews();
+      sinceVisit();
       renderTodayNews();
       if (news.article) renderArticle();
       if (story) renderCcyCards(story);
@@ -1193,6 +1195,60 @@
     var hr = parseInt(parts.hour, 10) % 24;
     return hr < 5 ? 'London open' : hr < 12 ? 'New York open' : 'New York close';
   }
+  /* When the next edition is due, as an instant. The schedule is in Chicago
+     time: 2:00 AM, 8:30 AM and 4:00 PM on weekdays, 8:30 AM at weekends. */
+  function nextEdition(now) {
+    var parts = {};
+    try {
+      new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', hour12: false, year: 'numeric', month: 'numeric',
+        day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' })
+        .formatToParts(now).forEach(function (x) { parts[x.type] = +x.value; });
+    } catch (e) { return null; }
+    // "Chicago wall clock" as if it were UTC; the gap to the real instant is the zone offset.
+    var wall = Date.UTC(parts.year, parts.month - 1, parts.day, parts.hour % 24, parts.minute, parts.second);
+    var offset = wall - Math.floor(now.getTime() / 1000) * 1000;
+    for (var d = 0; d < 4; d++) {
+      var day = new Date(Date.UTC(parts.year, parts.month - 1, parts.day + d));
+      var wd = day.getUTCDay(), slots = (wd === 0 || wd === 6) ? [[8, 30]] : [[2, 0], [8, 30], [16, 0]];
+      for (var i = 0; i < slots.length; i++) {
+        var t = day.getTime() + (slots[i][0] * 60 + slots[i][1]) * 60000;
+        if (t > wall + 60000) return new Date(t - offset);
+      }
+    }
+    return null;
+  }
+
+  /* "Since your last visit" (2026-11-16): what moved while the reader was
+     away, from a small snapshot kept in this browser. No login, nothing sent
+     anywhere. Shown only when something changed; otherwise nothing at all. */
+  var sinceDone = false;
+  function sinceVisit() {
+    var box = $('#t-since');
+    if (sinceDone || !box || !fx.data || !news.data) return;
+    sinceDone = true;
+    var now = Date.now(), cur = { t: now, scores: {}, ids: [] };
+    (fx.data.currencies || []).forEach(function (c) { cur.scores[c.ccy] = fxScore(c); });
+    (news.data.items || []).forEach(function (it) { if (it && it.id) cur.ids.push(it.id); });
+    var prev = null;
+    try {
+      prev = JSON.parse(sessionStorage.getItem('bluestreet-since') || 'null') || JSON.parse(localStorage.getItem('bluestreet-seen') || 'null');
+      if (prev) sessionStorage.setItem('bluestreet-since', JSON.stringify(prev));
+      localStorage.setItem('bluestreet-seen', JSON.stringify(cur));
+    } catch (e) { return; }
+    if (!prev || !prev.t || now - prev.t < 3 * 3600 * 1000) return;
+    var bits = [];
+    Object.keys(cur.scores).forEach(function (k) {
+      var was = (prev.scores || {})[k];
+      if (typeof was === 'number' && was !== cur.scores[k]) bits.push(k + ' ' + signed(cur.scores[k] - was));
+    });
+    var fresh = cur.ids.filter(function (id) { return (prev.ids || []).indexOf(id) < 0; }).length;
+    if (fresh) bits.push(fresh + (fresh === 1 ? ' new story' : ' new stories'));
+    if (!bits.length) return;
+    box.textContent = '';
+    box.appendChild(el('b', null, 'Since your last visit'));
+    box.appendChild(document.createTextNode(' (' + relTime(new Date(prev.t).toISOString()) + '): ' + bits.join(' · ')));
+    box.hidden = false;
+  }
   function stampEdition(iso) {
     var name = iso ? editionName(iso) : '';
     if (!name) return;
@@ -1202,6 +1258,12 @@
     box.textContent = '';
     box.appendChild(document.createTextNode((name === 'Weekend edition' ? name : name + ' edition') + ' · '));
     box.appendChild(relTimeEl(iso));
+    var nx = nextEdition(new Date());
+    if (nx) {
+      var sameDay = nx.toDateString() === new Date().toDateString();
+      box.appendChild(document.createTextNode(' · next at ' + nx.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) +
+        (sameDay ? '' : ' ' + nx.toLocaleDateString('en-US', { weekday: 'short' }))));
+    }
     box.hidden = false;
   }
   function renderEdition(d) {
@@ -4043,6 +4105,7 @@
     function fallback() {
       fig.textContent = '';
       fig.className = 'news-fig fallback' + (main ? ' ' + ((NEWS_LEAN[main.dir] || NEWS_LEAN.mixed).cls) : '');
+      if (main) { var fl = flagEl(main.ccy); if (fl.className) { fl.className = 'flag nf-flag'; fig.appendChild(fl); } }
       fig.appendChild(el('span', 'nf-mkt', main ? mktName(main.ccy) : 'FX'));
     }
     var src = safeUrl(it.image);
