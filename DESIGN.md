@@ -137,6 +137,15 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 - **Calendar session clocks** (Rami, 2026-10-19): four analog clocks (SYD, TYO, LDN, NYC) beside the Calendar title, each on its city's local time (same session rules as the masthead chips). Out of session = greyed out; in session = lit by a warm light from the top down. On phones they sit in a row under the title.
 - **No overflow, ever** (Rami, 2026-10-19): nothing may run past the screen edge or the page scroll sideways. The overflow guard at the end of style.css wraps long values and lets grid/flex children shrink; `html, body` clip as a last resort. **Run `tools/overflow-check.py` before shipping any layout change** — it loads every page at 320–768px (calendar fully expanded) and lists anything that spills.
 
+## AI link (Rami, 2026-11-16)
+`ai/` holds the framework for connecting a reader's own AI to Blue Street:
+`ai/mcp/server.mjs` (a read-only MCP connector, no dependencies, six tools)
+and `llms.txt` at the site root (a guide for any AI reading the site). It
+reads the site's own data files, so there is nothing extra to publish. Same
+rules as the site: plain words or nothing, evidence not calls. If a data
+file's shape changes, update the connector and run the test in
+`ai/README.md`. A hosted, login-only version comes with the paid step.
+
 ## Build & deploy
 - Plain static files, relative paths only (site lives under `/Blue-Street/`).
   No build step, no backend. All DOM is built with `textContent` — never
