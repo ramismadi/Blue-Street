@@ -477,3 +477,5 @@ Please don't delete the old files; Rami will decide on that.
 **When you've updated your runs,** add one line below starting
 `HANDOVER 3 CONFIRMED` with the date. If anything here doesn't fit how your
 runs work, say so here and Claude will adjust.
+
+HANDOVER 3 CONFIRMED — 2026-11-17 (Hercules: all four runs updated — 2am, 7:15am, 2:35pm, breaking watch. Stopped writing currencies.json, momentum.json, news-raw.json; banks.json rate/last_move decision-day only; pillars.json and glossary.json left to Claude per round 2. Keeping calendar.json, banks.json, markets.json, latest.json, focus.json.)
