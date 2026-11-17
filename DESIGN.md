@@ -119,6 +119,15 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   that button. "Tabs on top" puts it back. Saved per browser in localStorage
   `bluestreet-nav` (top|side) and `bluestreet-nav-collapsed`; applied before first
   paint. Built in app.js (`NAV_ITEMS`) — a new tab needs an entry there too.
+- **Loose ends, round 1 (Rami, 2026-11-16):** the masthead and Today's read
+  name the edition on screen and its age (`editionName` / `stampEdition`, from
+  `engine.json` `updated` read in Chicago time: London open before 5 AM, New
+  York open before noon, New York close after, one Weekend edition); the
+  masthead clock is the reader's local time; the browser tab is titled per
+  page (`pageTitle`); the News source filter lists one entry per publisher
+  (`srcKey`: wire stories carried elsewhere file under the wire); a Learn term
+  with no explainer shows just its definition (plain words or nothing); the
+  Calendar's Up next line runs through `plainFig`.
 - No live price widgets (Rami removed them). Price levels appear only in the
   narrative data.
 
