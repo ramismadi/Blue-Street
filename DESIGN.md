@@ -130,12 +130,27 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   Calendar's Up next line runs through `plainFig`.
 - **Loose ends, round 2 (Rami, 2026-11-16):** Today's read shows when the
   next edition is due (`nextEdition`, the Chicago schedule turned into the
-  reader's local time) and a "Since your last visit" line (`sinceVisit`:
-  score changes and new stories against a snapshot in localStorage
-  `bluestreet-seen`, shown only after 3+ hours away and only when something
-  changed). A story with no picture shows its market's flag on the tile and
-  no figure on its own page. On phones no text is under 11px and footer
-  links, source chips and "more" links are tall enough to tap.
+  reader's local time). A "Since your last visit" line was tried and removed
+  the same night (Rami: not wanted; don't bring it back). On phones no text
+  is under 11px and footer links, source chips and "more" links are tall
+  enough to tap.
+- **Stories with no picture (Rami, 2026-11-17):** never the currency's name in
+  big letters. The tile shows a line drawing picked from what the story is
+  about (`newsArtKind` reads the headline, then the pillar; `NEWS_ART` holds
+  nine drawings: central banks, growth, prices, oil, gold, world, trade,
+  government, markets) on a pale wash with the topic named small. On the
+  story's own page there is no figure at all.
+- **Learn hub (Rami, 2026-11-16):** `#learn` is the education centre, not a
+  tab. Lessons live in `data/learn.json` (Claude's words): `paths` (Start
+  here, The seven drivers, The releases that matter, Central banks, Reading
+  Blue Street) list lesson ids; each lesson has `title`, `minutes`, `lead`,
+  `sections` (`h`, `p`), optional `live` (`{"type":"driver","key":"policy"}`
+  shows today's engine read; `{"type":"calendar","match":"CPI"}` shows the
+  next and last matching release) and `see` links. `#learn/<lesson-id>` opens
+  a lesson; the glossary sits under the paths and still feeds the dotted
+  underlines. Lessons opened are remembered in localStorage
+  `bluestreet-learned`. Mechanics only, never direction; no figures that go
+  stale. Drivers' sub-nav links to the first driver lesson.
 - No live price widgets (Rami removed them). Price levels appear only in the
   narrative data.
 

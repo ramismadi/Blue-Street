@@ -14,7 +14,7 @@ It was renamed on 2026-10-19; the project used to have a different name.
 ## Who does what
 - **Claude:** the site (`index.html`, `assets/*`, `tools/*`, `ai/*`, `llms.txt`, workflows), every
   word readers see (`data/words.json`, `data/news.json`, `data/story.json`,
-  `data/engine.json`, `data/cot.json`, `data/glossary.json`,
+  `data/engine.json`, `data/cot.json`, `data/glossary.json`, `data/learn.json`,
   `data/pillars.json`), `data/rates.json` (built by a script, never by hand),
   and `DESIGN.md`.
 - **Hercules** (Rami's Muse assistant): the data (numbers, dates, sources) in
