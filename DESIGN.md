@@ -130,7 +130,9 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   Calendar's Up next line runs through `plainFig`.
 - **Loose ends, round 2 (Rami, 2026-11-16):** Today's read shows when the
   next edition is due (`nextEdition`, the Chicago schedule turned into the
-  reader's local time). A "Since your last visit" line was tried and removed
+  reader's local time). An edition lands before its time, so a slot the
+  edition on screen already filled (published up to 90 minutes before it) is
+  skipped: at 8:15 with the New York open out, it says 4:00 PM (fix, 2026-11-17). A "Since your last visit" line was tried and removed
   the same night (Rami: not wanted; don't bring it back). On phones no text
   is under 11px and footer links, source chips and "more" links are tall
   enough to tap.
