@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '139';
+  var ASSET_VERSION = '140';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -85,6 +85,11 @@
       setText('#today-headline', 'Edition unavailable');
     });
     initGlossary();
+    fetchJSON('data/learn.json').then(function (d) {
+      learn.data = d;
+      (d.lessons || []).forEach(function (l) { if (l && l.id) learn.byId[l.id] = l; });
+      renderLearn();
+    }).catch(function () { /* the glossary still shows */ });
     fetchJSON('data/pillars.json').then(function (d) {
       explainers = d.pillars || null;
       attachExplainers();
@@ -92,6 +97,8 @@
     withWords('data/engine.json', 'engine').then(function (d) {
       renderEngine(d);
       stampEdition(d && d.updated);
+      learn.engine = d;
+      renderLearn();
     }).catch(function () {
       note('#engine-rows', 'Macro engine data unavailable.');
     });
@@ -110,7 +117,6 @@
       fx.data = d;
       syncPillars();
       renderFx();
-      sinceVisit();
       if (story) renderCcyCards(story);
     }).catch(function () {
       note('#fx-board', 'Currency data unavailable.');
@@ -145,7 +151,6 @@
     fetchJSON('data/news.json').then(function (d) {
       news.data = d;
       renderNews();
-      sinceVisit();
       renderTodayNews();
       if (news.article) renderArticle();
       if (story) renderCcyCards(story);
@@ -649,6 +654,7 @@
   function pageTitle(tab, h) {
     var t = PAGE_TITLES[tab];
     if (!t) return SITE_TITLE;
+    if (tab === 'learn' && h[1] && learn.byId[h[1]]) return learn.byId[h[1]].title + ' — Blue Street';
     var sub = (h[1] || '').toUpperCase();
     if ((tab === 'fx' || tab === 'news' || tab === 'positioning') && /^[A-Z]{3}$/.test(sub)) {
       t = (sub === 'XAU' ? 'Gold' : sub === 'OIL' ? 'Oil' : sub) + (tab === 'fx' ? '' : ' · ' + t);
@@ -1218,37 +1224,6 @@
     return null;
   }
 
-  /* "Since your last visit" (2026-11-16): what moved while the reader was
-     away, from a small snapshot kept in this browser. No login, nothing sent
-     anywhere. Shown only when something changed; otherwise nothing at all. */
-  var sinceDone = false;
-  function sinceVisit() {
-    var box = $('#t-since');
-    if (sinceDone || !box || !fx.data || !news.data) return;
-    sinceDone = true;
-    var now = Date.now(), cur = { t: now, scores: {}, ids: [] };
-    (fx.data.currencies || []).forEach(function (c) { cur.scores[c.ccy] = fxScore(c); });
-    (news.data.items || []).forEach(function (it) { if (it && it.id) cur.ids.push(it.id); });
-    var prev = null;
-    try {
-      prev = JSON.parse(sessionStorage.getItem('bluestreet-since') || 'null') || JSON.parse(localStorage.getItem('bluestreet-seen') || 'null');
-      if (prev) sessionStorage.setItem('bluestreet-since', JSON.stringify(prev));
-      localStorage.setItem('bluestreet-seen', JSON.stringify(cur));
-    } catch (e) { return; }
-    if (!prev || !prev.t || now - prev.t < 3 * 3600 * 1000) return;
-    var bits = [];
-    Object.keys(cur.scores).forEach(function (k) {
-      var was = (prev.scores || {})[k];
-      if (typeof was === 'number' && was !== cur.scores[k]) bits.push(k + ' ' + signed(cur.scores[k] - was));
-    });
-    var fresh = cur.ids.filter(function (id) { return (prev.ids || []).indexOf(id) < 0; }).length;
-    if (fresh) bits.push(fresh + (fresh === 1 ? ' new story' : ' new stories'));
-    if (!bits.length) return;
-    box.textContent = '';
-    box.appendChild(el('b', null, 'Since your last visit'));
-    box.appendChild(document.createTextNode(' (' + relTime(new Date(prev.t).toISOString()) + '): ' + bits.join(' · ')));
-    box.hidden = false;
-  }
   function stampEdition(iso) {
     var name = iso ? editionName(iso) : '';
     if (!name) return;
@@ -2863,7 +2838,7 @@
     return t.length <= 200 && (t.match(/\d/g) || []).length <= 8 && !/[;()+~→|]/.test(t);
   }
   /* "US dollar" stays "US dollar"; "Euro" becomes "euro" mid-sentence. */
-  function inName(n) { return /^[A-Z]{2}/.test(n) ? n : n.charAt(0).toLowerCase() + n.slice(1); }
+  function inName(n) { return /^(Euro|Gold|Oil)\b/.test(n) ? n.charAt(0).toLowerCase() + n.slice(1) : n; }
   function noteFor(c, sign) {
     var d = (c && c.drivers) || {};
     for (var i = 0; i < PILLARS.length; i++) {
@@ -3309,6 +3284,53 @@
     sec.appendChild(ol);
     return sec;
   }
+  /* The score's path over the editions on file: a stepped line around a zero
+     line, with the first and last dates and a plain sentence on the change. */
+  function scoreChart(h, name) {
+    h = (h || []).filter(function (p) { return isFinite(p.v) && /^\d{4}-\d\d-\d\d$/.test(p.date); });
+    if (h.length < 5) return null;
+    var NS = 'http://www.w3.org/2000/svg', W = 640, H = 170, L = 34, R = 12, T = 14, B = 30;
+    var top = Math.max(3, Math.max.apply(null, h.map(function (p) { return Math.abs(p.v); }))) + 1;
+    var t0 = Date.parse(h[0].date), t1 = Date.parse(h[h.length - 1].date);
+    if (!(t1 > t0)) return null;
+    var X = function (d) { return L + (Date.parse(d) - t0) / (t1 - t0) * (W - L - R); };
+    var Y = function (v) { return T + (top - v) / (2 * top) * (H - T - B); };
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+    svg.setAttribute('class', 'score-chart');
+    svg.setAttribute('role', 'img');
+    function add(tag, attrs, text) {
+      var n = document.createElementNS(NS, tag);
+      Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+      if (text != null) n.textContent = text;
+      svg.appendChild(n);
+      return n;
+    }
+    [top - 1, 0, -(top - 1)].forEach(function (v) {
+      add('line', { x1: L, x2: W - R, y1: Y(v), y2: Y(v), 'class': v ? 'sc-grid' : 'sc-zero' });
+      add('text', { x: L - 8, y: Y(v) + 4, 'text-anchor': 'end', 'class': 'sc-lbl' }, signed(v));
+    });
+    var d = 'M' + X(h[0].date).toFixed(1) + ' ' + Y(h[0].v).toFixed(1);
+    for (var i = 1; i < h.length; i++) d += ' H' + X(h[i].date).toFixed(1) + ' V' + Y(h[i].v).toFixed(1);
+    add('path', { d: d, 'class': 'sc-line' });
+    var last = h[h.length - 1];
+    add('circle', { cx: X(last.date), cy: Y(last.v), r: 4.5, 'class': 'sc-dot' });
+    var fmt = function (iso) { return new Date(iso + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }); };
+    add('text', { x: L, y: H - 8, 'class': 'sc-lbl' }, fmt(h[0].date));
+    add('text', { x: W - R, y: H - 8, 'text-anchor': 'end', 'class': 'sc-lbl' }, fmt(last.date));
+    var hi = h.reduce(function (a, p) { return p.v > a.v ? p : a; }), lo = h.reduce(function (a, p) { return p.v < a.v ? p : a; });
+    var diff = last.v - h[0].v, nm = inName(name);
+    var line = diff === 0 ? 'The ' + nm + '’s score is where it was on ' + fmt(h[0].date) + '.'
+      : 'The ' + nm + '’s score has ' + (diff > 0 ? 'risen' : 'fallen') + ' from ' + signed(h[0].v) + ' to ' + signed(last.v) + ' since ' + fmt(h[0].date) + '.';
+    if (hi.v !== lo.v) line += ' Its high was ' + signed(hi.v) + ' on ' + fmt(hi.date) + ' and its low ' + signed(lo.v) + ' on ' + fmt(lo.date) + '.';
+    svg.setAttribute('aria-label', line);
+    var sec = hubSection('Score over time', 'hub-history');
+    var card = el('div', 'card sc-card');
+    card.appendChild(el('p', 'sc-read', line));
+    card.appendChild(svg);
+    sec.appendChild(card);
+    return sec;
+  }
   function hubSection(title, cls) {
     var sec = el('section', 'hub-sec ' + (cls || ''));
     sec.appendChild(el('h2', 'section-label', title));
@@ -3522,6 +3544,10 @@
     });
     mv.appendChild(grid);
     box.appendChild(mv);
+
+    // 5b. The score over time (2026-11-17): how the evidence has shifted.
+    var hs = scoreChart(fxHistory(c), c.name);
+    if (hs) box.appendChild(hs);
 
     // 6. The full read.
     hubRead(box, ch);
@@ -4104,9 +4130,12 @@
     var main = (it.impact || [])[0];
     function fallback() {
       fig.textContent = '';
-      fig.className = 'news-fig fallback' + (main ? ' ' + ((NEWS_LEAN[main.dir] || NEWS_LEAN.mixed).cls) : '');
-      if (main) { var fl = flagEl(main.ccy); if (fl.className) { fl.className = 'flag nf-flag'; fig.appendChild(fl); } }
-      fig.appendChild(el('span', 'nf-mkt', main ? mktName(main.ccy) : 'FX'));
+      // No photo: a line drawing chosen from what the story is about (Rami,
+      // 2026-11-17: not the currency's name in big letters).
+      var kind = newsArtKind(it);
+      fig.className = 'news-fig fallback art' + (main ? ' ' + ((NEWS_LEAN[main.dir] || NEWS_LEAN.mixed).cls) : '');
+      fig.appendChild(newsArt(kind));
+      fig.appendChild(el('span', 'nf-topic', NEWS_ART[kind].label));
     }
     var src = safeUrl(it.image);
     if (!src) { fallback(); return fig; }
@@ -4119,6 +4148,43 @@
     img.src = src;
     fig.appendChild(img);
     return fig;
+  }
+
+  /* Line drawings for stories with no photo. Each is a few strokes on a
+     120×80 canvas, drawn in the brand colour, so they sit together as a set. */
+  var NEWS_ART = {
+    bank: { label: 'Central banks', d: ['M24 30 L60 12 L96 30 Z', 'M34 36 V58', 'M47 36 V58', 'M60 36 V58', 'M73 36 V58', 'M86 36 V58', 'M24 62 H96', 'M18 68 H102'], c: [[60, 23, 3]] },
+    growth: { label: 'Growth', d: ['M22 12 V66 H102', 'M32 66 V48 H42 V66', 'M48 66 V40 H58 V66', 'M64 66 V32 H74 V66', 'M80 66 V24 H90 V66', 'M30 38 L50 28 L64 22 L92 10', 'M83 10 H92 V19'] },
+    inflation: { label: 'Prices', d: ['M28 18 H60 L94 44 L66 70 L28 44 Z', 'M74 40 L60 58'], c: [[40, 30, 4], [61, 43, 3.5], [73, 55, 3.5]] },
+    oil: { label: 'Oil', d: ['M60 10 C60 10 38 38 38 52 A22 22 0 0 0 82 52 C82 38 60 10 60 10 Z', 'M49 53 A11 11 0 0 0 60 64'] },
+    gold: { label: 'Gold', d: ['M14 68 L22 50 H52 L60 68 Z', 'M60 68 L68 50 H98 L106 68 Z', 'M37 48 L45 30 H75 L83 48 Z', 'M50 20 L53 14', 'M60 18 V11', 'M70 20 L67 14'] },
+    world: { label: 'World', d: ['M32 40 H88', 'M36 26 Q60 34 84 26', 'M36 54 Q60 46 84 54', 'M60 12 C44 24 44 56 60 68', 'M60 12 C76 24 76 56 60 68'], c: [[60, 40, 28]] },
+    trade: { label: 'Trade', d: ['M18 52 H102 L92 66 H28 Z', 'M34 38 H48 V50 H34 Z', 'M50 38 H64 V50 H50 Z', 'M66 38 H80 V50 H66 Z', 'M42 24 H56 V36 H42 Z', 'M58 24 H72 V36 H58 Z', 'M12 74 q6 -4 12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0'] },
+    government: { label: 'Government', d: ['M26 62 H94', 'M34 62 V44 H86 V62', 'M40 44 A20 20 0 0 1 80 44', 'M57 24 V15 H63 V24', 'M46 48 V62', 'M54 48 V62', 'M66 48 V62', 'M74 48 V62', 'M20 68 H100'] },
+    markets: { label: 'Markets', d: ['M30 20 V62', 'M25 30 H35 V48 H25 Z', 'M50 14 V54', 'M45 24 H55 V42 H45 Z', 'M70 28 V68', 'M65 38 H75 V58 H65 Z', 'M90 10 V46', 'M85 18 H95 V38 H85 Z'] }
+  };
+  function newsArtKind(it) {
+    var t = ((it.headline || '') + ' ' + (it.story_title || '')).toLowerCase();
+    if (/\b(oil|crude|opec|brent|tanker|barrel)/.test(t)) return 'oil';
+    if (/\b(gold|silver|bullion)\b/.test(t)) return 'gold';
+    if (/\b(inflation|cpi|ppi|prices?)\b/.test(t)) return 'inflation';
+    if (/\b(stocks?|shares|equit|nasdaq|dow|s&p|wall street|futures)/.test(t)) return 'markets';
+    if (/\b(fed|ecb|boe|boj|rba|rbnz|snb|boc|central bank|rate|hike|governor)/.test(t) || /\bbank of\b/.test(t)) return 'bank';
+    if (/\b(tariff|trade|exports?|imports?|shipping|china)/.test(t)) return 'trade';
+    if (/\b(war|strike|attack|missile|military|sanction|iran|israel|ukraine|russia|minister|talks|troops|forces)/.test(t)) return 'world';
+    if (/\b(budget|deficit|debt|congress|parliament|election|treasury|tax)/.test(t)) return 'government';
+    if (/\b(jobs?|payrolls?|unemployment|wages?|hiring|gdp|output|manufacturing|production|sales|pmi|survey)/.test(t)) return 'growth';
+    return { policy: 'bank', rates: 'bank', growth: 'growth', inflation: 'inflation', commodities: 'oil', fiscal: 'government', risk: 'world' }[it.pillar] || 'world';
+  }
+  function newsArt(kind) {
+    var NS = 'http://www.w3.org/2000/svg', a = NEWS_ART[kind] || NEWS_ART.world;
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 120 80');
+    svg.setAttribute('class', 'nf-art');
+    svg.setAttribute('aria-hidden', 'true');
+    (a.d || []).forEach(function (d) { var p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); svg.appendChild(p); });
+    (a.c || []).forEach(function (c) { var o = document.createElementNS(NS, 'circle'); o.setAttribute('cx', c[0]); o.setAttribute('cy', c[1]); o.setAttribute('r', c[2]); svg.appendChild(o); });
+    return svg;
   }
 
   function renderNews() {
@@ -4598,7 +4664,8 @@
       if (spec.id_prefix) return (e.id || '').indexOf(spec.id_prefix) === 0;
       if (spec.match) {
         return (e.title || '').toLowerCase().indexOf(String(spec.match).toLowerCase()) >= 0 &&
-               (!spec.ccy || e.ccy === spec.ccy);
+               (!spec.ccy || e.ccy === spec.ccy) &&
+               (!spec.majors || ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'NZD'].indexOf(e.ccy) >= 0);
       }
       return false;
     });
@@ -4624,15 +4691,141 @@
       root.appendChild(el('p', 'meta', gloss.loaded ? 'No terms published yet.' : 'Loading…'));
       return;
     }
-    if (id && gloss.byId[id] != null) renderLearnTerm(root, gloss.list[gloss.byId[id]]);
-    else renderLearnLibrary(root, terms);
+    if (id && learn.byId[id]) renderLesson(root, learn.byId[id]);
+    else if (id && gloss.byId[id] != null) renderLearnTerm(root, gloss.list[gloss.byId[id]]);
+    else { renderLearnHub(root); renderLearnLibrary(root, terms); }
+  }
+
+  /* ---- Learn hub (Rami, 2026-11-16): the centre for fundamentals education.
+     Lessons live in data/learn.json (Claude's words), grouped into paths. Each
+     lesson can end with a live example pulled from the site's own data, so it
+     never goes stale. Which lessons a reader has opened is remembered in this
+     browser only (localStorage `bluestreet-learned`). ---- */
+  var learn = { data: null, byId: {}, engine: null };
+  function learnedIds() {
+    try { return JSON.parse(localStorage.getItem('bluestreet-learned') || '[]') || []; } catch (e) { return []; }
+  }
+  function markLearned(id) {
+    var ids = learnedIds();
+    if (ids.indexOf(id) >= 0) return;
+    ids.push(id);
+    try { localStorage.setItem('bluestreet-learned', JSON.stringify(ids)); } catch (e) { /* private mode */ }
+  }
+  function renderLearnHub(root) {
+    var head = el('div', 'view-head');
+    head.appendChild(el('h1', 'view-title', 'Learn'));
+    root.appendChild(head);
+    if (!learn.data) return;
+    root.appendChild(el('p', 'learn-lead', 'How currencies work, in plain words. Short lessons you can read in a few minutes, each tied to what is happening on Blue Street today.'));
+    var done = learnedIds();
+    (learn.data.paths || []).forEach(function (p) {
+      var ls = (p.lessons || []).map(function (id) { return learn.byId[id]; }).filter(Boolean);
+      if (!ls.length) return;
+      var sec = el('section', 'lh-path');
+      var hd = el('div', 'lh-head');
+      hd.appendChild(el('h2', 'lh-title', p.title));
+      var n = ls.filter(function (l) { return done.indexOf(l.id) >= 0; }).length;
+      if (n) hd.appendChild(el('span', 'lh-count', n + ' of ' + ls.length + ' read'));
+      sec.appendChild(hd);
+      if (p.blurb) sec.appendChild(el('p', 'lh-blurb', p.blurb));
+      var ul = el('ol', 'lh-list');
+      ls.forEach(function (l, i) {
+        var li = el('li');
+        var a = el('a', 'lh-card card' + (done.indexOf(l.id) >= 0 ? ' read' : ''));
+        a.href = '#learn/' + encodeURIComponent(l.id);
+        a.appendChild(el('span', 'lh-num mono', String(i + 1)));
+        var body = el('span', 'lh-body');
+        body.appendChild(el('span', 'lh-name', l.title));
+        body.appendChild(el('span', 'lh-meta', (l.minutes || 3) + ' min' + (done.indexOf(l.id) >= 0 ? ' · read' : '')));
+        a.appendChild(body);
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      sec.appendChild(ul);
+      root.appendChild(sec);
+    });
+    root.appendChild(el('h2', 'lh-title lh-gloss', 'Glossary'));
+  }
+  function lessonLive(l) {
+    var spec = l.live;
+    if (!spec) return null;
+    var box = el('section', 'learn-live');
+    if (spec.type === 'driver') {
+      var row = ((learn.engine || {}).rows || []).filter(function (r) { return r.id === spec.key; })[0];
+      if (!row || !row.read || !plainText(row.read, 700)) return null;
+      box.appendChild(el('h2', 'section-label', 'On Blue Street today'));
+      box.appendChild(el('p', 'learn-p', row.read));
+      var m = el('a', 'more', 'See it in the Macro engine →');
+      m.href = '#engine';
+      box.appendChild(m);
+      return box;
+    }
+    if (spec.type === 'calendar') {
+      var live = learnLive({ match: spec.match, ccy: spec.ccy, majors: true });
+      if (!live) return null;
+      box.appendChild(el('h2', 'section-label', 'From the calendar'));
+      [['Next', live.next], ['Last', live.last]].forEach(function (x) {
+        var e = x[1];
+        if (!e) return;
+        var isNum = function (v) { return /^[+\-−]?\d/.test(plainFig(v)); };
+        var bits = [String(e.title).replace(/\s+[myq]\/[myq]$/, '') + (e.ccy ? ' (' + e.ccy + ')' : ''), e.ts ? fmtDateTime(e.ts) : e.date];
+        if (x[0] === 'Last' && isNum(e.actual)) bits.push('came in at ' + plainFig(e.actual));
+        if (isNum(e.forecast)) bits.push('expected ' + plainFig(e.forecast));
+        box.appendChild(el('p', 'learn-live-row', x[0] + ': ' + bits.join(' · ')));
+      });
+      var c = el('a', 'more', 'Open the calendar →');
+      c.href = '#calendar';
+      box.appendChild(c);
+      return box;
+    }
+    return null;
+  }
+  function renderLesson(root, l) {
+    markLearned(l.id);
+    var path = ((learn.data || {}).paths || []).filter(function (p) { return (p.lessons || []).indexOf(l.id) >= 0; })[0];
+    var back = el('a', 'more learn-back', '← Learn');
+    back.href = '#learn';
+    root.appendChild(back);
+    var head = el('div', 'view-head');
+    head.appendChild(el('p', 'kicker', (path ? path.title + ' · ' : '') + (l.minutes || 3) + ' min read'));
+    head.appendChild(el('h1', 'view-title', l.title));
+    root.appendChild(head);
+    root.appendChild(el('p', 'learn-lead', l.lead));
+    var card = el('div', 'card learn-card gl-scope');
+    (l.sections || []).forEach(function (sx) {
+      var sec = el('section', 'learn-sec');
+      sec.appendChild(el('h2', 'section-label', sx.h));
+      sec.appendChild(el('p', 'learn-p', sx.p));
+      card.appendChild(sec);
+    });
+    var live = lessonLive(l);
+    if (live) card.appendChild(live);
+    root.appendChild(card);
+    var nav = el('div', 'lesson-nav');
+    (l.see || []).forEach(function (x) {
+      var a = el('a', 'chip', x.label);
+      a.href = x.href;
+      nav.appendChild(a);
+    });
+    if (path) {
+      var i = path.lessons.indexOf(l.id), nx = learn.byId[path.lessons[i + 1]];
+      if (nx) {
+        var n = el('a', 'lesson-next card');
+        n.href = '#learn/' + encodeURIComponent(nx.id);
+        n.appendChild(el('span', 'section-label', 'Next lesson'));
+        n.appendChild(el('span', 'lh-name', nx.title + ' →'));
+        root.appendChild(n);
+      }
+    }
+    if (nav.childNodes.length) root.appendChild(nav);
   }
 
   function renderLearnLibrary(root, terms) {
-    var head = el('div', 'view-head');
-    head.appendChild(el('h1', 'view-title', 'Learn'));
-    var full = terms.filter(hasDetail).length;
-    root.appendChild(head);
+    if (!learn.data) {   // lessons not loaded: the glossary stands alone
+      var head = el('div', 'view-head');
+      head.appendChild(el('h1', 'view-title', 'Learn'));
+      root.appendChild(head);
+    }
 
     var search = el('input', 'learn-search');
     search.type = 'search';
