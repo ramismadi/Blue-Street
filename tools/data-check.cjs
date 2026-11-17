@@ -34,6 +34,10 @@ function slop(t) {
 /* The site hides a bank or currency line that contains a semicolon. */
 const hidden = (where, t) => { if (/;/.test(String(t || ''))) warns.push(where + ': has a semicolon, so the site hides this line — "' + String(t).slice(0, 70) + '"'); };
 const words = (where, t) => { const why = slop(t); if (why) warns.push(where + ': ' + why + ' — "' + String(t).slice(0, 90) + '"'); };
+/* News stays up for days, so a bare "today" or "on Monday" goes stale. Write the date. */
+const DAYS = '(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)';
+const STALE = new RegExp('\\b(today|tonight|tomorrow|yesterday|this (?:morning|afternoon|evening|week)|(?:on|this|next|last) ' + DAYS + '(?!,? (?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \\d))\\b', 'i');
+const dayWords = (where, t) => { const m = STALE.exec(String(t || '')); if (m) warns.push(where + ': "' + m[1] + '" goes stale, write the date — "' + String(t).slice(0, 80) + '"'); };
 
 const REQUIRED = ['banks', 'calendar', 'cot', 'currencies', 'engine', 'glossary', 'learn', 'momentum', 'news', 'pillars', 'story', 'words'];
 const d = {};
@@ -58,6 +62,21 @@ if (d.words) {
     Object.entries(c.notes || {}).forEach(([p, v]) => words('words.currencies.' + k + '.' + p, v));
   });
 }
+/* A currency summary must match its place on the board (Rami, 2026-11-16). */
+if (d.words && d.currencies && Array.isArray(d.currencies.currencies)) {
+  const sc = {}; d.currencies.currencies.forEach(c => { sc[c.ccy] = Object.values(c.drivers || {}).reduce((a, x) => a + (+x.score || 0), 0); });
+  const order = Object.keys(sc).sort((a, b) => sc[b] - sc[a]);
+  const rank = c => { const s = sc[c]; return { best: order.findIndex(k => sc[k] === s) + 1, worst: order.length - order.slice().reverse().findIndex(k => sc[k] === s) }; };
+  Object.entries((((d.words.currencies || {}).currencies) || {})).forEach(([c, v]) => {
+    if (sc[c] == null) return; const t = String(v.summary || ''), r = rank(c);
+    let want = null;
+    if (/near the top|top of the board|tops the board|leads the board|high on the board/i.test(t)) want = r.best <= 3 ? null : 'the top';
+    else if (/near the bottom|bottom of the board|low on the board|sits low|ranks low/i.test(t)) want = r.worst >= 6 ? null : 'the bottom';
+    else if (/middle of the board|mid-board|in the middle/i.test(t)) want = (r.worst >= 3 && r.best <= 6) ? null : 'the middle';
+    if (want) warns.push('words.currencies.' + c + '.summary: says ' + want + ' but ' + c + ' ranks ' + (r.best === r.worst ? r.best : r.best + '–' + r.worst) + ' of ' + order.length + ' on the board');
+  });
+}
+if (d['score-v2']) need(d['score-v2'].currencies && Object.keys(d['score-v2'].currencies).length === 8, 'score-v2.json: expected 8 currencies');
 if (d.engine) need(Array.isArray(d.engine.rows) && d.engine.rows.length === 7, 'engine.json: expected 7 rows');
 if (d.currencies) {
   need(Array.isArray(d.currencies.currencies) && d.currencies.currencies.length === 8, 'currencies.json: expected 8 currencies');
@@ -74,8 +93,9 @@ if (d.news) {
     if (seen.has(it.id)) errors.push('news.json: duplicate id ' + it.id);
     seen.add(it.id);
     need(!it.url || /^https?:\/\//.test(it.url), 'news.json: bad link on ' + it.id);
-    words('news ' + it.id + ' summary', it.summary);
-    Object.entries(it.beats || {}).forEach(([k, v]) => words('news ' + it.id + ' ' + k, v));
+    words('news ' + it.id + ' summary', it.summary); dayWords('news ' + it.id + ' summary', it.summary);
+    Object.entries(it.beats || {}).forEach(([k, v]) => { words('news ' + it.id + ' ' + k, v); dayWords('news ' + it.id + ' ' + k, v); });
+    dayWords('news ' + it.id + ' watch', it.watch);
     (it.impact || []).forEach(x => words('news ' + it.id + ' ' + x.ccy, x.why));
   });
   Object.entries(d.news.narratives || {}).forEach(([k, v]) => words('news narrative ' + k, v.text));

@@ -78,38 +78,7 @@ const sd = a => { const m = mean(a); return Math.sqrt(a.reduce((x, y) => x + (y 
 function rankOf(a) { const idx = a.map((v, i) => [v, i]).sort((x, y) => x[0] - y[0]), r = new Array(a.length); let i = 0; while (i < idx.length) { let j = i; while (j + 1 < idx.length && idx[j + 1][0] === idx[i][0]) j++; for (let k = i; k <= j; k++) r[idx[k][1]] = (i + j) / 2; i = j + 1; } return r; }
 function spearman(a, b) { const ra = rankOf(a), rb = rankOf(b), ma = mean(ra), mb = mean(rb); let n = 0, da = 0, db = 0; for (let i = 0; i < a.length; i++) { n += (ra[i] - ma) * (rb[i] - mb); da += (ra[i] - ma) ** 2; db += (rb[i] - mb) ** 2; } return da && db ? n / Math.sqrt(da * db) : null; }
 
-/* ---------- xlsx (Bank of England) ---------- */
-function xlsxSheet(file, sheetName) {
-  const dir = fs.mkdtempSync(path.join(TMP, 'x-'));
-  execFileSync('unzip', ['-q', '-o', file, 'xl/workbook.xml', 'xl/_rels/workbook.xml.rels', 'xl/sharedStrings.xml', 'xl/worksheets/*', '-d', dir], { maxBuffer: 1 << 30 });
-  const wb = fs.readFileSync(path.join(dir, 'xl/workbook.xml'), 'utf8'), rels = fs.readFileSync(path.join(dir, 'xl/_rels/workbook.xml.rels'), 'utf8');
-  const sh = [...wb.matchAll(/<sheet [^>]*name="([^"]*)"[^>]*r:id="([^"]*)"/g)].find(m => m[1].trim() === sheetName);
-  if (!sh) throw new Error('no sheet ' + sheetName + ' in ' + path.basename(file));
-  const target = (rels.match(new RegExp('Id="' + sh[2] + '"[^>]*Target="([^"]*)"')) || rels.match(new RegExp('Target="([^"]*)"[^>]*Id="' + sh[2] + '"')))[1];
-  let sst = [];
-  try { sst = [...fs.readFileSync(path.join(dir, 'xl/sharedStrings.xml'), 'utf8').matchAll(/<si>([\s\S]*?)<\/si>/g)].map(m => m[1].replace(/<[^>]+>/g, '')); } catch (e) { /* none */ }
-  const xml = fs.readFileSync(path.join(dir, 'xl', target.replace(/^\/?xl\//, '')), 'utf8');
-  const out = [];
-  for (const r of xml.matchAll(/<row [^>]*>([\s\S]*?)<\/row>/g)) {
-    const cells = {};
-    for (const c of r[1].matchAll(/<c r="([A-Z]+)\d+"([^>]*?)(?:\/>|>([\s\S]*?)<\/c>)/g)) {
-      const v = c[3] && (c[3].match(/<v>([^<]*)<\/v>/) || [])[1];
-      if (v != null) cells[c[1]] = /t="s"/.test(c[2]) ? sst[+v] : v;
-    }
-    out.push(cells);
-  }
-  return out;
-}
-const excelDate = n => new Date(Date.UTC(1899, 11, 30) + Math.round(+n) * 864e5).toISOString().slice(0, 10);
-/* Bank of England "4. spot curve": a "years:" row of maturities, then one row per day. */
-function boe2y(file) {
-  const r = xlsxSheet(file, '4. spot curve');
-  const head = r.find(x => /years/i.test(String(x.A || '')));
-  if (!head) throw new Error('no maturity row');
-  const col = Object.keys(head).find(k => k !== 'A' && Math.abs(+head[k] - 2) < 1e-6);
-  if (!col) throw new Error('no 2-year column');
-  return r.filter(x => /^\d{5}(\.\d+)?$/.test(String(x.A || '')) && num(x[col]) != null).map(x => [excelDate(x.A), x[col]]);
-}
+const { boe2y } = require('./xlsx.cjs');
 
 /* ---------- sources ---------- */
 const fredS = async id => series(rows(await get('https://fred.stlouisfed.org/graph/fredgraph.csv?id=' + id + '&cosd=' + START)).slice(1));
@@ -187,16 +156,14 @@ function drivers(date, D) {
 }
 /* Today's weights (score-build.cjs), limited to what can be tested. Rates = level + move as one driver. */
 const COMBOS = {
-  'Score v2 as built (rates, mood, oil)': { rates: 30, risk: 15, oil: 10 },
-  'Score v2 plus inflation': { rates: 30, risk: 15, oil: 10, inflation: 10 },
-  'Option A: rate levels only': { pol: 15, yl: 15 },
-  'Option B: rate levels + inflation': { pol: 15, yl: 15, inflation: 10 },
-  'Option C: rate levels + inflation + oil': { pol: 15, yl: 15, inflation: 10, oil: 10 }
+  'Score v2 as first built (rates, mood, oil)': { rates: 30, risk: 15, oil: 10 },
+  'Score v2 now (rate levels, inflation, oil)': { ratesL: 30, inflation: 10, oil: 10 }
 };
 function comboScore(P, w) {
   let s = 0, tot = 0;
   const rates = P.rate_level != null ? P.rate_level + (P.rate_move != null ? P.rate_move : 0) : null;
-  const parts = { rates, risk: P.risk, oil: P.oil, inflation: P.inflation, pol: P.rate_level != null ? P.rate_level * 2 : null, yl: P.yield_level != null ? P.yield_level * 2 : (P.rate_level != null ? P.rate_level * 2 : null) };
+  const lv = [P.rate_level, P.yield_level].filter(v => v != null);
+  const parts = { rates, risk: P.risk, oil: P.oil, inflation: P.inflation, ratesL: lv.length ? 2 * mean(lv) : null };
   Object.keys(w).forEach(k => { if (parts[k] != null) { s += w[k] * clamp(parts[k], -2, 2) / 2; tot += w[k]; } });
   return tot ? s / tot * 100 : null;
 }
@@ -224,7 +191,7 @@ function comboScore(P, w) {
     const P = drivers(f, D);
     const sig = {};
     SIGNALS.forEach(s => { sig[s] = {}; CCYS.forEach(c => { const v = COMBOS[s] ? comboScore(P[c], COMBOS[s]) : P[c][s]; if (v != null) sig[s][c] = v; }); });
-    snap.push([f, sig['Score v2 as built (rates, mood, oil)']]);
+    snap.push([f, sig['Score v2 now (rate levels, inflation, oil)']]);
     for (const [hn, hd] of Object.entries(H)) {
       if (addDays(f, hd) > lastFx) continue;
       const r = rel(f, addDays(f, hd)); if (!r) continue;
@@ -263,7 +230,7 @@ function comboScore(P, w) {
   });
   L.push('', '## Not tested', '', '- Growth surprises (beats vs misses) and hedge-fund positioning: Blue Street only has weeks of history for them.', '- Fiscal health and terms of trade beyond oil: no measured feed yet.', '- New Zealand two-year yield: no official daily source answers automated requests, so its rate move is left out.');
   notes.forEach(n => L.push('- ' + n));
-  L.push('', '## Latest scores from this test (rates, mood, oil only)', '');
+  L.push('', '## Latest scores from this test (rate levels, inflation, oil)', '');
   snap.slice(-3).forEach(([d, s]) => L.push('- ' + d + ': ' + CCYS.slice().sort((a, b) => (s[b] || 0) - (s[a] || 0)).map(c => c + ' ' + Math.round(s[c] || 0)).join(', ')));
   const text = L.join('\n') + '\n';
   console.log('\n' + text);

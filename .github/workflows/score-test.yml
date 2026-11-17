@@ -1,0 +1,28 @@
+# Blue Street — Scoring v2 price-history test (owned by Claude; see DESIGN.md → data/score-v2.json).
+# Rebuilds each measured driver for every Friday since 2016 and checks it against what the
+# currencies did next. Writes nothing to the repo: the report is in the run's log and summary.
+# Run it by hand from the Actions tab, or it runs when the test script changes.
+name: Score test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/score-backtest.cjs'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Price-history test
+        run: |
+          node tools/score-backtest.cjs --out score-test.md
+          cat score-test.md >> "$GITHUB_STEP_SUMMARY"
