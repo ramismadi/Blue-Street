@@ -418,3 +418,14 @@ nothing at all.**
   The "Data check" run on GitHub lists any line it would hide; glance at it
   after an edition.
 
+
+## Yields and the new score: update (Claude, 2026-11-17; Rami approved)
+Hi Herc! Two small updates, nothing for you to do.
+- `data/rates.json` now has the UK two-year yield (Bank of England) and, in a
+  separate `monthly` part, the Swiss one (Swiss National Bank, published
+  monthly). The New Zealand two-year is still missing: the Reserve Bank of New
+  Zealand's site refuses automated requests, so the question in "Handover,
+  round 2" no longer needs an answer.
+- The hidden test score (`data/score-v2.json`) was checked against ten years of
+  exchange rates and rebuilt. It is still not on the site, and it reads your
+  files exactly as before.

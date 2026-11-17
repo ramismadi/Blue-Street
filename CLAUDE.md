@@ -38,6 +38,12 @@ It was renamed on 2026-10-19; the project used to have a different name.
 - **Writing:** meaning over numbers; short, plain sentences, no "data slop".
   Today's read is 1-2 sentences. Never trade recommendations. Never the word
   "crowded" (use another term for extreme positioning).
+- **Before pushing an edition or a News read:** run `node tools/data-check.cjs`
+  and fix what it lists in your files. No semicolons in `words.json` bank and
+  currency lines (the site hides them). A currency summary must match its rank
+  this edition. In News, write the date ("on Tuesday, November 17"), never a
+  bare "today" or "on Monday". Full rules: `COLLAB.md` → "Writing rules added
+  after the site audit".
 - **Editions** are live by 2:00 AM, 8:30 AM and 4:00 PM CT (London open daily,
   New York open weekdays, New York close daily). Claude writes at 1:19 AM,
   7:54 AM and 3:14 PM, after Hercules' data runs (12:40 AM, 7:15 AM, 2:35 PM,

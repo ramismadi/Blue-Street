@@ -313,51 +313,79 @@ has no "What is this?" button.
   time); keep the method string accurate if it changes.
 
 ### `data/rates.json` — yields (Claude; built by a GitHub Action since 2026-11-16)
-- **Owner changed (Rami, 2026-11-16):** `tools/rates-build.cjs` builds this file
-  from official sources in `.github/workflows/rates.yml`, three times a day
-  ahead of the editions. No one writes it by hand. Covered: USD (Federal
-  Reserve via FRED), EUR (ECB euro-area AAA curve, not the German bond), JPY
-  (Ministry of Finance), CAD (Bank of Canada), AUD (Reserve Bank of
-  Australia). **Not yet covered: GBP, CHF, NZD** (no simple official daily
-  source answered); those currencies are simply absent and the site shows
-  the headline-rate gap alone for their pairs. `implied` is not built.
+`tools/rates-build.cjs` builds this file from official sources in
+`.github/workflows/rates.yml`, three times a day ahead of the editions. No one
+writes it by hand.
+- `yields` (daily, read by the site and the AI connector): USD (Federal Reserve
+  via FRED), EUR (ECB euro-area AAA curve), JPY (Ministry of Finance), CAD (Bank
+  of Canada), AUD (Reserve Bank of Australia), GBP (Bank of England spot curve,
+  from its daily spreadsheets; added 2026-11-17).
+- `monthly` (not read by the site): CHF from the Swiss National Bank (cube
+  `rendeiduebd`). Daily figures, but published once a month, so they serve
+  where the yield stands, never this month's direction.
+- `history`: the last ~130 GBP readings, because the Bank of England's
+  current-month file only covers this month. The first run fills it from the
+  Bank's yearly file.
+- **No NZD:** the Reserve Bank of New Zealand's site refuses automated
+  requests, and that is respected. Its pairs show the headline-rate gap alone.
 ```
 {"updated":"<ISO-8601>","as_of":"YYYY-MM-DD",
- "yields":{"USD":{"y2":4.72,"chg_1w":0.05,"chg_1m":0.20,"chg_3m":0.40,
-                  "source":"label","as_of":"<ISO-8601>"}},   // all eight; EUR = German 2Y
- "implied":{"USD":{"m3":4.25,"m6":4.50,"source":"label","as_of":"<ISO-8601>"}}}  // optional
+ "yields":{"USD":{"y2":4.72,"chg_1w":0.05,"chg_1m":0.20,"chg_3m":0.40,"source":"label","as_of":"YYYY-MM-DD"}},
+ "monthly":{"CHF":{...same shape...}},
+ "history":{"GBP":[["YYYY-MM-DD",4.21], ...]}}
 ```
 - `y2` in percent; `chg_*` in percentage points. Every number has a source label.
 - The site reads `yields[ccy].y2` and `chg_1m` for the picker's rate-gap line.
-  `implied` is not shown yet. No file renders gracefully: the picker shows only
-  today's headline-rate gap.
+  No file renders gracefully: the picker shows only today's headline-rate gap.
 
 ### `data/score-v2.json` — Scoring v2, shadow run (Claude; script, since 2026-11-17)
 Built by `tools/score-build.cjs` in the Rates workflow. **Not read by the
-site.** Rami approved the approach on 2026-11-16: measured, relative to the
-other seven, level plus direction, weighted (rates 30, growth 15, risk 15,
-inflation 10, terms of trade 10, positioning 10, fiscal 10), on a −100…+100
-scale, and it must run beside the live score and be checked against price
-history before it replaces anything.
+site.** Rami approved the approach on 2026-11-16 (measured, relative to the
+other seven, weighted, run beside the live score and tested on price history
+before it replaces anything).
+
+**Price-history test (2026-11-17, `tools/score-backtest.cjs`, workflow "Score
+test"):** every Friday 2016–2026, each measured driver rebuilt from what was
+public that day, compared with how the eight currencies did against their
+average over the next 2, 4 and 8 weeks. Result: rate levels (policy rate and
+two-year yield against the middle of the eight), inflation against each bank's
+goal and oil showed a small, steady edge (rank match about +0.03 to +0.05, the
+same sign in 2016–19, 2020–22 and 2023–now; not strong enough to rule out
+luck). Market mood (VIX x safe haven) pointed the wrong way, and the one-month
+yield move showed nothing. Growth surprises and positioning have too little
+history to test.
+
+**So (Rami, 2026-11-17):** counted weights are rates 30, inflation 10, terms
+of trade 10, growth 15, positioning 10, fiscal 10 (score = weighted average,
+−100…+100). Market mood is kept as a plain line with weight 0. The one-month
+yield move is mentioned in the rates line, not counted. `tested_score` uses
+only rates, inflation and terms of trade.
 ```
-{"as_of":"YYYY-MM-DD","weights":{...},"inputs":{"vix":true,"brent":true,"yields":["USD",...]},
+{"as_of":"YYYY-MM-DD","weights":{...},"tested":["rates","inflation","tot"],
+ "inputs":{"vix":true,"brent":true,"inflation":["USD",...],"aus_export_prices":true,"yields":[...],"yields_monthly":["CHF"]},
  "ranking":["GBP",...],
- "currencies":{"USD":{"score":19,"v1_score":1,"measured_share":55,
-   "drivers":{"rates":{"value":1.24,"measured":true,"why":"plain sentence"}, ...}}},
- "history":[{"date":"YYYY-MM-DD","scores":{"USD":19,...}}]}
+ "currencies":{"USD":{"score":19,"tested_score":40,"v1_score":1,"measured_share":65,
+   "drivers":{"rates":{"value":1.24,"measured":true,"counted":true,"tested":true,"why":"plain sentence"}, ...}}},
+ "history":[{"date":"YYYY-MM-DD","scores":{...},"tested":{...},"v1":{...}}]}
 ```
-- A driver's `value` runs −2…+2. `measured:false` means it still rests on the
-  hand-judged mark from `currencies.json` (inflation, fiscal, terms of trade
-  outside the oil currencies, and rate direction for GBP, CHF, NZD).
-- Sources: `banks.json` rates, `rates.json` yields, `momentum.json` beats and
-  misses, `cot.json` positioning, and from FRED the VIX (market mood) and
-  Brent (oil). Thresholds are first guesses. **Not yet tested against price
-  history.** One history point per edition date, kept for 180 days.
+- A driver's `value` runs −2…+2. `measured:false` means it rests on the
+  hand-judged mark from `currencies.json`.
+- Sources: `banks.json` rates, `rates.json` yields (daily and monthly),
+  `momentum.json`, `cot.json`, and online the VIX and Brent (FRED), inflation
+  for all eight (Bank for International Settlements), and Australia's export
+  prices (the RBA's commodity index, SDR terms). Inflation goals: 2% for the
+  Fed, ECB, Bank of England, Bank of Japan, Bank of Canada and RBNZ; 1% for the
+  SNB (middle of 0–2%); 2.5% for the RBA (middle of 2–3%).
+- History keeps the new score, the tested part and the live score side by
+  side, one point per edition date, 180 days, for the comparison Rami asked for.
 
 ### Data check (Claude; `tools/data-check.cjs`, workflow "Data check")
 Runs on every push that touches `data/`. Fails on a broken or incomplete data
-file. Lists reader-facing text that reads like desk shorthand, and bank lines
-the site would hide (a semicolon hides the line). It reports after the push;
+file. Lists reader-facing text that reads like desk shorthand, bank lines
+the site would hide (a semicolon hides the line), News text with day words
+that go stale ("today", "on Monday" with no date), and currency summaries
+that place a currency somewhere other than its rank on the board. The
+edition and News tasks run it before pushing. It reports after the push;
 it cannot stop one, so the site's own filter stays the last line of defence.
 
 ### `data/momentum.json` — surprise momentum (Hercules)
