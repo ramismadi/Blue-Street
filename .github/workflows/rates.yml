@@ -49,14 +49,13 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           # The shadow score's timestamp changes every run; only commit when a number did.
-          if [ -z "$(git status --porcelain data/rates.json)" ] && git diff --quiet -I'"updated"' -- data/score-v2.json && [ -z "$(git status --porcelain --untracked-files=all data/score-v2.json | grep '^??')" ]; then
+          git add data/rates.json data/score-v2.json
+          if git diff --cached --quiet -I'"updated"'; then
             echo "Nothing new."
-            git checkout -- data/score-v2.json 2>/dev/null || true
             exit 0
           fi
           git config user.name "Claude"
           git config user.email "noreply@anthropic.com"
-          git add data/rates.json data/score-v2.json
           git commit -m "data: two-year yields and shadow score"
           for i in 1 2 3; do
             git pull --rebase --quiet origin main && git push --quiet origin HEAD:main && exit 0
