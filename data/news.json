@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-17T01:46:00Z",
+  "updated": "2026-11-17T03:47:39Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-16T23:52:00Z",
-      "text": "The dollar rose for a sixth day on Monday to its highest since April 2025, because Federal Reserve officials keep saying inflation is too high and rates must rise in December. A weak New York factory survey and Fed Chair Kevin Warsh's silence on rates did not change that; the October meeting minutes on Wednesday are the next signal."
+      "ts": "2026-11-17T03:47:39Z",
+      "text": "The dollar is at its highest since April 2025 because Federal Reserve officials keep backing more rate rises: Cleveland's Beth Hammack and Boston's Susan Collins both favour steady quarter-point steps, and Collins thinks rates next year may end up higher than she expected. The Fed's October meeting minutes on Wednesday are the next signal."
     },
     "EUR": {
       "lean": "bearish",
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "bearish",
-      "ts": "2026-11-16T14:52:09Z",
-      "text": "Canadian inflation held at 3.1% in October, slightly below forecast, and the Bank of Canada's core measures sit near its 2% goal, so a December rate rise looks less likely. With oil, Canada's main export, drifting near $95 and the US dollar strong, the Canadian dollar has little to lean on."
+      "ts": "2026-11-17T03:47:39Z",
+      "text": "Canadian inflation held at 3.1% in October, slightly below forecast, and the Bank of Canada's core measures sit near its 2% goal, so a December rate rise looks less likely. Oil, Canada's main export, keeps slipping toward $92 for Brent and the US dollar is strong, so the Canadian dollar has little to lean on."
     },
     "AUD": {
       "lean": "bearish",
@@ -39,8 +39,8 @@
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-16T23:52:00Z",
-      "text": "The New Zealand dollar gave back all of its rise after the November 7 election and sits near 55 US cents, held down by the strong US dollar. Weak Chinese shop sales and Monday's slide in global technology shares add to the pressure, since the currency tends to fall when stocks do."
+      "ts": "2026-11-17T03:47:39Z",
+      "text": "The New Zealand dollar gave back all of its rise after the November 7 election and sits near 55 US cents, held down by the strong US dollar and weak Chinese demand. A Reserve Bank survey on Tuesday showed firms expect higher near-term inflation and a rate rise soon, which offers some support but has not lifted the kiwi."
     },
     "XAU": {
       "lean": "bearish",
@@ -49,11 +49,71 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-16T12:48:01Z",
-      "text": "Oil is drifting lower, near $95 for Brent, because Middle East exports are recovering, emergency stocks are being released and the International Energy Agency expects more supply than demand this quarter; Goldman Sachs sees Brent averaging $88 next year. Iran's unconfirmed claims of tankers hitting mines near Hormuz add only brief lifts, and weak Chinese refinery demand points the same way."
+      "ts": "2026-11-17T03:47:39Z",
+      "text": "Oil keeps drifting lower, with Brent near $92, because Middle East exports are recovering and the International Energy Agency expects more supply than demand this quarter. Attacks on Gulf shipping continue but move prices less each time; the OPEC+ meeting on November 29 on next year's output is the next big decision on supply."
     }
   },
   "items": [
+    {
+      "id": "reuters-oil-slips-surplus-opec-review-20261117",
+      "ts": "2026-11-17T02:37:52Z",
+      "source": "Reuters (via Business Recorder)",
+      "url": "https://www.brecorder.com/news/40449308/oil-slips-on-supply-surplus-outlook-despite-gulf-tensions",
+      "image": "https://i.brecorder.com/large/2026/10/2707484120ec1ba.jpg",
+      "headline": "Oil slips on supply surplus outlook despite Gulf tensions",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Oil eased again early Tuesday, with Brent at $92, as traders focus on supply catching up with demand rather than on continued attacks on Gulf shipping.",
+      "beats": {
+        "was": "Oil prices jumped when the US-Iran war cut Gulf exports, but the International Energy Agency said on Friday the market returns to surplus this quarter as those exports recover faster than demand.",
+        "happened": "In early Asian trade Brent crude fell about 0.5% to $92.00 a barrel and US crude to about $85.30. Attacks on Gulf energy sites and ships, including in the Strait of Hormuz, continue. OPEC held an online meeting on Monday to review members' output capacity; the wider OPEC+ group meets on November 29 to set 2027 output. US emergency oil stocks have fallen to their lowest since 1982.",
+        "means": "The war premium in oil keeps shrinking because supply is coming back. The November 29 OPEC+ meeting matters more now: a decision to keep pumping would deepen the surplus.",
+        "fx": "Cheaper oil takes some support from the Canadian dollar and Norway's krone, and helps oil importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Recovering supply and a surplus outlook outweigh continued attacks on shipping."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower prices for Canada's main export trim the currency's support."
+        }
+      ],
+      "watch": "The OPEC+ meeting on November 29 on 2027 output, and any confirmed damage to tankers in the Strait of Hormuz."
+    },
+    {
+      "id": "actionforex-rbnz-expectations-survey-q4-20261117",
+      "ts": "2026-11-17T02:29:53Z",
+      "source": "ActionForex",
+      "url": "https://www.actionforex.com/live-comments/661109-rbnz-survey-shows-near-term-inflation-fears-rising-but-long-term-expectations-ease/",
+      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-nz1.jpg",
+      "headline": "RBNZ Survey Shows Near-Term Inflation Fears Rising, but Long-Term Expectations Ease",
+      "story": "rbnz-december",
+      "story_title": "Will the Reserve Bank of New Zealand raise rates on December 9?",
+      "pillar": "inflation",
+      "summary": "Business leaders and forecasters polled by the Reserve Bank of New Zealand now expect inflation of almost 3% over the next year, up from 2.6%. Their longer-run views eased, and they now expect the bank to raise its 2.75% rate soon.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand asks firms and economists every quarter where they see prices and rates heading. Its policy rate is 2.75%, inflation slowed to 3.7% in July to September, and unemployment has risen to 5.7%.",
+        "happened": "The November survey, out on Tuesday, showed expected inflation one year ahead rising to 2.92%. The two-year view, which the bank watches most, barely moved at 2.36%, and the five- and ten-year views fell. Respondents now see the policy rate at about 3.05% by the end of this year and 3.40% a year from now, and expect house prices to rise only 0.5%.",
+        "means": "Price worries are rising in the short run but the longer-run anchor is holding, which gives the bank room to move slowly. Respondents expect a rate rise at the December 9 meeting, but rising joblessness argues for caution.",
+        "fx": "A small lift for the New Zealand dollar from higher expected rates, but it was offset by the strong US dollar and the kiwi barely moved."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Higher expected rates help, but steady long-run expectations and rising unemployment let the bank go slowly."
+        }
+      ],
+      "watch": "The Reserve Bank of New Zealand's decision on December 9: a rise would match what this survey expects; a hold would hurt the kiwi."
+    },
     {
       "id": "reuters-rba-minutes-split-fifth-hike-20261117",
       "date": "2026-11-17",
@@ -502,6 +562,33 @@
       "watch": "Euro-area inflation for November, due in early December: a sharp drop would weaken the case for any ECB move after December."
     },
     {
+      "id": "reuters-hammack-small-steps-bloombergtv-20261116",
+      "date": "2026-11-16",
+      "source": "Reuters (via 93.3 The Drive)",
+      "url": "https://www.933thedrive.com/2026/11/16/feds-hammack-reiterates-case-for-slow-steady-rate-hikes-bloomberg-tv/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/16/2026-11-16T193350Z_1_LYNXNPEMAF1UC_RTROPTP_3_USA-FED-HAMMACK.JPG",
+      "headline": "Fed's Hammack reiterates case for slow, steady rate hikes -Bloomberg TV",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "policy",
+      "summary": "Cleveland Fed President Beth Hammack said on Monday inflation pressure is building, but she prefers raising rates in small steps. She added the Fed can move faster if it falls behind.",
+      "beats": {
+        "was": "The Federal Reserve's target range is 3.75%-4%, and markets expect a quarter-point rise at the December 8-9 meeting after a hot October inflation report.",
+        "happened": "In a Bloomberg TV interview, Hammack said she sees mounting inflation pressure but is not ready for a more aggressive path. She said she likes smaller moves, but the Fed could make larger ones if it gets behind on inflation.",
+        "means": "Another Fed official backs steady rises, which supports pricing for December and beyond. Her preference for small steps argues against the half-point move some traders have bet on.",
+        "fx": "Steady support for the US dollar from higher expected rates; it does not add to the case for a bigger December move."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A Fed president backs more rate rises and keeps larger moves on the table."
+        }
+      ],
+      "watch": "The Fed's October meeting minutes on Wednesday, for how many officials wanted to move faster."
+    },
+    {
       "id": "reuters-canada-cpi-october-holds-20261116",
       "date": "2026-11-16",
       "source": "Reuters (via TradingView)",
@@ -704,6 +791,33 @@
         }
       ],
       "watch": "Any statement after the meeting approving action, or US pushback; Iran's foreign minister visits Oman on Tuesday."
+    },
+    {
+      "id": "reuters-collins-gradual-hikes-path-higher-20261115",
+      "ts": "2026-11-15T16:07:00Z",
+      "source": "Reuters (via The Manila Times)",
+      "url": "https://www.manilatimes.net/2026/11/16/business/foreign-business/fed-official-supports-gradual-rate-hikes/2470368",
+      "image": "https://manilatimes.net/manilatimes/uploads/images/2026/11/16/1308850.jpg",
+      "headline": "Fed official supports gradual rate hikes",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "policy",
+      "summary": "Boston Fed President Susan Collins backed steady, modest US rate rises over the weekend and said rates next year may end up a bit higher than she had expected.",
+      "beats": {
+        "was": "US inflation has been above the Federal Reserve's 2% goal for more than five years. The Fed's target range is 3.75%-4%, and a quarter-point rise is widely expected on December 9, with another in January.",
+        "happened": "Collins said a steady, gradual path of rate rises is right for now. She warned that higher long-term borrowing costs could cool demand more than she expects, but said the path of rates next year might be a bit higher than she had thought.",
+        "means": "Collins is usually one of the more cautious officials, so her nod to a higher path next year adds weight to bets on several more rises.",
+        "fx": "Supports the US dollar against currencies whose central banks are near the end of their rises, such as the euro and the Australian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A usually cautious Fed official sees rates possibly higher next year than she thought."
+        }
+      ],
+      "watch": "The Fed's October meeting minutes on Wednesday, and whether other officials echo a higher path for 2027."
     },
     {
       "id": "rte-afp-iran-supertanker-sinks-hormuz-20261115",
@@ -1016,144 +1130,6 @@
         }
       ],
       "watch": "UK October inflation figures, and the Bank of England's December decision."
-    },
-    {
-      "id": "manilatimes-afp-three-tankers-mines-hormuz-20261114",
-      "date": "2026-11-14",
-      "source": "The Manila Times (AFP)",
-      "url": "https://www.manilatimes.net/2026/11/15/world/americas-emea/iran-3-oil-tankers-hit-naval-mines-in-strait-of-hormuz/2470080",
-      "image": "https://manilatimes.net/manilatimes/uploads/images/2026/11/14/1308049.jpg",
-      "headline": "Iran: 3 oil tankers hit naval mines in Strait of Hormuz",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's navy and Revolutionary Guards say three oil tankers, one of them a supertanker, caught fire on Saturday after hitting mines in and near the Strait of Hormuz. No ship names were given and the claims are unconfirmed.",
-      "beats": {
-        "was": "Since the war with the US began in February, Iran has required ships to get its permission to pass through Hormuz, the route for about a fifth of the world's oil. The US says it has cleared the main routes of mines, and Iran said an LNG tanker hit a mine on Friday.",
-        "happened": "The Guards said two tankers that had switched off their tracking to take an unapproved route exploded and caught fire in the south of the strait, and two others turned back after warnings. Iran's regular navy said a third tanker east of the strait hit a mine and stopped, and warned that any ship breaking its rules will be set on fire.",
-        "means": "If true, it is the third weekly round of ship attacks and a sign that Iran can still stop traffic despite US mine clearing, which keeps the strait mostly shut. Without names or outside confirmation, it is weaker evidence than last week's hits.",
-        "fx": "Supports oil when trading resumes, a help for the Canadian dollar and a cost for big energy importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "More tankers hit in the main Gulf oil route keep supply at risk."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Dearer oil helps Canada's main export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so a higher bill hurts."
-        }
-      ],
-      "watch": "Whether shipping trackers or ship owners confirm the hits, and whether insurers raise rates for Gulf voyages."
-    },
-    {
-      "id": "reuters-trump-xi-putin-shenzhen-agenda-20261114",
-      "date": "2026-11-14",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/world/china/new-yalta-trump-putin-push-meeting-that-xi-is-wary-hosting-2026-11-14/",
-      "image": null,
-      "headline": "'New Yalta'? Trump and Putin push meeting that Xi is wary of hosting",
-      "story": "trump-xi-putin",
-      "story_title": "Trump, Xi and Putin meet in Shenzhen on November 19",
-      "pillar": "risk",
-      "summary": "US President Donald Trump, China's Xi Jinping and Russia's Vladimir Putin are set to meet in Shenzhen, China, on Thursday, November 19, but there is still no agenda, and Beijing is said to be uneasy about hosting.",
-      "beats": {
-        "was": "The three leaders have never met together. The talks are planned around the Asia-Pacific Economic Cooperation (APEC) summit, which China hosts in Shenzhen this month, while the US and Israel are at war with Iran.",
-        "happened": "The White House said on Friday that nuclear arms cuts and the Iran war would be discussed, and the Kremlin confirmed the date. By Saturday no format had been set: Xi is reported to be wary of hosting, a US official said Trump is unlikely to raise the war in Ukraine, and Beijing has little interest in nuclear arms talks. A US official said no agreement is expected.",
-        "means": "A first meeting of the three most powerful leaders could calm or unsettle markets depending on what comes out of it, but with low expectations set in advance, the bar for a surprise is high. Any sign of a path to ending the Iran war would matter most, for oil.",
-        "fx": "Little effect until Thursday. A hint of progress on Iran would weigh on oil and help the Australian dollar through China; a public falling-out would do the reverse."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Iran is on the list, but officials expect no deal, so oil waits for what is said."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Australia sells heavily to China, so the tone of US–China ties feeds through to the Australian dollar."
-        }
-      ],
-      "watch": "Whether an agenda is published before Thursday, and anything said about the Iran war or trade during or after the meeting."
-    },
-    {
-      "id": "forexcommand-nzd-gives-back-election-week-20261114",
-      "date": "2026-11-14",
-      "source": "ForexCommand",
-      "url": "https://blog.forexcommand.com/en/daily-roundup-2026-11-14-us-ppi-rises-0-3-vs-0-4-forecast-aud-usd-closes/",
-      "image": null,
-      "headline": "Daily roundup: NZD gives back its post-election rise",
-      "story": "nz-election",
-      "story_title": "New Zealand's election and the kiwi",
-      "pillar": "risk",
-      "summary": "The New Zealand dollar ended the week near 55.2 US cents, having given back all of Monday's rise after the November 7 election.",
-      "beats": {
-        "was": "New Zealand voted on Saturday, November 7. Prime Minister Christopher Luxon's National Party won 42 seats on the early count, and his three-party bloc looks set for 67 of 131 seats, just enough to govern. The final result is due November 27.",
-        "happened": "The kiwi jumped about 1.5% on Monday on relief at the result, then slid back through the week as the US dollar strengthened, ending Friday down 0.4% on the day at about $0.552.",
-        "means": "The election lift did not last: the strong dollar and US rate talk mattered more than the result at home. New Zealand's high jobless rate also gives the currency little support of its own.",
-        "fx": "Leaves the kiwi back where it started the week, at the mercy of the US dollar."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Its post-election rise fully reversed as the US dollar firmed."
-        }
-      ],
-      "watch": "The official vote count on November 27, and China's activity data, a big buyer of New Zealand goods."
-    },
-    {
-      "id": "capitalstreetfx-week-ahead-japan-gdp-china-data-20261114",
-      "date": "2026-11-14",
-      "source": "Capital Street FX",
-      "url": "https://www.capitalstreetfx.com/market-analysis/daily-index-report-14-nov-2026/",
-      "image": null,
-      "headline": "Week ahead: Japan GDP and China activity data open the week",
-      "story": "week-ahead",
-      "story_title": "The week's first numbers: Japan, China and Canada",
-      "pillar": "growth",
-      "summary": "The week starts Sunday evening US time with Japan's first estimate of third-quarter growth and China's October spending and factory figures, then Canada's inflation on Monday morning.",
-      "beats": {
-        "was": "The yen is near 160 per dollar and the Bank of Japan is weighing a December rate rise; China's economy drives demand for Australian and New Zealand exports.",
-        "happened": "Japan's GDP is due at 6:50 PM US Central time on Sunday, forecast to show growth of just 0.1% over the quarter. China's October retail sales (forecast up 0.8% on a year earlier) and factory output (up 5.3%) follow at 8:00 PM. Canada's October consumer prices come at 7:30 AM on Monday.",
-        "means": "Weak Japanese growth would make a December Bank of Japan rise harder to justify, and soft Chinese shop spending would add to worries about demand there.",
-        "fx": "A weak Japanese number weighs on the yen; Chinese spending figures matter most for the Australian and New Zealand dollars; Canada's inflation sets the tone for the loonie."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Growth near zero would make a December Bank of Japan rise harder to justify."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "China's spending and factory figures feed directly into demand for Australian exports."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Monday's inflation figures shape talk of another Bank of Canada rise."
-        }
-      ],
-      "watch": "Whether Japan's growth misses the 0.1% forecast, and how far Chinese retail sales stay near flat."
     }
   ]
 }
