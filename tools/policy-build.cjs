@@ -11,7 +11,7 @@
    - EUR: ECB deposit facility rate (ECB data portal)
    - GBP: Bank Rate (Bank of England database, IUDBEDR)
    - CAD: target for the overnight rate (Bank of Canada Valet, V39079)
-   - AUD: cash rate target (Reserve Bank of Australia, table F1.1)
+   - AUD: cash rate target (Reserve Bank of Australia, table F1)
    - JPY, CHF, NZD: Bank for International Settlements policy-rate series,
      which runs about a week behind.
    When a meeting has ended that a series doesn't cover yet (the official
