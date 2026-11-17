@@ -188,12 +188,15 @@ function drivers(date, D) {
 /* Today's weights (score-build.cjs), limited to what can be tested. Rates = level + move as one driver. */
 const COMBOS = {
   'Score v2 as built (rates, mood, oil)': { rates: 30, risk: 15, oil: 10 },
-  'Score v2 plus inflation': { rates: 30, risk: 15, oil: 10, inflation: 10 }
+  'Score v2 plus inflation': { rates: 30, risk: 15, oil: 10, inflation: 10 },
+  'Option A: rate levels only': { pol: 15, yl: 15 },
+  'Option B: rate levels + inflation': { pol: 15, yl: 15, inflation: 10 },
+  'Option C: rate levels + inflation + oil': { pol: 15, yl: 15, inflation: 10, oil: 10 }
 };
 function comboScore(P, w) {
   let s = 0, tot = 0;
   const rates = P.rate_level != null ? P.rate_level + (P.rate_move != null ? P.rate_move : 0) : null;
-  const parts = { rates, risk: P.risk, oil: P.oil, inflation: P.inflation };
+  const parts = { rates, risk: P.risk, oil: P.oil, inflation: P.inflation, pol: P.rate_level != null ? P.rate_level * 2 : null, yl: P.yield_level != null ? P.yield_level * 2 : (P.rate_level != null ? P.rate_level * 2 : null) };
   Object.keys(w).forEach(k => { if (parts[k] != null) { s += w[k] * clamp(parts[k], -2, 2) / 2; tot += w[k]; } });
   return tot ? s / tot * 100 : null;
 }
