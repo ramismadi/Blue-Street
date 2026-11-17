@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16T15:05:00-06:00",
+  "updated": "2026-11-17T00:46:40-06:00",
   "events": [
     {
       "id": "chf-ppi-20261015",
@@ -502,53 +502,6 @@
           "url": "https://www.wsj.com/world/asia/china-economic-activity-loses-steam-sharply-in-october-5990ffe0"
         }
       ]
-    },
-    {
-      "id": "cny-ratingdog-mfg-20261102",
-      "ts": "2026-11-02T01:45:00Z",
-      "ccy": "CNY",
-      "impact": "medium",
-      "category": "growth",
-      "title": "China RatingDog manufacturing PMI (Oct)",
-      "actual": "52.0 (vs 51.6 Reuters poll / 52.0 calendar fcst, prev 52.1)",
-      "forecast": "52.0",
-      "previous": "52.1",
-      "better": "higher",
-      "why": "Private factory read after Saturday's official PMI missed (mfg 49.3, back in contraction) — the two-speed China check into the RBA decision.",
-      "if_beat": "Beat: private factories holding up — AUD mildly supported.",
-      "if_miss": "Miss: both China factory reads soft — AUD mildly pressured.",
-      "outcome": "Beat vs the Reuters poll, inline vs the calendar forecast: private factories still expanding at 52.0 (Sep 52.1), a brighter read than Saturday's official 49.3 contraction — but export-order growth slowed to a three-month low and output prices fell, so a two-speed read, not a turnaround. AUD flat around $0.703 — no repricing leg.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "Reuters: China factory growth slows in October as export orders ease, private PMI shows (Nov 2, 2026)",
-          "url": "https://www.reuters.com/world/asia-pacific/china-factory-growth-slows-october-export-orders-ease-private-pmi-shows-2026-11-02/"
-        },
-        {
-          "label": "InvestingLive: China private factory PMI at 52.0 beats forecasts, output growth fastest since April (Nov 2, 2026)",
-          "url": "https://investinglive.com/news/china-private-factory-pmi-at-52-0-beats-forecasts-output-growth-fastest-since-april/"
-        }
-      ]
-    },
-    {
-      "id": "us-ism-mfg-20261102",
-      "ts": "2026-11-02T15:00:00Z",
-      "ccy": "USD",
-      "impact": "high",
-      "category": "growth",
-      "title": "US ISM manufacturing PMI (Oct)",
-      "actual": "55.5 (vs 54.5 fcst, prev 54.5); new orders 55.5 (prev 55.3), employment 52.4 (prev 52.7), prices paid 75.2 (vs 77.5 fcst, prev 77.9); beat",
-      "forecast": "54.5",
-      "previous": "54.5",
-      "better": "higher",
-      "why": "October factory pulse — September prices paid jumped to 77.9, so the prices sub-index is the read inside the headline; first hard October data point into the Nov 6 payrolls.",
-      "if_beat": "Beat: factories expanding faster — USD supported, Dec hike case firms.",
-      "if_miss": "Miss: factory momentum fading — USD pressured, Dec hike case softens.",
-      "outcome": "Beat: ISM manufacturing 55.5 in October (vs 54.5 fcst, prev 54.5) — production jumped to 59.0, new orders 55.5, prices paid eased to 75.2 (vs 77.9); but respondent sentiment worsened a third straight month (66% negative) and FXStreet/Reuters note no noticeable dollar reaction at release (DXY ~101.60, -0.35%).",
-      "chapter": null,
-      "bank": null,
-      "sources": []
     },
     {
       "actual": "4.85% (vs 4.85% fcst, prev 4.60%); 6-3 vote, fifth hike of 2026",
@@ -2089,17 +2042,42 @@
       "category": "speech",
       "title": "RBA Governor Bullock speaks",
       "focus": false,
-      "actual": null,
+      "actual": "ASIC Annual Forum (Sydney, Tue Nov 17): inflation risks 'skewed to the upside'; the five 2026 hikes were 'not just a response to oil prices' — the RBA started tightening before the Middle East conflict lifted crude; no December steer. ANZ/CBA/Goldman call 4.85% the peak (Capital Brief).",
       "forecast": null,
       "previous": null,
       "better": null,
       "why": "Bullock a fortnight after the RBA hiked to 4.85% — whether December is a pause or a follow-up.",
       "if_beat": "Hawkish: follow-up hike pricing firms — AUD bid.",
       "if_miss": "Dovish: pause case grows — AUD offered.",
-      "outcome": null,
+      "outcome": "No policy signal — Bullock restated the upside inflation skew without steering December; AUD/USD ~$0.6740 after the minutes, little changed on the day.",
       "chapter": null,
       "bank": "rba",
       "sources": []
+    },
+    {
+      "id": "nzd-breman-20261116",
+      "ts": "2026-11-17T00:00:00Z",
+      "ccy": "NZD",
+      "impact": "medium",
+      "category": "central-bank",
+      "title": "RBNZ Governor Breman speaks (Financial Stability Report)",
+      "focus": false,
+      "actual": "Semi-annual Financial Stability Report: global financial-stability risks 'continued to increase', raising the likelihood of a significant shock; NZ system resilient — banks and insurers withstand severe shocks in stress tests; domestic stress eased from last year's peak but stays uneven; non-bank / private-credit vulnerabilities growing (Reuters, Nov 17).",
+      "forecast": null,
+      "previous": null,
+      "better": null,
+      "why": "The RBNZ's twice-yearly stability read — Breman's first FSR as governor; the Dec 9 decision reads the same risk map.",
+      "if_beat": "Hawkish on risks: NZD offered on stress read-through.",
+      "if_miss": "Calm read: NZD steady.",
+      "outcome": "No rate signal — a stability read, not a policy steer; NZD/USD ~$0.5497 in Asia, Dec 9 hike priced <50%.",
+      "chapter": null,
+      "bank": "rbnz",
+      "sources": [
+        {
+          "label": "Reuters: NZ central bank warns global risks rising, says system can withstand shocks (Nov 17)",
+          "url": "https://www.reuters.com/world/asia-pacific/new-zealand-central-bank-warns-global-risks-rising-says-system-can-withstand-2026-11-16/"
+        }
+      ]
     },
     {
       "id": "nzd-infl-exp-20261116",
@@ -2150,7 +2128,7 @@
       "title": "US retail sales (Oct) m/m",
       "focus": false,
       "actual": null,
-      "forecast": "+0.2% m/m (control group +0.4%)",
+      "forecast": "+0.1% m/m (control group +0.4%; FF consensus)",
       "previous": "+0.8% m/m (Sep)",
       "better": "higher",
       "why": "October consumer spending — the demand side of the inflation story, three days before the FOMC minutes; September printed +0.8%.",
@@ -2175,7 +2153,7 @@
       "title": "Australia wage price index q/q",
       "focus": false,
       "actual": null,
-      "forecast": "0.9% (FF consensus)",
+      "forecast": "1.0% (FF consensus)",
       "previous": "0.8% (Q2)",
       "better": "higher",
       "why": "Wage growth hours before the October jobs report — the RBA's cost-pressure read after the hike to 4.85%.",
@@ -2335,7 +2313,7 @@
       "title": "Australia employment change + unemployment (Oct)",
       "focus": false,
       "actual": null,
-      "forecast": "Unemployment 4.7% (Trading Economics consensus; Sep 4.7%); employment change +25.2K (FF consensus; Sep -39.3K)",
+      "forecast": "Unemployment 4.7% (Trading Economics consensus; Sep 4.7%); employment change +25.5K (FF consensus; Sep -39.3K)",
       "previous": "Unemployment 4.7% (Sep)",
       "better": "higher",
       "why": "October jobs a fortnight after the RBA hiked to 4.85% — the labor read that shapes whether December is a pause or a follow-up.",
