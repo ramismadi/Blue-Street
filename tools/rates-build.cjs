@@ -86,8 +86,9 @@ const SRC = {
     const from = new Date(Date.now() - 150 * 864e5).toISOString().slice(0, 10);
     const text = await get('https://data.snb.ch/api/cube/rendoblid/data/csv/en?fromDate=' + from);
     const out = rows(text, ';').filter(x => x.length >= 3 && /^"?2J"?$/.test(x[1].trim())).map(x => [x[0], x[2]]);
-    if (!out.length) throw new Error('no 2J rows: ' + text.slice(0, 200).replace(/\s+/g, ' '));
-    return series(out);
+    const got = series(out);
+    if (got.length < 20) throw new Error(out.length + ' rows for 2J, ' + got.length + ' usable. Sample: ' + text.slice(0, 260).replace(/\s+/g, ' ') + ' ... ' + out.slice(-2).join(' | '));
+    return got;
   },
   stooq: sym => async () => {
     const r = rows(await get('https://stooq.com/q/d/l/?s=' + sym + '&i=d'));
