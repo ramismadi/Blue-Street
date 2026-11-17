@@ -151,6 +151,11 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   underlines. Lessons opened are remembered in localStorage
   `bluestreet-learned`. Mechanics only, never direction; no figures that go
   stale. Drivers' sub-nav links to the first driver lesson.
+- **Shorter currency pages on phones (Rami, 2026-11-17):** under 760px the
+  seven factor tiles swipe sideways as a row, and The full read opens clipped
+  with a "Read the full story" button (`.hub-read.clip`). Desktop unchanged.
+  Each currency page also has **Score over time** (`scoreChart`): a stepped
+  line of the score history with one plain sentence above it.
 - No live price widgets (Rami removed them). Price levels appear only in the
   narrative data.
 

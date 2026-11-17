@@ -2475,3 +2475,23 @@ html, body { overflow-x: clip; max-width: 100%; }
 .score-chart .sc-lbl { font-size: 12px; fill: var(--ink-3); font-family: var(--sans); }
 .nf-art { margin: auto; }
 .news-hero .news-fig.fallback.art .nf-art { width: 36%; }
+
+/* ---------- shorter currency pages on phones (2026-11-17) ---------- */
+.hub-read-more { display: none; }
+@media (max-width: 760px) {
+  /* The seven factors swipe sideways, like the other rows. */
+  .pillar-tiles {
+    display: flex; grid-template-columns: none; gap: 10px; margin: 0 -16px; padding: 2px 16px 8px;
+    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-left: 16px; scrollbar-width: none;
+  }
+  .pillar-tiles::-webkit-scrollbar { display: none; }
+  .pillar-tiles > li { flex: 0 0 78%; scroll-snap-align: start; }
+  /* The full read opens short; the rest is one tap away. */
+  .hub-read.clip { position: relative; max-height: 330px; overflow: hidden; }
+  .hub-read.clip::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(to bottom, transparent, var(--surface) 62%); pointer-events: none; }
+  .hub-read.clip .hub-read-more {
+    display: block; position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 1;
+    font: inherit; font-size: 0.86rem; font-weight: 600; color: var(--accent); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 9px 18px; cursor: pointer;
+  }
+}
+@media (max-width: 760px) { .score-chart .sc-lbl { font-size: 22px; } }
