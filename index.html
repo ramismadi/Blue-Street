@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=144">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=144">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=145">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=145">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=144">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=145">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=144">
+<link rel="stylesheet" href="assets/style.css?v=145">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=144" defer></script>
-<script src="assets/app.js?v=144" defer></script>
+<script src="assets/cot.js?v=145" defer></script>
+<script src="assets/app.js?v=145" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue (from tools/brand-build.py), removed by app.js once the edition renders -->
@@ -341,32 +341,56 @@
     <article class="info-page card gl-scope" data-page="faq" hidden>
       <p class="kicker">FAQ</p>
       <h1 class="display">Questions and answers</h1>
-      <dl class="faq">
-        <dt>Is this trading advice?</dt>
-        <dd>No. Blue Street is market context only. It explains what&rsquo;s driving currencies; it never tells you what to trade.</dd>
-        <dt>Why doesn&rsquo;t it say buy or sell?</dt>
-        <dd>Because the call depends on your timeframe, your risk and your charts. Blue Street gives you the evidence for each side so you can make it.</dd>
-        <dt>When does it update?</dt>
-        <dd>Three editions every weekday, before the London open, the New York open and the New York close, one each weekend morning, and the news through the day. The <a href="#about/schedule">update schedule</a> has the times.</dd>
-        <dt>Where does the data come from?</dt>
-        <dd>Central banks, official statistics, market prices, the US futures regulator&rsquo;s positioning reports and major news publishers. See <a href="#about/sources">sources</a>.</dd>
-        <dt>What do &ldquo;Supports&rdquo; and &ldquo;Weighs&rdquo; mean?</dt>
-        <dd>Supports means that factor is currently a reason for the currency to be stronger; weighs means a reason for it to be weaker. <a href="#about/method">How the scores work</a> explains the rest.</dd>
-        <dt>Why is a currency falling when its score is high?</dt>
-        <dd>The score reads the fundamentals, which play out over weeks and months. Day to day, prices also move on surprises, positioning and plain noise.</dd>
-        <dt>Does the score ever change during the day?</dt>
-        <dd>It&rsquo;s set at each edition. Breaking news shows up on the News tab between editions, and the next edition folds it in.</dd>
-        <dt>What are the arrows on the headlines?</dt>
-        <dd>They show which way a story pushes each currency it touches: up, down, or mixed. It&rsquo;s the push from that story, not a call on the currency.</dd>
-        <dt>Can I use it like an app?</dt>
-        <dd>Yes. On iPhone, open the site in Safari, tap Share, then &ldquo;Add to Home Screen&rdquo;. On Android, use the browser menu&rsquo;s &ldquo;Add to Home screen&rdquo; or &ldquo;Install app&rdquo;.</dd>
-        <dt>Does it cost anything?</dt>
-        <dd>No. Blue Street is free while it&rsquo;s being built.</dd>
-        <dt>Does it track me?</dt>
-        <dd>No. There are no accounts and no analytics. See <a href="#about/privacy">privacy</a>.</dd>
-        <dt>How do I suggest something or report a mistake?</dt>
-        <dd>A <a href="#about/feedback">feedback</a> form is coming soon.</dd>
-      </dl>
+      <div class="faq">
+        <details>
+          <summary>Is this trading advice?</summary>
+          <p>No. Blue Street is market context only. It explains what&rsquo;s driving currencies; it never tells you what to trade.</p>
+        </details>
+        <details>
+          <summary>Why doesn&rsquo;t it say buy or sell?</summary>
+          <p>Because the call depends on your timeframe, your risk and your charts. Blue Street gives you the evidence for each side so you can make it.</p>
+        </details>
+        <details>
+          <summary>When does it update?</summary>
+          <p>Three editions every weekday, before the London open, the New York open and the New York close, one each weekend morning, and the news through the day. The <a href="#about/schedule">update schedule</a> has the times.</p>
+        </details>
+        <details>
+          <summary>Where does the data come from?</summary>
+          <p>Central banks, official statistics, market prices, the US futures regulator&rsquo;s positioning reports and major news publishers. See <a href="#about/sources">sources</a>.</p>
+        </details>
+        <details>
+          <summary>What do &ldquo;Supports&rdquo; and &ldquo;Weighs&rdquo; mean?</summary>
+          <p>Supports means that factor is currently a reason for the currency to be stronger; weighs means a reason for it to be weaker. <a href="#about/method">How the scores work</a> explains the rest.</p>
+        </details>
+        <details>
+          <summary>Why is a currency falling when its score is high?</summary>
+          <p>The score reads the fundamentals, which play out over weeks and months. Day to day, prices also move on surprises, positioning and plain noise.</p>
+        </details>
+        <details>
+          <summary>Does the score ever change during the day?</summary>
+          <p>It&rsquo;s set at each edition. Breaking news shows up on the News tab between editions, and the next edition folds it in.</p>
+        </details>
+        <details>
+          <summary>What are the arrows on the headlines?</summary>
+          <p>They show which way a story pushes each currency it touches: up, down, or mixed. It&rsquo;s the push from that story, not a call on the currency.</p>
+        </details>
+        <details>
+          <summary>Can I use it like an app?</summary>
+          <p>Yes. On iPhone, open the site in Safari, tap Share, then &ldquo;Add to Home Screen&rdquo;. On Android, use the browser menu&rsquo;s &ldquo;Add to Home screen&rdquo; or &ldquo;Install app&rdquo;.</p>
+        </details>
+        <details>
+          <summary>Does it cost anything?</summary>
+          <p>No. Blue Street is free while it&rsquo;s being built.</p>
+        </details>
+        <details>
+          <summary>Does it track me?</summary>
+          <p>No. There are no accounts and no analytics. See <a href="#about/privacy">privacy</a>.</p>
+        </details>
+        <details>
+          <summary>How do I suggest something or report a mistake?</summary>
+          <p>A <a href="#about/feedback">feedback</a> form is coming soon.</p>
+        </details>
+      </div>
     </article>
 
     <article class="info-page card gl-scope" data-page="schedule" hidden>
