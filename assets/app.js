@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '144';
+  var ASSET_VERSION = '145';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -89,10 +89,6 @@
       (d.lessons || []).forEach(function (l) { if (l && l.id) learn.byId[l.id] = l; });
       renderLearn();
     }).catch(function () { /* the glossary still shows */ });
-    fetchJSON('data/pillars.json').then(function (d) {
-      explainers = d.pillars || null;
-      attachExplainers();
-    }).catch(function () { /* explainers are optional */ });
     withWords('data/engine.json', 'engine').then(function (d) {
       renderEngine(d);
       stampEdition(d && d.updated);
@@ -163,6 +159,7 @@
       if (news.article) renderArticle();
       if (story) renderCcyCards(story);
       renderFx();   // "In the news" on currency pages
+      renderEngine();   // the driver tiles' headlines
     }).catch(function () {
       note('#news-grid', 'News feed unavailable.');
       note('#today-news', 'News feed unavailable.');
@@ -1599,53 +1596,113 @@
 
   /* ---------------- macro engine ---------------- */
   var NUMWORDS = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
-  var explainers = null;   // data/pillars.json, keyed by engine row id
 
   var engineData = null;
+  /* Rami, 2026-11-17: the drivers are compact tiles in a side-scrolling row,
+     like the currency cards: icon and name, which currencies it helps and
+     hurts, today's read in 1–2 sentences, its top two headlines, and
+     "More on …" into the driver's own page (#learn/driver-<id>), which holds
+     the full read, the by-currency breakdown, sources and the lesson. */
+  var DRIVER_ICO = {
+    policy: 'M2.5 6.5L8 3l5.5 3.5 M4 7.5v4.5 M6.7 7.5v4.5 M9.3 7.5v4.5 M12 7.5v4.5 M2.5 13.5h11',
+    growth: 'M2.5 12.5l3.5-4 3 2.5 4.5-6 M10 5h3.5v3.5',
+    inflation: 'M8 2a6 6 0 1 0 0 12A6 6 0 1 0 8 2z M8 11V5 M5.5 7.5L8 5l2.5 2.5',
+    risk: 'M2.5 11.5a5.5 5.5 0 1 1 11 0 M8 11.5l2.6-3.6',
+    tot: 'M8 2.5c2 3 4 5 4 7a4 4 0 0 1-8 0c0-2 2-4 4-7z',
+    positioning: 'M8 3v10 M3 5h10 M3 5l-1.5 4h3z M13 5l-1.5 4h3z M5.5 13h5',
+    fiscal: 'M3.5 2.5h7l2 2v9h-9z M5.5 7h5 M5.5 9.5h5 M5.5 12h3'
+  };
+  var NEWS_PILLAR = { rates: 'policy', commodities: 'tot' };   // news.json pillar ids → engine ids
+  function driverIcon(id) {
+    var svg = navIcon(DRIVER_ICO[id] || DRIVER_ICO.risk);
+    svg.setAttribute('class', 'drv-ico');
+    return svg;
+  }
+  function driverHref(id) { return '#learn/driver-' + encodeURIComponent(id); }
+  /* Helps / Hurts: the currencies this driver is adding to or taking from. */
+  function driverSides(id) {
+    if (!fx.data) return null;
+    var up = [], down = [];
+    fxRanked().forEach(function (c) {
+      var d = (c.drivers || {})[id], v = d ? +d.score || 0 : 0;
+      if (v > 0) up.push(c); else if (v < 0) down.push(c);
+    });
+    var box = el('div', 'drv-sides');
+    [['Helps', up, 'bull'], ['Hurts', down, 'bear']].forEach(function (x) {
+      var g = el('span', 'drv-side ' + x[2]);
+      g.appendChild(el('span', 'drv-side-l', x[0]));
+      if (!x[1].length) g.appendChild(el('span', 'meta', 'none'));
+      x[1].forEach(function (c) {
+        var f = flagEl(c.ccy);
+        if (f.title !== undefined) f.title = c.ccy;
+        g.appendChild(f);
+        g.appendChild(el('span', 'sr-only', c.ccy + ' '));
+      });
+      box.appendChild(g);
+    });
+    return box;
+  }
+  function driverNews(id, n) {
+    var items = ((news.data && news.data.items) || []).filter(function (it) {
+      return it && it.headline && (it.ts || it.date) && (NEWS_PILLAR[it.pillar] || it.pillar) === id;
+    });
+    items.sort(function (a, b) { return (newsTime(b) - newsTime(a)) || (newsImpact(b) - newsImpact(a)); });
+    return items.slice(0, n);
+  }
   function renderEngine(d) {
     d = d || engineData;
     if (!d) return;
     engineData = d;
-    if (d.updated) setText('#engine-updated', fmtDateTime(d.updated, true));
-    var rows = d.rows || [];
-    setText('#pillar-count', NUMWORDS[rows.length] || String(rows.length));
     var box = $('#engine-rows');
+    if (!box) return;
     box.textContent = '';
-    // 3-up grid with no orphans: a remainder of 1 turns the last four tiles
-    // into two rows of halves (7 → 3+2+2); a remainder of 2 halves the last two.
-    var n = rows.length, rem = n % 3;
-    var halfFrom = rem === 1 && n >= 4 ? n - 4 : rem === 2 ? n - 2 : n;
-    rows.forEach(function (row, i) {
-      var c = el('div', 'card pillar gl-scope' + (i >= halfFrom ? ' half' : ''));
-      c.setAttribute('data-pillar', row.id);
-      var head = el('div', 'pillar-head');
-      head.appendChild(el('span', 'pillar-title', row.title));
-      c.appendChild(head);
-      // The read leads; the figures behind it sit one tap away.
-      // Rami, 2026-10-19: the read is the meaning in 2–3 plain sentences; numbers live in Details.
-      c.appendChild(el('p', 'pillar-read', firstSentences(row.read || '', 3, 70)));
-      // Rami, 2026-11-09: the old Details showed the raw figures. Now it's
-      // what this pillar is doing to each currency right now, in plain words
-      // (the board's scores and Claude's driver notes); sources sit apart.
-      var bc = pillarByCurrency(row.id);
-      if (bc) {
-        var det = drawer('By currency', bc.hint);
-        det.appendChild(bc.node);
-        c.appendChild(det);
+    (d.rows || []).forEach(function (row) {
+      var href = driverHref(row.id);
+      var li = el('li');
+      var card = el('article', 'card drv-card gl-scope');
+      card.setAttribute('data-driver', row.id);
+      var head = el('header', 'chc-head');
+      var ic = el('span', 'drv-badge');
+      ic.appendChild(driverIcon(row.id));
+      head.appendChild(ic);
+      var h = el('h3', 'chc-title');
+      var ha = el('a', null, row.title);
+      ha.href = href;
+      h.appendChild(ha);
+      head.appendChild(h);
+      card.appendChild(head);
+      var sides = driverSides(row.id);
+      if (sides) card.appendChild(sides);
+      card.appendChild(el('p', 'chc-read', firstSentences(row.read || '', 2, 45)));
+      var items = driverNews(row.id, 2);
+      if (items.length) {
+        var nw = el('div', 'chc-news');
+        nw.appendChild(el('h4', 'section-label', 'In the news'));
+        var ul = el('ul');
+        items.forEach(function (it) {
+          var nli = el('li');
+          var a = el('a', 'chc-hl drv-hl');
+          a.href = newsHref(it);
+          a.appendChild(el('span', 'chc-hl-t', it.headline));
+          nli.appendChild(a);
+          var m = el('span', 'chc-src meta');
+          m.appendChild(document.createTextNode((it.source || '') + ' · '));
+          m.appendChild(newsWhenEl(it));
+          nli.appendChild(m);
+          ul.appendChild(nli);
+        });
+        nw.appendChild(ul);
+        card.appendChild(nw);
       }
-      var sl = sourceList(row.sources || row.source, row.source_url).length;
-      if (sl) {
-        var sd = drawer('Sources', sl + (sl === 1 ? ' source' : ' sources'));
-        sd.appendChild(sourceChips(row.sources || row.source, row.source_url));
-        c.appendChild(sd);
-      }
-      // Rami, 2026-11-17: each live driver links to its lesson in the Learn hub.
-      var hw = el('a', 'more pillar-learn', 'How this works →');
-      hw.href = '#learn/driver-' + encodeURIComponent(row.id);
-      c.appendChild(hw);
-      box.appendChild(c);
+      var more = el('a', 'chc-more', 'More on ' + row.title + ' →');
+      more.href = href;
+      card.appendChild(more);
+      li.appendChild(card);
+      box.appendChild(li);
     });
-    attachExplainers();
+    initStrips();
+    setTimeout(updateStripNav, 0);
+    if (/^#learn\/driver-/.test(location.hash)) renderLearn();   // its page picks up late data
   }
 
   /* One pillar across the board: which currencies it supports or weighs on
@@ -1679,37 +1736,6 @@
     if (zero.length) wrap.appendChild(el('p', 'meta pbc-zero', (pos.length || neg.length ? 'Not moving: ' : 'Not moving any currency today: ') +
       zero.map(function (x) { return x.c.ccy; }).join(', ') + '.'));
     return { node: wrap, hint: pos.length + ' supported · ' + neg.length + ' weighed on' };
-  }
-
-  /* "What is this?" toggle on each pillar that has an explainer. */
-  function attachExplainers() {
-    if (!explainers) return;
-    Array.prototype.forEach.call(document.querySelectorAll('.pillar[data-pillar]'), function (c) {
-      var x = explainers[c.getAttribute('data-pillar')];
-      if (!x || c.querySelector('.explain-btn')) return;
-      var id = 'explain-' + c.getAttribute('data-pillar');
-      var btn = el('button', 'explain-btn');
-      btn.type = 'button';
-      btn.setAttribute('aria-expanded', 'false');
-      btn.setAttribute('aria-controls', id);
-      btn.appendChild(el('span', 'explain-i', 'i'));
-      btn.appendChild(document.createTextNode('What is this?'));
-      c.querySelector('.pillar-head').appendChild(btn);
-
-      var panel = el('div', 'explain');
-      panel.id = id;
-      panel.hidden = true;
-      panel.appendChild(el('p', null, x.body));
-      // The "Live example" (pillars.json → live) is no longer shown: today's
-      // read and its Details already carry it (Rami, 2026-10-21).
-      c.insertBefore(panel, c.querySelector('.pillar-read'));
-      btn.addEventListener('click', function () {
-        var open = panel.hidden;
-        panel.hidden = !open;
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        c.classList.toggle('explaining', open);
-      });
-    });
   }
 
   /* ---------------- central banks ----------------
@@ -4816,14 +4842,31 @@
     var spec = l.live;
     if (!spec) return null;
     var box = el('section', 'learn-live');
-    if (spec.type === 'driver') {
+    if (spec.type === 'driver') {   // the driver's own page leads with today (2026-11-17)
       var row = ((learn.engine || {}).rows || []).filter(function (r) { return r.id === spec.key; })[0];
       if (!row || !row.read || !plainText(row.read, 700)) return null;
-      box.appendChild(el('h2', 'section-label', 'On Blue Street today'));
-      box.appendChild(el('p', 'learn-p', row.read));
-      var m = el('a', 'more', 'See all seven drivers →');
-      m.href = '#learn';
-      box.appendChild(m);
+      box.className = 'card drv-today gl-scope';
+      var hd = el('div', 'chc-head');
+      var ic = el('span', 'drv-badge');
+      ic.appendChild(driverIcon(row.id));
+      hd.appendChild(ic);
+      hd.appendChild(el('h2', 'chc-title', row.title + ' today'));
+      box.appendChild(hd);
+      var sides = driverSides(row.id);
+      if (sides) box.appendChild(sides);
+      box.appendChild(el('p', 'drv-read', row.read));
+      var bc = pillarByCurrency(row.id);
+      if (bc) {
+        var sec = el('section', 'drv-sec');
+        sec.appendChild(el('h3', 'section-label', 'By currency'));
+        sec.appendChild(bc.node);
+        box.appendChild(sec);
+      }
+      if (sourceList(row.sources || row.source, row.source_url).length) {
+        var ss = el('section', 'drv-sec');
+        ss.appendChild(sourceChips(row.sources || row.source, row.source_url));
+        box.appendChild(ss);
+      }
       return box;
     }
     if (spec.type === 'calendar') {
@@ -4856,6 +4899,12 @@
     head.appendChild(el('p', 'kicker', (path ? path.title + ' · ' : '') + (l.minutes || 3) + ' min read'));
     head.appendChild(el('h1', 'view-title', l.title));
     root.appendChild(head);
+    var live = lessonLive(l);
+    var isDriver = live && l.live && l.live.type === 'driver';
+    if (isDriver) {   // today first, then how it works
+      root.appendChild(live);
+      root.appendChild(el('h2', 'section-label drv-how', 'How it works'));
+    }
     root.appendChild(el('p', 'learn-lead', l.lead));
     var card = el('div', 'card learn-card gl-scope');
     (l.sections || []).forEach(function (sx) {
@@ -4864,8 +4913,7 @@
       sec.appendChild(el('p', 'learn-p', sx.p));
       card.appendChild(sec);
     });
-    var live = lessonLive(l);
-    if (live) card.appendChild(live);
+    if (live && !isDriver) card.appendChild(live);
     root.appendChild(card);
     var nav = el('div', 'lesson-nav');
     (l.see || []).forEach(function (x) {
