@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '141';
+  var ASSET_VERSION = '142';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -1203,7 +1203,10 @@
   }
   /* When the next edition is due, as an instant. The schedule is in Chicago
      time: 2:00 AM, 8:30 AM and 4:00 PM on weekdays, 8:30 AM at weekends. */
-  function nextEdition(now) {
+  /* The next scheduled edition after the one on screen. Editions land before
+     their time (the New York open is out by about 8:20 for 8:30), so a slot
+     the current edition already filled is skipped (Rami, 2026-11-17). */
+  function nextEdition(now, editionIso) {
     var parts = {};
     try {
       new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', hour12: false, year: 'numeric', month: 'numeric',
@@ -1213,12 +1216,14 @@
     // "Chicago wall clock" as if it were UTC; the gap to the real instant is the zone offset.
     var wall = Date.UTC(parts.year, parts.month - 1, parts.day, parts.hour % 24, parts.minute, parts.second);
     var offset = wall - Math.floor(now.getTime() / 1000) * 1000;
+    var ed = editionIso ? Date.parse(editionIso) : NaN, edWall = isNaN(ed) ? null : ed + offset;
     for (var d = 0; d < 4; d++) {
       var day = new Date(Date.UTC(parts.year, parts.month - 1, parts.day + d));
       var wd = day.getUTCDay(), slots = (wd === 0 || wd === 6) ? [[8, 30]] : [[2, 0], [8, 30], [16, 0]];
       for (var i = 0; i < slots.length; i++) {
         var t = day.getTime() + (slots[i][0] * 60 + slots[i][1]) * 60000;
-        if (t > wall + 60000) return new Date(t - offset);
+        var filled = edWall != null && edWall <= t && t - edWall <= 90 * 60000;
+        if (t > wall + 60000 && !filled) return new Date(t - offset);
       }
     }
     return null;
@@ -1233,7 +1238,7 @@
     box.textContent = '';
     box.appendChild(document.createTextNode((name === 'Weekend edition' ? name : name + ' edition') + ' · '));
     box.appendChild(relTimeEl(iso));
-    var nx = nextEdition(new Date());
+    var nx = nextEdition(new Date(), iso);
     if (nx) {
       var sameDay = nx.toDateString() === new Date().toDateString();
       box.appendChild(document.createTextNode(' · next at ' + nx.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) +
