@@ -142,8 +142,8 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 - **Learn hub (Rami, 2026-11-16; tab and hub layout 2026-11-17):** `#learn`
   is the education centre and the fourth tab. It reads like a currency hub,
   top to bottom: a header card, **The drivers** (a side-scrolling row of
-  compact tiles shaped like the currency cards: icon and name, Helps/Hurts
-  flags from the score, today's read in 1–2 sentences, the top two headlines
+  compact tiles shaped like the currency cards: icon and name (no currency flags:
+  the topic leads, the headlines tie it to currencies), today's read in 1–2 sentences, the top two headlines
   tagged with that pillar, "More on … →"; each opens `#learn/driver-<id>`, the
   driver's own page: today's full read, By currency, sources, then the
   lesson), **Positioning**

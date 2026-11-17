@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '145';
+  var ASSET_VERSION = '146';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -1599,8 +1599,7 @@
 
   var engineData = null;
   /* Rami, 2026-11-17: the drivers are compact tiles in a side-scrolling row,
-     like the currency cards: icon and name, which currencies it helps and
-     hurts, today's read in 1–2 sentences, its top two headlines, and
+     like the currency cards: icon and name, today's read in 1–2 sentences, its top two headlines, and
      "More on …" into the driver's own page (#learn/driver-<id>), which holds
      the full read, the by-currency breakdown, sources and the lesson. */
   var DRIVER_ICO = {
@@ -1619,29 +1618,6 @@
     return svg;
   }
   function driverHref(id) { return '#learn/driver-' + encodeURIComponent(id); }
-  /* Helps / Hurts: the currencies this driver is adding to or taking from. */
-  function driverSides(id) {
-    if (!fx.data) return null;
-    var up = [], down = [];
-    fxRanked().forEach(function (c) {
-      var d = (c.drivers || {})[id], v = d ? +d.score || 0 : 0;
-      if (v > 0) up.push(c); else if (v < 0) down.push(c);
-    });
-    var box = el('div', 'drv-sides');
-    [['Helps', up, 'bull'], ['Hurts', down, 'bear']].forEach(function (x) {
-      var g = el('span', 'drv-side ' + x[2]);
-      g.appendChild(el('span', 'drv-side-l', x[0]));
-      if (!x[1].length) g.appendChild(el('span', 'meta', 'none'));
-      x[1].forEach(function (c) {
-        var f = flagEl(c.ccy);
-        if (f.title !== undefined) f.title = c.ccy;
-        g.appendChild(f);
-        g.appendChild(el('span', 'sr-only', c.ccy + ' '));
-      });
-      box.appendChild(g);
-    });
-    return box;
-  }
   function driverNews(id, n) {
     var items = ((news.data && news.data.items) || []).filter(function (it) {
       return it && it.headline && (it.ts || it.date) && (NEWS_PILLAR[it.pillar] || it.pillar) === id;
@@ -1671,8 +1647,6 @@
       h.appendChild(ha);
       head.appendChild(h);
       card.appendChild(head);
-      var sides = driverSides(row.id);
-      if (sides) card.appendChild(sides);
       card.appendChild(el('p', 'chc-read', firstSentences(row.read || '', 2, 45)));
       var items = driverNews(row.id, 2);
       if (items.length) {
@@ -4852,8 +4826,6 @@
       hd.appendChild(ic);
       hd.appendChild(el('h2', 'chc-title', row.title + ' today'));
       box.appendChild(hd);
-      var sides = driverSides(row.id);
-      if (sides) box.appendChild(sides);
       box.appendChild(el('p', 'drv-read', row.read));
       var bc = pillarByCurrency(row.id);
       if (bc) {
