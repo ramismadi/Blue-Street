@@ -412,7 +412,7 @@ Read by the site's Data surprises dots and the score's growth driver.
 Built by `tools/policy-build.cjs`: each bank's headline rate (`rate`, upper
 end for a range; `display` for the site), `last_move {date, bp}`, `as_of`,
 `source`. Official sources: FRED (Fed range), ECB data portal (deposit
-rate), Bank of England (Bank Rate), Bank of Canada Valet, RBA F1.1; BIS
+rate), Bank of England (Bank Rate), Bank of Canada Valet, RBA F1; BIS
 policy-rate series (about a week behind) for the BoJ, SNB and RBNZ, and for
 the RBA if its table can't be read. `pending: true` when a meeting has ended
 that the series doesn't cover yet. The site, the score and the AI connector

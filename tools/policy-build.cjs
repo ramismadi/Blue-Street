@@ -70,13 +70,13 @@ const SRC = {
   EUR: { label: 'ECB deposit facility rate (ECB data portal)', fn: async () => { const r = rows(await get('https://data-api.ecb.europa.eu/service/data/FM/D.U2.EUR.4F.KR.DFR.LEV?startPeriod=' + START + '&format=csvdata')); const d = r[0].indexOf('TIME_PERIOD'), v = r[0].indexOf('OBS_VALUE'); return { s: series(r.slice(1).map(x => [x[d], x[v]])) }; } },
   GBP: { label: 'Bank Rate (Bank of England)', fn: async () => { const from = new Date(Date.parse(START)); const f = p2(from.getUTCDate()) + '/' + Object.keys(MON)[from.getUTCMonth()].replace(/^./, c => c.toUpperCase()) + '/' + from.getUTCFullYear(); const r = rows(await get('https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=' + f + '&Dateto=now&SeriesCodes=IUDBEDR&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N')); return { s: series(r.slice(1).map(x => [x[0], x[1]])) }; } },
   CAD: { label: 'Bank of Canada target for the overnight rate (Valet)', fn: async () => { const j = JSON.parse(await get('https://www.bankofcanada.ca/valet/observations/V39079/json?start_date=' + START)); return { s: series(j.observations.map(o => [o.d, (o.V39079 || {}).v])) }; } },
-  AUD: { label: 'RBA cash rate target (table F1.1)', fn: async () => {
-    const r = rows((await get('https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv')).replace(/^\uFEFF/, '').replace(/"/g, ''));
+  AUD: { label: 'RBA cash rate target (table F1)', fn: async () => {
+    const r = rows((await get('https://www.rba.gov.au/statistics/tables/csv/f1-data.csv')).replace(/^\uFEFF/, '').replace(/"/g, ''));
     const h = r.find(x => /^series id$/i.test((x[0] || '').trim())) || [];
     const c = h.findIndex(x => /^FIRMMCRT/i.test(x.trim()));
     const s = c > 0 ? series(r.map(x => [x[0], x[c]])) : [];
     if (s.length >= 5) return { s };
-    console.log('AUD: RBA table F1.1 unreadable (column ' + c + ', ' + r.length + ' rows); using the BIS series');
+    console.log('AUD: RBA table F1 unreadable (column ' + c + ', ' + r.length + ' rows); using the BIS series');
     return { s: await bisSeries('AU'), label: 'RBA cash rate target (BIS, about a week behind)' };
   } },
   JPY: { label: 'Bank of Japan policy rate (BIS, about a week behind)', lag: true, fn: async () => ({ s: await bisSeries('JP') }) },
