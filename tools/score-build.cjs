@@ -21,8 +21,13 @@
    The score is the weighted average, on a scale of -100 to +100. `tested_score`
    uses only the drivers that passed the test.
 
-   Where no feed exists yet the driver falls back to the current hand-judged
-   mark, and is flagged `measured: false`.
+   Where no feed exists the driver uses a judged mark from data/marks.json
+   (fiscal health for all eight; trade prices where no price feed exists),
+   flagged `measured: false`. The editions keep those marks up to date.
+
+   Since 2026-11-17 this is the score on the site (Rami). `points` turns each
+   counted driver into its share of a score from -10 to +10, so the parts add
+   up to the total the site shows.
 
    Usage: node tools/score-build.cjs [--dry] [--offline]
    --offline skips the market series fetched online (VIX, Brent, inflation,
@@ -35,6 +40,8 @@ const OUT = path.join(DIR, 'score-v2.json');
 const DRY = process.argv.includes('--dry'), OFFLINE = process.argv.includes('--offline');
 const CCYS = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'NZD'];
 const NAME = { USD: 'the dollar', EUR: 'the euro', GBP: 'the pound', JPY: 'the yen', CHF: 'the franc', CAD: 'the Canadian dollar', AUD: 'the Australian dollar', NZD: 'the New Zealand dollar' };
+const NAME_FULL = { USD: 'US dollar', EUR: 'Euro', GBP: 'British pound', JPY: 'Japanese yen', CHF: 'Swiss franc', CAD: 'Canadian dollar', AUD: 'Australian dollar', NZD: 'New Zealand dollar' };
+const BANK_ID = { USD: 'fed', EUR: 'ecb', GBP: 'boe', JPY: 'boj', CHF: 'snb', CAD: 'boc', AUD: 'rba', NZD: 'rbnz' };
 const BANK = { USD: 'the Fed', EUR: 'the European Central Bank', GBP: 'the Bank of England', JPY: 'the Bank of Japan', CHF: 'the Swiss National Bank', CAD: 'the Bank of Canada', AUD: 'the Reserve Bank of Australia', NZD: 'the Reserve Bank of New Zealand' };
 /* Weights. risk is 0: shown as context, not counted (failed the price test). */
 const WEIGHTS = { rates: 30, inflation: 10, tot: 10, growth: 15, positioning: 10, fiscal: 10, risk: 0 };
@@ -57,7 +64,9 @@ function rateNum(r) {
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const median = a => { const s = a.slice().sort((x, y) => x - y), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
 const r2 = v => Math.round(v * 100) / 100;
-const pts = v => Math.abs(v).toFixed(2).replace(/\.?0+$/, '');
+const pts = v => { const a = Math.abs(v); return a >= 1 ? a.toFixed(1).replace(/\.0$/, '') : a.toFixed(2).replace(/0$/, ''); };
+const PLACE = { USD: 'the US', EUR: 'the euro area', GBP: 'the UK', JPY: 'Japan', CHF: 'Switzerland', CAD: 'Canada', AUD: 'Australia', NZD: 'New Zealand' };
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
 
 async function fred(id) {
   const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 40000);
@@ -99,10 +108,12 @@ async function rbaCommodities() {
 }
 
 (async () => {
-  const banks = load('banks'), rates = load('rates'), mom = load('momentum'), cot = load('cot'), cur = load('currencies');
-  if (!banks || !cur) { console.error('score-build: banks.json and currencies.json are required'); process.exit(1); }
-  const v1 = {}; (cur.currencies || []).forEach(c => { v1[c.ccy] = c.drivers || {}; });
-  const mark = (c, k) => (v1[c] && v1[c][k] ? +v1[c][k].score || 0 : 0);
+  const banks = load('banks'), rates = load('rates'), mom = load('surprises') || load('momentum'), cot = load('cot'), cur = load('currencies'), marks = load('marks') || {};
+  const policy = load('policy');
+  if (!banks) { console.error('score-build: banks.json is required'); process.exit(1); }
+  const v1 = {}; ((cur && cur.currencies) || []).forEach(c => { v1[c.ccy] = c.drivers || {}; });
+  const mark = (c, k) => { const m = ((marks[k] || {})[c]) || {}; return isFinite(+m.mark) ? +m.mark : 0; };
+  const markWhy = (c, k, dflt) => ((marks[k] || {})[c] || {}).why || dflt;
 
   let vix = null, brent = null, cpi = null, ausCom = null;
   if (!OFFLINE) {
@@ -118,6 +129,7 @@ async function rbaCommodities() {
          The one-month move in the yield is described but not counted. --- */
   const pol = {};
   (banks.banks || []).forEach(b => { const v = rateNum(b.rate); if (v != null) pol[b.ccy] = v; });
+  if (policy && policy.rates) CCYS.forEach(c => { const r = policy.rates[c]; if (r && typeof r.rate === 'number' && !r.pending) pol[c] = r.rate; });
   const polMed = median(CCYS.filter(c => pol[c] != null).map(c => pol[c]));
   const y = (rates && rates.yields) || {}, ym = (rates && rates.monthly) || {};
   const y2 = {}; CCYS.forEach(c => { const v = (y[c] || ym[c] || {}).y2; if (typeof v === 'number') y2[c] = v; });
@@ -149,11 +161,11 @@ async function rbaCommodities() {
     // rates
     if (pol[c] != null) {
       const g = pol[c] - polMed, parts = [clamp(g / 1.5, -1, 1)];
-      let why = 'Its central bank rate is ' + (Math.abs(g) < 0.13 ? 'in the middle of the eight' : pts(g) + ' points ' + (g > 0 ? 'above' : 'below') + ' the middle of the eight');
+      let why = cap(BANK[c]) + "'s rate is " + (Math.abs(g) < 0.13 ? 'in the middle of the eight' : pts(g) + ' points ' + (g > 0 ? 'above' : 'below') + ' the middle of the eight');
       if (y2Med != null && y2[c] != null) {
         const gy = y2[c] - y2Med; parts.push(clamp(gy / 1.5, -1, 1));
-        why += Math.abs(gy) < 0.13 ? ', and its two-year bond yield is close to the middle too.' : ', and its two-year bond yield is ' + pts(gy) + ' points ' + (gy > 0 ? 'above' : 'below') + ' the middle.';
-      } else why += '. No two-year yield feed covers it yet.';
+        why += Math.abs(gy) < 0.13 ? ', and ' + PLACE[c] + "'s two-year bond yield is close to the middle too." : ', and ' + PLACE[c] + "'s two-year bond yield is " + pts(gy) + ' points ' + (gy > 0 ? 'above' : 'below') + ' the middle.';
+      } else why += '. No daily two-year yield covers ' + PLACE[c] + ' yet.';
       if (moveMed != null && y[c] && typeof y[c].chg_1m === 'number') {
         const rel = y[c].chg_1m - moveMed;
         if (Math.abs(rel) >= 0.08) why += ' Over the past month that yield has ' + (rel > 0 ? 'risen faster than' : 'fallen behind') + ' the others.';
@@ -164,49 +176,57 @@ async function rbaCommodities() {
     if (gapMed != null && gap[c] != null) {
       const rel = gap[c] - gapMed, rate = cpi[c].rate;
       P.inflation = { value: r2(2 * clamp(rel / 1.5, -1, 1)), measured: true,
-        why: 'Prices are rising about ' + rate.toFixed(1) + '% a year against ' + BANK[c] + "'s goal of " + GOAL[c] + '%, ' + (Math.abs(rel) < 0.3 ? 'about as far from goal as most of the others.' : rel > 0 ? 'hotter than in most of the others, which keeps pressure on rates.' : 'cooler than in most of the others, which eases pressure on rates.') };
-    } else P.inflation = { value: mark(c, 'inflation'), measured: false, why: 'No inflation reading this run, so this rests on a judged mark.' };
+        why: 'Prices in ' + PLACE[c] + ' are rising about ' + rate.toFixed(1) + '% a year against ' + BANK[c] + "'s goal of " + GOAL[c] + '%, ' + (Math.abs(rel) < 0.3 ? 'about as far from goal as most of the others.' : rel > 0 ? 'hotter than in most of the others, which keeps pressure on rates.' : 'cooler than in most of the others, which eases pressure on rates.') };
+    } else P.inflation = { value: 0, measured: false, why: 'No inflation reading this run, so this counts as neutral.' };
     // growth: beats against misses in the latest releases (not yet tested)
     const rec = (((mom || {}).currencies || {})[c] || {}).recent || [];
     if (rec.length >= 3) {
       const b = rec.filter(x => x.result === 'beat').length, m = rec.filter(x => x.result === 'miss').length;
-      P.growth = { value: r2(2 * (b - m) / rec.length), measured: true, why: 'Of its last ' + rec.length + ' data releases, ' + b + ' beat forecasts and ' + m + ' missed.' };
-    } else P.growth = { value: mark(c, 'growth'), measured: false, why: 'Too few scored releases yet, so this rests on a judged mark.' };
+      P.growth = { value: r2(2 * (b - m) / rec.length), measured: true, why: 'Of ' + PLACE[c] + "'s last " + rec.length + ' data releases, ' + b + ' beat forecasts and ' + m + ' missed.' };
+    } else P.growth = { value: 0, measured: false, why: 'Too few recent data releases to judge, so this counts as neutral.' };
     // risk mood: context only, not counted
     if (mood != null) P.risk = { value: r2(2 * mood * HAVEN[c]), measured: true, why: moodWhy + (HAVEN[c] === 0 || Math.abs(mood) <= 0.33 ? ', which does little for ' + NAME[c] + '.' : ', which usually ' + (mood * HAVEN[c] > 0 ? 'helps ' : 'hurts ') + NAME[c] + ' at first.') };
     // terms of trade
     if (oil != null && OIL[c]) P.tot = { value: r2(2 * oil * OIL[c]), measured: true, why: 'Oil has ' + (Math.abs(oil) < 0.2 ? 'barely moved' : oil > 0 ? 'risen' : 'fallen') + ' over the past month, and ' + NAME[c] + (OIL[c] > 0 ? ' belongs to an oil exporter.' : ' belongs to an oil importer.') };
     else if (aus != null && c === 'AUD') P.tot = { value: r2(2 * aus), measured: true, why: 'The prices Australia gets for its exports have ' + (Math.abs(aus) < 0.2 ? 'barely moved' : aus > 0 ? 'risen' : 'fallen') + ' over the past three months.' };
-    else P.tot = { value: mark(c, 'tot'), measured: false, why: 'No measured feed for what this country sells and buys yet, so this rests on a judged mark.' };
+    else P.tot = { value: 2 * mark(c, 'tot'), measured: false, why: markWhy(c, 'tot', 'No price feed for what this country sells and buys, so this counts as neutral.') };
     // positioning: counts against the bet only at an extreme (not yet tested)
     const m = cot && (cot.markets || []).find(x => x.id === c);
     if (m && m.hf && isFinite(m.hf.pct)) {
       const p = m.hf.pct;
-      P.positioning = p >= 90 ? { value: -2, measured: true, why: 'Hedge funds are betting on it more heavily than at almost any time since 2015, which leaves few buyers left.' }
-        : p <= 10 ? { value: 2, measured: true, why: 'Hedge funds are betting against it more heavily than at almost any time since 2015, which leaves few sellers left.' }
-        : { value: r2((p - 50) / 50 * 0.5), measured: true, why: 'Hedge fund bets are not at an extreme, so this counts for little.' };
-    } else P.positioning = { value: mark(c, 'positioning'), measured: false, why: 'No positioning reading, so this rests on a judged mark.' };
-    // fiscal: judged until a feed exists
-    P.fiscal = { value: mark(c, 'fiscal'), measured: false, why: 'Rests on a judged mark. Fiscal health is hard to read from one number.' };
+      P.positioning = p >= 90 ? { value: -2, measured: true, why: 'Hedge funds are betting on ' + NAME[c] + ' more heavily than at almost any time since 2015, which leaves few buyers left.' }
+        : p <= 10 ? { value: 2, measured: true, why: 'Hedge funds are betting against ' + NAME[c] + ' more heavily than at almost any time since 2015, which leaves few sellers left.' }
+        : { value: r2((p - 50) / 50 * 0.5), measured: true, why: 'Hedge fund bets on ' + NAME[c] + ' are not at an extreme, so this counts for little.' };
+    } else P.positioning = { value: 0, measured: false, why: 'No positioning reading this week, so this counts as neutral.' };
+    // fiscal: a judged mark (no single number captures it)
+    P.fiscal = { value: 2 * mark(c, 'fiscal'), measured: false, why: markWhy(c, 'fiscal', 'Public finances are not a factor right now.') };
 
     Object.keys(P).forEach(k => { P[k].counted = (WEIGHTS[k] || 0) > 0; P[k].tested = !!TESTED[k]; });
     const avg = keys => { let s = 0, w = 0; keys.forEach(k => { const p = P[k]; if (!p || !WEIGHTS[k]) return; s += WEIGHTS[k] * clamp(p.value, -2, 2) / 2; w += WEIGHTS[k]; }); return w ? Math.round(s / w * 100) : 0; };
     const counted = Object.keys(WEIGHTS).filter(k => WEIGHTS[k] > 0);
     let measuredW = 0, totalW = 0; counted.forEach(k => { totalW += WEIGHTS[k]; if (P[k] && P[k].measured) measuredW += WEIGHTS[k]; });
-    out[c] = { score: avg(counted), tested_score: avg(Object.keys(TESTED)), measured_share: Math.round(measuredW / totalW * 100),
+    /* Points: each counted driver's share of a -10..+10 score, to one decimal;
+       a share under a quarter point shows as 0 ("not moving it"). */
+    let sumPts = 0;
+    Object.keys(P).forEach(k => {
+      const w = WEIGHTS[k] || 0; let v = w ? Math.round(100 * w * clamp(P[k].value, -2, 2) / 2 / totalW) / 10 : 0;
+      if (Math.abs(v) < 0.25) v = 0; P[k].points = v; sumPts += v;
+    });
+    out[c] = { points: Math.round(sumPts * 10) / 10, score: avg(counted), tested_score: avg(Object.keys(TESTED)), measured_share: Math.round(measuredW / totalW * 100),
       v1_score: Object.keys(v1[c] || {}).reduce((a, k) => a + (+v1[c][k].score || 0), 0), drivers: P };
   });
 
-  const asOf = cur.as_of ? String(cur.as_of).slice(0, 10) : new Date().toISOString().slice(0, 10);
+  const asOf = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
   let prev = load('score-v2');
   const history = ((prev && prev.history) || []).filter(h => h.date !== asOf);
-  history.push({ date: asOf, scores: Object.fromEntries(CCYS.map(c => [c, out[c].score])), tested: Object.fromEntries(CCYS.map(c => [c, out[c].tested_score])), v1: Object.fromEntries(CCYS.map(c => [c, out[c].v1_score])) });
+  history.push({ date: asOf, points: Object.fromEntries(CCYS.map(c => [c, out[c].points])), scores: Object.fromEntries(CCYS.map(c => [c, out[c].score])), tested: Object.fromEntries(CCYS.map(c => [c, out[c].tested_score])), v1: Object.fromEntries(CCYS.map(c => [c, out[c].v1_score])) });
   const doc = {
-    _about: 'Scoring v2, shadow run. Not shown on the site. Rate levels, inflation and terms of trade passed a price-history test (2016-2026) with a small, steady edge; market mood failed and is shown with no weight; growth, positioning and fiscal are not yet tested. Evidence, not a forecast.',
-    updated: new Date().toISOString(), as_of: asOf, scale: '-100 to +100', weights: WEIGHTS,
+    _about: 'Blue Street currency score (since 2026-11-17 the score on the site). Rate levels, inflation and terms of trade passed a price-history test (2016-2026) with a small, steady edge; market mood failed and is shown with no weight; growth, positioning and fiscal are not yet tested. Evidence, not a forecast.',
+    updated: new Date().toISOString(), as_of: asOf, scale: 'score -100 to +100; points -10 to +10 (what the site shows)', weights: WEIGHTS,
+    names: NAME_FULL, banks: BANK_ID,
     tested: Object.keys(TESTED),
     inputs: { vix: !!vix, brent: !!brent, inflation: cpi ? Object.keys(cpi) : [], aus_export_prices: !!ausCom, yields: Object.keys(y), yields_monthly: Object.keys(ym) },
-    ranking: CCYS.slice().sort((a, b) => out[b].score - out[a].score),
+    ranking: CCYS.slice().sort((a, b) => out[b].points - out[a].points || out[b].score - out[a].score),
     currencies: out, history: history.slice(-180)
   };
   console.log(CCYS.slice().sort((a, b) => out[b].score - out[a].score).map(c => c + ' ' + out[c].score + ' (tested part ' + out[c].tested_score + ', live score now ' + out[c].v1_score + ', ' + out[c].measured_share + '% measured)').join('\n'));

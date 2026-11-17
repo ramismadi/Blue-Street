@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '142';
+  var ASSET_VERSION = '143';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -102,7 +102,12 @@
     }).catch(function () {
       note('#engine-rows', 'Macro engine data unavailable.');
     });
-    withWords('data/banks.json', 'banks').then(function (d) {
+    // Central bank rates come from data/policy.json (built from each bank's own
+    // data, Rami 2026-11-17); banks.json keeps meetings and market odds.
+    var policyP = fetchJSON('data/policy.json').catch(function () { return null; });
+    Promise.all([withWords('data/banks.json', 'banks'), policyP]).then(function (r) {
+      var d = r[0];
+      applyPolicy(d, r[1]);
       renderBanks(d);
       (d.banks || []).forEach(function (b) { cal.banks[b.id] = b; });
       renderCalendar();
@@ -113,7 +118,11 @@
     initStrips();
     initFocus();
     initCot();
-    withWords('data/currencies.json', 'currencies').then(function (d) {
+    // The currency score (Rami, 2026-11-17): built by tools/score-build.cjs from
+    // measured data; the editions' plain summaries come from words.json.
+    fetchJSON('data/score-v2.json').then(function (s) {
+      return fetchJSON('data/words.json').catch(function () { return {}; }).then(function (w) { return applyWords('currencies', boardFrom(s), w); });
+    }).then(function (d) {
       fx.data = d;
       syncPillars();
       renderFx();
@@ -124,7 +133,7 @@
     });
     // Surprise momentum is optional: until the feed exists the site shows
     // when tracking starts.
-    fetchJSON('data/momentum.json').then(function (d) {
+    fetchJSON('data/surprises.json').catch(function () { return fetchJSON('data/momentum.json'); }).then(function (d) {
       momentum.data = d;
       renderFx();
     }).catch(function () { /* not published yet */ });
@@ -224,9 +233,7 @@
         var x = sec.currencies && sec.currencies[c.ccy];
         if (!x) return;
         if (x.summary) c.summary = x.summary;
-        Object.keys(x.notes || {}).forEach(function (k) {
-          if (c.drivers && c.drivers[k] && x.notes[k]) c.drivers[k].note = x.notes[k];
-        });
+        // Driver lines now come from the score script itself (2026-11-17).
       });
     }
     return d;
@@ -2666,16 +2673,16 @@
      a pair picker that ranks counterparts by divergence. Carry comes from
      banks.json, event risk from calendar.json. */
   var PILLARS = [
-    ['policy', 'Policy'], ['growth', 'Growth'], ['inflation', 'Inflation'], ['risk', 'Risk sentiment'],
+    ['policy', 'Interest rates'], ['growth', 'Growth'], ['inflation', 'Inflation'], ['risk', 'Market mood'],
     ['tot', 'Terms of trade'], ['positioning', 'Positioning'], ['fiscal', 'Fiscal & sovereign']
   ];
   /* Market quoting convention: the higher-priority currency is the base. */
   var PRIORITY = ['EUR', 'GBP', 'AUD', 'NZD', 'USD', 'CAD', 'CHF', 'JPY'];
   // Rami, 2026-10-27: the picker starts blank every visit (no remembered pick).
   var fx = { data: null, focus: '', dir: '', ccy: '', pickOpen: {} };
-  /* data/momentum.json — per-currency economic surprises (Hercules). */
+  /* data/surprises.json — per-currency data surprises (script, from the calendar). */
   var momentum = { data: null };
-  var rates = { data: null };   // data/rates.json (Hercules), optional
+  var rates = { data: null };   // data/rates.json (script), optional
 
   function initFx() {
     try { localStorage.removeItem('bluestreet-fx'); } catch (e) {}
@@ -2730,6 +2737,37 @@
     });
   }
 
+  /* data/score-v2.json → the board shape the pages use. Each counted driver
+     carries its `points`, its share of a score from −10 to +10, so the parts
+     add up to the total. Interest rates sit in the Policy slot; market mood
+     is shown but not counted. */
+  var BOARD_ID = { rates: 'policy', growth: 'growth', inflation: 'inflation', risk: 'risk', tot: 'tot', positioning: 'positioning', fiscal: 'fiscal' };
+  function boardFrom(s) {
+    var names = s.names || {}, bankIds = s.banks || {};
+    var list = CCYS.filter(function (c) { return s.currencies && s.currencies[c]; }).map(function (c) {
+      var x = s.currencies[c], drivers = {};
+      Object.keys(x.drivers || {}).forEach(function (k) {
+        var d = x.drivers[k], id = BOARD_ID[k];
+        if (!id) return;
+        drivers[id] = { score: +d.points || 0, note: d.why || '', counted: d.counted !== false, measured: !!d.measured };
+      });
+      return { ccy: c, name: names[c] || c, bank: bankIds[c] || null, chapter: null, summary: '', drivers: drivers };
+    });
+    var hist = (s.history || []).filter(function (h) { return h.points; })
+      .map(function (h) { return { date: h.date, scores: h.points }; });
+    return { as_of: s.as_of, currencies: list, history: hist };
+  }
+  function applyPolicy(banks, pol) {
+    var r = pol && pol.rates;
+    if (!r) return;
+    (banks.banks || []).forEach(function (b) {
+      var p = r[b.ccy];
+      if (!p || p.pending || !p.display) return;
+      b.rate = p.display;
+      if (p.last_move) b.last_move = p.last_move;
+    });
+  }
+
   function fxList() { return (fx.data && fx.data.currencies) || []; }
   function fxGet(c) {
     var l = fxList();
@@ -2739,7 +2777,7 @@
   function fxScore(c) {
     var d = (c && c.drivers) || {}, t = 0;
     Object.keys(d).forEach(function (k) { t += +d[k].score || 0; });
-    return t;
+    return Math.round(t * 10) / 10;
   }
   function fxRanked() {
     return fxList().slice().sort(function (a, b) {
@@ -2808,7 +2846,7 @@
     var sx = fxScore(x);
     return fxList().filter(function (y) { return y.ccy !== X; }).map(function (y) {
       var sy = fxScore(y);
-      var gap = dir === 'bull' ? sx - sy : sy - sx;
+      var gap = Math.round((dir === 'bull' ? sx - sy : sy - sx) * 10) / 10;
       var base = PRIORITY.indexOf(X) < PRIORITY.indexOf(y.ccy) ? X : y.ccy;
       var quote = base === X ? y.ccy : X;
       var longBase = dir === 'bull' ? base === X : base === y.ccy;
@@ -2821,7 +2859,7 @@
       }
       return {
         y: y, sy: sy, gap: gap, pair: base + '/' + quote, action: longBase ? 'Buy' : 'Sell', carry: carry, ygap: ygap,
-        rating: gap >= 2 ? ['Best', 'best'] : gap === 1 ? ['Good', 'good'] : gap === 0 ? ['No edge', 'flat'] : ['Avoid', 'avoid'],
+        rating: gap >= 4 ? ['Best', 'best'] : gap >= 1.5 ? ['Good', 'good'] : gap > -1.5 ? ['No edge', 'flat'] : ['Avoid', 'avoid'],
         events: eventsFor([X, y.ccy], 14)
       };
     }).sort(function (a, b) { return b.gap - a.gap || (b.carry || 0) - (a.carry || 0); });
@@ -3005,10 +3043,10 @@
 
 
   /* Today: one speedometer per currency (Rami, 2026-11-09), strongest to
-     weakest. Same score as the strength board (sum of the seven pillar
-     scores, each −1/0/+1), on a fixed ±7 dial so a needle means the same
-     thing every edition. Tap = that currency on the Currencies page. */
-  var GAUGE_MAX = 7;
+     weakest. Same score as the strength board (the measured score, −10 to
+     +10 since 2026-11-17), on a fixed dial so a needle means the same thing
+     every edition. Tap = that currency on the Currencies page. */
+  var GAUGE_MAX = 10;
   function gaugeSvg(score) {
     var NS = 'http://www.w3.org/2000/svg';
     function n(tag, attrs) {
@@ -3043,7 +3081,7 @@
       var li = el('li');
       var a = el('a', 'gauge-tile card ' + (sc > 0 ? 'pos' : sc < 0 ? 'neg' : 'zero'));
       a.href = '#fx/' + c.ccy;
-      a.setAttribute('aria-label', c.name + ': strength score ' + signed(sc) + ' (range −7 to +7)');
+      a.setAttribute('aria-label', c.name + ': strength score ' + signed(sc) + ' (range −10 to +10)');
       var hd = el('span', 'gt-id');
       hd.appendChild(flagEl(c.ccy));
       hd.appendChild(el('b', 'mono', c.ccy));
@@ -3295,7 +3333,7 @@
     h = (h || []).filter(function (p) { return isFinite(p.v) && /^\d{4}-\d\d-\d\d$/.test(p.date); });
     if (h.length < 5) return null;
     var NS = 'http://www.w3.org/2000/svg', W = 640, H = 170, L = 34, R = 12, T = 14, B = 30;
-    var top = Math.max(3, Math.max.apply(null, h.map(function (p) { return Math.abs(p.v); }))) + 1;
+    var top = Math.ceil(Math.max(3, Math.max.apply(null, h.map(function (p) { return Math.abs(p.v); })))) + 1;
     var t0 = Date.parse(h[0].date), t1 = Date.parse(h[h.length - 1].date);
     if (!(t1 > t0)) return null;
     var X = function (d) { return L + (Date.parse(d) - t0) / (t1 - t0) * (W - L - R); };
@@ -3402,22 +3440,24 @@
     var box = el('div', 'hh-bd');
     box.id = 'hh-bd';
     box.hidden = true;
-    box.appendChild(el('p', 'hh-bd-lead', 'Each factor adds +1 when it supports the ' + inName(c.name) +
-      ', −1 when it weighs on it, and 0 when it isn’t moving it. They add up to the score, from −7 to +7.'));
+    box.appendChild(el('p', 'hh-bd-lead', 'Each factor adds points when it supports the ' + inName(c.name) +
+      ' and takes them away when it weighs on it. Interest rates count most. They add up to the score, from −10 to +10.'));
     var ul = el('ul', 'hh-bd-list');
     var tot = 0;
     PILLARS.forEach(function (k) {
       var d = (c.drivers || {})[k[0]], v = d ? +d.score || 0 : 0;
       tot += v;
+      var off = d && d.counted === false;
       var li = el('li', v > 0 ? 'pos' : v < 0 ? 'neg' : 'zero');
       li.appendChild(el('span', 'bd-name', k[1]));
-      li.appendChild(el('span', 'bd-word', v > 0 ? 'Supports' : v < 0 ? 'Weighs' : 'Not moving it'));
+      li.appendChild(el('span', 'bd-word', off ? 'Shown, not counted' : v > 0 ? 'Supports' : v < 0 ? 'Weighs' : 'Not moving it'));
       li.appendChild(el('b', 'bd-v mono', v === 0 ? '0' : signed(v)));
       ul.appendChild(li);
     });
     var t = el('li', 'bd-total');
     t.appendChild(el('span', 'bd-name', 'Score'));
     t.appendChild(el('span', 'bd-word', ''));
+    tot = Math.round(tot * 10) / 10;
     t.appendChild(el('b', 'bd-v mono', tot === 0 ? '0' : signed(tot)));
     ul.appendChild(t);
     box.appendChild(ul);
@@ -3544,7 +3584,7 @@
       hd.appendChild(el('span', 'pt-name', k[1]));
       var tag = el('span', 'pt-tag ' + cls);
       tag.appendChild(trendIcon(cls));
-      tag.appendChild(document.createTextNode(s2 > 0 ? 'Supports' : s2 < 0 ? 'Weighs' : 'Neutral'));
+      tag.appendChild(document.createTextNode(d && d.counted === false ? 'Not counted' : s2 > 0 ? 'Supports' : s2 < 0 ? 'Weighs' : 'Neutral'));
       hd.appendChild(tag);
       li.appendChild(hd);
       var note = d && d.note && plainNote(d.note) ? sentence(d.note.charAt(0).toUpperCase() + d.note.slice(1))

@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=142">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=142">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=143">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=143">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=142">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=143">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=142">
+<link rel="stylesheet" href="assets/style.css?v=143">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=142" defer></script>
-<script src="assets/app.js?v=142" defer></script>
+<script src="assets/cot.js?v=143" defer></script>
+<script src="assets/app.js?v=143" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue (from tools/brand-build.py), removed by app.js once the edition renders -->
@@ -328,26 +328,26 @@
     <article class="info-page card gl-scope" data-page="method" hidden>
       <p class="kicker">How the scores work</p>
       <h1 class="display">The strength score</h1>
-      <p class="lede">Each currency gets a score from &minus;7 to +7. It adds up seven factors that drive currencies over weeks and months.</p>
+      <p class="lede">Each currency gets a score from &minus;10 to +10. It weighs seven factors that drive currencies over weeks and months, read from data wherever data exists.</p>
       <h2>The seven factors</h2>
       <ul>
-        <li><b>Policy:</b> what the central bank is doing with interest rates, and what markets expect next. Higher rates tend to draw money in.</li>
-        <li><b>Growth:</b> how strong the economy and the job market look.</li>
-        <li><b>Inflation:</b> how far prices are running above or below the central bank&rsquo;s goal, which shapes what it does next.</li>
-        <li><b>Risk sentiment:</b> whether markets are calm or nervous. Nervous markets favour the yen, the franc and the dollar.</li>
-        <li><b>Terms of trade:</b> what the country earns for what it sells abroad compared with what it pays for what it buys, like oil for Canada or iron ore for Australia.</li>
-        <li><b>Positioning:</b> how heavily speculators are betting on the currency. When bets are unusually one-sided, they tend to unwind.</li>
-        <li><b>Fiscal &amp; sovereign:</b> government budgets, debt and politics, when they shake confidence in the currency.</li>
+        <li><b>Interest rates:</b> where the central bank&rsquo;s rate and the two-year government bond yield sit against the other seven. Higher rates tend to draw money in. This counts most.</li>
+        <li><b>Inflation:</b> how far prices are running above or below the central bank&rsquo;s goal, against the others. Hotter inflation keeps pressure on rates.</li>
+        <li><b>Terms of trade:</b> the prices a country gets for what it sells abroad. Oil for Canada, Japan and the euro area; export prices for Australia.</li>
+        <li><b>Growth:</b> how the latest data releases came in against forecasts: more beats help, more misses hurt.</li>
+        <li><b>Positioning:</b> how heavily hedge funds are betting on the currency. Only an extreme bet counts, and it counts against the bet.</li>
+        <li><b>Fiscal &amp; sovereign:</b> government budgets, debt and politics, when they shake confidence in the currency. This one is a judgment call.</li>
+        <li><b>Market mood:</b> whether markets are calm or nervous. It is shown on each currency page but not counted (see below).</li>
       </ul>
-      <h2>How each factor is scored</h2>
-      <p>Every edition, each factor gets one of three marks for each currency: <b>+1 (supports)</b> when it&rsquo;s currently a reason for the currency to be stronger, <b>&minus;1 (weighs)</b> when it&rsquo;s a reason to be weaker, and <b>0 (neutral)</b> when it isn&rsquo;t doing much. Positioning follows a fixed rule: a bet in the most extreme tenth of its history counts against the crowd.</p>
-      <p>The score adds the seven marks, so it runs from &minus;7 to +7. Every currency page shows exactly how its score adds up under &ldquo;How it&rsquo;s scored&rdquo;.</p>
+      <h2>How it adds up</h2>
+      <p>Each factor is read against the other seven currencies, so the score says where a currency stands relative to the rest. Interest rates count for about a third of the score, growth for about a sixth, and inflation, terms of trade, positioning and fiscal for about a ninth each. Every currency page shows the points each factor adds under &ldquo;How it&rsquo;s scored&rdquo;, with one plain line on why.</p>
+      <h2>Tested on ten years of prices</h2>
+      <p>Before going live, each measured factor was rebuilt for every week from 2016 to 2026 and checked against how the eight currencies did over the following weeks. Interest rates, inflation and terms of trade showed a small but steady edge in every period. Market mood pointed the wrong way, because the safe currencies had usually already moved by the time markets looked nervous, so it no longer counts. Growth and positioning don&rsquo;t have enough history yet to test.</p>
+      <p>The edge is small. The highest-scored currencies beat the lowest a little more often than not, which is useful evidence, not a sure thing.</p>
       <h2>Pairs</h2>
       <p>A pair&rsquo;s score is one currency&rsquo;s score minus the other&rsquo;s, from the side of your view. The pair picker also shows whether holding the pair pays or costs interest, and the next big event for it.</p>
       <h2>What it isn&rsquo;t</h2>
       <p>The score is a summary of the evidence, not a forecast and not a trade signal. Prices can move against the fundamentals for weeks, especially around big news.</p>
-      <h2>What&rsquo;s next</h2>
-      <p>A measured version is being tested: each factor read from data instead of a judgment call, scored on a scale, and checked against years of price history before anything changes here. If it doesn&rsquo;t do better, it won&rsquo;t replace this one.</p>
     </article>
 
     <article class="info-page card gl-scope" data-page="faq" hidden>

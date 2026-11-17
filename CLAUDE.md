@@ -15,8 +15,11 @@ It was renamed on 2026-10-19; the project used to have a different name.
 - **Claude:** the site (`index.html`, `assets/*`, `tools/*`, `ai/*`, `llms.txt`, workflows), every
   word readers see (`data/words.json`, `data/news.json`, `data/story.json`,
   `data/engine.json`, `data/cot.json`, `data/glossary.json`, `data/learn.json`,
-  `data/pillars.json`), `data/rates.json` and `data/score-v2.json` (built by scripts, never by hand),
+  `data/pillars.json`, `data/marks.json`), the script-built files (`data/rates.json`,
+  `data/policy.json`, `data/surprises.json`, `data/score-v2.json`, never by hand),
   and `DESIGN.md`.
+- **The score on the site** is `data/score-v2.json` (since 2026-11-17). Hercules
+  no longer scores currencies; `currencies.json` and `momentum.json` are retired.
 - **Hercules** (Rami's Muse assistant): the data (numbers, dates, sources) in
   the other `data/*.json` files. Be kind to him and work with him.
 - **One writer per file.** Never edit a file the other agent owns; ask in
@@ -44,6 +47,10 @@ It was renamed on 2026-10-19; the project used to have a different name.
   this edition. In News, write the date ("on Tuesday, November 17"), never a
   bare "today" or "on Monday". Full rules: `COLLAB.md` → "Writing rules added
   after the site audit".
+- **Currency lines in editions (since 2026-11-17):** write only each currency's
+  `summary` in `words.json` (no `notes`), matched to `data/score-v2.json` →
+  `ranking`. Keep `data/marks.json` current. Details: `COLLAB.md` → "Handover,
+  round 3".
 - **Editions** are live by 2:00 AM, 8:30 AM and 4:00 PM CT (London open daily,
   New York open weekdays, New York close daily). Claude writes at 1:19 AM,
   7:54 AM and 3:14 PM, after Hercules' data runs (12:40 AM, 7:15 AM, 2:35 PM,

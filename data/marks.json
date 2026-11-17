@@ -1,0 +1,56 @@
+{
+ "_about": "Judged marks for the parts of the score with no data feed (Claude's; written by the editions, read by tools/score-build.cjs). -1 weighs on the currency, 0 neutral, +1 supports. Change a mark only when something real changes, and say why in `why`.",
+ "updated": "2026-11-17",
+ "fiscal": {
+  "USD": {
+   "mark": -1,
+   "why": "Large US budget deficits and rising debt costs weigh on confidence in the dollar."
+  },
+  "EUR": {
+   "mark": -1,
+   "why": "Budget strains in some euro-area countries, France above all, weigh on the euro."
+  },
+  "GBP": {
+   "mark": 0,
+   "why": "UK public finances are tight but not driving the pound right now."
+  },
+  "JPY": {
+   "mark": 0,
+   "why": "Japan's large debt is well known and not moving the yen right now."
+  },
+  "CHF": {
+   "mark": 0,
+   "why": "Switzerland's public finances are sound and not a factor right now."
+  },
+  "AUD": {
+   "mark": 0,
+   "why": "Australia's public finances are not a factor right now."
+  },
+  "CAD": {
+   "mark": 0,
+   "why": "Canada's public finances are not a factor right now."
+  },
+  "NZD": {
+   "mark": 0,
+   "why": "New Zealand's public finances are not a factor right now."
+  }
+ },
+ "tot": {
+  "USD": {
+   "mark": 0,
+   "why": "The US both sells and buys energy, so trade prices do little for the dollar."
+  },
+  "GBP": {
+   "mark": 0,
+   "why": "Trade prices are not moving the pound right now."
+  },
+  "CHF": {
+   "mark": 0,
+   "why": "Trade prices are not moving the franc right now."
+  },
+  "NZD": {
+   "mark": 1,
+   "why": "Firm prices for New Zealand's dairy exports support the New Zealand dollar."
+  }
+ }
+}

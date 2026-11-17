@@ -73,24 +73,26 @@ function market(code) {
 
 /* ---------- shaping ---------- */
 async function board() {
-  const [cur, words] = await Promise.all([load('currencies'), load('words')]);
+  const [s, words] = await Promise.all([load('score-v2'), load('words')]);
   const w = (words.currencies || {}).currencies || {};
-  const list = (cur.currencies || []).map(c => {
-    const d = c.drivers || {}, wn = (w[c.ccy] || {}).notes || {};
-    const factors = PILLARS.filter(p => d[p[0]]).map(p => {
-      const s = +d[p[0]].score || 0;
-      return clean({ factor: p[1], effect: s > 0 ? 'supports' : s < 0 ? 'weighs' : 'neutral', why: plain(wn[p[0]]) || plain(d[p[0]].note, 200) });
+  const ID = { rates: 'Interest rates', inflation: 'Inflation', tot: 'Terms of trade', growth: 'Growth', positioning: 'Positioning', fiscal: 'Fiscal & sovereign', risk: 'Market mood' };
+  const list = Object.keys(s.currencies || {}).map(code => {
+    const c = s.currencies[code], d = c.drivers || {};
+    const factors = Object.keys(ID).filter(k => d[k]).map(k => {
+      const p = +d[k].points || 0;
+      return clean({ factor: ID[k], effect: d[k].counted === false ? 'shown, not counted' : p > 0 ? 'supports' : p < 0 ? 'weighs' : 'neutral', points: p, why: plain(d[k].why, 240) });
     });
-    const score = PILLARS.reduce((a, p) => a + (d[p[0]] ? +d[p[0]].score || 0 : 0), 0);
-    return clean({ code: c.ccy, name: c.name, bank: c.bank, score, summary: plain((w[c.ccy] || {}).summary) || plain(c.summary), factors });
+    return clean({ code, name: (s.names || {})[code] || code, bank: (s.banks || {})[code], score: c.points, summary: plain((w[code] || {}).summary, 300), factors });
   }).sort((a, b) => b.score - a.score);
   list.forEach((c, i) => { c.rank = i + 1; });
-  return { as_of: (words.currencies || {}).as_of || cur.as_of, list };
+  return { as_of: s.as_of, list };
 }
 async function bankOf(id) {
-  const [banks, words] = await Promise.all([load('banks'), load('words')]);
+  const [banks, words, policy] = await Promise.all([load('banks'), load('words'), load('policy', true)]);
   const b = (banks.banks || []).find(x => x.id === id);
   if (!b) return null;
+  const pr = ((policy || {}).rates || {})[b.ccy];   // the bank's own published rate, when current
+  if (pr && !pr.pending && pr.display) { b.rate = pr.display; if (pr.last_move) b.last_move = pr.last_move; }
   const w = ((words.banks || {}).banks || {})[id] || {};
   return clean({ name: b.name, rate: b.rate, rate_means: b.rate_label, stance: w.bias || w.label,
     last_move: b.last_move && b.last_move.date ? clean({ date: b.last_move.date, change_in_points: b.last_move.bp != null ? b.last_move.bp / 100 : null }) : null,
@@ -120,7 +122,7 @@ const TOOLS = [
       return { edition_date: story.date, last_written: eng.updated, read: (words.story || {}).headline || story.headline,
         drivers: PILLARS.filter(p => reads[p[0]]).map(p => ({ driver: p[1], read: reads[p[0]] })),
         strength_ranking: b.list.map(c => ({ rank: c.rank, code: c.code, name: c.name, score: c.score })),
-        score_means: 'Sum of the driver marks for that currency (+1 supports, −1 weighs, 0 neutral). A summary of the evidence, not a forecast.',
+        score_means: 'From -10 to +10: seven drivers read from data and compared across the eight currencies; interest rates count most; market mood is shown but not counted. A summary of the evidence, not a forecast.',
         next_big_events: (cal.events || []).filter(e => e.impact === 'high' && Date.parse(e.ts) > now).sort((x, y) => x.ts < y.ts ? -1 : 1).slice(0, 5).map(eventOut), note: NOTE };
     } },
   { name: 'get_currency', description: 'Everything Blue Street says about one market: where it stands and why, each driver\'s effect, its central bank, the full story (what changed, what it means, what is next, scenarios), hedge-fund positioning and the latest headlines. Markets: USD, EUR, GBP, JPY, CHF, CAD, AUD, NZD, XAU (gold), OIL.',

@@ -39,10 +39,10 @@ const DAYS = '(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)';
 const STALE = new RegExp('\\b(today|tonight|tomorrow|yesterday|this (?:morning|afternoon|evening|week)|(?:on|this|next|last) ' + DAYS + '(?!,? (?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \\d))\\b', 'i');
 const dayWords = (where, t) => { const m = STALE.exec(String(t || '')); if (m) warns.push(where + ': "' + m[1] + '" goes stale, write the date — "' + String(t).slice(0, 80) + '"'); };
 
-const REQUIRED = ['banks', 'calendar', 'cot', 'currencies', 'engine', 'glossary', 'learn', 'momentum', 'news', 'pillars', 'story', 'words'];
+const REQUIRED = ['banks', 'calendar', 'cot', 'engine', 'glossary', 'learn', 'marks', 'news', 'pillars', 'score-v2', 'story', 'words'];
 const d = {};
 REQUIRED.forEach(n => { d[n] = read(n); });
-['rates', 'markets', 'latest', 'focus', 'news-raw', 'score-v2'].forEach(n => { if (fs.existsSync(path.join(DIR, n + '.json'))) d[n] = read(n); });
+['rates', 'policy', 'surprises', 'markets', 'latest', 'focus'].forEach(n => { if (fs.existsSync(path.join(DIR, n + '.json'))) d[n] = read(n); });
 
 if (d.story) {
   need(/^\d{4}-\d\d-\d\d$/.test(d.story.date || ''), 'story.json: no edition date');
@@ -63,8 +63,8 @@ if (d.words) {
   });
 }
 /* A currency summary must match its place on the board (Rami, 2026-11-16). */
-if (d.words && d.currencies && Array.isArray(d.currencies.currencies)) {
-  const sc = {}; d.currencies.currencies.forEach(c => { sc[c.ccy] = Object.values(c.drivers || {}).reduce((a, x) => a + (+x.score || 0), 0); });
+if (d.words && d['score-v2'] && d['score-v2'].currencies) {
+  const sc = {}; Object.entries(d['score-v2'].currencies).forEach(([c, x]) => { sc[c] = +x.points || 0; });
   const order = Object.keys(sc).sort((a, b) => sc[b] - sc[a]);
   const rank = c => { const s = sc[c]; return { best: order.findIndex(k => sc[k] === s) + 1, worst: order.length - order.slice().reverse().findIndex(k => sc[k] === s) }; };
   Object.entries((((d.words.currencies || {}).currencies) || {})).forEach(([c, v]) => {
@@ -78,10 +78,10 @@ if (d.words && d.currencies && Array.isArray(d.currencies.currencies)) {
 }
 if (d['score-v2']) need(d['score-v2'].currencies && Object.keys(d['score-v2'].currencies).length === 8, 'score-v2.json: expected 8 currencies');
 if (d.engine) need(Array.isArray(d.engine.rows) && d.engine.rows.length === 7, 'engine.json: expected 7 rows');
-if (d.currencies) {
-  need(Array.isArray(d.currencies.currencies) && d.currencies.currencies.length === 8, 'currencies.json: expected 8 currencies');
-  need(Array.isArray(d.currencies.history) && d.currencies.history.length > 0, 'currencies.json: no history');
-}
+if (d.marks) ['fiscal', 'tot'].forEach(k => Object.entries(d.marks[k] || {}).forEach(([c, m]) => {
+  need([-1, 0, 1].includes(m.mark), 'marks.json: ' + k + '.' + c + ' must be -1, 0 or 1');
+  words('marks.json ' + k + '.' + c, m.why);
+}));
 if (d.banks) need(Array.isArray(d.banks.banks) && d.banks.banks.length === 8, 'banks.json: expected 8 banks');
 if (d.calendar) need(Array.isArray(d.calendar.events) && d.calendar.events.length > 0, 'calendar.json: no events');
 if (d.cot) need(Array.isArray(d.cot.markets) && d.cot.markets.length >= 8, 'cot.json: fewer than 8 markets');
