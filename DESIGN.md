@@ -23,7 +23,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 |---|---|---|
 | Today | `/` (also `#today`) | story (headline), news, currencies |
 | Currencies | `#fx`, `#fx/AUD` = currency page, `#fx/OIL` / `#fx/XAU` = gold and oil (header + full read). Old `#story/N` links redirect to chapter N's page (Story view retired 2026-11-09) | `data/currencies.json` (+ banks, calendar, story joins) |
-| Learn (hub) | `#learn` = the drivers (macro engine cards), this week's positioning, lesson rows, glossary; `#learn/<lesson-id>` or `#learn/<term-id>` = its own page | `data/engine.json` + `data/pillars.json`, `data/cot.json`, `data/learn.json`, `data/glossary.json` |
+| Learn (hub) | `#learn` = the drivers (macro engine cards), this week's positioning, lesson rows, glossary; `#learn/<lesson-id>` or `#learn/<term-id>` = its own page | `data/engine.json`, `data/cot.json`, `data/learn.json`, `data/glossary.json` |
 | Learn: Positioning board | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join; the row of upcoming central bank decisions) |
 | News | `#news`, `#news/JPY` = filtered to a market, `#article/<id>` = one story's own page (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
@@ -141,8 +141,12 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   story's own page there is no figure at all.
 - **Learn hub (Rami, 2026-11-16; tab and hub layout 2026-11-17):** `#learn`
   is the education centre and the fourth tab. It reads like a currency hub,
-  top to bottom: a header card, **The drivers** (the seven macro engine cards
-  as they were, each with "How this works →" to its lesson), **Positioning**
+  top to bottom: a header card, **The drivers** (a side-scrolling row of
+  compact tiles shaped like the currency cards: icon and name, Helps/Hurts
+  flags from the score, today's read in 1–2 sentences, the top two headlines
+  tagged with that pillar, "More on … →"; each opens `#learn/driver-<id>`, the
+  driver's own page: today's full read, By currency, sources, then the
+  lesson), **Positioning**
   (this week's takeaway, "Full board →" to `#positioning`), then one
   side-scrolling row of lesson tiles per path (any order; the driver path gets
   no row since each driver card links its lesson), then the glossary. Lessons live in `data/learn.json` (Claude's words): `paths` (Start
@@ -267,7 +271,7 @@ Row ids: `policy`, `growth`, `inflation`, `risk`, `tot`, `positioning`,
 `fiscal`. Any number of rows works — the grid balances itself and the
 "N pillars" label counts them.
 
-### `data/pillars.json` — "What is this?" explainers
+### `data/pillars.json` — "What is this?" explainers (no longer shown since 2026-11-17; the driver lessons replaced them)
 ```
 {"pillars":{"<engine row id>":{"title","body","live"}}}
 ```
