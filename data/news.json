@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T17:48:17Z",
+  "updated": "2026-11-17T19:49:09Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -34,13 +34,13 @@
     },
     "AUD": {
       "lean": "bearish",
-      "ts": "2026-11-17T11:53:15Z",
-      "text": "The Australian dollar has been the weakest major currency this past month: the Reserve Bank of Australia's November rate rise was a 6-3 vote and big banks think rates have peaked, even though Governor Michele Bullock says inflation risks still lean higher. A deepening sell-off in technology shares adds to the pressure."
+      "ts": "2026-11-17T19:49:09Z",
+      "text": "The Australian dollar has been the weakest major currency this past month: the Reserve Bank of Australia's November rate rise was a 6-3 vote and big banks think rates have peaked, even though Governor Michele Bullock says inflation risks still lean higher. US stocks fell again on Tuesday, November 17 before Nvidia's results, adding to the pressure."
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-17T11:53:15Z",
-      "text": "The New Zealand dollar sits near 55 US cents, held down by the strong US dollar and falling stock markets. The Reserve Bank says the country's banks can cope with rising global risks and a survey shows firms expect a rate rise soon, but neither has lifted the kiwi."
+      "ts": "2026-11-17T19:49:09Z",
+      "text": "The New Zealand dollar sits near 55 US cents, held down by the strong US dollar and a second day of falling stock markets. Dairy prices were flat at the auction on Tuesday, November 17, with milk powder up, which is a small help but not enough to lift the kiwi."
     },
     "XAU": {
       "lean": "bearish",
@@ -49,11 +49,110 @@
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-17T17:48:17Z",
-      "text": "Oil has lost about a fifth this month as Middle East exports recover and the International Energy Agency expects more supply than demand this quarter. On Tuesday, November 17 Brent bounced to near $94 after more Iranian attacks in the Gulf, and talks between Iran and Oman in Muscat brought no plan to reopen the Strait of Hormuz, so prices swing within a range until the OPEC+ meeting on November 29."
+      "ts": "2026-11-17T19:49:09Z",
+      "text": "Oil has lost about a fifth this month as Middle East exports recover and the International Energy Agency expects more supply than demand this quarter. Brent bounced to near $94 on Tuesday, November 17 after more Iranian attacks in the Gulf, and with Iran and the US both refusing to give ground, the Strait of Hormuz stays shut, so prices swing within a range until the OPEC+ meeting on November 29."
     }
   },
   "items": [
+    {
+      "id": "marketscreener-reuters-wallst-falls-before-nvidia-20261117",
+      "ts": "2026-11-17T14:06:25Z",
+      "source": "Reuters (MarketScreener)",
+      "url": "https://www.marketscreener.com/news/nasdaq-set-for-higher-open-as-tech-steadies-ahead-of-nvidia-results-anthropic-ipo-ce785edcdb8dff24",
+      "image": "https://cdn.zonebourse.com/static/resize/0/0//images/reuters/2026-11/2026-11-17T105311Z_1_LYNXNPEMAG0VR_RTROPTP_4_USA-STOCKS.JPG",
+      "headline": "Wall St falls before Nvidia earnings in key AI test; Huang says open to return",
+      "story": "tech-selloff",
+      "story_title": "The AI stock sell-off before Nvidia's results",
+      "pillar": "risk",
+      "summary": "US stocks fell for a second day on Tuesday, November 17, with the Dow down about 1.6% by midday, as investors pulled back before chipmaker Nvidia's results after the close. Every sector of the S&P 500 was lower.",
+      "beats": {
+        "was": "Technology shares have been sliding for days. Nvidia, the biggest maker of AI chips, has lost about $410 billion in market value since its chief executive Jensen Huang resigned the week before, and AI company Anthropic plans a record stock market listing on Thursday, November 19.",
+        "happened": "By midday in New York the Dow had dropped about 820 points, the S&P 500 1.3% and the Nasdaq 1.4%, leaving the two broader indexes near their lowest in months. Huang said he would be willing to come back if the board wanted him, though the board was reported not to be considering it. Futures markets put the chance of a Federal Reserve rate rise in December at about 95%.",
+        "means": "Investors are heading into Nvidia's results already nervous, with rising US interest rates adding to the pressure on share prices.",
+        "fx": "Falling stock markets tend to weigh on currencies tied to global growth, such as the Australian and New Zealand dollars, and help safe currencies like the yen."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A broad US stock sell-off weighs on a currency that tracks global risk appetite."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Falling shares tend to pull the kiwi lower along with the Australian dollar."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Nervous markets tend to send money toward the yen as a safe place."
+        }
+      ],
+      "watch": "Nvidia's results after the US close on Tuesday, November 17: a strong report could steady stocks, a weak one could deepen the slide."
+    },
+    {
+      "id": "instaforex-gdt-flat-20261117",
+      "ts": "2026-11-17T14:30:00Z",
+      "source": "InstaForex",
+      "url": "https://www.instaforex.com/forex-news/3297762",
+      "image": null,
+      "headline": "Global Dairy Prices Stall as New Zealand's GDT Index Flatlines at 0.0%",
+      "story": "nz-dairy",
+      "story_title": "Dairy prices and New Zealand's export income",
+      "pillar": "tot",
+      "summary": "Global dairy prices were unchanged at the Global Dairy Trade auction on Tuesday, November 17, after a 3% rise at the previous one. Milk powder rose while butter and cheese fell.",
+      "beats": {
+        "was": "Dairy is New Zealand's biggest export, so prices at the twice-monthly Global Dairy Trade auction feed into the country's income and the value of its currency. The previous auction had lifted prices by 3%.",
+        "happened": "The overall price index was flat. Whole milk powder, New Zealand's main dairy product, rose about 2.7% and skim milk powder about 2.2%, while butter fell about 6.5% and cheddar cheese about 4%.",
+        "means": "The rise in milk powder still helps New Zealand's farmers, but the rally across dairy prices has paused.",
+        "fx": "A small support for the New Zealand dollar through milk powder, not enough to offset a strong US dollar and falling stock markets."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Milk powder prices rose but the overall dairy index was flat after a 3% gain last time."
+        }
+      ],
+      "watch": "The next Global Dairy Trade auction on Tuesday, December 1, and whether milk powder keeps rising."
+    },
+    {
+      "id": "aljazeera-iran-war-frozen-conflict-20261117",
+      "date": "2026-11-17",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/17/is-the-us-israel-war-on-iran-turning-into-a-frozen-conflict",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/ap_6afbfc9370a59-1794899091.jpg?resize=1920%2C1440",
+      "headline": "Is the US-Israel war on Iran turning into a 'frozen conflict'?",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "President Trump said the US does not need a deal with Iran, while Iran says it will not reopen the Strait of Hormuz until the US lifts its blockade of Iranian ports and its sanctions. Neither side is moving, so the standoff looks set to drag on.",
+      "beats": {
+        "was": "The US and Israel went to war with Iran in February 2026. A deal in June fell apart and the US reimposed a naval blockade of Iranian ports in July, and Iran has kept the Strait of Hormuz, a key route for Gulf oil, largely shut.",
+        "happened": "Trump wrote on his social media site that the US holds both Iranian money and control of the strait and needs no deal. Iran repeated that the strait stays shut until the blockade and sanctions end. Only a handful of cargo ships crossed the strait on some days in early November, and Iran's economy shrank about 10% from a year earlier in the spring.",
+        "means": "Neither side is under enough pressure to give way, so attacks and disruption at sea look likely to continue without a full war or a settlement.",
+        "fx": "Keeps a floor under oil prices, since a reopening of Hormuz is not in sight, but recovering exports from elsewhere in the Middle East limit the effect."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "No reopening of Hormuz in sight supports prices, but recovering Gulf exports cap them."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Canada's oil exports gain from a firm floor under prices, but oil is still well down this month."
+        }
+      ],
+      "watch": "Any sign of talks between Washington and Tehran, and whether Iran is raised at President Trump's meeting with China's Xi Jinping and Russia's Vladimir Putin on Thursday, November 19."
+    },
     {
       "id": "euronext-reuters-oil-rises-tanker-attacks-20261117",
       "date": "2026-11-17",
@@ -1039,84 +1138,6 @@
       "watch": "Thursday's Trump–Xi–Putin meeting in Shenzhen; any sign of new Chinese spending support or trade relief would ease the hit to the Australian dollar."
     },
     {
-      "id": "brecorder-reuters-oil-falls-surplus-20261116",
-      "ts": "2026-11-16T02:41:48Z",
-      "source": "Business Recorder (Reuters)",
-      "url": "https://www.brecorder.com/news/40449125/oil-prices-fall-on-expectations-of-coming-supply-surplus",
-      "image": "https://i.brecorder.com/large/2026/05/08052318c855fa3.webp",
-      "headline": "Oil prices fall on expectations of coming supply surplus",
-      "story": "oil-supply",
-      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
-      "pillar": "commodities",
-      "summary": "Oil kept slipping early Monday in Asia as the market leaned on a forecast that supply will outrun demand this quarter, despite a new Iranian claim of a tanker hitting a mine.",
-      "beats": {
-        "was": "The US and Iran have been at war since February and traffic through the Strait of Hormuz, the Gulf's main oil route, is badly disrupted. Last week the International Energy Agency, which advises rich countries on energy, switched its view for October to December from a shortage to a surplus.",
-        "happened": "Brent, the world benchmark, fell about half a percent to near $95.40 a barrel and US crude eased to about $88.30. The agency expects supply to beat demand by 1.7 million barrels a day this quarter and says 71 million barrels of emergency stocks can be released by the end of February. Iran's navy said a tanker caught fire after hitting a mine east of Hormuz, which could not be confirmed, and the White House extended a shipping-rule waiver that eases US fuel deliveries.",
-        "means": "Traders are giving more weight to the expected surplus and emergency stocks than to new war claims. High shipping costs still keep a floor under prices, so oil is drifting rather than falling hard.",
-        "fx": "A slightly softer oil price takes a little support from the Canadian dollar and helps oil importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "An expected surplus and emergency stocks outweigh an unconfirmed tanker claim."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Softer prices for Canada's main export."
-        }
-      ],
-      "watch": "Proof from ship trackers or insurers that the tanker was hit; confirmed damage would bring war risk back into oil."
-    },
-    {
-      "id": "yahoo-reuters-dollar-fifth-day-schmid-20261116",
-      "ts": "2026-11-16T01:09:00Z",
-      "source": "Reuters (via Yahoo Finance)",
-      "url": "https://finance.yahoo.com/markets/currencies/articles/yen-steady-against-euro-dollar-010910695.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/5f9a4f31587e0e89453c54f48f17a5cd9c730e89e1a02ba0a1c310497d72f11f/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F181398ced8bd674ead835171938d8f1f.jpg",
-      "headline": "Yen steady against euro and dollar after soft Japanese GDP data",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "The dollar started the week at its highest since April 2025 as another Federal Reserve official said inflation still needs work. The yen held near 160 per dollar despite Japan's economy shrinking slightly.",
-      "beats": {
-        "was": "US inflation came in hot for October, and Federal Reserve officials have spent the past week saying interest rates must rise again in December.",
-        "happened": "In early Monday trade in Asia the dollar index sat near 103.4, its highest since April 2025, and the euro was near $1.10. Kansas City Fed President Jeff Schmid, who does not vote on rates this year, said on Sunday the Fed still has work to do on inflation. Markets put the chance of a quarter-point rise on December 9 at about 94%, while bets on a bigger half-point move eased.",
-        "means": "Markets now expect about four Fed rate rises by next September, and higher US rates keep drawing money into the dollar. The yen barely reacted to Japan's weak July–September growth, because traders still expect the Bank of Japan to raise rates in December and Tokyo has warned it may step in near 160.",
-        "fx": "Steady support for the dollar against the euro and gold. The yen is held weak by the gap in rates but capped by the threat of Japanese intervention; the Australian and New Zealand dollars were flat."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Another Fed official backs more rate rises; the dollar is at its highest since April 2025."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro sits near $1.10, its lowest since April 2025, as the US rate gap widens."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Weak growth and high US rates weigh, but a likely December Bank of Japan rise and intervention threats limit the fall."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "More expected Fed rate rises raise the cost of holding gold, which pays no interest."
-        }
-      ],
-      "watch": "Fed Chair Kevin Warsh's speech on Monday: if he sounds less sure about a December rise, the dollar's run could stall."
-    },
-    {
       "id": "fxstreet-reuters-poll-ecb-final-hike-20261116",
       "ts": "2026-11-16T00:34:23Z",
       "source": "FXStreet / Reuters",
@@ -1304,39 +1325,6 @@
         }
       ],
       "watch": "Bank of Japan board member Hajime Takata speaks Monday; if he still backs a December rise, the weak quarter matters less."
-    },
-    {
-      "id": "hngn-reuters-trump-may-hold-off-iran-strikes-20261115",
-      "ts": "2026-11-15T20:39:00Z",
-      "source": "HNGN (citing Reuters)",
-      "url": "https://www.hngn.com/articles/273810/20261115/trump-says-no-iran-deal-needed-pulls-vance-talks.htm",
-      "image": null,
-      "headline": "Iran targets Bahrain again as Trump weighs a pause in strikes",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "President Trump has signalled he may hold off on new US strikes on Iran if Tehran and Yemen's Houthis stop provoking, though the US naval blockade of Iran stays in place.",
-      "beats": {
-        "was": "The US and Iran have been at war since February, and the US Navy blocks Iran's oil exports. On Thursday Trump said the US no longer needs a deal with Iran and took Vice President JD Vance off the talks.",
-        "happened": "Reuters reports Trump may pause strikes as long as Iran and the Houthis hold back, while Israeli officials keep pressing Washington to hit Iran again. Over the weekend Iran still claimed drone attacks on a US radar in Bahrain and said more tankers hit mines near Hormuz.",
-        "means": "It is a conditional pause, not a ceasefire, and the weekend attacks already test the condition. The blockade staying means Iranian oil stays off the market either way.",
-        "fx": "A pause would take a little war risk out of oil, which mildly weighs on the Canadian dollar and helps oil importers like Japan; a breakdown would do the opposite."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Fewer US strikes would ease supply fears, but the blockade and Gulf attacks continue."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Safe-place demand eases only if both sides actually hold back."
-        }
-      ],
-      "watch": "Whether Iran or the Houthis launch new attacks before Iran's foreign minister visits Oman on Tuesday, which would likely end the pause."
     },
     {
       "id": "reuters-collins-gradual-hikes-path-higher-20261115",
