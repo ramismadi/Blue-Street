@@ -22,11 +22,11 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 | Tab | Route | Fed by |
 |---|---|---|
 | Today | `/` (also `#today`) | story (headline), news, currencies |
-| Currencies | `#fx`, `#fx/AUD` = currency page, `#fx/OIL` / `#fx/XAU` = gold and oil (header + full read). Old `#story/N` links redirect to chapter N's page (Story view retired 2026-11-09) | `data/currencies.json` (+ banks, calendar, story joins) |
+| Currencies | `#fx`, `#fx/AUD` = currency page, `#fx/OIL` / `#fx/XAU` = gold and oil (header + full read). Old `#story/N` links redirect to chapter N's page (Story view retired 2026-11-09) | `data/score.json` (+ banks, policy, calendar, story joins) |
 | Learn (hub) | `#learn` = the drivers (macro engine cards), this week's positioning, lesson rows, glossary; `#learn/<lesson-id>` or `#learn/<term-id>` = its own page | `data/engine.json`, `data/cot.json`, `data/learn.json`, `data/glossary.json` |
 | Learn: Positioning board | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join; the row of upcoming central bank decisions) |
-| News | `#news`, `#news/JPY` = filtered to a market, `#article/<id>` = one story's own page (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
+| News | `#news`, `#news/JPY` = filtered to a market, `#article/<id>` = one story's own page (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job; the News read gathers its own headlines). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
 | About & help (not a tab) | `#about`, `#about/<page>`: about, method, faq, schedule, sources, new, privacy, contact, feedback | static pages in index.html (Claude's words); reached from the footer on every page and, on phones, the settings sheet (Rami, 2026-11-09). Contact and Feedback are "coming soon" placeholders. Keep `method` in step with how the score is computed, `schedule` with the editions, and add a line to `new` for notable site changes. |
 
 - **Today** (Rami, 2026-11-09, round 2). Top to bottom:
@@ -279,10 +279,10 @@ Row ids: `policy`, `growth`, `inflation`, `risk`, `tot`, `positioning`,
 example — refresh it when conditions change. A pillar without an entry simply
 has no "What is this?" button.
 
-### `data/currencies.json` — retired (Hercules' hand-scored board, until 2026-11-17)
-**No longer read by the site.** Since 2026-11-17 the strength board, gauges,
-breakdown, pair picker and score chart read `data/score-v2.json` (below).
-Kept for history; Hercules stopped writing it. The old shape, for reference:
+### `data/currencies.json` — deleted 2026-11-17 (Hercules' hand-scored board)
+**Removed from the repo (still in git history).** Since 2026-11-17 the strength board, gauges,
+breakdown, pair picker and score chart read `data/score.json` (below).
+Hercules stopped writing it. The old shape, for reference:
 ```
 {"updated":"<ISO-8601>","as_of":"YYYY-MM-DD",   // edition date
  "method":"Score = sum of pillar scores (-1 / 0 / +1) ...",
@@ -349,7 +349,7 @@ writes it by hand.
 - The site reads `yields[ccy].y2` and `chg_1m` for the picker's rate-gap line.
   No file renders gracefully: the picker shows only today's headline-rate gap.
 
-### `data/score-v2.json` — the currency score (Claude; script; on the site since 2026-11-17)
+### `data/score.json` — the currency score (Claude; script; on the site since 2026-11-17; named `score-v2.json` until then)
 Built by `tools/score-build.cjs` in the Rates workflow (three times a day, and
 whenever Hercules pushes `calendar.json` or `banks.json`, or `marks.json`
 changes). **The site's score** since 2026-11-17 (Rami): `app.js` `boardFrom()`
@@ -430,7 +430,7 @@ The parts of the score with no data feed: `fiscal` for all eight and `tot`
 for USD, GBP, CHF and NZD. Each is `{mark: -1|0|1, why}`, plain. Change a
 mark only when something real changed. Read by `score-build.cjs`.
 
-### `data/momentum.json` — retired (Hercules, until 2026-11-17; replaced by `surprises.json`)
+### `data/momentum.json` — deleted 2026-11-17 (Hercules; replaced by `surprises.json`)
 ```
 {"updated":"<ISO-8601>",
  "since":"2026-10-14",              // counting starts fresh with US CPI, Oct 14
@@ -534,15 +534,15 @@ for CPI, FOMC, hawkish) so the pages can be reviewed before the feed has any.
 - Preview the design anytime: `?focus-demo=preview|live|recap` (sample
   content in `assets/focus-demo.json`, labelled as a demo on screen).
 
-### `data/news.json` — News (Claude's job; built from `data/news-raw.json`)
+### `data/news.json` — News (Claude's job)
 Rami, 2026-10-18, benchmarked on ForexFundamentals' News Sentiment page and
 built to beat it: every FX-relevant headline as an image card, a market filter,
 an expandable read, which way the headline pushes each currency, and a link out
 to the publisher. Flash stays the curated "developing now" desk; News is the
 full stream.
 
-**Two files, two owners, no shared writes:**
-- `data/news-raw.json` — **Hercules (ingest).** Raw headlines from the sources,
+**Since 2026-11-17 the News read gathers its own headlines; `news-raw.json` was deleted.** History of the old split:
+- `data/news-raw.json` — **Hercules (ingest, until 2026-11-17).** Raw headlines from the sources,
   newest first, keep ~72h:
   ```
   {"updated":"<ISO>","items":[{"id":"stable-unique","ts":"<ISO published>" | "date":"YYYY-MM-DD",

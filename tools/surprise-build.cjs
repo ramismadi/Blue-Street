@@ -4,7 +4,7 @@
    Writes data/surprises.json: for each currency, its latest data releases
    and whether each beat, missed or matched the forecast. The score's growth
    driver and the "Data surprises" dots on each currency page read it.
-   Replaces Hercules' hand-kept data/momentum.json (Rami, 2026-11-17).
+   Replaced Hercules' hand-kept momentum file (Rami, 2026-11-17).
 
    How a release is judged, in order:
    1. Both the result and the forecast hold a number: compare them, using the
@@ -56,8 +56,7 @@ const short = v => v == null ? null : String(v).split(/[(;]/)[0].trim().slice(0,
 const cal = load('calendar.json');
 if (!cal || !Array.isArray(cal.events)) { console.error('surprise-build: data/calendar.json missing or malformed'); process.exit(1); }
 const prev = load('surprises.json');
-/* First run: start from Hercules' hand-kept list so older releases carry over. */
-const seed = prev || load('momentum.json');
+const seed = prev;
 const kept = {};
 CCYS.forEach(c => { kept[c] = {}; ((((seed || {}).currencies || {})[c] || {}).recent || []).forEach(r => {
   kept[c][r.id] = { id: r.id, date: r.date, title: r.title, result: r.result, actual: prev ? r.actual : short(r.actual), forecast: prev ? r.forecast : short(r.forecast) };

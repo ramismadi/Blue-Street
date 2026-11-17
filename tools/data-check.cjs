@@ -39,7 +39,7 @@ const DAYS = '(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)';
 const STALE = new RegExp('\\b(today|tonight|tomorrow|yesterday|this (?:morning|afternoon|evening|week)|(?:on|this|next|last) ' + DAYS + '(?!,? (?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \\d))\\b', 'i');
 const dayWords = (where, t) => { const m = STALE.exec(String(t || '')); if (m) warns.push(where + ': "' + m[1] + '" goes stale, write the date — "' + String(t).slice(0, 80) + '"'); };
 
-const REQUIRED = ['banks', 'calendar', 'cot', 'engine', 'glossary', 'learn', 'marks', 'news', 'pillars', 'score-v2', 'story', 'words'];
+const REQUIRED = ['banks', 'calendar', 'cot', 'engine', 'glossary', 'learn', 'marks', 'news', 'pillars', 'score', 'story', 'words'];
 const d = {};
 REQUIRED.forEach(n => { d[n] = read(n); });
 ['rates', 'policy', 'surprises', 'markets', 'latest', 'focus'].forEach(n => { if (fs.existsSync(path.join(DIR, n + '.json'))) d[n] = read(n); });
@@ -63,8 +63,8 @@ if (d.words) {
   });
 }
 /* A currency summary must match its place on the board (Rami, 2026-11-16). */
-if (d.words && d['score-v2'] && d['score-v2'].currencies) {
-  const sc = {}; Object.entries(d['score-v2'].currencies).forEach(([c, x]) => { sc[c] = +x.points || 0; });
+if (d.words && d.score && d.score.currencies) {
+  const sc = {}; Object.entries(d.score.currencies).forEach(([c, x]) => { sc[c] = +x.points || 0; });
   const order = Object.keys(sc).sort((a, b) => sc[b] - sc[a]);
   const rank = c => { const s = sc[c]; return { best: order.findIndex(k => sc[k] === s) + 1, worst: order.length - order.slice().reverse().findIndex(k => sc[k] === s) }; };
   Object.entries((((d.words.currencies || {}).currencies) || {})).forEach(([c, v]) => {
@@ -76,7 +76,7 @@ if (d.words && d['score-v2'] && d['score-v2'].currencies) {
     if (want) warns.push('words.currencies.' + c + '.summary: says ' + want + ' but ' + c + ' ranks ' + (r.best === r.worst ? r.best : r.best + '–' + r.worst) + ' of ' + order.length + ' on the board');
   });
 }
-if (d['score-v2']) need(d['score-v2'].currencies && Object.keys(d['score-v2'].currencies).length === 8, 'score-v2.json: expected 8 currencies');
+if (d.score) need(d.score.currencies && Object.keys(d.score.currencies).length === 8, 'score.json: expected 8 currencies');
 if (d.engine) need(Array.isArray(d.engine.rows) && d.engine.rows.length === 7, 'engine.json: expected 7 rows');
 if (d.marks) ['fiscal', 'tot'].forEach(k => Object.entries(d.marks[k] || {}).forEach(([c, m]) => {
   need([-1, 0, 1].includes(m.mark), 'marks.json: ' + k + '.' + c + ' must be -1, 0 or 1');
