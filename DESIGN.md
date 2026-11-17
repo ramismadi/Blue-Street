@@ -273,7 +273,10 @@ Row ids: `policy`, `growth`, `inflation`, `risk`, `tot`, `positioning`,
 example — refresh it when conditions change. A pillar without an entry simply
 has no "What is this?" button.
 
-### `data/currencies.json` — Currencies (strength board + pair picker)
+### `data/currencies.json` — retired (Hercules' hand-scored board, until 2026-11-17)
+**No longer read by the site.** Since 2026-11-17 the strength board, gauges,
+breakdown, pair picker and score chart read `data/score-v2.json` (below).
+Kept for history; Hercules stopped writing it. The old shape, for reference:
 ```
 {"updated":"<ISO-8601>","as_of":"YYYY-MM-DD",   // edition date
  "method":"Score = sum of pillar scores (-1 / 0 / +1) ...",
@@ -340,11 +343,15 @@ writes it by hand.
 - The site reads `yields[ccy].y2` and `chg_1m` for the picker's rate-gap line.
   No file renders gracefully: the picker shows only today's headline-rate gap.
 
-### `data/score-v2.json` — Scoring v2, shadow run (Claude; script, since 2026-11-17)
-Built by `tools/score-build.cjs` in the Rates workflow. **Not read by the
-site.** Rami approved the approach on 2026-11-16 (measured, relative to the
-other seven, weighted, run beside the live score and tested on price history
-before it replaces anything).
+### `data/score-v2.json` — the currency score (Claude; script; on the site since 2026-11-17)
+Built by `tools/score-build.cjs` in the Rates workflow (three times a day, and
+whenever Hercules pushes `calendar.json` or `banks.json`, or `marks.json`
+changes). **The site's score** since 2026-11-17 (Rami): `app.js` `boardFrom()`
+turns it into the board the pages use. Each counted driver's `points` is its
+share of a score from −10 to +10, and the parts add up to the total. The
+rates driver sits in the Interest rates (`policy`) slot. Market mood shows
+"Not counted". Driver lines are the script's `why`. The editions write only
+each currency's `summary` in `words.json`.
 
 **Price-history test (2026-11-17, `tools/score-backtest.cjs`, workflow "Score
 test"):** every Friday 2016–2026, each measured driver rebuilt from what was
@@ -390,7 +397,34 @@ that place a currency somewhere other than its rank on the board. The
 edition and News tasks run it before pushing. It reports after the push;
 it cannot stop one, so the site's own filter stays the last line of defence.
 
-### `data/momentum.json` — surprise momentum (Hercules)
+### `data/surprises.json` — data surprises (Claude; script, since 2026-11-17)
+Built by `tools/surprise-build.cjs` from `calendar.json` in the Rates workflow.
+Same shape as the old `momentum.json` below (`currencies[CCY].recent[]` with
+`id, date, title, result: beat|miss|inline, actual, forecast`, newest first,
+`window` 6). Only medium and high importance releases with a `better`
+direction count. The result compares the first number in `actual` with
+`forecast` (in line within 0.05 or 1%), else reads the calendar `outcome`
+("Beat" / "Miss" / "In line"). The file keeps its own last six, since the
+calendar only keeps a few weeks. The first run carried over Hercules' list.
+Read by the site's Data surprises dots and the score's growth driver.
+
+### `data/policy.json` — central bank rates (Claude; script, since 2026-11-17)
+Built by `tools/policy-build.cjs`: each bank's headline rate (`rate`, upper
+end for a range; `display` for the site), `last_move {date, bp}`, `as_of`,
+`source`. Official sources: FRED (Fed range), ECB data portal (deposit
+rate), Bank of England (Bank Rate), Bank of Canada Valet, RBA F1.1; BIS
+policy-rate series (about a week behind) for the BoJ, SNB and RBNZ, and for
+the RBA if its table can't be read. `pending: true` when a meeting has ended
+that the series doesn't cover yet. The site, the score and the AI connector
+then keep `banks.json`'s rate. Otherwise this rate and last move are shown
+over `banks.json`'s, which keeps meetings and market odds.
+
+### `data/marks.json` — judged marks (Claude; the editions, since 2026-11-17)
+The parts of the score with no data feed: `fiscal` for all eight and `tot`
+for USD, GBP, CHF and NZD. Each is `{mark: -1|0|1, why}`, plain. Change a
+mark only when something real changed. Read by `score-build.cjs`.
+
+### `data/momentum.json` — retired (Hercules, until 2026-11-17; replaced by `surprises.json`)
 ```
 {"updated":"<ISO-8601>",
  "since":"2026-10-14",              // counting starts fresh with US CPI, Oct 14

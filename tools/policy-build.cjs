@@ -57,7 +57,7 @@ const fred = async id => series(rows(await get('https://fred.stlouisfed.org/grap
 let bis = null;
 async function bisSeries(area) {
   if (!bis) {
-    const t = await get('https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.JP+CH+NZ?startPeriod=' + START + '&format=csv');
+    const t = await get('https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/D.JP+CH+NZ+AU?startPeriod=' + START + '&format=csv');
     const r = rows(t), h = r[0], a = h.indexOf('REF_AREA'), d = h.indexOf('TIME_PERIOD'), v = h.indexOf('OBS_VALUE');
     bis = {};
     r.slice(1).forEach(x => { const n = x.length; (bis[x[a]] = bis[x[a]] || []).push([x[n - (h.length - d)], x[n - (h.length - v)]]); });
@@ -70,7 +70,15 @@ const SRC = {
   EUR: { label: 'ECB deposit facility rate (ECB data portal)', fn: async () => { const r = rows(await get('https://data-api.ecb.europa.eu/service/data/FM/D.U2.EUR.4F.KR.DFR.LEV?startPeriod=' + START + '&format=csvdata')); const d = r[0].indexOf('TIME_PERIOD'), v = r[0].indexOf('OBS_VALUE'); return { s: series(r.slice(1).map(x => [x[d], x[v]])) }; } },
   GBP: { label: 'Bank Rate (Bank of England)', fn: async () => { const from = new Date(Date.parse(START)); const f = p2(from.getUTCDate()) + '/' + Object.keys(MON)[from.getUTCMonth()].replace(/^./, c => c.toUpperCase()) + '/' + from.getUTCFullYear(); const r = rows(await get('https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=' + f + '&Dateto=now&SeriesCodes=IUDBEDR&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N')); return { s: series(r.slice(1).map(x => [x[0], x[1]])) }; } },
   CAD: { label: 'Bank of Canada target for the overnight rate (Valet)', fn: async () => { const j = JSON.parse(await get('https://www.bankofcanada.ca/valet/observations/V39079/json?start_date=' + START)); return { s: series(j.observations.map(o => [o.d, (o.V39079 || {}).v])) }; } },
-  AUD: { label: 'RBA cash rate target (table F1.1)', fn: async () => { const r = rows(await get('https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv')); const h = r.find(x => /^series id$/i.test((x[0] || '').trim())); const c = h.findIndex(x => x.trim() === 'FIRMMCRTD'); return { s: series(r.map(x => [x[0], x[c]])) }; } },
+  AUD: { label: 'RBA cash rate target (table F1.1)', fn: async () => {
+    const r = rows((await get('https://www.rba.gov.au/statistics/tables/csv/f1.1-data.csv')).replace(/^\uFEFF/, '').replace(/"/g, ''));
+    const h = r.find(x => /^series id$/i.test((x[0] || '').trim())) || [];
+    const c = h.findIndex(x => /^FIRMMCRT/i.test(x.trim()));
+    const s = c > 0 ? series(r.map(x => [x[0], x[c]])) : [];
+    if (s.length >= 5) return { s };
+    console.log('AUD: RBA table F1.1 unreadable (column ' + c + ', ' + r.length + ' rows); using the BIS series');
+    return { s: await bisSeries('AU'), label: 'RBA cash rate target (BIS, about a week behind)' };
+  } },
   JPY: { label: 'Bank of Japan policy rate (BIS, about a week behind)', lag: true, fn: async () => ({ s: await bisSeries('JP') }) },
   CHF: { label: 'SNB policy rate (BIS, about a week behind)', lag: true, fn: async () => ({ s: await bisSeries('CH') }) },
   NZD: { label: 'RBNZ official cash rate (BIS, about a week behind)', lag: true, fn: async () => ({ s: await bisSeries('NZ') }) }
@@ -84,14 +92,14 @@ const SRC = {
   const rates = {};
   for (const c of Object.keys(SRC)) {
     try {
-      const { s, display } = await SRC[c].fn();
+      const { s, display, label } = await SRC[c].fn();
       if (s.length < 5) throw new Error('only ' + s.length + ' readings');
       const [asOf, rate] = s[s.length - 1];
       if (!(rate > -2 && rate < 20)) throw new Error('rate out of range: ' + rate);
-      if ((Date.parse(today) - Date.parse(asOf)) / 864e5 > (SRC[c].lag ? 21 : 10)) throw new Error('stale: latest is ' + asOf);
+      if ((Date.parse(today) - Date.parse(asOf)) / 864e5 > (SRC[c].lag || label ? 21 : 10)) throw new Error('stale: latest is ' + asOf);
       let lm = null;
       for (let i = s.length - 1; i > 0; i--) if (Math.abs(s[i][1] - s[i - 1][1]) > 1e-9) { lm = { date: s[i][0], bp: Math.round((s[i][1] - s[i - 1][1]) * 100) }; break; }
-      const row = { rate, display: display || rate.toFixed(2) + '%', as_of: asOf, last_move: lm, source: SRC[c].label };
+      const row = { rate, display: display || rate.toFixed(2) + '%', as_of: asOf, last_move: lm, source: label || SRC[c].label };
       /* A meeting has ended since the series' last reading (decision day itself
          included): wait for the series to catch up. */
       const end = meet[c] && meet[c].next_meeting && meet[c].next_meeting.end;

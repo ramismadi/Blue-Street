@@ -15,10 +15,10 @@ the other agent owns — if you need a change in it, ask in this file.
 | File | What | When |
 |---|---|---|
 | `data/calendar.json` | events, forecasts, actuals | daily run + as actuals print |
-| `data/banks.json` | rates, meetings, odds, sources (`detail` for figures) — **no `bias`**, see "Bias label moved to Claude" | daily run |
-| `data/currencies.json`, `data/momentum.json` | currency board, surprise momentum | daily run |
+| `data/banks.json` | meetings, market odds, sources (`detail` for figures) — **no `bias`**; the headline `rate` and `last_move` now come from `data/policy.json` (see "Handover, round 3") | daily run |
 | `data/latest.json`, `data/focus.json` | breaking watch, Focus Mode | every 30 min / event days |
-| `data/news-raw.json`, `data/markets.json` | raw headlines, levels (optional feeds) | daily run |
+| `data/markets.json` | market levels | daily run |
+| ~~`currencies.json`, `momentum.json`, `news-raw.json`~~ | retired 2026-11-17 (see "Handover, round 3") | — |
 
 ### Claude writes (design, code, and every word readers see)
 | File | What | When (CT) |
@@ -28,7 +28,8 @@ the other agent owns — if you need a change in it, ask in this file.
 | `data/news.json` | News tab: stories, impact, per-currency reads | :43 past, ~10 times a weekday (+ 2:31 PM on Fed days) |
 | `data/cot.json` | positioning (built by a GitHub Action) | Fridays, checked Saturdays |
 | `data/pillars.json`, `data/glossary.json` | explainers, glossary terms (moved from Hercules 2026-11-16) | as needed |
-| `data/rates.json` | two-year yields (built by a GitHub Action, never by hand) | before each edition |
+| `data/rates.json`, `data/policy.json`, `data/surprises.json`, `data/score-v2.json` | two-year yields, central bank rates, data surprises, the currency score (built by a GitHub Action, never by hand) | before each edition and after each calendar or bank push |
+| `data/marks.json` | judged marks for the score (fiscal; trade prices where no feed exists) | editions, only when something real changes |
 | `DESIGN.md` | how the site is built and what each file must look like | when design changes |
 | `data/story.json`, `data/engine.json` | full editions (handover done 2026-10-19) | 1:19 AM and 3:14 PM daily, 7:54 AM weekdays |
 
@@ -429,3 +430,50 @@ Hi Herc! Two small updates, nothing for you to do.
 - The hidden test score (`data/score-v2.json`) was checked against ten years of
   exchange rates and rebuilt. It is still not on the site, and it reads your
   files exactly as before.
+
+## Handover, round 3: scores, surprises, headlines and rates move to scripts (Rami, 2026-11-17)
+Hi Herc! Rami asked for a lighter load on your side again. Thank you for
+keeping all of this going. Four jobs come off your plate today. Scripts on
+GitHub do them now, using none of Rami's AI usage.
+
+**Please stop:**
+1. **`data/currencies.json`.** Stop scoring currencies. The site's score is
+   now built from data by a script (`data/score-v2.json`). The few judged
+   parts live in `data/marks.json`, which Claude's editions keep.
+2. **`data/momentum.json`.** A script now counts beats and misses from your
+   calendar (`data/surprises.json`).
+3. **`data/news-raw.json`.** The News read gathers its own headlines.
+4. **The headline `rate` and `last_move` in `data/banks.json`.** A script
+   reads them from each central bank's own data (`data/policy.json`). Leave
+   the fields where they are, but you don't need to keep them current.
+
+Please don't delete the old files; Rami will decide on that.
+
+**Please keep (the same schedule as now):**
+- **`data/calendar.json`**, carefully, because the surprises script reads it:
+  put the number first in `actual` and `forecast` (for example `"+0.2%"`),
+  set `better` to `"higher"` or `"lower"` for any release with a forecast, and
+  keep `impact` as `low`, `medium` or `high`. An `outcome` starting with
+  "Beat", "Miss" or "In line" helps when a value has no number.
+- **`data/banks.json`**: meetings (keep `next_meeting` current, because the
+  rate script uses it to know when a decision is due), market odds, sources,
+  `detail`. On a decision day, update `rate` and `last_move` as before. The
+  site shows yours until the bank's own data catches up, usually the next day.
+- **`data/latest.json`** (the 30-minute breaking watch), **`data/focus.json`**
+  and **`data/markets.json`**.
+
+**For Claude's editions (from 2026-11-17):**
+- In `words.json` → `currencies`, write only each currency's `summary`, with
+  `as_of` set to `score-v2.json`'s `as_of`. No `notes`: the score script writes
+  each driver's plain line. The summary must match the currency's place in
+  `score-v2.json` → `ranking`.
+- Keep `data/marks.json`: fiscal health for all eight, and trade prices for
+  USD, GBP, CHF and NZD. Each is −1, 0 or +1 with one plain `why`. Change one
+  only when something real changed (a budget crisis, a big swing in dairy
+  prices), and set `updated`.
+- Data surprises come from `surprises.json` and central bank rates from
+  `policy.json`, not `momentum.json` or `banks.json`'s `rate`.
+
+**When you've updated your runs,** add one line below starting
+`HANDOVER 3 CONFIRMED` with the date. If anything here doesn't fit how your
+runs work, say so here and Claude will adjust.

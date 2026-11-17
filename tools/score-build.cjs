@@ -64,7 +64,9 @@ function rateNum(r) {
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
 const median = a => { const s = a.slice().sort((x, y) => x - y), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
 const r2 = v => Math.round(v * 100) / 100;
-const pts = v => Math.abs(v).toFixed(2).replace(/\.?0+$/, '');
+const pts = v => { const a = Math.abs(v); return a >= 1 ? a.toFixed(1).replace(/\.0$/, '') : a.toFixed(2).replace(/0$/, ''); };
+const PLACE = { USD: 'the US', EUR: 'the euro area', GBP: 'the UK', JPY: 'Japan', CHF: 'Switzerland', CAD: 'Canada', AUD: 'Australia', NZD: 'New Zealand' };
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
 
 async function fred(id) {
   const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 40000);
@@ -159,11 +161,11 @@ async function rbaCommodities() {
     // rates
     if (pol[c] != null) {
       const g = pol[c] - polMed, parts = [clamp(g / 1.5, -1, 1)];
-      let why = 'Its central bank rate is ' + (Math.abs(g) < 0.13 ? 'in the middle of the eight' : pts(g) + ' points ' + (g > 0 ? 'above' : 'below') + ' the middle of the eight');
+      let why = cap(BANK[c]) + "'s rate is " + (Math.abs(g) < 0.13 ? 'in the middle of the eight' : pts(g) + ' points ' + (g > 0 ? 'above' : 'below') + ' the middle of the eight');
       if (y2Med != null && y2[c] != null) {
         const gy = y2[c] - y2Med; parts.push(clamp(gy / 1.5, -1, 1));
-        why += Math.abs(gy) < 0.13 ? ', and its two-year bond yield is close to the middle too.' : ', and its two-year bond yield is ' + pts(gy) + ' points ' + (gy > 0 ? 'above' : 'below') + ' the middle.';
-      } else why += '. No two-year yield feed covers it yet.';
+        why += Math.abs(gy) < 0.13 ? ', and ' + PLACE[c] + "'s two-year bond yield is close to the middle too." : ', and ' + PLACE[c] + "'s two-year bond yield is " + pts(gy) + ' points ' + (gy > 0 ? 'above' : 'below') + ' the middle.';
+      } else why += '. No daily two-year yield covers ' + PLACE[c] + ' yet.';
       if (moveMed != null && y[c] && typeof y[c].chg_1m === 'number') {
         const rel = y[c].chg_1m - moveMed;
         if (Math.abs(rel) >= 0.08) why += ' Over the past month that yield has ' + (rel > 0 ? 'risen faster than' : 'fallen behind') + ' the others.';
@@ -174,13 +176,13 @@ async function rbaCommodities() {
     if (gapMed != null && gap[c] != null) {
       const rel = gap[c] - gapMed, rate = cpi[c].rate;
       P.inflation = { value: r2(2 * clamp(rel / 1.5, -1, 1)), measured: true,
-        why: 'Prices are rising about ' + rate.toFixed(1) + '% a year against ' + BANK[c] + "'s goal of " + GOAL[c] + '%, ' + (Math.abs(rel) < 0.3 ? 'about as far from goal as most of the others.' : rel > 0 ? 'hotter than in most of the others, which keeps pressure on rates.' : 'cooler than in most of the others, which eases pressure on rates.') };
+        why: 'Prices in ' + PLACE[c] + ' are rising about ' + rate.toFixed(1) + '% a year against ' + BANK[c] + "'s goal of " + GOAL[c] + '%, ' + (Math.abs(rel) < 0.3 ? 'about as far from goal as most of the others.' : rel > 0 ? 'hotter than in most of the others, which keeps pressure on rates.' : 'cooler than in most of the others, which eases pressure on rates.') };
     } else P.inflation = { value: 0, measured: false, why: 'No inflation reading this run, so this counts as neutral.' };
     // growth: beats against misses in the latest releases (not yet tested)
     const rec = (((mom || {}).currencies || {})[c] || {}).recent || [];
     if (rec.length >= 3) {
       const b = rec.filter(x => x.result === 'beat').length, m = rec.filter(x => x.result === 'miss').length;
-      P.growth = { value: r2(2 * (b - m) / rec.length), measured: true, why: 'Of its last ' + rec.length + ' data releases, ' + b + ' beat forecasts and ' + m + ' missed.' };
+      P.growth = { value: r2(2 * (b - m) / rec.length), measured: true, why: 'Of ' + PLACE[c] + "'s last " + rec.length + ' data releases, ' + b + ' beat forecasts and ' + m + ' missed.' };
     } else P.growth = { value: 0, measured: false, why: 'Too few recent data releases to judge, so this counts as neutral.' };
     // risk mood: context only, not counted
     if (mood != null) P.risk = { value: r2(2 * mood * HAVEN[c]), measured: true, why: moodWhy + (HAVEN[c] === 0 || Math.abs(mood) <= 0.33 ? ', which does little for ' + NAME[c] + '.' : ', which usually ' + (mood * HAVEN[c] > 0 ? 'helps ' : 'hurts ') + NAME[c] + ' at first.') };
@@ -192,9 +194,9 @@ async function rbaCommodities() {
     const m = cot && (cot.markets || []).find(x => x.id === c);
     if (m && m.hf && isFinite(m.hf.pct)) {
       const p = m.hf.pct;
-      P.positioning = p >= 90 ? { value: -2, measured: true, why: 'Hedge funds are betting on it more heavily than at almost any time since 2015, which leaves few buyers left.' }
-        : p <= 10 ? { value: 2, measured: true, why: 'Hedge funds are betting against it more heavily than at almost any time since 2015, which leaves few sellers left.' }
-        : { value: r2((p - 50) / 50 * 0.5), measured: true, why: 'Hedge fund bets are not at an extreme, so this counts for little.' };
+      P.positioning = p >= 90 ? { value: -2, measured: true, why: 'Hedge funds are betting on ' + NAME[c] + ' more heavily than at almost any time since 2015, which leaves few buyers left.' }
+        : p <= 10 ? { value: 2, measured: true, why: 'Hedge funds are betting against ' + NAME[c] + ' more heavily than at almost any time since 2015, which leaves few sellers left.' }
+        : { value: r2((p - 50) / 50 * 0.5), measured: true, why: 'Hedge fund bets on ' + NAME[c] + ' are not at an extreme, so this counts for little.' };
     } else P.positioning = { value: 0, measured: false, why: 'No positioning reading this week, so this counts as neutral.' };
     // fiscal: a judged mark (no single number captures it)
     P.fiscal = { value: 2 * mark(c, 'fiscal'), measured: false, why: markWhy(c, 'fiscal', 'Public finances are not a factor right now.') };
