@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '140';
+  var ASSET_VERSION = '141';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -3436,6 +3436,13 @@
     if (!ch) return;
     var sec = el('section', 'hub-sec hub-read card gl-scope');
     sec.appendChild(chapterRead(ch));
+    // Phones (2026-11-17): the full read opens short, with the rest behind a
+    // tap, so the page is not six screens long. CSS only clips it on phones.
+    sec.classList.add('clip');
+    var more = el('button', 'hub-read-more', 'Read the full story');
+    more.type = 'button';
+    more.addEventListener('click', function () { sec.classList.remove('clip'); more.remove(); });
+    sec.appendChild(more);
     box.appendChild(sec);
   }
 
