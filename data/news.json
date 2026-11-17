@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T11:53:15Z",
+  "updated": "2026-11-17T12:47:57Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -14,13 +14,13 @@
     },
     "GBP": {
       "lean": "bearish",
-      "ts": "2026-11-16T20:00:00Z",
-      "text": "The pound has fallen for six days in a row against the dollar, to about $1.32, as markets bet on Federal Reserve rate rises in December and January. Bank of England chief economist Huw Pill backs another UK rise in December, but that is already expected and has not held the pound up."
+      "ts": "2026-11-17T12:47:57Z",
+      "text": "The pound sits near $1.32 after falling for most of the past week, as bets on more Federal Reserve rate rises lift the dollar. Tuesday's UK jobs report showed pay and job openings cooling but unemployment dipping, which leaves the Bank of England's expected December rate rise in place without giving the pound fresh support."
     },
     "JPY": {
-      "lean": "bearish",
-      "ts": "2026-11-16T20:00:00Z",
-      "text": "The dollar sits just under 160 yen because US rates are far above Japan's, and Finance Minister Satsuki Katayama has warned Tokyo will act against fast moves. Bank of Japan board member Hajime Takata urged early rate rises on Monday, but the economy shrank in July to September and most of the board has preferred to wait."
+      "lean": "mixed",
+      "ts": "2026-11-17T12:47:57Z",
+      "text": "The dollar sits just under 160 yen because US rates are far above Japan's, and Finance Minister Satsuki Katayama has warned Tokyo will act against fast moves. On Tuesday a slide in stock markets sent some money into the yen as a safe place, pulling the dollar back toward 159, so the pressure on the yen has eased a little."
     },
     "CHF": {
       "lean": "mixed",
@@ -49,11 +49,44 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-17T03:47:39Z",
-      "text": "Oil keeps drifting lower, with Brent near $92, because Middle East exports are recovering and the International Energy Agency expects more supply than demand this quarter. Attacks on Gulf shipping continue but move prices less each time; the OPEC+ meeting on November 29 on next year's output is the next big decision on supply."
+      "ts": "2026-11-17T12:47:57Z",
+      "text": "Oil keeps drifting lower, with Brent near $92, because Middle East exports are recovering and the International Energy Agency expects more supply than demand this quarter. Attacks on Gulf shipping continue, including a tanker hit twice off Oman overnight, but move prices less each time; the OPEC+ meeting on November 29 on next year's output is the next big decision on supply."
     }
   },
   "items": [
+    {
+      "id": "mql5-yen-firms-risk-off-15890-20261117",
+      "date": "2026-11-17",
+      "source": "MQL5 (Market Outlook)",
+      "url": "https://www.mql5.com/en/blogs/post/780926",
+      "image": null,
+      "headline": "Risk-off trading boosts the yen; USD/JPY briefly falls to 158.90",
+      "story": "tech-selloff",
+      "story_title": "The AI stock sell-off before Nvidia's results",
+      "pillar": "risk",
+      "summary": "The yen gained in early London trading as falling Asian shares sent money toward safe currencies, pulling the dollar back from just under 160 yen.",
+      "beats": {
+        "was": "The dollar has climbed to near 160 yen because US interest rates are far above Japan's, and Japanese officials have warned they may step in near that level. A sell-off in technology shares hit Wall Street hard on Monday ahead of chipmaker Nvidia's results on Tuesday evening.",
+        "happened": "The dollar slipped from about 159.6 yen early in Tokyo to about 158.9 in early London as Asian shares and oil fell. The dollar index had touched a new high for the year in Asia before easing, and the euro bounced back above $1.10 after dipping below it.",
+        "means": "When shares fall sharply, investors tend to buy the yen as a safe place, and that is now pulling against the rate gap that has kept the dollar strong. The dollar's run paused before US retail sales and Nvidia's results.",
+        "fx": "A risk-off day helps the yen even without any Japanese action, and gives the dollar a brief breather after seven days up."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Falling shares sent money into the yen, pulling the dollar off 160."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A pause in the dollar's seven-day climb ahead of US data and Nvidia results."
+        }
+      ],
+      "watch": "Nvidia's results after the US close on Tuesday: another tech slide would likely add to yen demand."
+    },
     {
       "id": "crozax-dollar-seventh-day-euro-below-110-20261117",
       "date": "2026-11-17",
@@ -220,6 +253,66 @@
       "watch": "Australian jobs figures and the fourth-quarter inflation reading: further rises in unemployment would strengthen the three members who wanted to stop."
     },
     {
+      "id": "thenational-hormuz-tanker-twice-oman-iran-20261117",
+      "ts": "2026-11-17T12:34:46Z",
+      "source": "The National",
+      "url": "https://thenationalnews.com/news/gulf/2026/11/17/iran-and-oman-discuss-maritime-security-amid-rising-attacks-in-strait-of-hormuz",
+      "image": "https://www.thenationalnews.com/resizer/v2/M636EE246BDARB6FQVC77BCTQI.jpg?auth=588ab518b35ed50a4e335c42e67286cbe9651dcc3572a7e7223d079cef018f5e&focal=995%2C539&width=1200&height=630",
+      "headline": "Oman discusses maritime security with Iran amid rising attacks in Strait of Hormuz",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "A tanker was hit twice off Oman overnight and its crew could not be accounted for, while Iran's foreign minister held talks in Oman on keeping sea routes safe.",
+      "beats": {
+        "was": "The US and Israel have been at war with Iran since late February, and the Strait of Hormuz, which carried about a fifth of the world's energy before the war, has seen repeated attacks on ships. Oil has still been falling because exports through the strait are recovering.",
+        "happened": "The UK navy's shipping-alert service said a tanker about 7 nautical miles off Khasab, Oman, was struck on Monday night, caught fire in its engine room, and was hit again later; the crew was reported unaccounted for. Iran's Revolutionary Guards claimed two more ships hit naval mines in the strait, which has not been confirmed. In Muscat, Iranian Foreign Minister Abbas Araghchi and Omani Foreign Minister Badr Albusaidi discussed reopening dialogue and protecting shipping.",
+        "means": "Attacks on shipping keep coming, but traffic and oil prices have mostly shrugged them off. Oman's talks are a small sign that a diplomatic channel stays open.",
+        "fx": "Each new strike adds a little risk to oil supply, but with prices drifting lower on an expected glut, the push on oil and oil-linked currencies is small."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Another tanker hit near Hormuz, though prices have shrugged off similar attacks."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Continued Gulf violence keeps some demand for safe currencies."
+        }
+      ],
+      "watch": "Whether attacks spread to big crude carriers, and whether the Oman talks lead to any wider contact between Iran and the US."
+    },
+    {
+      "id": "reuters-uk-pay-slows-vacancies-20261117",
+      "ts": "2026-11-17T07:25:44Z",
+      "source": "Reuters (via RTÉ)",
+      "url": "https://www.rte.ie/news/business/2026/1117/1599494-uk-wages-growth-figures/",
+      "image": "https://www.rte.ie/images/0015558d-1600.jpg",
+      "headline": "UK wage growth slows to 3.5% in three months to September",
+      "story": "boe-hikes",
+      "story_title": "Bank of England: how far do rates rise?",
+      "pillar": "policy",
+      "summary": "UK pay growth cooled a little more than expected and job openings fell to their lowest since 2021, but unemployment also dipped. The pound barely moved.",
+      "beats": {
+        "was": "The Bank of England raised rates in November for the first time in more than three years, because UK inflation is running well above its 2% goal. Markets expect another rise in December, and pay growth is one of the main things the Bank watches.",
+        "happened": "Regular pay, leaving out bonuses, grew 3.5% from a year earlier in July to September, down from 3.7% and just under forecasts. Unemployment slipped to 4.6% instead of rising, but the tax office's payroll count fell by about 34,000 in October and job openings dropped to 690,000, the fewest since early 2021.",
+        "means": "Slower pay and fewer openings point to a cooling job market, which takes a little heat out of inflation. It is not weak enough to change the Bank's December plans, so markets still see about a 90% chance of a rise.",
+        "fx": "A mixed report that leaves the December rate rise in place, so the pound keeps taking its lead from the strong dollar rather than from UK news."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Pay and job openings cooled, but unemployment fell; December rise still about 90% expected."
+        }
+      ],
+      "watch": "UK inflation for October, out Wednesday morning: a high reading would firm up the December rise."
+    },
+    {
       "id": "reuters-oil-slips-surplus-opec-review-20261117",
       "ts": "2026-11-17T02:37:52Z",
       "source": "Reuters (via Business Recorder)",
@@ -278,6 +371,99 @@
         }
       ],
       "watch": "The Reserve Bank of New Zealand's decision on December 9: a rise would match what this survey expects; a hold would hurt the kiwi."
+    },
+    {
+      "id": "reuters-hammack-small-steps-bloombergtv-20261116",
+      "date": "2026-11-16",
+      "source": "Reuters (via 93.3 The Drive)",
+      "url": "https://www.933thedrive.com/2026/11/16/feds-hammack-reiterates-case-for-slow-steady-rate-hikes-bloomberg-tv/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/16/2026-11-16T193350Z_1_LYNXNPEMAF1UC_RTROPTP_3_USA-FED-HAMMACK.JPG",
+      "headline": "Fed's Hammack reiterates case for slow, steady rate hikes -Bloomberg TV",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "policy",
+      "summary": "Cleveland Fed President Beth Hammack said on Monday inflation pressure is building, but she prefers raising rates in small steps. She added the Fed can move faster if it falls behind.",
+      "beats": {
+        "was": "The Federal Reserve's target range is 3.75%-4%, and markets expect a quarter-point rise at the December 8-9 meeting after a hot October inflation report.",
+        "happened": "In a Bloomberg TV interview, Hammack said she sees mounting inflation pressure but is not ready for a more aggressive path. She said she likes smaller moves, but the Fed could make larger ones if it gets behind on inflation.",
+        "means": "Another Fed official backs steady rises, which supports pricing for December and beyond. Her preference for small steps argues against the half-point move some traders have bet on.",
+        "fx": "Steady support for the US dollar from higher expected rates; it does not add to the case for a bigger December move."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A Fed president backs more rate rises and keeps larger moves on the table."
+        }
+      ],
+      "watch": "The Fed's October meeting minutes on Wednesday, for how many officials wanted to move faster."
+    },
+    {
+      "id": "reuters-canada-cpi-october-holds-20261116",
+      "date": "2026-11-16",
+      "source": "Reuters (via TradingView)",
+      "url": "https://www.tradingview.com/news/reuters.com,2026-11-16:newsml_SCLGMEM35:0-canada-s-annual-inflation-rate-holds-at-3-1-in-october/",
+      "image": null,
+      "headline": "Canada's annual inflation rate holds at 3.1% in October",
+      "story": "boc-december",
+      "story_title": "Will the Bank of Canada raise rates on December 9?",
+      "pillar": "inflation",
+      "summary": "Canadian inflation stayed at 3.1% in October, a touch below the 3.2% forecast. The Bank of Canada's preferred core measures sit close to its 2% goal, which weakens the case for a rate rise in December.",
+      "beats": {
+        "was": "Inflation in Canada was 3.1% in September, pushed up by fuel costs from the Middle East war. The Bank of Canada has said it is ready to raise rates if those energy costs spread into other prices, and it next decides on December 9.",
+        "happened": "Statistics Canada said prices rose 3.1% from a year earlier in October, against forecasts of 3.2%, and 0.2% from September. Without food and energy, inflation was 1.8%. The bank's own core measures came in at 2.0% for the median and 1.8% for the trimmed mean.",
+        "means": "Energy is lifting the headline number, but it is not spreading into everyday prices. That gives the Bank of Canada room to hold in December; bank ING sees January as the more likely time for any rise.",
+        "fx": "With fewer reasons for the Bank of Canada to act soon, the Canadian dollar has less support against a US dollar lifted by expected Fed rate rises. The US dollar was near 1.43 Canadian dollars, close to its October high."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slightly softer inflation and core near 2% make a December Bank of Canada rise less likely."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The gap between expected US and Canadian rate rises widens a little."
+        }
+      ],
+      "watch": "Bank of Canada decision on December 9: a hold would confirm that energy costs are not yet a reason to raise rates."
+    },
+    {
+      "id": "cnbc-gold-one-year-low-fed-bets-20261116",
+      "date": "2026-11-16",
+      "source": "CNBC",
+      "url": "https://www.cnbc.com/2026/11/16/gold-holds-steady-as-investors-await-warsh-remarks-for-rate-signals.html",
+      "image": null,
+      "headline": "Gold falls to more than one-year low on resilient dollar as hawkish Fed bets build",
+      "story": "gold-fed-cpi",
+      "story_title": "Gold: rising US rates vs war risk",
+      "pillar": "rates",
+      "summary": "Gold fell about 1% on Monday to near $3,840 an ounce, its lowest since October 2025, and silver dropped 3%. A strong dollar and expected Fed rate rises are outweighing demand linked to the Middle East war.",
+      "beats": {
+        "was": "Gold lost about 4.6% last week after US inflation figures for October came in hot and markets moved to price a December Federal Reserve rate rise as close to certain.",
+        "happened": "Spot gold slid to about $3,840 an ounce, briefly near $3,832, after an early bounce faded. Silver fell about 3% to $47.25, also a one-year low. The dollar index stood at its highest since April 2025, and Goldman Sachs cut its end-2027 gold forecast to $4,650.",
+        "means": "Higher US rates make gold, which pays no interest, less attractive to hold, and a dearer dollar makes it costlier for buyers abroad. Gulf attacks and tanker claims have not been enough to bring safe-haven buyers back.",
+        "fx": "Gold is moving with US rate expectations rather than with war news. Fed Chair Kevin Warsh speaks on Monday, and minutes of the Fed's October meeting come on Wednesday."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A fresh one-year low as bets on Fed rate rises firm and the dollar climbs."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The dollar index at its highest since April 2025 is the main weight on gold."
+        }
+      ],
+      "watch": "Fed Chair Kevin Warsh on Monday: talk of further rate rises would keep pressure on gold."
     },
     {
       "id": "reuters-dollar-sixth-day-nyclose-20261116",
@@ -422,99 +608,6 @@
         }
       ],
       "watch": "The Philadelphia Fed's factory survey on Thursday: a second weak reading would make the slowdown look broader."
-    },
-    {
-      "id": "reuters-hammack-small-steps-bloombergtv-20261116",
-      "date": "2026-11-16",
-      "source": "Reuters (via 93.3 The Drive)",
-      "url": "https://www.933thedrive.com/2026/11/16/feds-hammack-reiterates-case-for-slow-steady-rate-hikes-bloomberg-tv/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/16/2026-11-16T193350Z_1_LYNXNPEMAF1UC_RTROPTP_3_USA-FED-HAMMACK.JPG",
-      "headline": "Fed's Hammack reiterates case for slow, steady rate hikes -Bloomberg TV",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "Cleveland Fed President Beth Hammack said on Monday inflation pressure is building, but she prefers raising rates in small steps. She added the Fed can move faster if it falls behind.",
-      "beats": {
-        "was": "The Federal Reserve's target range is 3.75%-4%, and markets expect a quarter-point rise at the December 8-9 meeting after a hot October inflation report.",
-        "happened": "In a Bloomberg TV interview, Hammack said she sees mounting inflation pressure but is not ready for a more aggressive path. She said she likes smaller moves, but the Fed could make larger ones if it gets behind on inflation.",
-        "means": "Another Fed official backs steady rises, which supports pricing for December and beyond. Her preference for small steps argues against the half-point move some traders have bet on.",
-        "fx": "Steady support for the US dollar from higher expected rates; it does not add to the case for a bigger December move."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A Fed president backs more rate rises and keeps larger moves on the table."
-        }
-      ],
-      "watch": "The Fed's October meeting minutes on Wednesday, for how many officials wanted to move faster."
-    },
-    {
-      "id": "reuters-canada-cpi-october-holds-20261116",
-      "date": "2026-11-16",
-      "source": "Reuters (via TradingView)",
-      "url": "https://www.tradingview.com/news/reuters.com,2026-11-16:newsml_SCLGMEM35:0-canada-s-annual-inflation-rate-holds-at-3-1-in-october/",
-      "image": null,
-      "headline": "Canada's annual inflation rate holds at 3.1% in October",
-      "story": "boc-december",
-      "story_title": "Will the Bank of Canada raise rates on December 9?",
-      "pillar": "inflation",
-      "summary": "Canadian inflation stayed at 3.1% in October, a touch below the 3.2% forecast. The Bank of Canada's preferred core measures sit close to its 2% goal, which weakens the case for a rate rise in December.",
-      "beats": {
-        "was": "Inflation in Canada was 3.1% in September, pushed up by fuel costs from the Middle East war. The Bank of Canada has said it is ready to raise rates if those energy costs spread into other prices, and it next decides on December 9.",
-        "happened": "Statistics Canada said prices rose 3.1% from a year earlier in October, against forecasts of 3.2%, and 0.2% from September. Without food and energy, inflation was 1.8%. The bank's own core measures came in at 2.0% for the median and 1.8% for the trimmed mean.",
-        "means": "Energy is lifting the headline number, but it is not spreading into everyday prices. That gives the Bank of Canada room to hold in December; bank ING sees January as the more likely time for any rise.",
-        "fx": "With fewer reasons for the Bank of Canada to act soon, the Canadian dollar has less support against a US dollar lifted by expected Fed rate rises. The US dollar was near 1.43 Canadian dollars, close to its October high."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Slightly softer inflation and core near 2% make a December Bank of Canada rise less likely."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The gap between expected US and Canadian rate rises widens a little."
-        }
-      ],
-      "watch": "Bank of Canada decision on December 9: a hold would confirm that energy costs are not yet a reason to raise rates."
-    },
-    {
-      "id": "cnbc-gold-one-year-low-fed-bets-20261116",
-      "date": "2026-11-16",
-      "source": "CNBC",
-      "url": "https://www.cnbc.com/2026/11/16/gold-holds-steady-as-investors-await-warsh-remarks-for-rate-signals.html",
-      "image": null,
-      "headline": "Gold falls to more than one-year low on resilient dollar as hawkish Fed bets build",
-      "story": "gold-fed-cpi",
-      "story_title": "Gold: rising US rates vs war risk",
-      "pillar": "rates",
-      "summary": "Gold fell about 1% on Monday to near $3,840 an ounce, its lowest since October 2025, and silver dropped 3%. A strong dollar and expected Fed rate rises are outweighing demand linked to the Middle East war.",
-      "beats": {
-        "was": "Gold lost about 4.6% last week after US inflation figures for October came in hot and markets moved to price a December Federal Reserve rate rise as close to certain.",
-        "happened": "Spot gold slid to about $3,840 an ounce, briefly near $3,832, after an early bounce faded. Silver fell about 3% to $47.25, also a one-year low. The dollar index stood at its highest since April 2025, and Goldman Sachs cut its end-2027 gold forecast to $4,650.",
-        "means": "Higher US rates make gold, which pays no interest, less attractive to hold, and a dearer dollar makes it costlier for buyers abroad. Gulf attacks and tanker claims have not been enough to bring safe-haven buyers back.",
-        "fx": "Gold is moving with US rate expectations rather than with war news. Fed Chair Kevin Warsh speaks on Monday, and minutes of the Fed's October meeting come on Wednesday."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A fresh one-year low as bets on Fed rate rises firm and the dollar climbs."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The dollar index at its highest since April 2025 is the main weight on gold."
-        }
-      ],
-      "watch": "Fed Chair Kevin Warsh on Monday: talk of further rate rises would keep pressure on gold."
     },
     {
       "id": "sharecast-eurozone-industrial-production-sept-20261116",
@@ -793,6 +886,129 @@
       "watch": "Euro-area inflation for November, due in early December: a sharp drop would weaken the case for any ECB move after December."
     },
     {
+      "id": "investing-gharibabadi-iran-wont-wait-20261115",
+      "date": "2026-11-15",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/economy-news/iran-claims-fresh-strike-on-us-base-as-hormuz-shipping-crisis-deepens-5027672",
+      "image": "https://content-media.investing.com/news/moved_LYNXMPEM370Y0_1200_L.jpg",
+      "headline": "Iran says it will not wait for the US to attack first",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's deputy foreign minister Kazem Gharibabadi said Iran will not wait to be attacked and suggested US diplomacy is cover to prepare new strikes. He also said UN nuclear inspectors stay locked out for now.",
+      "beats": {
+        "was": "Iran and the US have been at war since February, with Iran mining the Strait of Hormuz, the narrow sea lane that normally carries about a fifth of the world's oil. A June deal opened a 60-day window for talks that has now run out.",
+        "happened": "Gharibabadi said the Revolutionary Guards are building missiles with longer ranges and will not let the International Atomic Energy Agency, the UN nuclear watchdog, into nuclear sites until Iran's conditions are met. The same day Yemen's Houthis claimed drone hits on pumping stations of Saudi Arabia's East-West pipeline, which Saudi Arabia did not confirm.",
+        "means": "Tehran is talking tougher just as Trump weighs pausing strikes, so the risk of a fresh round of fighting has not gone away. The East-West pipeline matters because it lets Saudi oil skip Hormuz.",
+        "fx": "Keeps a war premium in oil, mildly helping the Canadian dollar and hurting oil importers like Japan; adds a little safe-place demand for the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Harder Iranian line and unconfirmed pipeline claims keep supply worries alive."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Threat of new fighting adds some safe-place demand."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so higher prices hurt."
+        }
+      ],
+      "watch": "Whether Saudi Arabia confirms any damage to the East-West pipeline, and what comes out of Iran's foreign minister's Oman visit on Tuesday."
+    },
+    {
+      "id": "gulfnews-saudi-intercepts-houthi-missiles-riyadh-20261115",
+      "date": "2026-11-15",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-arabia-intercepts-houthi-missiles-targeting-riyadh-as-bahrain-issues-threat-alert-1.500747797",
+      "image": "https://media.assettype.com/gulfnews%2F2026-10-26%2F1zeomq5w%2FMecca-in-Saudi-Arabia?rect=0%2C850%2C6000%2C3150&w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "Saudi Arabia intercepts Houthi missiles targeting Riyadh as Iran claims Bahrain drone attack",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Saudi air defences shot down two ballistic missiles that Yemen's Houthis fired at Riyadh on Sunday, plus drones over the oil-rich Eastern Province. Nothing was reported hit.",
+      "beats": {
+        "was": "Iran and the US have been at war since February, and Yemen's Houthis, who are backed by Iran, have been firing at Saudi Arabia, the world's biggest oil exporter. Last week Houthi strikes on Saudi energy sites added about $3 to the oil price in a day.",
+        "happened": "The spokesman for the Saudi-led coalition in Yemen said two Houthi ballistic missiles aimed at the Saudi capital were destroyed, along with drones over the Eastern Province, where most Saudi oil is pumped. It came the same morning Bahrain said it stopped Iranian drones aimed at a US radar site.",
+        "means": "No damage this time, but the Houthis are now aiming at the capital and the oil region on the same day, and the Group of Seven rich nations condemned the attacks. A hit on Saudi oil sites would matter far more than another failed attack.",
+        "fx": "Keeps a small war premium in oil, which supports the Canadian dollar and weighs on big oil importers like Japan and the euro area; the Swiss franc gets a little safe-place demand."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Attacks on Saudi Arabia keep supply risk alive, though nothing was hit."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More Gulf attacks add some demand for a safe place to hold money."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil helps Canada's main export."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so higher prices hurt."
+        }
+      ],
+      "watch": "Whether any Houthi missile or drone gets through to a Saudi oil site, and whether the Gulf calms around Iran's foreign minister's trip to Oman on Tuesday."
+    },
+    {
+      "id": "almonitor-reuters-yemen-forces-leave-bab-el-mandeb-20261115",
+      "date": "2026-11-15",
+      "source": "Al-Monitor (Reuters)",
+      "url": "https://www.al-monitor.com/originals/2026/11/yemen-government-forces-withdraw-area-near-bab-el-mandeb-strait-houthis-control",
+      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-15T083942Z_2_LYNXNPEMAE04X_RTROPTP_3_IRAN-CRISIS-YEMEN.JPG?h=c9f93661&itok=turXqShl",
+      "headline": "Yemen government forces withdraw from area near Bab el-Mandeb Strait, Houthis in control",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Saudi-backed Yemeni government forces pulled back on Sunday from the area overlooking Bab el-Mandeb, the narrow southern entrance to the Red Sea, leaving Iran-aligned Houthi rebels in control of its shore.",
+      "beats": {
+        "was": "Bab el-Mandeb links the Red Sea to the Indian Ocean and carries Gulf oil shipped from Saudi Arabia's Red Sea port of Yanbu, the main way around a mostly shut Hormuz. The Houthis, allied with Iran, have already struck Yanbu and other Saudi oil sites, and the government began an offensive in October to retake the coast.",
+        "happened": "Southern forces fighting for Yemen's recognised government said they were leaving the Dhubab airport and Bab el-Mandeb area west of Taiz to move toward Aden and defend it, as the Houthis press into the south. Reuters calls it a major setback for the government side.",
+        "means": "The Houthis now overlook both sides of the Gulf's escape routes problem: with Hormuz mostly shut, the Red Sea is the main bypass, and the group gains more power to threaten it. They have not announced new attacks on ships, so this raises risk rather than cutting supply today.",
+        "fx": "Adds to oil's war premium and to demand for safe places to hold money such as the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Iran-aligned rebels gain control over the Red Sea route that carries oil around a mostly shut Hormuz."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A wider Gulf war adds demand for a safe place to hold money."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices help Canada's main export."
+        }
+      ],
+      "watch": "Whether the Houthis warn or attack ships in the Red Sea, and whether shipping firms reroute away from it."
+    },
+    {
       "id": "investinglive-japan-q3-gdp-shrinks-20261115",
       "ts": "2026-11-15T23:57:57Z",
       "source": "investingLive",
@@ -1040,129 +1256,6 @@
         }
       ],
       "watch": "Whether Oman or Iran says US officials are part of Tuesday's talks, and whether attacks on shipping pause around the visit."
-    },
-    {
-      "id": "investing-gharibabadi-iran-wont-wait-20261115",
-      "date": "2026-11-15",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/economy-news/iran-claims-fresh-strike-on-us-base-as-hormuz-shipping-crisis-deepens-5027672",
-      "image": "https://content-media.investing.com/news/moved_LYNXMPEM370Y0_1200_L.jpg",
-      "headline": "Iran says it will not wait for the US to attack first",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's deputy foreign minister Kazem Gharibabadi said Iran will not wait to be attacked and suggested US diplomacy is cover to prepare new strikes. He also said UN nuclear inspectors stay locked out for now.",
-      "beats": {
-        "was": "Iran and the US have been at war since February, with Iran mining the Strait of Hormuz, the narrow sea lane that normally carries about a fifth of the world's oil. A June deal opened a 60-day window for talks that has now run out.",
-        "happened": "Gharibabadi said the Revolutionary Guards are building missiles with longer ranges and will not let the International Atomic Energy Agency, the UN nuclear watchdog, into nuclear sites until Iran's conditions are met. The same day Yemen's Houthis claimed drone hits on pumping stations of Saudi Arabia's East-West pipeline, which Saudi Arabia did not confirm.",
-        "means": "Tehran is talking tougher just as Trump weighs pausing strikes, so the risk of a fresh round of fighting has not gone away. The East-West pipeline matters because it lets Saudi oil skip Hormuz.",
-        "fx": "Keeps a war premium in oil, mildly helping the Canadian dollar and hurting oil importers like Japan; adds a little safe-place demand for the Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Harder Iranian line and unconfirmed pipeline claims keep supply worries alive."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Threat of new fighting adds some safe-place demand."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so higher prices hurt."
-        }
-      ],
-      "watch": "Whether Saudi Arabia confirms any damage to the East-West pipeline, and what comes out of Iran's foreign minister's Oman visit on Tuesday."
-    },
-    {
-      "id": "gulfnews-saudi-intercepts-houthi-missiles-riyadh-20261115",
-      "date": "2026-11-15",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-arabia-intercepts-houthi-missiles-targeting-riyadh-as-bahrain-issues-threat-alert-1.500747797",
-      "image": "https://media.assettype.com/gulfnews%2F2026-10-26%2F1zeomq5w%2FMecca-in-Saudi-Arabia?rect=0%2C850%2C6000%2C3150&w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "Saudi Arabia intercepts Houthi missiles targeting Riyadh as Iran claims Bahrain drone attack",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Saudi air defences shot down two ballistic missiles that Yemen's Houthis fired at Riyadh on Sunday, plus drones over the oil-rich Eastern Province. Nothing was reported hit.",
-      "beats": {
-        "was": "Iran and the US have been at war since February, and Yemen's Houthis, who are backed by Iran, have been firing at Saudi Arabia, the world's biggest oil exporter. Last week Houthi strikes on Saudi energy sites added about $3 to the oil price in a day.",
-        "happened": "The spokesman for the Saudi-led coalition in Yemen said two Houthi ballistic missiles aimed at the Saudi capital were destroyed, along with drones over the Eastern Province, where most Saudi oil is pumped. It came the same morning Bahrain said it stopped Iranian drones aimed at a US radar site.",
-        "means": "No damage this time, but the Houthis are now aiming at the capital and the oil region on the same day, and the Group of Seven rich nations condemned the attacks. A hit on Saudi oil sites would matter far more than another failed attack.",
-        "fx": "Keeps a small war premium in oil, which supports the Canadian dollar and weighs on big oil importers like Japan and the euro area; the Swiss franc gets a little safe-place demand."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Attacks on Saudi Arabia keep supply risk alive, though nothing was hit."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "More Gulf attacks add some demand for a safe place to hold money."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firmer oil helps Canada's main export."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so higher prices hurt."
-        }
-      ],
-      "watch": "Whether any Houthi missile or drone gets through to a Saudi oil site, and whether the Gulf calms around Iran's foreign minister's trip to Oman on Tuesday."
-    },
-    {
-      "id": "almonitor-reuters-yemen-forces-leave-bab-el-mandeb-20261115",
-      "date": "2026-11-15",
-      "source": "Al-Monitor (Reuters)",
-      "url": "https://www.al-monitor.com/originals/2026/11/yemen-government-forces-withdraw-area-near-bab-el-mandeb-strait-houthis-control",
-      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-15T083942Z_2_LYNXNPEMAE04X_RTROPTP_3_IRAN-CRISIS-YEMEN.JPG?h=c9f93661&itok=turXqShl",
-      "headline": "Yemen government forces withdraw from area near Bab el-Mandeb Strait, Houthis in control",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Saudi-backed Yemeni government forces pulled back on Sunday from the area overlooking Bab el-Mandeb, the narrow southern entrance to the Red Sea, leaving Iran-aligned Houthi rebels in control of its shore.",
-      "beats": {
-        "was": "Bab el-Mandeb links the Red Sea to the Indian Ocean and carries Gulf oil shipped from Saudi Arabia's Red Sea port of Yanbu, the main way around a mostly shut Hormuz. The Houthis, allied with Iran, have already struck Yanbu and other Saudi oil sites, and the government began an offensive in October to retake the coast.",
-        "happened": "Southern forces fighting for Yemen's recognised government said they were leaving the Dhubab airport and Bab el-Mandeb area west of Taiz to move toward Aden and defend it, as the Houthis press into the south. Reuters calls it a major setback for the government side.",
-        "means": "The Houthis now overlook both sides of the Gulf's escape routes problem: with Hormuz mostly shut, the Red Sea is the main bypass, and the group gains more power to threaten it. They have not announced new attacks on ships, so this raises risk rather than cutting supply today.",
-        "fx": "Adds to oil's war premium and to demand for safe places to hold money such as the Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Iran-aligned rebels gain control over the Red Sea route that carries oil around a mostly shut Hormuz."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A wider Gulf war adds demand for a safe place to hold money."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil prices help Canada's main export."
-        }
-      ],
-      "watch": "Whether the Houthis warn or attack ships in the Red Sea, and whether shipping firms reroute away from it."
     },
     {
       "id": "siasat-bahrain-warns-iran-arena-20261115",
