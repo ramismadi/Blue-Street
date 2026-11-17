@@ -2681,7 +2681,7 @@
   }
 
   /* ---------------- currencies ----------------
-     data/currencies.json → strength board (sum of pillar scores), currency
+     data/score.json (via boardFrom) → strength board, currency
      detail (#fx/AUD: breakdown, trend, story, bank, events, best crosses) and
      a pair picker that ranks counterparts by divergence. Carry comes from
      banks.json, event risk from calendar.json. */
