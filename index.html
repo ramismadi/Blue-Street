@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=143">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=143">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=144">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=144">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=143">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=144">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=143">
+<link rel="stylesheet" href="assets/style.css?v=144">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=143" defer></script>
-<script src="assets/app.js?v=143" defer></script>
+<script src="assets/cot.js?v=144" defer></script>
+<script src="assets/app.js?v=144" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue (from tools/brand-build.py), removed by app.js once the edition renders -->
@@ -92,7 +92,7 @@
         <a role="tab" href="./" data-home data-tab="today"    id="tab-today">Today <span class="badge focus-badge" id="focus-badge" hidden></span></a>
         <a role="tab" href="#fx"       data-tab="fx"       id="tab-fx">Currencies</a>
         <a role="tab" href="#news"     data-tab="news"     id="tab-news">News</a>
-        <a role="tab" href="#drivers"  data-tab="drivers"  id="tab-drivers">Drivers</a>
+        <a role="tab" href="#learn"    data-tab="learn"    id="tab-learn">Learn</a>
         <a role="tab" href="#calendar" data-tab="calendar" id="tab-calendar">Calendar</a>
       </div>
     </div>
@@ -194,22 +194,10 @@
     </section>
   </section>
 
-  <!-- ============ MACRO ENGINE ============ -->
-  <!-- Drivers: one tab, two sections (Rami, 2026-10-18; central banks moved to the currency pages 2026-11-09) -->
-  <nav class="subnav" id="drivers-nav" aria-label="Drivers" hidden>
-    <a href="#engine" data-view="engine">Macro engine</a>
-    <a href="#positioning" data-view="positioning">Positioning</a>
-    <a href="#learn/driver-policy" class="subnav-learn">Learn the drivers &rarr;</a>
-  </nav>
-  <section class="view" id="view-engine" role="tabpanel" aria-label="Macro engine" hidden>
-    <div class="view-head">
-      <h1 class="view-title">Macro engine</h1>
-    </div>
-    <div class="engine-grid" id="engine-rows"></div>
-  </section>
-
   <!-- ============ POSITIONING (CFTC COT; data/cot.json, Claude's weekly job) ============ -->
+  <!-- Its own page, reached from the Learn hub (Rami, 2026-11-17) -->
   <section class="view" id="view-positioning" role="tabpanel" aria-label="Positioning" hidden>
+    <a class="more learn-back" href="#learn">&larr; Learn</a>
     <div class="view-head">
       <h1 class="view-title">Positioning</h1>
     </div>
@@ -420,6 +408,10 @@
     <article class="info-page card" data-page="new" hidden>
       <p class="kicker">What&rsquo;s new</p>
       <h1 class="display">Recent changes</h1>
+      <h2>November 17, 2026</h2>
+      <ul>
+        <li>The Drivers tab is now Learn: the seven live drivers and positioning sit at the top, with the lessons and glossary below them.</li>
+      </ul>
       <h2>November 16, 2026</h2>
       <ul>
         <li>The top of the page now says which edition you&rsquo;re reading, how old it is and when the next one is due.</li>
@@ -482,8 +474,25 @@
     </article>
   </section>
 
-  <!-- ============ LEARN: terms & events library (reached from popovers + footer, not a tab) ============ -->
-  <section class="view" id="view-learn" role="region" aria-label="Learn" hidden>
+  <!-- ============ LEARN hub (Rami, 2026-11-17): the Drivers tab became Learn.
+       Laid out like a currency hub: the live drivers first, then positioning,
+       then rows of lessons and the glossary. Lessons open on their own page. -->
+  <section class="view" id="view-learn" role="tabpanel" aria-labelledby="tab-learn" hidden>
+    <div id="learn-hub">
+      <header class="hub-head card learn-head">
+        <div class="hh-id">
+          <h1 class="display">Learn</h1>
+          <p class="hh-read">What moves currencies, live today, with short lessons on how each part works.</p>
+        </div>
+      </header>
+      <section class="hub-sec learn-drivers" aria-labelledby="learn-drivers-h">
+        <div class="t-row-head">
+          <h2 class="section-label" id="learn-drivers-h">The drivers</h2>
+        </div>
+        <div class="engine-grid" id="engine-rows"></div>
+      </section>
+      <section class="hub-sec learn-cot" id="learn-cot" aria-label="Positioning" hidden></section>
+    </div>
     <div id="learn-body"></div>
   </section>
 

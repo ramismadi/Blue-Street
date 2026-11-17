@@ -11,12 +11,10 @@ Collaboration rules and the update schedule live in `COLLAB.md`.
 story?) ·
 Currencies (where does each stand? — the currency page carries its bank,
 positioning, chapter, Developing threads and "In the news") · News ·
-**Drivers** (what's moving things underneath? — Macro engine and Positioning
-as two sections with a sub-nav; central banks moved into each currency's page
-2026-11-09; `#drivers` opens the last one
-read, saved in localStorage `bluestreet-driver`) · Calendar. Tab order (Rami,
-2026-10-21): Today, Currencies, News, Drivers, Calendar. Every old route
-still works. The table below lists the views.
+**Learn** (what's moving things underneath, and how does it work? — the
+Drivers tab became the Learn hub on 2026-11-17; old `#drivers` and `#engine`
+links land on `#learn`) · Calendar. Tab order: Today, Currencies, News,
+Learn, Calendar. Every old route still works. The table below lists the views.
 
 A premium, tabbed FX macro desk. Principle: **less text up front, depth on
 demand** — every view leads with the takeaway and tucks detail behind a click.
@@ -25,12 +23,11 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
 |---|---|---|
 | Today | `/` (also `#today`) | story (headline), news, currencies |
 | Currencies | `#fx`, `#fx/AUD` = currency page, `#fx/OIL` / `#fx/XAU` = gold and oil (header + full read). Old `#story/N` links redirect to chapter N's page (Story view retired 2026-11-09) | `data/currencies.json` (+ banks, calendar, story joins) |
-| Drivers: Macro engine | `#engine` | `data/engine.json` + `data/pillars.json` |
-| Drivers: Positioning | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
+| Learn (hub) | `#learn` = the drivers (macro engine cards), this week's positioning, lesson rows, glossary; `#learn/<lesson-id>` or `#learn/<term-id>` = its own page | `data/engine.json` + `data/pillars.json`, `data/cot.json`, `data/learn.json`, `data/glossary.json` |
+| Learn: Positioning board | `#positioning`, `#positioning/EUR` = open that market | `data/cot.json` (Claude's weekly job) |
 | Calendar | `#calendar` | `data/calendar.json` (+ banks.json join; the row of upcoming central bank decisions) |
 | News | `#news`, `#news/JPY` = filtered to a market, `#article/<id>` = one story's own page (old `#flash` / `#wire` links redirect here) | `data/news.json` (Claude's job, from Hercules's `data/news-raw.json`). The Developing strip was removed 2026-10-18; `data/latest.json` now only feeds the editions' "What changed". |
 | About & help (not a tab) | `#about`, `#about/<page>`: about, method, faq, schedule, sources, new, privacy, contact, feedback | static pages in index.html (Claude's words); reached from the footer on every page and, on phones, the settings sheet (Rami, 2026-11-09). Contact and Feedback are "coming soon" placeholders. Keep `method` in step with how the score is computed, `schedule` with the editions, and add a line to `new` for notable site changes. |
-| Learn (not a tab) | `#learn`, `#learn/cpi` = full explainer | `data/glossary.json` (+ calendar.json for live numbers) |
 
 - **Today** (Rami, 2026-11-09, round 2). Top to bottom:
   1. **Today's read**, the big centred serif headline, whole (1–2
@@ -142,8 +139,13 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   nine drawings: central banks, growth, prices, oil, gold, world, trade,
   government, markets) on a pale wash with the topic named small. On the
   story's own page there is no figure at all.
-- **Learn hub (Rami, 2026-11-16):** `#learn` is the education centre, not a
-  tab. Lessons live in `data/learn.json` (Claude's words): `paths` (Start
+- **Learn hub (Rami, 2026-11-16; tab and hub layout 2026-11-17):** `#learn`
+  is the education centre and the fourth tab. It reads like a currency hub,
+  top to bottom: a header card, **The drivers** (the seven macro engine cards
+  as they were, each with "How this works →" to its lesson), **Positioning**
+  (this week's takeaway, "Full board →" to `#positioning`), then one
+  side-scrolling row of lesson tiles per path (any order; the driver path gets
+  no row since each driver card links its lesson), then the glossary. Lessons live in `data/learn.json` (Claude's words): `paths` (Start
   here, The seven drivers, The releases that matter, Central banks, Reading
   Blue Street) list lesson ids; each lesson has `title`, `minutes`, `lead`,
   `sections` (`h`, `p`), optional `live` (`{"type":"driver","key":"policy"}`
@@ -152,7 +154,7 @@ demand** — every view leads with the takeaway and tucks detail behind a click.
   a lesson; the glossary sits under the paths and still feeds the dotted
   underlines. Lessons opened are remembered in localStorage
   `bluestreet-learned`. Mechanics only, never direction; no figures that go
-  stale. Drivers' sub-nav links to the first driver lesson.
+  stale.
 - **Shorter currency pages on phones (Rami, 2026-11-17):** under 760px the
   seven factor tiles swipe sideways as a row, and The full read opens clipped
   with a "Read the full story" button (`.hub-read.clip`). Desktop unchanged.
@@ -609,7 +611,7 @@ News tab badge counts live threads; the Today glance tile opens News.
 {"items":[{"ts":"<ISO-8601>","headline","url"?,"bullets":[],"sources":[],
   "thread":"us-iran-20261008",     // same id = one developing story
   "ccy":["USD","JPY"],             // affected currencies → tags link to #fx/CCY
-  "pillar":"risk",                 // engine pillar id → tag links to #engine
+  "pillar":"risk",                 // engine pillar id → tag links to #learn
   "next":"Next: ..."}]}            // next catalyst in the storyline
 ```
 Renders as **threads**: items sharing a `thread` id become one card headed

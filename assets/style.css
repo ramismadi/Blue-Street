@@ -2043,7 +2043,6 @@ a.learn-term:hover { text-decoration: underline; text-underline-offset: 3px; }
 .sn-ico path { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .sn-badge { margin-left: auto; }
 .sn-subs { display: none; flex-direction: column; gap: 1px; margin: 2px 0 6px 30px; padding-left: 12px; border-left: 1px solid var(--line); }
-.sidenav.drivers-open .sn-subs { display: flex; }
 .sn-sub { padding: 6px 10px; border-radius: 8px; font-size: 0.84rem; color: var(--ink-3); text-decoration: none; }
 .sn-sub:hover { color: var(--ink); background: var(--surface-2); }
 .sn-sub[aria-current="page"] { color: var(--accent); font-weight: 600; }
@@ -2437,19 +2436,21 @@ html, body { overflow-x: clip; max-width: 100%; }
   .news-toggle { padding-top: 6px; padding-bottom: 6px; }
 }
 
-/* ---------- Learn hub (2026-11-16) ---------- */
-.lh-path { margin-top: 30px; }
-.lh-head { display: flex; align-items: baseline; gap: 12px; }
-.lh-title { margin: 0; font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--ink); }
-.lh-title.lh-gloss { margin-top: 40px; }
+/* ---------- Learn hub (2026-11-16; hub layout 2026-11-17) ---------- */
+#learn-hub { display: grid; gap: 22px; margin-bottom: 22px; }
+#learn-hub[hidden] { display: none; }
+.learn-head .display { margin: 0; }
+.learn-drivers .t-row-head, .learn-cot .t-row-head { margin-bottom: 10px; }
+.learn-cot .cot-take { margin: 0; }
+.pillar .pillar-learn { display: inline-block; margin-top: 10px; font-size: 0.86rem; }
+.t-lessons > li { width: 250px; }
+.lt-tile { display: flex; flex-direction: column; gap: 6px; width: 100%; padding: 16px 18px; text-decoration: none; color: var(--ink); min-width: 0; }
+.lt-tile:hover .lh-name { color: var(--accent); }
+.lt-lead { font-size: 0.9rem; line-height: 1.45; color: var(--ink-2); }
+.lt-tile .lh-meta { margin-top: auto; }
+.lt-tile.read { border-color: var(--accent-wash); }
 .lh-count { font-size: 0.78rem; color: var(--ink-3); }
-.lh-blurb { margin: 4px 0 12px; font-size: 0.92rem; color: var(--ink-2); max-width: 62ch; }
-.lh-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
-.lh-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; text-decoration: none; color: var(--ink); height: 100%; min-width: 0; }
-.lh-card:hover .lh-name { color: var(--accent); }
-.lh-num { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: 0.8rem; font-weight: 700; background: var(--accent-wash); color: var(--accent); }
-.lh-card.read .lh-num { background: var(--accent); color: var(--surface); }
-.lh-body { display: grid; gap: 2px; min-width: 0; }
+.lh-gloss { margin: 8px 0 10px; }
 .lh-name { font-family: var(--serif); font-size: 1.02rem; font-weight: 600; line-height: 1.3; }
 .lh-meta { font-size: 0.76rem; color: var(--ink-3); }
 .lesson-next { display: grid; gap: 4px; margin-top: 16px; padding: 14px 16px; max-width: 760px; text-decoration: none; color: var(--ink); }
@@ -2458,10 +2459,9 @@ html, body { overflow-x: clip; max-width: 100%; }
 .lesson-nav .chip { text-decoration: none; }
 .lesson-nav .chip::after { content: none; }
 .learn-live .more { display: inline-block; margin-top: 4px; }
-.subnav .subnav-learn { margin-left: auto; font-size: 0.84rem; background: none; box-shadow: none; color: var(--accent); }
 @media (max-width: 760px) {
-  .lh-list { grid-template-columns: minmax(0, 1fr); }
-  .subnav .subnav-learn { margin-left: 0; }
+  #learn-hub { gap: 16px; margin-bottom: 16px; }
+  .t-lessons > li { width: 220px; }
 }
 
 /* ---------- score over time (2026-11-17) ---------- */

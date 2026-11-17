@@ -1,5 +1,5 @@
 /* Blue Street — premium desk renderer. Plain static JS, no build step.
-   Tabbed views (hash-routed: #today, #fx, #fx/USD, #engine, #positioning,
+   Tabbed views (hash-routed: #today, #fx, #fx/USD, #learn, #positioning,
    #calendar, #news; old #story links land on the matching currency page), a theme picker, and edition data (story, macro engine,
    developing stories, news) from local JSON files. textContent-only DOM, no HTML injection. */
 
@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '143';
+  var ASSET_VERSION = '144';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -17,13 +17,12 @@
     document.documentElement.classList.add('is-app');
   }
 
-  var TABS = ['today', 'fx', 'engine', 'positioning', 'calendar', 'event', 'news', 'article', 'learn', 'about'];   // views
+  var TABS = ['today', 'fx', 'positioning', 'calendar', 'event', 'news', 'article', 'learn', 'about'];   // views
   /* Rami, 2026-10-18: five tabs, one question each. Views without a tab of
-     their own light up their parent: the macro engine and positioning are
-     the Drivers sections. (Central banks moved into each currency's page,
-     2026-11-09.) */
-  var TAB_PARENT = { engine: 'drivers', positioning: 'drivers', article: 'news', event: 'calendar', learn: null, about: null };
-  var DRIVER_VIEWS = ['engine', 'positioning'];
+     their own light up their parent. Rami, 2026-11-17: the Drivers tab became
+     Learn, a hub with the live drivers on top; positioning's full board is a
+     page under it. (Central banks moved into each currency's page, 2026-11-09.) */
+  var TAB_PARENT = { positioning: 'learn', article: 'news', event: 'calendar', about: null };
   /* Theme catalogue. `sw` = swatch preview colors [background, accent, highlight].
      Token values live in style.css under [data-theme="<id>"]. */
   var THEMES = [
@@ -656,7 +655,7 @@
   var tabSettle = function () {};
 
   /* The browser tab says where you are (2026-11-16). */
-  var PAGE_TITLES = { fx: 'Currencies', engine: 'Macro engine', positioning: 'Positioning',
+  var PAGE_TITLES = { fx: 'Currencies', positioning: 'Positioning',
     calendar: 'Calendar', news: 'News', learn: 'Learn', about: 'About' };
   function pageTitle(tab, h) {
     var t = PAGE_TITLES[tab];
@@ -682,11 +681,9 @@
       h = ['fx'];
       history.replaceState(null, '', '#fx');
     }
-    if (h[0] === 'drivers') {   // the tab opens the Drivers section last read
-      var last = 'engine';
-      try { last = localStorage.getItem('bluestreet-driver') || 'engine'; } catch (e) { /* private mode */ }
-      h = [DRIVER_VIEWS.indexOf(last) >= 0 ? last : 'engine'];
-      history.replaceState(null, '', '#' + h[0]);
+    if (h[0] === 'drivers' || h[0] === 'engine') {   // Drivers became the Learn hub (2026-11-17)
+      h = ['learn'];
+      history.replaceState(null, '', '#learn');
     }
     var tab = TABS.indexOf(h[0]) >= 0 ? h[0] : 'today';
     var parent = tab in TAB_PARENT ? TAB_PARENT[tab] : tab;
@@ -697,15 +694,6 @@
       a.tabIndex = on ? 0 : -1;
     });
     tabSettle();
-    var dn = $('#drivers-nav');
-    if (dn) {
-      dn.hidden = DRIVER_VIEWS.indexOf(tab) < 0;
-      Array.prototype.forEach.call(dn.querySelectorAll('[data-view]'), function (a) {
-        var on = a.getAttribute('data-view') === tab;
-        if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
-      });
-      if (!dn.hidden) { try { localStorage.setItem('bluestreet-driver', tab); } catch (e) { /* private mode */ } }
-    }
     if (tab === 'fx') {
       fx.focus = (h[1] || '').toUpperCase();
       renderFx();
@@ -761,13 +749,10 @@
       ico: 'M6 4.5a3.5 3.5 0 1 0 0 7a3.5 3.5 0 1 0 0-7z M10 4.6a3.5 3.5 0 1 1 0 6.8' },
     { id: 'news', label: 'News', href: '#news',
       ico: 'M2.5 4.5h9v8h-9z M11.5 6.5h2v5a1 1 0 0 1-2 0 M4.5 6.5h5 M4.5 8.5h5 M4.5 10.5h3' },
-    { id: 'drivers', label: 'Drivers', href: '#drivers',
-      ico: 'M2.5 11.5a5.5 5.5 0 1 1 11 0 M8 11.5l2.6-3.6',
-      subs: [['engine', 'Macro engine'], ['positioning', 'Positioning']] },
+    { id: 'learn', label: 'Learn', href: '#learn',
+      ico: 'M2.5 3.5H7a1.5 1.5 0 0 1 1 .5v9a1.5 1.5 0 0 0-1-.5H2.5z M13.5 3.5H9a1.5 1.5 0 0 0-1 .5v9a1.5 1.5 0 0 1 1-.5h4.5z' },
     { id: 'calendar', label: 'Calendar', href: '#calendar',
       ico: 'M2.5 4h11v9.5h-11z M2.5 7h11 M5.5 2.5v3 M10.5 2.5v3' },
-    { id: 'learn', label: 'Learn', href: '#learn', minor: true,
-      ico: 'M2.5 3.5H7a1.5 1.5 0 0 1 1 .5v9a1.5 1.5 0 0 0-1-.5H2.5z M13.5 3.5H9a1.5 1.5 0 0 0-1 .5v9a1.5 1.5 0 0 1 1-.5h4.5z' },
     { id: 'about', label: 'About & help', href: '#about', minor: true,
       ico: 'M8 2a6 6 0 1 0 0 12A6 6 0 1 0 8 2z M8 7.2v4 M8 4.8v.2' }
   ];
@@ -1002,7 +987,6 @@
     Array.prototype.forEach.call(box.querySelectorAll('[data-nav-sub]'), function (a) {
       if (a.getAttribute('data-nav-sub') === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
-    box.classList.toggle('drivers-open', parent === 'drivers');
   }
 
   /* First two sentences of a headline (one if two run past ~45 words).
@@ -1655,6 +1639,10 @@
         sd.appendChild(sourceChips(row.sources || row.source, row.source_url));
         c.appendChild(sd);
       }
+      // Rami, 2026-11-17: each live driver links to its lesson in the Learn hub.
+      var hw = el('a', 'more pillar-learn', 'How this works →');
+      hw.href = '#learn/driver-' + encodeURIComponent(row.id);
+      c.appendChild(hw);
       box.appendChild(c);
     });
     attachExplainers();
@@ -2126,7 +2114,32 @@
     return lines;
   }
 
+  /* Learn hub's positioning row (2026-11-17): this week's takeaway, with the
+     full board one tap away on its own page. */
+  function renderLearnCot() {
+    var sec = $('#learn-cot');
+    if (!sec) return;
+    sec.textContent = '';
+    var ms = (cot.data && cot.data.markets) || [];
+    var lines = ms.length ? cotTakeaway(ms) : [];
+    sec.hidden = !lines.length;
+    if (!lines.length) return;
+    var hd = el('div', 't-row-head');
+    hd.appendChild(el('h2', 'section-label', 'Positioning'));
+    var a = el('a', 'more', 'Full board →');
+    a.href = '#positioning';
+    hd.appendChild(a);
+    sec.appendChild(hd);
+    var card = el('div', 'card cot-take');
+    card.appendChild(el('p', 'kicker', 'This week'));
+    var ul = el('ul', 'cot-lines');
+    lines.forEach(function (l) { ul.appendChild(el('li', null, l)); });
+    card.appendChild(ul);
+    sec.appendChild(card);
+  }
+
   function renderCot() {
+    renderLearnCot();
     var box = $('#cot-body');
     if (!box) return;
     box.textContent = '';
@@ -3859,7 +3872,7 @@
         });
         if (t.pillar) {
           var pa = el('a', 'tag pillar', pillarName(t.pillar));
-          pa.href = '#engine';
+          pa.href = '#learn';
           tags.appendChild(pa);
         }
         w.appendChild(tags);
@@ -4356,7 +4369,7 @@
       var meta = el('div', 'news-meta');
       if (it.pillar) {
         var pp = el('a', 'news-pillar p-' + it.pillar, pillarName(it.pillar));
-        pp.href = '#engine';
+        pp.href = '#learn';
         pp.title = 'Macro pillar: ' + pillarName(it.pillar);
         meta.appendChild(pp);
       }
@@ -4738,6 +4751,9 @@
     var id = '';
     try { id = decodeURIComponent(h[1] || ''); } catch (e) { id = h[1] || ''; }
     root.textContent = '';
+    var hub = $('#learn-hub');
+    var page = !!(id && (learn.byId[id] || gloss.byId[id] != null));
+    if (hub) hub.hidden = page;
     var terms = gloss.list.filter(Boolean);
     if (!terms.length) {
       root.appendChild(el('p', 'meta', gloss.loaded ? 'No terms published yet.' : 'Loading…'));
@@ -4763,40 +4779,38 @@
     ids.push(id);
     try { localStorage.setItem('bluestreet-learned', JSON.stringify(ids)); } catch (e) { /* private mode */ }
   }
+  /* Rami, 2026-11-17: Learn reads like a currency hub, not a course. The
+     drivers and positioning sit above (static in index.html); below them, one
+     side-scrolling row of lesson tiles per path, in any order. The driver
+     lessons open from each driver's "How this works", so they get no row. */
   function renderLearnHub(root) {
-    var head = el('div', 'view-head');
-    head.appendChild(el('h1', 'view-title', 'Learn'));
-    root.appendChild(head);
     if (!learn.data) return;
-    root.appendChild(el('p', 'learn-lead', 'How currencies work, in plain words. Short lessons you can read in a few minutes, each tied to what is happening on Blue Street today.'));
     var done = learnedIds();
     (learn.data.paths || []).forEach(function (p) {
+      if (p.id === 'drivers') return;
       var ls = (p.lessons || []).map(function (id) { return learn.byId[id]; }).filter(Boolean);
       if (!ls.length) return;
-      var sec = el('section', 'lh-path');
-      var hd = el('div', 'lh-head');
-      hd.appendChild(el('h2', 'lh-title', p.title));
+      var row = hubRow('lh-' + p.id, p.title);
       var n = ls.filter(function (l) { return done.indexOf(l.id) >= 0; }).length;
-      if (n) hd.appendChild(el('span', 'lh-count', n + ' of ' + ls.length + ' read'));
-      sec.appendChild(hd);
-      if (p.blurb) sec.appendChild(el('p', 'lh-blurb', p.blurb));
-      var ul = el('ol', 'lh-list');
-      ls.forEach(function (l, i) {
+      if (n) row.querySelector('.t-row-head').appendChild(el('span', 'lh-count', n + ' of ' + ls.length + ' read'));
+      var ol = row.querySelector('ol');
+      ol.classList.add('t-lessons');
+      ls.forEach(function (l) {
         var li = el('li');
-        var a = el('a', 'lh-card card' + (done.indexOf(l.id) >= 0 ? ' read' : ''));
+        var read = done.indexOf(l.id) >= 0;
+        var a = el('a', 'lt-tile card' + (read ? ' read' : ''));
         a.href = '#learn/' + encodeURIComponent(l.id);
-        a.appendChild(el('span', 'lh-num mono', String(i + 1)));
-        var body = el('span', 'lh-body');
-        body.appendChild(el('span', 'lh-name', l.title));
-        body.appendChild(el('span', 'lh-meta', (l.minutes || 3) + ' min' + (done.indexOf(l.id) >= 0 ? ' · read' : '')));
-        a.appendChild(body);
+        a.appendChild(el('span', 'lh-name', l.title));
+        if (l.lead) a.appendChild(el('span', 'lt-lead', firstSentences(l.lead, 1, 30)));
+        a.appendChild(el('span', 'lh-meta', (l.minutes || 3) + ' min' + (read ? ' · read' : '')));
         li.appendChild(a);
-        ul.appendChild(li);
+        ol.appendChild(li);
       });
-      sec.appendChild(ul);
-      root.appendChild(sec);
+      root.appendChild(row);
     });
-    root.appendChild(el('h2', 'lh-title lh-gloss', 'Glossary'));
+    initStrips();
+    setTimeout(updateStripNav, 0);
+    root.appendChild(el('h2', 'section-label lh-gloss', 'Glossary'));
   }
   function lessonLive(l) {
     var spec = l.live;
@@ -4807,8 +4821,8 @@
       if (!row || !row.read || !plainText(row.read, 700)) return null;
       box.appendChild(el('h2', 'section-label', 'On Blue Street today'));
       box.appendChild(el('p', 'learn-p', row.read));
-      var m = el('a', 'more', 'See it in the Macro engine →');
-      m.href = '#engine';
+      var m = el('a', 'more', 'See all seven drivers →');
+      m.href = '#learn';
       box.appendChild(m);
       return box;
     }
@@ -4873,12 +4887,6 @@
   }
 
   function renderLearnLibrary(root, terms) {
-    if (!learn.data) {   // lessons not loaded: the glossary stands alone
-      var head = el('div', 'view-head');
-      head.appendChild(el('h1', 'view-title', 'Learn'));
-      root.appendChild(head);
-    }
-
     var search = el('input', 'learn-search');
     search.type = 'search';
     search.placeholder = 'Search terms';
