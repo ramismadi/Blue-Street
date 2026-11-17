@@ -49,6 +49,15 @@ It was renamed on 2026-10-19; the project used to have a different name.
   new. A small fix he asked for by name can go straight in.
 - Keep replies short and lead with the answer.
 
+## Merging (Rami, 2026-11-16)
+- Claude may merge its own pull requests into `main` without asking, once the
+  change was approved in chat or is a fix Rami asked for, it was tested, and
+  the overflow check passes for layout changes. Squash merge.
+- Say in the reply what was merged and check the live site afterwards.
+- Still ask first for: anything in `VISION.md`, deleting a file or feature,
+  a change to a file Hercules owns, or anything Rami hasn't seen described.
+- Never force-push and never merge during an edition's push window.
+
 ## In a cloud session
 - Clone `https://github.com/ramismadi/blue-street`. A push can fail once with a
   server error; fetch and retry.
