@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue Street — Global fundamentals for FX</title>
 <meta name="description" content="Blue Street: a premium FX macro desk — the daily story behind the moves, a six-pillar macro engine, central-bank scorecard, calendar and news.">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=145">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=145">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png?v=146">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=146">
 <meta name="theme-color" content="#0a84ff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101319" media="(prefers-color-scheme: dark)">
 <meta name="mobile-web-app-capable" content="yes">
@@ -19,14 +19,14 @@
 <meta property="og:description" content="The daily story behind FX moves: macro drivers, central banks, calendar and every headline read for currencies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ramismadi.github.io/Blue-Street/">
-<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=145">
+<meta property="og:image" content="https://ramismadi.github.io/Blue-Street/assets/og.png?v=146">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=145">
+<link rel="stylesheet" href="assets/style.css?v=146">
 <script>
   /* Apply the saved theme before first paint (no flash). */
   try {
@@ -46,8 +46,8 @@
     if (localStorage.getItem('bluestreet-nav-collapsed') === '1') document.documentElement.setAttribute('data-nav-collapsed', '');
   } catch (e) {}
 </script>
-<script src="assets/cot.js?v=145" defer></script>
-<script src="assets/app.js?v=145" defer></script>
+<script src="assets/cot.js?v=146" defer></script>
+<script src="assets/app.js?v=146" defer></script>
 </head>
 <body>
 <!-- Loading splash: the full sign logo on brand blue (from tools/brand-build.py), removed by app.js once the edition renders -->
@@ -293,24 +293,42 @@
       <a href="#about/feedback" data-page="feedback">Feedback</a>
     </nav>
 
-    <article class="info-page card gl-scope" data-page="about">
-      <p class="kicker">About</p>
-      <h1 class="display">Blue Street</h1>
-      <p class="lede">Blue Street turns the raw data behind the currency markets into plain reads, so you can form your own view of where the major currencies are heading and why.</p>
-      <h2>What it covers</h2>
-      <p>The eight major currencies (the US dollar, euro, British pound, Japanese yen, Swiss franc, Australian dollar, Canadian dollar and New Zealand dollar), plus gold and oil: what moved them, what is driving them underneath, and what could move them next.</p>
-      <h2>What it&rsquo;s for</h2>
-      <p>A five-minute read. Open it, see what changed, and know where each currency stands. The depth is there for whoever wants it, from each currency&rsquo;s own page to the full story behind every headline.</p>
-      <h2>What it believes</h2>
-      <ul>
-        <li><b>Meaning before numbers.</b> Every figure comes with what it was, what happened, what it means, and what it does to the currency, in short plain sentences.</li>
-        <li><b>Evidence, not a verdict.</b> Blue Street weighs the evidence and shows its work. It never tells you to buy or sell; the call is yours.</li>
-        <li><b>Readable cold.</b> Every page should make sense to someone who hasn&rsquo;t opened it in a week.</li>
-      </ul>
-      <h2>Who it&rsquo;s for</h2>
-      <p>Traders who want a fundamental view behind their charts, and anyone who wants to understand why currencies move without wading through raw data.</p>
-      <h2>How it&rsquo;s made</h2>
-      <p>Blue Street is an independent project, written and updated around the clock by AI assistants working from public data, under a trader&rsquo;s direction. Every story links to its sources.</p>
+    <article class="info-page about-tour gl-scope" data-page="about">
+      <section class="tour-sec tour-hero">
+        <p class="kicker">About</p>
+        <h1 class="tour-big">Currencies move for reasons.</h1>
+        <p class="tour-sub">Blue Street turns the raw data behind the currency markets into plain reads, so you can form your own view of where the major currencies are heading and why.</p>
+        <span class="tour-cue" aria-hidden="true">Scroll</span>
+      </section>
+      <section class="tour-sec" data-reveal>
+        <p class="kicker">What it covers</p>
+        <h2 class="tour-big">Eight currencies. Two commodities.</h2>
+        <p class="tour-sub">The US dollar, euro, British pound, Japanese yen, Swiss franc, Australian dollar, Canadian dollar and New Zealand dollar, plus gold and oil. What moved them, what is driving them underneath, and what could move them next.</p>
+        <div class="tour-chips" id="tour-chips" aria-label="Currencies ranked by strength score today"></div>
+        <p class="tour-note">Ranked live, strongest first.</p>
+      </section>
+      <section class="tour-sec" data-reveal>
+        <p class="kicker">What it&rsquo;s for</p>
+        <h2 class="tour-big">A five-minute read.</h2>
+        <p class="tour-sub">Open it, see what changed, and know where each currency stands. The depth is there for whoever wants it, from each currency&rsquo;s own page to the full story behind every headline.</p>
+      </section>
+      <section class="tour-sec" data-reveal>
+        <p class="kicker">What it believes</p>
+        <div class="tour-belief"><h2 class="tour-big">Meaning before numbers.</h2><p class="tour-sub">Every figure comes with what it was, what happened, what it means, and what it does to the currency, in short plain sentences.</p></div>
+        <div class="tour-belief"><h2 class="tour-big">Evidence, not a verdict.</h2><p class="tour-sub">Blue Street weighs the evidence and shows its work. It never tells you to buy or sell; the call is yours.</p></div>
+        <div class="tour-belief"><h2 class="tour-big">Readable cold.</h2><p class="tour-sub">Every page should make sense to someone who hasn&rsquo;t opened it in a week.</p></div>
+      </section>
+      <section class="tour-sec" data-reveal>
+        <p class="kicker">Who it&rsquo;s for</p>
+        <h2 class="tour-big">Your view, with evidence behind it.</h2>
+        <p class="tour-sub">Traders who want a fundamental view behind their charts, and anyone who wants to understand why currencies move without wading through raw data.</p>
+      </section>
+      <section class="tour-sec" data-reveal>
+        <p class="kicker">How it&rsquo;s made</p>
+        <h2 class="tour-big">Independent, and always on.</h2>
+        <p class="tour-sub">Blue Street is an independent project, written and updated around the clock by AI assistants working from public data, under a trader&rsquo;s direction. Every story links to its sources.</p>
+        <p class="tour-links"><a href="#about/method">How the scores work</a><a href="#about/sources">Sources</a><a href="#about/faq">FAQ</a></p>
+      </section>
     </article>
 
     <article class="info-page card gl-scope" data-page="method" hidden>

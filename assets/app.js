@@ -7,7 +7,7 @@
   'use strict';
 
   /* Must equal the ?v= on app.js in index.html — bump both together. */
-  var ASSET_VERSION = '145';
+  var ASSET_VERSION = '146';
 
   /* Opened from the iPhone home screen? (No manifest, so the CSS
      display-mode query doesn't fire there.) Lifts the bottom bar clear of
@@ -702,6 +702,7 @@
       var pg = h[1] || 'about';
       if (!document.querySelector('.info-page[data-page="' + pg + '"]')) pg = 'about';
       Array.prototype.forEach.call(document.querySelectorAll('.info-page'), function (x) { x.hidden = x.getAttribute('data-page') !== pg; });
+      if (pg === 'about') initAboutTour();
       Array.prototype.forEach.call(document.querySelectorAll('#info-nav a'), function (a) {
         if (a.getAttribute('data-page') === pg) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
       });
@@ -2343,6 +2344,32 @@
     if (h) return h + 'h ' + mm + 'm';
     var s = Math.floor((ms % 60000) / 1000);
     return mm + 'm ' + (s < 10 ? '0' : '') + s + 's';
+  }
+
+  /* About tour (Rami, 2026-11-17): sections fade in as you scroll; the chips are
+     today's ranking from data/score-v2.json. */
+  var tourDone = false;
+  function initAboutTour() {
+    var secs = document.querySelectorAll('.about-tour [data-reveal]');
+    if (!('IntersectionObserver' in window)) {
+      Array.prototype.forEach.call(secs, function (x) { x.classList.add('in'); });
+    } else if (!tourDone) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.25 });
+      Array.prototype.forEach.call(secs, function (x) { io.observe(x); });
+      document.querySelector('.about-tour').classList.add('armed');
+    }
+    if (tourDone) return;
+    tourDone = true;
+    fetchJSON('data/score-v2.json').then(function (d) {
+      var box = document.getElementById('tour-chips');
+      if (!box) return;
+      box.innerHTML = d.ranking.map(function (c, i) {
+        var sc = d.currencies[c] && d.currencies[c].points;
+        return '<span class="tour-chip"><b>' + (i + 1) + '</b> ' + c + (typeof sc === 'number' ? ' <i>' + (sc > 0 ? '+' : '') + sc.toFixed(1) + '</i>' : '') + '</span>';
+      }).join('');
+    }).catch(function () { var b = document.getElementById('tour-chips'); if (b) b.hidden = true; });
   }
 
   function initCalendar() {
