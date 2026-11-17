@@ -1,0 +1,86 @@
+{
+ "_about": "Central bank headline rates from each bank's own data (Claude; tools/policy-build.cjs). Read over banks.json rate and last_move.",
+ "updated": "2026-11-17T16:26:15.646Z",
+ "rates": {
+  "USD": {
+   "rate": 4,
+   "display": "3.75–4.00%",
+   "as_of": "2026-11-17",
+   "last_move": {
+    "date": "2026-09-17",
+    "bp": 25
+   },
+   "source": "Federal Reserve target range (FRED)"
+  },
+  "EUR": {
+   "rate": 2.5,
+   "display": "2.50%",
+   "as_of": "2026-11-17",
+   "last_move": {
+    "date": "2026-09-16",
+    "bp": 25
+   },
+   "source": "ECB deposit facility rate (ECB data portal)"
+  },
+  "GBP": {
+   "rate": 4,
+   "display": "4.00%",
+   "as_of": "2026-11-16",
+   "last_move": {
+    "date": "2026-11-05",
+    "bp": 25
+   },
+   "source": "Bank Rate (Bank of England)"
+  },
+  "CAD": {
+   "rate": 2.5,
+   "display": "2.50%",
+   "as_of": "2026-11-16",
+   "last_move": {
+    "date": "2026-10-29",
+    "bp": 25
+   },
+   "source": "Bank of Canada target for the overnight rate (Valet)"
+  },
+  "AUD": {
+   "rate": 4.85,
+   "display": "4.85%",
+   "as_of": "2026-11-16",
+   "last_move": {
+    "date": "2026-11-04",
+    "bp": 25
+   },
+   "source": "RBA cash rate target (table F1)"
+  },
+  "JPY": {
+   "rate": 1.25,
+   "display": "1.25%",
+   "as_of": "2026-11-10",
+   "last_move": {
+    "date": "2026-09-24",
+    "bp": 25
+   },
+   "source": "Bank of Japan policy rate (BIS, about a week behind)"
+  },
+  "CHF": {
+   "rate": 0,
+   "display": "0.00%",
+   "as_of": "2026-11-10",
+   "last_move": {
+    "date": "2025-06-20",
+    "bp": -25
+   },
+   "source": "SNB policy rate (BIS, about a week behind)"
+  },
+  "NZD": {
+   "rate": 2.75,
+   "display": "2.75%",
+   "as_of": "2026-11-06",
+   "last_move": {
+    "date": "2026-09-03",
+    "bp": 25
+   },
+   "source": "RBNZ official cash rate (BIS, about a week behind)"
+  }
+ }
+}

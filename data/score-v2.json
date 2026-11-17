@@ -1,8 +1,8 @@
 {
- "_about": "Scoring v2, shadow run. Not shown on the site. Rate levels, inflation and terms of trade passed a price-history test (2016-2026) with a small, steady edge; market mood failed and is shown with no weight; growth, positioning and fiscal are not yet tested. Evidence, not a forecast.",
- "updated": "2026-11-17T16:17:59.853Z",
+ "_about": "Blue Street currency score (since 2026-11-17 the score on the site). Rate levels, inflation and terms of trade passed a price-history test (2016-2026) with a small, steady edge; market mood failed and is shown with no weight; growth, positioning and fiscal are not yet tested. Evidence, not a forecast.",
+ "updated": "2026-11-17T16:26:18.161Z",
  "as_of": "2026-11-17",
- "scale": "-100 to +100",
+ "scale": "score -100 to +100; points -10 to +10 (what the site shows)",
  "weights": {
   "rates": 30,
   "inflation": 10,
@@ -11,6 +11,26 @@
   "positioning": 10,
   "fiscal": 10,
   "risk": 0
+ },
+ "names": {
+  "USD": "US dollar",
+  "EUR": "Euro",
+  "GBP": "British pound",
+  "JPY": "Japanese yen",
+  "CHF": "Swiss franc",
+  "CAD": "Canadian dollar",
+  "AUD": "Australian dollar",
+  "NZD": "New Zealand dollar"
+ },
+ "banks": {
+  "USD": "fed",
+  "EUR": "ecb",
+  "GBP": "boe",
+  "JPY": "boj",
+  "CHF": "snb",
+  "CAD": "boc",
+  "AUD": "rba",
+  "NZD": "rbnz"
  },
  "tested": [
   "rates",
@@ -55,7 +75,8 @@
  ],
  "currencies": {
   "USD": {
-   "score": 31,
+   "points": 2.2,
+   "score": 25,
    "tested_score": 61,
    "measured_share": 76,
    "v1_score": 1,
@@ -63,56 +84,64 @@
     "rates": {
      "value": 1.92,
      "measured": true,
-     "why": "Its central bank rate is 1.38 points above the middle of the eight, and its two-year bond yield is 1.58 points above the middle.",
+     "why": "The Fed's rate is 1.4 points above the middle of the eight, and the US's two-year bond yield is 1.6 points above the middle.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 3.4
     },
     "inflation": {
      "value": 0.39,
      "measured": true,
-     "why": "Prices are rising about 3.7% a year against the Fed's goal of 2%, about as far from goal as most of the others.",
+     "why": "Prices in the US are rising about 3.7% a year against the Fed's goal of 2%, about as far from goal as most of the others.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0
     },
     "growth": {
      "value": 0,
      "measured": true,
-     "why": "Of its last 6 data releases, 3 beat forecasts and 3 missed.",
+     "why": "Of the US's last 6 data releases, 3 beat forecasts and 3 missed.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "risk": {
      "value": 1,
      "measured": true,
      "why": "Markets are more nervous than usual, which usually helps the dollar at first.",
      "counted": false,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "tot": {
      "value": 0,
      "measured": false,
-     "why": "No measured feed for what this country sells and buys yet, so this rests on a judged mark.",
+     "why": "The US both sells and buys energy, so trade prices do little for the dollar.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0
     },
     "positioning": {
      "value": 0.12,
      "measured": true,
-     "why": "Hedge fund bets are not at an extreme, so this counts for little.",
+     "why": "Hedge fund bets on the dollar are not at an extreme, so this counts for little.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "fiscal": {
-     "value": -1,
+     "value": -2,
      "measured": false,
-     "why": "Rests on a judged mark. Fiscal health is hard to read from one number.",
+     "why": "Large US budget deficits and rising debt costs weigh on confidence in the dollar.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": -1.2
     }
    }
   },
   "EUR": {
-   "score": -5,
+   "points": -0.7,
+   "score": -8,
    "tested_score": 8,
    "measured_share": 88,
    "v1_score": -2,
@@ -120,56 +149,64 @@
     "rates": {
      "value": -0.21,
      "measured": true,
-     "why": "Its central bank rate is in the middle of the eight, and its two-year bond yield is 0.19 points below the middle.",
+     "why": "The European Central Bank's rate is in the middle of the eight, and the euro area's two-year bond yield is 0.19 points below the middle.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": -0.4
     },
     "inflation": {
      "value": 0.44,
      "measured": true,
-     "why": "Prices are rising about 3.8% a year against the European Central Bank's goal of 2%, hotter than in most of the others, which keeps pressure on rates.",
+     "why": "Prices in the euro area are rising about 3.8% a year against the European Central Bank's goal of 2%, hotter than in most of the others, which keeps pressure on rates.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0.3
     },
     "growth": {
-     "value": -0.33,
+     "value": 0,
      "measured": true,
-     "why": "Of its last 6 data releases, 1 beat forecasts and 2 missed.",
+     "why": "Of the euro area's last 6 data releases, 2 beat forecasts and 2 missed.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "risk": {
      "value": 0,
      "measured": true,
      "why": "Markets are more nervous than usual, which does little for the euro.",
      "counted": false,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "tot": {
      "value": 1,
      "measured": true,
      "why": "Oil has fallen over the past month, and the euro belongs to an oil importer.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0.6
     },
     "positioning": {
      "value": -0.15,
      "measured": true,
-     "why": "Hedge fund bets are not at an extreme, so this counts for little.",
+     "why": "Hedge fund bets on the euro are not at an extreme, so this counts for little.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "fiscal": {
-     "value": -1,
+     "value": -2,
      "measured": false,
-     "why": "Rests on a judged mark. Fiscal health is hard to read from one number.",
+     "why": "Budget strains in some euro-area countries, France above all, weigh on the euro.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": -1.2
     }
    }
   },
   "GBP": {
-   "score": 41,
+   "points": 3.7,
+   "score": 38,
    "tested_score": 57,
    "measured_share": 76,
    "v1_score": 3,
@@ -177,56 +214,64 @@
     "rates": {
      "value": 1.9,
      "measured": true,
-     "why": "Its central bank rate is 1.38 points above the middle of the eight, and its two-year bond yield is 1.47 points above the middle.",
+     "why": "The Bank of England's rate is 1.4 points above the middle of the eight, and the UK's two-year bond yield is 1.5 points above the middle.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 3.4
     },
     "inflation": {
      "value": 0,
      "measured": true,
-     "why": "Prices are rising about 3.4% a year against the Bank of England's goal of 2%, about as far from goal as most of the others.",
+     "why": "Prices in the UK are rising about 3.4% a year against the Bank of England's goal of 2%, about as far from goal as most of the others.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0
     },
     "growth": {
-     "value": 0.67,
+     "value": 0.33,
      "measured": true,
-     "why": "Of its last 6 data releases, 3 beat forecasts and 1 missed.",
+     "why": "Of the UK's last 6 data releases, 2 beat forecasts and 1 missed.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0.3
     },
     "risk": {
      "value": -0.5,
      "measured": true,
      "why": "Markets are more nervous than usual, which usually hurts the pound at first.",
      "counted": false,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "tot": {
      "value": 0,
      "measured": false,
-     "why": "No measured feed for what this country sells and buys yet, so this rests on a judged mark.",
+     "why": "Trade prices are not moving the pound right now.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0
     },
     "positioning": {
      "value": 0.3,
      "measured": true,
-     "why": "Hedge fund bets are not at an extreme, so this counts for little.",
+     "why": "Hedge fund bets on the pound are not at an extreme, so this counts for little.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "fiscal": {
      "value": 0,
      "measured": false,
-     "why": "Rests on a judged mark. Fiscal health is hard to read from one number.",
+     "why": "UK public finances are tight but not driving the pound right now.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     }
    }
   },
   "JPY": {
-   "score": -39,
+   "points": -3.8,
+   "score": -36,
    "tested_score": -54,
    "measured_share": 88,
    "v1_score": -2,
@@ -234,55 +279,63 @@
     "rates": {
      "value": -1.86,
      "measured": true,
-     "why": "Its central bank rate is 1.38 points below the middle of the eight, and its two-year bond yield is 1.42 points below the middle. Over the past month that yield has fallen behind the others.",
+     "why": "The Bank of Japan's rate is 1.4 points below the middle of the eight, and Japan's two-year bond yield is 1.4 points below the middle. Over the past month that yield has fallen behind the others.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": -3.3
     },
     "inflation": {
      "value": -1.79,
      "measured": true,
-     "why": "Prices are rising about 2.1% a year against the Bank of Japan's goal of 2%, cooler than in most of the others, which eases pressure on rates.",
+     "why": "Prices in Japan are rising about 2.1% a year against the Bank of Japan's goal of 2%, cooler than in most of the others, which eases pressure on rates.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": -1.1
     },
     "growth": {
-     "value": -1,
+     "value": -0.67,
      "measured": true,
-     "why": "Of its last 6 data releases, 1 beat forecasts and 4 missed.",
+     "why": "Of Japan's last 6 data releases, 2 beat forecasts and 4 missed.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": -0.6
     },
     "risk": {
      "value": 2,
      "measured": true,
      "why": "Markets are more nervous than usual, which usually helps the yen at first.",
      "counted": false,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "tot": {
      "value": 2,
      "measured": true,
      "why": "Oil has fallen over the past month, and the yen belongs to an oil importer.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 1.2
     },
     "positioning": {
      "value": 0.2,
      "measured": true,
-     "why": "Hedge fund bets are not at an extreme, so this counts for little.",
+     "why": "Hedge fund bets on the yen are not at an extreme, so this counts for little.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "fiscal": {
      "value": 0,
      "measured": false,
-     "why": "Rests on a judged mark. Fiscal health is hard to read from one number.",
+     "why": "Japan's large debt is well known and not moving the yen right now.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     }
    }
   },
   "CHF": {
+   "points": -5.5,
    "score": -57,
    "tested_score": -79,
    "measured_share": 76,
@@ -291,55 +344,63 @@
     "rates": {
      "value": -2,
      "measured": true,
-     "why": "Its central bank rate is 2.63 points below the middle of the eight, and its two-year bond yield is 3.06 points below the middle.",
+     "why": "The Swiss National Bank's rate is 2.6 points below the middle of the eight, and Switzerland's two-year bond yield is 3.1 points below the middle.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": -3.5
     },
     "inflation": {
      "value": -1.94,
      "measured": true,
-     "why": "Prices are rising about 1.0% a year against the Swiss National Bank's goal of 1%, cooler than in most of the others, which eases pressure on rates.",
+     "why": "Prices in Switzerland are rising about 1.0% a year against the Swiss National Bank's goal of 1%, cooler than in most of the others, which eases pressure on rates.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": -1.1
     },
     "growth": {
      "value": -1,
      "measured": true,
-     "why": "Of its last 4 data releases, 1 beat forecasts and 3 missed.",
+     "why": "Of Switzerland's last 4 data releases, 1 beat forecasts and 3 missed.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": -0.9
     },
     "risk": {
      "value": 2,
      "measured": true,
      "why": "Markets are more nervous than usual, which usually helps the franc at first.",
      "counted": false,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "tot": {
      "value": 0,
      "measured": false,
-     "why": "No measured feed for what this country sells and buys yet, so this rests on a judged mark.",
+     "why": "Trade prices are not moving the franc right now.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0
     },
     "positioning": {
      "value": -0.21,
      "measured": true,
-     "why": "Hedge fund bets are not at an extreme, so this counts for little.",
+     "why": "Hedge fund bets on the franc are not at an extreme, so this counts for little.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "fiscal": {
      "value": 0,
      "measured": false,
-     "why": "Rests on a judged mark. Fiscal health is hard to read from one number.",
+     "why": "Switzerland's public finances are sound and not a factor right now.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     }
    }
   },
   "CAD": {
+   "points": -2.7,
    "score": -28,
    "tested_score": -27,
    "measured_share": 88,
@@ -348,55 +409,63 @@
     "rates": {
      "value": -0.08,
      "measured": true,
-     "why": "Its central bank rate is in the middle of the eight, and its two-year bond yield is close to the middle too.",
+     "why": "The Bank of Canada's rate is in the middle of the eight, and Canada's two-year bond yield is close to the middle too.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0
     },
     "inflation": {
      "value": -0.47,
      "measured": true,
-     "why": "Prices are rising about 3.1% a year against the Bank of Canada's goal of 2%, cooler than in most of the others, which eases pressure on rates.",
+     "why": "Prices in Canada are rising about 3.1% a year against the Bank of Canada's goal of 2%, cooler than in most of the others, which eases pressure on rates.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": -0.3
     },
     "growth": {
      "value": -1.33,
      "measured": true,
-     "why": "Of its last 6 data releases, 1 beat forecasts and 5 missed.",
+     "why": "Of Canada's last 6 data releases, 1 beat forecasts and 5 missed.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": -1.2
     },
     "risk": {
      "value": -1,
      "measured": true,
      "why": "Markets are more nervous than usual, which usually hurts the Canadian dollar at first.",
      "counted": false,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "tot": {
      "value": -2,
      "measured": true,
      "why": "Oil has fallen over the past month, and the Canadian dollar belongs to an oil exporter.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": -1.2
     },
     "positioning": {
      "value": -0.13,
      "measured": true,
-     "why": "Hedge fund bets are not at an extreme, so this counts for little.",
+     "why": "Hedge fund bets on the Canadian dollar are not at an extreme, so this counts for little.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "fiscal": {
      "value": 0,
      "measured": false,
-     "why": "Rests on a judged mark. Fiscal health is hard to read from one number.",
+     "why": "Canada's public finances are not a factor right now.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     }
    }
   },
   "AUD": {
+   "points": 3.2,
    "score": 35,
    "tested_score": 62,
    "measured_share": 88,
@@ -405,108 +474,123 @@
     "rates": {
      "value": 2,
      "measured": true,
-     "why": "Its central bank rate is 2.22 points above the middle of the eight, and its two-year bond yield is 1.51 points above the middle. Over the past month that yield has fallen behind the others.",
+     "why": "The Reserve Bank of Australia's rate is 2.2 points above the middle of the eight, and Australia's two-year bond yield is 1.5 points above the middle. Over the past month that yield has fallen behind the others.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 3.5
     },
     "inflation": {
      "value": 0,
      "measured": true,
-     "why": "Prices are rising about 3.9% a year against the Reserve Bank of Australia's goal of 2.5%, about as far from goal as most of the others.",
+     "why": "Prices in Australia are rising about 3.9% a year against the Reserve Bank of Australia's goal of 2.5%, about as far from goal as most of the others.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0
     },
     "growth": {
      "value": -0.33,
      "measured": true,
-     "why": "Of its last 6 data releases, 2 beat forecasts and 3 missed.",
+     "why": "Of Australia's last 6 data releases, 2 beat forecasts and 3 missed.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": -0.3
     },
     "risk": {
      "value": -2,
      "measured": true,
      "why": "Markets are more nervous than usual, which usually hurts the Australian dollar at first.",
      "counted": false,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "tot": {
      "value": 0.18,
      "measured": true,
      "why": "The prices Australia gets for its exports have barely moved over the past three months.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0
     },
     "positioning": {
      "value": 0.25,
      "measured": true,
-     "why": "Hedge fund bets are not at an extreme, so this counts for little.",
+     "why": "Hedge fund bets on the Australian dollar are not at an extreme, so this counts for little.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "fiscal": {
      "value": 0,
      "measured": false,
-     "why": "Rests on a judged mark. Fiscal health is hard to read from one number.",
+     "why": "Australia's public finances are not a factor right now.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     }
    }
   },
   "NZD": {
-   "score": 9,
-   "tested_score": 19,
+   "points": 1.2,
+   "score": 12,
+   "tested_score": 29,
    "measured_share": 76,
    "v1_score": 1,
    "drivers": {
     "rates": {
      "value": 0.17,
      "measured": true,
-     "why": "Its central bank rate is in the middle of the eight. No two-year yield feed covers it yet.",
+     "why": "The Reserve Bank of New Zealand's rate is in the middle of the eight. No daily two-year yield covers New Zealand yet.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0.3
     },
     "inflation": {
      "value": 0.36,
      "measured": true,
-     "why": "Prices are rising about 3.7% a year against the Reserve Bank of New Zealand's goal of 2%, about as far from goal as most of the others.",
+     "why": "Prices in New Zealand are rising about 3.7% a year against the Reserve Bank of New Zealand's goal of 2%, about as far from goal as most of the others.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 0
     },
     "growth": {
-     "value": 0,
+     "value": -0.33,
      "measured": true,
-     "why": "Of its last 6 data releases, 3 beat forecasts and 3 missed.",
+     "why": "Of New Zealand's last 6 data releases, 2 beat forecasts and 3 missed.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": -0.3
     },
     "risk": {
      "value": -2,
      "measured": true,
      "why": "Markets are more nervous than usual, which usually hurts the New Zealand dollar at first.",
      "counted": false,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "tot": {
-     "value": 1,
+     "value": 2,
      "measured": false,
-     "why": "No measured feed for what this country sells and buys yet, so this rests on a judged mark.",
+     "why": "Firm prices for New Zealand's dairy exports support the New Zealand dollar.",
      "counted": true,
-     "tested": true
+     "tested": true,
+     "points": 1.2
     },
     "positioning": {
      "value": -0.32,
      "measured": true,
-     "why": "Hedge fund bets are not at an extreme, so this counts for little.",
+     "why": "Hedge fund bets on the New Zealand dollar are not at an extreme, so this counts for little.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     },
     "fiscal": {
      "value": 0,
      "measured": false,
-     "why": "Rests on a judged mark. Fiscal health is hard to read from one number.",
+     "why": "New Zealand's public finances are not a factor right now.",
      "counted": true,
-     "tested": false
+     "tested": false,
+     "points": 0
     }
    }
   }
@@ -527,15 +611,25 @@
   },
   {
    "date": "2026-11-17",
+   "points": {
+    "USD": 2.2,
+    "EUR": -0.7,
+    "GBP": 3.7,
+    "JPY": -3.8,
+    "CHF": -5.5,
+    "CAD": -2.7,
+    "AUD": 3.2,
+    "NZD": 1.2
+   },
    "scores": {
-    "USD": 31,
-    "EUR": -5,
-    "GBP": 41,
-    "JPY": -39,
+    "USD": 25,
+    "EUR": -8,
+    "GBP": 38,
+    "JPY": -36,
     "CHF": -57,
     "CAD": -28,
     "AUD": 35,
-    "NZD": 9
+    "NZD": 12
    },
    "tested": {
     "USD": 61,
@@ -545,7 +639,7 @@
     "CHF": -79,
     "CAD": -27,
     "AUD": 62,
-    "NZD": 19
+    "NZD": 29
    },
    "v1": {
     "USD": 1,
