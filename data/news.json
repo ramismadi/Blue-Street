@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-18T20:00:00Z",
+  "updated": "2026-11-18T23:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-18T20:00:00Z",
-      "text": "The dollar sits near its highest since April 2025 because the Federal Reserve keeps signalling more rate rises. Minutes of its October meeting, released on Wednesday, November 18, show almost all officials expected further rises, and Governor Christopher Waller said the same day that a half-point step in December should be considered, though a quarter point is what markets expect."
+      "ts": "2026-11-18T23:55:00Z",
+      "text": "The dollar sits near its highest since April 2025 because the Federal Reserve keeps signalling more rate rises. On Wednesday, November 18 its October minutes showed almost all officials expecting further rises, Governor Christopher Waller raised the idea of a half-point step in December, and Minneapolis Fed President Neel Kashkari said he is fine with markets betting on more rises than officials project."
     },
     "EUR": {
       "lean": "bearish",
@@ -44,16 +44,82 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-18T20:00:00Z",
-      "text": "Gold fell on Wednesday, November 18 to its lowest since late September 2025, near $3,750 an ounce, as Federal Reserve Governor Christopher Waller raised the idea of a half-point rate rise and the Fed's October minutes showed almost all officials expecting more rises. Iran's widening attacks in the Gulf have not drawn enough safe-haven buying to offset higher US rates and a strong dollar."
+      "ts": "2026-11-18T23:55:00Z",
+      "text": "Gold fell on Wednesday, November 18 to its lowest since late September 2025, near $3,750 an ounce, as Federal Reserve officials one after another backed more rate rises and Governor Christopher Waller raised the idea of a half-point step. Iran's widening attacks in the Gulf have not drawn enough safe-haven buying to offset higher US rates and a strong dollar."
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-18T16:55:00Z",
-      "text": "Oil has lost about a fifth this month as Middle East exports recover, and official figures on Wednesday, November 18 showed US crude and gasoline stocks rising far more than expected, pushing prices down about 2%. Attacks on ships near the Strait of Hormuz and Iran's strikes on its neighbours keep supply scares alive before the OPEC+ meeting on November 29."
+      "ts": "2026-11-18T23:55:00Z",
+      "text": "Oil has lost about a fifth this month as Gulf exports recover, and on Wednesday, November 18 Brent ended near $92 and US crude near $83 after bigger US stockpiles and talk of faster Fed rate rises. Attacks on ships near the Strait of Hormuz go on but now move prices only briefly, ahead of the OPEC+ meeting on November 29."
     }
   },
   "items": [
+    {
+      "id": "investinglive-kashkari-markets-see-more-hikes-20261118",
+      "ts": "2026-11-18T21:32:19Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/central-banks/kashkari-says-markets-see-more-fed-hikes-than-officials-do-as-four-fed-voices-turn-hawkish/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/SP%20500%20hawkish%20fed%2019%20November%202026-featured-1795037522.jpg?width=960&format=webp",
+      "headline": "Kashkari: markets expect more Fed rate rises than officials do",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "policy",
+      "summary": "Minneapolis Fed President Neel Kashkari said on Wednesday, November 18 that markets expect more rate rises than Fed officials have pencilled in, and he did not push back on that.",
+      "beats": {
+        "was": "The Federal Reserve raised rates in September for the first time in three years as tariffs and the Iran war's energy shock lifted inflation, then held its main rate at 3.75% to 4% in October. Markets expect a quarter-point rise at the December 8-9 meeting.",
+        "happened": "Kashkari, who votes on rates in 2026, said on Wednesday, November 18 that markets see the Fed raising rates further than officials themselves project, and made no effort to talk that down. He blamed high inflation on a run of supply shocks, said keeping people's inflation expectations steady comes first, and called US spending and hiring surprisingly sturdy.",
+        "means": "He is the fourth Fed official in a day, after Governors Christopher Waller and Michael Barr and San Francisco Fed President Mary Daly, to lean toward more rate rises. Leaving market bets alone is a quiet sign the Fed is comfortable with them.",
+        "fx": "Adds to the dollar's support from expected Fed rate rises and to the pressure on gold."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Another official accepts market bets on more rate rises, which are already largely priced."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher expected US rates make gold, which pays no interest, less attractive."
+        }
+      ],
+      "watch": "The Fed's December 8-9 meeting, and US inflation figures before it, which decide whether the rise is a quarter point or half a point."
+    },
+    {
+      "id": "rigzone-bloomberg-oil-falls-3pc-settle-20261118",
+      "ts": "2026-11-18T21:14:00Z",
+      "source": "Rigzone (Bloomberg)",
+      "url": "https://www.rigzone.com/news/wire/oil_falls_3_despite_middle_east_attacks-18-nov-2026-185118-article/",
+      "image": "https://images.rigzone.com/images/news/articles/Oil-Falls-3-Despite-Middle-East-Attacks-185118-1200x628.png",
+      "headline": "Oil ends Wednesday lower despite more attacks near Hormuz",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "US crude ended Wednesday, November 18 down 3.2% at $83.26 a barrel and Brent down 1.3% at $91.95, as bigger US stockpiles and talk of faster Fed rate rises outweighed new attacks on ships near the Strait of Hormuz.",
+      "beats": {
+        "was": "Oil has lost about a fifth this month from a six-month high in late October, as Gulf exports disrupted by the Iran war come back and forecasters such as the International Energy Agency expect more supply than demand next year.",
+        "happened": "On Wednesday, November 18 US crude fell 3.2% to settle at $83.26 a barrel and Brent, the global benchmark, fell 1.3% to $91.95. Official figures showed US crude and gasoline stocks rising far more than expected, and Federal Reserve Governor Christopher Waller raised the idea of a bigger rate rise, which lifted the dollar.",
+        "means": "Iranian attacks on tankers near the Strait of Hormuz go on, but buyers now treat them as background noise unless they actually cut supply. Plenty of oil in storage and higher US rates are doing more to set the price.",
+        "fx": "Lower oil weighs a little on the Canadian dollar and Norway's krone, and eases inflation worries for big oil importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Bigger US stockpiles and higher expected US rates outweighed new attacks on shipping."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil prices cut into the value of Canada's main export."
+        }
+      ],
+      "watch": "Whether attacks near the Strait of Hormuz actually cut Gulf exports, and what OPEC+ decides at its meeting on November 29."
+    },
     {
       "id": "koreatimes-afp-fed-minutes-almost-all-more-hikes-20261118",
       "ts": "2026-11-18T19:30:03Z",
@@ -253,37 +319,157 @@
       "watch": "Euro-area business surveys in late November and whether other ECB officials talk about rises beyond December."
     },
     {
-      "id": "admisi-fomc-minutes-housing-preview-20261118",
-      "ts": "2026-11-18T11:50:49Z",
-      "source": "ADMISI",
-      "url": "https://www.admisi.com/macroeconomics-the-day-ahead-for-18-november-2026/",
-      "image": "https://zedia.admis.com/wp-content/uploads/sites/3/2020/08/20070841/691685071-skycraper-building-city-morning-comment-scaled.jpg",
-      "headline": "Fed minutes from October and weak US housing figures due Wednesday, November 18",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
+      "id": "bullionvault-gold-silver-no-floor-waller-20261118",
+      "date": "2026-11-18",
+      "source": "BullionVault",
+      "url": "https://www.bullionvault.com/gold-news/gold-price-news/gold-silver-floor-fed-rates-111820261",
+      "image": "https://www.bullionvault.com/gold-news/sites/default/files/inline-images/2026-11-18-eff-cpi.png",
+      "headline": "Gold and Silver 'Can't Find a Floor' as Waller Calls for Fed Rate Hike",
+      "story": "gold-fed-cpi",
+      "story_title": "Gold: rising US rates vs war risk",
       "pillar": "policy",
-      "summary": "The Federal Reserve publishes the minutes of its October meeting at 2:00 PM New York time on Wednesday, November 18, after October housing starts, forecast near a very low 1.25 million a year.",
+      "summary": "Gold's London afternoon price was set near $3,768 on Wednesday, November 18, about $90 lower than a day earlier and the lowest since late September 2025, and silver neared $45.",
       "beats": {
-        "was": "The Federal Reserve has been raising rates to cool inflation and several officials have recently backed more rises, so markets see a December rise as close to certain and the dollar near its highest since April 2025.",
-        "happened": "The minutes will show how many officials at the October meeting wanted to keep raising rates. Before that, October figures on new home building and permits come out, with forecasts pointing to one of the weakest readings in years, and pending home sales follow.",
-        "means": "The minutes are partly out of date because hotter inflation data and officials' speeches came after the meeting, but a broad push for more rises would back the current pricing. Weak housing shows higher rates are biting.",
-        "fx": "A firm tone in the minutes would support the dollar; very weak housing figures would lean against it a little."
+        "was": "Gold pays no interest, so it tends to lose appeal when US rates rise, and Federal Reserve officials have been backing further rate rises after a hot October inflation report.",
+        "happened": "Fed Governor Christopher Waller said on Wednesday, November 18 that a half-point rise in December should be considered. Gold then fell as much as 3.6% from its close on Friday, November 13, silver was down as much as 7.5% for the week, and platinum and palladium also dropped.",
+        "means": "Markets now expect the Fed to raise rates in December and probably again early next year, which makes holding metals costlier against a dollar that earns more.",
+        "fx": "A stronger dollar and higher US rates keep weighing on gold and silver."
       },
       "impact": [
         {
-          "ccy": "USD",
-          "dir": "mixed",
+          "ccy": "XAU",
+          "dir": "bearish",
           "strength": 1,
-          "why": "Minutes may back further rate rises, while housing data is expected to be weak."
+          "why": "A further leg down on bets for bigger and more Fed rate rises."
         },
         {
-          "ccy": "XAU",
-          "dir": "mixed",
+          "ccy": "USD",
+          "dir": "bullish",
           "strength": 1,
-          "why": "Gold has been falling as US rate expectations rise, so the tone of the minutes matters."
+          "why": "The same rate-rise bets that hit gold lift the dollar."
         }
       ],
-      "watch": "How many October voters wanted more than one further rate rise, and whether housing starts fall below forecast."
+      "watch": "The minutes of the Fed's October meeting, due at 2:00 PM New York time on Wednesday, November 18, and whether other officials back a half-point rise."
+    },
+    {
+      "id": "gulfnews-us-strikes-qeshm-adnoc-ship-hit-20261118",
+      "date": "2026-11-18",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/middle-east-war-iran-attacks-bahrain-kuwait-drone-threats-keep-gulf-on-high-alert-as-us-hits-irans-qeshm-1.500751444",
+      "image": "https://media.assettype.com/gulfnews%2F2026-11-17%2Fopnpxjfd%2F81edafb52beb4c3fb91eebcf4e1984f0.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "US jets hit an Iranian missile site on Qeshm Island; UAE oil company ship attacked in Hormuz",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "US jets struck an Iranian Revolutionary Guards missile site on Qeshm Island on Tuesday, November 17 after drones were fired at a US radar in Bahrain, and a ship run by the UAE's state oil company ADNOC was attacked in the Strait of Hormuz.",
+      "beats": {
+        "was": "Iran and the US have traded fire around the Gulf for months; the Strait of Hormuz carries about a fifth of the world's oil, so attacks on shipping there move oil prices.",
+        "happened": "A US official called the strike on Qeshm Island, which sits inside the Strait of Hormuz, self-defence after Revolutionary Guards drones targeted a US radar at Bahrain's Isa Air Base. An ADNOC Logistics vessel was attacked in the strait, with one crew member missing and 11 hurt, and 24 people were taken off a burning tanker off Oman's Musandam peninsula. Gulf airlines extended flight cancellations to Saudi Arabia.",
+        "means": "Direct US strikes on Iranian soil and fresh hits on ships make it harder to argue the conflict is cooling, and raise shipping insurance costs through the strait.",
+        "fx": "Some upward pressure on oil and a mild lift for safe places like the Swiss franc and gold, held back by the bigger story of rising US rates and recovering Gulf oil exports."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Ships hit in Hormuz and US strikes on Iran raise the risk to the main Gulf oil route."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Escalation between the US and Iran adds safe-haven demand."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Supply scares support oil, Canada's main export."
+        }
+      ],
+      "watch": "Whether Iran answers the Qeshm strike, and whether tanker traffic through Hormuz slows."
+    },
+    {
+      "id": "investing-reuters-japan-exports-record-october-20261118",
+      "date": "2026-11-18",
+      "source": "Investing.com (Reuters)",
+      "url": "https://au.investing.com/news/economic-indicators/japan-exports-set-record-in-october-on-strong-chiprelated-demand-4778513",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAH01I_L.jpg",
+      "headline": "Japan's exports hit a record in October on chip demand",
+      "story": "boj-december",
+      "story_title": "Will the Bank of Japan raise rates in December?",
+      "pillar": "growth",
+      "summary": "Japan's exports rose 20.5% from a year earlier in October to a monthly record, led by chips and chipmaking machines, and the trade gap came in about half as wide as forecast.",
+      "beats": {
+        "was": "Japan's economy shrank slightly in July to September, which gave the Bank of Japan a reason to hesitate over the rate rise to 1.5% that markets expect in December. The dollar trades just under 160 yen.",
+        "happened": "The Ministry of Finance's October trade figures, released on Wednesday, November 18, showed exports up 20.5% on a year earlier, a little above forecasts and the 14th rise in a row. Chip exports jumped by about half, and sales to the US rose about 24%. Imports rose less than expected, so the trade deficit was about 477 billion yen against roughly 956 billion forecast.",
+        "means": "Demand for AI chips is holding up Japan's factories while Chinese demand stays soft. Part of the jump comes from higher prices rather than more goods shipped, but it still eases worries that the economy is stalling, which helps the case for a December rate rise.",
+        "fx": "A small help for the yen: stronger trade supports a Bank of Japan rise and a smaller deficit means fewer yen sold to pay for imports. It does little against the wide gap between US and Japanese rates."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Record exports and a smaller trade gap support a December Bank of Japan rise."
+        }
+      ],
+      "watch": "Japan's October inflation figures on Friday, November 20, the last big reading before the Bank of Japan's December meeting."
+    },
+    {
+      "id": "reuters-ecb-reserve-requirement-2pc-20261118",
+      "date": "2026-11-18",
+      "source": "Reuters (via WBOW)",
+      "url": "https://1027wbow.com/2026/11/18/exclusive-ecb-to-discuss-raising-reserve-requirement-next-week-sources-say/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/18/2026-11-18T124128Z_1_LYNXNPEMAH19T_RTROPTP_3_ECB-POLICY.JPG",
+      "headline": "ECB to discuss doubling the cash banks must park with it, sources say",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "policy",
+      "summary": "European Central Bank policymakers will discuss on Wednesday, November 25 doubling the share of deposits that banks must hold at the central bank without earning interest, from 1% to 2%, four sources told Reuters.",
+      "beats": {
+        "was": "Euro-area banks hold over €2 trillion of spare cash at the European Central Bank, and as rates have risen the ECB and national central banks now pay out about €52 billion a year in interest on it.",
+        "happened": "Sources said the Governing Council will weigh raising the minimum reserve, the slice of deposits banks must keep at the central bank unpaid, to 2% at its meeting on Wednesday, November 25, with a decision possibly pushed to Thursday, December 17. Reuters estimates it would save the central banks about €4.4 billion a year. Vice President Boris Vujcic and chief economist Philip Lane are said to support it.",
+        "means": "It is a technical step to cut the cost of higher rates to the central banks, not a rate change. It would trim bank profits a little and take a small amount of spare cash out of the system.",
+        "fx": "Little direct effect on the euro. Weaker bank earnings are a small minus, a slightly tighter supply of spare cash a small plus. The ECB has not confirmed it."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "An unconfirmed technical change that would slightly squeeze banks and slightly tighten cash."
+        }
+      ],
+      "watch": "Any announcement after the ECB's non-rate meeting on Wednesday, November 25, or at the December 17 policy meeting."
+    },
+    {
+      "id": "reuters-bailey-labour-slack-stabilised-20261118",
+      "date": "2026-11-18",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/economy-news/boes-bailey-sees-uk-labour-market-no-longer-loosening-but-some-slack-remains-5036536",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAH1LD_L.jpg",
+      "headline": "BoE's Bailey says the UK jobs market has stopped loosening",
+      "story": "boe-hikes",
+      "story_title": "Bank of England: how far do rates rise?",
+      "pillar": "policy",
+      "summary": "Bank of England Governor Andrew Bailey said on Wednesday, November 18 that the UK jobs market is no longer getting weaker, though some slack remains, and that the next rate decision is not decided in advance.",
+      "beats": {
+        "was": "The Bank of England raised rates in November for the first time in three years. UK inflation for October, out on Wednesday, November 18, came in at 3.6% with core prices steady, and traders cut the odds of a December rise to about 80%.",
+        "happened": "Speaking at a conference in London, Bailey said spare capacity in the jobs market has stopped growing because the economy has picked up, but some remains. He repeated that policy is not on a set path and the bank will judge the evidence that builds up before its next meeting.",
+        "means": "A jobs market that has stopped loosening makes it harder for pay growth to keep cooling, which leans toward another rise. But Bailey gave no clear steer on December.",
+        "fx": "A slight support for the pound after the softer core inflation figures, as it keeps a December rise on the table."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Bailey says job-market slack has stopped growing, which keeps a December rise alive."
+        }
+      ],
+      "watch": "UK retail sales for October on Friday, November 20, and the Bank of England's decision on Thursday, December 17."
     },
     {
       "id": "irishtimes-euro-inflation-4pc-ecb-fsr-20261118",
@@ -487,159 +673,6 @@
       "watch": "The US government's weekly oil stock figures on Wednesday, November 18, which either confirm or contradict the industry count."
     },
     {
-      "id": "bullionvault-gold-silver-no-floor-waller-20261118",
-      "date": "2026-11-18",
-      "source": "BullionVault",
-      "url": "https://www.bullionvault.com/gold-news/gold-price-news/gold-silver-floor-fed-rates-111820261",
-      "image": "https://www.bullionvault.com/gold-news/sites/default/files/inline-images/2026-11-18-eff-cpi.png",
-      "headline": "Gold and Silver 'Can't Find a Floor' as Waller Calls for Fed Rate Hike",
-      "story": "gold-fed-cpi",
-      "story_title": "Gold: rising US rates vs war risk",
-      "pillar": "policy",
-      "summary": "Gold's London afternoon price was set near $3,768 on Wednesday, November 18, about $90 lower than a day earlier and the lowest since late September 2025, and silver neared $45.",
-      "beats": {
-        "was": "Gold pays no interest, so it tends to lose appeal when US rates rise, and Federal Reserve officials have been backing further rate rises after a hot October inflation report.",
-        "happened": "Fed Governor Christopher Waller said on Wednesday, November 18 that a half-point rise in December should be considered. Gold then fell as much as 3.6% from its close on Friday, November 13, silver was down as much as 7.5% for the week, and platinum and palladium also dropped.",
-        "means": "Markets now expect the Fed to raise rates in December and probably again early next year, which makes holding metals costlier against a dollar that earns more.",
-        "fx": "A stronger dollar and higher US rates keep weighing on gold and silver."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A further leg down on bets for bigger and more Fed rate rises."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The same rate-rise bets that hit gold lift the dollar."
-        }
-      ],
-      "watch": "The minutes of the Fed's October meeting, due at 2:00 PM New York time on Wednesday, November 18, and whether other officials back a half-point rise."
-    },
-    {
-      "id": "gulfnews-us-strikes-qeshm-adnoc-ship-hit-20261118",
-      "date": "2026-11-18",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/world/mena/middle-east-war-iran-attacks-bahrain-kuwait-drone-threats-keep-gulf-on-high-alert-as-us-hits-irans-qeshm-1.500751444",
-      "image": "https://media.assettype.com/gulfnews%2F2026-11-17%2Fopnpxjfd%2F81edafb52beb4c3fb91eebcf4e1984f0.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "US jets hit an Iranian missile site on Qeshm Island; UAE oil company ship attacked in Hormuz",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "US jets struck an Iranian Revolutionary Guards missile site on Qeshm Island on Tuesday, November 17 after drones were fired at a US radar in Bahrain, and a ship run by the UAE's state oil company ADNOC was attacked in the Strait of Hormuz.",
-      "beats": {
-        "was": "Iran and the US have traded fire around the Gulf for months; the Strait of Hormuz carries about a fifth of the world's oil, so attacks on shipping there move oil prices.",
-        "happened": "A US official called the strike on Qeshm Island, which sits inside the Strait of Hormuz, self-defence after Revolutionary Guards drones targeted a US radar at Bahrain's Isa Air Base. An ADNOC Logistics vessel was attacked in the strait, with one crew member missing and 11 hurt, and 24 people were taken off a burning tanker off Oman's Musandam peninsula. Gulf airlines extended flight cancellations to Saudi Arabia.",
-        "means": "Direct US strikes on Iranian soil and fresh hits on ships make it harder to argue the conflict is cooling, and raise shipping insurance costs through the strait.",
-        "fx": "Some upward pressure on oil and a mild lift for safe places like the Swiss franc and gold, held back by the bigger story of rising US rates and recovering Gulf oil exports."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Ships hit in Hormuz and US strikes on Iran raise the risk to the main Gulf oil route."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Escalation between the US and Iran adds safe-haven demand."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Supply scares support oil, Canada's main export."
-        }
-      ],
-      "watch": "Whether Iran answers the Qeshm strike, and whether tanker traffic through Hormuz slows."
-    },
-    {
-      "id": "investing-reuters-japan-exports-record-october-20261118",
-      "date": "2026-11-18",
-      "source": "Investing.com (Reuters)",
-      "url": "https://au.investing.com/news/economic-indicators/japan-exports-set-record-in-october-on-strong-chiprelated-demand-4778513",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAH01I_L.jpg",
-      "headline": "Japan's exports hit a record in October on chip demand",
-      "story": "boj-december",
-      "story_title": "Will the Bank of Japan raise rates in December?",
-      "pillar": "growth",
-      "summary": "Japan's exports rose 20.5% from a year earlier in October to a monthly record, led by chips and chipmaking machines, and the trade gap came in about half as wide as forecast.",
-      "beats": {
-        "was": "Japan's economy shrank slightly in July to September, which gave the Bank of Japan a reason to hesitate over the rate rise to 1.5% that markets expect in December. The dollar trades just under 160 yen.",
-        "happened": "The Ministry of Finance's October trade figures, released on Wednesday, November 18, showed exports up 20.5% on a year earlier, a little above forecasts and the 14th rise in a row. Chip exports jumped by about half, and sales to the US rose about 24%. Imports rose less than expected, so the trade deficit was about 477 billion yen against roughly 956 billion forecast.",
-        "means": "Demand for AI chips is holding up Japan's factories while Chinese demand stays soft. Part of the jump comes from higher prices rather than more goods shipped, but it still eases worries that the economy is stalling, which helps the case for a December rate rise.",
-        "fx": "A small help for the yen: stronger trade supports a Bank of Japan rise and a smaller deficit means fewer yen sold to pay for imports. It does little against the wide gap between US and Japanese rates."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Record exports and a smaller trade gap support a December Bank of Japan rise."
-        }
-      ],
-      "watch": "Japan's October inflation figures on Friday, November 20, the last big reading before the Bank of Japan's December meeting."
-    },
-    {
-      "id": "reuters-ecb-reserve-requirement-2pc-20261118",
-      "date": "2026-11-18",
-      "source": "Reuters (via WBOW)",
-      "url": "https://1027wbow.com/2026/11/18/exclusive-ecb-to-discuss-raising-reserve-requirement-next-week-sources-say/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/18/2026-11-18T124128Z_1_LYNXNPEMAH19T_RTROPTP_3_ECB-POLICY.JPG",
-      "headline": "ECB to discuss doubling the cash banks must park with it, sources say",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates one last time in December?",
-      "pillar": "policy",
-      "summary": "European Central Bank policymakers will discuss on Wednesday, November 25 doubling the share of deposits that banks must hold at the central bank without earning interest, from 1% to 2%, four sources told Reuters.",
-      "beats": {
-        "was": "Euro-area banks hold over €2 trillion of spare cash at the European Central Bank, and as rates have risen the ECB and national central banks now pay out about €52 billion a year in interest on it.",
-        "happened": "Sources said the Governing Council will weigh raising the minimum reserve, the slice of deposits banks must keep at the central bank unpaid, to 2% at its meeting on Wednesday, November 25, with a decision possibly pushed to Thursday, December 17. Reuters estimates it would save the central banks about €4.4 billion a year. Vice President Boris Vujcic and chief economist Philip Lane are said to support it.",
-        "means": "It is a technical step to cut the cost of higher rates to the central banks, not a rate change. It would trim bank profits a little and take a small amount of spare cash out of the system.",
-        "fx": "Little direct effect on the euro. Weaker bank earnings are a small minus, a slightly tighter supply of spare cash a small plus. The ECB has not confirmed it."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "An unconfirmed technical change that would slightly squeeze banks and slightly tighten cash."
-        }
-      ],
-      "watch": "Any announcement after the ECB's non-rate meeting on Wednesday, November 25, or at the December 17 policy meeting."
-    },
-    {
-      "id": "reuters-bailey-labour-slack-stabilised-20261118",
-      "date": "2026-11-18",
-      "source": "Investing.com (Reuters)",
-      "url": "https://www.investing.com/news/economy-news/boes-bailey-sees-uk-labour-market-no-longer-loosening-but-some-slack-remains-5036536",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAH1LD_L.jpg",
-      "headline": "BoE's Bailey says the UK jobs market has stopped loosening",
-      "story": "boe-hikes",
-      "story_title": "Bank of England: how far do rates rise?",
-      "pillar": "policy",
-      "summary": "Bank of England Governor Andrew Bailey said on Wednesday, November 18 that the UK jobs market is no longer getting weaker, though some slack remains, and that the next rate decision is not decided in advance.",
-      "beats": {
-        "was": "The Bank of England raised rates in November for the first time in three years. UK inflation for October, out on Wednesday, November 18, came in at 3.6% with core prices steady, and traders cut the odds of a December rise to about 80%.",
-        "happened": "Speaking at a conference in London, Bailey said spare capacity in the jobs market has stopped growing because the economy has picked up, but some remains. He repeated that policy is not on a set path and the bank will judge the evidence that builds up before its next meeting.",
-        "means": "A jobs market that has stopped loosening makes it harder for pay growth to keep cooling, which leans toward another rise. But Bailey gave no clear steer on December.",
-        "fx": "A slight support for the pound after the softer core inflation figures, as it keeps a December rise on the table."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Bailey says job-market slack has stopped growing, which keeps a December rise alive."
-        }
-      ],
-      "watch": "UK retail sales for October on Friday, November 20, and the Bank of England's decision on Thursday, December 17."
-    },
-    {
       "id": "arabnews-iran-kuwait-bahrain-attacks-houthi-strikes-20261118",
       "ts": "2026-11-17T22:38:53Z",
       "source": "Arab News",
@@ -797,33 +830,6 @@
         }
       ],
       "watch": "Minutes of the Fed's October meeting, due Wednesday, November 18, for how many officials want more than one more rise."
-    },
-    {
-      "id": "pa-uk-cpi-october-preview-20261117",
-      "ts": "2026-11-17T15:51:54Z",
-      "source": "PA Media",
-      "url": "https://www.rutland-times.co.uk/national/inflation-set-to-have-risen-amid-energy-bill-increases-and-tobacco-duty-hike-174401/",
-      "image": "https://www.rutland-times.co.uk/_media/img/MTFT5S4DR754OMGNTWGT.jpg",
-      "headline": "UK inflation expected to rise to 3.6% in October",
-      "story": "boe-hikes",
-      "story_title": "Bank of England: how far do rates rise?",
-      "pillar": "inflation",
-      "summary": "UK inflation for October, due at 7:00 AM London time on Wednesday, November 18, is expected to climb to 3.6% from 3.5%, pushed up by fuel, household energy and a rise in tobacco duty.",
-      "beats": {
-        "was": "UK inflation fell to 2.6% in June, then rose for three months in a row as the Middle East energy shock lifted fuel prices. The Bank of England raised its rate to 4.00% on November 5 and expects inflation to peak around 5% next year.",
-        "happened": "Forecasters polled by Pantheon Macroeconomics expect 3.6%, which would be a fourth rise in a row and the highest since October 2025. The energy price cap set by the regulator Ofgem went up 4% in October, and higher tobacco and vape duty adds to the monthly jump.",
-        "means": "A reading at or above forecast backs a further Bank of England rate rise in December. A reading below would ease that pressure, especially after a jobs report on Tuesday, November 17 that showed pay growth cooling.",
-        "fx": "This is a preview, so it moves little on its own. The pound has slid against a strong dollar, and a high reading would give it some support through higher expected UK rates."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Preview only; a high reading would firm up a December Bank of England rise."
-        }
-      ],
-      "watch": "The October inflation figures on Wednesday, November 18, especially services prices, which the Bank of England watches closely."
     },
     {
       "id": "instaforex-gdt-flat-20261117",
@@ -995,87 +1001,6 @@
         }
       ],
       "watch": "Whether attacks spread to big crude carriers, and whether the Oman talks lead to any wider contact between Iran and the US."
-    },
-    {
-      "id": "houseofsaud-araghchi-busaidi-no-hormuz-deal-20261117",
-      "ts": "2026-11-17T07:51:50Z",
-      "source": "House of Saud",
-      "url": "https://houseofsaud.com/araghchi-busaidi-muscat-nov17/",
-      "image": "https://houseofsaud.com/wp-content/uploads/2026/11/busaidi-araghchi-muscat-oman-iran-talks-nov17.jpg",
-      "headline": "Iran and Oman foreign ministers meet in Muscat with no Hormuz agreement",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's Foreign Minister Abbas Araghchi met Oman's Foreign Minister Badr Albusaidi in Muscat on Tuesday, November 17. The talks ended with no deal or timetable for reopening shipping through the Strait of Hormuz.",
-      "beats": {
-        "was": "Iran has kept the Strait of Hormuz closed or restricted since July, and the US has a naval blockade on Iran. Oman sits on the strait's southern side and has long passed messages between Tehran and Washington.",
-        "happened": "The two ministers discussed shipping safety and calming tensions, and Oman called the meeting constructive. Neither side announced an agreement, and the official accounts did not mention Hormuz shipping, which an Omani statement on November 5 had named. Hours earlier another tanker was hit near the strait.",
-        "means": "The channel for talks stays open, but there is no sign yet that the strait will return to normal traffic soon.",
-        "fx": "Keeps some war-risk premium in oil, a small help for the Canadian dollar and a cost for big energy importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "No progress on reopening Hormuz keeps supply worries alive."
-        }
-      ],
-      "watch": "Any follow-up from Oman or Iran on Hormuz shipping, and the OPEC+ meeting on November 29."
-    },
-    {
-      "id": "reuters-uk-pay-slows-vacancies-20261117",
-      "ts": "2026-11-17T07:25:44Z",
-      "source": "Reuters (via RTÉ)",
-      "url": "https://www.rte.ie/news/business/2026/1117/1599494-uk-wages-growth-figures/",
-      "image": "https://www.rte.ie/images/0015558d-1600.jpg",
-      "headline": "UK wage growth slows to 3.5% in three months to September",
-      "story": "boe-hikes",
-      "story_title": "Bank of England: how far do rates rise?",
-      "pillar": "policy",
-      "summary": "UK pay growth cooled a little more than expected and job openings fell to their lowest since 2021, but unemployment also dipped. The pound barely moved.",
-      "beats": {
-        "was": "The Bank of England raised rates in November for the first time in more than three years, because UK inflation is running well above its 2% goal. Markets expect another rise in December, and pay growth is one of the main things the Bank watches.",
-        "happened": "Regular pay, leaving out bonuses, grew 3.5% from a year earlier in July to September, down from 3.7% and just under forecasts. Unemployment slipped to 4.6% instead of rising, but the tax office's payroll count fell by about 34,000 in October and job openings dropped to 690,000, the fewest since early 2021.",
-        "means": "Slower pay and fewer openings point to a cooling job market, which takes a little heat out of inflation. It is not weak enough to change the Bank's December plans, so markets still see about a 90% chance of a rise.",
-        "fx": "A mixed report that leaves the December rate rise in place, so the pound keeps taking its lead from the strong dollar rather than from UK news."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Pay and job openings cooled, but unemployment fell; December rise still about 90% expected."
-        }
-      ],
-      "watch": "UK inflation for October, out Wednesday morning: a high reading would firm up the December rise."
-    },
-    {
-      "id": "actionforex-rbnz-expectations-survey-q4-20261117",
-      "ts": "2026-11-17T02:29:53Z",
-      "source": "ActionForex",
-      "url": "https://www.actionforex.com/live-comments/661109-rbnz-survey-shows-near-term-inflation-fears-rising-but-long-term-expectations-ease/",
-      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-nz1.jpg",
-      "headline": "RBNZ Survey Shows Near-Term Inflation Fears Rising, but Long-Term Expectations Ease",
-      "story": "rbnz-december",
-      "story_title": "Will the Reserve Bank of New Zealand raise rates on December 9?",
-      "pillar": "inflation",
-      "summary": "Business leaders and forecasters polled by the Reserve Bank of New Zealand now expect inflation of almost 3% over the next year, up from 2.6%. Their longer-run views eased, and they now expect the bank to raise its 2.75% rate soon.",
-      "beats": {
-        "was": "The Reserve Bank of New Zealand asks firms and economists every quarter where they see prices and rates heading. Its policy rate is 2.75%, inflation slowed to 3.7% in July to September, and unemployment has risen to 5.7%.",
-        "happened": "The November survey, out on Tuesday, November 17, showed expected inflation one year ahead rising to 2.92%. The two-year view, which the bank watches most, barely moved at 2.36%, and the five- and ten-year views fell. Respondents now see the policy rate at about 3.05% by the end of this year and 3.40% a year from now, and expect house prices to rise only 0.5%.",
-        "means": "Price worries are rising in the short run but the longer-run anchor is holding, which gives the bank room to move slowly. Respondents expect a rate rise at the December 9 meeting, but rising joblessness argues for caution.",
-        "fx": "A small lift for the New Zealand dollar from higher expected rates, but it was offset by the strong US dollar and the kiwi barely moved."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Higher expected rates help, but steady long-run expectations and rising unemployment let the bank go slowly."
-        }
-      ],
-      "watch": "The Reserve Bank of New Zealand's decision on December 9: a rise would match what this survey expects; a hold would hurt the kiwi."
     },
     {
       "id": "aljazeera-iran-war-frozen-conflict-20261117",
@@ -1250,6 +1175,87 @@
         }
       ],
       "watch": "Australian jobs figures and the fourth-quarter inflation reading: further rises in unemployment would strengthen the three members who wanted to stop."
+    },
+    {
+      "id": "houseofsaud-araghchi-busaidi-no-hormuz-deal-20261117",
+      "ts": "2026-11-17T07:51:50Z",
+      "source": "House of Saud",
+      "url": "https://houseofsaud.com/araghchi-busaidi-muscat-nov17/",
+      "image": "https://houseofsaud.com/wp-content/uploads/2026/11/busaidi-araghchi-muscat-oman-iran-talks-nov17.jpg",
+      "headline": "Iran and Oman foreign ministers meet in Muscat with no Hormuz agreement",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's Foreign Minister Abbas Araghchi met Oman's Foreign Minister Badr Albusaidi in Muscat on Tuesday, November 17. The talks ended with no deal or timetable for reopening shipping through the Strait of Hormuz.",
+      "beats": {
+        "was": "Iran has kept the Strait of Hormuz closed or restricted since July, and the US has a naval blockade on Iran. Oman sits on the strait's southern side and has long passed messages between Tehran and Washington.",
+        "happened": "The two ministers discussed shipping safety and calming tensions, and Oman called the meeting constructive. Neither side announced an agreement, and the official accounts did not mention Hormuz shipping, which an Omani statement on November 5 had named. Hours earlier another tanker was hit near the strait.",
+        "means": "The channel for talks stays open, but there is no sign yet that the strait will return to normal traffic soon.",
+        "fx": "Keeps some war-risk premium in oil, a small help for the Canadian dollar and a cost for big energy importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "No progress on reopening Hormuz keeps supply worries alive."
+        }
+      ],
+      "watch": "Any follow-up from Oman or Iran on Hormuz shipping, and the OPEC+ meeting on November 29."
+    },
+    {
+      "id": "reuters-uk-pay-slows-vacancies-20261117",
+      "ts": "2026-11-17T07:25:44Z",
+      "source": "Reuters (via RTÉ)",
+      "url": "https://www.rte.ie/news/business/2026/1117/1599494-uk-wages-growth-figures/",
+      "image": "https://www.rte.ie/images/0015558d-1600.jpg",
+      "headline": "UK wage growth slows to 3.5% in three months to September",
+      "story": "boe-hikes",
+      "story_title": "Bank of England: how far do rates rise?",
+      "pillar": "policy",
+      "summary": "UK pay growth cooled a little more than expected and job openings fell to their lowest since 2021, but unemployment also dipped. The pound barely moved.",
+      "beats": {
+        "was": "The Bank of England raised rates in November for the first time in more than three years, because UK inflation is running well above its 2% goal. Markets expect another rise in December, and pay growth is one of the main things the Bank watches.",
+        "happened": "Regular pay, leaving out bonuses, grew 3.5% from a year earlier in July to September, down from 3.7% and just under forecasts. Unemployment slipped to 4.6% instead of rising, but the tax office's payroll count fell by about 34,000 in October and job openings dropped to 690,000, the fewest since early 2021.",
+        "means": "Slower pay and fewer openings point to a cooling job market, which takes a little heat out of inflation. It is not weak enough to change the Bank's December plans, so markets still see about a 90% chance of a rise.",
+        "fx": "A mixed report that leaves the December rate rise in place, so the pound keeps taking its lead from the strong dollar rather than from UK news."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Pay and job openings cooled, but unemployment fell; December rise still about 90% expected."
+        }
+      ],
+      "watch": "UK inflation for October, out Wednesday morning: a high reading would firm up the December rise."
+    },
+    {
+      "id": "actionforex-rbnz-expectations-survey-q4-20261117",
+      "ts": "2026-11-17T02:29:53Z",
+      "source": "ActionForex",
+      "url": "https://www.actionforex.com/live-comments/661109-rbnz-survey-shows-near-term-inflation-fears-rising-but-long-term-expectations-ease/",
+      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-nz1.jpg",
+      "headline": "RBNZ Survey Shows Near-Term Inflation Fears Rising, but Long-Term Expectations Ease",
+      "story": "rbnz-december",
+      "story_title": "Will the Reserve Bank of New Zealand raise rates on December 9?",
+      "pillar": "inflation",
+      "summary": "Business leaders and forecasters polled by the Reserve Bank of New Zealand now expect inflation of almost 3% over the next year, up from 2.6%. Their longer-run views eased, and they now expect the bank to raise its 2.75% rate soon.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand asks firms and economists every quarter where they see prices and rates heading. Its policy rate is 2.75%, inflation slowed to 3.7% in July to September, and unemployment has risen to 5.7%.",
+        "happened": "The November survey, out on Tuesday, November 17, showed expected inflation one year ahead rising to 2.92%. The two-year view, which the bank watches most, barely moved at 2.36%, and the five- and ten-year views fell. Respondents now see the policy rate at about 3.05% by the end of this year and 3.40% a year from now, and expect house prices to rise only 0.5%.",
+        "means": "Price worries are rising in the short run but the longer-run anchor is holding, which gives the bank room to move slowly. Respondents expect a rate rise at the December 9 meeting, but rising joblessness argues for caution.",
+        "fx": "A small lift for the New Zealand dollar from higher expected rates, but it was offset by the strong US dollar and the kiwi barely moved."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Higher expected rates help, but steady long-run expectations and rising unemployment let the bank go slowly."
+        }
+      ],
+      "watch": "The Reserve Bank of New Zealand's decision on December 9: a rise would match what this survey expects; a hold would hurt the kiwi."
     },
     {
       "id": "reuters-canada-cpi-october-holds-20261116",
