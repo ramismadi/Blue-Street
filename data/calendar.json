@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T18:37:28-06:00",
+  "updated": "2026-11-18T07:36:00-06:00",
   "events": [
     {
       "id": "chf-ppi-20261015",
@@ -2168,6 +2168,26 @@
       ]
     },
     {
+      "id": "us-import-prices-20261017",
+      "ts": "2026-11-17T13:30:00Z",
+      "ccy": "USD",
+      "impact": "medium",
+      "category": "inflation",
+      "title": "US import prices m/m (Oct)",
+      "focus": false,
+      "actual": "+1.1% m/m (vs +0.7% fcst)",
+      "forecast": "+0.7% m/m",
+      "previous": null,
+      "better": "higher",
+      "why": "October import prices — the second upside inflation surprise in the run-up to the December hike decision, after the hot Oct CPI.",
+      "if_beat": "Hotter: Dec hike pricing firms — USD bid, yields up.",
+      "if_miss": "Cooler: disinflation read — USD offered.",
+      "outcome": "Beat — import prices rose 1.1% m/m vs 0.7% expected; the print reinforced the December hike case alongside the retail sales beat (CME Dec 25bp ~97%) and kept the 10Y above 5.10%. (BLS via Reuters/WSJ, Nov 17)",
+      "chapter": null,
+      "bank": "fed",
+      "sources": []
+    },
+    {
       "id": "us-ip-20261117",
       "ts": "2026-11-17T14:15:00Z",
       "ccy": "USD",
@@ -2260,19 +2280,24 @@
       "ccy": "GBP",
       "impact": "high",
       "category": "speech",
-      "title": "BoE Governor Bailey speaks",
+      "title": "BoE Governor Bailey — pre-recorded fireside chat (IFAC, Seoul)",
       "focus": false,
-      "actual": null,
+      "actual": "Pre-recorded fireside chat at the IFAC World Congress of Accountants, Seoul (7:30am GMT)",
       "forecast": null,
       "previous": null,
       "better": null,
-      "why": "Bailey hours after the October CPI print — the first BoE voice on whether December is back-to-back.",
+      "why": "Bailey's early appearance was a pre-recorded fireside chat at the IFAC World Congress of Accountants in Seoul — not a policy speech; the policy speech is the 3:00pm London appearance (15:00Z).",
       "if_beat": "Hawkish: back-to-back pricing firms — GBP bid.",
       "if_miss": "Dovish: one-and-done case grows — GBP offered.",
-      "outcome": null,
+      "outcome": "No policy signal — pre-recorded fireside chat, not a policy speech; no December steer reported in major-wire coverage checked. The policy read comes at the 3:00pm London speech (15:00Z). (Bank of England, Nov 18)",
       "chapter": null,
       "bank": "boe",
-      "sources": []
+      "sources": [
+        {
+          "label": "Bank of England: Upcoming events — w/b 16 November 2026",
+          "url": "https://www.bankofengland.co.uk/events/upcoming-events"
+        }
+      ]
     },
     {
       "id": "eur-fsr-20261118",
@@ -2282,17 +2307,76 @@
       "category": "central-bank",
       "title": "ECB Financial Stability Review",
       "focus": false,
-      "actual": null,
+      "actual": "Risks to euro area financial stability 'remain elevated' — AI valuations, fiscal imbalances, geoeconomic tensions; France singled out (debt 119% of GDP, deficit 5.5%); 'fiscal consolidation is overdue'; market discipline 'can help contain vulnerabilities'",
       "forecast": null,
       "previous": null,
       "better": null,
       "why": "The ECB's twice-yearly stability read — sovereign spreads and bank funding after the 10Y pushed above 5%.",
       "if_beat": "Hawkish on risks: EUR offered on stress read-through.",
       "if_miss": "Calm read: EUR steady.",
-      "outcome": null,
+      "outcome": "No policy signal — a stability read, not a rate steer: the FSR flags AI valuations, fiscal imbalances and geoeconomic tensions as the elevated risks, singles out France (widening spreads, 119% debt, 5.5% deficit) and says fiscal consolidation is overdue; banks resilient on capital and liquidity. Dec ECB hike pricing ~88-92% unchanged; EUR/USD ~1.097. (ECB, Nov 18)",
       "chapter": null,
       "bank": "ecb",
-      "sources": []
+      "sources": [
+        {
+          "label": "ECB: Risks from AI valuations, fiscal imbalances and geoeconomic tensions weigh on financial stability outlook",
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html"
+        }
+      ]
+    },
+    {
+      "id": "eur-cpi-final-20261118",
+      "ts": "2026-11-18T10:00:00Z",
+      "ccy": "EUR",
+      "impact": "high",
+      "category": "inflation",
+      "title": "Eurozone CPI (Oct, final) y/y",
+      "focus": false,
+      "actual": "+4.0% y/y (in line with flash; Sep 3.8%); core 2.6% (revised up from 2.5% flash); m/m +0.5% (revised from +0.4% flash)",
+      "forecast": "4.0% y/y (flash)",
+      "previous": "3.8% y/y (Sep)",
+      "better": "higher",
+      "why": "Final October HICP — the flash put euro-area inflation at 4.0%, a three-year high; the core revision is the December ECB hike tell.",
+      "if_beat": "Hotter core: Dec ECB hike pricing firms — EUR bid.",
+      "if_miss": "Softer: hold case grows — EUR offered.",
+      "outcome": "In line on the headline — 4.0% y/y confirmed, matching the Nov 4 flash and the highest since Sep 2023; core revised UP to 2.6% from the 2.5% flash and m/m to +0.5% from +0.4%. The upward core revision keeps the Dec ECB hike case intact; EUR/USD ~1.0965 after the print. (Eurostat, Nov 18)",
+      "chapter": null,
+      "bank": "ecb",
+      "sources": [
+        {
+          "label": "Eurostat: Inflation in the euro area (Oct 2026, final)",
+          "url": "https://ec.europa.eu/eurostat/statistics-explained/?%20title=Inflation_in_the_euro_area"
+        },
+        {
+          "label": "TradingView/DPA: Eurozone Inflation Confirmed At 4.0%",
+          "url": "https://www.tradingview.com/news/dpa_afx:32bd8721d9056:0-eurozone-inflation-confirmed-at-4-0/"
+        }
+      ]
+    },
+    {
+      "id": "us-housing-starts-20261118",
+      "ts": "2026-11-18T13:30:00Z",
+      "ccy": "USD",
+      "impact": "medium",
+      "category": "growth",
+      "title": "US housing starts (Oct) SAAR",
+      "focus": false,
+      "actual": "1.309M SAAR (+9.9% m/m vs 1.25M WSJ consensus; Sep revised down to 1.191M from 1.221M); single-family 864K (+4.0%); permits 1.295M (-7.4% vs 1.38M fcst; single-family 772K, -8.7%)",
+      "forecast": "1.25M (WSJ survey; TipRanks 1.27M)",
+      "previous": "1.191M SAAR (Sep, revised down from 1.221M)",
+      "better": "higher",
+      "why": "October residential construction — September starts fell 5.2% to a four-month low as 7%+ mortgages froze building; the read on whether housing is stabilizing into the December hike.",
+      "if_beat": "Stronger: housing stabilizing — small USD bid, yields up.",
+      "if_miss": "Weaker: the freeze deepens — USD offered, yields down.",
+      "outcome": "Mixed — starts BEAT at 1.309M SAAR (+9.9% m/m vs 1.25M consensus) but the +9.9% carries a ±16.8pp 90% confidence interval (not statistically significant), September was revised DOWN to 1.191M from 1.221M, and permits MISSED at 1.295M (-7.4% vs 1.38M expected; single-family permits -8.7% to 772K). The pipeline is weakening even as starts bounced — no dollar reaction (DXY ~103.80, EUR/USD ~1.0969 after the print). (Census Bureau CB26-187, Nov 18)",
+      "chapter": null,
+      "bank": null,
+      "sources": [
+        {
+          "label": "Census Bureau: Monthly New Residential Construction, October 2026 (CB26-187)",
+          "url": "https://www.census.gov/construction/nrc/current/index.html"
+        }
+      ]
     },
     {
       "id": "eur-lagarde-20261118",
