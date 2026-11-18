@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T01:55:00Z",
+  "updated": "2026-11-18T03:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -33,9 +33,9 @@
       "text": "Canadian inflation held at 3.1% in October, slightly below forecast, and the Bank of Canada's core measures sit near its 2% goal, so a December rate rise looks less likely. Oil, Canada's main export, ended Tuesday, November 17 a little higher but is still down about a fifth this month, and the US dollar is strong, so the Canadian dollar has little to lean on."
     },
     "AUD": {
-      "lean": "bearish",
-      "ts": "2026-11-17T19:49:09Z",
-      "text": "The Australian dollar has been the weakest major currency this past month: the Reserve Bank of Australia's November rate rise was a 6-3 vote and big banks think rates have peaked, even though Governor Michele Bullock says inflation risks still lean higher. US stocks fell again on Tuesday, November 17 before Nvidia's results, adding to the pressure."
+      "lean": "mixed",
+      "ts": "2026-11-18T03:55:00Z",
+      "text": "The Australian dollar has been the weakest major currency this past month as US rates rise and big banks call the Reserve Bank of Australia's rate rises finished. Pay grew faster than forecast in July to September, reported on Wednesday, November 18, which backs the board members who want one more rise and gives the currency some support."
     },
     "NZD": {
       "lean": "bearish",
@@ -49,11 +49,98 @@
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-18T00:05:00Z",
-      "text": "Oil has lost about a fifth this month as Middle East exports recover and the International Energy Agency expects more supply than demand this quarter. Brent still ended Tuesday, November 17 up at about $93 after fresh attacks on ships near the Strait of Hormuz, so prices swing between surplus forecasts and war risk until the OPEC+ meeting on November 29."
+      "ts": "2026-11-18T03:55:00Z",
+      "text": "Oil has lost about a fifth this month as Middle East exports recover and US crude stocks rise, with Brent just under $93 on Wednesday, November 18. Attacks near the Strait of Hormuz and Houthi claims of drone strikes on Saudi Arabia's pipeline around it keep supply scares alive until the OPEC+ meeting on November 29."
     }
   },
   "items": [
+    {
+      "id": "actionforex-australia-wages-q3-jump-20261118",
+      "ts": "2026-11-18T02:49:49Z",
+      "source": "ActionForex",
+      "url": "https://www.actionforex.com/live-comments/661241-australia-wage-growth-jumps-to-1-1-strongest-quarterly-rise-since-2023/",
+      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-au1.jpg",
+      "headline": "Australian wages post their biggest quarterly rise since 2023",
+      "story": "rba-path",
+      "story_title": "Has the Reserve Bank of Australia finished raising rates?",
+      "pillar": "inflation",
+      "summary": "Australian pay rose 1.1% in July to September, above the 0.9% forecast and the fastest quarterly gain since late 2023, which keeps alive the case for another Reserve Bank of Australia rate rise.",
+      "beats": {
+        "was": "The Reserve Bank of Australia raised rates in November on a 6-3 vote, and its minutes showed the board split on whether a fifth rise is needed. Big Australian banks think rates have peaked, and the Australian dollar has been the weakest major currency this past month.",
+        "happened": "The Australian Bureau of Statistics' Wage Price Index, released on Wednesday, November 18, rose 1.1% in the September quarter against 0.9% expected, taking yearly pay growth to 3.5% from 3.4%. The yearly minimum and award wage rise of 4.75% lifted private pay, and new state deals for nurses, midwives and police lifted public pay.",
+        "means": "Much of the jump comes from once-a-year pay decisions rather than a tighter jobs market, so it may not last. Still, faster pay growth makes it harder for the central bank to say inflation is beaten, which weakens the banks' call that rates have peaked.",
+        "fx": "A small lift for the Australian dollar, since it supports the side of the Reserve Bank of Australia board that wants one more rise. It does little against the strong US dollar and falling share markets."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Pay grew faster than forecast, backing the case for another Reserve Bank of Australia rise."
+        }
+      ],
+      "watch": "Australia's October jobs figures on Thursday, November 19, the next test of whether the jobs market is still tight."
+    },
+    {
+      "id": "brecorder-reuters-oil-falls-api-build-20261118",
+      "ts": "2026-11-18T02:48:58Z",
+      "source": "Business Recorder (Reuters)",
+      "url": "https://www.brecorder.com/news/40449497/oil-prices-fall-as-higher-us-crude-stocks-temper-supply-risks",
+      "image": "https://i.brecorder.com/large/2026/05/08052318c855fa3.webp",
+      "headline": "Oil slips as US crude stocks rise",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Oil edged lower early on Wednesday, November 18, with Brent just under $93 a barrel, after an industry count showed US crude stocks rose by about 5.3 million barrels last week.",
+      "beats": {
+        "was": "Oil has lost about a fifth this month as Middle East exports recover and the International Energy Agency forecasts more supply than demand this quarter, but attacks around the Strait of Hormuz keep lifting prices on some days.",
+        "happened": "The American Petroleum Institute, an industry group, reported on Tuesday, November 17 that US crude stocks grew by about 5.3 million barrels and petrol stocks by about 5.1 million in the week to November 13. Brent fell about 0.2% and US crude about 0.7% in Asian trading. Fresh Gulf attacks, including on a gas tanker near Hormuz, kept the losses small.",
+        "means": "Rising US stockpiles add to the picture of a well-supplied market, which pulls against the war risk. Analysts at LSEG said shipping through Hormuz is still far from normal, so supply scares can return quickly.",
+        "fx": "A mild drag on the Canadian dollar, as oil is Canada's main export. Cheaper oil is a slight help for big energy importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A large rise in US crude stocks points to ample supply."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Softer oil weighs on Canada's main export."
+        }
+      ],
+      "watch": "The US government's weekly oil stock figures on Wednesday, November 18, which either confirm or contradict the industry count."
+    },
+    {
+      "id": "ibtimes-houthis-drones-saudi-east-west-pipeline-20261117",
+      "ts": "2026-11-17T21:29:50Z",
+      "source": "IBTimes",
+      "url": "https://www.ibtimes.com/houthis-claim-drone-attacks-saudi-oil-pipeline-stations-3809884",
+      "image": "https://d.ibtimes.com/en/full/4654563/yemeni-fighters-taiz-province.jpg",
+      "headline": "Houthis claim drone strikes on Saudi Arabia's East-West oil pipeline",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Yemen's Houthi rebels said on Tuesday, November 17 they sent five drones at two pumping stations on Saudi Arabia's East-West pipeline, the route that lets Saudi oil avoid the Strait of Hormuz. Saudi Arabia has not confirmed any damage.",
+      "beats": {
+        "was": "With shipping through the Strait of Hormuz disrupted by the war with Iran, Saudi Arabia leans on its East-West pipeline, which can carry about 4 million barrels a day to the Red Sea port of Yanbu. The pipeline was shut for a while in September after a drone attack, and the Iran-allied Houthis have claimed several strikes on it this month.",
+        "happened": "Houthi spokesman Yahya Saree said three drones targeted Pumping Station 9 west of Riyadh and two hit Station 8, and claimed large fires. There was no independent confirmation of damage or of any halt to oil flows.",
+        "means": "The claim alone does not remove any oil, but it shows the main route around Hormuz is a target. If an attack did force a shutdown, a large share of Saudi exports would be stuck.",
+        "fx": "Little direct effect while the claim is unconfirmed. A confirmed shutdown would lift oil, helping the Canadian dollar and hurting energy importers such as the yen and euro."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Unconfirmed claim of drone hits on Saudi Arabia's route around Hormuz."
+        }
+      ],
+      "watch": "Whether Saudi Arabia's Energy Ministry confirms damage or any pause in pipeline flows."
+    },
     {
       "id": "investing-reuters-japan-exports-record-october-20261118",
       "date": "2026-11-18",
@@ -1277,45 +1364,6 @@
         }
       ],
       "watch": "Whether ship owners or tracking firms name the ship and confirm it sank, and how Brent opens Sunday evening US time."
-    },
-    {
-      "id": "almonitor-reuters-yemen-forces-leave-bab-el-mandeb-20261115",
-      "date": "2026-11-15",
-      "source": "Al-Monitor (Reuters)",
-      "url": "https://www.al-monitor.com/originals/2026/11/yemen-government-forces-withdraw-area-near-bab-el-mandeb-strait-houthis-control",
-      "image": "https://www.al-monitor.com/sites/default/files/styles/social_media_share/public/2026-11/2026-11-15T083942Z_2_LYNXNPEMAE04X_RTROPTP_3_IRAN-CRISIS-YEMEN.JPG?h=c9f93661&itok=turXqShl",
-      "headline": "Yemen government forces withdraw from area near Bab el-Mandeb Strait, Houthis in control",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Saudi-backed Yemeni government forces pulled back on Sunday from the area overlooking Bab el-Mandeb, the narrow southern entrance to the Red Sea, leaving Iran-aligned Houthi rebels in control of its shore.",
-      "beats": {
-        "was": "Bab el-Mandeb links the Red Sea to the Indian Ocean and carries Gulf oil shipped from Saudi Arabia's Red Sea port of Yanbu, the main way around a mostly shut Hormuz. The Houthis, allied with Iran, have already struck Yanbu and other Saudi oil sites, and the government began an offensive in October to retake the coast.",
-        "happened": "Southern forces fighting for Yemen's recognised government said they were leaving the Dhubab airport and Bab el-Mandeb area west of Taiz to move toward Aden and defend it, as the Houthis press into the south. Reuters calls it a major setback for the government side.",
-        "means": "The Houthis now overlook both sides of the Gulf's escape routes problem: with Hormuz mostly shut, the Red Sea is the main bypass, and the group gains more power to threaten it. They have not announced new attacks on ships, so this raises risk rather than cutting supply today.",
-        "fx": "Adds to oil's war premium and to demand for safe places to hold money such as the Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Iran-aligned rebels gain control over the Red Sea route that carries oil around a mostly shut Hormuz."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A wider Gulf war adds demand for a safe place to hold money."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil prices help Canada's main export."
-        }
-      ],
-      "watch": "Whether the Houthis warn or attack ships in the Red Sea, and whether shipping firms reroute away from it."
     }
   ]
 }
