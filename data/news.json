@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T14:48:00Z",
+  "updated": "2026-11-18T15:58:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,13 +9,13 @@
     },
     "EUR": {
       "lean": "bearish",
-      "ts": "2026-11-18T12:55:00Z",
-      "text": "The euro hovers around $1.10, near its lowest since April 2025, because the Federal Reserve looks set to keep raising rates after the European Central Bank's expected last rise in December. Euro-area inflation was confirmed at 4% on Wednesday, November 18, and a reported Franco-German deal to make Spain's Pablo Hernandez de Cos the next ECB president points to steady leadership rather than a change of course."
+      "ts": "2026-11-18T15:58:00Z",
+      "text": "The euro hovers around $1.10, near its lowest since April 2025, because the Federal Reserve looks set to keep raising rates. European Central Bank Vice President Boris Vujcic said on Wednesday, November 18 that a December rise is very likely after inflation was confirmed at 4%, which gives the euro some support but not enough to offset the Fed."
     },
     "GBP": {
       "lean": "bearish",
-      "ts": "2026-11-18T11:49:00Z",
-      "text": "The pound fell to its lowest against the dollar in about a month after UK inflation for October, released on Wednesday, November 18, came in at 3.6% with core prices steady. Traders cut the odds of a December Bank of England rate rise to about 80%, while bets on more Federal Reserve rises keep the dollar strong."
+      "ts": "2026-11-18T15:58:00Z",
+      "text": "The pound fell to its lowest against the dollar in about a month after UK inflation for October, released on Wednesday, November 18, came in at 3.6% with core prices steady, and traders cut the odds of a December Bank of England rise to about 80%. Governor Andrew Bailey said the same day that the jobs market has stopped weakening, which keeps that rise possible but did not change the picture much."
     },
     "JPY": {
       "lean": "mixed",
@@ -125,6 +125,33 @@
         }
       ],
       "watch": "Whether the October meeting minutes and other Fed officials back a half-point step, or stick with quarter-point rises."
+    },
+    {
+      "id": "newsquawk-vujcic-december-hike-very-likely-20261118",
+      "ts": "2026-11-18T12:24:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/ecbs-vujcic-says-based-on-current-conditions-a-december-rate-hike-is-very-likely",
+      "image": null,
+      "headline": "ECB's Vujcic says a December rate rise is very likely on current conditions",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "policy",
+      "summary": "European Central Bank Vice President Boris Vujcic said on Wednesday, November 18 that, as things stand, a rate rise at the December meeting is very likely, and that higher energy costs will feed into wages and other prices in 2027.",
+      "beats": {
+        "was": "The European Central Bank has raised rates twice this year as energy costs from the Iran war pushed euro-area inflation to 4%, and markets already expect one more rise at its meeting on Thursday, December 17.",
+        "happened": "Vujcic, the bank's second most senior official, said a December rise looks very likely based on current conditions, and that so-called second-round effects, where higher energy costs spread into pay and other prices, will definitely show up in 2027.",
+        "means": "This backs what markets already expect for December. The warning about 2027 hints that rates may not stop there, though the words 'on current conditions' leave room to change course.",
+        "fx": "A small lift for the euro, since it supports higher euro-area rates for longer. Bets on more Federal Reserve rises still weigh more on the euro against the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The ECB's vice president backs a December rise and warns price pressure will last into 2027."
+        }
+      ],
+      "watch": "Euro-area business surveys in late November and whether other ECB officials talk about rises beyond December."
     },
     {
       "id": "admisi-fomc-minutes-housing-preview-20261118",
@@ -425,6 +452,60 @@
         }
       ],
       "watch": "Japan's October inflation figures on Friday, November 20, the last big reading before the Bank of Japan's December meeting."
+    },
+    {
+      "id": "reuters-ecb-reserve-requirement-2pc-20261118",
+      "date": "2026-11-18",
+      "source": "Reuters (via WBOW)",
+      "url": "https://1027wbow.com/2026/11/18/exclusive-ecb-to-discuss-raising-reserve-requirement-next-week-sources-say/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/18/2026-11-18T124128Z_1_LYNXNPEMAH19T_RTROPTP_3_ECB-POLICY.JPG",
+      "headline": "ECB to discuss doubling the cash banks must park with it, sources say",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "policy",
+      "summary": "European Central Bank policymakers will discuss on Wednesday, November 25 doubling the share of deposits that banks must hold at the central bank without earning interest, from 1% to 2%, four sources told Reuters.",
+      "beats": {
+        "was": "Euro-area banks hold over €2 trillion of spare cash at the European Central Bank, and as rates have risen the ECB and national central banks now pay out about €52 billion a year in interest on it.",
+        "happened": "Sources said the Governing Council will weigh raising the minimum reserve, the slice of deposits banks must keep at the central bank unpaid, to 2% at its meeting on Wednesday, November 25, with a decision possibly pushed to Thursday, December 17. Reuters estimates it would save the central banks about €4.4 billion a year. Vice President Boris Vujcic and chief economist Philip Lane are said to support it.",
+        "means": "It is a technical step to cut the cost of higher rates to the central banks, not a rate change. It would trim bank profits a little and take a small amount of spare cash out of the system.",
+        "fx": "Little direct effect on the euro. Weaker bank earnings are a small minus, a slightly tighter supply of spare cash a small plus. The ECB has not confirmed it."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "An unconfirmed technical change that would slightly squeeze banks and slightly tighten cash."
+        }
+      ],
+      "watch": "Any announcement after the ECB's non-rate meeting on Wednesday, November 25, or at the December 17 policy meeting."
+    },
+    {
+      "id": "reuters-bailey-labour-slack-stabilised-20261118",
+      "date": "2026-11-18",
+      "source": "Investing.com (Reuters)",
+      "url": "https://www.investing.com/news/economy-news/boes-bailey-sees-uk-labour-market-no-longer-loosening-but-some-slack-remains-5036536",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAH1LD_L.jpg",
+      "headline": "BoE's Bailey says the UK jobs market has stopped loosening",
+      "story": "boe-hikes",
+      "story_title": "Bank of England: how far do rates rise?",
+      "pillar": "policy",
+      "summary": "Bank of England Governor Andrew Bailey said on Wednesday, November 18 that the UK jobs market is no longer getting weaker, though some slack remains, and that the next rate decision is not decided in advance.",
+      "beats": {
+        "was": "The Bank of England raised rates in November for the first time in three years. UK inflation for October, out on Wednesday, November 18, came in at 3.6% with core prices steady, and traders cut the odds of a December rise to about 80%.",
+        "happened": "Speaking at a conference in London, Bailey said spare capacity in the jobs market has stopped growing because the economy has picked up, but some remains. He repeated that policy is not on a set path and the bank will judge the evidence that builds up before its next meeting.",
+        "means": "A jobs market that has stopped loosening makes it harder for pay growth to keep cooling, which leans toward another rise. But Bailey gave no clear steer on December.",
+        "fx": "A slight support for the pound after the softer core inflation figures, as it keeps a December rise on the table."
+      },
+      "impact": [
+        {
+          "ccy": "GBP",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Bailey says job-market slack has stopped growing, which keeps a December rise alive."
+        }
+      ],
+      "watch": "UK retail sales for October on Friday, November 20, and the Bank of England's decision on Thursday, December 17."
     },
     {
       "id": "arabnews-iran-kuwait-bahrain-attacks-houthi-strikes-20261118",
@@ -916,39 +997,6 @@
       "watch": "UK inflation for October, out Wednesday morning: a high reading would firm up the December rise."
     },
     {
-      "id": "reuters-oil-slips-surplus-opec-review-20261117",
-      "ts": "2026-11-17T02:37:52Z",
-      "source": "Reuters (via Business Recorder)",
-      "url": "https://www.brecorder.com/news/40449308/oil-slips-on-supply-surplus-outlook-despite-gulf-tensions",
-      "image": "https://i.brecorder.com/large/2026/10/2707484120ec1ba.jpg",
-      "headline": "Oil slips on supply surplus outlook despite Gulf tensions",
-      "story": "oil-supply",
-      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
-      "pillar": "commodities",
-      "summary": "Oil eased again early Tuesday, with Brent at $92, as traders focus on supply catching up with demand rather than on continued attacks on Gulf shipping.",
-      "beats": {
-        "was": "Oil prices jumped when the US-Iran war cut Gulf exports, but the International Energy Agency said on Friday, November 13 the market returns to surplus this quarter as those exports recover faster than demand.",
-        "happened": "In early Asian trade Brent crude fell about 0.5% to $92.00 a barrel and US crude to about $85.30. Attacks on Gulf energy sites and ships, including in the Strait of Hormuz, continue. OPEC held an online meeting on Monday, November 16 to review members' output capacity; the wider OPEC+ group meets on November 29 to set 2027 output. US emergency oil stocks have fallen to their lowest since 1982.",
-        "means": "The war premium in oil keeps shrinking because supply is coming back. The November 29 OPEC+ meeting matters more now: a decision to keep pumping would deepen the surplus.",
-        "fx": "Cheaper oil takes some support from the Canadian dollar and Norway's krone, and helps oil importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Recovering supply and a surplus outlook outweigh continued attacks on shipping."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower prices for Canada's main export trim the currency's support."
-        }
-      ],
-      "watch": "The OPEC+ meeting on November 29 on 2027 output, and any confirmed damage to tankers in the Strait of Hormuz."
-    },
-    {
       "id": "actionforex-rbnz-expectations-survey-q4-20261117",
       "ts": "2026-11-17T02:29:53Z",
       "source": "ActionForex",
@@ -1067,39 +1115,6 @@
         }
       ],
       "watch": "US housing starts and building permits for October: a sharp drop would show the slump spreading from mood into actual building."
-    },
-    {
-      "id": "mql5-yen-firms-risk-off-15890-20261117",
-      "date": "2026-11-17",
-      "source": "MQL5 (Market Outlook)",
-      "url": "https://www.mql5.com/en/blogs/post/780926",
-      "image": null,
-      "headline": "Risk-off trading boosts the yen; USD/JPY briefly falls to 158.90",
-      "story": "tech-selloff",
-      "story_title": "The AI stock sell-off before Nvidia's results",
-      "pillar": "risk",
-      "summary": "The yen gained in early London trading as falling Asian shares sent money toward safe currencies, pulling the dollar back from just under 160 yen.",
-      "beats": {
-        "was": "The dollar has climbed to near 160 yen because US interest rates are far above Japan's, and Japanese officials have warned they may step in near that level. A sell-off in technology shares hit Wall Street hard on Monday, November 16 ahead of chipmaker Nvidia's results on Tuesday, November 17 evening.",
-        "happened": "The dollar slipped from about 159.6 yen early in Tokyo to about 158.9 in early London as Asian shares and oil fell. The dollar index had touched a new high for the year in Asia before easing, and the euro bounced back above $1.10 after dipping below it.",
-        "means": "When shares fall sharply, investors tend to buy the yen as a safe place, and that is now pulling against the rate gap that has kept the dollar strong. The dollar's run paused before US retail sales and Nvidia's results.",
-        "fx": "A risk-off day helps the yen even without any Japanese action, and gives the dollar a brief breather after seven days up."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Falling shares sent money into the yen, pulling the dollar off 160."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A pause in the dollar's seven-day climb ahead of US data and Nvidia results."
-        }
-      ],
-      "watch": "Nvidia's results after the US close on Tuesday, November 17: another tech slide would likely add to yen demand."
     },
     {
       "id": "crozax-dollar-seventh-day-euro-below-110-20261117",
@@ -1247,39 +1262,6 @@
         }
       ],
       "watch": "The Fed's yearly revision of these figures on November 24."
-    },
-    {
-      "id": "ap-warsh-ai-speech-silent-on-rates-20261116",
-      "ts": "2026-11-16T17:22:07Z",
-      "source": "AP (via ClickOnDetroit)",
-      "url": "https://www.clickondetroit.com/business/2026/11/16/warsh-grapples-with-ais-potential-economic-impact-steers-clear-of-its-inflation-risk/",
-      "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QZFAT6W2MBAMJJKR2PFMMM26UU.jpg?api_key=clickondetroit_06f87fefb2123598",
-      "headline": "Warsh grapples with AI's potential economic impact, steers clear of its inflation risk",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "Federal Reserve Chair Kevin Warsh spoke about artificial intelligence on Monday, November 16 and said nothing about inflation or the next rate move. That leaves markets leaning on other Fed officials, who have backed a December rise.",
-      "beats": {
-        "was": "US inflation sped up in October, and several Federal Reserve officials have said rates should rise again at the December 9 meeting. Markets had already priced that rise as close to certain.",
-        "happened": "Opening an AI and productivity conference at the San Francisco Fed, Warsh said AI could lift growth a lot, but warned it could also cost jobs or hit stocks if the payoff disappoints. He did not mention inflation and gave no view on where rates go next.",
-        "means": "Warsh chose not to push back on the December rise markets expect, so that pricing stands. His upbeat view of AI and growth hints he may be less eager than some colleagues to keep raising rates into next year, but he gave no signal either way.",
-        "fx": "No new push for the dollar, which stays near its highest since April 2025. The next Fed signal is the October meeting minutes on Wednesday, November 18."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The Fed chair neither confirmed nor questioned a December rise, so dollar support from rate bets is unchanged."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "No new rate signal from the Fed chair; gold stays near a one-year low on existing hike bets."
-        }
-      ],
-      "watch": "Minutes of the Fed's October meeting on Wednesday, November 18: they show how many officials want more than one more rise."
     },
     {
       "id": "reuters-canada-cpi-october-holds-20261116",
