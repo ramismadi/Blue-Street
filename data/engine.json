@@ -1,55 +1,59 @@
 {
-  "updated": "2026-11-18T01:40:00-06:00",
+  "updated": "2026-11-18T08:12:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~97% 25bp / ~3% 50bp (CME FedWatch via Hercules); ECB Dec ~90%; BoJ Dec ~84%; BoE Dec second hike ~70–75%; BoC Dec ~44%; Fed minutes Wed Nov 18 1:00 PM CT",
-      "read": "A December Fed rate hike is still seen as all but certain, and New York Fed President John Williams said one more is probably needed, but nothing dramatic. Europe, Britain and Japan are also expected to hike, while Canada and New Zealand look more likely to wait. US rates still look set to rise fastest, which keeps favouring the dollar.",
+      "figure": "Fed Dec hike ~97% 25bp / ~3% 50bp (CME FedWatch); BoE Dec ~80% (from ~92% earlier in the week); ECB Dec ~90%; BoJ Dec ~84%; BoC Dec ~44%",
+      "read": "A December Fed hike is now treated as all but certain, so the focus has moved to how many more follow next year. Steady UK core inflation trimmed bets on a second Bank of England hike, while firmer euro-area core prices keep a December European Central Bank hike on track. US rates still look set to rise fastest, which keeps favouring the dollar.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, London open run ~1:05 AM CT, Nov 18; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Blue Street central banks and pricing (Hercules, Nov 18 London open run)",
+          "label": "Blue Street central banks and pricing (Hercules, Nov 18 pre-open run)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Le Private Banker (Nov 17): Fed's Williams says another rate hike is likely but rejects dramatic action",
-          "url": "https://leprivatebanker.com/2026/11/17/feds-williams-says-another-rate-hike-is-likely-but-rejects-dramatic-action-as-inflation-spreads-beyond-supply-shocks/"
+          "label": "Reuters (Nov 18): Sterling slips to one-month low versus dollar after UK core inflation steadies",
+          "url": "https://www.reuters.com/world/uk/sterling-slips-one-month-low-versus-dollar-after-uk-core-inflation-steadies-2026-11-18/"
+        },
+        {
+          "label": "Irish Times (Nov 18): Euro-area inflation hits 4%, paving way for more ECB rate hikes",
+          "url": "https://www.irishtimes.com/business/2026/11/18/euro-area-inflation-hits-4-paving-way-for-more-ecb-rate-hikes/"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "Japan exports Oct +20.5% y/y, a monthly record; US retail sales Oct +0.2% m/m (fcst +0.1%); NAHB builder index 25, lowest since April 2012",
-      "read": "Japan's exports hit a record in October on chip demand, a sign its economy is picking up after a small summer dip. In the US, shoppers keep spending while housing struggles. The US still looks firmer than most, which supports the dollar.",
+      "figure": "US housing starts Oct 1.309M (fcst 1.25M), permits 1.295M (fcst 1.38M), Sep starts revised to 1.191M; Japan exports Oct +20.5% y/y",
+      "read": "US housing starts jumped in October, but permits for future building fell, a mixed sign for the US economy. Japan's record exports point to a pickup there. The US still looks firmer than most, which supports the dollar.",
       "sources": [
+        {
+          "label": "US Census Bureau (Nov 18): New Residential Construction, October 2026",
+          "url": "https://www.census.gov/construction/nrc/current/index.html"
+        },
         {
           "label": "Investing.com, citing Reuters (Nov 18): Japan exports set record in October on strong chip-related demand",
           "url": "https://au.investing.com/news/economic-indicators/japan-exports-set-record-in-october-on-strong-chiprelated-demand-4778513"
         },
         {
-          "label": "US Census Bureau (Nov 17): Advance Monthly Retail Trade Survey, October 2026",
-          "url": "https://www.census.gov/retail/marts/www/marts_current.pdf"
+          "label": "Blue Street calendar (Hercules, Nov 18): times, forecasts and actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "UK CPI Oct 3.6% y/y (fcst 3.6%), core 2.8%, services 3.7% (ONS); Australia wage price index Q3 +1.1% q/q (fcst +1.0%), +3.5% y/y (ABS); euro-area final CPI Oct due 4:00 AM CT (fcst 4.0%)",
-      "read": "UK inflation rose to 3.6% as expected, pushed up by fuel, while core prices stayed steady, so the pound got no new lift. Australian pay rose a bit faster than forecast, keeping alive the case for another rate hike there. Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes.",
+      "figure": "UK CPI Oct 3.6% y/y (fcst 3.6%), core 2.8%, services 3.7%; euro-area CPI Oct 4.0% final, core 2.6% (flash 2.5%)",
+      "read": "UK inflation rose to 3.6% on fuel, but core prices held steady, so the pound lost some of its rate edge. Euro-area core inflation was revised up, backing a December hike there. Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes.",
       "sources": [
         {
           "label": "ONS (Nov 18): Consumer price inflation, UK: October 2026",
           "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/october2026"
         },
         {
-          "label": "ABS (Nov 18): Wage Price Index, Australia, September 2026",
-          "url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/wage-price-index-australia/sep-2026"
+          "label": "Irish Times (Nov 18): Euro-area inflation hits 4%, paving way for more ECB rate hikes",
+          "url": "https://www.irishtimes.com/business/2026/11/18/euro-area-inflation-hits-4-paving-way-for-more-ecb-rate-hikes/"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 18): times, forecasts and actuals",
@@ -60,19 +64,23 @@
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "S&P 500 7,340.53 (−1.03%), VIX 25.46 (+11%) (Investing.com); gold ~$3,775 (−1.9%); AUD/USD 0.6723; NZD/USD 0.5491 (Hercules)",
-      "read": "Markets stayed nervous, with US stocks down for a second day and Iran attacking Bahrain again. Gold fell instead of rising, as some investors sold it to raise cash. The dollar gained from the unease, while the Aussie and kiwi, which track market mood, slipped.",
+      "figure": "Nvidia quarterly sales $115.8B (est. $109B), shares ~+2% after hours; Iran drone attack on Kuwait's Ali Al Salem base; AUD/USD ~0.6730; NZD/USD ~0.5495",
+      "read": "Nvidia's strong results calmed worries about tech stocks after two days of losses. Iran attacked a US base in Kuwait and ships in the Gulf, but markets took it in stride. The dollar stayed firm, and the Aussie and kiwi held near their lows.",
       "sources": [
         {
-          "label": "Investing.com (Nov 18): UK October inflation hits 3.6% as record diesel prices drive fuel costs higher",
-          "url": "https://www.investing.com/news/economic-indicators/uk-october-inflation-hits-36-as-record-diesel-prices-drive-fuel-costs-higher-5034908"
+          "label": "Yahoo Finance (Nov 17): Nvidia shares rise after earnings beat",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-shares-rise-earnings-beat-221818886.html"
         },
         {
-          "label": "Reuters via KTWB (Nov 18): Bahrain says air defences intercepted Iranian attacks",
-          "url": "https://ktwb.com/2026/11/17/bahrain-issues-all-clear-after-threat-alert-amid-us-iran-exchanges-of-fire/"
+          "label": "Arab News (Nov 18): Kuwait and Bahrain fend off Iranian aerial attacks",
+          "url": "https://www.arabnews.com/middle-east/kuwait-bahrain-fend-off-iranian-aerial-attacks-as-coalition-hits-houthi-military-sites-3012614"
         },
         {
-          "label": "Blue Street market levels (Hercules, London open run ~1:05 AM CT, Nov 18; indicative)",
+          "label": "Reuters (Nov 18): UAE's ADNOC L&S says one crew member missing after attack on its vessel in Hormuz",
+          "url": "https://www.reuters.com/world/middle-east/uaes-adnoc-ls-says-one-crew-member-missing-after-attack-its-vessel-hormuz-2026-11-18/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, pre-open run ~7:00 AM CT, checked after the 7:30 AM US data, Nov 18; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -80,20 +88,20 @@
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$91.76 (−1.5%), WTI ~$82.86 (−2.1%); API US crude +5.28M bbl; gold ~$3,775 (−1.9%)",
-      "read": "Oil fell as US crude stocks rose, which takes a little away from the Canadian dollar. Gold's slide below $3,800 weighs on the Aussie, since Australia is a big gold producer. Cheaper oil helps importers such as the euro area and Japan.",
+      "figure": "Brent ~$92.27 (−0.9%), WTI ~$84.57 (−1.7%); industry count US crude +5.3M bbl; gold ~$3,774 (−2.0%)",
+      "read": "Oil fell as US crude stocks rose, which takes a little away from the Canadian dollar and helps energy buyers such as Japan and the euro area. Gold's slide below $3,800 weighs on the Aussie, since Australia is a big gold producer.",
       "sources": [
         {
-          "label": "Business Recorder, citing Reuters (Nov 18): Oil prices fall as higher US crude stocks temper supply risks",
-          "url": "https://www.brecorder.com/news/40449497/oil-prices-fall-as-higher-us-crude-stocks-temper-supply-risks"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, London open run ~1:05 AM CT, Nov 18; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Reuters (Nov 18): Oil prices fall as higher US crude stocks temper supply risks",
+          "url": "https://www.reuters.com/business/energy/oil-prices-fall-higher-us-crude-stocks-temper-supply-risks-2026-11-18/"
         },
         {
           "label": "Reuters (Nov 18): Gold slides to over one-year low on firm dollar, US rate outlook",
           "url": "https://www.reuters.com/world/india/gold-slides-over-one-year-low-firm-dollar-us-rate-outlook-2026-11-18/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, pre-open run ~7:00 AM CT, checked after the 7:30 AM US data, Nov 18; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
     },
@@ -120,15 +128,19 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "US October deficit $404B, a record for the month; US 10-year ~5.09% in Asian trading (Hercules)",
-      "read": "Record US government borrowing keeps long-term US borrowing costs above 5%, which weighs a little on trust in the dollar. France's debt troubles keep weighing on the euro.",
+      "figure": "ECB FSR: France debt 119% of GDP, deficit 5.5%; US October deficit $404B, a record for the month; US 10-year ~5.09%",
+      "read": "The European Central Bank's stability report named France's debts as a risk and said cutting deficits is overdue, which keeps weighing on the euro. Record US government borrowing keeps long-term US borrowing costs near 5%, which weighs a little on trust in the dollar.",
       "sources": [
+        {
+          "label": "ECB (Nov 18): Financial Stability Review press release",
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html"
+        },
         {
           "label": "Reuters via Investing.com (Nov 12): US starts 2027 fiscal year with record October budget deficit of $404 billion",
           "url": "https://www.investing.com/news/economy-news/us-starts-2027-fiscal-year-with-record-october-budget-deficit-of-404-billion-5023006"
         },
         {
-          "label": "Blue Street market levels (Hercules, New York close run ~3:05 PM CT, Nov 17; indicative)",
+          "label": "Blue Street market levels (Hercules, pre-open run ~7:00 AM CT, checked after the 7:30 AM US data, Nov 18; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
