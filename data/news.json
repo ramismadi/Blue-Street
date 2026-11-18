@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T15:58:00Z",
+  "updated": "2026-11-18T16:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -44,16 +44,49 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-18T14:48:00Z",
-      "text": "Gold fell below $3,800 an ounce on Wednesday, November 18, its lowest since September 2025, and slid further after Federal Reserve Governor Christopher Waller raised the idea of a bigger half-point rate rise. Iran's widening attacks in the Gulf have not drawn enough safe-haven buying to offset higher US rates."
+      "ts": "2026-11-18T16:55:00Z",
+      "text": "Gold's London afternoon price was set near $3,768 an ounce on Wednesday, November 18, the lowest since late September 2025, after Federal Reserve Governor Christopher Waller raised the idea of a half-point rate rise in December. Iran's widening attacks in the Gulf have not drawn enough safe-haven buying to offset higher US rates and a strong dollar."
     },
     "OIL": {
-      "lean": "mixed",
-      "ts": "2026-11-18T11:49:00Z",
-      "text": "Oil has lost about a fifth this month as Middle East exports recover and US crude stocks rise. Against that, the fighting is spreading: Iran targeted a US base in Kuwait, US jets hit an Iranian missile site, and a UAE oil company ship was attacked in the Strait of Hormuz, keeping supply scares alive before the OPEC+ meeting on November 29."
+      "lean": "bearish",
+      "ts": "2026-11-18T16:55:00Z",
+      "text": "Oil has lost about a fifth this month as Middle East exports recover, and official figures on Wednesday, November 18 showed US crude and gasoline stocks rising far more than expected, pushing prices down about 2%. Attacks on ships near the Strait of Hormuz and Iran's strikes on its neighbours keep supply scares alive before the OPEC+ meeting on November 29."
     }
   },
   "items": [
+    {
+      "id": "boereport-reuters-eia-crude-gasoline-build-20261118",
+      "ts": "2026-11-18T15:49:39Z",
+      "source": "Reuters via BOE Report",
+      "url": "https://boereport.com/2026/11/18/us-crude-stocks-gasoline-and-distillate-inventories-rise-eia-says/",
+      "image": "https://boereport.com/wp-content/uploads/2018/02/cushing-tanks.jpg",
+      "headline": "US crude stocks, gasoline and distillate inventories rise, EIA says",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Official US figures showed crude stocks up 3.4 million barrels and gasoline up 5.2 million last week, far more than forecast, and oil fell about 2%.",
+      "beats": {
+        "was": "Oil has lost about a fifth this month as Middle East exports recover after the Iran war disrupted them, and an industry survey on Tuesday, November 17 had already pointed to a large rise in US crude stocks.",
+        "happened": "The US Energy Information Administration said on Wednesday, November 18 that crude stocks rose to about 418 million barrels in the week to November 13, against forecasts of almost no change. Gasoline stocks jumped by more than three times the expected amount, and stocks of diesel and heating oil also rose.",
+        "means": "More oil and fuel is sitting in US storage than expected, a sign that supply is running ahead of demand. That adds to the pressure from returning Gulf exports.",
+        "fx": "Brent fell to about $92 a barrel and US crude to about $84, a small weight on oil-linked currencies such as the Canadian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Much larger than expected rises in US crude and fuel stocks point to plenty of supply."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil prices cut into the value of Canada's main export."
+        }
+      ],
+      "watch": "Whether attacks on ships near the Strait of Hormuz cut Gulf exports again, and what OPEC+ decides on November 29."
+    },
     {
       "id": "reuters-us-housing-starts-october-permits-plunge-20261118",
       "ts": "2026-11-18T13:40:00Z",
@@ -386,6 +419,39 @@
         }
       ],
       "watch": "The US government's weekly oil stock figures on Wednesday, November 18, which either confirm or contradict the industry count."
+    },
+    {
+      "id": "bullionvault-gold-silver-no-floor-waller-20261118",
+      "date": "2026-11-18",
+      "source": "BullionVault",
+      "url": "https://www.bullionvault.com/gold-news/gold-price-news/gold-silver-floor-fed-rates-111820261",
+      "image": "https://www.bullionvault.com/gold-news/sites/default/files/inline-images/2026-11-18-eff-cpi.png",
+      "headline": "Gold and Silver 'Can't Find a Floor' as Waller Calls for Fed Rate Hike",
+      "story": "gold-fed-cpi",
+      "story_title": "Gold: rising US rates vs war risk",
+      "pillar": "policy",
+      "summary": "Gold's London afternoon price was set near $3,768 on Wednesday, November 18, about $90 lower than a day earlier and the lowest since late September 2025, and silver neared $45.",
+      "beats": {
+        "was": "Gold pays no interest, so it tends to lose appeal when US rates rise, and Federal Reserve officials have been backing further rate rises after a hot October inflation report.",
+        "happened": "Fed Governor Christopher Waller said on Wednesday, November 18 that a half-point rise in December should be considered. Gold then fell as much as 3.6% from its close on Friday, November 13, silver was down as much as 7.5% for the week, and platinum and palladium also dropped.",
+        "means": "Markets now expect the Fed to raise rates in December and probably again early next year, which makes holding metals costlier against a dollar that earns more.",
+        "fx": "A stronger dollar and higher US rates keep weighing on gold and silver."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A further leg down on bets for bigger and more Fed rate rises."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The same rate-rise bets that hit gold lift the dollar."
+        }
+      ],
+      "watch": "The minutes of the Fed's October meeting, due at 2:00 PM New York time on Wednesday, November 18, and whether other officials back a half-point rise."
     },
     {
       "id": "gulfnews-us-strikes-qeshm-adnoc-ship-hit-20261118",
@@ -1117,45 +1183,6 @@
       "watch": "US housing starts and building permits for October: a sharp drop would show the slump spreading from mood into actual building."
     },
     {
-      "id": "crozax-dollar-seventh-day-euro-below-110-20261117",
-      "date": "2026-11-17",
-      "source": "Crozax",
-      "url": "https://crozax.com/blog/forex-news-today-17-november-2026-us-retail-sales-nvidia-dollar",
-      "image": null,
-      "headline": "Dollar hits a fresh 19-month high in Asia; euro slips below $1.10",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "The dollar rose for a seventh day in Asian trading on Tuesday, November 17 to its highest in 19 months, and the euro dipped below $1.10 for the first time since April 2025.",
-      "beats": {
-        "was": "US inflation sped up in October and several Federal Reserve officials have backed another rate rise at the December 9 meeting, which markets treat as close to certain. The dollar had already risen six days in a row.",
-        "happened": "The dollar index, which tracks the dollar against six major currencies, reached about 103.7. The euro touched about $1.0985, the pound sat near $1.318 and the dollar stayed just under 160 yen. Markets put the chance of a quarter-point Fed rise in December at about 90%, with a small chance of a half-point move.",
-        "means": "Nothing has yet challenged the bet on higher US rates, so the dollar keeps edging up. Tuesday's US retail sales figures are the first real test of whether American spending can carry more rate rises.",
-        "fx": "The euro losing $1.10 shows how wide the gap between US and European rate paths has become. The yen stays pinned near 160 mainly by the risk that Japan steps in to support it."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A seventh straight gain on bets the Fed raises rates in December."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Below $1.10 for the first time since April 2025 as US rates are expected to rise faster than European ones."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The dollar sits just under 160 yen, held back only by the threat of Japanese action."
-        }
-      ],
-      "watch": "US retail sales on Tuesday, November 17 and the Fed's October meeting minutes on Wednesday, November 18, November 18: weak spending or a divided Fed would test the dollar's run."
-    },
-    {
       "id": "grafa-bullock-upside-risks-banks-peak-20261117",
       "date": "2026-11-17",
       "source": "Capital Brief (via Grafa)",
@@ -1235,33 +1262,6 @@
         }
       ],
       "watch": "Australian jobs figures and the fourth-quarter inflation reading: further rises in unemployment would strengthen the three members who wanted to stop."
-    },
-    {
-      "id": "reuters-us-factory-output-october-20261117",
-      "date": "2026-11-17",
-      "source": "Reuters (via 104.9 The Wolf)",
-      "url": "https://www.1049thewolf.com/2026/11/17/motor-vehicles-ai-investment-lift-us-factory-production-in-october/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/17/2026-11-17T153353Z_1_LYNXNPEMAG1IY_RTROPTP_3_USA-ECONOMY-OUTPUT.JPG",
-      "headline": "Cars and AI spending lift US factory output in October",
-      "story": "us-growth",
-      "story_title": "How strong is the US economy?",
-      "pillar": "growth",
-      "summary": "US factory output rose 0.3% in October, a little more than forecast, helped by cars and computer chips. Total industrial production still fell 0.4% because mild weather cut demand for power.",
-      "beats": {
-        "was": "The Federal Reserve is raising rates to cool inflation, so markets watch whether US industry holds up under higher borrowing costs. Factory output had also risen 0.3% in September.",
-        "happened": "The Fed's monthly report, released Tuesday, November 17, showed manufacturing up 0.3% against a 0.2% forecast, with cars and parts up 4.4% and computer chips up 2.2%. Utility output fell 4.3% after a warm month and mining fell 0.8%, so overall output dropped 0.4% when a small rise was expected.",
-        "means": "The overall miss comes from the weather, not weak demand. Factories, the better guide to the economy's health, are still growing, helped by spending on AI.",
-        "fx": "Little change for the dollar. The report does not alter the case for a Fed rate rise on December 9."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Factories beat forecasts, but total output fell on a weather-driven drop in power use."
-        }
-      ],
-      "watch": "The Fed's yearly revision of these figures on November 24."
     },
     {
       "id": "reuters-canada-cpi-october-holds-20261116",
