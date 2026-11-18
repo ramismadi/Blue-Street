@@ -1,23 +1,27 @@
 {
-  "updated": "2026-11-18T08:12:00-06:00",
+  "updated": "2026-11-18T15:20:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~97% 25bp / ~3% 50bp (CME FedWatch); BoE Dec ~80% (from ~92% earlier in the week); ECB Dec ~90%; BoJ Dec ~84%; BoC Dec ~44%",
-      "read": "A December Fed hike is now treated as all but certain, so the focus has moved to how many more follow next year. Steady UK core inflation trimmed bets on a second Bank of England hike, while firmer euro-area core prices keep a December European Central Bank hike on track. US rates still look set to rise fastest, which keeps favouring the dollar.",
+      "figure": "Fed Dec hike ~95% 25bp / ~5% 50bp (CME FedWatch); BoE Dec ~80%; ECB Dec ~90%; BoJ Dec ~84%; BoC Dec ~44%",
+      "read": "Minutes of the Fed's October meeting showed almost all officials expect more hikes, and a couple were open to a bigger December step. Bank of England Governor Andrew Bailey tied UK rates to how long the Iran war lasts, without pointing to December. US rates still look set to rise fastest, which keeps favouring the dollar.",
       "sources": [
         {
-          "label": "Blue Street central banks and pricing (Hercules, Nov 18 pre-open run)",
+          "label": "Federal Reserve (Nov 18): Minutes of the FOMC, October 27-28, 2026",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm"
+        },
+        {
+          "label": "Reuters (Nov 18): Fed policymakers focused on inflation risks in October, with some seeing need for bigger rate hike",
+          "url": "https://www.reuters.com/business/fed-policymakers-focused-inflation-risks-october-with-some-seeing-need-bigger-2026-11-18/"
+        },
+        {
+          "label": "Bank of England (Nov 18): speech by Andrew Bailey at the Institute of Economic Development conference",
+          "url": "https://www.bankofengland.co.uk/speech/2026/november/andrew-bailey-speech-at-the-annual-institute-of-economic-development-conference-london"
+        },
+        {
+          "label": "Blue Street central banks and pricing (Hercules, Nov 18 close run)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-        },
-        {
-          "label": "Reuters (Nov 18): Sterling slips to one-month low versus dollar after UK core inflation steadies",
-          "url": "https://www.reuters.com/world/uk/sterling-slips-one-month-low-versus-dollar-after-uk-core-inflation-steadies-2026-11-18/"
-        },
-        {
-          "label": "Irish Times (Nov 18): Euro-area inflation hits 4%, paving way for more ECB rate hikes",
-          "url": "https://www.irishtimes.com/business/2026/11/18/euro-area-inflation-hits-4-paving-way-for-more-ecb-rate-hikes/"
         }
       ]
     },
@@ -64,23 +68,19 @@
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "Nvidia quarterly sales $115.8B (est. $109B), shares ~+2% after hours; Iran drone attack on Kuwait's Ali Al Salem base; AUD/USD ~0.6730; NZD/USD ~0.5495",
-      "read": "Nvidia's strong results calmed worries about tech stocks after two days of losses. Iran attacked a US base in Kuwait and ships in the Gulf, but markets took it in stride. The dollar stayed firm, and the Aussie and kiwi held near their lows.",
+      "figure": "US blockade extended to oil transfers at sea; AUD/USD ~0.6716 (10-month low); NZD/USD ~0.5491 (lowest since 2020); USD/CHF ~0.8433",
+      "read": "The US tightened its blockade of Iran's oil and reports said Israel is pressing for joint strikes, yet markets stayed calm and the safe-haven franc and yen drew no extra buying. The Fed minutes did more to move prices than the war news. The Aussie and kiwi slid to fresh lows as gold fell.",
       "sources": [
         {
-          "label": "Yahoo Finance (Nov 17): Nvidia shares rise after earnings beat",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-shares-rise-earnings-beat-221818886.html"
+          "label": "Reuters (Nov 18): US tightens Iran blockade with curbs on oil transfers at sea",
+          "url": "https://www.reuters.com/business/energy/us-tightens-iran-blockade-with-curbs-oil-transfers-sea-advisory-shows-2026-11-18/"
         },
         {
-          "label": "Arab News (Nov 18): Kuwait and Bahrain fend off Iranian aerial attacks",
-          "url": "https://www.arabnews.com/middle-east/kuwait-bahrain-fend-off-iranian-aerial-attacks-as-coalition-hits-houthi-military-sites-3012614"
+          "label": "Reuters (Nov 18): Israeli spy chief lobbied for joint Iran strikes on US visit, sources say",
+          "url": "https://www.reuters.com/world/middle-east/israeli-spy-chief-lobbied-joint-iran-strikes-us-visit-sources-say-2026-11-18/"
         },
         {
-          "label": "Reuters (Nov 18): UAE's ADNOC L&S says one crew member missing after attack on its vessel in Hormuz",
-          "url": "https://www.reuters.com/world/middle-east/uaes-adnoc-ls-says-one-crew-member-missing-after-attack-its-vessel-hormuz-2026-11-18/"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, pre-open run ~7:00 AM CT, checked after the 7:30 AM US data, Nov 18; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close run, ~2:41 PM CT Nov 18; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -88,19 +88,19 @@
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$92.27 (−0.9%), WTI ~$84.57 (−1.7%); industry count US crude +5.3M bbl; gold ~$3,774 (−2.0%)",
-      "read": "Oil fell as US crude stocks rose, which takes a little away from the Canadian dollar and helps energy buyers such as Japan and the euro area. Gold's slide below $3,800 weighs on the Aussie, since Australia is a big gold producer.",
+      "figure": "Brent ~$89.21 (−4.2%), WTI ~$82.28 (−4.3%); EIA US crude +3.4M bbl, gasoline +5.2M; gold ~$3,720 (−3.4%)",
+      "read": "Oil fell about 4% as US fuel stocks swelled, which takes support from the Canadian dollar and helps energy buyers such as Japan and the euro area. Gold's slide to its lowest in more than a year weighs on the Aussie, since Australia is a big gold producer.",
       "sources": [
         {
-          "label": "Reuters (Nov 18): Oil prices fall as higher US crude stocks temper supply risks",
-          "url": "https://www.reuters.com/business/energy/oil-prices-fall-higher-us-crude-stocks-temper-supply-risks-2026-11-18/"
+          "label": "Dow Jones via Morningstar (Nov 18): US crude oil stockpiles rise for second straight week",
+          "url": "https://www.morningstar.com/news/dow-jones/202611186375/us-crude-oil-stockpiles-rise-for-second-straight-week"
         },
         {
-          "label": "Reuters (Nov 18): Gold slides to over one-year low on firm dollar, US rate outlook",
-          "url": "https://www.reuters.com/world/india/gold-slides-over-one-year-low-firm-dollar-us-rate-outlook-2026-11-18/"
+          "label": "Kitco (Nov 18): spot gold chart, about $3,720 at 2:43 PM ET",
+          "url": "https://www.kitco.com/charts/gold"
         },
         {
-          "label": "Blue Street market levels (Hercules, pre-open run ~7:00 AM CT, checked after the 7:30 AM US data, Nov 18; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close run, ~2:41 PM CT Nov 18; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -128,7 +128,7 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "ECB FSR: France debt 119% of GDP, deficit 5.5%; US October deficit $404B, a record for the month; US 10-year ~5.09%",
+      "figure": "ECB FSR: France debt 119% of GDP, deficit 5.5%; US October deficit $404B, a record for the month; US 10-year ~5.07%",
       "read": "The European Central Bank's stability report named France's debts as a risk and said cutting deficits is overdue, which keeps weighing on the euro. Record US government borrowing keeps long-term US borrowing costs near 5%, which weighs a little on trust in the dollar.",
       "sources": [
         {
@@ -140,7 +140,7 @@
           "url": "https://www.investing.com/news/economy-news/us-starts-2027-fiscal-year-with-record-october-budget-deficit-of-404-billion-5023006"
         },
         {
-          "label": "Blue Street market levels (Hercules, pre-open run ~7:00 AM CT, checked after the 7:30 AM US data, Nov 18; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close run, ~2:41 PM CT Nov 18; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
