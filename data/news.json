@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-18T12:55:00Z",
+  "updated": "2026-11-18T14:48:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-18T12:55:00Z",
-      "text": "The dollar sits near its highest since April 2025 because Federal Reserve officials keep backing more rate rises, and markets see a December rise as close to certain. Minutes of the Fed's October meeting, due at 2:00 PM New York time on Wednesday, November 18, will show how many officials want more after that, while weak housing figures show higher rates starting to bite."
+      "ts": "2026-11-18T14:48:00Z",
+      "text": "The dollar sits near its highest since April 2025 because Federal Reserve officials keep backing more rate rises, and Governor Christopher Waller said on Wednesday, November 18 that a half-point rise in December should be considered. Housing figures the same day were mixed, and the minutes of the Fed's October meeting, out at 2:00 PM New York time that day, will show how widely that push is shared."
     },
     "EUR": {
       "lean": "bearish",
@@ -44,8 +44,8 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-18T11:49:00Z",
-      "text": "Gold fell below $3,800 an ounce on Wednesday, November 18, its lowest since September 2025, as markets treat a December Federal Reserve rate rise as close to certain and the dollar holds a 19-month high. Iran's widening drone attacks in the Gulf have not drawn enough safe-haven buying to offset that."
+      "ts": "2026-11-18T14:48:00Z",
+      "text": "Gold fell below $3,800 an ounce on Wednesday, November 18, its lowest since September 2025, and slid further after Federal Reserve Governor Christopher Waller raised the idea of a bigger half-point rate rise. Iran's widening attacks in the Gulf have not drawn enough safe-haven buying to offset higher US rates."
     },
     "OIL": {
       "lean": "mixed",
@@ -54,6 +54,78 @@
     }
   },
   "items": [
+    {
+      "id": "reuters-us-housing-starts-october-permits-plunge-20261118",
+      "ts": "2026-11-18T13:40:00Z",
+      "source": "Reuters via Yahoo Finance",
+      "url": "https://finance.yahoo.com/real-estate/articles/us-single-family-housing-starts-133943107.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/e38d8a35a69e06ed4ad1203c194e6efefe4818fb3dffc9f4e69181deea32d106/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F6869c19aaa57135f05ac494a2aa7ae9a.jpg",
+      "headline": "US home building rebounds in October, but new permits fall sharply",
+      "story": "us-housing",
+      "story_title": "US housing under high mortgage rates",
+      "pillar": "growth",
+      "summary": "US housing starts rose to a 1.31 million yearly pace in October, above forecasts, but building permits, which point to future building, dropped more than 7%.",
+      "beats": {
+        "was": "US mortgage rates have climbed to about 7.2% since the Iran war began in late February, and homebuilder confidence is at its lowest since 2012.",
+        "happened": "Figures released on Wednesday, November 18 showed housing starts up almost 10% in October, after a weak September. Permits fell to about 1.30 million, well short of forecasts, with single-family permits down almost 9%.",
+        "means": "The rise in starts looks like a one-month bounce, while the drop in permits shows builders pulling back. Higher rates are hurting housing, but not enough to change the Fed's plan to keep raising.",
+        "fx": "Little effect on the dollar, which stayed flat after the release."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Starts beat forecasts while permits fell sharply, so the report cuts both ways."
+        }
+      ],
+      "watch": "Whether October existing-home sales also weaken, and whether Fed officials point to housing as a reason to slow."
+    },
+    {
+      "id": "tippinsights-waller-half-point-hike-20261118",
+      "ts": "2026-11-18T13:11:31Z",
+      "source": "TIPP Insights",
+      "url": "https://tippinsights.com/feds-christopher-waller-urges-aggressive-rate-hike-as-inflation-persists/",
+      "image": "https://storage.ghost.io/c/3f/69/3f69bcaa-7eb9-433f-9878-9087148920fa/content/images/size/w1200/2026/11/Federal-Reserve-Governor-Christopher-Waller-1.jpg",
+      "headline": "Fed Governor Waller says a half-point rate rise in December should be on the table",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "policy",
+      "summary": "Federal Reserve Governor Christopher Waller said on Wednesday, November 18 that the Fed may need to raise rates by half a point in December, twice the step markets expect, because price rises are spreading across the economy.",
+      "beats": {
+        "was": "The Federal Reserve has been raising rates to fight inflation pushed up by energy costs and tariffs, and markets already saw a quarter-point rise at the December 8-9 meeting as close to certain.",
+        "happened": "In a CNBC interview, Waller said inflation is heading the wrong way and now reaches most service prices, not just fuel. He argued a bigger half-point step may be needed to jolt expectations, unless the Fed signals another rise in January.",
+        "means": "Waller sits on the Fed's board and often moves ahead of his colleagues, so this raises the chance of a faster pace even if most officials still prefer quarter-point steps. US yields and the dollar rose, while shares and gold fell.",
+        "fx": "More pressure on the euro, yen and other currencies against the dollar, and on gold, which pays no interest."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A Fed governor floating a bigger rate rise lifted US yields and the dollar."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Higher US rates make gold, which pays no interest, less attractive."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A wider gap between US and Japanese rates weighs on the yen."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro loses ground when the Fed looks set to keep raising faster than the ECB."
+        }
+      ],
+      "watch": "Whether the October meeting minutes and other Fed officials back a half-point step, or stick with quarter-point rises."
+    },
     {
       "id": "admisi-fomc-minutes-housing-preview-20261118",
       "ts": "2026-11-18T11:50:49Z",
@@ -1208,60 +1280,6 @@
         }
       ],
       "watch": "Minutes of the Fed's October meeting on Wednesday, November 18: they show how many officials want more than one more rise."
-    },
-    {
-      "id": "investinglive-empire-state-november-miss-20261116",
-      "ts": "2026-11-16T13:30:00Z",
-      "source": "investinglive",
-      "url": "https://investinglive.com/news/us-november-empire-manufacturing-index-7-80-vs-18-00-expected/",
-      "image": null,
-      "headline": "US November Empire manufacturing index 7.80 vs 18.00 expected",
-      "story": "us-growth",
-      "story_title": "How strong is the US economy?",
-      "pillar": "growth",
-      "summary": "A New York Fed survey of factories in New York State showed growth slowed sharply in November and new orders nearly stopped rising. Hiring, though, picked up to its fastest since mid-2022.",
-      "beats": {
-        "was": "The Empire State survey asks New York manufacturers whether business is getting better or worse; a reading above zero means more say better. In October it hit 25.5, a multi-year high.",
-        "happened": "The New York Federal Reserve said the main reading fell to 7.8 in November, well below forecasts. New orders dropped to 3.0 from 23.2. The hiring measure rose to 18.1, the highest since June 2022, and the measure of prices paid by factories eased to 45.9.",
-        "means": "Factory activity is still growing, but much more slowly, and the fall in new orders hints at softer months ahead. Strong hiring and still-high costs mean it does little to change the Fed's view that inflation needs more rate rises.",
-        "fx": "A small weight on the dollar on the day, but bets on a December Fed rise did not move. One regional survey rarely changes the picture on its own."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Weaker factory orders point to slower growth, but strong hiring kept December Fed rate-rise bets intact."
-        }
-      ],
-      "watch": "The Philadelphia Fed's factory survey on Thursday, November 19: a second weak reading would make the slowdown look broader."
-    },
-    {
-      "id": "reuters-hammack-small-steps-bloombergtv-20261116",
-      "date": "2026-11-16",
-      "source": "Reuters (via 93.3 The Drive)",
-      "url": "https://www.933thedrive.com/2026/11/16/feds-hammack-reiterates-case-for-slow-steady-rate-hikes-bloomberg-tv/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/16/2026-11-16T193350Z_1_LYNXNPEMAF1UC_RTROPTP_3_USA-FED-HAMMACK.JPG",
-      "headline": "Fed's Hammack reiterates case for slow, steady rate hikes -Bloomberg TV",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "Cleveland Fed President Beth Hammack said on Monday, November 16 inflation pressure is building, but she prefers raising rates in small steps. She added the Fed can move faster if it falls behind.",
-      "beats": {
-        "was": "The Federal Reserve's target range is 3.75%-4%, and markets expect a quarter-point rise at the December 8-9 meeting after a hot October inflation report.",
-        "happened": "In a Bloomberg TV interview, Hammack said she sees mounting inflation pressure but is not ready for a more aggressive path. She said she likes smaller moves, but the Fed could make larger ones if it gets behind on inflation.",
-        "means": "Another Fed official backs steady rises, which supports pricing for December and beyond. Her preference for small steps argues against the half-point move some traders have bet on.",
-        "fx": "Steady support for the US dollar from higher expected rates; it does not add to the case for a bigger December move."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A Fed president backs more rate rises and keeps larger moves on the table."
-        }
-      ],
-      "watch": "The Fed's October meeting minutes on Wednesday, November 18, for how many officials wanted to move faster."
     },
     {
       "id": "reuters-canada-cpi-october-holds-20261116",
