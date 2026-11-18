@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-18T17:55:00Z",
+  "updated": "2026-11-18T20:00:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-18T17:55:00Z",
-      "text": "The dollar sits near its highest since April 2025 because Federal Reserve officials keep backing more rate rises: Governor Christopher Waller said on Wednesday, November 18 that a half-point rise in December should be considered, and San Francisco Fed President Mary Daly said the same day that inflation has been too high for too long. The minutes of the Fed's October meeting, out at 2:00 PM New York time that day, will show how widely that push is shared."
+      "ts": "2026-11-18T20:00:00Z",
+      "text": "The dollar sits near its highest since April 2025 because the Federal Reserve keeps signalling more rate rises. Minutes of its October meeting, released on Wednesday, November 18, show almost all officials expected further rises, and Governor Christopher Waller said the same day that a half-point step in December should be considered, though a quarter point is what markets expect."
     },
     "EUR": {
       "lean": "bearish",
@@ -44,8 +44,8 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-18T16:55:00Z",
-      "text": "Gold's London afternoon price was set near $3,768 an ounce on Wednesday, November 18, the lowest since late September 2025, after Federal Reserve Governor Christopher Waller raised the idea of a half-point rate rise in December. Iran's widening attacks in the Gulf have not drawn enough safe-haven buying to offset higher US rates and a strong dollar."
+      "ts": "2026-11-18T20:00:00Z",
+      "text": "Gold fell on Wednesday, November 18 to its lowest since late September 2025, near $3,750 an ounce, as Federal Reserve Governor Christopher Waller raised the idea of a half-point rate rise and the Fed's October minutes showed almost all officials expecting more rises. Iran's widening attacks in the Gulf have not drawn enough safe-haven buying to offset higher US rates and a strong dollar."
     },
     "OIL": {
       "lean": "bearish",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "koreatimes-afp-fed-minutes-almost-all-more-hikes-20261118",
+      "ts": "2026-11-18T19:30:03Z",
+      "source": "Korea Times (AFP)",
+      "url": "https://www.koreatimes.co.kr/world/20261119/almost-all-fed-policymakers-saw-further-interest-rate-hikes-as-likely",
+      "image": "https://newsimg.koreatimes.co.kr/2026/11/19/33f9baf7-358f-4917-944b-22a9442b69ca.jpg",
+      "headline": "Fed minutes: nearly every official expects more rate rises",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "policy",
+      "summary": "Minutes of the Federal Reserve's October 27-28 meeting, released on Wednesday, November 18, show almost all officials expected further rate rises to be needed, and a couple raised the idea of a bigger step in December.",
+      "beats": {
+        "was": "The Fed raised rates in September for the first time in three years, as tariffs and the energy price jump from the Iran war pushed inflation back up. In October it held its main rate at 3.75% to 4%, with Governor Lisa Cook and Cleveland Fed President Beth Hammack voting for an immediate rise.",
+        "happened": "The record of that October meeting, published on Wednesday, November 18, says almost all officials judged that more rate rises would likely be appropriate. About two said a rise bigger than a quarter point could be needed in December if inflation figures get worse.",
+        "means": "The push for higher rates is shared across the Fed, not just a few vocal officials. Markets already expect a quarter-point rise at the December 8-9 meeting, so the minutes mostly confirm that path, while keeping a small chance of a half-point step alive.",
+        "fx": "Backs the dollar's support from expected Fed rate rises and adds to the pressure on gold."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Broad agreement on more rate rises confirms what markets already expect for December, with a little extra on the chance of a bigger step."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher expected US rates make gold, which pays no interest, less attractive."
+        }
+      ],
+      "watch": "The Fed's December 8-9 meeting, and US inflation figures before it, which decide whether the rise is a quarter point or half a point."
+    },
     {
       "id": "investinglive-daly-inflation-too-high-too-long-20261118",
       "ts": "2026-11-18T17:37:51Z",
@@ -766,45 +799,6 @@
       "watch": "Minutes of the Fed's October meeting, due Wednesday, November 18, for how many officials want more than one more rise."
     },
     {
-      "id": "fxempire-dollar-profit-taking-20261117",
-      "ts": "2026-11-17T17:06:00Z",
-      "source": "FXEmpire",
-      "url": "https://www.fxempire.com/forecasts/article/u-s-dollar-pulls-back-amid-profit-taking-analysis-for-eur-usd-gbp-usd-usd-cad-usd-jpy-2-1645227",
-      "image": "https://responsive.fxempire.com/v7/_fxempire_/2026/11/us-dollar-index-dxy-06-2.jpg?width=1201",
-      "headline": "US dollar pulls back as traders take profits",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "rates",
-      "summary": "The dollar slipped back from its 19-month high on the afternoon of Tuesday, November 17, as traders took some profit and US bond yields eased. The euro rose back above $1.10.",
-      "beats": {
-        "was": "The dollar had risen seven days in a row on bets that the Federal Reserve will keep raising rates. That pushed the euro below $1.10 for the first time since April 2025 and the dollar to just under 160 yen.",
-        "happened": "By late afternoon in London the euro was back near $1.101 and the pound above $1.32, while the dollar fell back from 160 yen as the US two-year Treasury yield dipped below 4.79%. The ZEW survey of financial experts also showed euro-area economic sentiment improving to 26.5, well above the 19.1 forecast.",
-        "means": "This is a pause after a long run, not a change in the story. The US figures released the same day did nothing to weaken the case for more Fed rate rises.",
-        "fx": "The euro, pound and yen get a little breathing room. The dollar's main support, higher US interest rates, is still in place."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Profit-taking and slightly lower US yields pull the dollar off a 19-month high."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Back above $1.10, helped by a better-than-expected survey of euro-area sentiment."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The dollar eases back from just under 160 yen as US yields dip."
-        }
-      ],
-      "watch": "Minutes of the Fed's last meeting, due Wednesday, November 18."
-    },
-    {
       "id": "pa-uk-cpi-october-preview-20261117",
       "ts": "2026-11-17T15:51:54Z",
       "source": "PA Media",
@@ -857,45 +851,6 @@
         }
       ],
       "watch": "The next Global Dairy Trade auction on Tuesday, December 1, and whether milk powder keeps rising."
-    },
-    {
-      "id": "marketscreener-reuters-wallst-falls-before-nvidia-20261117",
-      "ts": "2026-11-17T14:06:25Z",
-      "source": "Reuters (MarketScreener)",
-      "url": "https://www.marketscreener.com/news/nasdaq-set-for-higher-open-as-tech-steadies-ahead-of-nvidia-results-anthropic-ipo-ce785edcdb8dff24",
-      "image": "https://cdn.zonebourse.com/static/resize/0/0//images/reuters/2026-11/2026-11-17T105311Z_1_LYNXNPEMAG0VR_RTROPTP_4_USA-STOCKS.JPG",
-      "headline": "Wall St falls before Nvidia earnings in key AI test; Huang says open to return",
-      "story": "tech-selloff",
-      "story_title": "The AI stock sell-off before Nvidia's results",
-      "pillar": "risk",
-      "summary": "US stocks fell for a second day on Tuesday, November 17, with the Dow down about 1.6% by midday, as investors pulled back before chipmaker Nvidia's results after the close. Every sector of the S&P 500 was lower.",
-      "beats": {
-        "was": "Technology shares have been sliding for days. Nvidia, the biggest maker of AI chips, has lost about $410 billion in market value since its chief executive Jensen Huang resigned the week before, and AI company Anthropic plans a record stock market listing on Thursday, November 19.",
-        "happened": "By midday in New York the Dow had dropped about 820 points, the S&P 500 1.3% and the Nasdaq 1.4%, leaving the two broader indexes near their lowest in months. Huang said he would be willing to come back if the board wanted him, though the board was reported not to be considering it. Futures markets put the chance of a Federal Reserve rate rise in December at about 95%.",
-        "means": "Investors are heading into Nvidia's results already nervous, with rising US interest rates adding to the pressure on share prices.",
-        "fx": "Falling stock markets tend to weigh on currencies tied to global growth, such as the Australian and New Zealand dollars, and help safe currencies like the yen."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A broad US stock sell-off weighs on a currency that tracks global risk appetite."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Falling shares tend to pull the kiwi lower along with the Australian dollar."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Nervous markets tend to send money toward the yen as a safe place."
-        }
-      ],
-      "watch": "Nvidia's results after the US close on Tuesday, November 17: a strong report could steady stocks, a weak one could deepen the slide."
     },
     {
       "id": "economies-us-retail-sales-october-core-beat-20261117",
