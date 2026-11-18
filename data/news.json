@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T00:05:00Z",
+  "updated": "2026-11-18T01:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "mixed",
-      "ts": "2026-11-17T17:48:17Z",
-      "text": "The dollar sits just under 160 yen because US rates are far above Japan's, and Finance Minister Satsuki Katayama has warned Tokyo will act against fast moves. On Tuesday, November 17 falling stock markets and slightly lower US yields pulled the dollar back from 160, but fresh Fed calls for more rate rises keep the gap with Japan wide."
+      "ts": "2026-11-18T01:55:00Z",
+      "text": "The dollar sits just under 160 yen because US rates are far above Japan's, and Finance Minister Satsuki Katayama has warned Tokyo will act against fast moves. Record exports in October, reported on Wednesday, November 18, ease fears of a stalling economy and help the case for a Bank of Japan rate rise in December, but fresh Fed calls for more rises keep the gap with Japan wide."
     },
     "CHF": {
       "lean": "mixed",
@@ -54,6 +54,33 @@
     }
   },
   "items": [
+    {
+      "id": "investing-reuters-japan-exports-record-october-20261118",
+      "date": "2026-11-18",
+      "source": "Investing.com (Reuters)",
+      "url": "https://au.investing.com/news/economic-indicators/japan-exports-set-record-in-october-on-strong-chiprelated-demand-4778513",
+      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAH01I_L.jpg",
+      "headline": "Japan's exports hit a record in October on chip demand",
+      "story": "boj-december",
+      "story_title": "Will the Bank of Japan raise rates in December?",
+      "pillar": "growth",
+      "summary": "Japan's exports rose 20.5% from a year earlier in October to a monthly record, led by chips and chipmaking machines, and the trade gap came in about half as wide as forecast.",
+      "beats": {
+        "was": "Japan's economy shrank slightly in July to September, which gave the Bank of Japan a reason to hesitate over the rate rise to 1.5% that markets expect in December. The dollar trades just under 160 yen.",
+        "happened": "The Ministry of Finance's October trade figures, released on Wednesday, November 18, showed exports up 20.5% on a year earlier, a little above forecasts and the 14th rise in a row. Chip exports jumped by about half, and sales to the US rose about 24%. Imports rose less than expected, so the trade deficit was about 477 billion yen against roughly 956 billion forecast.",
+        "means": "Demand for AI chips is holding up Japan's factories while Chinese demand stays soft. Part of the jump comes from higher prices rather than more goods shipped, but it still eases worries that the economy is stalling, which helps the case for a December rate rise.",
+        "fx": "A small help for the yen: stronger trade supports a Bank of Japan rise and a smaller deficit means fewer yen sold to pay for imports. It does little against the wide gap between US and Japanese rates."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Record exports and a smaller trade gap support a December Bank of Japan rise."
+        }
+      ],
+      "watch": "Japan's October inflation figures on Friday, November 20, the last big reading before the Bank of Japan's December meeting."
+    },
     {
       "id": "rigzone-oil-swings-gulf-attacks-settle-20261117",
       "ts": "2026-11-17T20:53:00Z",
@@ -862,51 +889,6 @@
       "watch": "US retail sales on Tuesday and the Fed's October meeting minutes on Wednesday: soft spending or a split Fed would test the dollar's run."
     },
     {
-      "id": "motleyfool-tech-selloff-nvidia-week-20261116",
-      "ts": "2026-11-16T18:55:00Z",
-      "source": "Motley Fool",
-      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/16/stock-market-midday-nov-16-stocks-slide-as-tech-selling-intensifies-across-the-market/",
-      "image": null,
-      "headline": "Stock Market Midday, Nov. 16: Stocks Slide as Tech Selling Intensifies Across the Market",
-      "story": "tech-selloff",
-      "story_title": "The AI stock sell-off before Nvidia's results",
-      "pillar": "risk",
-      "summary": "US stocks fell on Monday as investors sold technology and chip shares ahead of Nvidia's results on Tuesday. Asian chip markets fell harder overnight, with Taiwan down about 6%.",
-      "beats": {
-        "was": "Technology shares tied to artificial intelligence have led stock markets for much of the past two years. Chipmaker Nvidia, the biggest of them, reports quarterly results after the US close on Tuesday, November 17.",
-        "happened": "By midday in New York the tech-heavy Nasdaq index was down 1.3%, the S&P 500 down 1.0% and the Dow 0.6%. Nvidia shares fell about 4% and memory-chip maker Micron about 6%. Overnight, Taiwan's main index dropped about 6% and South Korea's about 3.6%. US 10-year Treasury yields were near 5.1%.",
-        "means": "Investors are cutting risk before a big test of the AI story. When stocks fall broadly, money tends to leave currencies tied to global growth and drift toward safer ones; high US yields are adding to the strain on share prices.",
-        "fx": "Mild pressure on the Australian and New Zealand dollars, which tend to fall with stocks. The yen and Swiss franc can gain from a shift to safety, though the yen is held back by low Japanese rates."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Falling stocks, especially the sharp drop in Asian chip markets, weigh on a currency tied to global growth."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The same move away from risk hurts the New Zealand dollar."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A broad stock sell-off adds some demand for the franc as a safe place."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Safety buying could help the yen, but the large gap between US and Japanese rates still weighs on it."
-        }
-      ],
-      "watch": "Nvidia's results after the US close on Tuesday: a strong report could calm stocks, a weak one could deepen the sell-off."
-    },
-    {
       "id": "ap-warsh-ai-speech-silent-on-rates-20261116",
       "ts": "2026-11-16T17:22:07Z",
       "source": "AP (via ClickOnDetroit)",
@@ -1085,45 +1067,6 @@
         }
       ],
       "watch": "Eurozone business surveys (PMIs) later this month: another weak factory reading would add to the pressure on the euro."
-    },
-    {
-      "id": "investing-sterling-sixth-day-slide-20261116",
-      "ts": "2026-11-16T10:10:00Z",
-      "source": "Investing.com",
-      "url": "https://uk.investing.com/news/forex-news/sterling-today-pound-extends-slide-as-dollar-firms-on-hawkish-fed-bets-4983992",
-      "image": "https://content-media.investing.com/news/LYNXMPEB4J19G_L.jpg",
-      "headline": "Pound extends slide as dollar firms on Fed rate-rise bets",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "The British pound fell for a sixth day in a row against the dollar, to about $1.32, as markets bet on more US rate rises. Analysts say US inflation, not anything in Britain, is driving the move.",
-      "beats": {
-        "was": "US core inflation for October came in above forecasts on November 10, and Federal Reserve Governor Christopher Waller then raised the idea of a larger half-point rate rise. The Bank of England raised its own rate earlier in November.",
-        "happened": "On Monday morning in London the pound slipped to about $1.319, heading for a sixth straight daily loss, and the euro hovered near $1.10. Two-year US interest-rate swaps have climbed about 0.35 percentage points since the inflation figures. Futures now lean toward quarter-point Fed rises in both December and January rather than one half-point move.",
-        "means": "Bank HSBC says the pound is being moved by US inflation rather than British news, so a firmer Bank of England has not been enough to hold it up. A bigger-than-expected euro-area trade deficit for September also gave the euro no help.",
-        "fx": "The dollar keeps gaining on both the pound and the euro, while the euro against the pound has barely moved this week. Fed Chair Kevin Warsh speaks on Monday and minutes of the Fed's October meeting come on Wednesday."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A sixth daily loss against the dollar as US rate expectations rise faster than Britain's."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Markets now price Fed rises in both December and January."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro sits near $1.10 and a wider trade deficit gave it no support."
-        }
-      ],
-      "watch": "Fed minutes on Wednesday: a firm tone would back the January rise markets now expect and keep the pound under pressure."
     },
     {
       "id": "reuters-oil-falls-exports-recover-goldman-20261116",
