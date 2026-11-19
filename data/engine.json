@@ -1,43 +1,43 @@
 {
-  "updated": "2026-11-19T01:40:00-06:00",
+  "updated": "2026-11-19T07:58:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~90% 25bp / ~10% 50bp (CME FedWatch); BoE Dec ~80%; ECB Dec ~90%; BoJ Dec ~84%; BoC Dec ~44%; RBA 4.85%, cut bets for 2027 building",
-      "read": "Fed Governor Christopher Waller argued for a half-point US hike in December unless the Fed signals another in January, and bets on a bigger step doubled. Weak Australian jobs figures point the other way there, supporting the view that Australian rates have peaked. US rates still look set to rise fastest, which keeps favouring the dollar.",
+      "figure": "Fed Dec hike ~90% 25bp / ~10% 50bp (CME FedWatch via Hercules); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~84%; BoC Dec ~44%; RBA 4.85%",
+      "read": "A December Fed hike is still treated as all but certain, and soft US data this morning did not change that. The European Central Bank and Bank of England are also expected to hike, while Australian job losses make another Reserve Bank of Australia hike unlikely. US rates still look set to rise fastest, which keeps favouring the dollar.",
       "sources": [
+        {
+          "label": "Blue Street central banks and pricing (Hercules, Nov 19)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+        },
+        {
+          "label": "Central FX (Nov 19): Daily news, markets price nearly two Fed rate rises",
+          "url": "https://centralfx.co.uk/daily-news-19th-november-2026/"
+        },
         {
           "label": "Yahoo Finance (Nov 18): Fed's Waller doubles down on a jumbo rate hike in December",
           "url": "https://finance.yahoo.com/economy/policy/article/feds-waller-doubles-down-on-a-jumbo-rate-hike-in-december-sees-more-hikes-to-come-174616572.html"
-        },
-        {
-          "label": "Federal Reserve (Nov 18): Minutes of the FOMC, October 27-28, 2026",
-          "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm"
-        },
-        {
-          "label": "ABS (Nov 19): Labour Force, Australia, October 2026",
-          "url": "https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release"
-        },
-        {
-          "label": "Blue Street central banks and pricing (Hercules, Nov 19 London open run)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "Australia employment Oct −43.5K (fcst +25.5K), unemployment 4.9% (fcst 4.7%); US housing starts Oct 1.309M, permits 1.295M; US jobless claims due 7:30 AM CT (fcst 198K)",
-      "read": "Australia lost jobs for a second month and unemployment hit a five-year high, the clearest sign yet that high rates are biting there. The US economy still looks firmer than most, which supports the dollar. Coming up: US weekly jobless claims.",
+      "figure": "US initial claims 203K (fcst 198K), continuing 1.763M (+70K); Philly Fed 6.3 (fcst 20.6, Oct 20.9), new orders −0.4; Australia jobs Oct −43.5K, unemployment 4.9%",
+      "read": "US jobless claims rose a little and a Philadelphia-area factory survey fell sharply, early signs that US growth is cooling. Australia lost jobs for a second month. The US still looks firmer than most, but a run of soft figures would chip at the dollar's lead.",
       "sources": [
         {
-          "label": "ABS (Nov 19): Labour Force, Australia, October 2026",
-          "url": "https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/latest-release"
+          "label": "US Department of Labor (Nov 19): Unemployment Insurance Weekly Claims, week ending Nov 14",
+          "url": "https://www.dol.gov/ui/data.pdf"
         },
         {
-          "label": "Reuters via Business Recorder (Nov 19): US dollar hovers near 19-month high, Aussie falls after soft jobs data",
-          "url": "https://www.brecorder.com/news/40449680/us-dollar-hovers-near-19-month-high-aussie-falls-after-soft-jobs-data"
+          "label": "Federal Reserve Bank of Philadelphia (Nov 19): Manufacturing Business Outlook Survey, November 2026",
+          "url": "https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis/manufacturing-business-outlook-survey"
+        },
+        {
+          "label": "investingLive (Nov 19): Australian unemployment jumps to 4.9% as jobs fall 43,500",
+          "url": "https://investinglive.com/central-banks/australian-unemployment-jumps-to-4-9-as-jobs-fall-43-500-taking-rba-hikes-off-the-table/"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 19): times, forecasts and actuals",
@@ -48,43 +48,39 @@
     {
       "id": "inflation",
       "title": "Inflation",
-      "figure": "UK CPI Oct 3.6% y/y, core 2.8%; euro-area CPI Oct 4.0% final, core 2.6%; Japan core CPI Oct due 5:30 PM CT (fcst 2.3%)",
-      "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. Japan's inflation figures, out Thursday evening US time, will show whether the Bank of Japan has a clear case to hike in December.",
+      "figure": "Philly Fed prices paid 58.2 (Oct 43.2); UK CPI Oct 3.6%; euro-area CPI Oct 4.0%",
+      "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. Prices paid by US factories jumped this month, a reminder that war-driven costs are still feeding through. That makes the Fed slow to read soft growth figures as a reason to stop.",
       "sources": [
         {
-          "label": "ONS (Nov 18): Consumer price inflation, UK: October 2026",
-          "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/october2026"
-        },
-        {
-          "label": "Irish Times (Nov 18): Euro-area inflation hits 4%, paving way for more ECB rate hikes",
-          "url": "https://www.irishtimes.com/business/2026/11/18/euro-area-inflation-hits-4-paving-way-for-more-ecb-rate-hikes/"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, London open run, ~12:45 AM CT Nov 19; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+          "label": "Federal Reserve Bank of Philadelphia (Nov 19): Manufacturing Business Outlook Survey, November 2026",
+          "url": "https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis/manufacturing-business-outlook-survey"
         },
         {
           "label": "Blue Street calendar (Hercules, Nov 19): times, forecasts and actuals",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+        },
+        {
+          "label": "ONS (Nov 18): Consumer price inflation, UK: October 2026",
+          "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/october2026"
         }
       ]
     },
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "Houthi missile threat toward Riyadh caused damage (Nov 19); Hormuz crude flows near pre-war levels; USD/CHF ~0.8437; AUD/USD ~0.6695 (10-month low)",
-      "read": "A Houthi missile aimed at the Saudi capital caused damage overnight, yet markets stayed calm and the franc and yen drew no haven buying. With Gulf oil still flowing, interest rates are doing more to move currencies than the war. Weak Australian jobs added to pressure on the Aussie.",
+      "figure": "Anthropic share sale priced at $83, value above $1T; DXY ~103.70 (−0.10%); NZD/USD +0.69%",
+      "read": "US stock futures rose as the AI company Anthropic priced a share sale above $1 trillion. Gulf attacks continued but markets took them in stride. The dollar eased a touch, and the kiwi led a small bounce in the currencies that had fallen most.",
       "sources": [
         {
-          "label": "Reuters (Nov 19): Houthi missile threat towards Riyadh causes damage, Saudi-led coalition says",
-          "url": "https://www.reuters.com/world/middle-east/houthi-missile-threat-towards-riyadh-causes-damage-saudi-led-coalition-says-2026-11-19/"
+          "label": "Yahoo Finance (Nov 19): Stock market today, futures rise as Anthropic prices its share sale",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-090910916.html"
         },
         {
-          "label": "Reuters via KTWB (Nov 19): Oil prices steady as supply surplus softens sentiment though Gulf war supports",
-          "url": "https://ktwb.com/2026/11/18/oil-prices-steady-as-supply-surplus-softens-sentiment-though-gulf-war-supports/"
+          "label": "Anadolu Agency (Nov 19): Three oil tankers disabled by mine blasts in Strait of Hormuz, says Iranian army",
+          "url": "https://www.aa.com.tr/en/middle-east/3-oil-tankers-disabled-by-mine-blasts-in-strait-of-hormuz-iranian-army/4129906"
         },
         {
-          "label": "Blue Street market levels (Hercules, London open run, ~12:45 AM CT Nov 19; indicative)",
+          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:38 AM CT Nov 19, after the 7:30 AM US data; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
@@ -92,19 +88,19 @@
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$89.47, WTI ~$82.43 (steady overnight after −4% Wed); Hormuz flows near pre-war; gold ~$3,734 (dipped to ~$3,693)",
-      "read": "Oil steadied after a big drop as Gulf flows returned to normal, which keeps weighing on the Canadian dollar and helps energy buyers such as Japan and the euro area. Gold's slide to its lowest in more than a year weighs on the Aussie, since Australia is a big gold producer.",
+      "figure": "Brent ~$89.94 (+0.82%), WTI ~$83.23 (+1.15%); gold ~$3,725 (+0.12%), overnight low ~$3,693",
+      "read": "Oil bounced back toward $90 for Brent, giving the Canadian dollar a little relief. Gold held near its lowest since September 2025, which keeps weighing on the Aussie.",
       "sources": [
         {
-          "label": "Reuters via KTWB (Nov 19): Oil prices steady as supply surplus softens sentiment though Gulf war supports",
-          "url": "https://ktwb.com/2026/11/18/oil-prices-steady-as-supply-surplus-softens-sentiment-though-gulf-war-supports/"
+          "label": "Business Recorder, citing Reuters (Nov 19): Oil prices steady as Middle East shipping attacks counter supply surplus outlook",
+          "url": "https://www.brecorder.com/news/40449685/oil-prices-steady-as-middle-east-shipping-attacks-counter-supply-surplus-outlook"
         },
         {
-          "label": "Dow Jones via Morningstar (Nov 18): US crude oil stockpiles rise for second straight week",
-          "url": "https://www.morningstar.com/news/dow-jones/202611186375/us-crude-oil-stockpiles-rise-for-second-straight-week"
+          "label": "ANC Blog (Nov 19): Gold price falls to a 14-month low after Fed minutes",
+          "url": "https://ancstockinvestments.com/blog/2026/11/19/gold-price-today-14-month-low-fed-minutes/"
         },
         {
-          "label": "Blue Street market levels (Hercules, London open run, ~12:45 AM CT Nov 19; indicative)",
+          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:38 AM CT Nov 19, after the 7:30 AM US data; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
