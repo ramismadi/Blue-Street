@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T01:55:00Z",
+  "updated": "2026-11-19T04:00:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -49,11 +49,44 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-18T23:55:00Z",
-      "text": "Oil has lost about a fifth this month as Gulf exports recover, and on Wednesday, November 18 Brent ended near $92 and US crude near $83 after bigger US stockpiles and talk of faster Fed rate rises. Attacks on ships near the Strait of Hormuz go on but now move prices only briefly, ahead of the OPEC+ meeting on November 29."
+      "ts": "2026-11-19T04:00:00Z",
+      "text": "Oil has lost about a fifth this month as Gulf exports recover, and on Wednesday, November 18 Brent ended near $92 and US crude near $83 after bigger US stockpiles and talk of faster Fed rate rises. Attacks on ships near the Strait of Hormuz go on but now move prices only briefly, ahead of the OPEC+ meeting on November 29. US President Donald Trump meets China's Xi Jinping and Russia's Vladimir Putin in Shenzhen on Thursday, November 19 with the Iran war on the list, though few expect a deal."
     }
   },
   "items": [
+    {
+      "id": "aljazeera-trump-xi-putin-shenzhen-20261119",
+      "ts": "2026-11-19T02:57:19Z",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/19/what-do-trump-putin-and-xi-want-from-their-shenzhen-meeting",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/afp_6afd95b92724-1795003833_223de5-1795004696.jpg?resize=1200%2C630&quality=80",
+      "headline": "Trump, Xi and Putin meet as a three for the first time, at the Asia-Pacific summit in Shenzhen",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "US President Donald Trump, China's President Xi Jinping and Russia's President Vladimir Putin hold their first three-way meeting on Thursday, November 19 in Shenzhen, China. The White House says the Iran war is on the list, but experts expect few firm results.",
+      "beats": {
+        "was": "The US is at war with Iran, attacks on ships and bases around the Gulf have kept oil jumpy, and Russia sells much more oil to China than before. The US and China agreed a trade truce that now runs to January 10, 2027.",
+        "happened": "The three leaders meet on the sidelines of the Asia-Pacific Economic Cooperation (APEC) summit in Shenzhen. The White House says President Trump wants to talk about the Iran war and a possible three-way nuclear arms deal, while Ukraine is not formally on the agenda. Trump also has a separate meeting with Putin the same day.",
+        "means": "A real step toward ending the Iran war would ease the threat to Gulf oil supply. Experts quoted by Al Jazeera expect handshakes rather than deals, so for now this is a chance of calmer news, not a change.",
+        "fx": "Little effect so far. Any sign of a deal on Iran would weigh on oil and on safe places like the Swiss franc and gold, while a public falling-out would do the opposite."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Iran is on the agenda, but no deal is expected, so it only hints at less war risk to supply."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Calmer talks would trim safe-haven demand for the franc, a clash would add to it."
+        }
+      ],
+      "watch": "Any joint statement after the meeting on Thursday, November 19, especially on Iran, and the OPEC+ oil producers' meeting on November 29."
+    },
     {
       "id": "investinglive-australia-jobs-october-49pc-20261119",
       "ts": "2026-11-19T00:42:15Z",
@@ -1187,33 +1220,6 @@
         }
       ],
       "watch": "Australian jobs figures and the fourth-quarter inflation reading: further rises in unemployment would strengthen the three members who wanted to stop."
-    },
-    {
-      "id": "houseofsaud-araghchi-busaidi-no-hormuz-deal-20261117",
-      "ts": "2026-11-17T07:51:50Z",
-      "source": "House of Saud",
-      "url": "https://houseofsaud.com/araghchi-busaidi-muscat-nov17/",
-      "image": "https://houseofsaud.com/wp-content/uploads/2026/11/busaidi-araghchi-muscat-oman-iran-talks-nov17.jpg",
-      "headline": "Iran and Oman foreign ministers meet in Muscat with no Hormuz agreement",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's Foreign Minister Abbas Araghchi met Oman's Foreign Minister Badr Albusaidi in Muscat on Tuesday, November 17. The talks ended with no deal or timetable for reopening shipping through the Strait of Hormuz.",
-      "beats": {
-        "was": "Iran has kept the Strait of Hormuz closed or restricted since July, and the US has a naval blockade on Iran. Oman sits on the strait's southern side and has long passed messages between Tehran and Washington.",
-        "happened": "The two ministers discussed shipping safety and calming tensions, and Oman called the meeting constructive. Neither side announced an agreement, and the official accounts did not mention Hormuz shipping, which an Omani statement on November 5 had named. Hours earlier another tanker was hit near the strait.",
-        "means": "The channel for talks stays open, but there is no sign yet that the strait will return to normal traffic soon.",
-        "fx": "Keeps some war-risk premium in oil, a small help for the Canadian dollar and a cost for big energy importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "No progress on reopening Hormuz keeps supply worries alive."
-        }
-      ],
-      "watch": "Any follow-up from Oman or Iran on Hormuz shipping, and the OPEC+ meeting on November 29."
     },
     {
       "id": "reuters-uk-pay-slows-vacancies-20261117",
