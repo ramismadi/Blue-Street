@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T23:55:00Z",
+  "updated": "2026-11-19T01:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -33,19 +33,19 @@
       "text": "Canadian inflation held at 3.1% in October, slightly below forecast, and the Bank of Canada's core measures sit near its 2% goal, so a December rate rise looks less likely. Oil, Canada's main export, ended Tuesday, November 17 a little higher but is still down about a fifth this month, and the US dollar is strong, so the Canadian dollar has little to lean on."
     },
     "AUD": {
-      "lean": "mixed",
-      "ts": "2026-11-18T11:49:00Z",
-      "text": "The Australian dollar has been the weakest major currency this past month as US rates rise and big banks call the Reserve Bank of Australia's rate rises finished. Faster pay growth, reported on Wednesday, November 18, and calmer share markets after Nvidia's strong results give it some support."
+      "lean": "bearish",
+      "ts": "2026-11-19T01:55:00Z",
+      "text": "The Australian dollar fell below 67 US cents after Australia lost jobs for a second month and unemployment rose to 4.9% in October, figures released on Thursday, November 19. That makes another Reserve Bank of Australia rate rise unlikely, while the Federal Reserve keeps signalling more, so faster pay growth reported the day before offers little support."
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-18T11:49:00Z",
-      "text": "The New Zealand dollar sits near 55 US cents, held down by the strong US dollar. Nvidia's strong results on Tuesday, November 17 calmed share markets, a small help, and dairy prices were flat at the latest auction."
+      "ts": "2026-11-19T01:55:00Z",
+      "text": "The New Zealand dollar sits near 55 US cents, close to its lowest since the pandemic, held down by a US dollar lifted by expected Federal Reserve rate rises while the Reserve Bank of New Zealand holds its rate at 2.75%. Weak Australian jobs figures on Thursday, November 19 add a little more pressure on its neighbour's currency."
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-18T23:55:00Z",
-      "text": "Gold fell on Wednesday, November 18 to its lowest since late September 2025, near $3,750 an ounce, as Federal Reserve officials one after another backed more rate rises and Governor Christopher Waller raised the idea of a half-point step. Iran's widening attacks in the Gulf have not drawn enough safe-haven buying to offset higher US rates and a strong dollar."
+      "ts": "2026-11-19T01:55:00Z",
+      "text": "Gold fell more than 3% on Wednesday, November 18 to about $3,720 an ounce, its lowest since September 2025, after Federal Reserve minutes and officials one after another backed more rate rises. Iran's widening attacks in the Gulf have not drawn enough safe-haven buying to offset higher US rates and a strong dollar."
     },
     "OIL": {
       "lean": "bearish",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "investinglive-australia-jobs-october-49pc-20261119",
+      "ts": "2026-11-19T00:42:15Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/central-banks/australian-unemployment-jumps-to-4-9-as-jobs-fall-43-500-taking-rba-hikes-off-the-table/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/aud%20jobless%20plunge%2019%20November%202026-featured-1795048923.jpg?width=960&format=webp",
+      "headline": "Australian unemployment jumps to 4.9%, a five-year high, as jobs fall again",
+      "story": "rba-path",
+      "story_title": "Has the Reserve Bank of Australia finished raising rates?",
+      "pillar": "growth",
+      "summary": "Australia lost 43,500 jobs in October and unemployment rose to 4.9%, its highest since 2021, far worse than forecast. That makes another Reserve Bank of Australia rate rise much less likely.",
+      "beats": {
+        "was": "The Reserve Bank of Australia has raised its main rate five times, to 4.85% in November, and three of its nine board members voted against that last rise. Pay growth picked up in the July to September quarter, so the question was whether the jobs market was still strong enough to justify one more rise.",
+        "happened": "Figures from the Australian Bureau of Statistics, released on Thursday, November 19, showed employment fell by 43,500 in October when a gain of about 25,000 was expected, after a fall of about 39,000 in September. Unemployment rose to 4.9% from 4.7%, and the share of people working or looking for work slipped.",
+        "means": "Two months of falling jobs suggest the rate rises are now biting hard. It backs the board members and big banks who say rates have peaked, and makes a rise early next year look unlikely.",
+        "fx": "Clear pressure on the Australian dollar, which fell below 67 US cents, already near its lowest in about ten months against a dollar lifted by expected Federal Reserve rate rises."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 3,
+          "why": "A big jobs miss and a five-year-high jobless rate take a further Reserve Bank of Australia rise largely off the table."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The New Zealand dollar often moves with its Australian neighbour and is already near its lows."
+        }
+      ],
+      "watch": "The Reserve Bank of Australia's next decision in February, and Australia's monthly inflation figures before it, which show whether rising prices still worry the board more than lost jobs."
+    },
     {
       "id": "investinglive-kashkari-markets-see-more-hikes-20261118",
       "ts": "2026-11-18T21:32:19Z",
@@ -119,6 +152,39 @@
         }
       ],
       "watch": "Whether attacks near the Strait of Hormuz actually cut Gulf exports, and what OPEC+ decides at its meeting on November 29."
+    },
+    {
+      "id": "kitco-gold-falls-3pc-fed-minutes-20261118",
+      "ts": "2026-11-18T19:43:05Z",
+      "source": "Kitco News",
+      "url": "https://www.kitco.com/news/article/2026-11-18/gold-prices-remain-under-pressure-fed-minutes-show-central-bank-committed",
+      "image": "https://images.kitco.com/img/extract_0_51_1000_563,width_1200,enlarge,format_jpeg/icms/01204ca0-fbe3-4463-a3c7-924357e708f0.jpeg",
+      "headline": "Gold falls more than 3% in a day, to about $3,720, after the Fed minutes",
+      "story": "gold-fed-cpi",
+      "story_title": "Gold: rising US rates vs war risk",
+      "pillar": "rates",
+      "summary": "Gold dropped more than 3% on Wednesday, November 18 to about $3,720 an ounce, its lowest since September 2025, as minutes from the Federal Reserve's October meeting showed officials set on bringing inflation down.",
+      "beats": {
+        "was": "Gold hit a record near $5,600 in January but has lost about a third since, as the Federal Reserve began raising rates again to fight inflation lifted by tariffs and the Iran war's energy shock. Higher US rates make gold, which pays no interest, less attractive.",
+        "happened": "Spot gold slid below $3,800 and kept falling after the minutes of the Fed's October 27-28 meeting, released on Wednesday, November 18, showed almost all officials expect more rate rises. It ended the day down more than 3%, near $3,720, and silver fell about 5%.",
+        "means": "The minutes held no big surprise, but together with Governor Christopher Waller's talk of a half-point rise in December they confirm the Fed is not close to stopping. Higher Treasury yields and a dollar near a 19-month high leave gold with little support, and Iran's attacks in the Gulf are not bringing in enough safe-haven buying.",
+        "fx": "Strong pressure on gold and a further sign of support for the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A fall of more than 3% in a day, to a 14-month low, as the Fed signals more rate rises."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The same rate expectations that sink gold keep the dollar near a 19-month high."
+        }
+      ],
+      "watch": "US inflation figures before the Fed's December 8-9 meeting, which decide whether the rise is a quarter point or half a point."
     },
     {
       "id": "koreatimes-afp-fed-minutes-almost-all-more-hikes-20261118",
@@ -583,7 +649,7 @@
           "why": "The same rate bets that sink gold keep the dollar near a 19-month high."
         }
       ],
-      "watch": "The Fed minutes on Wednesday, November 18, November 18; signs officials want fewer rises than markets expect would ease the pressure on gold."
+      "watch": "The Fed minutes on Wednesday, November 18; signs officials want fewer rises than markets expect would ease the pressure on gold."
     },
     {
       "id": "biggo-ueda-keep-raising-rates-weak-yen-food-20261118",
@@ -832,33 +898,6 @@
       "watch": "Minutes of the Fed's October meeting, due Wednesday, November 18, for how many officials want more than one more rise."
     },
     {
-      "id": "instaforex-gdt-flat-20261117",
-      "ts": "2026-11-17T14:30:00Z",
-      "source": "InstaForex",
-      "url": "https://www.instaforex.com/forex-news/3297762",
-      "image": null,
-      "headline": "Global Dairy Prices Stall as New Zealand's GDT Index Flatlines at 0.0%",
-      "story": "nz-dairy",
-      "story_title": "Dairy prices and New Zealand's export income",
-      "pillar": "tot",
-      "summary": "Global dairy prices were unchanged at the Global Dairy Trade auction on Tuesday, November 17, after a 3% rise at the previous one. Milk powder rose while butter and cheese fell.",
-      "beats": {
-        "was": "Dairy is New Zealand's biggest export, so prices at the twice-monthly Global Dairy Trade auction feed into the country's income and the value of its currency. The previous auction had lifted prices by 3%.",
-        "happened": "The overall price index was flat. Whole milk powder, New Zealand's main dairy product, rose about 2.7% and skim milk powder about 2.2%, while butter fell about 6.5% and cheddar cheese about 4%.",
-        "means": "The rise in milk powder still helps New Zealand's farmers, but the rally across dairy prices has paused.",
-        "fx": "A small support for the New Zealand dollar through milk powder, not enough to offset a strong US dollar and falling stock markets."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Milk powder prices rose but the overall dairy index was flat after a 3% gain last time."
-        }
-      ],
-      "watch": "The next Global Dairy Trade auction on Tuesday, December 1, and whether milk powder keeps rising."
-    },
-    {
       "id": "economies-us-retail-sales-october-core-beat-20261117",
       "ts": "2026-11-17T13:47:00Z",
       "source": "Economies.com",
@@ -1067,33 +1106,6 @@
         }
       ],
       "watch": "Weekly US crude stock figures, and the OPEC+ meeting on November 29 on 2027 output."
-    },
-    {
-      "id": "rallies-nahb-builder-mood-14-year-low-20261117",
-      "date": "2026-11-17",
-      "source": "Rallies (Reuters)",
-      "url": "https://rallies.ai/news/us-homebuilder-sentiment-tumbles-to-more-than-14-12-year-low-in-november-4f4d48f6808ea063",
-      "image": null,
-      "headline": "US homebuilder sentiment tumbles to more than 14-1/2-year low in November",
-      "story": "us-growth",
-      "story_title": "How strong is the US economy?",
-      "pillar": "growth",
-      "summary": "A monthly survey of US homebuilders fell to its weakest level since April 2012 in November, as high mortgage rates kept buyers away. Almost half of builders cut prices.",
-      "beats": {
-        "was": "The National Association of Home Builders asks builders each month how the market for new homes looks; a reading under 50 means more see it as poor. It stood at 29 in October, already weak, as mortgage rates climbed with Fed rate rises.",
-        "happened": "On Tuesday, November 17 the index dropped to 25, against forecasts for no change. Current sales, expected sales and buyer visits all fell. About 46% of builders cut prices and 68% gave buyers other deals, both the most since the pandemic.",
-        "means": "Housing is the part of the US economy hit first and hardest by higher borrowing costs, and it is now clearly struggling. It shows Fed rate rises are biting, even though shoppers kept spending in October.",
-        "fx": "A small weight on the dollar, but it did not shake the near-certain bets on a December Fed rise. Housing weakness matters more for the dollar if it starts to spread into jobs and spending."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Housing slumping under high mortgage rates points to slower growth, though December Fed rise bets held."
-        }
-      ],
-      "watch": "US housing starts and building permits for October: a sharp drop would show the slump spreading from mood into actual building."
     },
     {
       "id": "grafa-bullock-upside-risks-banks-peak-20261117",
