@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-19T07:58:00-06:00",
+  "updated": "2026-11-19T15:30:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~90% 25bp / ~10% 50bp (CME FedWatch via Hercules); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~84%; BoC Dec ~44%; RBA 4.85%",
-      "read": "A December Fed hike is still treated as all but certain, and soft US data this morning did not change that. The European Central Bank and Bank of England are also expected to hike, while Australian job losses make another Reserve Bank of Australia hike unlikely. US rates still look set to rise fastest, which keeps favouring the dollar.",
+      "figure": "Fed Dec hike ~91% 25bp / ~9% 50bp (CME FedWatch via Hercules); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~84%; BoC Dec ~44%; RBA 4.85%, hold expected",
+      "read": "Markets still treat a December Fed hike as close to certain, and a few soft US reports did not change that. The European Central Bank and Bank of England are also expected to hike, while Australian job losses suggest the Reserve Bank of Australia has peaked. US rates still look set to rise fastest, which keeps favouring the dollar.",
       "sources": [
         {
           "label": "Blue Street central banks and pricing (Hercules, Nov 19)",
@@ -24,24 +24,20 @@
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "US initial claims 203K (fcst 198K), continuing 1.763M (+70K); Philly Fed 6.3 (fcst 20.6, Oct 20.9), new orders −0.4; Australia jobs Oct −43.5K, unemployment 4.9%",
-      "read": "US jobless claims rose a little and a Philadelphia-area factory survey fell sharply, early signs that US growth is cooling. Australia lost jobs for a second month. The US still looks firmer than most, but a run of soft figures would chip at the dollar's lead.",
+      "figure": "US claims 203K (fcst 198K); Philly Fed 6.3 (fcst 20.6); Conference Board LEI Oct −0.3% (fcst 0.0%); Australia jobs Oct −43.5K, unemployment 4.9%",
+      "read": "Several US reports softened at once: layoffs ticked up, a regional factory survey dropped sharply and a gauge of future activity slipped. Australia lost jobs for a second month. The US still looks firmer than most, but a run of soft figures would chip at the dollar's lead.",
       "sources": [
         {
-          "label": "US Department of Labor (Nov 19): Unemployment Insurance Weekly Claims, week ending Nov 14",
+          "label": "Blue Street calendar (Hercules, Nov 19): actuals",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+        },
+        {
+          "label": "US Department of Labor (Nov 19): weekly claims",
           "url": "https://www.dol.gov/ui/data.pdf"
         },
         {
-          "label": "Federal Reserve Bank of Philadelphia (Nov 19): Manufacturing Business Outlook Survey, November 2026",
+          "label": "Federal Reserve Bank of Philadelphia (Nov 19): Manufacturing Business Outlook Survey",
           "url": "https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis/manufacturing-business-outlook-survey"
-        },
-        {
-          "label": "investingLive (Nov 19): Australian unemployment jumps to 4.9% as jobs fall 43,500",
-          "url": "https://investinglive.com/central-banks/australian-unemployment-jumps-to-4-9-as-jobs-fall-43-500-taking-rba-hikes-off-the-table/"
-        },
-        {
-          "label": "Blue Street calendar (Hercules, Nov 19): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
         }
       ]
     },
@@ -49,7 +45,7 @@
       "id": "inflation",
       "title": "Inflation",
       "figure": "Philly Fed prices paid 58.2 (Oct 43.2); UK CPI Oct 3.6%; euro-area CPI Oct 4.0%",
-      "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. Prices paid by US factories jumped this month, a reminder that war-driven costs are still feeding through. That makes the Fed slow to read soft growth figures as a reason to stop.",
+      "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. The prices US factories pay jumped this month, a sign that war-driven costs are still feeding through. That is why the Fed is slow to treat softer growth as a reason to stop.",
       "sources": [
         {
           "label": "Federal Reserve Bank of Philadelphia (Nov 19): Manufacturing Business Outlook Survey, November 2026",
@@ -68,40 +64,36 @@
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "Anthropic share sale priced at $83, value above $1T; DXY ~103.70 (−0.10%); NZD/USD +0.69%",
-      "read": "US stock futures rose as the AI company Anthropic priced a share sale above $1 trillion. Gulf attacks continued but markets took them in stride. The dollar eased a touch, and the kiwi led a small bounce in the currencies that had fallen most.",
+      "figure": "Anthropic share sale: foreign take-up est. $10–15B (Spectra Markets via Pound Sterling Live); GBP/USD −0.39%, AUD/USD −0.75%; USD/CHF +0.11%, USD/JPY +0.24% (Hercules)",
+      "read": "Heavy buying of US dollars, partly from foreign investors paying for shares in Anthropic's record stock listing, lifted the dollar against the pound and the Aussie. Gulf attacks continued, but markets took them in stride. The franc and yen got no safe-haven lift.",
       "sources": [
         {
-          "label": "Yahoo Finance (Nov 19): Stock market today, futures rise as Anthropic prices its share sale",
-          "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-090910916.html"
-        },
-        {
-          "label": "Anadolu Agency (Nov 19): Three oil tankers disabled by mine blasts in Strait of Hormuz, says Iranian army",
-          "url": "https://www.aa.com.tr/en/middle-east/3-oil-tankers-disabled-by-mine-blasts-in-strait-of-hormuz-iranian-army/4129906"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:38 AM CT Nov 19, after the 7:30 AM US data; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close run, Nov 19; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Pound Sterling Live (Nov 19): Pound-to-Dollar in fresh lurch lower",
+          "url": "https://www.poundsterlinglive.com/usd/23901-pound-to-dollar-rate-falls-risk-off-anthropic-ipo"
+        },
+        {
+          "label": "Blue Street breaking watch (Hercules, Nov 19)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         }
       ]
     },
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Brent ~$89.94 (+0.82%), WTI ~$83.23 (+1.15%); gold ~$3,725 (+0.12%), overnight low ~$3,693",
-      "read": "Oil bounced back toward $90 for Brent, giving the Canadian dollar a little relief. Gold held near its lowest since September 2025, which keeps weighing on the Aussie.",
+      "figure": "Brent $89.90, WTI $83.17 (+1.0%); gold $3,667.80 (−1.98%) (Hercules, New York close, indicative)",
+      "read": "Gold fell to its lowest in about 14 months, which weighs on the Aussie. Oil firmed a little but stayed near $90 for Brent, giving the Canadian dollar no real relief. Cheaper oil this month still helps importers like the euro area and Japan.",
       "sources": [
         {
-          "label": "Business Recorder, citing Reuters (Nov 19): Oil prices steady as Middle East shipping attacks counter supply surplus outlook",
-          "url": "https://www.brecorder.com/news/40449685/oil-prices-steady-as-middle-east-shipping-attacks-counter-supply-surplus-outlook"
-        },
-        {
-          "label": "ANC Blog (Nov 19): Gold price falls to a 14-month low after Fed minutes",
-          "url": "https://ancstockinvestments.com/blog/2026/11/19/gold-price-today-14-month-low-fed-minutes/"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:38 AM CT Nov 19, after the 7:30 AM US data; indicative)",
+          "label": "Blue Street market levels (Hercules, New York close run, Nov 19; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+        },
+        {
+          "label": "Blue Street breaking watch (Hercules, Nov 19)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
         }
       ]
     },
@@ -128,7 +120,7 @@
     {
       "id": "fiscal",
       "title": "Fiscal",
-      "figure": "ECB FSR: France debt 119% of GDP, deficit 5.5%; US October deficit $404B, a record for the month; US 10-year ~5.07%",
+      "figure": "ECB FSR: France debt 119% of GDP, deficit 5.5%; US October deficit $404B, a record for the month; US 10-year ~5.05% (Nov 19 close)",
       "read": "France's debts, flagged by the European Central Bank as a risk, keep weighing on the euro. Record US government borrowing keeps long-term US borrowing costs near 5%, which weighs a little on trust in the dollar.",
       "sources": [
         {
