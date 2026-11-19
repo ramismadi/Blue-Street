@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-19T12:58:00Z",
+  "updated": "2026-11-19T14:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-19T12:58:00Z",
-      "text": "The dollar sits near its highest since April 2025 because markets now expect two more Federal Reserve rate rises, in December and January. The Fed's October minutes and several officials backed that on Wednesday, November 18, so the dollar needs fresh US data surprises to go much higher."
+      "ts": "2026-11-19T14:55:00Z",
+      "text": "The dollar sits near its highest since April 2025 because markets expect two more Federal Reserve rate rises, in December and January. US figures on Thursday, November 19 were mixed: few new jobless claims and rising factory costs back those bets, while a sharp drop in Philadelphia-area factory activity hints at a cooling economy."
     },
     "EUR": {
       "lean": "bearish",
@@ -49,11 +49,98 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-19T12:00:00Z",
-      "text": "Oil has lost about a fifth this month as Gulf exports recover, and Brent held near $92 on Thursday, November 19. Iran says three tankers hit mines near the Strait of Hormuz, and the meeting of Presidents Trump, Xi and Putin in Shenzhen brought no plan for the Iran war, but neither moved prices much ahead of the OPEC+ meeting on November 29."
+      "ts": "2026-11-19T14:55:00Z",
+      "text": "Oil has lost about a fifth this month as Gulf exports recover, and a 3.4 million barrel rise in US crude stocks points to plenty of supply. Brent edged up to near $92.60 on Thursday, November 19 on fears of more US strikes on Iran, but the gain was small ahead of the OPEC+ meeting on November 29."
     }
   },
   "items": [
+    {
+      "id": "ttnews-bloomberg-oil-higher-iran-strike-fears-20261119",
+      "ts": "2026-11-19T13:59:43Z",
+      "source": "Transport Topics (Bloomberg)",
+      "url": "https://www.ttnews.com/articles/oil-prices-fears-strikes-iran",
+      "image": "https://www.ttnews.com/sites/default/files/styles/social_media_1200x630/public/2026-11/Hormuz-ap-1200.jpg",
+      "headline": "Oil edges up on fears of more US strikes on Iran",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Brent crude rose about 0.7% to near $92.60 a barrel on the morning of Thursday, November 19, on worry that the US could strike Iran again.",
+      "beats": {
+        "was": "Oil has fallen more than a fifth this month as Gulf exports recover from the Iran war, and US crude stocks rose by 3.4 million barrels last week.",
+        "happened": "Prices swung between small gains and losses before rising, after US President Donald Trump, China's Xi Jinping and Russia's Vladimir Putin agreed in Shenzhen to raise world fuel supplies but gave no details. Worry about new US strikes on Iran then lifted prices. US crude rose about 1% to near $84.",
+        "means": "War risk still puts a floor under oil, but plentiful supply keeps rises small. Prices were still down about 3% from Friday, November 13.",
+        "fx": "A small lift for oil-linked currencies such as the Canadian dollar, not enough to change their recent weakness."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Fear of more strikes on Iran adds a little risk premium."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Slightly firmer oil helps Canada's export income."
+        }
+      ],
+      "watch": "The OPEC+ meeting on Sunday, November 29, and any new US action against Iran."
+    },
+    {
+      "id": "abc-ap-jobless-claims-203k-20261119",
+      "ts": "2026-11-19T13:33:00Z",
+      "source": "ABC News (AP)",
+      "url": "https://abcnews.com/US/wireStory/number-people-seeking-unemployment-aid-ticks-higher-low-138286638",
+      "image": "https://i.abcnewsfe.com/a/4b9ce135-2120-44d2-8d11-3ef19840a5b8/wirestory_ea6affa07224e7be7cfafd66ae3235db_16x9.jpg?w=1600",
+      "headline": "New US jobless claims tick up to 203,000 but stay low",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "growth",
+      "summary": "The number of Americans filing new claims for unemployment benefits rose by 1,000 to 203,000 last week, still low by historical standards.",
+      "beats": {
+        "was": "Weekly claims for unemployment benefits are the quickest sign of layoffs in the US. They have stayed below 220,000 all year, and employers added 165,000 jobs in October, far more than expected.",
+        "happened": "The Labor Department said on Thursday, November 19 that new claims rose by 1,000 to 203,000, and the four-week average barely moved.",
+        "means": "Layoffs remain rare, so the jobs market gives the Federal Reserve no reason to stop raising rates.",
+        "fx": "Steady support for the dollar, though one quiet week of claims adds little to what markets already price."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Few layoffs keep the case for more Fed rate rises intact."
+        }
+      ],
+      "watch": "Next week's jobless claims, and Fed officials' comments before the December 8-9 meeting."
+    },
+    {
+      "id": "investinglive-philly-fed-november-63-20261119",
+      "ts": "2026-11-19T13:30:21Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/us-november-philly-fed-vs-20-0-expected/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Philly%20manufacturing%20PMI-featured-1795094834-featured-1795095020-featured-1795095191.jpg?width=960&format=webp",
+      "headline": "Philadelphia-area factories slow sharply in November while their costs jump",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "growth",
+      "summary": "The Philadelphia Federal Reserve's November survey of factories in its region fell to 6.3, far below the 20 expected, while the prices they pay rose to the highest in months.",
+      "beats": {
+        "was": "The Philadelphia Fed asks manufacturers in Pennsylvania, New Jersey and Delaware each month whether business is better or worse; a reading above zero means more say better. It had been falling since August, when it stood at 47.4.",
+        "happened": "The reading dropped to 6.3 from 20.9 in October, its lowest since May. New orders slipped just below zero and plans to invest fell. The prices factories pay rose to 58.2 from 43.2, and the prices they charge reached their highest since June 2022.",
+        "means": "Slower activity with faster price rises is an awkward mix for the Federal Reserve. The cost side fits its case for more rate rises, while the weaker orders hint the economy may be cooling.",
+        "fx": "A mixed signal for the dollar: the miss is a small drag, but the jump in prices backs the rate rises markets already expect."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Weaker factory activity, but rising costs that support more Fed rate rises."
+        }
+      ],
+      "watch": "The S&P Global flash surveys of US business on Friday, November 20, for a wider read on activity and prices."
+    },
     {
       "id": "yahoo-anthropic-ipo-futures-rise-20261119",
       "ts": "2026-11-19T12:00:00Z",
@@ -1220,99 +1307,6 @@
         }
       ],
       "watch": "Minutes of the Fed's October meeting on Wednesday, November 18: signs of a split over more rate rises would test the dollar's climb."
-    },
-    {
-      "id": "yahoo-musalem-several-hikes-by-spring-20261117",
-      "ts": "2026-11-17T13:25:00Z",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/economy/policy/article/st-louis-feds-musalem-calls-for-interest-rate-hikes-soon-132554806.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/d990785777d329a5cc53d356cff7d3d99a1a477bc03d2be771cf302c9bdc4082/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-11%2F53bf5721-d255-4ae0-984e-b46a6195c4d4",
-      "headline": "St. Louis Fed's Musalem calls for interest rate hikes 'soon'",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "growth",
-      "summary": "Alberto Musalem, head of the St. Louis Federal Reserve, said the Fed should raise rates soon and will likely need several more rises before spring 2027, possibly a full point or more in total.",
-      "beats": {
-        "was": "The Federal Reserve's main rate sits at 3.75% to 4% and US inflation is running above 3%, well over the Fed's 2% goal. Markets already see a quarter-point rise at the Fed's December 8-9 meeting as close to certain.",
-        "happened": "In a speech in Buenos Aires on Tuesday, November 17, Musalem said rates are up to a point below where they need to be. His target implies rises of 1 to 1.5 percentage points by spring, taking the rate to around 4.75% to 5%. He called the economy strong and the job market steady. He does not vote on rates this year.",
-        "means": "It is one of the clearest calls yet for a long run of rises, not just one in December. Even without a vote, it pushes up the path markets expect for US rates into 2027.",
-        "fx": "More expected Fed rises support the dollar against the euro, yen and pound, and weigh on gold, which pays no interest."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A Fed president sketching a full point or more of rises by spring lifts the expected path of US rates."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher expected US rates make gold, which pays no interest, less attractive."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A wider gap between US and Japanese rates keeps pressure on the yen."
-        }
-      ],
-      "watch": "Minutes of the Fed's last meeting on Wednesday, November 18, for how many officials back more than one more rise."
-    },
-    {
-      "id": "reuters-uk-pay-slows-vacancies-20261117",
-      "ts": "2026-11-17T07:25:44Z",
-      "source": "Reuters (via RTÉ)",
-      "url": "https://www.rte.ie/news/business/2026/1117/1599494-uk-wages-growth-figures/",
-      "image": "https://www.rte.ie/images/0015558d-1600.jpg",
-      "headline": "UK wage growth slows to 3.5% in three months to September",
-      "story": "boe-hikes",
-      "story_title": "Bank of England: how far do rates rise?",
-      "pillar": "policy",
-      "summary": "UK pay growth cooled a little more than expected and job openings fell to their lowest since 2021, but unemployment also dipped. The pound barely moved.",
-      "beats": {
-        "was": "The Bank of England raised rates in November for the first time in more than three years, because UK inflation is running well above its 2% goal. Markets expect another rise in December, and pay growth is one of the main things the Bank watches.",
-        "happened": "Regular pay, leaving out bonuses, grew 3.5% from a year earlier in July to September, down from 3.7% and just under forecasts. Unemployment slipped to 4.6% instead of rising, but the tax office's payroll count fell by about 34,000 in October and job openings dropped to 690,000, the fewest since early 2021.",
-        "means": "Slower pay and fewer openings point to a cooling job market, which takes a little heat out of inflation. It is not weak enough to change the Bank's December plans, so markets still see about a 90% chance of a rise.",
-        "fx": "A mixed report that leaves the December rate rise in place, so the pound keeps taking its lead from the strong dollar rather than from UK news."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Pay and job openings cooled, but unemployment fell; December rise still about 90% expected."
-        }
-      ],
-      "watch": "UK inflation for October, out Wednesday morning: a high reading would firm up the December rise."
-    },
-    {
-      "id": "actionforex-rbnz-expectations-survey-q4-20261117",
-      "ts": "2026-11-17T02:29:53Z",
-      "source": "ActionForex",
-      "url": "https://www.actionforex.com/live-comments/661109-rbnz-survey-shows-near-term-inflation-fears-rising-but-long-term-expectations-ease/",
-      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-nz1.jpg",
-      "headline": "RBNZ Survey Shows Near-Term Inflation Fears Rising, but Long-Term Expectations Ease",
-      "story": "rbnz-december",
-      "story_title": "Will the Reserve Bank of New Zealand raise rates on December 9?",
-      "pillar": "inflation",
-      "summary": "Business leaders and forecasters polled by the Reserve Bank of New Zealand now expect inflation of almost 3% over the next year, up from 2.6%. Their longer-run views eased, and they now expect the bank to raise its 2.75% rate soon.",
-      "beats": {
-        "was": "The Reserve Bank of New Zealand asks firms and economists every quarter where they see prices and rates heading. Its policy rate is 2.75%, inflation slowed to 3.7% in July to September, and unemployment has risen to 5.7%.",
-        "happened": "The November survey, out on Tuesday, November 17, showed expected inflation one year ahead rising to 2.92%. The two-year view, which the bank watches most, barely moved at 2.36%, and the five- and ten-year views fell. Respondents now see the policy rate at about 3.05% by the end of this year and 3.40% a year from now, and expect house prices to rise only 0.5%.",
-        "means": "Price worries are rising in the short run but the longer-run anchor is holding, which gives the bank room to move slowly. Respondents expect a rate rise at the December 9 meeting, but rising joblessness argues for caution.",
-        "fx": "A small lift for the New Zealand dollar from higher expected rates, but it was offset by the strong US dollar and the kiwi barely moved."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Higher expected rates help, but steady long-run expectations and rising unemployment let the bank go slowly."
-        }
-      ],
-      "watch": "The Reserve Bank of New Zealand's decision on December 9: a rise would match what this survey expects; a hold would hurt the kiwi."
     }
   ]
 }
