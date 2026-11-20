@@ -1,141 +1,145 @@
 {
-  "updated": "2026-11-20T07:57:00-06:00",
-  "rows": [
+ "updated": "2026-11-20T15:35:00-06:00",
+ "rows": [
+  {
+   "id": "policy",
+   "title": "Monetary Policy",
+   "figure": "Fed Dec hike ~90% (from ~97% at the NY open), 50bp 0%, hold ~10% (CME FedWatch 3:01 PM CT); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~84%; BoC Dec ~44%",
+   "read": "A December Fed hike is still expected, but bets slipped as stocks fell and US consumers said they expect less inflation. The European Central Bank, Bank of England and Bank of Japan are also expected to hike in December. A softer Fed path would narrow the US rate lead that has carried the dollar.",
+   "sources": [
     {
-      "id": "policy",
-      "title": "Monetary Policy",
-      "figure": "Fed Dec ~96.5% 25bp / 0% 50bp / ~3.5% hold (CME FedWatch via Hercules); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~85%; BoC Dec ~44%",
-      "read": "A quarter-point December Fed hike is still treated as all but certain, but bets on a bigger move faded as stocks slid. The European Central Bank, Bank of England and Bank of Japan are all expected to hike in December too. US rates still look set to rise further than most, though the gap stopped widening this week.",
-      "sources": [
-        {
-          "label": "CME FedWatch (Nov 20, via Hercules)",
-          "url": "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool"
-        },
-        {
-          "label": "Blue Street central banks and pricing (Hercules, Nov 20)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-        },
-        {
-          "label": "Reuters via Freedom 96.9 (Nov 20): Fed's Paulson backs further rate hikes",
-          "url": "https://www.freedom969.com/business/feds-paulson-backs-further-rate-hikes-says-shared-understanding-beats-guidance"
-        }
-      ]
+     "label": "CME FedWatch (Nov 20, 3:01 PM CT, via Hercules)",
+     "url": "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool"
     },
     {
-      "id": "growth",
-      "title": "Growth",
-      "figure": "UK retail sales Oct +0.7% m/m (fcst 0.0%), ex-fuel +0.9%; Canada retail sales Sep +0.8% (fcst 0.7%), ex-autos and fuel +0.1%",
-      "read": "UK shoppers spent more than expected in October, partly by stocking up. Canadian sales rose on gasoline. A global stock slide raises worries that growth will slow, which would hit commodity currencies hardest.",
-      "sources": [
-        {
-          "label": "ONS (Nov 20): Retail sales, Great Britain, October 2026",
-          "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/october2026"
-        },
-        {
-          "label": "RTE, citing Reuters (Nov 20): UK retail sales rise 0.7% in October",
-          "url": "https://www.rte.ie/news/business/2026/1120/1599950-uk-retail-sales/"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:40 AM CT Nov 20; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        }
-      ]
+     "label": "Blue Street central banks and pricing (Hercules, Nov 20 close run)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
     },
     {
-      "id": "inflation",
-      "title": "Inflation",
-      "figure": "Japan core CPI Oct 2.2% (fcst 2.3%), headline 2.3% (fcst 2.5%); Philly Fed prices paid 58.2; UK CPI Oct 3.6%; euro-area CPI Oct 4.0%",
-      "read": "Inflation is still above target almost everywhere, which keeps most central banks leaning toward hikes. Japan's inflation came in a touch below forecast but stayed above the Bank of Japan's goal, so a December hike there still looks likely. In the US, war-driven costs are still feeding through, which is why the Fed is slow to treat softer growth as a reason to stop.",
-      "sources": [
-        {
-          "label": "Blue Street calendar (Hercules, Nov 20): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-        },
-        {
-          "label": "Federal Reserve Bank of Philadelphia (Nov 19): Manufacturing Business Outlook Survey",
-          "url": "https://www.philadelphiafed.org/surveys-and-data/regional-economic-analysis/manufacturing-business-outlook-survey"
-        }
-      ]
-    },
-    {
-      "id": "risk",
-      "title": "Risk Sentiment",
-      "figure": "Nikkei ~−4.5%, Kospi ~−5%; US 2-year ~4.68% (−10bp); USD/JPY ~158.68 (−0.62%), USD/CHF ~0.8385 (−0.63%)",
-      "read": "Nvidia's chief executive stepped down without warning, and stocks fell sharply in the US and Asia. Money moved into the yen, the franc and US government bonds. The Aussie stayed near its lows, as it usually does when stocks slide.",
-      "sources": [
-        {
-          "label": "AP via ABC News (Nov 20): Asian shares drop as AI worries echo Wall Street",
-          "url": "https://abcnews.com/Business/wireStory/asia-shares-drop-ai-worries-echoing-wall-streets-138309523"
-        },
-        {
-          "label": "Business Recorder, citing Reuters (Nov 20): Asian shares head for worst week since 2020",
-          "url": "https://www.brecorder.com/news/40449953/asian-shares-head-for-worst-week-since-2020-as-ai-trade-gloom-fails-to-abate"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:40 AM CT Nov 20; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        }
-      ]
-    },
-    {
-      "id": "tot",
-      "title": "Terms of Trade",
-      "figure": "Gold ~$3,559 (−2.97%), low ~$3,515; Brent ~$91.43, WTI ~$82.32 (January contracts)",
-      "read": "Gold fell to its lowest in more than a year, which keeps weighing on the Aussie. Oil is headed for a third weekly fall despite attacks in the Gulf, which takes support away from the Canadian dollar.",
-      "sources": [
-        {
-          "label": "MarketScreener, citing Reuters (Nov 20): Gold set for worst week in eight months",
-          "url": "https://www.marketscreener.com/news/gold-set-for-worst-week-in-eight-months-as-firm-dollar-fed-hike-bets-weigh-ce785ed2de80f42d"
-        },
-        {
-          "label": "RTE, citing Reuters (Nov 20): Oil edges up after Houthi attacks on Riyadh, heads for third weekly fall",
-          "url": "https://www.rte.ie/news/business/2026/1120/1599964-world-oil-prices/"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:40 AM CT Nov 20; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        }
-      ]
-    },
-    {
-      "id": "positioning",
-      "title": "Positioning",
-      "figure": "CFTC report of Nov 10 (out late after Veterans Day): hedge funds for USD, GBP, AUD and gold; against EUR, NZD, CAD and CHF; slightly against JPY; real money disagrees on EUR, GBP and AUD",
-      "read": "The latest weekly figures show hedge funds leaning toward the dollar and the pound and against the euro, the kiwi and the Canadian dollar, with bets against the kiwi growing fastest. Big long-term investors take the other side on the euro, pound and Aussie. Where the two groups disagree, a surprise could set off a fast unwind.",
-      "sources": [
-        {
-          "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 10)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/cot.json"
-        },
-        {
-          "label": "CFTC Traders in Financial Futures (futures only)",
-          "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
-        },
-        {
-          "label": "CFTC Disaggregated (futures only)",
-          "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy"
-        }
-      ]
-    },
-    {
-      "id": "fiscal",
-      "title": "Fiscal",
-      "figure": "ECB FSR: France debt 119% of GDP, deficit 5.5%; US October deficit $404B, a record for the month; US 10-year ~5.03% (Asia, Nov 20)",
-      "read": "France's debts, flagged by the European Central Bank as a risk, keep weighing on the euro. Record US government borrowing keeps long-term US borrowing costs near 5%, which weighs a little on trust in the dollar.",
-      "sources": [
-        {
-          "label": "ECB (Nov 18): Financial Stability Review press release",
-          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html"
-        },
-        {
-          "label": "Reuters via Investing.com (Nov 12): US starts 2027 fiscal year with record October budget deficit of $404 billion",
-          "url": "https://www.investing.com/news/economy-news/us-starts-2027-fiscal-year-with-record-october-budget-deficit-of-404-billion-5023006"
-        },
-        {
-          "label": "Blue Street market levels (Hercules, London open run, ~12:45 AM CT Nov 20; indicative)",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        }
-      ]
+     "label": "ActionForex (Nov 20, 13:11 GMT): Dollar rally stalls as Treasury yields slide, yen leads safe-haven demand",
+     "url": "https://www.actionforex.com/action-insight/market-overview/661582-dollar-rally-stalls-as-treasury-yields-slide-yen-leads-safe-haven-demand/"
     }
-  ]
+   ]
+  },
+  {
+   "id": "growth",
+   "title": "Growth",
+   "figure": "UoM sentiment Nov final 51.5 (in line; Oct 48.0), current conditions 49.4; UK retail sales Oct +0.7% m/m (fcst 0.0%); Canada retail sales Sep +0.8% (fcst 0.7%)",
+   "read": "A deep slide in US tech stocks is now a worry for growth in its own right, since falling share prices can make households and companies spend less. US consumers stayed gloomy in November. Commodity currencies like the Aussie and kiwi feel growth fears first.",
+   "sources": [
+    {
+     "label": "InvestingLive (Nov 20): University of Michigan consumer sentiment 51.5, inflation expectations 3.7%",
+     "url": "https://investinglive.com/news/university-of-michigan-consumer-sentiment-51-5-versus-51-5-estimate/"
+    },
+    {
+     "label": "ONS (Nov 20): Retail sales, Great Britain, October 2026",
+     "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/october2026"
+    },
+    {
+     "label": "Blue Street calendar (Hercules, Nov 20): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    }
+   ]
+  },
+  {
+   "id": "inflation",
+   "title": "Inflation",
+   "figure": "UoM 1-yr inflation expectations 3.7% (prelim 4.3%, Oct 4.7%), 5-yr 3.3%; Japan core CPI Oct 2.2%; UK CPI Oct 3.6%; euro-area CPI Oct 4.0%",
+   "read": "US consumers now expect noticeably less inflation over the next year than they did a month ago, which takes a little pressure off the Fed. Inflation is still above target almost everywhere, so most central banks still lean toward hikes. Japan's prices stayed above the Bank of Japan's goal, keeping a December hike there likely.",
+   "sources": [
+    {
+     "label": "InvestingLive (Nov 20): University of Michigan consumer sentiment 51.5, inflation expectations 3.7%",
+     "url": "https://investinglive.com/news/university-of-michigan-consumer-sentiment-51-5-versus-51-5-estimate/"
+    },
+    {
+     "label": "Blue Street calendar (Hercules, Nov 20): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    }
+   ]
+  },
+  {
+   "id": "risk",
+   "title": "Risk Sentiment",
+   "figure": "S&P 500 ~−3%, Nasdaq ~−4.5%, VIX ~35 (Yahoo Finance, ~3:20 PM ET); Nikkei −5.06%; US 2-year ~4.62% (−16bp); USD/JPY ~158.50 (−0.75%), AUD/USD ~0.6615 (−0.66%)",
+   "read": "US stocks fell for a seventh day as the sell-off in AI companies deepened, with Nvidia down sharply on a report that a regulator is looking at its accounting. Money ran into the yen and US government bonds, and a gauge of market nerves hit its highest since March. The Aussie and kiwi fell, as they usually do when stocks slide.",
+   "sources": [
+    {
+     "label": "Yahoo Finance (Nov 20): Nvidia stock extends $2.5 trillion rout as SEC probe reportedly investigates its accounting",
+     "url": "https://finance.yahoo.com/markets/article/nvidia-stock-extends-25-trillion-rout-as-sec-probe-reportedly-investigates-its-accounting-194945274.html"
+    },
+    {
+     "label": "StockTitan (Nov 20, updated 1:21 PM ET): Stock market today live",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026"
+    },
+    {
+     "label": "ActionForex (Nov 20, 13:11 GMT): Dollar rally stalls as Treasury yields slide, yen leads safe-haven demand",
+     "url": "https://www.actionforex.com/action-insight/market-overview/661582-dollar-rally-stalls-as-treasury-yields-slide-yen-leads-safe-haven-demand/"
+    },
+    {
+     "label": "Blue Street market levels (Hercules, New York close run, about 3:00 PM CT Nov 20; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+    }
+   ]
+  },
+  {
+   "id": "tot",
+   "title": "Terms of Trade",
+   "figure": "Gold ~$3,523.55 (−2.81%), low ~$3,502.97; Brent ~$92.82 (+0.91%), WTI ~$83.94 (+1.82%), January contracts; Brent third weekly fall",
+   "read": "Gold fell to its lowest in about 14 months, which weighs on the Aussie. Oil bounced on new attacks in the Gulf but still fell for a third week, which takes support away from the Canadian dollar.",
+   "sources": [
+    {
+     "label": "Blue Street market levels (Hercules, New York close run, about 3:00 PM CT Nov 20; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+    },
+    {
+     "label": "Reuters (Nov 20): Fire reported on tanker after projectile strike off Oman, UKMTO says",
+     "url": "https://www.reuters.com/world/middle-east/fire-reported-tanker-after-projectile-strike-off-oman-ukmto-says-2026-11-20/"
+    },
+    {
+     "label": "Reuters (Nov 20, 0900 GMT): Oil prices edge higher as Houthi attacks on Riyadh raise supply concerns",
+     "url": "https://www.reuters.com/business/energy/oil-prices-edge-higher-houthi-attacks-riyadh-raise-supply-concerns-2026-11-20/"
+    }
+   ]
+  },
+  {
+   "id": "positioning",
+   "title": "Positioning",
+   "figure": "CFTC report of Nov 10 (out late after Veterans Day): hedge funds for USD, GBP, AUD and gold; against EUR, NZD, CAD and CHF; slightly against JPY; real money disagrees on EUR, GBP and AUD",
+   "read": "The latest weekly figures show hedge funds leaning toward the dollar and the pound and against the euro, the kiwi and the Canadian dollar, with bets against the kiwi growing fastest. Big long-term investors take the other side on the euro, pound and Aussie. Where the two groups disagree, a surprise could set off a fast unwind.",
+   "sources": [
+    {
+     "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 10)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/cot.json"
+    },
+    {
+     "label": "CFTC Traders in Financial Futures (futures only)",
+     "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
+    },
+    {
+     "label": "CFTC Disaggregated (futures only)",
+     "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy"
+    }
+   ]
+  },
+  {
+   "id": "fiscal",
+   "title": "Fiscal",
+   "figure": "ECB FSR: France debt 119% of GDP, deficit 5.5%; US October deficit $404B, a record for the month; US 10-year ~4.92% (−13bp, Hercules)",
+   "read": "France's debts, flagged by the European Central Bank as a risk, keep weighing on the euro. US long-term borrowing costs slipped back below 5% as money ran to safety, but record US government borrowing still weighs a little on trust in the dollar.",
+   "sources": [
+    {
+     "label": "ECB (Nov 18): Financial Stability Review press release",
+     "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html"
+    },
+    {
+     "label": "Reuters via Investing.com (Nov 12): US starts 2027 fiscal year with record October budget deficit of $404 billion",
+     "url": "https://www.investing.com/news/economy-news/us-starts-2027-fiscal-year-with-record-october-budget-deficit-of-404-billion-5023006"
+    },
+    {
+     "label": "Blue Street market levels (Hercules, New York close run, about 3:00 PM CT Nov 20; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+    }
+   ]
+  }
+ ]
 }
