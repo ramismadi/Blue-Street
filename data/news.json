@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T12:58:00Z",
+  "updated": "2026-11-20T14:58:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "bearish",
-      "ts": "2026-11-20T12:58:00Z",
-      "text": "The euro slipped below $1.10 on Thursday, November 19, its lowest since April 2025, because the Federal Reserve looks set to keep raising rates faster than the European Central Bank. Growing worry about France's April presidential election adds pressure, and strong UK shop sales left the euro weaker against the pound too."
+      "ts": "2026-11-20T14:58:00Z",
+      "text": "The euro slipped below $1.10 on Thursday, November 19, its lowest since April 2025, because the Federal Reserve looks set to keep raising rates faster than the European Central Bank. Firm words on Friday, November 20 from Bundesbank head Joachim Nagel back a December ECB rise but do little against worry about France's April presidential election and the wider rate gap with the US."
     },
     "GBP": {
       "lean": "mixed",
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "bearish",
-      "ts": "2026-11-19T23:55:00Z",
-      "text": "The Canadian dollar sits near 69.8 US cents, close to its weakest since April 2025, because markets expect the Federal Reserve to raise rates faster than the Bank of Canada, which they give about a 67% chance of a December rise. Flat oil and falling stocks on Thursday, November 19 gave it no help."
+      "ts": "2026-11-20T14:58:00Z",
+      "text": "The Canadian dollar sits near 69.8 US cents, close to its weakest since April 2025, because markets expect the Federal Reserve to raise rates faster than the Bank of Canada. Canada's retail sales report on Friday, November 20 showed September's rise came mostly from pricier petrol and pointed to a drop in October, which gives the currency no help."
     },
     "AUD": {
       "lean": "bearish",
@@ -54,6 +54,60 @@
     }
   },
   "items": [
+    {
+      "id": "cp24-cp-canada-retail-september-08-20261120",
+      "ts": "2026-11-20T14:11:33Z",
+      "source": "CP24 (Canadian Press)",
+      "url": "https://www.cp24.com/news/money/2026/11/20/statistics-canada-reports-retail-sales-up-08-per-cent-in-september-at-753b/",
+      "image": "https://www.cp24.com/resizer/v2/R5DQI24URDILRWEYVNGYHBA3VM.jpg?smart=true&auth=4ff6c5949f38828fc453efeff17e530e0716ee0ce09b4c3ba85731ab0584cb3b&width=1200&height=630",
+      "headline": "Canada's September shop sales rise 0.8%, but an early October estimate shows a 1.5% drop",
+      "story": "boc-december",
+      "story_title": "Will the Bank of Canada raise rates in December?",
+      "pillar": "growth",
+      "summary": "Statistics Canada said on Friday, November 20 that retail sales rose 0.8% in September, a touch above forecasts, but mostly because petrol cost more. Its early estimate for October points to a 1.5% fall.",
+      "beats": {
+        "was": "The Canadian dollar sits near its weakest since April 2025 because markets expect the US Federal Reserve to raise rates faster than the Bank of Canada. Markets put about a two-in-three chance on a Bank of Canada rise in December, so signs of spending strength or weakness matter.",
+        "happened": "Sales reached C$75.3 billion in September, up 0.8% against forecasts near 0.7%, and August was revised up to 1.4%. Petrol station sales jumped 6.9% on higher prices. Without petrol and cars, sales rose only 0.1%, and the amount of goods bought also rose just 0.1%. The agency's first estimate for October is a 1.5% drop.",
+        "means": "The headline gain mostly reflects prices, not more shopping, and October looks weak. That gives the Bank of Canada a little less reason to raise rates in December.",
+        "fx": "No lift for the Canadian dollar, which keeps taking its lead from the wider gap with US rates."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Spending growth is mostly higher prices and October looks weak, which softens the case for a December rise."
+        }
+      ],
+      "watch": "Canada's November jobs report and the Bank of Canada's December rate decision."
+    },
+    {
+      "id": "onvista-reuters-nagel-growth-inflation-too-high-20261120",
+      "date": "2026-11-20",
+      "source": "onvista (Reuters)",
+      "url": "https://www.onvista.de/news/2026/11-20-nagel-bundesbank-erwartet-1-2-prozent-wachstum-der-deutschen-wirtschaft-0-20-26578875",
+      "image": "https://www.onvista.de/og/onvista.png?v=2",
+      "headline": "Bundesbank's Nagel sees stronger German growth and says the ECB has to act on inflation",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "policy",
+      "summary": "Joachim Nagel, head of Germany's central bank and a European Central Bank rate-setter, said on Friday, November 20 that German growth looks close to 1.2% this year and that inflation is too high for the ECB to sit still.",
+      "beats": {
+        "was": "Euro-area inflation rose to 4.0% in October, twice the ECB's goal, and markets lean strongly toward an ECB rate rise at the December 17 meeting.",
+        "happened": "Speaking at a banking conference in Frankfurt, Nagel put German growth this year at about 1.2%, well above the Bundesbank's June forecast of 0.5%. He said inflation is too high even though expectations of future inflation stay steady, and that the ECB needs to do something.",
+        "means": "A leading voice for tighter policy backs a December rise, and stronger German growth removes one reason to wait.",
+        "fx": "Gives the euro a little support, though the Federal Reserve's faster rate path still weighs on it more."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firm talk from a senior ECB rate-setter backs the December rise markets already expect."
+        }
+      ],
+      "watch": "Euro-area flash inflation for November and the ECB decision on December 17."
+    },
     {
       "id": "ecb-lagarde-acting-in-time-frankfurt-20261120",
       "date": "2026-11-20",
