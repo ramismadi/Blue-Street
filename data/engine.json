@@ -1,35 +1,43 @@
 {
-  "updated": "2026-11-20T01:40:00-06:00",
+  "updated": "2026-11-20T07:57:00-06:00",
   "rows": [
     {
       "id": "policy",
       "title": "Monetary Policy",
-      "figure": "Fed Dec hike ~91% 25bp / ~9% 50bp (CME FedWatch via Hercules, Nov 19 close); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~84%; BoC Dec ~44%; RBA 4.85%, hold expected",
-      "read": "Markets still treat a December Fed hike as close to certain, and a sharp fall in US stocks has not changed that so far. The European Central Bank, Bank of England and Bank of Japan are also expected to hike, while Australian job losses suggest the Reserve Bank of Australia has peaked. US rates still look set to rise fastest, which keeps favouring the dollar.",
+      "figure": "Fed Dec ~96.5% 25bp / 0% 50bp / ~3.5% hold (CME FedWatch via Hercules); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~85%; BoC Dec ~44%",
+      "read": "A quarter-point December Fed hike is still treated as all but certain, but bets on a bigger move faded as stocks slid. The European Central Bank, Bank of England and Bank of Japan are all expected to hike in December too. US rates still look set to rise further than most, though the gap stopped widening this week.",
       "sources": [
+        {
+          "label": "CME FedWatch (Nov 20, via Hercules)",
+          "url": "https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool"
+        },
         {
           "label": "Blue Street central banks and pricing (Hercules, Nov 20)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
         },
         {
-          "label": "Investing.com (Nov 20): Asia FX struggles as dollar holds near 19-month high",
-          "url": "https://www.investing.com/news/forex-news/asia-fx-struggles-as-dollar-holds-near-19mth-high-aussie-hits-11month-low-5040667"
+          "label": "Reuters via Freedom 96.9 (Nov 20): Fed's Paulson backs further rate hikes",
+          "url": "https://www.freedom969.com/business/feds-paulson-backs-further-rate-hikes-says-shared-understanding-beats-guidance"
         }
       ]
     },
     {
       "id": "growth",
       "title": "Growth",
-      "figure": "UK retail sales Oct +0.7% m/m (fcst 0.0%), +2.3% y/y; US claims 203K, Philly Fed 6.3, LEI −0.3%; Australia jobs Oct −43.5K, unemployment 4.9%",
-      "read": "UK shoppers spent more than expected in October, though much of it was stockpiling food, so it may not last. Soft US reports this week and Australia's job losses point to cooling elsewhere. The US still looks firmer than most, which keeps the dollar's lead intact for now.",
+      "figure": "UK retail sales Oct +0.7% m/m (fcst 0.0%), ex-fuel +0.9%; Canada retail sales Sep +0.8% (fcst 0.7%), ex-autos and fuel +0.1%",
+      "read": "UK shoppers spent more than expected in October, partly by stocking up. Canadian sales rose on gasoline. A global stock slide raises worries that growth will slow, which would hit commodity currencies hardest.",
       "sources": [
         {
-          "label": "ActionForex (Nov 20, 07:11 GMT): UK retail sales rebound 0.7%",
-          "url": "https://www.actionforex.com/live-comments/661517-uk-retail-sales-rebound-0-7-as-emergency-food-purchases-lift-spending/"
+          "label": "ONS (Nov 20): Retail sales, Great Britain, October 2026",
+          "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/october2026"
         },
         {
-          "label": "Blue Street calendar (Hercules, Nov 20): times, forecasts and actuals",
-          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+          "label": "RTE, citing Reuters (Nov 20): UK retail sales rise 0.7% in October",
+          "url": "https://www.rte.ie/news/business/2026/1120/1599950-uk-retail-sales/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:40 AM CT Nov 20; indicative)",
+          "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
         }
       ]
     },
@@ -52,40 +60,40 @@
     {
       "id": "risk",
       "title": "Risk Sentiment",
-      "figure": "S&P 500 −2.0%, Nasdaq −2.3%, VIX ~28 (+16%) on Nov 19 (Journal Arta); USD/JPY −0.34%, USD/CHF −0.25% in Asia (Hercules)",
-      "read": "US stocks fell about 2% on Thursday, led by tech shares, and the market's fear gauge jumped. Money moved into the dollar, yen and franc, while the Aussie and kiwi lagged. Metals were sold to cover losses, so gold fell instead of rising.",
+      "figure": "Nikkei ~−4.5%, Kospi ~−5%; US 2-year ~4.68% (−10bp); USD/JPY ~158.68 (−0.62%), USD/CHF ~0.8385 (−0.63%)",
+      "read": "Nvidia's chief executive stepped down without warning, and stocks fell sharply in the US and Asia. Money moved into the yen, the franc and US government bonds. The Aussie stayed near its lows, as it usually does when stocks slide.",
       "sources": [
         {
-          "label": "Journal Arta (Nov 20, 04:37 GMT): Gold drops 3.71% in broad metals and equity selloff",
-          "url": "https://journalarta.com/en/2026/11/20/gold-price-today-bullion-drops-3-71-to-3530-75-in-broad-metals-and-equity-selloff/"
+          "label": "AP via ABC News (Nov 20): Asian shares drop as AI worries echo Wall Street",
+          "url": "https://abcnews.com/Business/wireStory/asia-shares-drop-ai-worries-echoing-wall-streets-138309523"
         },
         {
-          "label": "Blue Street market levels (Hercules, London open run, ~12:45 AM CT Nov 20; indicative)",
+          "label": "Business Recorder, citing Reuters (Nov 20): Asian shares head for worst week since 2020",
+          "url": "https://www.brecorder.com/news/40449953/asian-shares-head-for-worst-week-since-2020-as-ai-trade-gloom-fails-to-abate"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:40 AM CT Nov 20; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Investing.com (Nov 20): Asia FX struggles as dollar holds near 19-month high",
-          "url": "https://www.investing.com/news/forex-news/asia-fx-struggles-as-dollar-holds-near-19mth-high-aussie-hits-11month-low-5040667"
         }
       ]
     },
     {
       "id": "tot",
       "title": "Terms of Trade",
-      "figure": "Gold ~$3,552 (COMEX Dec), −3.2%; Brent Feb ~$92.6 (+0.7%), WTI Dec ~$83.4 (Hercules, Reuters; indicative)",
-      "read": "Gold fell more than 3% overnight to its lowest in about 14 months, which weighs on the Aussie. Oil edged up after Houthi strikes on Riyadh but is still heading for a third weekly fall, so the Canadian dollar gets little help. Cheaper oil this month still helps importers like the euro area and Japan.",
+      "figure": "Gold ~$3,559 (−2.97%), low ~$3,515; Brent ~$91.43, WTI ~$82.32 (January contracts)",
+      "read": "Gold fell to its lowest in more than a year, which keeps weighing on the Aussie. Oil is headed for a third weekly fall despite attacks in the Gulf, which takes support away from the Canadian dollar.",
       "sources": [
         {
-          "label": "Blue Street market levels (Hercules, London open run, ~12:45 AM CT Nov 20; indicative)",
+          "label": "MarketScreener, citing Reuters (Nov 20): Gold set for worst week in eight months",
+          "url": "https://www.marketscreener.com/news/gold-set-for-worst-week-in-eight-months-as-firm-dollar-fed-hike-bets-weigh-ce785ed2de80f42d"
+        },
+        {
+          "label": "RTE, citing Reuters (Nov 20): Oil edges up after Houthi attacks on Riyadh, heads for third weekly fall",
+          "url": "https://www.rte.ie/news/business/2026/1120/1599964-world-oil-prices/"
+        },
+        {
+          "label": "Blue Street market levels (Hercules, New York pre-open run ~7:40 AM CT Nov 20; indicative)",
           "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-        },
-        {
-          "label": "Journal Arta (Nov 20, 04:37 GMT): Gold drops 3.71% in broad metals and equity selloff",
-          "url": "https://journalarta.com/en/2026/11/20/gold-price-today-bullion-drops-3-71-to-3530-75-in-broad-metals-and-equity-selloff/"
-        },
-        {
-          "label": "Reuters (Nov 20): Oil prices edge higher as Houthi attacks on Riyadh raise supply concerns",
-          "url": "https://www.reuters.com/business/energy/oil-prices-edge-higher-houthi-attacks-riyadh-raise-supply-concerns-2026-11-20/"
         }
       ]
     },
