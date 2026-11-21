@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T23:55:00Z",
+  "updated": "2026-11-21T03:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -44,8 +44,8 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-20T15:55:00Z",
-      "text": "Gold traded near $3,570 an ounce on Friday, November 20, near its lowest since September 2025 and headed for its worst week since March. Expected Federal Reserve rate rises and a strong dollar outweigh the pull of the Iran war, with buying by central banks the main support."
+      "ts": "2026-11-21T03:50:00Z",
+      "text": "Gold ended Friday, November 20 near $3,538 an ounce after briefly touching $3,503, its lowest since September 2025, closing its worst week since March. Expected Federal Reserve rate rises and a strong dollar outweigh the Iran war, and gold was sold alongside shares in the US stock slide rather than bought as a safe place."
     },
     "OIL": {
       "lean": "mixed",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "kitco-gold-toward-3500-stocks-correction-20261120",
+      "ts": "2026-11-20T22:53:30Z",
+      "source": "Kitco News",
+      "url": "https://www.kitco.com/news/article/2026-11-20/gold-falls-toward-3500-silver-slides-stock-markets-enter-correction",
+      "image": "https://images.kitco.com/img/extract_0_0_1024_575,width_1200,enlarge,format_jpeg/icms/5768df25-c265-4c2d-a489-e51917a45667.jpeg",
+      "headline": "Gold falls toward $3,500 as the US stock slide drags metals down with it",
+      "story": "gold-fed",
+      "story_title": "Gold vs Fed rate rises",
+      "pillar": "policy",
+      "summary": "Gold kept sliding into the close on Friday, November 20, ending near $3,540 an ounce after a brief dip to its lowest since September 2025. Silver fell harder, by almost 4%.",
+      "beats": {
+        "was": "Gold set a record in January and held up for months on the war with Iran. Since then, expected Federal Reserve rate rises and a strong dollar have pulled it down, because gold pays no interest.",
+        "happened": "Gold kept falling into the US close as the S&P 500 dropped 3.7% and slipped more than 10% below its October 6 record. Minutes of the Fed's October meeting showed nearly all officials expect more rate rises, and futures lean to a quarter-point rise at the December 8-9 meeting.",
+        "means": "Gold did not act as a safe place during the stock slide. Investors sold it alongside shares, likely to raise cash, while rate-rise bets kept the cost of holding it high. A lower 10-year US yield, near 4.94%, gave it no lift.",
+        "fx": "Pressure on gold. The same Fed rate bets keep the US dollar firm, though falling US yields soften that edge a little."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Sold with stocks and held down by expected Fed rate rises, at a 14-month low."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The Fed rate bets that weigh on gold also support the dollar."
+        }
+      ],
+      "watch": "Whether gold holds near $3,500 when trading reopens on Monday, November 23, and whether central banks step in to buy at these lower prices."
+    },
     {
       "id": "spectrum-ap-sp500-correction-nasdaq-53-20261120",
       "ts": "2026-11-20T21:40:00Z",
@@ -986,39 +1019,6 @@
         }
       ],
       "watch": "Whether the stock slide carries into Friday, November 20, when the Anthropic sale is due to close."
-    },
-    {
-      "id": "investingnews-gold-14-month-low-34pc-off-record-20261119",
-      "ts": "2026-11-19T20:45:39Z",
-      "source": "Investing News Network",
-      "url": "https://investingnews.com/gold-falls-14-month-low/",
-      "image": "https://investingnews.com/media-library/a-stack-of-gold-bars-with-a-red-downward-arrow-on-a-white-background.jpg?id=68724303&width=1200&height=600&coordinates=0%2C125%2C0%2C125",
-      "headline": "Gold sinks to a 14-month low near $3,670 as rate-rise fears lift the dollar",
-      "story": "gold-fed-cpi",
-      "story_title": "Gold: rising US rates vs war risk",
-      "pillar": "policy",
-      "summary": "Gold fell to about $3,668 an ounce by midday on Thursday, November 19, its lowest in 14 months and about a third below its record in January.",
-      "beats": {
-        "was": "Gold hit a record of about $5,589 an ounce on January 28. Since then, rising US interest rates have made holding a metal that pays no interest less attractive, and minutes released on Wednesday, November 18 showed nearly all Federal Reserve policymakers expect more rate rises.",
-        "happened": "Gold slipped to around $3,668 and silver fell below $45, while the dollar index stood at its highest since April 2025. Joe Cavatoni, a senior strategist at the World Gold Council, said central banks in China, Poland and Asia are still buying.",
-        "means": "Higher US rates and a strong dollar keep outweighing the pull of the Iran war, so gold is not acting as a safe place right now. Steady buying by central banks is the main support underneath it.",
-        "fx": "Weak gold goes with a strong US dollar. It also takes away a support for currencies of gold-producing countries such as Australia."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Expected Fed rate rises and a strong dollar push gold to a 14-month low."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The same rate outlook that hurts gold supports the dollar."
-        }
-      ],
-      "watch": "Fed officials' comments before the December 8-9 meeting, and whether central-bank buying slows the fall."
     },
     {
       "id": "ttnews-bloomberg-oil-higher-iran-strike-fears-20261119",
