@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T17:50:00Z",
+  "updated": "2026-11-22T19:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-22T12:30:00Z",
-      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. A deep fall in US stocks on Friday, November 20 and Iran's attack on Bahrain, home to a US naval base, on Saturday, November 21 add some demand for the franc as a safe place."
+      "ts": "2026-11-22T19:55:00Z",
+      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. A deep fall in US stocks on Friday, November 20, Iran's strikes on Bahrain, home to a US naval base, and Iran's claim on Sunday, November 22 that two tankers hit sea mines add some demand for the franc as a safe place."
     },
     "CAD": {
       "lean": "bearish",
@@ -49,11 +49,50 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-22T17:50:00Z",
-      "text": "Oil fell for a third week to Friday, November 20, ending near $92.60 a barrel for Brent, because Gulf exports had been close to pre-war levels. Since then attacks on tankers have run at the war's fastest pace and ships crossing Hormuz have dropped, which puts the risk of lost supply back in the price, while Iran's offer to reopen the strait is the one way out."
+      "ts": "2026-11-22T19:55:00Z",
+      "text": "Oil fell for a third week to Friday, November 20, ending near $92.60 a barrel for Brent, because Gulf exports had been close to pre-war levels. Since then attacks on tankers have run at the war's fastest pace, Iran said on Sunday, November 22 that two supertankers hit sea mines near Hormuz, and ship crossings have dropped, which puts the risk of lost supply back in the price."
     }
   },
   "items": [
+    {
+      "id": "euronews-supertankers-mines-gulf-of-oman-incident-20261122",
+      "ts": "2026-11-22T18:07:13Z",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/11/22/tanker-incident-involving-military-forces-reported-in-strait-of-hormuz",
+      "image": "https://images.euronews.com/articles/stories/10/00/36/02/1200x675_cmsv2_3ccf9661-343f-5f6a-930a-a121c0febb52-10003602.jpg",
+      "headline": "Iran says two supertankers hit sea mines near Hormuz",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's navy said on Sunday, November 22 that two supertankers struck sea mines and stopped after sailing into a zone it bars near the Strait of Hormuz. The UK's maritime security agency separately reported a tanker in an incident with military forces in the Gulf of Oman, off Chabahar in Iran.",
+      "beats": {
+        "was": "The US-Iran war began in late February, and the US Navy has blocked Iran's oil exports for months while Iran has stepped up attacks on other countries' tankers.",
+        "happened": "Iranian media quoting the Revolutionary Guards navy said two very large tankers caught fire after hitting mines north of Ghanam Island and east of the strait. The ships were not named and the claim has not been confirmed. The UK agency's report came the same day as word that an Iranian tanker may have left Kharg Island to try to slip past the US blockade.",
+        "means": "If mines are now in the sea lanes, crossing Hormuz gets much riskier for every tanker, not just those Iran picks out.",
+        "fx": "Adds to the risk of lost Gulf oil just before markets reopen, which supports oil and safe currencies."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Mines near the strait would threaten a route that carries a large share of the world's oil, though Iran's claim is not yet confirmed."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A new kind of threat to shipping adds some demand for the franc as a safe place."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices lift Canada's export income."
+        }
+      ],
+      "watch": "Whether shipping firms or the US Navy confirm the mine strikes and name the ships, and how oil trades once markets reopen on the evening of Sunday, November 22."
+    },
     {
       "id": "cnn-hormuz-attacks-highest-since-war-began-20261122",
       "ts": "2026-11-22T15:13:28Z",
@@ -86,6 +125,39 @@
         }
       ],
       "watch": "Whether November's attack count passes October's, and whether insurers or shippers start avoiding the strait again."
+    },
+    {
+      "id": "ssbcrack-irgc-bahrain-patriot-radars-20261122",
+      "ts": "2026-11-22T14:00:19Z",
+      "source": "SSBCrack News",
+      "url": "https://news.ssbcrack.com/iran-escalates-gulf-attacks-targeting-us-base-radars-as-tanker-strikes-disrupt-hormuz-oil-flows/",
+      "image": "https://media2.ssbcrack.com/2026/11/Iran-escalates-Gulf-attacks-targeting-us-base-radars-as-tanker.jpg",
+      "headline": "Iran's Guards say they hit US air-defence radars in Bahrain",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's Revolutionary Guards said on Sunday, November 22 that missiles and drones destroyed two US Patriot air-defence radars at bases in Bahrain, home of the US Navy's Fifth Fleet. The claim has not been confirmed.",
+      "beats": {
+        "was": "Bahrain said an Iranian strike on Saturday, November 21 set fire to a civilian industrial site, one of several Iranian attacks around the Gulf in the past week.",
+        "happened": "The Guards called the radar strikes payback for a US strike on an Iranian radar on Hengam Island. UK maritime data showed ship crossings of Hormuz fell 15% in the week to November 18, with oil tankers down to 37 from 52.",
+        "means": "Iran is now aiming directly at US forces in a Gulf state, which widens the war beyond attacks on ships.",
+        "fx": "Raises the chance of a larger US-Iran clash, a mild push for oil and safe currencies."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Strikes on US bases in the Gulf raise the risk of a wider war near oil routes, though the damage is unconfirmed."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Direct attacks on US forces add some safe-haven demand."
+        }
+      ],
+      "watch": "Whether the US confirms damage in Bahrain or answers with new strikes on Iran."
     },
     {
       "id": "aljazeera-iran-escalation-tankers-transits-drop-20261122",
@@ -1312,39 +1384,6 @@
       "watch": "The gap between French and German borrowing costs, and the European Central Bank meeting on December 17."
     },
     {
-      "id": "rigzone-bloomberg-oil-swings-flat-settle-20261119",
-      "ts": "2026-11-19T22:31:00Z",
-      "source": "Rigzone (Bloomberg)",
-      "url": "https://www.rigzone.com/news/wire/oil_prices_swing_on_middle_east_uncertainty-19-nov-2026-185129-article/",
-      "image": "https://images.rigzone.com/images/news/articles/Oil-Prices-Swing-on-Middle-East-Uncertainty-185129-1200x628.png",
-      "headline": "Oil ends flat after swinging on Iran headlines",
-      "story": "oil-supply",
-      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
-      "pillar": "commodities",
-      "summary": "Brent crude settled almost unchanged near $92 a barrel on Thursday, November 19 after a $2 swing, as fresh attacks on ships near Iran met signs of ample supply.",
-      "beats": {
-        "was": "Oil has fallen about 20% this month as Gulf exports recover from the Iran war, and US crude stocks rose 3.4 million barrels last week.",
-        "happened": "Brent settled at $91.98 and US crude at $83.21, both barely changed. President Trump said he is not rushing a decision on Iran, while Western officials said the chance of another round of large US strikes had grown. The US energy chief said record volumes are flowing through the Strait of Hormuz even as ships are still attacked, and European diesel fell to a three-month low.",
-        "means": "The market is caught between war risk and plenty of oil actually arriving. For now supply is winning, which keeps prices from bouncing much on each attack.",
-        "fx": "Little net change. Steady oil gives no lift to the Canadian dollar and no new strain on oil importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "War headlines and ample supply cancel out, leaving prices flat."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Flat oil offers no help to Canada's currency."
-        }
-      ],
-      "watch": "Any US decision on new strikes on Iran, and the OPEC+ meeting on November 29."
-    },
-    {
       "id": "kitco-reuters-loonie-steadies-19-month-low-20261119",
       "ts": "2026-11-19T22:09:02Z",
       "source": "Kitco (Reuters)",
@@ -1370,51 +1409,6 @@
         }
       ],
       "watch": "Canada's September retail sales on Friday, November 20, and the Bank of Canada's December rate decision."
-    },
-    {
-      "id": "stocktitan-stocks-slide-anthropic-debut-vix-29-20261119",
-      "ts": "2026-11-19T21:20:56Z",
-      "source": "Stock Titan",
-      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-19-2026",
-      "image": "https://www.stocktitan.net/img/articles/stock-market-today-live-november-19-2026.webp",
-      "headline": "US stocks drop about 2% as Anthropic's first trading day fails to lift AI shares",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "The S&P 500 fell about 2% on Thursday, November 19 and the Nasdaq-100 a little more, as AI company Anthropic's market debut did not stop a slide in big tech shares.",
-      "beats": {
-        "was": "US stocks had fallen five sessions in a row on worries about Federal Reserve rate rises and AI spending. Anthropic, the AI company, priced its listing at $83 a share on Wednesday, November 18, which lifted stock futures before the open.",
-        "happened": "Anthropic's shares opened at $111.50 and closed at $97.17, about 17% above the listing price. But the wider market turned lower: the S&P 500 fell about 2%, Nvidia, Alphabet and Amazon each lost more than 3%, and the VIX, a gauge of expected stock swings, rose near 29, its highest since March.",
-        "means": "A strong listing was not enough to calm worries about high-priced AI shares, and a sixth losing day for the S&P 500 shows investors pulling back from risk while the Fed is expected to keep raising rates.",
-        "fx": "Falling stocks tend to help the US dollar and the yen as safe places and weigh on currencies tied to global growth, such as the Australian and New Zealand dollars."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A weaker mood in stocks hurts a currency tied to global growth."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Investors pulling back from risk add demand for the dollar."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Some safe-place demand, though small next to the gap with US rates."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Risk-shy markets weigh on another growth-linked currency."
-        }
-      ],
-      "watch": "Whether the stock slide carries into Friday, November 20, when the Anthropic sale is due to close."
     }
   ]
 }
