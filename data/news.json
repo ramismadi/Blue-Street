@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-22T19:55:00Z",
+  "updated": "2026-11-22T23:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-22T12:30:00Z",
-      "text": "The dollar sits near its highest since April 2025 because markets fully expect a Federal Reserve rate rise on December 9, and Fed officials keep saying rates must go higher. October PCE inflation on Wednesday, November 25 is the week's test of that view, while US 10-year yields under 5% trim the dollar's edge a little."
+      "ts": "2026-11-22T23:55:00Z",
+      "text": "The dollar sits near its highest since April 2025 because markets fully expect a Federal Reserve rate rise on December 9, and Fed officials keep saying rates must go higher. Treasury Secretary Scott Bessent warned on Sunday, November 22 against raising rates too far, and October PCE inflation on Wednesday, November 25 is the week's test."
     },
     "EUR": {
       "lean": "bearish",
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-22T19:55:00Z",
-      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. A deep fall in US stocks on Friday, November 20, Iran's strikes on Bahrain, home to a US naval base, and Iran's claim on Sunday, November 22 that two tankers hit sea mines add some demand for the franc as a safe place."
+      "ts": "2026-11-22T23:55:00Z",
+      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. A deep fall in US stocks on Friday, November 20, Iran's claim on Sunday, November 22 that two tankers hit sea mines, and President Trump's threat the same day to restart strikes on Iran after the New Year add some demand for the franc as a safe place."
     },
     "CAD": {
       "lean": "bearish",
@@ -38,9 +38,9 @@
       "text": "The Australian dollar sits near its lowest since January after Australia lost jobs for a second month, which makes another Reserve Bank of Australia rate rise less likely while the Federal Reserve keeps signalling more. October inflation on Wednesday, November 25 is the last big test before the bank meets on December 8."
     },
     "NZD": {
-      "lean": "bearish",
-      "ts": "2026-11-20T23:55:00Z",
-      "text": "The New Zealand dollar sits near 55 US cents, close to its lowest since the pandemic, held down by a US dollar lifted by expected Federal Reserve rate rises while the Reserve Bank of New Zealand holds at 2.75%. Falling stocks in Asia and a sharp drop on Wall Street on Friday, November 20 add to the pressure."
+      "lean": "mixed",
+      "ts": "2026-11-22T23:55:00Z",
+      "text": "The New Zealand dollar sits near 55 US cents, close to its lowest since the pandemic, held down by a US dollar lifted by expected Federal Reserve rate rises. A strong jump in shop sales for July to September, reported on Monday, November 23, makes more Reserve Bank of New Zealand rate cuts less likely and gives the currency some support."
     },
     "XAU": {
       "lean": "bearish",
@@ -54,6 +54,93 @@
     }
   },
   "items": [
+    {
+      "id": "rttnews-nz-retail-sales-q3-22-20261122",
+      "ts": "2026-11-22T22:45:00Z",
+      "source": "RTTNews",
+      "url": "https://www.rttnews.com/3716934/new-zealand-retail-sales-climb-2-2-in-q3.aspx",
+      "image": null,
+      "headline": "New Zealand shop sales jump 2.2% in the third quarter",
+      "story": "nz-economy",
+      "story_title": "New Zealand's economy and the RBNZ",
+      "pillar": "growth",
+      "summary": "Statistics New Zealand said on Monday, November 23 (local time) that the volume of retail sales rose 2.2% in July to September, more than four times the 0.5% economists expected, after a fall in April to June.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand has held its rate at 2.75% while the New Zealand dollar sits near its lowest since the pandemic, and spending had shrunk in the second quarter.",
+        "happened": "Shoppers bought clearly more in the third quarter, and the value of sales rose in every region of the country.",
+        "means": "New Zealand households are spending more than expected, which makes further rate cuts from the Reserve Bank less likely.",
+        "fx": "A firmer economy gives the New Zealand dollar some support against a strong US dollar."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A large beat on spending lowers the odds of more rate cuts in New Zealand."
+        }
+      ],
+      "watch": "Whether the New Zealand dollar holds its gain as Asian markets open, with Japan closed for a holiday on Monday, November 23."
+    },
+    {
+      "id": "investinglive-bessent-fed-overtightening-20261122",
+      "ts": "2026-11-22T21:26:35Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/central-banks/us-equity-rout-bessent-cautions-fed-against-overtightening-before-its-december-decision/",
+      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/red%20friday%20SP%20500%2023%20November%202026-featured-1795382754.jpg?width=960&format=webp",
+      "headline": "Bessent warns the Fed against raising rates too far",
+      "story": "fed-hikes",
+      "story_title": "The Federal Reserve's rate rises",
+      "pillar": "rates",
+      "summary": "US Treasury Secretary Scott Bessent said on CBS's Face the Nation on Sunday, November 22 that the Federal Reserve could make a policy mistake if it raises rates too much, after US stocks fell into a correction.",
+      "beats": {
+        "was": "The Federal Reserve raised its rate to 3.75%-4.00% in September, and markets now almost fully expect another quarter-point rise on December 9.",
+        "happened": "Bessent pointed to tough talk from Fed governors and a sharp tightening in borrowing conditions as stocks slid. He has made similar points in TV interviews on November 13 and 20.",
+        "means": "The government is pushing back against more Fed rate rises, but the Fed sets rates on its own and this does not change its plan by itself.",
+        "fx": "Adds a little doubt to the case for bigger Fed rises, which takes some shine off the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Treasury pressure against more rate rises slightly lowers the odds of a bigger Fed move, though a December rise is still expected."
+        }
+      ],
+      "watch": "Whether Fed officials answer Bessent before Thanksgiving on Thursday, November 26, and October's PCE inflation on Wednesday, November 25."
+    },
+    {
+      "id": "anews-aa-trump-resume-strikes-after-new-year-20261122",
+      "ts": "2026-11-22T19:50:00Z",
+      "source": "Anadolu (via A News)",
+      "url": "https://www.anews.com.tr/americas/2026/11/22/trump-inclined-to-resume-strikes-on-iran-after-new-year-if-no-deal-reached",
+      "image": "https://ia.tmgrup.com.tr/66a74b/806/378/0/6/800/381?u=https://i.tmgrup.com.tr/anews/v1/2026/11/22/trump-inclined-to-resume-strikes-on-iran-after-new-year-if-no-deal-reached-1795377352286.jpg",
+      "headline": "Trump says he leans toward new strikes on Iran after New Year if talks fail",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "US President Donald Trump told Fox News on Sunday, November 22 that he is inclined to restart strikes on Iran after the New Year if indirect talks bring no deal, and that Iranian ships trying to break the US naval blockade would be sunk.",
+      "beats": {
+        "was": "The US and Israel went to war with Iran in February, a framework deal was signed in June, and fighting has flared on and off since July while the US Navy blocks Iran's ports.",
+        "happened": "Trump dismissed Iran's negotiators as stalling and said US forces would fire on any vessel that tries to cross the blockade. Qatar is passing messages between the two sides.",
+        "means": "Talks look shakier, and the risk of a bigger war in early 2027 has gone up, though nothing has changed on the water yet.",
+        "fx": "Keeps a risk premium in oil and some demand for safe currencies as markets reopen."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A threat of renewed US strikes raises the chance of more lost Gulf supply, but it is a warning, not an action."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More war risk adds some demand for the franc as a safe place."
+        }
+      ],
+      "watch": "Whether an Iranian tanker tries to cross the blockade, and any sign of progress or collapse in the Qatar-relayed talks."
+    },
     {
       "id": "euronews-supertankers-mines-gulf-of-oman-incident-20261122",
       "ts": "2026-11-22T18:07:13Z",
@@ -1289,126 +1376,6 @@
         }
       ],
       "watch": "Any sign that China's central bank steps up support for growth, which would help the Australian and New Zealand dollars."
-    },
-    {
-      "id": "chaincatcher-japan-cpi-october-23pc-miss-20261119",
-      "ts": "2026-11-19T23:30:44Z",
-      "source": "ChainCatcher",
-      "url": "https://www.chaincatcher.com/en/article/2306501",
-      "image": null,
-      "headline": "Japan's inflation rises to 2.3% in October, below the 2.5% expected",
-      "story": "boj-december",
-      "story_title": "Will the Bank of Japan raise rates in December?",
-      "pillar": "inflation",
-      "summary": "Japan's consumer prices rose 2.3% from a year earlier in October, up from 2.1% but short of the 2.5% forecast, and prices without fresh food rose 2.2%, also a touch under forecast.",
-      "beats": {
-        "was": "The Bank of Japan held its rate at 1.25% on October 30 and markets have been weighing a rise to 1.5% in December. Governor Kazuo Ueda said on Wednesday, November 18 that rates will keep rising but gave no date, while the dollar sits close to 160 yen.",
-        "happened": "Figures released on the morning of Friday, November 20 in Tokyo showed national inflation at 2.3% in October against 2.5% forecast. The measure that leaves out fresh food, which the central bank watches closely, came in at 2.2% against 2.3% forecast. Both rose from 2.1% in September.",
-        "means": "Inflation is edging up and stays above the bank's 2% goal, but by less than expected, which gives the Bank of Japan less reason to hurry a December rise.",
-        "fx": "Mild pressure on the yen, because a softer reading trims the odds of a December rise that would narrow the wide gap with US rates."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Inflation came in below forecast, which weakens the case for a December Bank of Japan rise."
-        }
-      ],
-      "watch": "Whether Bank of Japan officials still point to December, and any warning from Japan's finance ministry if the dollar moves above 160 yen."
-    },
-    {
-      "id": "econotimes-goolsbee-large-december-hike-20261119",
-      "ts": "2026-11-19T23:12:00Z",
-      "source": "EconoTimes",
-      "url": "https://econotimes.com/Chicago-Fed-s-Goolsbee-Says-Large-December-Rate-Hike-Not-Ruled-Out-1779950",
-      "image": "https://wfuxxvxhdynkhcrlavdu.supabase.co/storage/v1/object/public/article-media/articles/0ad083adb84c24cfe297d229bf338ee17b84d2ced660dc1f8f9de440e847024c.webp",
-      "headline": "Chicago Fed's Goolsbee won't rule out a bigger rate rise in December",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "Chicago Fed President Austan Goolsbee said on Thursday, November 19 that a larger-than-usual Federal Reserve rate rise in December is not off the table, because inflation has stopped improving.",
-      "beats": {
-        "was": "Markets fully expect the US Federal Reserve to raise rates by a quarter point at its December 8-9 meeting. Fed Governor Christopher Waller raised the idea of a half-point move on Wednesday, November 18.",
-        "happened": "Goolsbee said all options remain open for December and named no size. He said progress on inflation has stalled, with little easing in the prices officials had expected to cool. US consumer prices rose 0.4% in October after 0.6% in September, and core prices rose 0.3% in each of the last three months.",
-        "means": "A second Fed official is now open to a bigger step, so a half-point rise is a real, if still smaller, possibility. The decision will rest on the inflation data before the meeting.",
-        "fx": "Adds to the dollar's lead over the euro, yen and other currencies whose central banks move more slowly."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Keeps a bigger December Fed rise on the table, though a quarter-point rise is already priced."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher US rates make gold, which pays no interest, less attractive."
-        }
-      ],
-      "watch": "US inflation figures before the Fed's December 8-9 meeting, and whether other Fed officials back a half-point rise."
-    },
-    {
-      "id": "investinglive-euro-below-110-french-election-20261119",
-      "ts": "2026-11-19T22:52:29Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/forex/euro-breaks-below-1-10-as-french-election-risk-builds-three-banks-see-1-08-next/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/euro%20update%2020%20November%202026-featured-1795128742.jpg?width=960&format=webp",
-      "headline": "Euro breaks below $1.10 as French election risk builds; three banks see $1.08 next",
-      "story": "euro-slide",
-      "story_title": "Why the euro keeps sliding against the dollar",
-      "pillar": "rates",
-      "summary": "The euro fell below $1.10 on Thursday, November 19, its lowest in about 18 months, and three large banks including Morgan Stanley and Deutsche Bank now see it near $1.08 next year.",
-      "beats": {
-        "was": "The euro has lost about 6% against the dollar since late August, mostly because the Federal Reserve is raising US rates faster than the European Central Bank. Bets on a weaker euro are now the largest in more than six years.",
-        "happened": "The euro slipped under $1.10 late on Thursday, November 19. Morgan Stanley said worry about France's presidential election, with a first round in April and a possible run-off in May, is likely to grow. The gap between French and German 10-year borrowing costs widened to about 1.54 percentage points.",
-        "means": "Two forces now weigh on the euro: higher US rates and French political risk. If the extra yield investors demand to hold French debt keeps rising, French politics could become the bigger driver.",
-        "fx": "Pressure lower on the euro against the dollar. The many existing bets against the euro mean a surprise could cause a sharp bounce."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "An 18-month low, with banks pointing lower and French election worry building."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Banks expect Fed rate rises into early 2027 and no US cuts until 2028."
-        }
-      ],
-      "watch": "The gap between French and German borrowing costs, and the European Central Bank meeting on December 17."
-    },
-    {
-      "id": "kitco-reuters-loonie-steadies-19-month-low-20261119",
-      "ts": "2026-11-19T22:09:02Z",
-      "source": "Kitco (Reuters)",
-      "url": "https://www.kitco.com/news/off-the-wire/2026-11-19/canadian-dollar-steadies-near-19-month-low-stocks-slide",
-      "image": "https://images.kitco.com/img/extract_0_0_1280_719,width_1200,enlarge,format_jpeg/icms/a8c61b15-b8e3-48e2-a4b5-09fed9190dc1.webp",
-      "headline": "Canadian dollar holds near its weakest since April 2025 as stocks fall",
-      "story": "boc-december",
-      "story_title": "Will the Bank of Canada raise rates in December?",
-      "pillar": "policy",
-      "summary": "The Canadian dollar ended Thursday, November 19 little changed at about 1.433 per US dollar, or 69.8 US cents, after touching its weakest since April 2025 during the day.",
-      "beats": {
-        "was": "The Canadian dollar has slipped below 70 US cents as markets expect the Federal Reserve to raise rates faster and further than the Bank of Canada, and oil has lost about a fifth this month.",
-        "happened": "The currency briefly hit 1.4358 per US dollar before steadying. Markets fully expect a Fed rise in December and lean toward another in January, while they put the chance of a Bank of Canada rise in December at about 67%. A slide in US stocks added to demand for the US dollar.",
-        "means": "The gap between US and Canadian rate paths is the main weight on the currency, and falling oil and nervous stock markets add to it. Canada's September retail sales on Friday, November 20, forecast up 0.7%, are the next home-grown test.",
-        "fx": "The Canadian dollar stays weak, with little support from home while the US dollar is in demand."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Near a 19-month low as US rates are expected to rise faster than Canada's."
-        }
-      ],
-      "watch": "Canada's September retail sales on Friday, November 20, and the Bank of Canada's December rate decision."
     }
   ]
 }
