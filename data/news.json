@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T16:55:00Z",
+  "updated": "2026-11-22T17:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -49,11 +49,83 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-22T15:00:00Z",
-      "text": "Oil fell for a third week to Friday, November 20 because Gulf exports are close to pre-war levels, ending at about $92.60 a barrel for Brent. Over the weekend of November 21-22 more tankers were hit near Hormuz, Iran attacked Bahrain and Houthi missiles and drones kept flying at Saudi Arabia, which puts war risk back in the price, while Iran's still-open offer to reopen the strait is the one sign of a way out."
+      "ts": "2026-11-22T17:50:00Z",
+      "text": "Oil fell for a third week to Friday, November 20, ending near $92.60 a barrel for Brent, because Gulf exports had been close to pre-war levels. Since then attacks on tankers have run at the war's fastest pace and ships crossing Hormuz have dropped, which puts the risk of lost supply back in the price, while Iran's offer to reopen the strait is the one way out."
     }
   },
   "items": [
+    {
+      "id": "cnn-hormuz-attacks-highest-since-war-began-20261122",
+      "ts": "2026-11-22T15:13:28Z",
+      "source": "CNN",
+      "url": "https://localnews8.com/news/national-world/cnn-world/2026/11/22/iranian-attacks-in-the-strait-of-hormuz-are-at-the-highest-levels-since-the-conflict-began/",
+      "image": null,
+      "headline": "Attacks on ships around Hormuz are running at the war's highest pace",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "A CNN count of UK maritime reports, published on Sunday, November 22, finds at least 22 attacks on ships near Hormuz so far in November, after more than 30 in October, against about 10 a month earlier in the war. Ship-tracker Kpler says Iranian oil afloat outside the US blockade has fallen to zero.",
+      "beats": {
+        "was": "The US-Iran war began in late February, and the US Navy has blocked Iran's oil exports for months while Gulf exports from other countries recovered and oil prices fell.",
+        "happened": "Reported attacks on ships in the Strait of Hormuz, the Gulf and the Gulf of Oman jumped in October and stayed high in November. Three tankers leaving the strait were hit on Friday, November 20 and Saturday, November 21, which a risk firm called likely Iranian work.",
+        "means": "Iran is losing its oil income to the blockade and is pushing back by making the sea route riskier for everyone else.",
+        "fx": "Keeps a war-risk floor under oil even as Gulf exports recover, and adds some steady demand for safe currencies."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More attacks on tankers raise the risk of lost Gulf barrels, though exports have kept flowing so far."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A rising pace of attacks keeps some safe-haven demand for the franc."
+        }
+      ],
+      "watch": "Whether November's attack count passes October's, and whether insurers or shippers start avoiding the strait again."
+    },
+    {
+      "id": "aljazeera-iran-escalation-tankers-transits-drop-20261122",
+      "ts": "2026-11-22T11:46:42Z",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/22/whats-behind-irans-escalation-of-attacks-in-the-gulf",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/2026-11-22T054830Z_561340037_RC2TSOAVQ66D_RTRMADP_3_IRAN-CRISIS-BAHRAIN-1-1795348266.jpg?resize=1758%2C1080",
+      "headline": "Fewer ships cross Hormuz as Iran steps up attacks",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "About 25 tankers have been hit near Hormuz in the week to Sunday, November 22, Al Jazeera reports, and ships crossing the strait fell 15% in the week of November 12-18, with oil tankers down from 52 to 37. Iran also said it shot down another US drone that same day.",
+      "beats": {
+        "was": "Since the war began in late February, the US Navy has blocked Iran's oil exports, and traffic through the strait had been recovering toward pre-war levels.",
+        "happened": "Iran's Revolutionary Guards said they hit US radar sites in Bahrain on Saturday, November 21 and downed a fourth US drone in 24 hours on Sunday, November 22. UK maritime data show 263 ships crossed the strait in the week of November 12-18, well below the roughly 135 a day before the war.",
+        "means": "The rise in attacks is starting to show up in traffic, the first sign in weeks that Gulf oil flows could shrink again.",
+        "fx": "Backs oil and the currencies that gain from it, like the Canadian dollar, and hurts big oil buyers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Tanker crossings fell by about a quarter in one week, a real hit to the supply that had been coming back."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports almost all its oil, so a pricier, scarcer supply weighs on the yen."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada exports oil, so tighter Gulf supply helps its income."
+        }
+      ],
+      "watch": "Next week's UK maritime count of crossings, to see whether traffic falls further."
+    },
     {
       "id": "lapresse-houthi-drone-riyadh-destroyed-20261122",
       "ts": "2026-11-22T11:31:30Z",
