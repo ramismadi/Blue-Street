@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T12:55:00Z",
+  "updated": "2026-11-22T15:00:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "bullish",
-      "ts": "2026-11-20T23:55:00Z",
-      "text": "The yen firmed on Friday, November 20 as US stocks fell hard, with the Nasdaq down 5.3%, and US 10-year yields dropped to about 4.93%, while Japan's government warned against fast moves near 160 per dollar and markets priced a Bank of Japan rate rise on December 18. The wide gap between US and Japanese rates still keeps the dollar near 159 yen."
+      "ts": "2026-11-22T15:00:00Z",
+      "text": "The yen firmed on Friday, November 20 as US stocks fell hard and US 10-year yields dropped below 5%, and most economists expect a Bank of Japan rate rise to 1.50% on December 18. The wide gap between US and Japanese rates still keeps the dollar near 159 yen, and Tokyo prices on Thursday, November 26 are the next clue."
     },
     "CHF": {
       "lean": "mixed",
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "bearish",
-      "ts": "2026-11-20T23:55:00Z",
-      "text": "The Australian dollar sits near its lowest since January after Australia lost jobs for a second month, which makes another Reserve Bank of Australia rate rise unlikely while the Federal Reserve keeps signalling more. A deep slide in US stocks on Friday, November 20, which pushed the S&P 500 into a correction, adds pressure on this growth-linked currency."
+      "ts": "2026-11-22T15:00:00Z",
+      "text": "The Australian dollar sits near its lowest since January after Australia lost jobs for a second month, which makes another Reserve Bank of Australia rate rise less likely while the Federal Reserve keeps signalling more. October inflation on Wednesday, November 25 is the last big test before the bank meets on December 8."
     },
     "NZD": {
       "lean": "bearish",
@@ -49,11 +49,44 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-22T12:30:00Z",
-      "text": "Oil fell for a third week to Friday, November 20 because Gulf exports are close to pre-war levels, ending at about $92.60 a barrel for Brent. Over the weekend of November 21-22 two more tankers were hit near Hormuz and an Iranian attack set an industrial site in Bahrain on fire, which puts war risk back in the price before the OPEC+ meeting on Sunday, November 29."
+      "ts": "2026-11-22T15:00:00Z",
+      "text": "Oil fell for a third week to Friday, November 20 because Gulf exports are close to pre-war levels, ending at about $92.60 a barrel for Brent. Over the weekend of November 21-22 more tankers were hit near Hormuz, Iran attacked Bahrain and Houthi missiles and drones kept flying at Saudi Arabia, which puts war risk back in the price, while Iran's still-open offer to reopen the strait is the one sign of a way out."
     }
   },
   "items": [
+    {
+      "id": "lapresse-houthi-drone-riyadh-destroyed-20261122",
+      "ts": "2026-11-22T11:31:30Z",
+      "source": "LaPresse",
+      "url": "https://uk.lapresse.it/world-en/2026/11/22/yemen-houthi-drone-heading-for-riyadh-intercepted/",
+      "image": "https://uk.lapresse.it/wp-content/uploads/2026/11/22/yemen-houthi-drone-heading-for-riyadh-intercepted-1024x575.jpg",
+      "headline": "Saudi air defences destroy a Houthi drone flying toward Riyadh on Sunday, November 22",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Saudi air defences shot down a Houthi drone headed for Riyadh on Sunday, November 22, hours after stopping a missile aimed at the kingdom's Red Sea coast. No damage or injuries were reported.",
+      "beats": {
+        "was": "Yemen's Houthi group, which is backed by Iran, has been firing missiles and drones at Saudi Arabia during the Iran war, and one hit the Saudi wealth fund's tower in Riyadh on Thursday, November 19.",
+        "happened": "Turki al-Maliki, spokesman for the Saudi-led coalition, said air defences destroyed a Houthi drone flying toward Riyadh. Earlier the same day the coalition stopped a ballistic missile aimed at the west coast, home to the Yanbu oil export terminal and the Jazan refinery.",
+        "means": "Houthi attacks on Saudi Arabia now come almost daily, so the threat to Saudi oil sites stays real even though these strikes caused no harm.",
+        "fx": "Adds a little to the war risk in oil before markets reopen, with no supply lost."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Houthi fire near Saudi oil sites keeps supply risk alive, though nothing was hit."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More Gulf attacks add a little demand for the franc as a safe place."
+        }
+      ],
+      "watch": "Whether a Houthi strike damages a Saudi oil terminal or refinery, which would hit supply rather than just raise the risk."
+    },
     {
       "id": "yahoo-investing-iran-claims-hormuz-control-houthi-missile-20261122",
       "ts": "2026-11-22T08:40:00Z",
@@ -226,6 +259,39 @@
       "watch": "October core PCE on Wednesday, November 25: above 0.3% on the month would firm bets on Fed rises beyond December."
     },
     {
+      "id": "tob-araghchi-open-to-talks-hormuz-offer-20261121",
+      "date": "2026-11-21",
+      "source": "TOB News",
+      "url": "https://tob.news/iran-remains-open-to-us-talks-on-reopening-hormuz-araghchi/",
+      "image": "https://tob.news/wp-content/uploads/2026/11/Strait-of-Hormuz-.jpg",
+      "headline": "Iran's foreign minister says talks with the US are still open and Iran's two-day Hormuz offer still stands",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's foreign minister Abbas Araghchi said on Saturday, November 21 that Iran is still open to talks with the US and that its offer to reopen the Strait of Hormuz in two days has not been withdrawn. He set firm conditions, so no deal is close.",
+      "beats": {
+        "was": "The US and Israel went to war with Iran on February 28. A framework deal in June broke down over shipping in the Strait of Hormuz, the sea lane for about a fifth of the world's oil, and the US now blockades Iran's ports. Qatar and Pakistan are carrying messages between the two sides.",
+        "happened": "Araghchi said Iran's plan still holds: the US lifts its recent sanctions on day one, and Iran reopens the strait and formal talks begin on day two. He said Washington's reply was unfavourable, that Iran wants signs the US is serious first, and that any deal must meet Iran's seven conditions, including keeping its enriched uranium at home. President Donald Trump said on Friday, November 20 that Iran wants a deal, but not one he can accept.",
+        "means": "Both sides say they want a deal but neither is moving, so the offer gives a path to reopening the strait without making it likely soon.",
+        "fx": "A small hint of a way out for the oil war premium, outweighed for now by the weekend's attacks."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "An open offer to reopen Hormuz points to lower oil if accepted, but the US has turned it down so far."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Japan buys most of its oil from the Gulf, so any real progress on Hormuz would ease pressure on the yen."
+        }
+      ],
+      "watch": "Whether the US answers through Qatar or Pakistan, or lifts any sanctions, which would be the first step in Iran's plan."
+    },
+    {
       "id": "kitco-gold-toward-3500-stocks-correction-20261120",
       "ts": "2026-11-20T22:53:30Z",
       "source": "Kitco News",
@@ -257,6 +323,33 @@
         }
       ],
       "watch": "Whether gold holds near $3,500 when trading reopens on Monday, November 23, and whether central banks step in to buy at these lower prices."
+    },
+    {
+      "id": "newsquawk-week-in-focus-boj-tokyo-cpi-20261120",
+      "ts": "2026-11-20T21:50:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/week-in-focus--november-23rd-27th-highlights-include-us-pce-flash-pmis-aussie-cpi-and-ecb-minutes",
+      "image": null,
+      "headline": "Most economists expect a Bank of Japan rate rise to 1.50% in December, with Tokyo prices due Thursday, November 26",
+      "story": "boj-december",
+      "story_title": "Will the Bank of Japan raise rates in December?",
+      "pillar": "policy",
+      "summary": "61 of 71 economists in a Reuters poll expect the Bank of Japan to raise its rate to 1.50% at its December 17-18 meeting. Tokyo's November consumer prices, due on Thursday, November 26, are the next clue.",
+      "beats": {
+        "was": "The yen sits near 159 per dollar because US rates are far higher than Japan's, and Japan's national inflation for October came in below forecasts at 2.2% for the core measure.",
+        "happened": "A weekly preview from Newsquawk notes the poll result and that Bank of Japan Governor Kazuo Ueda has said the bank expects to keep raising rates. Tokyo's November price figures land on Thursday, November 26, and Japan's markets are shut for a holiday on Monday, November 23.",
+        "means": "A December rise is largely expected, so the yen needs a firm Tokyo figure or a clear signal from the Bank of Japan to gain much from it.",
+        "fx": "Mild support for the yen if Tokyo prices are firm, while the wide gap with US rates still holds it down."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Most economists see a December rate rise, which slowly narrows the gap with US rates."
+        }
+      ],
+      "watch": "Tokyo's core inflation on Thursday, November 26. A drop below 2% would cast doubt on a December rise."
     },
     {
       "id": "spectrum-ap-sp500-correction-nasdaq-53-20261120",
@@ -772,6 +865,39 @@
       "watch": "Bank of England officials' comments on December, and the UK government budget plans for energy bills."
     },
     {
+      "id": "lirunex-week-ahead-australia-cpi-20261120",
+      "ts": "2026-11-20T04:55:07Z",
+      "source": "Lirunex",
+      "url": "https://lirunex.com/week-ahead-australia-cpi-and-core-pce/",
+      "image": "https://lirunex.com/wp-content/uploads/2026/11/Week-Ahead-Australia-CPI-and-Core-PCE-Nov-23-to-27.png",
+      "headline": "Australia's October inflation figure on Wednesday, November 25 is the last before the RBA's December 8 decision",
+      "story": "rba-december",
+      "story_title": "Will the RBA raise rates again in December?",
+      "pillar": "inflation",
+      "summary": "Australia reports October consumer prices on Wednesday, November 25, the last inflation reading before the Reserve Bank of Australia meets on December 8. Prices rose 4.3% over the year to September.",
+      "beats": {
+        "was": "The Reserve Bank of Australia raised its cash rate to 4.85% on November 3 in a 6-3 vote, but Australia then lost jobs for a second month and unemployment rose to 4.9% in October.",
+        "happened": "The October monthly price report comes out on the morning of Wednesday, November 25 in Sydney, which is the evening of Tuesday, November 24 in the US. September's yearly rate was 4.3%. Forecasts are unclear, with one calendar showing 4.2%.",
+        "means": "Inflation that stays above 4% would keep another rate rise alive despite the weak jobs data. A clear drop would make a pause on December 8 much more likely.",
+        "fx": "A preview only. The figure can move the Australian dollar either way."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "High inflation would revive talk of a December rise, a soft figure would back a pause."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The New Zealand dollar often moves with the Australian dollar on big Australian data."
+        }
+      ],
+      "watch": "Whether yearly inflation stays above 4%, which keeps a December rise possible, or falls clearly below it."
+    },
+    {
       "id": "marketscreener-reuters-gold-worst-week-eight-months-20261120",
       "ts": "2026-11-20T03:23:28Z",
       "source": "MarketScreener (Reuters)",
@@ -1190,258 +1316,6 @@
         }
       ],
       "watch": "Whether the stock slide carries into Friday, November 20, when the Anthropic sale is due to close."
-    },
-    {
-      "id": "ttnews-bloomberg-oil-higher-iran-strike-fears-20261119",
-      "ts": "2026-11-19T13:59:43Z",
-      "source": "Transport Topics (Bloomberg)",
-      "url": "https://www.ttnews.com/articles/oil-prices-fears-strikes-iran",
-      "image": "https://www.ttnews.com/sites/default/files/styles/social_media_1200x630/public/2026-11/Hormuz-ap-1200.jpg",
-      "headline": "Oil edges up on fears of more US strikes on Iran",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Brent crude rose about 0.7% to near $92.60 a barrel on the morning of Thursday, November 19, on worry that the US could strike Iran again.",
-      "beats": {
-        "was": "Oil has fallen more than a fifth this month as Gulf exports recover from the Iran war, and US crude stocks rose by 3.4 million barrels last week.",
-        "happened": "Prices swung between small gains and losses before rising, after US President Donald Trump, China's Xi Jinping and Russia's Vladimir Putin agreed in Shenzhen to raise world fuel supplies but gave no details. Worry about new US strikes on Iran then lifted prices. US crude rose about 1% to near $84.",
-        "means": "War risk still puts a floor under oil, but plentiful supply keeps rises small. Prices were still down about 3% from Friday, November 13.",
-        "fx": "A small lift for oil-linked currencies such as the Canadian dollar, not enough to change their recent weakness."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Fear of more strikes on Iran adds a little risk premium."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Slightly firmer oil helps Canada's export income."
-        }
-      ],
-      "watch": "The OPEC+ meeting on Sunday, November 29, and any new US action against Iran."
-    },
-    {
-      "id": "abc-ap-jobless-claims-203k-20261119",
-      "ts": "2026-11-19T13:33:00Z",
-      "source": "ABC News (AP)",
-      "url": "https://abcnews.com/US/wireStory/number-people-seeking-unemployment-aid-ticks-higher-low-138286638",
-      "image": "https://i.abcnewsfe.com/a/4b9ce135-2120-44d2-8d11-3ef19840a5b8/wirestory_ea6affa07224e7be7cfafd66ae3235db_16x9.jpg?w=1600",
-      "headline": "New US jobless claims tick up to 203,000 but stay low",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "growth",
-      "summary": "The number of Americans filing new claims for unemployment benefits rose by 1,000 to 203,000 last week, still low by historical standards.",
-      "beats": {
-        "was": "Weekly claims for unemployment benefits are the quickest sign of layoffs in the US. They have stayed below 220,000 all year, and employers added 165,000 jobs in October, far more than expected.",
-        "happened": "The Labor Department said on Thursday, November 19 that new claims rose by 1,000 to 203,000, and the four-week average barely moved.",
-        "means": "Layoffs remain rare, so the jobs market gives the Federal Reserve no reason to stop raising rates.",
-        "fx": "Steady support for the dollar, though one quiet week of claims adds little to what markets already price."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Few layoffs keep the case for more Fed rate rises intact."
-        }
-      ],
-      "watch": "Next week's jobless claims, and Fed officials' comments before the December 8-9 meeting."
-    },
-    {
-      "id": "investinglive-philly-fed-november-63-20261119",
-      "ts": "2026-11-19T13:30:21Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/news/us-november-philly-fed-vs-20-0-expected/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/Philly%20manufacturing%20PMI-featured-1795094834-featured-1795095020-featured-1795095191.jpg?width=960&format=webp",
-      "headline": "Philadelphia-area factories slow sharply in November while their costs jump",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "growth",
-      "summary": "The Philadelphia Federal Reserve's November survey of factories in its region fell to 6.3, far below the 20 expected, while the prices they pay rose to the highest in months.",
-      "beats": {
-        "was": "The Philadelphia Fed asks manufacturers in Pennsylvania, New Jersey and Delaware each month whether business is better or worse; a reading above zero means more say better. It had been falling since August, when it stood at 47.4.",
-        "happened": "The reading dropped to 6.3 from 20.9 in October, its lowest since May. New orders slipped just below zero and plans to invest fell. The prices factories pay rose to 58.2 from 43.2, and the prices they charge reached their highest since June 2022.",
-        "means": "Slower activity with faster price rises is an awkward mix for the Federal Reserve. The cost side fits its case for more rate rises, while the weaker orders hint the economy may be cooling.",
-        "fx": "A mixed signal for the dollar: the miss is a small drag, but the jump in prices backs the rate rises markets already expect."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Weaker factory activity, but rising costs that support more Fed rate rises."
-        }
-      ],
-      "watch": "The S&P Global flash surveys of US business on Friday, November 20, for a wider read on activity and prices."
-    },
-    {
-      "id": "fed-jefferson-shocks-brasilia-20261119",
-      "date": "2026-11-19",
-      "source": "Federal Reserve",
-      "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261119a.htm",
-      "image": "https://www.federalreserve.gov/images/social-media/social-default-image-opengraph.jpg",
-      "headline": "Fed Vice Chair Jefferson: inflation was already too high when the oil shock hit",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "Federal Reserve Vice Chair Philip Jefferson said on Thursday, November 19 that because US inflation was already above target when the war pushed oil up, the Fed has reason to respond more firmly.",
-      "beats": {
-        "was": "The Fed held its rate at 3.75-4% in late October, but the minutes of that meeting, released on Wednesday, November 18, showed almost all officials expect to raise rates further. Oil jumped earlier in the year because of the US-Israel war on Iran.",
-        "happened": "In a speech at a conference in Brasilia, Brazil, Jefferson, the Fed's number two, said energy, trade and AI are all hitting the economy at once. He said an oil jump both lifts prices and squeezes spending, and that starting with inflation above 2% argues for a firmer response if people begin to expect higher prices to last. He called AI spending a source of extra demand for now.",
-        "means": "Jefferson usually sits near the middle of the Fed, so his speech adds to the view that the leadership backs a December rate rise. He gave no hint of a bigger step than markets already expect.",
-        "fx": "Supports the dollar, but mostly confirms what is already priced."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A senior Fed official backs a firm stance on inflation, in line with expected rate rises."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher expected US rates make gold, which pays no interest, less attractive."
-        }
-      ],
-      "watch": "US inflation figures and Fed officials' comments before the December 8-9 Fed meeting."
-    },
-    {
-      "id": "timeslive-reuters-houthi-strike-pif-tower-riyadh-20261119",
-      "date": "2026-11-19",
-      "source": "TimesLIVE (Reuters)",
-      "url": "https://www.timeslive.co.za/news/world/2026-11-19-riyadhs-tallest-skyscraper-hit-in-houthi-strike-on-saudi-wealth-fund-hq/",
-      "image": "https://www.timeslive.co.za/resizer/v2/VZLWTBCG2NDABGEAIWSGY7S34E.jpg?smart=true&auth=0b49165b1c032aebdb5cc1ebecdb27000a5f7dea8f47705f2d2ba04f223f211e&width=1200&height=630",
-      "headline": "Houthi missile damages Saudi wealth fund's tower in Riyadh",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "A missile from Yemen's Houthi group hit the headquarters of Saudi Arabia's sovereign wealth fund in Riyadh on Thursday, November 19, damaging several floors but hurting no one.",
-      "beats": {
-        "was": "The Houthis, an Iran-backed group in Yemen, have kept firing at Saudi Arabia during the US-Israel war on Iran. On Sunday, November 8 they hit an Aramco building in Riyadh's financial district.",
-        "happened": "The strike blew out windows across seven or eight floors of the PIF Tower, the city's tallest building and home of the Public Investment Fund, Saudi Arabia's state investment fund. Saudi civil defence reported no injuries. Two Western officials said Saudi officials now expect the fight with the Houthis to last up to six months.",
-        "means": "Saudi Arabia, the largest Gulf oil exporter, is being hit at the heart of its business district, and expects a long campaign. Oil facilities were not hit this time.",
-        "fx": "Adds a little war risk that can support oil and safe places such as the Swiss franc, but Gulf oil keeps flowing, so the effect is small."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "More attacks on Saudi Arabia keep supply risk alive, though no oil sites were hit."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Gulf escalation adds a little demand for safe places."
-        }
-      ],
-      "watch": "Whether Houthi attacks reach Saudi oil sites or pipelines, and whether the US widens strikes on Iran."
-    },
-    {
-      "id": "investing-reuters-jpmorgan-fed-three-hikes-20261119",
-      "date": "2026-11-19",
-      "source": "Investing.com (Reuters)",
-      "url": "https://investing.com/news/economy-news/jp-morgan-sees-fed-rate-hikes-at-next-three-meetings-as-inflation-persists-5039090",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAI1JX_L.jpg",
-      "headline": "J.P. Morgan now expects Fed rate rises at each of the next three meetings",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "J.P. Morgan's economists now expect the Federal Reserve to raise rates in December, January and March, joining Bank of America and Deutsche Bank.",
-      "beats": {
-        "was": "The Federal Reserve, led by Chair Kevin Warsh, has been raising rates to fight inflation, and minutes of its October meeting showed almost all officials expect more rises.",
-        "happened": "On Thursday, November 19 J.P. Morgan's chief US economist Michael Feroli said he expects quarter-point rises in January and March on top of one in December. Bank of America and Deutsche Bank forecast the same. Futures show a December rise as close to certain.",
-        "means": "Big banks now see the Fed raising rates into spring 2027, not stopping after December, which keeps US borrowing costs high for longer.",
-        "fx": "Supports the dollar and weighs on gold, though it is a forecast, not a Fed decision, so much of it is already in prices."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Major banks expect three more Fed rate rises."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher US rates for longer make non-yielding gold less attractive."
-        }
-      ],
-      "watch": "Fed officials' comments and US inflation data before the December 8-9 meeting."
-    },
-    {
-      "id": "openthemagazine-trump-xi-putin-no-nukes-iran-20261119",
-      "date": "2026-11-19",
-      "source": "Open (ANI)",
-      "url": "https://openthemagazine.com/world/trump-says-no-nukes-for-iran-at-meet-with-xi-putin-optimistic-on-solution-to-russia-ukraine-war",
-      "image": "https://media.openthemagazine.com/openthemagazine/2026-11-19/7j1z20vn/HXeeeNqbEAAl7Au.jpg?w=1200&ar=40:21&auto=format,compress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "Trump, Xi and Putin meet in Shenzhen: talk of nuclear cuts and Ukraine, but no plan for the Iran war",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "US President Donald Trump met China's Xi Jinping and Russia's Vladimir Putin in Shenzhen on Thursday, November 19. Trump repeated that Iran will not get a nuclear weapon and said he sees progress on Ukraine, but no step toward ending the Iran war was announced.",
-      "beats": {
-        "was": "The US has been at war with Iran for months, and attacks on ships near the Strait of Hormuz keep oil prices jumpy. This was the first three-way meeting of the US, Chinese and Russian leaders, held at the Asia-Pacific Economic Cooperation (APEC) summit.",
-        "happened": "Trump said the three countries are best placed to cut their nuclear weapons, while admitting that will be hard. He said the US will not let Iran get a nuclear weapon, and that a long call with Putin earlier that day showed progress toward ending the war in Ukraine. Putin listed trade, food, energy and Ukraine as his topics.",
-        "means": "The meeting produced warm words, not a deal. Nothing changes for the Iran war or for shipping in the Gulf, and a Ukraine settlement is still only a hope.",
-        "fx": "Little effect. Without a plan for Iran, oil keeps its war risk and safe places like the Swiss franc and gold lose none of their appeal from this meeting."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "No step toward ending the Iran war, so the risk to Gulf supply stays as it was."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Calm talks but no deal leave safe-haven demand for the franc roughly unchanged."
-        }
-      ],
-      "watch": "Whether any follow-up talks on Iran are announced after the summit, and the OPEC+ oil producers' meeting on Sunday, November 29."
-    },
-    {
-      "id": "aa-iran-army-three-tankers-mines-hormuz-20261119",
-      "date": "2026-11-19",
-      "source": "Anadolu Agency",
-      "url": "https://www.aa.com.tr/en/middle-east/3-oil-tankers-disabled-by-mine-blasts-in-strait-of-hormuz-iranian-army/4129906",
-      "image": null,
-      "headline": "Iran's army says three oil tankers hit mines and caught fire east of the Strait of Hormuz",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Iran's army says three oil tankers struck sea mines and caught fire in the eastern Strait of Hormuz on Wednesday, November 18, and can no longer sail. Oil barely moved, because traffic through the strait is close to pre-war levels.",
-      "beats": {
-        "was": "Iran has been attacking ships and Gulf neighbours during its war with the US. On Tuesday, November 17 a ship of the UAE's state oil company ADNOC was attacked in the strait, injuring 11 crew with one missing. Even so, oil flows through the strait have recovered to around pre-war levels.",
-        "happened": "Iran's army said the three tankers had switched off their tracking systems before entering a zone it says is closed to ships, then hit mines and caught fire. The ships' names and owners were not given, and the claim has not been independently confirmed.",
-        "means": "Sea mines are a new kind of threat, harder to clear than missile or drone attacks, and they raise shipping and insurance costs. But so far the market treats each incident as a one-off rather than a cut to supply.",
-        "fx": "Only mild support for oil, which rose less than 1% on Thursday, November 19. A wider mining campaign would matter far more for oil, the Canadian and Norwegian currencies, and safe places like the Swiss franc and gold."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Mines in the strait add risk to Gulf shipping, but prices hardly reacted."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A new kind of attack adds a little safe-haven demand for the franc."
-        }
-      ],
-      "watch": "Any confirmation of the ships' names and owners, and whether shipping companies or insurers start avoiding the strait again."
     }
   ]
 }
