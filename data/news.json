@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-21T03:50:00Z",
+  "updated": "2026-11-22T12:30:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-20T17:50:00Z",
-      "text": "The dollar sits near its highest since April 2025 because markets fully expect a Federal Reserve rate rise on December 9, and on Friday, November 20 Governor Lisa Cook joined the officials saying rates must go higher still. US 10-year yields slipping under 5% and softer household inflation expectations the same day trim that edge a little."
+      "ts": "2026-11-22T12:30:00Z",
+      "text": "The dollar sits near its highest since April 2025 because markets fully expect a Federal Reserve rate rise on December 9, and Fed officials keep saying rates must go higher. October PCE inflation on Wednesday, November 25 is the week's test of that view, while US 10-year yields under 5% trim the dollar's edge a little."
     },
     "EUR": {
       "lean": "bearish",
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-20T23:55:00Z",
-      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. A deep fall in US stocks on Friday, November 20, which left the S&P 500 more than 10% below its October high, and fresh tanker trouble near Hormuz add some demand for the franc as a safe place."
+      "ts": "2026-11-22T12:30:00Z",
+      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. A deep fall in US stocks on Friday, November 20 and Iran's attack on Bahrain, home to a US naval base, on Saturday, November 21 add some demand for the franc as a safe place."
     },
     "CAD": {
       "lean": "bearish",
@@ -48,12 +48,150 @@
       "text": "Gold ended Friday, November 20 near $3,538 an ounce after briefly touching $3,503, its lowest since September 2025, closing its worst week since March. Expected Federal Reserve rate rises and a strong dollar outweigh the Iran war, and gold was sold alongside shares in the US stock slide rather than bought as a safe place."
     },
     "OIL": {
-      "lean": "mixed",
-      "ts": "2026-11-20T23:55:00Z",
-      "text": "Oil fell for a third week because Gulf exports are back close to pre-war levels, but Brent recovered to about $92.60 a barrel by the close on Friday, November 20. A third US aircraft carrier heading to the region, Houthi warnings near Saudi ports and tanker attacks near Hormuz show the war risk has not gone away."
+      "lean": "bullish",
+      "ts": "2026-11-22T12:30:00Z",
+      "text": "Oil fell for a third week to Friday, November 20 because Gulf exports are close to pre-war levels, ending at about $92.60 a barrel for Brent. Over the weekend of November 21-22 two more tankers were hit near Hormuz and an Iranian attack set an industrial site in Bahrain on fire, which puts war risk back in the price before the OPEC+ meeting on Sunday, November 29."
     }
   },
   "items": [
+    {
+      "id": "financefeeds-brent-week-ahead-opec-plus-nov29-20261122",
+      "ts": "2026-11-22T06:51:50Z",
+      "source": "FinanceFeeds",
+      "url": "https://financefeeds.com/brent-crude-oil-price-92-57-sunday-week-ahead-opec-plus-29-november-2027-quotas-bull-97-bear-88/",
+      "image": "https://financefeeds.com/wp-content/uploads/2026/08/offshore-oil-rig-brent-crude-price.jpg",
+      "headline": "Oil heads into a quiet holiday week with an OPEC+ output meeting set for Sunday, November 29",
+      "story": "oil-supply",
+      "story_title": "Oil supply: Gulf flows vs war risk",
+      "pillar": "commodities",
+      "summary": "Brent ended Friday, November 20 at $92.57 a barrel after a third weekly fall. The next big date for oil is the OPEC+ ministers' meeting on Sunday, November 29, which sets output plans for 2027.",
+      "beats": {
+        "was": "Oil prices jumped when the war with Iran began in late February, but they have fallen for three weeks in a row because tankers are again moving close to pre-war amounts out of the Gulf.",
+        "happened": "Brent rose 0.6% on Friday, November 20 but still lost about 3.4% on the week. OPEC+, the group of big oil producers led by Saudi Arabia and Russia, meets on Sunday, November 29 to set 2027 output using a fresh review of how much each member can pump. The January Brent contract also expires on Monday, November 30, and the next one trades about $2.60 lower.",
+        "means": "With US markets closed on Thursday, November 26 for Thanksgiving, trading may be thin, so attacks on ships can move prices more than usual. Until the OPEC+ meeting, supply news from the Gulf is the main driver.",
+        "fx": "Mixed for oil. The oil price feeds straight into the Canadian dollar, and cheaper oil eases inflation worries in Japan and Europe."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A preview: OPEC+ could add or hold supply, while Gulf attacks keep some risk in the price."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Canada's export income follows the oil price, which has no clear push until the OPEC+ meeting."
+        }
+      ],
+      "watch": "What OPEC+ decides on Sunday, November 29, and whether the attacks on tankers near Hormuz slow Gulf exports again."
+    },
+    {
+      "id": "aljazeera-bahrain-iran-attack-industrial-fire-20261121",
+      "date": "2026-11-21",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/21/bahrain-says-iranian-attack-causes-fire-at-industrial-facility",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/ap_6b0202985284a-1795293848.jpg?resize=1920%2C1440",
+      "headline": "Iranian attack sets an industrial site in Bahrain on fire as Iran says it aimed at US bases",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Bahrain said an Iranian attack late on Saturday, November 21 hit a civilian industrial site and started a fire, with damage but no injuries. Iran's Revolutionary Guards said they fired missiles and drones at US military bases in Bahrain.",
+      "beats": {
+        "was": "Bahrain, a small Gulf island state, hosts the US Navy's Fifth Fleet and has been a target since the US and Israel went to war with Iran in late February. After weeks of calm, it faced three drone attacks in the days before Saturday, November 21.",
+        "happened": "Bahrain's military said its air defences stopped several Iranian attacks late on Saturday, November 21, but one hit a civilian industrial site, which caught fire. Iran's Revolutionary Guards said they targeted US positions at the al-Riffa and Awali bases and destroyed two Patriot air-defence radars, a claim not confirmed by the US. Iran called it a reply to US drone flights over its land.",
+        "means": "Iran is widening its attacks from ships near Hormuz to a Gulf state that hosts US forces, which raises the chance of a US strike back. Markets were shut for the weekend, so the first reaction comes when trading reopens on the evening of Sunday, November 22.",
+        "fx": "Adds war risk to oil and a little demand for safe currencies such as the yen and Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "An attack on Gulf soil, not just ships, raises the risk that the war hits oil supply again."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Worries about a wider war add demand for the franc as a safe place."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Some investors buy the yen when war risk rises."
+        }
+      ],
+      "watch": "Whether the US answers the attack on its bases in Bahrain, and how oil opens on the evening of Sunday, November 22."
+    },
+    {
+      "id": "aljazeera-two-tankers-hit-khasab-hormuz-20261121",
+      "date": "2026-11-21",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/AFP__20261013__D3722EZ__v1__HighRes__UaeIranUsIsraelWarHormuzShipping-1795270231.jpg?resize=1920%2C1440",
+      "headline": "Two more tankers are hit in the Strait of Hormuz as Iran tightens its hold on shipping",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Two tankers were struck by unknown projectiles off Oman's Khasab coast on Saturday, November 21, with no one hurt. Iran said a separate tanker hit a sea mine east of the strait after ignoring its warnings.",
+      "beats": {
+        "was": "The Strait of Hormuz, the sea lane between Iran and Oman that carried about a fifth of the world's oil before the war, has seen ships hit almost daily in November. Iran wants ships to follow lanes it sets, and the US has answered by blockading Iran's ports and escorting tankers.",
+        "happened": "The UK Maritime Trade Operations, a British navy office that tracks shipping risks, reported one tanker hit at the rear about 20 km north of Khasab and another hit in the engine room about 31 km east, within an hour. Iran's navy said a tanker that had switched off its tracking gear hit a mine and caught fire, which could not be checked independently.",
+        "means": "Iran's own military counts about 25 tanker incidents in the week to Saturday, November 21. So far oil keeps flowing near pre-war levels, which is why prices fell for three weeks, but each hit raises shipping and insurance costs.",
+        "fx": "A small lift for oil against its recent slide, and a little support for safe currencies."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "More ships hit near Hormuz, though exports have kept flowing so far."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Ongoing attacks keep some demand for the franc as a safe place."
+        }
+      ],
+      "watch": "Whether any ship owners stop sending tankers through Hormuz, and whether the US changes how it escorts them."
+    },
+    {
+      "id": "nordfx-week-ahead-pce-fed-hike-bets-20261121",
+      "date": "2026-11-21",
+      "source": "NordFX",
+      "url": "https://nordfx.com/market-news/forex-cryptocurrency-forecast-november-23-27-2026",
+      "image": null,
+      "headline": "A short US week puts the Fed's preferred inflation gauge up on Wednesday, November 25",
+      "story": "fed-hikes",
+      "story_title": "Fed rate rises",
+      "pillar": "inflation",
+      "summary": "The Thanksgiving week packs most US data into Wednesday, November 25, led by October's PCE inflation, the measure the Federal Reserve targets. Futures show a near-certain quarter-point Fed rate rise on Wednesday, December 9.",
+      "beats": {
+        "was": "The Federal Reserve has been raising rates to fight inflation pushed up by the oil shock from the Iran war, and its October meeting minutes showed nearly all officials expect more rises. That has lifted the dollar to its highest since April 2025.",
+        "happened": "Monday, November 23 brings early business surveys (PMIs) for Germany, the euro area, the UK and the US. Wednesday, November 25 brings October PCE inflation, expected to show prices excluding food and energy up 0.3% on the month with the yearly rate rising to about 3.2%, plus revised third-quarter growth, durable goods orders, the Fed's Beige Book and Australia's October inflation. US markets close on Thursday, November 26 and shut early on Friday, November 27.",
+        "means": "A PCE reading at or above forecast would back the December rate rise markets already expect. A softer one could trim talk of a bigger move or of further rises in 2027.",
+        "fx": "A firm PCE reading would support the dollar, while a soft one would ease some of its lift."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A preview: the PCE reading could confirm or soften the expected December Fed rise."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Australia's October inflation on Wednesday, November 25 shapes the Reserve Bank of Australia's next move."
+        }
+      ],
+      "watch": "October core PCE on Wednesday, November 25: above 0.3% on the month would firm bets on Fed rises beyond December."
+    },
     {
       "id": "kitco-gold-toward-3500-stocks-correction-20261120",
       "ts": "2026-11-20T22:53:30Z",
@@ -1271,132 +1409,6 @@
         }
       ],
       "watch": "Any confirmation of the ships' names and owners, and whether shipping companies or insurers start avoiding the strait again."
-    },
-    {
-      "id": "aljazeera-trump-iran-bio-weapons-houthi-riyadh-20261119",
-      "date": "2026-11-19",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/11/19/iran-war-live-saudi-led-coalition-strikes-yemen-ships-on-fire-in-hormuz",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/epa_6afe32a94666-1795044009.jpg?resize=1920%2C1440",
-      "headline": "Trump claims Iran is seeking chemical and biological weapons; Houthi missile fired at Riyadh",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "President Donald Trump said in an interview that Iran is trying to build chemical and biological weapons, and the Saudi-led coalition said it stopped a Houthi missile aimed at Riyadh, the Saudi capital.",
-      "beats": {
-        "was": "The US-Israel war on Iran has eased into tit-for-tat attacks around the Gulf. On Tuesday, November 17 the US struck an Iranian missile site on Qeshm Island, and Iran has hit ships and fired drones at Kuwait and Bahrain.",
-        "happened": "In a wide-ranging interview reported on Thursday, November 19, Trump said Iran is seeking chemical and biological weapons, without giving evidence. The Saudi-led coalition fighting Yemen's Houthi group said it intercepted a Houthi missile fired at Riyadh and was checking for damage.",
-        "means": "Trump's claim is unproven, but it raises the risk that the US widens its strikes. The Houthi attack shows the war keeps reaching Saudi Arabia, the largest Gulf oil exporter.",
-        "fx": "More war risk lends a little support to oil and to safe places such as the Swiss franc and gold. So far markets have shrugged off similar headlines because Gulf oil is flowing again."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Threats near Saudi supply and talk of wider US action add a small risk premium."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Unproven but serious claims can draw some money to the franc as a safe place."
-        }
-      ],
-      "watch": "Whether the US acts on Trump's claim, and any hit to Saudi oil sites or tankers in the Gulf."
-    },
-    {
-      "id": "jpost-iran-cruise-missiles-ships-hormuz-20261119",
-      "date": "2026-11-19",
-      "source": "The Jerusalem Post",
-      "url": "https://www.jpost.com/middle-east/iran-news/article-915531",
-      "image": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/747261",
-      "headline": "Iran starts firing anti-ship cruise missiles at vessels near Hormuz, US official says",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "A US official said on Thursday, November 19 that Iran has begun using anti-ship cruise missiles, far deadlier than drones, against ships in the Gulf, even as a record amount of oil moved through the Strait of Hormuz.",
-      "beats": {
-        "was": "The US and Iran are at war, and Iran has been attacking ships in and near the Strait of Hormuz, the narrow route for about a fifth of the world's oil. Exports have been recovering, which pushed oil prices down this month.",
-        "happened": "The official told the newspaper that Iran is targeting more ships and has moved to cruise missiles. The UK's maritime security agency has been reporting several attacks a day. About 28 million barrels of oil passed through the strait on Wednesday, November 18, the most on record. A US assault ship with Marines aboard is heading to the region, and officials said President Trump has not ruled out new strikes.",
-        "means": "Heavier weapons raise the risk that a tanker is badly damaged or sunk, which could slow traffic again. For now the oil is still flowing in record amounts, so the threat is to the outlook more than to current supply.",
-        "fx": "A small upward push for oil and some demand for safe places such as the Swiss franc and gold, against the background of plentiful supply."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Deadlier attacks on ships raise the risk to Gulf exports, though flows are at a record."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A sharper war adds a little demand for the franc as a safe place."
-        }
-      ],
-      "watch": "Whether any tanker is badly hit, and whether President Trump orders new strikes on Iran."
-    },
-    {
-      "id": "vornews-macklem-exit-loonie-19-month-low-20261119",
-      "ts": "2026-11-19T03:39:50Z",
-      "source": "VOR News",
-      "url": "https://www.vornews.com/business/canada-loonie-19-month-low/",
-      "image": "https://www.vornews.com/wp-content/uploads/2026/08/Canadian-Dollar.jpg",
-      "headline": "Canadian dollar stays near a 19-month low as Bank of Canada Governor Macklem plans to leave",
-      "story": "boc-december",
-      "story_title": "Will the Bank of Canada raise rates in December?",
-      "pillar": "policy",
-      "summary": "Bank of Canada Governor Tiff Macklem will not seek a second term, and the Canadian dollar sits close to its weakest level since April 2025.",
-      "beats": {
-        "was": "The Canadian dollar has slid as markets bet on more US Federal Reserve rate rises while Canada lost jobs in October for a third month. Canadian inflation held at 3.1% in October.",
-        "happened": "Macklem said on Monday, November 16 that he will step down when his seven-year term ends on June 2, 2027, with a successor expected by spring. The Canadian dollar, near 70 US cents, is close to the low it hit on Thursday, November 12. Markets put the chance of a Bank of Canada rate rise in December at about 60%.",
-        "means": "A planned handover is months away and does not change the December decision. The bigger weight on the currency is the gap between a Fed set to keep raising rates and a Bank of Canada that may or may not follow.",
-        "fx": "Little direct effect from the leadership news. The Canadian dollar stays under pressure from the strong US dollar and weak Canadian jobs."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A long-planned exit adds little, while a December rise is still a coin-flip leaning yes."
-        }
-      ],
-      "watch": "Canada's November jobs figures and the Bank of Canada decision on December 9."
-    },
-    {
-      "id": "investinglive-australia-jobs-october-49pc-20261119",
-      "ts": "2026-11-19T00:42:15Z",
-      "source": "investingLive",
-      "url": "https://investinglive.com/central-banks/australian-unemployment-jumps-to-4-9-as-jobs-fall-43-500-taking-rba-hikes-off-the-table/",
-      "image": "https://investinglive.com/cms/media/Processed/Categories/featured/aud%20jobless%20plunge%2019%20November%202026-featured-1795048923.jpg?width=960&format=webp",
-      "headline": "Australian unemployment jumps to 4.9%, a five-year high, as jobs fall again",
-      "story": "rba-path",
-      "story_title": "Has the Reserve Bank of Australia finished raising rates?",
-      "pillar": "growth",
-      "summary": "Australia lost 43,500 jobs in October and unemployment rose to 4.9%, its highest since 2021, far worse than forecast. That makes another Reserve Bank of Australia rate rise much less likely.",
-      "beats": {
-        "was": "The Reserve Bank of Australia has raised its main rate five times, to 4.85% in November, and three of its nine board members voted against that last rise. Pay growth picked up in the July to September quarter, so the question was whether the jobs market was still strong enough to justify one more rise.",
-        "happened": "Figures from the Australian Bureau of Statistics, released on Thursday, November 19, showed employment fell by 43,500 in October when a gain of about 25,000 was expected, after a fall of about 39,000 in September. Unemployment rose to 4.9% from 4.7%, and the share of people working or looking for work slipped.",
-        "means": "Two months of falling jobs suggest the rate rises are now biting hard. It backs the board members and big banks who say rates have peaked, and makes a rise early next year look unlikely.",
-        "fx": "Clear pressure on the Australian dollar, which fell below 67 US cents, already near its lowest in about ten months against a dollar lifted by expected Federal Reserve rate rises."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 3,
-          "why": "A big jobs miss and a five-year-high jobless rate take a further Reserve Bank of Australia rise largely off the table."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The New Zealand dollar often moves with its Australian neighbour and is already near its lows."
-        }
-      ],
-      "watch": "The Reserve Bank of Australia's next decision in February, and Australia's monthly inflation figures before it, which show whether rising prices still worry the board more than lost jobs."
     }
   ]
 }
