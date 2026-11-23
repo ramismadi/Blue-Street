@@ -1,6 +1,6 @@
 {
  "_about": "Blue Street currency score (since 2026-11-17 the score on the site). Rate levels, inflation and terms of trade passed a price-history test (2016-2026) with a small, steady edge; market mood failed and is shown with no weight; growth, positioning and fiscal are not yet tested. Evidence, not a forecast.",
- "updated": "2026-11-23T13:34:45.960Z",
+ "updated": "2026-11-23T15:36:37.444Z",
  "as_of": "2026-11-23",
  "scale": "score -100 to +100; points -10 to +10 (what the site shows)",
  "weights": {
@@ -66,8 +66,8 @@
  "ranking": [
   "GBP",
   "AUD",
-  "USD",
   "NZD",
+  "USD",
   "EUR",
   "CAD",
   "JPY",
@@ -75,18 +75,18 @@
  ],
  "currencies": {
   "USD": {
-   "points": 1.8,
-   "score": 21,
+   "points": 1.6,
+   "score": 18,
    "tested_score": 61,
    "measured_share": 76,
    "drivers": {
     "rates": {
-     "value": 1.89,
+     "value": 1.92,
      "measured": true,
-     "why": "The Fed's rate is 1.4 points above the middle of the eight, and the US's two-year bond yield is 1.5 points above the middle.",
+     "why": "The Fed's rate is 1.4 points above the middle of the eight, and the US's two-year bond yield is 1.6 points above the middle.",
      "counted": true,
      "tested": true,
-     "points": 3.3
+     "points": 3.4
     },
     "inflation": {
      "value": 0.39,
@@ -97,12 +97,12 @@
      "points": 0
     },
     "growth": {
-     "value": -0.33,
+     "value": -0.67,
      "measured": true,
-     "why": "Of the US's last 6 data releases, 2 beat forecasts and 3 missed.",
+     "why": "Of the US's last 6 data releases, 1 beat forecasts and 3 missed.",
      "counted": true,
      "tested": false,
-     "points": -0.3
+     "points": -0.6
     },
     "risk": {
      "value": 1,
@@ -139,18 +139,18 @@
    }
   },
   "EUR": {
-   "points": -1.1,
-   "score": -12,
-   "tested_score": 7,
+   "points": -0.9,
+   "score": -10,
+   "tested_score": 9,
    "measured_share": 88,
    "drivers": {
     "rates": {
-     "value": -0.26,
+     "value": -0.19,
      "measured": true,
-     "why": "The European Central Bank's rate is in the middle of the eight, and the euro area's two-year bond yield is 0.27 points below the middle.",
+     "why": "The European Central Bank's rate is in the middle of the eight, and the euro area's two-year bond yield is 0.16 points below the middle.",
      "counted": true,
      "tested": true,
-     "points": -0.5
+     "points": -0.3
     },
     "inflation": {
      "value": 0.44,
@@ -203,18 +203,18 @@
    }
   },
   "GBP": {
-   "points": 3.5,
-   "score": 36,
-   "tested_score": 55,
+   "points": 3.7,
+   "score": 38,
+   "tested_score": 57,
    "measured_share": 76,
    "drivers": {
     "rates": {
-     "value": 1.82,
+     "value": 1.9,
      "measured": true,
-     "why": "The Bank of England's rate is 1.4 points above the middle of the eight, and the UK's two-year bond yield is 1.4 points above the middle.",
+     "why": "The Bank of England's rate is 1.4 points above the middle of the eight, and the UK's two-year bond yield is 1.5 points above the middle.",
      "counted": true,
      "tested": true,
-     "points": 3.2
+     "points": 3.4
     },
     "inflation": {
      "value": 0,
@@ -267,18 +267,18 @@
    }
   },
   "JPY": {
-   "points": -4.4,
-   "score": -43,
-   "tested_score": -54,
+   "points": -4.3,
+   "score": -41,
+   "tested_score": -52,
    "measured_share": 88,
    "drivers": {
     "rates": {
-     "value": -1.88,
+     "value": -1.81,
      "measured": true,
-     "why": "The Bank of Japan's rate is 1.4 points below the middle of the eight, and Japan's two-year bond yield is 1.4 points below the middle.",
+     "why": "The Bank of Japan's rate is 1.4 points below the middle of the eight, and Japan's two-year bond yield is 1.3 points below the middle.",
      "counted": true,
      "tested": true,
-     "points": -3.3
+     "points": -3.2
     },
     "inflation": {
      "value": -1.79,
@@ -339,7 +339,7 @@
     "rates": {
      "value": -2,
      "measured": true,
-     "why": "The Swiss National Bank's rate is 2.6 points below the middle of the eight, and Switzerland's two-year bond yield is 3.1 points below the middle.",
+     "why": "The Swiss National Bank's rate is 2.6 points below the middle of the eight, and Switzerland's two-year bond yield is 3 points below the middle.",
      "counted": true,
      "tested": true,
      "points": -3.5
@@ -403,7 +403,7 @@
     "rates": {
      "value": -0.08,
      "measured": true,
-     "why": "The Bank of Canada's rate is in the middle of the eight, and Canada's two-year bond yield is close to the middle too.",
+     "why": "The Bank of Canada's rate is in the middle of the eight, and Canada's two-year bond yield is close to the middle too. Over the past month that yield has fallen behind the others.",
      "counted": true,
      "tested": true,
      "points": 0
@@ -467,7 +467,7 @@
     "rates": {
      "value": 2,
      "measured": true,
-     "why": "The Reserve Bank of Australia's rate is 2.2 points above the middle of the eight, and Australia's two-year bond yield is 1.5 points above the middle.",
+     "why": "The Reserve Bank of Australia's rate is 2.2 points above the middle of the eight, and Australia's two-year bond yield is 1.6 points above the middle.",
      "counted": true,
      "tested": true,
      "points": 3.5
@@ -802,20 +802,20 @@
   {
    "date": "2026-11-23",
    "points": {
-    "USD": 1.8,
-    "EUR": -1.1,
-    "GBP": 3.5,
-    "JPY": -4.4,
+    "USD": 1.6,
+    "EUR": -0.9,
+    "GBP": 3.7,
+    "JPY": -4.3,
     "CHF": -5.5,
     "CAD": -2.7,
     "AUD": 3.2,
     "NZD": 1.8
    },
    "scores": {
-    "USD": 21,
-    "EUR": -12,
-    "GBP": 36,
-    "JPY": -43,
+    "USD": 18,
+    "EUR": -10,
+    "GBP": 38,
+    "JPY": -41,
     "CHF": -57,
     "CAD": -29,
     "AUD": 35,
@@ -823,9 +823,9 @@
    },
    "tested": {
     "USD": 61,
-    "EUR": 7,
-    "GBP": 55,
-    "JPY": -54,
+    "EUR": 9,
+    "GBP": 57,
+    "JPY": -52,
     "CHF": -79,
     "CAD": -27,
     "AUD": 62,
