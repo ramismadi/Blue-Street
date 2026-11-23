@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T17:48:00Z",
+  "updated": "2026-11-23T19:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "bearish",
-      "ts": "2026-11-23T12:55:00Z",
-      "text": "The Canadian dollar sits near 69.8 US cents, close to its weakest since April 2025, because markets expect the Federal Reserve to raise rates faster than the Bank of Canada. Brent oil slipping toward $91 a barrel on Monday, November 23 trims Canada's export income, and Bank of Canada Governor Tiff Macklem speaks on the economy and rates on Tuesday, November 24."
+      "ts": "2026-11-23T19:50:00Z",
+      "text": "The Canadian dollar sits near 69.8 US cents, close to its weakest since April 2025, because markets expect the Federal Reserve to raise rates faster than the Bank of Canada. Brent oil falling below $90 a barrel on Monday, November 23 trims Canada's export income, and Bank of Canada Governor Tiff Macklem speaks on the economy and rates on Tuesday, November 24."
     },
     "AUD": {
       "lean": "bearish",
@@ -49,11 +49,50 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-23T17:48:00Z",
-      "text": "Brent crude slipped toward $91 a barrel on Monday, November 23 despite weekend attacks on ships and Gulf sites, as more supply, including a reopened Libyan pipeline, outweighs the war and JPMorgan sees prices in the upper $70s in early 2027. Iran mixes a vow to fight the US naval blockade with an offer to calm Hormuz shipping fast on its own terms, and OPEC+ sets 2027 output on Sunday, November 29."
+      "ts": "2026-11-23T19:50:00Z",
+      "text": "Brent crude fell below $90 a barrel on Monday, November 23, its lowest since early September, as signs of a growing supply surplus, including a reopened Libyan pipeline, outweigh weekend attacks on ships and Gulf sites. Iran mixes a vow to fight the US naval blockade with an offer to calm Hormuz shipping fast on its own terms, and OPEC+ sets 2027 output on Sunday, November 29."
     }
   },
   "items": [
+    {
+      "id": "invezz-brent-below-90-surplus-20261123",
+      "date": "2026-11-23",
+      "source": "Invezz",
+      "url": "https://invezz.com/news/2026/11/23/oil-price-today-brent-below-90-surplus-fears/",
+      "image": null,
+      "headline": "Brent oil drops below $90 for the first time since early September",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Brent crude fell more than 3% to about $89 a barrel on the afternoon of Monday, November 23, its lowest since early September, as worry about too much oil outweighed weekend attacks in the Gulf. US crude fell to about $80.50.",
+      "beats": {
+        "was": "Brent closed at about $92.60 on Friday, November 20, after a third straight weekly fall. The International Energy Agency said on November 13 that world supply would beat demand by about 1.7 million barrels a day this quarter, with Gulf exports recovering despite tanker attacks.",
+        "happened": "Prices slid through the day on Monday, November 23, breaking below $90 by mid-afternoon in London. Libya's biggest oil pipeline briefly stopped after a group shut a valve, then pumping resumed, and the bank JPMorgan repeated that it sees prices in the upper $70s in the first half of 2027.",
+        "means": "The market now treats the war with Iran as a smaller threat to supply than the growing surplus, so the price premium from the fighting keeps fading. A fresh, clear cut to Gulf flows would be needed to reverse that.",
+        "fx": "Cheaper oil weighs on the Canadian dollar and Norway's krone through lower export income, and helps big importers like Japan and the euro zone by easing their fuel bills and price pressure."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A break below $90 to a two-and-a-half-month low shows supply worries outweighing the war."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil prices cut Canada's export income."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Cheaper oil eases Japan's import bill."
+        }
+      ],
+      "watch": "The OPEC+ meeting on Sunday, November 29, where the big producers set their 2027 output."
+    },
     {
       "id": "ghanaweb-reuters-oil-supply-outweighs-tensions-20261123",
       "ts": "2026-11-23T14:56:11Z",
