@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T16:05:00Z",
+  "updated": "2026-11-23T16:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -49,11 +49,50 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-23T14:55:00Z",
-      "text": "Brent crude slipped toward $91 a barrel on Monday, November 23 despite weekend attacks on ships and Gulf sites, because shipping costs and the extra price paid for physical cargoes have mostly faded. Iran's vow to fight the US naval blockade keeps some risk in the price, and OPEC+ sets 2027 output on Sunday, November 29."
+      "ts": "2026-11-23T16:55:00Z",
+      "text": "Brent crude slipped toward $91 a barrel on Monday, November 23 despite weekend attacks on ships and Gulf sites, as more supply, including a reopened Libyan pipeline, outweighs the war and JPMorgan sees prices in the upper $70s in early 2027. Iran's vow to fight the US naval blockade keeps some risk in the price, and OPEC+ sets 2027 output on Sunday, November 29."
     }
   },
   "items": [
+    {
+      "id": "ghanaweb-reuters-oil-supply-outweighs-tensions-20261123",
+      "ts": "2026-11-23T14:56:11Z",
+      "source": "GhanaWeb (Reuters)",
+      "url": "https://www.ghanaweb.com/GhanaHomePage/business/Oil-prices-drop-as-increased-supply-outweighs-Middle-East-tensions-2062619",
+      "image": "https://cdn.ghanaweb.com/imagelib/pics/751/75162827.jpg",
+      "headline": "Oil slips as more supply outweighs Gulf attacks, and JPMorgan sees the upper $70s next year",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Brent crude fell about $1.30 to near $91.25 a barrel by mid-morning in Europe on Monday, November 23, as signs of more oil coming to market outweighed weekend attacks in the Gulf. The bank JPMorgan expects Brent to fall into the upper $70s in the first half of 2027.",
+      "beats": {
+        "was": "Oil has stayed high through the US-Israeli war with Iran, with ships attacked near the Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil. Brent still fell about 4% in the week to Friday, November 20.",
+        "happened": "Yemen's Houthi group said it hit a Saudi oil refinery on Sunday, November 22, and ships were attacked near Hormuz, yet prices fell. Libya reopened the pipeline from Sharara, its biggest oil field, and JPMorgan pointed to rising output in the Middle East and the Americas, led by the US.",
+        "means": "Traders are giving more weight to extra supply than to the attacks, so the war's price premium keeps shrinking unless the fighting clearly cuts flows. OPEC+, the group of big producers led by Saudi Arabia and Russia, sets its 2027 output on Sunday, November 29.",
+        "fx": "Cheaper oil trims income for oil exporters like Canada and Norway and eases import bills and price pressure for big buyers such as Japan and the euro zone."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "More supply and a bank forecast of lower prices outweigh the attacks for now."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil prices mean less export income for Canada."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Cheaper oil eases Japan's import bill."
+        }
+      ],
+      "watch": "The OPEC+ meeting on Sunday, November 29; a plan to pump more in 2027 would add to the pressure on prices."
+    },
     {
       "id": "yahoo-nvidia-huang-back-stocks-surge-20261123",
       "ts": "2026-11-23T14:20:00Z",
@@ -1247,39 +1286,6 @@
         }
       ],
       "watch": "The Fed's decision on Wednesday, December 9, and whether officials signal a half-point step or more rises in January."
-    },
-    {
-      "id": "arabnews-reuters-tanker-hit-qeshm-missile-20261120",
-      "ts": "2026-11-20T16:39:50Z",
-      "source": "Arab News (Reuters)",
-      "url": "https://www.arabnews.com/middle-east/tanker-hit-in-strait-of-hormuz-as-missile-strikes-irans-qeshm-island-3013176",
-      "image": "https://assets.maestronewsroom.com/media/shared/wires/reuters/20261116/c0bbab1d843a-2026-11-16T140951Z_1014563699_RC21POA1T3OM_RTRMADP_3_IRAN-CRISIS-HORMUZ.JPG",
-      "headline": "Another tanker catches fire in the Strait of Hormuz as a missile hits Iran's Qeshm Island",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "A tanker leaving the Gulf caught fire after being hit near Oman's Musandam coast on Friday, November 20, and Iranian media said a missile struck Iran's Qeshm Island across the strait. No one was reported hurt.",
-      "beats": {
-        "was": "The Strait of Hormuz, the narrow sea lane between Iran and Oman that carries about a fifth of the world's oil, has been a war zone for months, and several tankers were reported hit by mines or missiles between Wednesday, November 18 and Friday, November 20.",
-        "happened": "The UK Maritime Trade Operations, a British navy office that tracks shipping risks, said an outbound tanker about 8 nautical miles north of Khasab was struck by an unknown object and caught fire. Iran's Revolutionary Guards blamed a sea mine. Separately, Iranian media reported a missile hit on Qeshm Island, with no word yet on damage or who fired it.",
-        "means": "Ships are still being hit almost daily, but oil fell through the week to Friday, November 20 because Gulf exports are flowing close to pre-war levels. A strike on Iranian soil adds a new risk that the fighting widens.",
-        "fx": "Gives oil a small lift against its slide and adds a little demand for safe places such as the Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "One more tanker hit and a strike on Iranian land add to supply worries, though so far exports keep flowing."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A wider war would add demand for the franc as a safe place."
-        }
-      ],
-      "watch": "Whether anyone claims the Qeshm strike and whether Iran answers it, and any rise in tanker insurance costs through Hormuz."
     }
   ]
 }
