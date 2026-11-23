@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T16:55:00Z",
+  "updated": "2026-11-23T17:48:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -49,8 +49,8 @@
     },
     "OIL": {
       "lean": "bearish",
-      "ts": "2026-11-23T16:55:00Z",
-      "text": "Brent crude slipped toward $91 a barrel on Monday, November 23 despite weekend attacks on ships and Gulf sites, as more supply, including a reopened Libyan pipeline, outweighs the war and JPMorgan sees prices in the upper $70s in early 2027. Iran's vow to fight the US naval blockade keeps some risk in the price, and OPEC+ sets 2027 output on Sunday, November 29."
+      "ts": "2026-11-23T17:48:00Z",
+      "text": "Brent crude slipped toward $91 a barrel on Monday, November 23 despite weekend attacks on ships and Gulf sites, as more supply, including a reopened Libyan pipeline, outweighs the war and JPMorgan sees prices in the upper $70s in early 2027. Iran mixes a vow to fight the US naval blockade with an offer to calm Hormuz shipping fast on its own terms, and OPEC+ sets 2027 output on Sunday, November 29."
     }
   },
   "items": [
@@ -230,6 +230,39 @@
         }
       ],
       "watch": "OPEC+ setting 2027 output on Sunday, November 29, and any attack that actually halts Gulf exports."
+    },
+    {
+      "id": "socialnews-ians-baghaei-hormuz-security-20261123",
+      "ts": "2026-11-23T13:37:47Z",
+      "source": "Social News XYZ (IANS)",
+      "url": "https://www.socialnews.xyz/2026/11/23/security-in-hormuz-can-be-restored-if-us-fulfils-commitment-iran",
+      "image": "https://s3.socialnews.xyz/wp-content/uploads/2026/11/23/20260623588-scaled.jpg",
+      "headline": "Iran says safe shipping through Hormuz can return quickly if the US meets its terms",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Iran's Foreign Ministry spokesman Esmaeil Baghaei said on Monday, November 23 that security in the Strait of Hormuz could be restored very quickly if the US keeps its commitments and accepts Iran's conditions. He called those conditions Iran's rights, not new demands.",
+      "beats": {
+        "was": "Ships near the Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil, have been attacked through the US-Israeli war with Iran, and the US Navy is blockading Iranian shipping. Iran's foreign minister Abbas Araghchi had said the strait could reopen within two hours on the right terms.",
+        "happened": "At his weekly briefing in Tehran, Baghaei backed that line and said Iran's terms are not fresh preconditions. He also said no decision to leave the global nuclear arms treaty has reached the Foreign Ministry.",
+        "means": "Iran keeps a door open to a deal that would calm shipping, but only on its own terms, and there is no sign yet that the US has agreed. Talk alone does not change oil flows.",
+        "fx": "Any real step toward reopening Hormuz would lower oil and cut demand for safe places like the Swiss franc and gold. Until then the effect is small."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Iran signals shipping could return to normal fast, but only if the US accepts its terms."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Talk of calmer shipping trims safe-place demand, but nothing is agreed."
+        }
+      ],
+      "watch": "Whether the US answers Iran's terms; a reply would matter far more than statements from either side."
     },
     {
       "id": "euronews-iran-every-means-blockade-20261123",
@@ -1253,39 +1286,6 @@
         }
       ],
       "watch": "Whether the extra US carrier is followed by strikes on Iran or Houthi attacks on Saudi ports, which would lift oil further."
-    },
-    {
-      "id": "wbow-reuters-cook-hikes-needed-20261120",
-      "ts": "2026-11-20T17:18:08Z",
-      "source": "WBOW (Reuters)",
-      "url": "https://1027wbow.com/2026/11/20/feds-cook-says-rate-hikes-needed-to-lower-high-inflation/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/20/2026-11-20T171808Z_1_LYNXNPEMAJ1KK_RTROPTP_3_USA-FED-MINUTES.JPG",
-      "headline": "Fed Governor Cook says rates must rise further to bring inflation down",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "rates",
-      "summary": "Federal Reserve Governor Lisa Cook said on Friday, November 20 that US interest rates are not yet high enough to cool inflation and that the Fed cannot afford to wait. She is the latest of several Fed officials to back more rate rises.",
-      "beats": {
-        "was": "The Fed raised rates by a quarter point in September, then held at 3.75% to 4% in October, when Cook was one of two officials who voted for another rise. US inflation has been above the Fed's 2% goal for more than five years.",
-        "happened": "In a speech prepared for a central bank conference in Chile, Cook said the September rise was not enough, that recent price reports show little sign inflation is easing, and that borrowing conditions are still too loose. She described growth as strong and the job market as solid, and warned that falling behind now could force bigger rises later.",
-        "means": "With Cook, Vice Chair Philip Jefferson, Governor Christopher Waller and several regional Fed heads all leaning the same way, a rise at the December 8-9 meeting looks close to settled, and the debate is about how many more follow early next year.",
-        "fx": "Supports the US dollar against most currencies by keeping US rates on a rising path, and weighs on gold, which pays no interest."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Another Fed board member backs further rate rises, matching what markets already expect."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher expected US rates make holding gold less appealing."
-        }
-      ],
-      "watch": "The Fed's decision on Wednesday, December 9, and whether officials signal a half-point step or more rises in January."
     }
   ]
 }
