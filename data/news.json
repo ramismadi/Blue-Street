@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T01:48:00Z",
+  "updated": "2026-11-23T03:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "bearish",
-      "ts": "2026-11-23T01:48:00Z",
-      "text": "The Australian dollar sits near 66 US cents, close to its lowest since January, after Australia lost jobs for a second month and an early business survey on Monday, November 23 showed activity shrinking at its fastest pace in more than five years. Both make another Reserve Bank of Australia rate rise on December 8 less likely, and October inflation on Wednesday, November 25 is the last big test."
+      "ts": "2026-11-23T03:55:00Z",
+      "text": "The Australian dollar sits near 66 US cents, close to its lowest since January, after Australia lost jobs for a second month and an early business survey on Monday, November 23 showed activity shrinking at its fastest pace in more than five years. Both make another Reserve Bank of Australia rate rise on December 8 less likely, and October inflation on Wednesday, November 25 is the last big test. Another slide in Asian shares on Monday, November 23, led by South Korea, adds to the pressure."
     },
     "NZD": {
       "lean": "mixed",
@@ -43,9 +43,9 @@
       "text": "The New Zealand dollar sits near 55 US cents, close to its lowest since the pandemic, held down by a US dollar lifted by expected Federal Reserve rate rises. A strong jump in shop sales for July to September, reported on Monday, November 23, makes more Reserve Bank of New Zealand rate cuts less likely and gives the currency some support."
     },
     "XAU": {
-      "lean": "bearish",
-      "ts": "2026-11-21T03:50:00Z",
-      "text": "Gold ended Friday, November 20 near $3,538 an ounce after briefly touching $3,503, its lowest since September 2025, closing its worst week since March. Expected Federal Reserve rate rises and a strong dollar outweigh the Iran war, and gold was sold alongside shares in the US stock slide rather than bought as a safe place."
+      "lean": "mixed",
+      "ts": "2026-11-23T03:55:00Z",
+      "text": "Gold bounced about 2% back above $3,600 an ounce on Monday, November 23, after its worst week since March took it to $3,503, its lowest since September 2025. A warning from Treasury Secretary Scott Bessent against raising US rates too far helped, but an expected Federal Reserve rate rise on December 9 still caps the recovery."
     },
     "OIL": {
       "lean": "mixed",
@@ -54,6 +54,78 @@
     }
   },
   "items": [
+    {
+      "id": "goodreturns-gold-up-2pct-above-3600-20261123",
+      "ts": "2026-11-23T01:59:17Z",
+      "source": "Goodreturns",
+      "url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-23-11-2026-live-updates-mcx-gold-silver-price-24k-22k-18k-gold-prices-1548905.html",
+      "image": "https://images.goodreturns.in/img/2026/11/goldsilverratestodaylive4-40451795399120.jpg",
+      "headline": "Gold bounces back above $3,600 an ounce in early Monday trade",
+      "story": "gold-fed",
+      "story_title": "Gold vs Fed rate rises",
+      "pillar": "rates",
+      "summary": "Spot gold rose about 2% to above $3,600 an ounce in Asian trading on Monday, November 23, and silver gained about 3%, after both had their worst week in months.",
+      "beats": {
+        "was": "Gold fell to about $3,503 on Friday, November 20, its lowest since September 2025, as investors sold it along with shares and bet on more Federal Reserve rate rises.",
+        "happened": "Buyers came back as the week opened, helped by US Treasury Secretary Scott Bessent warning on Sunday, November 22 that the Fed could raise rates too far, and by a slightly softer dollar.",
+        "means": "Talk of a smaller or slower set of Fed rate rises takes some pressure off gold, which pays no interest and suffers when US rates climb.",
+        "fx": "A firmer gold price reflects a small step back from the dollar, but markets still expect a quarter-point Fed rise on December 9."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A 2% rebound after a heavy weekly loss, helped by softer talk on Fed rate rises."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Bessent's warning trims bets on bigger Fed rate rises."
+        }
+      ],
+      "watch": "US October PCE inflation on Wednesday, November 25, the Federal Reserve's preferred price measure, ahead of its December 9 decision."
+    },
+    {
+      "id": "aljazeera-asia-stocks-tumble-ai-fears-20261123",
+      "date": "2026-11-23",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/23/south-koreas-stock-market-tumbles-as-ai-bubble-fears-mount",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/2026-11-06T015144Z_77722265_RC21IOA70JJX_RTRMADP_3_SOUTHKOREA-MARKETS-1-1795393000_0f55a3-1795395323.jpg?resize=1200%2C630&quality=80",
+      "headline": "Asian shares slide again on Monday as worries over AI spending spread",
+      "story": "ai-stocks",
+      "story_title": "AI stocks and the mood in markets",
+      "pillar": "risk",
+      "summary": "South Korea's Kospi index fell as much as 5.8% on Monday, November 23 and Hong Kong's Hang Seng about 1.9%, while Japan's market was shut for a holiday. US stock futures rose about 2%, hinting at a bounce later.",
+      "beats": {
+        "was": "On Friday, November 20 the S&P 500 fell 3.7%, putting it more than 10% below its peak, and the tech-heavy Nasdaq lost 5.3%, wiping out its gains for 2026, on fears that huge spending on artificial intelligence won't pay off.",
+        "happened": "Chip-heavy Asian markets took the next hit when they opened, with Samsung and other tech makers leading the drop, even though South Korea's chip exports for early November jumped.",
+        "means": "Investors are still pulling money out of tech shares, but rising US futures show some buyers think the sell-off went too far.",
+        "fx": "When shares fall this hard, the yen and the Swiss franc tend to gain as safe places, while the Australian and New Zealand dollars, tied to global growth, tend to suffer."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Another fall in Asian shares weighs on currencies tied to global growth."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stock selling tends to lift the yen as a safe place, though Japan's market was shut."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Risk-shy investors tend to avoid the New Zealand dollar."
+        }
+      ],
+      "watch": "Whether US shares follow their futures higher when New York opens on Monday, November 23."
+    },
     {
       "id": "finimize-australia-flash-pmi-461-20261122",
       "ts": "2026-11-22T23:49:18Z",
@@ -340,39 +412,6 @@
       "watch": "Whether the US confirms damage in Bahrain or answers with new strikes on Iran."
     },
     {
-      "id": "investing-oil-falls-gulf-exports-glut-20261122",
-      "date": "2026-11-22",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/commodities-news/oil-falls-as-robust-gulf-exports-offset-iran-escalation-supply-glut-risks-5044220",
-      "image": "https://content-media.investing.com/news/OilTanker_800x533_L_1778185672.jpg",
-      "headline": "Oil slips at the start of the week as strong Gulf exports and a supply surplus outweigh Iran's attacks",
-      "story": "oil-supply",
-      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
-      "pillar": "commodities",
-      "summary": "Brent crude fell 0.8% to about $91.85 a barrel as trading reopened late on Sunday, November 22, even after a weekend of Iranian and Houthi attacks around the Gulf, including a Houthi claim of a strike on Saudi Arabia's Rabigh refinery.",
-      "beats": {
-        "was": "Brent is down about 20% in November after President Trump held off new strikes on Iran following the US midterm elections, and Gulf exports have stayed close to pre-war levels.",
-        "happened": "Oil fell despite Trump saying he leans toward new strikes on Iran after the New Year if talks fail, fresh Iranian attacks on Bahrain, and Houthi attacks on Saudi Arabia.",
-        "means": "Traders are giving more weight to a coming supply surplus, about 2 million barrels a day in the last quarter according to the International Energy Agency, than to the war's threats so far.",
-        "fx": "Softer oil trims export income for Canada and Norway and eases fuel costs for importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Strong Gulf exports and a forecast surplus outweigh the weekend's attacks."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil prices cut Canada's export income."
-        }
-      ],
-      "watch": "The OPEC+ meeting on Sunday, November 29 on output, and whether ship crossings through Hormuz keep falling."
-    },
-    {
       "id": "aljazeera-iran-escalation-tankers-transits-drop-20261122",
       "ts": "2026-11-22T11:46:42Z",
       "source": "Al Jazeera",
@@ -536,6 +575,39 @@
         }
       ],
       "watch": "What OPEC+ decides on Sunday, November 29, and whether the attacks on tankers near Hormuz slow Gulf exports again."
+    },
+    {
+      "id": "investing-oil-falls-gulf-exports-glut-20261122",
+      "date": "2026-11-22",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/oil-falls-as-robust-gulf-exports-offset-iran-escalation-supply-glut-risks-5044220",
+      "image": "https://content-media.investing.com/news/OilTanker_800x533_L_1778185672.jpg",
+      "headline": "Oil slips at the start of the week as strong Gulf exports and a supply surplus outweigh Iran's attacks",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Brent crude fell 0.8% to about $91.85 a barrel as trading reopened late on Sunday, November 22, even after a weekend of Iranian and Houthi attacks around the Gulf, including a Houthi claim of a strike on Saudi Arabia's Rabigh refinery.",
+      "beats": {
+        "was": "Brent is down about 20% in November after President Trump held off new strikes on Iran following the US midterm elections, and Gulf exports have stayed close to pre-war levels.",
+        "happened": "Oil fell despite Trump saying he leans toward new strikes on Iran after the New Year if talks fail, fresh Iranian attacks on Bahrain, and Houthi attacks on Saudi Arabia.",
+        "means": "Traders are giving more weight to a coming supply surplus, about 2 million barrels a day in the last quarter according to the International Energy Agency, than to the war's threats so far.",
+        "fx": "Softer oil trims export income for Canada and Norway and eases fuel costs for importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Strong Gulf exports and a forecast surplus outweigh the weekend's attacks."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil prices cut Canada's export income."
+        }
+      ],
+      "watch": "The OPEC+ meeting on Sunday, November 29 on output, and whether ship crossings through Hormuz keep falling."
     },
     {
       "id": "aljazeera-bahrain-iran-attack-industrial-fire-20261121",
@@ -991,132 +1063,6 @@
       "watch": "Canada's November jobs report and the Bank of Canada's December rate decision."
     },
     {
-      "id": "energynow-reuters-oil-slides-third-weekly-drop-20261120",
-      "date": "2026-11-20",
-      "source": "EnergyNow (Reuters)",
-      "url": "https://energynow.ca/2026/11/oil-prices-slide-as-recovering-middle-east-exports-push-wti-toward-81-and-brent-near-90/",
-      "image": "https://energynow.ca/wp-content/uploads/2026/01/Pumpjack-Sunrise-1200x810-1.png",
-      "headline": "Oil gives back its early gain and slides toward $90 as Gulf exports recover",
-      "story": "oil-supply",
-      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
-      "pillar": "commodities",
-      "summary": "Brent crude dropped about 1.8% to near $90.30 a barrel on Friday, November 20, undoing an early rise, and US oil fell about 2% to near $81.60. Both are set for a third weekly fall.",
-      "beats": {
-        "was": "The Iran war cut oil shipments through the Strait of Hormuz earlier this year and pushed prices up. In recent weeks Gulf exports have been coming back, and the International Energy Agency expects more oil than buyers need in the last three months of 2026.",
-        "happened": "After a small rise in the morning on Houthi missile strikes at Riyadh, prices turned lower as traders focused on Middle East exports running close to their pre-war level. US crude stocks also rose by 3.4 million barrels in the week to November 13. Brent is down about 5% since Friday, November 13. Reports of tankers hitting mines near Hormuz did little to stop the slide.",
-        "means": "The market now weighs plentiful supply more than the risk of new attacks. Cheaper oil lowers income for oil exporters and eases pressure on import bills for countries that buy oil.",
-        "fx": "Weighs a little on the Canadian dollar and Norway's krone, which earn from oil, and slightly helps big oil buyers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Recovering Gulf exports and higher US stocks outweigh new attacks on ships."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil prices cut Canada's export income."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Cheaper oil eases Japan's import bill."
-        }
-      ],
-      "watch": "Whether Brent holds near $90 into the OPEC+ meeting on Sunday, November 29, and any further attacks on tankers near Hormuz."
-    },
-    {
-      "id": "onvista-reuters-nagel-growth-inflation-too-high-20261120",
-      "date": "2026-11-20",
-      "source": "onvista (Reuters)",
-      "url": "https://www.onvista.de/news/2026/11-20-nagel-bundesbank-erwartet-1-2-prozent-wachstum-der-deutschen-wirtschaft-0-20-26578875",
-      "image": "https://www.onvista.de/og/onvista.png?v=2",
-      "headline": "Bundesbank's Nagel sees stronger German growth and says the ECB has to act on inflation",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates one last time in December?",
-      "pillar": "policy",
-      "summary": "Joachim Nagel, head of Germany's central bank and a European Central Bank rate-setter, said on Friday, November 20 that German growth looks close to 1.2% this year and that inflation is too high for the ECB to sit still.",
-      "beats": {
-        "was": "Euro-area inflation rose to 4.0% in October, twice the ECB's goal, and markets lean strongly toward an ECB rate rise at the December 17 meeting.",
-        "happened": "Speaking at a banking conference in Frankfurt, Nagel put German growth this year at about 1.2%, well above the Bundesbank's June forecast of 0.5%. He said inflation is too high even though expectations of future inflation stay steady, and that the ECB needs to do something.",
-        "means": "A leading voice for tighter policy backs a December rise, and stronger German growth removes one reason to wait.",
-        "fx": "Gives the euro a little support, though the Federal Reserve's faster rate path still weighs on it more."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firm talk from a senior ECB rate-setter backs the December rise markets already expect."
-        }
-      ],
-      "watch": "Euro-area flash inflation for November and the ECB decision on December 17."
-    },
-    {
-      "id": "ecb-lagarde-acting-in-time-frankfurt-20261120",
-      "date": "2026-11-20",
-      "source": "European Central Bank",
-      "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261120~e52bcc4db2.en.html",
-      "image": "https://www.ecb.europa.eu/press/key/shared/img/socialmedia/social-default.jpg?0dbb2de262f4f1fcaeae410be132177a",
-      "headline": "Lagarde's Frankfurt speech urges Europe to act before problems become crises",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates one last time in December?",
-      "pillar": "policy",
-      "summary": "European Central Bank President Christine Lagarde used her keynote at the European Banking Congress in Frankfurt on Friday, November 20 to call for faster action on long-run issues such as a single capital market and Europe's reliance on foreign payment technology.",
-      "beats": {
-        "was": "Euro-area inflation is 4%, double the ECB's goal, and markets put about a 9 in 10 chance on a rate rise at the ECB's December 17 meeting. Traders hoped the speech would hint at what comes after December.",
-        "happened": "The published text, titled \"Acting in time\", focused on structural topics: a digital euro that could first be issued in 2029 if laws pass by year end, a new platform for settling digital assets, and Europe's dependence on foreign card networks. It was her last appearance at this congress as ECB President.",
-        "means": "The text offers no new clue on interest rates, so expectations for December and 2027 stay where they were.",
-        "fx": "Little direct effect on the euro, which keeps taking its lead from expected Federal Reserve rate rises."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A speech on long-run reforms leaves December rate bets unchanged."
-        }
-      ],
-      "watch": "Comments from other ECB officials before the December 17 meeting, and euro-area flash inflation for November."
-    },
-    {
-      "id": "tradingpedia-eurjpy-yen-firms-boj-december-20261120",
-      "date": "2026-11-20",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/11/20/eur-jpy-slides-as-yen-strengthens-on-hawkish-boj-signals/",
-      "image": null,
-      "headline": "EUR/JPY slides as yen strengthens on hawkish BoJ signals",
-      "story": "boj-december",
-      "story_title": "Will the Bank of Japan raise rates in December?",
-      "pillar": "policy",
-      "summary": "The yen gained in European trading on Friday, November 20, with the euro down to about 174.8 yen, as falling stocks, Tokyo's warnings about fast currency moves and bets on a December Bank of Japan rate rise helped it.",
-      "beats": {
-        "was": "The dollar came within a few hundredths of 160 yen on Thursday, November 19, a level where Japan has stepped into the market before. Japan's Finance Minister Satsuki Katayama has warned against rapid, one-sided currency moves.",
-        "happened": "On Friday, November 20 the euro fell to about 174.8 yen and the dollar slipped from just under 160 to about 158.7 yen, as Tokyo stocks dropped about 4.5% and US 10-year yields eased toward 4.97%. A Reuters poll found most economists expect the Bank of Japan to raise its rate to 1.5% on December 18, which markets price at about 85%.",
-        "means": "The yen is getting support from three places at once: demand for safe places as stocks fall, the risk of Japanese buying near 160, and a likely Bank of Japan rise. Japan's October inflation came in below forecast, which keeps a small doubt over December.",
-        "fx": "A push higher for the yen, mainly against the euro and the dollar, though US rates remain far above Japan's."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Safe-place buying, intervention warnings and a likely December Bank of Japan rise lift the yen."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro slips against the yen as stocks fall."
-        }
-      ],
-      "watch": "Bank of Japan meeting on December 18, and whether the dollar returns toward 160 yen."
-    },
-    {
       "id": "euronews-iran-tanker-convoy-kharg-blockade-20261120",
       "ts": "2026-11-20T10:06:49Z",
       "source": "Euronews",
@@ -1282,121 +1228,130 @@
       "watch": "Whether yearly inflation stays above 4%, which keeps a December rise possible, or falls clearly below it."
     },
     {
-      "id": "marketscreener-reuters-gold-worst-week-eight-months-20261120",
-      "ts": "2026-11-20T03:23:28Z",
-      "source": "MarketScreener (Reuters)",
-      "url": "https://www.marketscreener.com/news/gold-set-for-worst-week-in-eight-months-as-firm-dollar-fed-hike-bets-weigh-ce785ed2de80f42d",
-      "image": "https://cdn.zonebourse.com/static/resize/0/0//images/reuters/2026-11/2026-11-03T041617Z_1_LYNXNPEMA201V_RTROPTP_4_AUSTRALIA-IMARC-CRITICAL-MINERALS.JPG",
-      "headline": "Gold drops to about $3,550 and heads for its worst week since March",
-      "story": "gold-fed",
-      "story_title": "Gold vs Fed rate rises",
+      "id": "energynow-reuters-oil-slides-third-weekly-drop-20261120",
+      "date": "2026-11-20",
+      "source": "EnergyNow (Reuters)",
+      "url": "https://energynow.ca/2026/11/oil-prices-slide-as-recovering-middle-east-exports-push-wti-toward-81-and-brent-near-90/",
+      "image": "https://energynow.ca/wp-content/uploads/2026/01/Pumpjack-Sunrise-1200x810-1.png",
+      "headline": "Oil gives back its early gain and slides toward $90 as Gulf exports recover",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Brent crude dropped about 1.8% to near $90.30 a barrel on Friday, November 20, undoing an early rise, and US oil fell about 2% to near $81.60. Both are set for a third weekly fall.",
+      "beats": {
+        "was": "The Iran war cut oil shipments through the Strait of Hormuz earlier this year and pushed prices up. In recent weeks Gulf exports have been coming back, and the International Energy Agency expects more oil than buyers need in the last three months of 2026.",
+        "happened": "After a small rise in the morning on Houthi missile strikes at Riyadh, prices turned lower as traders focused on Middle East exports running close to their pre-war level. US crude stocks also rose by 3.4 million barrels in the week to November 13. Brent is down about 5% since Friday, November 13. Reports of tankers hitting mines near Hormuz did little to stop the slide.",
+        "means": "The market now weighs plentiful supply more than the risk of new attacks. Cheaper oil lowers income for oil exporters and eases pressure on import bills for countries that buy oil.",
+        "fx": "Weighs a little on the Canadian dollar and Norway's krone, which earn from oil, and slightly helps big oil buyers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Recovering Gulf exports and higher US stocks outweigh new attacks on ships."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil prices cut Canada's export income."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Cheaper oil eases Japan's import bill."
+        }
+      ],
+      "watch": "Whether Brent holds near $90 into the OPEC+ meeting on Sunday, November 29, and any further attacks on tankers near Hormuz."
+    },
+    {
+      "id": "onvista-reuters-nagel-growth-inflation-too-high-20261120",
+      "date": "2026-11-20",
+      "source": "onvista (Reuters)",
+      "url": "https://www.onvista.de/news/2026/11-20-nagel-bundesbank-erwartet-1-2-prozent-wachstum-der-deutschen-wirtschaft-0-20-26578875",
+      "image": "https://www.onvista.de/og/onvista.png?v=2",
+      "headline": "Bundesbank's Nagel sees stronger German growth and says the ECB has to act on inflation",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
       "pillar": "policy",
-      "summary": "Gold fell almost 2% early on Friday, November 20 to about $3,550 an ounce, its lowest since September 2025, and is on course for a fall of close to 9% in the week to Friday, November 20.",
+      "summary": "Joachim Nagel, head of Germany's central bank and a European Central Bank rate-setter, said on Friday, November 20 that German growth looks close to 1.2% this year and that inflation is too high for the ECB to sit still.",
       "beats": {
-        "was": "Gold set a record in January and held up for months on the war with Iran. Since then, expected Federal Reserve rate rises and a strong dollar have pulled it down, since gold pays no interest.",
-        "happened": "Philadelphia Fed President Anna Paulson said more rate rises are needed because inflation is too high, and futures put the chance of a December rise near certain. Silver, platinum and palladium also fell about 2%.",
-        "means": "Rising US interest rates make holding gold more costly, and that is outweighing the war as a reason to buy it. The fall picked up speed in the week of November 16.",
-        "fx": "Pressure on gold, and a mirror of the dollar's strength: the dollar sits near its highest in 19 months."
+        "was": "Euro-area inflation rose to 4.0% in October, twice the ECB's goal, and markets lean strongly toward an ECB rate rise at the December 17 meeting.",
+        "happened": "Speaking at a banking conference in Frankfurt, Nagel put German growth this year at about 1.2%, well above the Bundesbank's June forecast of 0.5%. He said inflation is too high even though expectations of future inflation stay steady, and that the ECB needs to do something.",
+        "means": "A leading voice for tighter policy backs a December rise, and stronger German growth removes one reason to wait.",
+        "fx": "Gives the euro a little support, though the Federal Reserve's faster rate path still weighs on it more."
       },
       "impact": [
         {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Near-certain Fed rate rises push gold to a 14-month low."
-        },
-        {
-          "ccy": "USD",
+          "ccy": "EUR",
           "dir": "bullish",
           "strength": 1,
-          "why": "The same rate bets that sink gold keep the dollar near a 19-month high."
+          "why": "Firm talk from a senior ECB rate-setter backs the December rise markets already expect."
         }
       ],
-      "watch": "Whether central banks keep buying on the dip, and US inflation data ahead of the Fed's December 8-9 meeting."
+      "watch": "Euro-area flash inflation for November and the ECB decision on December 17."
     },
     {
-      "id": "abc-ap-asia-shares-drop-nikkei-huang-20261120",
-      "ts": "2026-11-20T03:17:00Z",
-      "source": "AP via ABC News",
-      "url": "https://abcnews.com/Business/wireStory/asia-shares-drop-ai-worries-echoing-wall-streets-138309523",
-      "image": "https://i.abcnewsfe.com/a/cb8b8640-bb1a-4f88-a77c-5efb64763b8d/wirestory_c4c3f4878b12989347f8a930ed813dad_16x9.jpg?w=1600",
-      "headline": "Tokyo and Seoul stocks fall about 4.5% as AI worries spread to Asia",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "Japan's Nikkei 225 and South Korea's Kospi each fell about 4.5% on the morning of Friday, November 20, following a 2% drop in US stocks and the sudden resignation of Nvidia chief executive Jensen Huang.",
+      "id": "ecb-lagarde-acting-in-time-frankfurt-20261120",
+      "date": "2026-11-20",
+      "source": "European Central Bank",
+      "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261120~e52bcc4db2.en.html",
+      "image": "https://www.ecb.europa.eu/press/key/shared/img/socialmedia/social-default.jpg?0dbb2de262f4f1fcaeae410be132177a",
+      "headline": "Lagarde's Frankfurt speech urges Europe to act before problems become crises",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "policy",
+      "summary": "European Central Bank President Christine Lagarde used her keynote at the European Banking Congress in Frankfurt on Friday, November 20 to call for faster action on long-run issues such as a single capital market and Europe's reliance on foreign payment technology.",
       "beats": {
-        "was": "US stocks had fallen for five sessions in a row on worries about Federal Reserve rate rises and high prices for AI shares. AI company Anthropic's market debut on Thursday, November 19 went well but did not lift the wider market.",
-        "happened": "Nvidia, the biggest maker of AI chips, swung from a 4.7% gain to a 3.3% loss on Thursday, November 19 after Huang, its co-founder and chief executive, stepped down without warning. The Dow fell about 1,100 points, and in Asia on Friday, November 20 the Nikkei dropped to about 56,775 and the Kospi to about 4,905, both heavy in chip makers.",
-        "means": "The pullback from AI shares has become a global selloff, which leaves investors more wary of risk going into the weekend.",
-        "fx": "A deeper slide in stocks tends to lift the yen and the US dollar as safe places and weigh on the Australian and New Zealand dollars. The dollar still held near 159 yen, so the yen's gain so far is small."
+        "was": "Euro-area inflation is 4%, double the ECB's goal, and markets put about a 9 in 10 chance on a rate rise at the ECB's December 17 meeting. Traders hoped the speech would hint at what comes after December.",
+        "happened": "The published text, titled \"Acting in time\", focused on structural topics: a digital euro that could first be issued in 2029 if laws pass by year end, a new platform for settling digital assets, and Europe's dependence on foreign card networks. It was her last appearance at this congress as ECB President.",
+        "means": "The text offers no new clue on interest rates, so expectations for December and 2027 stay where they were.",
+        "fx": "Little direct effect on the euro, which keeps taking its lead from expected Federal Reserve rate rises."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A speech on long-run reforms leaves December rate bets unchanged."
+        }
+      ],
+      "watch": "Comments from other ECB officials before the December 17 meeting, and euro-area flash inflation for November."
+    },
+    {
+      "id": "tradingpedia-eurjpy-yen-firms-boj-december-20261120",
+      "date": "2026-11-20",
+      "source": "Tradingpedia",
+      "url": "https://www.tradingpedia.com/2026/11/20/eur-jpy-slides-as-yen-strengthens-on-hawkish-boj-signals/",
+      "image": null,
+      "headline": "EUR/JPY slides as yen strengthens on hawkish BoJ signals",
+      "story": "boj-december",
+      "story_title": "Will the Bank of Japan raise rates in December?",
+      "pillar": "policy",
+      "summary": "The yen gained in European trading on Friday, November 20, with the euro down to about 174.8 yen, as falling stocks, Tokyo's warnings about fast currency moves and bets on a December Bank of Japan rate rise helped it.",
+      "beats": {
+        "was": "The dollar came within a few hundredths of 160 yen on Thursday, November 19, a level where Japan has stepped into the market before. Japan's Finance Minister Satsuki Katayama has warned against rapid, one-sided currency moves.",
+        "happened": "On Friday, November 20 the euro fell to about 174.8 yen and the dollar slipped from just under 160 to about 158.7 yen, as Tokyo stocks dropped about 4.5% and US 10-year yields eased toward 4.97%. A Reuters poll found most economists expect the Bank of Japan to raise its rate to 1.5% on December 18, which markets price at about 85%.",
+        "means": "The yen is getting support from three places at once: demand for safe places as stocks fall, the risk of Japanese buying near 160, and a likely Bank of Japan rise. Japan's October inflation came in below forecast, which keeps a small doubt over December.",
+        "fx": "A push higher for the yen, mainly against the euro and the dollar, though US rates remain far above Japan's."
       },
       "impact": [
         {
           "ccy": "JPY",
           "dir": "bullish",
-          "strength": 2,
-          "why": "A sharp fall in Tokyo stocks adds safe-place demand for the yen."
+          "strength": 1,
+          "why": "Safe-place buying, intervention warnings and a likely December Bank of Japan rise lift the yen."
         },
         {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A global stock selloff hurts a currency tied to world growth."
-        },
-        {
-          "ccy": "NZD",
+          "ccy": "EUR",
           "dir": "bearish",
           "strength": 1,
-          "why": "Risk-shy markets weigh on another growth-linked currency."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Investors seeking safety add some demand for the dollar."
+          "why": "The euro slips against the yen as stocks fall."
         }
       ],
-      "watch": "Whether European and US stocks keep falling on Friday, November 20, and who Nvidia names to replace Huang."
-    },
-    {
-      "id": "brecorder-reuters-asia-shares-worst-week-since-2020-20261120",
-      "ts": "2026-11-20T03:00:18Z",
-      "source": "Business Recorder (Reuters)",
-      "url": "https://www.brecorder.com/news/40449953/asian-shares-head-for-worst-week-since-2020-as-ai-trade-gloom-fails-to-abate",
-      "image": "https://i.brecorder.com/large/2026/11/18075213b063701.webp",
-      "headline": "Asian shares head for their worst week since March 2020",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "MSCI's broadest index of Asia-Pacific shares fell 2.5% on Friday, November 20, its sixth daily drop, leaving it about 7% down for the week, the worst since the start of the pandemic.",
-      "beats": {
-        "was": "Worries that AI shares had risen too far, together with expected Federal Reserve rate rises, have pushed stocks lower all week. AI company Anthropic's market debut on Thursday, November 19 did not change the mood.",
-        "happened": "Japan's Nikkei 225 lost about 4% and South Korea's Kospi nearly 5% on Friday, November 20. The US dollar index held near 104, close to its highest since April 2025, and the 10-year US Treasury yield stayed just above 5%.",
-        "means": "The selloff in AI shares has turned into a broad retreat from risk across Asia, with higher US rates making investors less willing to buy the dip.",
-        "fx": "Weighs on currencies tied to world growth like the Australian dollar, and gives some support to the yen and the US dollar as safe places."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A broad Asian stock slide hurts a growth-linked currency."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Risk-shy markets add some safe-place demand for the yen."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The dollar holds near a 19-month high as investors seek safety."
-        }
-      ],
-      "watch": "Whether European and US stocks stabilise on Friday, November 20 or extend the slide into next week."
+      "watch": "Bank of Japan meeting on December 18, and whether the dollar returns toward 160 yen."
     }
   ]
 }
