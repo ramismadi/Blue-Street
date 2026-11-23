@@ -1,6 +1,6 @@
 {
  "_about": "Data surprises, built by tools/surprise-build.cjs from data/calendar.json (Claude). Newest first, last 6 medium or high importance releases per currency.",
- "updated": "2026-11-23T09:06:50.716Z",
+ "updated": "2026-11-23T09:35:49.461Z",
  "window": 6,
  "currencies": {
   "USD": {
@@ -58,6 +58,22 @@
   "EUR": {
    "recent": [
     {
+     "id": "ez-pmi-mfg-20261123",
+     "date": "2026-11-23",
+     "title": "Eurozone flash manufacturing PMI (Nov)",
+     "result": "inline",
+     "actual": "52.9",
+     "forecast": "52.7"
+    },
+    {
+     "id": "ez-pmi-services-20261123",
+     "date": "2026-11-23",
+     "title": "Eurozone flash services PMI (Nov)",
+     "result": "miss",
+     "actual": "51.2",
+     "forecast": "51.8"
+    },
+    {
      "id": "fr-pmi-mfg-20261123",
      "date": "2026-11-23",
      "title": "France flash manufacturing PMI (Nov)",
@@ -88,22 +104,6 @@
      "result": "beat",
      "actual": "54.0",
      "forecast": "52.4"
-    },
-    {
-     "id": "eur-cpi-final-20261118",
-     "date": "2026-11-18",
-     "title": "Eurozone CPI (Oct, final) y/y",
-     "result": "inline",
-     "actual": "+4.0% y/y",
-     "forecast": "4.0% y/y"
-    },
-    {
-     "id": "ez-ip-20261116",
-     "date": "2026-11-16",
-     "title": "Eurozone industrial production (Sep)",
-     "result": "miss",
-     "actual": "+0.2% m/m",
-     "forecast": "+0.3% m/m"
     }
    ]
   },
