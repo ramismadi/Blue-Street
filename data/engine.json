@@ -1,52 +1,60 @@
 {
- "updated": "2026-11-22T07:58:00-06:00",
+ "updated": "2026-11-23T01:40:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "figure": "Fed Dec hike ~90% (CME FedWatch via Hercules); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~84%; BoC Dec ~44%; RBA 4.85%",
-   "read": "A December Fed hike is still seen as likely, and several officials argued for more, but the stock slide made bigger steps less likely. The European Central Bank and Bank of England are also expected to hike, while Australia's job losses make another Reserve Bank of Australia hike unlikely. US rates still look set to rise further than most, which keeps supporting the dollar.",
+   "figure": "Fed Dec quarter-point hike ~89%, half-point priced out (CME FedWatch via Reuters, Nov 23); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~84%; BoC Dec ~44%; RBA 4.85%",
+   "read": "A December Fed hike is still expected, but bets on a bigger half-point move vanished after Treasury Secretary Scott Bessent warned against hiking too far. The European Central Bank and Bank of England are also expected to hike, while Australia's weakening economy makes another Reserve Bank of Australia hike unlikely. US rates still look set to rise further than most, which keeps supporting the dollar.",
    "sources": [
     {
-     "label": "Blue Street central banks and pricing (Hercules, Nov 21)",
+     "label": "Business Recorder, citing Reuters (Nov 23): Dollar edges off 19-month high after market rout, yen softens",
+     "url": "https://www.brecorder.com/news/40450308/dollar-edges-off-19-month-high-after-market-rout-yen-softens"
+    },
+    {
+     "label": "investingLive (Nov 22): Bessent cautions the Fed against overtightening",
+     "url": "https://investinglive.com/central-banks/us-equity-rout-bessent-cautions-fed-against-overtightening-before-its-december-decision/"
+    },
+    {
+     "label": "Blue Street central banks and pricing (Hercules, Nov 23)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-    },
-    {
-     "label": "WBOW, citing Reuters (Nov 20): Fed's Cook says rate hikes needed to lower high inflation",
-     "url": "https://1027wbow.com/2026/11/20/feds-cook-says-rate-hikes-needed-to-lower-high-inflation/"
-    },
-    {
-     "label": "investingLive (Nov 19): Australian unemployment jumps to 4.9% as jobs fall 43,500",
-     "url": "https://investinglive.com/central-banks/australian-unemployment-jumps-to-4-9-as-jobs-fall-43-500-taking-rba-hikes-off-the-table/"
     }
    ]
   },
   {
    "id": "growth",
    "title": "Growth",
-   "figure": "Australia jobs Oct −43.5K, unemployment 4.9%; UK retail sales Oct +0.7% m/m (fcst 0.0%); US UoM sentiment Nov 51.5",
-   "read": "Australia lost jobs for a second month, a blow to the Aussie. UK shoppers spent more than expected, partly by stocking up. A global stock slide raises worries that growth will slow, which usually hits commodity currencies hardest.",
+   "figure": "Australia flash composite PMI Nov 46.1 (Oct 48.2); NZ Q3 retail sales volume +2.2% q/q (fcst 0.5%); Australia jobs Oct −43.5K",
+   "read": "Australian business activity is shrinking at its fastest pace in more than five years, another blow to the Aussie. New Zealand shoppers, by contrast, spent far more than expected over the summer quarter, which helps the kiwi. Euro-area, UK and US business surveys for November come out on Monday.",
    "sources": [
     {
-     "label": "investingLive (Nov 19): Australian unemployment jumps to 4.9% as jobs fall 43,500",
-     "url": "https://investinglive.com/central-banks/australian-unemployment-jumps-to-4-9-as-jobs-fall-43-500-taking-rba-hikes-off-the-table/"
+     "label": "Finimize (Nov 22): Australia's private sector slipped deeper into contraction",
+     "url": "https://finimize.com/content/australias-private-sector-slipped-deeper-into-contraction"
     },
     {
-     "label": "ONS (Nov 20): Retail sales, Great Britain, October 2026",
-     "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/october2026"
+     "label": "RTTNews (Nov 22): New Zealand retail sales climb 2.2% in Q3",
+     "url": "https://www.rttnews.com/3716934/new-zealand-retail-sales-climb-2-2-in-q3.aspx"
     },
     {
-     "label": "Kitco News (Nov 20): Final University of Michigan consumer sentiment rises to 51.5",
-     "url": "https://www.kitco.com/news/article/2026-11-20/gold-price-trades-near-3568oz-after-final-consumer-sentiment-rises-515"
+     "label": "Blue Street calendar (Hercules, Nov 23): times and forecasts",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     }
    ]
   },
   {
    "id": "inflation",
    "title": "Inflation",
-   "figure": "UK CPI Oct 3.6%, core 2.8%; euro-area CPI Oct 4.0%, core 2.6%; Japan core CPI Oct 2.2%; US 1-yr inflation expectations 3.7% (prelim 4.3%)",
-   "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. UK core prices held steady while euro-area core prices firmed. US households expect a little less inflation than earlier this month, which eased bets on the Fed slightly.",
+   "figure": "US core PCE Oct due Wed (fcst +0.3% m/m, 3.2% y/y); UK CPI Oct 3.6%, core 2.8%; euro-area CPI Oct 4.0%; Australia CPI Oct due Tue (fcst 4.8% y/y)",
+   "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. Australian firms say price rises are slowing, which eases pressure on their central bank. Wednesday's US core inflation figures are the big test for the Fed this week.",
    "sources": [
+    {
+     "label": "Finimize (Nov 22): Australia's private sector slipped deeper into contraction",
+     "url": "https://finimize.com/content/australias-private-sector-slipped-deeper-into-contraction"
+    },
+    {
+     "label": "Blue Street calendar (Hercules, Nov 23): times and forecasts",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    },
     {
      "label": "ONS (Nov 18): Consumer price inflation, UK: October 2026",
      "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/october2026"
@@ -54,62 +62,58 @@
     {
      "label": "Irish Times (Nov 18): Euro-area inflation hits 4%, paving way for more ECB rate hikes",
      "url": "https://www.irishtimes.com/business/2026/11/18/euro-area-inflation-hits-4-paving-way-for-more-ecb-rate-hikes/"
-    },
-    {
-     "label": "Kitco News (Nov 20): Final University of Michigan consumer sentiment rises to 51.5",
-     "url": "https://www.kitco.com/news/article/2026-11-20/gold-price-trades-near-3568oz-after-final-consumer-sentiment-rises-515"
     }
    ]
   },
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "figure": "S&P 500 −3.7% Friday, >10% below Oct record; US 2-year ~4.62% (∲23bp on the week); USD/JPY −0.9% w/w; AUD/USD −2.4% w/w",
-   "read": "Stocks fell hard around the world last week as worries about AI spending spread, sending money into US government bonds, the yen and the franc. Over the weekend Iran struck Bahrain and more tankers were hit near the Strait of Hormuz, which could add to the nerves when trading reopens. The Aussie and kiwi, which suffer most when markets get nervous, start the week near multi-year lows.",
+   "figure": "US stock futures ~+2% in Asia (Al Jazeera, Nov 23); Kospi down as much as 5.8%; S&P 500 −3.7% Friday, >10% below its record; USD/JPY +0.3%",
+   "read": "US stock futures bounced overnight after last week's AI-driven slide, which cooled demand for the yen and the franc. Asian shares still fell, and Asian governments stepped in to steady their markets. Weekend threats in the Gulf, including reported mines near the Strait of Hormuz, keep some caution in place.",
    "sources": [
     {
-     "label": "Spectrum News, citing AP (Nov 20): S&P 500 sinks 3.7% and the Nasdaq goes negative for the year",
-     "url": "https://spectrumlocalnews.com/nc/coastal/business/2026/11/20/wall-street-nov-20-2026"
+     "label": "Al Jazeera (Nov 23): South Korea's stock market tumbles as AI bubble fears mount",
+     "url": "https://www.aljazeera.com/news/2026/11/23/south-koreas-stock-market-tumbles-as-ai-bubble-fears-mount"
     },
     {
-     "label": "AP via ABC News (Nov 20): Asian shares drop as AI worries echo Wall Street",
-     "url": "https://abcnews.com/Business/wireStory/asia-shares-drop-ai-worries-echoing-wall-streets-138309523"
+     "label": "Bloomberg via Swissinfo (Nov 22): Asia braces for more volatility after US selloff",
+     "url": "https://www.swissinfo.ch/eng/asia-braces-for-more-volatility-after-us-selloff:-markets-wrap/92421262"
     },
     {
-     "label": "Blue Street market levels (Hercules, Friday New York close run ~3:01 PM CT Nov 20; weekly change against the Nov 13 close run; indicative)",
+     "label": "Euronews (Nov 22): Iran says two supertankers hit sea mines near Hormuz",
+     "url": "https://www.euronews.com/2026/11/22/tanker-incident-involving-military-forces-reported-in-strait-of-hormuz"
+    },
+    {
+     "label": "Anadolu via A News (Nov 22): Trump inclined to resume strikes on Iran after New Year if no deal",
+     "url": "https://www.anews.com.tr/americas/2026/11/22/trump-inclined-to-resume-strikes-on-iran-after-new-year-if-no-deal-reached"
+    },
+    {
+     "label": "Blue Street market levels (Hercules, London open run ~12:47 AM CT Nov 23; FX quotes from ~9:32 PM CT Sunday; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-    },
-    {
-     "label": "Al Jazeera (Nov 21): Bahrain says Iranian attack causes fire at industrial facility",
-     "url": "https://www.aljazeera.com/news/2026/11/21/bahrain-says-iranian-attack-causes-fire-at-industrial-facility"
-    },
-    {
-     "label": "Al Jazeera (Nov 21): Tankers hit in Strait of Hormuz as Iran tightens grip on shipping",
-     "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping"
     }
    ]
   },
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "figure": "Gold ~$3,524 (≈−9% w/w), low ~$3,503; Brent ~$92.82 (−3.4% w/w), WTI ~$83.94 (January contracts)",
-   "read": "Oil fell for a third week as Gulf supply kept flowing, which took support away from the Canadian dollar and helped energy buyers such as Japan and the euro area. Weekend attacks in the Gulf could lift oil when trading reopens. Gold's worst week in about eight months keeps weighing on the Aussie.",
+   "figure": "Brent ~$92.3–92.7, WTI ~$83.3–83.6 in Asia (Reuters, FinanceFeeds); gold ~$3,627, about +3% from Friday's close (GoldPrice.com via Hercules)",
+   "read": "Oil held steady overnight as markets waited to see whether Gulf threats turn into lost supply, which leaves the Canadian dollar without fresh support. Gold bounced back strongly, which helps the Aussie. Energy buyers such as Japan and the euro area still benefit from oil well below this year's highs.",
    "sources": [
     {
-     "label": "Kitco News (Nov 20): Gold falls toward $3,500 as stock markets enter correction",
-     "url": "https://www.kitco.com/news/article/2026-11-20/gold-falls-toward-3500-silver-slides-stock-markets-enter-correction"
+     "label": "Arab News, citing Reuters (Nov 23): Oil holds in tight range as Gulf attacks sustain risk premium",
+     "url": "https://www.arabnews.com/energy/oil-holds-in-tight-range-as-gulf-attacks-sustain-risk-premium-3013656"
     },
     {
-     "label": "LSE.co.uk, citing Reuters (Nov 20): Oil prices set for third straight weekly decline",
-     "url": "https://www.lse.co.uk/news/oil-prices-set-for-third-straight-weekly-decline-on-middle-east-export-flows-qp84b5zsu0mheqd.html"
+     "label": "FinanceFeeds (Nov 23): Brent $92.32 on Houthi refinery claim before OPEC+",
+     "url": "https://financefeeds.com/brent-crude-oil-price-92-32-monday-houthi-refinery-claim-opec-plus-29-november-bull-96-bear-89/"
     },
     {
-     "label": "Blue Street market levels (Hercules, Friday New York close run ~3:01 PM CT Nov 20; weekly change against the Nov 13 close run; indicative)",
+     "label": "Blue Street breaking watch (Hercules, 1:02 AM CT Nov 23): gold ~$3,627, GoldPrice.com spot",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
+    },
+    {
+     "label": "Blue Street market levels (Hercules, London open run ~12:47 AM CT Nov 23; FX quotes from ~9:32 PM CT Sunday; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-    },
-    {
-     "label": "Al Jazeera (Nov 21): Tankers hit in Strait of Hormuz as Iran tightens grip on shipping",
-     "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping"
     }
    ]
   },
@@ -137,7 +141,7 @@
    "id": "fiscal",
    "title": "Fiscal",
    "figure": "US 10-year ~4.92% (−21bp on the week); ECB Financial Stability Review: France debt 119% of GDP, deficit 5.5%",
-   "read": "France's debts, flagged by the European Central Bank as a risk, keep weighing on the euro. Record US government borrowing still keeps long-term US borrowing costs high, though they slipped below 5% as money rushed into bonds during the stock slide.",
+   "read": "France's debts, flagged by the European Central Bank as a risk, keep weighing on the euro. Record US government borrowing still keeps long-term US borrowing costs high, though they slipped below 5% as money rushed into bonds during last week's stock slide.",
    "sources": [
     {
      "label": "ECB (Nov 18): Financial Stability Review press release",
