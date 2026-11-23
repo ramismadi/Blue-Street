@@ -1,19 +1,19 @@
 {
- "updated": "2026-11-23T07:58:00-06:00",
+ "updated": "2026-11-23T15:30:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "figure": "Fed Dec quarter-point hike ~96%, half point priced out (CME FedWatch via Reuters, Hercules, Nov 23); ECB Dec ~90%; BoE Dec ~80%; BoJ Dec ~84%; BoC Dec ~44%; RBA 4.85%",
-   "read": "A quarter-point December Fed hike is still treated as all but certain, even after Treasury Secretary Scott Bessent warned against hiking too far. The European Central Bank, Bank of England and Bank of Japan are all expected to hike in December as well.",
+   "figure": "Fed Dec quarter-point hike fully priced, from ~89% Friday; Jan ~67% (Reuters); CME FedWatch ~96% (Hercules); ECB Dec ~90%; BoE Dec ~84% (from ~80%); BoJ Dec ~84%; BoC Dec ~44%",
+   "read": "Traders now fully expect a quarter-point Fed hike in December and see a good chance of another in January. The Bank of England sounds firmer too, and the European Central Bank and Bank of Japan are expected to hike in December. The Fed still looks set to go furthest, which keeps the dollar on top.",
    "sources": [
     {
-     "label": "Business Recorder, citing Reuters (Nov 23): Dollar edges off 19-month high after market rout, yen softens",
-     "url": "https://www.brecorder.com/news/40450308/dollar-edges-off-19-month-high-after-market-rout-yen-softens"
+     "label": "Reuters via Devdiscourse (Nov 23): Dollar jumps on hawkish Fed bets, AI rally",
+     "url": "https://www.devdiscourse.com/article/international/4010912-forex-dollar-jumps-on-hawkish-fed-bets-ai-rally"
     },
     {
-     "label": "investingLive (Nov 22): Bessent cautions the Fed against overtightening",
-     "url": "https://investinglive.com/central-banks/us-equity-rout-bessent-cautions-fed-against-overtightening-before-its-december-decision/"
+     "label": "New York Fed (Nov 23): John Williams, \"The Economic Mixdown\"",
+     "url": "https://www.newyorkfed.org/newsevents/speeches/2026/wil261123"
     },
     {
      "label": "Blue Street central banks and pricing (Hercules, Nov 23)",
@@ -24,16 +24,12 @@
   {
    "id": "growth",
    "title": "Growth",
-   "figure": "Germany composite PMI Nov 55.0; France 46.2; euro area 51.7; UK 52.3, services 52.0; Australia composite 46.1; Chicago Fed activity index Oct −0.06",
-   "read": "Germany's economy sped up in November while France's shrank faster, early surveys showed, and UK services growth slowed. Australian firms are cutting output and jobs. A Chicago Fed gauge put US activity slightly below trend in October.",
+   "figure": "US composite PMI Nov 54.6 (Oct 55.9), services 54.7 vs 55.6 fcst, mfg 54.5 in line; Germany composite 55.0; France 46.2; euro area 51.7; UK 52.3, services 52.0; Chicago Fed activity index Oct −0.06",
+   "read": "Business surveys showed the US economy and UK services slowing in November, while Germany sped up and France shrank. None of it changed what central banks are expected to do, so growth news is taking a back seat to interest rates for now.",
    "sources": [
     {
-     "label": "Reuters (Nov 23): German business activity growth accelerates in November, PMI shows",
-     "url": "https://www.reuters.com/world/europe/german-business-activity-growth-accelerates-november-pmi-shows-2026-11-23/"
-    },
-    {
-     "label": "Reuters (Nov 23): French private-sector downturn deepens to six-month low, PMI shows",
-     "url": "https://www.reuters.com/world/europe/french-private-sector-downturn-deepens-six-month-low-pmi-shows-2026-11-23/"
+     "label": "Reuters (Nov 23): US business activity growth eases further in November",
+     "url": "https://www.reuters.com/world/us/us-business-activity-growth-eases-further-november-survey-shows-2026-11-23/"
     },
     {
      "label": "Reuters (Nov 23): Euro zone growth holds steady, France's deepening downturn clouds outlook",
@@ -44,55 +40,47 @@
      "url": "https://www.reuters.com/world/uk/uk-pmi-shows-slight-november-slowdown-q4-looks-robust-2026-11-23/"
     },
     {
-     "label": "Chicago Fed: National Activity Index, current data (October, released Nov 23)",
-     "url": "https://www.chicagofed.org/research/data/cfnai/current-data"
-    },
-    {
-     "label": "Finimize (Nov 22): Australia's private sector slipped deeper into contraction",
-     "url": "https://finimize.com/content/australias-private-sector-slipped-deeper-into-contraction"
+     "label": "Blue Street calendar (Hercules, Nov 23): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     }
    ]
   },
   {
    "id": "inflation",
    "title": "Inflation",
-   "figure": "US core PCE Oct due Wed (fcst +0.3% m/m, 3.2% y/y); UK CPI Oct 3.6%, core 2.8%; euro-area CPI Oct 4.0%; Australia CPI Oct due Tue (fcst 4.8% y/y)",
-   "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. Australian firms say price rises are slowing, which eases pressure on their central bank. Wednesday's US core inflation figures are the big test for the Fed this week.",
+   "figure": "US core PCE Oct due Wed (fcst +0.3% m/m, 3.2% y/y); Williams: inflation about 3.5%; UK CPI Oct 3.6%; euro-area CPI Oct 4.0%; Australia CPI Oct due Tue 6:30 PM CT (fcst 4.8% y/y)",
+   "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. New York Fed President John Williams called US inflation simply too high. US core inflation on Wednesday and Australian inflation on Tuesday evening are the week's big tests.",
    "sources": [
     {
-     "label": "Finimize (Nov 22): Australia's private sector slipped deeper into contraction",
-     "url": "https://finimize.com/content/australias-private-sector-slipped-deeper-into-contraction"
+     "label": "New York Fed (Nov 23): John Williams, \"The Economic Mixdown\"",
+     "url": "https://www.newyorkfed.org/newsevents/speeches/2026/wil261123"
     },
     {
-     "label": "Blue Street calendar (Hercules, Nov 23): times and forecasts",
+     "label": "Blue Street calendar (Hercules, Nov 23): times, forecasts and actuals",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     },
     {
      "label": "ONS (Nov 18): Consumer price inflation, UK: October 2026",
      "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/october2026"
-    },
-    {
-     "label": "Irish Times (Nov 18): Euro-area inflation hits 4%, paving way for more ECB rate hikes",
-     "url": "https://www.irishtimes.com/business/2026/11/18/euro-area-inflation-hits-4-paving-way-for-more-ecb-rate-hikes/"
     }
    ]
   },
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "figure": "US 2-year ~4.76% (Friday 4.63%); USD/JPY ~159.08 (+0.36%); USD/CHF ~0.8387; STOXX 600 recovering after a nearly 6% weekly fall",
-   "read": "Stocks steadied after last week's slide in technology shares, and European shares won back some of their losses. That cooled demand for the yen and lifted US yields. Iran's promise to fight the US naval blockade keeps some caution alive.",
+   "figure": "S&P 500 ~+5%, Nasdaq ~+7%, Nvidia ~+32% (Reuters); USD/JPY ~159.15 (+0.41%); USD/CHF ~0.8430 (+0.38%); US 2-year ~4.70%",
+   "read": "US stocks jumped after Nvidia brought back Jensen Huang as chief executive, ending last week's selloff. Calmer markets drew money out of the yen and the franc. With fear gone, the dollar rose on interest rates instead.",
    "sources": [
     {
-     "label": "Reuters via WBOW (Nov 23): European stocks recover after steep technology-led selloff",
-     "url": "https://1027wbow.com/2026/11/23/european-stocks-recover-after-steep-technology-led-selloff/"
+     "label": "Reuters via Yahoo Finance (Nov 23): Wall Street soars as Nvidia reinstates Huang, dollar jumps",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/us-futures-bounce-while-asia-234419517.html"
     },
     {
-     "label": "Euronews (Nov 23): Iran vows every means to counter US blockade of Hormuz",
-     "url": "https://www.euronews.com/2026/11/23/iran-vows-every-means-to-counter-us-blockade-of-hormuz-after-trump-threat"
+     "label": "Reuters via Devdiscourse (Nov 23): Dollar jumps on hawkish Fed bets, AI rally",
+     "url": "https://www.devdiscourse.com/article/international/4010912-forex-dollar-jumps-on-hawkish-fed-bets-ai-rally"
     },
     {
-     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:33 AM CT Nov 23; indicative)",
+     "label": "Blue Street market levels (Hercules, New York close run ~3:02 PM CT Nov 23; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
@@ -100,20 +88,24 @@
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "figure": "Gold ~$3,623 (+2.8% from Friday); Brent ~$91.07 (−1.6%), WTI ~$82.22",
-   "read": "Gold jumped back above $3,600, which helps the Aussie. Oil slipped to about $91 as falling stocks dragged on commodities, which keeps the Canadian dollar without support.",
+   "figure": "Brent ~$89.25 (−3.6%), low ~$89.07, lowest since Sep 4; WTI ~$80.29 (−3.6%); gold ~$3,645 (+3.4% from Friday)",
+   "read": "Oil fell below $90 as more Middle East supply reached the market, which hurts the Canadian dollar and helps oil importers like the euro area and Japan. Gold won back much of last week's fall, which gives the Aussie some support.",
    "sources": [
     {
-     "label": "Goodreturns (Nov 23): gold and silver rates, live updates",
-     "url": "https://www.goodreturns.in/news/gold-rates-silver-rates-today-23-11-2026-live-updates-mcx-gold-silver-price-24k-22k-18k-gold-prices-1548905.html"
-    },
-    {
-     "label": "Reuters via Express Tribune (Nov 23): Oil holds in tight range as Gulf attacks sustain risk premium",
-     "url": "https://tribune.com.pk/story/2641824/oil-holds-in-tight-range-as-gulf-attacks-sustain-risk-premium"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:33 AM CT Nov 23; indicative)",
+     "label": "Blue Street market levels (Hercules, New York close run ~3:02 PM CT Nov 23; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+    },
+    {
+     "label": "PriceOfOil (Nov 23, 1:46 PM CT): Brent and WTI",
+     "url": "https://priceofoil.com/oil-prices-today"
+    },
+    {
+     "label": "Reuters (Nov 23): Oil prices fall amid equity selloff though Iran war attacks limit losses",
+     "url": "https://www.reuters.com/business/energy/oil-prices-fall-amid-equity-selloff-though-iran-war-attacks-limit-losses-2026-11-23/"
+    },
+    {
+     "label": "GoldPrice.com spot (3:02 PM ET Nov 23, via Hercules breaking watch)",
+     "url": "https://goldprice.com/"
     }
    ]
   },
@@ -121,7 +113,7 @@
    "id": "positioning",
    "title": "Positioning",
    "figure": "Hedge funds (CFTC, Nov 17): USD index −1.3K (flipped short), EUR −76.6K, GBP +28.8K, JPY −23.8K, CHF −19.8K, CAD −72.1K, AUD +38.0K, NZD −23.6K; asset managers GBP −104.6K, AUD −182.7K, EUR +147.2K",
-   "read": "The latest weekly figures show hedge funds have turned slightly against the dollar after betting on it, while still betting against the euro, the kiwi, the franc and, most strongly, the Canadian dollar. They still bet on the pound and the Aussie, where big long-term investors take the opposite side. Where the two groups disagree, a surprise could set off a fast unwind.",
+   "read": "The latest weekly figures show hedge funds have turned slightly against the dollar, while still betting against the euro, the kiwi, the franc and, most strongly, the Canadian dollar. They still bet on the pound and the Aussie, where big long-term investors take the opposite side. Where the two groups disagree, a surprise could set off a fast unwind.",
    "sources": [
     {
      "label": "Blue Street positioning (CFTC Commitments of Traders, report of Nov 17)",
@@ -140,8 +132,8 @@
   {
    "id": "fiscal",
    "title": "Fiscal",
-   "figure": "US 10-year ~5.04% (Friday 4.92%); France composite PMI 46.2, a six-month low; ECB Financial Stability Review: France debt 119% of GDP, deficit 5.5%",
-   "read": "France's debts, flagged by the European Central Bank as a risk, weigh more now that its economy looks close to recession. Record US government borrowing keeps long-term US borrowing costs high, with the 10-year yield back above 5%.",
+   "figure": "US 10-year near 5% (Hercules); France composite PMI 46.2, a six-month low; ECB Financial Stability Review: France debt 119% of GDP, deficit 5.5%",
+   "read": "France's debts weigh more now that its economy looks close to recession. Heavy US government borrowing keeps long-term US borrowing costs near 5%, which supports the dollar's yield but raises questions about debt over time.",
    "sources": [
     {
      "label": "ECB (Nov 18): Financial Stability Review press release",
@@ -152,7 +144,7 @@
      "url": "https://www.reuters.com/world/europe/french-private-sector-downturn-deepens-six-month-low-pmi-shows-2026-11-23/"
     },
     {
-     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:33 AM CT Nov 23; indicative)",
+     "label": "Blue Street market levels (Hercules, New York close run ~3:02 PM CT Nov 23; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
