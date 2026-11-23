@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T14:37:40-06:00",
+  "updated": "2026-11-23T00:47:10-06:00",
   "events": [
     {
       "id": "nzd-elections-20261106",
@@ -1628,6 +1628,114 @@
       "chapter": null,
       "bank": "fed",
       "sources": []
+    },
+    {
+      "id": "nzd-retail-sales-20261122",
+      "ts": "2026-11-22T21:45:00Z",
+      "ccy": "NZD",
+      "impact": "medium",
+      "category": "growth",
+      "title": "New Zealand retail sales (Q3) q/q",
+      "focus": false,
+      "actual": "+2.2% q/q (vs 0.5% fcst; Q2 -0.5%, revised -0.4%); values +2.4% q/q to NZ$33B",
+      "forecast": "0.5% (FF consensus; Econoday 1.4%)",
+      "previous": "-0.5% (Q2)",
+      "better": "higher",
+      "why": "NZ Q3 retail sales — the last spending read before the Dec 9 RBNZ decision; volumes rebounded after Q2’s fall, with all 16 regions higher.",
+      "if_beat": "Beat: household spending firmer than expected — Dec RBNZ hike case firms, NZD supported.",
+      "if_miss": "Miss: spending soft — Dec hold case grows, NZD offered.",
+      "outcome": "Beat — retail sales volumes +2.2% q/q vs 0.5% expected (Q2 -0.5%), the strongest quarterly rise since Q4 2021; values +2.4% q/q to NZ$33B, all 16 regions higher. NZD/USD ~0.5474 in Asia, little moved — the Dec 9 decision stays the test. (Stats NZ, Nov 22)",
+      "chapter": null,
+      "bank": "rbnz",
+      "sources": [
+        {
+          "label": "Inside Retail NZ: Retail sales record strongest quarterly increase in nearly five years (Stats NZ, Nov 23)",
+          "url": "https://insideretail.co.nz/2026/11/23/retail-sales-record-strongest-quarterly-increase-in-nearly-five-years/"
+        },
+        {
+          "label": "ActionForex: NZ Retail Sales Surge 2.2% in Q3, Strongest Growth Since 2021",
+          "url": "https://www.actionforex.com/live-comments/661739-nz-retail-sales-surge-2-2-in-q3-strongest-growth-since-2021/"
+        }
+      ]
+    },
+    {
+      "id": "nzd-core-retail-sales-20261122",
+      "ts": "2026-11-22T21:45:00Z",
+      "ccy": "NZD",
+      "impact": "medium",
+      "category": "growth",
+      "title": "New Zealand core retail sales (Q3) q/q",
+      "focus": false,
+      "actual": "+1.4% q/q (vs 0.8% fcst; Q2 +0.7%)",
+      "forecast": "0.8% (FF consensus)",
+      "previous": "+0.7% (Q2)",
+      "better": "higher",
+      "why": "Core (ex-autos) retail sales — the cleaner read on NZ household demand into the Dec 9 RBNZ decision.",
+      "if_beat": "Beat: core demand firmer — Dec RBNZ hike case firms, NZD supported.",
+      "if_miss": "Miss: core demand soft — Dec hold case grows, NZD offered.",
+      "outcome": "Beat — core retail sales +1.4% q/q vs 0.8% expected (Q2 +0.7%). (Stats NZ, Nov 22)",
+      "chapter": null,
+      "bank": "rbnz",
+      "sources": [
+        {
+          "label": "ActionForex: NZ Retail Sales Surge 2.2% in Q3, Strongest Growth Since 2021",
+          "url": "https://www.actionforex.com/live-comments/661739-nz-retail-sales-surge-2-2-in-q3-strongest-growth-since-2021/"
+        }
+      ]
+    },
+    {
+      "id": "aud-pmi-mfg-20261122",
+      "ts": "2026-11-22T22:00:00Z",
+      "ccy": "AUD",
+      "impact": "low",
+      "category": "growth",
+      "title": "Australia flash manufacturing PMI (Nov)",
+      "focus": false,
+      "actual": "48.7 (Oct 49.6)",
+      "forecast": null,
+      "previous": "49.6 (Oct)",
+      "better": "higher",
+      "why": "Australia flash PMIs — manufacturing and services both deepened in contraction; the composite hit a five-year low days before Wednesday’s CPI.",
+      "if_beat": "Beat: activity firmer — AUD mildly supported.",
+      "if_miss": "Miss: contraction deepens — AUD offered.",
+      "outcome": "Miss — 48.7, deeper in contraction (Oct 49.6); composite 46.1 (Oct 48.2), the lowest in five years. AUD/USD ~0.6640 in Asia, steadied by the equity relief bounce. (S&P Global, Nov 22)",
+      "chapter": null,
+      "bank": null,
+      "sources": [
+        {
+          "label": "Financial Oracle: Australian flash PMIs slump deeper into contraction, NZ retail sales beat",
+          "url": "https://research.financialoracle.com/live/australian-flash-pmis-slump-deeper-into-contraction-new-zealand-retail-sales-beat-2-2-vs-0-5/"
+        },
+        {
+          "label": "InvestingLive Asia-Pacific market news: US futures hold 2% bounce",
+          "url": "https://investinglive.com/news/investinglive-asia-pacific-market-news-us-futures-hold-2-bounce/"
+        }
+      ]
+    },
+    {
+      "id": "aud-pmi-services-20261122",
+      "ts": "2026-11-22T22:00:00Z",
+      "ccy": "AUD",
+      "impact": "low",
+      "category": "growth",
+      "title": "Australia flash services PMI (Nov)",
+      "focus": false,
+      "actual": "46.2 (Oct 48.5)",
+      "forecast": null,
+      "previous": "48.5 (Oct)",
+      "better": "higher",
+      "why": "Australia flash services PMI — 48.5 in October; services leads the composite into contraction ahead of Wednesday’s CPI.",
+      "if_beat": "Beat: services firmer — AUD mildly supported.",
+      "if_miss": "Miss: services contraction deepens — AUD offered.",
+      "outcome": "Miss — 46.2, deeper in contraction (Oct 48.5); composite 46.1 (Oct 48.2), a five-year low. (S&P Global, Nov 22)",
+      "chapter": null,
+      "bank": null,
+      "sources": [
+        {
+          "label": "Financial Oracle: Australian flash PMIs slump deeper into contraction, NZ retail sales beat",
+          "url": "https://research.financialoracle.com/live/australian-flash-pmis-slump-deeper-into-contraction-new-zealand-retail-sales-beat-2-2-vs-0-5/"
+        }
+      ]
     },
     {
       "id": "fr-pmi-mfg-20261123",
