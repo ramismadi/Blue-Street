@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T12:58:00Z",
+  "updated": "2026-11-23T14:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -38,9 +38,9 @@
       "text": "The Australian dollar sits near 66 US cents, close to its lowest since January, after Australia lost jobs for a second month and an early business survey on Monday, November 23 showed activity shrinking at its fastest pace in more than five years. Both make another Reserve Bank of Australia rate rise on December 8 less likely, and October inflation on Wednesday, November 25 is the last big test. Another slide in Asian shares on Monday, November 23, led by South Korea, adds to the pressure."
     },
     "NZD": {
-      "lean": "mixed",
-      "ts": "2026-11-22T23:55:00Z",
-      "text": "The New Zealand dollar sits near 55 US cents, close to its lowest since the pandemic, held down by a US dollar lifted by expected Federal Reserve rate rises. A strong jump in shop sales for July to September, reported on Monday, November 23, makes more Reserve Bank of New Zealand rate cuts less likely and gives the currency some support."
+      "lean": "bearish",
+      "ts": "2026-11-23T14:55:00Z",
+      "text": "The New Zealand dollar fell to about 54.6 US cents around the weekend of November 21-22, its lowest in 17 years, as a slide in US shares sent money out of risk-linked currencies. Low local rates against rising US rates add to the pull, and strong shop sales reported on Monday, November 23 only soften it a little."
     },
     "XAU": {
       "lean": "mixed",
@@ -48,12 +48,105 @@
       "text": "Gold bounced about 2% back above $3,600 an ounce on Monday, November 23, after its worst week since March took it to $3,503, its lowest since September 2025. A warning from Treasury Secretary Scott Bessent against raising US rates too far helped, but an expected Federal Reserve rate rise on December 9 still caps the recovery."
     },
     "OIL": {
-      "lean": "mixed",
-      "ts": "2026-11-23T11:55:00Z",
-      "text": "Brent crude holds near $92 a barrel after three weekly falls, because Gulf exports remain strong and a supply surplus is forecast. Weekend attacks on ships and Gulf sites, and Iran's vow on Monday, November 23 to fight the US naval blockade, keep the risk of lost supply in the price, with OPEC+ setting 2027 output on Sunday, November 29."
+      "lean": "bearish",
+      "ts": "2026-11-23T14:55:00Z",
+      "text": "Brent crude slipped toward $91 a barrel on Monday, November 23 despite weekend attacks on ships and Gulf sites, because shipping costs and the extra price paid for physical cargoes have mostly faded. Iran's vow to fight the US naval blockade keeps some risk in the price, and OPEC+ sets 2027 output on Sunday, November 29."
     }
   },
   "items": [
+    {
+      "id": "1news-kiwi-17-year-low-20261123",
+      "date": "2026-11-23",
+      "source": "1News",
+      "url": "https://www.1news.co.nz/2026/11/23/kiwi-dollar-hits-lowest-level-in-17-years-against-us-dollar/",
+      "image": "https://tvnz-1-news-prod.cdn.arcpublishing.com/resizer/v2/nz-money-generic-XV4ISBBNDRAEHKFVXPJDMRDUGE.jpg?auth=652185ffd2ede74c512199270bb6d120b2daae4d5141807547a98a5903b45f0c&quality=70&width=600&height=315&focal=638%2C446",
+      "headline": "New Zealand dollar falls to its lowest in 17 years against the US dollar",
+      "story": "nz-economy",
+      "story_title": "New Zealand's economy and the RBNZ",
+      "pillar": "risk",
+      "summary": "The New Zealand dollar dropped to about 54.6 US cents around the weekend of November 21-22, its weakest since the 2009 financial crisis, and was still near 54.7 cents on Monday, November 23.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand cut rates hard over the past two years, leaving New Zealand with low rates while the US Federal Reserve is raising its own.",
+        "happened": "After a heavy fall in US shares on Friday, November 20, the currency sank to its lowest level in 17 years, ten falls in a row against the US dollar. A strategist at the bank BNZ put the latest leg down mainly on nervous markets and worries about the AI share boom.",
+        "means": "The gap between New Zealand and US rates already pulls money away, and when investors get nervous they sell small, risk-linked currencies like this one first.",
+        "fx": "The New Zealand dollar stays under pressure for as long as share markets keep falling; the Australian dollar faces the same pull."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A 17-year low as nervous markets and low local rates push money out."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The same flight from risk-linked currencies weighs on its neighbour."
+        }
+      ],
+      "watch": "Whether the bounce in US shares on Monday, November 23 holds; a steady recovery would ease the selling."
+    },
+    {
+      "id": "fxco-chicago-fed-activity-negative-oct-20261123",
+      "date": "2026-11-23",
+      "source": "FX.co",
+      "url": "https://www.fx.co/en/forex-news/3302436",
+      "image": "https://cdn.fx.co/forex-news/3302436_en.png",
+      "headline": "Chicago Fed gauge of US activity slips just below trend in October",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "growth",
+      "summary": "The Chicago Fed National Activity Index, a broad monthly gauge of the US economy, fell to -0.06 for October, out on Monday, November 23, from +0.05 in September and well short of the +0.4 forecast.",
+      "beats": {
+        "was": "Markets expect the Federal Reserve to raise rates on December 9 because US growth and inflation have stayed strong, which has lifted the dollar near its highest since April 2025.",
+        "happened": "The index, built from 85 measures of output, jobs, spending and orders, moved from slightly above its long-run trend to slightly below it, missing forecasts.",
+        "means": "A reading near zero means the economy grew about at its normal pace in October, so it is a small sign of cooling rather than a slowdown. It does little to change the case for a December rate rise.",
+        "fx": "A mild weight on the dollar, easily outweighed by inflation figures due on Wednesday, November 25."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Growth gauge misses forecasts but only dips to about trend."
+        }
+      ],
+      "watch": "October PCE inflation, the Fed's preferred price measure, on Wednesday, November 25."
+    },
+    {
+      "id": "cornerstone-oil-falls-despite-attacks-20261123",
+      "ts": "2026-11-23T11:52:15Z",
+      "source": "Cornerstone Futures",
+      "url": "https://www.cornerstonefuturesllc.com/post/morning-highlights-oil-falls-despite-weekend-attacks-on-shipping-a-saudi-refinery-and-bahrain-as-f",
+      "image": null,
+      "headline": "Oil slides despite weekend attacks as shipping costs and cargo premiums cool",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Brent crude fell about 1.8% to near $90.90 a barrel on Monday, November 23, even after weekend attacks on ships and Gulf sites, as the extra cost of shipping and buying physical oil keeps fading.",
+      "beats": {
+        "was": "The war with Iran and attacks near the Strait of Hormuz pushed oil sharply higher in October, but prices have fallen for three weeks as Gulf exports held up.",
+        "happened": "Over the weekend of November 21-22, ships near Hormuz were hit, Bahrain said an Iranian attack struck an industrial site, and Yemen's Houthis claimed an unconfirmed strike on a Saudi refinery. Prices fell anyway. Goldman Sachs said Atlantic crude shipping costs are 60-70% below their October peak, and cargoes now sell about $1 above futures prices, against about $31 in early October.",
+        "means": "Buyers are getting the oil they need, so the market no longer pays much extra for fear of lost supply. Attacks now need to actually cut flows to lift prices.",
+        "fx": "Cheaper oil trims export income for Canada and eases price pressure for big importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Fading supply premium outweighs weekend attacks."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower crude trims Canada's export income."
+        }
+      ],
+      "watch": "OPEC+ setting 2027 output on Sunday, November 29, and any attack that actually halts Gulf exports."
+    },
     {
       "id": "euronews-iran-every-means-blockade-20261123",
       "ts": "2026-11-23T11:34:05Z",
@@ -1220,33 +1313,6 @@
         }
       ],
       "watch": "US October inflation figures for spending (the PCE price index) and the Fed's December 8-9 decision."
-    },
-    {
-      "id": "cp24-cp-canada-retail-september-08-20261120",
-      "ts": "2026-11-20T14:11:33Z",
-      "source": "CP24 (Canadian Press)",
-      "url": "https://www.cp24.com/news/money/2026/11/20/statistics-canada-reports-retail-sales-up-08-per-cent-in-september-at-753b/",
-      "image": "https://www.cp24.com/resizer/v2/R5DQI24URDILRWEYVNGYHBA3VM.jpg?smart=true&auth=4ff6c5949f38828fc453efeff17e530e0716ee0ce09b4c3ba85731ab0584cb3b&width=1200&height=630",
-      "headline": "Canada's September shop sales rise 0.8%, but an early October estimate shows a 1.5% drop",
-      "story": "boc-december",
-      "story_title": "Will the Bank of Canada raise rates in December?",
-      "pillar": "growth",
-      "summary": "Statistics Canada said on Friday, November 20 that retail sales rose 0.8% in September, a touch above forecasts, but mostly because petrol cost more. Its early estimate for October points to a 1.5% fall.",
-      "beats": {
-        "was": "The Canadian dollar sits near its weakest since April 2025 because markets expect the US Federal Reserve to raise rates faster than the Bank of Canada. Markets put about a two-in-three chance on a Bank of Canada rise in December, so signs of spending strength or weakness matter.",
-        "happened": "Sales reached C$75.3 billion in September, up 0.8% against forecasts near 0.7%, and August was revised up to 1.4%. Petrol station sales jumped 6.9% on higher prices. Without petrol and cars, sales rose only 0.1%, and the amount of goods bought also rose just 0.1%. The agency's first estimate for October is a 1.5% drop.",
-        "means": "The headline gain mostly reflects prices, not more shopping, and October looks weak. That gives the Bank of Canada a little less reason to raise rates in December.",
-        "fx": "No lift for the Canadian dollar, which keeps taking its lead from the wider gap with US rates."
-      },
-      "impact": [
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Spending growth is mostly higher prices and October looks weak, which softens the case for a December rise."
-        }
-      ],
-      "watch": "Canada's November jobs report and the Bank of Canada's December rate decision."
     }
   ]
 }
