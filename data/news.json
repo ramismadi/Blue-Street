@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-22T23:55:00Z",
+  "updated": "2026-11-23T01:48:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-22T23:55:00Z",
-      "text": "The dollar sits near its highest since April 2025 because markets fully expect a Federal Reserve rate rise on December 9, and Fed officials keep saying rates must go higher. Treasury Secretary Scott Bessent warned on Sunday, November 22 against raising rates too far, and October PCE inflation on Wednesday, November 25 is the week's test."
+      "ts": "2026-11-23T01:48:00Z",
+      "text": "The dollar sits near its highest since April 2025 because markets expect a Federal Reserve rate rise on December 9, though bets on a larger half-point rise faded after Treasury Secretary Scott Bessent warned on Sunday, November 22 against raising rates too far. October PCE inflation on Wednesday, November 25 is the week's test."
     },
     "EUR": {
       "lean": "bearish",
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "bearish",
-      "ts": "2026-11-22T15:00:00Z",
-      "text": "The Australian dollar sits near its lowest since January after Australia lost jobs for a second month, which makes another Reserve Bank of Australia rate rise less likely while the Federal Reserve keeps signalling more. October inflation on Wednesday, November 25 is the last big test before the bank meets on December 8."
+      "ts": "2026-11-23T01:48:00Z",
+      "text": "The Australian dollar sits near 66 US cents, close to its lowest since January, after Australia lost jobs for a second month and an early business survey on Monday, November 23 showed activity shrinking at its fastest pace in more than five years. Both make another Reserve Bank of Australia rate rise on December 8 less likely, and October inflation on Wednesday, November 25 is the last big test."
     },
     "NZD": {
       "lean": "mixed",
@@ -48,12 +48,72 @@
       "text": "Gold ended Friday, November 20 near $3,538 an ounce after briefly touching $3,503, its lowest since September 2025, closing its worst week since March. Expected Federal Reserve rate rises and a strong dollar outweigh the Iran war, and gold was sold alongside shares in the US stock slide rather than bought as a safe place."
     },
     "OIL": {
-      "lean": "bullish",
-      "ts": "2026-11-22T19:55:00Z",
-      "text": "Oil fell for a third week to Friday, November 20, ending near $92.60 a barrel for Brent, because Gulf exports had been close to pre-war levels. Since then attacks on tankers have run at the war's fastest pace, Iran said on Sunday, November 22 that two supertankers hit sea mines near Hormuz, and ship crossings have dropped, which puts the risk of lost supply back in the price."
+      "lean": "mixed",
+      "ts": "2026-11-23T01:48:00Z",
+      "text": "Brent crude slipped to about $92 a barrel as trading reopened on Sunday, November 22, after three weekly falls, because Gulf exports remain strong and a supply surplus is forecast. Attacks on tankers near Hormuz at the war's fastest pace, Iran's claim of two supertankers hitting sea mines and President Trump's threat to strike Iran again after the New Year keep the risk of lost supply in the price."
     }
   },
   "items": [
+    {
+      "id": "finimize-australia-flash-pmi-461-20261122",
+      "ts": "2026-11-22T23:49:18Z",
+      "source": "Finimize",
+      "url": "https://finimize.com/content/australias-private-sector-slipped-deeper-into-contraction",
+      "image": "https://finimize-img.imgix.net/https%3A%2F%2Fchivas-assets.s3-eu-west-1.amazonaws.com%2Fstatic%2Fimages%2FG2720722_xml.jpeg?ixlib=python-3.1.2&s=536158234b474ba45b3e93b490793148",
+      "headline": "Australian business activity shrinks at its fastest pace in more than five years",
+      "story": "rba-december",
+      "story_title": "Will the RBA raise rates again in December?",
+      "pillar": "growth",
+      "summary": "S&P Global's early survey of Australian purchasing managers for November, out on Monday, November 23 (local time), fell to 46.1 from 48.2, with services at 46.2 and factories at 48.7. Any reading under 50 means activity is shrinking.",
+      "beats": {
+        "was": "Australia had already lost jobs for two months in a row, and the Reserve Bank of Australia was split at its November meeting on whether to keep raising rates.",
+        "happened": "Firms reported falling output, the first drop in new orders in five months, more job cuts and their weakest outlook in three years, while their costs and selling prices rose more slowly.",
+        "means": "A shrinking economy with cooling price pressure gives the Reserve Bank of Australia more reason to stop raising rates at its December 8 meeting.",
+        "fx": "Fewer expected rate rises in Australia, while the Federal Reserve keeps signalling more, weigh on the Australian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A deeper slump in business activity lowers the odds of another Australian rate rise."
+        }
+      ],
+      "watch": "Australia's October inflation figure on Wednesday, November 25, the last big reading before the Reserve Bank of Australia meets on December 8."
+    },
+    {
+      "id": "aol-reuters-dollar-off-19-month-high-yen-softens-20261122",
+      "ts": "2026-11-22T23:43:00Z",
+      "source": "Reuters via AOL",
+      "url": "https://www.aol.com/articles/dollar-edges-off-19-month-234343000.html",
+      "image": "https://hermes.media.transform.aol.com/0aa1f72b6a05e121ef88d29cc7c2dd54fb9b22b7/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/22/6f4e4ede-b799-3e51-9426-5345b8d8cb32/7c3dee29-b8bc-4f61-b91f-5ce0fecb764b.jpg",
+      "headline": "The dollar eases slightly from its highest in 19 months as Asian trading starts",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "policy",
+      "summary": "The dollar slipped a touch from its highest since April 2025 as trading began in Asia on Monday, November 23. Futures still put about an 89% chance on a quarter-point Federal Reserve rate rise on December 9, but bets on a larger half-point rise have gone.",
+      "beats": {
+        "was": "The dollar climbed to its highest in about a year and a half last week as markets came to expect another Federal Reserve rate rise in December and US stocks fell sharply.",
+        "happened": "The euro edged up to about $1.097, the Australian dollar to about 66.3 US cents, and the dollar rose slightly to about 158.6 yen, with Japan's markets shut for a holiday.",
+        "means": "Markets still expect one more Fed rise in December, but no longer a bigger one, after Treasury Secretary Scott Bessent warned against raising rates too far.",
+        "fx": "Smaller rate-rise bets take a little steam out of the dollar, though it stays near its highs."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Bets on a larger Fed rate rise in December have faded, a small loss of support for the dollar."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The euro edges up as the dollar eases slightly."
+        }
+      ],
+      "watch": "US October PCE inflation, the Fed's preferred price gauge, on Wednesday, November 25, ahead of the Fed meeting of December 8 to 9."
+    },
     {
       "id": "rttnews-nz-retail-sales-q3-22-20261122",
       "ts": "2026-11-22T22:45:00Z",
@@ -80,6 +140,39 @@
         }
       ],
       "watch": "Whether the New Zealand dollar holds its gain as Asian markets open, with Japan closed for a holiday on Monday, November 23."
+    },
+    {
+      "id": "swissinfo-bloomberg-asia-braces-volatility-20261122",
+      "ts": "2026-11-22T22:02:00Z",
+      "source": "Bloomberg via Swissinfo",
+      "url": "https://www.swissinfo.ch/eng/asia-braces-for-more-volatility-after-us-selloff:-markets-wrap/92421262",
+      "image": null,
+      "headline": "China, South Korea and Taiwan move to calm stock markets after the US slide",
+      "story": "ai-stocks",
+      "story_title": "AI stocks and the mood in markets",
+      "pillar": "risk",
+      "summary": "Ahead of Monday, November 23, China eased margin rules for stock buyers, South Korea readied its market stabilisation fund for the first time since 2008, and Taiwan widened limits on short selling after its worst week in 35 years.",
+      "beats": {
+        "was": "The S&P 500 fell into a correction last week and the Nasdaq 100 had its worst week since March 2020, as worries about artificial-intelligence spending spread to Asian chip stocks.",
+        "happened": "Asian governments stepped in with measures to support their stock markets, while Asian shares stood about 18% below their June peak, near a bear market. Japan's markets are closed on Monday, November 23 for a holiday.",
+        "means": "Officials are worried enough to act, but the fear in markets has not yet eased, and Asian trading may stay rough.",
+        "fx": "Continued stock market fear tends to help the yen and Swiss franc and hurt currencies tied to global growth, such as the Australian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Weak Asian stock markets weigh on a currency tied to regional growth."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stock market fear adds some demand for the yen as a safe place."
+        }
+      ],
+      "watch": "Whether the support steps steady Asian shares through Monday, November 23, and how US stocks open after last week's slide."
     },
     {
       "id": "investinglive-bessent-fed-overtightening-20261122",
@@ -245,6 +338,39 @@
         }
       ],
       "watch": "Whether the US confirms damage in Bahrain or answers with new strikes on Iran."
+    },
+    {
+      "id": "investing-oil-falls-gulf-exports-glut-20261122",
+      "date": "2026-11-22",
+      "source": "Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/oil-falls-as-robust-gulf-exports-offset-iran-escalation-supply-glut-risks-5044220",
+      "image": "https://content-media.investing.com/news/OilTanker_800x533_L_1778185672.jpg",
+      "headline": "Oil slips at the start of the week as strong Gulf exports and a supply surplus outweigh Iran's attacks",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Brent crude fell 0.8% to about $91.85 a barrel as trading reopened late on Sunday, November 22, even after a weekend of Iranian and Houthi attacks around the Gulf, including a Houthi claim of a strike on Saudi Arabia's Rabigh refinery.",
+      "beats": {
+        "was": "Brent is down about 20% in November after President Trump held off new strikes on Iran following the US midterm elections, and Gulf exports have stayed close to pre-war levels.",
+        "happened": "Oil fell despite Trump saying he leans toward new strikes on Iran after the New Year if talks fail, fresh Iranian attacks on Bahrain, and Houthi attacks on Saudi Arabia.",
+        "means": "Traders are giving more weight to a coming supply surplus, about 2 million barrels a day in the last quarter according to the International Energy Agency, than to the war's threats so far.",
+        "fx": "Softer oil trims export income for Canada and Norway and eases fuel costs for importers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Strong Gulf exports and a forecast surplus outweigh the weekend's attacks."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil prices cut Canada's export income."
+        }
+      ],
+      "watch": "The OPEC+ meeting on Sunday, November 29 on output, and whether ship crossings through Hormuz keep falling."
     },
     {
       "id": "aljazeera-iran-escalation-tankers-transits-drop-20261122",
@@ -1271,111 +1397,6 @@
         }
       ],
       "watch": "Whether European and US stocks stabilise on Friday, November 20 or extend the slide into next week."
-    },
-    {
-      "id": "yahoo-reuters-dollar-19-month-peak-goolsbee-20261120",
-      "ts": "2026-11-20T01:50:00Z",
-      "source": "Reuters via Yahoo Finance",
-      "url": "https://finance.yahoo.com/markets/currencies/articles/dollar-near-19-month-peak-015038270.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/bd1b52f63480576f9643c7b1f8f425f1a98e917b4a1a193db8ff2b5c548f26a9/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2Feca1eeec3b6e3d78b22718ae99a16183.jpg_up.jpg",
-      "headline": "Dollar holds near its highest in 19 months as AI worries hurt stocks",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "The dollar stayed near its strongest since early April 2025 in Asian trading on Friday, November 20, headed for a fourth weekly gain, as a slide in AI shares and expected Federal Reserve rate rises kept buyers on its side.",
-      "beats": {
-        "was": "The Federal Reserve raised rates in September as tariffs and the Iran war's energy shock lifted inflation, and markets fully expect another quarter-point rise at its December 8-9 meeting.",
-        "happened": "The dollar index, which tracks the dollar against six major currencies, sat near 103.9. Chicago Fed President Austan Goolsbee said inflation will not fall back to the 2% goal on its own. The euro traded near $1.097, the pound near $1.309 and the dollar near 159.5 yen, while the 10-year US Treasury yield eased to about 5.02%, a one-week low.",
-        "means": "Two forces now push the same way for the dollar: Fed officials keep signalling more rate rises, and falling stocks send investors toward safety.",
-        "fx": "Keeps the dollar firm against most currencies and keeps the euro under $1.10. A small dip in US bond yields limits the push a little."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Expected Fed rises and a pullback from risk both support the dollar, much of it already priced."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro stays near its lowest since April 2025 against a firm dollar."
-        },
-        {
-          "ccy": "GBP",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The pound stays weak against a strong dollar."
-        }
-      ],
-      "watch": "Whether the dollar closes a fourth straight week higher on Friday, November 20, and US inflation figures before the Fed's December 8-9 meeting."
-    },
-    {
-      "id": "freedom969-reuters-paulson-more-tightening-20261119",
-      "ts": "2026-11-20T01:38:21Z",
-      "source": "Reuters via Freedom 96.9",
-      "url": "https://www.freedom969.com/business/feds-paulson-backs-further-rate-hikes-says-shared-understanding-beats-guidance",
-      "image": "https://www.freedom969.com/wp-content/uploads/2026/11/179513311024919rJSoIxemZ8.jpg",
-      "headline": "Fed's Paulson says more rate rises are needed, at a steady pace",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "Philadelphia Fed President Anna Paulson said on the evening of Thursday, November 19 that the Federal Reserve still has more rate rises to do because inflation is too high, but that slow, steady steps beat sudden big moves.",
-      "beats": {
-        "was": "The Federal Reserve raised rates in September for the first time in three years as tariffs and the Iran war's energy shock lifted inflation, then held its main rate at 3.75% to 4% in late October. Markets fully expect a quarter-point rise at the December 8-9 meeting, and several officials leaned toward more on Wednesday, November 18.",
-        "happened": "Paulson, who votes on rates in 2026, said inflation is too high in an economy that is otherwise sturdy, so rates must rise further. She said the October hold did not leave the Fed behind, since markets already expected more rises, and that a clear shared sense of how the Fed reacts to data matters more than promises about future moves.",
-        "means": "Another voting official backs more rises but argues for a gradual pace, which supports a quarter-point step in December rather than a half point. It fits a Fed under Chair Kevin Warsh that gives little advance guidance and lets the data speak.",
-        "fx": "Keeps the dollar supported by expected Fed rate rises, though the call for a gradual pace adds little new, and keeps mild pressure on gold."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A voting official backs more rate rises, which markets already expect."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher expected US rates make gold, which pays no interest, less attractive."
-        }
-      ],
-      "watch": "US inflation figures before the Fed's December 8-9 meeting, which decide whether the rise is a quarter point or half a point."
-    },
-    {
-      "id": "dimsumdaily-china-lpr-hold-november-20261120",
-      "ts": "2026-11-20T01:34:45Z",
-      "source": "Dimsum Daily",
-      "url": "https://www.dimsumdaily.hk/china-keeps-benchmark-loan-prime-rates-unchanged-for-november/",
-      "image": "https://cdn.dimsumdaily.hk/wp-content/uploads/2026/11/20093324/RMB-232.webp",
-      "headline": "China keeps its main lending rates unchanged for November",
-      "story": "china-economy",
-      "story_title": "China's economy and its pull on commodity currencies",
-      "pillar": "growth",
-      "summary": "China left its benchmark lending rates unchanged on Friday, November 20: the one-year loan prime rate stays at 3% and the five-year rate, which prices mortgages, at 3.5%.",
-      "beats": {
-        "was": "China's loan prime rates are set monthly by its biggest banks under the People's Bank of China's guidance, and they have not moved for well over a year. Markets expected another hold this month.",
-        "happened": "The monthly fixing on the morning of Friday, November 20 in Beijing left the one-year rate, the reference for most business and household loans, at 3%, and the five-year rate at 3.5%.",
-        "means": "China is not adding new support to borrowing for now, so there is no fresh lift to its demand for commodities and imports. The hold was fully expected, so it changes little.",
-        "fx": "Little effect on the Australian and New Zealand dollars, which tend to move with China's economy, since nothing changed."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "An expected hold brings no new support from China's economy, Australia's biggest buyer."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "No new help for China's demand, a major market for New Zealand's exports."
-        }
-      ],
-      "watch": "Any sign that China's central bank steps up support for growth, which would help the Australian and New Zealand dollars."
     }
   ]
 }
