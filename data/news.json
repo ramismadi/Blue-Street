@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T14:55:00Z",
+  "updated": "2026-11-23T16:05:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,13 +19,13 @@
     },
     "JPY": {
       "lean": "mixed",
-      "ts": "2026-11-23T11:55:00Z",
-      "text": "The yen gained on Friday, November 20 as US shares fell hard, and most economists expect a Bank of Japan rate rise to 1.50% on December 18. A bounce in shares on Monday, November 23 took some of that safe-place demand back, and the wide gap between US and Japanese rates keeps the dollar near 159 yen ahead of Tokyo prices on Thursday, November 26."
+      "ts": "2026-11-23T16:05:00Z",
+      "text": "The yen gained on Friday, November 20 as US shares fell hard, and most economists expect a Bank of Japan rate rise to 1.50% on December 18. A big share rebound on Monday, November 23, after Nvidia brought back Jensen Huang as its boss, takes much of that safe-place demand back and keeps the dollar near 159 yen ahead of Tokyo prices on Thursday, November 26."
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-23T11:55:00Z",
-      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Iran's vow on Monday, November 23 to fight the US naval blockade by every means keeps some safe-place demand for the franc, while a bounce in shares the same day takes a little away."
+      "ts": "2026-11-23T16:05:00Z",
+      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Iran's vow on Monday, November 23 to fight the US naval blockade by every means keeps some safe-place demand for the franc, while a strong rebound in US shares the same day takes some away."
     },
     "CAD": {
       "lean": "bearish",
@@ -34,13 +34,13 @@
     },
     "AUD": {
       "lean": "bearish",
-      "ts": "2026-11-23T03:55:00Z",
-      "text": "The Australian dollar sits near 66 US cents, close to its lowest since January, after Australia lost jobs for a second month and an early business survey on Monday, November 23 showed activity shrinking at its fastest pace in more than five years. Both make another Reserve Bank of Australia rate rise on December 8 less likely, and October inflation on Wednesday, November 25 is the last big test. Another slide in Asian shares on Monday, November 23, led by South Korea, adds to the pressure."
+      "ts": "2026-11-23T16:05:00Z",
+      "text": "The Australian dollar sits near 66 US cents, close to its lowest since January, after Australia lost jobs for a second month and an early business survey on Monday, November 23 showed activity shrinking at its fastest pace in more than five years. A sharp rebound in US shares the same day, led by Nvidia bringing back Jensen Huang, gives some relief, but October inflation on Wednesday, November 25 decides how likely a Reserve Bank of Australia rise on December 8 is."
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-23T14:55:00Z",
-      "text": "The New Zealand dollar fell to about 54.6 US cents around the weekend of November 21-22, its lowest in 17 years, as a slide in US shares sent money out of risk-linked currencies. Low local rates against rising US rates add to the pull, and strong shop sales reported on Monday, November 23 only soften it a little."
+      "ts": "2026-11-23T16:05:00Z",
+      "text": "The New Zealand dollar fell to about 54.6 US cents around the weekend of November 21-22, its lowest in 17 years, as a slide in US shares sent money out of risk-linked currencies. A strong share rebound on Monday, November 23 eases that pull, but low local rates against rising US rates keep it under pressure."
     },
     "XAU": {
       "lean": "mixed",
@@ -54,6 +54,51 @@
     }
   },
   "items": [
+    {
+      "id": "yahoo-nvidia-huang-back-stocks-surge-20261123",
+      "ts": "2026-11-23T14:20:00Z",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html",
+      "image": "https://s.yimg.com/lo/mysterio/api/0e526a68da29ec5f8ecb6f5033889016c943db95de75baa345d75ca7e6f1296c/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-11%2Ff5008169-0f03-4389-8541-648e58a7fb47",
+      "headline": "US shares leap as Nvidia brings back Jensen Huang as its boss",
+      "story": "ai-stocks",
+      "story_title": "AI stocks and the mood in markets",
+      "pillar": "risk",
+      "summary": "Nvidia's board put co-founder Jensen Huang back in charge on Monday, November 23, and US share prices jumped about 4% for the S&P 500 and about 6% for the tech-heavy Nasdaq-100 before the open, after their worst week since 2020.",
+      "beats": {
+        "was": "Jensen Huang quit as Nvidia's chief executive on November 12 amid a board review of his business ties, and the chipmaker's fall helped drag the S&P 500 down more than 10% from its October record by Friday, November 20.",
+        "happened": "The board named Huang president, chief executive and board chair again, effective at once, though its review goes on. Nvidia rose about 27% before the open, and other chip makers such as AMD, Broadcom and Micron rose 4-5%.",
+        "means": "The biggest single worry behind last week's share slide has eased, so investors are less eager to hide in safe places and more willing to own riskier assets again.",
+        "fx": "A calmer mood tends to lift risk-linked currencies like the Australian and New Zealand dollars and take some safe-place demand away from the yen and the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A sharp bounce in shares pulls money back into risk-linked currencies."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "Less need for a safe place to park money as shares recover."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Eases the risk selling that took it to a 17-year low."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Safe-place demand fades as markets calm."
+        }
+      ],
+      "watch": "Whether shares hold the gains into October PCE inflation on Wednesday, November 25; a quick fade would bring last week's nerves back."
+    },
     {
       "id": "1news-kiwi-17-year-low-20261123",
       "date": "2026-11-23",
@@ -1235,84 +1280,6 @@
         }
       ],
       "watch": "Whether anyone claims the Qeshm strike and whether Iran answers it, and any rise in tanker insurance costs through Hormuz."
-    },
-    {
-      "id": "stocktitan-chip-slide-vix-31-yields-below-5-20261120",
-      "ts": "2026-11-20T15:20:18Z",
-      "source": "StockTitan",
-      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026",
-      "image": "https://www.stocktitan.net/img/articles/stock-market-today-live-november-20-2026.webp",
-      "headline": "Chip shares keep falling, the fear gauge tops 30 and US 10-year yields slip under 5%",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "US chip shares fell again on Friday, November 20 after a 5% drop in Tokyo stocks, the VIX fear gauge reached its highest since March, and buyers of safe US government bonds pushed the 10-year yield below 5%.",
-      "beats": {
-        "was": "Worry that AI spending has run ahead of profits has hit technology shares around the world since Monday, November 16, and the Dow had lost about 6% by Thursday, November 19. Shaky stocks tend to send money toward safe places such as US government bonds, the yen and the Swiss franc.",
-        "happened": "Early in New York trading Nvidia fell about 3%, and Micron, Broadcom and AMD lost 4-5%. The Nasdaq 100 slipped while the Dow edged up. The Cboe VIX, which measures expected swings in US stocks, hit about 31 before the open. Tokyo's Nikkei fell about 5% and Taiwan and South Korea's main indexes over 5%. The 10-year US Treasury yield fell about 6 basis points to near 4.99%.",
-        "means": "Fear is spreading from AI shares into wider markets. Lower US bond yields slightly trim the dollar's rate edge, while safe-place demand helps the yen and franc.",
-        "fx": "Supports the yen and Swiss franc and weighs on growth-linked currencies such as the Australian and New Zealand dollars. For the dollar the pull is two-way: safe demand helps, lower yields hurt."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Falling stocks and lower US yields add safe-place demand for the yen."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A global stock slide hurts currencies tied to world growth."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Safe-place demand helps the franc as fear rises."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Safe demand helps, but US yields below 5% trim its rate edge."
-        }
-      ],
-      "watch": "Whether the stock slide steadies by the close on Friday, November 20, and Fed Governor Lisa Cook's speech in Chile that afternoon."
-    },
-    {
-      "id": "kitco-michigan-sentiment-final-515-20261120",
-      "ts": "2026-11-20T15:00:25Z",
-      "source": "Kitco News",
-      "url": "https://www.kitco.com/news/article/2026-11-20/gold-price-trades-near-3568oz-after-final-consumer-sentiment-rises-515",
-      "image": "https://images.kitco.com/img/extract_0_0_1672_941,width_1200,enlarge,format_jpeg/icms/98f021b8-bbee-427e-ab4d-3d3bc80af7fe.png",
-      "headline": "US shoppers' mood improves in November and their inflation fears ease a full point",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "inflation",
-      "summary": "The University of Michigan's final November survey, out on Friday, November 20, showed US consumer mood up to 51.5 from 48.0, and households now expect 3.7% inflation over the next year, down from 4.7%.",
-      "beats": {
-        "was": "The US Federal Reserve is expected to raise rates at its December 8-9 meeting because inflation has stayed well above its 2% goal. Fed officials watch what households expect prices to do, since those hopes and fears can feed into wages and prices.",
-        "happened": "The University of Michigan's consumer sentiment index rose to 51.5 in its final November reading, in line with forecasts and up from 48.0 in October, still a low level by history. Expected inflation for the next 12 months fell to 3.7% from 4.7%, and the 5-10 year view eased to 3.3% from 3.5%.",
-        "means": "Households worry a bit less about prices, which takes a little heat out of the Fed's inflation concern. It does not change the expected December rise, but it gives less support to talk of a bigger half-point move.",
-        "fx": "A mild drag on the case for the dollar, which still has the rate gap on its side. Gold kept falling after the release, near $3,570 an ounce."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Better mood but lower inflation expectations soften talk of a larger Fed rise without changing the December call."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Gold stayed down about 1.5% on the day after the release, still pressed by expected Fed rises."
-        }
-      ],
-      "watch": "US October inflation figures for spending (the PCE price index) and the Fed's December 8-9 decision."
     }
   ]
 }
