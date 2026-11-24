@@ -1,50 +1,50 @@
 {
- "updated": "2026-11-24T01:30:00-06:00",
+ "updated": "2026-11-24T07:58:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "figure": "Fed Dec hike ~96% (CME FedWatch); Mar hike ~35%, from >50%; ECB Dec ~90%; BoE Dec ~84%; BoJ Dec ~84% (JPMorgan ~50%); BoC Dec ~44%",
-   "read": "Traders still fully expect a quarter-point Fed hike in December, though bets on further hikes into the spring have cooled a little. The Bank of England, European Central Bank and Bank of Japan are also expected to hike in December. The Fed still looks set to go furthest, which keeps the dollar on top.",
+   "figure": "Fed Dec quarter-point hike ~97%, small half-point chance (Hercules); ECB Dec ~90%; BoE Dec ~84%; BoJ Dec ~84%; BoC Dec ~44%; RBA 4.85%",
+   "read": "A quarter-point December Fed hike is now all but fully priced, with a small chance of a half-point move back in the mix. The European Central Bank, Bank of England and Bank of Japan are all expected to hike in December as well. The Bank of Canada is the main doubt, and Governor Tiff Macklem speaks today.",
    "sources": [
+    {
+     "label": "Reuters via Euronext (Nov 24): Dollar gains as renewed AI euphoria fuels Fed hike bets",
+     "url": "https://live.euronext.com/en/financial-news/dollar-gains-renewed-ai-euphoria-fuels-fed-hike-bets"
+    },
+    {
+     "label": "Bank of Canada (Nov 24): Speech by Tiff Macklem, Governor",
+     "url": "https://www.bankofcanada.ca/2026/11/speech-tiff-macklem-governor-bank-canada-2026-11-24/"
+    },
     {
      "label": "Blue Street central banks and pricing (Hercules, Nov 24)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, London open run 12:40 AM CT Nov 24; indicative)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-    },
-    {
-     "label": "New York Fed (Nov 23): John Williams, \"The Economic Mixdown\"",
-     "url": "https://www.newyorkfed.org/newsevents/speeches/2026/wil261123"
     }
    ]
   },
   {
    "id": "growth",
    "title": "Growth",
-   "figure": "Japan Nov PMI mfg 53.7 (fcst 53.5), services 50.5 (Oct 51.7); US composite 54.6; Germany composite 55.0; France 46.2; UK 52.3; Ifo due 3:00 AM CT (fcst 90.6); US Q3 GDP 2nd est Wed (fcst 3.5%)",
-   "read": "Japan's factories picked up in November while its services slowed, echoing mixed surveys in the US and Europe on Monday. None of it has changed what central banks are expected to do. Coming up, Germany's Ifo survey and the second estimate of US growth.",
+   "figure": "Germany Ifo Nov 90.6 (fcst 90.6, Oct 90.2); ADP weekly 21.0K (prior 23.8K); Japan Nov PMI mfg 53.7, services 50.5; Australia composite 46.1",
+   "read": "Germany's Ifo business mood rose for a seventh month to its highest in more than three years, though factories turned more cautious. A weekly US private hiring estimate cooled slightly. Australian firms are cutting output and jobs.",
    "sources": [
+    {
+     "label": "RTÉ, citing Reuters (Nov 24): German Ifo business sentiment rises in November",
+     "url": "https://www.rte.ie/news/business/2026/1124/1600420-german-ifo-index/"
+    },
     {
      "label": "Blue Street calendar (Hercules, Nov 24): times, forecasts and actuals",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     },
     {
-     "label": "Reuters (Nov 23): US business activity growth eases further in November",
-     "url": "https://www.reuters.com/world/us/us-business-activity-growth-eases-further-november-survey-shows-2026-11-23/"
-    },
-    {
-     "label": "Reuters (Nov 23): Euro zone growth holds steady, France's deepening downturn clouds outlook",
-     "url": "https://www.reuters.com/world/europe/euro-zone-growth-holds-steady-frances-deepening-downturn-clouds-outlook-pmi-2026-11-23/"
+     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:24 AM CT Nov 24; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
   },
   {
    "id": "inflation",
    "title": "Inflation",
-   "figure": "Australia CPI Oct due Tue 6:30 PM CT (fcst 4.8% y/y, Sep 4.3%); US core PCE Oct due Wed 7:30 AM CT (fcst +0.3% m/m, 3.2% y/y); Tokyo core CPI Nov due Thu 5:30 PM CT (fcst 2.9%); Brent ~$88.5",
+   "figure": "Australia CPI Oct due Tue 6:30 PM CT (fcst 4.7% y/y, Sep 4.3%); US core PCE Oct due Wed 7:30 AM CT (fcst +0.3% m/m, 3.2% y/y); Tokyo core CPI Nov due Thu 5:30 PM CT (fcst 2.9%); Brent ~$86.8",
    "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. Falling oil should ease some of that pressure in the months ahead. Australian inflation on Tuesday evening and US core inflation on Wednesday are the week's big tests.",
    "sources": [
     {
@@ -64,36 +64,40 @@
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "figure": "S&P 500 ~+5%, Nasdaq ~+7% Mon (Hercules); USD/JPY ~159.06; USD/CHF ~0.8408; US 2-year ~4.72%",
-   "read": "Markets stayed calm overnight after Monday's big rally in US stocks. With little fear around, the yen and the franc got no safe-haven lift, and the dollar held up on interest rates instead. Fresh reports of attacks in the Gulf did not shake markets.",
+   "figure": "S&P 500 ~+4.9%, Nasdaq ~+6.7% Mon (Hercules); USD/JPY ~159.21; USD/CHF ~0.8415; US 2-year ~4.68%",
+   "read": "Stocks held Monday's jump after Nvidia brought back Jensen Huang as chief executive. Calmer markets kept demand for the yen and franc low and let traders focus on Fed hikes, which supports the dollar.",
    "sources": [
     {
-     "label": "Blue Street market levels (Hercules, London open run 12:40 AM CT Nov 24; indicative)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+     "label": "Reuters via Euronext (Nov 24): Dollar gains as renewed AI euphoria fuels Fed hike bets",
+     "url": "https://live.euronext.com/en/financial-news/dollar-gains-renewed-ai-euphoria-fuels-fed-hike-bets"
     },
     {
-     "label": "Reuters via Express Tribune (Nov 24): Oil prices near three-month lows as rising supply offsets Hormuz threat",
-     "url": "https://tribune.com.pk/story/2642028/oil-prices-near-three-month-lows-as-rising-supply-offsets-hormuz-threat"
+     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:24 AM CT Nov 24; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
   },
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "figure": "Brent ~$88.47 (−0.9%), lowest close since Aug 31; WTI ~$79.28; gold ~$3,650; world oil stocks +52M bbl in Oct (Deutsche Bank)",
-   "read": "Oil kept sliding toward a three-month low as supply looks ample, which hurts the Canadian dollar and helps oil importers like the euro area and Japan. Gold held most of its rebound, giving the Aussie a little support.",
+   "figure": "Brent ~$86.81 (−1.88%), lowest since Aug 27 on Reuters; WTI ~$80.25; gold ~$3,628",
+   "read": "Oil slid to its lowest since late August as supply grows outside the Gulf, which weighs on the Canadian dollar. Gold held most of its rebound, which gives the Aussie a little support.",
    "sources": [
     {
-     "label": "Blue Street market levels (Hercules, London open run 12:40 AM CT Nov 24; indicative)",
+     "label": "Gulf News (Nov 24): Brent drops to $88, why oil is sliding despite Iran's tanker attacks",
+     "url": "https://gulfnews.com/business/energy/brent-drops-to-88-wti-at-79-why-oil-is-sliding-despite-irans-tanker-attacks-1.500758802"
+    },
+    {
+     "label": "Reuters via 93.3 The Drive (Nov 23): Oil holds near three-month low as rising supply offsets Hormuz threat",
+     "url": "https://www.933thedrive.com/2026/11/23/oil-holds-near-three-month-low-as-rising-supply-offsets-hormuz-threat/"
+    },
+    {
+     "label": "Blue Street breaking watch (Hercules, Nov 24)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
+    },
+    {
+     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:24 AM CT Nov 24; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-    },
-    {
-     "label": "Reuters via Express Tribune (Nov 24): Oil prices near three-month lows as rising supply offsets Hormuz threat",
-     "url": "https://tribune.com.pk/story/2642028/oil-prices-near-three-month-lows-as-rising-supply-offsets-hormuz-threat"
-    },
-    {
-     "label": "Kotak Neo (Nov 24): Oil price today, Brent slips below $90",
-     "url": "https://www.kotakneo.com/news/commodities/oil-price-today-24-november-2026-brent-falls-below-90-us-iran-talks-supply-risks/"
     }
    ]
   },
@@ -116,8 +120,8 @@
   {
    "id": "fiscal",
    "title": "Fiscal",
-   "figure": "US 10-year near 5% (Hercules); France composite PMI 46.2, a six-month low; ECB Financial Stability Review: France debt 119% of GDP, deficit 5.5%",
-   "read": "France's debts weigh more now that its economy looks close to recession. Heavy US government borrowing keeps long-term US borrowing costs near 5%, which supports the dollar's yield but raises questions about debt over time.",
+   "figure": "US 10-year ~4.94% (Hercules); France composite PMI 46.2, a six-month low; ECB Financial Stability Review: France debt 119% of GDP, deficit 5.5%",
+   "read": "France's debts, flagged by the European Central Bank as a risk, weigh more now that its economy looks close to recession. Record US government borrowing keeps long-term US borrowing costs high, with the 10-year yield just under 5%.",
    "sources": [
     {
      "label": "ECB (Nov 18): Financial Stability Review press release",
