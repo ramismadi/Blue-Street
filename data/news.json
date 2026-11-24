@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T13:00:00Z",
+  "updated": "2026-11-24T14:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -13,9 +13,9 @@
       "text": "The euro sits near $1.09, close to its lowest since April 2025, because the Federal Reserve looks set to keep raising rates faster than the European Central Bank. German business mood rose for a seventh month on Tuesday, November 24, a small support that backs an ECB rise on December 17."
     },
     "GBP": {
-      "lean": "bearish",
-      "ts": "2026-11-24T12:10:00Z",
-      "text": "The pound sits near $1.30, its lowest in 19 months, mainly because the dollar is strong on near-certain bets of a Federal Reserve rate rise on December 9. An early survey on Monday, November 23 showed UK services growth slowing, and Bank of England policymaker Megan Greene speaks on Tuesday, November 24."
+      "lean": "mixed",
+      "ts": "2026-11-24T14:55:00Z",
+      "text": "The pound sits near $1.31, close to its lowest in 19 months, because the dollar is strong on near-certain bets of a Federal Reserve rate rise on December 9. Bank of England policymaker Megan Greene called on Tuesday, November 24 for faster UK rate rises, which firms bets on a move on December 17 and gives the pound some support."
     },
     "JPY": {
       "lean": "mixed",
@@ -29,8 +29,8 @@
     },
     "CAD": {
       "lean": "bearish",
-      "ts": "2026-11-24T12:10:00Z",
-      "text": "The Canadian dollar sits close to its weakest since April 2025, because markets expect the Federal Reserve to raise rates faster than the Bank of Canada, and oil near a three-month low trims Canada's export income. Bank of Canada Governor Tiff Macklem speaks on the economy and rates in Toronto on Tuesday, November 24."
+      "ts": "2026-11-24T14:55:00Z",
+      "text": "The Canadian dollar sits close to its weakest since April 2025, because markets expect the Federal Reserve to raise rates faster than the Bank of Canada. Oil bounced back above $90 on Tuesday, November 24, a small help, and Bank of Canada Governor Tiff Macklem speaks on rates in Toronto the same day."
     },
     "AUD": {
       "lean": "bearish",
@@ -55,70 +55,103 @@
   },
   "items": [
     {
-      "id": "euronext-reuters-dollar-ai-euphoria-fed-hike-bets-20261124",
-      "ts": "2026-11-24T10:31:00Z",
-      "source": "Reuters via Euronext",
-      "url": "https://live.euronext.com/en/financial-news/dollar-gains-renewed-ai-euphoria-fuels-fed-hike-bets",
-      "image": null,
-      "headline": "Dollar gains as renewed AI euphoria fuels Fed hike bets",
-      "story": "fed-hikes",
-      "story_title": "The Federal Reserve's rate rises",
-      "pillar": "policy",
-      "summary": "The dollar held near its highest in almost two years on Tuesday, November 24, as a rebound in tech shares and firm bets on a Federal Reserve rate rise in December kept buyers coming.",
+      "id": "gvwire-reuters-oil-rebounds-hormuz-20261124",
+      "ts": "2026-11-24T14:32:18Z",
+      "source": "Reuters via GV Wire",
+      "url": "https://gvwire.com/2026/11/24/oil-rebounds-from-three-month-lows-on-hormuz-threat/",
+      "image": "https://gvwire.com/wp-content/uploads/2026/10/Vessels-at-the-Strait-of-Hormuz-as-seen-from-Musandam-Oman-October-23-2026.-REUTERS_Stringer.jpg",
+      "headline": "Oil Rebounds From Three-Month Lows on Hormuz Threat",
+      "story": "oil-supply",
+      "story_title": "Oil supply: surplus vs Gulf attacks",
+      "pillar": "commodities",
+      "summary": "Oil bounced about 1% on Tuesday, November 24, with Brent back above $90 a barrel, after three ships were hit near the Strait of Hormuz, though plenty of supply keeps the rise small.",
       "beats": {
-        "was": "The Federal Reserve has been raising rates to fight inflation, and markets now treat another quarter-point rise on December 9 as all but certain. The dollar has gained about 2.3% so far in November.",
-        "happened": "After chip maker Nvidia brought back Jensen Huang as its boss on Monday, November 23, tech shares rallied and Nvidia gained close to $1 trillion in value. The dollar index stayed near 104.3, just off Monday's high of 104.5, its strongest since March 2025. The euro sat near $1.091, the pound near $1.305 and the dollar near 159.2 yen. The Australian dollar was near 66.3 US cents, down almost 6% in a month, and speculators hold a record bet against it.",
-        "means": "Calmer stock markets have not slowed the dollar, because its strength rests on the gap between rising US rates and slower moves elsewhere. The record bet against the Australian dollar means any good news for it could spark a sharp bounce as those bets are closed.",
-        "fx": "Rate-rise bets keep the dollar firm against most currencies. US inflation figures on Wednesday, November 25 decide whether that lead grows or fades."
+        "was": "Oil had slid to its lowest since late August because more supply is reaching the market than buyers need, even as Iran keeps up attacks on shipping in and near the Strait of Hormuz, the route for about a fifth of the world's oil.",
+        "happened": "Brent rose to about $90.40 and US crude to about $81.20 by mid-morning in London. The UK's maritime security agency said three ships were hit by unknown projectiles in the strait on Monday, November 23, with all crews safe. US officials are also looking into whether Iran was behind cyberattacks on up to 50 tankers. Libya reopened a key oil pipeline, and Deutsche Bank puts October's surplus at 1.7 million barrels a day.",
+        "means": "Attacks on ships now lift prices only briefly, because the surplus is large enough to cover the lost flows for now.",
+        "fx": "A small oil bounce gives modest help to the Canadian dollar and Norway's krone, while a real cut in supply would hurt oil importers such as Japan and the euro area."
       },
       "impact": [
         {
-          "ccy": "USD",
+          "ccy": "CAD",
           "dir": "bullish",
           "strength": 1,
-          "why": "Near-certain bets on a December Fed rise hold the dollar near a two-year high."
+          "why": "Oil back above $90 eases a drag on Canada's export income."
         },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil, so any supply scare raises its import bill."
+        }
+      ],
+      "watch": "Further attacks on ships in the Strait of Hormuz, and US oil stock figures on Wednesday, November 25."
+    },
+    {
+      "id": "yahoo-stocks-futures-fall-nvidia-test-20261124",
+      "ts": "2026-11-24T13:22:00Z",
+      "source": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-rebound-090614276.html",
+      "image": null,
+      "headline": "Stock market today: Dow, S&P 500, Nasdaq futures fall as investors test Nvidia-fueled rally",
+      "story": "ai-stocks",
+      "story_title": "AI stocks and the mood in markets",
+      "pillar": "risk",
+      "summary": "US share futures fell on Tuesday, November 24, with Nasdaq futures down about 2%, as Nvidia gave back part of Monday's huge gain.",
+      "beats": {
+        "was": "US shares had their best day since April 2025 on Monday, November 23, after chip maker Nvidia brought back Jensen Huang as its boss and its stock jumped about 31%.",
+        "happened": "Before the US open, Dow futures were down about 0.5%, S&P 500 futures about 1% and Nasdaq futures about 2%, with Nvidia off 5%. Asian shares had surged earlier, with South Korea's main index up about 7% and Japan's close to 4%. Traders put about a 95% chance on a Federal Reserve quarter-point rise on December 9.",
+        "means": "Monday's rebound is being tested quickly, so the calmer mood that helped risk-linked currencies may not last.",
+        "fx": "Falling shares tend to weigh on the Australian and New Zealand dollars and lift safe currencies like the yen and the Swiss franc."
+      },
+      "impact": [
         {
           "ccy": "AUD",
           "dir": "bearish",
           "strength": 1,
-          "why": "The Aussie is down almost 6% in a month and speculators hold a record bet against it."
+          "why": "Weaker share futures chip at Monday's relief for risk-linked currencies."
         },
         {
-          "ccy": "EUR",
+          "ccy": "NZD",
           "dir": "bearish",
           "strength": 1,
-          "why": "The euro sits near its lowest since April 2025 as the US rate lead widens."
+          "why": "The kiwi near a 17-year low stays exposed when shares slip."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Softer shares add mild demand for the yen as a safe place."
         }
       ],
-      "watch": "US October PCE inflation on Wednesday, November 25, and the Fed decision on December 9."
+      "watch": "US consumer confidence for November on Tuesday, November 24, and October PCE inflation on Wednesday, November 25."
     },
     {
-      "id": "rte-reuters-german-ifo-november-906-20261124",
-      "ts": "2026-11-24T10:28:49Z",
-      "source": "RTÉ / Reuters",
-      "url": "https://www.rte.ie/news/business/2026/1124/1600420-german-ifo-index/",
-      "image": "https://www.rte.ie/images/001ea0f7-1600.jpg",
-      "headline": "German Ifo business sentiment rises in November",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates one last time in December?",
-      "pillar": "growth",
-      "summary": "German business mood improved for a seventh month in November, with the Ifo index at 90.6, just above forecasts, though factory confidence slipped.",
+      "id": "investing-boe-greene-faster-hikes-20261124",
+      "date": "2026-11-24",
+      "source": "Investing.com",
+      "url": "https://in.investing.com/news/economy-news/bank-of-englands-greene-says-uk-needs-faster-rate-hikes-5723695",
+      "image": "https://content-media.investing.com/news/moved_LYNXMPEI640FC_L.jpg",
+      "headline": "Bank of England's Greene says UK needs faster rate hikes",
+      "story": "boe-hikes",
+      "story_title": "Bank of England: how far do rates rise?",
+      "pillar": "policy",
+      "summary": "Bank of England policymaker Megan Greene said on Tuesday, November 24 that the bank is a little behind on inflation and should raise rates faster if the Middle East conflict drags on.",
       "beats": {
-        "was": "The Ifo index, a monthly survey of about 9,000 German firms, has risen every month since spring as Germany's economy slowly recovers. It stood at 90.1 in October.",
-        "happened": "The index rose to 90.6 in November, a touch above the 90.5 economists expected. Firms felt better about both current trade and the months ahead. Services and retail improved, but factories and builders turned more cautious, the first factory drop after six gains. Ifo president Clemens Fuest said the recovery goes on but is not broad.",
-        "means": "Germany keeps growing slowly, which supports the European Central Bank's plan to raise rates in December. The factory dip is a small warning, because an early survey on Monday, November 23 had shown factories speeding up.",
-        "fx": "A steady German economy gives the euro a little support. It is too small to offset the dollar's pull from rising US rates."
+        "was": "The Bank of England raised rates earlier in November for the first time in three years, as the conflict with Iran pushed up energy costs. UK household energy bills are expected to jump about 26% in January.",
+        "happened": "Greene, one of the nine members who vote on UK rates, told a London business meeting that the bank is slightly behind where it should be and that the chance of a lasting peace deal in the Middle East looks very low. She said the UK should tighten faster if the conflict continues. Markets price about an 80% chance of another quarter-point rise on December 17.",
+        "means": "A voting member openly asking for faster rises makes a December move look more likely, and raises the chance that UK rates keep climbing into 2027 if energy prices stay high.",
+        "fx": "Firmer rate-rise bets give the pound some support near its 19-month low against the dollar, which still has its own strong rate story."
       },
       "impact": [
         {
-          "ccy": "EUR",
+          "ccy": "GBP",
           "dir": "bullish",
-          "strength": 1,
-          "why": "German business mood edges up again, backing a December ECB rise."
+          "strength": 2,
+          "why": "A rate-setter calling for faster rises firms bets on a December 17 Bank of England move."
         }
       ],
-      "watch": "The ECB decision on December 17 and euro zone inflation early in December."
+      "watch": "The Bank of England decision on December 17, and UK energy prices into January."
     },
     {
       "id": "gulfnews-brent-88-despite-tanker-attacks-20261124",
@@ -356,6 +389,72 @@
         }
       ],
       "watch": "Whether Qatar gets the two sides talking, and whether the number of ships crossing Hormuz actually falls."
+    },
+    {
+      "id": "euronext-reuters-dollar-ai-euphoria-fed-hike-bets-20261124",
+      "ts": "2026-11-24T10:31:00Z",
+      "source": "Reuters via Euronext",
+      "url": "https://live.euronext.com/en/financial-news/dollar-gains-renewed-ai-euphoria-fuels-fed-hike-bets",
+      "image": null,
+      "headline": "Dollar gains as renewed AI euphoria fuels Fed hike bets",
+      "story": "fed-hikes",
+      "story_title": "The Federal Reserve's rate rises",
+      "pillar": "policy",
+      "summary": "The dollar held near its highest in almost two years on Tuesday, November 24, as a rebound in tech shares and firm bets on a Federal Reserve rate rise in December kept buyers coming.",
+      "beats": {
+        "was": "The Federal Reserve has been raising rates to fight inflation, and markets now treat another quarter-point rise on December 9 as all but certain. The dollar has gained about 2.3% so far in November.",
+        "happened": "After chip maker Nvidia brought back Jensen Huang as its boss on Monday, November 23, tech shares rallied and Nvidia gained close to $1 trillion in value. The dollar index stayed near 104.3, just off Monday's high of 104.5, its strongest since March 2025. The euro sat near $1.091, the pound near $1.305 and the dollar near 159.2 yen. The Australian dollar was near 66.3 US cents, down almost 6% in a month, and speculators hold a record bet against it.",
+        "means": "Calmer stock markets have not slowed the dollar, because its strength rests on the gap between rising US rates and slower moves elsewhere. The record bet against the Australian dollar means any good news for it could spark a sharp bounce as those bets are closed.",
+        "fx": "Rate-rise bets keep the dollar firm against most currencies. US inflation figures on Wednesday, November 25 decide whether that lead grows or fades."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Near-certain bets on a December Fed rise hold the dollar near a two-year high."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The Aussie is down almost 6% in a month and speculators hold a record bet against it."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro sits near its lowest since April 2025 as the US rate lead widens."
+        }
+      ],
+      "watch": "US October PCE inflation on Wednesday, November 25, and the Fed decision on December 9."
+    },
+    {
+      "id": "rte-reuters-german-ifo-november-906-20261124",
+      "ts": "2026-11-24T10:28:49Z",
+      "source": "RTÉ / Reuters",
+      "url": "https://www.rte.ie/news/business/2026/1124/1600420-german-ifo-index/",
+      "image": "https://www.rte.ie/images/001ea0f7-1600.jpg",
+      "headline": "German Ifo business sentiment rises in November",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "growth",
+      "summary": "German business mood improved for a seventh month in November, with the Ifo index at 90.6, just above forecasts, though factory confidence slipped.",
+      "beats": {
+        "was": "The Ifo index, a monthly survey of about 9,000 German firms, has risen every month since spring as Germany's economy slowly recovers. It stood at 90.1 in October.",
+        "happened": "The index rose to 90.6 in November, a touch above the 90.5 economists expected. Firms felt better about both current trade and the months ahead. Services and retail improved, but factories and builders turned more cautious, the first factory drop after six gains. Ifo president Clemens Fuest said the recovery goes on but is not broad.",
+        "means": "Germany keeps growing slowly, which supports the European Central Bank's plan to raise rates in December. The factory dip is a small warning, because an early survey on Monday, November 23 had shown factories speeding up.",
+        "fx": "A steady German economy gives the euro a little support. It is too small to offset the dollar's pull from rising US rates."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "German business mood edges up again, backing a December ECB rise."
+        }
+      ],
+      "watch": "The ECB decision on December 17 and euro zone inflation early in December."
     },
     {
       "id": "rigzone-bloomberg-oil-falls-trump-iran-talks-20261123",
@@ -1249,39 +1348,6 @@
       "watch": "Whether the US confirms damage in Bahrain or answers with new strikes on Iran."
     },
     {
-      "id": "investing-oil-falls-gulf-exports-glut-20261122",
-      "date": "2026-11-22",
-      "source": "Investing.com",
-      "url": "https://www.investing.com/news/commodities-news/oil-falls-as-robust-gulf-exports-offset-iran-escalation-supply-glut-risks-5044220",
-      "image": "https://content-media.investing.com/news/OilTanker_800x533_L_1778185672.jpg",
-      "headline": "Oil slips at the start of the week as strong Gulf exports and a supply surplus outweigh Iran's attacks",
-      "story": "oil-supply",
-      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
-      "pillar": "commodities",
-      "summary": "Brent crude fell 0.8% to about $91.85 a barrel as trading reopened late on Sunday, November 22, even after a weekend of Iranian and Houthi attacks around the Gulf, including a Houthi claim of a strike on Saudi Arabia's Rabigh refinery.",
-      "beats": {
-        "was": "Brent is down about 20% in November after President Trump held off new strikes on Iran following the US midterm elections, and Gulf exports have stayed close to pre-war levels.",
-        "happened": "Oil fell despite Trump saying he leans toward new strikes on Iran after the New Year if talks fail, fresh Iranian attacks on Bahrain, and Houthi attacks on Saudi Arabia.",
-        "means": "Traders are giving more weight to a coming supply surplus, about 2 million barrels a day in the last quarter according to the International Energy Agency, than to the war's threats so far.",
-        "fx": "Softer oil trims export income for Canada and Norway and eases fuel costs for importers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Strong Gulf exports and a forecast surplus outweigh the weekend's attacks."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil prices cut Canada's export income."
-        }
-      ],
-      "watch": "The OPEC+ meeting on Sunday, November 29 on output, and whether ship crossings through Hormuz keep falling."
-    },
-    {
       "id": "aljazeera-iran-escalation-tankers-transits-drop-20261122",
       "ts": "2026-11-22T11:46:42Z",
       "source": "Al Jazeera",
@@ -1319,39 +1385,6 @@
         }
       ],
       "watch": "Next week's UK maritime count of crossings, to see whether traffic falls further."
-    },
-    {
-      "id": "lapresse-houthi-drone-riyadh-destroyed-20261122",
-      "ts": "2026-11-22T11:31:30Z",
-      "source": "LaPresse",
-      "url": "https://uk.lapresse.it/world-en/2026/11/22/yemen-houthi-drone-heading-for-riyadh-intercepted/",
-      "image": "https://uk.lapresse.it/wp-content/uploads/2026/11/22/yemen-houthi-drone-heading-for-riyadh-intercepted-1024x575.jpg",
-      "headline": "Saudi air defences destroy a Houthi drone flying toward Riyadh on Sunday, November 22",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Saudi air defences shot down a Houthi drone headed for Riyadh on Sunday, November 22, hours after stopping a missile aimed at the kingdom's Red Sea coast. No damage or injuries were reported.",
-      "beats": {
-        "was": "Yemen's Houthi group, which is backed by Iran, has been firing missiles and drones at Saudi Arabia during the Iran war, and one hit the Saudi wealth fund's tower in Riyadh on Thursday, November 19.",
-        "happened": "Turki al-Maliki, spokesman for the Saudi-led coalition, said air defences destroyed a Houthi drone flying toward Riyadh. Earlier the same day the coalition stopped a ballistic missile aimed at the west coast, home to the Yanbu oil export terminal and the Jazan refinery.",
-        "means": "Houthi attacks on Saudi Arabia now come almost daily, so the threat to Saudi oil sites stays real even though these strikes caused no harm.",
-        "fx": "Adds a little to the war risk in oil before markets reopen, with no supply lost."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Houthi fire near Saudi oil sites keeps supply risk alive, though nothing was hit."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "More Gulf attacks add a little demand for the franc as a safe place."
-        }
-      ],
-      "watch": "Whether a Houthi strike damages a Saudi oil terminal or refinery, which would hit supply rather than just raise the risk."
     }
   ]
 }
