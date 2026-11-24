@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T04:02:10-06:00",
+  "updated": "2026-11-24T14:40:21-06:00",
   "events": [
     {
       "id": "cny-trade-20261110",
@@ -1896,7 +1896,7 @@
       "why": "NY Fed President Williams speaks at the University of Mount Saint Vincent — first Fed voice of the week; the Dec 8-9 hike (~90% for 25bp) is the question.",
       "if_beat": "Hawkish: Dec hike firms toward done-deal — USD bid.",
       "if_miss": "Dovish: hold case reopens — USD offered, Dec hike pricing fades.",
-      "outcome": null,
+      "outcome": "Hawkish — Williams said inflation is still too high and risks are skewed to the upside; the Dec hike stayed fully priced into Tuesday. (StockNow, Nov 24)",
       "chapter": null,
       "bank": "fed",
       "sources": [
@@ -1971,13 +1971,17 @@
       "why": "BoE MPC member Greene speaks — second BoE voice of the week, ahead of Thursday's Financial Stability Report.",
       "if_beat": "Hawkish: Dec back-to-back hike firms — GBP bid.",
       "if_miss": "Dovish: one-and-done case grows — GBP offered.",
-      "outcome": null,
+      "outcome": "Hawkish — Greene said disinflation has stalled, another hike is warranted and the Bank is 'a little bit behind the curve'; a 50bp move would need clear evidence of energy costs feeding wages and prices. Wage growth stuck at 3.5% (target-consistent ~3%). Dec back-to-back hike ~82% (Prime Terminal via FXStreet, Nov 24)",
       "chapter": null,
       "bank": "boe",
       "sources": [
         {
           "label": "ForexFactory calendar",
           "url": "https://www.forexfactory.com/calendar?day=nov24.2026"
+        },
+        {
+          "label": "FXStreet: BoE's Greene — disinflation process has stalled",
+          "url": "https://www.fxstreet.com/news/boes-greene-disinflation-process-has-stalled-202611241321"
         }
       ]
     },
@@ -1991,18 +1995,51 @@
       "focus": false,
       "actual": "21.0K",
       "forecast": null,
-      "previous": "23.8K",
+      "previous": "23.0K (revised from 23.8K)",
       "better": "higher",
       "why": "ADP's new weekly employment change — first weekly labor read; 23.8K prior. A soft print would test the Dec hike case.",
       "if_beat": "Beat: labor firmer — USD supported.",
       "if_miss": "Miss: labor cooling — USD offered.",
-      "outcome": "Softer — 21.0K vs 23.8K prior (four weeks ending Nov 7; preliminary, two-week lag). Hiring cooled from the Oct-31 window; DXY flat ~104.3 into the print. (ForexFactory, Nov 24 — ADP's own release page had not yet posted the precise figure at push; confirm next run.)",
+      "outcome": "Softer — 21.0K vs 23.0K prior (four weeks ending Nov 7; preliminary, two-week lag). Hiring cooled from the Oct-31 window; DXY flat ~104.3 into the print. (ADP NER Pulse via PRNewswire, Nov 24 — confirmed against ADP's own release; prior revised 23.8K -> 23.0K)",
       "chapter": null,
       "bank": null,
       "sources": [
         {
           "label": "ForexFactory calendar",
           "url": "https://www.forexfactory.com/calendar?day=nov24.2026"
+        },
+        {
+          "label": "ADP NER Pulse via PRNewswire (Nov 24)",
+          "url": "https://www.prnewswire.com/news-releases/adp-national-employment-report-preliminary-estimate-for-november-7-2026-302948539.html"
+        }
+      ]
+    },
+    {
+      "id": "us-fhfa-hpi-20261124",
+      "ts": "2026-11-24T14:00:00Z",
+      "ccy": "USD",
+      "impact": "low",
+      "category": "growth",
+      "title": "US FHFA house price index (Sep) m/m",
+      "focus": false,
+      "actual": "0.0%",
+      "forecast": "+0.2% (FF consensus; Aug +0.2%)",
+      "previous": "+0.2% (Aug, revised from +0.3%)",
+      "better": "higher",
+      "why": "FHFA house price index — +0.2% in August (revised from +0.3%); the housing read with mortgage rates elevated.",
+      "if_beat": "Beat: house prices firm — USD supported.",
+      "if_miss": "Miss: house prices cooling — USD offered.",
+      "outcome": "Miss — 0.0% vs +0.2% forecast (Aug revised to +0.2% from +0.3%); Case-Shiller 20-city +2.6% y/y (fcst 2.7%), m/m -0.5%. (FHFA / S&P Cotality via eRegal, Nov 24)",
+      "chapter": null,
+      "bank": null,
+      "sources": [
+        {
+          "label": "ForexFactory calendar",
+          "url": "https://www.forexfactory.com/calendar?day=nov24.2026"
+        },
+        {
+          "label": "eRegal Mid-Morning Look Nov 24 (FHFA 0.0%)",
+          "url": "https://www.eregal.com/mid-morning-look-november-24-2026/"
         }
       ]
     },
@@ -2040,6 +2077,35 @@
       ]
     },
     {
+      "id": "us-richmond-fed-20261124",
+      "ts": "2026-11-24T15:00:00Z",
+      "ccy": "USD",
+      "impact": "low",
+      "category": "growth",
+      "title": "US Richmond Fed manufacturing index (Nov)",
+      "focus": false,
+      "actual": "+3",
+      "forecast": "-3 (consensus; Oct -2)",
+      "previous": "-2 (Oct)",
+      "better": "higher",
+      "why": "Richmond Fed composite — -2 in October; the regional read alongside the confidence beat.",
+      "if_beat": "Beat: regional manufacturing firmer — USD supported.",
+      "if_miss": "Miss: manufacturing cooling — USD offered.",
+      "outcome": "Beat — +3 vs -3 forecast (Oct -2); shipments +2 (Oct 0), services -7 (Oct +2). (Richmond Fed via eRegal, Nov 24)",
+      "chapter": null,
+      "bank": null,
+      "sources": [
+        {
+          "label": "ForexFactory calendar",
+          "url": "https://www.forexfactory.com/calendar?day=nov24.2026"
+        },
+        {
+          "label": "eRegal Mid-Morning Look Nov 24 (Richmond Fed +3)",
+          "url": "https://www.eregal.com/mid-morning-look-november-24-2026/"
+        }
+      ]
+    },
+    {
       "id": "cad-macklem-20261124",
       "ts": "2026-11-24T17:25:00Z",
       "ccy": "CAD",
@@ -2054,13 +2120,21 @@
       "why": "BoC Governor Macklem speaks — Dec 9 decision ~44% for a further hike; any steer moves CAD with USD/CAD near the 52-week high.",
       "if_beat": "Hawkish: Dec hike pricing firms — CAD bid.",
       "if_miss": "Dovish: hold case firms, January more likely — CAD offered.",
-      "outcome": null,
+      "outcome": "Hawkish-leaning — Macklem: 'if inflation is going to be too high for too long, we would need to hike rates'; year-end inflation may land below the ~3.5% October forecast as oil and refinery margins eased, but second-round pass-through 'will add to inflation persistence'. Dec 9 hike odds jumped to ~80% (Reuters, from ~65% pre-speech); USD/CAD hit an 11-day low ~1.4267.",
       "chapter": null,
       "bank": "boc",
       "sources": [
         {
           "label": "ForexFactory calendar",
           "url": "https://www.forexfactory.com/calendar?day=nov24.2026"
+        },
+        {
+          "label": "Reuters: Canadian dollar hits 11-day high as BoC hike bets rise",
+          "url": "https://www.reuters.com/markets/us/canadian-dollar-hits-11-day-high-investors-raise-boc-rate-hike-bets-2026-11-24/"
+        },
+        {
+          "label": "Bank of Canada: Macklem speech, Economic Club of Canada",
+          "url": "https://www.bankofcanada.ca/multimedia/speech-economic-club-of-canada-2026-11-24/"
         }
       ]
     },
