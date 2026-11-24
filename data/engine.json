@@ -1,32 +1,36 @@
 {
- "updated": "2026-11-23T15:30:00-06:00",
+ "updated": "2026-11-24T01:30:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "figure": "Fed Dec quarter-point hike fully priced, from ~89% Friday; Jan ~67% (Reuters); CME FedWatch ~96% (Hercules); ECB Dec ~90%; BoE Dec ~84% (from ~80%); BoJ Dec ~84%; BoC Dec ~44%",
-   "read": "Traders now fully expect a quarter-point Fed hike in December and see a good chance of another in January. The Bank of England sounds firmer too, and the European Central Bank and Bank of Japan are expected to hike in December. The Fed still looks set to go furthest, which keeps the dollar on top.",
+   "figure": "Fed Dec hike ~96% (CME FedWatch); Mar hike ~35%, from >50%; ECB Dec ~90%; BoE Dec ~84%; BoJ Dec ~84% (JPMorgan ~50%); BoC Dec ~44%",
+   "read": "Traders still fully expect a quarter-point Fed hike in December, though bets on further hikes into the spring have cooled a little. The Bank of England, European Central Bank and Bank of Japan are also expected to hike in December. The Fed still looks set to go furthest, which keeps the dollar on top.",
    "sources": [
     {
-     "label": "Reuters via Devdiscourse (Nov 23): Dollar jumps on hawkish Fed bets, AI rally",
-     "url": "https://www.devdiscourse.com/article/international/4010912-forex-dollar-jumps-on-hawkish-fed-bets-ai-rally"
+     "label": "Blue Street central banks and pricing (Hercules, Nov 24)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+    },
+    {
+     "label": "Blue Street market levels (Hercules, London open run 12:40 AM CT Nov 24; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     },
     {
      "label": "New York Fed (Nov 23): John Williams, \"The Economic Mixdown\"",
      "url": "https://www.newyorkfed.org/newsevents/speeches/2026/wil261123"
-    },
-    {
-     "label": "Blue Street central banks and pricing (Hercules, Nov 23)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
     }
    ]
   },
   {
    "id": "growth",
    "title": "Growth",
-   "figure": "US composite PMI Nov 54.6 (Oct 55.9), services 54.7 vs 55.6 fcst, mfg 54.5 in line; Germany composite 55.0; France 46.2; euro area 51.7; UK 52.3, services 52.0; Chicago Fed activity index Oct −0.06",
-   "read": "Business surveys showed the US economy and UK services slowing in November, while Germany sped up and France shrank. None of it changed what central banks are expected to do, so growth news is taking a back seat to interest rates for now.",
+   "figure": "Japan Nov PMI mfg 53.7 (fcst 53.5), services 50.5 (Oct 51.7); US composite 54.6; Germany composite 55.0; France 46.2; UK 52.3; Ifo due 3:00 AM CT (fcst 90.6); US Q3 GDP 2nd est Wed (fcst 3.5%)",
+   "read": "Japan's factories picked up in November while its services slowed, echoing mixed surveys in the US and Europe on Monday. None of it has changed what central banks are expected to do. Coming up, Germany's Ifo survey and the second estimate of US growth.",
    "sources": [
+    {
+     "label": "Blue Street calendar (Hercules, Nov 24): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    },
     {
      "label": "Reuters (Nov 23): US business activity growth eases further in November",
      "url": "https://www.reuters.com/world/us/us-business-activity-growth-eases-further-november-survey-shows-2026-11-23/"
@@ -34,78 +38,62 @@
     {
      "label": "Reuters (Nov 23): Euro zone growth holds steady, France's deepening downturn clouds outlook",
      "url": "https://www.reuters.com/world/europe/euro-zone-growth-holds-steady-frances-deepening-downturn-clouds-outlook-pmi-2026-11-23/"
-    },
-    {
-     "label": "Reuters (Nov 23): UK PMI shows slight November slowdown, Q4 looks robust",
-     "url": "https://www.reuters.com/world/uk/uk-pmi-shows-slight-november-slowdown-q4-looks-robust-2026-11-23/"
-    },
-    {
-     "label": "Blue Street calendar (Hercules, Nov 23): times, forecasts and actuals",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     }
    ]
   },
   {
    "id": "inflation",
    "title": "Inflation",
-   "figure": "US core PCE Oct due Wed (fcst +0.3% m/m, 3.2% y/y); Williams: inflation about 3.5%; UK CPI Oct 3.6%; euro-area CPI Oct 4.0%; Australia CPI Oct due Tue 6:30 PM CT (fcst 4.8% y/y)",
-   "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. New York Fed President John Williams called US inflation simply too high. US core inflation on Wednesday and Australian inflation on Tuesday evening are the week's big tests.",
+   "figure": "Australia CPI Oct due Tue 6:30 PM CT (fcst 4.8% y/y, Sep 4.3%); US core PCE Oct due Wed 7:30 AM CT (fcst +0.3% m/m, 3.2% y/y); Tokyo core CPI Nov due Thu 5:30 PM CT (fcst 2.9%); Brent ~$88.5",
+   "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. Falling oil should ease some of that pressure in the months ahead. Australian inflation on Tuesday evening and US core inflation on Wednesday are the week's big tests.",
    "sources": [
+    {
+     "label": "Blue Street calendar (Hercules, Nov 24): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    },
     {
      "label": "New York Fed (Nov 23): John Williams, \"The Economic Mixdown\"",
      "url": "https://www.newyorkfed.org/newsevents/speeches/2026/wil261123"
     },
     {
-     "label": "Blue Street calendar (Hercules, Nov 23): times, forecasts and actuals",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
-    },
-    {
-     "label": "ONS (Nov 18): Consumer price inflation, UK: October 2026",
-     "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/october2026"
+     "label": "Blue Street market levels (Hercules, London open run 12:40 AM CT Nov 24; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
   },
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "figure": "S&P 500 ~+5%, Nasdaq ~+7%, Nvidia ~+32% (Reuters); USD/JPY ~159.15 (+0.41%); USD/CHF ~0.8430 (+0.38%); US 2-year ~4.70%",
-   "read": "US stocks jumped after Nvidia brought back Jensen Huang as chief executive, ending last week's selloff. Calmer markets drew money out of the yen and the franc. With fear gone, the dollar rose on interest rates instead.",
+   "figure": "S&P 500 ~+5%, Nasdaq ~+7% Mon (Hercules); USD/JPY ~159.06; USD/CHF ~0.8408; US 2-year ~4.72%",
+   "read": "Markets stayed calm overnight after Monday's big rally in US stocks. With little fear around, the yen and the franc got no safe-haven lift, and the dollar held up on interest rates instead. Fresh reports of attacks in the Gulf did not shake markets.",
    "sources": [
     {
-     "label": "Reuters via Yahoo Finance (Nov 23): Wall Street soars as Nvidia reinstates Huang, dollar jumps",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/us-futures-bounce-while-asia-234419517.html"
-    },
-    {
-     "label": "Reuters via Devdiscourse (Nov 23): Dollar jumps on hawkish Fed bets, AI rally",
-     "url": "https://www.devdiscourse.com/article/international/4010912-forex-dollar-jumps-on-hawkish-fed-bets-ai-rally"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, New York close run ~3:02 PM CT Nov 23; indicative)",
+     "label": "Blue Street market levels (Hercules, London open run 12:40 AM CT Nov 24; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+    },
+    {
+     "label": "Reuters via Express Tribune (Nov 24): Oil prices near three-month lows as rising supply offsets Hormuz threat",
+     "url": "https://tribune.com.pk/story/2642028/oil-prices-near-three-month-lows-as-rising-supply-offsets-hormuz-threat"
     }
    ]
   },
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "figure": "Brent ~$89.25 (−3.6%), low ~$89.07, lowest since Sep 4; WTI ~$80.29 (−3.6%); gold ~$3,645 (+3.4% from Friday)",
-   "read": "Oil fell below $90 as more Middle East supply reached the market, which hurts the Canadian dollar and helps oil importers like the euro area and Japan. Gold won back much of last week's fall, which gives the Aussie some support.",
+   "figure": "Brent ~$88.47 (−0.9%), lowest close since Aug 31; WTI ~$79.28; gold ~$3,650; world oil stocks +52M bbl in Oct (Deutsche Bank)",
+   "read": "Oil kept sliding toward a three-month low as supply looks ample, which hurts the Canadian dollar and helps oil importers like the euro area and Japan. Gold held most of its rebound, giving the Aussie a little support.",
    "sources": [
     {
-     "label": "Blue Street market levels (Hercules, New York close run ~3:02 PM CT Nov 23; indicative)",
+     "label": "Blue Street market levels (Hercules, London open run 12:40 AM CT Nov 24; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     },
     {
-     "label": "PriceOfOil (Nov 23, 1:46 PM CT): Brent and WTI",
-     "url": "https://priceofoil.com/oil-prices-today"
+     "label": "Reuters via Express Tribune (Nov 24): Oil prices near three-month lows as rising supply offsets Hormuz threat",
+     "url": "https://tribune.com.pk/story/2642028/oil-prices-near-three-month-lows-as-rising-supply-offsets-hormuz-threat"
     },
     {
-     "label": "Reuters (Nov 23): Oil prices fall amid equity selloff though Iran war attacks limit losses",
-     "url": "https://www.reuters.com/business/energy/oil-prices-fall-amid-equity-selloff-though-iran-war-attacks-limit-losses-2026-11-23/"
-    },
-    {
-     "label": "GoldPrice.com spot (3:02 PM ET Nov 23, via Hercules breaking watch)",
-     "url": "https://goldprice.com/"
+     "label": "Kotak Neo (Nov 24): Oil price today, Brent slips below $90",
+     "url": "https://www.kotakneo.com/news/commodities/oil-price-today-24-november-2026-brent-falls-below-90-us-iran-talks-supply-risks/"
     }
    ]
   },
@@ -122,10 +110,6 @@
     {
      "label": "CFTC Traders in Financial Futures (futures only)",
      "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/TFF-Futures-Only/gpe5-46if"
-    },
-    {
-     "label": "CFTC Disaggregated (futures only)",
-     "url": "https://publicreporting.cftc.gov/Commitments-of-Traders/Disaggregated-Futures-Only/72hh-3qpy"
     }
    ]
   },
