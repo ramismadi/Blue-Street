@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-24T14:55:00Z",
+  "updated": "2026-11-24T15:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-24T13:00:00Z",
-      "text": "The dollar sits near its highest since March 2025 because markets treat a Federal Reserve rate rise on December 9 as all but certain. A tech-share rebound on Tuesday, November 24 has not slowed it, and October PCE inflation on Wednesday, November 25 is the week's test."
+      "ts": "2026-11-24T15:50:00Z",
+      "text": "The dollar sits near its highest since March 2025 because markets treat a Federal Reserve rate rise on December 9 as all but certain. US consumer confidence jumped to its best since January 2025 on Tuesday, November 24, adding support ahead of October PCE inflation on Wednesday, November 25."
     },
     "EUR": {
       "lean": "bearish",
@@ -54,6 +54,45 @@
     }
   },
   "items": [
+    {
+      "id": "prnewswire-conference-board-confidence-1033-20261124",
+      "ts": "2026-11-24T15:00:00Z",
+      "source": "The Conference Board via PR Newswire",
+      "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html",
+      "image": "https://mmx.prnewswire.com/media/MS461842/The-Conference-Board-Logo.jpg?id=OA3098576&p=facebook",
+      "headline": "US Consumer Confidence Surged in November",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "growth",
+      "summary": "US consumer confidence jumped to 103.3 in November, far above the 92.5 expected and its best since January 2025, as people felt better about finding work.",
+      "beats": {
+        "was": "Markets already treat a Federal Reserve rate rise on December 9 as close to certain, and the dollar sits near its highest since March 2025. The Conference Board's monthly survey of US households had read 91.9 in October.",
+        "happened": "The Conference Board said on Tuesday, November 24 that its index rose more than 11 points to 103.3. Views of current conditions and of the months ahead both improved, more people said jobs were easy to find, and the share expecting to cut back on hiring fell. Households' expected inflation for the next year stayed high at 5.7%. The group linked part of the lift to less uncertainty after the midterm elections.",
+        "means": "Confident households tend to keep spending, which supports the case that the US economy can take higher rates and gives the Fed less reason to pause.",
+        "fx": "A stronger US consumer adds support to the dollar against most currencies, and weighs most on the yen and the euro, where rates are lower."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A big upside surprise in household mood backs more Fed rate rises."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Firmer US rate bets widen the gap with Japan's low rates."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Adds to the view that the Fed will keep raising rates faster than the European Central Bank."
+        }
+      ],
+      "watch": "US October PCE inflation on Wednesday, November 25, the Fed's preferred price gauge."
+    },
     {
       "id": "gvwire-reuters-oil-rebounds-hormuz-20261124",
       "ts": "2026-11-24T14:32:18Z",
@@ -1313,39 +1352,6 @@
         }
       ],
       "watch": "Whether November's attack count passes October's, and whether insurers or shippers start avoiding the strait again."
-    },
-    {
-      "id": "ssbcrack-irgc-bahrain-patriot-radars-20261122",
-      "ts": "2026-11-22T14:00:19Z",
-      "source": "SSBCrack News",
-      "url": "https://news.ssbcrack.com/iran-escalates-gulf-attacks-targeting-us-base-radars-as-tanker-strikes-disrupt-hormuz-oil-flows/",
-      "image": "https://media2.ssbcrack.com/2026/11/Iran-escalates-Gulf-attacks-targeting-us-base-radars-as-tanker.jpg",
-      "headline": "Iran's Guards say they hit US air-defence radars in Bahrain",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's Revolutionary Guards said on Sunday, November 22 that missiles and drones destroyed two US Patriot air-defence radars at bases in Bahrain, home of the US Navy's Fifth Fleet. The claim has not been confirmed.",
-      "beats": {
-        "was": "Bahrain said an Iranian strike on Saturday, November 21 set fire to a civilian industrial site, one of several Iranian attacks around the Gulf in the past week.",
-        "happened": "The Guards called the radar strikes payback for a US strike on an Iranian radar on Hengam Island. UK maritime data showed ship crossings of Hormuz fell 15% in the week to November 18, with oil tankers down to 37 from 52.",
-        "means": "Iran is now aiming directly at US forces in a Gulf state, which widens the war beyond attacks on ships.",
-        "fx": "Raises the chance of a larger US-Iran clash, a mild push for oil and safe currencies."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Strikes on US bases in the Gulf raise the risk of a wider war near oil routes, though the damage is unconfirmed."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Direct attacks on US forces add some safe-haven demand."
-        }
-      ],
-      "watch": "Whether the US confirms damage in Bahrain or answers with new strikes on Iran."
     },
     {
       "id": "aljazeera-iran-escalation-tankers-transits-drop-20261122",
