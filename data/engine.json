@@ -1,82 +1,82 @@
 {
- "updated": "2026-11-25T01:40:00-06:00",
+ "updated": "2026-11-25T07:57:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "figure": "Fed Dec quarter-point hike ~96% (CME FedWatch via Hercules); RBA Dec hold ~99%, cut ~1% (forex.com); BoC Dec ~80% (Reuters); BoE Dec ~82%; ECB Dec ~90%; BoJ Dec ~84%",
-   "read": "A December Fed hike is fully priced, so the dollar now needs bets on further hikes to rise much more. Hot Australian inflation ended talk of a cut there, and Canada and the UK still lean toward December hikes. In Japan, mixed inflation signals keep a December hike likely but not certain.",
+   "figure": "Fed Dec quarter-point hike ~97% (CME FedWatch via Hercules); RBA Dec hold ~99%; BoC Dec ~80% (Reuters); BoE Dec ~82%; ECB Dec ~90%; BoJ Dec ~84%",
+   "read": "A December Fed hike stays fully priced after strong US growth and slightly hot core inflation, so the dollar needs bets on further hikes to rise much more. Hot Australian inflation ended talk of a cut there, and Canada and the UK still lean toward December hikes.",
    "sources": [
     {
-     "label": "Reuters via WDSM (Nov 24, updated 05:19 UTC Nov 25): Dollar takes breather ahead of US data on Fed path, Aussie jumps on CPI",
-     "url": "https://wdsm710.com/2026/11/24/dollar-takes-breather-ahead-of-us-data-on-fed-path-aussie-jumps-on-cpi/"
+     "label": "BEA (Nov 25): Personal income and outlays, October 2026",
+     "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
     },
     {
      "label": "Blue Street central banks and pricing (Hercules, Nov 25)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
-    },
-    {
-     "label": "Reuters (Nov 24): Canadian dollar hits 11-day high as investors raise Bank of Canada hike bets",
-     "url": "https://www.reuters.com/markets/us/canadian-dollar-hits-11-day-high-investors-raise-boc-rate-hike-bets-2026-11-24/"
-    },
-    {
-     "label": "FXStreet (Nov 24): BoE's Greene says disinflation has stalled",
-     "url": "https://www.fxstreet.com/news/boes-greene-disinflation-process-has-stalled-202611241321"
     }
    ]
   },
   {
    "id": "growth",
    "title": "Growth",
-   "figure": "Germany Q3 GDP +0.1% q/q final (first estimate +0.2%, forecast +0.2%) (Destatis); US Q3 GDP second estimate due Wed 7:30 AM CT (forecast 3.5%, advance 3.4%) (Hercules)",
-   "read": "Germany's economy grew a touch less than first reported in the third quarter, a reminder that its recovery is slow. US growth and spending figures on Wednesday will show whether the US economy is still outrunning the rest, which has kept the dollar strong.",
+   "figure": "US Q3 GDP +4.3% annualized, second estimate (fcst 3.5%, advance 3.4%); jobless claims 189K (fcst 201K); spending Oct +0.3% (fcst 0.4%); Germany Q3 GDP +0.1% q/q final",
+   "read": "The US economy grew at a 4.3% annual pace in July to September, far faster than first reported, while Germany managed just 0.1%. That gap keeps money flowing toward the dollar. Jobless claims stayed low, though spending was a little soft in October.",
    "sources": [
+    {
+     "label": "BEA (Nov 25): GDP, second estimate, and corporate profits, third quarter 2026",
+     "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026"
+    },
+    {
+     "label": "BEA (Nov 25): Personal income and outlays, October 2026",
+     "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
+    },
+    {
+     "label": "US Department of Labor (Nov 25): Unemployment insurance weekly claims",
+     "url": "https://www.dol.gov/ui/data.pdf"
+    },
     {
      "label": "Destatis (Nov 25): GDP quarterly results, final Q3 2026",
      "url": "https://www.destatis.de/EN/Themes/Economy/National-Accounts-Domestic-Product/Tables/domestic-product-q-gdp.html?view=main[Print]"
-    },
-    {
-     "label": "Blue Street calendar (Hercules, Nov 25): times, forecasts and actuals",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     }
    ]
   },
   {
    "id": "inflation",
    "title": "Inflation",
-   "figure": "Australia CPI Oct 4.9% y/y (fcst 4.7%), trimmed mean 3.8% (fcst 3.6%); Japan services PPI Oct +4.2% (fcst 3.6%); BoJ core CPI 2.3% (fcst 2.5%); US core PCE Oct due Wed 7:30 AM CT (fcst +0.3% m/m, 3.2% y/y)",
-   "read": "Inflation is running hot in Australia and still above target in Japan, which keeps those central banks from easing. US core inflation for October, out Wednesday morning, is the week's biggest test for the dollar.",
+   "figure": "US core PCE Oct +0.3% m/m, +3.3% y/y (fcst 3.2%); Australia CPI Oct 4.9% y/y (fcst 4.7%), trimmed mean 3.8%; BoJ core CPI 2.3% (fcst 2.5%)",
+   "read": "US core inflation ticked up to 3.3% a year in October, a touch above forecast, and Australian inflation jumped to 4.9%. Both keep their central banks from easing. Japan's core measure cooled slightly but stays above target.",
    "sources": [
     {
-     "label": "Blue Street calendar (Hercules, Nov 25): times, forecasts and actuals",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+     "label": "BEA (Nov 25): Personal income and outlays, October 2026",
+     "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
+    },
+    {
+     "label": "ActionForex (Nov 25): Australia CPI surges to 4.9% as underlying inflation accelerates to 3.8%",
+     "url": "https://www.actionforex.com/live-comments/661997-australia-cpi-surges-to-4-9-as-underlying-inflation-accelerates-to-3-8/"
     },
     {
      "label": "Bank of Japan (Nov 25): Indicators for core CPI",
      "url": "https://www.boj.or.jp/en/research/research_data/cpi/index.htm"
-    },
-    {
-     "label": "Blue Street breaking watch (Hercules, Nov 25)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
     }
    ]
   },
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "figure": "DXY ~103.97 (+0.12%); AUD/USD ~0.6608 (−0.59%); NZD/USD ~0.5468 (−0.36%); gold ~$3,521 (−0.99%) (Hercules, ~12:40 AM CT)",
-   "read": "Asian markets turned cautious ahead of expected new US tariffs on 16 trading partners. Money went into the dollar this time, while riskier currencies like the Aussie and kiwi fell. Gold slid too, a sign that higher US rates still outweigh fear.",
+   "figure": "Nasdaq 100 futures ~−2.2%, S&P 500 ~−1.3% at 3:32 AM CT (Reuters); AUD/USD ~0.6566 (−0.80%); NZD/USD ~0.5468; gold ~$3,500 (−1.58%)",
+   "read": "Reports that the Trump administration is about to unveil new tariffs on 16 trading partners sent Nasdaq futures down more than 2%. The Aussie and kiwi fell hardest. Gold slid too, a sign that higher US rates still outweigh fear.",
    "sources": [
     {
-     "label": "Reuters via WDSM (Nov 24, updated 05:19 UTC Nov 25): Dollar takes breather ahead of US data on Fed path, Aussie jumps on CPI",
-     "url": "https://wdsm710.com/2026/11/24/dollar-takes-breather-ahead-of-us-data-on-fed-path-aussie-jumps-on-cpi/"
+     "label": "Reuters via WHTC (Nov 25): Nasdaq futures slide over 2% on fresh US tariff concerns",
+     "url": "https://whtc.com/2026/11/25/nasdaq-futures-slide-over-2-on-fresh-us-tariff-concerns-inflation-data-in-focus/"
     },
     {
-     "label": "Reuters via KTWB (Nov 24): Trump administration set to unveil new tariffs after probe on excess factory capacity",
-     "url": "https://ktwb.com/2026/11/24/trump-administration-set-to-unveil-new-tariffs-after-probe-on-excess-factory-capacity-sources-say/"
+     "label": "RTÉ, citing Reuters (Nov 25): Trump administration set to unveil new tariffs",
+     "url": "https://www.rte.ie/news/business/2026/1125/1600572-trump-set-to-unveil-new-tariffs/"
     },
     {
-     "label": "Blue Street market levels (Hercules, London open run Nov 25; levels ~12:40 AM CT; indicative)",
+     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:47 AM CT Nov 25, after the 7:30 AM data; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
@@ -84,27 +84,19 @@
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "figure": "Brent ~$89.85 (−0.88%), Tuesday settle $91.40; WTI ~$80.86; gold ~$3,521 (−0.99%) (Hercules)",
-   "read": "Oil slipped back under $90 as rising supply outweighed worries about Gulf attacks, a small drag on the Canadian dollar. Gold's slide takes away some support from Australia's export earnings.",
+   "figure": "Brent ~$90.89 (−0.56%), Tuesday settle $91.40; WTI ~$81.48; gold ~$3,500, a 14-month low",
+   "read": "Oil held near $91 as Iran's unconfirmed mine claims offset plentiful supply, which leaves the Canadian dollar without a lift. Gold's fall to a 14-month low takes support away from Australia's export earnings.",
    "sources": [
     {
-     "label": "Reuters (Nov 25): Oil falls as supply-glut concerns offset Middle East disruption fears",
-     "url": "https://www.reuters.com/business/energy/oil-prices-fall-supply-glut-concerns-offset-middle-east-disruption-fears-2026-11-25/"
+     "label": "The Nation (Nov 25): Brent closed $2.03 higher on Tuesday after reports of attacks near Hormuz",
+     "url": "https://www.nationthailand.com/news/world/40073886"
     },
     {
-     "label": "PriceOfOil (Nov 25): Brent $89.81 at 05:22 UTC",
-     "url": "https://priceofoil.com/prices/brent"
+     "label": "Reuters via WHTC (Nov 25): Iran says ships hit mines in Hormuz, warns vessels to coordinate passage",
+     "url": "https://whtc.com/2026/11/25/iran-says-ships-hit-mines-in-hormuz-warns-vessels-to-coordinate-passage/"
     },
     {
-     "label": "FuelDataPortal (Nov 25): Brent, Nov 24 settle $91.40",
-     "url": "https://fueldataportal.com/data/brent-crude-price"
-    },
-    {
-     "label": "GoldPrice.com (Nov 25): spot gold $3,518.26 at 1:01 AM ET",
-     "url": "https://goldprice.com/"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, London open run Nov 25; levels ~12:40 AM CT; indicative)",
+     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:47 AM CT Nov 25, after the 7:30 AM data; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
