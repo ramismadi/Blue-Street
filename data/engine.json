@@ -1,12 +1,20 @@
 {
- "updated": "2026-11-24T15:30:00-06:00",
+ "updated": "2026-11-25T01:40:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "figure": "Fed Dec quarter-point hike ~96%, Jan ~62% (CME FedWatch via Hercules); BoC Dec ~80% from ~65% (Reuters); BoE Dec ~82%; ECB Dec ~90%; BoJ Dec ~84%",
-   "read": "A December Fed hike is fully priced, so strong US data no longer adds much to the dollar. The Bank of Canada moved closer to a December hike after Governor Tiff Macklem's speech, which lifted the loonie. Bank of England policymakers keep backing another hike, which supports the pound.",
+   "figure": "Fed Dec quarter-point hike ~96% (CME FedWatch via Hercules); RBA Dec hold ~99%, cut ~1% (forex.com); BoC Dec ~80% (Reuters); BoE Dec ~82%; ECB Dec ~90%; BoJ Dec ~84%",
+   "read": "A December Fed hike is fully priced, so the dollar now needs bets on further hikes to rise much more. Hot Australian inflation ended talk of a cut there, and Canada and the UK still lean toward December hikes. In Japan, mixed inflation signals keep a December hike likely but not certain.",
    "sources": [
+    {
+     "label": "Reuters via WDSM (Nov 24, updated 05:19 UTC Nov 25): Dollar takes breather ahead of US data on Fed path, Aussie jumps on CPI",
+     "url": "https://wdsm710.com/2026/11/24/dollar-takes-breather-ahead-of-us-data-on-fed-path-aussie-jumps-on-cpi/"
+    },
+    {
+     "label": "Blue Street central banks and pricing (Hercules, Nov 25)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+    },
     {
      "label": "Reuters (Nov 24): Canadian dollar hits 11-day high as investors raise Bank of Canada hike bets",
      "url": "https://www.reuters.com/markets/us/canadian-dollar-hits-11-day-high-investors-raise-boc-rate-hike-bets-2026-11-24/"
@@ -14,25 +22,21 @@
     {
      "label": "FXStreet (Nov 24): BoE's Greene says disinflation has stalled",
      "url": "https://www.fxstreet.com/news/boes-greene-disinflation-process-has-stalled-202611241321"
-    },
-    {
-     "label": "Blue Street central banks and pricing (Hercules, Nov 24)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
     }
    ]
   },
   {
    "id": "growth",
    "title": "Growth",
-   "figure": "US Conference Board confidence 103.3 (fcst 92.1, Oct 91.9); Germany Ifo 90.6 (fcst 90.6); US FHFA house prices 0.0% m/m (fcst +0.2%); Richmond Fed +3 (fcst −3)",
-   "read": "US consumers turned much more upbeat about jobs, a sign the economy is holding up under higher rates. Germany's business mood kept improving. Neither moved currencies much, because markets were watching stocks and yields.",
+   "figure": "Germany Q3 GDP +0.1% q/q final (first estimate +0.2%, forecast +0.2%) (Destatis); US Q3 GDP second estimate due Wed 7:30 AM CT (forecast 3.5%, advance 3.4%) (Hercules)",
+   "read": "Germany's economy grew a touch less than first reported in the third quarter, a reminder that its recovery is slow. US growth and spending figures on Wednesday will show whether the US economy is still outrunning the rest, which has kept the dollar strong.",
    "sources": [
     {
-     "label": "Conference Board via PRNewswire (Nov 24): US consumer confidence surged in November",
-     "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html"
+     "label": "Destatis (Nov 25): GDP quarterly results, final Q3 2026",
+     "url": "https://www.destatis.de/EN/Themes/Economy/National-Accounts-Domestic-Product/Tables/domestic-product-q-gdp.html?view=main[Print]"
     },
     {
-     "label": "Blue Street calendar (Hercules, Nov 24): times, forecasts and actuals",
+     "label": "Blue Street calendar (Hercules, Nov 25): times, forecasts and actuals",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     }
    ]
@@ -40,35 +44,39 @@
   {
    "id": "inflation",
    "title": "Inflation",
-   "figure": "Australia CPI Oct due Tue 6:30 PM CT (fcst 4.7% y/y); US core PCE Oct due Wed 7:30 AM CT (fcst +0.3% m/m, 3.2% y/y); Tokyo core CPI Nov due Thu 5:30 PM CT (fcst 2.9%)",
-   "read": "Inflation is still well above target almost everywhere, which keeps most central banks leaning toward hikes. Australian inflation on Tuesday evening and US core inflation on Wednesday are the week's big tests.",
+   "figure": "Australia CPI Oct 4.9% y/y (fcst 4.7%), trimmed mean 3.8% (fcst 3.6%); Japan services PPI Oct +4.2% (fcst 3.6%); BoJ core CPI 2.3% (fcst 2.5%); US core PCE Oct due Wed 7:30 AM CT (fcst +0.3% m/m, 3.2% y/y)",
+   "read": "Inflation is running hot in Australia and still above target in Japan, which keeps those central banks from easing. US core inflation for October, out Wednesday morning, is the week's biggest test for the dollar.",
    "sources": [
     {
-     "label": "Blue Street calendar (Hercules, Nov 24): times, forecasts and actuals",
+     "label": "Blue Street calendar (Hercules, Nov 25): times, forecasts and actuals",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    },
+    {
+     "label": "Bank of Japan (Nov 25): Indicators for core CPI",
+     "url": "https://www.boj.or.jp/en/research/research_data/cpi/index.htm"
+    },
+    {
+     "label": "Blue Street breaking watch (Hercules, Nov 25)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
     }
    ]
   },
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "figure": "USD/CHF ~0.8354 (−0.90%); US 10-year ~4.89%, lowest since Nov 10; DXY ~103.85 (−0.34%) (Hercules, early afternoon)",
-   "read": "Monday's rally in technology shares faded, and attacks on ships near the Strait of Hormuz kept some caution alive. That brought money back into the franc and pulled the dollar down. Possible new US tariffs on 16 trading partners are a fresh worry for stocks.",
+   "figure": "DXY ~103.97 (+0.12%); AUD/USD ~0.6608 (−0.59%); NZD/USD ~0.5468 (−0.36%); gold ~$3,521 (−0.99%) (Hercules, ~12:40 AM CT)",
+   "read": "Asian markets turned cautious ahead of expected new US tariffs on 16 trading partners. Money went into the dollar this time, while riskier currencies like the Aussie and kiwi fell. Gold slid too, a sign that higher US rates still outweigh fear.",
    "sources": [
     {
-     "label": "Reuters via Euronext (Nov 24): Dollar slips as AI-fuelled rally fades",
-     "url": "https://live.euronext.com/en/financial-news/dollar-takes-breather-ai-driven-rally"
-    },
-    {
-     "label": "Reuters via Devdiscourse (Nov 24): Three vessels struck by projectiles in Strait of Hormuz, UKMTO says",
-     "url": "https://www.devdiscourse.com/article/international/4011373-three-vessels-struck-by-projectiles-in-strait-of-hormuz-on-monday-ukmto-says"
+     "label": "Reuters via WDSM (Nov 24, updated 05:19 UTC Nov 25): Dollar takes breather ahead of US data on Fed path, Aussie jumps on CPI",
+     "url": "https://wdsm710.com/2026/11/24/dollar-takes-breather-ahead-of-us-data-on-fed-path-aussie-jumps-on-cpi/"
     },
     {
      "label": "Reuters via KTWB (Nov 24): Trump administration set to unveil new tariffs after probe on excess factory capacity",
      "url": "https://ktwb.com/2026/11/24/trump-administration-set-to-unveil-new-tariffs-after-probe-on-excess-factory-capacity-sources-say/"
     },
     {
-     "label": "Blue Street market levels (Hercules, New York close run Nov 24; levels read ~11:30 AM–1:00 PM CT, before the 3:00 PM close; indicative)",
+     "label": "Blue Street market levels (Hercules, London open run Nov 25; levels ~12:40 AM CT; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
@@ -76,23 +84,27 @@
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "figure": "Brent ~$90.65 (+1.57%), morning low ~$88.62; WTI ~$81.49; gold ~$3,556 (−2.44%) (Hercules)",
-   "read": "Oil bounced back above $90 after hitting a three-month low, which helped the Canadian dollar. Gold fell sharply, which gave the Aussie less of a lift than other currencies got.",
+   "figure": "Brent ~$89.85 (−0.88%), Tuesday settle $91.40; WTI ~$80.86; gold ~$3,521 (−0.99%) (Hercules)",
+   "read": "Oil slipped back under $90 as rising supply outweighed worries about Gulf attacks, a small drag on the Canadian dollar. Gold's slide takes away some support from Australia's export earnings.",
    "sources": [
     {
-     "label": "Reuters (Nov 24): Oil holds near three-month low as rising supply offsets Hormuz threat",
-     "url": "https://www.reuters.com/business/energy/oil-holds-near-three-month-low-rising-supply-offsets-hormuz-threat-2026-11-24/"
+     "label": "Reuters (Nov 25): Oil falls as supply-glut concerns offset Middle East disruption fears",
+     "url": "https://www.reuters.com/business/energy/oil-prices-fall-supply-glut-concerns-offset-middle-east-disruption-fears-2026-11-25/"
     },
     {
-     "label": "PriceOfOil (Nov 24): Brent $90.85 at 18:43 UTC",
+     "label": "PriceOfOil (Nov 25): Brent $89.81 at 05:22 UTC",
      "url": "https://priceofoil.com/prices/brent"
     },
     {
-     "label": "GoldPrice.com (Nov 24): spot gold $3,552.99 at 3:02 PM ET",
+     "label": "FuelDataPortal (Nov 25): Brent, Nov 24 settle $91.40",
+     "url": "https://fueldataportal.com/data/brent-crude-price"
+    },
+    {
+     "label": "GoldPrice.com (Nov 25): spot gold $3,518.26 at 1:01 AM ET",
      "url": "https://goldprice.com/"
     },
     {
-     "label": "Blue Street market levels (Hercules, New York close run Nov 24; levels read ~11:30 AM–1:00 PM CT, before the 3:00 PM close; indicative)",
+     "label": "Blue Street market levels (Hercules, London open run Nov 25; levels ~12:40 AM CT; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
@@ -116,20 +128,20 @@
   {
    "id": "fiscal",
    "title": "Fiscal",
-   "figure": "USTR Section 301 findings expected as soon as Nov 24, 16 partners, final rates not set (Reuters); US 10-year ~4.89% (Hercules); France debt 119% of GDP (ECB)",
-   "read": "Reports say the US may soon add new tariffs on 16 trading partners, including China, the European Union and Japan, which could weigh on those economies and on US growth. Record US government borrowing keeps long-term US borrowing costs high. France's debts remain a weight on the euro.",
+   "figure": "USTR Section 301 findings expected soon, 16 partners, final rates not set (Reuters); US 10-year ~4.90% (Hercules, WSJ); S&P France review Fri Nov 27 (Hercules)",
+   "read": "The US is expected to unveil new tariffs on 16 trading partners, including China, the European Union and Japan, which could weigh on their economies and on US growth. Record US government borrowing keeps long-term US borrowing costs high. France's debts remain a weight on the euro, with S&P due to review its credit rating on Friday.",
    "sources": [
     {
      "label": "Reuters via KTWB (Nov 24): Trump administration set to unveil new tariffs after probe on excess factory capacity",
      "url": "https://ktwb.com/2026/11/24/trump-administration-set-to-unveil-new-tariffs-after-probe-on-excess-factory-capacity-sources-say/"
     },
     {
-     "label": "Blue Street market levels (Hercules, New York close run Nov 24; levels read ~11:30 AM–1:00 PM CT, before the 3:00 PM close; indicative)",
+     "label": "Blue Street market levels (Hercules, London open run Nov 25; levels ~12:40 AM CT; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     },
     {
-     "label": "ECB (Nov 18): Financial Stability Review press release",
-     "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr261118~83c5c60158.en.html"
+     "label": "Blue Street central banks and pricing (Hercules, Nov 25)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
     }
    ]
   }
