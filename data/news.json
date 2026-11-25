@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T14:55:00Z",
+  "updated": "2026-11-25T15:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -44,16 +44,88 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-25T14:55:00Z",
-      "text": "Gold sits near $3,545 an ounce, down about 8% in November. On Wednesday, November 25 core PCE inflation came in a touch above forecasts and US growth was revised up to a 4.3% pace, which keeps a Federal Reserve rate rise on December 9 firmly on track and weighs on metal that pays no interest."
+      "ts": "2026-11-25T15:55:00Z",
+      "text": "Gold fell below $3,500 an ounce on Wednesday, November 25, its lowest since September 2025, down about 10% in November. US inflation figures out that morning keep a Federal Reserve rate rise on December 9 all but certain, which weighs on a metal that pays no interest."
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-25T11:55:00Z",
-      "text": "Brent crude sits near $90 a barrel, about a quarter below its October peak, because Gulf oil keeps flowing and US stockpiles rose again. Iran said on Wednesday, November 25 that two tankers hit mines in Hormuz, which keeps war risk in the price ahead of the OPEC+ meeting on Sunday, November 29."
+      "ts": "2026-11-25T15:55:00Z",
+      "text": "Brent crude rose back to about $93 a barrel on Wednesday, November 25, after Yemen's Houthi rebels claimed a strike on Saudi Arabia's largest refinery and Iran said two tankers hit mines in Hormuz. Expectations of a supply surplus next year still cap prices ahead of the OPEC+ meeting on Sunday, November 29."
     }
   },
   "items": [
+    {
+      "id": "oilprice-houthis-ras-tanura-drones-20261125",
+      "date": "2026-11-25",
+      "source": "OilPrice.com",
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Jumps-Over-2-as-Saudi-Arabia-Downs-Drones-Over-Ras-Tanura.html",
+      "image": null,
+      "headline": "Oil Jumps Over 2% as Saudi Arabia Downs Drones Over Ras Tanura",
+      "story": "oil-supply",
+      "story_title": "Oil supply: surplus vs Gulf attacks",
+      "pillar": "commodities",
+      "summary": "Brent crude rose more than 2% to about $93.60 a barrel by mid-morning in New York on Wednesday, November 25, after Yemen's Houthi rebels said they struck Saudi Arabia's Ras Tanura oil refinery.",
+      "beats": {
+        "was": "Ras Tanura is Saudi Arabia's largest refinery and sits beside a terminal that can load about 6.5 million barrels of oil a day. A drone attack shut it in March, and it took about four months to restart. Brent had slipped to near $90 on fears of too much oil next year.",
+        "happened": "Houthi military spokesman Yahya Saree said the group hit the refinery and set off fires. The Saudi-led coalition said its air defenses destroyed four drones over the site but did not say whether the refinery was damaged, and the claim has not been confirmed. Brent climbed about $2.20 and US crude about $1.50, helped by traders closing bets on lower prices before the US Thanksgiving holiday.",
+        "means": "Even an unconfirmed hit on a key Saudi site puts some war risk back into oil, on top of Iran's mine claims in the Strait of Hormuz. Talk of a supply surplus next year still caps how far prices run.",
+        "fx": "Firmer oil supports the Canadian dollar, while more Gulf fighting adds a little safe-place demand for the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "A claimed strike on Saudi Arabia's biggest refinery lifted Brent more than 2%."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices help Canada's export earnings."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Wider Gulf fighting draws some money to safe places."
+        }
+      ],
+      "watch": "Whether Saudi Arabia or the oil company Aramco confirms any damage, and the OPEC+ meeting on Sunday, November 29."
+    },
+    {
+      "id": "investing-gold-below-3500-pce-20261125",
+      "date": "2026-11-25",
+      "source": "Investing.com",
+      "url": "https://in.investing.com/news/commodities-news/gold-holds-near-15mth-lows-on-fed-hike-bets-pce-inflation-awaited-5724751",
+      "image": "https://content-media.investing.com/news/LYNXMPED180L9_L.jpg",
+      "headline": "Gold slides below $3,500 amid Fed rate hike expectations, AI stock rout",
+      "story": "gold-fed",
+      "story_title": "Gold and Federal Reserve rate rises",
+      "pillar": "rates",
+      "summary": "Gold fell below $3,500 an ounce on the morning of Wednesday, November 25, its lowest since September 2025, after US inflation figures kept a Federal Reserve rate rise in December all but certain.",
+      "beats": {
+        "was": "Gold has been sliding for two months because the Federal Reserve is raising rates, which makes a metal that pays no interest less attractive. It held just above $3,500 on Friday, November 20, a level many saw as a floor.",
+        "happened": "US PCE inflation, the Fed's preferred price gauge, came in at 3.8% for the year to October, as expected, with the core measure a touch above forecasts. Spot gold then dropped close to 3% and US gold futures fell to about $3,457. Futures pricing puts the chance of a quarter-point Fed rise on December 9 at about 96%, and New York Fed President John Williams said stubborn inflation points to tighter policy. Silver lost close to 4%.",
+        "means": "The $3,500 floor has given way, so gold is now trading at levels last seen more than a year ago. Some analysts also point to investors selling gold to raise cash as tech shares fall.",
+        "fx": "Gold moves against the dollar and US yields, so this drop mirrors how firmly markets expect the Fed to keep raising rates."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A break below $3,500 to its lowest since September 2025."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Near-certain Fed rate-rise bets keep the dollar firm."
+        }
+      ],
+      "watch": "The Federal Reserve decision on Wednesday, December 9."
+    },
     {
       "id": "chipdispatch-durable-goods-oct-02-20261125",
       "date": "2026-11-25",
@@ -1258,39 +1330,6 @@
       "watch": "Whether shares hold the gains into October PCE inflation on Wednesday, November 25; a quick fade would bring last week's nerves back."
     },
     {
-      "id": "socialnews-ians-baghaei-hormuz-security-20261123",
-      "ts": "2026-11-23T13:37:47Z",
-      "source": "Social News XYZ (IANS)",
-      "url": "https://www.socialnews.xyz/2026/11/23/security-in-hormuz-can-be-restored-if-us-fulfils-commitment-iran",
-      "image": "https://s3.socialnews.xyz/wp-content/uploads/2026/11/23/20260623588-scaled.jpg",
-      "headline": "Iran says safe shipping through Hormuz can return quickly if the US meets its terms",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Iran's Foreign Ministry spokesman Esmaeil Baghaei said on Monday, November 23 that security in the Strait of Hormuz could be restored very quickly if the US keeps its commitments and accepts Iran's conditions. He called those conditions Iran's rights, not new demands.",
-      "beats": {
-        "was": "Ships near the Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil, have been attacked through the US-Israeli war with Iran, and the US Navy is blockading Iranian shipping. Iran's foreign minister Abbas Araghchi had said the strait could reopen within two hours on the right terms.",
-        "happened": "At his weekly briefing in Tehran, Baghaei backed that line and said Iran's terms are not fresh preconditions. He also said no decision to leave the global nuclear arms treaty has reached the Foreign Ministry.",
-        "means": "Iran keeps a door open to a deal that would calm shipping, but only on its own terms, and there is no sign yet that the US has agreed. Talk alone does not change oil flows.",
-        "fx": "Any real step toward reopening Hormuz would lower oil and cut demand for safe places like the Swiss franc and gold. Until then the effect is small."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Iran signals shipping could return to normal fast, but only if the US accepts its terms."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Talk of calmer shipping trims safe-place demand, but nothing is agreed."
-        }
-      ],
-      "watch": "Whether the US answers Iran's terms; a reply would matter far more than statements from either side."
-    },
-    {
       "id": "invezz-brent-below-90-surplus-20261123",
       "date": "2026-11-23",
       "source": "Invezz",
@@ -1361,33 +1400,6 @@
         }
       ],
       "watch": "Whether the bounce in US shares on Monday, November 23 holds; a steady recovery would ease the selling."
-    },
-    {
-      "id": "wolf-reuters-euro-zone-pmi-france-20261123",
-      "date": "2026-11-23",
-      "source": "Reuters (via 104.9 The Wolf)",
-      "url": "https://www.1049thewolf.com/2026/11/23/euro-zone-growth-holds-steady-but-frances-deepening-downturn-clouds-outlook-pmi-shows/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/23/2026-11-23T090800Z_1_LYNXNPEMAM0J2_RTROPTP_3_GERMANY-ECONOMY-PMI.JPG",
-      "headline": "Euro zone business growth holds up as Germany speeds ahead and France sinks",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates one last time in December?",
-      "pillar": "growth",
-      "summary": "S&P Global's early November business survey for the euro zone, out on Monday, November 23, held at 51.7, a little short of forecasts, with Germany at a four-year high and France shrinking faster.",
-      "beats": {
-        "was": "The European Central Bank is expected to raise rates again in December, but the euro has slid below $1.10 because the US Federal Reserve looks set to raise faster.",
-        "happened": "The survey of purchasing managers stayed at 51.7 (above 50 means growth) against 51.9 forecast: factories did better than expected while services slipped to a five-month low. Germany hit its best reading since March 2022, while France fell to a six-month low as next year's presidential election weighs on firms.",
-        "means": "Overall growth is steady, which keeps a December ECB rate rise on the table, but softer services, falling business confidence and easing cost pressure give no reason to raise faster.",
-        "fx": "A mixed result gives the euro little lift against a dollar backed by expected Fed rate rises."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Steady growth but a small miss, with Germany strong and France weak."
-        }
-      ],
-      "watch": "Euro zone inflation figures for November, due in early December, the last big reading before the ECB's December decision."
     },
     {
       "id": "actionforex-uk-pmi-services-miss-20261123",
