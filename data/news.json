@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-25T11:55:00Z",
+  "updated": "2026-11-25T14:26:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-25T11:55:00Z",
-      "text": "The dollar sits near its highest since March 2025 because markets see a Federal Reserve rate rise on December 9 as all but certain, with good odds of another in January. Reports on Wednesday, November 25 of new US tariffs on 16 trading partners knocked US share futures lower, and October PCE inflation out that morning is the next guide."
+      "ts": "2026-11-25T13:55:00Z",
+      "text": "The dollar sits near its highest since March 2025 because markets see a Federal Reserve rate rise on December 9 as all but certain. Core PCE inflation came in a touch hot at 3.3% on Wednesday, November 25 and layoffs stayed low, which keeps that rise on track even as US tech shares slide."
     },
     "EUR": {
       "lean": "bearish",
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "mixed",
-      "ts": "2026-11-24T12:10:00Z",
-      "text": "The yen firmed slightly on Tuesday, November 24, with the dollar near 159 yen, as fear that Japan could step in near 160 and an expected Bank of Japan rate rise on December 18 give it some support. The wide gap with rising US rates still weighs on it, and Tokyo prices come on Thursday, November 26."
+      "ts": "2026-11-25T13:55:00Z",
+      "text": "The yen is a little firmer with the dollar near 159 yen, helped by Japan's warnings it may step in near 160 and by services inflation hitting its fastest since 1990, which backs a Bank of Japan rate rise on December 18. Falling share prices also bring some money back to the yen, and Tokyo prices come on Friday, November 27."
     },
     "CHF": {
       "lean": "mixed",
@@ -34,8 +34,8 @@
     },
     "AUD": {
       "lean": "mixed",
-      "ts": "2026-11-25T11:55:00Z",
-      "text": "The Australian dollar sits near 66 US cents, close to its lowest since January. Inflation jumping to 4.9% in October rules out early rate cuts and lends support, but a new slide in tech shares and reports of fresh US tariffs on Wednesday, November 25 weigh on risk-linked currencies."
+      "ts": "2026-11-25T13:55:00Z",
+      "text": "The Australian dollar sits near 66.6 US cents, close to its lowest since January. Inflation jumping to 4.9% in October rules out early rate cuts and lends support, but Nasdaq futures down about 3% before the New York open on Wednesday, November 25 and new US tariff plans weigh on risk-linked currencies."
     },
     "NZD": {
       "lean": "bearish",
@@ -44,8 +44,8 @@
     },
     "XAU": {
       "lean": "bearish",
-      "ts": "2026-11-25T11:55:00Z",
-      "text": "Gold sits near $3,559 an ounce, down about 8% in November, after Tuesday, November 24 erased most of its bounce from last week's 14-month low. A near-certain Federal Reserve rate rise on December 9 weighs on it, and October PCE inflation on Wednesday, November 25 decides the next push."
+      "ts": "2026-11-25T13:55:00Z",
+      "text": "Gold sits near $3,545 an ounce, down about 8% in November, after slipping again early on Wednesday, November 25. Core PCE inflation a touch above forecasts keeps a Federal Reserve rate rise on December 9 firmly on track, which weighs on metal that pays no interest."
     },
     "OIL": {
       "lean": "mixed",
@@ -54,6 +54,138 @@
     }
   },
   "items": [
+    {
+      "id": "foxbusiness-pce-october-core-33-20261125",
+      "ts": "2026-11-25T13:33:00Z",
+      "source": "Fox Business",
+      "url": "https://www.foxbusiness.com/economy/october-2026-pce-inflation",
+      "image": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2024/11/0/0/shopper-grocery-store.jpg?ve=1&tl=1",
+      "headline": "Fed's favored inflation gauge rose in October ahead of expected Fed rate hike next month",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "inflation",
+      "summary": "US core PCE inflation, the Federal Reserve's preferred gauge, rose to 3.3% in the year to October, a touch above the 3.2% expected, the Commerce Department said on Wednesday, November 25.",
+      "beats": {
+        "was": "The Federal Reserve has been raising rates again because inflation is well above its 2% goal, and markets saw a rise at its December 9 meeting as nearly certain. October PCE was the last big inflation report before that meeting.",
+        "happened": "Overall PCE prices rose 0.3% in October and 3.8% from a year earlier, as expected. Core prices, which leave out food and energy, also rose 0.3% on the month, and the yearly rate climbed to 3.3% from 3.1% in September. Personal income rose 0.7%.",
+        "means": "Underlying inflation is still speeding up, not slowing, so nothing here argues against a December rate rise. Betting markets kept the odds of a quarter-point rise near 94% after the report.",
+        "fx": "A slightly hot core reading backs the case for more Fed rate rises, which supports the dollar and weighs on gold, which pays no interest. The miss was small, so the bigger swing for markets on Wednesday, November 25 is still the slide in tech shares."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Core inflation rising to 3.3% keeps a December 9 Fed rate rise firmly on track."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher US rates make gold, which pays nothing, less attractive."
+        }
+      ],
+      "watch": "US markets are shut on Thursday, November 26 for Thanksgiving. The next big US report is November jobs data in early December, before the Fed meets on December 8-9."
+    },
+    {
+      "id": "panews-us-jobless-claims-189k-20261125",
+      "ts": "2026-11-25T13:30:45Z",
+      "source": "PANews",
+      "url": "https://panews.io/articles/01a212e6-cf2d-70fb-a468-f4775abb0864",
+      "image": null,
+      "headline": "US Initial Jobless Claims for Week Ending Nov 21 at 189,000; October Core PCE Price Index Annual Rate at 3.3%",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "growth",
+      "summary": "New US claims for unemployment benefits fell to 189,000 in the week to November 21, below the 200,000 expected, a sign layoffs remain rare.",
+      "beats": {
+        "was": "Weekly jobless claims are the quickest read on US layoffs. They have stayed low for months, one reason the Federal Reserve feels free to keep raising rates. The report came out a day early because of Thanksgiving.",
+        "happened": "The Labor Department said new claims fell to 189,000 in the week to November 21, down from the week before and lower than forecasters expected.",
+        "means": "Layoffs remain low even as share prices fall, so the job market gives the Fed no reason to pause.",
+        "fx": "A firm job market adds to the case for more Fed rate rises, a small support for the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Low layoffs back the Fed's plan to keep raising rates."
+        }
+      ],
+      "watch": "The November US jobs report in early December, the last before the Fed's December 9 decision."
+    },
+    {
+      "id": "whtc-reuters-iran-tankers-mines-coordinate-20261125",
+      "date": "2026-11-25",
+      "source": "WHTC (Reuters)",
+      "url": "https://whtc.com/2026/11/25/iran-says-ships-hit-mines-in-hormuz-warns-vessels-to-coordinate-passage/",
+      "image": null,
+      "headline": "Iran says ships hit mines in Hormuz, warns vessels to coordinate passage",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Iran's Revolutionary Guards navy said on Wednesday, November 25 that two oil tankers hit mines, exploded and caught fire in the Strait of Hormuz while using a route Iran had not approved.",
+      "beats": {
+        "was": "The Strait of Hormuz, the sea lane for about a fifth of the world's oil, has been fought over since the US-Iran war began, and the US is blockading Iranian ports. Several ships have been hit near the strait in recent days.",
+        "happened": "Iran said two tankers struck mines and burned after taking an unapproved route. An Iranian army spokesman said new systems now watch the strait and that ships not working with Iranian forces face more danger. Tehran told Washington it will not let shipping return to normal until its demands are met, including an end to the US blockade.",
+        "means": "Iran is pressing its claim to control who passes through Hormuz, which keeps a risk premium in oil. Through Qatari go-betweens it has said it would reopen the strait within 48 hours if its conditions are met, so a deal remains possible.",
+        "fx": "Each new attack props up oil prices, which supports the Canadian dollar, and adds safe-place demand for the Swiss franc and gold."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Mines and burning tankers raise the risk of losing Gulf supply."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "War escalation draws money to safe places."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices help Canada's export earnings."
+        }
+      ],
+      "watch": "Any word through Qatar on talks to reopen the strait, and the OPEC+ meeting on Sunday, November 29."
+    },
+    {
+      "id": "nationthailand-brent-closes-up-203-hormuz-20261125",
+      "date": "2026-11-25",
+      "source": "The Nation (Thailand)",
+      "url": "https://www.nationthailand.com/news/world/40073886",
+      "image": "https://media.nationthailand.com/uploads/images/md/2026/11/yMbrXeco012PfPlYScnH.webp",
+      "headline": "Brent closed US$2.03 higher on Tuesday after reports of attacks on shipping around the Strait of Hormuz",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Brent crude ended Tuesday, November 24 up about $2 at $91.40 a barrel, after earlier touching its lowest since late August, as reports of ships hit near the Strait of Hormuz spread.",
+      "beats": {
+        "was": "Oil had slid for days because Gulf crude kept flowing despite the war between the US, Israel and Iran, and talk of US-Iran peace talks. The Strait of Hormuz carries about a fifth of the world's oil.",
+        "happened": "Brent dipped to about $88.10 during Tuesday, November 24, then closed at $91.40, up about 2.3%. US crude closed near $82. The UK's maritime agency confirmed three ships were struck by unknown projectiles while crossing the strait on Monday, November 23, though all sailed on, and Iran's Revolutionary Guards said a container ship hit a mine.",
+        "means": "Each new report of attacks puts some risk premium back into oil, even while supply keeps getting through. The market is torn between plenty of oil now and the chance of a sudden cut.",
+        "fx": "A firmer oil price is a small help to the Canadian dollar, and higher energy costs add a little to inflation worries in big oil importers like Japan and the euro zone."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Shipping attacks lifted prices off a three-month low."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada is a big oil exporter."
+        }
+      ],
+      "watch": "Whether more attacks are confirmed, and the OPEC+ meeting on Sunday, November 29."
+    },
     {
       "id": "whtc-reuters-nasdaq-futures-slide-tariffs-pce-20261125",
       "ts": "2026-11-25T10:08:22Z",
@@ -232,76 +364,31 @@
       "watch": "US October PCE inflation later on Wednesday, November 25, and the Reserve Bank of Australia decision on Tuesday, December 8."
     },
     {
-      "id": "whtc-reuters-iran-tankers-mines-coordinate-20261125",
-      "date": "2026-11-25",
-      "source": "WHTC (Reuters)",
-      "url": "https://whtc.com/2026/11/25/iran-says-ships-hit-mines-in-hormuz-warns-vessels-to-coordinate-passage/",
-      "image": null,
-      "headline": "Iran says ships hit mines in Hormuz, warns vessels to coordinate passage",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Iran's Revolutionary Guards navy said on Wednesday, November 25 that two oil tankers hit mines, exploded and caught fire in the Strait of Hormuz while using a route Iran had not approved.",
+      "id": "actionforex-japan-services-ppi-42-20261125",
+      "ts": "2026-11-25T01:07:01Z",
+      "source": "ActionForex",
+      "url": "https://www.actionforex.com/live-comments/661994-japan-services-producer-prices-jump-4-2-but-freight-costs-drive-much-of-the-surge/",
+      "image": "https://www.actionforex.com/wp-content/uploads/2018/03/f-japan5.jpg",
+      "headline": "Japan Services Producer Prices Jump 4.2%, but Freight Costs Drive Much of the Surge",
+      "story": "yen-boj",
+      "story_title": "The yen, the Bank of Japan and intervention risk",
+      "pillar": "inflation",
+      "summary": "Prices Japanese firms charge each other for services rose 4.2% in the year to October, the fastest since 1990 and above the 3.6% expected, the Bank of Japan said on Wednesday, November 25.",
       "beats": {
-        "was": "The Strait of Hormuz, the sea lane for about a fifth of the world's oil, has been fought over since the US-Iran war began, and the US is blockading Iranian ports. Several ships have been hit near the strait in recent days.",
-        "happened": "Iran said two tankers struck mines and burned after taking an unapproved route. An Iranian army spokesman said new systems now watch the strait and that ships not working with Iranian forces face more danger. Tehran told Washington it will not let shipping return to normal until its demands are met, including an end to the US blockade.",
-        "means": "Iran is pressing its claim to control who passes through Hormuz, which keeps a risk premium in oil. Through Qatari go-betweens it has said it would reopen the strait within 48 hours if its conditions are met, so a deal remains possible.",
-        "fx": "Each new attack props up oil prices, which supports the Canadian dollar, and adds safe-place demand for the Swiss franc and gold."
+        "was": "The Bank of Japan has raised its rate to 1.25% this year and many expect another rise at its December 18 meeting. It watches services prices closely because they show whether inflation is driven by wages at home rather than imports.",
+        "happened": "Services producer prices rose 4.2% from a year earlier, up from 3.8% in September. Much of the jump came from ocean freight, which more than doubled on the year, and hotel charges. Leaving out international transport, the rise was a milder 3.2%.",
+        "means": "The headline backs the case for a December rate rise, but the wage-linked part is softer than the top number, so the push is real but limited.",
+        "fx": "Signs of firmer Japanese inflation support bets on higher Japanese rates, a mild help for the yen. The dollar was still near 159 yen, close to the level where Japan has warned it may step in."
       },
       "impact": [
         {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Mines and burning tankers raise the risk of losing Gulf supply."
-        },
-        {
-          "ccy": "CHF",
+          "ccy": "JPY",
           "dir": "bullish",
           "strength": 1,
-          "why": "War escalation draws money to safe places."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil prices help Canada's export earnings."
+          "why": "Faster services inflation adds weight to a Bank of Japan rate rise on December 18."
         }
       ],
-      "watch": "Any word through Qatar on talks to reopen the strait, and the OPEC+ meeting on Sunday, November 29."
-    },
-    {
-      "id": "nationthailand-brent-closes-up-203-hormuz-20261125",
-      "date": "2026-11-25",
-      "source": "The Nation (Thailand)",
-      "url": "https://www.nationthailand.com/news/world/40073886",
-      "image": "https://media.nationthailand.com/uploads/images/md/2026/11/yMbrXeco012PfPlYScnH.webp",
-      "headline": "Brent closed US$2.03 higher on Tuesday after reports of attacks on shipping around the Strait of Hormuz",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "commodities",
-      "summary": "Brent crude ended Tuesday, November 24 up about $2 at $91.40 a barrel, after earlier touching its lowest since late August, as reports of ships hit near the Strait of Hormuz spread.",
-      "beats": {
-        "was": "Oil had slid for days because Gulf crude kept flowing despite the war between the US, Israel and Iran, and talk of US-Iran peace talks. The Strait of Hormuz carries about a fifth of the world's oil.",
-        "happened": "Brent dipped to about $88.10 during Tuesday, November 24, then closed at $91.40, up about 2.3%. US crude closed near $82. The UK's maritime agency confirmed three ships were struck by unknown projectiles while crossing the strait on Monday, November 23, though all sailed on, and Iran's Revolutionary Guards said a container ship hit a mine.",
-        "means": "Each new report of attacks puts some risk premium back into oil, even while supply keeps getting through. The market is torn between plenty of oil now and the chance of a sudden cut.",
-        "fx": "A firmer oil price is a small help to the Canadian dollar, and higher energy costs add a little to inflation worries in big oil importers like Japan and the euro zone."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Shipping attacks lifted prices off a three-month low."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Canada is a big oil exporter."
-        }
-      ],
-      "watch": "Whether more attacks are confirmed, and the OPEC+ meeting on Sunday, November 29."
+      "watch": "Tokyo consumer prices for November on Friday, November 27, and the Bank of Japan meeting on December 18."
     },
     {
       "id": "fool-close-nasdaq-falls-dow-gains-20261124",
@@ -679,144 +766,6 @@
       "watch": "Whether UKMTO's count of confirmed attacks in November tops October's 39."
     },
     {
-      "id": "euronews-hatami-hormuz-closed-day-by-day-qatar-talks-20261124",
-      "ts": "2026-11-24T10:42:32Z",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/11/24/iran-orders-hormuz-closed-further-day-by-day-as-qatar-seeks-to-revive-peace-talks",
-      "image": "https://images.euronews.com/articles/stories/10/00/54/79/1200x675_cmsv2_d09bc77c-4395-5a65-8782-b47673e3e794-10005479.jpg",
-      "headline": "Iran orders Hormuz closed 'further day by day' as Qatar seeks to revive peace talks",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "A senior Iranian general told the navy to tighten its hold on the Strait of Hormuz a little more each day until Iran's seven demands are met, while Qatar's prime minister pressed US leaders in Washington to restart talks.",
-      "beats": {
-        "was": "The US and Iran are at war, the US Navy is blockading Iranian ports, and Iran has been attacking ships near the Strait of Hormuz, the narrow sea route for about a fifth of the world's oil. Iran says it will not talk until the US meets seven conditions, such as lifting sanctions and ending the blockade.",
-        "happened": "On Monday, November 23, Major General Amir Hatami ordered Iran's navy to keep shutting the strait more each day, citing orders from Supreme Leader Mojtaba Khamenei. Parliament Speaker Mohammad Bagher Ghalibaf repeated there will be no talks before the conditions are met. The same day, Qatar's Prime Minister Mohammed bin Abdulrahman Al Thani met Secretary of State Marco Rubio and Vice President JD Vance to push for new talks. A shipping monitor still counted 114 trips through the strait from November 19 to 21.",
-        "means": "Iran's words are getting harder even as ships keep moving, and a peace push has started without any sign Iran will soften. The risk of a sudden supply shock stays, but for now it is threats more than lost barrels.",
-        "fx": "Tougher talk from Iran props up oil a little and keeps some demand for safe currencies like the yen and Swiss franc. A real cut in tanker traffic would help Canada's and Norway's currencies and hurt big oil buyers like Japan and the euro zone."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "An order to tighten control of the strait raises the risk to supply, though traffic has not dropped much yet."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "No sign of peace talks keeps some demand for the franc as a safe place."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Safe-place demand helps the yen, but higher oil costs hurt Japan as a big oil buyer."
-        }
-      ],
-      "watch": "Whether Qatar gets the two sides talking, and whether the number of ships crossing Hormuz actually falls."
-    },
-    {
-      "id": "ap-qalibaf-seven-conditions-20261124",
-      "ts": "2026-11-24T10:34:18Z",
-      "source": "Associated Press via WHIO",
-      "url": "https://www.whio.com/news/world/iran-insists-no/P24ZCW2W7I745GZC67TAPOXQYE/",
-      "image": "https://cmg-cmg-tv-10040-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FXSQTAKKEHQ55DJRCQIZ46Z2CVQ.jpg?auth=d9901d9e27a5bcc4cfd768325faec20c5677eef32eb7ae4194cbc771fa0ba547&width=1200&height=630&smart=true",
-      "headline": "Iran insists no talks with the US until its 7 conditions are met, and other Mideast news",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's parliament speaker and chief negotiator Mohammad Bagher Qalibaf said on Tuesday, November 24 that Iran will not talk with the US until seven conditions are met, and warned the conflict could spread to new areas.",
-      "beats": {
-        "was": "The US and Iran are at war, the US Navy is blockading Iranian ports, and Iran has been attacking ships near the Strait of Hormuz, the narrow sea route for about a fifth of the world's oil. Qatar has been trying to restart talks.",
-        "happened": "Qalibaf said on Iranian state TV that there will be no talks before the conditions are met. Iran has not listed them publicly, but state media say they include lifting sanctions, ending the naval blockade and freeing seized Iranian assets. He also warned Iran could widen the area of the fighting. Iran's Revolutionary Guard navy said three tankers hit mines in the strait and caught fire despite a US air escort.",
-        "means": "A quick deal to reopen Hormuz looks less likely, so the risk of a sudden jump in oil prices stays, even though oil has been falling on signs that Gulf crude keeps getting out.",
-        "fx": "Stalled talks keep some support under oil and some safe-place demand for the Swiss franc, but markets have mostly looked past the threats so far."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "No talks soon keeps the supply risk alive, though prices have shrugged it off."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Threats to widen the war keep some demand for a safe currency."
-        }
-      ],
-      "watch": "Whether Qatar's efforts restart US-Iran talks, and the OPEC+ meeting on 2027 output on Sunday, November 29."
-    },
-    {
-      "id": "euronext-reuters-dollar-ai-euphoria-fed-hike-bets-20261124",
-      "ts": "2026-11-24T10:31:00Z",
-      "source": "Reuters via Euronext",
-      "url": "https://live.euronext.com/en/financial-news/dollar-gains-renewed-ai-euphoria-fuels-fed-hike-bets",
-      "image": null,
-      "headline": "Dollar gains as renewed AI euphoria fuels Fed hike bets",
-      "story": "fed-hikes",
-      "story_title": "The Federal Reserve's rate rises",
-      "pillar": "policy",
-      "summary": "The dollar held near its highest in almost two years on Tuesday, November 24, as a rebound in tech shares and firm bets on a Federal Reserve rate rise in December kept buyers coming.",
-      "beats": {
-        "was": "The Federal Reserve has been raising rates to fight inflation, and markets now treat another quarter-point rise on December 9 as all but certain. The dollar has gained about 2.3% so far in November.",
-        "happened": "After chip maker Nvidia brought back Jensen Huang as its boss on Monday, November 23, tech shares rallied and Nvidia gained close to $1 trillion in value. The dollar index stayed near 104.3, just off Monday's high of 104.5, its strongest since March 2025. The euro sat near $1.091, the pound near $1.305 and the dollar near 159.2 yen. The Australian dollar was near 66.3 US cents, down almost 6% in a month, and speculators hold a record bet against it.",
-        "means": "Calmer stock markets have not slowed the dollar, because its strength rests on the gap between rising US rates and slower moves elsewhere. The record bet against the Australian dollar means any good news for it could spark a sharp bounce as those bets are closed.",
-        "fx": "Rate-rise bets keep the dollar firm against most currencies. US inflation figures on Wednesday, November 25 decide whether that lead grows or fades."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Near-certain bets on a December Fed rise hold the dollar near a two-year high."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The Aussie is down almost 6% in a month and speculators hold a record bet against it."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The euro sits near its lowest since April 2025 as the US rate lead widens."
-        }
-      ],
-      "watch": "US October PCE inflation on Wednesday, November 25, and the Fed decision on December 9."
-    },
-    {
-      "id": "rte-reuters-german-ifo-november-906-20261124",
-      "ts": "2026-11-24T10:28:49Z",
-      "source": "RTÉ / Reuters",
-      "url": "https://www.rte.ie/news/business/2026/1124/1600420-german-ifo-index/",
-      "image": "https://www.rte.ie/images/001ea0f7-1600.jpg",
-      "headline": "German Ifo business sentiment rises in November",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates one last time in December?",
-      "pillar": "growth",
-      "summary": "German business mood improved for a seventh month in November, with the Ifo index at 90.6, just above forecasts, though factory confidence slipped.",
-      "beats": {
-        "was": "The Ifo index, a monthly survey of about 9,000 German firms, has risen every month since spring as Germany's economy slowly recovers. It stood at 90.1 in October.",
-        "happened": "The index rose to 90.6 in November, a touch above the 90.5 economists expected. Firms felt better about both current trade and the months ahead. Services and retail improved, but factories and builders turned more cautious, the first factory drop after six gains. Ifo president Clemens Fuest said the recovery goes on but is not broad.",
-        "means": "Germany keeps growing slowly, which supports the European Central Bank's plan to raise rates in December. The factory dip is a small warning, because an early survey on Monday, November 23 had shown factories speeding up.",
-        "fx": "A steady German economy gives the euro a little support. It is too small to offset the dollar's pull from rising US rates."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "German business mood edges up again, backing a December ECB rise."
-        }
-      ],
-      "watch": "The ECB decision on December 17 and euro zone inflation early in December."
-    },
-    {
       "id": "investing-boe-greene-faster-hikes-20261124",
       "date": "2026-11-24",
       "source": "Investing.com",
@@ -982,6 +931,144 @@
       "watch": "US PCE inflation on Wednesday, November 25, Tokyo prices on Thursday, November 26, and the Bank of Japan decision on Friday, December 18."
     },
     {
+      "id": "euronews-hatami-hormuz-closed-day-by-day-qatar-talks-20261124",
+      "ts": "2026-11-24T10:42:32Z",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/11/24/iran-orders-hormuz-closed-further-day-by-day-as-qatar-seeks-to-revive-peace-talks",
+      "image": "https://images.euronews.com/articles/stories/10/00/54/79/1200x675_cmsv2_d09bc77c-4395-5a65-8782-b47673e3e794-10005479.jpg",
+      "headline": "Iran orders Hormuz closed 'further day by day' as Qatar seeks to revive peace talks",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "A senior Iranian general told the navy to tighten its hold on the Strait of Hormuz a little more each day until Iran's seven demands are met, while Qatar's prime minister pressed US leaders in Washington to restart talks.",
+      "beats": {
+        "was": "The US and Iran are at war, the US Navy is blockading Iranian ports, and Iran has been attacking ships near the Strait of Hormuz, the narrow sea route for about a fifth of the world's oil. Iran says it will not talk until the US meets seven conditions, such as lifting sanctions and ending the blockade.",
+        "happened": "On Monday, November 23, Major General Amir Hatami ordered Iran's navy to keep shutting the strait more each day, citing orders from Supreme Leader Mojtaba Khamenei. Parliament Speaker Mohammad Bagher Ghalibaf repeated there will be no talks before the conditions are met. The same day, Qatar's Prime Minister Mohammed bin Abdulrahman Al Thani met Secretary of State Marco Rubio and Vice President JD Vance to push for new talks. A shipping monitor still counted 114 trips through the strait from November 19 to 21.",
+        "means": "Iran's words are getting harder even as ships keep moving, and a peace push has started without any sign Iran will soften. The risk of a sudden supply shock stays, but for now it is threats more than lost barrels.",
+        "fx": "Tougher talk from Iran props up oil a little and keeps some demand for safe currencies like the yen and Swiss franc. A real cut in tanker traffic would help Canada's and Norway's currencies and hurt big oil buyers like Japan and the euro zone."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "An order to tighten control of the strait raises the risk to supply, though traffic has not dropped much yet."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "No sign of peace talks keeps some demand for the franc as a safe place."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Safe-place demand helps the yen, but higher oil costs hurt Japan as a big oil buyer."
+        }
+      ],
+      "watch": "Whether Qatar gets the two sides talking, and whether the number of ships crossing Hormuz actually falls."
+    },
+    {
+      "id": "ap-qalibaf-seven-conditions-20261124",
+      "ts": "2026-11-24T10:34:18Z",
+      "source": "Associated Press via WHIO",
+      "url": "https://www.whio.com/news/world/iran-insists-no/P24ZCW2W7I745GZC67TAPOXQYE/",
+      "image": "https://cmg-cmg-tv-10040-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FXSQTAKKEHQ55DJRCQIZ46Z2CVQ.jpg?auth=d9901d9e27a5bcc4cfd768325faec20c5677eef32eb7ae4194cbc771fa0ba547&width=1200&height=630&smart=true",
+      "headline": "Iran insists no talks with the US until its 7 conditions are met, and other Mideast news",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "risk",
+      "summary": "Iran's parliament speaker and chief negotiator Mohammad Bagher Qalibaf said on Tuesday, November 24 that Iran will not talk with the US until seven conditions are met, and warned the conflict could spread to new areas.",
+      "beats": {
+        "was": "The US and Iran are at war, the US Navy is blockading Iranian ports, and Iran has been attacking ships near the Strait of Hormuz, the narrow sea route for about a fifth of the world's oil. Qatar has been trying to restart talks.",
+        "happened": "Qalibaf said on Iranian state TV that there will be no talks before the conditions are met. Iran has not listed them publicly, but state media say they include lifting sanctions, ending the naval blockade and freeing seized Iranian assets. He also warned Iran could widen the area of the fighting. Iran's Revolutionary Guard navy said three tankers hit mines in the strait and caught fire despite a US air escort.",
+        "means": "A quick deal to reopen Hormuz looks less likely, so the risk of a sudden jump in oil prices stays, even though oil has been falling on signs that Gulf crude keeps getting out.",
+        "fx": "Stalled talks keep some support under oil and some safe-place demand for the Swiss franc, but markets have mostly looked past the threats so far."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "No talks soon keeps the supply risk alive, though prices have shrugged it off."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Threats to widen the war keep some demand for a safe currency."
+        }
+      ],
+      "watch": "Whether Qatar's efforts restart US-Iran talks, and the OPEC+ meeting on 2027 output on Sunday, November 29."
+    },
+    {
+      "id": "euronext-reuters-dollar-ai-euphoria-fed-hike-bets-20261124",
+      "ts": "2026-11-24T10:31:00Z",
+      "source": "Reuters via Euronext",
+      "url": "https://live.euronext.com/en/financial-news/dollar-gains-renewed-ai-euphoria-fuels-fed-hike-bets",
+      "image": null,
+      "headline": "Dollar gains as renewed AI euphoria fuels Fed hike bets",
+      "story": "fed-hikes",
+      "story_title": "The Federal Reserve's rate rises",
+      "pillar": "policy",
+      "summary": "The dollar held near its highest in almost two years on Tuesday, November 24, as a rebound in tech shares and firm bets on a Federal Reserve rate rise in December kept buyers coming.",
+      "beats": {
+        "was": "The Federal Reserve has been raising rates to fight inflation, and markets now treat another quarter-point rise on December 9 as all but certain. The dollar has gained about 2.3% so far in November.",
+        "happened": "After chip maker Nvidia brought back Jensen Huang as its boss on Monday, November 23, tech shares rallied and Nvidia gained close to $1 trillion in value. The dollar index stayed near 104.3, just off Monday's high of 104.5, its strongest since March 2025. The euro sat near $1.091, the pound near $1.305 and the dollar near 159.2 yen. The Australian dollar was near 66.3 US cents, down almost 6% in a month, and speculators hold a record bet against it.",
+        "means": "Calmer stock markets have not slowed the dollar, because its strength rests on the gap between rising US rates and slower moves elsewhere. The record bet against the Australian dollar means any good news for it could spark a sharp bounce as those bets are closed.",
+        "fx": "Rate-rise bets keep the dollar firm against most currencies. US inflation figures on Wednesday, November 25 decide whether that lead grows or fades."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Near-certain bets on a December Fed rise hold the dollar near a two-year high."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The Aussie is down almost 6% in a month and speculators hold a record bet against it."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The euro sits near its lowest since April 2025 as the US rate lead widens."
+        }
+      ],
+      "watch": "US October PCE inflation on Wednesday, November 25, and the Fed decision on December 9."
+    },
+    {
+      "id": "rte-reuters-german-ifo-november-906-20261124",
+      "ts": "2026-11-24T10:28:49Z",
+      "source": "RTÉ / Reuters",
+      "url": "https://www.rte.ie/news/business/2026/1124/1600420-german-ifo-index/",
+      "image": "https://www.rte.ie/images/001ea0f7-1600.jpg",
+      "headline": "German Ifo business sentiment rises in November",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "growth",
+      "summary": "German business mood improved for a seventh month in November, with the Ifo index at 90.6, just above forecasts, though factory confidence slipped.",
+      "beats": {
+        "was": "The Ifo index, a monthly survey of about 9,000 German firms, has risen every month since spring as Germany's economy slowly recovers. It stood at 90.1 in October.",
+        "happened": "The index rose to 90.6 in November, a touch above the 90.5 economists expected. Firms felt better about both current trade and the months ahead. Services and retail improved, but factories and builders turned more cautious, the first factory drop after six gains. Ifo president Clemens Fuest said the recovery goes on but is not broad.",
+        "means": "Germany keeps growing slowly, which supports the European Central Bank's plan to raise rates in December. The factory dip is a small warning, because an early survey on Monday, November 23 had shown factories speeding up.",
+        "fx": "A steady German economy gives the euro a little support. It is too small to offset the dollar's pull from rising US rates."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "German business mood edges up again, backing a December ECB rise."
+        }
+      ],
+      "watch": "The ECB decision on December 17 and euro zone inflation early in December."
+    },
+    {
       "id": "rigzone-bloomberg-oil-falls-trump-iran-talks-20261123",
       "ts": "2026-11-23T21:30:00Z",
       "source": "Rigzone (Bloomberg)",
@@ -1099,6 +1186,144 @@
       "watch": "Whether the US answers Iran's terms; a reply would matter far more than statements from either side."
     },
     {
+      "id": "invezz-brent-below-90-surplus-20261123",
+      "date": "2026-11-23",
+      "source": "Invezz",
+      "url": "https://invezz.com/news/2026/11/23/oil-price-today-brent-below-90-surplus-fears/",
+      "image": null,
+      "headline": "Brent oil drops below $90 for the first time since early September",
+      "story": "oil-supply",
+      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
+      "pillar": "commodities",
+      "summary": "Brent crude fell more than 3% to about $89 a barrel on the afternoon of Monday, November 23, its lowest since early September, as worry about too much oil outweighed weekend attacks in the Gulf. US crude fell to about $80.50.",
+      "beats": {
+        "was": "Brent closed at about $92.60 on Friday, November 20, after a third straight weekly fall. The International Energy Agency said on November 13 that world supply would beat demand by about 1.7 million barrels a day this quarter, with Gulf exports recovering despite tanker attacks.",
+        "happened": "Prices slid through the day on Monday, November 23, breaking below $90 by mid-afternoon in London. Libya's biggest oil pipeline briefly stopped after a group shut a valve, then pumping resumed, and the bank JPMorgan repeated that it sees prices in the upper $70s in the first half of 2027.",
+        "means": "The market now treats the war with Iran as a smaller threat to supply than the growing surplus, so the price premium from the fighting keeps fading. A fresh, clear cut to Gulf flows would be needed to reverse that.",
+        "fx": "Cheaper oil weighs on the Canadian dollar and Norway's krone through lower export income, and helps big importers like Japan and the euro zone by easing their fuel bills and price pressure."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A break below $90 to a two-and-a-half-month low shows supply worries outweighing the war."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Lower oil prices cut Canada's export income."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Cheaper oil eases Japan's import bill."
+        }
+      ],
+      "watch": "The OPEC+ meeting on Sunday, November 29, where the big producers set their 2027 output."
+    },
+    {
+      "id": "1news-kiwi-17-year-low-20261123",
+      "date": "2026-11-23",
+      "source": "1News",
+      "url": "https://www.1news.co.nz/2026/11/23/kiwi-dollar-hits-lowest-level-in-17-years-against-us-dollar/",
+      "image": "https://tvnz-1-news-prod.cdn.arcpublishing.com/resizer/v2/nz-money-generic-XV4ISBBNDRAEHKFVXPJDMRDUGE.jpg?auth=652185ffd2ede74c512199270bb6d120b2daae4d5141807547a98a5903b45f0c&quality=70&width=600&height=315&focal=638%2C446",
+      "headline": "New Zealand dollar falls to its lowest in 17 years against the US dollar",
+      "story": "nz-economy",
+      "story_title": "New Zealand's economy and the RBNZ",
+      "pillar": "risk",
+      "summary": "The New Zealand dollar dropped to about 54.6 US cents around the weekend of November 21-22, its weakest since the 2009 financial crisis, and was still near 54.7 cents on Monday, November 23.",
+      "beats": {
+        "was": "The Reserve Bank of New Zealand cut rates hard over the past two years, leaving New Zealand with low rates while the US Federal Reserve is raising its own.",
+        "happened": "After a heavy fall in US shares on Friday, November 20, the currency sank to its lowest level in 17 years, ten falls in a row against the US dollar. A strategist at the bank BNZ put the latest leg down mainly on nervous markets and worries about the AI share boom.",
+        "means": "The gap between New Zealand and US rates already pulls money away, and when investors get nervous they sell small, risk-linked currencies like this one first.",
+        "fx": "The New Zealand dollar stays under pressure for as long as share markets keep falling; the Australian dollar faces the same pull."
+      },
+      "impact": [
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 2,
+          "why": "A 17-year low as nervous markets and low local rates push money out."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The same flight from risk-linked currencies weighs on its neighbour."
+        }
+      ],
+      "watch": "Whether the bounce in US shares on Monday, November 23 holds; a steady recovery would ease the selling."
+    },
+    {
+      "id": "aljazeera-asia-stocks-tumble-ai-fears-20261123",
+      "date": "2026-11-23",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/23/south-koreas-stock-market-tumbles-as-ai-bubble-fears-mount",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/2026-11-06T015144Z_77722265_RC21IOA70JJX_RTRMADP_3_SOUTHKOREA-MARKETS-1-1795393000_0f55a3-1795395323.jpg?resize=1200%2C630&quality=80",
+      "headline": "Asian shares slide again on Monday as worries over AI spending spread",
+      "story": "ai-stocks",
+      "story_title": "AI stocks and the mood in markets",
+      "pillar": "risk",
+      "summary": "South Korea's Kospi index fell as much as 5.8% on Monday, November 23 and Hong Kong's Hang Seng about 1.9%, while Japan's market was shut for a holiday. US stock futures rose about 2%, hinting at a bounce later.",
+      "beats": {
+        "was": "On Friday, November 20 the S&P 500 fell 3.7%, putting it more than 10% below its peak, and the tech-heavy Nasdaq lost 5.3%, wiping out its gains for 2026, on fears that huge spending on artificial intelligence won't pay off.",
+        "happened": "Chip-heavy Asian markets took the next hit when they opened, with Samsung and other tech makers leading the drop, even though South Korea's chip exports for early November jumped.",
+        "means": "Investors are still pulling money out of tech shares, but rising US futures show some buyers think the sell-off went too far.",
+        "fx": "When shares fall this hard, the yen and the Swiss franc tend to gain as safe places, while the Australian and New Zealand dollars, tied to global growth, tend to suffer."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Another fall in Asian shares weighs on currencies tied to global growth."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stock selling tends to lift the yen as a safe place, though Japan's market was shut."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Risk-shy investors tend to avoid the New Zealand dollar."
+        }
+      ],
+      "watch": "Whether US shares follow their futures higher when New York opens on Monday, November 23."
+    },
+    {
+      "id": "wolf-reuters-euro-zone-pmi-france-20261123",
+      "date": "2026-11-23",
+      "source": "Reuters (via 104.9 The Wolf)",
+      "url": "https://www.1049thewolf.com/2026/11/23/euro-zone-growth-holds-steady-but-frances-deepening-downturn-clouds-outlook-pmi-shows/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/23/2026-11-23T090800Z_1_LYNXNPEMAM0J2_RTROPTP_3_GERMANY-ECONOMY-PMI.JPG",
+      "headline": "Euro zone business growth holds up as Germany speeds ahead and France sinks",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "growth",
+      "summary": "S&P Global's early November business survey for the euro zone, out on Monday, November 23, held at 51.7, a little short of forecasts, with Germany at a four-year high and France shrinking faster.",
+      "beats": {
+        "was": "The European Central Bank is expected to raise rates again in December, but the euro has slid below $1.10 because the US Federal Reserve looks set to raise faster.",
+        "happened": "The survey of purchasing managers stayed at 51.7 (above 50 means growth) against 51.9 forecast: factories did better than expected while services slipped to a five-month low. Germany hit its best reading since March 2022, while France fell to a six-month low as next year's presidential election weighs on firms.",
+        "means": "Overall growth is steady, which keeps a December ECB rate rise on the table, but softer services, falling business confidence and easing cost pressure give no reason to raise faster.",
+        "fx": "A mixed result gives the euro little lift against a dollar backed by expected Fed rate rises."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Steady growth but a small miss, with Germany strong and France weak."
+        }
+      ],
+      "watch": "Euro zone inflation figures for November, due in early December, the last big reading before the ECB's December decision."
+    },
+    {
       "id": "euronews-iran-every-means-blockade-20261123",
       "ts": "2026-11-23T11:34:05Z",
       "source": "Euronews",
@@ -1190,231 +1415,6 @@
         }
       ],
       "watch": "US October PCE inflation on Wednesday, November 25, the Federal Reserve's preferred price measure, ahead of its December 9 decision."
-    },
-    {
-      "id": "reuters-williams-work-to-do-inflation-20261123",
-      "date": "2026-11-23",
-      "source": "Reuters (via 93.3 The Drive)",
-      "url": "https://www.933thedrive.com/2026/11/23/fed-has-work-to-do-to-lower-inflation-williams-says/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/23/2026-11-23T210546Z_1_LYNXNPEMAM1MP_RTROPTP_3_USA-FED-WILLIAMS.JPG",
-      "headline": "Fed has 'work to do' to lower inflation, Williams says",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "policy",
-      "summary": "New York Fed President John Williams said on Monday, November 23 that the Federal Reserve still has work to do to bring inflation down, and that it must act over time. He sees inflation near 3.5% this year and not back at the 2% goal until 2028.",
-      "beats": {
-        "was": "The Fed raised its main rate in September to a 3.75%-4.00% range, and markets expect another quarter-point rise at its December 8-9 meeting, with more in 2027. Governor Christopher Waller has said a half-point move should also be considered.",
-        "happened": "In a speech in New York on Monday, November 23, Williams, who also serves as vice chair of the committee that sets US rates, said the risk to stable prices has grown while the risk to jobs has shrunk. He expects growth near 2.75% this year and next, and unemployment to slip to about 4% from 4.1%.",
-        "means": "One of the Fed's most senior voices backs a December rise and hints that rates may keep going up into 2027, because he sees inflation staying above target for two more years.",
-        "fx": "Support for higher US rates for longer keeps a floor under the dollar against currencies whose central banks are moving more slowly, such as the euro, the Canadian dollar and the Swiss franc, and weighs on gold."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A senior Fed voice backs the December rise most traders already expect, and hints at more."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher US rates for longer make gold, which pays no interest, less attractive."
-        }
-      ],
-      "watch": "October PCE inflation, the Fed's preferred price gauge, on Wednesday, November 25."
-    },
-    {
-      "id": "reuters-ecb-simkus-december-may-not-suffice-20261123",
-      "date": "2026-11-23",
-      "source": "Reuters (via Investing.com)",
-      "url": "https://au.investing.com/news/economy-news/december-rate-hike-may-not-be-enough-but-not-in-a-rush-to-move-again-ecbs-simkus-4789639",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAM0IQ_L.jpg",
-      "headline": "ECB's Simkus says a December rise may not be enough, but there is no rush to move again",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates one last time in December?",
-      "pillar": "policy",
-      "summary": "Gediminas Simkus, Lithuania's central bank head and a European Central Bank rate-setter, said on Monday, November 23 that a quarter-point rise in December may not fully tame inflation, but that a further move soon after is not urgent.",
-      "beats": {
-        "was": "The ECB has raised its rates twice this year, with euro zone inflation near 4% against a 2% goal, and a third rise at its December 17 meeting is seen as all but certain. Markets expect one or two more rises in 2027.",
-        "happened": "Speaking in Vienna on Monday, November 23, Simkus said one more quarter-point step might not be sufficient, pointing to early signs of rising wages and prices feeding each other, coming wage talks and low gas stocks. He added that he sees little pressure to act again quickly after December.",
-        "means": "A December rise looks locked in, but the ECB is signalling a slower pace after that than markets might hope, so its rates are unlikely to catch up with the Federal Reserve's soon.",
-        "fx": "Confirmation of a December rise gives the euro a little support, but a slow path afterwards does little to close the gap with higher US rates that has pushed the euro to its lowest since April 2025."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A December rise is confirmed, but the hint of a long pause after it limits the lift."
-        }
-      ],
-      "watch": "The ECB's rate decision on Thursday, December 17."
-    },
-    {
-      "id": "invezz-brent-below-90-surplus-20261123",
-      "date": "2026-11-23",
-      "source": "Invezz",
-      "url": "https://invezz.com/news/2026/11/23/oil-price-today-brent-below-90-surplus-fears/",
-      "image": null,
-      "headline": "Brent oil drops below $90 for the first time since early September",
-      "story": "oil-supply",
-      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
-      "pillar": "commodities",
-      "summary": "Brent crude fell more than 3% to about $89 a barrel on the afternoon of Monday, November 23, its lowest since early September, as worry about too much oil outweighed weekend attacks in the Gulf. US crude fell to about $80.50.",
-      "beats": {
-        "was": "Brent closed at about $92.60 on Friday, November 20, after a third straight weekly fall. The International Energy Agency said on November 13 that world supply would beat demand by about 1.7 million barrels a day this quarter, with Gulf exports recovering despite tanker attacks.",
-        "happened": "Prices slid through the day on Monday, November 23, breaking below $90 by mid-afternoon in London. Libya's biggest oil pipeline briefly stopped after a group shut a valve, then pumping resumed, and the bank JPMorgan repeated that it sees prices in the upper $70s in the first half of 2027.",
-        "means": "The market now treats the war with Iran as a smaller threat to supply than the growing surplus, so the price premium from the fighting keeps fading. A fresh, clear cut to Gulf flows would be needed to reverse that.",
-        "fx": "Cheaper oil weighs on the Canadian dollar and Norway's krone through lower export income, and helps big importers like Japan and the euro zone by easing their fuel bills and price pressure."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A break below $90 to a two-and-a-half-month low shows supply worries outweighing the war."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil prices cut Canada's export income."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Cheaper oil eases Japan's import bill."
-        }
-      ],
-      "watch": "The OPEC+ meeting on Sunday, November 29, where the big producers set their 2027 output."
-    },
-    {
-      "id": "1news-kiwi-17-year-low-20261123",
-      "date": "2026-11-23",
-      "source": "1News",
-      "url": "https://www.1news.co.nz/2026/11/23/kiwi-dollar-hits-lowest-level-in-17-years-against-us-dollar/",
-      "image": "https://tvnz-1-news-prod.cdn.arcpublishing.com/resizer/v2/nz-money-generic-XV4ISBBNDRAEHKFVXPJDMRDUGE.jpg?auth=652185ffd2ede74c512199270bb6d120b2daae4d5141807547a98a5903b45f0c&quality=70&width=600&height=315&focal=638%2C446",
-      "headline": "New Zealand dollar falls to its lowest in 17 years against the US dollar",
-      "story": "nz-economy",
-      "story_title": "New Zealand's economy and the RBNZ",
-      "pillar": "risk",
-      "summary": "The New Zealand dollar dropped to about 54.6 US cents around the weekend of November 21-22, its weakest since the 2009 financial crisis, and was still near 54.7 cents on Monday, November 23.",
-      "beats": {
-        "was": "The Reserve Bank of New Zealand cut rates hard over the past two years, leaving New Zealand with low rates while the US Federal Reserve is raising its own.",
-        "happened": "After a heavy fall in US shares on Friday, November 20, the currency sank to its lowest level in 17 years, ten falls in a row against the US dollar. A strategist at the bank BNZ put the latest leg down mainly on nervous markets and worries about the AI share boom.",
-        "means": "The gap between New Zealand and US rates already pulls money away, and when investors get nervous they sell small, risk-linked currencies like this one first.",
-        "fx": "The New Zealand dollar stays under pressure for as long as share markets keep falling; the Australian dollar faces the same pull."
-      },
-      "impact": [
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A 17-year low as nervous markets and low local rates push money out."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The same flight from risk-linked currencies weighs on its neighbour."
-        }
-      ],
-      "watch": "Whether the bounce in US shares on Monday, November 23 holds; a steady recovery would ease the selling."
-    },
-    {
-      "id": "fxco-chicago-fed-activity-negative-oct-20261123",
-      "date": "2026-11-23",
-      "source": "FX.co",
-      "url": "https://www.fx.co/en/forex-news/3302436",
-      "image": "https://cdn.fx.co/forex-news/3302436_en.png",
-      "headline": "Chicago Fed gauge of US activity slips just below trend in October",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "growth",
-      "summary": "The Chicago Fed National Activity Index, a broad monthly gauge of the US economy, fell to -0.06 for October, out on Monday, November 23, from +0.05 in September and well short of the +0.4 forecast.",
-      "beats": {
-        "was": "Markets expect the Federal Reserve to raise rates on December 9 because US growth and inflation have stayed strong, which has lifted the dollar near its highest since April 2025.",
-        "happened": "The index, built from 85 measures of output, jobs, spending and orders, moved from slightly above its long-run trend to slightly below it, missing forecasts.",
-        "means": "A reading near zero means the economy grew about at its normal pace in October, so it is a small sign of cooling rather than a slowdown. It does little to change the case for a December rate rise.",
-        "fx": "A mild weight on the dollar, easily outweighed by inflation figures due on Wednesday, November 25."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Growth gauge misses forecasts but only dips to about trend."
-        }
-      ],
-      "watch": "October PCE inflation, the Fed's preferred price measure, on Wednesday, November 25."
-    },
-    {
-      "id": "aljazeera-asia-stocks-tumble-ai-fears-20261123",
-      "date": "2026-11-23",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/11/23/south-koreas-stock-market-tumbles-as-ai-bubble-fears-mount",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/2026-11-06T015144Z_77722265_RC21IOA70JJX_RTRMADP_3_SOUTHKOREA-MARKETS-1-1795393000_0f55a3-1795395323.jpg?resize=1200%2C630&quality=80",
-      "headline": "Asian shares slide again on Monday as worries over AI spending spread",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "South Korea's Kospi index fell as much as 5.8% on Monday, November 23 and Hong Kong's Hang Seng about 1.9%, while Japan's market was shut for a holiday. US stock futures rose about 2%, hinting at a bounce later.",
-      "beats": {
-        "was": "On Friday, November 20 the S&P 500 fell 3.7%, putting it more than 10% below its peak, and the tech-heavy Nasdaq lost 5.3%, wiping out its gains for 2026, on fears that huge spending on artificial intelligence won't pay off.",
-        "happened": "Chip-heavy Asian markets took the next hit when they opened, with Samsung and other tech makers leading the drop, even though South Korea's chip exports for early November jumped.",
-        "means": "Investors are still pulling money out of tech shares, but rising US futures show some buyers think the sell-off went too far.",
-        "fx": "When shares fall this hard, the yen and the Swiss franc tend to gain as safe places, while the Australian and New Zealand dollars, tied to global growth, tend to suffer."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Another fall in Asian shares weighs on currencies tied to global growth."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Stock selling tends to lift the yen as a safe place, though Japan's market was shut."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Risk-shy investors tend to avoid the New Zealand dollar."
-        }
-      ],
-      "watch": "Whether US shares follow their futures higher when New York opens on Monday, November 23."
-    },
-    {
-      "id": "wolf-reuters-euro-zone-pmi-france-20261123",
-      "date": "2026-11-23",
-      "source": "Reuters (via 104.9 The Wolf)",
-      "url": "https://www.1049thewolf.com/2026/11/23/euro-zone-growth-holds-steady-but-frances-deepening-downturn-clouds-outlook-pmi-shows/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/23/2026-11-23T090800Z_1_LYNXNPEMAM0J2_RTROPTP_3_GERMANY-ECONOMY-PMI.JPG",
-      "headline": "Euro zone business growth holds up as Germany speeds ahead and France sinks",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates one last time in December?",
-      "pillar": "growth",
-      "summary": "S&P Global's early November business survey for the euro zone, out on Monday, November 23, held at 51.7, a little short of forecasts, with Germany at a four-year high and France shrinking faster.",
-      "beats": {
-        "was": "The European Central Bank is expected to raise rates again in December, but the euro has slid below $1.10 because the US Federal Reserve looks set to raise faster.",
-        "happened": "The survey of purchasing managers stayed at 51.7 (above 50 means growth) against 51.9 forecast: factories did better than expected while services slipped to a five-month low. Germany hit its best reading since March 2022, while France fell to a six-month low as next year's presidential election weighs on firms.",
-        "means": "Overall growth is steady, which keeps a December ECB rate rise on the table, but softer services, falling business confidence and easing cost pressure give no reason to raise faster.",
-        "fx": "A mixed result gives the euro little lift against a dollar backed by expected Fed rate rises."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Steady growth but a small miss, with Germany strong and France weak."
-        }
-      ],
-      "watch": "Euro zone inflation figures for November, due in early December, the last big reading before the ECB's December decision."
     }
   ]
 }
