@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-25T17:55:00Z",
+  "updated": "2026-11-25T19:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-25T16:50:00Z",
-      "text": "The dollar sits near its highest since March 2025 because markets see a Federal Reserve rate rise on December 9 as all but certain, backed by hot core PCE inflation of 3.3% and growth revised up to a 4.3% pace on Wednesday, November 25. A deep fall in US tech shares pulled bond yields lower that day, a small offset."
+      "ts": "2026-11-25T19:50:00Z",
+      "text": "The dollar sits near its highest since March 2025 because markets see a Federal Reserve rate rise on December 9 as all but certain. Hot core PCE inflation of 3.3%, growth revised up to a 4.3% pace and a Fed business survey showing sticky prices all backed that on Wednesday, November 25, while a deep fall in US tech shares pulled bond yields a little lower."
     },
     "EUR": {
       "lean": "bearish",
@@ -24,8 +24,8 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-25T14:55:00Z",
-      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. The US named Switzerland on Wednesday, November 25 among 14 economies facing proposed tariffs of up to 15%, while Iran's claim that tankers hit mines near Hormuz keeps some safe-place demand for the franc."
+      "ts": "2026-11-25T19:50:00Z",
+      "text": "The Swiss franc sits near a one-month low against a dollar lifted by bets on more Federal Reserve rate rises. Switzerland is among 14 economies facing proposed US tariffs, which its government rejected on Wednesday, November 25, while Iran's claim that tankers hit mines near Hormuz keeps some safe-place demand for the franc."
     },
     "CAD": {
       "lean": "mixed",
@@ -54,6 +54,39 @@
     }
   },
   "items": [
+    {
+      "id": "wsau-reuters-beige-book-sticky-prices-20261125",
+      "ts": "2026-11-25T19:19:00Z",
+      "source": "Reuters",
+      "url": "https://wsau.com/2026/11/25/fed-survey-shows-continued-growth-and-sticky-inflation-in-recent-weeks",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/25/2026-11-25T191926Z_1_LYNXNPEMAO1QY_RTROPTP_3_USA-FED-INFLATION.JPG",
+      "headline": "Fed survey shows continued growth and sticky inflation in recent weeks",
+      "story": "fed-hikes",
+      "story_title": "The Federal Reserve's rate rises",
+      "pillar": "policy",
+      "summary": "The Federal Reserve's Beige Book, a survey of businesses across its 12 regions, found on Wednesday, November 25 that the US economy kept growing at a slight to moderate pace while price pressures stayed stubborn.",
+      "beats": {
+        "was": "The Federal Reserve's main rate sits at 3.75% to 4.00%, and markets expect it to raise that by at least a quarter point at its meeting on December 8 and 9. Earlier on Wednesday, November 25, core PCE inflation rose to 3.3%, its highest in three years.",
+        "happened": "Eight of the Fed's 12 regions reported slight to moderate growth and four saw no change. Jobs edged up and prices rose at a moderate pace, with firms pointing to energy, transport, healthcare, insurance and tariffs as costs that keep climbing. Many said they could not pass all of those costs on to customers.",
+        "means": "The survey gives the Fed no reason to back off a December rate rise: growth is holding and costs are still rising. Firms struggling to raise their own prices hints that some pressure may fade later.",
+        "fx": "It backs the case for a Fed rate rise, which keeps support under the dollar, though the sharp fall in US shares had already trimmed how many further rises markets expect."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Steady growth and sticky prices keep a December Fed rate rise on track."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher US rates make gold, which pays no interest, less attractive."
+        }
+      ],
+      "watch": "The Fed decision on Wednesday, December 9, and the US jobs report for November before it."
+    },
     {
       "id": "yahoo-stocks-sink-pce-tariffs-chips-20261125",
       "ts": "2026-11-25T16:31:00Z",
@@ -131,6 +164,144 @@
         }
       ],
       "watch": "Canada's third-quarter growth figures on Monday, November 30, the jobs report on Friday, December 4, and the Bank of Canada decision on Wednesday, December 9."
+    },
+    {
+      "id": "stocktitan-q3-gdp-revised-43-20261125",
+      "ts": "2026-11-25T13:47:07Z",
+      "source": "Stock Titan",
+      "url": "https://www.stocktitan.net/articles/q3-2026-gdp-second-estimate",
+      "image": "https://www.stocktitan.net/img/articles/q3-2026-gdp-second-estimate.webp",
+      "headline": "US economy grew much faster than first thought, new GDP count shows",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "growth",
+      "summary": "The US economy grew at a 4.3% yearly pace in July to September, well above the first count of 3.4% and the roughly 3.5% expected, the Commerce Department said on Wednesday, November 25.",
+      "beats": {
+        "was": "The Federal Reserve has been raising rates again because inflation is well above its 2% goal. The first count of US growth for July to September, published in October, showed a solid 3.4% yearly pace.",
+        "happened": "The second count lifted growth to 4.3%, an unusually large revision. Business spending on software and equipment, much of it tied to artificial intelligence, jumped, and household spending was revised up to a 4.2% pace from 3.8%. Company profits rose again.",
+        "means": "The US economy is running hot, not cooling, so there is little in the way of more Fed rate rises. Strong growth on top of firm inflation makes a December 9 rise look even safer.",
+        "fx": "Faster US growth backs higher US rates for longer, which supports the dollar against currencies whose central banks are moving more slowly. It also weighs on gold, which pays no interest."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Growth revised up to 4.3% shows an economy strong enough to take more Fed rate rises."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A strong economy keeps US rates high, which makes gold less attractive."
+        }
+      ],
+      "watch": "November jobs data in early December, the last big US report before the Fed meets on December 8-9."
+    },
+    {
+      "id": "foxbusiness-pce-october-core-33-20261125",
+      "ts": "2026-11-25T13:33:00Z",
+      "source": "Fox Business",
+      "url": "https://www.foxbusiness.com/economy/october-2026-pce-inflation",
+      "image": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2024/11/0/0/shopper-grocery-store.jpg?ve=1&tl=1",
+      "headline": "Fed's favored inflation gauge rose in October ahead of expected Fed rate hike next month",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "inflation",
+      "summary": "US core PCE inflation, the Federal Reserve's preferred gauge, rose to 3.3% in the year to October, a touch above the 3.2% expected, the Commerce Department said on Wednesday, November 25.",
+      "beats": {
+        "was": "The Federal Reserve has been raising rates again because inflation is well above its 2% goal, and markets saw a rise at its December 9 meeting as nearly certain. October PCE was the last big inflation report before that meeting.",
+        "happened": "Overall PCE prices rose 0.3% in October and 3.8% from a year earlier, as expected. Core prices, which leave out food and energy, also rose 0.3% on the month, and the yearly rate climbed to 3.3% from 3.1% in September. Personal income rose 0.7%.",
+        "means": "Underlying inflation is still speeding up, not slowing, so nothing here argues against a December rate rise. Betting markets kept the odds of a quarter-point rise near 94% after the report.",
+        "fx": "A slightly hot core reading backs the case for more Fed rate rises, which supports the dollar and weighs on gold, which pays no interest. The miss was small, so the bigger swing for markets on Wednesday, November 25 is still the slide in tech shares."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Core inflation rising to 3.3% keeps a December 9 Fed rate rise firmly on track."
+        },
+        {
+          "ccy": "XAU",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Higher US rates make gold, which pays nothing, less attractive."
+        }
+      ],
+      "watch": "US markets are shut on Thursday, November 26 for Thanksgiving. The next big US report is November jobs data in early December, before the Fed meets on December 8-9."
+    },
+    {
+      "id": "panews-us-jobless-claims-189k-20261125",
+      "ts": "2026-11-25T13:30:45Z",
+      "source": "PANews",
+      "url": "https://panews.io/articles/01a212e6-cf2d-70fb-a468-f4775abb0864",
+      "image": null,
+      "headline": "US Initial Jobless Claims for Week Ending Nov 21 at 189,000; October Core PCE Price Index Annual Rate at 3.3%",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "growth",
+      "summary": "New US claims for unemployment benefits fell to 189,000 in the week to November 21, below the 200,000 expected, a sign layoffs remain rare.",
+      "beats": {
+        "was": "Weekly jobless claims are the quickest read on US layoffs. They have stayed low for months, one reason the Federal Reserve feels free to keep raising rates. The report came out a day early because of Thanksgiving.",
+        "happened": "The Labor Department said new claims fell to 189,000 in the week to November 21, down from the week before and lower than forecasters expected.",
+        "means": "Layoffs remain low even as share prices fall, so the job market gives the Fed no reason to pause.",
+        "fx": "A firm job market adds to the case for more Fed rate rises, a small support for the dollar."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Low layoffs back the Fed's plan to keep raising rates."
+        }
+      ],
+      "watch": "The November US jobs report in early December, the last before the Fed's December 9 decision."
+    },
+    {
+      "id": "aljazeera-world-reacts-new-tariffs-20261125",
+      "date": "2026-11-25",
+      "source": "Al Jazeera",
+      "url": "https://www.aljazeera.com/economy/2026/11/25/world-reacts-to-trumps-new-tariffs-as-us-stocks-tumble",
+      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/ap_6b0717159b5cc-1795626773.jpg?resize=1920%2C1440",
+      "headline": "World reacts to Trump's new tariffs as US stocks tumble",
+      "story": "us-tariffs",
+      "story_title": "New US tariffs on 14 trading partners",
+      "pillar": "risk",
+      "summary": "China, the European Union and Switzerland rejected the US case for new tariffs on 14 trading partners on Wednesday, November 25, while US shares and gold fell hard the same day.",
+      "beats": {
+        "was": "The US Supreme Court struck down President Donald Trump's broad global tariffs in February. US Trade Representative Jamieson Greer then spent eight months investigating 14 economies over making more goods than their home markets can use.",
+        "happened": "The US proposed tariffs, highest at 20% on China, on 14 partners including the EU, Japan, India, South Korea, Taiwan and Switzerland. China's foreign ministry and the European Commission rejected the claim of excess production, and the Swiss government rejected it too. Norway, left off the list for now, welcomed the move.",
+        "means": "Trade partners are pushing back rather than offering deals, so the dispute may drag on while the tariffs are still only proposals. It lands on markets already shaken by a fall in tech shares.",
+        "fx": "Tariffs on China weigh most on currencies tied to Chinese demand, like the Australian and New Zealand dollars. The euro and Swiss franc face a direct hit to exports, though the franc can also draw safe-place money when markets are stressed."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "A 20% tariff on China threatens demand for Australian exports."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Trade fights and falling shares weigh on the kiwi."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "The EU is on the list and rejected the case, so a trade fight looks likely."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Swiss exports are targeted, but market stress can bring money to the franc."
+        }
+      ],
+      "watch": "Whether any of the 14 economies opens talks or answers with tariffs of its own before the US makes the rates final."
     },
     {
       "id": "wtbx-reuters-boe-bailey-lower-peak-tsc-20261125",
@@ -329,99 +500,6 @@
         }
       ],
       "watch": "Public comments on the proposed tariffs are due January 5, 2027, with hearings on January 25."
-    },
-    {
-      "id": "stocktitan-q3-gdp-revised-43-20261125",
-      "ts": "2026-11-25T13:47:07Z",
-      "source": "Stock Titan",
-      "url": "https://www.stocktitan.net/articles/q3-2026-gdp-second-estimate",
-      "image": "https://www.stocktitan.net/img/articles/q3-2026-gdp-second-estimate.webp",
-      "headline": "US economy grew much faster than first thought, new GDP count shows",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "growth",
-      "summary": "The US economy grew at a 4.3% yearly pace in July to September, well above the first count of 3.4% and the roughly 3.5% expected, the Commerce Department said on Wednesday, November 25.",
-      "beats": {
-        "was": "The Federal Reserve has been raising rates again because inflation is well above its 2% goal. The first count of US growth for July to September, published in October, showed a solid 3.4% yearly pace.",
-        "happened": "The second count lifted growth to 4.3%, an unusually large revision. Business spending on software and equipment, much of it tied to artificial intelligence, jumped, and household spending was revised up to a 4.2% pace from 3.8%. Company profits rose again.",
-        "means": "The US economy is running hot, not cooling, so there is little in the way of more Fed rate rises. Strong growth on top of firm inflation makes a December 9 rise look even safer.",
-        "fx": "Faster US growth backs higher US rates for longer, which supports the dollar against currencies whose central banks are moving more slowly. It also weighs on gold, which pays no interest."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Growth revised up to 4.3% shows an economy strong enough to take more Fed rate rises."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A strong economy keeps US rates high, which makes gold less attractive."
-        }
-      ],
-      "watch": "November jobs data in early December, the last big US report before the Fed meets on December 8-9."
-    },
-    {
-      "id": "foxbusiness-pce-october-core-33-20261125",
-      "ts": "2026-11-25T13:33:00Z",
-      "source": "Fox Business",
-      "url": "https://www.foxbusiness.com/economy/october-2026-pce-inflation",
-      "image": "https://a57.foxnews.com/static.foxbusiness.com/foxbusiness.com/content/uploads/2024/11/0/0/shopper-grocery-store.jpg?ve=1&tl=1",
-      "headline": "Fed's favored inflation gauge rose in October ahead of expected Fed rate hike next month",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "inflation",
-      "summary": "US core PCE inflation, the Federal Reserve's preferred gauge, rose to 3.3% in the year to October, a touch above the 3.2% expected, the Commerce Department said on Wednesday, November 25.",
-      "beats": {
-        "was": "The Federal Reserve has been raising rates again because inflation is well above its 2% goal, and markets saw a rise at its December 9 meeting as nearly certain. October PCE was the last big inflation report before that meeting.",
-        "happened": "Overall PCE prices rose 0.3% in October and 3.8% from a year earlier, as expected. Core prices, which leave out food and energy, also rose 0.3% on the month, and the yearly rate climbed to 3.3% from 3.1% in September. Personal income rose 0.7%.",
-        "means": "Underlying inflation is still speeding up, not slowing, so nothing here argues against a December rate rise. Betting markets kept the odds of a quarter-point rise near 94% after the report.",
-        "fx": "A slightly hot core reading backs the case for more Fed rate rises, which supports the dollar and weighs on gold, which pays no interest. The miss was small, so the bigger swing for markets on Wednesday, November 25 is still the slide in tech shares."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Core inflation rising to 3.3% keeps a December 9 Fed rate rise firmly on track."
-        },
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Higher US rates make gold, which pays nothing, less attractive."
-        }
-      ],
-      "watch": "US markets are shut on Thursday, November 26 for Thanksgiving. The next big US report is November jobs data in early December, before the Fed meets on December 8-9."
-    },
-    {
-      "id": "panews-us-jobless-claims-189k-20261125",
-      "ts": "2026-11-25T13:30:45Z",
-      "source": "PANews",
-      "url": "https://panews.io/articles/01a212e6-cf2d-70fb-a468-f4775abb0864",
-      "image": null,
-      "headline": "US Initial Jobless Claims for Week Ending Nov 21 at 189,000; October Core PCE Price Index Annual Rate at 3.3%",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "growth",
-      "summary": "New US claims for unemployment benefits fell to 189,000 in the week to November 21, below the 200,000 expected, a sign layoffs remain rare.",
-      "beats": {
-        "was": "Weekly jobless claims are the quickest read on US layoffs. They have stayed low for months, one reason the Federal Reserve feels free to keep raising rates. The report came out a day early because of Thanksgiving.",
-        "happened": "The Labor Department said new claims fell to 189,000 in the week to November 21, down from the week before and lower than forecasters expected.",
-        "means": "Layoffs remain low even as share prices fall, so the job market gives the Fed no reason to pause.",
-        "fx": "A firm job market adds to the case for more Fed rate rises, a small support for the dollar."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Low layoffs back the Fed's plan to keep raising rates."
-        }
-      ],
-      "watch": "The November US jobs report in early December, the last before the Fed's December 9 decision."
     },
     {
       "id": "whtc-reuters-iran-tankers-mines-coordinate-20261125",
@@ -1174,72 +1252,6 @@
       "watch": "US October PCE inflation on Wednesday, November 25: a hot number would firm up the Fed rise and test gold's rebound."
     },
     {
-      "id": "currencynews-pound-towards-130-nvidia-20261124",
-      "date": "2026-11-24",
-      "source": "Currency News",
-      "url": "https://www.currencynews.co.uk/forecast/20261124-47838_pound-sterling-forecast-nvidia-news-sends-gbp-towards-1-30.html",
-      "image": null,
-      "headline": "Pound Sterling Forecast: Nvidia News Sends GBP Towards 1.30",
-      "story": "boe-hikes",
-      "story_title": "Bank of England: another rate rise?",
-      "pillar": "policy",
-      "summary": "The pound slipped toward $1.30 early on Tuesday, November 24, after hitting a 19-month low on Monday, November 23, as a tech-share rally and near-certain bets on a Fed rate rise lifted the dollar.",
-      "beats": {
-        "was": "Both the Bank of England and the Federal Reserve have been raising rates to fight inflation, but markets now expect the Fed to move more surely and sooner, which has pulled the pound lower against the dollar for most of November.",
-        "happened": "On Monday, November 23, chip maker Nvidia brought back Jensen Huang as its boss, sparking a tech rally that also lifted the dollar. Market bets on a quarter-point Fed rise on December 9 climbed to almost certain. The pound fell to about $1.3024, its lowest in 19 months. A UK services survey the same day came in close to forecasts.",
-        "means": "The pound's slide is mostly about dollar strength, not bad UK news. Bank of England policymaker Megan Greene speaks on Tuesday, November 24, and a firm tone from her could slow the fall.",
-        "fx": "A dollar lifted by Fed bets keeps pressing the pound. Strong Bank of England rate-rise signals would be the main thing that could help sterling hold $1.30."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The pound sits at a 19-month low as the dollar gains on Fed rate-rise bets."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Near-certain bets on a December Fed rise keep the dollar strong."
-        }
-      ],
-      "watch": "Bank of England policymaker Megan Greene's speech on Tuesday, November 24, and US PCE inflation on Wednesday, November 25."
-    },
-    {
-      "id": "tradingpedia-yen-firms-intervention-jitters-20261124",
-      "date": "2026-11-24",
-      "source": "Tradingpedia",
-      "url": "https://www.tradingpedia.com/2026/11/24/yen-firms-on-intervention-jitters-ahead-of-us-pce-data/",
-      "image": null,
-      "headline": "Yen Firms on Intervention Jitters Ahead of US PCE Data",
-      "story": "yen-boj",
-      "story_title": "The yen, the Bank of Japan and intervention risk",
-      "pillar": "policy",
-      "summary": "The yen edged up in early Asian trading on Tuesday, November 24, with the dollar near 159 yen, as traders stayed wary that Japan could step in to support its currency.",
-      "beats": {
-        "was": "The yen has been weak all year because Japanese interest rates stay far below US rates. Japan has bought yen to prop it up in the past when the dollar neared 160 yen, and Finance Minister Satsuki Katayama warned last week against sudden one-way moves.",
-        "happened": "The dollar slipped to about 158.95 yen in early Asian trading on Tuesday, November 24. Katayama has said Japan will work closely with the US Treasury on currency moves, and a Reuters poll shows most economists expect the Bank of Japan to raise rates in December and again by the end of March.",
-        "means": "The fear that Japan could buy yen near 160 is acting like a ceiling on the dollar, and expected Bank of Japan rate rises give the yen some backing.",
-        "fx": "The yen gets a small lift from intervention fears and rate-rise hopes, but the wide gap with US rates still pulls the other way."
-      },
-      "impact": [
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Fear that Japan could buy yen near 160 per dollar limits further losses."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Strong against most currencies on Fed bets, but held back against the yen by intervention risk."
-        }
-      ],
-      "watch": "US PCE inflation on Wednesday, November 25, Tokyo prices on Thursday, November 26, and the Bank of Japan decision on Friday, December 18."
-    },
-    {
       "id": "euronews-hatami-hormuz-closed-day-by-day-qatar-talks-20261124",
       "ts": "2026-11-24T10:42:32Z",
       "source": "Euronews",
@@ -1277,39 +1289,6 @@
         }
       ],
       "watch": "Whether Qatar gets the two sides talking, and whether the number of ships crossing Hormuz actually falls."
-    },
-    {
-      "id": "ap-qalibaf-seven-conditions-20261124",
-      "ts": "2026-11-24T10:34:18Z",
-      "source": "Associated Press via WHIO",
-      "url": "https://www.whio.com/news/world/iran-insists-no/P24ZCW2W7I745GZC67TAPOXQYE/",
-      "image": "https://cmg-cmg-tv-10040-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FXSQTAKKEHQ55DJRCQIZ46Z2CVQ.jpg?auth=d9901d9e27a5bcc4cfd768325faec20c5677eef32eb7ae4194cbc771fa0ba547&width=1200&height=630&smart=true",
-      "headline": "Iran insists no talks with the US until its 7 conditions are met, and other Mideast news",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's parliament speaker and chief negotiator Mohammad Bagher Qalibaf said on Tuesday, November 24 that Iran will not talk with the US until seven conditions are met, and warned the conflict could spread to new areas.",
-      "beats": {
-        "was": "The US and Iran are at war, the US Navy is blockading Iranian ports, and Iran has been attacking ships near the Strait of Hormuz, the narrow sea route for about a fifth of the world's oil. Qatar has been trying to restart talks.",
-        "happened": "Qalibaf said on Iranian state TV that there will be no talks before the conditions are met. Iran has not listed them publicly, but state media say they include lifting sanctions, ending the naval blockade and freeing seized Iranian assets. He also warned Iran could widen the area of the fighting. Iran's Revolutionary Guard navy said three tankers hit mines in the strait and caught fire despite a US air escort.",
-        "means": "A quick deal to reopen Hormuz looks less likely, so the risk of a sudden jump in oil prices stays, even though oil has been falling on signs that Gulf crude keeps getting out.",
-        "fx": "Stalled talks keep some support under oil and some safe-place demand for the Swiss franc, but markets have mostly looked past the threats so far."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "No talks soon keeps the supply risk alive, though prices have shrugged it off."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Threats to widen the war keep some demand for a safe currency."
-        }
-      ],
-      "watch": "Whether Qatar's efforts restart US-Iran talks, and the OPEC+ meeting on 2027 output on Sunday, November 29."
     },
     {
       "id": "euronext-reuters-dollar-ai-euphoria-fed-hike-bets-20261124",
