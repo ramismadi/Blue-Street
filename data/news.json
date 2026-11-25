@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T23:48:00Z",
+  "updated": "2026-11-25T01:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -33,9 +33,9 @@
       "text": "The Canadian dollar sits close to its weakest since April 2025, because markets expect the Federal Reserve to raise rates faster than the Bank of Canada. Governor Tiff Macklem said on Tuesday, November 24 the bank was too slow on inflation after COVID, a watchful tone, but he gave no signal on a December rate rise."
     },
     "AUD": {
-      "lean": "bearish",
-      "ts": "2026-11-24T19:48:00Z",
-      "text": "The Australian dollar sits near 66 US cents, close to its lowest since January, after Australia lost jobs for a second month and business activity shrank at its fastest pace in more than five years. US tech shares gave back much of Monday's rebound on Tuesday, November 24, and October inflation on Wednesday, November 25 decides how likely a Reserve Bank of Australia rise on December 8 is."
+      "lean": "mixed",
+      "ts": "2026-11-25T01:55:00Z",
+      "text": "The Australian dollar sits near 66 US cents, close to its lowest since January, after Australia lost jobs for a second month and business activity shrank fast. Inflation jumping to 4.9% in October, reported on Wednesday, November 25, rules out early rate cuts and gives the currency some lift."
     },
     "NZD": {
       "lean": "bearish",
@@ -49,11 +49,77 @@
     },
     "OIL": {
       "lean": "mixed",
-      "ts": "2026-11-24T23:48:00Z",
-      "text": "Brent crude sits in the high $80s a barrel, near its lowest since late August, because Gulf oil keeps getting out despite the war. Iran's claims on Tuesday, November 24 that tankers under US escort have hit mines near Hormuz lifted prices off the lows, and OPEC+ sets its 2027 output on Sunday, November 29."
+      "ts": "2026-11-25T01:55:00Z",
+      "text": "Brent crude touched its lowest since late August on Tuesday, November 24, because Gulf oil keeps getting out despite the war, then closed back near $91 a barrel on reports of ships hit near Hormuz. OPEC+ sets its 2027 output on Sunday, November 29."
     }
   },
   "items": [
+    {
+      "id": "actionforex-australia-cpi-oct-49-20261125",
+      "ts": "2026-11-25T01:18:48Z",
+      "source": "ActionForex",
+      "url": "https://www.actionforex.com/live-comments/661997-australia-cpi-surges-to-4-9-as-underlying-inflation-accelerates-to-3-8/",
+      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-au1.jpg",
+      "headline": "Australia CPI Surges to 4.9% as Underlying Inflation Accelerates to 3.8%",
+      "story": "australia-inflation-rba",
+      "story_title": "Australian inflation and the Reserve Bank of Australia",
+      "pillar": "inflation",
+      "summary": "Australian prices rose 4.9% in the year to October, up from 4.3% in September and a little above forecasts, Australia's statistics office said on Wednesday, November 25. The trimmed mean, a gauge that strips out the biggest swings, rose to 3.8%.",
+      "beats": {
+        "was": "Australian inflation was already well above the Reserve Bank of Australia's 2-3% target, while jobs have been falling and business activity shrinking. Economists expected October's yearly rate near 4.7-4.8% and the trimmed mean to hold at 3.6%.",
+        "happened": "Yearly inflation jumped to 4.9%, its highest in about three years. Electricity costs rose about 25% from a year earlier as government power rebates ran out, and housing and fuel costs also climbed. The trimmed mean rose to 3.8% from 3.6%, so price pressure is spreading beyond a few items.",
+        "means": "Underlying inflation moving up, not just one-off power bills, makes it much harder for the Reserve Bank of Australia to ease even as the job market weakens. Most big-bank economists still expect it to hold rates at its December 7-8 meeting.",
+        "fx": "Hotter inflation props up Australian interest rate expectations, which supports the Australian dollar after weeks near its lows."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Inflation beat forecasts and the underlying gauge rose, keeping rate cuts off the table."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "The kiwi often moves with the Australian dollar on Australian news."
+        }
+      ],
+      "watch": "US October PCE inflation later on Wednesday, November 25, and the Reserve Bank of Australia decision on Tuesday, December 8."
+    },
+    {
+      "id": "nationthailand-brent-closes-up-203-hormuz-20261125",
+      "date": "2026-11-25",
+      "source": "The Nation (Thailand)",
+      "url": "https://www.nationthailand.com/news/world/40073886",
+      "image": "https://media.nationthailand.com/uploads/images/md/2026/11/yMbrXeco012PfPlYScnH.webp",
+      "headline": "Brent closed US$2.03 higher on Tuesday after reports of attacks on shipping around the Strait of Hormuz",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Brent crude ended Tuesday, November 24 up about $2 at $91.40 a barrel, after earlier touching its lowest since late August, as reports of ships hit near the Strait of Hormuz spread.",
+      "beats": {
+        "was": "Oil had slid for days because Gulf crude kept flowing despite the war between the US, Israel and Iran, and talk of US-Iran peace talks. The Strait of Hormuz carries about a fifth of the world's oil.",
+        "happened": "Brent dipped to about $88.10 during Tuesday, November 24, then closed at $91.40, up about 2.3%. US crude closed near $82. The UK's maritime agency confirmed three ships were struck by unknown projectiles while crossing the strait on Monday, November 23, though all sailed on, and Iran's Revolutionary Guards said a container ship hit a mine.",
+        "means": "Each new report of attacks puts some risk premium back into oil, even while supply keeps getting through. The market is torn between plenty of oil now and the chance of a sudden cut.",
+        "fx": "A firmer oil price is a small help to the Canadian dollar, and higher energy costs add a little to inflation worries in big oil importers like Japan and the euro zone."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Shipping attacks lifted prices off a three-month low."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Canada is a big oil exporter."
+        }
+      ],
+      "watch": "Whether more attacks are confirmed, and the OPEC+ meeting on Sunday, November 29."
+    },
     {
       "id": "fool-close-nasdaq-falls-dow-gains-20261124",
       "ts": "2026-11-24T21:51:48Z",
@@ -772,45 +838,6 @@
       "watch": "The OPEC+ meeting on Sunday, November 29, where the big producers set their 2027 output."
     },
     {
-      "id": "ghanaweb-reuters-oil-supply-outweighs-tensions-20261123",
-      "ts": "2026-11-23T14:56:11Z",
-      "source": "GhanaWeb (Reuters)",
-      "url": "https://www.ghanaweb.com/GhanaHomePage/business/Oil-prices-drop-as-increased-supply-outweighs-Middle-East-tensions-2062619",
-      "image": "https://cdn.ghanaweb.com/imagelib/pics/751/75162827.jpg",
-      "headline": "Oil slips as more supply outweighs Gulf attacks, and JPMorgan sees the upper $70s next year",
-      "story": "oil-supply",
-      "story_title": "Oil supply: how much is lost to the war, and how fast it comes back",
-      "pillar": "commodities",
-      "summary": "Brent crude fell about $1.30 to near $91.25 a barrel by mid-morning in Europe on Monday, November 23, as signs of more oil coming to market outweighed weekend attacks in the Gulf. The bank JPMorgan expects Brent to fall into the upper $70s in the first half of 2027.",
-      "beats": {
-        "was": "Oil has stayed high through the US-Israeli war with Iran, with ships attacked near the Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil. Brent still fell about 4% in the week to Friday, November 20.",
-        "happened": "Yemen's Houthi group said it hit a Saudi oil refinery on Sunday, November 22, and ships were attacked near Hormuz, yet prices fell. Libya reopened the pipeline from Sharara, its biggest oil field, and JPMorgan pointed to rising output in the Middle East and the Americas, led by the US.",
-        "means": "Traders are giving more weight to extra supply than to the attacks, so the war's price premium keeps shrinking unless the fighting clearly cuts flows. OPEC+, the group of big producers led by Saudi Arabia and Russia, sets its 2027 output on Sunday, November 29.",
-        "fx": "Cheaper oil trims income for oil exporters like Canada and Norway and eases import bills and price pressure for big buyers such as Japan and the euro zone."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "More supply and a bank forecast of lower prices outweigh the attacks for now."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Lower oil prices mean less export income for Canada."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Cheaper oil eases Japan's import bill."
-        }
-      ],
-      "watch": "The OPEC+ meeting on Sunday, November 29; a plan to pump more in 2027 would add to the pressure on prices."
-    },
-    {
       "id": "yahoo-nvidia-huang-back-stocks-surge-20261123",
       "ts": "2026-11-23T14:20:00Z",
       "source": "Yahoo Finance",
@@ -1172,33 +1199,6 @@
         }
       ],
       "watch": "Comments from Bank of England Chief Economist Huw Pill, due to speak on Monday, November 23, for any hint on a December rate rise."
-    },
-    {
-      "id": "arabtimes-iran-ten-tankers-daily-20261123",
-      "ts": "2026-11-23T07:20:00Z",
-      "source": "Arab Times",
-      "url": "https://www.arabtimesonline.com/news/iran-claims-to-hit-10-violating-tankers-daily-in-strait-of-hormuz/",
-      "image": "https://www.arabtimesonline.com/arabtimes/uploads/images/2026/11/23/thumbs/400x400/151413.jpg",
-      "headline": "Iranian lawmaker claims Iran hits about 10 tankers a day near Hormuz",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "An Iranian member of parliament said on Monday, November 23 that Iran strikes around 10 tankers a day that break its rules in the Strait of Hormuz, a claim far above the attacks confirmed by shipping monitors.",
-      "beats": {
-        "was": "Since the war began in late February, Iran has limited traffic through the Strait of Hormuz, which carried about a fifth of the world's oil before the conflict, and the US Navy blockades Iran's ports.",
-        "happened": "Iranian lawmaker Abolfazl Aboutorabi said on Monday, November 23 that Iran hits about 10 tankers a day and that the strait will not go back to how it was before the war. The UK's maritime security agency, UKMTO, confirmed 39 incidents in all of October, its highest monthly count of the war.",
-        "means": "The claim is not backed by the confirmed counts, which are far lower, so it reads more as a warning to shippers than proof of a new wave of attacks. Confirmed attacks are still rising month by month, though.",
-        "fx": "Talk like this keeps a war risk in the oil price, but oil has been falling because Gulf exports are still flowing well, so the push is small."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "An unconfirmed claim of daily tanker attacks adds to supply worries, without any confirmed loss of oil."
-        }
-      ],
-      "watch": "Whether UKMTO's November count of confirmed attacks tops October's 39."
     },
     {
       "id": "goodreturns-gold-up-2pct-above-3600-20261123",
