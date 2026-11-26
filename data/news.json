@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T19:55:00Z",
+  "updated": "2026-11-26T23:50:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "mixed",
-      "ts": "2026-11-26T03:50:00Z",
-      "text": "The yen is a little firmer with the dollar near 159 yen, helped by Japan's warnings it may step in near 160 and by Bank of Japan rate-setter Naoki Tamura saying on Thursday, November 26 that rates may need to rise faster, backing a rise on December 18. Dearer oil is a cost for Japan. Tokyo prices come on Friday, November 27."
+      "ts": "2026-11-26T23:50:00Z",
+      "text": "The yen is steady with the dollar near 159 yen, held up by Japan's warnings it may step in near 160 and by talk of a Bank of Japan rate rise on December 18. Tokyo prices in November kept the main inflation measure rising to 2.9%, which backs that rise, while dearer oil remains a cost for Japan."
     },
     "CHF": {
       "lean": "mixed",
@@ -54,6 +54,33 @@
     }
   },
   "items": [
+    {
+      "id": "chaincatcher-tokyo-cpi-nov-28-20261126",
+      "ts": "2026-11-26T23:30:23Z",
+      "source": "ChainCatcher",
+      "url": "https://www.chaincatcher.com/en/article/2308345",
+      "image": null,
+      "headline": "Tokyo inflation comes in at 2.8% in November, below the 3% expected",
+      "story": "yen-boj",
+      "story_title": "The yen, the Bank of Japan and intervention risk",
+      "pillar": "inflation",
+      "summary": "Prices in Tokyo rose 2.8% from a year earlier in November, a little under the roughly 3% economists expected, in figures out on Friday, November 27, Tokyo time.",
+      "beats": {
+        "was": "Tokyo's consumer prices come out about three weeks before the national figures and are watched as an early read on Japan's inflation. The Bank of Japan, with its rate at 1.25%, is widely expected to raise it at the meeting ending December 18.",
+        "happened": "Overall prices in Japan's capital rose 2.8% in the year to November, against forecasts near 3%. Prices leaving out fresh food, the measure the Bank of Japan watches most, rose 2.9%, up from 2.6% in October.",
+        "means": "Inflation stays well above the Bank of Japan's 2% goal and is still rising on the measure it cares about most, so the case for a December rate rise holds. The small miss on the overall figure gives no extra push.",
+        "fx": "The figures change little for the yen, which stays near 159 per dollar and close to the 160 level where Japan has warned it may step in."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Overall prices came in a bit soft, but the main measure rose and still backs a December rate rise."
+        }
+      ],
+      "watch": "The Bank of Japan's decision on December 18, and any warnings from Japan's finance ministry if the dollar nears 160 yen."
+    },
     {
       "id": "thenational-italians-killed-kuwait-drones-20261126",
       "ts": "2026-11-26T15:47:54Z",
@@ -1177,51 +1204,6 @@
       "watch": "US markets are shut on Thursday, November 26 for Thanksgiving. The next big US report is November jobs data in early December, before the Fed meets on December 8-9."
     },
     {
-      "id": "aljazeera-world-reacts-new-tariffs-20261125",
-      "date": "2026-11-25",
-      "source": "Al Jazeera",
-      "url": "https://www.aljazeera.com/economy/2026/11/25/world-reacts-to-trumps-new-tariffs-as-us-stocks-tumble",
-      "image": "https://www.aljazeera.com/wp-content/uploads/2026/11/ap_6b0717159b5cc-1795626773.jpg?resize=1920%2C1440",
-      "headline": "World reacts to Trump's new tariffs as US stocks tumble",
-      "story": "us-tariffs",
-      "story_title": "New US tariffs on 14 trading partners",
-      "pillar": "risk",
-      "summary": "China, the European Union and Switzerland rejected the US case for new tariffs on 14 trading partners on Wednesday, November 25, while US shares and gold fell hard the same day.",
-      "beats": {
-        "was": "The US Supreme Court struck down President Donald Trump's broad global tariffs in February. US Trade Representative Jamieson Greer then spent eight months investigating 14 economies over making more goods than their home markets can use.",
-        "happened": "The US proposed tariffs, highest at 20% on China, on 14 partners including the EU, Japan, India, South Korea, Taiwan and Switzerland. China's foreign ministry and the European Commission rejected the claim of excess production, and the Swiss government rejected it too. Norway, left off the list for now, welcomed the move.",
-        "means": "Trade partners are pushing back rather than offering deals, so the dispute may drag on while the tariffs are still only proposals. It lands on markets already shaken by a fall in tech shares.",
-        "fx": "Tariffs on China weigh most on currencies tied to Chinese demand, like the Australian and New Zealand dollars. The euro and Swiss franc face a direct hit to exports, though the franc can also draw safe-place money when markets are stressed."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "A 20% tariff on China threatens demand for Australian exports."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Trade fights and falling shares weigh on the kiwi."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The EU is on the list and rejected the case, so a trade fight looks likely."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Swiss exports are targeted, but market stress can bring money to the franc."
-        }
-      ],
-      "watch": "Whether any of the 14 economies opens talks or answers with tariffs of its own before the US makes the rates final."
-    },
-    {
       "id": "wtbx-reuters-boe-bailey-lower-peak-tsc-20261125",
       "date": "2026-11-25",
       "source": "Reuters (via WTBX)",
@@ -1319,51 +1301,6 @@
         }
       ],
       "watch": "The Federal Reserve decision on Wednesday, December 9."
-    },
-    {
-      "id": "ustr-section-301-14-economies-20261125",
-      "date": "2026-11-25",
-      "source": "Office of the US Trade Representative",
-      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
-      "image": "https://ustr.gov/sites/default/files/2026-11/Meta%20Tag_7.png",
-      "headline": "USTR Makes Determinations and Proposes Actions in 14 Section 301 Investigations Relating to Structural Excess Capacity",
-      "story": "us-tariffs",
-      "story_title": "New US tariffs",
-      "pillar": "risk",
-      "summary": "US Trade Representative Jamieson Greer proposed new import taxes on 14 economies, including China, the European Union, Japan and Switzerland, after a probe into excess factory output, his office said on Wednesday, November 25.",
-      "beats": {
-        "was": "The US Supreme Court struck down many of President Trump's tariffs in February, so the White House turned to a different trade law to tax imports. A probe into whether trade partners make far more goods than they need was expected to bring new duties.",
-        "happened": "The probe found 14 economies at fault. Proposed rates are up to 15% for the EU, Japan, South Korea, Taiwan and Switzerland, up to 20% extra for China on most goods, up to 25% for India and up to 35% for Vietnam. Mexico and Norway were spared. The rates are only proposals: comments are due January 5, 2027 and hearings follow on January 25.",
-        "means": "For the biggest partners the rates match caps already in their trade deals, so the news is less harsh than feared. China and parts of Southeast Asia take the bigger hit, and nothing changes until early 2027 at the soonest.",
-        "fx": "New tariffs weigh on currencies tied to world trade and China, like the Australian dollar. The euro, yen and franc face only small direct effects because their rates stay near existing caps."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "An extra 20% on Chinese goods hurts Australia's biggest customer."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The EU is named, though its 15% rate matches its trade-deal cap."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Japan is named at up to 15%, but trade worries also bring some money back to the yen."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Switzerland is named at up to 15%, while trade worries add some safe-place demand."
-        }
-      ],
-      "watch": "Public comments on the proposed tariffs are due January 5, 2027, with hearings on January 25."
     },
     {
       "id": "whtc-reuters-iran-tankers-mines-coordinate-20261125",
