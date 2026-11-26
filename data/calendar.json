@@ -1,64 +1,6 @@
 {
-  "updated": "2026-11-25T10:02:10-06:00",
+  "updated": "2026-11-26T00:54:14-06:00",
   "events": [
-    {
-      "id": "cny-trade-20261110",
-      "ts": "2026-11-10T03:00:00Z",
-      "ccy": "CNY",
-      "impact": "medium",
-      "category": "trade",
-      "title": "China trade balance (Oct)",
-      "focus": false,
-      "actual": "Surplus $105.3B vs $126.5B forecast (Reuters poll $125.8B), $133.5B in Sep: exports +35.2% y/y (exp +33.5%, Sep +36.3%), imports +41.6% y/y (exp +32%, Sep +31.0%)",
-      "forecast": "surplus $126.5B",
-      "previous": "surplus $133.5B",
-      "better": "higher",
-      "why": "October trade — surplus expected to narrow to $126.5B as exports moderate (+32.3% y/y expected vs +36.3% in Sep) but AI hardware keeps both sides robust.",
-      "if_beat": "Wider surplus: external demand holding — AUD/NZD supported.",
-      "if_miss": "Narrower: export engine cooling — AUD/NZD offered.",
-      "outcome": "Surplus missed by ~$20B as imports surged far faster than exports — import strength, not export cooling; cumulative Jan–Oct surplus tops $1T for a second straight year. No FX leg: EUR/USD flat ~1.1222, AUD/USD ~0.692.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "Reuters: China's trade surplus soars past $1 trillion, October exports jump 35.2% y/y",
-          "url": "https://www.reuters.com/world/asia-pacific/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-2026-11-10/"
-        },
-        {
-          "label": "FXStreet: China's trade surplus shrinks more than expected to CNY712.72 billion in October",
-          "url": "https://www.fxstreet.com/news/chinas-trade-surplus-shrinks-more-than-expected-to-cny71272-billion-in-october-202611100247"
-        }
-      ]
-    },
-    {
-      "id": "us-waller-20261110",
-      "ts": "2026-11-10T09:00:00Z",
-      "ccy": "USD",
-      "impact": "medium",
-      "category": "central-bank",
-      "title": "FOMC member Waller speaks",
-      "focus": false,
-      "actual": "Waller (BoE Watchers Conference, London): leans +25bp Dec hike even if Oct CPI cools; 50bp should be considered if core CPI ~0.3% or higher — 'hiking only 25bp would put our credibility at risk'",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Waller hours before the Oct CPI print — the last Fed voice before the data that decides the ~76-77% December hike; Waller has leaned hawkish through the autumn.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "Hawkish turn hours before CPI: Dec hike now fully priced (~95.6-99% vs ~82% Mon); DXY lifted to ~101.7, GBP/USD off 1.3459 to ~1.3425, 2Y +6bp to ~4.61%. Today's CPI is now the 25bp-vs-50bp test.",
-      "chapter": null,
-      "bank": "fed",
-      "sources": [
-        {
-          "label": "FXStreet: Fed's Waller: Further policy tightening will be needed",
-          "url": "https://www.fxstreet.com/news/feds-waller-further-policy-tightening-will-be-needed-202611100908"
-        },
-        {
-          "label": "Reuters: Dollar steadies as Waller argues for more rate hikes, inflation up next",
-          "url": "https://live.euronext.com/en/financial-news/dollar-steadies-waller-argues-more-rate-hikes-inflation-next"
-        }
-      ]
-    },
     {
       "id": "us-cpi-20261110",
       "ts": "2026-11-10T13:30:00Z",
@@ -85,149 +27,6 @@
         {
           "label": "Bloomberg: US Core CPI Rises by More Than Forecast, Supporting Fed Hike",
           "url": "https://www.bloomberg.com/news/articles/2026-11-10/us-core-cpi-rises-more-than-forecast-0-3-supporting-rate-hike"
-        }
-      ]
-    },
-    {
-      "id": "us-10y-auction-20261110",
-      "ts": "2026-11-10T18:00:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "auction",
-      "title": "US $42B 10-year Treasury auction",
-      "focus": false,
-      "actual": "High yield 5.020% (vs 5.300% Oct 7); BTC 2.46 (below 2.60 six-auction avg); indirects 61.2% (soft foreign demand — vs 80.3% Oct), directs 29.0%, dealers 9.8%",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Second refunding auction of the week, hours after CPI — a soft auction into a hot print would steepen the backup in 10Y yields.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "Soft auction: the second refunding sale of the week stopped above where the 10-year was trading into the auction (~4.97%), with the softest foreign take of the recent 10-year auctions; the $25B 30Y auction Thu is the final supply test.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "TreasuryDirect: Treasury Auction Results — 10-Year Note, November 10, 2026 (official)",
-          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2026/R_20261110_1.pdf"
-        },
-        {
-          "label": "TFTC: Treasury Auction Results — 10-Year Note, Nov 10, 2026",
-          "url": "https://www.tftc.io/treasury-auctions"
-        }
-      ]
-    },
-    {
-      "id": "cad-boc-minutes-20261110",
-      "ts": "2026-11-10T18:30:00Z",
-      "ccy": "CAD",
-      "impact": "low",
-      "category": "central-bank",
-      "title": "BoC Summary of Deliberations (Oct 28 decision)",
-      "focus": false,
-      "actual": "Council debated hold (2.25%) vs hike; chose 2.50% — energy ‘higher for longer’ with cost pass-through building; CPI seen 3.5% end-2026, above 3% through much of 2027, back to 2% by mid-2028; growth revised up (2026 to 1%, 2027–28 to 2%).",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "The record of the Oct 28 hike to 2.50% — Macklem's 'proceed carefully' framing vs the MPR's 2027 inflation lift to 3.1%; the read-through for the ~56% December follow-up hike.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "Confirms the Oct 28 message rather than extending it: ‘there could be a need to increase the policy rate further’ but decisions one meeting at a time; Dec 9 follow-up hike still roughly a coin toss. The minutes add detail (oil ~$35/bbl above the July assumption, diversity of views on pass-through speed) but no new hawkish signal.",
-      "chapter": null,
-      "bank": "boc",
-      "sources": [
-        {
-          "label": "Bank of Canada: Summary of Governing Council deliberations, Oct 28, 2026 (official)",
-          "url": "https://www.bankofcanada.ca/2026/11/summary-of-governing-council-deliberations-fixed-announcement-date-of-october-28-2026/"
-        }
-      ]
-    },
-    {
-      "id": "us-api-20261110",
-      "ts": "2026-11-10T22:30:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "energy",
-      "title": "API weekly crude stocks",
-      "actual": "Crude +9.0M bbls (vs -5.267M prior); gasoline +4k, distillate +1.5M, Cushing +182k",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Weekly crude read into Thursday's EIA — oil tape still trades the Gulf arc.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "OilPrice first reported a -9.8M draw with signs flipped; corrected to a +9.0M build (Reuters corroborates). EIA Thu 10:30 ET gives the official print.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "OilPrice: API shows sharp build in US crude oil, distillate inventories (corrected)",
-          "url": "https://oilprice.com/Latest-Energy-News/World-News/API-Shows-Sharp-Build-in-US-Crude-Oil-Distillate-Inventories.html"
-        },
-        {
-          "label": "Reuters: Oil rises from two-month low as Hormuz shipping attacks offset Iran truce hopes",
-          "url": "https://www.reuters.com/business/energy/oil-rises-two-month-low-hormuz-shipping-attacks-offset-iran-truce-hopes-2026-11-11/"
-        }
-      ]
-    },
-    {
-      "id": "eur-lagarde-20261111",
-      "ts": "2026-11-11T09:45:00Z",
-      "ccy": "EUR",
-      "impact": "medium",
-      "category": "central-bank",
-      "title": "ECB President Lagarde speaks",
-      "actual": "Spoke at the Paris Peace Forum on European sovereignty; no monetary-policy signal in major-wire coverage",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Lagarde speaks twice this week (Wed 3:45am CT, Thu 1:30pm CT) ahead of the Dec 17 decision; Dec hike ~89% priced — any steer on whether December is live is the read.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "Lagarde's Paris Peace Forum panel carried no policy steer — she spoke on European sovereignty, not rates; Dec ECB hike pricing ~89-92% unchanged; EUR/USD ~1.1096, lowest since May 2025.",
-      "chapter": null,
-      "bank": "ecb",
-      "sources": [
-        {
-          "label": "FXStreet: US CPI hotter than expected (Lagarde at Paris Peace Forum; no market-moving release Wed)",
-          "url": "https://www.fxstreet.com/analysis/us-cpi-hotter-than-expected-202611110636"
-        },
-        {
-          "label": "Lagarde on LinkedIn: Paris Peace Forum — European sovereignty (Nov 11)",
-          "url": "https://www.linkedin.com/posts/christinelagarde_i-had-a-busy-day-at-the-paris-peace-forum-activity-7526343801259356160-U8Cr"
-        }
-      ]
-    },
-    {
-      "id": "jpy-ppi-20261112",
-      "ts": "2026-11-11T23:50:00Z",
-      "ccy": "JPY",
-      "impact": "medium",
-      "category": "inflation",
-      "title": "Japan PPI (Oct) y/y",
-      "focus": false,
-      "actual": "+7.1% y/y (+0.7% m/m) (BoJ official)",
-      "forecast": "6.5% y/y",
-      "previous": "6.8% y/y",
-      "better": "higher",
-      "why": "Producer-price pipeline into the December BoJ meeting — a hot print keeps the ~80% hike pricing honest; Ueda's 'real rates have not risen significantly' leaves the door open.",
-      "if_beat": "Hotter: BoJ hike case firms — JPY supported.",
-      "if_miss": "Softer: pipeline cooling — JPY offered.",
-      "outcome": "Beat — +7.1% y/y vs +6.5% median forecast (Sept +6.8%); +0.7% m/m vs +0.2-0.3% expected; yen-based import prices +24.8% y/y on yen weakness. Dec BoJ hike case firms; USD/JPY softened ~0.12% to ~159.58 after the print (Reuters), still just under 160.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "BoJ: Monthly Report on the Corporate Goods Price Index (October 2026)",
-          "url": "https://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2610.pdf"
-        },
-        {
-          "label": "Reuters: Dollar near one-month high as yen edges toward 160",
-          "url": "https://www.reuters.com/world/asia-pacific/dollar-near-one-month-high-yen-edges-toward-160-2026-11-12/"
-        },
-        {
-          "label": "Mace News: Japan Oct corporate goods prices +7.1% y/y",
-          "url": "https://www.tradingview.com/news/macenews:ad23e8a4e094b:0-japan-oct-corporate-goods-producer-prices-7-1-y-y-sept-6-8-median-forecast-6-5/"
         }
       ]
     },
@@ -2374,20 +2173,28 @@
       "category": "inflation",
       "title": "US GDP price index (Q3, 2nd estimate) q/q",
       "focus": false,
-      "actual": "+2.2% q/q",
+      "actual": "+1.9% q/q",
       "forecast": "2.3% (FF consensus; Q3 advance 2.3%)",
       "previous": "2.3% (Q3 advance)",
       "better": "higher",
       "why": "Q3 GDP price index — the inflation companion to the GDP revision; 2.3% expected, in line with the advance.",
       "if_beat": "Hotter: inflation firmer — USD supported, Dec hike firms.",
       "if_miss": "Softer: inflation cooling — USD offered.",
-      "outcome": "Miss: GDP price index +2.2% q/q vs 2.3% forecast (advance 2.3%) — price pressures a touch softer than expected even as growth was revised up sharply. (BEA via FRED, Nov 25)",
+      "outcome": "Miss: GDP price index +1.9% q/q vs 2.3% forecast (advance 2.3%) — revised down 0.4pp; FRED GDPCTPI 134.057 vs 133.416. BEA's summary publishes the purchases price index (+2.7%, revised down from 3.0%), not a separate GDP-deflator line.",
       "chapter": null,
       "bank": null,
       "sources": [
         {
           "label": "ForexFactory calendar",
           "url": "https://www.forexfactory.com/calendar?day=nov25.2026"
+        },
+        {
+          "label": "FRED GDPCTPI — Q3 134.057 vs Q2 133.416 (2nd-est vintage)",
+          "url": "https://fred.stlouisfed.org/series/GDPCTPI"
+        },
+        {
+          "label": "BEA — GDP Second Estimate, Q3 2026",
+          "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026"
         }
       ]
     },
@@ -2509,6 +2316,31 @@
       "outcome": "Miss: personal spending +0.3% m/m vs 0.4% forecast, after an upwardly revised +0.6% in September; real PCE flat. (BEA, Nov 25)",
       "chapter": null,
       "bank": null,
+      "sources": [
+        {
+          "label": "ForexFactory calendar",
+          "url": "https://www.forexfactory.com/calendar?day=nov25.2026"
+        }
+      ]
+    },
+    {
+      "id": "gb-mpr-hearings-20261125",
+      "ts": "2026-11-25T14:15:00Z",
+      "ccy": "GBP",
+      "impact": "medium",
+      "category": "speech",
+      "title": "BoE Monetary Policy Report hearings (Treasury Committee)",
+      "focus": false,
+      "actual": null,
+      "forecast": null,
+      "previous": null,
+      "better": null,
+      "why": "Bailey and MPC members testify to the Treasury Committee on the November Monetary Policy Report — the last BoE voices before Thursday's Financial Stability Report; any steer on the Dec 17 back-to-back debate moves sterling.",
+      "if_beat": "Hawkish: Dec back-to-back hike firms — GBP bid.",
+      "if_miss": "Dovish: one-and-done case grows — GBP offered.",
+      "outcome": "No new steer — Bailey's testimony produced no policy headline by the NY close; Dec back-to-back hike ~82% (Prime Terminal via FXStreet, Nov 24).",
+      "chapter": null,
+      "bank": "boe",
       "sources": [
         {
           "label": "ForexFactory calendar",
@@ -2715,7 +2547,7 @@
       "forecast": "3.0% (FF consensus; Oct 2.6%)",
       "previous": "2.6% (Oct)",
       "better": "higher",
-      "why": "Tokyo core CPI for November — the early read on Japan inflation; national core printed 2.2% in October (vs 2.3% fcst). A hot Tokyo print cements the Dec BoJ hike.",
+      "why": "Tokyo core CPI for November — the early read on Japan inflation; national core printed 2.2% in October (vs 2.3% fcst). A hot Tokyo print cements the Dec BoJ hike. Tamura (Thu) said the BoJ must respond swiftly to an inflation overshoot, including by accelerating hikes.",
       "if_beat": "Hotter: Dec BoJ hike firms — JPY bid.",
       "if_miss": "Softer: hike pricing softens — JPY offered, 160 back in focus.",
       "outcome": null,
@@ -2765,7 +2597,7 @@
       "forecast": "4.7% (FF consensus; Oct 4.9%)",
       "previous": "4.9% (Oct)",
       "better": "higher",
-      "why": "Spain flash CPI — Oct 4.9% y/y, the eurozone's hottest; forecast eases to 4.8%.",
+      "why": "Spain flash CPI — Oct 4.9% y/y, the eurozone's hottest; forecast eases to 4.7%.",
       "if_beat": "Hotter: Spanish inflation sticky — EUR supported.",
       "if_miss": "Softer: inflation easing — EUR offered.",
       "outcome": null,
