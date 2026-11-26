@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T03:50:00Z",
+  "updated": "2026-11-26T11:49:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -33,14 +33,14 @@
       "text": "The Canadian dollar was the strongest major currency on Wednesday, November 25, bouncing from a 19-month low on bets of a Bank of Canada rate rise on December 9 after Governor Tiff Macklem said the bank was too slow on inflation after COVID. Brent oil rising 3.5% to about $94.60 a barrel adds support for this oil-exporting country's currency."
     },
     "AUD": {
-      "lean": "bearish",
-      "ts": "2026-11-26T01:55:00Z",
-      "text": "The Australian dollar sits near 66 US cents, close to its lowest since January. Inflation jumping to 4.9% in October rules out early rate cuts, but doubts about AI shares and a US plan for new tariffs on China and others weigh more, even as Asian shares steadied on Thursday, November 26."
+      "lean": "mixed",
+      "ts": "2026-11-26T11:49:00Z",
+      "text": "The Australian dollar edged back up to about 66.4 US cents on Thursday, November 26, after its lowest in a year, helped by the biggest jump in business investment since 2011 and inflation of 4.9% that keeps rates high. Falls in AI shares and proposed US tariffs on China and others still weigh."
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-25T23:50:00Z",
-      "text": "The New Zealand dollar sits just under 55 US cents after bouncing from its lowest since March 2009 on Monday, November 23. The bounce is small, because low local rates set against rising US rates keep pulling money away, and falls in tech shares weigh on risk-linked currencies like the kiwi."
+      "ts": "2026-11-26T11:49:00Z",
+      "text": "The New Zealand dollar sits near 55 US cents, just above its lowest since 2009, after a 10-day slide stopped on Thursday, November 26. Markets now price a likely Reserve Bank of New Zealand rate rise to 3%, but US rates rising faster still pull money away."
     },
     "XAU": {
       "lean": "bearish",
@@ -49,11 +49,83 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-26T03:50:00Z",
-      "text": "Brent crude held near $94.70 a barrel on Thursday, November 26 after a 3.5% jump on Wednesday, November 25, as Yemen's Houthi rebels claimed attacks on Saudi Arabia's Ras Tanura refinery and Iran claimed another tanker hit a mine in Hormuz. Worries about too much supply next year are the main brake ahead of the OPEC+ meeting on Sunday, November 29."
+      "ts": "2026-11-26T11:49:00Z",
+      "text": "Brent crude climbed to about $95 a barrel on Thursday, November 26 as the fight between Saudi Arabia and Yemen's Houthi rebels widened, with missiles aimed at Riyadh shot down overnight, on top of tanker attacks in the Strait of Hormuz. Worries about too much supply next year are the main brake ahead of the OPEC+ meeting on Sunday, November 29."
     }
   },
   "items": [
+    {
+      "id": "koreaherald-saudi-downs-riyadh-missiles-20261126",
+      "ts": "2026-11-26T04:25:33Z",
+      "source": "The Korea Herald (AFP)",
+      "url": "https://www.koreaherald.com/article/10950334",
+      "image": "https://wimg.heraldcorp.com/news/cms/2026/11/26/rcv.YNA.20261125.PRU20261125270201009_P1.jpg",
+      "headline": "Saudis down missiles targeting capital after Yemen port strikes",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "geopolitics",
+      "summary": "Saudi Arabia said its air defences shot down two ballistic missiles aimed at Riyadh around midnight going into Thursday, November 26, after Saudi-led strikes on Yemen's Hodeidah port and Houthi attacks on the Red Sea ports of Jeddah and Jazan.",
+      "beats": {
+        "was": "Yemen's Houthi rebels, allied with Iran, have stepped up attacks on Saudi Arabia during the Iran war. They claimed a strike on Saudi Arabia's Ras Tanura refinery on Wednesday, November 25, which Saudi officials have not confirmed, and a drone hit a Riyadh office tower on Tuesday, November 24, injuring 11.",
+        "happened": "An explosion was heard in Riyadh after an air-raid alert. The Saudi-led coalition said it also downed a cruise missile in the west and a drone near Jeddah port, with no civilian injuries. The Houthis said they hit Jeddah and Jazan in reply to coalition strikes on Hodeidah, Yemen's main port.",
+        "means": "The fighting between Saudi Arabia and the Houthis is widening, with the Saudi capital and Red Sea ports now targets. That adds a second risk to Gulf oil supply on top of tanker attacks in the Strait of Hormuz.",
+        "fx": "More risk to Saudi supply keeps a floor under oil, which helps oil-exporting currencies like the Canadian dollar and supports safe places like the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Attacks reaching Saudi Arabia's capital and Red Sea ports raise the risk to Gulf supply."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil supports the currency of a big oil exporter."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A wider Gulf conflict adds demand for safe places."
+        }
+      ],
+      "watch": "The OPEC+ ministers' meeting on Sunday, November 29, which sets oil output for 2027."
+    },
+    {
+      "id": "brecorder-reuters-aud-capex-kiwi-20261126",
+      "ts": "2026-11-26T07:05:00Z",
+      "source": "Business Recorder (Reuters)",
+      "url": "https://www.brecorder.com/news/40450846/australian-dollar-finds-support-in-data-centre-boom-kiwi-edges-away-from-17-year-low",
+      "image": "https://i.brecorder.com/large/2026/04/151031358695b2c.webp",
+      "headline": "Australian dollar finds support in data centre boom, kiwi edges away from 17-year low",
+      "story": "australia-inflation-rba",
+      "story_title": "Australian inflation and the Reserve Bank of Australia",
+      "pillar": "growth",
+      "summary": "Business investment in Australia jumped by the most since 2011 in July to September, driven by data centres, and the Australian dollar edged up to about 66.4 US cents on Thursday, November 26.",
+      "beats": {
+        "was": "The Australian dollar fell to its lowest in a year on Wednesday, November 25, near 65.6 US cents, and is down about 5.6% in November as AI shares slid and US rates looked set to rise. Inflation of 4.9% in October had already ruled out early rate cuts by the Reserve Bank of Australia.",
+        "happened": "Company spending on buildings and equipment rose far more than expected in the third quarter, led by data centres, though much of the money went on imported equipment. The Australian dollar rose 0.2%. The New Zealand dollar was flat near 54.9 US cents, ending a 10-day losing run just above its lowest since 2009.",
+        "means": "Strong investment points to an economy with more pace than feared, which backs the case that Australian rates stay high for longer. Markets do not expect a rate cut for many months. In New Zealand, swaps price about an 80% chance of a quarter-point rate rise to 3% at the next decision.",
+        "fx": "Better local news gives the Australian dollar some footing after a heavy month, though swings in AI shares still drive it day to day. The kiwi has stopped falling but has not turned."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "The biggest jump in business investment since 2011 supports keeping rates high."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A 10-day slide paused near a 17-year low, with a rate rise priced but not yet delivered."
+        }
+      ],
+      "watch": "The Reserve Bank of Australia's last rate decision of the year in December."
+    },
     {
       "id": "brecorder-reuters-dollar-steady-yields-20261126",
       "ts": "2026-11-26T02:59:50Z",
