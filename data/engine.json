@@ -1,39 +1,43 @@
 {
- "updated": "2026-11-26T01:40:00-06:00",
+ "updated": "2026-11-26T07:57:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "figure": "Fed Dec quarter-point hike ~96% (CME FedWatch via Hercules); BoJ Dec ~85% (Kalshi); BoC Dec ~80% (Reuters); BoE Dec ~82%; ECB Dec ~90%; RBA Dec hold ~99%",
-   "read": "A December Fed hike stays all but certain, and nothing overnight changed that. In Japan, a Bank of Japan board member hinted at faster hikes, backing a December move. Canada's central bank also looks set to hike again, which narrows the US dollar's rate edge over the loonie.",
+   "figure": "Fed Dec quarter-point hike ~96% (CME FedWatch via Hercules); ECB Dec ~90%; BoJ Dec ~85%; BoC Dec ~80% (Reuters); BoE Dec ~80–82%; RBA Dec hold ~99%",
+   "read": "A December Fed hike stays all but certain. The European Central Bank's October notes showed many officials were ready to hike then, which confirms a December rise there too. A Bank of Japan board member hinted at faster hikes, and Canada looks set to hike again.",
    "sources": [
     {
-     "label": "Blue Street central banks and pricing (Hercules, Nov 26)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+     "label": "Action Forex (Nov 26): ECB monetary policy accounts, October meeting",
+     "url": "https://www.actionforex.com/central-banks/european-central-bank/662223-ecb-monetary-policy-accounts-36/"
     },
     {
      "label": "Investing.com, Reuters (Nov 26): BOJ's Tamura signals chance of faster-pace interest rate hikes",
      "url": "https://za.investing.com/news/economy-news/bojs-tamura-signals-chance-of-fasterpace-interest-rate-hikes-4597800"
     },
     {
-     "label": "Blue Street market levels (Hercules, London open run, levels ~8:30 PM–12:30 AM CT Nov 25–26; indicative)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+     "label": "Blue Street central banks and pricing (Hercules, Nov 26)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
     }
    ]
   },
   {
    "id": "growth",
    "title": "Growth",
-   "figure": "US Q3 GDP +4.3% annualized, second estimate (fcst 3.5%); Australia Q3 private capex +12.2% q/q (fcst 4.5%); Germany Q3 GDP +0.1% q/q final",
-   "read": "The US economy is still running hot, and Australian firms stepped up investment far more than expected. Germany barely grew over the summer. Strong growth backs higher rates in the US and Australia, while Europe lags.",
+   "figure": "Beige Book: growth in 8 of 12 Fed regions, none declined; Australia Q3 private capex +12.2% q/q (fcst 4.5%); Germany GfK Dec −30.2 (fcst −29.4)",
+   "read": "The Fed's Beige Book found slight to moderate growth in most US regions, and Australian firms stepped up investment far more than expected. German consumers stayed deeply gloomy. Strong growth backs higher rates in the US and Australia, while Europe lags.",
    "sources": [
-    {
-     "label": "BEA (Nov 25): GDP, second estimate, and corporate profits, third quarter 2026",
-     "url": "https://www.bea.gov/news/2026/gdp-second-estimate-and-corporate-profits-3rd-quarter-2026"
-    },
     {
      "label": "Blue Street calendar (Hercules, Nov 26): times, forecasts and actuals",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
+    },
+    {
+     "label": "Business Recorder, citing Reuters (Nov 26): Australian dollar finds support in data centre boom",
+     "url": "https://www.brecorder.com/news/40450846/australian-dollar-finds-support-in-data-centre-boom-kiwi-edges-away-from-17-year-low"
+    },
+    {
+     "label": "investingLive (Nov 26): German consumer confidence remains in the doldrums heading into December",
+     "url": "https://investinglive.com/news/german-consumer-confidence-remains-in-the-doldrums-heading-into-december/"
     }
    ]
   },
@@ -60,19 +64,15 @@
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "figure": "S&P 500 fund ~−0.3%, Nasdaq-100 fund ~−0.7% at Wed close after −4% intraday; Nikkei +1.6%, Kospi +1.9%; USD/CHF ~0.832; AUD/USD ~0.664",
-   "read": "US shares won back most of Wednesday's deep fall, and Asian shares bounced overnight. That cooled the rush into safe havens, so the franc gave back some gains and the Aussie recovered. Thin holiday trading can still make moves jumpy.",
+   "figure": "STOXX 600 ~+1.4% early Thu (Reuters); EUR/CHF ~0.916 (+0.44%); AUD/USD ~0.663; US markets closed",
+   "read": "Markets calmed after Wednesday's slide, and European shares rallied as tariff worries eased. That cooled demand for the franc and gold. Thin trading with US markets shut for Thanksgiving can still make moves jumpy.",
    "sources": [
     {
-     "label": "Stock Titan (Nov 25): Stocks win back most of their morning losses after a chip sell-off",
-     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
+     "label": "Reuters via WHBL (Nov 26): European stocks rally as tech and banks rebound, tariff fears ease",
+     "url": "https://whbl.com/2026/11/26/european-stocks-rally-as-tech-and-banks-rebound-tariff-fears-ease/"
     },
     {
-     "label": "Investing.com, Reuters (Nov 26): Asia shares bounce, AI and tariffs lurk in background",
-     "url": "https://za.investing.com/news/stock-market-news/asia-shares-bounce-ai-and-tariffs-lurk-in-background-4597799"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, London open run, levels ~8:30 PM–12:30 AM CT Nov 25–26; indicative)",
+     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:32 AM CT Nov 26, Thanksgiving; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
@@ -80,15 +80,23 @@
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "figure": "Brent ~$94.87, WTI ~$84.10 (indicative); Brent Wed settlement $94.61 (+3.5%); OPEC+ meets Sun Nov 29",
-   "read": "Oil held its jump as Iran claimed another tanker hit a mine near Hormuz. That keeps helping the Canadian dollar and costs oil importers like Japan and the euro area. No claim has yet shown a real loss of supply.",
+   "figure": "Brent ~$95.36 (+0.80%), Wed settlement $94.61 (+3.5%); WTI ~$84.73; gold ~$3,565, Wed low ~$3,446",
+   "read": "Oil held near $95 as attacks around Saudi Arabia and Iran's mine claims kept risk high, which helps the Canadian dollar. Gold bounced from its lowest in more than a year, a little support for the Aussie.",
    "sources": [
     {
-     "label": "Investing.com, Reuters (Nov 26): Oil rises on supply concerns as Iran claims mine strikes on ships",
-     "url": "https://za.investing.com/news/commodities-news/oil-rises-on-supply-concerns-as-iran-claims-mine-strikes-on-ships-4597874"
+     "label": "Reuters via The Canadian Vanguard (Nov 26): Oil slides despite shipping mine claims and supply risks",
+     "url": "https://www.thecanadianvanguard.com/oil-slides-despite-shipping-mine-claims-and-supply-risks/"
     },
     {
-     "label": "Blue Street market levels (Hercules, London open run, levels ~8:30 PM–12:30 AM CT Nov 25–26; indicative)",
+     "label": "The Korea Herald, citing AFP (Nov 26): Saudis down missiles targeting capital after Yemen port strikes",
+     "url": "https://www.koreaherald.com/article/10950334"
+    },
+    {
+     "label": "FinanceFeeds (Nov 26): Gold price today, holiday bounce from a 15-month low",
+     "url": "https://financefeeds.com/gold-price-today-3565-thursday-holiday-bounce-from-15-month-low-bull-3697-bear-3446/"
+    },
+    {
+     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:32 AM CT Nov 26, Thanksgiving; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
