@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T16:50:00Z",
+  "updated": "2026-11-26T17:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -24,13 +24,13 @@
     },
     "CHF": {
       "lean": "mixed",
-      "ts": "2026-11-26T15:50:00Z",
-      "text": "The Swiss franc rose to its strongest against the euro this month as falling AI shares and the Iran war sent money to safe places, and the Bank of England warned on Thursday, November 26 about AI debt. Against the dollar it slipped 0.4% that day, held back by bets on more Federal Reserve rate rises."
+      "ts": "2026-11-26T17:55:00Z",
+      "text": "The Swiss franc rose to its strongest against the euro this month as falling AI shares and the Iran war sent money to safe places. The war spread further on Thursday, November 26, when Kuwait said two Italian workers died as it shot down Iranian drones, though the franc slipped against the dollar on bets of more Federal Reserve rate rises."
     },
     "CAD": {
       "lean": "bullish",
-      "ts": "2026-11-25T23:50:00Z",
-      "text": "The Canadian dollar was the strongest major currency on Wednesday, November 25, bouncing from a 19-month low on bets of a Bank of Canada rate rise on December 9 after Governor Tiff Macklem said the bank was too slow on inflation after COVID. Brent oil rising 3.5% to about $94.60 a barrel adds support for this oil-exporting country's currency."
+      "ts": "2026-11-26T17:55:00Z",
+      "text": "The Canadian dollar has bounced from a 19-month low as all six of Canada's biggest banks now expect a Bank of Canada rate rise on December 9, after Governor Tiff Macklem warned inflation is lasting. Brent oil near $95 a barrel, lifted by attacks on Saudi refineries, adds support for this oil-exporting country's currency."
     },
     "AUD": {
       "lean": "mixed",
@@ -49,11 +49,110 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-26T16:50:00Z",
-      "text": "Brent crude rose for a third day to about $95.60 a barrel on Thursday, November 26, as Yemen's Houthi rebels claimed a strike on Saudi Arabia's biggest refinery and the UK Navy's shipping office confirmed another tanker was hit in the Strait of Hormuz. Worries about too much supply next year are the main brake ahead of the OPEC+ meeting on Sunday, November 29."
+      "ts": "2026-11-26T17:55:00Z",
+      "text": "Brent crude rose for a third day to about $95.60 a barrel on Thursday, November 26, as Yemen's Houthi rebels targeted two Saudi refineries in two days and Iranian drones were shot down over Kuwait. No lost Gulf supply is confirmed, and worries about too much oil next year are the main brake ahead of the OPEC+ meeting on Sunday, November 29."
     }
   },
   "items": [
+    {
+      "id": "thenational-italians-killed-kuwait-drones-20261126",
+      "ts": "2026-11-26T15:47:54Z",
+      "source": "The National",
+      "url": "https://www.thenationalnews.com/news/gulf/2026/11/26/two-italian-workers-killed-in-iranian-drone-attack-on-kuwait/",
+      "image": "https://www.thenationalnews.com/resizer/v2/AUXOZDBXURFX3NMGGKBHQW3FDI.JPG?auth=b8f2c8c57a93f7fc3d8e41d5cf14a0a280ad4bf72f250eba1b6ce2335cebe2ae&smart=true&width=1200&height=630",
+      "headline": "Two Italian workers killed as Kuwait shoots down Iranian drones",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "geopolitics",
+      "summary": "Kuwait said on Thursday, November 26 that two Italian technicians died when debris from Iranian drones it shot down fell on a key site. Iran denied attacking.",
+      "beats": {
+        "was": "The war between Iran and the US and Israel began with US-Israeli strikes in late February. Kuwait hosts US forces and was last targeted by drones on November 18.",
+        "happened": "Kuwait's Defence Ministry said falling debris from intercepted drones killed two Italian workers for the defence firm Rheinmetall and hurt a Kuwaiti and a Pakistani worker on Thursday, November 26. Kuwait called it a breach of its sovereignty and kept the right to respond. Iran's military denied any attack.",
+        "means": "Deaths of Western civilians in a Gulf state widen the war beyond shipping and Saudi oil sites. No damage to Kuwaiti oil output or exports was reported.",
+        "fx": "More fighting in the Gulf keeps a risk premium in oil and supports safe places such as the Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Another Gulf oil producer is drawn in, though no supply loss was reported."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A wider war adds to demand for safe places."
+        }
+      ],
+      "watch": "Whether Kuwait answers the attack, and talks led by Qatar and Pakistan to calm the fighting."
+    },
+    {
+      "id": "arabnews-houthis-jazan-refinery-coalition-20261126",
+      "ts": "2026-11-26T15:19:01Z",
+      "source": "Arab News",
+      "url": "https://www.arabnews.com/saudi-arabia/coalition-strikes-houthi-missile-site-after-attack-on-saudi-arabias-jazan-refinery-3014153",
+      "image": "https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/1795713364594-d8095cf24cab8404.webp",
+      "headline": "Saudi-led coalition says Houthis attacked Jazan refinery, hits back in Yemen",
+      "story": "oil-supply",
+      "story_title": "Oil supply: surplus vs Gulf attacks",
+      "pillar": "commodities",
+      "summary": "The Saudi-led coalition said Yemen's Houthi rebels attacked Saudi Arabia's Jazan refinery on Thursday, November 26, and that it destroyed the missile launcher used.",
+      "beats": {
+        "was": "Yemen's Houthi rebels, who back Iran, have stepped up attacks on Saudi Arabia since Tuesday, November 24. On Wednesday, November 25 they claimed a drone strike on Ras Tanura, the kingdom's biggest refinery, and Saudi forces said they downed four drones there.",
+        "happened": "The coalition said the Houthis struck the Jazan refinery on the Red Sea coast on Thursday, November 26, and that it then destroyed a ballistic missile launch site at Yemen's Hodeidah port. No damage to the refinery or to Saudi output was given.",
+        "means": "A second Saudi refinery targeted in two days keeps the fear of lost Gulf supply alive, even while big stock builds point to a surplus next year.",
+        "fx": "A supply scare lifts oil, which helps the Canadian dollar and Norway's krone and is a cost for Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "A second Saudi refinery targeted in two days, with no output loss confirmed."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices lift income for Canada, a big oil exporter."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, so supply scares raise its costs."
+        }
+      ],
+      "watch": "Any word from Saudi Aramco on damage at Jazan, and the OPEC+ ministers' meeting on Sunday, November 29."
+    },
+    {
+      "id": "cmt-bloomberg-big-six-december-boc-hike-20261126",
+      "ts": "2026-11-26T14:14:16Z",
+      "source": "Canadian Mortgage Trends (Bloomberg)",
+      "url": "https://www.canadianmortgagetrends.com/2026/11/all-of-canadas-big-six-banks-now-see-december-rate-hike/",
+      "image": "https://www.canadianmortgagetrends.com/wp-content/uploads/2026/11/The-Bank-of-Canada-building-in-Ottawa-Ontario_sm.jpg",
+      "headline": "All six of Canada's biggest banks now expect a Bank of Canada rate rise in December",
+      "story": "boc-outlook",
+      "story_title": "Bank of Canada: inflation and the rate path",
+      "pillar": "rates",
+      "summary": "TD became the last of Canada's six biggest banks to forecast a Bank of Canada rate rise on December 9, after Governor Tiff Macklem warned about inflation.",
+      "beats": {
+        "was": "The Bank of Canada raised its rate to 2.5% in October, its first rise in three years, as energy costs from the Middle East war pushed up prices. On Tuesday, November 24 Governor Tiff Macklem stressed that inflation is lasting and firms may pass on higher energy costs.",
+        "happened": "By Thursday, November 26 all six big banks (RBC, TD, Scotiabank, BMO, CIBC and National Bank) expected another rise on December 9. CIBC and BMO moved their call up from January earlier in the week of November 23, and TD followed. Markets put the odds near 80%.",
+        "means": "A December rise is now the near-unanimous view, so much of it is already in prices. Canada's July-September growth figures and November jobs report, both due next week, could still change the call.",
+        "fx": "Higher Canadian rates make the Canadian dollar more rewarding to hold, though the US Federal Reserve is also expected to raise rates on December 9."
+      },
+      "impact": [
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Bank forecasts catch up with a December rate rise markets mostly expect already."
+        }
+      ],
+      "watch": "Canada's July-September GDP and November jobs report next week, then the Bank of Canada decision on Wednesday, December 9."
+    },
     {
       "id": "financefeeds-brent-9558-three-day-rally-20261126",
       "ts": "2026-11-26T13:20:00Z",
@@ -1376,156 +1475,6 @@
         }
       ],
       "watch": "US October PCE inflation later on Wednesday, November 25, and the Reserve Bank of Australia decision on Tuesday, December 8."
-    },
-    {
-      "id": "fool-close-nasdaq-falls-dow-gains-20261124",
-      "ts": "2026-11-24T21:51:48Z",
-      "source": "The Motley Fool",
-      "url": "https://www.fool.com/coverage/stock-market-today/2026/11/24/stock-market-today-nov-24-tech-sell-off-drags-nasdaq-as-dow-gains-on-value-rotation/",
-      "image": "https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Ff8d366e52d93d5ab48cd8b149129678a09db7af2-2121x1414.jpg&w=1200&op=resize",
-      "headline": "Stock Market Today, Nov. 24: Tech Sell-Off Drags Nasdaq as Dow Gains on Value Rotation",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "US tech shares fell again on Tuesday, November 24, with the Nasdaq down 1.5% and Nvidia down about 6%, but the Dow rose almost 1% as money moved into health care and retailers. Gold ended about 2.7% lower near $3,554.",
-      "beats": {
-        "was": "US shares had their best day since April 2025 on Monday, November 23, after chip maker Nvidia put Jensen Huang back in charge and its stock jumped about 31%.",
-        "happened": "At the New York close the Nasdaq lost 1.5% and the S&P 500 0.5%, while the Dow gained 0.85% to just above 50,000. Nvidia gave back about 6%, and other chip and tech names fell harder. Health care and retailers such as Kohl's and Dollar Tree rose after strong results, and a jump in US consumer confidence helped. The US 10-year yield held at 4.92%, and gold fell about 2.7%.",
-        "means": "Investors are pulling back from the AI trade but not from the US economy, so this looks more like a shift between sectors than a broad loss of nerve. Steady yields near 5% keep the cost of holding gold high.",
-        "fx": "Weaker tech shares weigh a little on the Australian and New Zealand dollars, while a confident US economy and high yields support the dollar and press on gold."
-      },
-      "impact": [
-        {
-          "ccy": "XAU",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "Gold lost about 2.7% with US 10-year yields near 5%."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Another tech sell-off cools appetite for risk-linked currencies."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The kiwi near a 17-year low stays exposed when tech shares slip."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Shares outside tech rose on a confident US consumer."
-        }
-      ],
-      "watch": "US October PCE inflation, the Federal Reserve's preferred price gauge, on Wednesday, November 25."
-    },
-    {
-      "id": "thehill-iran-tankers-mines-escort-20261124",
-      "ts": "2026-11-24T20:49:00Z",
-      "source": "The Hill via Yahoo News",
-      "url": "https://www.yahoo.com/news/us/articles/iran-says-3-oil-tankers-204949928.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/b9d71e91f790c89aa767d4c7240d684166a5c8284a265390d4cd53202b3cf2fa/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hill_articles_341%2F84bf652ad363a40e764cb066d3398096.jpg_up.jpg",
-      "headline": "Iran says 3 oil tankers hit underwater mines despite US naval escort",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "risk",
-      "summary": "Iran's Revolutionary Guards say three oil tankers sailing under US protection hit underwater mines near the Strait of Hormuz, and on Tuesday, November 24 claimed a fourth caught fire. The US answered with new sanctions on Iran's money networks.",
-      "beats": {
-        "was": "The US and Israel went to war with Iran on February 28, and a deal signed in June has stalled over shipping. The Strait of Hormuz, the narrow sea lane that carries about a fifth of the world's oil, still sees far fewer ships than before the war, and the US now escorts tankers through it.",
-        "happened": "The naval arm of Iran's Revolutionary Guards said three escorted tankers struck mines, one off Iran's southern coast and two in the eastern part of the strait, and that US air cover failed to stop it. On Tuesday, November 24 it said a fourth tanker caught fire after hitting a mine east of the strait. No names or damage details were given and the claims are not confirmed. The US Treasury put sanctions on more than two dozen Iranian exchange houses and front companies, and a third US aircraft carrier joined two already in the Gulf.",
-        "means": "If mines are now in the water, US escorts are not enough to make the route safe, which raises the risk of a sudden cut to Gulf oil. More carriers and sanctions show the US digging in rather than easing off.",
-        "fx": "A riskier sea lane props up oil prices and with them the Canadian dollar, and keeps some safe-place demand for the Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Mines in the strait would make even escorted tankers unsafe."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A tougher US stance and more attacks keep safe-place demand alive."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firmer oil prices help Canada, a big oil exporter."
-        }
-      ],
-      "watch": "Whether shipping groups or the UK's maritime agency confirm mine strikes, and the OPEC+ meeting on Sunday, November 29."
-    },
-    {
-      "id": "prnewswire-conference-board-confidence-1033-20261124",
-      "ts": "2026-11-24T15:00:00Z",
-      "source": "The Conference Board via PR Newswire",
-      "url": "https://www.prnewswire.com/news-releases/us-consumer-confidence-surged-in-november-302949447.html",
-      "image": "https://mmx.prnewswire.com/media/MS461842/The-Conference-Board-Logo.jpg?id=OA3098576&p=facebook",
-      "headline": "US Consumer Confidence Surged in November",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "growth",
-      "summary": "US consumer confidence jumped to 103.3 in November, far above the 92.5 expected and its best since January 2025, as people felt better about finding work.",
-      "beats": {
-        "was": "Markets already treat a Federal Reserve rate rise on December 9 as close to certain, and the dollar sits near its highest since March 2025. The Conference Board's monthly survey of US households had read 91.9 in October.",
-        "happened": "The Conference Board said on Tuesday, November 24 that its index rose more than 11 points to 103.3. Views of current conditions and of the months ahead both improved, more people said jobs were easy to find, and the share expecting to cut back on hiring fell. Households' expected inflation for the next year stayed high at 5.7%. The group linked part of the lift to less uncertainty after the midterm elections.",
-        "means": "Confident households tend to keep spending, which supports the case that the US economy can take higher rates and gives the Fed less reason to pause.",
-        "fx": "A stronger US consumer adds support to the dollar against most currencies, and weighs most on the yen and the euro, where rates are lower."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A big upside surprise in household mood backs more Fed rate rises."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Firmer US rate bets widen the gap with Japan's low rates."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Adds to the view that the Fed will keep raising rates faster than the European Central Bank."
-        }
-      ],
-      "watch": "US October PCE inflation on Wednesday, November 25, the Fed's preferred price gauge."
-    },
-    {
-      "id": "investing-boe-greene-faster-hikes-20261124",
-      "date": "2026-11-24",
-      "source": "Investing.com",
-      "url": "https://in.investing.com/news/economy-news/bank-of-englands-greene-says-uk-needs-faster-rate-hikes-5723695",
-      "image": "https://content-media.investing.com/news/moved_LYNXMPEI640FC_L.jpg",
-      "headline": "Bank of England's Greene says UK needs faster rate hikes",
-      "story": "boe-hikes",
-      "story_title": "Bank of England: how far do rates rise?",
-      "pillar": "policy",
-      "summary": "Bank of England policymaker Megan Greene said on Tuesday, November 24 that the bank is a little behind on inflation and should raise rates faster if the Middle East conflict drags on.",
-      "beats": {
-        "was": "The Bank of England raised rates earlier in November for the first time in three years, as the conflict with Iran pushed up energy costs. UK household energy bills are expected to jump about 26% in January.",
-        "happened": "Greene, one of the nine members who vote on UK rates, told a London business meeting that the bank is slightly behind where it should be and that the chance of a lasting peace deal in the Middle East looks very low. She said the UK should tighten faster if the conflict continues. Markets price about an 80% chance of another quarter-point rise on December 17.",
-        "means": "A voting member openly asking for faster rises makes a December move look more likely, and raises the chance that UK rates keep climbing into 2027 if energy prices stay high.",
-        "fx": "Firmer rate-rise bets give the pound some support near its 19-month low against the dollar, which still has its own strong rate story."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "A rate-setter calling for faster rises firms bets on a December 17 Bank of England move."
-        }
-      ],
-      "watch": "The Bank of England decision on December 17, and UK energy prices into January."
     }
   ]
 }
