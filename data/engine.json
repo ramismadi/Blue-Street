@@ -1,27 +1,19 @@
 {
- "updated": "2026-11-26T15:30:00-06:00",
+ "updated": "2026-11-27T01:40:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "figure": "Fed Dec quarter-point hike ~96% (CME FedWatch, Nov 25 close, via Hercules); ECB Dec ~93%; BoJ Dec ~85%; BoC Dec ~80%, all six big Canadian banks forecast a hike; BoE Dec ~80–82%; RBA Dec hold ~99%; de Cos backed as ECB president from Feb 2027",
-   "read": "A December Fed hike stays all but certain, and the European Central Bank's October notes confirm a December rise there too. Euro-area leaders picked a centrist to lead the European Central Bank from February, and every big Canadian bank now expects a Bank of Canada hike.",
+   "figure": "Fed Dec quarter-point hike ~97% (CME FedWatch via Hercules); ECB Dec ~93%; BoJ Dec ~85%; BoE Dec ~82%; BoC Dec ~80%; RBA Dec hold ~99%; IMF backs RBA tightening bias",
+   "read": "A December Fed hike stays all but certain, and hikes are also widely expected from the European Central Bank, the Bank of Canada, the Bank of Japan and the Bank of England. The International Monetary Fund backed the Reserve Bank of Australia's leaning toward higher rates, which helped the Aussie.",
    "sources": [
     {
-     "label": "Euronews (Nov 26): Eurozone leaders back Hernández de Cos to succeed Lagarde at ECB",
-     "url": "https://www.euronews.com/2026/11/26/eurozone-leaders-back-hernandez-de-cos-to-succeed-lagarde-at-ecb"
-    },
-    {
-     "label": "Canadian Mortgage Trends, Bloomberg (Nov 26): All of Canada's big six banks now see December rate hike",
-     "url": "https://www.canadianmortgagetrends.com/2026/11/all-of-canadas-big-six-banks-now-see-december-rate-hike/"
-    },
-    {
-     "label": "Action Forex (Nov 26): ECB monetary policy accounts, October meeting",
-     "url": "https://www.actionforex.com/central-banks/european-central-bank/662223-ecb-monetary-policy-accounts-36/"
-    },
-    {
-     "label": "Blue Street central banks and pricing (Hercules, Nov 26)",
+     "label": "Blue Street central banks and pricing (Hercules, Nov 27)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+    },
+    {
+     "label": "Investing.com (Nov 27): Asia FX weakens as high oil prices weigh, dollar edges lower in holiday trade",
+     "url": "https://ng.investing.com/news/forex-news/asia-fx-weakens-as-high-oil-prices-weigh-dollar-edges-lower-in-holiday-trade-2830877"
     }
    ]
   },
@@ -48,47 +40,35 @@
   {
    "id": "inflation",
    "title": "Inflation",
-   "figure": "US core PCE Oct +3.3% y/y (fcst 3.2%); Australia CPI Oct 4.9% y/y; Tokyo core CPI Nov due 5:30 PM CT Thu (fcst 3.0%, Oct 2.6%)",
-   "read": "US core inflation edged up again in October, and Australian inflation is climbing. In Japan, a rate-setter said a weak yen and costly raw materials are pushing prices up, ahead of Tokyo's November figures tonight. All three keep their central banks leaning against easing.",
+   "figure": "Tokyo core CPI Nov +2.9% y/y (fcst 3.0%, Oct 2.6%), ex-food and energy 2.5% (Oct 2.6%), energy +9.5%; US core PCE Oct +3.3% y/y; Australia CPI Oct 4.9% y/y",
+   "read": "Tokyo's inflation rose to its highest in 16 months, but mainly because of energy. Prices outside food and energy cooled a little, which backs a December Bank of Japan hike without pushing for a faster pace. US and Australian inflation stay well above goal, keeping both central banks leaning against easing.",
    "sources": [
+    {
+     "label": "ActionForex (Nov 27): Tokyo core CPI hits 16-month high at 2.9%, but underlying inflation eases",
+     "url": "https://www.actionforex.com/live-comments/662248-tokyo-core-cpi-hits-16-month-high-at-2-9-but-underlying-inflation-eases/"
+    },
     {
      "label": "BEA (Nov 25): Personal income and outlays, October 2026",
      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-october-2026"
-    },
-    {
-     "label": "Investing.com, Reuters (Nov 26): BOJ's Tamura signals chance of faster-pace interest rate hikes",
-     "url": "https://za.investing.com/news/economy-news/bojs-tamura-signals-chance-of-fasterpace-interest-rate-hikes-4597800"
-    },
-    {
-     "label": "Blue Street calendar (Hercules, Nov 26): times, forecasts and actuals",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     }
    ]
   },
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "figure": "Two Italian workers killed in Kuwait drone attack; Jazan refinery hit, one killed; EUR/CHF ~0.9152 (+0.36%); AUD/USD ~0.6635; US markets closed for Thanksgiving",
-   "read": "The Gulf fighting spread, with deadly attacks in Kuwait and on a Saudi refinery, but markets looked past it in thin holiday trade. European shares rose and the franc lost ground against the euro. The Bank of England warned that borrowing to fund artificial intelligence is a growing risk to the financial system.",
+   "figure": "Gold ~$3,651 (+2.4%); MSCI Asia-Pacific +0.6%, Nikkei +0.7%, Kospi +1.5% (Bloomberg); Israel security cabinet meeting on Iran cancelled, no decision (Hercules); AUD/USD +0.5%, USD/CHF flat",
+   "read": "Fear of new Israeli strikes on Iran and more attacks on Gulf shipping sent gold sharply higher overnight. Stock markets did not share the worry, as Asian shares rose for a second day. So the Aussie and kiwi gained while the yen and franc stayed flat.",
    "sources": [
     {
-     "label": "Reuters (Nov 26): Two Italians killed in Iranian drone attack in Kuwait, Italy says",
-     "url": "https://www.reuters.com/world/asia-pacific/two-italians-killed-iranian-drone-attack-kuwait-italy-says-2026-11-26/"
+     "label": "Swissinfo, Bloomberg (Nov 27): Asian stocks rise for second day, Treasuries slip",
+     "url": "https://www.swissinfo.ch/eng/asian-stocks-rise-for-second-day,-treasuries-slip:-markets-wrap/92446051"
     },
     {
-     "label": "CNN (Nov 26): Jazan refinery hit, one worker killed, some operations halted",
-     "url": "https://www.cnn.com/2026/11/26/middleeast/houthi-saudi-oil-refinery-strike-satellite-imagery-intl?cid=external-feeds_iluminar_meta"
+     "label": "Blue Street breaking watch (Hercules, Nov 26–27)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
     },
     {
-     "label": "ActionForex (Nov 26): EUR/CHF breakdown as safe-haven demand outweighs ECB–SNB rate repricing",
-     "url": "https://www.actionforex.com/action-insight/market-overview/662227-eur-chf-breakdown-as-safe-haven-demand-outweighs-ecb-snb-rate-repricing/"
-    },
-    {
-     "label": "StockAnalysis (Nov 26): Bank of England warns AI financing threatens financial stability",
-     "url": "https://stockanalysis.com/news/boe-financial-stability-report-ai-november-2026/"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, New York close run ~2:37 PM CT Nov 26, Thanksgiving; indicative)",
+     "label": "Blue Street market levels (Hercules, London open run ~12:46 AM CT Nov 27; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
@@ -96,28 +76,20 @@
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "figure": "Brent ~$94–96 in thin trade, no Thanksgiving settlement (Hercules ~$93.83 at 2:37 PM CT; FinanceFeeds $95.58 midday London); Wed settle $94.61; WTI ~$84.63; gold ~$3,567, Wed low ~$3,446",
-   "read": "Oil held near $95 as attacks around the Gulf kept supply fears alive, though no barrels were lost. That helps the Canadian dollar and costs Japan and the euro area. Gold steadied after bouncing from its lowest in more than a year.",
+   "figure": "Brent ~$96.19, settled $96.57 Thursday (highest since Nov 6), ~+3.9% on the week, ~−18% in November (Reuters); WTI ~$85.96; gold ~$3,651 (+2.4%) (Hercules)",
+   "read": "Oil held near $96 after its highest close in three weeks, as Gulf attacks kept supply fears alive though no barrels were lost. That helps the Canadian dollar and costs Japan and the euro area. Gold jumped, a lift for Australia, one of its big producers.",
    "sources": [
     {
-     "label": "FinanceFeeds (Nov 26): Brent crude at $95.58, three-day rally before OPEC+ meets",
-     "url": "https://financefeeds.com/brent-crude-oil-price-95-58-thursday-three-day-rally-before-opec-plus-sunday-bull-100-bear-91/"
+     "label": "Yahoo Finance, Reuters (Nov 27): Shares find footing after bruising month, dollar set for third monthly gain",
+     "url": "https://finance.yahoo.com/markets/articles/shares-footing-bruising-month-dollar-020059656.html"
     },
     {
-     "label": "Reuters (Nov 26): Two Italians killed in Iranian drone attack in Kuwait, Italy says",
-     "url": "https://www.reuters.com/world/asia-pacific/two-italians-killed-iranian-drone-attack-kuwait-italy-says-2026-11-26/"
+     "label": "Blue Street breaking watch (Hercules, Nov 26–27)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
     },
     {
-     "label": "CNN (Nov 26): Jazan refinery hit, one worker killed, some operations halted",
-     "url": "https://www.cnn.com/2026/11/26/middleeast/houthi-saudi-oil-refinery-strike-satellite-imagery-intl?cid=external-feeds_iluminar_meta"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, New York close run ~2:37 PM CT Nov 26, Thanksgiving; indicative)",
+     "label": "Blue Street market levels (Hercules, London open run ~12:46 AM CT Nov 27; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-    },
-    {
-     "label": "FinanceFeeds (Nov 26): Gold price today, holiday bounce from a 15-month low",
-     "url": "https://financefeeds.com/gold-price-today-3565-thursday-holiday-bounce-from-15-month-low-bull-3697-bear-3446/"
     }
    ]
   },
@@ -140,16 +112,20 @@
   {
    "id": "fiscal",
    "title": "Fiscal",
-   "figure": "USTR proposed Section 301 tariffs on 14 economies: up to 15% EU, Japan, Korea, Taiwan, Switzerland; up to 20% extra China; 25% India; 35% Vietnam; comments due Jan 5, hearings Jan 25 (USTR); S&P France review Fri Nov 27",
-   "read": "The US plans new tariffs on 14 economies, but nothing takes effect before early 2027. France's debts remain a weight on the euro, with S&P due to review its credit rating on Friday, November 27.",
+   "figure": "NZ final count: coalition 65 of 130 seats, 66 needed (ABC News); S&P France review Fri Nov 27; US Section 301 tariff proposals on 14 economies, comments due Jan 5 (USTR)",
+   "read": "New Zealand's final election count left the governing coalition one seat short of a majority, so it must win over a smaller party or face a new vote. France's debts remain a weight on the euro, with S&P due to review its credit rating late on Friday, November 27.",
    "sources": [
+    {
+     "label": "ABC News (Nov 27): New Zealand's incumbent government fails to secure majority from election result",
+     "url": "https://www.abc.net.au/news/2026-11-27/official-results-of-new-zealand-s-national-election-announced/107434326"
+    },
+    {
+     "label": "Blue Street central banks and pricing (Hercules, Nov 27)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+    },
     {
      "label": "USTR (Nov 25): Determinations and proposed actions in 14 Section 301 investigations",
      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural"
-    },
-    {
-     "label": "Blue Street central banks and pricing (Hercules, Nov 26)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
     }
    ]
   }
