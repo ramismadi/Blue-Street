@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T02:05:00Z",
+  "updated": "2026-11-27T03:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -10,7 +10,7 @@
     "EUR": {
       "lean": "mixed",
       "ts": "2026-11-26T14:50:00Z",
-      "text": "The euro sits near $1.09, close to its lowest since April 2025, because the Federal Reserve looks set to raise rates faster than the European Central Bank. On Thursday, November 26, notes from the ECB's October meeting backed a rate rise on December 17, and leaders calmly chose Pablo Hern\u00e1ndez de Cos to run the bank from February 2027."
+      "text": "The euro sits near $1.09, close to its lowest since April 2025, because the Federal Reserve looks set to raise rates faster than the European Central Bank. On Thursday, November 26, notes from the ECB's October meeting backed a rate rise on December 17, and leaders calmly chose Pablo Hernández de Cos to run the bank from February 2027."
     },
     "GBP": {
       "lean": "mixed",
@@ -43,17 +43,56 @@
       "text": "The New Zealand dollar sits near 55 US cents, just above its lowest since 2009, after a 10-day slide stopped on Thursday, November 26. Markets price a likely Reserve Bank of New Zealand rate rise to 3% and Chinese demand looks firmer, but US rates rising faster still pull money away."
     },
     "XAU": {
-      "lean": "bearish",
-      "ts": "2026-11-26T13:00:00Z",
-      "text": "Gold bounced to about $3,565 an ounce on Thursday, November 26, after falling to a 15-month low near $3,446 the day before. The bounce came in thin holiday trading, and a Federal Reserve rate rise on December 9 still looks all but certain, which weighs on a metal that pays no interest."
+      "lean": "bullish",
+      "ts": "2026-11-27T03:55:00Z",
+      "text": "Gold jumped about 2.7% to near $3,632 an ounce early on Friday, November 27, after falling to a 15-month low near $3,446 on Wednesday, November 25, as the Gulf war and falling AI shares brought buyers back. Trading is thin over the US Thanksgiving holiday, and a likely Federal Reserve rate rise on December 9 still weighs on a metal that pays no interest."
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-27T02:05:00Z",
-      "text": "Brent crude climbed above $96 a barrel on Friday, November 27, up almost 6% in two days, as Yemen's Houthi rebels kept targeting Saudi refineries and Iranian drones were shot down over Kuwait. Reports say the OPEC+ producers may leave output unchanged when they meet on Sunday, November 29, though worries about too much oil next year still act as a brake."
+      "ts": "2026-11-27T03:55:00Z",
+      "text": "Brent crude climbed above $96 a barrel on Friday, November 27, up almost 6% in two days, after Yemen's Houthi rebels hit Saudi refineries, forcing part of the Jazan plant to shut, and Iranian drones were shot down over Kuwait. Reports say the OPEC+ producers may leave output unchanged when they meet on Sunday, November 29, though worries about too much oil next year still act as a brake."
     }
   },
   "items": [
+    {
+      "id": "upstox-gold-silver-jump-thanksgiving-20261127",
+      "ts": "2026-11-27T03:45:00Z",
+      "source": "Upstox",
+      "url": "https://upstox.com/news/market-news/commodities/gold-price-tracker-nov-27-mcx-gold-prices-mcx-silver-rates-comex-gold-comex-silver-gold-prices-today-bullion-market-silver-prices-today/liveblog-204059/",
+      "image": "https://assets.upstox.com/content/assets/images/news/gold-and-silver-rate-today-17-nov.webp",
+      "headline": "Gold jumps 2.7% to about $3,632 and silver leaps 8% in thin holiday trading",
+      "story": "gold-fed",
+      "story_title": "Gold and Federal Reserve rate rises",
+      "pillar": "risk",
+      "summary": "US gold futures rose 2.7% to about $3,632 an ounce early on Friday, November 27, and silver jumped more than 8%, as both metals bounced hard from 14-month lows.",
+      "beats": {
+        "was": "Gold had slid to its lowest in about 14 months earlier in the week because markets expect the Federal Reserve to raise US interest rates on December 9, which makes a metal that pays no interest less appealing.",
+        "happened": "Gold futures in New York climbed to about $3,632 an ounce from $3,535, and silver rose from about $40 to $43.42. Trading was thin because many US traders were away for the Thanksgiving holiday.",
+        "means": "Buyers came back after the steep drop, helped by the war around the Gulf and the slide in AI shares. Moves in thin holiday markets can be large and may not last once full trading returns.",
+        "fx": "A sharp rebound in gold points to fresh demand for safety, which tends to help the Swiss franc and the yen, while firmer metal prices give a small lift to the Australian dollar."
+      },
+      "impact": [
+        {
+          "ccy": "XAU",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Gold rose about 2.7% in a single session, its biggest bounce in weeks."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Renewed buying of gold hints at more demand for safe places to hold money."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Australia mines a lot of gold, so higher prices help its export earnings a little."
+        }
+      ],
+      "watch": "Whether the bounce holds when US markets fully reopen on Monday, November 30, and the Fed's decision on December 9."
+    },
     {
       "id": "investinglive-china-industrial-profits-oct-20261127",
       "ts": "2026-11-27T01:36:10Z",
@@ -152,6 +191,45 @@
         }
       ],
       "watch": "The Bank of Japan's decision on December 18, and any warnings from Japan's finance ministry if the dollar nears 160 yen."
+    },
+    {
+      "id": "gulfnews-jazan-refinery-worker-killed-shutdown-20261126",
+      "date": "2026-11-26",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-refinery-attack-kills-worker-iran-denies-deadly-kuwait-strike-1.500761343",
+      "image": "https://media.assettype.com/gulfnews%2F2026-11-26%2Fhcnfekgu%2F202611264025437.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "Houthi strike on Saudi Jazan refinery kills a worker and forces a partial shutdown",
+      "story": "oil-supply",
+      "story_title": "Oil supply: surplus vs Gulf attacks",
+      "pillar": "tot",
+      "summary": "Saudi Arabia's energy ministry said on Thursday, November 26 that a strike on its Jazan refinery killed one worker, injured others and forced part of the plant to shut.",
+      "beats": {
+        "was": "Yemen's Houthi rebels, who are backed by Iran, have been firing missiles and drones at Saudi oil sites during the wider war with Iran, adding to fears about Gulf oil supply.",
+        "happened": "Saudi state news said one worker from Nepal died and several were hurt at the Jazan refinery in the south of the country, and some of its units were halted. The Saudi-led coalition blamed the Houthis, promised a firm military answer and said it destroyed a Houthi missile launcher in Yemen. Iran denied any role in a separate deadly drone attack in Kuwait.",
+        "means": "Saudi fuel output has now been hit directly, not just threatened. Brent crude barely moved on the news early on Friday, November 27, because some of the damage was already in the price after a 3.5% jump on Wednesday, November 25.",
+        "fx": "Lost Saudi refining keeps oil supported, which helps the Canadian dollar and weighs on big energy buyers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Part of a Saudi refinery is shut after a deadly strike."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil helps Canada, a big oil exporter."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so dearer energy is a cost."
+        }
+      ],
+      "watch": "How fast the Jazan refinery restarts, and what OPEC+ producers decide at their meeting on Sunday, November 29."
     },
     {
       "id": "thenational-italians-killed-kuwait-drones-20261126",
@@ -297,7 +375,7 @@
       "source": "ActionForex",
       "url": "https://www.actionforex.com/action-insight/market-overview/662227-eur-chf-breakdown-as-safe-haven-demand-outweighs-ecb-snb-rate-repricing/",
       "image": "https://www.actionforex.com/wp-content/uploads/2026/07/f-eur-chf6.jpg",
-      "headline": "EUR/CHF breakdown as safe-haven demand outweighs ECB\u2013SNB rate repricing",
+      "headline": "EUR/CHF breakdown as safe-haven demand outweighs ECB–SNB rate repricing",
       "story": "ai-stocks",
       "story_title": "AI stocks and the mood in markets",
       "pillar": "risk",
@@ -369,14 +447,14 @@
       "source": "Euronews",
       "url": "https://www.euronews.com/2026/11/26/eurozone-leaders-back-hernandez-de-cos-to-succeed-lagarde-at-ecb",
       "image": "https://images.euronews.com/articles/stories/10/00/94/13/1200x675_cmsv2_ed7bd85b-5bb7-5641-8a1c-d7105a86adf9-10009413.jpg",
-      "headline": "Eurozone leaders back Hern\u00e1ndez de Cos to succeed Lagarde at ECB",
+      "headline": "Eurozone leaders back Hernández de Cos to succeed Lagarde at ECB",
       "story": "ecb-december",
       "story_title": "Will the ECB raise rates one last time in December?",
       "pillar": "policy",
-      "summary": "Euro area leaders chose Pablo Hern\u00e1ndez de Cos, a former governor of Spain's central bank, on Thursday, November 26 to follow Christine Lagarde as European Central Bank president from February 2027.",
+      "summary": "Euro area leaders chose Pablo Hernández de Cos, a former governor of Spain's central bank, on Thursday, November 26 to follow Christine Lagarde as European Central Bank president from February 2027.",
       "beats": {
         "was": "Christine Lagarde said on October 29 she will step down as European Central Bank president on February 7, 2027, before her term ends. The bank has raised rates twice this year, with euro area inflation at 4% in October, twice its 2% goal.",
-        "happened": "At a summit in Brussels, leaders backed Hern\u00e1ndez de Cos, 55, who now runs the Bank for International Settlements and led the Bank of Spain from 2018 to 2024. He beat Klaas Knot, former head of the Dutch central bank, after the Netherlands dropped its objection. The same package names Laurence Boone and Markus Brunnermeier to the bank's board. The choice still needs formal sign-off.",
+        "happened": "At a summit in Brussels, leaders backed Hernández de Cos, 55, who now runs the Bank for International Settlements and led the Bank of Spain from 2018 to 2024. He beat Klaas Knot, former head of the Dutch central bank, after the Netherlands dropped its objection. The same package names Laurence Boone and Markus Brunnermeier to the bank's board. The choice still needs formal sign-off.",
         "means": "The question of who leads the bank next year is settled without a fight. Some analysts see him as a little softer on inflation than Knot, but mainly as a pragmatic centrist, so no big shift in rate policy is expected.",
         "fx": "A smooth handover removes a source of doubt for the euro. A slightly softer leader at the margin could trim rate-rise bets for 2027, but the December 17 decision is still the main driver."
       },
@@ -876,7 +954,7 @@
       "source": "The Library",
       "url": "https://thelibraryestate.com/forex-day-close-report-swiss-franc-and-yen-hold-haven-gains-as-dollar-retreats-nov-25-2026/",
       "image": "https://thelibraryestate.com/wp-content/uploads/2026/11/library-global-markets-graphic.jpg",
-      "headline": "Forex \u2014 Day Close Report: Swiss franc and yen hold haven gains as dollar retreats",
+      "headline": "Forex — Day Close Report: Swiss franc and yen hold haven gains as dollar retreats",
       "story": "fed-hikes",
       "story_title": "The Fed's next rate rise",
       "pillar": "rates",
@@ -1373,78 +1451,6 @@
         }
       ],
       "watch": "US October PCE inflation and third-quarter GDP at 8:30 a.m. New York time on Wednesday, November 25. US markets are shut on Thursday, November 26 for Thanksgiving."
-    },
-    {
-      "id": "rte-reuters-us-new-tariffs-16-partners-20261125",
-      "ts": "2026-11-25T08:24:45Z",
-      "source": "RT\u00c9 (Reuters)",
-      "url": "https://www.rte.ie/news/business/2026/1125/1600572-trump-set-to-unveil-new-tariffs/",
-      "image": "https://www.rte.ie/images/0022dfc2-1600.jpg",
-      "headline": "Trump administration set to unveil new tariffs, sources say",
-      "story": "us-tariffs",
-      "story_title": "New US tariffs",
-      "pillar": "risk",
-      "summary": "The Trump administration is close to releasing a probe into spare factory capacity in 16 trading partners, which is expected to bring new import taxes, three sources told Reuters on Wednesday, November 25.",
-      "beats": {
-        "was": "The US Supreme Court struck down many of President Trump's tariffs in February, and the White House has since been looking for other legal routes to tax imports. Trade deals cap US tariffs at 15% for the European Union, Japan and South Korea, and at 20% for China if a truce ending January 10 is extended.",
-        "happened": "Sources say the probe into excess production is about to be published, with new duties set country by country and stacked on top of existing ones. A trade lawyer expects rates between 15% and 25%. Mexico and Norway are unlikely to face them right away. The Wall Street Journal said results could come before the end of the week of November 23.",
-        "means": "A fresh round of tariffs adds to costs for US importers and hurts exporters abroad, just as markets were already nervous about tech shares. Staying under the trade-deal caps limits the damage for the biggest partners.",
-        "fx": "Tariff worries tend to hit currencies tied to global trade and risk appetite, like the Australian and New Zealand dollars, and to help safe places like the Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "New tariffs on major trade partners hurt global trade and risk appetite, which the Aussie tracks."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "The EU is among the likely targets, though its 15% cap should hold."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Trade worries add to demand for a safe place to park money."
-        }
-      ],
-      "watch": "The release of the US probe into excess industrial capacity, which the Wall Street Journal said could come before Sunday, November 29."
-    },
-    {
-      "id": "actionforex-australia-cpi-oct-49-20261125",
-      "ts": "2026-11-25T01:18:48Z",
-      "source": "ActionForex",
-      "url": "https://www.actionforex.com/live-comments/661997-australia-cpi-surges-to-4-9-as-underlying-inflation-accelerates-to-3-8/",
-      "image": "https://www.actionforex.com/wp-content/uploads/featured-images/f-au1.jpg",
-      "headline": "Australia CPI Surges to 4.9% as Underlying Inflation Accelerates to 3.8%",
-      "story": "australia-inflation-rba",
-      "story_title": "Australian inflation and the Reserve Bank of Australia",
-      "pillar": "inflation",
-      "summary": "Australian prices rose 4.9% in the year to October, up from 4.3% in September and a little above forecasts, Australia's statistics office said on Wednesday, November 25. The trimmed mean, a gauge that strips out the biggest swings, rose to 3.8%.",
-      "beats": {
-        "was": "Australian inflation was already well above the Reserve Bank of Australia's 2-3% target, while jobs have been falling and business activity shrinking. Economists expected October's yearly rate near 4.7-4.8% and the trimmed mean to hold at 3.6%.",
-        "happened": "Yearly inflation jumped to 4.9%, its highest in about three years. Electricity costs rose about 25% from a year earlier as government power rebates ran out, and housing and fuel costs also climbed. The trimmed mean rose to 3.8% from 3.6%, so price pressure is spreading beyond a few items.",
-        "means": "Underlying inflation moving up, not just one-off power bills, makes it much harder for the Reserve Bank of Australia to ease even as the job market weakens. Most big-bank economists still expect it to hold rates at its December 7-8 meeting.",
-        "fx": "Hotter inflation props up Australian interest rate expectations, which supports the Australian dollar after weeks near its lows."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "Inflation beat forecasts and the underlying gauge rose, keeping rate cuts off the table."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The kiwi often moves with the Australian dollar on Australian news."
-        }
-      ],
-      "watch": "US October PCE inflation later on Wednesday, November 25, and the Reserve Bank of Australia decision on Tuesday, December 8."
     }
   ]
 }
