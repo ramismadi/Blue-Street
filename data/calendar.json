@@ -1,213 +1,6 @@
 {
-  "updated": "2026-11-26T07:32:14-06:00",
+  "updated": "2026-11-27T07:44:00-06:00",
   "events": [
-    {
-      "id": "us-cpi-20261110",
-      "ts": "2026-11-10T13:30:00Z",
-      "ccy": "USD",
-      "impact": "high",
-      "category": "inflation",
-      "title": "US CPI (Oct)",
-      "focus": true,
-      "actual": "+0.4% m/m (core +0.3%); no y/y published",
-      "forecast": "+0.3% m/m (core +0.2%); no y/y published",
-      "previous": "+0.6% m/m; 3.7% y/y (Sep); core 2.6% y/y",
-      "better": "higher",
-      "why": "The last CPI before the Dec 9 FOMC — after the +165K payrolls beat re-armed the ~77% December hike, a hot print locks it in and a soft one reopens the hold case. BLS will NOT publish y/y rates (no Oct 2025 data — last year's shutdown), so m/m is the read; ING expects headline and core both +0.3% m/m.",
-      "if_beat": "Hotter: Dec hike firms toward done-deal — USD bid, 2Y higher.",
-      "if_miss": "Softer: hold case reopens — USD offered, Dec hike pricing fades.",
-      "outcome": "Hotter on both measures — headline +0.4% vs +0.3% expected, core +0.3% vs +0.2%, a third straight +0.3% core; Dec hike firms and Waller's 50bp conditional (core at 0.3% or higher) is now live for Dec 8-9. No FX leg yet: EUR/USD flat ~1.1216 after the print.",
-      "chapter": null,
-      "bank": "fed",
-      "sources": [
-        {
-          "label": "BLS: Consumer Price Index, October 2026 (USDL-26-1685)",
-          "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
-        },
-        {
-          "label": "Bloomberg: US Core CPI Rises by More Than Forecast, Supporting Fed Hike",
-          "url": "https://www.bloomberg.com/news/articles/2026-11-10/us-core-cpi-rises-more-than-forecast-0-3-supporting-rate-hike"
-        }
-      ]
-    },
-    {
-      "id": "gb-gdp-20261112",
-      "ts": "2026-11-12T07:00:00Z",
-      "ccy": "GBP",
-      "impact": "high",
-      "category": "growth",
-      "title": "UK GDP (Q3) first estimate + Sep monthly",
-      "focus": false,
-      "actual": "Q3 +0.7% q/q (in line); Sep +0.2% m/m (vs 0.0% fcst; Aug revised to 0.0% from +0.1%)",
-      "forecast": "Q3 +0.7% q/q (prev +0.5%); Sep +0.0% m/m (prev +0.1%)",
-      "previous": "+0.5% q/q (Q2); Sep +0.1% m/m",
-      "better": "higher",
-      "why": "First Q3 GDP read one week after the BoE hiked to 4.00% — growth vs the hike path is the tension; France contracted in Q3 and Italy was flat, so a soft UK print would stand out.",
-      "if_beat": "Beat: growth holding after the hike — GBP supported.",
-      "if_miss": "Miss: hike biting into activity — GBP offered, Dec back-to-back pricing fades.",
-      "outcome": "In line on the quarter — Q3 +0.7% q/q matches consensus and the BoE's November projection (Q2 +0.5%); Sep +0.2% m/m beat the 0.0% forecast, but Aug was revised down to 0.0% from +0.1%, netting the beat out. Services +0.9% drove the quarter; production +0.1%, construction -0.7%; 3m/3m +1.9% y/y. No post-print GBP/USD quote in major-wire coverage checked at 07:05Z (pre-release cable ~$1.3266, Reuters); growth holding one week after the Nov 5 hike to 4.00% keeps the Dec back-to-back debate live but adds nothing new.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "ONS: GDP monthly estimate, UK — September 2026",
-          "url": "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/latest"
-        }
-      ]
-    },
-    {
-      "id": "us-claims-20261112",
-      "ts": "2026-11-12T13:30:00Z",
-      "ccy": "USD",
-      "impact": "medium",
-      "category": "jobs",
-      "title": "US initial jobless claims (w/e Nov 7)",
-      "focus": false,
-      "actual": "200,000 (vs 194K fcst; prev revised to 191K from 189K); continuing claims 1,697,000 (vs ~1.71M fcst; prev revised to 1,717,000)",
-      "forecast": "194K",
-      "previous": "189K",
-      "better": "lower",
-      "why": "Claims fell to 189K last week (a 57-year low) in the triple beat that set up payrolls; the post-NFP read on whether the labor market is still tightening.",
-      "if_beat": "Lower: labor still tight — Dec hike case firms.",
-      "if_miss": "Higher: the tightness easing — USD offered.",
-      "outcome": "Small miss on initial claims — 200,000 vs 194,000 expected, up 9,000 from a revised 191,000 (was 189,000); first print at 200K since Oct 10. Continuing claims fell 20,000 to 1,697,000, below the ~1.71M expected; 4-week average for initial claims flat at 195,250. Layoffs still low and the hiring pool still shrinking slightly — no challenge to the December hike pricing. No post-print USD quote in major-wire coverage checked at 13:35Z (USD/JPY ~159.7 pre-print, Finnhub/OANDA).",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "DOL: Unemployment Insurance Weekly Claims — Nov 12, 2026",
-          "url": "https://www.dol.gov/ui/data.pdf"
-        }
-      ]
-    },
-    {
-      "id": "us-existing-home-sales-20261112",
-      "ts": "2026-11-12T15:00:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "growth",
-      "title": "US existing-home sales (Oct)",
-      "actual": "3.75M SAAR (-5.5% m/m)",
-      "forecast": "3.89M",
-      "previous": "3.99M",
-      "better": null,
-      "why": "Housing's read on high rates — the 30Y mortgage averaged 7.33% in Oct; sales at the lowest since Aug 2010.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "Miss: 3.75M SAAR (-5.5% m/m) vs 3.89M fcst (wire consensus 3.85M) — lowest since Aug 2010; high mortgage rates biting.",
-      "chapter": null,
-      "bank": null,
-      "sources": []
-    },
-    {
-      "id": "us-eia-20261112",
-      "ts": "2026-11-12T17:00:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "energy",
-      "title": "EIA crude inventories",
-      "actual": "+4.657M (vs -1.109M expected; prior -0.865M); gasoline +1.799M; distillates +4.071M",
-      "forecast": "-1.109M",
-      "previous": "-0.9M (Nov 4)",
-      "better": null,
-      "why": "Weekly crude stocks — last week drew 0.9M bbl to 409.8M, 4% below the five-year average; oil tape trades the Gulf arc.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "Big build vs a draw expected — crude +4.657M vs -1.109M consensus, a 5.77M upside surprise; gasoline +1.799M and distillates +4.071M also built, total commercial stocks +11.4M; commercial crude 414.4M (4% below 5-yr avg). Smaller than API's +9.0M, so oil took it as relief: Brent $94.53, above the posted $94.19 high, WTI $87.52 (nabdmal, 17:24Z) — Iran-risk bid still in charge after Trump's 'we don't need a deal' post.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "EIA: Weekly Petroleum Status Report summary (week ending Nov 6)",
-          "url": "https://ir.eia.gov/wpsr/summary.txt"
-        },
-        {
-          "label": "InvestingLive: Crude oil inventories +4.657 million versus -1.109 million estimate",
-          "url": "https://investinglive.com/commodities/crude-oil-inventories-4-657-million-versus-1-109-million-estimate/"
-        }
-      ]
-    },
-    {
-      "id": "us-30y-auction-20261112",
-      "ts": "2026-11-12T18:00:00Z",
-      "ccy": "USD",
-      "impact": "low",
-      "category": "auction",
-      "title": "US $25B 30-year Treasury auction",
-      "focus": false,
-      "actual": "High yield 5.441% (vs 5.618% Oct 8); BTC 2.36 (below 2.44 six-auction avg); indirects 68.1% (vs 72.3% Oct), directs 20.5%, dealers 11.4%",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Final refunding auction of the week; the 20Y tailed 0.9bp on Oct 21 (4th tail in a row) — long-end demand is the soft spot to watch.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "Average demand: the final refunding sale tailed WI by 0.4bp (ZeroHedge) — the biggest 30Y tail since June — with yields hitting session highs after the auction; indirects 68.1% vs 72.3% in October. The high yield fell 17.7bp vs October as the curve rallied.",
-      "chapter": null,
-      "bank": null,
-      "sources": [
-        {
-          "label": "TreasuryDirect: Treasury Auction Results — 30-Year Bond, November 12, 2026 (official)",
-          "url": "https://www.treasurydirect.gov/instit/annceresult/press/preanre/2026/R_20261112_4.pdf"
-        },
-        {
-          "label": "TFTC: 30-Year Treasury Bond Auction: 5.441% (Nov 12)",
-          "url": "https://www.tftc.io/treasury-auctions/30-year-bond"
-        },
-        {
-          "label": "ZeroHedge: Yields Hit Session High After Ugly, Tailing 30Y Auction",
-          "url": "https://www.zerohedge.com/markets/yields-hit-session-high-after-ugly-tailing-30y-auction-0"
-        }
-      ]
-    },
-    {
-      "id": "us-budget-20261112",
-      "ts": "2026-11-12T19:00:00Z",
-      "ccy": "USD",
-      "impact": "medium",
-      "category": "fiscal",
-      "title": "US Federal Budget Balance (Oct)",
-      "actual": "-$404B",
-      "forecast": "-$298.6B",
-      "previous": "-$26.9B",
-      "better": null,
-      "why": "October opens FY2027 — the monthly deficit sets the fiscal tone into the December Fed meeting; outlays hit a record $773B.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "Oct deficit $404B — a record for the month, +42% y/y (receipts $369B, outlays a record $773B); FY2026 deficit $1.992T, 6.2% of GDP.",
-      "chapter": null,
-      "bank": null,
-      "sources": []
-    },
-    {
-      "id": "eur-lagarde-20261112",
-      "ts": "2026-11-12T19:30:00Z",
-      "ccy": "EUR",
-      "impact": "medium",
-      "category": "central-bank",
-      "title": "ECB President Lagarde speaks",
-      "focus": false,
-      "actual": "On-stage conversation with former US Treasury Secretary Timothy Geithner at the French-American Foundation 50th anniversary gala in Paris (20:30 CET, invitation-only)",
-      "forecast": null,
-      "previous": null,
-      "better": null,
-      "why": "Lagarde a week after the hold at 2.50% — 'many indicators between now and December' will decide the hike; the Dec 17 hike sits at ~89% after the inline Oct flash CPI.",
-      "if_beat": null,
-      "if_miss": null,
-      "outcome": "Gala conversation, not a policy event — no monetary-policy signal in major-wire coverage; Dec ECB hike pricing ~88% (STIR-implied ~79%) essentially unchanged; EUR/USD $1.1059, lowest since April 2025.",
-      "chapter": null,
-      "bank": "ecb",
-      "sources": [
-        {
-          "label": "ECB weekly schedule: Lagarde on-stage conversation with Timothy Geithner, French-American Foundation 50th anniversary gala, Paris, 20:30 CET Nov 12",
-          "url": "https://www.ecb.europa.eu/press/calendars/weekly/html/index.en.html"
-        },
-        {
-          "label": "Market briefing: Lagarde in Paris at 20:30 CET (Nov 12)",
-          "url": "https://medium.com/@kggrimm/nvidia-turmoil-drags-nasdaq-yen-nears-intervention-59b3fca33a7a"
-        }
-      ]
-    },
     {
       "id": "eur-gdp-20261113",
       "ts": "2026-11-13T10:00:00Z",
@@ -2692,17 +2485,21 @@
       "category": "trade",
       "title": "Canada current account (Q3)",
       "focus": false,
-      "actual": "4.5B (surplus)",
-      "forecast": "9.5B (FF consensus; Q2 deficit 8.8B)",
-      "previous": "6.1B (Q2, revised from 8.8B)",
+      "actual": "+C$4.5B (surplus)",
+      "forecast": "9.5B (FF consensus; Q2 surplus 6.1B, revised)",
+      "previous": "C$6.1B surplus (Q2, revised from C$8.8B)",
       "better": "higher",
-      "why": "Canada Q3 current account — Q2 deficit 8.8B; the external-balance read with USD/CAD near the 52-week high.",
-      "if_beat": "Beat: deficit narrower — CAD supported.",
-      "if_miss": "Miss: deficit wider — CAD offered.",
-      "outcome": "Miss — Canada Q3 current account surplus narrowed to 4.5B vs 9.5B forecast; Q2 revised down to 6.1B from 8.8B. Second straight quarterly surplus — first since 2022 — but smaller than expected; USD/CAD held ~1.4257 after the print. (Statistics Canada, Nov 27)",
+      "why": "Canada Q3 current account — Q2 surplus 6.1B (revised from 8.8B); the external-balance read with USD/CAD near the 52-week high.",
+      "if_beat": "Beat: surplus wider — CAD supported.",
+      "if_miss": "Miss: surplus narrower — CAD offered.",
+      "outcome": "Miss — Q3 current account surplus C$4.5B vs C$9.5B forecast (Q2 surplus revised to C$6.1B from C$8.8B); the surplus narrowed C$1.6B in the quarter; goods balance stable at C$10.7B. (Statistics Canada, Nov 27; ForexFactory)",
       "chapter": null,
       "bank": null,
       "sources": [
+        {
+          "label": "Statistics Canada: Canada's balance of international payments, Q3 2026 (The Daily)",
+          "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/261127/dq261127a-eng.htm"
+        },
         {
           "label": "ForexFactory calendar",
           "url": "https://www.forexfactory.com/calendar?day=nov27.2026"
@@ -2717,17 +2514,21 @@
       "category": "trade",
       "title": "US goods trade balance (Oct, advance)",
       "focus": false,
-      "actual": "-149.5B",
-      "forecast": "-135.9B (FF consensus; Sep -134.9B)",
+      "actual": "-$149.5B",
+      "forecast": "-135.9B (FF consensus; Sep -135.1B)",
       "previous": "-135.1B (Sep, revised from -134.9B)",
       "better": "higher",
       "why": "October advance goods trade balance — Sep -135.1B; the trade read on a thin-liquidity Friday after Thanksgiving.",
       "if_beat": "Beat: deficit narrower — USD supported.",
       "if_miss": "Miss: deficit wider — USD offered.",
-      "outcome": "Miss — US advance goods deficit widened to $149.5B in Oct vs -$133.0B Econoday consensus (Sep $135.1B, revised from $134.9B); exports $215.8B, imports $365.3B. The gap widened $14.4B (+10.7%) in a month; Census notes the 90% confidence interval on the change includes zero. Little FX follow-through — USD/CAD held ~1.4257 after the print. (Census Bureau CB26-195, Nov 27)",
+      "outcome": "Miss — goods deficit widened to -$149.5B vs -$135.9B forecast (Sep revised to -$135.1B); widest since March 2025 (-$158.7B); imports still surging on AI-related capital-goods demand — exports $215.8B, imports $365.3B; a drag on Q4 GDP tracking. (Census CB26-195, Nov 27; ForexFactory)",
       "chapter": null,
       "bank": null,
       "sources": [
+        {
+          "label": "Census Bureau: Advance Economic Indicators, October 2026 (CB26-195)",
+          "url": "https://www.census.gov/econ/indicators/2026/advance_report2610.pdf"
+        },
         {
           "label": "ForexFactory calendar",
           "url": "https://www.forexfactory.com/calendar?day=nov27.2026"
