@@ -1,12 +1,16 @@
 {
- "updated": "2026-11-27T07:58:00-06:00",
+ "updated": "2026-11-27T15:32:00-06:00",
  "rows": [
   {
    "id": "policy",
    "title": "Monetary Policy",
-   "figure": "Fed Dec quarter-point hike ~97% (CME FedWatch via Hercules); ECB Dec ~93%; BoE Dec ~82%; BoJ Dec ~85%; BoC Dec ~80%; RBA Dec hold ~99%",
-   "read": "A December Fed hike stays all but certain. Soft French and Spanish inflation leaves a December European Central Bank hike likely but weakens the case for more after it. The Bank of England, Bank of Japan and Bank of Canada are all still expected to hike in December.",
+   "figure": "Fed Dec quarter-point hike ~97%; ECB Dec ~93%; BoE Dec ~82%; BoJ Dec ~85%; BoC Dec ~80%; RBA Dec hold ~99%; US 2-year ~4.69% (+0.06)",
+   "read": "A December Fed hike stays all but certain, and US bond yields rose again into the weekend. Soft French and Spanish inflation weakened the case for European Central Bank hikes after December, even as Bundesbank President Joachim Nagel argued it might have to do more. The Bank of England, Bank of Japan and Bank of Canada are all still expected to hike in December.",
    "sources": [
+    {
+     "label": "Global Banking & Finance Review, Reuters (Nov 27): ECB may need to raise rates as inflation stays above 3%",
+     "url": "https://www.globalbankingandfinance.com/ecb-raise-rates-inflation-stays-3/"
+    },
     {
      "label": "The Private Banker (Nov 27): French and Spanish inflation slow sharply in November as fuel prices fall",
      "url": "https://leprivatebanker.com/2026/11/27/french-and-spanish-inflation-slow-sharply-in-november-as-fuel-prices-fall-pressuring-the-euro-against-sterling/"
@@ -14,6 +18,10 @@
     {
      "label": "Blue Street central banks and pricing (Hercules, Nov 27)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/banks.json"
+    },
+    {
+     "label": "Blue Street market levels (Hercules, New York close run, 3:00 PM CT Nov 27; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
   },
@@ -21,7 +29,7 @@
    "id": "growth",
    "title": "Growth",
    "figure": "China industrial profits Oct +20.1% y/y; US goods trade gap Oct −$149.5B (fcst −$135.9B); Germany unemployment +9K (fcst +5K); Canada Q3 current account +C$4.5B (fcst C$9.5B)",
-   "read": "Chinese factory profits grew at their fastest in five months, good news for Australia. The US goods trade gap widened sharply as imports of artificial intelligence equipment surged, a drag on US growth this quarter. German unemployment rose more than expected.",
+   "read": "Chinese factory profits grew at their fastest in five months, good news for Australia. The US goods trade gap widened sharply as imports of artificial intelligence equipment surged, a drag on US growth this quarter. German unemployment rose and Canada's surplus with the world shrank, both small misses.",
    "sources": [
     {
      "label": "investingLive (Nov 27): China's industrial profits growth speeds up to 20.1% in October",
@@ -32,68 +40,80 @@
      "url": "https://www.census.gov/econ/indicators/2026/advance_report2610.pdf"
     },
     {
-     "label": "investingLive (Nov 27): Germany unemployment rises more than expected in November",
-     "url": "https://investinglive.com/news/germany-unemployment-rises-more-than-expected-in-november-as-labour-market-struggles-persist/"
-    },
-    {
      "label": "Statistics Canada (Nov 27): Canada's balance of international payments, third quarter 2026",
      "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/261127/dq261127a-eng.htm"
+    },
+    {
+     "label": "Blue Street calendar (Hercules, Nov 27): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     }
    ]
   },
   {
    "id": "inflation",
    "title": "Inflation",
-   "figure": "France CPI Nov 2.9% y/y (fcst 3.2%); Spain CPI Nov 4.1% (fcst 4.7%), core 2.6%; Tokyo core CPI Nov 2.9% (fcst 3.0%), ex-food and energy 2.5%; US core PCE Oct 3.3%; Australia CPI Oct 4.9%",
-   "read": "Inflation slowed far more than expected in France and Spain as fuel got cheaper. Tokyo's core inflation reached a 16-month high but cooled underneath. US and Australian inflation still run hot, which keeps their central banks leaning toward higher rates.",
+   "figure": "France CPI Nov 2.9% y/y (fcst 3.2%); Spain CPI Nov 4.1% (fcst 4.7%), core 2.6%; ECB consumer 12-month expectation 3.5% (from 3.1%); Tokyo core CPI Nov 2.9% (fcst 3.0%)",
+   "read": "Inflation slowed far more than expected in France and Spain as fuel got cheaper, which weighed on the euro. Euro-area households, though, expect faster price rises over the next year. US and Australian inflation still run hot, keeping their central banks leaning toward higher rates.",
    "sources": [
     {
      "label": "The Private Banker (Nov 27): French and Spanish inflation slow sharply in November as fuel prices fall",
      "url": "https://leprivatebanker.com/2026/11/27/french-and-spanish-inflation-slow-sharply-in-november-as-fuel-prices-fall-pressuring-the-euro-against-sterling/"
     },
     {
-     "label": "ActionForex (Nov 27): Tokyo core CPI hits 16-month high at 2.9%, but underlying inflation eases",
-     "url": "https://www.actionforex.com/live-comments/662248-tokyo-core-cpi-hits-16-month-high-at-2-9-but-underlying-inflation-eases/"
+     "label": "Global Banking & Finance Review, Reuters (Nov 27): Euro zone consumers sharply increase inflation expectations",
+     "url": "https://www.globalbankingandfinance.com/euro-zone-consumers-sharply-increase-inflation-expectation/"
+    },
+    {
+     "label": "Trading and Investment News (Nov 27): Yen near weekly low after Tokyo inflation",
+     "url": "https://www.tradingandinvestmentnews.co.uk/japanese-yen-weekly-low-tokyo-cpi/"
+    },
+    {
+     "label": "Blue Street calendar (Hercules, Nov 27): times, forecasts and actuals",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/calendar.json"
     }
    ]
   },
   {
    "id": "risk",
    "title": "Risk Sentiment",
-   "figure": "Gold ~$3,646 (+2.2%), morning high ~$3,690; Israel security cabinet meeting on Iran cancelled, no decision; USD/CHF ~0.836 (+0.24%); AUD/USD +0.30%",
-   "read": "Asian shares rose for a second day, but fear of new Israeli strikes on Iran sent money into gold. The franc did not share the gain. Thin post-Thanksgiving trading can make moves look bigger than they are.",
+   "figure": "Gold ~$3,652 (+2.4%); USD/CHF ~0.836 (+0.22%); USD/JPY ~159.5 (+0.14%); US 10-year ~4.92% (+0.07)",
+   "read": "US technology shares recovered in a shortened session, so the yen and franc got no help from fear. The Gulf stayed tense as the US disabled another ship trying to break its Iran blockade, and that worry went into gold. Thin holiday trading can make moves look bigger than they are.",
    "sources": [
+    {
+     "label": "Eurasia Business News (Nov 27): US stocks, tech rebounds in shortened Black Friday session",
+     "url": "https://eurasiabusinessnews.com/2026/11/27/u-s-stock-market-today-november-27-2026-tech-rebounds-in-shortened-black-friday-session/"
+    },
+    {
+     "label": "Reuters (Nov 27): US disables ship trying to leave Iran, as Tehran vows to confront blockade",
+     "url": "https://www.reuters.com/world/middle-east/us-disables-ship-trying-leave-iran-tehran-vows-confront-blockade-2026-11-27/"
+    },
     {
      "label": "Blue Street breaking watch (Hercules, Nov 27)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
     },
     {
-     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:44 AM CT Nov 27, after the 7:30 AM data; indicative)",
+     "label": "Blue Street market levels (Hercules, New York close run, 3:00 PM CT Nov 27; indicative)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
-    },
-    {
-     "label": "Swissinfo, Bloomberg (Nov 27): Asian stocks rise for second day, Treasuries slip",
-     "url": "https://www.swissinfo.ch/eng/asian-stocks-rise-for-second-day,-treasuries-slip:-markets-wrap/92446051"
     }
    ]
   },
   {
    "id": "tot",
    "title": "Terms of Trade",
-   "figure": "Brent January ~$96.19, settled $96.57 Thu; Brent February ~$91.65; WTI ~$84.65; gold ~$3,646 (+2.2%)",
-   "read": "Brent's January contract held near $96 after its highest close since early November, which helps the Canadian dollar. Gold's jump gives the Aussie a lift.",
+   "figure": "Brent January settled $95.44 (−1.2%), up ~3% on the week; Brent February ~$92.57; WTI ~$83.08 (−0.7%); gold ~$3,652 (+2.4%)",
+   "read": "Oil gave back its morning gain into the weekend but still rose on the week, ahead of a meeting of the OPEC+ oil producers. That leaves the Canadian dollar with steady support. Gold's jump gives the Aussie a lift.",
    "sources": [
     {
-     "label": "Trading and Investment News (Nov 27): Crude oil rebound, weekly gain",
-     "url": "https://www.tradingandinvestmentnews.co.uk/crude-oil-rebound-weekly-gain/"
+     "label": "Blue Street market levels (Hercules, New York close run, 3:00 PM CT Nov 27; indicative)",
+     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
+    },
+    {
+     "label": "FinanceFeeds (Nov 27): Brent near $96 on Friday, OPEC+ set to hold output on Sunday",
+     "url": "https://financefeeds.com/brent-crude-oil-price-96-30-friday-opec-plus-set-to-hold-q1-output-sunday-bull-100-bear-92-57/"
     },
     {
      "label": "Blue Street breaking watch (Hercules, Nov 27)",
      "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/latest.json"
-    },
-    {
-     "label": "Blue Street market levels (Hercules, New York pre-open run ~7:44 AM CT Nov 27, after the 7:30 AM data; indicative)",
-     "url": "https://github.com/ramismadi/Blue-Street/blob/main/data/markets.json"
     }
    ]
   },
