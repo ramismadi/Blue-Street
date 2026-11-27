@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-27T11:50:00Z",
+  "updated": "2026-11-27T12:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
       "lean": "bullish",
-      "ts": "2026-11-27T11:50:00Z",
-      "text": "The dollar sits just below its highest since March 2025 because markets see a Federal Reserve rate rise on December 9 as all but certain, after hot core PCE inflation of 3.3% and growth revised up to 4.3%. President Trump's claim on Thursday, November 26 that the growth figure was a deliberate error adds a small worry about trust in US data."
+      "ts": "2026-11-27T12:55:00Z",
+      "text": "The dollar sits just below its highest since March 2025 because markets see a Federal Reserve rate rise on December 9 as all but certain, after hot core PCE inflation of 3.3% and growth revised up to 4.3%. Investors are taking some money off the table now that much of this is priced, and President Trump's claim that the growth figure was a deliberate error adds a small worry about trust in US data."
     },
     "EUR": {
       "lean": "bearish",
@@ -18,9 +18,9 @@
       "text": "The pound is heading for its best week against the euro in almost a month, near 83.5 pence per euro, as markets still expect a Bank of England rate rise in mid-December and euro area inflation cools. Against the dollar it stays near $1.31, close to its lowest in a year, because a Federal Reserve rise on December 9 looks all but certain."
     },
     "JPY": {
-      "lean": "mixed",
-      "ts": "2026-11-26T23:50:00Z",
-      "text": "The yen is steady with the dollar near 159 yen, held up by Japan's warnings it may step in near 160 and by talk of a Bank of Japan rate rise on December 18. Tokyo prices in November kept the main inflation measure rising to 2.9%, which backs that rise, while dearer oil remains a cost for Japan."
+      "lean": "bearish",
+      "ts": "2026-11-27T12:55:00Z",
+      "text": "The yen slipped to about 159.6 per dollar on Friday, November 27, near its weakest of the week, after Tokyo inflation came in a little under forecast and was driven mostly by fuel. Talk of a Bank of Japan rate rise on December 18 and Japan's warnings that it may step in near 160 are slowing the fall, while dearer oil remains a cost."
     },
     "CHF": {
       "lean": "mixed",
@@ -49,11 +49,44 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-27T11:50:00Z",
-      "text": "Brent crude rose to about $97.66 a barrel on Friday, November 27, set for a weekly gain of more than 5%, after Yemen's Houthi rebels hit Saudi refineries and tankers struck mines near the Strait of Hormuz, where flows are about half of pre-war levels. The OPEC+ producers meet on Sunday, November 29 and are expected to keep output targets unchanged, while forecasts of too much oil next year still act as a brake."
+      "ts": "2026-11-27T12:55:00Z",
+      "text": "Brent crude rose to about $97.66 a barrel on Friday, November 27, set for a weekly gain of more than 5%, after Yemen's Houthi rebels hit Saudi refineries and tankers struck mines near the Strait of Hormuz, where flows are about half of pre-war levels. Iran said the same day that another tanker blew up on a mine there, though no one else has confirmed it. The OPEC+ producers meet on Sunday, November 29 and are expected to keep output targets unchanged, while forecasts of too much oil next year still act as a brake."
     }
   },
   "items": [
+    {
+      "id": "tradinginvestment-yen-159-tokyo-cpi-20261127",
+      "ts": "2026-11-27T12:09:52Z",
+      "source": "Trading and Investment News",
+      "url": "https://www.tradingandinvestmentnews.co.uk/japanese-yen-weekly-low-tokyo-cpi/",
+      "image": "https://www.tradingandinvestmentnews.co.uk/wp-content/uploads/2026/11/Yen-Under-Neon-Skies.png",
+      "headline": "Yen slips near its weakest of the week after Tokyo inflation comes in a little soft",
+      "story": "yen-boj",
+      "story_title": "The yen, the Bank of Japan and intervention risk",
+      "pillar": "rates",
+      "summary": "The yen weakened to about 159.6 per dollar on Friday, November 27, close to its weakest of the week, after Tokyo's main inflation measure rose less than expected.",
+      "beats": {
+        "was": "The Bank of Japan's rate is 1.25%, and markets expect a rise at its December 17-18 meeting. Japan stepped into the currency market to buy yen in late July and early August, and traders see 160 per dollar as the level where it may do so again.",
+        "happened": "Tokyo prices excluding fresh food rose 2.9% from a year earlier in November, the most in 16 months but just short of the 3.0% forecast. Leaving out energy as well, the rate eased to 2.5% from 2.6%, so much of the rise came from dearer fuel.",
+        "means": "Inflation driven mainly by energy gives the Bank of Japan a weaker case for raising rates quickly. Meanwhile the US Federal Reserve is expected to raise rates on December 9, keeping the gap in interest rates wide in the dollar's favour.",
+        "fx": "The yen drifts back towards 160 per dollar, the area where Japan's warnings of action carry most weight, so further falls may be slower."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Tokyo's core inflation came in just under forecast and was driven mostly by energy."
+        },
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "An expected Fed rate rise keeps US rates far above Japan's."
+        }
+      ],
+      "watch": "Whether the yen reaches 160 per dollar, and the Bank of Japan meeting on December 17-18."
+    },
     {
       "id": "gbaf-reuters-sterling-weekly-gain-euro-20261127",
       "ts": "2026-11-27T11:29:39Z",
@@ -160,6 +193,33 @@
       "watch": "The OPEC+ meeting on Sunday, November 29, and any new attacks near Hormuz."
     },
     {
+      "id": "finscans-dollar-index-pares-longs-20261127",
+      "ts": "2026-11-27T09:48:28Z",
+      "source": "FinScans",
+      "url": "https://finscans.com/news/2026/11/27/us-dollar-index-holds-at-10367-as-investors-pare-long",
+      "image": null,
+      "headline": "Dollar holds below Monday's 20-month high as investors take some money off the table",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "rates",
+      "summary": "The dollar index, which tracks the dollar against six major currencies, held near 103.7 on Friday, November 27, about flat for the week and below the 20-month high it hit on Monday, November 23.",
+      "beats": {
+        "was": "The dollar climbed about 1.7% in November as hot inflation and growth revised up to 4.3% made a US Federal Reserve rate rise on December 9 look all but certain.",
+        "happened": "Investors cut back on bets that the dollar will keep rising, even after the strong figures. Some think the Fed will raise rates once in December but be careful about going much further, with US tech shares still nearly 20% below their October highs.",
+        "means": "Much of the good news for the dollar is already in its price, so the rally has paused. A single, careful rate rise would support the dollar without pushing it much higher.",
+        "fx": "A pause in the dollar gives the euro, pound and other majors some room to steady after their November falls."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The dollar is still high on Fed rate rise bets, but investors are trimming bets on further gains."
+        }
+      ],
+      "watch": "US jobs figures for November on Friday, December 4, and the Fed decision on December 9."
+    },
+    {
       "id": "time-trump-gdp-revision-fake-20261127",
       "ts": "2026-11-27T08:00:00Z",
       "source": "TIME",
@@ -259,6 +319,45 @@
       "watch": "China's official factory survey for November at the end of the month, and how far the planned US tariffs on China go."
     },
     {
+      "id": "anews-iran-tanker-mine-explodes-ghavam-20261127",
+      "date": "2026-11-27",
+      "source": "A News (Anadolu Agency)",
+      "url": "https://www.anews.com.tr/middle-east/2026/11/27/iran-says-oil-tanker-explodes-after-hitting-naval-mine-in-strait-of-hormuz",
+      "image": "https://ia.tmgrup.com.tr/80dfab/806/378/0/38/864/442?u=https://i.tmgrup.com.tr/anews/v1/2026/11/27/iran-says-oil-tanker-explodes-after-hitting-naval-mine-in-strait-of-hormuz-1795782682074.jpeg",
+      "headline": "Iran says a tanker blew up on a mine in the Strait of Hormuz and another turned back",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "geopolitics",
+      "summary": "Iran's Revolutionary Guards navy said on Friday, November 27 that an oil tanker exploded after hitting a mine in the Strait of Hormuz and a second tanker was forced to turn back.",
+      "beats": {
+        "was": "The US and Israel went to war with Iran on February 28. A deal signed in June stalled over shipping through the Strait of Hormuz, the narrow route for about a fifth of the world's oil, and Iran says it will only fully reopen it if attacks stop and US sanctions are lifted.",
+        "happened": "Iran said the two tankers tried to slip through an unapproved route north of Ghavam Island on the morning of Friday, November 27. It did not name the ships or give any details on damage or crews, and the claim has not been confirmed by others. It follows a similar Iranian claim on Thursday, November 26.",
+        "means": "Iran is signalling that ships which avoid its approved routes will be hit, which keeps the strait risky and slows any recovery in Gulf oil flows. Without confirmation, the market treats it as added risk rather than a proven loss of supply.",
+        "fx": "Each new threat to Gulf oil helps lift crude, which supports oil exporters like Canada and is a cost for big importers like Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "An unconfirmed Iranian claim of a second tanker hit by a mine in two days."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices help Canada's export earnings."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so dearer crude is a cost."
+        }
+      ],
+      "watch": "Whether shipping firms or other governments confirm the explosion, and the OPEC+ meeting on Sunday, November 29."
+    },
+    {
       "id": "swissinfo-bloomberg-brent-96-asia-stocks-20261127",
       "date": "2026-11-27",
       "source": "swissinfo.ch (Bloomberg)",
@@ -323,45 +422,6 @@
         }
       ],
       "watch": "The Bank of Japan's decision on December 18, and any warnings from Japan's finance ministry if the dollar nears 160 yen."
-    },
-    {
-      "id": "gulfnews-jazan-refinery-worker-killed-shutdown-20261126",
-      "date": "2026-11-26",
-      "source": "Gulf News",
-      "url": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-refinery-attack-kills-worker-iran-denies-deadly-kuwait-strike-1.500761343",
-      "image": "https://media.assettype.com/gulfnews%2F2026-11-26%2Fhcnfekgu%2F202611264025437.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
-      "headline": "Houthi strike on Saudi Jazan refinery kills a worker and forces a partial shutdown",
-      "story": "oil-supply",
-      "story_title": "Oil supply: surplus vs Gulf attacks",
-      "pillar": "tot",
-      "summary": "Saudi Arabia's energy ministry said on Thursday, November 26 that a strike on its Jazan refinery killed one worker, injured others and forced part of the plant to shut.",
-      "beats": {
-        "was": "Yemen's Houthi rebels, who are backed by Iran, have been firing missiles and drones at Saudi oil sites during the wider war with Iran, adding to fears about Gulf oil supply.",
-        "happened": "Saudi state news said one worker from Nepal died and several were hurt at the Jazan refinery in the south of the country, and some of its units were halted. The Saudi-led coalition blamed the Houthis, promised a firm military answer and said it destroyed a Houthi missile launcher in Yemen. Iran denied any role in a separate deadly drone attack in Kuwait.",
-        "means": "Saudi fuel output has now been hit directly, not just threatened. Brent crude barely moved on the news early on Friday, November 27, because some of the damage was already in the price after a 3.5% jump on Wednesday, November 25.",
-        "fx": "Lost Saudi refining keeps oil supported, which helps the Canadian dollar and weighs on big energy buyers such as Japan and the euro area."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Part of a Saudi refinery is shut after a deadly strike."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Firmer oil helps Canada, a big oil exporter."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan buys almost all its oil abroad, so dearer energy is a cost."
-        }
-      ],
-      "watch": "How fast the Jazan refinery restarts, and what OPEC+ producers decide at their meeting on Sunday, November 29."
     },
     {
       "id": "thenational-italians-killed-kuwait-drones-20261126",
@@ -436,6 +496,33 @@
       "watch": "Any word from Saudi Aramco on damage at Jazan, and the OPEC+ ministers' meeting on Sunday, November 29."
     },
     {
+      "id": "euronews-hernandez-de-cos-ecb-president-20261126",
+      "ts": "2026-11-26T14:18:57Z",
+      "source": "Euronews",
+      "url": "https://www.euronews.com/2026/11/26/eurozone-leaders-back-hernandez-de-cos-to-succeed-lagarde-at-ecb",
+      "image": "https://images.euronews.com/articles/stories/10/00/94/13/1200x675_cmsv2_ed7bd85b-5bb7-5641-8a1c-d7105a86adf9-10009413.jpg",
+      "headline": "Eurozone leaders back Hernández de Cos to succeed Lagarde at ECB",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "policy",
+      "summary": "Euro area leaders chose Pablo Hernández de Cos, a former governor of Spain's central bank, on Thursday, November 26 to follow Christine Lagarde as European Central Bank president from February 2027.",
+      "beats": {
+        "was": "Christine Lagarde said on October 29 she will step down as European Central Bank president on February 7, 2027, before her term ends. The bank has raised rates twice this year, with euro area inflation at 4% in October, twice its 2% goal.",
+        "happened": "At a summit in Brussels, leaders backed Hernández de Cos, 55, who now runs the Bank for International Settlements and led the Bank of Spain from 2018 to 2024. He beat Klaas Knot, former head of the Dutch central bank, after the Netherlands dropped its objection. The same package names Laurence Boone and Markus Brunnermeier to the bank's board. The choice still needs formal sign-off.",
+        "means": "The question of who leads the bank next year is settled without a fight. Some analysts see him as a little softer on inflation than Knot, but mainly as a pragmatic centrist, so no big shift in rate policy is expected.",
+        "fx": "A smooth handover removes a source of doubt for the euro. A slightly softer leader at the margin could trim rate-rise bets for 2027, but the December 17 decision is still the main driver."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A calm, expected choice for the next ECB president, seen as a centrist, so little change to the rate path."
+        }
+      ],
+      "watch": "Formal approval of the new ECB board, and the ECB rate decision on Thursday, December 17."
+    },
+    {
       "id": "cmt-bloomberg-big-six-december-boc-hike-20261126",
       "ts": "2026-11-26T14:14:16Z",
       "source": "Canadian Mortgage Trends (Bloomberg)",
@@ -463,43 +550,31 @@
       "watch": "Canada's July-September GDP and November jobs report next week, then the Bank of Canada decision on Wednesday, December 9."
     },
     {
-      "id": "euronext-reuters-dollar-rally-pauses-thanksgiving-20261126",
-      "date": "2026-11-26",
-      "source": "Euronext (Reuters)",
-      "url": "https://live.euronext.com/en/financial-news/dollar-rally-pauses-thanksgiving",
-      "image": null,
-      "headline": "Dollar rally pauses for Thanksgiving",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "rates",
-      "summary": "The dollar held just below its highest since March 2025 on Thursday, November 26, as US markets shut for Thanksgiving, while the Swiss franc slipped 0.4% against it.",
+      "id": "gbaf-reuters-sterling-steady-boe-bets-20261126",
+      "ts": "2026-11-26T13:29:45Z",
+      "source": "Reuters (via Global Banking & Finance Review)",
+      "url": "https://www.globalbankingandfinance.com/sterling-steady-dollar-takes-breather/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-d3357261-7b64-45d5-920c-67c1cc9fd458/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "Sterling steady as dollar takes a breather",
+      "story": "boe-hikes",
+      "story_title": "Bank of England: how far do rates rise?",
+      "pillar": "policy",
+      "summary": "The pound held near $1.31 on Thursday, November 26 after falling in 13 of the past 16 sessions, while traders added to bets on Bank of England rate rises in December and February.",
       "beats": {
-        "was": "The dollar has climbed for weeks as markets bet the Federal Reserve will raise rates by a quarter point on December 9 and again early in 2027. Hot core PCE inflation for October and a big upward revision to US growth in the third quarter, both out on Wednesday, November 25, added to those bets.",
-        "happened": "With US markets closed, the dollar index sat near 103.7. The euro was steady near $1.098 after its lowest since April 2025 earlier in the week, sterling was about $1.31 and the dollar near 159.25 yen. The franc weakened 0.4% to about 0.834 per dollar. One Mizuho strategist described the dollar's strength as defensive, after the US proposed new tariffs on 14 trading partners on Wednesday, November 25.",
-        "means": "The holiday pause does not change the story: US rates look set to rise faster than elsewhere, which keeps money flowing to the dollar. Thin trading can make moves look bigger than they are until US markets reopen on Friday, November 27.",
-        "fx": "The dollar stays firm against most major currencies. The franc lost ground to the dollar on the day, even as it gained against the euro."
+        "was": "The pound has lost more than 2% against the dollar in November, back to levels last seen a year ago, as markets price a Federal Reserve rate rise on December 9. The Bank of England raised its rate to 4% earlier in November.",
+        "happened": "Sterling was little changed at about $1.31 and near 83.8 pence per euro in quiet holiday trading. Money markets now lean toward back-to-back Bank of England rises in December and February, and price three more rises by September 2027. A Santander Asset Management strategist said part of the pound's drop came from the fall in share prices, and that its longer-run value now looks better.",
+        "means": "UK rate bets are rising, which gives the pound a floor, but the dollar's own rate story has been stronger. The slide has paused rather than turned.",
+        "fx": "Firmer Bank of England bets are a mild support for the pound. The direction against the dollar still hangs on the Fed decision on December 9."
       },
       "impact": [
         {
-          "ccy": "USD",
+          "ccy": "GBP",
           "dir": "bullish",
           "strength": 1,
-          "why": "Holds near its highest since March 2025 on bets of more Fed rate rises."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Slipped 0.4% against the dollar in quiet holiday trading."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Steady near $1.098, close to its lowest since April 2025."
+          "why": "Traders now lean toward two more Bank of England rate rises, in December and February."
         }
       ],
-      "watch": "The return of US trading on Friday, November 27, and the Fed rate decision on Wednesday, December 9."
+      "watch": "The Bank of England decision on Thursday, December 17, and the Fed decision on Wednesday, December 9."
     },
     {
       "id": "actionforex-eurchf-breakdown-safe-haven-20261126",
@@ -574,60 +649,6 @@
       "watch": "How AI shares trade when US markets reopen on Friday, November 27, and the Bank of England rate decision on Thursday, December 17."
     },
     {
-      "id": "euronews-hernandez-de-cos-ecb-president-20261126",
-      "ts": "2026-11-26T14:18:57Z",
-      "source": "Euronews",
-      "url": "https://www.euronews.com/2026/11/26/eurozone-leaders-back-hernandez-de-cos-to-succeed-lagarde-at-ecb",
-      "image": "https://images.euronews.com/articles/stories/10/00/94/13/1200x675_cmsv2_ed7bd85b-5bb7-5641-8a1c-d7105a86adf9-10009413.jpg",
-      "headline": "Eurozone leaders back Hernández de Cos to succeed Lagarde at ECB",
-      "story": "ecb-december",
-      "story_title": "Will the ECB raise rates one last time in December?",
-      "pillar": "policy",
-      "summary": "Euro area leaders chose Pablo Hernández de Cos, a former governor of Spain's central bank, on Thursday, November 26 to follow Christine Lagarde as European Central Bank president from February 2027.",
-      "beats": {
-        "was": "Christine Lagarde said on October 29 she will step down as European Central Bank president on February 7, 2027, before her term ends. The bank has raised rates twice this year, with euro area inflation at 4% in October, twice its 2% goal.",
-        "happened": "At a summit in Brussels, leaders backed Hernández de Cos, 55, who now runs the Bank for International Settlements and led the Bank of Spain from 2018 to 2024. He beat Klaas Knot, former head of the Dutch central bank, after the Netherlands dropped its objection. The same package names Laurence Boone and Markus Brunnermeier to the bank's board. The choice still needs formal sign-off.",
-        "means": "The question of who leads the bank next year is settled without a fight. Some analysts see him as a little softer on inflation than Knot, but mainly as a pragmatic centrist, so no big shift in rate policy is expected.",
-        "fx": "A smooth handover removes a source of doubt for the euro. A slightly softer leader at the margin could trim rate-rise bets for 2027, but the December 17 decision is still the main driver."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A calm, expected choice for the next ECB president, seen as a centrist, so little change to the rate path."
-        }
-      ],
-      "watch": "Formal approval of the new ECB board, and the ECB rate decision on Thursday, December 17."
-    },
-    {
-      "id": "gbaf-reuters-sterling-steady-boe-bets-20261126",
-      "ts": "2026-11-26T13:29:45Z",
-      "source": "Reuters (via Global Banking & Finance Review)",
-      "url": "https://www.globalbankingandfinance.com/sterling-steady-dollar-takes-breather/",
-      "image": "https://www.globalbankingandfinance.com/i/cloud-d3357261-7b64-45d5-920c-67c1cc9fd458/width=1200,height=630,quality=80,format=auto,fit=cover/",
-      "headline": "Sterling steady as dollar takes a breather",
-      "story": "boe-hikes",
-      "story_title": "Bank of England: how far do rates rise?",
-      "pillar": "policy",
-      "summary": "The pound held near $1.31 on Thursday, November 26 after falling in 13 of the past 16 sessions, while traders added to bets on Bank of England rate rises in December and February.",
-      "beats": {
-        "was": "The pound has lost more than 2% against the dollar in November, back to levels last seen a year ago, as markets price a Federal Reserve rate rise on December 9. The Bank of England raised its rate to 4% earlier in November.",
-        "happened": "Sterling was little changed at about $1.31 and near 83.8 pence per euro in quiet holiday trading. Money markets now lean toward back-to-back Bank of England rises in December and February, and price three more rises by September 2027. A Santander Asset Management strategist said part of the pound's drop came from the fall in share prices, and that its longer-run value now looks better.",
-        "means": "UK rate bets are rising, which gives the pound a floor, but the dollar's own rate story has been stronger. The slide has paused rather than turned.",
-        "fx": "Firmer Bank of England bets are a mild support for the pound. The direction against the dollar still hangs on the Fed decision on December 9."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Traders now lean toward two more Bank of England rate rises, in December and February."
-        }
-      ],
-      "watch": "The Bank of England decision on Thursday, December 17, and the Fed decision on Wednesday, December 9."
-    },
-    {
       "id": "actionforex-ecb-accounts-october-20261126",
       "ts": "2026-11-26T12:33:27Z",
       "source": "Action Forex",
@@ -653,6 +674,39 @@
         }
       ],
       "watch": "The ECB's decision and new forecasts on Thursday, December 17."
+    },
+    {
+      "id": "canadianvanguard-reuters-oil-slides-ras-tanura-20261126",
+      "ts": "2026-11-26T12:25:20Z",
+      "source": "The Canadian Vanguard (Reuters)",
+      "url": "https://www.thecanadianvanguard.com/oil-slides-despite-shipping-mine-claims-and-supply-risks/",
+      "image": "https://www.thecanadianvanguard.com/wp-content/uploads/2026/07/oil-pause.png",
+      "headline": "Oil Slides Despite Shipping Mine Claims and Supply Risks",
+      "story": "oil-supply",
+      "story_title": "Oil supply: surplus vs Gulf attacks",
+      "pillar": "commodities",
+      "summary": "Brent crude slipped below $94 a barrel by mid-morning in Europe on Thursday, November 26, giving back part of Wednesday's 3.5% jump even as Yemen's Houthi rebels claimed an attack on Saudi Arabia's biggest refinery.",
+      "beats": {
+        "was": "Brent rose 3.5% to $94.61 on Wednesday, November 25 after tankers hit mines in the Strait of Hormuz and Houthi attacks on Saudi Arabia spread. Oil is still about 13% lower than a month ago on worries about too much supply next year.",
+        "happened": "Brent fell about 0.9% to $93.79 by 0939 GMT on Thursday, November 26 and US crude dipped to about $83.33. The Houthis said they struck the Ras Tanura refinery, though Saudi Arabia and its state oil firm Aramco did not confirm it. Iran's army said a tanker hit a mine and caught fire in a closed-off area of the Strait. US crude stocks rose 1.1 million barrels last week.",
+        "means": "Attacks keep adding risk, but buyers took profits after a big jump, and plenty of supply caps prices. Analysts see Brent moving roughly between $88 and $97 for now.",
+        "fx": "A small dip after a big rise leaves oil-linked currencies like the Canadian dollar with most of their support. US markets are closed for Thanksgiving, so trading is light."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Profit-taking after a 3.5% jump, while an unconfirmed Houthi refinery attack keeps supply risk alive."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Oil eased a little but held most of Wednesday's gains."
+        }
+      ],
+      "watch": "The OPEC+ meeting on Sunday, November 29 on output for 2027."
     },
     {
       "id": "bs-reuters-opecplus-may-roll-over-targets-20261126",
@@ -694,72 +748,6 @@
       "watch": "The OPEC+ ministers' meeting on Sunday, November 29, and whether it says anything about output for 2027."
     },
     {
-      "id": "whbl-reuters-europe-stocks-rally-tariffs-ease-20261126",
-      "ts": "2026-11-26T08:33:00Z",
-      "source": "WHBL (Reuters)",
-      "url": "https://whbl.com/2026/11/26/european-stocks-rally-as-tech-and-banks-rebound-tariff-fears-ease/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/26/2026-11-26T083329Z_2_LYNXNPEMAP0MX_RTROPTP_3_EUROPE-STOCKS.JPG",
-      "headline": "European stocks rally as tech and banks rebound, tariff fears ease",
-      "story": "us-tariffs",
-      "story_title": "New US tariffs",
-      "pillar": "risk",
-      "summary": "European shares rose about 1.4% on Thursday, November 26, as tech and bank stocks bounced and proposed US tariffs on the EU looked likely to stay at the 15% rate agreed last year.",
-      "beats": {
-        "was": "On Wednesday, November 25 European shares fell more than 1% as US inflation came in hot, AI shares slid and the US proposed new import taxes on 14 trading partners, including the EU.",
-        "happened": "The STOXX 600 index of big European companies rose 1.4% early on Thursday, November 26. Chip and tech firms gained nearly 2%, and banks such as Deutsche Bank rose about 3%. Reports suggested US duties on EU goods will likely be capped at the 15% the two sides agreed last year.",
-        "means": "If the EU is spared a fresh jump in US import taxes, one risk to Europe's growth fades. Shares also followed Wall Street's late recovery from its AI sell-off.",
-        "fx": "Calmer trade news and firmer shares are a mild support for the euro and for currencies that track risk appetite, like the Australian dollar. US markets are shut for Thanksgiving, so moves are thin."
-      },
-      "impact": [
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "US tariffs on the EU look likely to stay at the agreed 15%, easing a growth worry."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Stocks bounced after the AI sell-off, a better mood for risk-sensitive currencies."
-        }
-      ],
-      "watch": "The final US tariff list, with written comments due by January 5, 2027."
-    },
-    {
-      "id": "canadianvanguard-reuters-oil-slides-ras-tanura-20261126",
-      "ts": "2026-11-26T12:25:20Z",
-      "source": "The Canadian Vanguard (Reuters)",
-      "url": "https://www.thecanadianvanguard.com/oil-slides-despite-shipping-mine-claims-and-supply-risks/",
-      "image": "https://www.thecanadianvanguard.com/wp-content/uploads/2026/07/oil-pause.png",
-      "headline": "Oil Slides Despite Shipping Mine Claims and Supply Risks",
-      "story": "oil-supply",
-      "story_title": "Oil supply: surplus vs Gulf attacks",
-      "pillar": "commodities",
-      "summary": "Brent crude slipped below $94 a barrel by mid-morning in Europe on Thursday, November 26, giving back part of Wednesday's 3.5% jump even as Yemen's Houthi rebels claimed an attack on Saudi Arabia's biggest refinery.",
-      "beats": {
-        "was": "Brent rose 3.5% to $94.61 on Wednesday, November 25 after tankers hit mines in the Strait of Hormuz and Houthi attacks on Saudi Arabia spread. Oil is still about 13% lower than a month ago on worries about too much supply next year.",
-        "happened": "Brent fell about 0.9% to $93.79 by 0939 GMT on Thursday, November 26 and US crude dipped to about $83.33. The Houthis said they struck the Ras Tanura refinery, though Saudi Arabia and its state oil firm Aramco did not confirm it. Iran's army said a tanker hit a mine and caught fire in a closed-off area of the Strait. US crude stocks rose 1.1 million barrels last week.",
-        "means": "Attacks keep adding risk, but buyers took profits after a big jump, and plenty of supply caps prices. Analysts see Brent moving roughly between $88 and $97 for now.",
-        "fx": "A small dip after a big rise leaves oil-linked currencies like the Canadian dollar with most of their support. US markets are closed for Thanksgiving, so trading is light."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Profit-taking after a 3.5% jump, while an unconfirmed Houthi refinery attack keeps supply risk alive."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Oil eased a little but held most of Wednesday's gains."
-        }
-      ],
-      "watch": "The OPEC+ meeting on Sunday, November 29 on output for 2027."
-    },
-    {
       "id": "boereport-reuters-ukmto-tanker-projectile-khasab-20261126",
       "ts": "2026-11-26T11:57:52Z",
       "source": "BOE Report (Reuters)",
@@ -797,6 +785,72 @@
         }
       ],
       "watch": "Whether UKMTO names the ship or says who fired, and the OPEC+ meeting on Sunday, November 29, where ministers set 2027 output."
+    },
+    {
+      "id": "whbl-reuters-europe-stocks-rally-tariffs-ease-20261126",
+      "ts": "2026-11-26T08:33:00Z",
+      "source": "WHBL (Reuters)",
+      "url": "https://whbl.com/2026/11/26/european-stocks-rally-as-tech-and-banks-rebound-tariff-fears-ease/",
+      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/26/2026-11-26T083329Z_2_LYNXNPEMAP0MX_RTROPTP_3_EUROPE-STOCKS.JPG",
+      "headline": "European stocks rally as tech and banks rebound, tariff fears ease",
+      "story": "us-tariffs",
+      "story_title": "New US tariffs",
+      "pillar": "risk",
+      "summary": "European shares rose about 1.4% on Thursday, November 26, as tech and bank stocks bounced and proposed US tariffs on the EU looked likely to stay at the 15% rate agreed last year.",
+      "beats": {
+        "was": "On Wednesday, November 25 European shares fell more than 1% as US inflation came in hot, AI shares slid and the US proposed new import taxes on 14 trading partners, including the EU.",
+        "happened": "The STOXX 600 index of big European companies rose 1.4% early on Thursday, November 26. Chip and tech firms gained nearly 2%, and banks such as Deutsche Bank rose about 3%. Reports suggested US duties on EU goods will likely be capped at the 15% the two sides agreed last year.",
+        "means": "If the EU is spared a fresh jump in US import taxes, one risk to Europe's growth fades. Shares also followed Wall Street's late recovery from its AI sell-off.",
+        "fx": "Calmer trade news and firmer shares are a mild support for the euro and for currencies that track risk appetite, like the Australian dollar. US markets are shut for Thanksgiving, so moves are thin."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "US tariffs on the EU look likely to stay at the agreed 15%, easing a growth worry."
+        },
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stocks bounced after the AI sell-off, a better mood for risk-sensitive currencies."
+        }
+      ],
+      "watch": "The final US tariff list, with written comments due by January 5, 2027."
+    },
+    {
+      "id": "brecorder-reuters-aud-capex-kiwi-20261126",
+      "ts": "2026-11-26T07:05:00Z",
+      "source": "Business Recorder (Reuters)",
+      "url": "https://www.brecorder.com/news/40450846/australian-dollar-finds-support-in-data-centre-boom-kiwi-edges-away-from-17-year-low",
+      "image": "https://i.brecorder.com/large/2026/04/151031358695b2c.webp",
+      "headline": "Australian dollar finds support in data centre boom, kiwi edges away from 17-year low",
+      "story": "australia-inflation-rba",
+      "story_title": "Australian inflation and the Reserve Bank of Australia",
+      "pillar": "growth",
+      "summary": "Business investment in Australia jumped by the most since 2011 in July to September, driven by data centres, and the Australian dollar edged up to about 66.4 US cents on Thursday, November 26.",
+      "beats": {
+        "was": "The Australian dollar fell to its lowest in a year on Wednesday, November 25, near 65.6 US cents, and is down about 5.6% in November as AI shares slid and US rates looked set to rise. Inflation of 4.9% in October had already ruled out early rate cuts by the Reserve Bank of Australia.",
+        "happened": "Company spending on buildings and equipment rose far more than expected in the third quarter, led by data centres, though much of the money went on imported equipment. The Australian dollar rose 0.2%. The New Zealand dollar was flat near 54.9 US cents, ending a 10-day losing run just above its lowest since 2009.",
+        "means": "Strong investment points to an economy with more pace than feared, which backs the case that Australian rates stay high for longer. Markets do not expect a rate cut for many months. In New Zealand, swaps price about an 80% chance of a quarter-point rate rise to 3% at the next decision.",
+        "fx": "Better local news gives the Australian dollar some footing after a heavy month, though swings in AI shares still drive it day to day. The kiwi has stopped falling but has not turned."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "The biggest jump in business investment since 2011 supports keeping rates high."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A 10-day slide paused near a 17-year low, with a rate rise priced but not yet delivered."
+        }
+      ],
+      "watch": "The Reserve Bank of Australia's last rate decision of the year in December."
     },
     {
       "id": "financefeeds-gold-holiday-bounce-3565-20261126",
@@ -865,39 +919,6 @@
       "watch": "The OPEC+ ministers' meeting on Sunday, November 29, which sets oil output for 2027."
     },
     {
-      "id": "brecorder-reuters-aud-capex-kiwi-20261126",
-      "ts": "2026-11-26T07:05:00Z",
-      "source": "Business Recorder (Reuters)",
-      "url": "https://www.brecorder.com/news/40450846/australian-dollar-finds-support-in-data-centre-boom-kiwi-edges-away-from-17-year-low",
-      "image": "https://i.brecorder.com/large/2026/04/151031358695b2c.webp",
-      "headline": "Australian dollar finds support in data centre boom, kiwi edges away from 17-year low",
-      "story": "australia-inflation-rba",
-      "story_title": "Australian inflation and the Reserve Bank of Australia",
-      "pillar": "growth",
-      "summary": "Business investment in Australia jumped by the most since 2011 in July to September, driven by data centres, and the Australian dollar edged up to about 66.4 US cents on Thursday, November 26.",
-      "beats": {
-        "was": "The Australian dollar fell to its lowest in a year on Wednesday, November 25, near 65.6 US cents, and is down about 5.6% in November as AI shares slid and US rates looked set to rise. Inflation of 4.9% in October had already ruled out early rate cuts by the Reserve Bank of Australia.",
-        "happened": "Company spending on buildings and equipment rose far more than expected in the third quarter, led by data centres, though much of the money went on imported equipment. The Australian dollar rose 0.2%. The New Zealand dollar was flat near 54.9 US cents, ending a 10-day losing run just above its lowest since 2009.",
-        "means": "Strong investment points to an economy with more pace than feared, which backs the case that Australian rates stay high for longer. Markets do not expect a rate cut for many months. In New Zealand, swaps price about an 80% chance of a quarter-point rate rise to 3% at the next decision.",
-        "fx": "Better local news gives the Australian dollar some footing after a heavy month, though swings in AI shares still drive it day to day. The kiwi has stopped falling but has not turned."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 2,
-          "why": "The biggest jump in business investment since 2011 supports keeping rates high."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A 10-day slide paused near a 17-year low, with a rate rise priced but not yet delivered."
-        }
-      ],
-      "watch": "The Reserve Bank of Australia's last rate decision of the year in December."
-    },
-    {
       "id": "brecorder-reuters-dollar-steady-yields-20261126",
       "ts": "2026-11-26T02:59:50Z",
       "source": "Business Recorder (Reuters)",
@@ -935,6 +956,84 @@
         }
       ],
       "watch": "The Federal Reserve's rate decision on December 9, which markets expect to be a quarter-point rise."
+    },
+    {
+      "id": "gulfnews-jazan-refinery-worker-killed-shutdown-20261126",
+      "date": "2026-11-26",
+      "source": "Gulf News",
+      "url": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-refinery-attack-kills-worker-iran-denies-deadly-kuwait-strike-1.500761343",
+      "image": "https://media.assettype.com/gulfnews%2F2026-11-26%2Fhcnfekgu%2F202611264025437.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=false&overlay_position=bottom&overlay_width=100",
+      "headline": "Houthi strike on Saudi Jazan refinery kills a worker and forces a partial shutdown",
+      "story": "oil-supply",
+      "story_title": "Oil supply: surplus vs Gulf attacks",
+      "pillar": "tot",
+      "summary": "Saudi Arabia's energy ministry said on Thursday, November 26 that a strike on its Jazan refinery killed one worker, injured others and forced part of the plant to shut.",
+      "beats": {
+        "was": "Yemen's Houthi rebels, who are backed by Iran, have been firing missiles and drones at Saudi oil sites during the wider war with Iran, adding to fears about Gulf oil supply.",
+        "happened": "Saudi state news said one worker from Nepal died and several were hurt at the Jazan refinery in the south of the country, and some of its units were halted. The Saudi-led coalition blamed the Houthis, promised a firm military answer and said it destroyed a Houthi missile launcher in Yemen. Iran denied any role in a separate deadly drone attack in Kuwait.",
+        "means": "Saudi fuel output has now been hit directly, not just threatened. Brent crude barely moved on the news early on Friday, November 27, because some of the damage was already in the price after a 3.5% jump on Wednesday, November 25.",
+        "fx": "Lost Saudi refining keeps oil supported, which helps the Canadian dollar and weighs on big energy buyers such as Japan and the euro area."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Part of a Saudi refinery is shut after a deadly strike."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Firmer oil helps Canada, a big oil exporter."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan buys almost all its oil abroad, so dearer energy is a cost."
+        }
+      ],
+      "watch": "How fast the Jazan refinery restarts, and what OPEC+ producers decide at their meeting on Sunday, November 29."
+    },
+    {
+      "id": "euronext-reuters-dollar-rally-pauses-thanksgiving-20261126",
+      "date": "2026-11-26",
+      "source": "Euronext (Reuters)",
+      "url": "https://live.euronext.com/en/financial-news/dollar-rally-pauses-thanksgiving",
+      "image": null,
+      "headline": "Dollar rally pauses for Thanksgiving",
+      "story": "fed-hikes",
+      "story_title": "The Fed's rate rises and the strong dollar",
+      "pillar": "rates",
+      "summary": "The dollar held just below its highest since March 2025 on Thursday, November 26, as US markets shut for Thanksgiving, while the Swiss franc slipped 0.4% against it.",
+      "beats": {
+        "was": "The dollar has climbed for weeks as markets bet the Federal Reserve will raise rates by a quarter point on December 9 and again early in 2027. Hot core PCE inflation for October and a big upward revision to US growth in the third quarter, both out on Wednesday, November 25, added to those bets.",
+        "happened": "With US markets closed, the dollar index sat near 103.7. The euro was steady near $1.098 after its lowest since April 2025 earlier in the week, sterling was about $1.31 and the dollar near 159.25 yen. The franc weakened 0.4% to about 0.834 per dollar. One Mizuho strategist described the dollar's strength as defensive, after the US proposed new tariffs on 14 trading partners on Wednesday, November 25.",
+        "means": "The holiday pause does not change the story: US rates look set to rise faster than elsewhere, which keeps money flowing to the dollar. Thin trading can make moves look bigger than they are until US markets reopen on Friday, November 27.",
+        "fx": "The dollar stays firm against most major currencies. The franc lost ground to the dollar on the day, even as it gained against the euro."
+      },
+      "impact": [
+        {
+          "ccy": "USD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Holds near its highest since March 2025 on bets of more Fed rate rises."
+        },
+        {
+          "ccy": "CHF",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Slipped 0.4% against the dollar in quiet holiday trading."
+        },
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "Steady near $1.098, close to its lowest since April 2025."
+        }
+      ],
+      "watch": "The return of US trading on Friday, November 27, and the Fed rate decision on Wednesday, December 9."
     },
     {
       "id": "investing-reuters-oil-iran-mine-tanker-20261126",
@@ -1009,39 +1108,6 @@
       "watch": "Tokyo consumer prices on Friday, November 27, an early read on Japan's inflation before the December 18 decision."
     },
     {
-      "id": "stockanalysis-sp-nvidia-creditwatch-20261125",
-      "ts": "2026-11-25T20:10:00Z",
-      "source": "StockAnalysis",
-      "url": "https://stockanalysis.com/news/nvidia-sp-rating-creditwatch-negative/",
-      "image": "https://api.stockanalysis.com/api/assets/photo/social/141f520c-a0ff-4ff4-8dbe-c52ca6152512.jpg",
-      "headline": "S&P may cut Nvidia's AA credit rating over board oversight after Huang's return",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "Ratings agency S&P Global warned on Wednesday, November 25 it may cut chipmaker Nvidia's AA credit rating by one step within 90 days, citing weak board oversight.",
-      "beats": {
-        "was": "Nvidia is the biggest company behind the stock rally built on artificial intelligence. Its boss Jensen Huang quit on November 12 over his personal conduct, and the board brought him back on Monday, November 23. Its debt has climbed to about $32 billion this year.",
-        "happened": "S&P put the rating on watch for a possible downgrade, pointing to the board's independence, the lack of a plan to replace Mr Huang and the firm's exposure to China. The cost of insuring Nvidia's debt against default hit a record, and its shares fell about 4% on the day.",
-        "means": "A one-step cut would still leave Nvidia with a strong rating, but the warning adds to doubts that have been dragging tech shares lower. Mr Huang faces questions from US lawmakers in early December.",
-        "fx": "Worries about the top AI firm weigh on the risk mood, which tends to hurt the Australian and New Zealand dollars and help the yen and Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "More doubt about the AI leader sours the mood in shares, which tends to drag the Aussie."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Nervous markets lean toward the yen as a safe place."
-        }
-      ],
-      "watch": "Jensen Huang's hearings with US lawmakers on December 1 and December 3, and S&P's final decision."
-    },
-    {
       "id": "stocktitan-stocks-claw-back-chip-selloff-20261125",
       "ts": "2026-11-25T23:10:00Z",
       "source": "Stock Titan",
@@ -1079,51 +1145,6 @@
         }
       ],
       "watch": "Whether chip shares steady when US trading resumes for a half-day on Friday, November 27."
-    },
-    {
-      "id": "library-havens-hold-dollar-dips-20261125",
-      "ts": "2026-11-25T22:31:44Z",
-      "source": "The Library",
-      "url": "https://thelibraryestate.com/forex-day-close-report-swiss-franc-and-yen-hold-haven-gains-as-dollar-retreats-nov-25-2026/",
-      "image": "https://thelibraryestate.com/wp-content/uploads/2026/11/library-global-markets-graphic.jpg",
-      "headline": "Forex — Day Close Report: Swiss franc and yen hold haven gains as dollar retreats",
-      "story": "fed-hikes",
-      "story_title": "The Fed's next rate rise",
-      "pillar": "rates",
-      "summary": "The dollar slipped about 0.2% against major currencies by the New York close on Wednesday, November 25, as US bond yields fell, while the Swiss franc and the yen kept their safe-place gains.",
-      "beats": {
-        "was": "The dollar had climbed near its highest in almost two years on bets that the Federal Reserve raises rates on December 9. Hot inflation and growth figures on the morning of Wednesday, November 25 backed those bets.",
-        "happened": "A deep but short-lived fall in tech shares sent money into US government bonds, pulling the 10-year yield down to about 4.85%. The euro edged up to near $1.10 and the dollar held near 159 yen.",
-        "means": "Markets still put the chance of a Fed rate rise on December 9 near 97%, so the dollar's dip reflects lower yields on the day, not a change in the rate outlook.",
-        "fx": "Lower US yields take a little support from the dollar. The franc and yen benefit when share markets wobble."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Rate-rise bets hold, but falling bond yields pulled the dollar back a little."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The franc kept gains from the morning rush for safety."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The yen held its safe-place gains as US yields fell."
-        },
-        {
-          "ccy": "EUR",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A softer dollar lifted the euro slightly."
-        }
-      ],
-      "watch": "Thin trading on Thursday, November 26 with US markets shut, then Tokyo prices on Friday, November 27."
     },
     {
       "id": "thecircuitry-brent-settles-9461-houthis-20261125",
@@ -1165,6 +1186,39 @@
       "watch": "Whether the Houthi claims are confirmed by Saudi Arabia, and what OPEC+ decides on Sunday, November 29."
     },
     {
+      "id": "stockanalysis-sp-nvidia-creditwatch-20261125",
+      "ts": "2026-11-25T20:10:00Z",
+      "source": "StockAnalysis",
+      "url": "https://stockanalysis.com/news/nvidia-sp-rating-creditwatch-negative/",
+      "image": "https://api.stockanalysis.com/api/assets/photo/social/141f520c-a0ff-4ff4-8dbe-c52ca6152512.jpg",
+      "headline": "S&P may cut Nvidia's AA credit rating over board oversight after Huang's return",
+      "story": "ai-stocks",
+      "story_title": "AI stocks and the mood in markets",
+      "pillar": "risk",
+      "summary": "Ratings agency S&P Global warned on Wednesday, November 25 it may cut chipmaker Nvidia's AA credit rating by one step within 90 days, citing weak board oversight.",
+      "beats": {
+        "was": "Nvidia is the biggest company behind the stock rally built on artificial intelligence. Its boss Jensen Huang quit on November 12 over his personal conduct, and the board brought him back on Monday, November 23. Its debt has climbed to about $32 billion this year.",
+        "happened": "S&P put the rating on watch for a possible downgrade, pointing to the board's independence, the lack of a plan to replace Mr Huang and the firm's exposure to China. The cost of insuring Nvidia's debt against default hit a record, and its shares fell about 4% on the day.",
+        "means": "A one-step cut would still leave Nvidia with a strong rating, but the warning adds to doubts that have been dragging tech shares lower. Mr Huang faces questions from US lawmakers in early December.",
+        "fx": "Worries about the top AI firm weigh on the risk mood, which tends to hurt the Australian and New Zealand dollars and help the yen and Swiss franc."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "More doubt about the AI leader sours the mood in shares, which tends to drag the Aussie."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Nervous markets lean toward the yen as a safe place."
+        }
+      ],
+      "watch": "Jensen Huang's hearings with US lawmakers on December 1 and December 3, and S&P's final decision."
+    },
+    {
       "id": "wsau-reuters-beige-book-sticky-prices-20261125",
       "ts": "2026-11-25T19:19:00Z",
       "source": "Reuters",
@@ -1196,45 +1250,6 @@
         }
       ],
       "watch": "The Fed decision on Wednesday, December 9, and the US jobs report for November before it."
-    },
-    {
-      "id": "thehill-iran-coordinate-third-carrier-20261125",
-      "ts": "2026-11-25T17:54:00Z",
-      "source": "The Hill (via Yahoo News)",
-      "url": "https://www.yahoo.com/news/world/articles/iran-tightening-control-over-strait-175419852.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/3bff7d986d0be2865c9ad3f3489cdcaa81b21a4bb2e812f40b10d480484455ec/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_hill_articles_341%2F84158981f0d5accca9b8880d76af276e.jpg_up.jpg",
-      "headline": "Iran tightening control over Strait of Hormuz, spokesperson says",
-      "story": "iran-war-hormuz",
-      "story_title": "The Iran war and the Strait of Hormuz",
-      "pillar": "geopolitics",
-      "summary": "Iran's army said on Wednesday, November 25 that ships must arrange passage through the Strait of Hormuz with its forces, as the US sent a third aircraft carrier, the USS Theodore Roosevelt, to the Gulf.",
-      "beats": {
-        "was": "The US-Iran war is close to nine months old and peace talks have stalled. The Strait of Hormuz, a narrow sea lane that normally carries about a fifth of the world's oil, has seen almost no traffic, and Iran says tankers under US escort hit mines there on Monday, November 23 and Tuesday, November 24.",
-        "happened": "Iranian army spokesman Mohammad Akrami-Nia said the military is on high alert and ships must coordinate with Iranian forces to pass safely. The USS Theodore Roosevelt is joining two other US carriers already in the region.",
-        "means": "Both sides are adding force rather than talking, so the chance of the strait reopening soon looks lower and the risk of a clash at sea is higher.",
-        "fx": "A firmer standoff in the Gulf keeps oil supported and gives some lift to safe places like the Swiss franc, the yen and the US dollar."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "More warships and tighter Iranian control make a reopening of the strait less likely soon."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "War risk brings some money into the franc as a safe place."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "The dollar tends to gain when war fears rise."
-        }
-      ],
-      "watch": "Whether more ships are hit, and whether any go-between country manages to restart US-Iran talks."
     },
     {
       "id": "yahoo-stocks-sink-pce-tariffs-chips-20261125",
@@ -1406,33 +1421,6 @@
         }
       ],
       "watch": "US markets are shut on Thursday, November 26 for Thanksgiving. The next big US report is November jobs data in early December, before the Fed meets on December 8-9."
-    },
-    {
-      "id": "wtbx-reuters-boe-bailey-lower-peak-tsc-20261125",
-      "date": "2026-11-25",
-      "source": "Reuters (via WTBX)",
-      "url": "https://wtbx.com/2026/11/25/boes-bailey-sees-lower-inflation-peak-if-energy-prices-stabilise/",
-      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/25/2026-11-25T145022Z_1_LYNXNPEMAO1AS_RTROPTP_3_BRITAIN-BOE.JPG",
-      "headline": "BoE's Bailey sees lower inflation peak if energy prices stabilise",
-      "story": "boe-hikes",
-      "story_title": "Bank of England: how far do rates rise?",
-      "pillar": "policy",
-      "summary": "Bank of England Governor Andrew Bailey told UK lawmakers on Wednesday, November 25 that inflation would peak lower than forecast if energy prices hold where they are, while two colleagues sounded more worried about prices.",
-      "beats": {
-        "was": "The Bank of England raised its rate to 4% earlier in November and forecast on November 5 that UK inflation would peak near 5% in mid-2027. Oil and gas prices have eased since then, and markets lean toward another rise on December 17.",
-        "happened": "At a hearing of Parliament's Treasury Committee, Bailey said the inflation peak would be lower if energy prices stay at current levels, though he noted the economy has held up better and job market slack has stopped growing. Policymaker Catherine Mann said the bank should raise rates more and sooner. Deputy Governor Clare Lombardelli said she is less sure that underlying price pressure is still easing, and expects food inflation near 5% next year.",
-        "means": "The bank's leaders are not of one mind: the governor sees some relief from cheaper energy, while others see sticky prices that need more rate rises. That leaves the December 17 decision more open than the most hawkish voices suggest.",
-        "fx": "Mixed signals for the pound: Bailey's softer tone trims rate-rise bets a little, while Mann and Lombardelli keep the case for more rises alive."
-      },
-      "impact": [
-        {
-          "ccy": "GBP",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The governor sees a lower inflation peak, but two colleagues lean toward more rate rises."
-        }
-      ],
-      "watch": "The Bank of England decision on December 17, and UK energy prices into January."
     }
   ]
 }
