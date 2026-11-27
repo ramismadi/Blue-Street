@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T23:50:00Z",
+  "updated": "2026-11-27T02:05:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -29,18 +29,18 @@
     },
     "CAD": {
       "lean": "bullish",
-      "ts": "2026-11-26T17:55:00Z",
-      "text": "The Canadian dollar has bounced from a 19-month low as all six of Canada's biggest banks now expect a Bank of Canada rate rise on December 9, after Governor Tiff Macklem warned inflation is lasting. Brent oil near $95 a barrel, lifted by attacks on Saudi refineries, adds support for this oil-exporting country's currency."
+      "ts": "2026-11-27T02:05:00Z",
+      "text": "The Canadian dollar has bounced from a 19-month low as all six of Canada's biggest banks now expect a Bank of Canada rate rise on December 9, after Governor Tiff Macklem warned inflation is lasting. Brent oil above $96 a barrel on Friday, November 27, lifted by attacks on Saudi refineries, adds support for this oil-exporting country's currency."
     },
     "AUD": {
       "lean": "mixed",
-      "ts": "2026-11-26T11:49:00Z",
-      "text": "The Australian dollar edged back up to about 66.4 US cents on Thursday, November 26, after its lowest in a year, helped by the biggest jump in business investment since 2011 and inflation of 4.9% that keeps rates high. Falls in AI shares and proposed US tariffs on China and others still weigh."
+      "ts": "2026-11-27T02:05:00Z",
+      "text": "The Australian dollar is near 66.4 US cents after its lowest in a year, helped by the biggest jump in business investment since 2011, inflation of 4.9% that keeps rates high, and Chinese factory profits up 20.1% in October. Falls in AI shares and proposed US tariffs on China and others still weigh."
     },
     "NZD": {
       "lean": "bearish",
-      "ts": "2026-11-26T11:49:00Z",
-      "text": "The New Zealand dollar sits near 55 US cents, just above its lowest since 2009, after a 10-day slide stopped on Thursday, November 26. Markets now price a likely Reserve Bank of New Zealand rate rise to 3%, but US rates rising faster still pull money away."
+      "ts": "2026-11-27T02:05:00Z",
+      "text": "The New Zealand dollar sits near 55 US cents, just above its lowest since 2009, after a 10-day slide stopped on Thursday, November 26. Markets price a likely Reserve Bank of New Zealand rate rise to 3% and Chinese demand looks firmer, but US rates rising faster still pull money away."
     },
     "XAU": {
       "lean": "bearish",
@@ -49,11 +49,83 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-26T19:55:00Z",
-      "text": "Brent crude rose for a third day to about $95.60 a barrel on Thursday, November 26, as Yemen's Houthi rebels targeted two Saudi refineries in two days and Iranian drones were shot down over Kuwait. Reports say the OPEC+ producers may leave output unchanged at their meeting on Sunday, November 29, so no extra supply is coming soon, though worries about too much oil next year still act as a brake."
+      "ts": "2026-11-27T02:05:00Z",
+      "text": "Brent crude climbed above $96 a barrel on Friday, November 27, up almost 6% in two days, as Yemen's Houthi rebels kept targeting Saudi refineries and Iranian drones were shot down over Kuwait. Reports say the OPEC+ producers may leave output unchanged when they meet on Sunday, November 29, though worries about too much oil next year still act as a brake."
     }
   },
   "items": [
+    {
+      "id": "investinglive-china-industrial-profits-oct-20261127",
+      "ts": "2026-11-27T01:36:10Z",
+      "source": "investingLive",
+      "url": "https://investinglive.com/news/china-s-industrial-profits-growth-speeds-up-to-20-1-y-y-in-october/",
+      "image": "https://investinglive.com/cms/media/images/china%20factory_id_893a0b59-e452-4b7f-9cc8-2b3807e64b3b_original.jpeg?width=960&format=webp",
+      "headline": "China's factory profits grow 20.1% in October, the fastest in five months",
+      "story": "china-economy",
+      "story_title": "China's economy and the commodity currencies",
+      "pillar": "growth",
+      "summary": "Profits at Chinese industrial firms rose 20.1% from a year earlier in October, up from 14.4% in September, in figures out on Friday, November 27, Beijing time.",
+      "beats": {
+        "was": "China is the biggest buyer of Australian iron ore and a major market for New Zealand's farm goods, so signs of strength or weakness there move both currencies. Profits had already been growing through 2026, by 15.5% in the first nine months.",
+        "happened": "China's statistics office said industrial profits grew 20.1% in October alone, a sharp pickup from 14.4% in September. For January to October together, growth rose to 16.0%.",
+        "means": "Chinese factories are earning more, which suggests steady demand for raw materials. It comes as the US plans new tariffs on China and other partners, which could cut into that strength next year.",
+        "fx": "Firmer Chinese industry gives mild support to the Australian and New Zealand dollars, though both are still pulled lower by rising US rates."
+      },
+      "impact": [
+        {
+          "ccy": "AUD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Stronger profits at Chinese factories point to steady demand for Australian iron ore."
+        },
+        {
+          "ccy": "NZD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Better business in China, a big buyer of New Zealand goods, helps a little."
+        }
+      ],
+      "watch": "China's official factory survey for November at the end of the month, and how far the planned US tariffs on China go."
+    },
+    {
+      "id": "swissinfo-bloomberg-brent-96-asia-stocks-20261127",
+      "date": "2026-11-27",
+      "source": "swissinfo.ch (Bloomberg)",
+      "url": "https://www.swissinfo.ch/eng/asian-stocks-rise-for-second-day,-crude-oil-gains:-markets-wrap/92446051",
+      "image": null,
+      "headline": "Brent oil climbs above $96 and Asian shares rise for a second day",
+      "story": "oil-supply",
+      "story_title": "Oil supply: surplus vs Gulf attacks",
+      "pillar": "commodities",
+      "summary": "Brent crude rose more than 2% to above $96 a barrel on Friday, November 27, its highest since mid-November, after a Houthi attack on a Saudi refinery. Asian shares gained for a second day.",
+      "beats": {
+        "was": "Brent fell from about $118 at the end of October to near $89 on Monday, November 23, as worries about too much oil in 2027 outweighed the Iran war. Since then Yemen's Houthi rebels have targeted Saudi refineries and Iranian drones have been shot down over Kuwait.",
+        "happened": "Brent topped $96 a barrel, up almost 6% in two days, and US crude rose to about $85. A broad index of Asia-Pacific shares rose 0.6%, US share futures gained ahead of a shortened session, and gold edged up to about $3,573 an ounce.",
+        "means": "Attacks on Gulf oil sites keep adding a risk premium even though no lasting loss of Saudi output has been confirmed. The OPEC+ producers meet on Sunday, November 29, and reports say they may keep output unchanged.",
+        "fx": "Dearer oil helps the Canadian dollar and is a cost for Japan and the euro area, which import most of their energy. Calmer stock markets ease demand for safe currencies like the Swiss franc and yen."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Gulf refinery attacks keep lifting prices, without confirmed lost supply."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices lift income for Canada, a big oil exporter."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports nearly all its oil, and firmer shares cut demand for a safe currency."
+        }
+      ],
+      "watch": "The OPEC+ ministers' meeting on Sunday, November 29, and whether attacks on Saudi or Kuwaiti oil sites cause real supply losses."
+    },
     {
       "id": "chaincatcher-tokyo-cpi-nov-28-20261126",
       "ts": "2026-11-26T23:30:23Z",
@@ -179,45 +251,6 @@
         }
       ],
       "watch": "Canada's July-September GDP and November jobs report next week, then the Bank of Canada decision on Wednesday, December 9."
-    },
-    {
-      "id": "financefeeds-brent-9558-three-day-rally-20261126",
-      "ts": "2026-11-26T13:20:00Z",
-      "source": "FinanceFeeds",
-      "url": "https://financefeeds.com/brent-crude-oil-price-95-58-thursday-three-day-rally-before-opec-plus-sunday-bull-100-bear-91/",
-      "image": "https://financefeeds.com/wp-content/uploads/2026/08/offshore-oil-rig-brent-crude-price.jpg",
-      "headline": "Brent crude climbs to $95.58 for a third day of gains before OPEC+ meets",
-      "story": "oil-supply",
-      "story_title": "Oil supply: surplus vs Gulf attacks",
-      "pillar": "commodities",
-      "summary": "Brent crude rose for a third straight day to about $95.60 a barrel by midday in London on Thursday, November 26, turning around an early dip.",
-      "beats": {
-        "was": "Brent fell from about $118 at the end of October to near $89 on Monday, November 23, as worries about too much supply in 2027 outweighed the Iran war. Yemen's Houthi rebels then claimed a drone strike on Saudi Arabia's Ras Tanura refinery, the kingdom's largest.",
-        "happened": "January Brent traded about 1% higher at $95.58 around midday London time on Thursday, November 26, up from $89.37 on Monday, November 23. No loss of Saudi output or exports has been confirmed, and US crude stocks rose slightly in the week to November 20.",
-        "means": "Buyers still pay up for the risk of Gulf supply being hit, even without proof of lost barrels. Next year's supply glut is the brake, and the OPEC+ meeting on Sunday, November 29 will set the tone for 2027 output.",
-        "fx": "Dearer oil helps the Canadian dollar and Norway's krone and is a cost for Japan and the euro area, which buy most of their energy abroad."
-      },
-      "impact": [
-        {
-          "ccy": "OIL",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "A third day of gains on Gulf attack fears, though no Saudi supply loss is confirmed."
-        },
-        {
-          "ccy": "CAD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Higher oil prices lift income for Canada, a big oil exporter."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "Japan imports nearly all its oil, so dearer crude widens its import bill."
-        }
-      ],
-      "watch": "The OPEC+ ministers' meeting on Sunday, November 29, and the expiry of January Brent on Monday, November 30."
     },
     {
       "id": "euronext-reuters-dollar-rally-pauses-thanksgiving-20261126",
@@ -764,45 +797,6 @@
         }
       ],
       "watch": "Tokyo consumer prices on Friday, November 27, an early read on Japan's inflation before the December 18 decision."
-    },
-    {
-      "id": "investing-reuters-asia-shares-bounce-20261126",
-      "date": "2026-11-26",
-      "source": "Investing.com (Reuters)",
-      "url": "https://za.investing.com/news/stock-market-news/asia-shares-bounce-ai-and-tariffs-lurk-in-background-4597799",
-      "image": "https://content-media.investing.com/trkd-images/LYNXNPEMAP03E_L.jpg",
-      "headline": "Asia shares bounce, AI and tariffs lurk in background",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "Asian shares rose modestly on Thursday, November 26 after Wall Street won back most of a deep fall. Japan's Nikkei gained 1.6% and South Korea's main index 1.9%.",
-      "beats": {
-        "was": "Asian chip-heavy markets had a rough November as doubts grew about the rally in artificial intelligence shares. Japan was down about 8% for the month, South Korea about 16% and Taiwan about 15%. The US also plans new tariffs on 14 big trading partners, including China, Japan and the euro area.",
-        "happened": "Buyers returned in Asia after US shares recovered late on Wednesday, November 25. Markets still price an almost certain Federal Reserve rate rise of a quarter point in December, and the US 10-year bond yield sat near 4.85%. Brent oil held near $94.80 and gold near $3,566, down almost 8% this month.",
-        "means": "The selling in tech shares has paused, but the tariff plan and doubts about AI firms have not gone away. US markets are shut for Thanksgiving, so trading is thin.",
-        "fx": "A calmer mood gives some relief to risk-linked currencies like the Australian and New Zealand dollars, while firm Fed rate bets keep the US dollar strong."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Asian shares steadied, but tariffs on China still hang over Australia's biggest buyer."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "A rebound in Tokyo shares cuts the need for the yen as a safe place."
-        },
-        {
-          "ccy": "USD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Markets still see a Fed rate rise in December as all but certain."
-        }
-      ],
-      "watch": "Whether chip shares hold the rebound when US markets reopen for a half-day on Friday, November 27."
     },
     {
       "id": "stockanalysis-sp-nvidia-creditwatch-20261125",
