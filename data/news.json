@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T12:55:00Z",
+  "updated": "2026-11-27T14:55:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -8,9 +8,9 @@
       "text": "The dollar sits just below its highest since March 2025 because markets see a Federal Reserve rate rise on December 9 as all but certain, after hot core PCE inflation of 3.3% and growth revised up to 4.3%. Investors are taking some money off the table now that much of this is priced, and President Trump's claim that the growth figure was a deliberate error adds a small worry about trust in US data."
     },
     "EUR": {
-      "lean": "bearish",
-      "ts": "2026-11-27T11:50:00Z",
-      "text": "The euro sits near $1.09, close to its lowest since April 2025, because the Federal Reserve looks set to raise rates faster than the European Central Bank. Inflation slowed far more than expected in France and Spain on Friday, November 27, which makes an ECB rise on December 17 less certain and pushed the euro lower against the pound."
+      "lean": "mixed",
+      "ts": "2026-11-27T14:55:00Z",
+      "text": "The euro sits near $1.095, close to its lowest since April 2025, because the Federal Reserve looks set to raise rates before the European Central Bank. Inflation slowed far more than expected in France and Spain on Friday, November 27, but Bundesbank head Joachim Nagel and another ECB rate-setter said the same day that rates may still need to rise in December."
     },
     "GBP": {
       "lean": "mixed",
@@ -54,6 +54,33 @@
     }
   },
   "items": [
+    {
+      "id": "gbaf-reuters-nagel-dolenc-ecb-more-hikes-20261127",
+      "ts": "2026-11-27T13:15:01Z",
+      "source": "Global Banking & Finance Review (Reuters)",
+      "url": "https://www.globalbankingandfinance.com/ecb-raise-rates-inflation-stays-3/",
+      "image": "https://www.globalbankingandfinance.com/i/cloud-161a1624-5b2b-431b-a2c2-35a461628d40/width=1200,height=630,quality=80,format=auto,fit=cover/",
+      "headline": "Two ECB rate-setters say rates may need to rise again as soon as December",
+      "story": "ecb-december",
+      "story_title": "Will the ECB raise rates one last time in December?",
+      "pillar": "policy",
+      "summary": "Joachim Nagel, head of Germany's Bundesbank, said euro area inflation could stay above 3% into 2027 and rates may need to rise again in December, and Slovenia's central bank governor said two rises so far may not be enough.",
+      "beats": {
+        "was": "The European Central Bank has raised its deposit rate twice this year, to 2.5%, as the Iran war pushed energy costs up, then held in October. Its next decision is on December 17.",
+        "happened": "On Friday, November 27, Bundesbank President Joachim Nagel said the ECB may have to do more and could raise rates as soon as December, since he expects inflation to stay above 3% in 2027. Primoz Dolenc, Slovenia's central bank governor and also an ECB rate-setter, said the two rises so far are not enough and that dearer energy is spreading into service prices.",
+        "means": "These comments came hours after inflation in France and Spain slowed far more than forecast. They tell markets that some ECB members still see inflation lasting well above the 2% goal and are not ready to stop raising rates.",
+        "fx": "Firm talk of another ECB rise supports the euro and softens the blow from the weaker inflation figures, though the Federal Reserve still looks set to move first on December 9."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "bullish",
+          "strength": 2,
+          "why": "Two ECB rate-setters, including Germany's central bank head, pointed to another rate rise as soon as December."
+        }
+      ],
+      "watch": "Germany's November inflation on Monday, November 30, the euro area figure on Tuesday, December 1, and the ECB decision on December 17."
+    },
     {
       "id": "tradinginvestment-yen-159-tokyo-cpi-20261127",
       "ts": "2026-11-27T12:09:52Z",
@@ -1108,45 +1135,6 @@
       "watch": "Tokyo consumer prices on Friday, November 27, an early read on Japan's inflation before the December 18 decision."
     },
     {
-      "id": "stocktitan-stocks-claw-back-chip-selloff-20261125",
-      "ts": "2026-11-25T23:10:00Z",
-      "source": "Stock Titan",
-      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026",
-      "image": "https://www.stocktitan.net/img/articles/stock-market-today-live-november-25-2026.webp",
-      "headline": "Stock Market Today Live, November 25, 2026: Stocks Win Back Most of Their Morning Losses After a Chip Sell-Off",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "US shares won back most of a deep morning slide on Wednesday, November 25. A fund that tracks the Nasdaq-100 ended down about 0.7% after being down more than 4% late in the morning.",
-      "beats": {
-        "was": "US tech shares had been falling for days, led by Nvidia, as doubts grew about the rally built on artificial intelligence. Hot inflation figures and a US plan for new tariffs on 14 economies added to the selling on the morning of Wednesday, November 25.",
-        "happened": "Buyers came back through the afternoon. The S&P 500 fund closed down about 0.3% and the Dow fund rose about 0.3%. Nvidia still ended about 4% lower and Micron about 4.5% lower. US markets are shut on Thursday, November 26 for Thanksgiving and close early on Friday, November 27.",
-        "means": "The panic of the morning eased, but chip shares are still under pressure. Thin holiday trading can make moves bigger in either direction.",
-        "fx": "A calmer close takes some heat off risk-linked currencies like the Australian and New Zealand dollars, and cools the rush into the yen."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Shares recovered, but chip stocks still fell, so the risk mood is only half mended."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "The kiwi gets some relief from the late rebound in shares."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Less panic means less need for the yen as a safe place."
-        }
-      ],
-      "watch": "Whether chip shares steady when US trading resumes for a half-day on Friday, November 27."
-    },
-    {
       "id": "thecircuitry-brent-settles-9461-houthis-20261125",
       "ts": "2026-11-25T21:31:59Z",
       "source": "The Circuitry (Reuters)",
@@ -1184,39 +1172,6 @@
         }
       ],
       "watch": "Whether the Houthi claims are confirmed by Saudi Arabia, and what OPEC+ decides on Sunday, November 29."
-    },
-    {
-      "id": "stockanalysis-sp-nvidia-creditwatch-20261125",
-      "ts": "2026-11-25T20:10:00Z",
-      "source": "StockAnalysis",
-      "url": "https://stockanalysis.com/news/nvidia-sp-rating-creditwatch-negative/",
-      "image": "https://api.stockanalysis.com/api/assets/photo/social/141f520c-a0ff-4ff4-8dbe-c52ca6152512.jpg",
-      "headline": "S&P may cut Nvidia's AA credit rating over board oversight after Huang's return",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "Ratings agency S&P Global warned on Wednesday, November 25 it may cut chipmaker Nvidia's AA credit rating by one step within 90 days, citing weak board oversight.",
-      "beats": {
-        "was": "Nvidia is the biggest company behind the stock rally built on artificial intelligence. Its boss Jensen Huang quit on November 12 over his personal conduct, and the board brought him back on Monday, November 23. Its debt has climbed to about $32 billion this year.",
-        "happened": "S&P put the rating on watch for a possible downgrade, pointing to the board's independence, the lack of a plan to replace Mr Huang and the firm's exposure to China. The cost of insuring Nvidia's debt against default hit a record, and its shares fell about 4% on the day.",
-        "means": "A one-step cut would still leave Nvidia with a strong rating, but the warning adds to doubts that have been dragging tech shares lower. Mr Huang faces questions from US lawmakers in early December.",
-        "fx": "Worries about the top AI firm weigh on the risk mood, which tends to hurt the Australian and New Zealand dollars and help the yen and Swiss franc."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 1,
-          "why": "More doubt about the AI leader sours the mood in shares, which tends to drag the Aussie."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Nervous markets lean toward the yen as a safe place."
-        }
-      ],
-      "watch": "Jensen Huang's hearings with US lawmakers on December 1 and December 3, and S&P's final decision."
     },
     {
       "id": "wsau-reuters-beige-book-sticky-prices-20261125",
