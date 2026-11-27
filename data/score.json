@@ -1,6 +1,6 @@
 {
  "_about": "Blue Street currency score (since 2026-11-17 the score on the site). Rate levels, inflation and terms of trade passed a price-history test (2016-2026) with a small, steady edge; market mood failed and is shown with no weight; growth, positioning and fiscal are not yet tested. Evidence, not a forecast.",
- "updated": "2026-11-27T09:35:17.911Z",
+ "updated": "2026-11-27T13:46:54.076Z",
  "as_of": "2026-11-27",
  "scale": "score -100 to +100; points -10 to +10 (what the site shows)",
  "weights": {
@@ -66,8 +66,8 @@
  "ranking": [
   "AUD",
   "GBP",
-  "USD",
   "NZD",
+  "USD",
   "EUR",
   "CAD",
   "JPY",
@@ -75,8 +75,8 @@
  ],
  "currencies": {
   "USD": {
-   "points": 2,
-   "score": 22,
+   "points": 1.4,
+   "score": 16,
    "tested_score": 58,
    "measured_share": 76,
    "drivers": {
@@ -97,12 +97,12 @@
      "points": 0
     },
     "growth": {
-     "value": 0,
+     "value": -0.67,
      "measured": true,
-     "why": "Of the US's last 6 data releases, 2 beat forecasts and 2 missed.",
+     "why": "Of the US's last 6 data releases, 1 beat forecasts and 3 missed.",
      "counted": true,
      "tested": false,
-     "points": 0
+     "points": -0.6
     },
     "risk": {
      "value": 1,
@@ -139,18 +139,18 @@
    }
   },
   "EUR": {
-   "points": -2.2,
-   "score": -22,
-   "tested_score": 9,
+   "points": -2.1,
+   "score": -21,
+   "tested_score": 10,
    "measured_share": 88,
    "drivers": {
     "rates": {
-     "value": -0.26,
+     "value": -0.22,
      "measured": true,
-     "why": "The European Central Bank's rate is in the middle of the eight, and the euro area's two-year bond yield is 0.27 points below the middle.",
+     "why": "The European Central Bank's rate is in the middle of the eight, and the euro area's two-year bond yield is 0.21 points below the middle. Over the past month that yield has risen faster than the others.",
      "counted": true,
      "tested": true,
-     "points": -0.5
+     "points": -0.4
     },
     "inflation": {
      "value": 0.66,
@@ -203,18 +203,18 @@
    }
   },
   "GBP": {
-   "points": 3.5,
-   "score": 37,
-   "tested_score": 56,
+   "points": 3.6,
+   "score": 38,
+   "tested_score": 57,
    "measured_share": 76,
    "drivers": {
     "rates": {
-     "value": 1.83,
+     "value": 1.86,
      "measured": true,
      "why": "The Bank of England's rate is 1.4 points above the middle of the eight, and the UK's two-year bond yield is 1.4 points above the middle.",
      "counted": true,
      "tested": true,
-     "points": 3.2
+     "points": 3.3
     },
     "inflation": {
      "value": 0.15,
@@ -934,9 +934,9 @@
   {
    "date": "2026-11-27",
    "points": {
-    "USD": 2,
-    "EUR": -2.2,
-    "GBP": 3.5,
+    "USD": 1.4,
+    "EUR": -2.1,
+    "GBP": 3.6,
     "JPY": -4.2,
     "CHF": -5.2,
     "CAD": -2.8,
@@ -944,9 +944,9 @@
     "NZD": 1.8
    },
    "scores": {
-    "USD": 22,
-    "EUR": -22,
-    "GBP": 37,
+    "USD": 16,
+    "EUR": -21,
+    "GBP": 38,
     "JPY": -41,
     "CHF": -54,
     "CAD": -29,
@@ -955,8 +955,8 @@
    },
    "tested": {
     "USD": 58,
-    "EUR": 9,
-    "GBP": 56,
+    "EUR": 10,
+    "GBP": 57,
     "JPY": -56,
     "CHF": -74,
     "CAD": -28,
