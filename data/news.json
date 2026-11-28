@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T23:55:00Z",
+  "updated": "2026-11-28T02:05:00Z",
   "method": "Headlines from the source feed, read by Claude: summary and four beats in Blue Street's own words from each article's headline and public text; impact = which way the headline pushes each market (dir bullish/bearish/mixed, strength 1 mild, 2 clear, 3 strong). Evidence, not a call.",
   "narratives": {
     "USD": {
@@ -9,8 +9,8 @@
     },
     "EUR": {
       "lean": "mixed",
-      "ts": "2026-11-27T19:55:00Z",
-      "text": "The euro sits near $1.095, close to its lowest since April 2025, because the Federal Reserve looks set to raise rates before the European Central Bank. Inflation slowed far more than expected in France and Spain on Friday, November 27, but households now expect prices to rise 3.5% over the next year and Bundesbank head Joachim Nagel said rates may still need to rise in December."
+      "ts": "2026-11-28T02:05:00Z",
+      "text": "The euro sits near $1.095, close to its lowest since April 2025, because the Federal Reserve looks set to raise rates before the European Central Bank. Inflation slowed sharply in France and Spain on Friday, November 27, while Spain's general election on Sunday, November 29, where polls favour a conservative government, could add doubt if the result is unclear."
     },
     "GBP": {
       "lean": "mixed",
@@ -19,8 +19,8 @@
     },
     "JPY": {
       "lean": "bearish",
-      "ts": "2026-11-27T12:55:00Z",
-      "text": "The yen slipped to about 159.6 per dollar on Friday, November 27, near its weakest of the week, after Tokyo inflation came in a little under forecast and was driven mostly by fuel. Talk of a Bank of Japan rate rise on December 18 and Japan's warnings that it may step in near 160 are slowing the fall, while dearer oil remains a cost."
+      "ts": "2026-11-28T02:05:00Z",
+      "text": "The yen is near 159.6 per dollar, close to its weakest of the week, as US rates stay far above Japan's. Markets see a Bank of Japan rate rise on December 18 as likely, and Governor Kazuo Ueda's speech on Monday, November 30 will show how firm that is, while dearer oil remains a cost."
     },
     "CHF": {
       "lean": "mixed",
@@ -49,11 +49,50 @@
     },
     "OIL": {
       "lean": "bullish",
-      "ts": "2026-11-27T23:55:00Z",
-      "text": "Brent crude settled at $95.44 on Friday, November 27, down 1.2% on the day but up about 3% on the week, its first weekly rise in November, after Houthi attacks on Saudi refineries and a US blockade of Iran that keeps Gulf shipping disrupted. OPEC+ meets on Sunday, November 29 and is expected to leave output unchanged, while forecasts of a surplus still act as a brake."
+      "ts": "2026-11-28T02:05:00Z",
+      "text": "Brent crude settled at $95.44 on Friday, November 27, up about 3% on the week, its first weekly rise in November, after Houthi attacks on Saudi refineries and repeated Iranian claims of tankers hit by mines in the Strait of Hormuz. OPEC+ meets on Sunday, November 29 and is expected to leave output unchanged, while forecasts of a surplus still act as a brake."
     }
   },
   "items": [
+    {
+      "id": "khaama-irgc-two-tankers-mines-hormuz-20261128",
+      "ts": "2026-11-27T23:41:24Z",
+      "source": "Khaama Press",
+      "url": "https://www.khaama.com/iran-two-oil-tankers-naval-mines-strait-hormuz/",
+      "image": "https://www.khaama.com/wp-content/uploads/2026/11/vessel-hit-mines-in-HOrmuz.webp",
+      "headline": "Iran says two more tankers hit mines and caught fire in the Strait of Hormuz",
+      "story": "iran-war-hormuz",
+      "story_title": "The Iran war and the Strait of Hormuz",
+      "pillar": "commodities",
+      "summary": "Iran's Revolutionary Guards navy said early on Saturday, November 28 that two oil tankers hit sea mines and caught fire in the Strait of Hormuz after using routes Iran has not approved.",
+      "beats": {
+        "was": "The US and Israel went to war with Iran on February 28, and Iran now controls which routes ships may use through the Strait of Hormuz, the narrow sea lane for about a fifth of the world's oil. Iran made similar mine claims on Thursday, November 26 and Friday, November 27.",
+        "happened": "Iranian state broadcaster IRIB, citing the Guards, said one tanker was hit near the entrance to Oman's Khasab port and the other on the eastern route, and that both had switched off their tracking systems. Iran did not name the ships, their flags or any casualties, and no one else has confirmed the account.",
+        "means": "It is the third such claim in three days, a sign Iran wants ships to keep to its own routes. Until shipping firms or other navies confirm damage, it adds to the risk around Gulf oil rather than proving supply was lost.",
+        "fx": "More danger in the strait tends to lift crude, which helps oil exporters like Canada and is a cost for big oil buyers like Japan."
+      },
+      "impact": [
+        {
+          "ccy": "OIL",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Another unconfirmed Iranian claim of tankers hit in Hormuz."
+        },
+        {
+          "ccy": "CAD",
+          "dir": "bullish",
+          "strength": 1,
+          "why": "Higher oil prices help Canada's export earnings."
+        },
+        {
+          "ccy": "JPY",
+          "dir": "bearish",
+          "strength": 1,
+          "why": "Japan imports almost all its oil, so dearer crude is a cost."
+        }
+      ],
+      "watch": "Whether the UK Navy's shipping office (UKMTO) or ship owners confirm the fires, and how Brent opens on Monday, November 30 after the OPEC+ meeting on Sunday, November 29."
+    },
     {
       "id": "longbridge-gold-jumps-24-weekly-gain-20261127",
       "ts": "2026-11-27T22:03:06Z",
@@ -419,6 +458,33 @@
         }
       ],
       "watch": "The third growth estimate on December 23, and the Fed's decision on December 9."
+    },
+    {
+      "id": "asiae-ueda-nagoya-december-hike-odds-20261127",
+      "ts": "2026-11-27T06:03:11Z",
+      "source": "The Asia Business Daily",
+      "url": "https://www.asiae.co.kr/en/article/2026112714481942303",
+      "image": "https://cphoto.asiae.co.kr/listimglink/1/2026112714471526717_1795758435.jpg",
+      "headline": "Markets look to Bank of Japan head Ueda's speech for a December rate signal",
+      "story": "yen-boj",
+      "story_title": "The yen and the Bank of Japan",
+      "pillar": "rates",
+      "summary": "Bank of Japan Governor Kazuo Ueda speaks in Nagoya on Monday, November 30, and markets see the odds of a rate rise at the December 17-18 meeting near 80%.",
+      "beats": {
+        "was": "The yen is near 160 per US dollar, close to its weakest in decades, because Japanese interest rates are far below US ones. Board member Naoki Tamura said on Thursday, November 26 that the bank could raise rates by a quarter point every few months.",
+        "happened": "Ahead of the speech, pricing in markets puts a December rise at close to 80%, according to Japan's Nikkei newspaper. A Mizuho strategist said the dollar could climb back above 160 yen if Ueda sounds worried about falling shares.",
+        "means": "Ueda's words on Monday, November 30 are the clearest guide before the meeting. A firm hint would back the odds, while caution would likely send them lower.",
+        "fx": "A clear signal of a rise would support the yen, and a hesitant tone would add to pressure on it."
+      },
+      "impact": [
+        {
+          "ccy": "JPY",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "The yen's next move depends on how firmly Ueda points to December."
+        }
+      ],
+      "watch": "Ueda's speech in Nagoya on Monday, November 30, and whether Japan's finance ministry steps in if the yen passes 160."
     },
     {
       "id": "upstox-gold-silver-jump-thanksgiving-20261127",
@@ -937,6 +1003,33 @@
       "watch": "The OPEC+ meeting on Sunday, November 29 on output for 2027."
     },
     {
+      "id": "newsquawk-spain-election-primer-20261126",
+      "ts": "2026-11-26T12:23:00Z",
+      "source": "Newsquawk",
+      "url": "https://www.newsquawk.com/headlines/primer-spanish-general-election-on-29th-november-2026",
+      "image": "https://www.newsquawk.com/og-image.png",
+      "headline": "Spain votes on Sunday, November 29, with the conservatives expected to win",
+      "story": "spain-election",
+      "story_title": "Spain's general election",
+      "pillar": "policy",
+      "summary": "Spain holds a general election on Sunday, November 29, and polls point to the conservative People's Party winning and needing the right-wing Vox party to govern.",
+      "beats": {
+        "was": "Spain, the euro area's fourth-biggest economy, has been run by Prime Minister Pedro Sánchez of the Socialist party (PSOE). A party needs 176 of the 350 seats in parliament to govern alone.",
+        "happened": "The last official polls put the People's Party, led by Alberto Núñez Feijóo, at about 31-32%, the Socialists at about 29-31% and Vox, led by Santiago Abascal, at about 17-18%. Together the People's Party and Vox would clear 176 seats in most polls. Results should be mostly known by late evening Central European time on election night.",
+        "means": "Bank analysts expect a People's Party and Vox government to spend more freely, which could push up Spain's borrowing costs, though they see the wider risk to Europe as limited. A clear result would remove one source of doubt for the euro, while a hung parliament would add one.",
+        "fx": "A clear win is likely to give the euro a small, short lift, but a messy result or fears over Spain's budget could weigh on it."
+      },
+      "impact": [
+        {
+          "ccy": "EUR",
+          "dir": "mixed",
+          "strength": 1,
+          "why": "A clear result could ease doubt, a hung parliament could add to it."
+        }
+      ],
+      "watch": "The result late on Sunday, November 29, whether the People's Party and Vox reach 176 seats, and how Spanish bonds trade on Monday, November 30."
+    },
+    {
       "id": "bs-reuters-opecplus-may-roll-over-targets-20261126",
       "ts": "2026-11-26T12:02:54Z",
       "source": "Business Standard (Reuters)",
@@ -1120,45 +1213,6 @@
       "watch": "The OPEC+ ministers' meeting on Sunday, November 29, which sets oil output for 2027."
     },
     {
-      "id": "brecorder-reuters-dollar-steady-yields-20261126",
-      "ts": "2026-11-26T02:59:50Z",
-      "source": "Business Recorder (Reuters)",
-      "url": "https://www.brecorder.com/news/40450821/dollar-steady-as-sliding-yields-temper-safe-haven-bid",
-      "image": "https://i.brecorder.com/large/2026/11/26075643f76b452.webp",
-      "headline": "Dollar steady as sliding yields temper safe-haven bid",
-      "story": "fed-hikes",
-      "story_title": "The Fed's rate rises and the strong dollar",
-      "pillar": "rates",
-      "summary": "The dollar held steady in Asian trading on Thursday, November 26, a little above a one-week low, as a drop in US bond yields took the edge off its pull as a safe place.",
-      "beats": {
-        "was": "The dollar index hit a 19-month high on Monday, November 23, after Nvidia's board put co-founder Jensen Huang back in charge and AI shares rallied. Hot US inflation figures on Wednesday, November 25 left markets almost sure the Federal Reserve will raise rates on December 9.",
-        "happened": "The dollar index sat flat near 103.7. The US 10-year bond yield fell as much as 0.1 point to about 4.8%, its lowest in two and a half months. The Australian dollar climbed back above 66 US cents after nearly a one-year low, and the euro held near $1.097.",
-        "means": "Lower US yields shrink the dollar's interest-rate edge, but markets still expect a Fed rate rise in December and another early in 2027. With US markets shut for Thanksgiving, trading is thin and moves can be jumpy.",
-        "fx": "The dollar is resting rather than turning. The yen, Swiss franc and Canadian dollar kept their gains from Wednesday, November 25."
-      },
-      "impact": [
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Falling bond yields offset firm bets on a Fed rate rise in December."
-        },
-        {
-          "ccy": "AUD",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Back above 66 US cents after its weakest level in almost a year."
-        },
-        {
-          "ccy": "CHF",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Held a 0.5% safe-place gain from Wednesday, November 25."
-        }
-      ],
-      "watch": "The Federal Reserve's rate decision on December 9, which markets expect to be a quarter-point rise."
-    },
-    {
       "id": "gulfnews-jazan-refinery-worker-killed-shutdown-20261126",
       "date": "2026-11-26",
       "source": "Gulf News",
@@ -1307,51 +1361,6 @@
         }
       ],
       "watch": "Tokyo consumer prices on Friday, November 27, an early read on Japan's inflation before the December 18 decision."
-    },
-    {
-      "id": "yahoo-stocks-sink-pce-tariffs-chips-20261125",
-      "ts": "2026-11-25T16:31:00Z",
-      "source": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html",
-      "image": "https://s.yimg.com/lo/mysterio/api/ce00c506eb7053ddeae082bdba351b50dedccd0393500951191e10afcf77ee8e/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-11%2F1861b748-c134-459b-9a1c-13aa127e9c2a",
-      "headline": "Stock market today: Dow, S&P 500, Nasdaq sink on hot inflation, new Trump tariffs as chip rout continues",
-      "story": "ai-stocks",
-      "story_title": "AI stocks and the mood in markets",
-      "pillar": "risk",
-      "summary": "US shares fell hard on Wednesday, November 25, with the Nasdaq down about 4% and the S&P 500 down nearly 3% by late morning in New York, as chip stocks kept sliding and fresh inflation and tariff news hit.",
-      "beats": {
-        "was": "US tech shares had already dropped sharply on Tuesday, November 24, with Nvidia down 9%, ending a long rally built on artificial intelligence. Bringing back Jensen Huang as Nvidia's chief executive on Monday, November 23 had briefly lifted shares.",
-        "happened": "Nvidia fell almost 9% more and an index of chipmakers lost over 6%. The Nasdaq-100 neared a fall of 20% from its peak, the usual line for a bear market. A gauge of expected share swings, the VIX, jumped about 28% to near 34. Core PCE inflation came in at 3.3% against 3.2% expected, and the US proposed new tariffs of up to 20% on 14 trading partners. Investors moved into US government bonds, pulling the 10-year yield down about 0.07 points to 4.82%.",
-        "means": "Markets are now dealing with two pressures at once: a sharp fall in the shares that drove the past rally, and a Federal Reserve still set to raise rates on December 9. Lower bond yields show some money already looking for safety.",
-        "fx": "A deep share sell-off tends to hurt risk-linked currencies like the Australian and New Zealand dollars and help the yen. Falling US yields take a little shine off the dollar's rate support."
-      },
-      "impact": [
-        {
-          "ccy": "AUD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "A deep fall in US shares drives money out of risk-linked currencies."
-        },
-        {
-          "ccy": "NZD",
-          "dir": "bearish",
-          "strength": 2,
-          "why": "The kiwi tends to fall when share markets sell off hard."
-        },
-        {
-          "ccy": "JPY",
-          "dir": "bullish",
-          "strength": 1,
-          "why": "Share market stress brings some money back to the yen."
-        },
-        {
-          "ccy": "USD",
-          "dir": "mixed",
-          "strength": 1,
-          "why": "Rate-rise bets hold, but US bond yields fell as investors sought safety."
-        }
-      ],
-      "watch": "Whether the chip sell-off spreads further, and thin trading around the US Thanksgiving holiday on Thursday, November 26, with a half-day on Friday, November 27."
     },
     {
       "id": "tmgm-nzd-rebounds-2009-low-20261125",
